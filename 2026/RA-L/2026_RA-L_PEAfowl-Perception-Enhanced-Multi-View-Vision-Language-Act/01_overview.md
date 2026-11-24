@@ -1,7 +1,6 @@
 # PEAfowl: Perception-Enhanced Multi-View Vision-Language-Action for Bimanual Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / RA-L
 - Authors: Qingyu Fan, Zhaoxiang Li, Jinrui Hu, Yi Lu, Wang Chen, Qiu Shen, Xiao-xiao Long, Yinghao Cai, Tao Lu, Shuo Wang, Xun Cao
@@ -14,15 +13,17 @@
 - Venue verification: https://ieeexplore.ieee.org/document/11661761/
 - Code/Project: https://peafowlvla.github.io/
 - Code: https://github.com/Qingyu-Fan/PEAfowl
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RA-L 11(10), 11841–11848, October 2026; first online 2026-08-21. Crossref issue metadata checked 11/08. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-양팔 조작에서 다중 시점 간 기하 정합과 언어 의미의 결합이 필요하다.
+PEAfowl은 여러 카메라의 시각 토큰을 깊이에 따라 3차원에 배치하고 언어 지시와 결합해, 가림과 시점 변화가 있는 양팔 조작을 학습한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=3)
 
 ## Core Idea and Contribution
 
-깊이 분포 기반 3D lifting·cross-view 이웃 집계·text-aware readout을 사용하고 학습 시 depth distillation을 적용한다.
+- 토큰별 깊이 분포로 다른 시점의 이웃 특징을 모으고 텍스트 조건부 판독기를 적용하며, 깊이 교사 모델은 훈련 시에만 사용한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=5)
+- RoboTwin 2.0의 도메인 무작위화 조건에서 가장 높은 비교 기준선보다 성공률이 23.0%p 높았고 별도의 실물 과제도 평가했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 RoboTwin2.0과 실제 양팔 조작을 평가한다.
 
-근거: [공식 paper/abstract](https://ieeexplore.ieee.org/document/11661761/) · [저자 project/code](https://peafowlvla.github.io/) · [공식 code](https://github.com/Qingyu-Fan/PEAfowl). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://ieeexplore.ieee.org/document/11661761/) · [저자 project/code](https://peafowlvla.github.io/) · [공식 code](https://github.com/Qingyu-Fan/PEAfowl).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -1,7 +1,6 @@
 # D4RL: Datasets for Deep Data-Driven Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2020 / arXiv
 - Authors: Justin Fu, Aviral Kumar, Ofir Nachum, George Tucker, Sergey Levine
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2004.07219
 - Code/Project: https://github.com/Farama-Foundation/D4RL
 - Code: https://github.com/Farama-Foundation/D4RL
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. arXiv v4와 공식 유지 repository 확인. 확인되지 않은 conference venue를 부여하지 않으며 현행 라이브러리의 실행 호환성을 보장하지 않는다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Full-text retrieval: https://arxiv.org/pdf/2004.07219v4
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-온라인 학습용 benchmark만으로는 offline 데이터의 이질성과 실패를 평가하기 어렵다.
+D4RL은 고정된 자료로 학습하는 오프라인 강화학습을 위해 서로 다른 행동 정책과 수집 방식에서 나온 자료 및 공통 평가 절차를 제공한다. [PDF 1쪽](https://arxiv.org/pdf/2004.07219v4#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2004.07219v4#page=3)
 
 ## Core Idea and Contribution
 
-사람·규칙 controller·정책 혼합·멀티태스크 데이터를 포함하는 offline RL benchmark와 평가 프로토콜을 제시한다.
+- 혼합 정책, 사람 시연, 목표 지향 제어기에서 얻은 자료로 부분 궤적의 조합과 학습 자료에 드문 행동 등 오프라인 학습의 난점을 설계했다. [PDF 3쪽](https://arxiv.org/pdf/2004.07219v4#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2004.07219v4#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2004.07219v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2004.07219v4#page=6)
+- 여러 알고리즘의 성과를 환경별 기준점에 대한 정규화 점수로 비교해, 수집 방식에 따라 성능이 어떻게 달라지는지 보고했다. [PDF 7쪽](https://arxiv.org/pdf/2004.07219v4#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2004.07219v4#page=8) · [PDF 15쪽](https://arxiv.org/pdf/2004.07219v4#page=15)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 다양한 데이터 수집 조건에서 offline 알고리즘을 비교한다. 데이터셋 전체가 실물 로봇 trajectory라는 뜻은 아니다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2004.07219) · [저자 project/code](https://github.com/Farama-Foundation/D4RL). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2004.07219) · [저자 project/code](https://github.com/Farama-Foundation/D4RL).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

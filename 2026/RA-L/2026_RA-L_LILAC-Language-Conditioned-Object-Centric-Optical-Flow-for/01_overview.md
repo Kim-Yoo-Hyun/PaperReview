@@ -1,7 +1,6 @@
 # LILAC: Language-Conditioned Object-Centric Optical Flow for Open-Loop Trajectory Generation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / RA-L
 - Authors: Motonari Kambara, Koki Seno, Tomoya Kaichi, Yanan Wang, Komei Sugiura
@@ -14,15 +13,17 @@
 - Venue verification: https://ieeexplore.ieee.org/abstract/document/11478289
 - Code/Project: https://lilac-75srg.kinsta.page/
 - Code: not_released
-- Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. IEEE indexed publisher 내용으로 게재를 확인했고 직접 본문 접근은 제한적이었다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-사람/웹 영상에서 얻은 움직임을 언어에 맞는 로봇 궤적으로 변환하는 데 필요한 정렬을 다룬다.
+LILAC은 조작 전 RGB 영상과 언어 지시로부터 물체 중심의 2차원 흐름을 생성하고 이를 로봇 팔의 개루프 6자유도 궤적으로 변환한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=1) · [PDF 2쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=2)
 
 ## Core Idea and Contribution
 
-언어와 RGB로 object-centric 2D flow를 생성하고 이를 6-DoF 로봇 trajectory로 변환한다.
+- 언어와 움직임의 정합 손실 및 프롬프트 조건부 어댑터로 같은 장면에서도 지시에 맞는 흐름을 생성하도록 학습한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=4)
+- 생성한 흐름의 영상 평가와 자유로운 표현의 지시를 받은 실물 로봇의 과제 성공을 별도로 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=7)
 
 ## Observation–State–Action Interface
 

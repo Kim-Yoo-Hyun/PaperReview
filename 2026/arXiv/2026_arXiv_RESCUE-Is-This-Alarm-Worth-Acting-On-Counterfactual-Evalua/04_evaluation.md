@@ -1,42 +1,32 @@
 # RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-LIBERO Spatial Plus와 VLA runtime monitor 평가를 보고한다.
+LIBERO에서 수집한 원 에피소드 1,562개 중 262개가 실패했다. 128,340건은 저장한 체크포인트에서 복원·실행한 반사실적 분기다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-LIBERO Spatial Plus와 VLA runtime monitor 평가를 보고한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+OpenVLA-OFT와 π0.5의 LIBERO-Plus가 주 분석이며, 약화한 정책과 기본 환경을 대조 조건으로 사용했다. [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+복구 성공 확률의 Jeffreys 사후분포 25% 분위수가 기준 τ에 도달하는지를 개입별로 평가했다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 state clone 완전성, policy memory, oracle 개입, 실환경 적용 범위을 점검한다.
+계속 실행과 스크립트 복구를 같은 체크포인트에서 비교했다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+원 에피소드 1,562개에서 체크포인트 10,083개를 분기했다. 체크포인트당 초기 분기 수는 4개이고 기준 경계 근처에서 16개로 늘렸다. [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +36,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2610.13516). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2610.13516).

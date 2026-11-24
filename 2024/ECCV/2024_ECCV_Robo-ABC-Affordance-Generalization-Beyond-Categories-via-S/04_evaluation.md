@@ -1,42 +1,28 @@
 # Robo-ABC: Affordance Generalization Beyond Categories via Semantic Correspondence for Robot Manipulation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-시각 affordance 추정과 실세계 cross-category grasping을 보고한다.
+실물 파지 성공률 85.7%와 VRB 기준선의 68.6%는 일곱 물체 범주에서 얻은 값이다. 이미지에 대한 접촉점 예측 정확도는 별도 평가다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `BENCHMARK / DATASET AND REAL-ROBOT COMPARISON`.
 
 ## Dataset / Benchmark Role
 
-시각 affordance 추정과 실세계 cross-category grasping을 보고한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+영상에서 접촉점을 평가하고, 범주를 넘는 전이를 실물 파지로도 검사했다. [PDF 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=10) · [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+AnyGrasp가 생성한 파지 후보 중 예측 접촉점에 가장 가까운 후보를 실행해 실물 성공률을 측정했다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 2D/3D lifting, grasp 실행기, source별 수치 차이을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실물 비교 대상은 VRB다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +32,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php) · [저자 project/code](https://tea-lab.github.io/Robo-ABC/) · [공식 code](https://github.com/TEA-Lab/Robo-ABC). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php) · [저자 project/code](https://tea-lab.github.io/Robo-ABC/) · [공식 code](https://github.com/TEA-Lab/Robo-ABC).

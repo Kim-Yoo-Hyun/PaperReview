@@ -1,42 +1,24 @@
 # JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-실제 동물 조직의 부착점과 cutting/suturing 변화 실험을 보고한다.
+절단과 봉합으로 부착 관계가 변하는 실험은 시뮬레이션에서 수행했다. 동물 조직 실험은 스테레오 내시경 영상에서 봉합으로 고정된 부위를 추정하는 과제였다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=2) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=10) · [PDF 11쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=12)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-실제 동물 조직의 부착점과 cutting/suturing 변화 실험을 보고한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실제 조직에서 관찰한 영상과 시뮬레이션에서 생성한 부착 상태의 정답을 구분해 평가했다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=2) · [PDF 11쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=12)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 재료 모델과 attachment 가정, 안전 비용 정의을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+영상 기반 부착 부위의 검출을 평가했다. 추정한 부착 강도는 XPBD 시뮬레이터에 정의된 값이며 물리 단위로 보정된 힘이 아니다. [PDF 11쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=12)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +28,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://www.roboticsproceedings.org/rss20/p007.html). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://www.roboticsproceedings.org/rss20/p007.html).

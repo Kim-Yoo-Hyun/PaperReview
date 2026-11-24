@@ -1,7 +1,6 @@
 # STAFF: Speculative Coreset Selection for Task-Specific Fine-tuning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2025 / ICLR
 - Authors: Xiaoyu Zhang, Juan Zhai, Shiqing Ma, Chao Shen, Tianlin Li, Weipeng Jiang, Yang Liu
@@ -14,15 +13,17 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-큰 target model에서 coreset 점수를 직접 계산하는 비용이 크다.
+STAFF는 대규모 언어 모델의 미세조정 자료를 고를 때 같은 계열의 소형 모델로 후보를 먼저 채점해 선별 비용을 줄인다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=1) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=5)
 
 ## Core Idea and Contribution
 
-동일 family의 작은 model로 점수를 추정하고 target에서 확인해 선택 예산과 coverage를 조정한다.
+- 소형 모델의 점수를 구간별로 나눈 뒤 대상 모델로 일부 표본을 검산해 중요한 구간에 선별 예산을 더 배분한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=6)
+- 언어 과제에서 남길 자료 비율을 바꿔 미세조정 후 품질과 코어셋을 고르는 데 드는 시간을 각각 측정했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ LLM 학습 예제 → proxy score·target verification → coreset; robot action
 
 LLM fine-tuning 평가이며 VLA의 closed-loop 성공을 검증한 논문은 아니다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

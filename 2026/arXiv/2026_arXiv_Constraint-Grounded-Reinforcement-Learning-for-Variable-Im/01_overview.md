@@ -1,7 +1,6 @@
 # Constraint-Grounded Reinforcement Learning for Variable Impedance Control in Contact-Rich Robotic Insertion
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / arXiv
 - Authors: Lin He, Min Deng
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2609.13516
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-09: official abstract/project 및 metadata 확인. v1 abstract 확인. 실물 검증·VLA·언어 일반화 결과로 확대하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.
+- Full-text retrieval: https://arxiv.org/pdf/2609.13516v1
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-삽입의 force limit과 controller gain이 달라질 때 수동 재조정이 필요하다.
+CG-RL은 주어진 축 방향 힘 상한과 접촉 피드백에 따라 삽입 속도·잔차 동작·임피던스 이득을 조절하며, 제어기가 요청 이득을 허용 구간에 투영한다. [PDF 1쪽](https://arxiv.org/pdf/2609.13516v1#page=1) · [PDF 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5)
 
 ## Core Idea and Contribution
 
-Force-limit 조건부 RL이 motion·insertion rate·gain을 요청하고 controller가 gain 범위로 투영한다.
+- 정책에는 힘 상한을 입력하고 이득 구간은 제어기만 사용하게 설계했다. 투영은 적용 이득의 범위를 보장하며 힘 상한 준수는 시행에서 측정한다. [PDF 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.13516v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.13516v1#page=7)
+- 경사 삽입 시뮬레이션에서 힘 상한을 지키며 삽입한 성공률은 다섯 학습 시드 평균 85.8±7.7%, 고정 중간 이득 기준선은 50.1±1.0%였다. [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@ Force-limit 조건부 RL이 motion·insertion rate·gain을 요청하고 control
 
 ## Evaluation Scope and Claim Boundary
 
-Simulated oblique insertion을 평가한다. Gain 범위 보장과 force-limit 경험적 만족은 구별한다.
+허용 구간 투영이 보장하는 대상은 적용 이득이다. 힘 상한을 지킨 삽입의 85.8±7.7%는 경사 삽입 시뮬레이션에서 측정한 시드 간 평균±표준편차다. [PDF 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.13516v1#page=6) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15)
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2609.13516). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2609.13516).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

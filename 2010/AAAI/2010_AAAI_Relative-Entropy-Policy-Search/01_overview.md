@@ -1,10 +1,10 @@
 # Relative Entropy Policy Search
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2010 / AAAI
-- Authors: Jan Peters, Katharina Mulling, Yasemin Altun
+- Authors: Jan Peters, Katharina Mülling, Yasemin Altün
+- 저자 판본: 학회 서지에는 Katharina Mulling, Yasemin Altun로 실려 있다. [PDF 1쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=1) · [학회 서지](https://ojs.aaai.org/index.php/AAAI/article/view/7727)
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
@@ -14,15 +14,17 @@
 - Venue verification: https://ojs.aaai.org/index.php/AAAI/article/view/7727
 - Code/Project:
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Full-text retrieval: https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-큰 정책 변경에 따른 정보 손실과 조기 수렴을 줄인다.
+REPS는 정책을 개선할 때 새 상태·행동 분포가 표본 분포에서 벗어나는 정도를 상대 엔트로피로 제한한다. [PDF 1쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=1) · [PDF 2쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=2)
 
 ## Core Idea and Contribution
 
-Relative entropy 제약으로 정책 개선을 제한하고 명시적 갱신을 도출한다.
+- 기대 보상 개선에 분포 보존 제약을 둔 최적화 문제에서 쌍대 문제와 표본 가중치를 유도해 정책을 갱신한다. [PDF 2쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=2) · [PDF 3쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=3)
+- 소규모 제어 예제와 시뮬레이션 로봇 탁구에서 상태에 따라 타구 동작 프리미티브를 선택하는 정책을 평가했다. [PDF 4쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=4) · [PDF 5쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=5) · [PDF 6쪽](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=6)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Relative entropy 제약으로 정책 개선을 제한하고 명시적 갱신을 
 
 정책 탐색 benchmark에서 방법을 평가한다. VLA나 대규모 foundation model 결과는 아니다.
 
-근거: [공식 paper/abstract](https://ojs.aaai.org/index.php/AAAI/article/view/7727). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://ojs.aaai.org/index.php/AAAI/article/view/7727).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

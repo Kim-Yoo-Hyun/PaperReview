@@ -1,7 +1,6 @@
 # LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2025 / arXiv
 - Authors: Xueyang Zhou, Yangming Xu, Guiyao Tie, Yongchao Chen, Guowen Zhang, Duanfeng Chu, Pan Zhou, Lichao Sun
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2510.03827
 - Code/Project: https://github.com/Zxy-MLlab/LIBERO-PRO
 - Code: https://github.com/Zxy-MLlab/LIBERO-PRO
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 정식 acceptance를 확인하지 못해 preprint로 유지한다.
+- Full-text retrieval: https://arxiv.org/pdf/2510.03827v2
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-기존 LIBERO 평가에서 task 이해와 행동 암기가 혼동될 수 있다.
+LIBERO-PRO는 기존 LIBERO에서 학습한 조작 정책의 성공이 물체·배치·지시·환경이 바뀌어도 유지되는지 검사한다. [PDF 1쪽](https://arxiv.org/pdf/2510.03827v2#page=1) · [PDF 6쪽](https://arxiv.org/pdf/2510.03827v2#page=6)
 
 ## Core Idea and Contribution
 
-물체·초기 상태·지시·환경 perturbation으로 일반화와 지시 의존성을 점검한다.
+- 목표 물체를 바꾸거나 지시를 교란하는 진단 사례와, 물체·배치·지시·과제·환경을 나눠 바꾸는 벤치마크를 제시했다. [PDF 3쪽](https://arxiv.org/pdf/2510.03827v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2510.03827v2#page=4) · [PDF 6쪽](https://arxiv.org/pdf/2510.03827v2#page=6)
+- OpenVLA, π0, π0.5에서 교란 종류와 과제군에 따라 성공률 저하가 달랐고, 위치와 과제 변화에서 큰 하락을 관찰했다. [PDF 7쪽](https://arxiv.org/pdf/2510.03827v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@
 
 ## Evaluation Scope and Claim Boundary
 
-LIBERO 기반 변형 평가를 보고한다. 극단적 저하 수치의 task validity는 별도 본문 감사가 필요하다.
+그림 6은 교란을 다섯 종류로 나누며 작업 목표를 바꾸는 교란은 조합에서 제외한다. 그림 7의 성공률은 모델·교란·과제군별로 달라서 초록의 0.0%를 전체 평균으로 인용할 수 없다. [PDF 6쪽](https://arxiv.org/pdf/2510.03827v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2510.03827v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8)
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2510.03827) · [저자 project/code](https://github.com/Zxy-MLlab/LIBERO-PRO). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2510.03827) · [저자 project/code](https://github.com/Zxy-MLlab/LIBERO-PRO).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

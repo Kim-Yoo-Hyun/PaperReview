@@ -1,7 +1,6 @@
 # Difference-Aware Retrieval Policies for Imitation Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / ICLR
 - Authors: Quinn Pfeifer, Ethan Pronovost, Paarth Shah, Khimya Khetarpal, Siddhartha Srinivasa, Abhishek Gupta
@@ -14,15 +13,17 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html
 - Code/Project: https://weirdlabuw.github.io/darp-site/
 - Code: https://github.com/WEIRDLabUW/darp
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-Behavior cloning의 전역 state-to-action mapping은 배포 분포 변화에서 누적 오차를 겪는다.
+DARP는 모방 정책이 낯선 상태를 만났을 때 전문가 자료에서 가까운 상태·행동을 검색하고 현재 상태와의 차이를 이용해 행동을 예측한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=1) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=4)
 
 ## Core Idea and Contribution
 
-시연의 가까운 상태·행동 및 query와의 상대 차이를 이용하는 semi-parametric policy를 학습한다.
+- 전문가 상태에서 질의 상태를 뺀 벡터와 해당 전문가 행동을 이웃별 입력으로 사용해 예측기를 학습한다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=7)
+- 연속제어와 RoboCasa 조작에서 행동 복제 및 검색 기준선과 비교하고, 시각 특징 입력과 차이 벡터 제거 조건을 따로 평가했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Query state·이웃 시연·상대 벡터 → action prediction.
 
 Continuous control과 manipulation, 고차원 시각 표현에서 BC와 비교한다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html) · [저자 project/code](https://weirdlabuw.github.io/darp-site/) · [공식 code](https://github.com/WEIRDLabUW/darp). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html) · [저자 project/code](https://weirdlabuw.github.io/darp-site/) · [공식 code](https://github.com/WEIRDLabUW/darp).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

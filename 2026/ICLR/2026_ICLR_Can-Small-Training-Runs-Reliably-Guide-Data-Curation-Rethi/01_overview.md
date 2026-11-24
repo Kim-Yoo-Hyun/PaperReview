@@ -1,10 +1,10 @@
 # Can Small Training Runs Reliably Guide Data Curation? Rethinking Proxy-Model Practice
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / ICLR
 - Authors: Jiachen (Tianhao) Wang, Tong Wu, Kaifeng Lyu, James Y Zou, Dawn Song, Ruoxi Jia, Prateek Mittal
+- 저자 판본: 학회 서지와 표기가 다른 저자의 인쇄명은 Jiachen T. Wang, James Zou이다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html)
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
@@ -14,15 +14,17 @@
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-작은 proxy 실험의 데이터 순위가 큰 model 학습에서도 유지되는지 불명확하다.
+언어 모델 사전학습 자료를 고르는 소규모 대리 실험에서 모든 자료에 같은 학습 설정을 쓰면 대규모 학습에서의 자료 순위를 잘못 예측할 수 있음을 보였다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=1) · [PDF 2쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=2)
 
 ## Core Idea and Contribution
 
-Data-dependent tuning에 따라 순위가 바뀌는 문제를 분석하고 작은 learning rate를 쓰는 평가 보정을 제안한다.
+- 데이터 조합에 따라 적절한 학습률이 달라지는 현상을 측정하고, 대리 모델의 학습률을 낮춰 자료 순위를 비교하는 절차를 제안했다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=5) · [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=6)
+- 무작위 특징 모델에서 순위 보존 조건을 분석하고 23개 사전학습 자료 조합에서 대리 실험과 대규모 학습의 순위 일치도를 확인했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Data recipe·proxy 학습 설정 → 상대 loss 순위; 로봇 행동 평가는
 
 LLM pretraining recipe와 random-feature model 이론을 다룬다.
 
-근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

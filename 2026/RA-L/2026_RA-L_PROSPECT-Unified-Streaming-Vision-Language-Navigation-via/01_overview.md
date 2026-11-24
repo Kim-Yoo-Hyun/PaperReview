@@ -1,7 +1,6 @@
 # PROSPECT: Unified Streaming Vision-Language Navigation via Semantic–Spatial Fusion and Latent Predictive Representation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / RA-L
 - Authors: Zehua Fan, Wenqi Lyu, Wenxuan Song, Linge Zhao, Yifei Yang, Xi Wang, Junjie He, Lida Huang, Haiyan Liu, Bingchuan Sun, Guangjun Bao, Xuanyao Mao, Liang Xu, Yan Wang, Feng Gao
@@ -14,15 +13,17 @@
 - Venue verification: https://ieeexplore.ieee.org/document/11673313/
 - Code/Project: https://github.com/Debactor/PROSPECT
 - Code: https://github.com/Debactor/PROSPECT
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RA-L 11(11), 13071–13078, November 2026; first online 2026-08-31. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-Streaming VLN에서 의미 정보와 공간 정보를 함께 이용하고 미래 상태를 학습할 필요가 있다.
+PROSPECT는 연속 관측의 3차원 공간 특징과 영상 의미 특징을 결합하고, 다음 시점의 두 특징을 예측하도록 학습한 언어 지시 내비게이션 정책이다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=3)
 
 ## Core Idea and Contribution
 
-CUT3R 공간 표현과 SigLIP 의미 표현을 융합하고 학습 중 미래 2D·3D latent prediction을 보조 목표로 사용한다.
+- CUT3R 공간 특징과 SigLIP 시각 특징을 교차 주의로 결합하고, 훈련 중 동결한 교사의 다음 잠재 표현을 예측하는 보조 목표를 사용한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=4)
+- VLN-CE 벤치마크와 실물 주행에서 평가하고 조명 변화와 긴 경로에서의 행동을 분석했다. 배포 시에는 보조 예측 분기를 실행하지 않는다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ CUT3R 공간 표현과 SigLIP 의미 표현을 융합하고 학습 중 미래 2D
 
 VLN-CE와 실제 항법을 평가한다.
 
-근거: [공식 paper/abstract](https://ieeexplore.ieee.org/document/11673313/) · [저자 project/code](https://github.com/Debactor/PROSPECT). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://ieeexplore.ieee.org/document/11673313/) · [저자 project/code](https://github.com/Debactor/PROSPECT).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

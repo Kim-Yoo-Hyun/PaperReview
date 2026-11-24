@@ -1,42 +1,32 @@
 # ActMem-VLA: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-LIBERO-Mem과 네 실제 조작 과제에서 memory 및 기존 VLA와 비교한다.
+LIBERO-Mem 평균 80.8%는 과제별 시연 길이로 정한 스텝 제한을 적용한 결과다. 공통 600스텝 제한의 결과는 그림 3, 과제별 제한은 그림 4에 실렸다. [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-LIBERO-Mem과 네 실제 조작 과제에서 memory 및 기존 VLA와 비교한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+10개 기억 의존 시뮬레이션 과제와 실물 과제를 구분해 평가했다. [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+과제별 제한은 훈련 시연 길이의 95% 분위수를 기준으로 20스텝 단위로 올림하고 최대 600으로 제한한다. [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 memory reset·실제 실행 이력의 정의·효과 피드백 접근권·분할과 예산을 점검한다.
+시뮬레이션에서 π0.5 및 MemoryVLA와 비교했다. 실물 비교 대상은 π0.5다. [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+주 시뮬레이션 비교는 방법·과제당 시행 180회, 실물은 방법·과제당 시행 20회다. [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +36,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2609.37307). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2609.37307).

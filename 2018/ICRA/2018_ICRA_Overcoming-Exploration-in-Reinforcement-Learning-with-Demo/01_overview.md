@@ -1,6 +1,6 @@
 # Overcoming Exploration in Reinforcement Learning with Demonstrations
 
-> Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2018 / ICRA
 - Authors: Ashvin Nair, Bob McGrew, Marcin Andrychowicz, Wojciech Zaremba, Pieter Abbeel
@@ -13,15 +13,17 @@
 - Venue verification: https://api.crossref.org/works/10.1109/ICRA.2018.8463162
 - Code/Project: not identified
 - Code: not identified
-- Source audit: 2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 Q-Filter subsection / Eq. 8; arXiv abstract and publisher-deposited metadata를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다. 사용자 읽기 상태는 UNREAD 유지.
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다. 이전 감사에서 확인한 Q-filter 식 (8)의 출처도 보존했다.
 
 ## Problem and Importance
 
-Sparse reward에서 성공 행동을 찾기 어려운 로봇 RL에 소수 demonstration을 활용하는 문제다.
+희소 보상 조작에서 DDPG와 목표 재지정 경험 재생에 소수 시연을 더해, 블록 쌓기처럼 보상을 만나기 어려운 행동을 학습했다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=1) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=3)
 
 ## Core Idea and Contribution
 
-DDPG·HER와 demonstration replay 및 behavior cloning을 결합한다. Q-filter는 demonstration 행동이 actor 행동보다 높은 Q를 받을 때 모방 손실을 적용한다.
+- 시연 행동의 추정 가치가 정책 행동보다 높을 때 모방 손실을 적용하고, 긴 과제에서는 일부 에피소드를 시연 중간 상태에서 시작한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=4)
+- 시뮬레이션 과제에서 강화학습·행동 복제 기준선과 비교하고, 블록 쌓기에서 시연 상태 재시작과 모방 항의 영향을 분리했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=7)
 
 ## Observation–State–Action Interface
 
@@ -29,9 +31,7 @@ DDPG·HER와 demonstration replay 및 behavior cloning을 결합한다. Q-filter
 
 ## Evaluation Scope and Limitations
 
-시뮬레이션 로봇 팔의 sparse-reward 조작을 다룬다. VLA 연구가 아니며 현재 후보의 두 reference 규칙을 원 논문의 재현이라고 부를 수 없다.
-
-이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다.
+저자들이 제시한 약 6시간은 pick-and-place 학습의 약 100만 시뮬레이션 스텝을 실물 상호작용 시간으로 환산한 값이다. 실험은 시뮬레이션 로봇 팔에서 했다. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=4) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=8)
 
 근거: [지정 본문](https://arxiv.org/pdf/1709.10089) — Q-Filter subsection / Eq. 8; arXiv abstract and publisher-deposited metadata.
 

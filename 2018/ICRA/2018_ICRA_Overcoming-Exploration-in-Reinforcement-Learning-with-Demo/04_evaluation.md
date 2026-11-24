@@ -5,15 +5,23 @@
 
 ## Evaluated Setting and Evidence
 
-시뮬레이션 로봇 팔의 sparse-reward 조작을 다룬다. VLA 연구가 아니며 현재 후보의 두 reference 규칙을 원 논문의 재현이라고 부를 수 없다.
+저자들이 제시한 약 6시간은 pick-and-place 학습의 약 100만 시뮬레이션 스텝을 실물 상호작용 시간으로 환산한 값이다. 실험은 시뮬레이션 로봇 팔에서 했다. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=4) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=8)
+
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
 
 ## Comparison and Reproducibility Boundary
 
-이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다.
-
-정확한 dataset 규모·train/test 분할·trial/seed·수치·모든 baseline/ablation은 이 노트에서 미기록이다. 논문 자체의 미보고라는 뜻이 아니다. 공개 code 링크는 실행 검증이 아니다.
+이전 검토에서 Q-filter 식 (8)을 확인했다. 데이터 분할, 전체 기준선의 계산 예산, 공개 구현의 현재 상태는 추가 확인이 필요하다.
 
 근거: [지정 본문](https://arxiv.org/pdf/1709.10089) — Q-Filter subsection / Eq. 8; arXiv abstract and publisher-deposited metadata.
+
+## Dataset / Benchmark Role
+
+희소 보상 도달·물체 조작 과제와 블록 쌓기를 시뮬레이션에서 평가했다. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=5)
+
+## Baselines and Fairness
+
+강화학습 단독과 행동 복제, 시연 상태 재시작·모방 손실을 바꾼 방법을 비교했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=7)
 
 ## Minimal Check — Researcher Proposal
 

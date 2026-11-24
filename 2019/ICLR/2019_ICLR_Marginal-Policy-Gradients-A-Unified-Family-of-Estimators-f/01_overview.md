@@ -1,7 +1,6 @@
 # Marginal Policy Gradients: A Unified Family of Estimators for Bounded Action Spaces with Applications
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2019 / ICLR
 - Authors: Carson Eisenach, Haichuan Yang, Ji Liu, Han Liu
@@ -14,15 +13,17 @@
 - Venue verification: https://openreview.net/pdf?id=HkgqFiAcFm
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. OpenReview live challenge; ICLR 공식 Downloads/2019와 공식 indexed accepted manuscript를 확인했다. Content는 arXiv abstract 기준.
+- Full-text retrieval: https://arxiv.org/pdf/1806.05134v3
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-변환 후 같은 실행 행동이 되는 action sample의 gradient 분산을 줄인다.
+Marginal Policy Gradients는 표본 행동이 변환된 뒤 실행될 때, 실제로 같은 행동을 만드는 표본들을 주변화해 정책 경사의 분산을 줄인다. [PDF 1쪽](https://arxiv.org/pdf/1806.05134v3#page=1) · [PDF 4쪽](https://arxiv.org/pdf/1806.05134v3#page=4)
 
 ## Core Idea and Contribution
 
-Marginal policy gradient family로 angular/clipped estimator를 통합한다.
+- 방향만 제어하는 각도 정책 경사를 유도하고, 방향 정규화와 범위 클리핑을 같은 분산 분해로 설명한다. [PDF 4쪽](https://arxiv.org/pdf/1806.05134v3#page=4) · [PDF 6쪽](https://arxiv.org/pdf/1806.05134v3#page=6) · [PDF 7쪽](https://arxiv.org/pdf/1806.05134v3#page=7)
+- 방향 행동을 사용하는 내비게이션과 실시간 전략 게임에서 각도 정책 경사와 표준 정책 경사의 학습 결과를 비교했다. [PDF 8쪽](https://arxiv.org/pdf/1806.05134v3#page=8) · [PDF 9쪽](https://arxiv.org/pdf/1806.05134v3#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Raw action distribution → execution transform → marginal score.
 
 RTS와 navigation task 및 variance 분석을 보고한다.
 
-근거: [공식 paper/abstract](https://openreview.net/forum?id=HkgqFiAcFm). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openreview.net/forum?id=HkgqFiAcFm).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

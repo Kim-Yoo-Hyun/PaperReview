@@ -1,7 +1,6 @@
 # ActMem-VLA: Action-History Memory with Dual-Expert Denoising for Long-Horizon Vision-Language-Action Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / arXiv
 - Authors: Yaxin Zhao, Dianye Huang, Chenwei Wang, Chenguang Yang, Zhongliang Jiang
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2609.37307
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 abstract/metadata·명시한 project 확인. v2 abstract 확인. 공식 채택·공식 code/project URL 미확인. 행동 이력은 물리적 과제 완료의 증거가 아니다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.
+- Full-text retrieval: https://arxiv.org/pdf/2609.37307v2
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-현재 관측이 비슷한 서로 다른 작업 단계에서 행동이 모호해지는 문제를 다룬다.
+ActMem-VLA는 비슷하게 보이는 장면에서 작업 단계를 구분하기 위해 실행한 행동 이력을 인코딩하고, 동결된 VLA의 초기 잡음 제거 단계를 유도한다. [PDF 1쪽](https://arxiv.org/pdf/2609.37307v2#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2609.37307v2#page=3)
 
 ## Core Idea and Contribution
 
-Mamba 행동 이력 memory와 PreAction Expert를 학습하고 frozen action expert에 denoising을 넘긴다.
+- Mamba 기억과 경량 행동 전문가만 학습해 초기 잡음 제거를 맡기고, 남은 단계에서 기존 행동 전문가가 세부 움직임을 다듬는다. [PDF 3쪽](https://arxiv.org/pdf/2609.37307v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4)
+- LIBERO-Mem의 시연 길이로 정한 과제별 스텝 제한을 적용한 10개 과제에서 평균 성공률은 80.8%였고 π0.5는 65.2%, MemoryVLA는 49.5%였다. 과제별 우위는 달랐다. [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@ Mamba 행동 이력 memory와 PreAction Expert를 학습하고 frozen action exp
 
 ## Evaluation Scope and Claim Boundary
 
-LIBERO-Mem과 네 실제 조작 과제에서 memory 및 기존 VLA와 비교한다.
+LIBERO-Mem 평균 80.8%는 과제별 시연 길이로 정한 스텝 제한을 적용한 결과다. 공통 600스텝 제한의 결과는 그림 3, 과제별 제한은 그림 4에 실렸다. [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2609.37307). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2609.37307).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

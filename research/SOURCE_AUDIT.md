@@ -14,6 +14,7 @@
 | 2026-11-24 | REFERENCE | [pr-0182–pr-0509 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/5b2939af8404530fa2cd9fa8d069492ece6bb3ac) | 100 | 0 | 240 |
 | 2026-11-24 | REFERENCE | [pr-0510–pr-0674 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/7f49e6ff2c9f9cab212c65418f9121c5f2dd4922) | 100 | 0 | 140 |
 | 2026-11-24 | REFERENCE | [pr-0676–pr-1023 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/8f99ff9bf6765c7aefba27ec29cdc39d5b854e23) | 100 | 0 | 40 |
+| 2026-11-24 | REFERENCE | [pr-1024–pr-1210 중 당시 미확인 논문](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/c99713fa4c274a23d4bff686fe2c59cd539659e8) | 40 | 0 | 0 |
 
 안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. 문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. 이 순차 배치에서 집계하는 값은 검증 진척이다.
 
@@ -22,6 +23,14 @@
 **CLIP-Fields 저자 표기.** 2026-11-24에 RSS 게재본 표제면에 따라 첫 저자의 이름과 성 사이 공백을 복원해 Nur Muhammad (Mahi) Shafiullah로 교정했다. [게재본 표제면](https://www.roboticsproceedings.org/rss19/p074.pdf#page=1)
 
 **Online Continual Learning with Maximal Interfered Retrieval 저자 표기.** 2026-11-24에 NeurIPS 게재 PDF 표제면의 일곱 저자를 인쇄 순서대로 반영했다. 학회 웹 서지는 Lucas Page-Caccia를 일곱 번째로, 게재 PDF는 Lucas Caccia를 두 번째로 표기한다. [게재본 표제면](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=1)
+
+**Active Offline Policy Selection 저자 표기.** 2026-11-24에 NeurIPS 웹 서지에 Ksenia Konyushova와 Thomas Paine으로 실린 두 저자를 게재본의 Ksenia Konyushkova와 Tom Le Paine으로 교정하고 표제면의 순서를 확인했다. [게재본 표제면](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=1)
+
+**Benchmarking World-Model Learning with Environment-Level Queries 저자 표기.** 2026-11-24에 ICML 웹 서지의 Dat Nguyen과 Sebastian Josef Vollmer에 대응하는 게재본 표기 Thanh Dat Nguyen과 Sebastian Vollmer를 기록했다. [게재본 표제면](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=1)
+
+**FlashSAC 저자 표기.** 2026-11-24에 RSS 웹 서지가 I.로 줄여 쓴 여섯 번째 저자의 이름을 게재본 표기 I Made Aswin Nahrendra로 반영했다. [게재본 표제면](https://roboticsproceedings.org/rss22/p099.pdf#page=1)
+
+**Relative Entropy Policy Search 저자 표기.** 2026-11-24에 AAAI 웹 서지에서 생략한 두 성의 분음 부호를 게재본에서 확인해 Katharina Mülling과 Yasemin Altün으로 표기했다. [게재본 표제면](https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=1)
 
 **EgoDex 저자 표기.** 2026-11-23에 ICLR 게재본 표제면에 따라 세 번째 저자를 David J. Yoon, 네 번째 저자를 Mouli Sivapurapu로 교정했다. [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=1)
 
@@ -60,6 +69,20 @@
 | Restoring the Right Stream | 1,120개 새 인스턴스에서 상태 입력 보정 후 초기 자세 교란의 성공률은 23.8%에서 28.7%로 변했다(Holm 보정 p=0.287). 보정이 활성화되는 별도의 600개 확인 표본에서는 26.3%에서 32.2%로 변했다. [PDF 10쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=10) · [PDF 12쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=12) |
 | Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models | 표 II의 각 단계는 전문가 상태에서 시작하고 전체 작업은 처음부터 실행한다. Isaac Gym의 전체 조립 성공률은 기본 잔차 정책 54.5%, 다음 단계 성공 가능성을 보상에 반영한 정책 85.6%다. [PDF 6쪽](https://arxiv.org/pdf/2607.16506v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2607.16506v1#page=7) |
 | SafeLoop | 시뮬레이션은 LIBERO 24개 과제에 시드 16개씩을 사용해 방법별 384회 시행했다. 실물 검증은 세 과제를 각각 25회 수행해 위해 사건과 작업 성공을 기록했다. [PDF 5쪽](https://arxiv.org/pdf/2609.26313v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.26313v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.26313v1#page=7) |
+| RESCUE | LIBERO에서 수집한 원 에피소드 1,562개 중 262개가 실패했다. 128,340건은 저장한 체크포인트에서 복원·실행한 반사실적 분기다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5) |
+| JIGGLE | 절단과 봉합으로 부착 관계가 변하는 실험은 시뮬레이션에서 수행했다. 동물 조직 실험은 스테레오 내시경 영상에서 봉합으로 고정된 부위를 추정하는 과제였다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=2) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=10) · [PDF 11쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=12) |
+| Robo-ABC | 실물 파지 성공률 85.7%와 VRB 기준선의 68.6%는 일곱 물체 범주에서 얻은 값이다. 이미지에 대한 접촉점 예측 정확도는 별도 평가다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12) |
+| LIBERO-PRO | 그림 6은 교란을 다섯 종류로 나누며 작업 목표를 바꾸는 교란은 조합에서 제외한다. 그림 7의 성공률은 모델·교란·과제군별로 달라서 초록의 0.0%를 전체 평균으로 인용할 수 없다. [PDF 6쪽](https://arxiv.org/pdf/2510.03827v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2510.03827v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8) |
+| Colosseum V2 | 실물 대조는 단팔 ACT의 5개 과제 × 7개 조건에 한정했다. 35개 조합의 절대 성공률에 대한 결정계수는 0.49였고 교란별 성공률을 무교란 대비로 정규화한 뒤 시뮬레이션·실물의 평균 절대 차이는 12.3%p였다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11726868#page=5) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11726868#page=7) |
+| A process-centric manipulation taxonomy for the organization, classification and synthesis of tactile robot skills | 28은 구현한 조작 스킬 수다. 표 1은 작업별 실행 시간과 접촉 토크의 강건성을 따로 싣는다. 원통 삽입의 두 열은 각각 94%와 92%다. [PDF 5쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=5) · [PDF 6쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=6) · [PDF 7쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=7) |
+| Overcoming Exploration in Reinforcement Learning with Demonstrations | 저자들이 제시한 약 6시간은 pick-and-place 학습의 약 100만 시뮬레이션 스텝을 실물 상호작용 시간으로 환산한 값이다. 실험은 시뮬레이션 로봇 팔에서 했다. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=4) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162#page=8) |
+| FlashSAC | Unitree G1의 실물 계단 오르기에서 인용하는 4시간은 FlashSAC의 시뮬레이션 학습 시간이다. 그림 6은 비슷한 계단 등반 능력에 도달한 PPO의 약 20시간과 비교한다. [PDF 5쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=5) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=7) |
+| Enhancing Tactile-based Reinforcement Learning for Robotic Control | RoTO 실험은 Isaac Lab의 세 과제로 구성된다. 10초 동안 공을 88번 튀긴 수치와 보정구를 25번 회전시킨 수치는 시뮬레이션 에이전트의 최고 기록이다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=9) |
+| ContextFlow | LIBERO 미학습 구성에서 평균 성공률은 ContextFlow 73.5%, ICRT 38.5%로 35%p 차이다. 실물의 빨간 펜을 왼손부터 잡아 뚜껑을 여는 조건에서는 각각 4/10과 0/10이었다. [PDF 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10) · [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14) |
+| Constraint-Grounded Reinforcement Learning for Variable Impedance Control in Contact-Rich Robotic Insertion | 허용 구간 투영이 보장하는 대상은 적용 이득이다. 힘 상한을 지킨 삽입의 85.8±7.7%는 경사 삽입 시뮬레이션에서 측정한 시드 간 평균±표준편차다. [PDF 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.13516v1#page=6) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15) |
+| Same Path, Less Time | 표 1의 처리량은 추론 대기 시간을 포함한 제어 1,000스텝당 성공 횟수다. π0.5는 4개 과제군, SmolVLA는 2개 과제군에서 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2611.01390v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2611.01390v1#page=8) |
+| ActMem-VLA | LIBERO-Mem 평균 80.8%는 과제별 시연 길이로 정한 스텝 제한을 적용한 결과다. 공통 600스텝 제한의 결과는 그림 3, 과제별 제한은 그림 4에 실렸다. [PDF 4쪽](https://arxiv.org/pdf/2609.37307v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5) |
+| UA-Pose | 평가는 RGB-D 시퀀스의 6D 자세 정확도와 온라인 형상 완성도다. 자세에는 ADD·ADD-S의 곡선 아래 면적을, 형상에는 Chamfer 거리를 사용했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=8) |
 
 ## CORE 공개 자료
 
@@ -108,7 +131,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 저자 | 6 | 1,251 | 1 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
-| 요약·기여 | 30 | 1,014 | 238 | 0 |
+| 요약·기여 | 30 | 1,054 | 198 | 0 |
 | 코드 | 0 | 383 | 869 | 0 |
 | 가중치 | 0 | 84 | 1,168 | 0 |
 | 데이터 | 0 | 101 | 1,151 | 0 |
@@ -122,7 +145,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 13 | 0 | 0 | 36 |
 | NEXT | 450 | 6 | 0 | 360 | 433 |
-| REFERENCE | 510 | 0 | 40 | 366 | 504 |
+| REFERENCE | 510 | 0 | 0 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 198 | 131 | 242 |
 
 ## 배치별 결과

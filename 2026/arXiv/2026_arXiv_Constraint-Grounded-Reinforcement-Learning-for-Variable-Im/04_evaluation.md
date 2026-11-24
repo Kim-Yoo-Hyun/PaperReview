@@ -1,42 +1,34 @@
 # Constraint-Grounded Reinforcement Learning for Variable Impedance Control in Contact-Rich Robotic Insertion
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-Simulated oblique insertion을 평가한다. Gain 범위 보장과 force-limit 경험적 만족은 구별한다.
+허용 구간 투영이 보장하는 대상은 적용 이득이다. 힘 상한을 지킨 삽입의 85.8±7.7%는 경사 삽입 시뮬레이션에서 측정한 시드 간 평균±표준편차다. [PDF 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.13516v1#page=6) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-Simulated oblique insertion을 평가한다. Gain 범위 보장과 force-limit 경험적 만족은 구별한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+힘 상한과 이득 허용 범위가 주어진 경사 삽입 시뮬레이션을 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2609.13516v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2609.13516v1#page=8)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+힘 상한 준수와 과제 완료를 함께 요구하는 성공률(CCS)과 기하학적 삽입 성공률을 따로 보고했다. [PDF 9쪽](https://arxiv.org/pdf/2609.13516v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
+표 V에는 고정 중간 이득 제어기, 힘 상한 입력을 제거한 정책, 장벽 항을 사용한 학습 비교군이 있다. [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10)
 
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 Projection과 actor 범위, force constraint의 경험적/형식적 보장 차이을 점검한다.
+표 IV·V의 K-conditioned 비교 정책은 이득 구간을 직접 입력받고 힘 상한은 받지 않는다. 훈련 분포에서 이 정책의 힘 상한 준수 삽입 성공률은 89.34±2.45%였다. [PDF 9쪽](https://arxiv.org/pdf/2609.13516v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+학습 시드 5개의 평균과 표준편차를 보고했다. [PDF 9쪽](https://arxiv.org/pdf/2609.13516v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +38,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2609.13516). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2609.13516).

@@ -1,10 +1,10 @@
 # JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2024 / RSS
 - Authors: Nikhil Uday Shinde, Xiao Liang, Fei Liu, Yutong Zhang, Florian Richter, Sylvia Lee Herbert, Michael C. Yip
+- 저자 판본: 학회 서지와 표기가 다른 저자의 인쇄명은 Sylvia Herbert이다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=1) · [학회 서지](https://www.roboticsproceedings.org/rss20/p007.html)
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
@@ -14,15 +14,17 @@
 - Venue verification: https://www.roboticsproceedings.org/rss20/p007.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Full-text retrieval: https://www.roboticsproceedings.org/rss20/p007.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-가려진 deformable tissue의 부착 조건을 손상 없이 알아내야 한다.
+JIGGLE은 조직을 움직일 때 보이는 변형으로 숨은 부착 부위를 추정하고, 다음 조작에서 얻을 정보와 조직에 가해지는 비용을 함께 고려한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=1) · [PDF 3쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=3)
 
 ## Core Idea and Contribution
 
-미분 가능한 soft-body 모델·EKF 추정과 정보 이득/안전 비용을 고려한 능동 조작을 결합한다.
+- 미분 가능한 연체 시뮬레이터와 확장 칼만 필터로 부착 파라미터의 분포를 갱신하고 정보 이득과 안전 비용으로 탐색 동작을 정한다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=5) · [PDF 8쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=8)
+- 절단·봉합으로 부착 상태가 변하는 시뮬레이션과 동물 조직의 스테레오 내시경 관측으로 추정 결과를 평가했다. 추정한 부착 강도의 척도는 시뮬레이터 파라미터다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=2) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=10) · [PDF 11쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=12)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +32,9 @@ Stereo 관측·조작 → attachment 추정 → sensing action.
 
 ## Evaluation Scope and Claim Boundary
 
-실제 동물 조직의 부착점과 cutting/suturing 변화 실험을 보고한다.
+절단과 봉합으로 부착 관계가 변하는 실험은 시뮬레이션에서 수행했다. 동물 조직 실험은 스테레오 내시경 영상에서 봉합으로 고정된 부위를 추정하는 과제였다. [PDF 2쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=2) · [PDF 10쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=10) · [PDF 11쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss20/p007.pdf#page=12)
 
-근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss20/p007.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss20/p007.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

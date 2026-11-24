@@ -1,42 +1,32 @@
 # Enhancing Tactile-based Reinforcement Learning for Robotic Control
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-RoTO 시뮬레이션의 공 튀기기·Baoding 회전 등 dexterity를 평가한다. 실로봇 결과로 확대하지 않는다.
+RoTO 실험은 Isaac Lab의 세 과제로 구성된다. 10초 동안 공을 88번 튀긴 수치와 보정구를 25번 회전시킨 수치는 시뮬레이션 에이전트의 최고 기록이다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=9)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `BENCHMARK / SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-RoTO 시뮬레이션의 공 튀기기·Baoding 회전 등 dexterity를 평가한다. 실로봇 결과로 확대하지 않는다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+희소 이진 접촉과 고유수용감각을 입력으로 사용하는 시뮬레이션 조작을 평가했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=7)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
+학습 보상과 물리적 과제 지표를 별도로 측정했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=9)
 
 ## Ablations and Sensitivity
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 센서 노이즈·빈도, sim contact의 현실성, 실물 센서 전이을 점검한다.
+촉각 입력과 자기지도 목표, 기억 공유 여부의 영향을 비교했다. [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=9)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+최종 비교는 학습 시드 5개를 사용했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +36,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html) · [저자 project/code](https://elle-miller.github.io/tactile_rl/) · [공식 code](https://github.com/elle-miller/roto). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html) · [저자 project/code](https://elle-miller.github.io/tactile_rl/) · [공식 code](https://github.com/elle-miller/roto).

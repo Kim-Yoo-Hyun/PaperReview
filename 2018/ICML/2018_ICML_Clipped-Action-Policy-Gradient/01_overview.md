@@ -1,7 +1,6 @@
 # Clipped Action Policy Gradient
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2018 / ICML
 - Authors: Yasuhiro Fujita, Shin-ichi Maeda
@@ -14,15 +13,17 @@
 - Venue verification: https://proceedings.mlr.press/v80/fujita18a.html
 - Code/Project: https://github.com/pfnet-research/capg
 - Code: https://github.com/pfnet-research/capg
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Full-text retrieval: https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-Action clipping을 무시한 policy gradient의 불필요한 분산을 줄인다.
+CAPG는 행동 범위를 넘는 정책 출력을 실행 전에 경곗값으로 자르는 연속제어에서, 실제로 실행된 행동에 맞춰 정책 경사를 추정한다. [PDF 1쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=1) · [PDF 2쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=2)
 
 ## Core Idea and Contribution
 
-실행 action이 clipping되는 사실을 이용한 unbiased estimator를 제안한다.
+- 경계 밖 표본의 개별 점수 대신 꼬리 확률의 경사를 이용하며, 논문의 가정에서 기존 추정량과 기대값이 같고 분산이 더 크지 않음을 보인다. [PDF 2쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=2) · [PDF 3쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=4)
+- MuJoCo 연속제어 과제에서 같은 PPO·TRPO에 경사 추정량만 바꿔 학습 곡선과 최종 성능을 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Unbounded policy sample → clip → bounded executed action·gradient.
 
 Continuous control의 이론·실험 비교를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v80/fujita18a.html) · [저자 project/code](https://github.com/pfnet-research/capg). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v80/fujita18a.html) · [저자 project/code](https://github.com/pfnet-research/capg).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

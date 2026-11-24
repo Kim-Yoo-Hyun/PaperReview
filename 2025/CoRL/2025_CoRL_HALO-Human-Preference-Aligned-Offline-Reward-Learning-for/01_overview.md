@@ -1,7 +1,6 @@
 # HALO : Human Preference Aligned Offline Reward Learning for Robot Navigation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2025 / CoRL
 - Authors: Gershom Seneviratne, Jianyu An, Sahire Ellahy, Kasun Weerakoon, Mohamed Bashir Elnoor, Jonathan Deepak Kannan, Amogha Thalihalla Sunil, Dinesh Manocha
@@ -14,15 +13,17 @@
 - Venue verification: https://proceedings.mlr.press/v305/seneviratne25a.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-항법 경로의 인간 선호를 단순 성공 보상으로 표현하기 어렵다.
+HALO는 로봇의 주행 시연과 이진 주행 피드백에서 시각 보상을 학습해, 같은 보상을 오프라인 정책과 모델 예측 제어에 활용한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=1) · [PDF 3쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=3)
 
 ## Core Idea and Contribution
 
-Expert 행동 주변 후보의 선호 순위를 학습해 시각 reward를 구성한다.
+- 참조 행동 주위에서 뽑은 행동에 선호 순위를 부여하고 Plackett–Luce 손실로 영상 조건부 보상 모델을 학습한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=4) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=6)
+- Clearpath Husky의 실물 주행에서 학습 보상을 사용한 정책 및 계획기를 비교하고, 목표 도달과 전문가 경로에 대한 궤적 유사성을 평가했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Expert 행동 주변 후보의 선호 순위를 학습해 시각 reward를 구�
 
 실제 Clearpath Husky 항법에서 성공·경로 특성을 비교한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/seneviratne25a.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/seneviratne25a.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

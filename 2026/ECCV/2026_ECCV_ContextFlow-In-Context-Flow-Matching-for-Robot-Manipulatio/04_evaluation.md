@@ -1,42 +1,32 @@
 # ContextFlow: In-Context Flow Matching for Robot Manipulation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-LIBERO의 미관측 구성과 실제 단일팔·양팔 조작을 평가한다.
+LIBERO 미학습 구성에서 평균 성공률은 ContextFlow 73.5%, ICRT 38.5%로 35%p 차이다. 실물의 빨간 펜을 왼손부터 잡아 뚜껑을 여는 조건에서는 각각 4/10과 0/10이었다. [PDF 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10) · [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-LIBERO의 미관측 구성과 실제 단일팔·양팔 조작을 평가한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+LIBERO-Spatial·Object의 미학습 구성과 실물 단팔·양팔 조작을 별도 표로 비교했다. [PDF 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10) · [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+시뮬레이션 표는 구성별 성공률과 평균을, 실물 표는 성공 횟수와 시행 수를 보고한다. [PDF 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10) · [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 context 길이·선정 비용, 미관측 task 정의, bimanual action 정규화을 점검한다.
+두 평가 모두 ICRT와 비교한다. [PDF 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10) · [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실물 표 8의 각 모델·구성 조합은 시행 10회다. [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +36,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16) · [저자 project/code](https://dingjiansw101.github.io/contextflow-page/) · [공식 code](https://github.com/dingjiansw101/ContextFlow). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16) · [저자 project/code](https://dingjiansw101.github.io/contextflow-page/) · [공식 code](https://github.com/dingjiansw101/ContextFlow).

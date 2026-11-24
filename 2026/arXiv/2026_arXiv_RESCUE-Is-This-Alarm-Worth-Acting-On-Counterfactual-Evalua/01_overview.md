@@ -1,7 +1,6 @@
 # RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / arXiv
 - Authors: David Ahmedt-Aristizabal, Abdelwahed Khamis, Mohammad Ali Armin, Lars Petersson
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2610.13516
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Full-text retrieval: https://arxiv.org/pdf/2610.13516v1
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-Failure alarm의 정확도만으로 실제 개입 가치를 알 수 없다.
+RESCUE는 로봇 정책 감시기가 울린 시점에 개입하면 실제로 과제를 구제하거나 완료 비용을 낮출 수 있는지 시뮬레이션에서 평가한다. [PDF 1쪽](https://arxiv.org/pdf/2610.13516v1#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3)
 
 ## Core Idea and Contribution
 
-Counterfactual continuation branch로 monitor의 intervention utility와 비용을 평가한다.
+- 정책과 시뮬레이터 상태를 같은 체크포인트로 복원해 계속 실행하거나 복구 행동을 적용하고, 허용한 개입 집합별로 마지막 복구 가능 시점을 구한다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4)
+- OpenVLA-OFT의 LIBERO-Plus 실패 66건에서 추정한 복구 성공 확률의 하위 분위수가 0.5 이상인 체크포인트가 있는 사례는 계속 실행만 허용하면 14건, 스크립트 복구도 허용하면 34건이었다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@ Counterfactual continuation branch로 monitor의 intervention utility와 비용�
 
 ## Evaluation Scope and Claim Boundary
 
-LIBERO Spatial Plus와 VLA runtime monitor 평가를 보고한다.
+LIBERO에서 수집한 원 에피소드 1,562개 중 262개가 실패했다. 128,340건은 저장한 체크포인트에서 복원·실행한 반사실적 분기다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5)
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2610.13516). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2610.13516).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -1,7 +1,6 @@
 # Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / arXiv
 - Authors: Fuyi Chen
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2611.01390
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 abstract/metadata·명시한 project 확인. 11/01 공개 v1 abstract 확인. 공식 채택·code URL 미확인. Simulation 결과를 실제 로봇 검증으로 확대하지 않는다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.
+- Full-text retrieval: https://arxiv.org/pdf/2611.01390v1
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-추론 대기와 느린 시연 속도로 인한 배포 시간 손실을 줄인다.
+PTS는 동결된 행동 청크 정책을 실행할 때 새 추론이 끝날 때까지 이동한 양과 경로를 따라가는 속도를 함께 고려해 추론 지연을 보상한다. [PDF 1쪽](https://arxiv.org/pdf/2611.01390v1#page=1) · [PDF 4쪽](https://arxiv.org/pdf/2611.01390v1#page=4)
 
 ## Core Idea and Contribution
 
-Frozen chunk policy에 경로 유지 time scaling을 적용해 비동기 추론과 실행 속도를 맞춘다.
+- 새 청크에는 추론 중 진행한 위치에서 진입하고, 그리퍼가 움직이는 구간과 구동기의 동작 범위에 따라 팔의 가속 배율을 제한한다. [PDF 4쪽](https://arxiv.org/pdf/2611.01390v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2611.01390v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2611.01390v1#page=6)
+- LIBERO에서 지연을 주입해 π0.5와 SmolVLA의 처리량과 성공률을 비교하고, 이동 표적을 포함하는 LIBERO-Dynamic에서는 비동기 등속 실행과 비슷한 처리량을 관찰했다. [PDF 7쪽](https://arxiv.org/pdf/2611.01390v1#page=7) · [PDF 10쪽](https://arxiv.org/pdf/2611.01390v1#page=10) · [PDF 11쪽](https://arxiv.org/pdf/2611.01390v1#page=11)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@ Frozen chunk policy에 경로 유지 time scaling을 적용해 비동기 추론�
 
 ## Evaluation Scope and Claim Boundary
 
-LIBERO와 LIBERO-Dynamic에서 지연을 주입해 성공률과 task throughput을 비교한다.
+표 1의 처리량은 추론 대기 시간을 포함한 제어 1,000스텝당 성공 횟수다. π0.5는 4개 과제군, SmolVLA는 2개 과제군에서 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2611.01390v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2611.01390v1#page=8)
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2611.01390). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2611.01390).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

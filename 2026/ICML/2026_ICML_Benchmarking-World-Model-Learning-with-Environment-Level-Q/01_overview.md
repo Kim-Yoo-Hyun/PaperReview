@@ -1,10 +1,10 @@
 # Benchmarking World-Model Learning with Environment-Level Queries
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / ICML
-- Authors: Archana Warrier, Dat Nguyen, Michelangelo Naim, Moksh Jain, Yichao Liang, Karen Schroeder, Cambridge Yang, Joshua B. Tenenbaum, Sebastian Josef Vollmer, Kevin Ellis, Zenna Tavares
+- Authors: Archana Warrier, Thanh Dat Nguyen, Michelangelo Naim, Moksh Jain, Yichao Liang, Karen Schroeder, Cambridge Yang, Joshua B. Tenenbaum, Sebastian Vollmer, Kevin Ellis, Zenna Tavares
+- 저자 판본: 학회 서지에는 Dat Nguyen, Sebastian Josef Vollmer로 실려 있다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=1) · [학회 서지](https://proceedings.mlr.press/v306/warrier26a.html)
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
@@ -14,15 +14,17 @@
 - Venue verification: https://proceedings.mlr.press/v306/warrier26a.html
 - Code/Project: https://zenodo.org/records/19498269
 - Code: project_only
-- Source audit: 2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 PMLR abstract와 Software 링크 확인. Zenodo landing page 직접 접근 실패; 링크 존재만 기록하며 파일/코드 release와 실행 가능성은 미검증.
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-단일 rollout의 예측이나 return만으로 환경 전반을 이해했는지 판단하기 어렵다.
+WorldTest는 에이전트가 탐색한 환경에 대해 개별 궤적의 예측을 넘어 여러 종류의 환경 수준 질문에 답할 수 있는지 평가한다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=1) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=5)
 
 ## Core Idea and Contribution
 
-도달 가능성·개입 결과 같은 environment-level query를 평가하는 WorldTest를 제안한다.
+- AutumnBench의 격자 환경 43개에서 가려진 프레임 예측, 변화 탐지, 계획의 세 계열로 129개 문제를 구성했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=5)
+- 참가자 517명과 기반 모델 다섯 개를 평가해 탐색으로 얻은 정보가 서로 다른 질문의 정답으로 얼마나 이어지는지 비교했다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=6) · [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=7) · [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@
 
 AutumnBench grid-world에서 사람과 학습 agent를 비교한다. 실로봇 평가는 아니다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/warrier26a.html) · [저자 project/code](https://zenodo.org/records/19498269). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/warrier26a.html) · [저자 project/code](https://zenodo.org/records/19498269).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

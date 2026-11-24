@@ -1,42 +1,28 @@
 # LIBERO-PRO: Towards Robust and Fair Evaluation of Vision-Language-Action Models Beyond Memorization
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-LIBERO 기반 변형 평가를 보고한다. 극단적 저하 수치의 task validity는 별도 본문 감사가 필요하다.
+그림 6은 교란을 다섯 종류로 나누며 작업 목표를 바꾸는 교란은 조합에서 제외한다. 그림 7의 성공률은 모델·교란·과제군별로 달라서 초록의 0.0%를 전체 평균으로 인용할 수 없다. [PDF 6쪽](https://arxiv.org/pdf/2510.03827v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2510.03827v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `BENCHMARK / SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-LIBERO 기반 변형 평가를 보고한다. 극단적 저하 수치의 task validity는 별도 본문 감사가 필요하다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+물체 속성, 배치, 지시, 과제, 시각 환경을 바꾼 후 LIBERO 과제군별 결과를 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2510.03827v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2510.03827v2#page=7)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 변경된 목표의 타당성, 언어 교란의 의미, v1/v2 차이을 점검한다.
+OpenVLA는 과제군별 공식 체크포인트 네 개, π0와 π0.5는 모델별 단일 공식 체크포인트를 사용했다. [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+과제당 에피소드 50개로 평가했다. [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +32,4 @@ Goal/planner/evaluator를 먼저 맞춘 뒤 원본과 변형 task 성공을 비�
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2510.03827) · [저자 project/code](https://github.com/Zxy-MLlab/LIBERO-PRO). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2510.03827) · [저자 project/code](https://github.com/Zxy-MLlab/LIBERO-PRO).

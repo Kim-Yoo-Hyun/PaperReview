@@ -14,7 +14,7 @@
 - Structured evaluation profiles: **1252**
 - Reproducibility profiles: **1252**
 - Lineage coverage profiles: **1252**
-- Papers with explicit trial/seed cues: **252**
+- Papers with explicit trial/seed cues: **260**
 - Papers without DOI/arXiv/OpenReview identifier: **363**
 
 ## 연도와 발표처
@@ -53,8 +53,8 @@
 
 | Value | Count |
 |---|---:|
-| FULL_TEXT_CHECKED | 1017 |
-| ABSTRACT_CHECKED | 235 |
+| FULL_TEXT_CHECKED | 1056 |
+| ABSTRACT_CHECKED | 196 |
 
 ## Reading status (intensive set)
 
@@ -130,48 +130,48 @@
 
 | Value | Count |
 |---|---:|
-| EMPIRICAL / REAL-ROBOT OR HARDWARE | 443 |
-| not_recorded | 300 |
+| EMPIRICAL / REAL-ROBOT OR HARDWARE | 444 |
+| not_recorded | 286 |
 | EMPIRICAL / SOURCE-REPORTED EVALUATION | 273 |
 | SYSTEM / EVALUATION SCOPE UNRESOLVED | 94 |
-| EMPIRICAL / SIMULATION | 69 |
-| BENCHMARK / DATASET | 64 |
-| EMPIRICAL / REAL-ROBOT AND SIMULATION | 4 |
-| BENCHMARK / DATASET AND REAL-ROBOT COMPARISON | 3 |
-| BENCHMARK / SIMULATION | 1 |
-| BENCHMARK / DATASET WITH SIMULATION AND REAL-ROBOT COMPARISON | 1 |
+| EMPIRICAL / SIMULATION | 73 |
+| BENCHMARK / DATASET | 65 |
+| EMPIRICAL / REAL-ROBOT AND SIMULATION | 8 |
+| BENCHMARK / DATASET AND REAL-ROBOT COMPARISON | 4 |
+| BENCHMARK / SIMULATION | 3 |
+| BENCHMARK / DATASET WITH SIMULATION AND REAL-ROBOT COMPARISON | 2 |
 
 ## Evaluation setting
 
 | Value | Count |
 |---|---:|
-| real_robot | 451 |
-| not_recorded | 300 |
+| real_robot | 458 |
+| not_recorded | 286 |
 | source_reported | 273 |
 | scope_unresolved | 94 |
-| simulation | 75 |
-| benchmark_or_dataset | 69 |
+| simulation | 86 |
+| benchmark_or_dataset | 74 |
 
 ## Evaluation protocol status
 
 | Value | Count |
 |---|---:|
-| trials_or_seeds=not_recorded | 1000 |
-| dataset_or_benchmark=reported | 947 |
-| metrics=reported | 947 |
-| baselines=reported | 939 |
-| statistics=reported | 939 |
+| trials_or_seeds=not_recorded | 992 |
+| dataset_or_benchmark=reported | 961 |
+| metrics=reported | 958 |
+| baselines=reported | 949 |
+| statistics=reported | 947 |
 | split_or_generalization=reported | 926 |
 | failure_cases=reported | 926 |
-| ablations=reported | 919 |
+| ablations=reported | 920 |
 | split_or_generalization=not_recorded | 326 |
 | failure_cases=not_recorded | 326 |
-| dataset_or_benchmark=not_recorded | 305 |
-| metrics=not_recorded | 304 |
-| baselines=not_recorded | 304 |
-| ablations=not_recorded | 304 |
-| statistics=not_recorded | 304 |
-| trials_or_seeds=reported | 252 |
+| ablations=not_recorded | 303 |
+| statistics=not_recorded | 296 |
+| baselines=not_recorded | 294 |
+| metrics=not_recorded | 293 |
+| dataset_or_benchmark=not_recorded | 291 |
+| trials_or_seeds=reported | 260 |
 | ablations=not_reported | 29 |
 | baselines=not_reported | 9 |
 | statistics=not_reported | 9 |

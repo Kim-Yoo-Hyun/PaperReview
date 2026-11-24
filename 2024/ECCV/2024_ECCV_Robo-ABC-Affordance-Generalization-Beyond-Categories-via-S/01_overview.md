@@ -1,7 +1,6 @@
 # Robo-ABC: Affordance Generalization Beyond Categories via Semantic Correspondence for Robot Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2024 / ECCV
 - Authors: Yuanchen Ju, Kaizhe Hu, Guowei Zhang, Gu Zhang, Mingrun Jiang, Huazhe Xu
@@ -14,15 +13,17 @@
 - Venue verification: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php
 - Code/Project: https://tea-lab.github.io/Robo-ABC/
 - Code: https://github.com/TEA-Lab/Robo-ABC
-- Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.
+- Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.
 
 ## Problem and Importance
 
-새 물체 category에서 조작 contact point를 얻기 어렵다.
+Robo-ABC는 사람이 물체를 다루는 영상에서 모은 접촉점을 시각적·의미적으로 비슷한 물체에 대응시켜 처음 보는 범주의 파지 위치를 찾는다. [PDF 1쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=1) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=6)
 
 ## Core Idea and Contribution
 
-Human video의 affordance memory에서 유사 물체를 찾고 semantic correspondence로 contact point를 옮긴다.
+- 사람 손과 물체의 상호작용에서 접촉점 메모리를 구축하고, 사전학습 확산 모델의 특징 대응으로 검색한 접촉점을 목표 이미지에 옮긴다. [PDF 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=5) · [PDF 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=6) · [PDF 7쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=7)
+- 영상의 접촉점 예측과 실물 파지를 따로 평가했으며, 일곱 물체 범주에 걸친 실물 파지 성공률은 85.7%, 비교 기준선은 68.6%였다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@ Human video의 affordance memory에서 유사 물체를 찾고 semantic correspo
 
 ## Evaluation Scope and Claim Boundary
 
-시각 affordance 추정과 실세계 cross-category grasping을 보고한다.
+실물 파지 성공률 85.7%와 VRB 기준선의 68.6%는 일곱 물체 범주에서 얻은 값이다. 이미지에 대한 접촉점 예측 정확도는 별도 평가다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12)
 
-근거: [공식 paper/abstract](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php) · [저자 project/code](https://tea-lab.github.io/Robo-ABC/) · [공식 code](https://github.com/TEA-Lab/Robo-ABC). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php) · [저자 project/code](https://tea-lab.github.io/Robo-ABC/) · [공식 code](https://github.com/TEA-Lab/Robo-ABC).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

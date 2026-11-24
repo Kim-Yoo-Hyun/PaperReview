@@ -1,7 +1,6 @@
 # Reinforcement learning in robotics: A survey
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2013 / IJRR
 - Authors: Jens Kober, J. Andrew Bagnell, Jan Peters
@@ -14,15 +13,17 @@
 - Venue verification: https://journals.sagepub.com/doi/abs/10.1177/0278364913495721
 - Code/Project: https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. Sage 검색의 publisher abstract/metadata와 저자 연구실 BibTeX·원문 초록으로 IJRR 2013 확인. Publisher 직접 open은 timeout. Survey 본문 전체 정독은 하지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Full-text retrieval: https://www.jenskober.de/publications/Kober2013IJRR.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-로봇 행동 학습의 실물 상호작용·표현·학습 비용을 RL 관점에서 정리한다.
+로봇 강화학습 서베이로, 실제 상호작용의 비용과 고차원 제어 문제를 알고리즘·표현·사전지식의 선택이 어떻게 다루는지 정리했다. [PDF 1쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=1) · [PDF 3쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=3)
 
 ## Core Idea and Contribution
 
-Robot RL의 어려움과 성공 사례를 분류하는 survey이며 단일 새 학습 알고리즘을 제안하지 않는다.
+- 가치함수 기반 방법과 정책 탐색을 비교하고, 학습한 동역학 모형을 활용해 실물 상호작용을 절약하는 접근을 정리했다. [PDF 9쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=9) · [PDF 10쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=10) · [PDF 11쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=11) · [PDF 22쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=22)
+- 공을 컵에 넣는 과제를 사례로 동작 표현, 시연·사전지식, 시뮬레이션과 실물 학습의 역할을 추적했다. [PDF 25쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=25) · [PDF 26쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=26) · [PDF 27쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=27) · [PDF 28쪽](https://www.jenskober.de/publications/Kober2013IJRR.pdf#page=28)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Robot RL의 어려움과 성공 사례를 분류하는 survey이며 단일 새 �
 
 기존 로봇 학습 사례를 종합한다. 단일 benchmark의 새 성능 표나 VLA 실험은 아니다.
 
-근거: [공식 paper/abstract](https://journals.sagepub.com/doi/abs/10.1177/0278364913495721) · [저자 project/code](https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://journals.sagepub.com/doi/abs/10.1177/0278364913495721) · [저자 project/code](https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

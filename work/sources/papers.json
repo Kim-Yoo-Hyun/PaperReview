@@ -237880,7 +237880,7 @@
     ],
     "page": "https://proceedings.mlr.press/v162/sharma22a.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf",
     "identifiers": {},
     "aliases": [
       "MEDAL"
@@ -237905,7 +237905,12 @@
       "preprint": null,
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v162/sharma22a.html",
         "kind": "official_publication",
@@ -237941,12 +237946,12 @@
     },
     "provenance": {
       "metadata_source_kind": "official_publication",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -238259,7 +238264,7 @@
     ],
     "page": "https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf",
     "identifiers": {},
     "aliases": [
       "AOPS"
@@ -238284,7 +238289,12 @@
       "preprint": null,
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html",
         "kind": "official_publication",
@@ -238320,12 +238330,12 @@
     },
     "provenance": {
       "metadata_source_kind": "official_publication",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -238334,9 +238344,9 @@
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-22",
       "authors_verification": {
-        "source": "https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "NeurIPS 웹 서지에 Ksenia Konyushova와 Thomas Paine으로 실린 두 저자를 게재본의 Ksenia Konyushkova와 Tom Le Paine으로 교정하고 표제면의 순서를 확인했다."
       },
       "identifier_status": "source_only",
       "primary_source_scope": "paper_specific"
@@ -238427,12 +238437,12 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Ksenia Konyushova",
+      "Ksenia Konyushkova",
       "Yutian Chen",
-      "Thomas Paine",
+      "Tom Le Paine",
       "Caglar Gulcehre",
       "Cosmin Paduraru",
-      "Daniel J. Mankowitz",
+      "Daniel J Mankowitz",
       "Misha Denil",
       "Nando de Freitas"
     ]
@@ -238852,7 +238862,7 @@
     ],
     "page": "https://proceedings.mlr.press/v305/anwar25a.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/anwar25a/anwar25a.pdf",
     "identifiers": {
       "arxiv": "2502.09829"
     },
@@ -238884,7 +238894,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/anwar25a/anwar25a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/anwar25a.html",
         "kind": "publisher_record",
@@ -238920,12 +238935,12 @@
     },
     "provenance": {
       "metadata_source_kind": "official_publication",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -239481,7 +239496,7 @@
     ],
     "page": "https://arxiv.org/abs/2610.13516",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2610.13516v1",
     "identifiers": {
       "arxiv": "2610.13516"
     },
@@ -239511,7 +239526,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2610.13516v1",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": null
     },
     "artifacts": {
@@ -239542,15 +239562,15 @@
     },
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "schema_version": "1.0",
@@ -239569,7 +239589,7 @@
     "problem": "Failure alarm의 정확도만으로 실제 개입 가치를 알 수 없다.",
     "method": "Counterfactual continuation branch로 monitor의 intervention utility와 비용을 평가한다.",
     "interface": "동일 sim/policy state·alarm → 여러 continuation → outcome 비교.",
-    "evaluation": "LIBERO Spatial Plus와 VLA runtime monitor 평가를 보고한다.",
+    "evaluation": "LIBERO에서 수집한 원 에피소드 1,562개 중 262개가 실패했다. 128,340건은 저장한 체크포인트에서 복원·실행한 반사실적 분기다.",
     "role": "C1/RP-2의 관측/개입 가치 진단에 대한 직접 evaluation 기준이다.",
     "lineage": "Failure monitor·recovery → counterfactual utility evaluation",
     "question": "높은 alarm score가 실제로 도움 되는 intervention을 예측하는가?",
@@ -239582,26 +239602,41 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / SIMULATION",
       "settings": [
-        "not_recorded"
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
-      "benchmark_cues": [],
+      "trial_evidence": [
+        {
+          "count": 1562,
+          "unit": "episode",
+          "text": "원 에피소드 1,562개에서 체크포인트 10,083개를 분기했다. 체크포인트당 초기 분기 수는 4개이고 기준 경계 근처에서 16개로 늘렸다. [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4)",
+          "source": "2026/arXiv/2026_arXiv_RESCUE-Is-This-Alarm-Worth-Acting-On-Counterfactual-Evalua/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:libero",
+          "name": "LIBERO",
+          "evidence": "cue_only",
+          "source": "2026/arXiv/2026_arXiv_RESCUE-Is-This-Alarm-Worth-Acting-On-Counterfactual-Evalua/04_evaluation.md"
+        }
+      ],
       "metric_cues": [],
       "source_note": "2026/arXiv/2026_arXiv_RESCUE-Is-This-Alarm-Worth-Acting-On-Counterfactual-Evalua/04_evaluation.md",
-      "reviewed_on": "2026-10-22",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -240317,7 +240352,7 @@
     ],
     "page": "https://proceedings.mlr.press/v80/fujita18a.html",
     "project": "https://github.com/pfnet-research/capg",
-    "pdf": "",
+    "pdf": "https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf",
     "identifiers": {},
     "aliases": [
       "CAPG"
@@ -240352,7 +240387,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-22"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.mlr.press/v80/fujita18a/fujita18a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v80/fujita18a.html",
         "kind": "official_publication",
@@ -240388,12 +240428,12 @@
     },
     "provenance": {
       "metadata_source_kind": "official_publication",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -240513,7 +240553,7 @@
     ],
     "page": "https://arxiv.org/abs/1806.05134",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/1806.05134v3",
     "identifiers": {
       "arxiv": "1806.05134",
       "openreview": "HkgqFiAcFm"
@@ -240546,7 +240586,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/1806.05134v3",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://openreview.net/pdf?id=HkgqFiAcFm",
         "kind": "publisher_record",
@@ -240588,12 +240633,12 @@
     },
     "provenance": {
       "metadata_source_kind": "official_publication",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. OpenReview live challenge; ICLR 공식 Downloads/2019와 공식 indexed accepted manuscript를 확인했다. Content는 arXiv abstract 기준.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -241117,7 +241162,7 @@
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
     "project": "https://weirdlabuw.github.io/darp-site/",
-    "pdf": "",
+    "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf",
     "identifiers": {
       "arxiv": "2606.09758",
       "openreview": "9AA27en4go"
@@ -241158,7 +241203,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-25"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html",
         "kind": "official_publication",
@@ -241208,14 +241258,14 @@
     "venue_canonical": "ICLR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -241323,7 +241373,7 @@
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf",
     "identifiers": {
       "arxiv": "2410.01296"
     },
@@ -241353,7 +241403,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html",
         "kind": "official_publication",
@@ -241403,14 +241458,14 @@
     "venue_canonical": "ICLR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -241518,7 +241573,7 @@
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf",
     "identifiers": {
       "arxiv": "2512.24503"
     },
@@ -241548,7 +241603,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html",
         "kind": "official_publication",
@@ -241598,14 +241658,14 @@
     "venue_canonical": "ICLR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -243123,7 +243183,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss20/p007.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://www.roboticsproceedings.org/rss20/p007.pdf",
     "identifiers": {
       "arxiv": "2405.09743",
       "doi": "10.15607/RSS.2024.XX.007"
@@ -243154,7 +243214,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://www.roboticsproceedings.org/rss20/p007.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://www.roboticsproceedings.org/rss20/p007.html",
         "kind": "official_publication",
@@ -243193,7 +243258,7 @@
     "problem": "가려진 deformable tissue의 부착 조건을 손상 없이 알아내야 한다.",
     "method": "미분 가능한 soft-body 모델·EKF 추정과 정보 이득/안전 비용을 고려한 능동 조작을 결합한다.",
     "interface": "Stereo 관측·조작 → attachment 추정 → sensing action.",
-    "evaluation": "실제 동물 조직의 부착점과 cutting/suturing 변화 실험을 보고한다.",
+    "evaluation": "절단과 봉합으로 부착 관계가 변하는 실험은 시뮬레이션에서 수행했다. 동물 조직 실험은 스테레오 내시경 영상에서 봉합으로 고정된 부위를 추정하는 과제였다.",
     "role": "물성·boundary 식별과 task-oriented probing을 구별하는 GAP-DE의 직접 선행이다.",
     "lineage": "Deformable state estimation → JIGGLE → task-level sensing 비교",
     "question": "같은 probe 비용에서 attachment 정보 증가가 downstream 작업 성공에 비례하는가?",
@@ -243204,17 +243269,17 @@
     "venue_canonical": "RSS",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -243229,13 +243294,14 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / REAL-ROBOT AND SIMULATION",
       "settings": [
-        "not_recorded"
+        "real_robot",
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
         "baselines": "not_recorded",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
@@ -243247,8 +243313,8 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2024/RSS/2024_RSS_JIGGLE-An-Active-Sensing-Framework-for-Boundary-Parameters/04_evaluation.md",
-      "reviewed_on": "2026-10-25",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -243526,7 +243592,7 @@
     ],
     "page": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
     "project": "https://tea-lab.github.io/Robo-ABC/",
-    "pdf": "",
+    "pdf": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf",
     "identifiers": {},
     "aliases": [],
     "paper_type": "method",
@@ -243559,7 +243625,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-25"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php",
         "kind": "official_publication",
@@ -243598,7 +243669,7 @@
     "problem": "새 물체 category에서 조작 contact point를 얻기 어렵다.",
     "method": "Human video의 affordance memory에서 유사 물체를 찾고 semantic correspondence로 contact point를 옮긴다.",
     "interface": "새 물체 영상·contact memory → affordance/contact point → robot manipulation.",
-    "evaluation": "시각 affordance 추정과 실세계 cross-category grasping을 보고한다.",
+    "evaluation": "실물 파지 성공률 85.7%와 VRB 기준선의 68.6%는 일곱 물체 범주에서 얻은 값이다. 이미지에 대한 접촉점 예측 정확도는 별도 평가다.",
     "role": "Semantic representation을 실제 contact/action에 연결하는 비교용 3D/affordance 지원 연구다.",
     "lineage": "Semantic correspondence → Robo-ABC → action-valid contact transfer",
     "question": "의미 대응점이 비슷해도 물리적으로 실행 가능한 contact인가?",
@@ -243609,17 +243680,17 @@
     "venue_canonical": "ECCV",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -243634,14 +243705,15 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "BENCHMARK / DATASET AND REAL-ROBOT COMPARISON",
       "settings": [
-        "not_recorded"
+        "real_robot",
+        "benchmark_or_dataset"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
         "trials_or_seeds": "not_recorded",
@@ -243652,8 +243724,8 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2024/ECCV/2024_ECCV_Robo-ABC-Affordance-Generalization-Beyond-Categories-via-S/04_evaluation.md",
-      "reviewed_on": "2026-10-25",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -243932,7 +244004,7 @@
     ],
     "page": "https://arxiv.org/abs/2510.03827",
     "project": "https://github.com/Zxy-MLlab/LIBERO-PRO",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2510.03827v2",
     "identifiers": {
       "arxiv": "2510.03827"
     },
@@ -243972,7 +244044,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-25"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2510.03827v2",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": null
     },
     "artifacts": {
@@ -244006,7 +244083,7 @@
     "problem": "기존 LIBERO 평가에서 task 이해와 행동 암기가 혼동될 수 있다.",
     "method": "물체·초기 상태·지시·환경 perturbation으로 일반화와 지시 의존성을 점검한다.",
     "interface": "변형 task/지시 → VLA → 실행 결과.",
-    "evaluation": "LIBERO 기반 변형 평가를 보고한다. 극단적 저하 수치의 task validity는 별도 본문 감사가 필요하다.",
+    "evaluation": "그림 6은 교란을 다섯 종류로 나누며 작업 목표를 바꾸는 교란은 조합에서 제외한다. 그림 7의 성공률은 모델·교란·과제군별로 달라서 초록의 0.0%를 전체 평균으로 인용할 수 없다.",
     "role": "지시 교란 평가와 구현된 task의 유효성을 함께 점검할 비교 benchmark다.",
     "lineage": "LIBERO → LIBERO-PRO/Plus → 유효성 통제 비교",
     "question": "Reachability·goal consistency를 확인한 perturbation에서도 성능 저하가 남는가?",
@@ -244017,17 +244094,17 @@
     "venue_canonical": "arXiv",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 정식 acceptance를 확인하지 못해 preprint로 유지한다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -244042,26 +244119,42 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "BENCHMARK / SIMULATION",
       "settings": [
-        "not_recorded"
+        "simulation",
+        "benchmark_or_dataset"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
+        "dataset_or_benchmark": "reported",
         "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
-      "benchmark_cues": [],
+      "trial_evidence": [
+        {
+          "count": 50,
+          "unit": "episode",
+          "text": "과제당 에피소드 50개로 평가했다. [PDF 8쪽](https://arxiv.org/pdf/2510.03827v2#page=8)",
+          "source": "2025/arXiv/2025_arXiv_LIBERO-PRO-Towards-Robust-and-Fair-Evaluation-of-Vision-La/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:libero",
+          "name": "LIBERO",
+          "evidence": "cue_only",
+          "source": "2025/arXiv/2025_arXiv_LIBERO-PRO-Towards-Robust-and-Fair-Evaluation-of-Vision-La/04_evaluation.md"
+        }
+      ],
       "metric_cues": [],
       "source_note": "2025/arXiv/2025_arXiv_LIBERO-PRO-Towards-Robust-and-Fair-Evaluation-of-Vision-La/04_evaluation.md",
-      "reviewed_on": "2026-10-25",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -244134,7 +244227,7 @@
     ],
     "page": "https://arxiv.org/abs/2605.27759",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11726868",
     "identifiers": {
       "arxiv": "2605.27759",
       "doi": "10.1109/lra.2026.3741771"
@@ -244167,7 +244260,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11726868",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://api.crossref.org/works/10.1109/lra.2026.3741771",
         "kind": "publisher_record",
@@ -244206,7 +244304,7 @@
     "problem": "VLA의 perception 일반화가 여러 robot morphology에서 행동 일반화로 이어지는지 점검해야 한다.",
     "method": "ManiSkill 기반 다중 morphology task로 in/out-of-domain policy 평가를 구성한다.",
     "interface": "Task·robot morphology·분포 변화 → ACT/π0.5 등 policy → task 성능.",
-    "evaluation": "28 task·두 robot morphology와 simulation/real-world 지표 상관을 abstract에서 보고한다.",
+    "evaluation": "실물 대조는 단팔 ACT의 5개 과제 × 7개 조건에 한정했다. 35개 조합의 절대 성공률에 대한 결정계수는 0.49였고 교란별 성공률을 무교란 대비로 정규화한 뒤 시뮬레이션·실물의 평균 절대 차이는 12.3%p였다.",
     "role": "THE COLOSSEUM의 후속 평가 자산이며 다양한 로봇을 다루는 사용자 연구축과 직접 연결된다.",
     "lineage": "THE COLOSSEUM → Colosseum V2 → morphology별 일반화 진단",
     "question": "동일 task 및 관측 정보에서 morphology 변경의 추가 실패가 남는가?",
@@ -244217,17 +244315,17 @@
     "venue_canonical": "RA-L",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 정식 acceptance를 확인하지 못해 preprint로 유지한다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -244242,26 +244340,36 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "BENCHMARK / DATASET WITH SIMULATION AND REAL-ROBOT COMPARISON",
       "settings": [
-        "not_recorded"
+        "real_robot",
+        "simulation",
+        "benchmark_or_dataset"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
+      "trial_evidence": [
+        {
+          "count": 20,
+          "unit": "trial",
+          "text": "각 과제·조건 조합에서 시행 20회를 평가했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11726868#page=5)",
+          "source": "2026/RA-L/2026_RA-L_Colosseum-V2-Benchmarking-Generalization-for-Vision-Langua/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2026/RA-L/2026_RA-L_Colosseum-V2-Benchmarking-Generalization-for-Vision-Langua/04_evaluation.md",
-      "reviewed_on": "2026-10-25",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -246693,7 +246801,7 @@
     ],
     "page": "https://www.nature.com/articles/s42256-025-01045-3",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://www.nature.com/articles/s42256-025-01045-3.pdf",
     "identifiers": {
       "doi": "10.1038/s42256-025-01045-3"
     },
@@ -246720,7 +246828,12 @@
       "preprint": null,
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://www.nature.com/articles/s42256-025-01045-3.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://www.nature.com/articles/s42256-025-01045-3",
         "kind": "official_publication",
@@ -246759,7 +246872,7 @@
     "problem": "복잡한 접촉 작업을 재사용 가능한 tactile skill로 조직할 표현이 필요하다.",
     "method": "전문가의 process specification을 taxonomy와 parametric tactile skill로 연결한다.",
     "interface": "공정 요구 → skill specification → policy/controller → 접촉 feedback.",
-    "evaluation": "산업 응용의 여러 tactile skill과 목표 pose 교란을 실로봇에서 평가한다.",
+    "evaluation": "28은 구현한 조작 스킬 수다. 표 1은 작업별 실행 시간과 접촉 토크의 강건성을 따로 싣는다. 원통 삽입의 두 열은 각각 94%와 92%다.",
     "role": "언어 기반 skill 조합과 전문가가 명시한 물리적 요구·종료 조건을 비교할 참조다.",
     "lineage": "Impedance control·skill library → process taxonomy; tactile VLA의 제어 경계와 비교",
     "question": "같은 공정 정보를 제공할 때 learned selector의 이득이 명시적 skill 조건을 넘는가?",
@@ -246770,17 +246883,17 @@
     "venue_canonical": "Nature Machine Intelligence",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. Nature 공식 검색 인덱스의 abstract·서지정보 확인. 직접 HTML 접근은 인증 redirect로 제한; 본문 정독·code 확인으로 표시하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -246795,13 +246908,13 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
       "settings": [
-        "not_recorded"
+        "real_robot"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
         "baselines": "not_recorded",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
@@ -246813,8 +246926,8 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2025/Nature-Machine-Intellige/2025_Nature-Machine-Intellige_A-process-centric-manipulation-taxonomy-for-the-organizati/04_evaluation.md",
-      "reviewed_on": "2026-10-25",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -247077,7 +247190,7 @@
     ],
     "page": "https://proceedings.mlr.press/v267/richens25a.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf",
     "identifiers": {
       "openreview": "dlIoumNiXt"
     },
@@ -247102,7 +247215,12 @@
       "preprint": null,
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v267/richens25a.html",
         "kind": "official_publication",
@@ -247152,14 +247270,14 @@
     "venue_canonical": "ICML",
     "provenance": {
       "metadata_source_kind": "pmlr",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -247264,7 +247382,7 @@
     ],
     "page": "https://proceedings.mlr.press/v306/warrier26a.html",
     "project": "https://zenodo.org/records/19498269",
-    "pdf": "",
+    "pdf": "https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf",
     "identifiers": {
       "openreview": "Ny6UYZ8ysN"
     },
@@ -247297,7 +247415,12 @@
         "verified_on": "2026-10-25"
       },
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v306/warrier26a.html",
         "kind": "official_publication",
@@ -247347,23 +247470,23 @@
     "venue_canonical": "ICML",
     "provenance": {
       "metadata_source_kind": "pmlr",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. 공식 PMLR abstract와 Software 링크 확인. Zenodo landing page 직접 접근 실패; 링크 존재만 기록하며 파일/코드 release와 실행 가능성은 미검증.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v306/warrier26a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "ICML 웹 서지의 Dat Nguyen과 Sebastian Josef Vollmer에 대응하는 게재본 표기 Thanh Dat Nguyen과 Sebastian Vollmer를 기록했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -247442,14 +247565,14 @@
     },
     "authors": [
       "Archana Warrier",
-      "Dat Nguyen",
+      "Thanh Dat Nguyen",
       "Michelangelo Naim",
       "Moksh Jain",
       "Yichao Liang",
       "Karen Schroeder",
       "Cambridge Yang",
       "Joshua B. Tenenbaum",
-      "Sebastian Josef Vollmer",
+      "Sebastian Vollmer",
       "Kevin Ellis",
       "Zenna Tavares"
     ]
@@ -247655,7 +247778,7 @@
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/4415e8cb0741bc0beb79b316f0856108-Paper-Conference.pdf",
     "identifiers": {},
     "aliases": [
       "DML-IL"
@@ -247680,7 +247803,12 @@
       "preprint": null,
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/4415e8cb0741bc0beb79b316f0856108-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html",
         "kind": "official_publication",
@@ -247730,14 +247858,14 @@
     "venue_canonical": "ICLR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-25",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -251380,7 +251508,7 @@
     "question": "같은 robot supervision과 초기 관측에서 flow 중간 표현이 직접 waypoint 예측보다 유리한 조건은 무엇이며 실행 중 변화에는 어떻게 대응하는가?",
     "minimal_experiment": "연구자 제안: 같은 robot supervision과 초기 관측에서 flow 중간 표현이 직접 waypoint 예측보다 유리한 조건은 무엇이며 실행 중 변화에는 어떻게 대응하는가? 먼저 2D→6-DoF 변환·embodiment별 calibration·실행 feedback. 공식 abstract와 project 본문의 loss/adapter 명칭이 달라 원문 version 확인 필요을 대조하고, 실행은 별도 local Docker qualification 뒤 가장 작은 paired 비교로 한정한다.",
     "verification_questions": "2D→6-DoF 변환·embodiment별 calibration·실행 feedback. 공식 abstract와 project 본문의 loss/adapter 명칭이 달라 원문 version 확인 필요",
-    "pdf": "",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289",
     "publication": {
       "status": "peer_reviewed",
       "kind": "journal",
@@ -251410,7 +251538,12 @@
         "verified_on": "2026-11-02"
       },
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://ieeexplore.ieee.org/abstract/document/11478289",
         "kind": "publisher",
@@ -251456,14 +251589,14 @@
     "venue_canonical": "RA-L",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. IEEE indexed publisher 내용으로 게재를 확인했고 직접 본문 접근은 제한적이었다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-02",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -252889,7 +253022,7 @@
     "problem": "Sparse reward에서 성공 행동을 찾기 어려운 로봇 RL에 소수 demonstration을 활용하는 문제다.",
     "method": "DDPG·HER와 demonstration replay 및 behavior cloning을 결합한다. Q-filter는 demonstration 행동이 actor 행동보다 높은 Q를 받을 때 모방 손실을 적용한다.",
     "interface": "관측·목표 → actor action; demonstration action과 actor action의 Q 비교 → 선택적 imitation 업데이트.",
-    "evaluation": "시뮬레이션 로봇 팔의 sparse-reward 조작을 다룬다. VLA 연구가 아니며 현재 후보의 두 reference 규칙을 원 논문의 재현이라고 부를 수 없다.",
+    "evaluation": "저자들이 제시한 약 6시간은 pick-and-place 학습의 약 100만 시뮬레이션 스텝을 실물 상호작용 시간으로 환산한 값이다. 실험은 시뮬레이션 로봇 팔에서 했다.",
     "assumptions": "Q 추정이 demonstration과 현재 actor의 행동 비교에 의미 있는 신호여야 한다.",
     "limitations": "이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다.",
     "role": "선택적 Q 기반 imitation의 직접 기원으로 REFERENCE에 추가한다. 2024–2026 최신 동향 수에는 포함하지 않으며 기존 SAC/DDPG 기반 읽기 흐름을 보완한다.",
@@ -252897,7 +253030,7 @@
     "lineage": "개념 비교: DDPG/SAC·imitation → residual policy refinement → VLA 후학습/독립 base 업데이트. 직접 citation edge를 새로 확정한 것은 아니다.",
     "minimal_experiment": "연구자 제안: 같은 reference 행동·critic·데이터·loss 계수를 사용한 원리 수준 Q-filter와 무조건 모방을 분리하고, 원 논문 전체 알고리즘 재현 여부를 명시한다.",
     "verification_questions": "이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다.",
-    "pdf": "",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162",
     "publication": {
       "status": "peer_reviewed",
       "kind": "conference",
@@ -252922,7 +253055,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=8463162",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://api.crossref.org/works/10.1109/ICRA.2018.8463162",
         "kind": "publisher_metadata",
@@ -252975,7 +253113,7 @@
       "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-03 공식 venue/서지 재확인; 기존 GAP-VRL 검토의 지정 본문 Q-Filter subsection / Eq. 8; arXiv abstract and publisher-deposited metadata를 반영. 선택 절 검토이며 전체 논문 정독·native 실행은 아님. 이번 확인은 Q-filter 수식과 서지에 한정한다. 정확한 seed·전체 baseline/ablation·현재 공식 code 상태는 확인하지 않았다. 사용자 읽기 상태는 UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다. 이전 감사에서 확인한 Q-filter 식 (8)의 출처도 보존했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-03",
       "note_evidence": {
@@ -252997,14 +253135,14 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / SIMULATION",
       "settings": [
-        "not_recorded"
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
+        "dataset_or_benchmark": "reported",
         "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
         "trials_or_seeds": "not_recorded",
@@ -253015,8 +253153,8 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2018/ICRA/2018_ICRA_Overcoming-Exploration-in-Reinforcement-Learning-with-Demo/04_evaluation.md",
-      "reviewed_on": "2026-11-03",
-      "basis": "Selected text/code sections only; unrecorded numerical protocol is not inferred. Catalog cues are not evaluation-use evidence."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -258312,7 +258450,7 @@
     "problem": "고차원 로봇 제어에서 off-policy critic 오차가 불안정한 bootstrap을 유발한다.",
     "method": "가중치·feature·gradient norm을 제한하고 병렬 데이터와 replay coverage를 확대한다.",
     "interface": "상태 또는 시각 관측 → SAC 행동; replay 기반 가치 학습.",
-    "evaluation": "여러 simulator의 제어 과제와 실제 humanoid sim-to-real을 보고한다.",
+    "evaluation": "Unitree G1의 실물 계단 오르기에서 인용하는 4시간은 FlashSAC의 시뮬레이션 학습 시간이다. 그림 6은 비슷한 계단 등반 능력에 도달한 PPO의 약 20시간과 비교한다.",
     "role": "새 VLA-RL 구조의 필요성을 판단할 때 참고할 강한 off-policy 학습 baseline이다.",
     "lineage": "SAC·대규모 simulation RL을 잇는 학습 안정성 연구이며 직접 VLA 결과와는 구별한다.",
     "question": "동일 compute에서 critic 안정화만으로 새 표현 구조의 이득을 대체할 수 있는가?",
@@ -258335,12 +258473,13 @@
     ],
     "page": "https://roboticsproceedings.org/rss22/p099.html",
     "project": "https://github.com/Holiday-Robot/FlashSAC",
-    "pdf": "",
+    "pdf": "https://roboticsproceedings.org/rss22/p099.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "RSS와 후속 arXiv의 평가 과제 수가 다르므로 수치를 혼합하지 않는다.",
     "identifiers": {
-      "arxiv": "2604.04539"
+      "arxiv": "2604.04539",
+      "doi": "10.15607/RSS.2026.XXII.099"
     },
     "source_audit": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS와 후속 arXiv의 평가 과제 수가 다르므로 수치를 혼합하지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
     "sources": {
@@ -258374,7 +258513,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://roboticsproceedings.org/rss22/p099.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -258416,23 +258560,23 @@
     "venue_canonical": "RSS",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RSS와 후속 arXiv의 평가 과제 수가 다르므로 수치를 혼합하지 않는다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://roboticsproceedings.org/rss22/p099.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://roboticsproceedings.org/rss22/p099.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "RSS 웹 서지가 I.로 줄여 쓴 여섯 번째 저자의 이름을 게재본 표기 I Made Aswin Nahrendra로 반영했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -258441,14 +258585,15 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / REAL-ROBOT AND SIMULATION",
       "settings": [
-        "not_recorded"
+        "real_robot",
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
+        "dataset_or_benchmark": "reported",
         "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
         "trials_or_seeds": "not_recorded",
@@ -258459,8 +258604,8 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2026/RSS/2026_RSS_FlashSAC-Fast-and-Stable-Off-Policy-Reinforcement-Learning/04_evaluation.md",
-      "reviewed_on": "2026-11-08",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -258514,7 +258659,7 @@
       "Minho Park",
       "Kinam Kim",
       "Takuma Seno",
-      "I. Made Aswin Nahrendra",
+      "I Made Aswin Nahrendra",
       "Sehee Min",
       "Daniel Palenicek",
       "Florian Vogt",
@@ -260252,7 +260397,7 @@
     ],
     "page": "https://proceedings.mlr.press/v305/seneviratne25a.html",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "",
@@ -260282,7 +260427,12 @@
       },
       "project": null,
       "code": null,
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -260324,14 +260474,14 @@
     "venue_canonical": "CoRL",
     "provenance": {
       "metadata_source_kind": "pmlr",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -261707,7 +261857,7 @@
     ],
     "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.html",
     "project": "https://ec-flow1.github.io/",
-    "pdf": "",
+    "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "",
@@ -261746,7 +261896,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -261788,14 +261943,14 @@
     "venue_canonical": "ICCV",
     "provenance": {
       "metadata_source_kind": "cvf",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -262310,11 +262465,12 @@
       "long-horizon"
     ],
     "aliases": [
-      "SPIRE"
+      "SPIRE",
+      "SPIRE: Synergistic Planning, Imitation, and Reinforcement for Long-Horizon Manipulation"
     ],
     "page": "https://proceedings.mlr.press/v270/zhou25a.html",
     "project": "https://sites.google.com/view/spire-corl-2024",
-    "pdf": "",
+    "pdf": "https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhou25a/zhou25a.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": " CoRL 2024 event; PMLR volume 270 published 2025. Registry year uses event year.",
@@ -262343,7 +262499,12 @@
         "verified_on": "2026-11-08"
       },
       "code": null,
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhou25a/zhou25a.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -262385,14 +262546,14 @@
     "venue_canonical": "CoRL",
     "provenance": {
       "metadata_source_kind": "pmlr",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  CoRL 2024 event; PMLR volume 270 published 2025. Registry year uses event year. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -262940,7 +263101,7 @@
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/64a0192102e1421a2b2c15ae0bdb9f3a-Abstract-Conference.html",
     "project": "https://lrmbbj.github.io/DIPOLE/",
-    "pdf": "",
+    "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/64a0192102e1421a2b2c15ae0bdb9f3a-Paper-Conference.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "저자 repository의 rl-bench 하위 코드 범위는 추가 확인 필요. 전체 DIPOLE training release로 판정하지 않는다. NAVSIM의 VLA 결과는 자율주행이다.",
@@ -262979,7 +263140,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/64a0192102e1421a2b2c15ae0bdb9f3a-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -263021,14 +263187,14 @@
     "venue_canonical": "ICLR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. 저자 repository의 rl-bench 하위 코드 범위는 추가 확인 필요. 전체 DIPOLE training release로 판정하지 않는다. NAVSIM의 VLA 결과는 자율주행이다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -263356,7 +263522,7 @@
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html",
     "project": "https://github.com/amap-cvlab/CE-Nav",
-    "pdf": "",
+    "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/514bdfb12b318ad02c6f28dc68f2feea-Paper-Conference.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "",
@@ -263395,7 +263561,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/514bdfb12b318ad02c6f28dc68f2feea-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -263437,14 +263608,14 @@
     "venue_canonical": "ICLR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -263749,7 +263920,7 @@
     "problem": "접촉 정보를 추가해도 RL이 이를 안정적으로 활용하지 못하며 proprioception만으로 놓치는 물체 움직임이 있다.",
     "method": "희소 이진 접촉·proprioception 표현을 self-supervised learning으로 학습하고 SSL memory와 on-policy memory의 분리를 검토한다.",
     "interface": "Binary contact·proprioception → 표현/memory → contact-rich control.",
-    "evaluation": "RoTO 시뮬레이션의 공 튀기기·Baoding 회전 등 dexterity를 평가한다. 실로봇 결과로 확대하지 않는다.",
+    "evaluation": "RoTO 실험은 Isaac Lab의 세 과제로 구성된다. 10초 동안 공을 88번 튀긴 수치와 보정구를 25번 회전시킨 수치는 시뮬레이션 에이전트의 최고 기록이다.",
     "role": "시각 VLA에 촉각을 넣기 전에 입력 유용성과 표현 학습을 분리할 진단 자원이다.",
     "lineage": "PPO·tactile manipulation 선행과 센서 정보량·memory 구조를 비교한다.",
     "question": "추가 센서 이득과 SSL memory 이득이 각각 독립적으로 남는가?",
@@ -263773,7 +263944,7 @@
     ],
     "page": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html",
     "project": "https://elle-miller.github.io/tactile_rl/",
-    "pdf": "",
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "",
@@ -263813,7 +263984,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -263855,17 +264031,17 @@
     "venue_canonical": "NeurIPS",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -263880,26 +264056,35 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "BENCHMARK / SIMULATION",
       "settings": [
-        "not_recorded"
+        "simulation",
+        "benchmark_or_dataset"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
         "baselines": "not_recorded",
-        "ablations": "not_recorded",
+        "ablations": "reported",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
+      "trial_evidence": [
+        {
+          "count": 5,
+          "unit": "seed",
+          "text": "최종 비교는 학습 시드 5개를 사용했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6)",
+          "source": "2025/NeurIPS/2025_NeurIPS_Enhancing-Tactile-based-Reinforcement-Learning-for-Robotic/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2025/NeurIPS/2025_NeurIPS_Enhancing-Tactile-based-Reinforcement-Learning-for-Robotic/04_evaluation.md",
-      "reviewed_on": "2026-11-08",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -263981,7 +264166,7 @@
     ],
     "page": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html",
     "project": "https://thuml.github.io/RLVR-World/",
-    "pdf": "",
+    "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/b63a24a1832bd14fa945c71f535c0095-Paper-Conference.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "Robot video prediction 결과와 robot policy return을 구분한다.",
@@ -264021,7 +264206,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/b63a24a1832bd14fa945c71f535c0095-Paper-Conference.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -264063,14 +264253,14 @@
     "venue_canonical": "NeurIPS",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. Robot video prediction 결과와 robot policy return을 구분한다. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -264589,7 +264779,7 @@
     "problem": "새 과제 적응을 위해 정책을 반복 fine-tuning하는 비용을 줄일 필요가 있다.",
     "method": "시연의 시각·proprioception·행동을 압축하는 perceiver와 in-context 조건부 flow matching을 결합한다.",
     "interface": "현재 관측과 demonstration context → continuous action flow; 새 context로 행동을 조건화한다.",
-    "evaluation": "LIBERO의 미관측 구성과 실제 단일팔·양팔 조작을 평가한다.",
+    "evaluation": "LIBERO 미학습 구성에서 평균 성공률은 ContextFlow 73.5%, ICRT 38.5%로 35%p 차이다. 실물의 빨간 펜을 왼손부터 잡아 뚜껑을 여는 조건에서는 각각 4/10과 0/10이었다.",
     "role": "적응을 RL update 없이 해결하는 비교 대안으로 등록한다.",
     "lineage": "ACT·Diffusion Policy·in-context imitation의 적응 interface를 비교한다.",
     "question": "같은 신규 시연 예산에서 context 적응이 RL fine-tuning과 어느 조건에서 갈리는가?",
@@ -264611,7 +264801,7 @@
     ],
     "page": "https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16",
     "project": "https://dingjiansw101.github.io/contextflow-page/",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2609.06852v1",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "",
@@ -264651,7 +264841,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2609.06852v1",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -264693,17 +264888,17 @@
     "venue_canonical": "ECCV",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -264718,26 +264913,42 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / REAL-ROBOT AND SIMULATION",
       "settings": [
-        "not_recorded"
+        "real_robot",
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
-      "benchmark_cues": [],
+      "trial_evidence": [
+        {
+          "count": 10,
+          "unit": "trial",
+          "text": "실물 표 8의 각 모델·구성 조합은 시행 10회다. [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)",
+          "source": "2026/ECCV/2026_ECCV_ContextFlow-In-Context-Flow-Matching-for-Robot-Manipulatio/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:libero",
+          "name": "LIBERO",
+          "evidence": "cue_only",
+          "source": "2026/ECCV/2026_ECCV_ContextFlow-In-Context-Flow-Matching-for-Robot-Manipulatio/04_evaluation.md"
+        }
+      ],
       "metric_cues": [],
       "source_note": "2026/ECCV/2026_ECCV_ContextFlow-In-Context-Flow-Matching-for-Robot-Manipulatio/04_evaluation.md",
-      "reviewed_on": "2026-11-08",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -265873,7 +266084,7 @@
     ],
     "page": "https://peafowlvla.github.io/",
     "project": "https://peafowlvla.github.io/",
-    "pdf": "",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "RA-L 11(10), 11841–11848, October 2026; first online 2026-08-21. Crossref issue metadata checked 11/08.",
@@ -265913,7 +266124,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11661761",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://ieeexplore.ieee.org/document/11661761/",
         "kind": "publisher",
@@ -265961,14 +266177,14 @@
     "venue_canonical": "RA-L",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RA-L 11(10), 11841–11848, October 2026; first online 2026-08-21. Crossref issue metadata checked 11/08. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -266094,7 +266310,7 @@
     ],
     "page": "https://api.crossref.org/works/10.1109/LRA.2026.3729462",
     "project": "https://github.com/Debactor/PROSPECT",
-    "pdf": "",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "boundary": "RA-L 11(11), 13071–13078, November 2026; first online 2026-08-31.",
@@ -266134,7 +266350,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-08"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11673313",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://ieeexplore.ieee.org/document/11673313/",
         "kind": "publisher",
@@ -266182,14 +266403,14 @@
     "venue_canonical": "RA-L",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인. RA-L 11(11), 13071–13078, November 2026; first online 2026-08-31. 본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-08",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -267968,7 +268189,7 @@
     ],
     "page": "https://arxiv.org/abs/2609.13516",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2609.13516v1",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -267987,7 +268208,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-09"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2609.13516v1",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": null,
       "code": null
     },
@@ -268008,7 +268234,7 @@
     "problem": "삽입의 force limit과 controller gain이 달라질 때 수동 재조정이 필요하다.",
     "method": "Force-limit 조건부 RL이 motion·insertion rate·gain을 요청하고 controller가 gain 범위로 투영한다.",
     "interface": "접촉 feedback·force limit → residual motion·속도·요청 gain.",
-    "evaluation": "Simulated oblique insertion을 평가한다. Gain 범위 보장과 force-limit 경험적 만족은 구별한다.",
+    "evaluation": "허용 구간 투영이 보장하는 대상은 적용 이득이다. 힘 상한을 지킨 삽입의 85.8±7.7%는 경사 삽입 시뮬레이션에서 측정한 시드 간 평균±표준편차다.",
     "role": "동작·강성 공동 RL 자체가 새롭지 않음을 보이는 controller 비교 자료다.",
     "lineage": "Variable impedance RL을 VLA 내부 공동 행동 학습의 비-VLA 대안으로 둔다.",
     "question": "VLA prior가 gain 적응만으로 해결되지 않는 일반화를 제공하는가?",
@@ -268042,17 +268268,17 @@
     "venue_canonical": "arXiv",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-09: official abstract/project 및 metadata 확인. v1 abstract 확인. 실물 검증·VLA·언어 일반화 결과로 확대하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-09",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -268067,26 +268293,34 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / SIMULATION",
       "settings": [
-        "not_recorded"
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
+      "trial_evidence": [
+        {
+          "count": 5,
+          "unit": "seed",
+          "text": "학습 시드 5개의 평균과 표준편차를 보고했다. [PDF 9쪽](https://arxiv.org/pdf/2609.13516v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15)",
+          "source": "2026/arXiv/2026_arXiv_Constraint-Grounded-Reinforcement-Learning-for-Variable-Im/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2026/arXiv/2026_arXiv_Constraint-Grounded-Reinforcement-Learning-for-Variable-Im/04_evaluation.md",
-      "reviewed_on": "2026-11-09",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -268155,7 +268389,7 @@
     ],
     "page": "https://arxiv.org/abs/2601.15541",
     "project": "https://sites.google.com/view/compliantvla",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2601.15541v2",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -268174,7 +268408,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-09"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2601.15541v2",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": {
         "url": "https://sites.google.com/view/compliantvla",
         "kind": "author_project",
@@ -268234,14 +268473,14 @@
     "venue_canonical": "arXiv",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-09: official abstract/project 및 metadata 확인. v2는 under review 표기. Project의 anonymous code 공개 주장은 확인했지만 구체적 repository URL은 이번 확인에서 식별하지 못했다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-09",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -269551,7 +269790,7 @@
     ],
     "page": "https://arxiv.org/abs/2611.01390",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2611.01390v1",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -269570,7 +269809,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-12"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2611.01390v1",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": null,
       "code": null
     },
@@ -269591,7 +269835,7 @@
     "problem": "추론 대기와 느린 시연 속도로 인한 배포 시간 손실을 줄인다.",
     "method": "Frozen chunk policy에 경로 유지 time scaling을 적용해 비동기 추론과 실행 속도를 맞춘다.",
     "interface": "고정 VLA 행동 chunk·추론 지연 → 경로/진행도 정렬 → 속도 조절된 실행 명령.",
-    "evaluation": "LIBERO와 LIBERO-Dynamic에서 지연을 주입해 성공률과 task throughput을 비교한다.",
+    "evaluation": "표 1의 처리량은 추론 대기 시간을 포함한 제어 1,000스텝당 성공 횟수다. π0.5는 4개 과제군, SmolVLA는 2개 과제군에서 비교했다.",
     "role": "제어 주기 학습 전에 넘어야 할 학습 없는 실행 대안이며 예비 timing 질문의 비교 자료다.",
     "lineage": "RTC 비동기 실행·action chunking·CAT 물리 시간 표현과 학습/실행 단계의 효과를 분리한다.",
     "question": "표현 학습의 추가 이득이 같은 decoder·latency·gripper 규칙의 단순 time scaling 이후 남는가?",
@@ -269625,17 +269869,17 @@
     "venue_canonical": "arXiv",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. 11/01 공개 v1 abstract 확인. 공식 채택·code URL 미확인. Simulation 결과를 실제 로봇 검증으로 확대하지 않는다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -269650,26 +269894,41 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / SIMULATION",
       "settings": [
-        "not_recorded"
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
-      "benchmark_cues": [],
+      "trial_evidence": [
+        {
+          "count": 100,
+          "unit": "episode",
+          "text": "표 1의 각 모델·방법·과제군 조합에서 에피소드 100개를 사용했다. 방법 간 초기 상태와 시드를 맞췄다. [PDF 7쪽](https://arxiv.org/pdf/2611.01390v1#page=7)",
+          "source": "2026/arXiv/2026_arXiv_Same-Path-Less-Time-Training-Free-Fast-Execution-of-Vision/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:libero",
+          "name": "LIBERO",
+          "evidence": "cue_only",
+          "source": "2026/arXiv/2026_arXiv_Same-Path-Less-Time-Training-Free-Fast-Execution-of-Vision/04_evaluation.md"
+        }
+      ],
       "metric_cues": [],
       "source_note": "2026/arXiv/2026_arXiv_Same-Path-Less-Time-Training-Free-Fast-Execution-of-Vision/04_evaluation.md",
-      "reviewed_on": "2026-11-12",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -269737,7 +269996,7 @@
     ],
     "page": "https://arxiv.org/abs/2609.37307",
     "project": "not identified",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2609.37307v2",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -269756,7 +270015,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-12"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2609.37307v2",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": null,
       "code": null
     },
@@ -269777,7 +270041,7 @@
     "problem": "현재 관측이 비슷한 서로 다른 작업 단계에서 행동이 모호해지는 문제를 다룬다.",
     "method": "Mamba 행동 이력 memory와 PreAction Expert를 학습하고 frozen action expert에 denoising을 넘긴다.",
     "interface": "실행 행동 이력·현재 맥락 → memory/PAE → frozen AE의 행동 refinement.",
-    "evaluation": "LIBERO-Mem과 네 실제 조작 과제에서 memory 및 기존 VLA와 비교한다.",
+    "evaluation": "LIBERO-Mem 평균 80.8%는 과제별 시연 길이로 정한 스텝 제한을 적용한 결과다. 공통 600스텝 제한의 결과는 그림 3, 과제별 제한은 그림 4에 실렸다.",
     "role": "행동 이력 memory의 강한 비교 자료이며 결과 기반 기억이라는 질문의 기존 대안을 구체화한다.",
     "lineage": "MemoryVLA·π₀.₅·RoboMME와 명령 이력/관측 결과/작업 진행도의 차이를 비교한다.",
     "question": "행동 이력이 유지돼도 실행 결과가 바뀌는 경우 memory가 결과를 올바르게 반영하는가?",
@@ -269811,17 +270075,17 @@
     "venue_canonical": "arXiv",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 abstract/metadata·명시한 project 확인. v2 abstract 확인. 공식 채택·공식 code/project URL 미확인. 행동 이력은 물리적 과제 완료의 증거가 아니다. 새 5-note는 초록 수준이며 과거 N1/N2의 지정 본문/source 검토는 work/sources/vla_masters_gap_scout_2026-11-12.json을 따른다. 사용자 정독·코드 재현을 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -269836,26 +270100,49 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / REAL-ROBOT AND SIMULATION",
       "settings": [
-        "not_recorded"
+        "real_robot",
+        "simulation"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
         "failure_cases": "not_recorded"
       },
-      "trial_evidence": [],
-      "benchmark_cues": [],
+      "trial_evidence": [
+        {
+          "count": 180,
+          "unit": "trial",
+          "text": "주 시뮬레이션 비교는 방법·과제당 시행 180회, 실물은 방법·과제당 시행 20회다. [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)",
+          "source": "2026/arXiv/2026_arXiv_ActMem-VLA-Action-History-Memory-with-Dual-Expert-Denoisin/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        },
+        {
+          "count": 20,
+          "unit": "trial",
+          "text": "주 시뮬레이션 비교는 방법·과제당 시행 180회, 실물은 방법·과제당 시행 20회다. [PDF 5쪽](https://arxiv.org/pdf/2609.37307v2#page=5)",
+          "source": "2026/arXiv/2026_arXiv_ActMem-VLA-Action-History-Memory-with-Dual-Expert-Denoisin/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:libero",
+          "name": "LIBERO",
+          "evidence": "cue_only",
+          "source": "2026/arXiv/2026_arXiv_ActMem-VLA-Action-History-Memory-with-Dual-Expert-Denoisin/04_evaluation.md"
+        }
+      ],
       "metric_cues": [],
       "source_note": "2026/arXiv/2026_arXiv_ActMem-VLA-Action-History-Memory-with-Dual-Expert-Denoisin/04_evaluation.md",
-      "reviewed_on": "2026-11-12",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",
@@ -271090,7 +271377,7 @@
     ],
     "page": "https://ojs.aaai.org/index.php/AAAI/article/view/7727",
     "project": "",
-    "pdf": "",
+    "pdf": "https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -271104,9 +271391,20 @@
         "verified_on": "2026-11-12"
       },
       "preprint": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": null,
-      "code": null
+      "code": null,
+      "venue_verification": {
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/7727",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -271159,23 +271457,23 @@
     "venue_canonical": "AAAI",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://ojs.aaai.org/index.php/AAAI/article/view/7727",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://cdn.aaai.org/ojs/7727/7727-13-11257-1-2-20201228.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "AAAI 웹 서지에서 생략한 두 성의 분음 부호를 게재본에서 확인해 Katharina Mülling과 Yasemin Altün으로 표기했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -271252,8 +271550,8 @@
     },
     "authors": [
       "Jan Peters",
-      "Katharina Mulling",
-      "Yasemin Altun"
+      "Katharina Mülling",
+      "Yasemin Altün"
     ]
   },
   {
@@ -271480,7 +271778,7 @@
     ],
     "page": "https://api.crossref.org/works/10.1016/S0004-3702(99)00052-1",
     "project": "",
-    "pdf": "",
+    "pdf": "https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -271494,7 +271792,12 @@
         "verified_on": "2026-11-20"
       },
       "preprint": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": null,
       "code": null,
       "alternate_at_audit": {
@@ -271555,14 +271858,14 @@
     "venue_canonical": "Artificial Intelligence",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -271669,7 +271972,7 @@
     ],
     "page": "https://api.crossref.org/works/10.1177/0278364913495721",
     "project": "https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613",
-    "pdf": "",
+    "pdf": "https://www.jenskober.de/publications/Kober2013IJRR.pdf",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -271683,7 +271986,12 @@
         "verified_on": "2026-11-20"
       },
       "preprint": null,
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://www.jenskober.de/publications/Kober2013IJRR.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": {
         "url": "https://www.ias.informatik.tu-darmstadt.de/Publications/BibTex?id=10613",
         "kind": "author_project",
@@ -271749,14 +272057,14 @@
     "venue_canonical": "IJRR",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. Sage 검색의 publisher abstract/metadata와 저자 연구실 BibTeX·원문 초록으로 IJRR 2013 확인. Publisher 직접 open은 timeout. Survey 본문 전체 정독은 하지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -271863,7 +272171,7 @@
     ],
     "page": "https://arxiv.org/abs/2004.07219",
     "project": "https://github.com/Farama-Foundation/D4RL",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2004.07219v4",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -271882,7 +272190,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-12"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2004.07219v4",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": {
         "url": "https://github.com/Farama-Foundation/D4RL",
         "kind": "author_project",
@@ -271947,14 +272260,14 @@
     "venue_canonical": "arXiv",
     "provenance": {
       "metadata_source_kind": "arxiv",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. arXiv v4와 공식 유지 repository 확인. 확인되지 않은 conference venue를 부여하지 않으며 현행 라이브러리의 실행 호환성을 보장하지 않는다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -272852,7 +273165,7 @@
     ],
     "page": "https://api.crossref.org/works/10.1146/annurev-control-030323-022510",
     "project": "",
-    "pdf": "",
+    "pdf": "https://arxiv.org/pdf/2408.03539v3",
     "note_format": "abstract_analysis_v1",
     "evidence": "ABSTRACT_CHECKED",
     "identifiers": {
@@ -272872,7 +273185,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-12"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2408.03539v3",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "project": null,
       "code": null,
       "alternate_at_audit": {
@@ -272933,14 +273251,14 @@
     "venue_canonical": "Annual Review of Control, Robotics, and Autonomous Systems",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. Publisher의 2025 volume 게재를 사용한다. 2024 online-first와 같은 제목의 AAAI 2025 요약은 별도 신규 논문으로 중복 등록하지 않는다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
         "04_evaluation.md": "ABSTRACT_CHECKED",
@@ -276106,7 +276424,7 @@
     },
     "page": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
     "project": "https://minfenli.github.io/UA-Pose/",
-    "pdf": "",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf",
     "sources": {
       "primary": {
         "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
@@ -276114,7 +276432,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-18"
       },
-      "paper_pdf": null,
+      "paper_pdf": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf",
+        "kind": "verified_pdf",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html",
         "kind": "cvf",
@@ -276162,7 +276485,7 @@
     "problem": "완전 CAD나 전체 표면 reference 없이 부분 관측만으로 미지 물체 pose를 추정해야 한다.",
     "method": "부분 3D 모델의 관측·미관측 영역 불확실성을 활용해 pose 신뢰도와 온라인 completion sampling을 다룬다.",
     "interface": "Known-pose RGB-D 소수 관측 또는 한 장의 reference 이미지에서 출발해 pose와 보완된 물체 표현을 출력한다.",
-    "evaluation": "YCB-Video·YCBInEOAT·HO3D의 로봇/손 조작 RGB-D 시퀀스를 평가한다. 제어 정책 성공의 실증과 구별한다.",
+    "evaluation": "평가는 RGB-D 시퀀스의 6D 자세 정확도와 온라인 형상 완성도다. 자세에는 ADD·ADD-S의 곡선 아래 면적을, 형상에는 Chamfer 거리를 사용했다.",
     "role": "CAD 완전성 전제를 완화하는 geometry 대안으로 보존하되 첫 active-pose 비교의 필수 정독에서는 REFERENCE로 둔다.",
     "lineage": "FoundationPose의 reference 전제 → UA-Pose의 부분 object 표현을 비교한다.",
     "question": "미관측 표면 completion의 오차가 pose confidence와 조작 실패를 함께 악화시키는가?",
@@ -276192,17 +276515,17 @@
     "paper_type": "method",
     "provenance": {
       "metadata_source_kind": "cvf",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
       "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. Official GitHub root에는 README와 images만 확인됨; 구현 release로 세지 않는다.",
+      "source_audit_note": "2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다. 평가 조건은 04_evaluation.md에 쪽수와 함께 기록했다. 11월 18일 저자 저장소에서는 README와 이미지만 확인했다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-18",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
+        "01_overview.md": "FULL_TEXT_CHECKED",
         "02_problem.md": "ABSTRACT_CHECKED",
         "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
@@ -276217,13 +276540,13 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "BENCHMARK / DATASET",
       "settings": [
-        "not_recorded"
+        "benchmark_or_dataset"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
         "baselines": "not_recorded",
         "ablations": "not_recorded",
         "split_or_generalization": "not_recorded",
@@ -276235,8 +276558,8 @@
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2025/CVPR/2025_CVPR_UA-Pose-Uncertainty-Aware-6D-Object-Pose-Estimation-and-On/04_evaluation.md",
-      "reviewed_on": "2026-11-18",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-24",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
     },
     "reproducibility": {
       "profile_version": "1.0",

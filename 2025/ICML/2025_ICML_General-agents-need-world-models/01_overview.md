@@ -1,7 +1,6 @@
 # General agents need world models
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2025 / ICML
 - Authors: Jonathan Richens, Tom Everitt, David Abel
@@ -14,15 +13,17 @@
 - Venue verification: https://proceedings.mlr.press/v267/richens25a.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다.
+- Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-다단계 목표 일반화에 환경 예측 모델이 필요한지 형식적으로 묻는다.
+다단계 목표군에서 일반화하는 에이전트의 정책으로부터 환경의 예측 모형을 얼마나 정확히 복원할 수 있는지 정리로 보였다. [PDF 1쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=1) · [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=4)
 
 ## Core Idea and Contribution
 
-일반화 가능한 정책에서 예측 world model을 추출할 수 있음을 이론적으로 분석한다.
+- 달성 가능한 목표의 종류와 정책의 목표 달성 성능에 따라 복원한 전이 모형의 오차를 제한하는 조건을 도출했다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=4) · [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=5)
+- 구성한 실험 환경에서 정책 성능과 복원 오차의 관계를 확인하고, 정책이 내부에 명시적 전이 모형을 구현했는지와 외부에서 복원 가능한지를 구별한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=5) · [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=6)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +31,9 @@
 
 ## Evaluation Scope and Claim Boundary
 
-공식 abstract는 다단계 목표·성능과 모델 정확도의 이론적 관계를 제시한다.
+정리 1은 다단계 목표에서 정책의 실패율과 복원 가능한 환경 모형의 오차를 연결한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=4)
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v267/richens25a.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v267/richens25a.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

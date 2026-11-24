@@ -1,10 +1,10 @@
 # Active Offline Policy Selection
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2021 / NeurIPS
-- Authors: Ksenia Konyushova, Yutian Chen, Thomas Paine, Caglar Gulcehre, Cosmin Paduraru, Daniel J. Mankowitz, Misha Denil, Nando de Freitas
+- Authors: Ksenia Konyushkova, Yutian Chen, Tom Le Paine, Caglar Gulcehre, Cosmin Paduraru, Daniel J Mankowitz, Misha Denil, Nando de Freitas
+- 저자 판본: 학회 서지에는 Ksenia Konyushova, Thomas Paine, Daniel J. Mankowitz로 실려 있다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=1) · [학회 서지](https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html)
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
@@ -14,15 +14,17 @@
 - Venue verification: https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-Offline data가 있지만 online 평가 예산이 작은 상황에서 policy를 고른다.
+A-OPS는 고정 로그가 있고 새 시행 예산은 적을 때, 후보 정책 중 어느 것을 다음으로 실행해야 좋은 정책을 찾을지 결정한다. [PDF 1쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=1) · [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=3)
 
 ## Core Idea and Contribution
 
-OPE로 초기화하고 policy similarity 기반 Bayesian 선택으로 다음 평가를 배분한다.
+- 오프폴리시 가치 추정치를 가우시안 과정에 반영하고 관측 상태에서의 행동 차이로 정책 간 유사도를 계산해 새 평가 결과를 다른 후보에도 반영한다. [PDF 3쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=4)
+- 연속제어와 Atari 등을 대상으로 로그만 쓰는 선택, 온라인 평가, 두 정보를 함께 쓰는 선택의 정책 선택 성능을 비교했다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=6) · [PDF 7쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Logged data·policy 후보·평가 결과 → 다음 policy 선택.
 
 여러 benchmark와 다수 후보 정책의 selection 효율을 보고한다.
 
-근거: [공식 paper/abstract](https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

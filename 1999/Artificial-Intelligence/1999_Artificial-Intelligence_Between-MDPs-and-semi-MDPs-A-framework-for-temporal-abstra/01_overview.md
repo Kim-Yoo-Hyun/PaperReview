@@ -1,7 +1,6 @@
 # Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 1999 / Artificial Intelligence
 - Authors: Richard S. Sutton, Doina Precup, Satinder Singh
@@ -14,15 +13,17 @@
 - Venue verification: https://www.sciencedirect.com/science/article/pii/S0004370299000521
 - Code/Project:
 - Code: not_identified
-- Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.
+- Full-text retrieval: https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-서로 다른 시간 길이의 행동과 정책을 같은 RL 형식으로 다룬다.
+옵션은 여러 시간 단계에 걸친 폐루프 행동을 하나의 선택으로 나타내며, MDP 위에서 옵션을 고르는 문제를 준마르코프 결정 과정으로 기술할 수 있다. [PDF 1쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=1) · [PDF 6쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=6)
 
 ## Core Idea and Contribution
 
-여러 step 동안 실행되는 closed-loop option과 SMDP를 연결하고 중단·intra-option 학습을 분석한다.
+- 시작 상태 집합·내부 정책·종료 규칙으로 옵션을 정의하고 시간 추상화를 포함하는 계획과 가치 학습을 전개했다. [PDF 6쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=6) · [PDF 7쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=7) · [PDF 8쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=8)
+- 실행 중 다른 옵션으로 전환하는 조건과, 옵션 전체가 끝날 때까지 기다리지 않고 부분 경험으로 옵션 모형을 학습하는 방법을 제시했다. [PDF 17쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=17) · [PDF 21쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=21) · [PDF 22쪽](https://ics.uci.edu/~dechter/courses/ics-295/winter-2018/papers/Sutton-Precup-Singh-AIJ99.pdf#page=22)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@
 
 시간 추상화의 이론과 학습·계획 예제를 다룬다. VLA chunk가 자동으로 option이라는 주장은 없다.
 
-근거: [공식 paper/abstract](https://www.sciencedirect.com/science/article/pii/S0004370299000521). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://www.sciencedirect.com/science/article/pii/S0004370299000521).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -1,7 +1,6 @@
 # A State-Distribution Matching Approach to Non-Episodic Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2022 / ICML
 - Authors: Archit Sharma, Rehaan Ahmad, Chelsea Finn
@@ -14,15 +13,17 @@
 - Venue verification: https://proceedings.mlr.press/v162/sharma22a.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Full-text retrieval: https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-비에피소드 RL에서 backward policy가 어떤 분포로 reset할지 정한다.
+MEDAL은 외부에서 매번 초기화해 주기 어려운 연속제어 과제에서 역방향 정책이 소수 전문가 시연의 상태 분포로 로봇을 되돌리도록 학습한다. [PDF 1쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=1) · [PDF 3쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=3)
 
 ## Core Idea and Contribution
 
-시연 state 분포를 맞추는 backward policy로 task-relevant reset을 학습한다.
+- 시연과 현재 상태를 구분하는 판별기에서 역방향 보상을 얻고, 정방향 정책과 역방향 정책을 번갈아 실행한다. [PDF 4쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=5)
+- EARL의 탁상 물체 이동, 문 닫기, 못 삽입에서 재시작 분포를 달리하는 방법들과 정방향 과제 성능을 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=7)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ Demonstration states → reset policy → forward learner.
 
 EARL의 sparse-reward continuous control task를 평가한다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v162/sharma22a.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v162/sharma22a.html).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

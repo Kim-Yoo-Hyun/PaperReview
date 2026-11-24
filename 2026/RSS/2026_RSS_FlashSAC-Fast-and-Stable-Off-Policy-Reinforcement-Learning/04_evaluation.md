@@ -1,42 +1,24 @@
 # FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 표시한 평가 항목을 확인했다.
+> Source audit: 2026-11-24 원문 대조.
 
 ## Evaluation in One Sentence
 
-여러 simulator의 제어 과제와 실제 humanoid sim-to-real을 보고한다.
+Unitree G1의 실물 계단 오르기에서 인용하는 4시간은 FlashSAC의 시뮬레이션 학습 시간이다. 그림 6은 비슷한 계단 등반 능력에 도달한 PPO의 약 20시간과 비교한다. [PDF 5쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=5) · [PDF 7쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=7)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-여러 simulator의 제어 과제와 실제 humanoid sim-to-real을 보고한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+29자유도 G1의 비시각 보행을 위해 계단·격자·파형·구덩이 지형에서 학습했다. [PDF 7쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=7)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 상태/vision별 계산량, update-to-data 비율, 실제 로봇 전이 범위을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+계단 등반의 실물 전이 비교 대상은 PPO다. [PDF 7쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=7)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +28,4 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://roboticsproceedings.org/rss22/p099.html) · [저자 project/code](https://github.com/Holiday-Robot/FlashSAC). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://roboticsproceedings.org/rss22/p099.html) · [저자 project/code](https://github.com/Holiday-Robot/FlashSAC).

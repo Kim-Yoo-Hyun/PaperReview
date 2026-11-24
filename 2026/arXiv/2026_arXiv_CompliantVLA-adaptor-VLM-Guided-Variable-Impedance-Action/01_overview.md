@@ -1,7 +1,6 @@
 # CompliantVLA-adaptor: VLM-Guided Variable Impedance Action for Safe Contact-Rich Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 요약과 기여를 아래 쪽수에서 확인했다.
 
 - Year/Venue: 2026 / arXiv
 - Authors: Heng Zhang, Wei-Hsing Huang, Qiyi Tong, Gokhan Solak, Puze Liu, Kaidi Zhang, Sheng Liu, Jan Peters, Yu She, Arash Ajoudani
@@ -14,15 +13,17 @@
 - Venue verification: https://arxiv.org/abs/2601.15541
 - Code/Project: https://sites.google.com/view/compliantvla
 - Code: not_identified
-- Source audit: 2026-11-09: official abstract/project 및 metadata 확인. v2는 under review 표기. Project의 anonymous code 공개 주장은 확인했지만 구체적 repository URL은 이번 확인에서 식별하지 못했다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다.
+- Full-text retrieval: https://arxiv.org/pdf/2601.15541v2
+- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
 
 ## Problem and Importance
 
-위치 명령 중심 VLA가 접촉 force와 순응성을 충분히 조절하지 못한다.
+CompliantVLA-adaptor는 VLA가 생성한 위치 명령을 작업 맥락과 힘·토크 피드백에 따라 가변 임피던스 제어로 실행한다. [PDF 1쪽](https://arxiv.org/pdf/2601.15541v2#page=1) · [PDF 3쪽](https://arxiv.org/pdf/2601.15541v2#page=3)
 
 ## Core Idea and Contribution
 
-VLM이 task context에 따른 impedance를 정하고 실시간 force/torque feedback으로 조절한다.
+- 시각·언어 모델이 장면과 지시에서 강성·감쇠를 정하고, 접촉 중 측정한 힘·토크에 따라 제어 파라미터를 다시 조절한다. [PDF 3쪽](https://arxiv.org/pdf/2601.15541v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2601.15541v2#page=4)
+- 시뮬레이션 접촉 과제와 실물 상자 밀기·화이트보드 닦기에서 어댑터 유무에 따른 과제 성공과 접촉력을 측정했다. [PDF 5쪽](https://arxiv.org/pdf/2601.15541v2#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2601.15541v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2601.15541v2#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +33,7 @@ VLM이 task context에 따른 impedance를 정하고 실시간 force/torque feed
 
 Simulation과 실제 접촉 과제에서 성공률·force violation을 비교한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2601.15541) · [저자 project/code](https://sites.google.com/view/compliantvla). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2601.15541) · [저자 project/code](https://sites.google.com/view/compliantvla).
 
 ## Why This Paper Is Here — Researcher Interpretation
 

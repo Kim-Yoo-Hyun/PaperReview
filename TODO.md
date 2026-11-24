@@ -2,7 +2,7 @@
 
 ## 재개 순서
 
-**다음 원장 감사.** REFERENCE에 남은 요약 40편을 대조한다. *A State-Distribution Matching Approach to Non-Episodic Reinforcement Learning*(`pr-1024`)부터 *UA-Pose*(`pr-1210`)까지 미확인 논문을 안정 ID 순으로 고른다. 논문별 요약과 핵심 기여 두 개에 PDF 쪽수 또는 공식 웹 원문의 절을 연결한다. 이 배치를 마치면 요약 감사가 남은 등급은 ARCHIVE 198편이다. [진척과 선정 기준](./research/SOURCE_AUDIT.md#요약기여-원문-대조)
+**다음 원장 감사.** ARCHIVE에 남은 198편 중 *ScanRefer*(`pr-0025`)부터 *SDGS*(`pr-0366`)까지 미확인 100편을 안정 ID 순으로 대조한다. 논문별 요약과 핵심 기여 두 개에 PDF 쪽수 또는 공식 웹 원문의 절을 연결한다. 다음 98편은 *SR3R*(`pr-0367`)에서 시작한다. [진척과 선정 기준](./research/SOURCE_AUDIT.md#요약기여-원문-대조)
 
 **추출 문자 대조.** 10편의 노트 31개에 남은 글꼴 전용 문자를 원문의 수식·도식과 대조한다. 저장소 루트에서 `rg -n '[\p{Co}\x{FFFD}]' -g '0[1-5]_*.md' .`로 해당 줄을 찾을 수 있다. [노트 품질](./work/update/REGISTRY.md#note-review)
 
@@ -28,6 +28,6 @@ CORE 36편에는 공개 자료 68개 항목이 남아 있다. 원장에는 이�
 
 ## 직전 완료
 
-- **11월 24일 REFERENCE 네 번째 100편.** Safety Gym부터 EARL까지 요약 100개와 기여 200개를 원문 쪽수에 연결했다. 11편에서 시연 수, 실물 전이 결과, 판본별 실험 등 평가 조건을 명시했다. 이전에 초록만 확인했던 24편은 개요의 근거 수준을 갱신했고, 비어 있던 원문 주소 44개를 채웠다. [평가 조건과 지표](./research/SOURCE_AUDIT.md#평가-조건과-지표) · [노트 교정](./work/update/REGISTRY.md#note-review)
+- **11월 24일 REFERENCE 요약 감사 완료.** MEDAL부터 UA-Pose까지 마지막 40편의 요약 40개와 기여 80개에 원문 쪽수를 연결해 510편을 모두 확인했다. 14편의 평가 조건을 보강했고, 4편의 저자 표기를 게재본과 맞췄다. RESCUE의 원 시행과 복구 분기, ContextFlow의 시뮬레이션 개선 폭과 실물 성공 횟수, ActMem-VLA의 과제별 스텝 제한을 각 평가 노트에 기록했다. [배치 원장](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [평가 조건과 지표](./research/SOURCE_AUDIT.md#평가-조건과-지표)
 - **시연의 선택적 재수집.** 네 원격조작 자료를 대조했다. 원래 요청을 복원할 수 없으면서 같은 작업에서 가이드 방향만 바꿔 재시연할 수 있는 표본이 확보될 때까지 파일럿을 보류한다. [결과](./work/research_topics/demonstration_recollection/내용/README.md) · [공개 표본 재검산](./work/research_topics/demonstration_recollection/재현%20방법/README.md)
 - **레지스트리.** 공유 제어 원문 2편을 등록하고 DROID 공개 자료를 교정했다. 기존 23편의 등록 판정과 이전 실험의 수치·재개 조건은 각 결과 문서에서 확인할 수 있다. [등록과 교정](./work/update/REGISTRY.md) · [누락 심사](./research/GAPFILL.md) · [종료·보류 결과](./work/research_topics/RESULTS.md)
