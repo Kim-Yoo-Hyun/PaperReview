@@ -72,6 +72,8 @@ def current_checks(row, *, include_reviews=True):
             states["authors"] = review.get("resolution", review)["status"]
         if review := row.get("byline_correction"):
             states["authors"] = review["status"]
+        if review := row.get("taxonomy_review", {}).get("legacy_tags"):
+            states["tags"] = review["status"]
         for field, check in artifact_checks(row).items():
             states[field] = check["status"]
     return states
@@ -146,6 +148,9 @@ def check_applied(rows, papers, root):
 
         def check_source(field, target):
             source_key = {"pdf": "paper_pdf", "code_url": "code"}.get(field, field)
+            current_project = row.get("taxonomy_review", {}).get("project")
+            if source_key == "project" and current_project:
+                target = current_project["url"]
             actual = (paper["sources"].get(source_key) or {}).get("url")
             expect(f"sources.{source_key}", actual, target)
             if field in ("primary", "pdf"):
@@ -298,6 +303,16 @@ def check_applied(rows, papers, root):
                     line = cited_statement(claim, review)
                     if line not in section:
                         errors.append(f"{pid} source-checked statement or citation missing from {header}")
+        taxonomy = row.get("taxonomy_review", {})
+        if tags := taxonomy.get("legacy_tags"):
+            expect("reviewed search tags", paper["tags"], tags["tags"])
+            for axis, values in tags.get("facets", {}).items():
+                expect("reviewed search facets " + axis, paper["facets"][axis], values)
+            if "- Tags: " + ", ".join(tags["tags"]) not in (root / paper["folder"] / "01_overview.md").read_text().splitlines():
+                errors.append(f"{pid} reviewed search tags missing from overview")
+        if project := taxonomy.get("project"):
+            check_source("project", project["url"])
+            expect("reviewed project link", paper["project"], project["url"])
         for field, item in artifacts.items():
             if item["status"] != PASS and "metadata_correction" not in item:
                 continue
@@ -454,9 +469,17 @@ def validate(rows, meta):
                         raise ValueError(f"Invalid applicability correction for {row['id']} {field}")
     for row in rows:
         if review := row.get("taxonomy_review"):
-            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", review["verified_on"]) or not review.get("fields"):
+            if (not re.fullmatch(r"\d{4}-\d{2}-\d{2}", review["verified_on"])
+                or not (review.get("fields") or review.get("legacy_tags") or review.get("project"))):
                 raise ValueError(f"Invalid taxonomy artifact review for {row['id']}")
-            for field, item in review["fields"].items():
+            if tags := review.get("legacy_tags"):
+                if (tags["status"] != PASS or not tags.get("tags") or not tags.get("before") or not tags.get("basis")
+                    or not tags.get("source", "").startswith("https://") or not tags.get("pdf_pages")):
+                    raise ValueError(f"Missing search tag evidence for {row['id']}")
+            if project := review.get("project"):
+                if "before" not in project or not all(project.get(key, "").startswith("https://") for key in ("url", "source")):
+                    raise ValueError(f"Missing current project evidence for {row['id']}")
+            for field, item in review.get("fields", {}).items():
                 finding = item["finding"]
                 if (field not in ("code", "weights", "data") or not item["basis"].strip()
                     or not item["source"].startswith("https://") or not item.get("before", {}).get("status")):
@@ -632,13 +655,18 @@ def render(rows, meta):
         lines.append("")
     taxonomy_reviews = [r["taxonomy_review"] for r in rows if "taxonomy_review" in r]
     if taxonomy_reviews:
-        findings = Counter(item["finding"] for review in taxonomy_reviews for item in review["fields"].values())
         lines += ["## 다축 태그와 공개 자료", "",
-                  f"태그 정규화 과정에서 {len(taxonomy_reviews)}편의 공개 자료 근거를 갱신했다. "
-                  f"배포 파일 {findings['file']}건, 저자가 공개 예정으로 표시한 항목 {findings['not_released']}건, "
-                  f"실험 자료를 사용하지만 배포 범위가 미확인인 항목 {findings['unresolved']}건이다. "
-                  "한 논문의 코드·가중치·데이터는 따로 센다. "
-                  "[배치별 분류와 미확인 범위](../work/update/REGISTRY.md#두-번째-배치-태그-매핑)", ""]
+                  "코드·가중치·데이터의 배포 범위를 항목별로 집계했다. "
+                  "기존 검색 태그 판정은 원문의 방법·평가와 대조한 논문에만 반영했다. "
+                  "[배치별 분류와 미확인 범위](../work/update/REGISTRY.md#세-번째-배치-태그-매핑)", "",
+                  "| 배치 | 공개 근거를 갱신한 논문 | 배포 파일 | 저자의 공개 예정 안내 | 배포 미확인으로 교정 | 기존 검색 태그 대조 |",
+                  "|---|---:|---:|---:|---:|---:|"]
+        for batch in sorted({review["batch"] for review in taxonomy_reviews}):
+            group = [review for review in taxonomy_reviews if review["batch"] == batch]
+            findings = Counter(item["finding"] for review in group for item in review.get("fields", {}).values())
+            lines.append(f"| {batch} | {sum(bool(r.get('fields')) for r in group)} | {findings['file']} | "
+                         f"{findings['not_released']} | {findings['unresolved']} | {sum('legacy_tags' in r for r in group)} |")
+        lines.append("")
     bylines = [(row, change) for row in rows if (change := row.get("byline_correction", {})).get("batch")]
     if bylines:
         lines += [f"다축 정규화에서 저자 {len(bylines)}편의 표기나 순서를 원문 표제면에 맞췄다. "

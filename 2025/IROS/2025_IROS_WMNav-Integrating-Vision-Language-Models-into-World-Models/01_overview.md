@@ -10,7 +10,7 @@
 - Authors: Dujun Nie, Xianda Guo, Yiqun Duan, Ruijun Zhang, Long Chen
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Vision-Language Model, Navigation, Reinforcement Learning
+- Tags: Vision-Language Model, Navigation, world model
 - Official paper: https://arxiv.org/abs/2503.02247
 - Full-text retrieval: https://arxiv.org/pdf/2503.02247
 - Code/Project: https://b0b8k1ng.github.io/WMNav/
@@ -85,3 +85,7 @@ WMNav는 목표 물체를 찾을 때 시각·언어 모델이 후보 이동의 �
 - **Actual contribution:** Our contributions can be summarized as follows: • We introduce a new direction for object goal navigation in a complex, unknown environment using a world model consisting of VLMs and ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ✗ ✗ 69.5 34.9 e CVM(Ours) ... (p. 6, IV. EXPERIMENTS).
 - **Explicit failure boundary:** 2) Goal-approaching Stage: Due to the limitations of the existing VLMs' capability, we do not rely on the VLM to estimate the stopping condition directly from the observed image. (p. 5, III. WMNAV APPROACH).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · scripts/main.py [배포 파일](https://raw.githubusercontent.com/B0B8K1ng/WMNavigation/57b74cee7a00b669733e8ca917f34a8aadfd6fd0/scripts/main.py)

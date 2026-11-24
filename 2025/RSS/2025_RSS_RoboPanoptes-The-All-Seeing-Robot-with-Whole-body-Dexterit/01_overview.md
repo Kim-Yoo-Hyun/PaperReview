@@ -10,7 +10,7 @@
 - Authors: Xiaomeng Xu, Dominik Bauer, Shuran Song
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
-- Tags: Robotics, mobile manipulation, whole-body control, whole-body perception
+- Tags: Robotics, whole-body manipulation, whole-body control, whole-body perception
 - Official paper: https://www.roboticsproceedings.org/rss21/p042.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p042.pdf
 - Code/Project: https://robopanoptes.github.io/
@@ -87,3 +87,9 @@ RoboPanoptes는 로봇 몸체 여러 곳의 카메라와 접촉면을 사용해 
 - **Actual contribution:** design enables new robot capabilities such asa) simultaneously sweeping multiple sx (p. 1, 21 Cameras).
 - **Evaluation boundary:** overall 94.4% success rate, outperforming all baselines. (p. 8, A. Unboxing Task).
 - **Explicit failure boundary:** The Top-down Camere policy fails to locate the hance. ‘odiing policy's actions ae less precise, leading to failures ike missing the shoe or misaligning the drawer. (p. 10, IX. LIMITATIONS AND FUTURE WORK).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · train.py [배포 파일](https://raw.githubusercontent.com/real-stanford/RoboPanoptes/765bf79dfdb9cc8f9a1baacb0e928df10f0e9c48/train.py)
+- 가중치 — Stanford 배포 디렉토리의 쓸기 정책 체크포인트다. README 명령에 잘못 들어간 호스트 구분자를 바로잡았다. [배포 파일](https://real.stanford.edu/robopanoptes/data/pretrained_models/sweep.ckpt)
+- 데이터 — 쓸기 조작의 전처리 시연 묶음이다. 같은 디렉토리에 상자 열기와 정리 자료도 있다. [배포 파일](https://real.stanford.edu/robopanoptes/data/zarr_datasets/sweep.zarr.zip)

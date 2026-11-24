@@ -13,7 +13,7 @@
 - Tags: Robotics, mobile manipulation, Imitation Learning, safety constraints
 - Official paper: https://www.roboticsproceedings.org/rss21/p128.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p128.pdf
-- Code/Project: not identified
+- Code/Project: https://robin-lab.cs.utexas.edu/SafeMimic/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,8 @@ SafeMimic은 한 편의 사람 시연 영상에서 이동 조작 단계를 추�
 - **Actual contribution:** In summary, SAFEMIMIC introduces several novel contributions: (p. 2, I. INrRopucTION).
 - **Evaluation boundary:** The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt the human demonstrations to the robot's ... (p. 7, C. Learning from Previous Successful Exploration).
 - **Explicit failure boundary:** Similarly, motion planning methods [61, 62] ‘enable collision-free motion generation for a given environment geometry but fail to capture other possible failure modes involving contact, such as force-torque limit violations ... (p. 3, I. INrRopucTION).
+
+## 배포 범위 대조
+
+- 코드 — 프로젝트는 Code (coming soon)으로 표시한다. 연구실 저장소의 확인한 리비전에는 README만 있다. [저자 공개 안내](https://robin-lab.cs.utexas.edu/SafeMimic/)
+- 연구실 저장소의 파일 목록. [확인 리비전](https://github.com/UT-Austin-RobIn/SafeMimic/tree/adee5b06d0eb077bbe397f0965617f0118324b74)

@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS
-- Authors: Scott Fujimoto, Shixiang (Shane) Gu
+- Authors: Scott Fujimoto, Shixiang Shane Gu
+- 저자 표기 근거 — NeurIPS 표제면은 두 번째 저자의 이름을 괄호 없이 Shixiang Shane Gu로 표기한다. [표제면](https://proceedings.neurips.cc/paper_files/paper/2021/file/a8166da05c5a094f7dc03724b41886e5-Paper.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, offline reinforcement learning, behavior cloning, continuous control
@@ -85,3 +86,7 @@ TD3+BC는 고정된 데이터에서 TD3를 학습할 때 정책 갱신에 행동
 - **Actual contribution:** Consequently, offline RL enables the use of previously logged data or leveraging an expert, such as a human operator, without any of the risk associated with an untrained RL agent. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Table 9: Average normalized score using the D4RL -v2 datasets. The highest performing scores are highlighted. ± captures the standard deviation over seeds. Total (DT) sums scores over the subset ... (p. 18, Figure/Table caption).
 - **Explicit failure boundary:** We use the hyperparameters defined in the CQL paper rather than the default settings in the CQL GitHub as we found those settings performed poorly. † denotes hyperparameters which deviate ... (p. 15, B Experimental Details).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · TD3_BC.py [배포 파일](https://raw.githubusercontent.com/sfujim/TD3_BC/8791ad7d7656cb8396f1b3ac8c37f170b2a2dd5f/TD3_BC.py)

@@ -49,7 +49,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Robotics-enabling 3D perception`; tags: `VLA, Vision-Language Model, 3D Vision, Reinforcement Learning`.
+- **Registry position:** `NEXT` in `Robotics-enabling 3D perception`; tags: `VLA, Vision-Language Model, 3D Vision, Imitation Learning`.
 - **Reading predecessor in the generated track queue:** RoboSpatial: Teaching Spatial Understanding to 2D and 3D Vision-Language Models for Robotics (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Vysics: Object Reconstruction Under Occlusion by Fusing Vision and Contact-Rich Physics (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -92,3 +92,9 @@ Splat-Nav는 사전에 만든 가우시안 지도에서 충돌 제약을 만족�
 - **Actual contribution:** The key contributions of this paper are as follows: • We develop a fast polytope corridor generation algorithm to enable provably safe planning for drone navigation in GSplat maps. • ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Lastly, we examine the performance of the pose estimation algorithms in problems with a larger error in the initial estimate of the pose, with δR = 30◦and δt = 0.5 ... (p. 11, VI. EXPERIMENTS).
 - **Explicit failure boundary:** More importantly, we see that Splat-Plan never fails to return a trajectory, highlighted by the 0 failure rate. (p. 12, VI. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · splatplan/splatplan.py [배포 파일](https://raw.githubusercontent.com/chengine/splatnav/e996e229daca4e25703a13243541371290a6f7f8/splatplan/splatplan.py)
+- 가중치 — flight 장면의 Splatfacto 지도 체크포인트다. 로봇 제어 정책의 가중치와 구별한다. [배포 파일](https://drive.google.com/file/d/1oHRYtKOfHBoDymhlNWddQGrj2_ktB2hr/view)
+- 데이터 — flight 장면 학습 관측의 카메라 변환 파일을 확인했다. [배포 파일](https://drive.google.com/file/d/1YgsFyoSmZCOeEBGtCZdZScKaiEZjrpA5/view)

@@ -8,12 +8,13 @@
 
 - Year/Venue: 2026 / RA-L
 - Authors: Chengmeng Li, Junjie Wen, Yaxin Peng, Yan Peng, Yichen Zhu
+- 저자 판본 — RA-L 출판사 서지는 저자 5명, 저자 공개 PDF 표제면은 6명이다. 저자는 게재 서지를 따랐고, 방법·소속은 6인 판본 기준이다. Feifei Feng은 해당 저자판에만 있다. [게재 서지](https://api.crossref.org/works/10.1109/lra.2026.3653303) · [저자판](https://arxiv.org/pdf/2503.07511#page=1)
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
-- Tags: VLA, Vision-Language Model, 3D Vision, Reinforcement Learning
+- Tags: VLA, Vision-Language Model, 3D Vision, Imitation Learning
 - Official paper: https://arxiv.org/abs/2503.07511
 - Full-text retrieval: https://arxiv.org/pdf/2503.07511
-- Code/Project: not identified
+- Code/Project: https://pointvla.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

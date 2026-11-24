@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / CoRL
-- Authors: Pete Florence, Corey Lynch, Andy Zeng, Oscar A Ramirez, Ayzaan Wahid, Laura Downs, Adrian Wong, Johnny Lee, Igor Mordatch, Jonathan Tompson
+- Authors: Pete Florence, Corey Lynch, Andy Zeng, Oscar Ramirez, Ayzaan Wahid, Laura Downs, Adrian Wong, Johnny Lee, Igor Mordatch, Jonathan Tompson
+- 저자 표기 근거 — PMLR 표제면의 네 번째 저자는 Oscar Ramirez이다. [표제면](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, energy-based model, multimodal actions
@@ -91,3 +92,8 @@ IBC는 관측에서 단일 동작을 직접 회귀하는 대신 관측과 후보
 - **Actual contribution:** In this work, we propose to reformulate BC using implicit models - specifically, the composition of argmin with a continuous energy function Eθ (see Sec. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Table 2. Baseline comparisons on D4RL [17] tasks with human-expert data. Results shown are the average of 3 random seeds, 100 evaluations each, with ± std. dev. Baselines from [26] ... (p. 5, Figure/Table caption).
 - **Explicit failure boundary:** The failures of the Nearest-Neighbor baseline, with only 0-4% success rate, show that generalization is required for this task. (p. 5, 1 Introduction).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · ibc/train_eval.py [배포 파일](https://raw.githubusercontent.com/google-research/ibc/db89ddbb852603fe9b64cf0f502b1fd3d6037d33/ibc/train_eval.py)
+- 데이터 — IBC 기준 과제의 상태 기반 밀기 시연 자료다. [배포 파일](https://storage.googleapis.com/brain-reach-public/ibc_data/block_push_states_location.zip)

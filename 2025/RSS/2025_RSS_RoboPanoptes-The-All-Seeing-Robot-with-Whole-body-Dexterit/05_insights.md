@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, mobile manipulation, whole-body control, whole-body perception`.
+- **Registry position:** `NEXT` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, whole-body manipulation, whole-body control, whole-body perception`.
 - **Reading predecessor in the generated track queue:** LangWBC: Language-Directed Humanoid Whole-Body Control via End-to-End Learning (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Demonstrating OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

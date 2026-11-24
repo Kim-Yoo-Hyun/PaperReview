@@ -88,3 +88,7 @@ PlaNet은 영상에서 잠재 동역학과 보상을 학습하고 매 시점 후
 - **Actual contribution:** Key contributions of this work are summarized as follows: • Planning in latent spaces We solve a variety of tasks from the DeepMind control suite, shown in Figure 1, by ... (p. 1, 1. Introduction).
 - **Evaluation boundary:** Figure 12: Planning performance on the cheetah running task with the true simulator using different planner settings. Performance ranges from 132 (blue) to 837 (yellow). Evaluating more action sequences, optimizing ... (p. 20, Figure/Table caption).
 - **Explicit failure boundary:** Key difficulties include model inaccuracies, accumulating errors of multi-step predictions, failure to capture multiple possible futures, and overconfident predictions outside of the training distribution. (p. 1, 1. Introduction).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · planet/control/planning.py [배포 파일](https://raw.githubusercontent.com/google-research/planet/c04226b6db136f5269625378cd6a0aa875a92842/planet/control/planning.py)

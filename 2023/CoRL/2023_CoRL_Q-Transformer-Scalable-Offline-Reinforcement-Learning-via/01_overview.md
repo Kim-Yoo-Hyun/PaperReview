@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / CoRL
-- Authors: Yevgen Chebotar, Quan Vuong, Karol Hausman, Fei Xia, Yao Lu, Alex Irpan, Aviral Kumar, Tianhe Yu, Alexander Herzog, Karl Pertsch, Keerthana Gopalakrishnan, Julian Ibarz, Ofir Nachum, Sumedh Anand Sontakke, Grecia Salazar, Huong T. Tran, Jodilyn Peralta, Clayton Tan, Deeksha Manjunath, Jaspiar Singh, Brianna Zitkovich, Tomas Jackson, Kanishka Rao, Chelsea Finn, Sergey Levine
+- Authors: Yevgen Chebotar, Quan Vuong, Alex Irpan, Karol Hausman, Fei Xia, Yao Lu, Aviral Kumar, Tianhe Yu, Alexander Herzog, Karl Pertsch, Keerthana Gopalakrishnan, Julian Ibarz, Ofir Nachum, Sumedh Sontakke, Grecia Salazar, Huong T Tran, Jodilyn Peralta, Clayton Tan, Deeksha Manjunath, Jaspiar Singh, Brianna Zitkovich, Tomas Jackson, Kanishka Rao, Chelsea Finn, Sergey Levine
+- 저자 표기 근거 — 게재 PDF에서 Alex Irpan이 세 번째다. Sumedh Sontakke와 Huong T Tran은 표제면 표기를 사용했다. PDF의 Jaspiar Singht는 PMLR 웹 서지의 Jaspiar Singh와 달라 인명은 웹 서지 표기를 유지했다. [표제면](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, offline reinforcement learning, Transformer, robot manipulation
@@ -89,3 +90,7 @@ Q-Transformer는 고차원 로봇 행동을 차원별 이산 선택으로 풀어
 - **Actual contribution:** We propose a specific regularizer that minimizes values of every action that was not taken in the dataset and show that our method can learn from both narrow demonstration-like data ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** Training steps Success rate Q-Transformer with softmax Q-Transformer without conservatism Q-Transformer (ours) Q-Transformer without Monte-Carlo n-step ablation n-step 1-step 1-step # of gradient steps 137480 582960 136920 Training dura ... (p. 8, 5 Experiments).
 - **Explicit failure boundary:** This leaves us with about 20,000 additional autonomously collected failed episodes, each with a reward of 0.0, for a dataset size of about 58,000 episodes. (p. 6, 5 Experiments).
+
+## 배포 범위 대조
+
+- 실물 평가 — 실물 평가 본문이 밝힌 전체는 72개다. §5.1의 셋째 범주는 본문에 48, 그림 4에 47로 적혀 있다. 세 범주의 합은 그림에서만 72가 된다. [§5.1·그림 4](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=6)

@@ -13,7 +13,7 @@
 - Tags: Robotics, motion planning, RRT, kinodynamic planning
 - Official paper: https://lavalle.pl/papers/Lav98c.pdf
 - Full-text retrieval: https://lavalle.pl/papers/Lav98c.pdf
-- Code/Project: not identified
+- Code/Project: https://lavalle.pl/rrt/
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (4 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -79,3 +79,8 @@ RRT는 상태 공간에서 무작위로 뽑은 점 쪽으로 도달 가능한 �
 
 - **Problem/bottleneck:** For planning of holonomic systems or steerable nonholonomic systems (see [6] and references therein), the local planning step might be efficient; however, in general, the connection problem can be as ... (p. 1, 1 Introduction).
 - **Explicit failure boundary:** The primary difficulty with existing techniques is that, although powerful for standard path planning, they do not naturally extend to general nonholonomic planning problems. (p. 1, 1 Introduction).
+
+## 배포 범위 대조
+
+- 코드 — LaValle의 RRT Planner 0.3 소스 아카이브에서 rrt.C를 확인했다. 1998년 기술보고서 이후의 배포판이다. [배포 파일](https://lavalle.pl/rrt/rrt-0.3.tar)
+- 데이터 — 저자 배포판의 미로 계획 예제에 장애물·초기 상태·목표 상태가 있다. 원 보고서 그림을 만든 입력과 동일한지는 미확인이다. [배포 파일](https://lavalle.pl/rrt/rrt-0.3.tar)

@@ -87,3 +87,8 @@ RMA는 사족 로봇이 최근 움직임으로 지면과 하중 조건을 추정
 - **Actual contribution:** The combination of these components enables the robot to adapt to novel situations in fractions of a second. (p. 1, Abstract).
 - **Evaluation boundary:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without ... (p. 1, Figure/Table caption).
 - **Explicit failure boundary:** RMA w/o adaptation fails to move for payloads more than 8Kg, but rarely falls. (p. 6, IV. EXPERIMENTAL SETUP).
+
+## 배포 범위 대조
+
+- 코드 — RMA 프로젝트가 연결한 후속 Cross-Modal Supervision 구현의 A1 정책 학습 코드. 최초 RSS 실험의 정확한 버전은 미확인이다. [배포 파일](https://raw.githubusercontent.com/antonilo/rl_locomotion/f71db8195bfb49b6d964bf53be3c5adadb0c11b1/raisimGymTorch/env/envs/rsg_a1_task/runner.py)
+- 데이터 — 원문에 학습 또는 제어 실험의 관측·궤적이 있다. 해당 실험의 원시 자료 배포 범위는 미확인이다. [검토 근거](https://arxiv.org/pdf/2107.04034#page=6)

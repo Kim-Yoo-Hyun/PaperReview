@@ -85,3 +85,7 @@ Dreamer는 학습한 세계 모델의 잠재 공간에서 상상한 궤적으로
 - **Actual contribution:** The key contributions of this paper are summarized as follows: • Learning long-horizon behaviors by latent imagination Model-based agents can be shortsighted if they use a finite imagination horizon. (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Figure 8: Comparison of representation learning objectives to be used with Dreamer. Pixel recon- struction performs best for the majority of tasks. The contrastive objective solves about half of the ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** We approach this limitation by predicting both actions and state values. (p. 2, 1 INTRODUCTION).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · dreamer.py [배포 파일](https://raw.githubusercontent.com/danijar/dreamer/56d4d444dfd0582b0e79dab80aebbea74c0ce40d/dreamer.py)

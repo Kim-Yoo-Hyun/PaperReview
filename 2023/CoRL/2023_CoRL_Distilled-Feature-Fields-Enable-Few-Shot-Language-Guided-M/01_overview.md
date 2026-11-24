@@ -86,3 +86,8 @@ F3RM은 2차원 기초 모델의 특징을 3차원 장면에 증류해 소수 �
 - **Actual contribution:** The main contribution of this work is to study the use of DFFs instead for robotic manipulation. (p. 1, 1 Introduction).
 - **Evaluation boundary:** We present the success rates in Table 1 and examples of robot executions in Figure 5. (p. 6, 4 Results).
 - **Explicit failure boundary:** The remaining 13/19 failed grasps are due to CLIP features behaving like a bag-of-words and struggling to capture relationships, attributes, and ordinal information within sentences [22]. (p. 7, 4 Results).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · f3rm/feature_field.py [배포 파일](https://raw.githubusercontent.com/f3rm/f3rm/0802283b682e9bfcd5fb9432015a6c9da97c96c0/f3rm/feature_field.py)
+- 데이터 — F3RM 내려받기 구현이 연결한 예시 장면의 RGB 영상·카메라 자세 자료다. [배포 파일](https://drive.google.com/file/d/15iNJo57bIM2NMyKVs4JU_nzNvFzJ1ZRU/view)

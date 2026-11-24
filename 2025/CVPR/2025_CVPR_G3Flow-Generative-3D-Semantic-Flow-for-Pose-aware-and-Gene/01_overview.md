@@ -13,7 +13,7 @@
 - Tags: geometry, semantic, alignment, Diffusion, Generation, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_G3Flow_Generative_3D_Semantic_Flow_for_Pose-aware_and_Generalizable_Object_CVPR_2025_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/TianxingChen/G3Flow
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,7 @@ G3Flow는 조작 대상의 자세가 바뀌어도 같은 부위의 의미 특징
 - **Actual contribution:** Our key contributions can be summarized as follows: (1) We propose a novel foundation model-driven approach for constructing semantic flow, a dynamic and complete semantic representation through the integration of ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** As shown in Table 4, our approach improves success rates by 22.6% and 41.2% over scenelevel features, and by 9.3% and 3.7% over D3Fields. (p. 7, 4.4. Ablation Study).
 - **Explicit failure boundary:** Our key insight is to leverage foundation models to construct and maintain complete 4D semantic understanding during dynamic interactions through real-time semantic flow, which addresses the limitations of existing geometry-centric ... (p. 3, 3.1. Overview).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · G3FlowDP/dp/G3Flow_policy.py [배포 파일](https://raw.githubusercontent.com/TianxingChen/G3Flow/e011ba6ae5a9493b93b02b2ca7b542f9cf629835/G3FlowDP/dp/G3Flow_policy.py)

@@ -1,6 +1,6 @@
 # 원문 감사
 
-2026-11-24 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **27편**, 한 필드 이상 미확인인 논문은 **1,225편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
+2026-11-24 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **32편**, 한 필드 이상 미확인인 논문은 **1,220편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
 
 ## 요약·기여 원문 대조
 
@@ -156,9 +156,14 @@
 
 ## 다축 태그와 공개 자료
 
-태그 정규화 과정에서 22편의 공개 자료 근거를 갱신했다. 배포 파일 34건, 저자가 공개 예정으로 표시한 항목 5건, 실험 자료를 사용하지만 배포 범위가 미확인인 항목 1건이다. 한 논문의 코드·가중치·데이터는 따로 센다. [배치별 분류와 미확인 범위](../work/update/REGISTRY.md#두-번째-배치-태그-매핑)
+코드·가중치·데이터의 배포 범위를 항목별로 집계했다. 기존 검색 태그 판정은 원문의 방법·평가와 대조한 논문에만 반영했다. [배치별 분류와 미확인 범위](../work/update/REGISTRY.md#세-번째-배치-태그-매핑)
 
-다축 정규화에서 저자 14편의 표기나 순서를 원문 표제면에 맞췄다. 각 레코드에 이전 저자 목록을 보존했다.
+| 배치 | 공개 근거를 갱신한 논문 | 배포 파일 | 저자의 공개 예정 안내 | 배포 미확인으로 교정 | 기존 검색 태그 대조 |
+|---|---:|---:|---:|---:|---:|
+| core_next_02 | 22 | 34 | 5 | 1 | 0 |
+| core_next_03 | 43 | 67 | 2 | 6 | 49 |
+
+다축 정규화에서 저자 22편의 표기나 순서를 원문 표제면에 맞췄다. 각 레코드에 이전 저자 목록을 보존했다.
 
 | 논문 | 표제면 대조 |
 |---|---|
@@ -174,6 +179,14 @@
 | From Spatial to Actions | 논문 표제면의 저자 표기와 순서. [원문](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=1) |
 | MomaGraph | 논문 표제면의 저자 표기와 순서. [원문](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=1) |
 | A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning | 논문 표제면의 저자 표기와 순서. [원문](https://proceedings.mlr.press/v15/ross11a/ross11a.pdf#page=1) |
+| Trust Region Policy Optimization | PMLR 게재 PDF의 표제면에서 Philipp Moritz가 세 번째, Pieter Abbeel이 마지막이다. [원문](https://arxiv.org/pdf/1502.05477#page=1) |
+| Hindsight Experience Replay | NeurIPS 게재본에서 OpenAI는 소속이고 저자 이름은 Pieter Abbeel이다. [원문](https://proceedings.neurips.cc/paper_files/paper/2017/file/453fadbd8a1a3af50a9df4df899537b5-Paper.pdf#page=1) |
+| A Minimalist Approach to Offline Reinforcement Learning | NeurIPS 표제면은 두 번째 저자의 이름을 괄호 없이 Shixiang Shane Gu로 표기한다. [원문](https://proceedings.neurips.cc/paper_files/paper/2021/file/a8166da05c5a094f7dc03724b41886e5-Paper.pdf#page=1) |
+| Q-Transformer | 게재 PDF에서 Alex Irpan이 세 번째다. Sumedh Sontakke와 Huong T Tran은 표제면 표기를 사용했다. PDF의 Jaspiar Singht는 PMLR 웹 서지의 Jaspiar Singh와 달라 인명은 웹 서지 표기를 유지했다. [원문](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=1) |
+| Implicit Behavioral Cloning | PMLR 표제면의 네 번째 저자는 Oscar Ramirez이다. [원문](https://proceedings.mlr.press/v164/florence22a/florence22a.pdf#page=1) |
+| In-Hand Manipulation via Motion Cones | RSS 표제면에서 첫 저자가 복합 성 Chavan-Dafle에 붙임표를 사용한다. [원문](https://www.roboticsproceedings.org/rss14/p58.pdf#page=1) |
+| Towards Tight Convex Relaxations for Contact-Rich Manipulation | RSS 표제면에서 Pablo A. Parrilo의 가운데 이니셜을 확인했다. [원문](https://www.roboticsproceedings.org/rss20/p132.pdf#page=1) |
+| DayDreamer | CoRL 게재 PDF는 Ken Goldberg, Pieter Abbeel 순으로 끝난다. [원문](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=1) |
 | DROID | RSS 2024 게재본 표제면의 저자 순서와 표기를 따른다. RSS 웹 서지와 후속 저자판은 명단에 차이가 있다. [원문](https://www.roboticsproceedings.org/rss20/p120.pdf#page=1) |
 | Universal Value Function Approximators | 논문 표제면의 저자 표기와 순서. [원문](https://proceedings.mlr.press/v37/schaul15.pdf#page=1) |
 
@@ -213,12 +226,12 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---|
 | 11월 20일 교정 전 추가 확인 오류 | 37 / 1,252 (2.96%) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |
 | 이번 반영 후 확인 오류 | 0 / 1,252 (0.00%) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |
-| 현재 전 항목 통과 | 27 / 1,252 (2.16%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
-| 현재 미확인 필드 보유 | 1,225 / 1,252 (97.84%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
+| 현재 전 항목 통과 | 32 / 1,252 (2.56%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
+| 현재 미확인 필드 보유 | 1,220 / 1,252 (97.44%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
 
 11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 141/1,252편(11.26%)이다. 자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.
 
-**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–97.84%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
+**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–97.44%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
 
 ## 교정 재검증
 
@@ -241,10 +254,10 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
 | 요약·기여 | 30 | 1,252 | 0 | 0 |
-| 코드 | 0 | 404 | 848 | 0 |
-| 가중치 | 0 | 103 | 1,149 | 0 |
-| 데이터 | 0 | 113 | 1,139 | 0 |
-| 태그 | 1 | 395 | 857 | 0 |
+| 코드 | 0 | 425 | 827 | 0 |
+| 가중치 | 0 | 114 | 1,138 | 0 |
+| 데이터 | 0 | 129 | 1,123 | 0 |
+| 태그 | 1 | 437 | 815 | 0 |
 
 링크는 대표 원문과 기재한 부가 주소별로 판정한다. 원문만 열리더라도 다른 링크의 판정은 유지한다. 잘못된 주소를 걷어낸 뒤 대체 주소가 확인되지 않은 경우에는 그 역할이 미확인이다. 저자의 공개 표명이나 배포 파일로 코드·가중치·데이터를 각각 판단한다. 배포 근거를 찾지 못한 상태는 ‘존재 불확실’이다. 기존 요약 판정에는 overview 대신 검증한 정규화 배치의 요약·기여를 대상으로 명시한 70편이 포함된다. 논문별 근거의 `scope`에서 대상 텍스트를 확인할 수 있다.
 
@@ -253,7 +266,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 18 | 0 | 0 | 31 |
-| NEXT | 450 | 9 | 0 | 360 | 424 |
+| NEXT | 450 | 14 | 0 | 318 | 418 |
 | REFERENCE | 510 | 0 | 0 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 0 | 131 | 242 |
 
@@ -263,11 +276,11 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---:|---|---:|---:|---:|---:|
 | <a id="batch-01"></a>1 | [pr-0001–pr-0100](../work/sources/batches/source_audit_2026_11.jsonl#L1-L100) | 100 | 7 | 93 | 0 |
 | <a id="batch-02"></a>2 | [pr-0101–pr-0200](../work/sources/batches/source_audit_2026_11.jsonl#L101-L200) | 100 | 1 | 99 | 0 |
-| <a id="batch-03"></a>3 | [pr-0201–pr-0300](../work/sources/batches/source_audit_2026_11.jsonl#L201-L300) | 100 | 1 | 99 | 0 |
+| <a id="batch-03"></a>3 | [pr-0201–pr-0300](../work/sources/batches/source_audit_2026_11.jsonl#L201-L300) | 100 | 2 | 98 | 0 |
 | <a id="batch-04"></a>4 | [pr-0301–pr-0400](../work/sources/batches/source_audit_2026_11.jsonl#L301-L400) | 100 | 0 | 100 | 0 |
 | <a id="batch-05"></a>5 | [pr-0401–pr-0500](../work/sources/batches/source_audit_2026_11.jsonl#L401-L500) | 100 | 1 | 99 | 0 |
-| <a id="batch-06"></a>6 | [pr-0501–pr-0600](../work/sources/batches/source_audit_2026_11.jsonl#L501-L600) | 100 | 2 | 98 | 0 |
-| <a id="batch-07"></a>7 | [pr-0601–pr-0700](../work/sources/batches/source_audit_2026_11.jsonl#L601-L700) | 100 | 4 | 96 | 0 |
+| <a id="batch-06"></a>6 | [pr-0501–pr-0600](../work/sources/batches/source_audit_2026_11.jsonl#L501-L600) | 100 | 3 | 97 | 0 |
+| <a id="batch-07"></a>7 | [pr-0601–pr-0700](../work/sources/batches/source_audit_2026_11.jsonl#L601-L700) | 100 | 7 | 93 | 0 |
 | <a id="batch-08"></a>8 | [pr-0701–pr-0800](../work/sources/batches/source_audit_2026_11.jsonl#L701-L800) | 100 | 2 | 98 | 0 |
 | <a id="batch-09"></a>9 | [pr-0801–pr-0900](../work/sources/batches/source_audit_2026_11.jsonl#L801-L900) | 100 | 4 | 96 | 0 |
 | <a id="batch-10"></a>10 | [pr-0901–pr-1000](../work/sources/batches/source_audit_2026_11.jsonl#L901-L1000) | 100 | 3 | 97 | 0 |

@@ -89,3 +89,9 @@
 - **Actual contribution:** We use similar terminology and notation as On Learning to Think: Algorithmic Information Theory for Novel Combinations of RL Controllers and RNN World Models (Schmidhuber, 2015a) when describing our methodology ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 11. Limiting our controller to see only zt, but not ht results in wobbly and unstable driving behaviours. Although the agent is still able to navigate the race track ... (p. 5, Figure/Table caption).
 - **Explicit failure boundary:** For instance, it reproduced unimportant detailed brick tile patterns on the side walls in the Doom environment, but failed to reproduce task-relevant tiles on the road in the Car Racing ... (p. 12, 7. Discussion).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · carracing/dream_model.py [배포 파일](https://raw.githubusercontent.com/hardmaru/WorldModelsExperiments/fd982b9691a941b52c6addbde29bc801ca6202c8/carracing/dream_model.py)
+- 가중치 — 제1저자의 CarRacing 시각 인코더 가중치다. 학습 입력 이미지와 구별한다. [배포 파일](https://raw.githubusercontent.com/hardmaru/WorldModelsExperiments/fd982b9691a941b52c6addbde29bc801ca6202c8/carracing/vae/vae.json)
+- 데이터 — CarRacing 진화 전략 실행의 최적화 이력이다. 학습 영상 배포는 미확인이다. [배포 파일](https://raw.githubusercontent.com/hardmaru/WorldModelsExperiments/fd982b9691a941b52c6addbde29bc801ca6202c8/carracing/log/carracing.cma.16.64.hist.json)

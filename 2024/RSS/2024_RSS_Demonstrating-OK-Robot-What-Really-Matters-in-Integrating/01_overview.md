@@ -88,3 +88,7 @@ OK-Robot은 공개 인식·파지 모델과 이동 계획을 결합해 이전에
 - **Actual contribution:** We present OK-Robot, an Open Knowledge Robot that integrates state-of-the-art VLMs with powerful robotics primitives for navigation and grasping to enable pick-and-drop. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Results of home experiments Over the 10 home environment, OK-Robot achieved a 58.5% success rates in completing full pick-and-drops. (p. 6, III. EXPERIMENTS).
 - **Explicit failure boundary:** Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D image. (p. 7, III. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · ok-robot-hw/run.py [배포 파일](https://raw.githubusercontent.com/ok-robot/ok-robot/174c742b6a1866a2da8f75a89e2c544bb77ab5f9/ok-robot-hw/run.py)

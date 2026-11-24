@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / NeurIPS
-- Authors: Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, Wojciech Zaremba
+- Authors: Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, Wojciech Zaremba
+- 저자 표기 근거 — NeurIPS 게재본에서 OpenAI는 소속이고 저자 이름은 Pieter Abbeel이다. [표제면](https://proceedings.neurips.cc/paper_files/paper/2017/file/453fadbd8a1a3af50a9df4df899537b5-Paper.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, goal-conditioned RL, sparse rewards
@@ -87,3 +88,8 @@ HER는 원래 목표에 실패한 에피소드도 실제로 도달한 상태를 
 - **Actual contribution:** In this paper we introduce a technique called Hindsight Experience Replay (HER) which allows the algorithm to perform exactly this kind of reasoning and can be combined with any off-policy ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** 4.6 we show the results of the experiments on the physical robot. (p. 5, 4 Experiments).
 - **Explicit failure boundary:** These results are indicative of the practical challenges with reward shaping, and that shaped rewards would often constitute a compromise on the metric we truly care about (such as binary ... (p. 5, 2 Background).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · baselines/her/her_sampler.py [배포 파일](https://raw.githubusercontent.com/openai/baselines/ea25b9e8b234e6ee1bca43083f8f3cf974143998/baselines/her/her_sampler.py)
+- 데이터 — 원문에 학습 또는 제어 실험의 관측·궤적이 있다. 해당 실험의 원시 자료 배포 범위는 미확인이다. [검토 근거](https://arxiv.org/pdf/1707.01495#page=5)

@@ -86,3 +86,7 @@ MoMa-LLM은 가구를 열거나 위치를 바꾸어야 찾을 수 있는 물체�
 - **Actual contribution:** To address these challenges, we propose grounding LLMs in dynamically built scene graphs. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** This results in an efficiency curve, in which the best policies are located in the top left corner, enabling the comparison of success rates for arbitrary budgets. (p. 6, V. EXPERIMENTS).
 - **Explicit failure boundary:** Furthermore, the agent was able to react to the (unseen) subpolicy failures, such as re-trying to open a drawer when the gripper slipped off the handle. (p. 7, V. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · run_agent.py [배포 파일](https://raw.githubusercontent.com/robot-learning-freiburg/MoMa-LLM/5db816cf4da6217eb55bf75fb14930c467804681/run_agent.py)

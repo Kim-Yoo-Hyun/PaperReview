@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Vision-Language Model, Navigation, Reinforcement Learning`.
+- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Vision-Language Model, Navigation, world model`.
 - **Reading predecessor in the generated track queue:** Self-Correcting Robot Manipulation via Gaussian-Splatted Foresight (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** RoboDreamer: Learning Compositional World Models for Robot Imagination (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

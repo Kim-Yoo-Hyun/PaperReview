@@ -89,3 +89,9 @@ Neural Descriptor Fields는 시연에서 본 그리퍼와 물체의 상대 자�
 - **Actual contribution:** We present a novel representation that models dense correspondence across object instances at the level of points and local coordinate frames. (p. 2, II. METHOD).
 - **Evaluation boundary:** For objects in arbitrary poses (bottom row), DON's performance suffers, while NDFs maintains higher success rates due to their equivariance to SE(3) transformations. to achieve success rate above 10%. (p. 6, II. METHOD).
 - **Explicit failure boundary:** We find that DON's failures are usually a function of either insufficient precision in keypoint predictions, or failed registration of testtime keypoints to the demonstration keypoints. (p. 7, II. METHOD).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · src/ndf_robot/training/train_vnn_occupancy_net.py [배포 파일](https://raw.githubusercontent.com/anthonysimeonov/ndf_robot/59eb1fb152092347e995eafaaf332f13840c5002/src/ndf_robot/training/train_vnn_occupancy_net.py)
+- 가중치 — 공식 다운로드 스크립트의 머그 표현 가중치 파일이다. [배포 파일](https://www.dropbox.com/s/buhbw9q61psizgp/ndf_demo_mug_weights.pth?dl=1)
+- 데이터 — 저자가 제공하는 시연 예시 압축 파일이다. [배포 파일](https://www.dropbox.com/s/rcnkzkrd0gyvvxh/ndf_release_demo_demonstrations.tar.gz?dl=1)

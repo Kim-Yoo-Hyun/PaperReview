@@ -89,3 +89,8 @@ DreamerV3는 서로 다른 보상 규모와 관측 조건의 제어 과제에서
 - **Actual contribution:** We present DreamerV3, a general algorithm that outperforms specialized methods across over 150 diverse tasks, with a single configuration. (p. 1, Abstract).
 - **Evaluation boundary:** Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve until the 100M step budget. At ... (p. 24, Figure/Table caption).
 - **Explicit failure boundary:** This brittleness poses a bottleneck in applying reinforcement learning to new problems and also limits the applicability of reinforcement learning to computationally expensive models or tasks where tuning is prohibitive. (p. 2, Abstract).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · dreamerv3/agent.py [배포 파일](https://raw.githubusercontent.com/danijar/dreamerv3/e01491fad6434b2245a3b8ca201dd7faedcc458c/dreamerv3/agent.py)
+- 데이터 — 고유수용 상태 조건의 DeepMind Control Suite 평가 점수 파일이다. 학습용 경험과 구별한다. [배포 파일](https://raw.githubusercontent.com/danijar/dreamerv3/e01491fad6434b2245a3b8ca201dd7faedcc458c/scores/dmc_proprio-dreamerv3.json.gz)

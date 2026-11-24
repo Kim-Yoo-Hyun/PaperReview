@@ -83,3 +83,7 @@ CPO는 기대 보상을 높이면서 누적 비용의 기댓값이 제한 안에
 - **Actual contribution:** In this work, we propose the first such algorithm, allowing applications to constrained deep RL. (p. 1, 1. Introduction).
 - **Evaluation boundary:** In our experiments, we aim to answer the following: • Does CPO succeed at enforcing behavioral constraints when training neural network policies with thousands of parameters? • How does CPO ... (p. 6, 8. Experiments).
 - **Explicit failure boundary:** Additionally, PDO is sensitive to the initialization of the dual variable. (p. 7, 8.1. Evaluating CPO and Comparison Analysis).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · algos/safe/cpo.py [배포 파일](https://raw.githubusercontent.com/jachiam/cpo/5c83925a84bc21dfc9f8bceb82f85daf2937e595/algos/safe/cpo.py)

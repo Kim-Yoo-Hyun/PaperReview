@@ -87,3 +87,8 @@ TD3는 연속 제어의 actor–critic에서 가치 과대추정과 정책 갱�
 - **Actual contribution:** Finally, we introduce a novel regularization strategy, where a SARSA-style update bootstraps similar action estimates to further reduce variance. (p. 1, 1. Introduction).
 - **Evaluation boundary:** While a larger d would result in a larger benefit with respect to accumulating errors, for fair comparison, the critics are only trained once per time step, and training the ... (p. 7, 6.1. Evaluation).
 - **Explicit failure boundary:** For transitions where the episode terminates by reaching some failure state, and not due to the episode running until the max horizon, the value of Q(s, ·) is set to ... (p. 14, 4. Q values are stored in a lookup table).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · TD3.py [배포 파일](https://raw.githubusercontent.com/sfujim/TD3/34770ccdcb51df6f6c7d85c1ba7e40d71b940d16/TD3.py)
+- 데이터 — Ant의 첫 시드 학습 곡선이다. 정책 학습에 쓴 전이 데이터는 미확인이다. [배포 파일](https://raw.githubusercontent.com/sfujim/TD3/34770ccdcb51df6f6c7d85c1ba7e40d71b940d16/learning_curves/Ant/TD3_Ant-v1_0.npy)

@@ -87,3 +87,9 @@ RoboPack은 시각·촉각 이력으로 물체의 운동과 물성을 추정해 
 - **Actual contribution:** We find that our method can successfully leverage histories of visuo-tactile information to improve prediction, with models trained on just 30 minutes of real-world interaction data per task on average. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** 2.65 ± 0.18 4.11 ± 0.17 4.57 ± 0.16 Dense RoboPack 0.070 ± 0.005 1.12 ± 0.036 2.01 ± 0.050 Packing RoboPack (no tactile) 0.088 ± 0.006 1.18 ± 0.043 ... (p. 8, V. EXPERIMENTS).
 - **Explicit failure boundary:** Due to heavy occlusions during task execution, the robot does not have access to meaningful visual feedback during robot execution other than the initial frame, but again tactile signals are ... (p. 6, IV. EXPERIMENTAL SETUP).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · demo_packing.py [배포 파일](https://raw.githubusercontent.com/BoAi01/robopack/ac02a01006b50dbb7379b676ec5a622921875c5b/demo_packing.py)
+- 가중치 — RoboPack의 촉각을 포함한 동역학 모델 체크포인트다. [배포 파일](https://raw.githubusercontent.com/BoAi01/robopack/ac02a01006b50dbb7379b676ec5a622921875c5b/trained_models/dec7_version32/epoch%3D97-step%3D25774-val_loss%3D0.00207-val_tac_loss%3D0.00330.ckpt)
+- 데이터 — 저자 README의 표본 데이터 Drive 파일이 재검사에서 HTTP 404를 반환했다. 현재 받을 수 있는 대체 파일은 미확인이다. [저자 배포 안내](https://github.com/BoAi01/robopack/blob/ac02a01006b50dbb7379b676ec5a622921875c5b/README.md)

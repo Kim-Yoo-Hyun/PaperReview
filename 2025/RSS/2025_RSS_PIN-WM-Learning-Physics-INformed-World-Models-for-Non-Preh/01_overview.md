@@ -86,3 +86,7 @@ PIN-WM은 물체를 쥐지 않고 밀거나 치는 행동의 결과를 소수의
 - **Actual contribution:** + We conduct real robot implementation to demonstrate that our approach enables learning control policies with minimal task-agnostic interaction data and attains high performance Real2Sim2Real without real-world fine-tuning. (p. 2, 2 Wuhan Universi).
 - **Evaluation boundary:** All policies are trained until no significant success rate performance can be gained and are then deployed directly to the target domain for evaluation, We also conduct an ablation study ... (p. 7, A. Evaluations in Simulation).
 - **Explicit failure boundary:** Moreover, the policies trained with physics-based alternatives exhibit unsatisfactory performance in the target domain, ‘One reason is that their world models failed to effectively ‘capture the target-domain dynamics. (p. 8, A. Evaluations in Simulation).
+
+## 배포 범위 대조
+
+- 코드 — 물성 식별 구현. 저장소가 공개 완료로 표시한 범위는 데이터 준비·2DGS 훈련·물성 식별이다. [배포 파일](https://raw.githubusercontent.com/XuAdventurer/PIN-WM/99d3fde5d233aeffabfa287f94831cf7c7afee64/scripts/identify_physical_parameters.py)

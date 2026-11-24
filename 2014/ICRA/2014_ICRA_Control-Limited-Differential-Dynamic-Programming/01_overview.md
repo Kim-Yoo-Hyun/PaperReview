@@ -13,7 +13,7 @@
 - Tags: Robotics, optimal control, trajectory optimization, control limits
 - Official paper: https://api.crossref.org/works/10.1109/ICRA.2014.6907001
 - Full-text retrieval: https://roboti.us/lab/papers/TassaICRA14.pdf
-- Code/Project: not identified
+- Code/Project: https://www.mathworks.com/matlabcentral/fileexchange/52069-ilqg-ddp-trajectory-optimization
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,8 @@
 - **Actual contribution:** Finally, Section IV describes the results, illustrating the usefulness of our approach. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** The bottom row of Figure 2 shows a comparison between the clamping and squashing heuristics and the proposed algorithm. (p. 4, IV. RESULTS).
 - **Explicit failure boundary:** A running cost is added to penalize cartesian distance from the origin ℓ(x) = 0.01(z(x,px) + z(y,py)) This term encourages parking maneuvers which do not take the car far from ... (p. 5, IV. RESULTS).
+
+## 배포 범위 대조
+
+- 코드 — 제1저자의 MATLAB 배포판 1.2.0에서 상자 제약 QP와 iLQG 소스를 확인했다. HRP-2 전체 장면은 이 패키지에 포함되지 않는다. [배포 파일](https://uk.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/52069/versions/3/download/zip)
+- 데이터 — 원문에 학습 또는 제어 실험의 관측·궤적이 있다. 해당 실험의 원시 자료 배포 범위는 미확인이다. [검토 근거](https://roboti.us/lab/papers/TassaICRA14.pdf#page=6)

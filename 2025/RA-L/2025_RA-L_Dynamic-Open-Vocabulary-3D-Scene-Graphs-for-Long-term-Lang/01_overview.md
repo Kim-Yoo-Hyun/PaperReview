@@ -85,3 +85,8 @@ DovSG는 사람이 물체를 옮기거나 로봇이 조작한 뒤에도 장면 �
 - **Actual contribution:** Our contributions are as follows: • We propose a novel robotic framework that integrates dynamic open-vocabulary 3D scene graphs with languageguided task planning, enabling accurate long-term task execution in dynamic ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** This results in a 10.7% higher pick-up success rate than Ok-Robot, which relies solely on AnyGrasp. (p. 7, IV. EXPERIMENTS).
 - **Explicit failure boundary:** These changes are often invisible to previous approaches [3], [21], [14], and in such environments, if the robot cannot dynamically update its memory, it will soon face failure. (p. 4, III. METHOD).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · dovsg/controller.py [배포 파일](https://raw.githubusercontent.com/BJHYZJ/DovSG/b355987a1ca586f7756f025820fddc24166d75af/dovsg/controller.py)
+- 데이터 — 저자가 공개한 방 관측 예시 압축 파일을 확인했다. [배포 파일](https://drive.google.com/file/d/1-N53AN9L2aw4LVttKrTtKuP51kqQu_uX/view)

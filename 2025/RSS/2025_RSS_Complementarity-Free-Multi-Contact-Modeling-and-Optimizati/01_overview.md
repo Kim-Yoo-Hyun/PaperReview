@@ -13,7 +13,7 @@
 - Tags: Robotics, contact-rich manipulation, multi-contact, trajectory optimization
 - Official paper: https://www.roboticsproceedings.org/rss21/p111.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p111.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/asu-iris/Complementarity-Free-Dexterous-Manipulation
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@
 - **Actual contribution:** Our method consistently achieves state-of-the ) a 96.5% average success rate across all objects (p. 1, Abstract).
 - **Evaluation boundary:** For each object, we conduct 20 trials with different random inital and target poses. ‘The results are in Table IV, where we quantify the manipulation accuracy by (p. 9, B. MPC Setting and Results).
 - **Explicit failure boundary:** [1p Peargal] $0.02 tm), 1-(dhggecd™)? < 0.015, is deemed a failure if the object does not satisfy (33) within the maximum MPC rollout length 11 = 2000. (p. 9, B. MPC Setting and Results).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · examples/mpc/allegro/cube/test.py [배포 파일](https://raw.githubusercontent.com/asu-iris/Complementarity-Free-Dexterous-Manipulation/87b320ffb4b40ab4f3aa344371f6e5e8d619aa7e/examples/mpc/allegro/cube/test.py)

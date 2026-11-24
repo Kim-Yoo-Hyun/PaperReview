@@ -89,3 +89,8 @@ CLIPort는 언어 지시의 의미와 정밀한 공간 대응을 결합해 로�
 - **Actual contribution:** We propose 10 language-conditioned tasks with 1000s of unique instances per task that require both semantic and spatial reasoning (see Figure 1 a-j). (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 1. Language-Conditioned Test Results. Task success scores (mean %) from 100 evaluation instances vs. # of training demonstrations (1, 10, 100, or 1000). The challenges pertaining to each task ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** While language-grounding for manipulation has been explored in the past [7, 8, 9, 10], these pipelines are limited by object-centric representations that cannot handle granular or deformable objects and often ... (p. 1, 1 Introduction).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · cliport/agents/transporter_lang_goal.py [배포 파일](https://raw.githubusercontent.com/cliport/cliport/2be5c47b5bb9bb7040ad90693288b87b1e18e7ad/cliport/agents/transporter_lang_goal.py)
+- 가중치 — 다중 언어 과제 quickstart의 훈련된 CLIPort 모델이다. [배포 파일](https://github.com/cliport/cliport/releases/download/v1.0.0/cliport_quickstart.zip)

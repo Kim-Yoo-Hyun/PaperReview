@@ -64,7 +64,7 @@ Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인�
 
 ## 두 번째 배치 태그 매핑
 
-2026-11-24에 첫 배치와 겹치지 않는 CORE 20편 전부와 안정 ID 순으로 다음 NEXT 30편을 정규화했다. 두 배치의 누계는 CORE 50편, NEXT 50편이다. 별도 등록 심사를 거친 NEXT 23편까지 포함하면 집중 읽기 대상 500편 중 123편에 같은 축의 태그가 있다. 각 레코드에는 대조한 방법·평가 원문의 URL, 쪽수와 SHA-256, 교정 전 값이 있다. [두 번째 배치 50편](../sources/batches/core_next_02.yaml) · [첫 배치 50편](../sources/batches/core_next_01.yaml) · [별도 등록 23편](../sources/batches/gapfill_2026_11.yaml)
+2026-11-24에 첫 배치와 겹치지 않는 CORE 20편 전부와 안정 ID 순으로 다음 NEXT 30편을 정규화했다. 이 시점의 누계는 CORE 50편, NEXT 50편이며, 별도 등록 심사를 거친 NEXT 23편까지 합한 표본은 123편이었다. 각 레코드에는 원문의 URL, 쪽수와 SHA-256, 교정 전 값이 있다. [두 번째 배치 50편](../sources/batches/core_next_02.yaml) · [첫 배치 50편](../sources/batches/core_next_01.yaml) · [별도 등록 23편](../sources/batches/gapfill_2026_11.yaml)
 
 | 기존 표기 | 원문에서 확인할 조건 | 기록할 축 |
 |---|---|---|
@@ -90,6 +90,31 @@ Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인�
 - 14편에서 표제면의 저자 표기·순서를 반영했다. PointNet은 Charles R. Qi와 Kaichun Mo의 이름 순서를 교정했다. RT-2의 PMLR 웹 서지는 Brianna Zitkovich로, 게재 PDF는 Anthony Brohan으로 시작한다. 두 판본 표기와 기존 명단을 보존했다. [PointNet 게재본](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf#page=1) · [RT-2 웹 서지](https://proceedings.mlr.press/v229/zitkovich23a.html) · [RT-2 게재본](https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf#page=1)
 - IGL-Nav는 자세가 주어진 RGB-D 관측으로 지도를 구축한다. 목표 사진의 깊이와 카메라 내부 파라미터가 필요하며 단안 추정값을 쓴 조건도 평가했다. VISTA는 실측 장면에서의 시점 비교와 쿼드로터·Spot에서의 실제 탐색을 각각 평가했다. 두 논문의 개요와 감사 원장에 원문 위치를 반영했다. [IGL-Nav §3.1](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=3) · [IGL-Nav §5](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=8) · [VISTA §V](https://arxiv.org/pdf/2507.01125#page=7)
 - **중복 후보 0쌍.** 이번 배치 내부 1,225쌍, 나머지 원장과 60,100쌍에서 DOI·버전을 제외한 arXiv ID·OpenReview ID, 정규화 제목과 유사 제목을 대조했다. 공개 식별자가 없으면서 제목이 크게 바뀐 판본은 이 방법으로 놓칠 수 있다. [기존 유사도 기준](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/REGISTRY_AUDIT.md#3-중복-의심)
+
+## 세 번째 배치 태그 매핑
+
+| 기존 표기 | 원문에서 구별할 역할 | 템플릿 4에 반영할 값 |
+|---|---|---|
+| Scene graph, Gaussian splatting, world model | 장면을 기술하는지, 행동을 바꾸었을 때의 결과를 예측해 계획하는지 | 예측 모델로 행동을 선택하면 모델기반으로 기록한다. 지도 구축 자체에 대응하는 방법 값은 `unknown`이다. |
+| Imitation, offline RL, demonstrations | 시연 행동을 모방하는 손실과 보상·가치 기반 갱신이 각각 학습에 쓰이는지 | 행동을 모방하면 IL, 보상으로 갱신하면 RL을 부여한다. 두 목적함수를 모두 쓰면 두 값을 기록한다. |
+| Point cloud, state, vision | 센서 관측, 파생된 점군, 학습 시에만 보는 상태 중 무엇이 행동이나 추정의 입력인지 | 입력 역할을 본문과 대조해 RGB·depth·고유수용감각·기타를 선택한다. |
+| Real robot, sim-to-real, benchmark | 데이터를 모은 곳과 평가를 수행한 곳이 어디인지 | 학습·지도 구축 자료의 출처를 기록하고, 실기 평가와 기체는 별도로 적는다. |
+| Public code, pretrained, dataset | 해당 논문의 구현·학습 결과·수집 자료가 어느 경로에 어떤 파일로 있는지 | 저자 배포 파일의 범위로 Y·부분을 정한다. 외부 기반 모델이나 데이터 생성 명령만 있는 경우에는 해당 산출물의 공개를 미확인으로 둔다. |
+
+2026-11-24에 Clio부터 PIN-WM까지 미처리 NEXT 50편의 원문과 공개 자료를 대조했다. 세 배치 150편과 별도 등록한 23편을 합하면 집중 읽기 대상 500편 중 **173편(34.6%)**에 같은 축의 태그가 있다. 나머지는 NEXT 327편이다. 이번 배치는 50편 모두 레코드 단위로 `부분확인`이다. 원문이 명시한 한계 25편, 후속 연구가 지적한 한계 5편, 등록 논문 사이의 직접 선행 관계 19건을 쪽수와 연결했다. [논문별 원문·이전 값](../sources/batches/core_next_03.yaml) · [다음 배치](../../TODO.md)
+
+| 공개 범위 | Y | 부분 | N · 저자 공개 예정 | 미확인 |
+|---|---:|---:|---:|---:|
+| 코드 | 33 | 5 | 2 | 10 |
+| 가중치 | 1 | 11 | 0 | 38 |
+| 데이터 | 0 | 17 | 0 | 33 |
+
+공개 범위 150개 중 67개는 배포 파일을 확인했고, 2개는 저자가 구현 공개를 예고했다. 남은 81개에는 실험 자료가 있는데도 기존 원장이 ‘해당 없음’으로 표시했던 6개가 포함된다. 예를 들어 DAPG는 네 과제의 정책과 시연을 배포했다. RoboPack은 촉각 동역학 체크포인트가 열리지만 저자의 표본 데이터 링크는 HTTP 404다. 학습 곡선·점수만 배포한 연구는 데이터 ‘부분’으로 표시하고 원시 전이 공개 여부를 따로 적었다. [DAPG 정책·시연](https://github.com/aravindr93/hand_dapg/tree/master/dapg) · [RoboPack 배포 안내](https://github.com/BoAi01/robopack) · [감사 집계](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
+
+- **방법과 기체.** PointVLA의 시연 기반 미세조정과 WMNav의 학습 없는 계획에서 기존 강화학습 태그를 교정했다. RoboPanoptes는 카메라가 분산된 다관절 몸체로 쓸기·개봉·정리를 평가해 전신 조작으로 분류했다. 49편의 기존 검색 태그를 원문으로 확인했다. World Models의 게임 평가는 CarRacing·VizDoom에 한정되어 기존 Robotics 태그의 실험상 근거는 유보했다. [PointVLA §III–IV](https://arxiv.org/pdf/2503.07511#page=5) · [WMNav 표 I](https://arxiv.org/pdf/2503.02247#page=6) · [RoboPanoptes §III](https://www.roboticsproceedings.org/rss21/p042.pdf#page=3)
+- **판본과 수치.** 8편의 저자 표기·순서를 교정했다. PointVLA는 RA-L 서지의 5명과 저자판 표제면의 6명을 구분했다. Q-Transformer의 실물 평가는 72개 과제다. 셋째 범주의 과제 수는 §5.1 본문에 48개, 그림 4에 47개로 인쇄되어 있다. [PointVLA 게재 서지](https://doi.org/10.1109/LRA.2026.3653303) · [PointVLA 저자판](https://arxiv.org/pdf/2503.07511#page=1) · [Q-Transformer §5.1·그림 4](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=6)
+- **남은 분류 질문.** 장면 그래프 구축·지도화와 지도학습 기반 파지 자세 추정은 현행 방법 열거값으로 구분하기 어렵다. 방법 9편, 태스크 2편, 기체 1편, 데이터 출처 2편은 축 전체를 `unknown`으로 두고 실제 수행 역할을 서술했다. 입력 축은 50편에서 확인했다. VLA 전용 필드는 4편, 휴머노이드 전용 필드는 3편에 적용했다. [논문별 분류](../sources/batches/core_next_03.yaml)
+- **중복 후보 0쌍.** 배치 내부 1,225쌍과 나머지 원장과의 60,100쌍에서 공개 식별자, 정규화한 제목·별칭, 유사 제목을 대조했다. 공통 식별자 없이 제목이 크게 달라진 판본은 판별하기 어렵다. [중복 검사 기준](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/REGISTRY_AUDIT.md#3-중복-의심)
 
 ## 외부 목록 대조와 CORE 심화 감사
 

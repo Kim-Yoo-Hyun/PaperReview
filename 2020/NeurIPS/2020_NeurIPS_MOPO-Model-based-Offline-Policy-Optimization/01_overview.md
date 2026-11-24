@@ -88,3 +88,7 @@ MOPO는 오프라인 데이터로 학습한 동역학에서 정책을 개선할 
 - **Actual contribution:** Although neither method is designed for the batch setting, we find that the model-based method and its variant without ensembles show surprisingly large gains. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 1: Results for D4RL datasets. Each number is the normalized score proposed in [18] of the policy at the last iteration of training, averaged over 6 random seeds, ± ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** These failures are generally caused by large extrapolation error when the Q-function is evaluated on out-of-distribution actions [19, 36], which can lead to unstable learning and divergence. (p. 1, 1 Introduction).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · mopo/algorithms/mopo.py [배포 파일](https://raw.githubusercontent.com/tianheyu927/mopo/e5efe3eaa548850af109c920bfc2c1ec96bf2285/mopo/algorithms/mopo.py)

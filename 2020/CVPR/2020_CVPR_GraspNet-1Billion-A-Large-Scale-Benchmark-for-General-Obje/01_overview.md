@@ -23,3 +23,9 @@ GraspNet-1Billion은 복잡하게 쌓인 물체의 RGB-D 관측, 6자유도 파�
 ## Evaluation Scope
 
 분석적 파지 점수와 실물 파지의 대응은 논문이 시험한 물체·그리퍼와 조건에서 평가했다.
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · models/graspnet.py [배포 파일](https://raw.githubusercontent.com/graspnet/graspnet-baseline/280c215129f759ed8649cb4e89fc5dfee55f4f80/models/graspnet.py)
+- 가중치 — GraspNet 기준 모델의 RealSense 학습 가중치 파일이다. [배포 파일](https://drive.google.com/file/d/1hd0G8LN6tRpi4742XOTEisbTXNZ-1jmk/view)
+- 데이터 — 공식 학습 자료의 첫 분할 배포 파일이다. [배포 파일](https://drive.google.com/file/d/1wQx8IJ_Lok3hVK_nchQUzgw88QBGZ5iq/view)

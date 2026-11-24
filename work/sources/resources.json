@@ -5713,6 +5713,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:08a238259d82",
+      "resource_type": "code_or_project",
+      "name": "PIN-WM",
+      "url": "https://github.com/XuAdventurer/PIN-WM",
+      "paper_ids": [
+        "pr-0685"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:08b6fc5688d7",
       "resource_type": "code_or_project",
       "name": "PersistWorld",
@@ -5734,7 +5746,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:099cf0d4bcfc",
@@ -5773,6 +5785,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:0bc5f6c6a253",
+      "resource_type": "code_or_project",
+      "name": "WMNavigation",
+      "url": "https://github.com/B0B8K1ng/WMNavigation",
+      "paper_ids": [
+        "pr-0279"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:0bfe92a94b96",
       "resource_type": "code_or_project",
       "name": "contact-grounded-policy.github.io",
@@ -5808,6 +5832,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:0dbbf256bdb6",
+      "resource_type": "code_or_project",
+      "name": "foci",
+      "url": "https://github.com/leggedrobotics/foci",
+      "paper_ids": [
+        "pr-0288"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:0e43d5943975",
@@ -5856,6 +5892,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:109fd7cf8d3e",
+      "resource_type": "code_or_project",
+      "name": "rl_locomotion",
+      "url": "https://github.com/antonilo/rl_locomotion",
+      "paper_ids": [
+        "pr-0564"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:10da3b7462dc",
@@ -6107,7 +6155,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:1be0236300b6",
@@ -6230,18 +6278,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:213fd3a296b5",
-      "resource_type": "code_or_project",
-      "name": "deeprl-dexterous-manipulation",
-      "url": "https://sites.google.com/view/deeprl-dexterous-manipulation",
-      "paper_ids": [
-        "pr-0633"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:21937c501c7a",
       "resource_type": "code_or_project",
       "name": "VLAC",
@@ -6332,18 +6368,6 @@
       "url": "https://pacevla.github.io/",
       "paper_ids": [
         "pr-1001"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:22a2dec9a8db",
-      "resource_type": "code_or_project",
-      "name": "ok-robot.github.io",
-      "url": "https://ok-robot.github.io/",
-      "paper_ids": [
-        "pr-0670"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -6540,7 +6564,7 @@
         "pr-0270"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
+      "availability": "not_released",
       "verified_on": "2026-11-20"
     },
     {
@@ -6580,6 +6604,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:2befb94a0f8b",
+      "resource_type": "code_or_project",
+      "name": "robopack",
+      "url": "https://github.com/BoAi01/robopack",
+      "paper_ids": [
+        "pr-0649"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:2d1b0f762255",
       "resource_type": "code_or_project",
       "name": "innermonologue.github.io",
@@ -6613,18 +6649,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:2e2af534cb77",
-      "resource_type": "code_or_project",
-      "name": "foci",
-      "url": "https://rffr.leggedrobotics.com/works/foci/",
-      "paper_ids": [
-        "pr-0288"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -6841,7 +6865,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:35513a720bd6",
@@ -7021,7 +7045,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:3a3940987b2e",
@@ -7046,7 +7070,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:3ac2991c5333",
@@ -7178,7 +7202,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:3fad4df5df91",
@@ -7202,7 +7226,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:3fd2e4eaef17",
@@ -7217,6 +7241,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:4191c3fe1522",
+      "resource_type": "code_or_project",
+      "name": "software.html",
+      "url": "https://lavalle.pl/rrt/software.html",
+      "paper_ids": [
+        "pr-0552"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:41b8d8e96b79",
       "resource_type": "code_or_project",
       "name": "BLIP",
@@ -7226,18 +7262,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:41ec2860fc6b",
-      "resource_type": "code_or_project",
-      "name": "robopanoptes.github.io",
-      "url": "https://robopanoptes.github.io/",
-      "paper_ids": [
-        "pr-0671"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -7708,7 +7732,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:54cfdec392f9",
@@ -8028,11 +8052,12 @@
       "name": "modular_rl",
       "url": "https://github.com/joschu/modular_rl",
       "paper_ids": [
+        "pr-0615",
         "pr-1180"
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:5ebc09d15f51",
@@ -8128,7 +8153,19 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
+    },
+    {
+      "resource_id": "code:631deb6a0794",
+      "resource_type": "code_or_project",
+      "name": "PointFlowMatch",
+      "url": "https://github.com/robot-learning-freiburg/PointFlowMatch",
+      "paper_ids": [
+        "pr-0577"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:63ee7e61696e",
@@ -8518,6 +8555,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:71d4b80ababe",
+      "resource_type": "code_or_project",
+      "name": "planning-through-contact",
+      "url": "https://github.com/bernhardpg/planning-through-contact",
+      "paper_ids": [
+        "pr-0650"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:7233fb6617db",
       "resource_type": "code_or_project",
       "name": "ASAP",
@@ -8671,7 +8720,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:777922808829",
@@ -8902,6 +8951,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:808cd53ed8bd",
+      "resource_type": "code_or_project",
+      "name": "WorldModelsExperiments",
+      "url": "https://github.com/hardmaru/WorldModelsExperiments",
+      "paper_ids": [
+        "pr-0678"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:80920e7a49b5",
       "resource_type": "code_or_project",
       "name": "contactbench-sim",
@@ -9052,30 +9113,6 @@
       "url": "https://pengyu-team.github.io/S3E/",
       "paper_ids": [
         "pr-0266"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:85f642d2ae28",
-      "resource_type": "code_or_project",
-      "name": "worldmodels.github.io",
-      "url": "https://worldmodels.github.io/",
-      "paper_ids": [
-        "pr-0678"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:860b5a499acb",
-      "resource_type": "code_or_project",
-      "name": "planetrl.github.io",
-      "url": "https://planetrl.github.io/",
-      "paper_ids": [
-        "pr-0679"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -9367,7 +9404,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:8e290e52b568",
@@ -9454,6 +9491,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:91dca05be9db",
+      "resource_type": "code_or_project",
+      "name": "OpenHomie",
+      "url": "https://github.com/OpenRobotLab/OpenHomie",
+      "paper_ids": [
+        "pr-0609"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:92361c0b1bb7",
       "resource_type": "code_or_project",
       "name": "humanoidmimicgen",
@@ -9511,18 +9560,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:9329ef98192a",
-      "resource_type": "code_or_project",
-      "name": "implicitbc.github.io",
-      "url": "https://implicitbc.github.io/",
-      "paper_ids": [
-        "pr-0636"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -9658,18 +9695,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:96c3c467e389",
-      "resource_type": "code_or_project",
-      "name": "homietele.github.io",
-      "url": "https://homietele.github.io/",
-      "paper_ids": [
-        "pr-0609"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:96f630884f9f",
       "resource_type": "code_or_project",
       "name": "AgiBot-World",
@@ -9704,6 +9729,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:987dd5877b22",
+      "resource_type": "code_or_project",
+      "name": "Complementarity-Free-Dexterous-Manipulation",
+      "url": "https://github.com/asu-iris/Complementarity-Free-Dexterous-Manipulation",
+      "paper_ids": [
+        "pr-0652"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:98a65f15132d",
@@ -9763,7 +9800,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:9baf60318e2f",
@@ -9958,6 +9995,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:a1bb8c99ba09",
+      "resource_type": "code_or_project",
+      "name": "ibc",
+      "url": "https://github.com/google-research/ibc",
+      "paper_ids": [
+        "pr-0636"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:a1d3295d0f44",
@@ -10381,18 +10430,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:ad55c05069b3",
-      "resource_type": "code_or_project",
-      "name": "pinwm.github.io",
-      "url": "https://pinwm.github.io/",
-      "paper_ids": [
-        "pr-0685"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:adc16a96f325",
       "resource_type": "code_or_project",
       "name": "www.lerf.io",
@@ -10414,18 +10451,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "not_released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:aeba7cc5bc3b",
-      "resource_type": "code_or_project",
-      "name": "robo-pack.github.io",
-      "url": "https://robo-pack.github.io/",
-      "paper_ids": [
-        "pr-0649"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -10474,7 +10499,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:b0f1015a62b7",
@@ -10970,6 +10995,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:be474b253533",
+      "resource_type": "code_or_project",
+      "name": "domainrandomization",
+      "url": "https://sites.google.com/view/domainrandomization/",
+      "paper_ids": [
+        "pr-0561"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:bfa5daaa3e42",
       "resource_type": "code_or_project",
       "name": "proact",
@@ -11100,6 +11137,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:c8067955cc20",
+      "resource_type": "code_or_project",
+      "name": "hand_dapg",
+      "url": "https://github.com/aravindr93/hand_dapg",
+      "paper_ids": [
+        "pr-0633"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:c82e3f79a149",
@@ -11291,7 +11340,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:cdfedc2ce97d",
@@ -11372,18 +11421,6 @@
       "url": "https://robot-adaptation.github.io/MemoryAnchors",
       "paper_ids": [
         "pr-0995"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:d149219e76c6",
-      "resource_type": "code_or_project",
-      "name": "rma-legged-robots",
-      "url": "https://ashish-kmr.github.io/rma-legged-robots/",
-      "paper_ids": [
-        "pr-0564"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -11532,7 +11569,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:d70fe82916dd",
@@ -11593,6 +11630,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:d7923ce7babc",
+      "resource_type": "code_or_project",
+      "name": "SafeMimic",
+      "url": "https://robin-lab.cs.utexas.edu/SafeMimic/",
+      "paper_ids": [
+        "pr-0672"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:d8d9974c715f",
@@ -11832,7 +11881,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:e00975fe1503",
@@ -11857,6 +11906,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-19"
+    },
+    {
+      "resource_id": "code:e0e3af67c5d2",
+      "resource_type": "code_or_project",
+      "name": "ok-robot",
+      "url": "https://github.com/ok-robot/ok-robot",
+      "paper_ids": [
+        "pr-0670"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:e15c0f88ad15",
@@ -11979,6 +12040,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:e53dbec430d3",
+      "resource_type": "code_or_project",
+      "name": "RoboPanoptes",
+      "url": "https://github.com/real-stanford/RoboPanoptes",
+      "paper_ids": [
+        "pr-0671"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:e5b237dd2d23",
       "resource_type": "code_or_project",
       "name": "DovSG",
@@ -11988,7 +12061,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:e6527721e11d",
@@ -12012,7 +12085,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:e6f6b6a85014",
@@ -12063,24 +12136,24 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:e794e83c2a62",
+      "resource_type": "code_or_project",
+      "name": "G3Flow",
+      "url": "https://github.com/TianxingChen/G3Flow",
+      "paper_ids": [
+        "pr-0345"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:e7a4a42cf456",
       "resource_type": "code_or_project",
       "name": "articubot.github.io",
       "url": "https://articubot.github.io/",
       "paper_ids": [
         "pr-0674"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:e7f6176bd312",
-      "resource_type": "code_or_project",
-      "name": "WMNav",
-      "url": "https://b0b8k1ng.github.io/WMNav/",
-      "paper_ids": [
-        "pr-0279"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -12400,6 +12473,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:f01de4122754",
+      "resource_type": "code_or_project",
+      "name": "planet",
+      "url": "https://github.com/google-research/planet",
+      "paper_ids": [
+        "pr-0679"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:f047baf69e31",
       "resource_type": "code_or_project",
       "name": "VITA",
@@ -12520,6 +12605,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:f335ae39995d",
+      "resource_type": "code_or_project",
+      "name": "52069-ilqg-ddp-trajectory-optimization",
+      "url": "https://www.mathworks.com/matlabcentral/fileexchange/52069-ilqg-ddp-trajectory-optimization",
+      "paper_ids": [
+        "pr-0643"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:f34082b4dbc7",
       "resource_type": "code_or_project",
       "name": "droid",
@@ -12554,6 +12651,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:f4911b1f8887",
+      "resource_type": "code_or_project",
+      "name": "pointvla.github.io",
+      "url": "https://pointvla.github.io/",
+      "paper_ids": [
+        "pr-0272"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:f4fa7bfb43ad",
@@ -12889,7 +12998,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "metric:acc-0-25",

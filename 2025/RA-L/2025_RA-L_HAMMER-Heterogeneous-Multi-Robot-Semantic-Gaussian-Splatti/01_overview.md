@@ -84,3 +84,7 @@ HAMMER는 서로 다른 로봇에서 비동기적으로 전송되는 관측을 �
 - **Actual contribution:** In this work, we propose HAMMER, Heterogeneous Asynchronous Multi-robot Mapping of Environmental Radiance. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Therefore, to showcase the generalizability of HAMMER and its real-time deployment in real-world environments, we also assess its performance in two different hardware trials with data collected using real robots. (p. 5, IV. EXPERIMENTS).
 - **Explicit failure boundary:** 4) compared to Di-NeRF*, which fails to resolve robot alignments and therefore cannot accurately match the ground-truth images. (p. 6, IV. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 코드 — 프로젝트는 Code (coming June 2025)로 표시하고 실제 구현을 연결하지 않는다. [저자 공개 안내](https://hammer-project.github.io/)

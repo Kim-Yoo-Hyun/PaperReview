@@ -82,3 +82,8 @@ MimicGen은 소수의 사람 시연을 물체 중심 하위 동작으로 나눠 
 - **Actual contribution:** We make the following contributions: • We introduce MimicGen, a system for generating large diverse datasets from a small number of human demonstrations by adapting the human demonstrations to novel ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** Figure 4: (left) Agent Performance on Source and Generated Datasets. Success rates (3 seeds) of image- based agents trained with BC on the 10 source demos and each 1000 demo ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** Why might a data generation attempt result in a failure? (p. 17, 2. What are some limitations of MimicGen?).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · mimicgen/scripts/generate_dataset.py [배포 파일](https://raw.githubusercontent.com/NVlabs/mimicgen_environments/c0fbff22ba40060f05a917a80817f3f5c20731e7/mimicgen/scripts/generate_dataset.py)
+- 데이터 — 저자의 MimicGen 코어 모음에 있는 coffee D0 시연 HDF5를 고정 리비전에서 확인했다. [배포 파일](https://huggingface.co/datasets/amandlek/mimicgen_datasets/blob/33016f8a62c02334f929f2913af8fdd2a8a129e1/core/coffee_d0.hdf5)

@@ -87,3 +87,8 @@ HOMIE는 사람이 휴머노이드의 보행과 높이를 조절하면서 양팔
 - **Actual contribution:** HOMIE is designed to combine all the advantages mentioned above, integrating isomorphic exoskeleton arms with a pair of novel motionsensing gloves. (p. 3, A. Teleoperation Systems).
 - **Evaluation boundary:** These results indicate that just scaling up the height tracking reward in hei may initially lead to faster reduction in height tracking error, but it negatively affects the feedback from ... (p. 8, A. Humanoid Whole-body Control).
 - **Explicit failure boundary:** However, due to limitations in the accuracy, inference speed, and difficulty in handling occlusions of pose estimation, such approaches cannot guarantee rapid and accurate pose acquisition. (p. 2, A. Teleoperation Systems).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · HomieRL/legged_gym/legged_gym/scripts/train.py [배포 파일](https://raw.githubusercontent.com/OpenRobotLab/OpenHomie/33071f79f1884bb122bd45631c8c60d61dac1eb8/HomieRL/legged_gym/legged_gym/scripts/train.py)
+- 가중치 — HOMIE의 G1 하체 배포용 ONNX 정책이다. 상체 시연 정책까지 공개됐는지는 별도로 판단한다. [배포 파일](https://raw.githubusercontent.com/OpenRobotLab/OpenHomie/33071f79f1884bb122bd45631c8c60d61dac1eb8/HomieDeploy/deploy.onnx)

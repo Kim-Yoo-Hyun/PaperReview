@@ -7,13 +7,14 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: Bernhard Paus Graesdal, Shao Yuan Chew Chia, Tobia Marcucci, Savva Morozov, Alexandre Amice, Pablo Parrilo, Russ Tedrake
+- Authors: Bernhard Paus Graesdal, Shao Yuan Chew Chia, Tobia Marcucci, Savva Morozov, Alexandre Amice, Pablo A. Parrilo, Russ Tedrake
+- 저자 표기 근거 — RSS 표제면에서 Pablo A. Parrilo의 가운데 이니셜을 확인했다. [표제면](https://www.roboticsproceedings.org/rss20/p132.pdf#page=1)
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, contact-rich manipulation, convex relaxation, trajectory optimization
 - Official paper: https://www.roboticsproceedings.org/rss20/p132.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p132.pdf
-- Code/Project: not identified
+- Code/Project: https://bernhardgraesdal.com/rss24-towards-tight-convex-relaxations/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +88,7 @@
 - **Actual contribution:** Our method approximates these bilinearities using a tight Semidefinite Programming (SDP) relaxation for each contact mode. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to the baseline. (p. 9, VIII. EXPERIMENTS).
 - **Explicit failure boundary:** In contrast, the baseline often fails, finding a solution in 58% of the instances for the box-shaped slider geometry and a mere 12% for the T-shaped slider. (p. 10, VIII. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · planning_through_contact/planning/planar/planar_pushing_planner.py [배포 파일](https://raw.githubusercontent.com/bernhardpg/planning-through-contact/a3998f25b2868d865ec98b2b2dca38032b93e40b/planning_through_contact/planning/planar/planar_pushing_planner.py)

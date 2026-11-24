@@ -87,3 +87,7 @@ FOCI는 로봇과 환경을 모두 가우시안으로 표현해 좁은 공간에
 - **Actual contribution:** In this paper, we propose an algorithm that enables a robot to perform trajectory optimization directly on the 3D Gaussians. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Environment Initial Guess Time Solve Time # of Gaussians Narrow Corridor 0.24s 0.47s 24k Pillars 0.25s 0.45s 49k Machine Hall 0.22s 2.12s 243k Stonehenge 0.55s 0.83s 138k TABLE II: Planning ... (p. 5, A. Trajectory Evaluation).
 - **Explicit failure boundary:** 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points. (p. 7, V. LIMITATIONS).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · src/planning/planner.py [배포 파일](https://raw.githubusercontent.com/leggedrobotics/foci/43cb1774afc1310b69072029a7b672840face8d7/src/planning/planner.py)

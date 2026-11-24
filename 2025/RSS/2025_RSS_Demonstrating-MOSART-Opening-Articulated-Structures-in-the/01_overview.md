@@ -86,3 +86,8 @@ MOSART는 처음 보는 문·서랍 등이 시야 안에 있는 위치에서 출
 - **Actual contribution:** In contrast to these approaches, we develop a system that operates on novel object instances in novel environments in a zero-shot manner without requiring any privileged information. (p. 4, B. Generating Motion Plans).
 - **Evaluation boundary:** We first present ‘our end-to-end system test results, evaluating MOSART on 31 novel drawers and cupboards across 10 buildings (Section IV-A), To see how a modular system compares to an ... (p. 6, IV. EXPERIMENTS).
 - **Explicit failure boundary:** Other failures were during execution, where the handle would slip out, and during navigation, where navigating ‘on carpets was less accurate than on tiles. (p. 10, Discussion).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · pipeline.py [배포 파일](https://raw.githubusercontent.com/mosart-system/code/211ddd77e0ed745373e7b34217a21f01c4f8337b/pipeline.py)
+- 가중치 — MOSART 저자 배포 경로에 있는 Mask R-CNN 지각 가중치다. [배포 파일](https://drive.google.com/file/d/1qwZa-0dJ7dsfS1ty2XtL3AgWjXIENl9C/view)

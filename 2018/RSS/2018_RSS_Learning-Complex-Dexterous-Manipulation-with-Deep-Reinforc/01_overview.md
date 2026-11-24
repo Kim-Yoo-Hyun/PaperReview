@@ -84,3 +84,9 @@ DAPG는 소수의 사람 시연을 정책 그래디언트 학습에 사용해 �
 - **Actual contribution:** To overcome this challenge, we propose to augment the policy search process with a small number of human demonstrations collected in virtual reality (VR). (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Figure 1: We demonstrate a wide range of dexterous manipulation skills such as object relocation, in-hand manipulation, tool use, and opening doors using DRL methods. By augmenting with human demonstrations, ... (p. 1, Figure/Table caption).
 - **Explicit failure boundary:** Indeed, model-free methods have been used for acquiring manipulation skills [52], [13], but so far have been limited to simpler behaviors with 2-3 finger hands or wholearm manipulators, which do ... (p. 1, I. INTRODUCTION).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · dapg/examples/job_script.py [배포 파일](https://raw.githubusercontent.com/aravindr93/hand_dapg/9a1de23df6574e1b94e1da742e3326eb1f61c013/dapg/examples/job_script.py)
+- 가중치 — 네 과제 door·hammer·pen·relocate 각각의 학습 정책 파일을 확인했다. [배포 파일](https://raw.githubusercontent.com/aravindr93/hand_dapg/9a1de23df6574e1b94e1da742e3326eb1f61c013/dapg/policies/door-v0.pickle)
+- 데이터 — 네 Adroit 과제의 시연 파일을 확인했다. 정책 학습 중 생성된 전체 경험은 미확인이다. [배포 파일](https://raw.githubusercontent.com/aravindr93/hand_dapg/9a1de23df6574e1b94e1da742e3326eb1f61c013/dapg/demonstrations/door-v0_demos.pickle)

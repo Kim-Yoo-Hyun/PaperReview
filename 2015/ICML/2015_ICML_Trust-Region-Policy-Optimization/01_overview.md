@@ -7,13 +7,14 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2015 / ICML
-- Authors: John Schulman, Sergey Levine, Pieter Abbeel, Michael Jordan, Philipp Moritz
+- Authors: John Schulman, Sergey Levine, Philipp Moritz, Michael Jordan, Pieter Abbeel
+- 저자 표기 근거 — PMLR 게재 PDF의 표제면에서 Philipp Moritz가 세 번째, Pieter Abbeel이 마지막이다. [표제면](https://arxiv.org/pdf/1502.05477#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, policy optimization, on-policy RL
 - Official paper: https://proceedings.mlr.press/v37/schulman15.html
 - Full-text retrieval: https://arxiv.org/pdf/1502.05477
-- Code/Project: not identified
+- Code/Project: https://github.com/joschu/modular_rl
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +88,8 @@ TRPO는 정책을 한 번에 너무 크게 바꿔 성능이 무너지는 문제�
 - **Actual contribution:** In our experiments, we show that the same TRPO methods can learn complex policies for swimming, hopping, and walking, as well as playing Atari games directly from raw images. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the same architecture and parameters. Performance varies ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Our analysis also provides a perspective that unifies policy gradient and policy iteration methods, and shows them to be special limiting cases of an algorithm that optimizes a certain objective ... (p. 8, 9 Discussion).
+
+## 배포 범위 대조
+
+- 코드 — 제1저자가 배포한 모듈형 TRPO 구현. ICML 표의 실험 시점 버전은 미확인이다. [배포 파일](https://raw.githubusercontent.com/joschu/modular_rl/6970cde3da265cf2a98537250fea5e0c0d9a7639/modular_rl/trpo.py)
+- 데이터 — 원문에 학습 또는 제어 실험의 관측·궤적이 있다. 해당 실험의 원시 자료 배포 범위는 미확인이다. [검토 근거](https://arxiv.org/pdf/1502.05477#page=6)

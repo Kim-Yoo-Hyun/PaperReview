@@ -87,3 +87,9 @@ Contact-GraspNet은 복잡한 장면의 깊이 관측 하나에서 평행 그리
 - **Actual contribution:** Thus, our main contributions are the following: • A new end-to-end method for 6-DoF grasping of unknown objects in cluttered real world scenes where we achieve 90% grasp success rate. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** We observe a significantly higher grasp success rate of our method compared to [11] and [12] which themselves outperform other learning-based methods and analytic/heuristic baselines. (p. 6, IV. EXPERIMENTAL EVALUATION).
 - **Explicit failure boundary:** Failure Cases: We observe some failure cases for thick objects that only allow grasps almost at maximum grasp width. (p. 6, IV. EXPERIMENTAL EVALUATION).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · contact_graspnet/contact_graspnet.py [배포 파일](https://raw.githubusercontent.com/NVlabs/contact_graspnet/721706067cc7f7889c32afe7b4f7955eb90bd866/contact_graspnet/contact_graspnet.py)
+- 가중치 — Contact-GraspNet의 학습 체크포인트 자료 파일과 동일 폴더의 색인을 확인했다. [배포 파일](https://drive.google.com/file/d/1LIHVgwseBBTv0YxhgYMn7-pKjo8vptEk/view)
+- 데이터 — 저자가 배포한 시험용 장면 관측 파일이다. [배포 파일](https://drive.google.com/file/d/1lMCkzIPYvTGYbjLaTEPpRL4qXN5Xz0TF/view)

@@ -84,3 +84,8 @@ Clio는 자연어로 주어진 작업에 필요한 물체와 공간만 충분한
 - **Actual contribution:** We propose Clio, a novel approach for building task-driven 3D scene graphs in real-time with embedded open-set semantics. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** First and second-best results are bolded and underlined, respectively. ∗Total time for Clio-batch normalized by number of images; clustering step for batch run once on entire graph takes approximately 30 ... (p. 7, VI. EXPERIMENTS).
 - **Explicit failure boundary:** Notably, Clio was only unable to select the correct target object in the scene graph once (i.e., the "Wrong Object" failure category). (p. 8, VI. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · clio/src/object_update_functor.cpp [배포 파일](https://raw.githubusercontent.com/MIT-SPARK/Clio/f912b7c08fb0e029d80fd6b05eccee5009199ce4/clio/src/object_update_functor.cpp)
+- 데이터 — 저자 저장소에서 평가 장면의 좌표 변환을 확인했다. 별도 배포한 Office·Apartment·Cubicle·Building 원시 RGB-D 묶음은 저자 안내에서 식별했다. [배포 파일](https://raw.githubusercontent.com/MIT-SPARK/Clio/f912b7c08fb0e029d80fd6b05eccee5009199ce4/clio_eval/scene_transforms.yaml)

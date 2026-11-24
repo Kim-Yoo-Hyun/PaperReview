@@ -91,3 +91,7 @@ BC-Z는 여러 기술의 시연으로 하나의 로봇 조작 정책을 학습�
 - **Actual contribution:** We develop an interactive imitation learning system with two key properties that enable high-quality data collection and generalization to entirely new tasks. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Table 6: Ablations of video encoder batch composition. In the ablations below, we control for the same architecture, dataset, hyperparameters, and training time, changing only the sampling strategy for each ... (p. 17, Figure/Table caption).
 - **Explicit failure boundary:** Further, any collision of the robot base and arm (not including the gripper) with the environment counted as the task failure by the operator. (p. 20, C Featurization Details).
+
+## 배포 범위 대조
+
+- 데이터 — Google의 BC-Z 파일 목록에서 21개 과제 TFRecord의 첫 학습 분할을 확인했다. [배포 파일](https://api.kaggle.com/v1/datasets/list/google/bc-z-robot)

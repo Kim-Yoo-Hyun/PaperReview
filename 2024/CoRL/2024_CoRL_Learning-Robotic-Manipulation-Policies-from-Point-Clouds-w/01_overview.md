@@ -13,7 +13,7 @@
 - Tags: Robotics, point cloud, conditional flow matching, Imitation Learning
 - Official paper: https://arxiv.org/abs/2409.07343
 - Full-text retrieval: https://arxiv.org/pdf/2409.07343
-- Code/Project: not identified
+- Code/Project: https://pointflowmatch.cs.uni-freiburg.de/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,8 @@ PointFlowMatch는 점군 관측을 조건으로 시연의 말단장치 궤적 �
 - **Actual contribution:** Inspired by recent flow-based generative models, we propose PointFlowMatch, a novel imitation learning algorithm for robotic manipulation. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 1: Performance comparison of PointFlowMatch with different baseline methods on the RLBench set of tasks. We report the success rate (SR) (↑) as well as the delta to our ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** In addition to this, as usual in the fixed-data imitation learning setting, CFM cannot extrapolate out of distribution and thus, only learns motion correction behavior when included in the demonstration ... (p. 8, 5 Conclusion).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · scripts/train.py [배포 파일](https://raw.githubusercontent.com/robot-learning-freiburg/PointFlowMatch/d46cc98cf07a15fc264dddfddf5085880749a0ab/scripts/train.py)
+- 가중치 — RLBench에서 학습한 PointFlowMatch 정책 체크포인트 묶음 중 하나다. [배포 파일](https://pointflowmatch.cs.uni-freiburg.de/download/1717446544-didactic-woodpecker.zip)

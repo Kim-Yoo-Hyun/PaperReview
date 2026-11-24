@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2018 / RSS
-- Authors: Nikhil Chavan Dafle, Rachel Holladay, Alberto Rodriguez
+- Authors: Nikhil Chavan-Dafle, Rachel Holladay, Alberto Rodriguez
+- 저자 표기 근거 — RSS 표제면에서 첫 저자가 복합 성 Chavan-Dafle에 붙임표를 사용한다. [표제면](https://www.roboticsproceedings.org/rss14/p58.pdf#page=1)
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, contact-rich manipulation, in-hand manipulation, motion cones

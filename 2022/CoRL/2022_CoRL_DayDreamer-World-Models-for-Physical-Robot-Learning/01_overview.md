@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
-- Authors: Philipp Wu, Alejandro Escontrela, Danijar Hafner, Pieter Abbeel, Ken Goldberg
+- Authors: Philipp Wu, Alejandro Escontrela, Danijar Hafner, Ken Goldberg, Pieter Abbeel
+- 저자 표기 근거 — CoRL 게재 PDF는 Ken Goldberg, Pieter Abbeel 순으로 끝난다. [표제면](https://proceedings.mlr.press/v205/wu23c/wu23c.pdf#page=1)
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, real robot, model-based reinforcement learning
@@ -85,3 +86,8 @@ DayDreamer는 실물에서 모은 경험으로 세계 모델을 갱신하고 그
 - **Actual contribution:** The key contributions of this paper are summarized as follows: • Dreamer on Robots We apply Dreamer to 4 robots, demonstrating successful learning directly in the real world, without introducing ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** We evaluate Dreamer on 4 robots, each with a different task, and compare its performance to appropriate algorithmic and human baselines. (p. 4, 3 Experiments).
 - **Explicit failure boundary:** On the other hand, learning inside of simulators fails to capture the complexity of the real world, is prone to simulator inaccuracies, and the resulting behaviors do not adapt to ... (p. 1, Body text (section boundary not confidently recovered)).
+
+## 배포 범위 대조
+
+- 코드 — 저자 구현 파일 · embodied/agents/dreamerv2plus/agent.py [배포 파일](https://raw.githubusercontent.com/danijar/daydreamer/709016ce11c32dad1f24c4cc77afdf980d2a92a8/embodied/agents/dreamerv2plus/agent.py)
+- 데이터 — 실물 XArm의 적응 실험 결과 시계열이며 정책 학습 전이는 미확인이다. [배포 파일](https://raw.githubusercontent.com/danijar/daydreamer/709016ce11c32dad1f24c4cc77afdf980d2a92a8/scores/xarm_adapt.csv)

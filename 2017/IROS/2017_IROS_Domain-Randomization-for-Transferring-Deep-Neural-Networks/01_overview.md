@@ -13,7 +13,7 @@
 - Tags: Robotics, sim-to-real, domain randomization, perception
 - Official paper: https://arxiv.org/abs/1703.06907
 - Full-text retrieval: https://arxiv.org/pdf/1703.06907
-- Code/Project: not identified
+- Code/Project: https://sites.google.com/view/domainrandomization/
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,7 @@
 - **Actual contribution:** Our approach is to train a deep neural network in simulation using domain randomization. (p. 3, III. METHOD).
 - **Evaluation boundary:** The goals of our experiments are: (a) Evaluate the localization accuracy of our trained detectors in the real world, including in the presence of distractor objects and partial occlusions (b) ... (p. 4, IV. EXPERIMENTS).
 - **Explicit failure boundary:** Ablation study To evaluate the importance of different factors of our training methodology, we assessed the sensitivity of the algorithm to the following: • Number of training images • Number ... (p. 5, IV. EXPERIMENTS).
+
+## 배포 범위 대조
+
+- 데이터 — 원문에 학습 또는 제어 실험의 관측·궤적이 있다. 해당 실험의 원시 자료 배포 범위는 미확인이다. [검토 근거](https://arxiv.org/pdf/1703.06907#page=3)
