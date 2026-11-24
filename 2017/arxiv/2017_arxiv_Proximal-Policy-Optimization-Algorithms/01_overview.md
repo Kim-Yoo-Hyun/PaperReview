@@ -17,6 +17,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** OpenAI의 Atari 비교 노트북은 실행 폴더의 모니터 로그를 읽어 곡선을 그린다. 원 PPO 시행의 관측·행동 궤적이나 재사용할 로그 묶음은 해당 저장소에서 식별하지 못했다. [검토 근거](https://raw.githubusercontent.com/openai/baselines-results/master/acktr_ppo_acer_a2c_atari.ipynb)
+
 ## Why This Paper Is Here
 
 수집한 정책 롤아웃을 여러 번 재사용해 근접 정책 갱신을 수행한다.

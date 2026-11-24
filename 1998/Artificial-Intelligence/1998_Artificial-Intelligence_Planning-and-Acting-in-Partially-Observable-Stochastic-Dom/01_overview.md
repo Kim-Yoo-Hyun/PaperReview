@@ -17,6 +17,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (45 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** 공저자의 Tiger 입력은 §5.1의 관측확률 0.85와 보상 +10/−100/−1에 대응한다. 파일은 AAAI-94 예제로 분류되고 할인율 0.75를 지정한다. §5.2의 비할인 유한 지평 시행 원자료는 미확인이다. [검토 근거](https://pomdp.org/examples/tiger.aaai.POMDP)
+
 ## Why This Paper Is Here
 
 부분적으로만 관측할 수 있는 확률적 환경에서 관측·행동 이력으로 상태에 대한 믿음을 갱신하고 행동을 계획한다.

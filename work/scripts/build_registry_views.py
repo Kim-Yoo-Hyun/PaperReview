@@ -112,9 +112,8 @@ def build_resources(papers: list[dict]) -> dict:
         if paper["paper_id"] not in current["paper_ids"]:
             current["paper_ids"].append(paper["paper_id"])
         current["availability"].add(artifact.get("code_status", "not_identified"))
-        checked_on = (paper.get("provenance") or {}).get("metadata_checked_on")
-        if checked_on:
-            current["verified_on"].append(checked_on)
+        link_dates = (source.get("verified_on"), (paper.get("provenance") or {}).get("metadata_checked_on"))
+        current["verified_on"].extend(date_checked for date_checked in link_dates if date_checked)
 
     for entry in code_by_url.values():
         availability = entry.pop("availability")

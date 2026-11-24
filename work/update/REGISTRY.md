@@ -42,10 +42,12 @@ TrajOpt `pr-0558`의 기존 arXiv 식별자 1310.7730은 감마선 폭발에 관
 | 저자 배포물 | Y | 부분 | N | unknown |
 |---|---:|---:|---:|---:|
 | 코드 | 40 | 3 | 1 | 6 |
-| 가중치 | 16 | 4 | 0 | 30 |
+| 가중치 | 16 | 8 | 0 | 26 |
 | 데이터 | 15 | 7 | 1 | 27 |
 
-공개 판정일은 2026-11-19다. Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 공개 범위가 일부 구성요소·태스크·파일에 한정된 경우다. N은 저자가 미배포 또는 공개 예정임을 명시한 경우다. 사이트나 README만 있는 저장소는 확인한 범위를 적고 공개 여부를 unknown으로 둔다. 오류가 나는 다운로드 링크, 확인하지 못한 파일, 기존 벤치마크 재사용은 `unknown`으로 남긴다. 공개 상태는 다운로드한 모델의 실행 가능성까지 보증하지 않는다. [CLIP 학습 데이터](https://github.com/openai/CLIP/blob/main/model-card.md#data) · [Habitat 2.0 장면 배포 범위](https://aihabitat.org/datasets/replica_cad/) · [RLDG 공개 코드](https://github.com/generalist-distillation/RLDG)
+11월 19일 첫 판정 후 11월 24일 SayCan·Habitat·RLDG·3D Diffusion Policy의 가중치를 `unknown`에서 `부분`으로 갱신했다. 각각 모의 탁상 정책, PointNav PPO, 커넥터 삽입 학생 정책, 시연 생성용 RL 전문가의 파일을 확인했다. [변경 전 값과 출처](../sources/batches/core_next_01.yaml) · [논문별 배포 파일](../../research/SOURCE_AUDIT.md#core-공개-자료)
+
+Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인한 배포 범위가 일부 구성요소·과제·파일에 한정된 경우다. N은 저자가 미배포 또는 공개 예정임을 명시한 경우다. 배포 근거가 부족하면 `unknown`으로 둔다. 이 양식에는 ‘해당 없음’ 값이 없어 자체 가중치나 실험 데이터가 없는 연구는 `unknown`을 유지하고 그 근거를 각 항목의 `notes`에 적었다. [분류 원장](../sources/batches/core_next_01.yaml) · [CLIP 학습 데이터](https://github.com/openai/CLIP/blob/main/model-card.md#data)
 
 - **공통 태그.** 데이터 출처는 해당 논문의 학습·벤치마크 구축 자료를 기준으로 한다. 여러 출처를 사용하면 `혼합`으로 표기한다. RFMPose는 합성 자료로만 학습한 뒤 실제 관측에서도 평가해 `합성`이다. `기타`는 점군 등 허용된 나머지 범주의 구체적인 입력·형태가 확인된 경우에 쓴다. [RFMPose](https://proceedings.neurips.cc/paper_files/paper/2025/hash/618c0a236e7aace748d09bc8fbed3e4d-Abstract-Conference.html)
 - **전용 태그.** VLA나 Octo처럼 언어 지시로 여러 로봇의 행동을 생성하는 범용 정책을 설계·학습한 13편에 VLA 항목을 붙였다. 휴머노이드 기종이나 시뮬레이션 모델을 실제 사용한 10편에는 역할을 함께 적었다. 두 집합은 겹친다. FAST의 H1은 행동 토큰화 데이터에 등장한다. Ψ₀는 G1에서 전신 행동을 실행하며 기존 RL 하체 추종기를 사용한다. [FAST](https://arxiv.org/html/2501.09747) · [Ψ₀](https://www.roboticsproceedings.org/rss22/p021.html)

@@ -17,6 +17,10 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** 제1저자가 배포한 커넥터 삽입의 RL 전문가 45개 에피소드로 미세조정한 Octo 체크포인트를 확인했다. 같은 배포처는 원격조작 대조군 및 OpenVLA 변형을 구분한다. [배포 파일](https://huggingface.co/charlesxu0124/RLDG/blob/d85bceeda9fd6e41b894e3d31de16f1d5dcc91b4/octo_connector_rl_45/49999/default/checkpoint) · [저자 설명](https://huggingface.co/charlesxu0124/RLDG/raw/d85bceeda9fd6e41b894e3d31de16f1d5dcc91b4/README.md)
+
 ## Why This Paper Is Here
 
 실기 RL 전문가가 생성한 성공 궤적을 범용 정책의 감독 데이터로 사용한다.

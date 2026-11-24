@@ -17,6 +17,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** 게임 시연 영상과 기존 OCR 자료의 출처는 공개돼 있다. DAgger가 각 반복에서 모은 상태·전문가 행동 쌍의 저자 배포 파일은 미확인이다. [검토 근거](https://proceedings.mlr.press/v15/ross11a/ross11a.pdf)
+
 ## Why This Paper Is Here
 
 DAgger는 학습 중인 정책이 스스로 방문한 상태에서 전문가 행동을 받아 시연 분포와 실행 분포의 차이를 줄인다.

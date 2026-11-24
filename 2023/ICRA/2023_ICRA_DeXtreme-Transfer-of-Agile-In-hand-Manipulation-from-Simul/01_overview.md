@@ -12,11 +12,12 @@
 - Tier: NEXT
 - Tags: Robotics, dexterous manipulation, sim-to-real, Reinforcement Learning, NVIDIA
 - Official paper: https://arxiv.org/abs/2210.13702
-- Full-text retrieval: https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality
+- Full-text retrieval: https://ieeexplore.ieee.org/ielx7/10160211/10160212/10160216.pdf
 - Code/Project: not identified
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
-- 대조 판본: 요약과 기여는 저자판 v2에서 확인했다. ICRA 게재본의 저자 명단은 별도 대조 항목이다. [원문](https://arxiv.org/pdf/2210.13702v2)
+- 대조 판본: 요약과 기여는 저자판 v2에서 확인했다. [원문](https://arxiv.org/pdf/2210.13702v2)
+- 게재본 저자열: ICRA 게재본 인쇄 5977쪽 표제면의 저자 14명과 순서가 원장·학회 목차·저자판과 일치한다. IEEE 웹 서지에는 11명이 표시된다. [표제면](https://ieeexplore.ieee.org/ielx7/10160211/10160212/10160216.pdf#page=1)
 
 ## Why This Paper Is Here
 

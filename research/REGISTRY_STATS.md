@@ -113,17 +113,17 @@
 | Value | Count |
 |---|---:|
 | not_identified | 652 |
-| released | 400 |
-| project_only | 187 |
+| released | 401 |
+| project_only | 186 |
 | not_released | 13 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1053 |
-| released | 100 |
-| not_applicable | 98 |
+| not_identified | 1059 |
+| released | 101 |
+| not_applicable | 91 |
 | not_released | 1 |
 
 ## Evaluation type
@@ -191,8 +191,9 @@
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1166 |
-| reported | 86 |
+| not_recorded | 1157 |
+| reported | 91 |
+| not_applicable | 4 |
 
 ## Configuration status
 

@@ -17,6 +17,10 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** 저자의 PointNav 배포 ZIP에서 Gibson·Matterport3D 각각의 RGB·RGBD·깊이 PPO 가중치 6개를 확인했다. 모델 계열과 입력은 식별했으며 논문 수치별 난수 시드 대응은 미확인이다. [배포 파일](https://dl.fbaipublicfiles.com/habitat/data/baselines/v1/habitat_baselines_v2.zip) · [저자 설명](https://raw.githubusercontent.com/facebookresearch/habitat-lab/0fb6f43ffe806a8088a171b036336c093bcf604e/habitat-baselines/README.md)
+
 ## Why This Paper Is Here
 
 스캔된 실내 장면에서 내비게이션 에이전트를 훈련하고 비교할 플랫폼을 제시한다.

@@ -18,6 +18,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** 원 논문의 이미지 생성 실험과 후속 라이브러리 예제를 구분했다. 원 실험의 저자 생성 표본이나 데이터 분할을 고정한 배포 파일은 확인하지 못했다. [검토 근거](https://arxiv.org/pdf/2210.02747)
+
 ## Why This Paper Is Here
 
 Flow Matching은 연속 정규화 흐름이 따를 벡터장을 조건부 확률 경로에서 회귀해 생성 모델을 학습한다.

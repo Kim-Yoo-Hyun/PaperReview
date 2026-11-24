@@ -17,6 +17,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** ICML 실험은 환경 상호작용으로 리플레이 버퍼를 채운다. 저장소의 환경·실행 설정과 별도로 원 시행의 경험 버퍼 파일은 미확인이다. [검토 근거](https://proceedings.mlr.press/v80/haarnoja18b/haarnoja18b.pdf)
+
 ## Why This Paper Is Here
 
 확률 정책의 기대 보상과 엔트로피를 함께 최적화하는 오프폴리시 actor–critic을 제시한다.

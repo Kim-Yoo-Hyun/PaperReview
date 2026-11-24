@@ -18,6 +18,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** 저자 프로젝트의 예제 이미지와 보충 원고를 확인했다. Dropbox에서 생성 표본 묶음을 열거할 수 없어 논문 평가에 사용한 샘플 파일은 미확인이다. [검토 근거](https://hojonathanho.github.io/diffusion/)
+
 ## Why This Paper Is Here
 
 DDPM은 잡음에서 자연 이미지를 복원하는 역확산 모델이다. 이 논문의 평가는 생성한 이미지의 품질과 분포에 초점을 둔다. [원문](https://arxiv.org/html/2006.11239)

@@ -17,6 +17,10 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (36 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** 원문에 훈련 시퀀스를 생성하는 절차가 있다. 원래의 난수 보행 표본 자체를 내려받을 수 있는 저자 자료와의 대응은 미확인이다. [검토 근거](https://link.springer.com/content/pdf/10.1007/BF00115009.pdf)
+
 ## Why This Paper Is Here
 
 시간차 학습은 연속한 시점의 예측 사이의 차이를 이용해 미래 결과의 예측을 점진적으로 갱신한다.

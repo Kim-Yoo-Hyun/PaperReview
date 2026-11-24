@@ -17,6 +17,11 @@
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 저자판 PDF에서 §II의 접촉 계산과 §IV 표 1을 육안 대조했다.
 
+## 공개 자료
+
+- **코드** 공식 MuJoCo 저장소는 IROS 2012 논문을 엔진의 인용 대상으로 지정하며 접촉 해법의 C 소스를 배포한다. 확인한 것은 후속 공개 판본이며 2012년 측정에 쓴 정확한 리비전은 미확인이다. [배포 파일](https://raw.githubusercontent.com/google-deepmind/mujoco/7a587a978699cd60d2466117aeba559492ea05b3/src/engine/engine_solver.c) · [저자 설명](https://raw.githubusercontent.com/google-deepmind/mujoco/7a587a978699cd60d2466117aeba559492ea05b3/README.md)
+- **가중치** 논문 §II의 접촉 해법은 관성·야코비안과 마찰 제약에서 충격량을 계산한다. 엔진 해법 자체의 학습 가중치는 해당되지 않는다. [원문 근거](https://roboti.us/lab/papers/TodorovIROS12.pdf)
+
 ## Why This Paper Is Here
 
 MuJoCo는 접촉이 있는 다관절 동역학을 모델 기반 제어에 필요한 속도로 계산하는 물리 엔진이다.

@@ -17,6 +17,10 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **데이터** DeepMind가 RT-2의 로봇 학습 입력으로 명시한 RT-1 데이터에서 Google 팀이 공개한 RLDS 훈련 조각을 확인했다. RT-2에 투입한 정확한 표본 목록, 웹 혼합과 RT-2 평가 로그는 미확인이다. [배포 파일](https://storage.googleapis.com/storage/v1/b/gresearch/o/robotics%2Ffractal20220817_data%2F0.1.0%2Ffractal20220817_data-train.tfrecord-00000-of-01024?generation=1696340210661554) · [저자 설명](https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/)
+
 ## Why This Paper Is Here
 
 RT-2는 웹 시각·언어 과제와 로봇 시연을 함께 미세조정해 영상과 지시에서 로봇 행동을 생성한다.

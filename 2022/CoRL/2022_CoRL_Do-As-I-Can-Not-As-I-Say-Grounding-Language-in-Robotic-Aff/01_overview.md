@@ -17,6 +17,10 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (34 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** 저자 탁상 집기·놓기 예제에서 복원하는 정책 체크포인트 ckpt_40000을 확인했다. 공개 범위는 모의 탁상 정책이다. 실물 주방 기술별 가치 함수와 PaLM의 가중치는 미확인이다. [배포 파일](https://drive.google.com/file/d/1Nq0q1KbqHOA5O7aRSu4u7-u27EMMXqgP/view) · [저자 설명](https://raw.githubusercontent.com/google-research/google-research/87e25a5ba04d2c4cf0108f0cec96d648fe2b945a/saycan/SayCan-Robot-Pick-Place.ipynb)
+
 ## Why This Paper Is Here
 
 SayCan은 언어 모델이 지시와 맞는다고 평가한 기술과 현재 로봇 상태에서 실행할 수 있는 기술을 함께 고려해 다음 행동을 고른다.

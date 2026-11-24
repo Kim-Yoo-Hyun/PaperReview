@@ -19,6 +19,10 @@
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
+## 공개 자료
+
+- **가중치** 저자가 배포한 ZIP에서 Adroit Hammer·Door·Pen의 VRL3 전문가 가중치를 확인했다. 본문의 시연 생성에 쓰는 정책이며 원 DP3 모방 정책의 가중치는 미확인이다. [배포 파일](https://drive.google.com/file/d/1iNkSrLD_N4NrezLx58L1YoBBqYYg-33u/view?usp=sharing) · [저자 설명](https://raw.githubusercontent.com/YanjieZe/3D-Diffusion-Policy/47385d9d6f5bde3f2ebdf2400ecb8261cc9e6b97/README.md)
+
 ## Why This Paper Is Here
 
 희소한 점군 표현을 조건으로 확산 정책이 조작 행동을 생성하도록 학습한다.

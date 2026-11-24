@@ -37,6 +37,11 @@ def bibliography_digest(paper, fields):
     return hashlib.sha256(json.dumps(values, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
+def artifact_checks(row):
+    return {**row.get("artifact_review", {}).get("fields", {}),
+            **row.get("artifact_recheck", {}).get("fields", {})}
+
+
 def current_checks(row, *, include_reviews=True):
     states = {field: final(check) for field, check in row["checks"].items()}
     post = row.get("postcheck", {})
@@ -63,10 +68,10 @@ def current_checks(row, *, include_reviews=True):
         if review := row.get("summary_review"):
             states["summary"] = review["status"]
         if review := row.get("byline_review"):
-            states["authors"] = review["status"]
+            states["authors"] = review.get("resolution", review)["status"]
         if review := row.get("byline_correction"):
             states["authors"] = review["status"]
-        for field, check in row.get("artifact_review", {}).get("fields", {}).items():
+        for field, check in artifact_checks(row).items():
             states[field] = check["status"]
     return states
 
@@ -103,7 +108,7 @@ def check_applied(rows, papers, root):
         post = row.get("postcheck", {})
         follow = {**row.get("followup", {}), **post.get("resources", {})}
         edits = post.get("edits", {})
-        artifacts = row.get("artifact_review", {}).get("fields", {})
+        artifacts = artifact_checks(row)
         verified_artifacts = {k: v for k, v in artifacts.items() if v["status"] == PASS}
 
         def expect(field, value, target):
@@ -146,9 +151,21 @@ def check_applied(rows, papers, root):
                 key = "page" if field == "primary" else "pdf"
                 expect(key, paper.get(key) or None, target)
 
+        if resolution := row.get("byline_review", {}).get("resolution"):
+            expect("printed byline", final_authors, resolution["authors"])
+            check_source("pdf", resolution["source"])
+            verification = paper["provenance"]["authors_verification"]
+            for key in ("source", "verified_on", "basis"):
+                expect("printed byline " + key, verification[key], resolution[key])
+            overview = (root / paper["folder"] / "01_overview.md").read_text()
+            if ("- Authors: " + ", ".join(final_authors) not in overview.splitlines()
+                or resolution["source"] + "#page=1" not in overview):
+                errors.append(f"{pid} verified byline or its title page missing from overview")
+
         def check_artifact(field, target):
             key = "checkpoint" if field == "weights" else field
-            target = verified_artifacts.get(field, {}).get("value", target)
+            item = artifacts.get(field, {})
+            target = item.get("value", item.get("metadata_correction", {}).get("value", target))
             expect(f"reproducibility.{key}", paper["reproducibility"][key]["status"], target)
             if field != "weights":
                 expect(f"artifacts.{key}_status", paper["artifacts"][key + "_status"], target)
@@ -208,8 +225,8 @@ def check_applied(rows, papers, root):
                     errors.append(f"{pid} incomplete later code release evidence")
                 if item["source"] not in overview or item["release_reference"] not in overview:
                     errors.append(f"{pid} later code file or release reference missing from overview")
-            expect("release endpoint coverage",
-                   set(post.get("availability", {})) | set(verified_artifacts) | later_releases, positive)
+            released = {field for field, item in verified_artifacts.items() if item.get("finding", "file") == "file"}
+            expect("release endpoint coverage", set(post.get("availability", {})) | released | later_releases, positive)
             for field, probe in post.get("availability", {}).items():
                 key = "checkpoint" if field == "weights" else field
                 source = verified_artifacts.get(field, {}).get("source", probe["url"])
@@ -274,18 +291,27 @@ def check_applied(rows, papers, root):
                     line = cited_statement(claim, review)
                     if line not in section:
                         errors.append(f"{pid} source-checked statement or citation missing from {header}")
-        for field, item in verified_artifacts.items():
-            check_artifact(field, item["value"])
+        for field, item in artifacts.items():
+            if item["status"] != PASS and "metadata_correction" not in item:
+                continue
+            check_artifact(field, item.get("value"))
             key = "checkpoint" if field == "weights" else field
             profile = paper["reproducibility"][key]
             expect(field + " file source", profile.get("source"), item["source"])
             expect(field + " file evidence", profile.get("evidence"), item["basis"])
-            expect(field + " review date", profile.get("verified_on"), row["artifact_review"]["verified_on"])
+            recheck = row.get("artifact_recheck", {})
+            review = recheck if field in recheck.get("fields", {}) else row["artifact_review"]
+            expect(field + " review date", profile.get("verified_on"), review["verified_on"])
+            label = "배포 파일"
+            if item.get("finding") == "not_applicable":
+                label = "원문 근거"
+            elif "metadata_correction" in item:
+                label = "검토 근거"
             if field == "code":
                 check_source("code", item["repository"])
             overview = (root / paper["folder"] / "01_overview.md").read_text()
-            if item["basis"] + f" [배포 파일]({item['source']})" not in overview:
-                errors.append(f"{pid} {field} release scope or file link missing from overview")
+            if item["basis"] + f" [{label}]({item['source']})" not in overview:
+                errors.append(f"{pid} {field} reviewed scope or source missing from overview")
     if errors:
         raise ValueError("\n".join(errors))
     return original, later
@@ -382,6 +408,41 @@ def validate(rows, meta):
                     or check.get("value") != ("reported" if field == "weights" else "released")
                     or (field == "code" and not check.get("repository"))):
                     raise ValueError(f"Incomplete file-level release evidence for {row['id']} {field}")
+    rechecked = [row for row in rows if "artifact_recheck" in row]
+    if rechecked or "artifact_recheck" in meta:
+        campaign = meta["artifact_recheck"]
+        if (len(rechecked) != campaign["count"] or not re.fullmatch(r"[0-9a-f]{40}", campaign["baseline_commit"])
+            or sum(len(r["artifact_recheck"]["fields"]) for r in rechecked) != campaign["field_count"]):
+            raise ValueError("Incorrect artifact recheck cohort")
+        for row in rows:
+            expected = {k for k, v in row.get("artifact_review", {}).get("fields", {}).items() if v["status"] == OPEN}
+            review = row.get("artifact_recheck", {})
+            if (set(review.get("fields", {})) != expected or bool(review) != bool(expected)
+                or (expected and review["verified_on"] != campaign["verified_on"])):
+                raise ValueError(f"Artifact recheck coverage differs for {row['id']}")
+            sources = review.get("checked_sources", [])
+            field_sources = {url for item in review.get("fields", {}).values()
+                             for url in (item["source"], *item.get("additional_sources", []))}
+            if set(sources) != field_sources or len(sources) != len(field_sources) or any(not u.startswith("https://") for u in sources):
+                raise ValueError(f"Artifact recheck source index differs for {row['id']}")
+            for field, item in review.get("fields", {}).items():
+                finding = item["finding"]
+                if (finding not in ("file", "not_applicable", "unresolved")
+                    or item["status"] != (OPEN if finding == "unresolved" else PASS)
+                    or not item["basis"].strip()):
+                    raise ValueError(f"Incomplete artifact recheck for {row['id']} {field}")
+                if finding == "file" and (not item.get("file") or item.get("release_reference") not in sources
+                    or item.get("value") != ("reported" if field == "weights" else "released")
+                    or (field == "code" and not item.get("repository"))):
+                    raise ValueError(f"Missing verified release for {row['id']} {field}")
+                if finding == "not_applicable" and (field not in ("weights", "data") or item.get("value") != "not_applicable"):
+                    raise ValueError(f"Invalid applicability finding for {row['id']} {field}")
+                if (finding == "unresolved") != ("value" not in item):
+                    raise ValueError(f"Unresolved artifact marked as determined for {row['id']} {field}")
+                if change := item.get("metadata_correction"):
+                    if (finding != "unresolved" or field != "data" or change["before"]["status"] != "not_applicable"
+                        or change["value"] != "not_identified"):
+                        raise ValueError(f"Invalid applicability correction for {row['id']} {field}")
     for row in rows:
         if change := row.get("byline_correction"):
             if (change["status"] != PASS or not change["before"] or not change["corrected"]
@@ -393,6 +454,12 @@ def validate(rows, meta):
             if (review["status"] != OPEN or review["publisher"]["count"] == review["program"]["count"]
                 or not all(review[key]["source"].startswith("https://") for key in ("publisher", "program", "author_version", "final_copy"))):
                 raise ValueError(f"Incomplete conflicting byline evidence for {row['id']}")
+            if resolution := review.get("resolution"):
+                if (resolution["status"] != PASS or resolution["source"] != review["final_copy"]["source"]
+                    or resolution["pdf_page"] != 1 or resolution["printed_page"] <= 0 or not resolution["authors"]
+                    or not re.fullmatch(r"[0-9a-f]{64}", resolution["pdf_sha256"])
+                    or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", resolution["verified_on"])):
+                    raise ValueError(f"Incomplete printed byline verification for {row['id']}")
 
 
 def render(rows, meta):
@@ -461,7 +528,10 @@ def render(rows, meta):
     latest_date = max([post["verified_on"], *(b["verified_on"] for b in batches),
                        *(r["verified_on"] for r in transcriptions),
                        *(r["byline_correction"]["verified_on"] for r in rows if "byline_correction" in r),
-                       meta.get("artifact_review", {}).get("verified_on", "")])
+                       meta.get("artifact_review", {}).get("verified_on", ""),
+                       meta.get("artifact_recheck", {}).get("verified_on", ""),
+                       *(r["byline_review"]["resolution"]["verified_on"] for r in rows
+                         if "resolution" in r.get("byline_review", {}))])
     lines = [
         "# 원문 감사", "",
         f"{latest_date} KST 기준. 등록된 {n:,}편에서 **확인된 잔여 오류는 {failed}/{n:,}편({pct(failed, n)})**, "
@@ -529,15 +599,54 @@ def render(rows, meta):
         lines.append("")
     artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]
     if artifacts:
+        rechecks = [r["artifact_recheck"]["fields"] for r in rows if "artifact_recheck" in r]
         lines += ["## CORE 공개 자료", "",
-                  f"공개 자료가 한 종류 이상 미확인이었던 CORE {len(artifacts)}편에서 저자 배포처·논문별 근거를 확인했다. "
-                  "파일의 역할이 식별된 경우에만 공개 판정을 갱신했다. 일부 자료만 확인한 경우 원장에 그 범위를 적었다.", "",
-                  "| 자료 | 점검한 미확인 항목 | 파일 근거 확보 | 남은 미확인 |", "|---|---:|---:|---:|"]
+                  f"첫 감사에서 CORE {len(artifacts)}편의 공개 자료를 대조했다. 파일을 확인한 과제와 구성요소에만 공개 판정을 적용했다.", ""]
+        if rechecks:
+            n_checked = sum(map(len, rechecks))
+            findings = Counter(item["finding"] for group in rechecks for item in group.values())
+            n_papers = sum(any(item["status"] == OPEN for item in group.values()) for group in rechecks)
+            lines += [f"이후 남은 {len(rechecks)}편 {n_checked}개 항목을 모두 재검토했다. "
+                      f"{findings['file']}개 항목의 배포 파일을 확인했고, {findings['not_applicable']}개는 자체 학습 가중치나 "
+                      f"실험 데이터가 연구 산출물에 해당하지 않음을 원문에서 확인했다. "
+                      f"현재 {n_papers}편 {findings['unresolved']}개 항목은 배포 여부를 판단할 근거가 부족하다. "
+                      f"[각 항목의 판정·근거·대조 주소]({ledger})", ""]
+        lines += ["| 자료 | 첫 감사 대상 | 첫 감사 파일 확인 | 재검토 대상 | 추가 파일 확인 | 해당 없음 | 현재 미확인 |",
+                  "|---|---:|---:|---:|---:|---:|---:|"]
         for field in ("code", "weights", "data"):
             group = [f[field] for f in artifacts if field in f]
             resolved = sum(v["status"] == PASS for v in group)
-            lines.append(f"| {FIELDS[field]} | {len(group)} | {resolved} | {len(group)-resolved} |")
+            latest = Counter(g[field]["finding"] for g in rechecks if field in g)
+            remaining = len(group) - resolved - latest["file"] - latest["not_applicable"]
+            lines.append(f"| {FIELDS[field]} | {len(group)} | {resolved} | {sum(latest.values())} "
+                         f"| {latest['file']} | {latest['not_applicable']} | {remaining} |")
         lines.append("")
+        if rechecks:
+            lines += ["| 추가로 확인한 논문 | 자료 | 확인한 공개 범위 |", "|---|---|---|"]
+            for row in rows:
+                for field, item in row.get("artifact_recheck", {}).get("fields", {}).items():
+                    if item["finding"] == "file":
+                        title = row["title"].split(":")[0]
+                        lines.append(f"| {title} (`{row['id']}`) | {FIELDS[field]} | {item['basis']} "
+                                     f"[배포 파일]({item['source']}) · [저자 설명]({item['release_reference']}) |")
+            lines.append("")
+            scopes = []
+            for row in rows:
+                fields = {f: c for f, c in row.get("artifact_recheck", {}).get("fields", {}).items()
+                          if c["finding"] == "not_applicable"}
+                if fields:
+                    names = "·".join(FIELDS[f] for f in fields)
+                    source = next(iter(fields.values()))["source"]
+                    scopes.append(f"[{row['title'].split(':')[0]} ({names})]({source})")
+            if scopes:
+                lines += ["**연구 산출물에 해당하지 않는 항목.** " + " · ".join(scopes), ""]
+            corrections = [(i, r) for i, r in enumerate(rows, 1) if any("metadata_correction" in item
+                           for item in r.get("artifact_recheck", {}).get("fields", {}).values())]
+            if corrections:
+                lines += [f"별도로 {len(corrections)}편의 원장에 실험 데이터가 ‘해당 없음’으로 기록돼 있었다. "
+                          "이 논문들이 표본이나 시행을 사용한 사실을 확인해 ‘배포 파일 미확인’으로 고쳤다. "
+                          "위 표의 현재 미확인 데이터에 포함된다. "
+                          + " · ".join(f"[{r['id']}]({ledger}#L{i})" for i, r in corrections), ""]
         for row in rows:
             for field, item in row.get("artifact_review", {}).get("fields", {}).items():
                 if item.get("before", {}).get("status") == "not_applicable" and item["status"] == PASS:
@@ -546,6 +655,11 @@ def render(rows, meta):
                               f"[저자 설명]({item['release_reference']}) · [배포 파일]({item['source']})", ""]
     for row in rows:
         if review := row.get("byline_review"):
+            if resolution := review.get("resolution"):
+                lines += [f"**{row['title'].split(':')[0]} 저자 명단.** {resolution['basis']} "
+                          f"[게재본 표제면]({resolution['source']}#page=1) · [출판사 웹 서지]({review['publisher']['source']}) · "
+                          f"[학회 목차]({review['program']['source']})", ""]
+                continue
             lines += [f"**{row['title'].split(':')[0]} 저자 명단.** 출판사 서지에는 {review['publisher']['count']}명, "
                       f"학회 목차와 저자판에는 {review['program']['count']}명이 적혀 있다. "
                       f"{review['target']}은 출판사 인증 화면으로 연결되어 미확인으로 유지한다. "
@@ -656,7 +770,8 @@ def main():
         print(f"Matched {original} original errors, {additions} additions, {later} follow-up fields and {newest} post-correction fields")
         summaries = sum("summary_review" in r for r in rows)
         artifact_fields = sum(len(r.get("artifact_review", {}).get("fields", {})) for r in rows)
-        print(f"Matched {summaries} source-checked summaries and reviewed {artifact_fields} artifact fields")
+        rechecked_fields = sum(len(r.get("artifact_recheck", {}).get("fields", {})) for r in rows)
+        print(f"Matched {summaries} source-checked summaries, {artifact_fields} initial artifact checks and {rechecked_fields} rechecks")
     text = render(rows, meta)
     if args.write:
         REPORT.write_text(text)

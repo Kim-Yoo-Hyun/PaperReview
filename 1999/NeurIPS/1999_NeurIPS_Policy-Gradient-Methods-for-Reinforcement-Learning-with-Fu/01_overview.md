@@ -18,6 +18,11 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** 이 논문이 제공하는 결과는 정책 경사와 호환 함수 근사의 정리 및 수렴 증명이다. 특정 과제에서 학습해 배포할 정책 체크포인트는 연구 산출물에 해당하지 않는다. [원문 근거](https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf)
+- **데이터** 게재본은 기대값과 수렴 조건을 유도하며 데이터셋을 수집하거나 실험 표본으로 성능을 평가하지 않는다. 원 논문의 실험 데이터는 해당되지 않는다. [원문 근거](https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf)
+
 ## Why This Paper Is Here
 
 Sutton 등은 정책 경사를 행동가치로 표현하고, 그 자리에 함수 근사기를 사용해도 같은 경사를 얻는 조건을 증명했다. [원문](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)

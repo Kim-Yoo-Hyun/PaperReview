@@ -17,6 +17,11 @@
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** Part I의 제어식은 기계적 임피던스와 등가 네트워크에서 유도한다. 이론식의 관성·감쇠·강성 계수는 학습된 정책 가중치가 아니다. [원문 근거](https://newmanlab.mit.edu/wp-content/uploads/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf)
+- **데이터** Part I(1–7쪽)은 기계적 결합 관계를 식과 등가 네트워크로 유도하고 그림 1–6으로 설명한다. 이 권에는 데이터를 수집해 비교한 실험이 없으며 구현과 적용은 후속 두 권에서 다룬다. [원문 근거](https://newmanlab.mit.edu/wp-content/uploads/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf)
+
 ## Why This Paper Is Here
 
 접촉 중인 조작기와 환경 사이에서 제어해야 할 운동–힘의 동적 관계를 정식화한다.

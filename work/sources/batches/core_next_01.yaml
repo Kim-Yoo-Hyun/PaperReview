@@ -244,7 +244,7 @@
     - 혼합
   openness:
     code: 부분
-    weights: unknown
+    weights: 부분
     data: 부분
   datasets_benchmarks:
     - unknown
@@ -255,9 +255,16 @@
     - unknown
   verification: 부분확인
   notes: PMLR 서지의 선두 저자는 Brian Ichter이고 PDF 표제면은 Michael Ahn으로 시작한다. 학회 2022, 논문집 2023. 코드·자료는 모의 탁상 구현과 지시–해법 매핑에 한정된다. 상위 언어 모델은 사전 정의한 기술을 선택한다.
+  revisions:
+    - field: openness.weights
+      changed_from: unknown
+      reviewed_on: '2026-11-24'
+      reason: 저자 탁상 집기·놓기 예제에서 복원하는 정책 체크포인트 ckpt_40000을 확인했다. 공개 범위는 모의 탁상 정책이다. 실물 주방 기술별 가치 함수와 PaLM의 가중치는 미확인이다.
+      source: https://drive.google.com/file/d/1Nq0q1KbqHOA5O7aRSu4u7-u27EMMXqgP/view
   evidence:
     verified_on: '2026-11-19'
     sources:
+      가중치 대조: https://drive.google.com/file/d/1Nq0q1KbqHOA5O7aRSu4u7-u27EMMXqgP/view
       원문·서지: https://proceedings.mlr.press/v205/ichter23a.html
       저장소: https://github.com/google-research/google-research/tree/master/saycan
       자료: https://github.com/say-can/say-can.github.io/tree/main/data
@@ -357,10 +364,17 @@
   prior_work:
     - 2021-radford-clip
   verification: 부분확인
-  notes: UnCoCo는 저자 저장소의 TODO 항목이다. 조작은 지도를 이용한 하위 응용이고 오디오 질의는 기타 입력이다.
+  notes: UnCoCo는 저자 저장소의 TODO 항목이다. 조작은 지도를 이용한 하위 응용이고 오디오 질의는 기타 입력이다. 추가 학습이 없는 지도 융합 단계에는 자체 가중치가 없다.
+  revisions:
+    - field: notes
+      changed_from: UnCoCo는 저자 저장소의 TODO 항목이다. 조작은 지도를 이용한 하위 응용이고 오디오 질의는 기타 입력이다.
+      reviewed_on: '2026-11-24'
+      reason: 추가 학습이 없는 지도 융합 단계에는 자체 가중치가 없다.
+      source: https://concept-fusion.github.io/
   evidence:
     verified_on: '2026-11-19'
     sources:
+      적용 범위: https://concept-fusion.github.io/
       원문·서지: https://www.roboticsproceedings.org/rss19/p066.html
       저장소: https://github.com/concept-fusion/concept-fusion
       저자 목록: https://www.roboticsproceedings.org/rss19/p066.html
@@ -725,7 +739,7 @@
     - 시뮬
   openness:
     code: 'Y'
-    weights: unknown
+    weights: 부분
     data: 'Y'
   datasets_benchmarks:
     - PointNav
@@ -738,9 +752,16 @@
     - pr-0499
   verification: 부분확인
   notes: 기타 형태는 시뮬레이터의 가상 에이전트다. 공개 에피소드와 원본 장면의 이용 조건은 다르다.
+  revisions:
+    - field: openness.weights
+      changed_from: unknown
+      reviewed_on: '2026-11-24'
+      reason: 저자의 PointNav 배포 ZIP에서 Gibson·Matterport3D 각각의 RGB·RGBD·깊이 PPO 가중치 6개를 확인했다. 모델 계열과 입력은 식별했으며 논문 수치별 난수 시드 대응은 미확인이다.
+      source: https://dl.fbaipublicfiles.com/habitat/data/baselines/v1/habitat_baselines_v2.zip
   evidence:
     verified_on: '2026-11-19'
     sources:
+      가중치 대조: https://dl.fbaipublicfiles.com/habitat/data/baselines/v1/habitat_baselines_v2.zip
       원문·서지: https://openaccess.thecvf.com/content_ICCV_2019/html/Savva_Habitat_A_Platform_for_Embodied_AI_Research_ICCV_2019_paper.html
       저장소: https://github.com/facebookresearch/habitat-lab
       자료: https://github.com/facebookresearch/habitat-lab/blob/main/DATASETS.md
@@ -1881,10 +1902,17 @@
   prior_work:
     - unknown
   verification: 부분확인
-  notes: Part I의 이론 결과다. 저자 소장 원문과 ASME DOI를 사용했다.
+  notes: Part I의 이론 결과다. 저자 소장 원문과 ASME DOI를 사용했다. 이 권의 이론 유도에는 학습 가중치와 실험 데이터가 해당되지 않는다.
+  revisions:
+    - field: notes
+      changed_from: Part I의 이론 결과다. 저자 소장 원문과 ASME DOI를 사용했다.
+      reviewed_on: '2026-11-24'
+      reason: 이 권의 이론 유도에는 학습 가중치와 실험 데이터가 해당되지 않는다.
+      source: https://newmanlab.mit.edu/wp-content/uploads/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf
   evidence:
     verified_on: '2026-11-19'
     sources:
+      적용 범위: https://newmanlab.mit.edu/wp-content/uploads/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf
       원문·서지: https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/5/1384/files/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf
       DOI 기록: https://api.crossref.org/works/10.1115/1.3140702
       저자 목록: https://api.crossref.org/works/10.1115/1.3140702
@@ -1966,10 +1994,17 @@
   prior_work:
     - pr-0837
   verification: 부분확인
-  notes: 정책 경사 정리와 호환 함수 근사를 다루는 이론 논문이다.
+  notes: 정책 경사 정리와 호환 함수 근사를 다루는 이론 논문이다. 정리와 증명에 학습 가중치와 실험 데이터가 해당되지 않는다.
+  revisions:
+    - field: notes
+      changed_from: 정책 경사 정리와 호환 함수 근사를 다루는 이론 논문이다.
+      reviewed_on: '2026-11-24'
+      reason: 정리와 증명에 학습 가중치와 실험 데이터가 해당되지 않는다.
+      source: https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
   evidence:
     verified_on: '2026-11-19'
     sources:
+      적용 범위: https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
       원문·서지: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html
       저자 목록: https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html
       소속·내용 원문: https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf
@@ -2380,7 +2415,7 @@
     - 실제로봇
   openness:
     code: 부분
-    weights: unknown
+    weights: 부분
     data: 'Y'
   datasets_benchmarks:
     - RLDG
@@ -2408,9 +2443,16 @@
   verification: 부분확인
   notes: RL은 교사 정책에 적용한다. 학생 OpenVLA와 Octo는 각각 토큰·확산 헤드로 감독학습한다. 두 학생을 하나의 하이브리드 헤드로 분류하지 않았다. 공개 코드는 커넥터 삽입용 HIL-SERL 설정과 롤아웃 스크립트다. 학생 미세조정 절차는 공개
     예고 상태다.
+  revisions:
+    - field: openness.weights
+      changed_from: unknown
+      reviewed_on: '2026-11-24'
+      reason: 제1저자가 배포한 커넥터 삽입의 RL 전문가 45개 에피소드로 미세조정한 Octo 체크포인트를 확인했다. 같은 배포처는 원격조작 대조군 및 OpenVLA 변형을 구분한다.
+      source: https://huggingface.co/charlesxu0124/RLDG/blob/d85bceeda9fd6e41b894e3d31de16f1d5dcc91b4/octo_connector_rl_45/49999/default/checkpoint
   evidence:
     verified_on: '2026-11-19'
     sources:
+      가중치 대조: https://huggingface.co/charlesxu0124/RLDG/blob/d85bceeda9fd6e41b894e3d31de16f1d5dcc91b4/octo_connector_rl_45/49999/default/checkpoint
       원문·서지: https://www.roboticsproceedings.org/rss21/p028.html
       본문: https://arxiv.org/html/2412.09858
       자료: https://huggingface.co/datasets/charlesxu0124/RLDG
@@ -2496,7 +2538,7 @@
     - 혼합
   openness:
     code: 'Y'
-    weights: unknown
+    weights: 부분
     data: 'Y'
   datasets_benchmarks:
     - Meta-World
@@ -2508,9 +2550,16 @@
     - pr-0019
   verification: 부분확인
   notes: 기타 형태에는 손 조작 과제가 포함된다. RL 전문가용 가중치와 학습된 DP3 정책 가중치는 구분했다.
+  revisions:
+    - field: openness.weights
+      changed_from: unknown
+      reviewed_on: '2026-11-24'
+      reason: 저자가 배포한 ZIP에서 Adroit Hammer·Door·Pen의 VRL3 전문가 가중치를 확인했다. 본문의 시연 생성에 쓰는 정책이며 원 DP3 모방 정책의 가중치는 미확인이다.
+      source: https://drive.google.com/file/d/1iNkSrLD_N4NrezLx58L1YoBBqYYg-33u/view?usp=sharing
   evidence:
     verified_on: '2026-11-19'
     sources:
+      가중치 대조: https://drive.google.com/file/d/1iNkSrLD_N4NrezLx58L1YoBBqYYg-33u/view?usp=sharing
       원문·서지: https://www.roboticsproceedings.org/rss20/p067.html
       저장소: https://github.com/YanjieZe/3D-Diffusion-Policy
       프로젝트: https://3d-diffusion-policy.github.io/

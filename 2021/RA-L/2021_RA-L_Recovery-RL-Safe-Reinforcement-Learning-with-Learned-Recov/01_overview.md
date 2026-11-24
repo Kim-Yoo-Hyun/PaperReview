@@ -22,6 +22,7 @@
 
 - **코드** Recovery RL의 안전 가치 함수와 복구 정책 구현을 저자 저장소에서 확인했다. [배포 파일](https://raw.githubusercontent.com/abalakrishna123/recovery-rl/084c968538850e82776564e07b9dcdffca369936/recovery_rl/qrisk.py)
 - **데이터** 저자 설치 스크립트가 안내하는 shelf·maze 오프라인 복구 시연 압축 파일 recovery_rl_demos.zip의 배포를 확인했다. [배포 파일](https://drive.google.com/file/d/10M7pzsvKP4DcDDqxctDzx_opGfoV6rVt/view)
+- **가중치** 저자 설치 스크립트의 ZIP에서 Image Maze 시각 동역학 가중치 model_19900.pth를 확인했다. 실험 코드가 같은 파일을 불러오며, 공개된 항목은 복구 계획에 쓰는 동역학 모델이다. [배포 파일](https://drive.google.com/file/d/10M7pzsvKP4DcDDqxctDzx_opGfoV6rVt/view) · [저자 설명](https://raw.githubusercontent.com/abalakrishna123/recovery-rl/084c968538850e82776564e07b9dcdffca369936/install.sh)
 
 ## Why This Paper Is Here
 

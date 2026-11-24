@@ -17,6 +17,10 @@
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
+## 공개 자료
+
+- **가중치** 저자는 기존 시각 모델의 특징을 추가 학습 없이 정렬해 3D 지도에 융합한다. 융합 단계에는 자체 학습 체크포인트가 없다. 외부 인코더의 가중치는 저장소가 따로 안내한다. [원문 근거](https://concept-fusion.github.io/)
+
 ## Why This Paper Is Here
 
 RGB-D 관측에 정렬한 개방어휘 특징을 3차원 지도에 누적해 다양한 질의로 물체를 찾는다.

@@ -1,6 +1,6 @@
 # 원문 감사
 
-2026-11-24 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **19편**, 한 필드 이상 미확인인 논문은 **1,233편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
+2026-11-24 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **24편**, 한 필드 이상 미확인인 논문은 **1,228편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
 
 ## 요약·기여 원문 대조
 
@@ -156,17 +156,33 @@
 
 ## CORE 공개 자료
 
-공개 자료가 한 종류 이상 미확인이었던 CORE 43편에서 저자 배포처·논문별 근거를 확인했다. 파일의 역할이 식별된 경우에만 공개 판정을 갱신했다. 일부 자료만 확인한 경우 원장에 그 범위를 적었다.
+첫 감사에서 CORE 43편의 공개 자료를 대조했다. 파일을 확인한 과제와 구성요소에만 공개 판정을 적용했다.
 
-| 자료 | 점검한 미확인 항목 | 파일 근거 확보 | 남은 미확인 |
-|---|---:|---:|---:|
-| 코드 | 16 | 6 | 10 |
-| 가중치 | 38 | 7 | 31 |
-| 데이터 | 34 | 7 | 27 |
+이후 남은 36편 68개 항목을 모두 재검토했다. 7개 항목의 배포 파일을 확인했고, 6개는 자체 학습 가중치나 실험 데이터가 연구 산출물에 해당하지 않음을 원문에서 확인했다. 현재 31편 55개 항목은 배포 여부를 판단할 근거가 부족하다. [각 항목의 판정·근거·대조 주소](../work/sources/batches/source_audit_2026_11.jsonl)
+
+| 자료 | 첫 감사 대상 | 첫 감사 파일 확인 | 재검토 대상 | 추가 파일 확인 | 해당 없음 | 현재 미확인 |
+|---|---:|---:|---:|---:|---:|---:|
+| 코드 | 16 | 6 | 10 | 1 | 0 | 9 |
+| 가중치 | 38 | 7 | 31 | 5 | 4 | 22 |
+| 데이터 | 34 | 7 | 27 | 1 | 2 | 24 |
+
+| 추가로 확인한 논문 | 자료 | 확인한 공개 범위 |
+|---|---|---|
+| Do As I Can, Not As I Say (`pr-0020`) | 가중치 | 저자 탁상 집기·놓기 예제에서 복원하는 정책 체크포인트 ckpt_40000을 확인했다. 공개 범위는 모의 탁상 정책이다. 실물 주방 기술별 가치 함수와 PaLM의 가중치는 미확인이다. [배포 파일](https://drive.google.com/file/d/1Nq0q1KbqHOA5O7aRSu4u7-u27EMMXqgP/view) · [저자 설명](https://raw.githubusercontent.com/google-research/google-research/87e25a5ba04d2c4cf0108f0cec96d648fe2b945a/saycan/SayCan-Robot-Pick-Place.ipynb) |
+| RT-2 (`pr-0022`) | 데이터 | DeepMind가 RT-2의 로봇 학습 입력으로 명시한 RT-1 데이터에서 Google 팀이 공개한 RLDS 훈련 조각을 확인했다. RT-2에 투입한 정확한 표본 목록, 웹 혼합과 RT-2 평가 로그는 미확인이다. [배포 파일](https://storage.googleapis.com/storage/v1/b/gresearch/o/robotics%2Ffractal20220817_data%2F0.1.0%2Ffractal20220817_data-train.tfrecord-00000-of-01024?generation=1696340210661554) · [저자 설명](https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/) |
+| Habitat (`pr-0500`) | 가중치 | 저자의 PointNav 배포 ZIP에서 Gibson·Matterport3D 각각의 RGB·RGBD·깊이 PPO 가중치 6개를 확인했다. 모델 계열과 입력은 식별했으며 논문 수치별 난수 시드 대응은 미확인이다. [배포 파일](https://dl.fbaipublicfiles.com/habitat/data/baselines/v1/habitat_baselines_v2.zip) · [저자 설명](https://raw.githubusercontent.com/facebookresearch/habitat-lab/0fb6f43ffe806a8088a171b036336c093bcf604e/habitat-baselines/README.md) |
+| Recovery RL (`pr-0677`) | 가중치 | 저자 설치 스크립트의 ZIP에서 Image Maze 시각 동역학 가중치 model_19900.pth를 확인했다. 실험 코드가 같은 파일을 불러오며, 공개된 항목은 복구 계획에 쓰는 동역학 모델이다. [배포 파일](https://drive.google.com/file/d/10M7pzsvKP4DcDDqxctDzx_opGfoV6rVt/view) · [저자 설명](https://raw.githubusercontent.com/abalakrishna123/recovery-rl/084c968538850e82776564e07b9dcdffca369936/install.sh) |
+| MuJoCo (`pr-0831`) | 코드 | 공식 MuJoCo 저장소는 IROS 2012 논문을 엔진의 인용 대상으로 지정하며 접촉 해법의 C 소스를 배포한다. 확인한 것은 후속 공개 판본이며 2012년 측정에 쓴 정확한 리비전은 미확인이다. [배포 파일](https://raw.githubusercontent.com/google-deepmind/mujoco/7a587a978699cd60d2466117aeba559492ea05b3/src/engine/engine_solver.c) · [저자 설명](https://raw.githubusercontent.com/google-deepmind/mujoco/7a587a978699cd60d2466117aeba559492ea05b3/README.md) |
+| RLDG (`pr-0886`) | 가중치 | 제1저자가 배포한 커넥터 삽입의 RL 전문가 45개 에피소드로 미세조정한 Octo 체크포인트를 확인했다. 같은 배포처는 원격조작 대조군 및 OpenVLA 변형을 구분한다. [배포 파일](https://huggingface.co/charlesxu0124/RLDG/blob/d85bceeda9fd6e41b894e3d31de16f1d5dcc91b4/octo_connector_rl_45/49999/default/checkpoint) · [저자 설명](https://huggingface.co/charlesxu0124/RLDG/raw/d85bceeda9fd6e41b894e3d31de16f1d5dcc91b4/README.md) |
+| 3D Diffusion Policy (`pr-0926`) | 가중치 | 저자가 배포한 ZIP에서 Adroit Hammer·Door·Pen의 VRL3 전문가 가중치를 확인했다. 본문의 시연 생성에 쓰는 정책이며 원 DP3 모방 정책의 가중치는 미확인이다. [배포 파일](https://drive.google.com/file/d/1iNkSrLD_N4NrezLx58L1YoBBqYYg-33u/view?usp=sharing) · [저자 설명](https://raw.githubusercontent.com/YanjieZe/3D-Diffusion-Policy/47385d9d6f5bde3f2ebdf2400ecb8261cc9e6b97/README.md) |
+
+**연구 산출물에 해당하지 않는 항목.** [ConceptFusion (가중치)](https://concept-fusion.github.io/) · [Impedance Control (가중치·데이터)](https://newmanlab.mit.edu/wp-content/uploads/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf) · [MuJoCo (가중치)](https://roboti.us/lab/papers/TodorovIROS12.pdf) · [Policy Gradient Methods for Reinforcement Learning with Function Approximation (가중치·데이터)](https://proceedings.neurips.cc/paper_files/paper/1999/file/464d828b85b0bed98e80ade0a5c43b0f-Paper.pdf)
+
+별도로 7편의 원장에 실험 데이터가 ‘해당 없음’으로 기록돼 있었다. 이 논문들이 표본이나 시행을 사용한 사실을 확인해 ‘배포 파일 미확인’으로 고쳤다. 위 표의 현재 미확인 데이터에 포함된다. [pr-0008](../work/sources/batches/source_audit_2026_11.jsonl#L8) · [pr-0522](../work/sources/batches/source_audit_2026_11.jsonl#L522) · [pr-0524](../work/sources/batches/source_audit_2026_11.jsonl#L524) · [pr-0620](../work/sources/batches/source_audit_2026_11.jsonl#L620) · [pr-0745](../work/sources/batches/source_audit_2026_11.jsonl#L745) · [pr-0821](../work/sources/batches/source_audit_2026_11.jsonl#L821) · [pr-0835](../work/sources/batches/source_audit_2026_11.jsonl#L835)
 
 NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있었다. 공유 저자 저장소가 훈련에 사용했다고 명시한 자료 중 수정 GoStanford2의 go_stanford.zip을 확인했다. 전체 훈련 혼합에서 공개된 부분이다. [저자 설명](https://raw.githubusercontent.com/PrieureDeSion/visualnav-transformer/dca79815b704e5aa9c6bdc3082351f9e3b2848c2/README.md) · [배포 파일](https://drive.google.com/file/d/1BVGA46WbvOZFyuzkzV2n_yZqcQsdIJy7/view)
 
-**DeXtreme 저자 명단.** 출판사 서지에는 11명, 학회 목차와 저자판에는 14명이 적혀 있다. ICRA 게재본 인쇄 5977쪽 표제면은 출판사 인증 화면으로 연결되어 미확인으로 유지한다. [출판사 서지](https://ieeexplore.ieee.org/abstract/document/10160216) · [학회 목차](https://www.proceedings.com/content/069/069566webtoc.pdf#page=103) · [저자판](https://arxiv.org/abs/2210.13702)
+**DeXtreme 저자 명단.** ICRA 게재본 인쇄 5977쪽 표제면의 저자 14명과 순서가 원장·학회 목차·저자판과 일치한다. IEEE 웹 서지에는 11명이 표시된다. [게재본 표제면](https://ieeexplore.ieee.org/ielx7/10160211/10160212/10160216.pdf#page=1) · [출판사 웹 서지](https://ieeexplore.ieee.org/abstract/document/10160216) · [학회 목차](https://www.proceedings.com/content/069/069566webtoc.pdf#page=103)
 
 ## 오류율과 검증 범위
 
@@ -174,12 +190,12 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---|
 | 11월 20일 교정 전 추가 확인 오류 | 37 / 1,252 (2.96%) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |
 | 이번 반영 후 확인 오류 | 0 / 1,252 (0.00%) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |
-| 현재 전 항목 통과 | 19 / 1,252 (1.52%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
-| 현재 미확인 필드 보유 | 1,233 / 1,252 (98.48%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
+| 현재 전 항목 통과 | 24 / 1,252 (1.92%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
+| 현재 미확인 필드 보유 | 1,228 / 1,252 (98.08%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
 
 11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 141/1,252편(11.26%)이다. 자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.
 
-**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–98.48%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
+**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–98.08%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
 
 ## 교정 재검증
 
@@ -198,13 +214,13 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---:|---:|---:|
 | 링크 | 0 | 1,206 | 46 | 0 |
 | 제목 | 0 | 1,252 | 0 | 0 |
-| 저자 | 6 | 1,251 | 1 | 0 |
+| 저자 | 6 | 1,252 | 0 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
 | 요약·기여 | 30 | 1,252 | 0 | 0 |
-| 코드 | 0 | 384 | 868 | 0 |
-| 가중치 | 0 | 84 | 1,168 | 0 |
-| 데이터 | 0 | 101 | 1,151 | 0 |
+| 코드 | 0 | 385 | 867 | 0 |
+| 가중치 | 0 | 93 | 1,159 | 0 |
+| 데이터 | 0 | 104 | 1,148 | 0 |
 | 태그 | 1 | 395 | 857 | 0 |
 
 링크는 대표 원문과 기재한 부가 주소별로 판정한다. 원문만 열리더라도 다른 링크의 판정은 유지한다. 잘못된 주소를 걷어낸 뒤 대체 주소가 확인되지 않은 경우에는 그 역할이 미확인이다. 저자의 공개 표명이나 배포 파일로 코드·가중치·데이터를 각각 판단한다. 배포 근거를 찾지 못한 상태는 ‘존재 불확실’이다. 기존 요약 판정에는 overview 대신 검증한 정규화 배치의 요약·기여를 대상으로 명시한 70편이 포함된다. 논문별 근거의 `scope`에서 대상 텍스트를 확인할 수 있다.
@@ -213,7 +229,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 
 | 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |
 |---|---:|---:|---:|---:|---:|
-| CORE | 50 | 13 | 0 | 0 | 36 |
+| CORE | 50 | 18 | 0 | 0 | 31 |
 | NEXT | 450 | 6 | 0 | 360 | 433 |
 | REFERENCE | 510 | 0 | 0 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 0 | 131 | 242 |
@@ -222,16 +238,16 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 
 | 배치 | 논문별 원장 행 | 편수 | 전 항목 통과 | 미확인 | 수정 필요 |
 |---:|---|---:|---:|---:|---:|
-| <a id="batch-01"></a>1 | [pr-0001–pr-0100](../work/sources/batches/source_audit_2026_11.jsonl#L1-L100) | 100 | 5 | 95 | 0 |
+| <a id="batch-01"></a>1 | [pr-0001–pr-0100](../work/sources/batches/source_audit_2026_11.jsonl#L1-L100) | 100 | 6 | 94 | 0 |
 | <a id="batch-02"></a>2 | [pr-0101–pr-0200](../work/sources/batches/source_audit_2026_11.jsonl#L101-L200) | 100 | 0 | 100 | 0 |
 | <a id="batch-03"></a>3 | [pr-0201–pr-0300](../work/sources/batches/source_audit_2026_11.jsonl#L201-L300) | 100 | 0 | 100 | 0 |
 | <a id="batch-04"></a>4 | [pr-0301–pr-0400](../work/sources/batches/source_audit_2026_11.jsonl#L301-L400) | 100 | 0 | 100 | 0 |
-| <a id="batch-05"></a>5 | [pr-0401–pr-0500](../work/sources/batches/source_audit_2026_11.jsonl#L401-L500) | 100 | 0 | 100 | 0 |
+| <a id="batch-05"></a>5 | [pr-0401–pr-0500](../work/sources/batches/source_audit_2026_11.jsonl#L401-L500) | 100 | 1 | 99 | 0 |
 | <a id="batch-06"></a>6 | [pr-0501–pr-0600](../work/sources/batches/source_audit_2026_11.jsonl#L501-L600) | 100 | 2 | 98 | 0 |
-| <a id="batch-07"></a>7 | [pr-0601–pr-0700](../work/sources/batches/source_audit_2026_11.jsonl#L601-L700) | 100 | 3 | 97 | 0 |
+| <a id="batch-07"></a>7 | [pr-0601–pr-0700](../work/sources/batches/source_audit_2026_11.jsonl#L601-L700) | 100 | 4 | 96 | 0 |
 | <a id="batch-08"></a>8 | [pr-0701–pr-0800](../work/sources/batches/source_audit_2026_11.jsonl#L701-L800) | 100 | 2 | 98 | 0 |
-| <a id="batch-09"></a>9 | [pr-0801–pr-0900](../work/sources/batches/source_audit_2026_11.jsonl#L801-L900) | 100 | 3 | 97 | 0 |
-| <a id="batch-10"></a>10 | [pr-0901–pr-1000](../work/sources/batches/source_audit_2026_11.jsonl#L901-L1000) | 100 | 2 | 98 | 0 |
+| <a id="batch-09"></a>9 | [pr-0801–pr-0900](../work/sources/batches/source_audit_2026_11.jsonl#L801-L900) | 100 | 4 | 96 | 0 |
+| <a id="batch-10"></a>10 | [pr-0901–pr-1000](../work/sources/batches/source_audit_2026_11.jsonl#L901-L1000) | 100 | 3 | 97 | 0 |
 | <a id="batch-11"></a>11 | [pr-1001–pr-1100](../work/sources/batches/source_audit_2026_11.jsonl#L1001-L1100) | 100 | 0 | 100 | 0 |
 | <a id="batch-12"></a>12 | [pr-1101–pr-1200](../work/sources/batches/source_audit_2026_11.jsonl#L1101-L1200) | 100 | 0 | 100 | 0 |
 | <a id="batch-13"></a>13 | [pr-1201–pr-1252](../work/sources/batches/source_audit_2026_11.jsonl#L1201-L1252) | 52 | 2 | 50 | 0 |

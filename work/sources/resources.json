@@ -6628,6 +6628,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:2ed36b56a538",
+      "resource_type": "code_or_project",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "paper_ids": [
+        "pr-0831"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:3055e3134835",
       "resource_type": "code_or_project",
       "name": "NaVid-VLN-CE",
@@ -8203,18 +8215,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:67ccf3b10060",
-      "resource_type": "code_or_project",
-      "name": "mujoco.org",
-      "url": "https://mujoco.org/",
-      "paper_ids": [
-        "pr-0831"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:67ce4af66d8f",
       "resource_type": "code_or_project",
       "name": "umpnet",
@@ -8334,7 +8334,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-22"
     },
     {
       "resource_id": "code:6d01641cc964",
@@ -10679,7 +10679,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-22"
     },
     {
       "resource_id": "code:b98525242714",
@@ -11964,7 +11964,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:e8ada7413c15",
@@ -11977,7 +11977,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-22"
     },
     {
       "resource_id": "code:e8ddacd0807e",
