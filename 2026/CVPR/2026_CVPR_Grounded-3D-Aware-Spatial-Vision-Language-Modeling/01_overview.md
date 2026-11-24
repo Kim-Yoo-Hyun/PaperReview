@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Two challenges, in particular, are under-addressed.
-
-방법 관련 발췌 — We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
+GR3D는 영상 속 지시 대상의 2차원 영역과 단안 3차원 경계 상자를 함께 추론해 공간 질의에 답한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 2.2. Grounding in the 2D Plane - extractive body cue:** We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
-- **p. 2 / 1. Introduction - extractive body cue:** To address these limitations, we introduce (GR3D), a spatial VLM that integrates grounding as a core mechanism for learning spatial representations.
-- **p. 3 / 2. Method - extractive body cue:** Building on this foundation, we introduce explicit and implicit 2D grounding (Sec.
-- **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** To mitigate scale and depth ambiguity, we introduce an intrinsic-aware normalization strategy that rescales images according to focal length, yielding a consistent field of view ...
-- **p. 2 / 1. Introduction - extractive body cue:** This enables reasoning to evolve directly over grounded visual evidence, yielding coherent spatial predictions without any separate detection phase.
-- **p. 6 / 3.2. 3D Object Detection - extractive body cue:** Compared with vision specialists, our model achieves competitive results overall and delivers notably better performance on indoor datasets.
-- **p. 6 / 3.3. Visual Question Answering - extractive body cue:** In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general VQA ...
-- **p. 7 / 3.4. Implicit Grounding CoT - extractive body cue:** We show results in Table 4, where our method outperforms baselines in all these metrics.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 답을 생성하다가 참조한 영역의 토큰을 문장에 삽입하고 해당 영역과 카메라 정보를 조건으로 3차원 상자를 추정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=4)
+- Omni3D의 3차원 위치 추정과 공간 질의응답을 각각 평가해 명시적·암시적 영역 연결이 주는 효과를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

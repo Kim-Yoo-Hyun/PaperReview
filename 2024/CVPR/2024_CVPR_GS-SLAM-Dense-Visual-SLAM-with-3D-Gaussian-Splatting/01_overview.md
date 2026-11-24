@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, these methods face serious challenges in obtaining fine-grained dense maps.
-
-방법 관련 발췌 — Overall, our contributions include: • We propose GS-SLAM, the first 3D Gaussian Splatting(3DGS)-based dense RGB-D SLAM approach, which takes advantage of the fast splatting rendering technique to boost the mapping optimizing and ...
+GS-SLAM은 RGB-D 영상에서 3차원 가우시안 지도를 렌더링해 카메라 자세를 추적하고 관측이 쌓일 때 지도를 갱신한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, our contributions include: • We propose GS-SLAM, the first 3D Gaussian Splatting(3DGS)-based dense RGB-D SLAM approach, which takes advantage of the fast splatting rendering ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose GS-SLAM, the first RGB-D dense SLAM system that first utilizes 3D Gaussian scene representation coupled with the splatting rendering technique ...
-- **p. 3 / 3.1. 3D Gaussian Scene Representation - extractive body cue:** Our goal is to optimize a scene representation that captures the geometry and appearance of the scene, resulting in a detailed dense map and high-quality ...
-- **p. 6 / 4.2. Evaluation of Localization and Mapping - extractive body cue:** Our method achieves the best or second performance in 7 of 8 scenes and outperforms the second-best method Point-SLAM [27] by 0.4 cm on average ...
-- **p. 7 / 4.5. Ablation Study - extractive body cue:** The results illustrate that the expansion strategy can significantly improve the tracking and mapping perTable 4.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 6. Rendering performance on Replica dataset. We outperform existing dense neural RGB-D methods on the commonly reported rendering metrics. Note that GS-SLAM achieves 386 ...
-- **p. 6 / 4.3. Rendering Evaluation - extractive body cue:** The results show that GS-SLAM achieves the best performance Table 3.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The illustration of the proposed GS-SLAM. It first uti- lizes the 3D Gaussian representation and differentiable splatting rasterization pipeline in SLAM, achieving real-time ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 새롭게 관측한 영역에 가우시안을 추가하고 잡음 성분을 제거하며 자세 추적에는 신뢰할 수 있는 성분을 선택한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=4)
+- 실내 영상 순서열에서 자세 궤적 오차와 렌더링 품질·속도를 각각 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yan_GS-SLAM_Dense_Visual_SLAM_with_3D_Gaussian_Splatting_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Although language-free training based on implicit feature substitution looks promising for various 2D visionlanguage tasks, it encounters several specific challenges when applied to 3D point clouds: (1) Insufficient 3Dlanguage alignment ...
-
-방법 관련 발췌 — Overall, our contributions can be summarized as follows: • We introduce a CLIP-driven language-free 3DVG framework, which requires no manually annotated texts to effectively achieve 3D visual grounding on point clouds. • ...
+이 연구는 물체별 언어 설명이 없는 3차원 장면으로 학습해 문장이 지칭하는 물체를 추론하는 방법을 제안한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Overall, our contributions can be summarized as follows: • We introduce a CLIP-driven language-free 3DVG framework, which requires no manually annotated texts to effectively achieve ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address the above issues, we propose a LanguageFree training method for 3D Visual Grounding, named 3DLFVG.
-- **p. 3 / 3.1. Overview - extractive body cue:** The objective of our method is to train a model to localize specified objects without using any language queries during training, yet capable of identifying ...
-- **p. 4 / 3.1. Overview - extractive body cue:** Since our method capitalizes on the image-text feature alignment provided by CLIP, and incorporates extra modules that enhance the features with relation-aware capabilities.
-- **p. 4 / 3.3. Relation Injection - extractive body cue:** (2) Since there is no supervision of this relation during our training process, we introduce the proxy task of predicting the target object to achieve ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of language-free (LF) 3DVG on ScanRefer [4] dataset. Results of relevant fully supervised (Fully) meth- ods are also provided. Accuracy (Acc) ...
-- **p. 6 / 4.3. Compared Methods - extractive body cue:** Pseudo-Q [16] is currently a method that has achieved good performance in 2D language-free grounding.
-- **p. 7 / 4.3. Compared Methods - extractive body cue:** Qualitative results from Pseudo-Q [16], Zero-shot-RIS [40] and our method.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 2차원 시각·언어 공동 표현을 이용해 3차원 물체의 학습용 질의를 구성하고 물체 사이 공간 관계를 반영한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf#page=4)
+- 언어 주석을 쓰지 않는 학습 조건의 위치 특정 정확도를 비교하고 구성 요소를 제거한 실험으로 성능 변화를 측정했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Zhang_Towards_CLIP-driven_Language-free_3D_Visual_Grounding_via_2D-3D_Relational_Enhancement_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

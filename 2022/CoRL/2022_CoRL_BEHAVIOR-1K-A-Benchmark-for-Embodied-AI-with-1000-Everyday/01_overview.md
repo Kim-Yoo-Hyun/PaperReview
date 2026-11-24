@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2403.09227
 - Code/Project: https://behavior.stanford.edu/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (43 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (43 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.mlr.press/v205/li23a/li23a.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Concretely, the difficulties derive in part from the length of BEHAVIOR-1K's activities and the complexity of the physical manipulation required.
-
-방법 관련 발췌 — In this work, we present BEHAVIOR-1K, a Benchmark of 1,000 Everyday Household Activities in Virtual, Interactive, and Ecological Environments-the next generation of BEHAVIOR-100 [27].
+BEHAVIOR-1K는 사람이 로봇에 맡기고 싶은 일상 활동 1,000개를 가정 등 실내 장면의 물체·상태 변화와 연결한 시뮬레이션 벤치마크다. [PDF 1쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this work, we present BEHAVIOR-1K, a Benchmark of 1,000 Everyday Household Activities in Virtual, Interactive, and Ecological Environments-the next generation of BEHAVIOR-100 [27].
-- **p. 8 / Method - extractive body cue:** We also evaluate to what extent the simplifications we introduce in physics and actuation (grasping, motion execution) during training impact the performance of RL-Prim. during ...
-- **p. 2 / 1 Introduction - extractive body cue:** We hope that the BEHAVIOR-1K benchmark, our survey, and our analysis will serve to support and guide the development of future embodied AI agents and ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Task success rates across three baseline methods. RL-VMC with end-to-end visuomotor control completely fails to solve any of the activities, whereas RL-Prim. and ...
-- **p. 8 / Method - extractive body cue:** We achieve different success rates in simulation (50 runs, ∼40% success) and in the real world with optimal (27 runs, ∼22%) and trained policies (26 ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Efficiency metrics across three base- line methods. RL-VMC has low spatial and temporal efficiency because it fails to learn, whereas history information helps ...
-- **p. 7 / Method - extractive body cue:** Following the metrics proposed in BEHAVIOR-100 [27], we report the success rate and efficiency metrics (distance traveled, time invested, and disarrangement caused) in Table 2 ...
-- **p. 4 / C C - extractive body cue:** The realism achieved in rendering by OMNIGIBSON for BEHAVIOR-1K is also significantly higher than what was possible in BEHAVIOR-100 and other benchmarks (see Fig.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 활동에 필요한 물리·의미 속성과 상태 조건을 정의하고 OmniGibson에서 강체·변형체·액체 상호작용을 구현했다. [PDF 4쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=5) · [PDF 6쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=6)
+- 일부 활동의 긴 과제 수행을 기준 정책으로 평가하고 모의 아파트에서 학습한 모바일 조작 행동의 실물 전이를 사례로 조사했다. [PDF 7쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=8)
 
 ## Evaluation Scope
 

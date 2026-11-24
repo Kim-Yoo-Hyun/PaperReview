@@ -71,7 +71,7 @@ PDF body method statement (p. 6 (3.3.4. Visibility-based Viewpoint Decision (VVD
 
 - **p. 3 / 3.1.1. Problem definition - extractive body cue:** At each time step t, it obtains an RGB-D observation It and executes an action At (camera rotation or ego-motion) to actively explore until locating ...
 - **p. 4 / 3.1.2. Overview - extractive body cue:** At time step t, the agent incrementally constructs the scene graph St based on received observation It and its own pose.
-- **p. 4 / 3.1.2. Overview - extractive body cue:** Observation Pose (a) Construction of M3DSG VFMs Visual Spatial Room Livingroom bathroom Kitchen … �� Attribution �1 �2 �3
+- **그림 3.** 현재 관측과 로봇 자세로 장면 그래프를 갱신한다. 노드는 물체의 시각·공간·방 속성을, 간선은 물체 쌍을 함께 본 영상을 저장한다. 추론으로 찾은 목표에 대해 가시성을 기준으로 이동할 시점을 선택한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=4)
 - **p. 7 / 4.3.2. Advantage of M3DSG - extractive body cue:** Concept-graph outperforms Node-only by 4.4% in SR and 1.5% in SPL, especially for Language and Image goals, underscoring the value of relationship edges.
 - **p. 2 / 1. Introduction - extractive body cue:** Notably, a series of methods [35, 36] that build explicit 3D scene graphs from observations and leverage LLMs to drive exploration have shown promising performance ...
 - **p. 3 / 3.1.2. Overview - extractive body cue:** Formally, at each time step t, M3DSG incrementally integrates the RGB-D observation It into an evolving scene graph S.

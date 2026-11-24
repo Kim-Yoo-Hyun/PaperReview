@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, 3D Registration, ICP, state estimation
 - Official paper: https://api.crossref.org/works/10.1109/34.121791
-- Full-text retrieval: https://doi.org/10.1109/34.121791
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (18 pages; tesseract OCR fallback; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — reasonable quality curve data but has difficulty with very noisy curves because the method uses arclenath sampling of the curves to obtain corresponding point sets.
-
-방법 관련 발췌 — The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of choice for n > 3 in any ...
+Besl과 McKay의 ICP는 최근접점 대응과 강체 변환 추정을 반복해 두 3차원 형상을 정합한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / B. Point to Implicit Entity Distance - extractive body cue:** The SVD approach, based on the eross- ‘covariance matrix of two point distributions, does, however, ‘generalize easily ton dimensions and would be our method of ...
-- **p. 2 / 1) Point sets - extractive body cue:** A recent conference proceedings [47] contains new contributions on this subject.
-- **p. 2 / 1) Point sets - extractive body cue:** ‘Schwartz and Sharir [50] developed a solution to the freeform space curve matching problem without feature extraction in late 1985.
-- **p. 11 / A. Point Ser Matching - extractive body cue:** translations to achieve local matching.
-- **p. 14 / A BN - extractive body cue:** 17, The registration algorithm locked in on the solution and gave a slightly improved rms distance in less time than the full data set
-- **p. 15 / A BN - extractive body cue:** The accelerated ICP algorithm converges to a local mini ‘mum quickly in comparison with generic nonlinear optimization methods, It is fast enough that global shape ...
-- **p. 16 / A BN - extractive body cue:** Local matching is achieved at predictable cost based
-- **p. 16 / A BN - extractive body cue:** + The accelerated ICP algorithm can achieve Newton-type {quadratic convergence steps at less cost than « numerical steepest descent step.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 최근접점 계산이 가능한 기하 표현에 알고리즘을 적용하고 평균제곱거리의 단조 감소와 국소 수렴을 분석했다. [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=6)
+- 형상·초기 배치·관측 잡음이 달라질 때 곡선과 표면 자료에서 정합 결과를 비교했다. [PDF 10쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=10) · [PDF 11쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=11) · [PDF 12쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=12) · [PDF 13쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=121791#page=13)
 
 ## Evaluation Scope
 

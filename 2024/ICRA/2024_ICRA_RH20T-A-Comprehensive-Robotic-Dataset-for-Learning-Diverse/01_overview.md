@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2307.00595
 - Code/Project: https://rh20t.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2307.00595v2) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Firstly, there is a lack of large and diverse robotic manipulation datasets in this field [B]], despite the community's long-standing eagerness for such datasets.
-
-방법 관련 발췌 — We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
+RH20T는 접촉이 많은 실물 조작에서 시각·힘·소리·로봇 행동을 수집하고 대응하는 사람 시연 및 언어 설명을 제공한다. [PDF 1쪽](https://arxiv.org/pdf/2307.00595v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,14 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / III. RH20T DATASET - extractive body cue:** We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
-- **p. 3 / III. RH20T DATASET - extractive body cue:** [TM1 c) Scale: Our dataset consists of over 110,000 robot sequences and an equal number of human sequences, with more than 50 million images collected ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Additionally, the inclusion of data from different tasks during pretraining further improves the overall success rate.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Experimental Results We present the model's success rates under different training configurations in Tab.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** We divide the task into 3 stages, namely whether the robot can reach the block, grasp it and place it on the weight, and measure ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** This stage aims to refine the model's performance on the target task.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 로봇·카메라의 좌표계와 센서를 보정해 다양한 관측을 같은 행동 기록에 연결한다. [PDF 3쪽](https://arxiv.org/pdf/2307.00595v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2307.00595v2#page=4)
+- RH20T로 사전학습한 ACT를 새 환경에서 수집한 시연으로 미세조정한 뒤 실물 블록 옮기기에서 도달·파지·배치 성공률을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2307.00595v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2307.00595v2#page=6)
 
 ## Evaluation Scope
 

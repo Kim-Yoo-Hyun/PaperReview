@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2304.11477
 - Code/Project: https://github.com/Cranial-XIX/llm-pddl
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2304.11477v3) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — A Failure Example of GPT-4 in Planning Problem (P1): You have 5 blocks.
-
-방법 관련 발췌 — Given how LLMs are designed and trained, this phenomenon should come as no surprise.
+LLM+P는 자연어로 기술된 문제를 PDDL로 번역해 고전 계획기로 풀고 얻은 행동 순서를 다시 자연어로 표현한다. [PDF 1쪽](https://arxiv.org/pdf/2304.11477v3#page=1)
 
 ## Problem and Motivation
 
@@ -53,13 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Given how LLMs are designed and trained, this phenomenon should come as no surprise.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Specifically, they can be (relatively) easily fooled by, for example, asking for the result of a straightforward arithmetic problem that does not appear in their ...
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** We report the success rate of the optimal alias, and for the domains that time out, we show the success rate of the sub-optimal alias ...
-- **p. 5 / 1) How well does LLM-AS-P work? To what extent - extractive body cue:** Domain Success Rate % LLMLLM LLMToT LLM+PLLM+P BARMAN 0 0 0 0 20 (100) BLOCKSWORLD 20 15 (30) 0 (5) 0 90 FLOORTILE 0 0 ...
-- **p. 2 / II. BACKGROUND - extractive body cue:** A solution to a planning problem P is a symbolic plan π in the form of ⟨a1,a2,...,aN⟩, such that the preconditions of a1 hold in ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 도메인 정의와 변환 예시를 이용해 초기 상태와 목표를 생성하고 계획 탐색은 외부 기호 계획기에 맡긴다. [PDF 2쪽](https://arxiv.org/pdf/2304.11477v3#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2304.11477v3#page=3)
+- 여러 계획 도메인에서 해의 실행 가능성과 비용을 비교하고 사람의 정리 지시를 받는 가정용 로봇 사례를 제시했다. [PDF 5쪽](https://arxiv.org/pdf/2304.11477v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2304.11477v3#page=6)
 
 ## Evaluation Scope
 

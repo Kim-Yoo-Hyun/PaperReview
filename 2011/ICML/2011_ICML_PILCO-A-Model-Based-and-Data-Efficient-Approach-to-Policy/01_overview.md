@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, model-based RL, Gaussian Process
 - Official paper: https://icml.cc/2011/papers/323_icmlpaper.pdf
-- Full-text retrieval: https://www.deisenroth.cc/publication/deisenroth-2011-c/
+- Full-text retrieval: https://icml.cc/2011/papers/323_icmlpaper.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://icml.cc/2011/papers/323_icmlpaper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Pilco reduces model bias, one of the key problems of model-based reinforcement learning, in a principled way.
-
-방법 관련 발췌 — In this paper, we introduce pilco, a practical, data-efficient model-based policy search method.
+PILCO는 적은 상호작용으로 제어를 학습하도록 확률적 동역학 모형의 불확실성을 장기 정책 평가에 전파한다. [PDF 1쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,15 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** In this paper, we introduce pilco, a practical, data-efficient model-based policy search method.
-- **p. 6 / 3.3. Unicycle Riding - extractive body cue:** The success rate was approximately 93%; bringing the unicycle upright from extreme initial configurations was sometimes impossible due to the torque constraints.
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Small data set of observed transitions (left), multiple plausible deterministic function approximators (center), probabilistic function approximator (right). The probabilistic approximator models uncertainty about ...
-- **p. 3 / 2.2. Policy Evaluation - extractive body cue:** In the following, we assume that these test inputs are Gaussian distributed and extend the results from Qui˜nonero-Candela et al.
-- **p. 5 / 3. Experimental Results - extractive body cue:** The results discussed in the following are typical, i.e., they do neither represent best nor worst cases.
-- **p. 5 / 3.2. Cart-Double-Pendulum Swing-up - extractive body cue:** In the following, we show the results for pilco learning a dynamics model and a controller for the cart-doublependulum swing-up.
-- **p. 6 / 3.3. Unicycle Riding - extractive body cue:** Robotic unicycle system and simulation results.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가우시안 과정으로 상태 전이를 학습하고 예측 상태 분포의 모멘트로 장기 비용과 정책 기울기를 근사 계산한다. [PDF 2쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=2) · [PDF 3쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=3) · [PDF 4쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=4)
+- 카트폴 등 제어 과제에서 제한된 자료로 정책을 갱신하고 실제 장치에서 학습에 필요한 상호작용을 측정했다. [PDF 5쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=5) · [PDF 6쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=6) · [PDF 7쪽](https://icml.cc/2011/papers/323_icmlpaper.pdf#page=7)
 
 ## Evaluation Scope
 

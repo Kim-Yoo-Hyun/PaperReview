@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2007.00258
 - Code/Project: https://github.com/TixiaoShan/LIO-SAM
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2007.00258v3) 기준이다.
 
 > DOC-QA3 (2026-10-23): [LIO-SAM의 지정 수식·공개 구현 대조](./03_method.md). Commit `0be1fbe6275fb8366d5b800af4fc8c76a885c869`의 정적 검토이며 paper-run 버전·실행 결과는 미확인. [결과와 경계](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PAPER_CODE_FORMULA_REVIEW_2026-10-23.md).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite its success, LOAM presents some limitations - by saving its data in a global voxel map, it is often difficult to perform loop closure detection and incorporate other absolute measurements, e.g., ...
-
-방법 관련 발췌 — Scan-matching at a local scale instead of a global scale significantly improves the real-time performance of the system, as does the selective introduction of keyframes, and an efficient sliding window approach that ...
+LIO-SAM은 라이다와 관성 센서의 상대 운동, 루프 폐쇄 및 이용 가능한 절대 위치 관측을 요인 그래프로 결합해 궤적과 지도를 추정한다. [PDF 1쪽](https://arxiv.org/pdf/2007.00258v3#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Scan-matching at a local scale instead of a global scale significantly improves the real-time performance of the system, as does the selective introduction of keyframes, ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we propose a framework for tightly-coupled lidar inertial odometry via smoothing and mapping, LIOSAM, to address the aforementioned problems.
-- **p. 2 / III. LIDAR INERTIAL ODOMETRY VIA - extractive body cue:** We introduce four types of factors along with one variable type for factor graph construction.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** The maximum data playback speed is recorded and shown in the last column of Table IV when LIO-SAM achieves similar performance without failure compared with ...
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** LIOM outperforms LOAM in this test.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** Finally, LIO-SAM outperforms both methods and produces a map that is consistent with the available Google Earth imagery.
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** As is shown in Table III, LIO-GPS and LIO-SAM achieve similar RMSE error with respect to the GPS ground truth.
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** 4: Mapping results of LOAM, LIOM, and LIO-SAM using the Walking dataset.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관성 사전적분으로 스캔 왜곡을 보정하고 라이다 정합의 초깃값을 구하며 라이다 결과로 관성 센서의 편향을 갱신한다. [PDF 2쪽](https://arxiv.org/pdf/2007.00258v3#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2007.00258v3#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2007.00258v3#page=4)
+- 여러 플랫폼에서 모은 실외 순서열로 궤적·지도 품질을 비교하고 루프 폐쇄 및 위치 관측이 누적 오차에 미치는 영향을 보여준다. [PDF 5쪽](https://arxiv.org/pdf/2007.00258v3#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2007.00258v3#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2007.00258v3#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2007.00258v3#page=8)
 
 ## Evaluation Scope
 

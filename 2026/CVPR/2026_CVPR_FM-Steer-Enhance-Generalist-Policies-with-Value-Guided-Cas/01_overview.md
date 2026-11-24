@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf
 - Code/Project: https://hume-vla.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, robot control has stricter real-time requirements than text generation: extra inference computation can introduce delays, causing jitter or even task failure.
-
-방법 관련 발췌 — In summary, the main contributions of this work are: • We propose FM-Steer, a test-time computing framework that enhances flow-based Vision-Language-Action models while improving the robot control frequency. • We introduce value-guided ...
+FM-Steer는 흐름 기반 로봇 정책의 추론 중 중간 단계의 행동 후보에 가치를 매기고, 고른 후보를 빠르게 정제해 실행한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, the main contributions of this work are: • We propose FM-Steer, a test-time computing framework that enhances flow-based Vision-Language-Action models while improving the ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address this issue, we propose a cascaded action denoising mechanism that distributes the denoising computation across the original VLA and a separate Lite-Flow denoiser, ...
-- **p. 3 / 3. Preliminaries - extractive body cue:** The model typically consists of a VLM backbone and a flow matching expert.
-- **p. 3 / 3. Preliminaries - extractive body cue:** A flow-based VLA aims to model the data distribution p(At/ot), mapping the observation ot, which consists of images it, language instructions ℓt, and robot state ...
-- **p. 6 / Model - extractive body cue:** We present the success rate (SR) and standard error for each method across four task suites.
-- **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present FM-Steer, a test-time computing framework exploring human-like thinking capabilities for dexterous robot control. Equipped with value-guided test-time sampling and cascaded action ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Real-world evaluation on WidowX, Franka, and AgiBot G-1 tasks. We evaluate FM-Steer across 3 real-robot platforms with varying backgrounds, poses, and motion distractors. ...
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. SimplerEnv Results. We compare FM-Steer with two prior test-time computing methods, V-GPS [50] and RoboMonkey [33], on four WidowX tasks and Google Robot ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 중간 잡음 상태의 행동에 가치 추정기를 학습시켜 여러 후보 중 사용할 행동을 결정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf#page=4)
+- 후보 선택과 경량 Lite-Flow의 잡음 제거를 비동기로 수행하고 실제 로봇에서 행동 빈도와 조작 성과를 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf#page=4) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf#page=7)
 
 ## Evaluation Scope
 

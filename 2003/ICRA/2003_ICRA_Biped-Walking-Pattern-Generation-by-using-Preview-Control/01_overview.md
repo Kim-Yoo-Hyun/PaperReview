@@ -12,18 +12,16 @@
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, locomotion, ZMP, Control
 - Official paper: https://api.crossref.org/works/10.1109/ROBOT.2003.1241826
-- Full-text retrieval: https://doi.org/10.1109/ROBOT.2003.1241826
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826) 기준이다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3, 5. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, we must consider an xu ZMP reference Servo Controller Dynamic ZMP equation (12) p ref p x + - p ZMP CoM Figure 4: Pattern generation as ZMP tracking control 0 ...
-
-방법 관련 발췌 — In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted pendulum based approaches.
+Kajita 등은 미래의 목표 영모멘트점 궤적을 미리 고려해 이족 로봇의 무게중심 움직임을 생성한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper we introduce a novel walking pattern generation that allows arbitrary foot placements as a mixture of the ZMP based and the inverted ...
-- **p. 1 / 1 Introduction - extractive body cue:** However, since our method generated a stable gait by changing foot placements from the original assignment, it was not applicable to a situation like a ...
-- **p. 2 / 1 Introduction - extractive body cue:** It is also shown that by using the preview controller, we can take into account of the precise multibody dynamics although our method is based ...
-- **p. 5 / 1 Introduction - extractive body cue:** To evaluate our method we used the physical parameters of HRP-2 prototype (HRP-2P) shown in Figure 9[22].
-- **p. 1 / Abstract - extractive body cue:** We introduce a new method of a biped walking pattern generation by using a preview control of the zeromoment point (ZMP).
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 11: Modified ZMP of multibody model These information are stored to the buffer memory and loaded to use after delay time of T ∗NL. ...
-- **p. 4 / 1 Introduction - extractive body cue:** We can see a smooth trajectory of CoM (dashed line) is generated and the resulted ZMP (bold line) follows the reference (thin line) with good ...
-- **p. 4 / 1 Introduction - extractive body cue:** When the ZMP reference can be previewed for NL step future at every sampling time, the optimal controller which minimizes the performance index (14) is ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 단순화한 카트·테이블 동역학에서 영모멘트점 추종을 미래 기준값을 사용하는 서보 제어 문제로 구성했다. [PDF 2쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=2) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=4)
+- 정밀 다물체 모형과 단순 모형의 차이에서 생기는 영모멘트점 오차를 보상하고 시뮬레이션 보행으로 확인했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=6) · [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=1241826#page=7)
 
 ## Evaluation Scope
 

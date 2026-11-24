@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf
 - Code/Project: https://github.com/AgibotTech/ACoT-VLA
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This foundational shift, however, introduces a critical and distinct research challenge: How can we robustly and efficiently synthesize the complex, high-dimensional motion cues required for ACoT reasoning from the raw, heterogeneous mu ...
-
-방법 관련 발췌 — To summarize, our main contributions are as follows: • Conceptually, we introduce Action Chain of Thought (ACoT), a new paradigm for generalist robot policies.
+ACoT-VLA는 행동 공간에서 먼저 거친 기준 궤적을 추론하고 이를 이용해 로봇이 실행할 세밀한 행동을 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our main contributions are as follows: • Conceptually, we introduce Action Chain of Thought (ACoT), a new paradigm for generalist robot policies.
-- **p. 2 / 1. Introduction - extractive body cue:** Subsequently, through jointly leveraging both EAR and IAR, we develop ACoT-VLA, an integrated Action Chain-of-Thought framework that enables grounded generalist robot policy learning.
-- **p. 3 / 3. Methodology - extractive body cue:** The core of our method lies in two distinct action reasoners introduced in Sec.
-- **p. 3 / 3. Methodology - extractive body cue:** In this section, we present a detailed investigation into how to generate effective action space guidance and integrate it into robotic policy learning.
-- **p. 4 / 3.3. Implicit Action Reasoner - extractive body cue:** To this end, we introduce an Implicit Action Reasoner (IAR), which directly operates on the VLM's key-value cache.
-- **p. 8 / 4.4. Real-World Deployment - extractive body cue:** 3, our approach achieves consistently higher average success rates than both π0.5 and π0, i.e., 66.7% against 61.0% and 33.8%.
-- **p. 6 / 4.2. Simulation Experiments - extractive body cue:** Compared to previous stateof-the-art method π0.5, our approach achieves a 1.6% absolute improvement in average.
-- **p. 7 / 4.2. Simulation Experiments - extractive body cue:** Furthermore, our method maintains exceptional performance under the Supervised Fine-Tuning setting, reaching an 88.0% average success rate.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 명시적 추론기가 제안한 기준 궤적과 암시적 행동 표현을 결합해 최종 행동 생성을 안내한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=4)
+- LIBERO 계열과 VLABench, 실물 조작에서 성공률을 비교하고 행동 수준의 중간 추론이 주는 효과를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

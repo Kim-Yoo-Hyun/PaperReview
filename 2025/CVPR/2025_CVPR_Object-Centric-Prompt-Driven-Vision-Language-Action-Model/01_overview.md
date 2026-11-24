@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In contrast, RT-Trajectory [20] (Figure1.(c)) illustrates the entire movement path of the endeffector, which helps bridge the gap between task components and enhances generalization.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • 1) We propose employing a sequence of key-frames presented with prompts to explicitly convey the task objectives in both low-level action and high-level planning. ...
+CrayonRobo는 영상 위에 그린 시각 지시와 언어를 접촉 자세 및 접촉 후 이동 방향으로 변환해 조작한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • 1) We propose employing a sequence of key-frames presented with prompts to explicitly convey the task objectives ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our experimental setup includes a diverse range of manipulation tasks, both familiar and novel, where our method achieves a promising success rate in manipulation.
-- **p. 4 / 3.3.2. Policy Learning - extractive body cue:** To establish an explicit connection between the input 2D directional prompt and the output 3D directions, we introduce a projection loss designed to guide their ...
-- **p. 1 / 1. Introduction - extractive body cue:** Since key-frames represent important or bottleneck steps of the gripper during the task execution [18, 19, 26, 46, 58], we propose CrayonRobo, an approach that ...
-- **p. 3 / 3.3.2. Policy Learning - extractive body cue:** This gradual progression enables the model to develop a deeper understanding of the physical significance 27640
-- **p. 6 / 4.3. Ablation Study - extractive body cue:** Beginning with Ex1, where only a 2D position prompt is provided, the model achieves impressive performance with scores of 0.42/0.37.
-- **p. 8 / 4.3.2. Tolerance Analysis of Prompt Noise - extractive body cue:** The results, shown in Figure 5, indicate that with 10% and 20% noise, our method achieves performance levels comparable to those of the noise-free scenario.
-- **p. 6 / 4.2. Comparisons with Baselines - extractive body cue:** For automatically generated prompts, the results are 0.64/0.62 on seen and unseen tasks, still outperforming the baselines.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 수동 또는 자동으로 만든 2차원 표시를 사용자가 지정한 말단 자세와 이동 방향의 3차원 감독 신호에 대응시킨다. [PDF 2쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=2) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=5)
+- 접촉 동작의 수행 성과를 비교하고 표시 위치와 방향에 잡음을 더해 민감도를 측정했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

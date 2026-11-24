@@ -15,15 +15,13 @@
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf) 기준이다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — 1 (b), where standard RSSM-based baselines (APV and ContextWM), even when equipped with ensemble heads, exhibit artificially low and nearly flat predictive uncertainty that fails to grow with the prediction horizon, in ...
-
-방법 관련 발췌 — We propose a novel framework using variable-horizon prediction and introduce the Horizon-Calibrated Uncertainty (HCU) loss to learn the relationship between time and predictive uncertainty explicitly.
+HAUWM은 행동 레이블이 없는 영상에서 더 먼 미래일수록 예측 불확실성이 커지도록 잠재 세계 모형을 사전학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose a novel framework using variable-horizon prediction and introduce the Horizon-Calibrated Uncertainty (HCU) loss to learn the relationship between time and predictive uncertainty explicitly.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Instead of single-step prediction, our method trains a probabilistic ensemble to forecast states across variable, randomly sampled time horizons.
-- **p. 4 / 4 METHODOLOGY - extractive body cue:** Our methodology is structured around a two-phase framework as shown in fig.
-- **p. 5 / 4 METHODOLOGY - extractive body cue:** To explicitly preserve future-state diversity, we introduce a Horizon-Calibrated Uncertainty (HCU) loss.
-- **p. 5 / 4 METHODOLOGY - extractive body cue:** In the pre-training phase, we introduce a variable-horizon prediction task, where an ensemble of dynamics models learns to forecast future states over randomly sampled time ...
-- **p. 9 / 5 EXPERIMENTS - extractive body cue:** In the imitation learning setting, HAUWM achieves stateof-the-art performance, outperforming baselines in several tasks and performing competitively in Drawer Close.
-- **p. 7 / 5 EXPERIMENTS - extractive body cue:** Performance (RQ1): Does HAUWM lead to improved sample efficiency and final performance on downstream RL tasks compared to state-of-the-art methods?
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** 3, our method, HAUWM, achieves state-of-the-art sample efficiency and final performance on the majority of the tested benchmarks.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 미래 시점을 무작위로 선택해 앙상블로 예측하고, 시간 간격과 잠재 예측 분산을 연결하는 손실을 적용한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf#page=5)
+- 사전학습 표현을 고정하고 행동 조건 동역학을 학습한 뒤, 불확실성 손실을 제거한 조건과 여러 시각 제어 과제에서 비교했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf#page=7) · [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/ad222e6e38e26e3f00d85829b9e02f43-Paper-Conference.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, simulation, human-robot interaction, social navigation, humanoid, mobile manipulation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html
-- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2024/hash/430894999584d0bd358611e2ecf00b15-Abstract-Conference.html
+- Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf
 - Code/Project: https://aihabitat.org/habitat3
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (31 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Training and testing such social agents on hardware with real humans poses inherent challenges, including safety concerns, scalability limitations, substantial cost implications, and the complexity of establishing standardized benchmark ...
-
-방법 관련 발췌 — Social tasks - Aiming at reproducible and standardized benchmarking, we present two collaborative human-robot interaction tasks and a suite of baselines for each.
+Habitat 3.0은 가상 사람과 로봇이 실내에서 함께 이동하거나 물건을 정리하는 협업 과제를 연구할 수 있는 시뮬레이터다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Social tasks - Aiming at reproducible and standardized benchmarking, we present two collaborative human-robot interaction tasks and a suite of baselines for each.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** In this paper, we introduce Habitat 3.0 - a simulator that supports both humanoid avatars and robots for the study of collaborative human-robot tasks in ...
-- **p. 3 / 1 INTRODUCTION - extractive body cue:** Our framework is open-sourced, for more details see Appendix A.
-- **p. 18 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** We present the overall task success as well as the training reward for all approaches, averaged over 3 seeds.
-- **p. 18 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** The action space of the learned high-level policy consists of discrete selections from all possible combinations of skills and objects/receptacles allowed at each step.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Social Navigation. Overview of the Social Navigation task and sensors used (left). Baseline Results (right). The bottom rows show different variations of removing ...
-- **p. 25 / Figure/Table caption - extractive body cue:** Figure 9: Robot Embodiment. Spot robot in the simulation environment is designed to minimize the embodiment gaps to the robot in the physical world. We ...
-- **p. 19 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** This performance can potentially be improved by training the high-level policy with learned low-level skills in-the-loop, or by fine-tuning in this setting.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 다양한 외형과 동작을 가진 가상 사람을 구현하고 사람이 화면 또는 가상현실 인터페이스로 그 행동을 제어하게 했다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=5)
+- 사람을 찾아 따라가는 탐색과 함께 장면을 정리하는 두 과제를 정의해 학습 및 휴리스틱 정책을 비교했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=9)
 
 ## Evaluation Scope
 

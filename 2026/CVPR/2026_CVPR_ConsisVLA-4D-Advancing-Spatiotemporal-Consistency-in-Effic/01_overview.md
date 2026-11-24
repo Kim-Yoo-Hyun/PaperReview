@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Due to the lack of a comprehensive understanding of current spatial states and insufficient knowledge of evolving scene dynamics, existing methods struggle to build consistent correlations with predicted future scenes.
-
-방법 관련 발췌 — Our contributions are summarized as follows: • We propose ConsisVLA-4D, an efficient and innovative framework that advances spatiotemporal consistency in 3D-Perception and 4D-Reasoning. • We introduce CV-Aligner and CO-Fuser to ensure c ...
+ConsisVLA-4D는 지시에 등장하는 물체를 여러 시점에서 대응시키고 행동에 따른 장면 변화를 학습해 조작 행동을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 3) Cross-Scene - extractive body cue:** Our contributions are summarized as follows: • We propose ConsisVLA-4D, an efficient and innovative framework that advances spatiotemporal consistency in 3D-Perception and 4D-Reasoning. • We ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose ConsisVLA-4D, a unified and efficient framework that enhances spatiotemporal consistency in 3D-perception and 4D-reasoning, as shown in Fig.
-- **p. 1 / Abstract - extractive body cue:** Building upon these, we introduce 3) CS-Thinker to achieve Cross-Scene spatiotemporal consistency as actions unfold.
-- **p. 4 / 4.2. Cross-View Object Semantic Consistency - extractive body cue:** (12) To inject 3D information into zobj i and establish associations between objects with the same identity across different viewpoints, we introduce Single-Fusion, which performs ...
-- **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** Particularly, it achieves exceptional success rates of 98.8% and 99.8% in the Spatial and Object suites, which assess spatial perception and object recognition, respectively.
-- **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** ConsisVLA-4D leads significantly in both phased and final success rates across 4 diverse long-horizon bimanual tasks, with strong performance stably maintained across deployment platforms (±1.7%).
-- **p. 8 / 5.3. Ablation Studies - extractive body cue:** The R = 1/8 setting achieves a favorable balance between performance and efficiency.
-- **p. 8 / 5.4. Qualitative Analysis - extractive body cue:** Based on this correlation, ConsisVLA-4D achieves state-of-the-art performance with only 1/8 of the visual tokens (see Tab.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시점 사이에서 물체의 정체성을 정렬하고 물체 간 공간 관계와 시간에 따른 국소 동역학을 정책 표현에 결합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=5)
+- LIBERO와 RoboTwin 2.0에서 과제 성공률을 비교하고 시공간 정보를 처리하는 구성 요소의 역할을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

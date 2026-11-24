@@ -1,6 +1,6 @@
 # Persistent Robot World Models: Stabilizing Multi-Step Rollouts via Reinforcement Learning
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ECCV
@@ -11,18 +11,20 @@
 - Tags: world-model, exposure-bias, visual-fidelity
 - Aliases: PersistWorld
 - Official paper: https://arxiv.org/abs/2603.25685
+- Full-text retrieval: https://arxiv.org/pdf/2603.25685v2
 - Venue verification: https://api.crossref.org/works/10.1007/978-3-032-37517-9_29
 - Code/Project: https://jaibardhan.com/persistworld/
 - Code: https://github.com/Jai2500/PersistWorld
-- Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. ECCV 2026 accepted/video list의 공식 검색 색인과 저자 abstract 대조; proceedings page/DOI 미확인.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-Action-conditioned video world model의 autoregressive rollout에서 exposure bias 때문에 장기 prediction 품질이 저하되는 문제다.
+이 연구는 로봇 행동에 조건화한 영상 세계 모형이 자신이 생성한 장면을 연이어 입력할 때 생기는 시각적 오차 누적을 줄이도록 후학습한다. [PDF 1쪽](https://arxiv.org/pdf/2603.25685v2#page=1)
 
 ## Core Idea and Contribution
 
-자신이 생성한 history에 conditioning하며 여러 미래 rollout을 비교하는 RL post-training과 multi-view visual fidelity reward를 제안한다.
+- 같은 예측 이력에서 길이가 다른 여러 미래를 생성하고 실제 다중 시점 영상과의 일치도를 보상으로 삼아 확산 모형을 갱신한다. [PDF 5쪽](https://arxiv.org/pdf/2603.25685v2#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2603.25685v2#page=7) · [PDF 9쪽](https://arxiv.org/pdf/2603.25685v2#page=9)
+- 연속 생성에서 시점별 영상 품질 지표와 사람이 선호하는 영상을 비교해 오차가 시간에 따라 어떻게 변하는지 분석했다. [PDF 11쪽](https://arxiv.org/pdf/2603.25685v2#page=11) · [PDF 12쪽](https://arxiv.org/pdf/2603.25685v2#page=12) · [PDF 13쪽](https://arxiv.org/pdf/2603.25685v2#page=13) · [PDF 14쪽](https://arxiv.org/pdf/2603.25685v2#page=14)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Robot action + predicted video history → future multi-view video; 최적화 �
 
 공식 abstract/project는 DROID에서 LPIPS/SSIM/PSNR 기반 rollout fidelity와 human preference 평가를 설명한다. Downstream policy improvement는 별도 검증 대상이다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2603.25685) · [저자 project/code](https://jaibardhan.com/persistworld/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2603.25685) · [저자 project/code](https://jaibardhan.com/persistworld/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

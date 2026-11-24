@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We argue that this limitation stems from how current VLMs acquire their physical world knowledge.
-
-방법 관련 발췌 — Our contributions can be summarized as follows: • We introduce G2VLM, the first unified model that bridges spatial 3D reconstruction and high-level spatial understanding in a single vision-language model.
+G²VLM은 여러 영상의 3차원 기하를 복원하는 학습과 언어 기반 공간 추론을 하나의 시각언어모형에 결합한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions can be summarized as follows: • We introduce G2VLM, the first unified model that bridges spatial 3D reconstruction and high-level spatial understanding in ...
-- **p. 2 / 1. Introduction - extractive body cue:** To overcome this limitation, we propose to integrate visual geometry learning into the VLM.
-- **p. 3 / 1. Introduction - extractive body cue:** We present G2VLM, a unified model that integrates both a geometric perception expert for 3D reconstruction and a semantic perception expert for multimodal understanding and ...
-- **p. 4 / 3. Unified Spatial Vision-Language Model - extractive body cue:** We introduce G2VLM, a unified geometry-grounded VLM that integrates spatial 3D reconstruction and spatial understanding.
-- **p. 4 / 3.1. Model Architecture - extractive body cue:** Our model's input is a sequence (Ii)N i=1 of N RGB images Ii ∈R3×H×W , we present the detailed design for each expert as follows.
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 2. Ablation study on the design choices for G2VLM. GP denotes the geometric perception expert. Our results validate the superiority of our approach over ...
-- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** These results demonstrate that our method achieves on-par performance with VGGT in completion and comparable results in accuracy.
-- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** As shown in Table 1a, our method achieves on-par performance on the RRA and RTA metrics and comparable results on the AUC metric when compared ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기하와 의미를 맡는 두 전문가를 연결하고 점 지도·상대 카메라 자세·표면 법선에 대한 감독을 적용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=5)
+- 다중 시점 3차원 복원과 공간 질의응답을 각각 평가해 기하 표현이 두 종류의 과제에 기여하는지 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

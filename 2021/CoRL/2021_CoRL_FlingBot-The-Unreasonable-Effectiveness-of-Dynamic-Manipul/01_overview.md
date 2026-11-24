@@ -17,13 +17,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2105.03655
 - Code/Project: https://flingbot.cs.columbia.edu/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Additionally, since the robot arm cannot manipulate the cloth at locations it can't reach, the maximum cloth size is greatly limited by the robot arm's reach range.
-
-방법 관련 발췌 — In summary: • Our main contribution is in demonstrating the effectiveness of dynamic manipulation for cloth unfolding through our self-supervised learning framework, FlingBot. • We propose a parameterization for the dual-arm grasp ...
+FlingBot은 천을 두 팔로 집어 늘인 뒤 펄럭이는 동작을 학습해 임의로 구겨진 천의 펼쳐진 면적을 늘린다. [PDF 1쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In summary: • Our main contribution is in demonstrating the effectiveness of dynamic manipulation for cloth unfolding through our self-supervised learning framework, FlingBot. • We ...
-- **p. 4 / 3 Method - extractive body cue:** To make these constraints linear and independent, we propose an alternative 4-scalar parameterization, which consists of pixel position of the point C ∈R2 at the ...
-- **p. 2 / 1 Introduction - extractive body cue:** To achieve this goal, we present FlingBot, a self-supervised algorithm that learns how to unfold cloths from arbitrary initial configurations using a pick, stretch, and ...
-- **p. 5 / 3 Method - extractive body cue:** To this end, we propose to use spatial action maps [5, 6, 7].
-- **p. 6 / 3 Method - extractive body cue:** Our real-world experiment setup consists of two UR5s, where one is equipped with a Schunk WSG50 and the other with an OnRobot RG2, facing each ...
-- **p. 7 / 4 Evaluation - extractive body cue:** While the pick & place baseline discovered a similar strategy, its performance is inherently limited by quasi-static actions, requiring significantly more steps to achieve a ...
-- **p. 9 / 4.4 Results - extractive body cue:** 2, we report that our policy achieves over 80% on all cloth types, which outperforms the quasi-static pick & place baseline by over 40%.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Coverage v.s. Steps. With 95% confidence interval shaded. FlingBot can achieve high coverage within a few interaction steps, while the quasi-static baselines never ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 영상에서 파지 위치를 고르고 행동 전후 면적 증가를 자기지도 신호로 사용해 동작의 가치를 학습한다. [PDF 3쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=4)
+- 새 천과 의류에서 동적 동작과 준정적 조작의 면적 변화를 비교하고 실물 양팔 로봇에서도 확인했다. [PDF 6쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=8)
 
 ## Evaluation Scope
 

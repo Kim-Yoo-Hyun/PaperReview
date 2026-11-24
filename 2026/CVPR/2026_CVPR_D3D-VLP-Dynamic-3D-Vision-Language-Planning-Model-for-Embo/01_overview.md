@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, this simple black-box approach impairs VLA Model Modular System Instruction Actions Planning Model Instruction Sub-instructions Grounding Model Navigation Model Actions No target, explore Target is grounded, navigate x x No syn ...
-
-방법 관련 발췌 — In summary, our main contributions are: • We propose D3D-VLP, a 3D vision-language-planning model that unifies multi-step planning, grounding, and navigation in unseen and dynamic environments within a single 3D memory and ...
+D3D-VLP는 3차원 장면에서의 계획, 지시 대상 찾기, 이동, 질의응답을 한 시각언어모형의 추론 과정으로 표현한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,12 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are: • We propose D3D-VLP, a 3D vision-language-planning model that unifies multi-step planning, grounding, and navigation in unseen and dynamic ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these limitations, we propose the Dynamic 3D Vision-Language-Planning Model (D3D-VLP).
-- **p. 8 / 1. Synergistic Learning (SLFS) and Training Data - extractive body cue:** The ablation also reveals two complementary roles of SLFS: 1) SLFS enables the model to exploit massive partially annotated data (w/o Tplan, types 4-6) to ...
-- **p. 7 / 4.3. Long-Horizon Grounding and Planning - extractive body cue:** The SG3D benchmark is specifically designed to evaluate planning, grounding, and memory capabilities in longhorizon stateful tasks of an agent.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 부분적으로만 주석이 있는 자료를 함께 활용할 수 있도록 중간 추론열의 감독 가능한 부분에 학습 손실을 적용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=5)
+- 언어 지시 이동과 물체 목표 이동 등에서 성능을 비교하고 추론 이력과 학습 자료 구성이 미치는 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_D3D-VLP_Dynamic_3D_Vision-Language-Planning_Model_for_Embodied_Grounding_and_Navigation_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

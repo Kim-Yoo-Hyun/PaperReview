@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Open-vocabulary 3D scene understanding methods propose a solution towards these challenges by training a model not on a fixed label set but rather aligning the 3D model with 2D foundation models [14, ...
-
-방법 관련 발췌 — We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from a 3D point cloud, which can be ...
+Open3DSG는 점군에서 물체와 물체 사이 관계를 열린 어휘로 질의할 수 있는 3차원 장면 그래프를 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from ...
-- **p. 1 / 1. Introduction - extractive body cue:** We present Open3DSG the first approach for learning to predict open-vocabulary 3D scene graphs from 3D point clouds.
-- **p. 1 / 1. Introduction - extractive body cue:** The advantage of our method is that it can be queried and prompted for any instance in the scene, such as the TV and Wall, ...
-- **p. 3 / 3. Method - extractive body cue:** An overview of our method is shown in Fig.
-- **p. 3 / 3. Method - extractive body cue:** The overall goal of our approach is to distill the knowledge of 2D vision-language models into a 3D graph neural network (GNN) to predict open-vocabulary ...
-- **p. 6 / 4.1. Experimental Setup - extractive body cue:** We also evaluate the performance of NegCLIP [52] which is supposed to have improved compositional understanding.
-- **p. 7 / 4.2. Closed-set 3D scene graph prediction - extractive body cue:** The caption-based approach also achieves considerably lower performances compared to our method.
-- **p. 7 / 4.2. Closed-set 3D scene graph prediction - extractive body cue:** However, Open3DSG achieves comparable results to the first supervised 3D scene graph prediction method 3DSSG.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 시점의 2차원 기반 모형 특징을 점군의 물체·관계 표현에 정렬해 레이블이 지정된 장면 그래프에 대한 의존을 줄였다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=5)
+- 물체 이름을 질의하고 연결된 물체의 관계를 언어모형으로 추론해 닫힌 어휘 평가와 열린 어휘 사례를 제시했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

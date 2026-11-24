@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We outline the robot arm for better visualization. structions, leading to better generalization capabilities when fine-tuned for downstream testing scenarios.
-
-방법 관련 발췌 — Our key contributions include: • We introduce a method of visual chain-of-thought reasoning through subgoal image generation as an intermediate reasoning step for robotic control. • We introduce a system CoT-VLA that ...
+CoT-VLA는 언어 지시를 받은 로봇이 도달할 중간 목표 이미지를 먼저 생성한 뒤 이를 조건으로 짧은 행동열을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our key contributions include: • We introduce a method of visual chain-of-thought reasoning through subgoal image generation as an intermediate reasoning step for robotic control. ...
-- **p. 2 / 1. Introduction - extractive body cue:** Rather than directly predicting actions, our method first generates a subgoal image that represents the robot's planned state in pixel space, and then conditions its ...
-- **p. 4 / 3.2. The Base Vision-Language Model - extractive body cue:** This enables autoregressive image and video generation while significantly enhancing the understanding capabilities of VLMs that leverage discrete visual features.
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. LIBERO benchmark experimental results. For each task suite (Spatial, Object, Goal, Long), we report the average success rate and standard error across 3 ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Better visual reasoning helps. Success rates compar- ing CoT-VLA using generated versus ground-truth goal images on out-of-distribution tasks. Results demonstrate that improved visual ...
-- **p. 6 / 4.2. Evaluations Results - extractive body cue:** Overall, CoT-VLA achieves the highest average performance compared to baseline approaches, showing improvements in both single and multi-instruction scenarios.
-- **p. 8 / 4.3. Ablation Study - extractive body cue:** Our results show that CoT-VLA with our pretraining stage achieves a 46.7% relative improvement, from 53.7% to 78.8%, compared to directly fine-tuning the base VILA-U ...
-- **p. 6 / 4.2. Evaluations Results - extractive body cue:** SUSIE [2] generates visually higher-quality goal images through its diffusion prior (see Section 5 for a detailed discussion on our limitations) but achieves lower success ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 하나의 모형 안에서 중간 목표 영상 생성과 행동 예측에 서로 다른 어텐션 패턴을 적용했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf#page=4)
+- 시뮬레이션과 실제 로봇 조작에서 중간 목표 생성을 포함한 정책을 비교하고 영상 자료 및 학습 구성의 역할을 조사했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhao_CoT-VLA_Visual_Chain-of-Thought_Reasoning_for_Vision-Language-Action_Models_CVPR_2025_paper.pdf#page=7)
 
 ## Evaluation Scope
 

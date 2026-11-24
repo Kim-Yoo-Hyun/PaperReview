@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, Policy Gradient, REINFORCE
 - Official paper: https://doi.org/10.1007/BF00992696
-- Full-text retrieval: https://doi.org/10.1007/BF00992696
+- Full-text retrieval: https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While such algorithms are known to have a number of limitations, there are a number of reasons why their study can be useful.
-
-방법 관련 발췌 — In this article we present analytical results concerning certain algorithms for tasks that are associative, meaning that the learner is required to perform an input-output mapping, and, with one limited exception, that ...
+Williams의 REINFORCE는 확률적 출력을 갖는 신경망에서 표집한 강화 신호로 기대 보상을 높이는 방향의 매개변수 갱신을 유도한다. [PDF 1쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In this article we present analytical results concerning certain algorithms for tasks that are associative, meaning that the learner is required to perform an input-output ...
-- **p. 2 / 1. Introduction - extractive body cue:** The results to be presented apply in general to any learner whose inputoutput mappings consists of a parameterized input-controlled distribution function from which outputs are ...
-- **p. 8 / 5. Episodic REINFORCE algorithms - extractive body cue:** In particular, assume a net N is trained on an episode-by-episode basis, where each episode consists of k time steps, during which the units may ...
-- **p. 9 / 5. Episodic REINFORCE algorithms - extractive body cue:** For example, if the network consists of Bernoulli-logistic units an episodic REINFORCE algorithm would prescribe weight changes according to the rule k Awij = c~ij(r ...
-- **p. 1 / 1. Introduction - extractive body cue:** While delayed reinforcement tasks are obviously important and are receiving much-deserved attention lately, a widely used approach to developing algorithms for such tasks is to ...
-- **p. 17 / 8. Algorithm performance and other issues - extractive body cue:** In those situations when it is known that unsatisfactory performance is being achieved it is reasonable to broaden this scale in order to take a ...
-- **p. 15 / 8. Algorithm performance and other issues - extractive body cue:** In these studies, REINFORCE with reinforcement comparison was found to outperform all other algorithms investigated.
-- **p. 18 / 8. Algorithm performance and other issues - extractive body cue:** WILLIAMS a slight improvement in convergence speed over the use of mean reinforcement, but a more convincing advantage remains to be demonstrated. &4.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 출력 확률의 로그 도함수와 기준값을 뺀 강화 신호를 결합하고 갱신의 기댓값이 기울기와 갖는 관계를 보인다. [PDF 4쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=4) · [PDF 5쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=5) · [PDF 6쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=6)
+- 이진 및 가우시안 확률 단위에 적용하는 예와 지연된 보상을 다루기 위한 적격도 누적 방식을 제시한다. [PDF 7쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=7) · [PDF 8쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=8) · [PDF 9쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=9) · [PDF 10쪽](https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf#page=10)
 
 ## Evaluation Scope
 

@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, actor-critic, A3C
 - Official paper: https://proceedings.mlr.press/v48/mniha16.html
-- Full-text retrieval: https://proceedings.mlr.press/v48/mniha16.html
+- Full-text retrieval: https://proceedings.mlr.press/v48/mniha16.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.mlr.press/v48/mniha16.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We propose a conceptually simple and lightweight framework for deep reinforcement learning that uses asynchronous gradient descent for optimization of deep neural network controllers.
-
-방법 관련 발췌 — We present asynchronous variants of four standard reinforcement learning algorithms and show that parallel actor-learners have a stabilizing effect on training allowing all four methods to successfully train neural network controllers.
+이 연구는 병렬로 환경과 상호작용하는 여러 학습자가 공유 신경망을 비동기적으로 갱신하는 심층 강화학습을 제안한다. [PDF 1쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** We present asynchronous variants of four standard reinforcement learning algorithms and show that parallel actor-learners have a stabilizing effect on training allowing all four methods ...
-- **p. 1 / Abstract - extractive body cue:** We propose a conceptually simple and lightweight framework for deep reinforcement learning that uses asynchronous gradient descent for optimization of deep neural network controllers.
-- **p. 3 / 4. Asynchronous RL Framework - extractive body cue:** Keeping the learners on a single machine removes the communication costs of sending gradients and parameters and enables us to use Hogwild!
-- **p. 5 / 5.1. Atari 2600 Games - extractive body cue:** A3C significantly improves on state-of-the-art the average score over 57 games in half the training time of the other methods while using only 16 CPU ...
-- **p. 5 / 5.1. Atari 2600 Games - extractive body cue:** Overall, the policy-based advantage actor-critic method significantly outperforms all three value-based methods.
-- **p. 6 / 5.5. Scalability and Data Efficiency - extractive body cue:** We observe that one-step methods (one-step Q and one-step Sarsa) often require less data to achieve a particular score when using more parallel actor-learners.
-- **p. 6 / 5.5. Scalability and Data Efficiency - extractive body cue:** These results show that all four methods achieve substantial speedups from using multiple worker threads, with 16 threads leading to at least an order of ...
-- **p. 4 / 5. Experiments - extractive body cue:** We use the Atari domain to compare against state of the art results (Van Hasselt et al., 2015; Wang et al., 2015; Schaul et al., ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 가치 기반 기법 및 actor–critic의 비동기 버전을 설계하고 서로 다른 학습자가 수집한 궤적으로 공유 매개변수를 갱신한다. [PDF 3쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=4)
+- Atari의 학습 시간과 점수를 비교하고 비동기 actor–critic을 연속 제어와 시각적 미로 탐색에도 평가했다. [PDF 5쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=5) · [PDF 6쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v48/mniha16.pdf#page=8)
 
 ## Evaluation Scope
 

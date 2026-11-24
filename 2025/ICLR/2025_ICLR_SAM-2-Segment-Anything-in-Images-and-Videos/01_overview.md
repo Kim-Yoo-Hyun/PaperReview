@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2408.00714
 - Code/Project: https://github.com/facebookresearch/sam2
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (42 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Further, efficient processing of a large number of frames is a key challenge.
-
-방법 관련 발췌 — We introduce the Segment Anything Model 2 (SAM 2), a unified model for video and image segmentation (we consider an image as a single-frame video).
+SAM 2는 클릭이나 마스크로 지정한 대상을 단일 영상에서 분할하고 동영상에서는 프레임 사이에 기억을 전달하며 추적한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,15 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** We introduce the Segment Anything Model 2 (SAM 2), a unified model for video and image segmentation (we consider an image as a single-frame video).
-- **p. 2 / 1 Introduction - extractive body cue:** Our final Segment Anything Video (SA-V) dataset (§5.2) consists of 35.5M masks across 50.9K videos, 53× more masks than any existing video segmentation dataset.
-- **p. 28 / Method - extractive body cue:** 16, we show a comparison between our baseline (Cutie-base+, top row) and our model (SAM 2, bottom row) when prompted with a mask in the ...
-- **p. 1 / 1 Introduction - extractive body cue:** SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the ...
-- **p. 31 / dataset - extractive body cue:** We report the performance of prior works as evaluated by the LVOSv2 authors.
-- **p. 32 / dataset - extractive body cue:** Risks and harms In Section E.1.1 of the main text we analyze SAM 2 performance on people across demographic groups.
-- **p. 32 / dataset - extractive body cue:** G: We use G for evaluation on YTVOS 2019 for the semi-supervised VOS task. mIoU: We evaluate performance using mIoU for the promptable image segmentation ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 현재 프레임의 특징에 이전 예측과 사용자 입력에서 얻은 기억을 결합해 뒤따르는 프레임의 마스크를 생성한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=5)
+- 사람과 모형을 함께 활용해 동영상 마스크 자료 SA-V를 구축하고 상호작용 횟수별 동영상 분할과 단일 영상 분할을 평가했다. [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=7) · [PDF 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=9) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

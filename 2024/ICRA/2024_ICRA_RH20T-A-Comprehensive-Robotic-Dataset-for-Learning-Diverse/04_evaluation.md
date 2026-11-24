@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS)): Additionally, the inclusion of data from different tasks during pretraining further improves the overall success rate.
+표 IV는 새 환경에서 ACT를 시연 10·40·75개로 미세조정하고 설정별 20회 시행에서 도달·파지·배치 성공률을 따로 보고한다. 단일 시연 적응은 논문이 제시한 장기 목표다. [PDF 5쪽](https://arxiv.org/pdf/2307.00595v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2307.00595v2#page=6)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `BENCHMARK / DATASET`.
+- **Evaluation type:** `BENCHMARK / DATASET AND REAL-ROBOT COMPARISON`.
 - **Target system/task:** multi-robot demonstration/dataset ecosystem.
 - **Input boundary:** multi-view observation, language/task label과 action trajectory.
 - **Output/decision under evaluation:** dataset sample 또는 learned policy action.
@@ -133,6 +133,8 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
+
+- 표 IV의 같은 환경 비교는 설정별 시행 20회, 표 V의 물체·배경 일반화 비교는 설정별 시행 10회다. [PDF 6쪽](https://arxiv.org/pdf/2307.00595v2#page=6)
 
 | Body reproducibility cue | Anchor |
 |---|---|

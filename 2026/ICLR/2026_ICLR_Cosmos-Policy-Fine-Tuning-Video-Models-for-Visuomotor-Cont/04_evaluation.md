@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 19 (A.3.2 REAL-WORLD ALOHA ROBOT EVALUATION DETAILS), p. 10 (Figure/Table caption), p. 10 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS)): Table 1: LIBERO simulation benchmark results. Success rates (SR) across four LIBERO benchmark task suites (Liu et al., 2024). Cosmos Policy success rates are averaged over 500 trials for each ...
+표 1·2의 98.5%와 67.1%는 각각 LIBERO와 RoboCasa에서 직접 행동을 출력한 정책의 평균 성공률이다. 그림 7의 계획 효과는 실물 ALOHA 과제 두 개의 어려운 초기 상태에서 별도로 비교했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=10)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 - **Target system/task:** uncertain robot state와 safe/unsafe operating region.
 - **Input boundary:** observation, uncertainty/risk estimate와 task command.
 - **Output/decision under evaluation:** shielded, recovery 또는 safe action.

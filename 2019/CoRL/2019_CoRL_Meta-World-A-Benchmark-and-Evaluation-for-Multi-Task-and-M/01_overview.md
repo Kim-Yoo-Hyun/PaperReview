@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Benchmark, Reinforcement Learning, manipulation
 - Official paper: https://proceedings.mlr.press/v100/yu20a.html
-- Full-text retrieval: https://proceedings.mlr.press/v100/yu20a.html
+- Full-text retrieval: https://proceedings.mlr.press/v100/yu20a/yu20a.pdf
 - Code/Project: https://meta-world.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We provide an evaluation protocol with evaluation modes of varying difficulty, and observe that current methods only show success in the easiest modes.
-
-방법 관련 발췌 — To this end, we present a benchmark of simulated manipulation tasks with everyday objects, all of which are contained in a shared, table-top environment with a simulated Sawyer arm.
+Meta-World는 같은 시뮬레이션 로봇팔로 수행하는 서로 다른 50개 조작 과제를 제공해 다중 작업 학습과 새 기술 적응을 평가한다. [PDF 2쪽](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf#page=2)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To this end, we present a benchmark of simulated manipulation tasks with everyday objects, all of which are contained in a shared, table-top environment with ...
-- **p. 2 / 1 Introduction - extractive body cue:** For example, one popular evaluation of metalearning involves choosing different running directions for simulated legged robots [10], which then enables fast adaptation to new directions.
-- **p. 1 / Abstract - extractive body cue:** In this paper, we propose an open-source simulated benchmark for meta-reinforcement learning and multitask learning consisting of 50 distinct robotic manipulation tasks.
-- **p. 1 / Abstract - extractive body cue:** Our aim is to make it possible to develop algorithms that generalize to accelerate the acquisition of entirely new, held-out tasks.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Quantitative results on MT10, MT50, ML10, and ML45. Note that, even on the challenging ML10 and ML45 benchmarks, current methods already exhibit some ...
-- **p. 1 / 1 Introduction - extractive body cue:** While reinforcement learning (RL) has achieved some success in domains such as assembly [1], ping pong [2], in-hand manipulation [3], and hockey [4], state-of-the-art methods ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Figure 8: Learning curves of all methods on MT10, ML10, MT50, and ML45 benchmarks. Y- axis represents success rate averaged over tasks in percentage (%). ...
-- **p. 2 / 1 Introduction - extractive body cue:** By doing so, we can enable meaningful generalization across many tasks and achieve the full potential of meta-learning as a means of incorporating past experience ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 같은 기술 안의 목표 변화와 학습에서 보지 못한 기술을 구별하도록 다중 작업·메타학습 평가 분할을 구성했다. [PDF 4쪽](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf#page=5) · [PDF 6쪽](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf#page=6)
+- 여러 학습 기준선을 같은 작업 집합에서 비교하고 과제 수와 새로운 기술이 성공률에 미치는 영향을 보고했다. [PDF 7쪽](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v100/yu20a/yu20a.pdf#page=8)
 
 ## Evaluation Scope
 

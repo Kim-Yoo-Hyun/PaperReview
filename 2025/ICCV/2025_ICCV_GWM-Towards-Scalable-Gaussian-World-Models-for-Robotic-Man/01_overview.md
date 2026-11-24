@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, since these methods primarily rely on offline per-scene reconstruction, their computational demands pose significant challenges [49, 91] on applying them in robotic manipulation, especially for Model-based Reinforcement Learnin ...
-
-방법 관련 발췌 — In summary, our main contributions are threefold. • We introduce GWM, a novel 3D world model that is instantiated with a Gaussian diffusion transformer and a Gaussian VAE for efficient dynamic modeling.
+GWM은 행동에 따라 장면의 3차원 가우시안이 어떻게 이동하는지 학습해 조작 후의 장면을 예측한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are threefold. • We introduce GWM, a novel 3D world model that is instantiated with a Gaussian diffusion transformer and ...
-- **p. 2 / 1. Introduction - extractive body cue:** To this end, we propose Gaussian World Model (GWM), a novel 3D world model that integrates 3D-GS with high-capacity generative models for robotic manipulation.
-- **p. 4 / 3.1. World State Encoding - extractive body cue:** The overall pipeline of GWM, which primarily consists of a 3D variational encoder and a latent diffusion transformer.
-- **p. 5 / 2. Does Gaussian world model benefits downstream imita - extractive body cue:** Specifically, we leverage the following three testing environments and four tasks in our experiments: Environments To provide a comprehensive analysis of GWM's capability, we evaluate ...
-- **p. 6 / 4.1. Action-conditioned Scene Prediction - extractive body cue:** Results and Analyses We provide quantitative comparison between our method and iVideoGPT in Tab.
-- **p. 8 / 4.5. Ablation Analysis - extractive body cue:** Choice of Gaussian Splatting As shown in Table 4, compared to directly building image-based world model with diffusion transformer on par with [1], introducing Gaussian ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Multi-Task Imitation Learning Results in Robocasa. Average success rates (%) of multi-task agents trained with 50 human demonstrations or 3000 generated demonstrations per ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Model-based RL Results of GWM and ivideogpt [82] on METAWORLD. The shadow area represents 95% confidence interval (CI) across three random seeds. Each ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 3차원 변분 오토인코더와 잠재 확산 트랜스포머를 결합해 미래 가우시안 상태를 생성하고 여러 시점에서 렌더링한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=5)
+- 미래 장면의 예측 품질을 평가하고 이 표현으로 학습한 모방 정책과 모형 내부에서 학습한 강화학습 정책을 시험했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

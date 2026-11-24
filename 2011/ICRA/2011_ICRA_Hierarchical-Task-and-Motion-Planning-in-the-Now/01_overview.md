@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Planning, task and motion planning, manipulation
 - Official paper: https://api.crossref.org/works/10.1109/ICRA.2011.5980391
-- Full-text retrieval: https://doi.org/10.1109/ICRA.2011.5980391
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — We attempt to avoid such failures by constraining the abstract plan steps so that they are serializable [1]; that is, so that for any realization of the first plan step, there exist ...
-
-방법 관련 발췌 — The architecture can be thought of as doing a depth-first traversal of a planning tree, and is implemented as a recursive algorithm, as shown below.
+Kaelbling과 Lozano-Pérez는 긴 조작 과제에서 기호적 결정과 연속 기하 경로를 계층적으로 계획하며 필요한 단계부터 실행한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391#page=1)
 
 ## Problem and Motivation
 
@@ -49,14 +47,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / B C - extractive body cue:** Note that executing the operator for removing c from the swept volume of a requires no further planning or execution, as the condition it was ...
-- **p. 6 / C C - extractive body cue:** In this case, the planner will achieve p1, ...., pn in whatever way it can, and then execute o and r will be achieved; the ...
-- **p. 6 / C C - extractive body cue:** For example, if it is important that the object not be regrasped as part of the Place operation, it is possible to 'expose' the choice ...
-- **p. 7 / VI. CORRECTNESS - extractive body cue:** So, we need to examine the effects of hierarchy and of operating in infinite domains on the ability of HPN to achieve feasible goals.
-- **p. 2 / III. EXAMPLE - extractive body cue:** The primitive operation is executed in the world, which results in the robot grasping c.
-- **p. 5 / C C - extractive body cue:** The pick operation results in the robot holding object O: Holding() = O: define: Ts = {T : ClearX (T, X) ∈goal ∧O̸ ∈X} exists: ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 재배치와 충돌 회피를 연속 기하 조건으로 표현하고 추상적인 행동을 필요한 수준까지 세분화한다. [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391#page=5)
+- 통합 계획 및 실행 알고리즘을 기술하고 조작 장면에서 계획에 들이는 계산량과 행동 선택을 조사했다. [PDF 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391#page=7) · [PDF 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=5980391#page=8)
 
 ## Evaluation Scope
 

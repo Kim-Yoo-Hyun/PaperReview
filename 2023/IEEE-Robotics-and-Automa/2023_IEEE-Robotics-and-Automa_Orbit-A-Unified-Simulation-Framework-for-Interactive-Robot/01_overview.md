@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, simulation, Robot Learning, Benchmark, NVIDIA
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2023.3270034
-- Full-text retrieval: https://doi.org/10.1109/LRA.2023.3270034
+- Full-text retrieval: https://arxiv.org/pdf/2301.04195v2
 - Code/Project: https://isaac-orbit.github.io/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2301.04195v2) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, existing platforms often need to make a trade-off between these aspects.
-
-방법 관련 발췌 — Our main contributions are as follows:
+ORBIT는 Isaac Sim에서 센서·로봇·제어기를 조합해 강화학습, 시연 수집과 정책 평가 환경을 만들 수 있는 프레임워크다. [PDF 1쪽](https://arxiv.org/pdf/2301.04195v2#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our main contributions are as follows:
-- **p. 1 / Abstract - extractive body cue:** We present ORBIT, a unified and modular framework for robot learning powered by NVIDIA Isaac Sim.
-- **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** ORBIT is a unified simulation infrastructure that provides both pre-built environments and easy-to-use interfaces that enables extendability and customization.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To prevent a scattering of efforts for building the necessary tooling to use the simulator for robot learning, we design a unified and modular framework ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Currently, this feature is under development for ORBIT.
-- **p. 6 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** The success rate and trajectory lengths are reported over 100 trials.
-- **p. 7 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** In contrast, GPU-based parallelization scales better to a larger number of environments and achieves a throughput of ∼10x faster for rigid body environments (Fig.
-- **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** Although we ensure the same parameter settings for PPO in the frameworks, we notice a difference in their performance and training time due to implementation ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇·물체·센서와 운동 생성기를 모듈로 구성해 팔 조작, 이동 조작 및 변형체 과제에 재사용하게 했다. [PDF 3쪽](https://arxiv.org/pdf/2301.04195v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2301.04195v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2301.04195v2#page=5)
+- 병렬 강화학습과 시연 수집 절차를 예시하고 학습한 이동 정책을 실물 ANYmal-D에서 실행하는 과정을 제시했다. [PDF 6쪽](https://arxiv.org/pdf/2301.04195v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2301.04195v2#page=7)
 
 ## Evaluation Scope
 

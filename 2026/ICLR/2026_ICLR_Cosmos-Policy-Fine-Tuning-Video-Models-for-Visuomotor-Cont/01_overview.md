@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2601.16163
 - Code/Project: https://research.nvidia.com/labs/dir/cosmos-policy/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In this work, we address these limitations with Cosmos Policy: an effective robot policy that is adapted from a pretrained video model (Cosmos-Predict2-2B (NVIDIA et al., 2025)) through a single stage of ...
-
-방법 관련 발췌 — We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value predictions.
+Cosmos Policy는 사전학습한 영상 확산 모형에 로봇 행동·미래 관측·가치를 잠재 프레임으로 표현해 조작 정책과 예측 모형을 함께 학습한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We evaluate our method in two modes: first as a direct policy (without planning) and then with model-based planning using the future state and value ...
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** This search process produces trajectories that are more likely to succeed at the task Our main contribution is the Cosmos Policy approach for fine-tuning pretrained ...
-- **p. 4 / 3 PRELIMINARIES - extractive body cue:** Rather than designing new model components or making architectural modifications as done in prior works, we propose to encode additional modalities as new latent frames ...
-- **p. 5 / 3 PRELIMINARIES - extractive body cue:** To encode the new modalities as latent frames, we fill each H′ ×W ′ ×C′ latent volume with normalized and duplicated copies of the robot ...
-- **p. 6 / 3 PRELIMINARIES - extractive body cue:** Once we have the fine-tuned checkpoint for refined world modeling and policy learning, we propose dual deployment: the original Cosmos Policy checkpoint serves as the ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 1: LIBERO simulation benchmark results. Success rates (SR) across four LIBERO benchmark task suites (Liu et al., 2024). Cosmos Policy success rates are averaged ...
-- **p. 8 / 5 EXPERIMENTS - extractive body cue:** Our method achieves a state-of-the-art average success rate of 67.1% while requiring significantly fewer training demonstrations (50 versus >300). # Training Demos per Task Average ...
-- **p. 19 / A.3.2 REAL-WORLD ALOHA ROBOT EVALUATION DETAILS - extractive body cue:** Cosmos Policy achieves highest aggregate success rates, though π0.5 shows slightly better performance specifically in OOD test scenarios.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 로봇 시연의 관측과 행동을 영상 잠재 시퀀스에 배치해 기존 영상 모형의 구조를 유지한 채 미세조정한다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=5)
+- 직접 정책의 시뮬레이션 성과와 후보 행동의 미래·가치를 예측해 선택하는 실물 계획 실험을 구분해 평가했다. [PDF 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=8) · [PDF 10쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/748becc400a57c0e31cfe6a2e7951467-Paper-Conference.pdf#page=10)
 
 ## Evaluation Scope
 

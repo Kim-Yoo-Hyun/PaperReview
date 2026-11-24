@@ -15,15 +15,13 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf) 기준이다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — (A) Dense image-based representations contain heavy token redundancy and lack explicit spatial structure.
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We propose Geometry-Aware BEV (GA-BEV), a compact and 3D-grounded representation that combines explicit depth-based projected features with implicit geometric priors from pretrained 3D ...
+GA-VLN은 RGB-D 관측을 로봇 중심의 조감도 특징으로 압축해 언어 지시에 따른 이동 결정을 내린다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose Geometry-Aware BEV (GA-BEV), a compact and 3D-grounded representation that combines explicit depth-based projected features with ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address these challenges, we propose the GeometryAware BEV (GA-BEV) - a compact and spatially grounded feature representation that integrates explicit and implicit geometric cues ...
-- **p. 3 / 3. Methods - extractive body cue:** We propose the Geometry-Aware Vision-Language Navigation (GA-VLN) framework, which incorporates a Geometry-Aware BEV (GA-BEV) - a compact and 3Dgrounded spatial representation that transforms RGB-D observations ...
-- **p. 4 / 3.2. Geometry-Aware BEV Representation - extractive body cue:** To address this, we introduce the Grid-Based BEV Aggregation method for efficient aggregation and making the representation more suitable for the navigation task.
-- **p. 4 / 3.2. Geometry-Aware BEV Representation - extractive body cue:** To incorporate broader 3D geometric priors for better spatial reasoning, we introduce representation from a pretrained 3D foundation model (e.g., VGGT [27]) f3DFM(·), which encodes ...
-- **p. 5 / 4.1. Experimental Setup - extractive body cue:** Navigation performance is measured using four standard metrics: Navigation Error (NE), Success Rate (SR), Oracle Success Rate (OSR), and Success weighted by Path Length (SPL).
-- **p. 5 / 4.2. Comparison with State-of-the-Art Methods - extractive body cue:** Across most metrics on these benchmarks, our GA-VLN achieves the best overall performance, consistently surpassing previous Image-based MLLM frameworks [10, 39, 41, 42] and pipelines ...
-- **p. 6 / 4.3. Ablation Study and Efficiency Analysis - extractive body cue:** Ultimately, GA-VLN outperforms the image-based baseline in both navigation performance and inference speed.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 깊이로 시각 특징을 3차원에 투영하고 사전학습한 기하 모형의 특징을 같은 조감도 좌표에서 결합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf#page=4)
+- 연속 환경의 언어 지시 탐색에서 성능을 평가하고 조감도 표현에 쓰는 토큰 수와 기하 단서의 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_GA-VLN_Geometry-Aware_BEV_Representation_for_Efficient_Vision-Language_Navigation_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

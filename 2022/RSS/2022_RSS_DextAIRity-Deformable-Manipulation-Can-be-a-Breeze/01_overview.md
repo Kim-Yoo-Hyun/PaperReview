@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2203.01197
 - Code/Project: https://dextairity.cs.columbia.edu/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.roboticsproceedings.org/rss18/p017.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, despite the potential advantages of air-based manipulation, it is an open and challenging problem.
-
-방법 관련 발췌 — Our system setup consists of (a) three UR5 robot arms, two of which are equipped with parallel-jaw grippers and one with a commodity centrifugal air pump.
+DextAIRity는 로봇이 변형체를 잡고 있는 동안 공기의 방향을 시각 피드백으로 조절해 천을 펴거나 가방을 연다. [PDF 1쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** Our system setup consists of (a) three UR5 robot arms, two of which are equipped with parallel-jaw grippers and one with a commodity centrifugal air ...
-- **p. 4 / IV. METHOD - extractive body cue:** The blowing network consists of an image encoder (7-layer convolution network) and an action encoder (3-layer MLP), followed by a 3-layer MLP to produce the ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This property particularly is useful when the target object has a large volume or surface area - spreading a large piece of cloth for instance ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** The primary contribution of this work is to suggest a new approach for deformable object manipulation utilizing directed airstreams, DextAIRity.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Instead of applying force through sparse contact positions, DextAIRity allows the system to simultaneously apply dense forces to a 3D space.
-- **p. 7 / V. EVALUATION - extractive body cue:** II shows performance averaged over 10 test episodes; our policy achieves over 80% on all cloth types, outperforming [FlingBot] and [Pick&Place] by roughly 60% and ...
-- **p. 8 / V. EVALUATION - extractive body cue:** In contrast, [DextAIRity] achieves 60% success rate at the first interaction step and achieved a final success rate, after 4 blowing steps, of 88%.
-- **p. 8 / V. EVALUATION - extractive body cue:** We found that dynamic action [Shake] generally fails to open the bag while [DextAIRity-fixed] achieved a roughly 50% success rate on the testing bags.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 현재 형상에서 파지와 송풍 행동을 선택하고 송풍 뒤의 변화를 다시 관측하는 자기지도 절차를 설계했다. [PDF 3쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=4)
+- 실물 세 팔 시스템에서 천의 펼쳐진 면적과 가방 개방 결과를 측정해 동작 방식에 따른 차이를 비교했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=8)
 
 ## Evaluation Scope
 

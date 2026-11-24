@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the expansive robot space within large-scale cross-embodiment datasets, encompassing diverse camera views and action spaces, presents a substantial challenge for a tiny diffusion head to effectively denoise continuous actions.
-
-방법 관련 발췌 — In this paper, we introduce Dita, a Diffusion Transformer (DiT) Policy that capitalizes on the Transformer architecture, as demonstrated in prior work [8, 9, 32, 54, 72], thereby ensuring scalability across extensive ...
+Dita는 시각 관측 이력과 지시를 이용해 트랜스포머 안에서 연속 행동열의 잡음을 제거하는 확산 로봇 정책이다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce Dita, a Diffusion Transformer (DiT) Policy that capitalizes on the Transformer architecture, as demonstrated in prior work [8, 9, 32, ...
-- **p. 3 / 3. Method - extractive body cue:** Finally, we present the data and implementation specifics for the pretraining of our model.
-- **p. 3 / 3.1. Architecture - extractive body cue:** This design preserves the scalability of Transformer networks and enables denoising to be conditioned directly on image patches, thereby allowing the model to capture nuanced ...
-- **p. 2 / 1. Introduction - extractive body cue:** This achievement implies that a universal robotic policy, pretrained on heterogeneous robotic data and finetuned with minimal supervision, could be instrumental in realizing true generalization ...
-- **p. 7 / 5.1. Real-Robot Task Finetuning - extractive body cue:** Overall, Dita achieves a 63.8% success rate on two-step 7692
-- **p. 5 / 4.1. Baselines - extractive body cue:** Success rate comparison with RT-1-X [8], Octo-Base [72] and OpenVLA-7B [32] on SimplerEnv (both match and variant results of Google Robot [8]).
-- **p. 5 / 4.4. CALVIN - extractive body cue:** Without whistles and bells, the proposed Dita achieves comparable performance among methods relying solely on a single RGB camera for observation.
-- **p. 6 / 4.6. Ablation Study - extractive body cue:** When the trajectory length is 32, Dita with 2-frame observations achieves superior performance.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 과거 관측의 시각 토큰과 잡음이 있는 행동 토큰을 함께 처리해 매 단계의 행동 복원에 조건으로 사용한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=4)
+- 시뮬레이션 및 실제 로봇에서 조작 성공을 평가하고 관측 이력 길이와 행동 생성 설정을 비교했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_Dita_Scaling_Diffusion_Transformer_for_Generalist_Vision-Language-Action_Policy_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

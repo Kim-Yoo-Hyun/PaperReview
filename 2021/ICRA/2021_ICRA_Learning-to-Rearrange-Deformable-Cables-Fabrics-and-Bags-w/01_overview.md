@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2012.03385
 - Code/Project: https://sites.google.com/view/berkeley-deformable/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2012.03385v4) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Manipulating deformable objects is a long-standing challenge in robotics with a wide range of real-world applications.
-
-방법 관련 발췌 — For several tasks in the benchmark, we propose to tackle them using novel goal-conditioned variants of Transporter Network [68] architectures.
+이 연구는 목표 영상과 현재 관측을 함께 사용해 케이블·천·가방을 원하는 배치로 옮기는 조작 정책을 학습한다. [PDF 1쪽](https://arxiv.org/pdf/2012.03385v4#page=1)
 
 ## Problem and Motivation
 
@@ -55,22 +53,14 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** For several tasks in the benchmark, we propose to tackle them using novel goal-conditioned variants of Transporter Network [68] architectures.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** In this work, we propose a new suite of benchmark tasks, called DeformableRavens, to test manipulation of cables, fabrics, and bags spanning 1D, 2D, and ...
-- **p. 3 / IV. GOAL-CONDITIONED TRANSPORTER NETWORKS - extractive body cue:** Goal-Conditioned Transporter Networks We propose two goal-conditioned architectures based on Transporter Networks.
-- **p. 3 / III. BACKGROUND - extractive body cue:** To train the policy, we assume access to a small dataset of N stochastic expert demonstrations D = {ξi}N i=1, where each episode ξi of ...
-- **p. 4 / IV. GOAL-CONDITIONED TRANSPORTER NETWORKS - extractive body cue:** [53], [54]. with rotations and translations, this enables data augmentation by randomizing a rotation and translation for each training image.
-- **p. 6 / VII. SIMULATION RESULTS - extractive body cue:** Transporter-Goal-Stack achieves slightly higher performance among the cable-related tasks, though the gap narrows with more demonstrations in cable-line-notarget, since both goal-conditioned Transporters each achieve 100% ...
-- **p. 6 / VII. SIMULATION RESULTS - extractive body cue:** For fabric-flat-notarget, the performance of both goal-conditioned Transporters is more evenly matched, while for bag-color-goal, Transporter-Goal-Split achieves higher success rates of 12.2% and 29.8% with ...
-- **p. 5 / VII. SIMULATION RESULTS - extractive body cue:** It performs reliably on fabric-cover with 100% success rates
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 목표 영상의 특징을 Transporter Networks의 집기·놓기 예측에 결합해 물체의 상대 이동을 정한다. [PDF 3쪽](https://arxiv.org/pdf/2012.03385v4#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2012.03385v4#page=4)
+- ICRA 판은 여러 변형체의 시뮬레이션 과제를 비교했고 저자 개정판은 실물 케이블 재배치 실험을 추가했다. [PDF 5쪽](https://arxiv.org/pdf/2012.03385v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2012.03385v4#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2012.03385v4#page=7) · [PDF 10쪽](https://arxiv.org/pdf/2012.03385v4#page=10)
 
 ## Evaluation Scope
 
 | Dimension | Body-grounded record | Boundary | Anchor |
 |---|---|---|---|
-| Evaluation type | EMPIRICAL / REAL-ROBOT OR HARDWARE | do not infer unreported downstream behavior | p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMULATION RESULTS) |
+| Evaluation type | PyBullet 시뮬레이션과 개정판 v4의 실물 케이블 실험 | 판본별 평가 범위 | [PDF 10쪽](https://arxiv.org/pdf/2012.03385v4#page=10) |
 | Embodiment/environment | We next validate experiments on physical hardware using a Franka Panda robot with a standard parallel-jaw gripper. | hardware/simulator version and reset protocol | p. 6 (VIII. PHYSICAL EXPERIMENTS AND RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS) |
 | Dataset/benchmark | Task success rate (mean % over 60 test-time episodes in simulation of the best saved snapshot) vs. # of demonstration episodes (1, 10, 100, or 1000) used in training. | role, split, size and leakage | p. 6 (VIII. PHYSICAL EXPERIMENTS AND RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS), p. 6 (VII. SIMULATION RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS) |
 | Metric | Transporter-Goal-Stack achieves slightly higher performance among the cable-related tasks, though the gap narrows with more demonstrations in cable-line-notarget, since both goal-conditioned Transporters each achieve 100% success rates ... | definition, denominator, direction and uncertainty | p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS) |

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p137.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.roboticsproceedings.org/rss21/p137.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — which present challenges in synthesizing safe controllers.
-
-방법 관련 발췌 — The main contributions are threefold: (I) we present a constructive way of generating safe sets for complex environments from perception data via Poisson's equation, (2) we illustrate and prove how the resulting ...
+이 연구는 국소 점유 지도에서 푸아송 방정식을 풀어 안전 함수를 구성하고 변화하는 장애물 주변에서 로봇 명령을 보정한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p137.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,15 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. IyrRopUCTION - extractive body cue:** The main contributions are threefold: (I) we present a constructive way of generating safe sets for complex environments from perception data via Poisson's equation, (2) ...
-- **p. 6 / B. Indirect Assignment - Variational Approach - extractive body cue:** However. the condition V-v(y) <0 may not necessarily hold for all y < ©, which is sufficient to guarantee h(y) > 0 in 2. ‘To ...
-- **p. 6 / B. Indirect Assignment - Variational Approach - extractive body cue:** We focus on systems defined by integrator chains as (10), with the input appearing at the last layer-note that our method can be extended to ...
-- **p. 2 / 1. IyrRopUCTION - extractive body cue:** We propose several methods for constructing the forcing function within Poisson's equation, including an average flux method and a guidance field method {26} that provides ...
-- **p. 4 / IV. FORCING FUNCTION CONSTRUCTION - extractive body cue:** In this section, we present methods of designing forcing functions that ensure the solution to the boundary value problem for Poisson's equation (16) is a ...
-- **p. 8 / B. Hardware Experiments - extractive body cue:** For dynamic environments, we improve the ‘computational speed of our PDE solver by warm-starting each PDE solution with the previous safety function, producing
-- **p. 8 / B. Hardware Experiments - extractive body cue:** The results corresponding to this experiment are depicted in Fig 5,
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 경계에서 원하는 기울기를 담는 유도 벡터장을 만들고 이를 강제항으로 써 디리클레 경계 조건의 문제를 푼다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p137.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss21/p137.pdf#page=5)
+- 계산한 함수를 제어 장벽 함수 기반 필터에 연결하고 실제 사족 로봇과 휴머노이드의 장애물 회피를 시험했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p137.pdf#page=6) · [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p137.pdf#page=9) · [PDF 10쪽](https://www.roboticsproceedings.org/rss21/p137.pdf#page=10)
 
 ## Evaluation Scope
 

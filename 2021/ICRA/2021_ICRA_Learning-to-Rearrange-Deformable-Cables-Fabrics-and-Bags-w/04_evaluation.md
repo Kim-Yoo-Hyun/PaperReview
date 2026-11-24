@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS), p. 14 (Figure/Table caption), p. 2 (Figure/Table caption)): Transporter-Goal-Stack achieves slightly higher performance among the cable-related tasks, though the gap narrows with more demonstrations in cable-line-notarget, since both goal-conditioned Transporters each achieve 100% success rates ...
+ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평가했다. 2023년 저자 개정판 v4가 Franka Panda로 구슬 사슬 케이블을 재배치하는 실물 실험을 추가했다. [PDF 5쪽](https://arxiv.org/pdf/2012.03385v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2012.03385v4#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2012.03385v4#page=7) · [PDF 10쪽](https://arxiv.org/pdf/2012.03385v4#page=10)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,9 @@ PDF body evaluation/result cue (p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMUL
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
+
+- **판본별 평가 환경.** ICRA 최종판은 PyBullet을 사용하고 저자 개정판 v4는 Franka Panda의 케이블 실험을 추가했다. [PDF 10쪽](https://arxiv.org/pdf/2012.03385v4#page=10)
 - **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
 - **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
 - **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
@@ -32,11 +34,11 @@ PDF body evaluation/result cue (p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMUL
 
 | Body section | Type | PDF body experiment/result cue | Anchor |
 |---|---|---|---|
-| VII. SIMULATION RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Transporter-Goal-Stack achieves slightly higher performance among the cable-related tasks, though the gap narrows with more demonstrations in cable-line-notarget, since both goal-conditioned Transporters each achieve ... | p. 6 (VII. SIMULATION RESULTS) |
-| VII. SIMULATION RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | For fabric-flat-notarget, the performance of both goal-conditioned Transporters is more evenly matched, while for bag-color-goal, Transporter-Goal-Split achieves higher success rates of 12.2% and 29.8% ... | p. 6 (VII. SIMULATION RESULTS) |
-| VII. SIMULATION RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | It performs reliably on fabric-cover with 100% success rates | p. 5 (VII. SIMULATION RESULTS) |
-| VII. SIMULATION RESULTS | EMPIRICAL / REAL-ROBOT OR HARDWARE | Non-Goal Conditioned Tasks In these tasks, Transporter generally achieves orders of magnitude better sample efficiency than ground truth models. | p. 5 (VII. SIMULATION RESULTS) |
-| Figure/Table caption | EMPIRICAL / REAL-ROBOT OR HARDWARE | Fig. 8: Results for models on the block-notarget task. From left to right, we report models trained with 1, 10, 100, and 1000 demonstrations. ... | p. 14 (Figure/Table caption) |
+| VII. SIMULATION RESULTS | EMPIRICAL / SIMULATION | Transporter-Goal-Stack achieves slightly higher performance among the cable-related tasks, though the gap narrows with more demonstrations in cable-line-notarget, since both goal-conditioned Transporters each achieve ... | p. 6 (VII. SIMULATION RESULTS) |
+| VII. SIMULATION RESULTS | EMPIRICAL / SIMULATION | For fabric-flat-notarget, the performance of both goal-conditioned Transporters is more evenly matched, while for bag-color-goal, Transporter-Goal-Split achieves higher success rates of 12.2% and 29.8% ... | p. 6 (VII. SIMULATION RESULTS) |
+| VII. SIMULATION RESULTS | EMPIRICAL / SIMULATION | It performs reliably on fabric-cover with 100% success rates | p. 5 (VII. SIMULATION RESULTS) |
+| VII. SIMULATION RESULTS | EMPIRICAL / SIMULATION | Non-Goal Conditioned Tasks In these tasks, Transporter generally achieves orders of magnitude better sample efficiency than ground truth models. | p. 5 (VII. SIMULATION RESULTS) |
+| Figure/Table caption | EMPIRICAL / SIMULATION | Fig. 8: Results for models on the block-notarget task. From left to right, we report models trained with 1, 10, 100, and 1000 demonstrations. ... | p. 14 (Figure/Table caption) |
 
 ## Dataset / Benchmark Role
 
@@ -133,6 +135,8 @@ PDF body evaluation/result cue (p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMUL
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
+
+- 개정판 v4의 케이블 검증은 서로 다른 목표 영상으로 실물 에피소드 10개를 실행했다. 케이블 마스크 IoU 0.25를 넘긴 시행은 7개였다. [PDF 7쪽](https://arxiv.org/pdf/2012.03385v4#page=7)
 
 | Body reproducibility cue | Anchor |
 |---|---|

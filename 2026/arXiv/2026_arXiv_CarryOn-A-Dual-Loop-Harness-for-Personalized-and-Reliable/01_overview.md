@@ -1,6 +1,6 @@
 # CarryOn: A Dual-Loop Harness for Personalized and Reliable Robot Assistance
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -11,18 +11,20 @@
 - Tags: Robotics, feedback, evaluation
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.21453
+- Full-text retrieval: https://arxiv.org/pdf/2610.21453v1
 - Venue verification: https://arxiv.org/abs/2610.21453
 - Code/Project: https://vincent2311.github.io/Projects/CarryOn/
 - Code: project_only
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-개인화된 robot assistance에서 고수준 의도와 실행 신뢰성을 연결한다.
+CarryOn은 고정된 VLA에 사용자 선호를 기억하는 계획 루프와 위험 접촉·실패에 대응하는 실행 루프를 결합한다. [PDF 1쪽](https://arxiv.org/pdf/2610.21453v1#page=1)
 
 ## Core Idea and Contribution
 
-계획과 action safety/recovery의 dual-loop 구조를 frozen VLA에 결합한다.
+- 관측과 대화로 사용자·장면 정보를 갱신하고 실행 중 위험을 감시하다가 필요할 때 재사용 가능한 제어 기술로 작업을 복구한다. [PDF 4쪽](https://arxiv.org/pdf/2610.21453v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.21453v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2610.21453v1#page=6)
+- 시뮬레이션에서 개인화·안전·복구를 평가하고 실물 음식 제공 과제에서 구성 요소가 함께 동작하는지 확인했다. [PDF 7쪽](https://arxiv.org/pdf/2610.21453v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2610.21453v1#page=8) · [PDF 9쪽](https://arxiv.org/pdf/2610.21453v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2610.21453v1#page=10)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@
 
 Simulation과 실제 robot assistance 결과를 보고한다.
 
-근거: [공식 paper/abstract](https://arxiv.org/abs/2610.21453) · [저자 project/code](https://vincent2311.github.io/Projects/CarryOn/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://arxiv.org/abs/2610.21453) · [저자 project/code](https://vincent2311.github.io/Projects/CarryOn/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

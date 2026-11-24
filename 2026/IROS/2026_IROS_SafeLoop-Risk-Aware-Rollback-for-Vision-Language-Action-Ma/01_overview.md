@@ -1,6 +1,6 @@
 # SafeLoop: Risk-Aware Rollback for Vision-Language-Action Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / IROS
@@ -11,18 +11,20 @@
 - Tags: Robotics, feedback, evaluation
 - Aliases:
 - Official paper: https://arxiv.org/abs/2609.26313
+- Full-text retrieval: https://arxiv.org/pdf/2609.26313v1
 - Venue verification: https://2026.ieee-iros.org/program/contributed_talks/#d6dc87:1051
 - Code/Project: https://github.com/Loule0-0/SafeLoop/tree/release/safeloop
 - Code: https://github.com/Loule0-0/SafeLoop/tree/release/safeloop
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. IROS 저자 표기만으로 venue를 승격하지 않음; 공식 acceptance 미확인.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다. 평가 노트의 측정 조건도 해당 표·절에서 확인했다.
 
 ## Problem and Importance
 
-위험한 VLA 실행을 감지해 rollback으로 복구한다.
+SafeLoop는 영상과 고유수용감각에서 충돌·물체 실패의 확률과 남은 시간을 예측해 고정된 VLA의 행동을 계속하거나 안전한 관절 자세로 후퇴시킨다. [PDF 1쪽](https://arxiv.org/pdf/2609.26313v1#page=1)
 
 ## Core Idea and Contribution
 
-시각·proprioception 기반 위험 예측과 no-op/rollback 개입을 결합한다.
+- 위험 유형별 예측을 이용해 계속 실행, 안전 자세 저장, 후퇴 중 하나를 고르고 되돌아간 뒤 정책에 다시 질의한다. [PDF 3쪽](https://arxiv.org/pdf/2609.26313v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2609.26313v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2609.26313v1#page=5)
+- LIBERO 조작과 실물 과제에서 충돌·물체 실패와 작업 성공을 함께 측정해 후퇴 전략을 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2609.26313v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.26313v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.26313v1#page=7)
 
 ## Observation–State–Action Interface
 
@@ -30,9 +32,7 @@
 
 ## Evaluation Scope and Claim Boundary
 
-LIBERO 및 실제 manipulation을 보고한다.
-
-근거: [공식 paper/abstract](https://arxiv.org/abs/2609.26313) · [저자 project/code](https://github.com/Loule0-0/SafeLoop/tree/release/safeloop). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+시뮬레이션은 LIBERO 24개 과제에 시드 16개씩을 사용해 방법별 384회 시행했다. 실물 검증은 세 과제를 각각 25회 수행해 위해 사건과 작업 성공을 기록했다. [PDF 5쪽](https://arxiv.org/pdf/2609.26313v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.26313v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.26313v1#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

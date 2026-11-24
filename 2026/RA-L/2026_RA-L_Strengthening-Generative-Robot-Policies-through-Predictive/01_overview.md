@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2502.00622
 - Code/Project: https://computationalrobotics.seas.harvard.edu/GPC/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=0.875)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=0.875). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2502.00622v4) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, some tasks involve rewards that are difficult or even infeasible to specify.
-
-방법 관련 발췌 — GPC consists of three components: • Generative policy training.
+GPC는 고정한 확산 행동복제 정책이 제안한 행동을 세계 모형으로 미리 평가해 배포 시 조작 행동을 고른다. [PDF 1쪽](https://arxiv.org/pdf/2502.00622v4#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / B EHAVIOR cloning (BC) with generative models has - extractive body cue:** GPC consists of three components: • Generative policy training.
-- **p. 1 / Abstract - extractive body cue:** We present generative predictive control (GPC), a framework for inference-time enhancement of pretrained behavior-cloning policies.
-- **p. 3 / III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL - extractive body cue:** In contrast, GPC-OPT enables continuous action refinement by performing gradientbased optimization from diffusion-policy warm starts, allowing it to improve beyond sampled proposals.
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** We further provide ablations and comparisons to illustrate: (i) the influence of K and M on performance, and (ii) how GPC compares with other baselines ...
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** The results show that (a) GPC-RANK improves performance by ∼10% over the behavior cloning baseline; (b) GPC-OPT yields a ∼15% gain; and (c) GPC-RANK+OPT achieves ...
-- **p. 6 / V. EXPERIMENTS - extractive body cue:** Planning-only methods without a generative policy prior, including model predictive path integral (MPPI), cross-entropy method (CEM), and pure gradient ascent [35], achieve substantially lower performance ...
-- **p. 4 / V. EXPERIMENTS - extractive body cue:** In all cases, GPC consistently outperforms the behavior cloning baseline, highlighting its effectiveness as an inference-time enhancement.
-- **p. 5 / V. EXPERIMENTS - extractive body cue:** Clearly, all GPCRANK, GPC-OPT, and GPC-RANK+OPT variants outperform pure behavior cloning.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시연과 탐색 자료로 행동 조건부 동역학을 학습해 후보 행동열이 만들 미래 관측을 예측한다. [PDF 3쪽](https://arxiv.org/pdf/2502.00622v4#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2502.00622v4#page=4)
+- 평면 밀기 등에서 후보 선택·정제 방식의 효과를 나눠 비교하고 실물 Push-T에서도 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2502.00622v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2502.00622v4#page=6) · [PDF 8쪽](https://arxiv.org/pdf/2502.00622v4#page=8)
 
 ## Evaluation Scope
 

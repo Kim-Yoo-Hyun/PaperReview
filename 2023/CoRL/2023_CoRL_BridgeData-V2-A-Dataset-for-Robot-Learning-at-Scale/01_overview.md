@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2308.12952
 - Code/Project: https://rail-berkeley.github.io/bridgedata/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, in practice, assembling a dataset with the right features to accelerate research in large-scale robot learning presents a significant challenge.
-
-방법 관련 발췌 — In this paper, we propose a new dataset, which we call BridgeData V2 (Figure 1) because it greatly expands on the previously released Bridge Dataset [6].
+BridgeData V2는 저비용 로봇팔의 24개 환경에서 얻은 조작 궤적을 제공해 목표 영상 또는 자연어 조건의 다중 작업 정책을 비교한다. [PDF 1쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose a new dataset, which we call BridgeData V2 (Figure 1) because it greatly expands on the previously released Bridge Dataset ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are a new dataset of robotic manipulation behaviors as well as the empirical study of state-of-the-art offline learning methods using the introduced dataset.
-- **p. 15 / B.4 Contrastive RL - extractive body cue:** The greater size and diversity of BridgeData V2 enables significantly better generalization to these unseen tasks.
-- **p. 8 / 5 Experiments - extractive body cue:** ResNet-18 ResNet-34 ResNet-50 Image Encoder 0.0 0.2 0.4 0.6 0.8 1.0 Average Success Rate 0.25 0.50 0.75 1.00 Proportion of Dataset 0.0 0.2 0.4 0.6 ...
-- **p. 7 / 5 Experiments - extractive body cue:** Note that these evaluations were performed zero-shot, without any new data collected in Lab 2, and we expect fine-tuning on a small amount of data ...
-- **p. 8 / 5 Experiments - extractive body cue:** We found that performance on an unseen pickand place task was significantly improved by training on data with greater skill diversity.
-- **p. 6 / 5 Experiments - extractive body cue:** The goal-conditioned methods are comparable to each other in success rate.
-- **p. 6 / 5 Experiments - extractive body cue:** To obtain success rates for each method, we collected 10 trials for each task, varying the positions of objects and distractors between trials.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 사람의 시연과 스크립트로 자율 수집한 집기·놓기 시도를 함께 제공하고 두 자료의 수집 방식과 구성을 명시했다. [PDF 2쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=2) · [PDF 4쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=5)
+- 모방학습과 오프라인 강화학습 방법을 실물에서 비교하고 자료량·모형 크기·기술 다양성에 따른 일반화를 분석했다. [PDF 7쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=8)
 
 ## Evaluation Scope
 

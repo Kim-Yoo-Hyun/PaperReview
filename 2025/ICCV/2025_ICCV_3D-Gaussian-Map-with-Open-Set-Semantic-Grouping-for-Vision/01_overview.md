@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Additionally, existing methods are primarily trained in closed-vocabulary settings that lack the diversity to encompass the rich semantics and variaThis ICCV paper is the Open Access version, provided by the Computer Vision ...
-
-방법 관련 발췌 — In contrast, our method introduces a set of sparse and adaptive 3D Gaussians to model the 3D scene, efficiently capturing spatial structures and integrating open-set semantics. code online visual observations into the ...
+이 연구는 언어 지시를 따라 이동할 때 관측한 장면을 3차원 가우시안으로 누적해 기하와 의미 정보를 함께 사용한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In contrast, our method introduces a set of sparse and adaptive 3D Gaussians to model the 3D scene, efficiently capturing spatial structures and integrating open-set ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our method is evaluated on three public benchmarks: R2R [3], R4R [32], and REVERIE [56].
-- **p. 4 / 3.3. Multi-Level Action Prediction (MAP) - extractive body cue:** The 3D Gaussian Map G, constructed by integrating ESM and OSG, consists of Gaussians gi parameterized by {µi, si, ri, αi, ci, σi}.
-- **p. 4 / 3.2. Open-Set Semantic Grouping (OSG) - extractive body cue:** To bridge this gap, we introduce OSG operation, enriching ESM with open-set semantics by associating each Gaussian primitive with semantic properties derived from visual observations.
-- **p. 2 / 1. Introduction - extractive body cue:** The solution enables the agent to i) construct 3D scene maps with geometric priors at each navigable point during navigation, ii) integrate open-set semantics into ...
-- **p. 6 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** Our agent achieves consistent improvements across all splits, which outperforms BEVBert [1] by 2% in both SR and SPL on the val unseen split.
-- **p. 6 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** Specifically, compared to HAMT [12], our approach achieves improvements of 2% in SR, CLS, and nDTW, with 3% gain in SDTW.
-- **p. 8 / 4.3. Diagnostic Experiment - extractive body cue:** From Table 5, we can observe that: i) Row #1 vs #2 vs #3 vs #4: Each level contributes to performance gain, and the Instance ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 희소한 깊이 기반 점으로 로봇 중심 지도를 초기화하고 가우시안을 의미적으로 묶어 경로 선택에 제공했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=5)
+- REVERIE와 R2R에서 탐색 결과를 비교하고 지도 구성과 의미 그룹화가 성능에 주는 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

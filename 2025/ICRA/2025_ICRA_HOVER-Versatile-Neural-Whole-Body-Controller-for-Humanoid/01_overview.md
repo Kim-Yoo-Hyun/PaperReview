@@ -12,18 +12,16 @@
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, Reinforcement Learning, NVIDIA
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128549
-- Full-text retrieval: https://research.nvidia.com/labs/lpr/publication/he2025hover/
+- Full-text retrieval: https://arxiv.org/pdf/2410.21229v2
 - Code/Project: https://hover-versatile-humanoid.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2410.21229v2) 기준이다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This is a non-trivial challenge, as each mode operates within a distinct command space, making direct integration impractical.
-
-방법 관련 발췌 — To summarize, our contributions are threefold: 1) we present HOVER, a unified neural controller for humanoid whole-body control supporting multiple control modes; 2) we show that, through policy distillation, HOVER effectively shares ...
+HOVER는 전신 동작 모방을 공통 교사로 삼고 다양한 명령 방식의 휴머노이드 제어를 하나의 정책으로 증류한다. [PDF 1쪽](https://arxiv.org/pdf/2410.21229v2#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To summarize, our contributions are threefold: 1) we present HOVER, a unified neural controller for humanoid whole-body control supporting multiple control modes; 2) we show ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** To this end, we present HOVER, a unified neural controller for humanoid whole-body control that supports diverse control modes as shown in Figure 1, including ...
-- **p. 3 / II. METHOD - extractive body cue:** In our framework, as shown in Figure 1, a one-hot masking vector is introduced to specify which components of the command space are activated for ...
-- **p. 3 / II. METHOD - extractive body cue:** This space consists of two primary control regions-upper-body and lower-body control-and incorporates three distinct control modes: • Kinematic Position Tracking: target 3D positions of key ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** 1: HOVER enables versatile humanoid control with a unified multi-mode command space.
-- **p. 4 / III. EXPERIMENT - extractive body cue:** In this section, we present extensive experimental results in both IsaacGym [23] and the real-world Unitree H1 [24] robot to address the following questions: • ...
-- **p. 5 / III. EXPERIMENT - extractive body cue:** The results show that HOVER achieves consistently lower tracking error across 32/32 metrics and modes.
-- **p. 5 / III. EXPERIMENT - extractive body cue:** The results in Table IV show that HOVER consistently outperforms specialists in terms of tracking metrics that are trained for specific command configurations.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 명령에서 신체 일부의 목표를 가리는 방식으로 속도·몸통·상체 등 서로 다른 제어 입력을 통합한다. [PDF 2쪽](https://arxiv.org/pdf/2410.21229v2#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2410.21229v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2410.21229v2#page=4)
+- 시뮬레이션에서 모드별 전문 정책과 비교하고 실물 휴머노이드에서 자세 추종과 제어 모드 전환을 시험했다. [PDF 4쪽](https://arxiv.org/pdf/2410.21229v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2410.21229v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2410.21229v2#page=6)
 
 ## Evaluation Scope
 

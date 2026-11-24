@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2311.01977
 - Code/Project: https://rt-trajectory.github.io/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.iclr.cc/paper_files/paper/2024/file/c383e44d9a878d1982d9abb838bd5d8a-Paper-Conference.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Recently, language conditioning significantly improves generalization to new language commands (Brohan et al., 2023b), but it suffers from the lack of specificity, which makes it difficult to generalize to a new motion ...
-
-방법 관련 발췌 — The main contribution of this paper is a novel policy conditioning framework RT-Trajectory that fosters task generalization.
+RT-Trajectory는 영상 위에 그린 성긴 궤적을 조건으로 삼아 현재 장면에서 필요한 로봇팔 동작을 생성한다. [PDF 1쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/c383e44d9a878d1982d9abb838bd5d8a-Paper-Conference.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The main contribution of this paper is a novel policy conditioning framework RT-Trajectory that fosters task generalization.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** To this end, we propose to use a coarse trajectory as a middle-ground solution between expressiveness and ease of use.
-- **p. 3 / 3 METHOD - extractive body cue:** We introduce three basic elements for constructing the trajectory representation format: 2D Trajectories, Color Grading, and Interaction Markers.
-- **p. 4 / 3 METHOD - extractive body cue:** Trajectory Representations In this work, we propose two forms of trajectory representation from different combinations of the basic elements.
-- **p. 4 / 3 METHOD - extractive body cue:** In the second representation, we introduce a more detailed trajectory representation RT-Trajectory (2.5D), which includes the height information in the 2D trajectory (Fig.
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Success rate of different trajectory generation approaches across tasks. Details about video collection and how trajectory sketches are derived from videos are described ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 8: Example RT-Trajectory evaluations in realistic scenarios involving (a) novel articulated objects requiring new motions, (b) manipulation on new surfaces in new buildings in ...
-- **p. 17 / Figure/Table caption - extractive body cue:** Figure 14: Evaluation trajectories for new skills and their 10 closest trajectories from the training set. Each row shows three frames of a skill evaluation ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 시연을 다시 보며 로봇의 이동 경로를 2차원 스케치로 표시해 추가 수동 경로 주석 없이 학습 쌍을 만든다. [PDF 3쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/c383e44d9a878d1982d9abb838bd5d8a-Paper-Conference.pdf#page=3) · [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/c383e44d9a878d1982d9abb838bd5d8a-Paper-Conference.pdf#page=4)
+- 같은 로봇 자료로 학습한 언어·목표 영상 조건 정책과 비교해 새 작업에서 스케치가 전달하는 움직임 정보의 효과를 확인했다. [PDF 6쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/c383e44d9a878d1982d9abb838bd5d8a-Paper-Conference.pdf#page=6) · [PDF 7쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/c383e44d9a878d1982d9abb838bd5d8a-Paper-Conference.pdf#page=7)
 
 ## Evaluation Scope
 

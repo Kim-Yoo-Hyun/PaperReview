@@ -12,7 +12,7 @@ PDF body method statement (p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 11 (
 
 - **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** To this end, we ignore estimating the drift-free roll and pitch states, and only perform 4-DOF pose graph optimization.
 - **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** Pose graph optimization and relocalization (Sect.
-- **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** The whole graph of sequential edges and loop closure edges are optimized by minimizing the following cost function: min p,ψ    X (i,j)∈S ...
+- **네 자유도 자세 그래프.** 식 (29)는 위치와 요각을 변수로 순차 간선의 제곱 잔차와 루프 폐쇄 간선에 Huber 함수를 적용한 제곱 잔차를 합해 최소화한다. [PDF 11쪽](https://arxiv.org/pdf/1708.03852v1#page=11)
 - **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** All keyframes with loop closure constraints will be kept, while other keyframes that are either too close or have very similar orientations to its neighbors ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Outdoor experimental results of the proposed monocular visual-inertial state estimator.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator.
@@ -43,7 +43,7 @@ PDF body method statement (p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 11 (
 
 ## Objective / Update Rule
 
-- **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** The whole graph of sequential edges and loop closure edges are optimized by minimizing the following cost function: min p,ψ    X (i,j)∈S ...
+- **네 자유도 자세 그래프.** 식 (29)는 위치와 요각을 변수로 순차 간선의 제곱 잔차와 루프 폐쇄 간선에 Huber 함수를 적용한 제곱 잔차를 합해 최소화한다. [PDF 11쪽](https://arxiv.org/pdf/1708.03852v1#page=11)
 - **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** All keyframes with loop closure constraints will be kept, while other keyframes that are either too close or have very similar orientations to its neighbors ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION).

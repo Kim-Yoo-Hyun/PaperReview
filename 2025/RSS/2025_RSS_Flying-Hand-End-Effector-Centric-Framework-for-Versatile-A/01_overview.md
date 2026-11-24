@@ -15,13 +15,11 @@
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p130.pdf
 - Code/Project: https://lecar-lab.github.io/flying_hand/
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; tesseract OCR fallback; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.roboticsproceedings.org/rss21/p130.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most previous works have been tailored to specific tasks, developing unique platforms and algorithms accordingly, lacking the ability to handle different types of tasks, In real-world scenarios, manipulation tasks can be ...
-
-방법 관련 발췌 — Our framework consists of a fully-actuated hexarotor with a 4:DoF robotic arm, an end-effector-centrie whole-body: model predictive controller, and a high-level po is end-effector controller enables efficient and ‘operation for versatil ...
+Flying Hand는 비행체와 로봇팔의 결합 동역학을 하위 제어기가 처리해 상위 정책과 조작자가 말단의 움직임으로 공중 조작을 지시하게 한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Abstract - extractive body cue:** Our framework consists of a fully-actuated hexarotor with a 4:DoF robotic arm, an end-effector-centrie whole-body: model predictive controller, and a high-level po is end-effector controller ...
-- **p. 7 / VII. EE-CENTRIC TELEOPERATION AND POLICY - extractive body cue:** [As we mentioned, our framework enables the decoupling between the high-level policy and low-level controller, with the ee-centric interface serving asthe sole connection between them.
-- **p. 2 / B. Mobile Manipulation Framework and EE-Centric Interface - extractive body cue:** [25] proposed a framework that consists of a robust humanoid whole-body controller with a high-level policy, either an autonomous agent like GPT-40 or an imitation ...
-- **p. 7 / VII. EE-CENTRIC TELEOPERATION AND POLICY - extractive body cue:** In this section, we introduce two aerial manipulation systems we ‘developed based on this framework: the ee-centrc aerial tele- ‘operation system and the imitaton-Iearning-based autonomous ...
-- **p. 2 / 1. Iyrropuction - extractive body cue:** By effectively decoupling high-level policies from low-level control, it enables the development ‘of embodiment-agnostic policies 47}, {10}.
-- **p. 9 / B. Implementation Details - extractive body cue:** improvements can be achieved through more accurate system modeling and higher-precision hardware to enhance tracking accuracy.
-- **p. 10 / B. Implementation Details - extractive body cue:** + Multi-Skill Composition: In the open and retrieve task, our ee-centric policy achieves 2 higher success rate than the joint space policy, which demonstrates its ...
-- **p. 10 / B. Implementation Details - extractive body cue:** + Geometric Precision Advantage: Our ee-centric policy achieves 2.5% higher success rate in geometrically sensitive peg in hole task, directly benefiting from task-space supervision that ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 완전 구동 육회전익에 4자유도 팔을 장착하고 말단 기준 전신 예측 제어기를 구성했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=4) · [PDF 6쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=6)
+- 비행 중 말단 추종과 원격조작을 시험하고 시연으로 학습한 정책의 공중 핀 삽입을 평가했다. [PDF 9쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=9) · [PDF 11쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=11) · [PDF 12쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=12)
 
 ## Evaluation Scope
 

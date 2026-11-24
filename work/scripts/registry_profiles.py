@@ -58,11 +58,14 @@ EVALUATION_TYPE_RE = re.compile(
     r"^- \*\*Evaluation type:\*\*\s*`([^`]+)`\s*\.?\s*$", re.MULTILINE
 )
 ANCHOR_RE = re.compile(r"\bp\.\s*\d+\b|extractive body cue|PDF body", re.IGNORECASE)
+PDF_PAGE_LINK_RE = re.compile(r"\[PDF ([1-9]\d*)쪽\]\(https://[^\s#\[\]]+#page=\1\)")
 TRIAL_RE = re.compile(
     r"(?P<count>\d[\d,]*)\s+(?P<unit>total\s+)?(?P<kind>rollouts?|episodes?|trials?|seeds?|runs?)",
     re.IGNORECASE,
 )
 RANDOM_SEED_RE = re.compile(r"(?P<count>\d[\d,]*)\s+random\s+seeds?", re.IGNORECASE)
+KOREAN_TRIAL_RE = re.compile(r"(?P<kind>시드|에피소드|롤아웃|시행)\s+(?P<count>\d[\d,]*)\s*(?:개|회)")
+KOREAN_TRIAL_UNITS = {"시드": "seed", "에피소드": "episode", "롤아웃": "rollout", "시행": "trial"}
 
 
 def _section(text: str, heading: str) -> str:
@@ -99,7 +102,7 @@ def _body_lines(section: str) -> list[str]:
 
 
 def _has_anchor(section: str) -> bool:
-    return bool(ANCHOR_RE.search(section))
+    return bool(ANCHOR_RE.search(section) or PDF_PAGE_LINK_RE.search(section))
 
 
 def _section_status(section: str, *, no_cue: tuple[str, ...] = ()) -> str:
@@ -113,9 +116,8 @@ def _section_status(section: str, *, no_cue: tuple[str, ...] = ()) -> str:
             return "not_reported"
         return "not_recorded"
     lowered = body.casefold()
-    if any(pattern.casefold() in lowered for pattern in no_cue) and not re.search(
-        r"\bp\.\s*\d+\b|extractive body cue", body, flags=re.IGNORECASE
-    ):
+    direct_anchor = PDF_PAGE_LINK_RE.search(body) or re.search(r"\bp\.\s*\d+\b|extractive body cue", body, re.I)
+    if any(pattern.casefold() in lowered for pattern in no_cue) and not direct_anchor:
         return "not_reported"
     return "reported"
 
@@ -127,12 +129,15 @@ def _evaluation_type(text: str) -> str:
 
 def _settings(evaluation_type: str) -> list[str]:
     normalized = evaluation_type.casefold()
+    settings = []
     if "real-robot" in normalized or "hardware" in normalized:
-        return ["real_robot"]
+        settings.append("real_robot")
     if "simulation" in normalized:
-        return ["simulation"]
+        settings.append("simulation")
     if "benchmark" in normalized or "dataset" in normalized:
-        return ["benchmark_or_dataset"]
+        settings.append("benchmark_or_dataset")
+    if settings:
+        return settings
     if "source-reported" in normalized:
         return ["source_reported"]
     if "scope unresolved" in normalized:
@@ -157,10 +162,12 @@ def _trial_evidence(text: str, source_note: str) -> list[dict[str, Any]]:
         if not line or line.startswith("| Audit field"):
             continue
         matches = list(TRIAL_RE.finditer(line)) + list(RANDOM_SEED_RE.finditer(line))
+        if PDF_PAGE_LINK_RE.search(line):
+            matches.extend(KOREAN_TRIAL_RE.finditer(line))
         for match in matches:
             count = int(match.group("count").replace(",", ""))
             unit = match.groupdict().get("kind") or "random seeds"
-            unit = unit.casefold().rstrip("s")
+            unit = KOREAN_TRIAL_UNITS.get(unit, unit.casefold().rstrip("s"))
             if "seed" in match.group(0).casefold():
                 unit = "seed"
             record = {

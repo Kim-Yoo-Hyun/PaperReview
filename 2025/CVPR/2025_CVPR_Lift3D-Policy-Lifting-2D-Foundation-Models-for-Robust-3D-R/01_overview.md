@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, the limited availability of large-scale robotic 3D data and foundational models constrains their generalization capabilities.
-
-방법 관련 발췌 — In summary, our contributions are as follows: • We propose Lift3D, which elevates 2D foundation models 17348
+Lift3D는 2차원 사전학습 모형에 깊이 복원과 점군 입력을 도입해 로봇의 3차원 조작 표현을 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our contributions are as follows: • We propose Lift3D, which elevates 2D foundation models 17348
-- **p. 2 / 1. Introduction - extractive body cue:** Building on the challenges in the aforementioned 3D policies, we raise a question: "Can we develop a 3D policy model that integrates large-scale pretrained knowledge ...
-- **p. 3 / 3. Lift3D Method - extractive body cue:** In Section 3.1, we introduce the problem statement of our proposed Lift3D framework.
-- **p. 3 / 1. Introduction - extractive body cue:** to construct a 3D manipulation policy by systematically improving implicit and explicit 3D robotic representations. • For implicit 3D robotic representation, we design a taskaware ...
-- **p. 4 / 3.3. 2D Model-lifting Strategy - extractive body cue:** After endowing the 2D foundation model with implicit 3D robotic awareness, we introduce a lifting strategy that en17350
-- **p. 6 / 4.1. Simulation Experiment - extractive body cue:** In Table 1, Lift3D(CLIP) achieves an average success rate of 83.9 on the MetaWorld benchmark, with 78.8 accuracy on medium-level tasks and 82.0 accuracy on ...
-- **p. 6 / 4.1. Simulation Experiment - extractive body cue:** In addition, compared to the previous SOTA 3D policy (DP3), Lift3D achieves an accuracy improvement of 18.6.
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 4. Scalability. Y-axis is the manipulation success rate. in Figure 4. Moreover, Lift3D exhibits better scalability than the original DINOv2 models by leveraging its ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업에 관련된 영상 패치를 가린 뒤 깊이를 복원하고 점군 토큰의 공간 정보를 이용해 행동을 예측한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf#page=5)
+- 시뮬레이션과 실물 조작에서 과제 성공률을 평가하고 암시적·명시적 기하 표현을 학습하는 단계의 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jia_Lift3D_Policy_Lifting_2D_Foundation_Models_for_Robust_3D_Robotic_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

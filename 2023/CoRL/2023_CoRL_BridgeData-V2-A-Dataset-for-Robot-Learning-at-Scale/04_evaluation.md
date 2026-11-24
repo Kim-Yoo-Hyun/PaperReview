@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments)): ResNet-18 ResNet-34 ResNet-50 Image Encoder 0.0 0.2 0.4 0.6 0.8 1.0 Average Success Rate 0.25 0.50 0.75 1.00 Proportion of Dataset 0.0 0.2 0.4 0.6 0.8 1.0 Average Success Rate ...
+24개 환경의 60,096개 궤적은 사람 시연 50,365개와 무작위화한 집기·놓기 스크립트로 얻은 9,731개로 구성된다. [PDF 1쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=1) · [PDF 2쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=2) · [PDF 4쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=4) · [PDF 5쪽](https://proceedings.mlr.press/v229/walke23a/walke23a.pdf#page=5)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `BENCHMARK / DATASET`.
+- **Evaluation type:** `BENCHMARK / DATASET AND REAL-ROBOT COMPARISON`.
 - **Target system/task:** demonstration으로 정의된 robot task distribution.
 - **Input boundary:** observation history와 expert trajectory/action.
 - **Output/decision under evaluation:** predicted action 또는 action chunk.

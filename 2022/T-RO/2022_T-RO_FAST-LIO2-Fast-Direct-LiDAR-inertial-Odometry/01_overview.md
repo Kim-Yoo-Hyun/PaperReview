@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2107.06829
 - Code/Project: https://github.com/hku-mars/FAST_LIO
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (19 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2107.06829v1) 기준이다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, efficient and accurate LiDAR odometry and mapping are still challenging problems: 1) Current LiDAR sensors produce a large amount of 3D points from hundreds of thousands to millions per second.
-
-방법 관련 발췌 — More specifically, our contributions are as follows: 1) We develop an incremental k-d tree data structure, ikd-Tree, to represent a large dense point cloud map efficiently.
+FAST-LIO2는 라이다 원시 점을 국소 지도에 직접 정합하고 관성 측정과 함께 필터링해 실시간 위치·자세를 추정한다. [PDF 1쪽](https://arxiv.org/pdf/2107.06829v1#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** More specifically, our contributions are as follows: 1) We develop an incremental k-d tree data structure, ikd-Tree, to represent a large dense point cloud map ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 2) Allowed by the increased computation efficiency of ikd-Tree, we directly register raw points to the map, which enables more accurate and reliable scan registration ...
-- **p. 1 / Abstract - extractive body cue:** The elimination of a hand-engineered feature extraction module also makes it naturally adaptable to emerging LiDARs of different scanning patterns; The second main novelty is ...
-- **p. 4 / IV. STATE ESTIMATION - extractive body cue:** Kinematic Model We first derive the system model, which consists of a state transition model and a measurement model.
-- **p. 1 / Abstract - extractive body cue:** This enables the exploitation of subtle features in the environment and hence increases the accuracy.
-- **p. 16 / VII. REAL-WORLD EXPERIMENTS - extractive body cue:** Notice that the considerably reduced processing time for FAST-LIO2 is achieved even at a much higher number of map points.
-- **p. 10 / VI. BENCHMARK RESULTS - extractive body cue:** VI-C, we compare the accuracy and processing time of FAST-LIO2 on 19 sequences.
-- **p. 10 / VI. BENCHMARK RESULTS - extractive body cue:** In this section, extensive experiments in terms of accuracy, robustness, and computational efficiency are conducted on various open datasets.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 반복 칼만 필터에 점과 지도 사이의 거리 잔차를 넣어 별도 기하 특징 추출 없이 상태를 갱신한다. [PDF 4쪽](https://arxiv.org/pdf/2107.06829v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2107.06829v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2107.06829v1#page=6)
+- 점 삽입·삭제와 재균형을 지원하는 증분 k-d 트리로 지도를 유지하고 저장 구조 비용 및 주행 순서열의 위치 오차를 평가했다. [PDF 7쪽](https://arxiv.org/pdf/2107.06829v1#page=7) · [PDF 9쪽](https://arxiv.org/pdf/2107.06829v1#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2107.06829v1#page=10) · [PDF 12쪽](https://arxiv.org/pdf/2107.06829v1#page=12)
 
 ## Evaluation Scope
 

@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2303.12153
 - Code/Project: https://sites.google.com/view/text-to-motion/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (30 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2303.12153v5) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Such strategies are challenged in long-horizon settings, where the 1
-
-방법 관련 발췌 — We propose Text2Motion, a language-based planning framework that interfaces an LLM with a library of learned skills and a geometric feasibility planner [8] to solve complex sequential manipulation tasks (Figure 1).
+Text2Motion은 자연어 지시에서 추론한 목표를 달성하도록 언어모형의 기술 순서 제안과 기하학적 실행 가능성 검사를 결합한다. [PDF 1쪽](https://arxiv.org/pdf/2303.12153v5#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** We propose Text2Motion, a language-based planning framework that interfaces an LLM with a library of learned skills and a geometric feasibility planner [8] to solve ...
-- **p. 5 / 4.2 Shooting-based planning - extractive body cue:** To this end, the first strategy we propose is a shooting-based Algorithm 1 Shooting-based LLM planner 1: globals: Lψ, Lχ, SatFunc, LLM, STAP 2: function ...
-- **p. 6 / 4.3 Search-based planning - extractive body cue:** We propose a second planner, greedy-search (see Figure 2, Right), which at each planning iteration ranks candidate skills predicted by the LLM and adds the ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our contributions are twofold: (i) a hybrid LLM planner that synergistically integrates shooting-based and search-based planning strategies to construct geometrically feasible plans for tasks not ...
-- **p. 3 / 3.1 LLM and skill library - extractive body cue:** Each skill ψ consists of a policy π(a/s) and a parameterized manipulation primitive ϕ(a) [59], and is associated with a contextual bandit, or a single-timestep ...
-- **p. 11 / 6.2 Search-based reasoning is - extractive body cue:** In the first two tasks (LH, Figure 5), we find that shooting achieves slightly higher success rates than greedy-search, while both methods achieve 100% success ...
-- **p. 11 / 6.2 Search-based reasoning is - extractive body cue:** In terms of success, greedysearch solves 40%-60% of the PAP tasks, while shooting achieves a 10% success rate on Task 4 (LG + PAP) and ...
-- **p. 10 / 6.1 Feasibility planning is required - extractive body cue:** This divergence arises because it is possible to make progress on tasks without resolving geometric dependencies in the earlier timesteps; however, failure to account for ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기술별 행동가치로 연속 매개변수의 실행 가능성을 평가하고 뒤따르는 기술에 필요한 배치까지 탐색한다. [PDF 4쪽](https://arxiv.org/pdf/2303.12153v5#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2303.12153v5#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2303.12153v5#page=6)
+- 여러 단계 사이에 기하 의존성이 있는 순차 조작에서 계획 성공률을 비교하고 탐색 방식의 역할을 분석했다. [PDF 9쪽](https://arxiv.org/pdf/2303.12153v5#page=9) · [PDF 10쪽](https://arxiv.org/pdf/2303.12153v5#page=10) · [PDF 11쪽](https://arxiv.org/pdf/2303.12153v5#page=11)
 
 ## Evaluation Scope
 

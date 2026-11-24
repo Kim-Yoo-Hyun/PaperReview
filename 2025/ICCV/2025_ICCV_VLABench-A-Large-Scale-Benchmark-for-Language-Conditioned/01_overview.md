@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The second task further intensifies the difficulty, requiring the robot to decompose the task into subtasks and execute the steps to operate a coffee machine-a long-horizon challenge that has previously been difficult ...
-
-방법 관련 발췌 — We summarize contributions as follows: • We propose VLABench, the first benchmark designed to comprehensively evaluate the capabilities of VLAs and VLMs in robotics manipulation tasks, covering multiple dimensions such as skills, ...
+VLABench는 자연어로 지시한 조작을 평가하도록 구성한 100개 과제 범주와 다양한 물체·장면을 제공한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize contributions as follows: • We propose VLABench, the first benchmark designed to comprehensively evaluate the capabilities of VLAs and VLMs in robotics manipulation ...
-- **p. 2 / 1. Introduction - extractive body cue:** To better define the types of language-conditioned manipulation tasks suited for foundation models and provide a standardized evaluation suite to advance robotics research, we introduce ...
-- **p. 8 / 4.3. Comprehensive Ability of VLMs - extractive body cue:** This dataset consists of a complex set of tasks designed to assess the VLM's ability to perceive visual stimuli and comprehend verbal instructions.
-- **p. 6 / 3.4. Dataset Construction - extractive body cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
-- **p. 6 / 3.4. Dataset Construction - extractive body cue:** As human teleoperation is timeconsuming and not scalable [38, 47], we developed an efficient, scalable automated data collection pipeline based on our custom skill library.
-- **p. 5 / 3.3. Benchmark - extractive body cue:** In addition to the success rate (SR), considering the long-horizon nature and high difficulty level of our tasks, we introduce the intention score (IS) and ...
-- **p. 6 / 3.3. Benchmark - extractive body cue:** The progress score refers to the completion level of subtasks in a long-horizon task and serves as a softer process supervision metric compared to the ...
-- **p. 6 / 3.4. Dataset Construction - extractive body cue:** Subsequently, the selected skills generate trajectories using RRT [29], with quaternion interpolation achieved through spherical linear interpolation.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공통 상식, 암시적인 의도와 여러 단계의 조작을 시험하도록 과제와 지시의 변형을 구성했다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=5)
+- 행동을 생성하는 정책과 시각언어모형의 계획을 평가하는 절차를 기술하고 과제별 수행 결과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

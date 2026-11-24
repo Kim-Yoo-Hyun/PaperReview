@@ -15,15 +15,13 @@
 - Full-text retrieval: https://cdn.openai.com/safexp-short.pdf
 - Code/Project: https://github.com/openai/safety-gym
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://cdn.openai.com/safexp-short.pdf) 기준이다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 14. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While RL is not yet fully mature or ready to serve as an "off-the-shelf" solution, it appears to offer a viable path to solving hard sequential decision-making problems that cannot currently be ...
-
-방법 관련 발췌 — To address the gap, we present Safety Gym: a set of tools for accelerating safe exploration research.
+Safety Gym은 연속 제어에서 탐색하는 동안 얻는 보상과 위반 비용을 따로 기록해 제약 강화학습 알고리즘을 비교한다. [PDF 1쪽](https://cdn.openai.com/safexp-short.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** To address the gap, we present Safety Gym: a set of tools for accelerating safe exploration research.
-- **p. 2 / 1 Introduction - extractive body cue:** Towards standardizing safety specifications: Based on a range of prior work, we propose to standardize constrained RL [Altman, 1999] as the main formalism for incorporating ...
-- **p. 1 / Abstract - extractive body cue:** First, building on a wide range of prior work on safe reinforcement learning, we propose to standardize constrained RL as the main formalism for safe ...
-- **p. 1 / Abstract - extractive body cue:** Second, we present the Safety Gym benchmark suite, a new slate of high-dimensional continuous control environments for measuring research progress on constrained RL.
-- **p. 21 / 5.3 Results - extractive body cue:** By success, we mean attaining improvements simultaneously along both the episodic return axis and the constraint regret axis, while still producing a constraint-satisfying policy at ...
-- **p. 14 / 5 Experiments - extractive body cue:** However, we highlight a few common rules that guide our discussion: • All agents that fail to satisfy constraints are strictly worse than all agents ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Figure 3: Constraint elements used in our environments. currently-highlighted button, which is the goal button. After the agent presses the correct button, the environment will ...
-- **p. 14 / 5 Experiments - extractive body cue:** Metrics: To characterize the task and safety performance of an agent and its training run, we measure the following throughout training: • The average episodic ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 이동 로봇과 목표·위험 요소를 조합해 같은 과제에서도 제어와 안전 제약의 난도를 바꿀 수 있게 했다. [PDF 9쪽](https://cdn.openai.com/safexp-short.pdf#page=9) · [PDF 10쪽](https://cdn.openai.com/safexp-short.pdf#page=10) · [PDF 12쪽](https://cdn.openai.com/safexp-short.pdf#page=12)
+- 최종 정책의 보상·제약 위반과 학습 과정 전체의 평균 비용률을 각각 계산해 기준 알고리즘을 비교했다. [PDF 14쪽](https://cdn.openai.com/safexp-short.pdf#page=14) · [PDF 16쪽](https://cdn.openai.com/safexp-short.pdf#page=16)
 
 ## Evaluation Scope
 

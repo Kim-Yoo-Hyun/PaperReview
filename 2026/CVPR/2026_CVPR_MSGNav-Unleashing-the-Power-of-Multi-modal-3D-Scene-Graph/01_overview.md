@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Previous RL-based embodied navigation methods suffer from poor generalization and a large sim-to-real gap [44].
-
-방법 관련 발췌 — Our contributions can be summarized as follows: • M3DSG: We propose a multi-modal 3D scene graph that incorporates visual information, overcoming pure-text limitations and enhancing open-vocabulary scene representation for embodied navi ...
+MSGNav는 탐색하며 본 RGB-D 영상으로 물체 사이 관계를 보존하는 3차원 장면 그래프를 만들고 목표를 관측할 위치를 고른다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 1. Introduction - extractive body cue:** Our contributions can be summarized as follows: • M3DSG: We propose a multi-modal 3D scene graph that incorporates visual information, overcoming pure-text limitations and enhancing ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address this issue, we introduce a visibility-based viewpoint decision module in our MSGNav.
-- **p. 2 / 1. Introduction - extractive body cue:** 1, we introduce the Multi-modal 3D Scene Graph (M3DSG), which replaces the pure-text relational edges with dynamically assigned images to incorporate visual cues, and facilitates ...
-- **p. 3 / 3.1.2. Overview - extractive body cue:** Unlike traditional 3D scene graph [9] which uses textual relation edges, our method stores images to describe detailed object relations directly.
-- **p. 5 / 3.3. MSGNav Embodied Navigation System - extractive body cue:** To fully exploit this, we propose the navigation system MSGNav.
-- **p. 7 / 4.2.2. HM3D-ObjNav Benchmark - extractive body cue:** As shown in Table 2, MSGNav achieves a state-of-the-art Success Rate (SR) of 74.1%, which is 1.9% higher than that of the previous best-performing method ...
-- **p. 6 / 4.1. Experimental Setting - extractive body cue:** Following standard practice, we assess navigation performance using Success Rate (SR = Nsuccess Ntotal ) and Success weighted by Path Length (SPL = 1 Ntotal ...
-- **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Experiments on the HM3D-ObjNav benchmark. gains 12.5% in SR and 6.7% in SPL (row 3). Notably, in- troducing either AVU (row 4) or ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 쌍을 함께 관측한 영상을 그래프 간선에 저장하고 관련 부분 그래프의 추론 및 가시성 평가로 마지막 접근 시점을 선택한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=6)
+- GOAT-Bench와 HM3D-ObjNav에서 성공률과 경로 효율을 측정하고 그래프 처리 및 최종 시점 선택의 효과를 비교했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

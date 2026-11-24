@@ -12,18 +12,16 @@
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, Deep Q-Network, Value Learning
 - Official paper: https://doi.org/10.1038/nature14236
-- Full-text retrieval: https://doi.org/10.1038/nature14236
+- Full-text retrieval: https://www.nature.com/articles/nature14236.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.nature.com/articles/nature14236.pdf) 기준이다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Indeed, in certain games DQN is able to discover a relatively long-term strategy (for example, Breakout: the agent learns the optimal strategy, which is to first dig a tunnel around the side ...
-
-방법 관련 발췌 — Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average score-per-ep ...
+DQN은 화면과 보상만으로 합성곱 신경망이 행동가치를 학습하게 해 여러 Atari 게임을 같은 학습 절차로 플레이한다. [PDF 1쪽](https://www.nature.com/articles/nature14236.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 2 6 F E B R U A R Y - extractive body cue:** Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average ...
-- **p. 2 / 2 6 F E B R U A R Y - extractive body cue:** The input to the neural network consists of an 843 843 4 image produced by the preprocessing map w, followed by three convolutional layers (note: ...
-- **p. 3 / V O L - extractive body cue:** Furthermore, we also show that the representations learned by DQN are able to generalize to data generated from policies other than its own-in simulations where ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The final hidden layer is fully-connected and consists of 512 rectifier units.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Here we use recent advances in training deep neural networks9-11 to develop a novel artificial agent, termed a deep Q-network, that can learnsuccessfulpoliciesdirectlyfromhigh-dimensionalsensoryinputs using end-to-end ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, Krull ...
-- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Rectified linear units improve restricted Boltzmann machines.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 저장한 전이를 무작위로 재표집하고 별도의 목표 네트워크로 시간차 학습의 목표값을 계산한다. [PDF 1쪽](https://www.nature.com/articles/nature14236.pdf#page=1) · [PDF 2쪽](https://www.nature.com/articles/nature14236.pdf#page=2)
+- 49개 게임에서 학습한 에이전트의 점수를 무작위 및 전문 플레이어의 점수로 정규화해 게임별 성능을 비교했다. [PDF 2쪽](https://www.nature.com/articles/nature14236.pdf#page=2) · [PDF 3쪽](https://www.nature.com/articles/nature14236.pdf#page=3)
 
 ## Evaluation Scope
 

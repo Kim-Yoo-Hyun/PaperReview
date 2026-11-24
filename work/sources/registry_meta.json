@@ -11,12 +11,12 @@
     }
   ],
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-11-22",
+  "generated_on": "2026-11-24",
   "paper_count": 1252,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "0bd361c551b74718547543cfc9f620c8f41435b8a687f2a49e0327bba5684169",
+  "manifest_sha256": "4088e6e7ca3a9389a691bbf5fd1c21a99d8506d0945bcc80224b56e343535e0b",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
   "relation_count": 91,
@@ -118,6 +118,13 @@
         "verified_on": "2026-11-24",
         "count": 100,
         "baseline_commit": "7f49e6ff2c9f9cab212c65418f9121c5f2dd4922"
+      },
+      {
+        "batch": "reference-summary-04",
+        "tier": "REFERENCE",
+        "verified_on": "2026-11-24",
+        "count": 100,
+        "baseline_commit": "8f99ff9bf6765c7aefba27ec29cdc39d5b854e23"
       }
     ],
     "artifact_review": {
@@ -126,7 +133,7 @@
       "count": 43,
       "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
     },
-    "manifest_sha256": "0bd361c551b74718547543cfc9f620c8f41435b8a687f2a49e0327bba5684169",
+    "manifest_sha256": "4088e6e7ca3a9389a691bbf5fd1c21a99d8506d0945bcc80224b56e343535e0b",
     "initial_verified_on": "2026-11-20"
   }
 }

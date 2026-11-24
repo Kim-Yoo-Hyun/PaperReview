@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, it is still challenging for these methods to generalize
-
-방법 관련 발췌 — In this work, we introduce grounding masks as a promising intermediate representation that balances two key aspects: (1) Effective spatial guidance, which not only specifies target objects and placement areas but also ...
+RoboGround는 지시가 가리키는 물체와 배치 영역의 마스크를 로봇 정책에 전달해 조작 행동의 공간적 목표를 지정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** In this work, we introduce grounding masks as a promising intermediate representation that balances two key aspects: (1) Effective spatial guidance, which not only specifies ...
-- **p. 2 / 1. Introduction - extractive body cue:** To address dataset limitations, we propose an automated pipeline for generating simulated manipulation data with a diverse set of objects and instructions.
-- **p. 5 / 4.3. Grounded Policy Network - extractive body cue:** To address this, we propose guiding attention toward regions defined by grounded masks, ensuring that essential information is preserved for effective manipulation.
-- **p. 5 / 4.3. Grounded Policy Network - extractive body cue:** The encoded feature Zv consists of a global representation ZCLS v ∈R1×Dv, obtained from the CLS token, and a set of local patch representations ZP ...
-- **p. 6 / 4.3. Grounded Policy Network - extractive body cue:** To integrate grounded masks, we introduce two additional sets of query tokens: Qo ∈Rk×Dp for the target object and Qp ∈ Rk×Dp for the target ...
-- **p. 7 / 5.3. Zero-shot Evaluation - extractive body cue:** Notably, in more challenging scenarios, mask guidance achieves approximately 100% relative improvement over non-mask baselines, highlighting its crucial role in handling complex, unseen situations.
-- **p. 8 / 5.4. Ablation Study - extractive body cue:** Fine-tuning on simulation data alone significantly improves results but risks losing the knowledge embedded in the original VLM dataset.
-- **p. 7 / 5.2. Main Results - extractive body cue:** Interestingly, we observe a consistent gap between the success rate and the contact rate, with the latter being significantly higher.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 여러 물체와 지시를 포함하는 시뮬레이션 자료를 자동 생성하고 마스크 정보를 조건으로 사용하는 조작 정책을 구성했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=5)
+- 물체와 언어가 달라지는 조작 조건에서 정책 성공률을 비교하고 마스크와 학습 자료가 일반화에 주는 영향을 조사했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

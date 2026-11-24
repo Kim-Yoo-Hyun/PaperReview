@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Method), p. 8 (Figure/Table caption), p. 7 (Method), p. 4 (C C), p. 6 (C C)): Table 2: Task success rates across three baseline methods. RL-VMC with end-to-end visuomotor control completely fails to solve any of the activities, whereas RL-Prim. and RL-Prim.Hist. with action primitives are ...
+1,000개는 정의한 활동의 수다. 기준 정책 비교는 StoreDecoration·CollectTrash·CleanTable 세 활동에서 수행했다. CollectTrash 실물 전이에서 학습 정책은 26회 중 성공 0회였다. [PDF 6쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=8)
 
 ## Evaluation Body Digest
 
@@ -21,7 +21,7 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Method), p. 8
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `BENCHMARK / DATASET`.
+- **Evaluation type:** `BENCHMARK / DATASET WITH SIMULATION AND REAL-ROBOT COMPARISON`.
 - **Target system/task:** defined robot simulator/hardware task suite.
 - **Input boundary:** standardized observation, action, task state와 evaluation split.
 - **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
@@ -142,6 +142,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Method), p. 8
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
+
+- CollectTrash의 학습 정책은 시뮬레이션 시행 50회와 실물 시행 26회로 평가했다. 사람 입력으로 정한 최적 정책의 실물 평가는 시행 27회다. [PDF 8쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=8)
 
 | Body reproducibility cue | Anchor |
 |---|---|

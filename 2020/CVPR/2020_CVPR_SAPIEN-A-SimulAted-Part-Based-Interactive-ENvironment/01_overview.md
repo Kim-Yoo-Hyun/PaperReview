@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf
 - Code/Project: https://sapien.ucsd.edu/
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — It faces challenges from four main aspects: 1) The environment needs to reproduce the real-world physics to some level.
-
-방법 관련 발췌 — The input of the agent consists of point clouds, normal maps and segmentation masks captured by three fixed cameras mounted on the left, right and front of the arena respectively.
+SAPIEN은 관절이 있는 생활 물체의 부품 기하와 움직임을 표현해 시각 인식 및 물체 조작을 평가하는 물리 시뮬레이션 환경이다. [PDF 1쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 8 / 4.2. Robotic Interaction - extractive body cue:** The input of the agent consists of point clouds, normal maps and segmentation masks captured by three fixed cameras mounted on the left, right and ...
-- **p. 1 / 1. Introduction - extractive body cue:** We show the ray-traced scene (top) and robot camera views (bottom): RGB image, surface normals, depth and semantic segmentation of motion parts, while a robot ...
-- **p. 7 / 4.2. Robotic Interaction - extractive body cue:** Also, this mode enables end-toend learning for perception and interactions (e.g., learning perception with a specific interaction target).
-- **p. 7 / 4.2. Robotic Interaction - extractive body cue:** Having both diverse object categories and rich intra-class instance variations allows us to perform such tasks on multiple object instances at category levels.
-- **p. 8 / 4.2. Robotic Interaction - extractive body cue:** To demonstrate our simulator in manipulation tasks, we first use manually designed heuristic pipelines to solve the tasks.
-- **p. 8 / 4.2. Robotic Interaction - extractive body cue:** This method (PBVS) achieves an 81.8% success rate for door opening.
-- **p. 8 / 4.2. Robotic Interaction - extractive body cue:** Using ground-truth visual information, we can achieve a 95.3% success rate.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Robotic Interaction tasks. We study two robotic interaction tasks: door-opening and drawer-pulling. architectures, loss designs, and training protocols. We summarize the experimental results ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- PartNet-Mobility의 관절 물체 자산을 센서 렌더링·물리 상호작용과 연결해 부품 수준의 학습 데이터를 생성한다. [PDF 3쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=5)
+- 움직이는 부품 검출과 운동 속성 추정을 평가하고 휴리스틱 및 강화학습 기반의 물체 상호작용을 시연했다. [PDF 6쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf#page=8)
 
 ## Evaluation Scope
 

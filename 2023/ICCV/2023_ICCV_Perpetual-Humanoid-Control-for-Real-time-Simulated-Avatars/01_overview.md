@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, motion imitation
 - Official paper: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html
-- Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html
+- Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf
 - Code/Project: https://zhengyiluo.github.io/PHC-Site/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — These limitations prevent the widespread adoption of physics-based methods, as current control policies cannot handle noisy observations such as video or language.
-
-방법 관련 발췌 — To summarize, our contributions are as follows: (1) we propose a Perpetual Humanoid Controller that can successfully imitate 98.9% of the AMASS dataset without applying any external forces; (2) we propose the ...
+Perpetual Humanoid Control은 물리 시뮬레이션의 휴머노이드가 다양한 기준 동작을 모방하다 넘어져도 스스로 일어나 추종을 이어가도록 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are as follows: (1) we propose a Perpetual Humanoid Controller that can successfully imitate 98.9% of the AMASS dataset without applying ...
-- **p. 5 / 3.1. Goal Conditioned Motion Imitation with Ad - extractive body cue:** Thus, we propose Relaxed Early Termination (RET), which allows the humanoid's ankle and toes to slightly deviate from the MoCap motion to remain balanced.
-- **p. 3 / 3.1. Goal Conditioned Motion Imitation with Ad - extractive body cue:** The simulation state st ≜(sp t, sg t) consists of humanoid proprioception sp t and the goal state sg t.
-- **p. 4 / 3.1. Goal Conditioned Motion Imitation with Ad - extractive body cue:** Unlike prior motion tracking policies that only use a motion imitation reward, we use the recently proposed Adversarial Motion Prior [33] and include a discriminator ...
-- **p. 5 / 3.2. Progressive Multiplicative Control Policy - extractive body cue:** Thus, we propose a progressive multiplicative control policy (PMCP), which allocates new subnetworks (primitives P) to learn harder sequences.
-- **p. 8 / 4.1. Motion Imitation - extractive body cue:** H36M-Test-Video* RET MCP PNN Rotation Fail-Recover Succ ↑ Eg-mpjpe ↓ Empjpe ↓ ✗ ✗ ✗ ✓ ✗ 51.2% 56.2 34.4 ✓ ✗ ✗ ✓ ✗ ...
-- **p. 7 / 4.1. Motion Imitation - extractive body cue:** Similar to results on MoCap Imitation, PHC outperforms the baselines 10901
-- **p. 7 / 4.1. Motion Imitation - extractive body cue:** On testing, PHC shows a high success rate on unseen MoCap sequences from both the AMASS and H36M data.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 점차 어려운 동작을 학습할 때 새 정책 구성 요소를 추가하고 기존에 익힌 동작을 보존하면서 복구 행동을 통합한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=5)
+- 모션 캡처 동작과 잡음이 있는 자세 입력에 대한 추종 정확도 및 실패 후 복구 능력을 시뮬레이션에서 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=8)
 
 ## Evaluation Scope
 

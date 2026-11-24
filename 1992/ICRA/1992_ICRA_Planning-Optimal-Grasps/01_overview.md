@@ -12,14 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Grasp Planning, manipulation, contact
 - Official paper: https://api.crossref.org/works/10.1109/ROBOT.1992.219918
-- Full-text retrieval: https://doi.org/10.1109/ROBOT.1992.219918
+- Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (6 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918) 기준이다.
 
 ## Why This Paper Is Here
 
-Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해하기 위해 읽는다. 본문은 Because of their intricate design, they are difficult to control and plan.
+Ferrari와 Canny는 접촉이 가할 수 있는 힘과 토크를 이용해 외란에 견디는 파지의 품질을 정량화한다. [PDF 1쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918#page=1)
 
 ## Problem and Motivation
 
@@ -53,11 +53,8 @@ Manipulation, contact, tactile, and dexterity의 manipulation 문제를 이해�
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1 Introduction - extractive body cue:** In section four, we introduce and discuss the quality criteria we are proposing.
-- **p. 1 / 1 Introduction - extractive body cue:** We give a geometric interpretation of the criteria which unifies them, and allows simple algorithms for optimal grasp planning according to either criterion.
-- **p. 3 / 4.1 Representing Anger forces - extractive body cue:** We therefore want to guarantee a level of performance as judged by the local quality measure over all possible wrenches, and this is the measure ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 손가락 힘의 합과 각 손가락의 최대 힘을 각각 제한할 때 가능한 일반화 힘의 집합을 기하학적으로 구성한다. [PDF 2쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918#page=2) · [PDF 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918#page=3) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918#page=4)
+- 품질 기준의 기하적 해석을 파지 계획에 적용해 두 턱 및 세 턱 그리퍼의 평면 물체 사례를 제시했다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918#page=5) · [PDF 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=219918#page=6)
 
 ## Evaluation Scope
 

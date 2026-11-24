@@ -1,6 +1,6 @@
 # VoLo: A Physical Orchestrator for Open-Vocabulary Long-Horizon Manipulation
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CoRL
@@ -11,18 +11,20 @@
 - Tags: Planning, language, execution
 - Aliases:
 - Official paper: https://arxiv.org/abs/2606.07723
+- Full-text retrieval: https://arxiv.org/pdf/2606.07723v1
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://chicychen.github.io/VoLo/
 - Code: https://github.com/NVlabs/VoLoAgent
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-다양한 저수준 도구를 long-horizon 언어 계획에 연결한다.
+VoLoAgent는 시각언어모형이 로봇 정책과 인식·동작 도구를 호출하고 실행 중에도 진행을 감시해 장기 조작의 계획을 바꿀 수 있게 한다. [PDF 1쪽](https://arxiv.org/pdf/2606.07723v1#page=1)
 
 ## Core Idea and Contribution
 
-VLM orchestrator가 interruptible VLA/WAM·perception/action 도구를 조정한다.
+- 열린 어휘 지시를 갖는 RoboVoLo 벤치마크를 구성하고 하위 정책의 실행을 중단·재지시할 수 있는 인터페이스를 제시했다. [PDF 4쪽](https://arxiv.org/pdf/2606.07723v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2606.07723v1#page=5)
+- 시뮬레이션에서 작업 성공과 실패 단계를 분석하고 실물 과제에서 진행 감시와 실패 복구를 시험했다. [PDF 6쪽](https://arxiv.org/pdf/2606.07723v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2606.07723v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2606.07723v1#page=8) · [PDF 9쪽](https://arxiv.org/pdf/2606.07723v1#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ VLM orchestrator가 interruptible VLA/WAM·perception/action 도구를 조정한
 
 RoboVoLo와 실제 open-vocabulary long-horizon manipulation 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://openreview.net/forum?id=sF3YZbbTNX) · [저자 project/code](https://chicychen.github.io/VoLo/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openreview.net/forum?id=sF3YZbbTNX) · [저자 project/code](https://chicychen.github.io/VoLo/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

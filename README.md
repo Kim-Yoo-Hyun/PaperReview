@@ -19,7 +19,7 @@
 |---:|---:|---:|---:|---:|
 | 1,252 | 50 | 450 | 510 | 242 |
 
-2026-11-24 기준 표준 노트는 6,260개다. 전체 1,252편 중 914편의 요약·기여를 원문과 대조했다. CORE 50편과 NEXT 450편은 모두 확인했고, REFERENCE는 510편 중 370편, ARCHIVE는 242편 중 44편을 확인했다. 사용자 정독 진척은 읽기 기록에서 확인할 수 있다. [원문 감사](./research/SOURCE_AUDIT.md) · [읽기 기록](./research/READING_STATUS.csv) · [레지스트리 통계](./research/REGISTRY_STATS.md)
+2026-11-24 기준 표준 노트는 6,260개다. 전체 1,252편 중 1,014편의 요약·기여를 원문과 대조했다. CORE 50편과 NEXT 450편은 모두 확인했고, REFERENCE는 510편 중 470편, ARCHIVE는 242편 중 44편을 확인했다. 사용자 정독 진척은 읽기 기록에서 확인할 수 있다. [원문 감사](./research/SOURCE_AUDIT.md) · [읽기 기록](./research/READING_STATUS.csv) · [레지스트리 통계](./research/REGISTRY_STATS.md)
 
 ## 사용법
 

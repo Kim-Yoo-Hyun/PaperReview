@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This approach avoids redundancy in multi-view methods and limitations of bird's-eye views, which lack height and orientation details.
-
-방법 관련 발췌 — Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG.
+SeeGround는 질의에 맞춰 렌더링한 장면 이미지와 물체의 공간 설명을 2차원 시각언어모형에 제공해 3차원 지시 대상을 찾는다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our contributions are as follows: • We introduce SeeGround, a training-free solution for zero-shot 3DVG.
-- **p. 2 / 1. Introduction - extractive body cue:** Considering that 2D-VLMs cannot process 3D data directly, we introduce a cross-modal alignment representation that enables 2D-VLMs to interpret 3D scenes.
-- **p. 3 / 3. Methodology - extractive body cue:** (1) In this work, we propose a novel method for 3DVG that integrates 2D-VLM with spatially enriched 3D scene representations.
-- **p. 3 / 3. Methodology - extractive body cue:** This representation allows our framework to align the rich visual features from 2D renderings with the spatial context from 3D scene descriptions.
-- **p. 4 / 3.2. Perspective Adaptation Module - extractive body cue:** To meet these needs, we propose a query-driven dynamic scene rendering method that aligns the rendered viewpoint with the query description, capturing more scene details, ...
-- **p. 7 / 4.2. Comparative Study - extractive body cue:** Our method achieves 46.1% accuracy on Nr3D, which is a 18.2% improvement over the previous zero-shot baseline, ZSVG3D [60] (39.0%).
-- **p. 7 / 4.2. Comparative Study - extractive body cue:** While fully supervised methods like MCLN [41] and ConcreteNet [47] achieve higher accuracy, our proposed SeeGround framework demonstrates competitive zero-shot performance, highlighting its potential for ...
-- **p. 6 / 4.2. Comparative Study - extractive body cue:** 1 compares methods on the ScanRefer dataset. our method outperforms other zero-shot methods [55, 60] and the weakly supervised WS-3DVG [50], achieving competitive results with ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 질의와 관련된 관점에서 점군을 투영하고 물체의 시각적 표시와 3차원 위치 정보를 정렬한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=5)
+- ScanRefer와 Nr3D에서 추가 과제 학습 없이 위치 특정 성능을 평가하고 시점 선택 방식의 영향을 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_SeeGround_See_and_Ground_for_Zero-Shot_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

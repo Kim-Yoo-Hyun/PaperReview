@@ -1,28 +1,32 @@
 # Online Continual Learning with Maximal Interfered Retrieval
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2019 / NeurIPS
-- Authors: Rahaf Aljundi, Eugene Belilovsky, Tinne Tuytelaars, Laurent Charlin, Massimo Caccia, Min Lin, Lucas Page-Caccia
+- Authors: Rahaf Aljundi, Lucas Caccia, Eugene Belilovsky, Massimo Caccia, Min Lin, Laurent Charlin, Tinne Tuytelaars
+- NeurIPS 게재 PDF 표제면의 일곱 저자를 인쇄 순서대로 반영했다. 학회 웹 서지는 Lucas Page-Caccia를 일곱 번째로, 게재 PDF는 Lucas Caccia를 두 번째로 표기한다. [게재 PDF](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=1) · [학회 서지](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html)
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
 - Tags: continual-learning, replay, robot-learning
 - Aliases: MIR, Online Continual Learning with Maximally Interfered Retrieval
+- 게재 PDF에는 “Online Continual Learning with Maximally Interfered Retrieval”라는 제목이 실렸다. [표제면](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=1) · [학회 서지](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html)
 - Official paper: https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html
+- Full-text retrieval: https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf
 - Venue verification: https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html
 - Code/Project: https://github.com/optimass/Maximally_Interfered_Retrieval
 - Code: https://github.com/optimass/Maximally_Interfered_Retrieval
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-Continual 학습에서 과거 memory를 무작위로 고르는 한계를 다룬다.
+MIR은 새 자료로 다음 학습 갱신을 수행했을 때 손실이 크게 늘 것으로 예상되는 과거 예를 골라 온라인 연속학습에서 다시 사용한다. [PDF 1쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=1)
 
 ## Core Idea and Contribution
 
-예상 parameter update 뒤 손실이 많이 증가할 sample을 선택해 replay한다.
+- 가상 매개변수 갱신 전후의 예측 손실 변화를 이용해 저장 메모리와 생성 재생에서 간섭이 큰 표본을 찾는다. [PDF 3쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=3) · [PDF 4쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=4) · [PDF 5쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=5)
+- 단일 통과 분류 설정에서 무작위 재생 등과 정확도 및 망각을 비교하고 표본 선택 구성의 효과를 측정했다. [PDF 7쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=7) · [PDF 8쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=8) · [PDF 9쪽](https://proceedings.neurips.cc/paper/2019/file/15825aee15eb335cc13f9b559f166ee8-Paper.pdf#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +36,7 @@ Continual 학습에서 과거 memory를 무작위로 고르는 한계를 다룬�
 
 Continual learning benchmark에서 경험/생성 replay 비교를 보고한다.
 
-근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/Maximally_Interfered_Retrieval). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2019/hash/15825aee15eb335cc13f9b559f166ee8-Abstract.html) · [저자 project/code](https://github.com/optimass/Maximally_Interfered_Retrieval). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2307.04577
 - Code/Project: https://research.nvidia.com/labs/srl/publication/qin-2023-any-teleop/
 - Paper type: system
-- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.roboticsproceedings.org/rss19/p015.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — teleoperating dexterous hand-arm systems poses unprecedented challenges and often requires specialized apparatus that comes with high costs and setup efforts, such as Virtual Reality (VR) devices [4, 17, 15], wearable gloves [29, ...
-
-방법 관련 발췌 — To this end, we propose AnyTeleop, a unified and general teleoperation system (Fig.
+AnyTeleop은 카메라로 사람 손을 추적해 여러 로봇팔과 손에 동작을 전달하는 공통 원격조작 시스템이다. [PDF 1쪽](https://www.roboticsproceedings.org/rss19/p015.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** To this end, we propose AnyTeleop, a unified and general teleoperation system (Fig.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** It enables smooth deployment on different simulators or real hardware.
-- **p. 1 / Body text (section not recovered) - extractive body cue:** 1: We present AnyTeleop, a vision-based teleoperation system for a variety of scenarios to solve a wide range of manipulation tasks.
-- **p. 3 / III. SYSTEM OVERVIEW - extractive body cue:** Below we introduce the features and designs of our system which realize the paradigms.
-- **p. 4 / IV. TELEOPERATION SERVER - extractive body cue:** It consists of four modules: (i) the hand pose detection module, which predicts hand wrist and finger poses from the camera stream, (ii) the detection ...
-- **p. 6 / VI. SYSTEM EVALUATION - extractive body cue:** Luckily, with our communication-oriented design, we can run the control modules on a separate machine to achieve the best performance.
-- **p. 7 / VI. SYSTEM EVALUATION - extractive body cue:** The success rate is computed from 100 trials.
-- **p. 7 / VI. SYSTEM EVALUATION - extractive body cue:** The right table shows the success rate of the evaluated methods.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 손 자세 추정, 로봇 손 관절로의 리타게팅, 팔 동작 생성을 분리해 카메라와 하드웨어 조합을 바꿀 수 있게 했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss19/p015.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss19/p015.pdf#page=5)
+- 실물 원격조작의 과제 성공과 시뮬레이터에서 시연을 수집해 학습한 모방 정책의 성능을 별도로 비교했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss19/p015.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss19/p015.pdf#page=7)
 
 ## Evaluation Scope
 

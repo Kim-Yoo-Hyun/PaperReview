@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Despite its promising applications, automatic generation of precise and complete semantic occupancy annotations from raw sensor data remains a fundamental challenge, particularly in the pursuit of costeffective solutions for real-world ...
-
-방법 관련 발췌 — Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided differentiable reconstruction. • We de ...
+AutoOcc는 카메라 관측에서 물체의 의미와 공간 점유를 추정해 복셀 단위의 3차원 주석을 자동으로 생성한다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Our main contributions include: • We present AutoOcc, a vision-centric automatic annotation pipeline that supports open-ended semantic 3D occupancy label generation, based on vision-language guided ...
-- **p. 5 / 3.2. VL-GS - extractive body cue:** Unlike dense voxels or point clouds, our method allows for representing regions of interest with sparse Gaussians, aided by scalability and semantic attention maps.
-- **p. 2 / 1. Introduction - extractive body cue:** Our method further exhibits excellent open-ended and zero-shot generalization capabilities, as evidenced by cross-dataset experiments.
-- **p. 4 / 3. Method - extractive body cue:** Concurrently, our method supports LiDAR input, serving as a robust geometric prior constraint.
-- **p. 4 / 3.1. Vision-Language Guidance - extractive body cue:** To overcome these limitations, we propose a guidance framework centered around semantic attention maps and resolve ambiguities through scene reconstruction, thereby preserving 3D semantic and ...
-- **p. 6 / 4.2. Performance Evaluation and Analysis - extractive body cue:** As shown in Table 2, our vision-centric method outperforms these pipelines that utilize LiDAR point clouds.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** As shown in Table 2, using pure visual input, our method outperforms GaussianOcc [13], which utilizes vanilla GS as an intermediate representation.
-- **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** In extreme weather conditions (e.g., rain and nighttime), our method maintains robust performance, achieving annotation results comparable to or even surpassing manually labeled ground truth.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 시각언어모형에서 의미 정보를 얻어 가우시안 장면 표현에 결합하고 복셀마다 가우시안의 기여를 누적한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=5)
+- Occ3D-nuScenes의 점유 주석과 SemanticKITTI로의 전이를 평가하고 주석 생성 시간도 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_AutoOcc_Automatic_Open-Ended_Semantic_Occupancy_Annotation_via_Vision-Language_Guided_Gaussian_ICCV_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

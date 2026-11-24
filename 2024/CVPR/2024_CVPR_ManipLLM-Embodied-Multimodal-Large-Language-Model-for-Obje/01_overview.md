@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Consequently, MLLMs lack prior knowledge in this field while successful training for these tasks necessitates extensive data to achieve desired generalization ability.
-
-방법 관련 발췌 — Meanwhile, in real-world experiments, our method shows strong generalization ability, with or without TTA strategy.
+ManipLLM은 물체 영상과 지시에서 상호작용할 지점 및 그리퍼 방향을 추론해 관절 물체의 조작을 시작한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Meanwhile, in real-world experiments, our method shows strong generalization ability, with or without TTA strategy.
-- **p. 2 / 1. Introduction - extractive body cue:** Experiments show that in the simulator, our method achieves a promising manipulation success rate across 30 categories.
-- **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** It thus significantly improves the manipulation success rate by +7%.
-- **p. 6 / 4.1. Training Details - extractive body cue:** If successful manipulation is achieved, we record it as a successful sample.
-- **p. 6 / 4.1. Training Details - extractive body cue:** We adopt the manipulation success rate to reflect the outcome of the manipulation which is the ratio of the number of successfully manipulated samples divided ...
-- **p. 7 / 4.2. Quantitative Comparison - extractive body cue:** The success rate of VoxPoser is 14.0% while ours is 69.0%.
-- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** The results of real-world experiments are shown in Table 3.
-- **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** Object Category Success/Total 4/5 5/5 4/5 3/5 4/5 4/5 4/5 Distance(m) 0.17 0.28 0.10 0.08 0.14 0.15 0.18 Table 3.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물체 범주, 움직일 부분, 접촉 자세를 차례로 학습하는 어댑터를 멀티모달 언어모형에 추가했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=5)
+- 새 물체 범주에서 접촉 자세 예측을 비교하고 실물에서는 상호작용 피드백으로 동작을 조정하는 사례를 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=8)
 
 ## Evaluation Scope
 

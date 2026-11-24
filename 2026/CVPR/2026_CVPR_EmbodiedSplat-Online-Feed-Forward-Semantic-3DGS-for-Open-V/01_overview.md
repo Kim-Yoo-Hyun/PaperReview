@@ -15,15 +15,13 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf) 기준이다.
 
 > DOC-QA1 (2026-10-23): 제어문자·깨진 추출 구간과 직접 연결된 표 항목을 PDF 페이지 이미지와 대조했다. 확인 범위·원문 URL·페이지·수정 이력은 [대조 기록](../../../work/sources/pdf_note_review_2026-10-23.json)에 있다. 노트 전체의 정독이나 모든 기존 주장에 대한 재검증을 뜻하지 않으며 reading status는 유지한다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Nevertheless, all of them share two limitations in embodied scenarios:
-
-방법 관련 발췌 — Our contributions are as follows: • Novel framework for embodied 3D perception which enables online, whole-scene reconstruction for languageembedded 3DGS with up to 5-6 FPS inference speed. • Combination of 2D CLIP ...
+EmbodiedSplat은 이동하며 들어오는 영상으로 3차원 가우시안 지도를 만들면서 열린 어휘로 장면의 의미를 질의할 수 있게 한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -57,16 +55,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** Our contributions are as follows: • Novel framework for embodied 3D perception which enables online, whole-scene reconstruction for languageembedded 3DGS with up to 5-6 FPS ...
-- **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** To this end, we propose EmbodiedSplat, a novel online framework to endow pretrained feed-forward 3DGS [44] with open-vocabulary capability.
-- **p. 1 / 1. Introduction - extractive body cue:** In this paper, our objective is to develop an embodied perception model that meets the above five conditions by leveraging 3D Gaussian Splatting (3DGS) [20].
-- **p. 1 / 1. Introduction - extractive body cue:** 3DGS is the recent 3D representation that supports real-time novel view synthesis with explicit structure which existing repreThis CVPR paper is the Open Access version, ...
-- **p. 3 / 3. Preliminaries - extractive body cue:** Since FreeSplat++ is designed for offline use, we modify its inference pipeline to enable online perception from streaming images: 1) Input selection.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparisons on 3D Semantic Segmentation across ScanNet [6], ScanNet200 [38] and ScanNet++ [53]. We compare the performance of our EmbodiedSplat with existing ...
-- **p. 8 / 5.2. Ablation Studies - extractive body cue:** 4, our codebook-based cosine similarity (2nd row) significantly improves efficiency, achieving nearly 14× faster processing speed compared to the naive per-Gaussian cosine similarity computation (1st ...
-- **p. 7 / 5.1. Experimental Results - extractive body cue:** Nevertheless, our model achieves performance comparable to clustering-based baselines [28, 48].
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 공유 CLIP 코드북에 대한 희소 계수로 가우시안별 의미 특징을 저장하고 점군의 기하 정보를 반영한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=5)
+- 새 장면에서 의미 분할 성능을 비교하고 기하 특징과 온라인 표현의 메모리·처리 비용을 조사했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

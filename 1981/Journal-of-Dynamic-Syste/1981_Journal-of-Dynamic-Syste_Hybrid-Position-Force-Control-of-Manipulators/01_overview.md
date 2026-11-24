@@ -15,13 +15,11 @@
 - Full-text retrieval: https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — The slow progress is due partly to a lack of rugged, reliable sensors of sufficient precision and versatility.
-
-방법 관련 발췌 — Note that the method we propose here does not prescribe particular feedback control laws for the regulation of errors.
+Raibert와 Craig는 작업 좌표계의 방향별로 위치와 힘을 나누어 제어해 접촉 제약을 따르는 로봇팔의 움직임을 생성한다. [PDF 1쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Note that the method we propose here does not prescribe particular feedback control laws for the regulation of errors.
-- **p. 3 / Body text (section boundary not confidently recovered) - extractive body cue:** The transformation form (C) to the joints of the manipulator is such that, for the general case, control of one manipulator joint involves every dimension ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Such techniques are just now being developed.
-- **p. 3 / Body text (section boundary not confidently recovered) - extractive body cue:** The present control methodology was designed to address this low-level control problem.
-- **p. 4 / Body text (section boundary not confidently recovered) - extractive body cue:** To improve thermal immunity, gauges mounted on opposite faces are operated as voltage divider pairs [9J.
-- **p. 5 / Body text (section boundary not confidently recovered) - extractive body cue:** Force control was achieved by combining proportional-integral (PI) control with a saturation-type feedback limiter and a simple feed forward term.
-- **p. 6 / Body text (section boundary not confidently recovered) - extractive body cue:** Therefore, stability is more easily achieved.
-- **p. 7 / Body text (section boundary not confidently recovered) - extractive body cue:** These changes resulted in improved force response -less overshoot and better stability - but did not affect the position servo perceptibly.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 작업이 정하는 운동·힘 제약과 사용자가 지정할 목표를 구분하고 선택 행렬로 두 제어 루프의 명령을 결합한다. [PDF 2쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=2) · [PDF 3쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=3) · [PDF 4쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=4)
+- 시뮬레이션과 힘 센서가 달린 로봇팔에서 목표 힘과 위치 궤적에 대한 제어 응답을 조사했다. [PDF 5쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=5) · [PDF 6쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=6) · [PDF 7쪽](https://fab.cba.mit.edu/classes/865.15/classes/measurement/hybrid-position-force.pdf#page=7)
 
 ## Evaluation Scope
 

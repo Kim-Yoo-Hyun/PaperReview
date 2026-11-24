@@ -1,6 +1,6 @@
 # PROGRESSOR: A Perceptually Guided Reward Estimator with Self-Supervised Online Refinement
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / ICCV
@@ -11,18 +11,20 @@
 - Tags: reward-learning, robot-learning, evaluation
 - Aliases:
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html
+- Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf
 - Venue verification: https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-Video에서 robot 학습에 쓸 progress reward를 얻는다.
+PROGRESSOR는 초기·현재·목표 관측에서 작업 진행도의 분포를 예측해 사람이 단계별로 표시하지 않은 영상으로부터 로봇 학습용 보상을 만든다. [PDF 1쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=1)
 
 ## Core Idea and Contribution
 
-초기·현재·목표 관측으로 progress를 추정하고 online refinement한다.
+- 영상의 시간 순서로 진행도를 자기지도 학습하고 온라인 강화학습에서는 비전문가 관측의 진행도 과대평가를 억제한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=5)
+- 시뮬레이션 온라인 학습과 실물 오프라인 학습을 구분해 평가하고 사람의 일상 영상으로 사전학습한 보상의 전이를 조사했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Video에서 robot 학습에 쓸 progress reward를 얻는다.
 
 Human video와 실제 로봇 offline RL 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

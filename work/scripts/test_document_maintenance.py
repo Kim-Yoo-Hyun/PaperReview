@@ -124,6 +124,30 @@ class DocumentMaintenanceTest(unittest.TestCase):
         record["sources"]["code"]["scope"] = "undefined_scope"
         self.assertIn("invalid sources.code.scope", validate_record_shape(record))
 
+    def test_evaluation_refresh_keeps_page_citations_and_mixed_settings(self):
+        paper = {"paper_id": "paper", "folder": "paper", "title": "Paper"}
+        page = "[PDF 5쪽](https://example.org/paper.pdf#page=5)"
+        note = (
+            "- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.\n"
+            f"## Metrics and Success Definition\n\n과제별 성공률. {page}\n"
+            "## Baselines and Fairness\n\n[PDF 7쪽](https://example.org/paper.pdf#page=5)\n"
+            "## Statistics, Efficiency, and Reproducibility\n\n"
+            f"시뮬레이션 과제별 시드 16개. {page}\n"
+            f"실물 과제별 시행 25회. {page}\n"
+            "추가 실험 계획에는 시행 99회가 필요하다.\n"
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "paper").mkdir()
+            (root / "paper/04_evaluation.md").write_text(note, encoding="utf-8")
+            profiles.enrich_profiles([paper], root)
+        result = paper["evaluation_profile"]
+        self.assertEqual(set(result["settings"]), {"simulation", "real_robot"})
+        self.assertEqual(result["protocol"]["metrics"], "reported")
+        self.assertEqual(result["protocol"]["baselines"], "not_recorded")
+        self.assertEqual([(r["count"], r["unit"]) for r in result["trial_evidence"]],
+                         [(16, "seed"), (25, "trial")])
+
     def test_admitting_a_citing_paper_updates_only_relevant_lineage(self):
         baseline = {"paper_id": "baseline", "folder": "baseline", "title": "Baseline"}
         unrelated = {"paper_id": "other", "folder": "other", "title": "Other"}

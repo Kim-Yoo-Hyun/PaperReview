@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, tactile sensing, Force, contact, manipulation
 - Official paper: https://api.crossref.org/works/10.3390/s17122762
-- Full-text retrieval: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/
+- Full-text retrieval: https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing.
-
-방법 관련 발췌 — In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect the contact and contact force, or force ...
+GelSight는 탄성체 표면의 변형을 카메라로 관측해 접촉면의 미세 기하와 물체가 가하는 하중의 단서를 읽는 광학 촉각 센서다. [PDF 1쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -53,16 +51,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect ...
-- **p. 2 / 1. Introduction - extractive body cue:** The first GelSight prototype was developed in 2009 by Johnson and Adelson [7].
-- **p. 2 / 1. Introduction - extractive body cue:** We have developed sensors that are compact, yet have resolution far exceeding that of human skin.
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 6. Calibration images (part) with different GelSight sensors. During calibration, a ball/ball array is pressed on the sensor, and the image intensity change corresponds ...
-- **p. 15 / 5. Evaluation - extractive body cue:** In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate the sensor's performance in estimating object shapes ...
-- **p. 16 / 5.1. Evaluation of Shape Measurement - extractive body cue:** Examples of the results are shown in Figure 13a.
-- **p. 16 / 5.2. Evaluation of Force Measurement - extractive body cue:** In this preliminary experiment, we train the force measurement neural network with the data of GelSight contacting objects with some basic shapes, including spheres, cylinders ...
-- **p. 17 / 5.2. Evaluation of Force Measurement - extractive body cue:** The results also show that the GelSight measurement of force can be robust regardless of the geometry of the contact objects.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 조명에 따른 반사와 표면 표식의 이동을 사용해 접촉 형상 및 접선 방향 변형을 측정하는 원리를 설명한다. [PDF 4쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=4) · [PDF 5쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=5) · [PDF 6쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=6)
+- 힘·토크가 달라질 때의 표식 변위와 접촉면 변화를 측정해 하중과 미끄럼을 추정하는 조건을 조사했다. [PDF 7쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=7) · [PDF 10쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=10) · [PDF 11쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=11) · [PDF 12쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=12)
 
 ## Evaluation Scope
 

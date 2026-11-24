@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2306.11706
 - Code/Project: https://deepmind.google/discover/blog/robocat-a-self-improving-robotic-agent/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (60 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (60 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2306.11706v2) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In the real world, the shafts are metallic and the base is not fixed to the basket, which significantly increases the difficulty of the task.
-
-방법 관련 발췌 — Our main contributions in this work are outlined below: (1) we demonstrate, for the first time, that a large transformer sequence model can solve a large set of dexterous tasks on multiple ...
+RoboCat은 목표 영상과 여러 로봇팔의 행동 기록으로 범용 조작 정책을 학습하고 새 작업·로봇에 대한 적응을 평가한다. [PDF 1쪽](https://arxiv.org/pdf/2306.11706v2#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 Introduction - extractive body cue:** Our main contributions in this work are outlined below: (1) we demonstrate, for the first time, that a large transformer sequence model can solve a ...
-- **p. 2 / 1 Introduction - extractive body cue:** We introduce the embodiments, tasks, and object sets that we have used in this work in Section 3.
-- **p. 3 / 1 Introduction - extractive body cue:** We describe our experimental setup for both training and evaluation in Section 4, before we present our extensive experiments to support our claims in Section ...
-- **p. 3 / 1 Introduction - extractive body cue:** 2 RoboCat We introduce RoboCat, a self-improving generalist agent for robotic manipulation that can perform multiple tasks and control multiple embodiments in simulation and the ...
-- **p. 4 / 1 Introduction - extractive body cue:** Specifically, the encoder is trained on a dataset that consists of images from ImageNet (Deng et al., 2009), images from the control tasks in Reed ...
-- **p. 17 / 5 Experiments - extractive body cue:** The results in Figure 10 show that the self-improved agent outperforms the baseline agent in all four of these tasks.
-- **p. 13 / 5 Experiments - extractive body cue:** We see from Figure 5(a) that the performance of this smaller model is comparable to RoboCat on the stacking tasks, but significantly lower for the ...
-- **p. 10 / Figure/Table caption - extractive body cue:** Table 1: Final RoboCat performance on evaluation tasks. This table lists the tasks used for training and fine-tuning of the final RoboCat agent, and highlights ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 기존 정책을 새 시연에 맞춰 조정한 뒤 그 정책으로 경험을 더 수집해 다음 범용 정책의 학습에 사용한다. [PDF 3쪽](https://arxiv.org/pdf/2306.11706v2#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2306.11706v2#page=5)
+- 학습에서 본 작업, 보지 못한 작업, 소수 시연 미세조정 조건을 나누어 실물·시뮬레이션에서 전이를 측정했다. [PDF 10쪽](https://arxiv.org/pdf/2306.11706v2#page=10) · [PDF 13쪽](https://arxiv.org/pdf/2306.11706v2#page=13) · [PDF 16쪽](https://arxiv.org/pdf/2306.11706v2#page=16)
 
 ## Evaluation Scope
 

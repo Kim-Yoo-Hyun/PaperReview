@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Planning, graph search, A*
 - Official paper: https://api.crossref.org/works/10.1109/TSSC.1968.300136
-- Full-text retrieval: https://people.stfx.ca/jdelamer/courses/csci-564/_downloads/b2220c66675ddde471ca1795147b8e86/A_Formal_Basis_for_the_Heuristic_Determination_of_Minimum_Cost_Paths.pdf
+- Full-text retrieval: https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — MANY PROBLEIVIS of engineering and scientific importance can be related to the general problem of finding a path through a graph.
-
-방법 관련 발췌 — Procedures developed via the heuristic approach generally have not been able to guarantee that minimum cost solution paths will always be found.
+Hart·Nilsson·Raphael은 시작점까지의 비용과 남은 비용의 휴리스틱 추정값을 결합하는 A* 그래프 탐색을 정식화했다. [PDF 1쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -51,16 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 2) The heuristic approach typically uses special knowl - extractive body cue:** Procedures developed via the heuristic approach generally have not been able to guarantee that minimum cost solution paths will always be found.
-- **p. 1 / A. The Problem of Finding Paths Through Graphs - extractive body cue:** [3] The mathematical approach is generally more concerned with the ultimate achievement of solutions than it is with the computational feasibility of the algorithms developed.
-- **p. 4 / 6. The value of 0(no) remains - extractive body cue:** 0 ,On (3) We assume the infimum is achieved for some fOn In actual problems one probably never has an explicit representation for {Gn,0 but ...
-- **p. 5 / 6. The value of 0(no) remains - extractive body cue:** It means that any estimate h(n) calculated from data available in the "physical" situation represented by node n alone would not be improved by using ...
-- **p. 2 / 2) The heuristic approach typically uses special knowl - extractive body cue:** Application of r to the source nodes, to their successors, and so forth as long as new nodes can be generated results in an explicit ...
-- **p. 2 / 2) The heuristic approach typically uses special knowl - extractive body cue:** The following is a typical illustration of the sort of problem to which our results are applicable.
-- **p. 3 / 1) Mark s "open" and calculatef(s) - extractive body cue:** Starting with s, we obtain successors ni and n2.
-- **p. 3 / 1) Mark s "open" and calculatef(s) - extractive body cue:** Suppose A * expands ni next with successors n2 and n3.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 남은 최적 비용을 과대평가하지 않는 휴리스틱에 대해 논문이 정의한 그래프 조건에서 최소 비용 경로를 찾음을 증명한다. [PDF 2쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=2) · [PDF 3쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=3) · [PDF 4쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=4)
+- 서로 다른 탐색법이 사용하는 휴리스틱 정보와 노드 확장 수를 비교하며 일관성 가정의 역할을 분석한다. [PDF 5쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=5) · [PDF 6쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=6) · [PDF 7쪽](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf#page=7)
 
 ## Evaluation Scope
 

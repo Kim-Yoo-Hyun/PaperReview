@@ -15,15 +15,13 @@
 - Full-text retrieval: https://arxiv.org/pdf/2202.05894
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.roboticsproceedings.org/rss18/p042.pdf) 기준이다.
 
 > DOC-QA2 targeted source review: 2026-10-23; PDF pp. 3. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../work/sources/pdf_note_review_followup_2026-10-23.json).
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Given access to a black-box control policy (e.g., one with neural network components), our goal is to train a failure predictor for this policy.
-
-방법 관련 발췌 — Our primary contribution is to develop an approach for learning a failure predictor with guaranteed bounds on error rates, given a black-box control policy that operates on a robotic system with high-dimensional ...
+이 연구는 영상 관측 이력에서 주어진 로봇 정책의 실패를 예측하고 학습 환경이 표집된 분포에서 오경보와 미탐 확률의 상한을 구한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss18/p042.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,10 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our primary contribution is to develop an approach for learning a failure predictor with guaranteed bounds on error rates, given a black-box control policy that ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** box policy for training purposes, we present a reduction of the failure prediction problem (which involves non-i.i.d. data in the form of sensor observations) to ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we develop novel classconditional bounds that allow us to trade-off the relative rates of false negative vs. false positive errors.
-- **PDF p. 3, §III Eqs. (3)–(4) (DOC-QA2 원문 대조):** 고정 black-box policy에서 failure-predictor distribution D_F를 선택하여 environment distribution D_E와 predictor에 대한 misclassification cost 또는 class-conditional cost expectation을 최소화한다. Training/test environments는 같은 D_E의 i.i.d. sampling 가정이며 arbitrary shift 보장이 아니다.
-- **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** To evaluate the performance of the failure predictor, we introduce the error of applying the predictor f in an environment E where a policy π ...
-- **p. 8 / V. EXPERIMENTAL RESULTS - extractive body cue:** In order to evaluate the failure predictor on policies with different task success rates, we choose three different policies saved at different epochs during training.
-- **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** We aim to examine the improvement in safety of the policy with the addition of the failure predictor; thus, we test in settings that are ...
-- **p. 8 / V. EXPERIMENTAL RESULTS - extractive body cue:** 5 in the drone example, we achieve strong bounds on conditional misclassification Fig.
+- PAC-Bayes 일반화 경계에 기반해 예측기를 학습하고 실패 여부별 조건부 오류를 따로 제한한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss18/p042.pdf#page=3) · [PDF 4쪽](https://www.roboticsproceedings.org/rss18/p042.pdf#page=4)
+- 드론의 시각 내비게이션과 손목 카메라를 이용한 로봇팔 파지에서 오류 상한과 관측한 실패 예측 성능을 비교했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss18/p042.pdf#page=6) · [PDF 7쪽](https://www.roboticsproceedings.org/rss18/p042.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss18/p042.pdf#page=8)
 
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- **PDF p. 3, §III Eqs. (3)–(4) (DOC-QA2 원문 대조):** 고정 black-box policy에서 failure-predictor distribution D_F를 선택하여 environment distribution D_E와 predictor에 대한 misclassification cost 또는 class-conditional cost expectation을 최소화한다. Training/test environments는 같은 D_E의 i.i.d. sampling 가정이며 arbitrary shift 보장이 아니다.
 
 ## Evaluation Scope
 

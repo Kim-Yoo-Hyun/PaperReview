@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, whole-body control, motion imitation, NVIDIA
 - Official paper: https://arxiv.org/abs/2409.14393
-- Full-text retrieval: https://research.nvidia.com/labs/par/maskedmimic/
+- Full-text retrieval: https://arxiv.org/pdf/2409.14393v1
 - Code/Project: https://research.nvidia.com/labs/par/maskedmimic/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2409.14393v1) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and VR tracking.
-
-방법 관련 발췌 — Our framework consists of two stages.
+MaskedMimic은 시공간적으로 일부만 주어진 동작 조건을 채워 물리 시뮬레이션 캐릭터의 전신 행동을 생성한다. [PDF 1쪽](https://arxiv.org/pdf/2409.14393v1#page=1)
 
 ## Problem and Motivation
 
@@ -54,16 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 4 / 3 PRELIMINARIES - extractive body cue:** Our framework consists of two stages.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We present MaskedMimic, a versatile control model that enables physically simulated characters to generate diverse behaviors from flexible userspecified constraints.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** Training on masked motion sequences enables the model to generalize to novel combinations of objectives.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We propose a framework that trains a versatile control model by leveraging the rich multi-modal information within existing motion capture datasets, such as kinematic trajectories, ...
-- **p. 4 / 3 PRELIMINARIES - extractive body cue:** We now review the fundamental concepts and notations behind our framework.
-- **p. 15 / 8 RESULTS - extractive body cue:** While MaskedMimic demonstrates high success rates in generating diverse motions, there are three notable areas for improvement in terms of motion quality.
-- **p. 11 / 8 RESULTS - extractive body cue:** We attribute these performance improvements to our architecture and data augmentation techniques.
-- **p. 9 / 7.2 Evaluation - extractive body cue:** For each tasks, we report a success rate metric and an error rate metric.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 전체 동작을 추종하는 정책을 먼저 학습한 뒤 관절·시간·조건을 가려 부분 지정 목표에서 동작을 복원하도록 증류한다. [PDF 5쪽](https://arxiv.org/pdf/2409.14393v1#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2409.14393v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2409.14393v1#page=8)
+- 관절 목표가 드문 경우의 추종과 경로·텍스트·물체 상호작용 등 서로 다른 제어 입력을 같은 시뮬레이션 정책으로 평가했다. [PDF 10쪽](https://arxiv.org/pdf/2409.14393v1#page=10) · [PDF 11쪽](https://arxiv.org/pdf/2409.14393v1#page=11) · [PDF 12쪽](https://arxiv.org/pdf/2409.14393v1#page=12)
 
 ## Evaluation Scope
 

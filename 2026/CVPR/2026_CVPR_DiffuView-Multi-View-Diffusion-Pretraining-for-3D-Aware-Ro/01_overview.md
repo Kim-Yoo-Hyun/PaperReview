@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, most of these approaches rely solely on 2D imagery, lacking awareness of This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.
-
-방법 관련 발췌 — To summarize, our contributions are as follows: • We propose DiffuView, a novel diffusion-based representation learning framework for robotic manipulation that learns 3D consistent visual representations through multiview diffusion pret ...
+DiffuView는 한 시점에서 다른 시점의 영상을 합성하는 확산 사전학습으로 로봇 모방 정책에 쓸 시각 표현을 얻는다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** To summarize, our contributions are as follows: • We propose DiffuView, a novel diffusion-based representation learning framework for robotic manipulation that learns 3D consistent visual ...
-- **p. 2 / 1. Introduction - extractive body cue:** Our method consists of two stages, as illustrated in Fig.
-- **p. 1 / 1. Introduction - extractive body cue:** (c) Our method leverages a multi view diffusion model that learns 3D consistent and geometry aware representations by generating novel target views conditioned on source ...
-- **p. 4 / 3. Method - extractive body cue:** In this section, we present our two stage framework for learning 3D consistent visuomotor in details.
-- **p. 5 / 3.2. Policy Learning - extractive body cue:** In addition, we introduce an action causal self-attention mechanism to model temporal dependencies among consecutive action tokens.
-- **p. 7 / 4.4. Real World Experiments - extractive body cue:** The results indicate that our method significantly improves generalization, with the DiffuView framework achieving superior performance compared to prior models.
-- **p. 7 / 4.3. View Generalization Experiments - extractive body cue:** Real world experiment results on success rate.
-- **p. 8 / 4.5. Ablation Studies - extractive body cue:** Furthermore, excluding the FiLM-based language conditioning in the Q-Former reduces the success rate to 73.3%, indicating that task relevant modulation is crucial for aligning pretrained ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 목표 시점 생성에 쓰인 확산 네트워크의 특징을 행동 정책에 전달해 시점 사이 대응이 제어 학습에 반영되게 한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=4)
+- LIBERO와 실물 조작에서 관측 시점을 바꿔 정책을 평가하고 사전학습 표현에 따른 차이를 측정했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 7 (5.2. RealVLG Benchmark), p. 7 (5.1. Data Quality Evaluation), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 4 (3.3. Unified Data Annotation), p. 4 (3.3. Unified Data Annotation)): In rectangular grasp pose prediction, performance relies on mean IoU (mIoU) and Grasp Accuracy (gAcc) [26], where gAcc is achieved when the IoU exceeds 0.25 and the angular deviation is ...
+RealVLG-11B의 약 110억은 실제 장면 영상에 연결한 파지 예시의 수다. 표 1·2는 영상 수, 물체 수, 파지 주석 수를 각각 집계한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=5)
 
 ## Evaluation Body Digest
 

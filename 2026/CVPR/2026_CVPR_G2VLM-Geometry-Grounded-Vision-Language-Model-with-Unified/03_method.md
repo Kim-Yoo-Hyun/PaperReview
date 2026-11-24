@@ -17,7 +17,7 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Re
 - **p. 6 / Model - extractive body cue:** Model SPAR-Bench MindCube OST-Bench∗ OmniSpatial∗ Avg.
 - **p. 6 / Model - extractive body cue:** Our model, G2VLM, demonstrate comparable performance against SOTA feed-forward 3D recontruction methods.
 - **p. 5 / 3.3. Spatial Reasoning Learning - extractive body cue:** We explore three distinct joint-training strategies, where the semantic perception expert is, by default, optimized using a cross-entropy (CE) loss: • CE Loss Only: Freeze ...
-- **p. 4 / 3.2. Visual Geometry Learning - extractive body cue:** Specifically, the rotation loss minimizes the geodesic distance (angle) between the predicted relative rotation ˆRi←j and its ground-truth target Ri←j: Lrot(i, j) = arccos  ...
+- **상대 회전 손실.** 식 (5)는 실제 상대 회전과 예측 상대 회전의 측지각을 `arccos((tr(Rᵀ R̂) − 1)/2)`로 계산한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=4)
 
 ## Design Rationale
 
@@ -48,7 +48,7 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Re
 ## Objective / Update Rule
 
 - **p. 5 / 3.3. Spatial Reasoning Learning - extractive body cue:** We explore three distinct joint-training strategies, where the semantic perception expert is, by default, optimized using a cross-entropy (CE) loss: • CE Loss Only: Freeze ...
-- **p. 4 / 3.2. Visual Geometry Learning - extractive body cue:** Specifically, the rotation loss minimizes the geodesic distance (angle) between the predicted relative rotation ˆRi←j and its ground-truth target Ri←j: Lrot(i, j) = arccos  ...
+- **상대 회전 손실.** 식 (5)는 실제 상대 회전과 예측 상대 회전의 측지각을 `arccos((tr(Rᵀ R̂) − 1)/2)`로 계산한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Hu_G2VLM_Geometry_Grounded_Vision_Language_Model_with_Unified_3D_Reconstruction_CVPR_2026_paper.pdf#page=4)
 - **p. 5 / 3.3. Spatial Reasoning Learning - extractive body cue:** Given this scalability constraint, we select the CE Loss Only approach for our main G2VLM.
 - **p. 4 / 3.2. Visual Geometry Learning - extractive body cue:** The point cloud reconstruction loss, Lpoints, is defined using the optimal scale factor s∗: Lpoints = 1 3NHW N X i=1 H×W X j=1 1 ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.

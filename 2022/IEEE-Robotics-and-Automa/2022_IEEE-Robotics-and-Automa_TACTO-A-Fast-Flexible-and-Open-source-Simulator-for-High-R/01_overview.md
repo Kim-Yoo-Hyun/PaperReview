@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, tactile sensing, simulation, contact
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2022.3146945
-- Full-text retrieval: https://doi.org/10.1109/LRA.2022.3146945
+- Full-text retrieval: https://arxiv.org/pdf/2012.08456v2
 - Code/Project: https://github.com/facebookresearch/tacto
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2012.08456v2) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], [3], [4] which provide rich highresolution measurements.
-
-방법 관련 발췌 — This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.
+TACTO는 비전 기반 촉각 센서의 접촉 영상을 물리 시뮬레이터의 로봇·물체 상태로부터 렌더링한다. [PDF 1쪽](https://arxiv.org/pdf/2012.08456v2#page=1)
 
 ## Problem and Motivation
 
@@ -49,16 +47,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.
-- **p. 6 / IV. SIMULATED EXPERIMENTS - extractive body cue:** Results show that learning grasp stability from touch needs significantly less amount of data to achieve relative high accuracy compared to vision, and that increasing ...
-- **p. 5 / IV. SIMULATED EXPERIMENTS - extractive body cue:** The experiments in simulation achieve similar results to the ones with real robots, which demonstrates the effectiveness and potentials of the simulated environment.
-- **p. 7 / V. SIM2REAL EXPERIMENTS - extractive body cue:** Without any real data, Sim2Real with augmentation can achieve comparable results with Real2Real (64).
-- **p. 7 / IV. SIMULATED EXPERIMENTS - extractive body cue:** Since there are rich contacts with friction happening during the rolling, we aim to investigate how stable the TACTO and PyBullet are, and explore whether ...
-- **p. 6 / IV. SIMULATED EXPERIMENTS - extractive body cue:** To evaluate the performance of different dataset sizes, we used K-fold cross-validation and computed the median and 68% percentile of the classification accuracy.
-- **p. 4 / Figure/Table caption - extractive body cue:** Fig. 6: If readings from a real-world sensor are available, TACTO allows to fine-tune the simulator using the real-world data. This is achieved by calculating ...
-- **p. 5 / IV. SIMULATED EXPERIMENTS - extractive body cue:** The goal is to predict whether a grasped object will be successfully lifted, based on the touch
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 물리 엔진의 접촉 계산과 광학 렌더링을 분리해 DIGIT와 OmniTact 등 센서의 카메라·조명·형상을 설정할 수 있게 했다. [PDF 2쪽](https://arxiv.org/pdf/2012.08456v2#page=2) · [PDF 3쪽](https://arxiv.org/pdf/2012.08456v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2012.08456v2#page=4)
+- 시뮬레이션 접촉 영상으로 파지 안정성 예측과 구슬 조작을 평가하고 실물 센서와의 차이도 조사했다. [PDF 5쪽](https://arxiv.org/pdf/2012.08456v2#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2012.08456v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2012.08456v2#page=7)
 
 ## Evaluation Scope
 

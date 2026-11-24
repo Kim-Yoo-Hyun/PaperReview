@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, a significant gap remains: previous works [2, 14, 16] have primarily focused on 3D distance relationships, overlooking the crucial role of 3D object orientation.
-
-방법 관련 발췌 — Second, we propose a novel compound 3D-informed design that introduces improvements across multiple dimensions, leading to our proposed SpatialLLM model.
+SpatialLLM은 물체의 3차원 위치·방향과 물체 사이 관계에 대한 학습 자료를 구성해 영상 기반 공간 추론을 연구한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Second, we propose a novel compound 3D-informed design that introduces improvements across multiple dimensions, leading to our proposed SpatialLLM model.
-- **p. 2 / 1. Introduction - extractive body cue:** Third, we present the first comprehensive search over the LMM design space for spatial reasoning tasks and propose a roadmap towards developing state-of-the-art models in ...
-- **p. 3 / 3. Methods - extractive body cue:** We present the task of reasoning 3D spatial relationships and explain the challenges LMMs face when answering these questions in Sec.
-- **p. 3 / 3.1. Preliminary of LMMs - extractive body cue:** A standard LMM [39, 41] consists of a visual encoder to process the image, a multimodal connector to transform the visual feature to visual token, ...
-- **p. 5 / 3.3.1. Design space - extractive body cue:** 3.2.1, we propose new training setups that aim to improve 3D awareness and advance the 3D spatial reasoning capabilities.
-- **p. 7 / 4.2. Results - extractive body cue:** Comparison with the state-of-the-arts including proprietary and open source models. ably, our model achieves a performance of 62.7%, outperforming the top proprietary model by 8.7% ...
-- **p. 7 / 4.2. Results - extractive body cue:** In terms of architecture, integrating a mixed vision encoder can improve overall performance especially for the 3D orientation.
-- **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. We modernize a standard LLaVA-v1.5 towards the de- sign of a 3D-informed LMM. The bars are the answer accuracies on the SpatialVQA benchmark, ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 위치와 방향을 묻는 자료 및 복합 공간 관계 대화를 구축하고 이를 평가할 SpatialVQA를 설계했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=5)
+- 3차원 정보를 입력하는 모형 구조와 학습 설정을 바꾸며 공간 질의응답 정확도의 변화를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

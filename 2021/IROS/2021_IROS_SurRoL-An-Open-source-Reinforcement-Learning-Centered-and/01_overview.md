@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2108.13035
 - Code/Project: https://github.com/med-air/SurRoL
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/2108.13035v1) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Ten constructed surgical relevant tasks with difficulty levels and varying scenes are presented for learning-based algorithm evaluation (right).
-
-방법 관련 발췌 — Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which benefits low-cost data collection and accelerates the ...
+SurRoL은 다빈치 연구용 수술 로봇과 호환되는 시뮬레이션에서 수술 기구와 내시경의 조작을 강화학습으로 연구할 수 있게 한다. [PDF 1쪽](https://arxiv.org/pdf/2108.13035v1#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Further, the designed SurRoL with carefully modeled assets can successfully deal with more realistic physical interactions.
-- **p. 2 / III. METHODS - extractive body cue:** Finally, ten surgical learning-based tasks are built for algorithm development and evaluation.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** By contrast, the policy trained in the Interact manner with improved physics simulation is more robust to environment changes with a high success rate.
-- **p. 5 / IV. EXPERIMENTS - extractive body cue:** The success rates and episode returns are used as the evaluation metrics for goal-based and reward-based tasks, respectively, as in [32], [9], [10].
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** The mean success rate and standard deviation of three trained policies for the two manners are presented based on the evaluation of 200 episodes per ...
-- **p. 6 / IV. EXPERIMENTS - extractive body cue:** Epoch 30 40 50 10 20 0.0 0.2 0.4 0.6 0.8 1.0 Success Rate BiPegTransfer with Variants (1) Approach (2) Pick (3) Lift (4) Handover ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 수술 기구와 카메라의 기구학 및 물리 상호작용을 구현하고 두 장치를 위한 열 가지 학습 과제를 정의했다. [PDF 3쪽](https://arxiv.org/pdf/2108.13035v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2108.13035v1#page=4)
+- 시뮬레이션에서 기법별 학습 성과를 비교하고 일부 기구 조작 과제를 실물 연구용 장비로 옮겨 시험했다. [PDF 5쪽](https://arxiv.org/pdf/2108.13035v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2108.13035v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2108.13035v1#page=7)
 
 ## Evaluation Scope
 

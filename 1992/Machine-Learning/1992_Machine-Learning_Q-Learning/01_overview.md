@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, Reinforcement Learning, Q-learning, Value Learning
 - Official paper: https://doi.org/10.1007/BF00992698
-- Full-text retrieval: https://doi.org/10.1007/BF00992698
+- Full-text retrieval: https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf
 - Code/Project: not identified
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Section 2 describes the problem, the method, and the notation, section 3 gives an overview of the proof, and section 4 discusses two extensions.
-
-방법 관련 발췌 — In O~-learning, the agent's experience consists of a sequence of distinct stages or episodes.
+Watkins와 Dayan은 이산 상태·행동의 Q-learning이 주어진 표집과 학습률 조건에서 최적 행동가치로 수렴함을 증명했다. [PDF 1쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -54,13 +52,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 3 / 2. The task for ~-learning - extractive body cue:** In O~-learning, the agent's experience consists of a sequence of distinct stages or episodes.
-- **p. 4 / 3. The convergence proof - extractive body cue:** A state of the AFI~, (x, n), consists of a card number (or level) n, together with a state x from the real process.
-- **p. 4 / 3. The convergence proof - extractive body cue:** Replaying the episode on card t consists of emitting the reward, rt, written on the card, and then moving to the next state (Yt, t ...
-- **p. 1 / 1. Introduction - extractive body cue:** Examples of its use include Barto and Singh (1990), Sutton (1990), Chapman and Kaelbling (1991), Mahadevan and Connell (1991), and Lin (1992), who developed it ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We show that 0~-learning converges to the optimum action-values with probability 1 so long as all actions are repeatedly sampled in all states and the ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관측한 보상과 다음 상태에서 가장 좋은 행동의 추정가치로 방문한 상태·행동의 값을 갱신한다. [PDF 2쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=2) · [PDF 3쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=3)
+- 과거 행동을 재생하는 보조 마르코프 과정을 구성해 반복 표집 조건에서 확률 1 수렴을 보인다. [PDF 3쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=3) · [PDF 4쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=4) · [PDF 5쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=5) · [PDF 7쪽](https://www.gatsby.ucl.ac.uk/~dayan/papers/cjch.pdf#page=7)
 
 ## Evaluation Scope
 

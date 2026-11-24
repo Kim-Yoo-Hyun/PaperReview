@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/1708.03852
 - Code/Project: https://github.com/HKUST-Aerial-Robotics/VINS-Mono
 - Paper type: theory_or_foundation
-- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://arxiv.org/pdf/1708.03852v1) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — This implies that monocular VINS estimators cannot start from a stationary condition, but rather launch from an unknown moving state.
-
-방법 관련 발췌 — 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator.
+VINS-Mono는 단안 영상 특징과 관성 센서 측정을 결합해 이동체의 미터 단위 자세·위치를 추정하고 재방문 정보를 이용해 누적 오차를 줄인다. [PDF 1쪽](https://arxiv.org/pdf/1708.03852v1#page=1)
 
 ## Problem and Motivation
 
@@ -50,20 +48,12 @@
 | Observation/input | Outdoor experimental results of the proposed monocular visual-inertial state estimator. | camera/depth stream, pose, map와 language goal | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
 | State/latent | Outdoor, experimental, monocular, visual-inertial, state, estimator, address, issues, VINS-Mono, robust, versatile, summarize | robot pose, free-space/semantic map와 local goal | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
 | Output/action | 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator. | collision-free trajectory 또는 velocity command | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION) |
-| Objective/outcome | The whole graph of sequential edges and loop closure edges are optimized by minimizing the following cost function: min p,ψ    X (i,j)∈S ∥ri,j∥2 + X (i,j)∈L ρ(∥ri,j∥2)   ... | goal reach, safety, localization error와 replanning latency | p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION), p. 11 (VIII. GLOBAL POSE GRAPH OPTIMIZATION) |
+| Objective/outcome | 순차 간선의 제곱 잔차와 루프 폐쇄 간선의 강건 비용을 합해 키프레임의 위치와 요각을 최적화한다. | 전역 궤적의 정합과 드리프트 | 식 (29) [PDF 11쪽](https://arxiv.org/pdf/1708.03852v1#page=11) |
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** 2 To address all these issues, we propose VINS-Mono, a robust and versatile monocular visual-inertial state estimator.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** This enables navigation tasks that require metric state estimates.
-- **p. 2 / I. INTRODUCTION - extractive body cue:** This enables robust and accurate relocalization with minimum computation overhead.
-- **p. 11 / VIII. GLOBAL POSE GRAPH OPTIMIZATION - extractive body cue:** This enables immediate use of the most optimized pose graph for relocalization whenever it becomes available.
-- **p. 1 / I. INTRODUCTION - extractive body cue:** Finally, in order to eliminate long-term drift within an acceptable processing window, a complete system that includes visual-inertial odometry, loop detection, relocalization, and global optimization ...
-- **p. 14 / IX. EXPERIMENTAL RESULTS - extractive body cue:** In this large-scale test, We set the keyframe database size to 2000 in order to provide sufficient loop information and achieve real-time performance.
-- **p. 12 / IX. EXPERIMENTAL RESULTS - extractive body cue:** However, VINS-Mono outperforms OKVIS at the system level.
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. A block diagram illustrating the full pipeline of the proposed monocular visual-inertial state estimator. order to avoid repeated IMU re-integration This technique was ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 관성 측정을 사전적분하고 영상과 관성의 초기 정렬을 거쳐 슬라이딩 윈도에서 상태를 함께 최적화한다. [PDF 4쪽](https://arxiv.org/pdf/1708.03852v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/1708.03852v1#page=5) · [PDF 7쪽](https://arxiv.org/pdf/1708.03852v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/1708.03852v1#page=8)
+- 재지역화로 얻은 루프 제약과 순차 제약을 네 자유도의 자세 그래프에 결합하고 궤적 추정 결과를 비교했다. [PDF 10쪽](https://arxiv.org/pdf/1708.03852v1#page=10) · [PDF 11쪽](https://arxiv.org/pdf/1708.03852v1#page=11) · [PDF 12쪽](https://arxiv.org/pdf/1708.03852v1#page=12)
 
 ## Evaluation Scope
 

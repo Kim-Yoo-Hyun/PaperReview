@@ -1,6 +1,6 @@
 # Autonomous Reinforcement Learning: Formalism and Benchmarking
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2022 / ICLR
@@ -11,18 +11,20 @@
 - Tags: RL, evaluation, learning-foundation
 - Aliases: EARL
 - Official paper: https://arxiv.org/abs/2112.09605
+- Full-text retrieval: https://arxiv.org/pdf/2112.09605v2
 - Venue verification: https://iclr.cc/Downloads/2022
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. OpenReview live challenge; ICLR 공식 Downloads/2022 목록의 exact title와 기존 accepted manuscript 기록을 교차 대조했다. 현재 content는 arXiv abstract 기준.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-Human reset에 의존하는 episodic RL을 연속적으로 변하는 환경의 자율 학습으로 확장한다.
+EARL은 학습 중 매 시행마다 외부에서 환경을 초기화하기 어려운 상황을 정식화하고 자율 강화학습을 비교할 시뮬레이션 벤치마크를 제공한다. [PDF 1쪽](https://arxiv.org/pdf/2112.09605v2#page=1)
 
 ## Core Idea and Contribution
 
-Autonomous RL formalism과 최소 개입을 평가하는 EARL benchmark를 제안한다.
+- 학습 중 거둔 보상과 학습 후 배포한 정책의 성능을 구분하는 평가 방식을 정의하고 과제별 재설정 조건을 기술했다. [PDF 3쪽](https://arxiv.org/pdf/2112.09605v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2112.09605v2#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2112.09605v2#page=5)
+- 초기화 빈도를 바꾼 기준 강화학습 및 자율 학습 기법을 비교하고 최종 정책 성능과 방문 상태의 차이를 조사했다. [PDF 7쪽](https://arxiv.org/pdf/2112.09605v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2112.09605v2#page=8) · [PDF 9쪽](https://arxiv.org/pdf/2112.09605v2#page=9)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Autonomous RL formalism과 최소 개입을 평가하는 EARL benchmark를 제�
 
 다양한 simulated task에서 reset 의존성과 기존 방법 한계를 분석한다.
 
-근거: [공식 paper/abstract](https://openreview.net/forum?id=nkaba3ND7B5). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openreview.net/forum?id=nkaba3ND7B5). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

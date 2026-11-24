@@ -1,6 +1,6 @@
 # RePlan-Bot: Multi-Level Replanning for Embodied Instruction Following
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `FULL_TEXT_CHECKED`. 아래에 쪽수를 붙인 문장을 원문과 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CVPR-Workshop
@@ -11,18 +11,20 @@
 - Tags: Planning, language, execution
 - Aliases:
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/html/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.html
+- Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/html/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.html
 - Code/Project: not identified
 - Code: not_identified
-- Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
+- Source audit: 2026-11-24에 한 줄 요약과 핵심 기여 두 개를 아래 PDF 쪽수에 대조했다.
 
 ## Problem and Importance
 
-Embodied instruction 실행 중 여러 수준의 계획 실패를 수정한다.
+RePlan-Bot은 자연어 지시를 수행하면서 관측을 바탕으로 다음 하위목표와 당장 실행할 저수준 행동을 각각 수정한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=1)
 
 ## Core Idea and Contribution
 
-고수준 계획 감사와 탐색·저수준 보정을 연결한다.
+- 언어모형이 진행 상황을 점검하고 다층 물체 지도로 대상을 찾으며 시각 트랜스포머가 위험한 저수준 행동을 사전에 교정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=5)
+- ALFRED의 본 환경과 보지 못한 환경을 나눠 성공률을 비교하고 각 수준의 재계획이 실패에 미치는 영향을 분석했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=8)
 
 ## Observation–State–Action Interface
 
@@ -32,7 +34,7 @@ Embodied instruction 실행 중 여러 수준의 계획 실패를 수정한다.
 
 ALFRED instruction following 평가를 보고한다.
 
-근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/html/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.html). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/html/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.html). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 

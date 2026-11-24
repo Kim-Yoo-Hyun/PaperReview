@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Noticing these limitations of conventional VLMs, many recent works still prioritize image-level semantic alignment over the understanding of spatial and geometric structures [17, 32, 37].
-
-방법 관련 발췌 — We summarize our contributions as follows: • We present the first systematic analysis of how fusion layers across vision encoders, geometry encoders, and LLM decoders affect the granularity of spatial reasoning.
+SpatialStack은 기하 인코더의 여러 층에서 얻은 특징을 시각언어모형의 여러 깊이에 결합해 영상의 공간 관계를 추론한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -52,16 +50,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** We summarize our contributions as follows: • We present the first systematic analysis of how fusion layers across vision encoders, geometry encoders, and LLM decoders ...
-- **p. 2 / 1. Introduction - extractive body cue:** Building on these insights, we introduce SpatialStack, a general hierarchical fusion framework that integrates multi-level geometric features into multimodal LLMs.
-- **p. 8 / Model - extractive body cue:** 5 shows that our method maintains robust general capabilities while specializing in spatial-temporal tasks, confirming no catastrophic forgetting.
-- **p. 7 / 5.2. Evaluation - extractive body cue:** Furthermore, under a fair comparison using the identical Qwen2.5 base model, SpatialStack significantly outperforms other concurrent geometry-aware MLLMs, such as Spatial-MLLM [45], VG-LLM [53], and ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Effect of Geometry Injection Layers on Spatial Tasks. Deeper layers improve high-level tasks, while low-level tasks peak at layer 11 and decline at ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Table 1. Ablation Results on Geometry Token Fusion Depth. Simply fusing multi-layer geometry features to the visual features yields suboptimal performance, while selecting an appropriate ...
-- **p. 7 / 5.2. Evaluation - extractive body cue:** Applying our framework to both Qwen2.5 [2] and Qwen3.5 [38] yields substantial improvements over their untuned base models.
-- **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Cross-benchmark Ablation. SpatialStack achieves the best cross-task transfer ability, obtaining the highest scores on VSI-Bench, SPAR-Bench, CV-Bench, and the overall aver- age, while ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 서로 다른 층의 기하 신호를 대응하는 언어 처리 단계로 보내고 기하 입력의 깊이와 조합을 분석한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=5)
+- VSI-Bench 등 공간 이해 평가에서 질의 유형별 성능과 기하 특징을 주입하는 설계의 효과를 비교했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_SpatialStack_Layered_Geometry-Language_Fusion_for_3D_VLM_Spatial_Reasoning_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

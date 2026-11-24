@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 14 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments)): By success, we mean attaining improvements simultaneously along both the episodic return axis and the constraint regret axis, while still producing a constraint-satisfying policy at the conclusion of training.
+표 1은 학습이 끝난 정책의 반환값과 제약 위반량을 학습 전 과정의 스텝당 평균 비용률과 구분한다. 전체 학습 중 겪은 위반을 비교할 때는 비용률을 사용한다. [PDF 14쪽](https://cdn.openai.com/safexp-short.pdf#page=14) · [PDF 15쪽](https://cdn.openai.com/safexp-short.pdf#page=15) · [PDF 16쪽](https://cdn.openai.com/safexp-short.pdf#page=16)
 
 ## Evaluation Body Digest
 
@@ -23,7 +23,7 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `BENCHMARK / DATASET`.
+- **Evaluation type:** `BENCHMARK / SIMULATION`.
 - **Target system/task:** defined robot simulator/hardware task suite.
 - **Input boundary:** standardized observation, action, task state와 evaluation split.
 - **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
@@ -139,6 +139,8 @@ PDF body evaluation/result cue (p. 21 (5.3 Results), p. 14 (5 Experiments), p. 1
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
+
+- 표 1은 SG18의 각 환경에서 얻은 시드 3개의 결과를 평균한다. [PDF 16쪽](https://cdn.openai.com/safexp-short.pdf#page=16)
 
 | Body reproducibility cue | Anchor |
 |---|---|

@@ -12,16 +12,14 @@
 - Tier: REFERENCE
 - Tags: Robotics, humanoid, Reinforcement Learning, motion imitation, whole-body control
 - Official paper: https://xbpeng.github.io/projects/AMP/
-- Full-text retrieval: https://doi.org/10.1145/3450626.3459670
+- Full-text retrieval: https://xbpeng.github.io/projects/AMP/AMP_2021.pdf
 - Code/Project: https://xbpeng.github.io/projects/AMP/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — However, it can be exceptionally difficult to design a style-reward 𝑟𝑆 that leads a character to learn naturalistic behaviors, or behaviors that conform to a particular style.
-
-방법 관련 발췌 — The central contribution of this work is an adversarial learning approach for physics-based character animation that combines goalconditioned reinforcement with an adversarial motion prior, which enables the style of a character's movem ...
+AMP는 동작 자료와 시뮬레이션 캐릭터의 상태 전이를 구별하는 판별기에서 스타일 보상을 얻어 과제 수행과 함께 학습한다. [PDF 1쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** The central contribution of this work is an adversarial learning approach for physics-based character animation that combines goalconditioned reinforcement with an adversarial motion prior, which ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Our framework enables physically simulated character to solve challenging tasks while adopting stylistic behaviors specified by unstructured motion data.
-- **p. 2 / 1 INTRODUCTION - extractive body cue:** We present one of the first adversarial learning systems that is able to produce high-quality full-body motions for physically simulated characters.
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We demonstrate the effectiveness of our framework on a diverse cast of complex simulated characters and a challenging suite of motor control tasks.
-- **p. 5 / 4 BACKGROUND - extractive body cue:** We propose to model the style-reward with a learned discriminator, which we refer to as an adversarial motion prior (AMP), by analogy to the adversarial ...
-- **p. 9 / 8 RESULTS - extractive body cue:** Training the motion prior with a diverse dataset results in more flexible and optimal policies that are able to achieve a wider range of target ...
-- **p. 10 / 8 RESULTS - extractive body cue:** Our method achieves comparable performance across the various tasks, while also producing higher fidelity motions. order to fulfill the high-level task objectives.
-- **p. 9 / 8 RESULTS - extractive body cue:** As a result, these policies are not able to achieve the faster target speeds.
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 참고 동작과 정책이 만든 동작을 비교하는 적대적 목적함수를 과제 보상과 결합해 비정렬 동작 클립을 사용할 수 있게 했다. [PDF 3쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=3) · [PDF 4쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=4) · [PDF 5쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=5)
+- 이동·목표 접촉 등 물리 시뮬레이션 과제로 동작 스타일과 작업 수행을 평가하고 다른 형상의 캐릭터에도 적용했다. [PDF 8쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=8) · [PDF 9쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=9) · [PDF 10쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=10) · [PDF 11쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=11)
 
 ## Evaluation Scope
 

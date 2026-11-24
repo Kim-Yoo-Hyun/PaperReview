@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf
 - Code/Project: https://github.com/lif314/RealVLG-R1
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — In summary, current VLG and grasping research highlight a clear gap between semantic understanding and manipulation reasoning, making them insufficient for real-world robotic scenarios that require fine-grained, multi-modal perception.
-
-방법 관련 발췌 — 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.
+RealVLG는 자연어가 가리키는 물체·부위와 파지 후보를 함께 주석화하고 시각언어모형이 언어 조건의 파지를 예측하도록 학습한다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** 1, we propose the RealVLG framework, which unifies visuallanguage grounding and grasping tasks within a single research paradigm.
-- **p. 2 / 1. Introduction - extractive body cue:** In summary, our main contributions are as follows: • RealVLG-11B Dataset: The largest real-world grounding and grasping dataset with multi-granularity annotations from semantic localization to ...
-- **p. 5 / 4.1. Overview - extractive body cue:** 3, we propose a unified framework, RealVLG-R1, which fine-tunes pretrained LVLMs using a reinforcement-style optimization strategy inspired by DeepSeek-R1 [22].
-- **p. 5 / 4.1. Overview - extractive body cue:** Furthermore, we introduce a Verifiable Reward Mechanism that dynamically evaluates and guides model predictions in terms of both semantic correctness and physical feasibility.
-- **p. 8 / Method - extractive body cue:** Building upon this, our proposed RealVLG-R1 model employs Qwen2.5-VL as its backbone and is developed within the VERL framework [68].
-- **p. 7 / 5.2. RealVLG Benchmark - extractive body cue:** In rectangular grasp pose prediction, performance relies on mean IoU (mIoU) and Grasp Accuracy (gAcc) [26], where gAcc is achieved when the IoU exceeds 0.25 ...
-- **p. 7 / 5.1. Data Quality Evaluation - extractive body cue:** Specifically, since the language descriptions in RealVLG-11B encompass not only object categories but also rich attributes and spatial relations, it achieves a higher MTLD score, ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Table 4. RealVLG benchmark comprehensive results. All metrics are reported in percentage format. to quantify the proportion of valid outputs, defined as pre- dictions that ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실제 장면 영상에 물체·부위 설명, 마스크, 경계 상자, 파지 자세와 접촉점을 연결한 RealVLG-11B를 구축했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=5)
+- 지시 대상 및 파지 예측을 채점하는 보상으로 모형을 미세조정하고 위치 특정과 파지 과제의 결과를 나누어 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=6) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_RealVLG-R1_A_Large-Scale_Real-World_Visual-Language_Grounding_Benchmark_for_Robotic_Perception_CVPR_2026_paper.pdf#page=8)
 
 ## Evaluation Scope
 

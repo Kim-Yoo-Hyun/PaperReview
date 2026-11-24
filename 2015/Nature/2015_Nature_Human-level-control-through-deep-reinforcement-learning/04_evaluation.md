@@ -8,7 +8,7 @@
 
 ## Evaluation in One Sentence
 
-PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess)): The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game.
+그림 3은 무작위 에이전트를 0%, 전문 플레이어를 100%로 두고 게임별 점수를 정규화한다. 49개 중 29개 게임에서 DQN이 사람 기준 점수의 75% 이상에 도달했다. [PDF 2쪽](https://www.nature.com/articles/nature14236.pdf#page=2) · [PDF 3쪽](https://www.nature.com/articles/nature14236.pdf#page=3)
 
 ## Evaluation Body Digest
 
@@ -23,7 +23,7 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 
 ## Evaluation Type and Scope
 
-- **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
+- **Evaluation type:** `EMPIRICAL / SIMULATION`.
 - **Target system/task:** robot mechanism의 state와 task-space dynamics.
 - **Input boundary:** joint/task state, reference와 sensor feedback.
 - **Output/decision under evaluation:** torque, force, velocity 또는 position command.
@@ -137,6 +137,8 @@ PDF body evaluation/result cue (p. 6 (84 3 84.The functionw fromalgorithm1 descr
 - Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
+
+- 그림 3의 오차 막대는 시작 조건을 달리한 평가 에피소드 30개에서 얻은 점수의 표준편차다. [PDF 3쪽](https://www.nature.com/articles/nature14236.pdf#page=3)
 
 | Body reproducibility cue | Anchor |
 |---|---|

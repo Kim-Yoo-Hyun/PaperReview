@@ -61,7 +61,7 @@
 2. Use the paper-reported resource/task cue: We next validate experiments on physical hardware using a Franka Panda robot with a standard parallel-jaw gripper..
 3. Compare against the body-reported baseline or a matched simpler baseline: Goal Conditioned Tasks Across all 4 dataset sizes for cable-line-notarget, cableshape-notarget, and fabric-flat-notarget, both TransporterGoal-Stack and Transporter-Goal-Split substantially outperform the two GT-State baselines..
 4. Report the body metric and its denominator/aggregation: Transporter-Goal-Stack achieves slightly higher performance among the cable-related tasks, though the gap narrows with more demonstrations in cable-line-notarget, since both goal-conditioned Transporters each achieve 100% success rates ....
-5. Re-run the body-reported ablation/failure condition: Fig. 4: Top row: examples of physical bags. The bags we use follow a design similar to the sack (top left) and drawstring (top middle). Bags with handles (e.g., top right) or ....
+5. 재현할 때 가방은 PyBullet의 bag-color-goal을 사용하고 케이블 실물 조건은 저자 개정판 제VIII절에서 확인한다. [PDF 6쪽](https://arxiv.org/pdf/2012.03385v4#page=6)
 6. Add one matched stress test for the strongest assumption without changing observation, action, data, compute, horizon or controller.
 
 ### What would count as a successful reproduction

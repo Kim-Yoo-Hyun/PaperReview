@@ -15,13 +15,11 @@
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf
 - Code/Project: not identified
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — Existing 3D visual grounding (3DVG) methods [7, 12, 13, 36] face challenges in open-vocabulary grounding and reasoning, primarily due to reliance on 3D annotations [37, 39] and mask proposals [2, 5], which ...
-
-방법 관련 발췌 — Furthermore, we introduce a novel ReasoningGD dataset containing over 10K complex scenes and 263 object types, with a total of approximately 2 million annotations.
+ReasonGrounder는 여러 시점에서 구축한 3차원 장면 표현과 시각언어모형을 이용해 암시적인 설명이 가리키는 물체를 찾는다. [PDF 1쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -51,16 +49,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / 1. Introduction - extractive body cue:** Furthermore, we introduce a novel ReasoningGD dataset containing over 10K complex scenes and 263 object types, with a total of approximately 2 million annotations.
-- **p. 2 / 1. Introduction - extractive body cue:** To achieve open-vocabulary 3D visual grounding and reasoning, this paper proposes ReasonGrounder, a novel LVLM-Guided Hierarchical Feature Splatting method that enables implicit instruction comprehension and ...
-- **p. 6 / 4.1. Evaluation on Open-set 3D Visual Grounding - extractive body cue:** Our results show that ReasonGrounder outperforms 2D-based methods like ODISE [35] and OV-Seg [25], and significantly surpasses 3D-based methods, including Method bed bench room sofa ...
-- **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** These results demonstrate that ReasonGrounder successfully achieves amodal perception, accurately localizing complete objects regardless of the occlusion level.
-- **p. 6 / 4.1. Evaluation on Open-set 3D Visual Grounding - extractive body cue:** Quantitative results of mean IoU (%) across various scenes in the LERF, 3D-OVS, and ReasoningGD datasets, including both scene-specific scores and overall performance.
-- **p. 7 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** As shown in Table 5, our method outperforms in all edge cases.
-- **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** Our ReasonGrounder achieves accurate 3D localization, even when the object is partially visible or fully occluded in novel views.
-- **p. 5 / 4. Experiments - extractive body cue:** The performance of ReasonGrounder is evaluated using two main metrics: Localization Accuracy [16] and Intersection over Union (IoU).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 분할 마스크와 다중 시점의 시각·언어 특징을 규모별 가우시안 특징장에 결합해 질의할 물체 영역을 구성한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=4)
+- 언어로 지정한 물체의 위치 정확도를 비교하고 일부가 가려진 물체를 새로운 시점에서 찾는 사례를 분석했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=8)
 
 ## Evaluation Scope
 

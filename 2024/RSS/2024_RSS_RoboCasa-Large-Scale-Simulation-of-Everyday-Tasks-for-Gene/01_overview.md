@@ -15,13 +15,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2406.02523
 - Code/Project: https://robocasa.ai/
 - Paper type: benchmark_or_dataset
-- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.roboticsproceedings.org/rss20/p050.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — While these datasets have advanced robots' generalization abilities in narrow domains, there remains a considerable gap between the capabilities achieved thus far and general-purpose robots that can be reliably deployed in the ...
-
-방법 관련 발췌 — We summarize our contributions as follows: • We develop the RoboCasa simulation framework featuring diverse, realistic kitchen scenes, thousands of high-quality object assets, and cross-embodiment mobile manipulators.
+RoboCasa는 다양한 주방 장면에서 일상 조작을 학습하고 평가하도록 물체·가구 자산, 과제, 시연 수집 절차를 제공한다. [PDF 1쪽](https://www.roboticsproceedings.org/rss20/p050.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -55,16 +53,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We summarize our contributions as follows: • We develop the RoboCasa simulation framework featuring diverse, realistic kitchen scenes, thousands of high-quality object assets, and cross-embodiment ...
-- **p. 2 / I. INTRODUCTION - extractive body cue:** We present RoboCasa, a large-scale simulation framework centered around home environments for training generalist robots.
-- **p. 3 / III. ROBOCASA SIMULATION - extractive body cue:** Core Simulation Platform We adopt RoboSuite [51] as the core simulation platform on which we develop RoboCasa.
-- **p. 3 / III. ROBOCASA SIMULATION - extractive body cue:** We chose RoboSuite because of its focus on physical realism, high speed, and modular design, which allows us to scale to large-scale scenes.
-- **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Comparison between human demonstrations and machine-generated datasets. We present learning results across 24 atomic tasks spanning diverse robot skills. We compare training on ...
-- **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** The overall performance on human data is 28.8% success rate, and with the fully generated dataset, we observe a significant improvement at 47.6% success rate.
-- **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** The fine-tuning method achieves non-zero success rates on 4/5 tasks.
-- **p. 8 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** On seen objects, we see that cotraining with simulated data yields a 24.4% average success rate, compared to 13.6% with using real data only, a ...
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 주방 배치·물체 외관을 다양화하고 기본 행동과 여러 단계를 결합한 과제로 100개 평가 과제를 구성했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss20/p050.pdf#page=4) · [PDF 5쪽](https://www.roboticsproceedings.org/rss20/p050.pdf#page=5) · [PDF 6쪽](https://www.roboticsproceedings.org/rss20/p050.pdf#page=6)
+- 사람 시연에서 자동 생성한 궤적을 늘릴 때 모방 정책의 성과를 측정하고 실물 조작 전이를 별도 실험으로 확인했다. [PDF 7쪽](https://www.roboticsproceedings.org/rss20/p050.pdf#page=7) · [PDF 8쪽](https://www.roboticsproceedings.org/rss20/p050.pdf#page=8)
 
 ## Evaluation Scope
 

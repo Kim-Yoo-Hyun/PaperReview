@@ -16,13 +16,11 @@
 - Full-text retrieval: https://arxiv.org/pdf/2203.04955
 - Code/Project: https://www.nicklashansen.com/td-mpc/
 - Paper type: method
-- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
+- Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf) 기준이다.
 
 ## Why This Paper Is Here
 
-문제 관련 발췌 — To overcome these challenges, we make three key changes to model learning.
-
-방법 관련 발췌 — (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning.
+TD-MPC는 학습한 잠재 동역학으로 짧은 구간의 행동을 계획하고 계획 구간 이후의 보상은 종단 가치 함수로 추정한다. [PDF 1쪽](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -56,16 +54,8 @@
 
 ## Main Claims and Actual Contribution
 
-- **p. 1 / 1. Introduction - extractive body cue:** (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning.
-- **p. 1 / 1. Introduction - extractive body cue:** (Bottom) Episode return of our method, SAC, and MPC with a ground-truth simulator on challenging, highdimensional Humanoid and Dog tasks (Tassa et al., 2018).
-- **p. 2 / 1. Introduction - extractive body cue:** Lastly, we propose a modality-agnostic prediction loss in latent space that enforces temporal consistency in the learned representation without explicit state or image prediction.
-- **p. 2 / 1. Introduction - extractive body cue:** In particular, our method solves Humanoid and Dog locomotion tasks with up to 38-dimensional continuous action spaces in as little as 1M environment steps (see ...
-- **p. 3 / 3. TD-Learning for Model Predictive Control - extractive body cue:** We summarize our framework in Figure 1 and Algorithm 1.
-- **p. 19 / Figure/Table caption - extractive body cue:** Figure 14. Individual Meta-World tasks. Success rate of our method (TD-MPC) and SAC on diverse manipulation tasks from Meta- World (Yu et al., 2019). We ...
-- **p. 17 / Figure/Table caption - extractive body cue:** Table 8. Meta-World MT10. As our performance metric reported in Figure 5 differs from that of the Meta-World v2 benchmark proposal (Yu et al., 2019), ...
-- **p. 8 / 5. Experiments - extractive body cue:** Success rate on 50 goal-conditioned Meta-World tasks using individual policies, and a multi-task policy trained on 10 tasks simultaneously (Meta-World MT10).
-
-- Claims are retained as body cues; exact percentages and table values must be read at the cited result anchor.
+- 실제 전이로부터 잠재 상태의 일관성, 보상 예측, 시간차 가치 추정을 한 모형에서 함께 학습한다. [PDF 3쪽](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf#page=3) · [PDF 4쪽](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf#page=4)
+- 상태 또는 영상 관측을 쓰는 연속 제어와 Meta-World 조작에서 자료량에 따른 반환값과 성공률을 비교했다. [PDF 6쪽](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf#page=6) · [PDF 7쪽](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf#page=7) · [PDF 8쪽](https://proceedings.mlr.press/v162/hansen22a/hansen22a.pdf#page=8)
 
 ## Evaluation Scope
 
