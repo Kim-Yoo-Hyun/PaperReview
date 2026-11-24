@@ -13,7 +13,7 @@
 - Tags: Robotics, 3D Vision, semantic
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/7ba6b5b03ae07151a9a353b51f943290-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2412.05268
-- Code/Project: not identified
+- Code/Project: https://tea-lab.github.io/DenseMatcher/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (22 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,8 @@ DenseMatcher는 구조가 비슷한 물체 사이의 조밀한 3D 대응점을 �
 - **Actual contribution:** In summary, we make the following contributions: (i) a novel 3d matching dataset that remedies the lack of texture information and categories in previous datasets, (ii) a 3D dense correspondence ... (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Table 1: Performance comparison on DenseCorr3D shape matching benchmark. We report the results on both the full test set and the held-out set. Ablation studies are listed in Section 6.4. ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** As a result, prior methods generating dense 3D features can be divided into two categories: (1) 3D networks that only utilize geometry information and are trained on category-specific datasets (Cao ... (p. 2, 1 INTRODUCTION).
+
+## 공개 자료 대조
+
+- **코드** · DenseMatcher의 표면 대응 특징 추출 구현. [배포 파일](https://raw.githubusercontent.com/JunzheJosephZhu/DenseMatcher/fc3a2e3ddb038a87616903f1f784f790d267165b/densematcher/extractor.py) · [저자 배포 안내](https://raw.githubusercontent.com/JunzheJosephZhu/DenseMatcher/fc3a2e3ddb038a87616903f1f784f790d267165b/README.md)
+- **데이터** · 저자가 배포한 DenseCorr3D.zip 대응 학습·평가 자료. [배포 파일](https://drive.google.com/file/d/1bpgsNu8JewRafhdRN4woQL7ObQtfgcpu/view?usp=sharing) · [저자 배포 안내](https://tea-lab.github.io/DenseMatcher/)

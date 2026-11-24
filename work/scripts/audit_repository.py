@@ -643,6 +643,11 @@ def audit_taxonomy_batches(batches, registry_ids, errors, warnings):
         if not isinstance(records, list) or len(records) != batch["record_count"]:
             errors.append(f"taxonomy batch count mismatch: {relative}")
             continue
+        selection = batch.get("selection", {})
+        if selection:
+            tiers_at_review = Counter(r.get("changed_from", {}).get("tier") for r in records if isinstance(r, dict))
+            if tiers_at_review != selection.get("tier_counts"):
+                errors.append(f"taxonomy batch tier selection mismatch: {relative}")
         for record in records:
             if not isinstance(record, dict):
                 errors.append(f"invalid taxonomy record: {relative}")
@@ -666,6 +671,18 @@ def audit_taxonomy_batches(batches, registry_ids, errors, warnings):
                 errors.append(f"invalid openness: {appendix_id}")
             if record.get("changed_from", {}).get("id") != paper_id:
                 errors.append(f"missing previous registry identity: {appendix_id}")
+            if selection:
+                evidence = record.get("evidence", {})
+                pages = evidence.get("method_evaluation_pages", [])
+                if (not pages or any(type(page) is not int or page < 1 for page in pages)
+                    or not re.fullmatch(r"[a-f0-9]{64}", evidence.get("pdf_sha256", ""))
+                    or evidence.get("verified_on") != batch["verified_on"]
+                    or not evidence.get("sources", {}).get("방법·평가 원문", "").startswith("https://")):
+                    errors.append(f"missing taxonomy paper evidence: {appendix_id}")
+                for field in ("code", "weights", "data"):
+                    item = evidence.get("openness", {}).get(field, {})
+                    if not item.get("scope") or not item.get("source", "").startswith(("https://", "http://")):
+                        errors.append(f"missing taxonomy openness evidence: {appendix_id} {field}")
             if "vla" in record:
                 vla = record["vla"]
                 evaluation = vla.get("evaluation", {})

@@ -114,6 +114,9 @@ class DocumentMaintenanceTest(unittest.TestCase):
         row["artifact_recheck"] = {"fields": {"data": {"status": PASS, "finding": "not_applicable"}}}
         self.assertEqual(current_checks(row), {"link": PASS, "summary": PASS, "weights": PASS, "data": PASS})
         self.assertEqual(current_checks(row, include_reviews=False)["data"], OPEN)
+        row["taxonomy_review"] = {"fields": {"data": {"status": OPEN}}}
+        self.assertEqual(current_checks(row), {"link": PASS, "summary": PASS, "weights": PASS, "data": OPEN})
+        self.assertEqual(current_checks(row, include_reviews=False)["weights"], OPEN)
 
     def test_legacy_code_scope_normalizes_and_unrecognized_scopes_fail(self):
         code = {"kind": "official_code", "url": "https://example.org/repository",

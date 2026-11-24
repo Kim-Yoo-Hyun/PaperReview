@@ -13,7 +13,7 @@
 - Tags: VLA, Vision-Language Model, 3D Vision
 - Official paper: https://icml.cc/virtual/2026/poster/60472
 - Full-text retrieval: https://arxiv.org/pdf/2602.00807
-- Code/Project: not identified
+- Code/Project: https://xianzhefan.github.io/Any3D-VLA.github.io
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,8 @@ Any3D-VLA는 출처가 다른 점군을 같은 학습 과정에서 사용해 VLA
 - **Actual contribution:** The contributions of this paper are summarized as follows: (1) We propose ANY3D-VLA. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 RGBD image-plane 56.8 76.8 87.4 Point ... (p. 4, 3. Dataset and Benchmark).
 - **Explicit failure boundary:** Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single robotic arm and a limited ... (p. 8, 7. Limitations and Future Work).
+
+## 공개 자료 대조
+
+- **코드** · Any3D-VLA 정책 서버의 추론 코드. [배포 파일](https://raw.githubusercontent.com/XianzheFan/Any3D-VLA/7ce3a3e68d49619d8eedde15b8b32ae73b88262b/src/vla_network/vla_network/scripts/serve.py) · [저자 배포 안내](https://raw.githubusercontent.com/XianzheFan/Any3D-VLA/7ce3a3e68d49619d8eedde15b8b32ae73b88262b/README.md)
+- **가중치** · 저자가 배포한 Any3D-VLA 체크포인트. [배포 파일](https://huggingface.co/XianzheFan/Any3D-VLA/blob/386572ad1400d8a4258a4e3193a1692184d017b8/grit-Concerto-mono-dinosiglip-16-128-40000/checkpoint-340000/model.safetensors) · [저자 배포 안내](https://raw.githubusercontent.com/XianzheFan/Any3D-VLA/7ce3a3e68d49619d8eedde15b8b32ae73b88262b/README.md)

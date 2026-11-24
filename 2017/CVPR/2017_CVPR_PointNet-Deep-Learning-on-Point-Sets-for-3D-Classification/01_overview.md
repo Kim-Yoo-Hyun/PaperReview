@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2017 / CVPR
-- Authors: R. Qi Charles, Hao Su, Mo Kaichun, Leonidas J. Guibas
+- Authors: Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas
+- 저자 판본: 논문 표제면의 저자 표기와 순서. [표제면](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf#page=1)
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: 3D geometry, point cloud, representation

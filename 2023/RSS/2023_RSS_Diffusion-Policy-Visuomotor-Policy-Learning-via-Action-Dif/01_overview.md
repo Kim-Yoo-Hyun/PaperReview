@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin CM Burchfiel, Shuran Song
+- Authors: Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin Burchfiel, Shuran Song
+- 저자 판본: RSS 2023 표제면의 7명과 표기를 따른다. 후속 IJRR 저널판은 저자 구성과 순서가 다르다. [표제면](https://www.roboticsproceedings.org/rss19/p026.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Diffusion, Imitation Learning, Robotics

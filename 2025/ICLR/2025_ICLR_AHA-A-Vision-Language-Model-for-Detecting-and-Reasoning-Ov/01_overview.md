@@ -13,7 +13,7 @@
 - Tags: Vision-Language Model, Robotics
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/70a06501001e1820fd1eb9ee821302d2-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2410.00371
-- Code/Project: not identified
+- Code/Project: https://aha-vlm.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -90,3 +90,7 @@ AHA는 로봇 조작이 실패한 장면에서 무엇이 잘못됐는지를 자�
 - **Actual contribution:** We introduce AHA, an open-source vision-language model (VLM) that uses natural language to detect and reason about failures in robotic manipulation. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 2: Quantitative Evaluation on Failure Detection and Reasoning. AHA-13B was evaluated and benchmarked against three open and three proprietary VLMs and one visual prompting baseline across three evaluation datasets. ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Importantly, as is typical of TAMP methods, the original approach checks for a finite set of failures (inverse kinematics, collisions, etc.) from the environment, and returns any sampled plan that ... (p. 10, 4 Method).
+
+## 공개 자료 대조
+
+- **코드** · FailGen으로 실패 시연을 생성하는 코드와 AHA 학습·평가 절차. [배포 파일](https://raw.githubusercontent.com/NVlabs/AHA/0d39c0591566ddaf997be5822f3dead8e08501aa/aha/Data_Generation/rlbench-failgen/examples/ex_custom_data_generator.py) · [저자 배포 안내](https://raw.githubusercontent.com/NVlabs/AHA/0d39c0591566ddaf997be5822f3dead8e08501aa/README.md)

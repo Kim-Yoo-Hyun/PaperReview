@@ -13,7 +13,7 @@
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
 - Official paper: https://icml.cc/virtual/2026/poster/66214
 - Full-text retrieval: https://arxiv.org/pdf/2605.22283
-- Code/Project: not identified
+- Code/Project: https://github.com/Hoantrbl/SOMA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,7 @@ SOMA는 카메라 시야를 벗어난 물체의 공간 정보를 저장해 VLA�
 - **Actual contribution:** Based on these insights, we introduce SOMA, a VLA framework for out-of-vision manipulation that equips the robot with persistent spatial memory for reasoning and action. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 5. Ablation study on different components of the proposed memory design. "Geo." and "Obj." denote Geometric cues and object semantics, respectively. SimplerEnv Results. Table 4 reports the performance com- ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** The fixed-head variant fails once either the target or the goal leaves the field of view, confirming the brittleness of view-bound policies under partial observability. (p. 7, 4.3. Real World Results).
+
+## 공개 자료 대조
+
+- **코드** · 공식 저장소는 README와 라이선스를 제공하고 코드는 공개 예정이라고 명시한다. [저자 공개 안내](https://raw.githubusercontent.com/Hoantrbl/SOMA/2e3992018798b0eefb444917cf09348824d03fcf/README.md)

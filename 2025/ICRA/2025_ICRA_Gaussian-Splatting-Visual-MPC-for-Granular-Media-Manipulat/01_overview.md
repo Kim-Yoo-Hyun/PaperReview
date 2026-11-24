@@ -13,7 +13,7 @@
 - Tags: Robotics, Gaussian Splatting
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128002
 - Full-text retrieval: https://arxiv.org/pdf/2410.09740v3
-- Code/Project: not identified
+- Code/Project: https://rvl.cs.toronto.edu/gs-granular-media-mpc/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (7 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -85,3 +85,8 @@
 - **Actual contribution:** Our method takes a few multi-view images of a scene and their corresponding camera poses as input, and (a) converts them into their Gaussian splatting representation, (b) learns a dynamics ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Manipulation Results TABLE I MANIPULATION SUCCESS RATE IN SIMULATION (MAX = 1.0) Collection Splitting Redistributing NeRF-dy [38] 0.67 0.43 0.31 Dyn-Res [16] 0.79 0.72 0.67 NFD [29] 0.89 0.74 0.46 ... (p. 5, V. EXPERIMENTAL RESULTS).
 - **Explicit failure boundary:** This limitation stems from the difficulty in accurately reconstructing such tiny particles using Gaussian splatting, which struggles to maintain precision at smaller scales. (p. 6, VI. LIMITATIONS).
+
+## 공개 자료 대조
+
+- **코드** · 저자의 Resource and Citation에서 자료를 공개 예정으로 표시했다. [저자 공개 안내](https://weichengtseng.github.io/gs-granular-mani/)
+- **데이터** · 저자의 Resource and Citation에서 자료를 공개 예정으로 표시했다. [저자 공개 안내](https://weichengtseng.github.io/gs-granular-mani/)

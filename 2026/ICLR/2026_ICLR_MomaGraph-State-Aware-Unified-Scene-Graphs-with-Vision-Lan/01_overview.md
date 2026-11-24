@@ -7,13 +7,14 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Yuanchen Ju, Yongyuan Liang, Yen-Jen Wang, Gireesh Nandiraju, Yuanliang Ju, Seungjae (Jay) Lee, Qiao Gu, Elvis Hsieh, Furong Huang, Koushil Sreenath
+- Authors: Yuanchen Ju, Yongyuan Liang, Yen-Jen Wang, Nandiraju Gireesh, Yuanliang Ju, Seungjae Lee, Qiao Gu, Elvis Hsieh, Furong Huang, Koushil Sreenath
+- 저자 판본: 논문 표제면의 저자 표기와 순서. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=1)
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Vision-Language Model, Robotics, 3D Vision, Graph Reasoning
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9baf31febefde7bd76023c2d2f13cbd7-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf
-- Code/Project: not identified
+- Code/Project: https://HybridRobotics.github.io/MomaGraph/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -90,3 +91,9 @@ MomaGraph는 장면의 공간·기능 관계, 물체 상태와 조작 가능한 
 - **Actual contribution:** In summary, our work makes the following key contributions: • We propose MomaGraph, the first scene graph representation that jointly models spatial and functional relationships while incorporating part-level interactive nodes, ... (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Table 2: Performance comparison on the MomaGraph-Bench. We report accuracy (%) across four tiers (T1-T4) and the overall score, with and without graph-based reasoning. Type Models Params MomaGraph Benchmark Tier ... (p. 9, Figure/Table caption).
 - **Explicit failure boundary:** (b) Failure analysis illustrating success/failure rates across different reasoning stages. (p. 11, 6 EXPERIMENTS).
+
+## 공개 자료 대조
+
+- **코드** · MomaGraph의 계획 평가와 프롬프트 코드. 이 공개 파일에서 강화학습 전체 파이프라인의 배포는 확인되지 않았다. [배포 파일](https://raw.githubusercontent.com/HybridRobotics/MomaGraph/aacc96ff274e9601532876b4dea96c83d955f489/eval.py) · [저자 배포 안내](https://raw.githubusercontent.com/HybridRobotics/MomaGraph/aacc96ff274e9601532876b4dea96c83d955f489/README.md)
+- **가중치** · MomaGraph-R1 추론 모델의 분할 가중치. [배포 파일](https://huggingface.co/cheryyunl/MomaGraph-R1/blob/d447423d48112418b8707bb0baa08516ea6052bc/model-00001-of-00004.safetensors) · [저자 배포 안내](https://raw.githubusercontent.com/HybridRobotics/MomaGraph/aacc96ff274e9601532876b4dea96c83d955f489/README.md)
+- **데이터** · MomaGraph-Bench가 제공하는 계획 평가 레코드 샤드. [배포 파일](https://huggingface.co/datasets/cheryyunl/MomaGraph-Bench/blob/a6f8e6a870ed1c3d4342808957593fbda4e1b21a/data/train-00000-of-00003.parquet) · [저자 배포 안내](https://raw.githubusercontent.com/HybridRobotics/MomaGraph/aacc96ff274e9601532876b4dea96c83d955f489/README.md)

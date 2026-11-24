@@ -39,7 +39,8 @@ def bibliography_digest(paper, fields):
 
 def artifact_checks(row):
     return {**row.get("artifact_review", {}).get("fields", {}),
-            **row.get("artifact_recheck", {}).get("fields", {})}
+            **row.get("artifact_recheck", {}).get("fields", {}),
+            **row.get("taxonomy_review", {}).get("fields", {})}
 
 
 def current_checks(row, *, include_reviews=True):
@@ -250,6 +251,12 @@ def check_applied(rows, papers, root):
                         errors.append(f"{pid} reviewed {field} missing from overview")
         if review := row.get("summary_review"):
             overview = (root / paper["folder"] / "01_overview.md").read_text()
+            if revision := review.get("taxonomy_revision"):
+                claim = review[revision["field"]][revision["index"]]
+                expect("revised claim source", review["source"], revision["source"])
+                expect("revised claim pages", claim["pages"], revision["pages"])
+                if claim["text"] == revision["before"]["text"]:
+                    errors.append(f"{pid} revised claim still contains its former wording")
             if review.get("source_format") == "html":
                 expect("official web report", review["source"], paper["page"])
             if evidence := review.get("identifier_evidence"):
@@ -299,15 +306,17 @@ def check_applied(rows, papers, root):
             profile = paper["reproducibility"][key]
             expect(field + " file source", profile.get("source"), item["source"])
             expect(field + " file evidence", profile.get("evidence"), item["basis"])
-            recheck = row.get("artifact_recheck", {})
-            review = recheck if field in recheck.get("fields", {}) else row["artifact_review"]
+            review = next(row[name] for name in ("taxonomy_review", "artifact_recheck", "artifact_review")
+                          if field in row.get(name, {}).get("fields", {}))
             expect(field + " review date", profile.get("verified_on"), review["verified_on"])
             label = "배포 파일"
             if item.get("finding") == "not_applicable":
                 label = "원문 근거"
+            elif item.get("finding") == "not_released":
+                label = "저자 공개 안내"
             elif "metadata_correction" in item:
                 label = "검토 근거"
-            if field == "code":
+            if field == "code" and item.get("finding", "file") == "file":
                 check_source("code", item["repository"])
             overview = (root / paper["folder"] / "01_overview.md").read_text()
             if item["basis"] + f" [{label}]({item['source']})" not in overview:
@@ -444,6 +453,27 @@ def validate(rows, meta):
                         or change["value"] != "not_identified"):
                         raise ValueError(f"Invalid applicability correction for {row['id']} {field}")
     for row in rows:
+        if review := row.get("taxonomy_review"):
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", review["verified_on"]) or not review.get("fields"):
+                raise ValueError(f"Invalid taxonomy artifact review for {row['id']}")
+            for field, item in review["fields"].items():
+                finding = item["finding"]
+                if (field not in ("code", "weights", "data") or not item["basis"].strip()
+                    or not item["source"].startswith("https://") or not item.get("before", {}).get("status")):
+                    raise ValueError(f"Incomplete taxonomy evidence for {row['id']} {field}")
+                if finding == "file":
+                    valid = (item["status"] == PASS and item.get("coverage") in ("Y", "부분") and item.get("file")
+                             and item.get("release_reference", "").startswith("https://")
+                             and item.get("value") == ("reported" if field == "weights" else "released")
+                             and (field != "code" or item.get("repository", "").startswith("https://")))
+                elif finding == "not_released":
+                    valid = item["status"] == PASS and item.get("coverage") == "N" and item.get("value") == "not_released"
+                else:
+                    valid = (finding == "unresolved" and item["status"] == OPEN and item.get("coverage") == "unknown"
+                             and "value" not in item and field == "data"
+                             and item.get("metadata_correction", {}).get("value") == "not_identified")
+                if not valid:
+                    raise ValueError(f"Invalid taxonomy artifact finding for {row['id']} {field}")
         if change := row.get("byline_correction"):
             if (change["status"] != PASS or not change["before"] or not change["corrected"]
                 or change["before"] == change["corrected"] or not change["basis"].strip()
@@ -527,6 +557,7 @@ def render(rows, meta):
     transcriptions = [r["note_transcription_review"] for r in rows if "note_transcription_review" in r]
     latest_date = max([post["verified_on"], *(b["verified_on"] for b in batches),
                        *(r["verified_on"] for r in transcriptions),
+                       *(r["taxonomy_review"]["verified_on"] for r in rows if "taxonomy_review" in r),
                        *(r["byline_correction"]["verified_on"] for r in rows if "byline_correction" in r),
                        meta.get("artifact_review", {}).get("verified_on", ""),
                        meta.get("artifact_recheck", {}).get("verified_on", ""),
@@ -583,6 +614,8 @@ def render(rows, meta):
         lines.append("")
     for row in rows:
         if change := row.get("byline_correction"):
+            if change.get("batch"):
+                continue
             short_title = row["title"].split(":")[0]
             lines += [f"**{short_title} 저자 표기.** {change['verified_on']}에 {change['basis']} "
                       f"[게재본 표제면]({change['source']})", ""]
@@ -596,6 +629,22 @@ def render(rows, meta):
             if short_titles[title] > 1:
                 title = row["title"]
             lines.append(f"| {title} | {cited_statement(review['scope_clarification'], review)} |")
+        lines.append("")
+    taxonomy_reviews = [r["taxonomy_review"] for r in rows if "taxonomy_review" in r]
+    if taxonomy_reviews:
+        findings = Counter(item["finding"] for review in taxonomy_reviews for item in review["fields"].values())
+        lines += ["## 다축 태그와 공개 자료", "",
+                  f"태그 정규화 과정에서 {len(taxonomy_reviews)}편의 공개 자료 근거를 갱신했다. "
+                  f"배포 파일 {findings['file']}건, 저자가 공개 예정으로 표시한 항목 {findings['not_released']}건, "
+                  f"실험 자료를 사용하지만 배포 범위가 미확인인 항목 {findings['unresolved']}건이다. "
+                  "한 논문의 코드·가중치·데이터는 따로 센다. "
+                  "[배치별 분류와 미확인 범위](../work/update/REGISTRY.md#두-번째-배치-태그-매핑)", ""]
+    bylines = [(row, change) for row in rows if (change := row.get("byline_correction", {})).get("batch")]
+    if bylines:
+        lines += [f"다축 정규화에서 저자 {len(bylines)}편의 표기나 순서를 원문 표제면에 맞췄다. "
+                  "각 레코드에 이전 저자 목록을 보존했다.", "", "| 논문 | 표제면 대조 |", "|---|---|"]
+        for row, change in bylines:
+            lines.append(f"| {row['title'].split(':')[0]} | {change['basis']} [원문]({change['source']}) |")
         lines.append("")
     artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]
     if artifacts:
@@ -771,7 +820,9 @@ def main():
         summaries = sum("summary_review" in r for r in rows)
         artifact_fields = sum(len(r.get("artifact_review", {}).get("fields", {})) for r in rows)
         rechecked_fields = sum(len(r.get("artifact_recheck", {}).get("fields", {})) for r in rows)
-        print(f"Matched {summaries} source-checked summaries, {artifact_fields} initial artifact checks and {rechecked_fields} rechecks")
+        taxonomy_fields = sum(len(r.get("taxonomy_review", {}).get("fields", {})) for r in rows)
+        print(f"Matched {summaries} source-checked summaries, {artifact_fields} initial artifact checks, "
+              f"{rechecked_fields} rechecks and {taxonomy_fields} taxonomy artifact checks")
     text = render(rows, meta)
     if args.write:
         REPORT.write_text(text)

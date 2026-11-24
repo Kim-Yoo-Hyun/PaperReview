@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / RA-L
-- Authors: Oier Mees, Lukas Hermann, Erick Rosete-Beas, Wolfram Burgard Burgard
+- Authors: Oier Mees, Lukas Hermann, Erick Rosete-Beas, Wolfram Burgard
+- 저자 판본: RA-L 승인 원고 표제면은 마지막 저자를 Wolfram Burgard로 표기한다. [표제면](https://arxiv.org/pdf/2112.03227#page=1)
 - Primary track: VLA and generalist robot policies
 - Tier: CORE
 - Tags: Vision-Language-Action, Benchmark, Robotics

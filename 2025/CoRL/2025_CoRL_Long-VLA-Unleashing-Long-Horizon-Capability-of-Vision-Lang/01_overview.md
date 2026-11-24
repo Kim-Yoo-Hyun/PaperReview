@@ -7,13 +7,14 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / CoRL
-- Authors: Yiguo Fan, Shuanghao Bai, Xinyang Tong, Pengxiang Ding, Yuyang Zhu, Hongchao Lu, Fengqi Dai, Wei Zhao, Yang Liu, Siteng Huang, Zhaoxin Fan, Badong Chen, Donglin Wang
+- Authors: Yiguo Fan, Pengxiang Ding, Shuanghao Bai, Xinyang Tong, Yuyang Zhu, Hongchao Lu, Fengqi Dai, Wei Zhao, Yang Liu, Siteng Huang, Zhaoxin Fan, Badong Chen, Donglin Wang
+- 저자 판본: PMLR 게재 PDF 표제면은 Pengxiang Ding을 두 번째로 인쇄한다. [표제면](https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=1)
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Planning, Robotics
 - Official paper: https://proceedings.mlr.press/v305/fan25a.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf
-- Code/Project: not identified
+- Code/Project: https://long-vla.github.io
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +88,7 @@ Long-VLA는 이동과 실제 상호작용에 필요한 관측이 다르다는 �
 - **Actual contribution:** To this end, we propose Long-VLA, the first end-to-end VLA model specifically designed for longhorizon robotic manipulation. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Figure 7: Comparison with SOTA method on real-world scenarios. (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** While our model mitigates the initial state gap, it does not address execution failures under precise initial conditions. (p. 9, Limitation).
+
+## 공개 자료 대조
+
+- **코드** · 프로젝트의 코드 버튼에 공개 예정이라고 표시되어 있다. [저자 공개 안내](https://long-vla.github.io)

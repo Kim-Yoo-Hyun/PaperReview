@@ -13,7 +13,7 @@
 - Tags: VLA, grasping, synthetic data
 - Official paper: https://proceedings.mlr.press/v305/deng25a.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf
-- Code/Project: not identified
+- Code/Project: https://pku-epic.github.io/GraspVLA-web/
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,9 @@ GraspVLA는 시뮬레이터에서 생성한 파지 행동과 웹의 의미 정�
 - **Actual contribution:** In summary, our contributions are as follows: a) we introduce a novel pretraining paradigm that relies entirely on synthetic action data, significantly reducing the real world action data acquisition burden, ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 14: Impact of number of input views. Comparison of GraspVLA with different numbers of input views. The results demonstrate that while multiple views significantly improve performance, our single-view implementation ... (p. 24, Figure/Table caption).
 - **Explicit failure boundary:** Finally, the remaining failures (7%) include minor errors such as early gripper closure or collisions with the environment, which reinforcement learning could potentially address. (p. 26, C Details about Data Generation).
+
+## 공개 자료 대조
+
+- **코드** · 언어·영상·연속 행동 모듈을 결합하는 GraspVLA 모델. [배포 파일](https://raw.githubusercontent.com/PKU-EPIC/GraspVLA/6acd035edf7fee9ef7d90246bd9911ccf2232b8e/vla_network/model/vla/assembled_vla.py) · [저자 배포 안내](https://raw.githubusercontent.com/PKU-EPIC/GraspVLA/6acd035edf7fee9ef7d90246bd9911ccf2232b8e/README.md)
+- **가중치** · 저자가 배포한 GraspVLA 모델 체크포인트. [배포 파일](https://huggingface.co/vegebirrd/GraspVLA/blob/e0b642edc7dfdf8e76cb7883320a0bbd85145f53/checkpoint/model.safetensors) · [저자 배포 안내](https://raw.githubusercontent.com/PKU-EPIC/GraspVLA/6acd035edf7fee9ef7d90246bd9911ccf2232b8e/README.md)
+- **데이터** · SynGrasp-1B의 LeRobot 형식 파지 궤적 샤드. 웹 공동학습 자료는 별도 범위다. [배포 파일](https://huggingface.co/datasets/vegebirrd/SynGrasp-1B/blob/411e82e0f40b1d95e05962a9cf3d881aa76c6443/front-side-290cat-500w_lerobot/000b701e-1381-43e6-a966-d03342f30f0e/data/chunk-000/file-000.parquet) · [저자 배포 안내](https://raw.githubusercontent.com/PKU-EPIC/GraspVLA/6acd035edf7fee9ef7d90246bd9911ccf2232b8e/README.md)

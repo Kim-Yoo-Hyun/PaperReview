@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2011 / AISTATS
-- Authors: Stephane Ross, Geoffrey Gordon, Drew Bagnell
+- Authors: Stéphane Ross, Geoffrey J. Gordon, J. Andrew Bagnell
+- 저자 판본: 논문 표제면의 저자 표기와 순서. [표제면](https://proceedings.mlr.press/v15/ross11a/ross11a.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE
 - Tags: Robotics, Imitation Learning, policy learning

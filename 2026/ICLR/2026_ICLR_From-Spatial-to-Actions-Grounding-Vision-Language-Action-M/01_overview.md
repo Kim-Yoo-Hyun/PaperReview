@@ -7,13 +7,14 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Zhengshen Zhang, 昊 李, Yalun Dai, Zhengbang Zhu, Lei Zhou, Chenchen Liu, Dong Wang, Francis Tay, Sijin Chen, Ziwei Liu, Yuxiao Liu, Xinghang Li, Pan Zhou
+- Authors: Zhengshen Zhang, Hao Li, Yalun Dai, Zhengbang Zhu, Lei Zhou, Chenchen Liu, Dong Wang, Francis E. H. Tay, Sijin Chen, Ziwei Liu, Yuxiao Liu, Xinghang Li, Pan Zhou
+- 저자 판본: 논문 표제면의 저자 표기와 순서. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=1)
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Vision-Language Model, Robotics, 3D Vision
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf
-- Code/Project: not identified
+- Code/Project: https://falcon-vla.github.io/
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +88,9 @@ FALCON은 RGB로 추정한 3차원 구조를 행동 헤드에 제공해 VLA 정�
 - **Actual contribution:** We propose FALCON (From Spatial to Action), a novel paradigm that integrates richer and more representative 3D spatial tokens into VLAs through an improved injection scheme. (p. 2, 1 Introduction).
 - **Evaluation boundary:** 2 reports the results on the Bridge-WidowX setup, where FALCON consistently outperforms all baselines and achieves best performance. (p. 8, 4 Experiments).
 - **Explicit failure boundary:** For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure. (p. 9, 4 Experiments).
+
+## 공개 자료 대조
+
+- **코드** · FALCON의 학습 손실 코드 및 CALVIN·SimplerEnv 평가 진입점. [배포 파일](https://raw.githubusercontent.com/FALCON-VLA/FALCON/a30c80aef8fc5e95badaa1b65ca40e25004bc87c/falcon/train/loss.py) · [저자 배포 안내](https://raw.githubusercontent.com/FALCON-VLA/FALCON/a30c80aef8fc5e95badaa1b65ca40e25004bc87c/README.md)
+- **가중치** · CALVIN ABC에서 학습한 FALCON 정책. 저장소는 다른 변형과 사전학습 파일도 제공한다. [배포 파일](https://huggingface.co/FALCON-VLA/FALCON-series/blob/902eec199093478b500edd2cde2d8728c556d5de/falcon-esm-fc-calvin-abc/ckpts/falcon_esm_fc_calvin_abc.pt) · [저자 배포 안내](https://raw.githubusercontent.com/FALCON-VLA/FALCON/a30c80aef8fc5e95badaa1b65ca40e25004bc87c/README.md)
+- **데이터** · 저자가 전처리한 CALVIN의 카메라·3차원 입력 자료. 원래 로봇 데이터 전체의 재배포를 뜻하지 않는다. [배포 파일](https://huggingface.co/datasets/FALCON-VLA/CALVIN-3D_cam-params/blob/f7d9c7bd21f054180bddc8ac4b64ee799d7a7556/packaged_ABC_D/packaged_ABC_D.tar.gz) · [저자 배포 안내](https://raw.githubusercontent.com/FALCON-VLA/FALCON/a30c80aef8fc5e95badaa1b65ca40e25004bc87c/README.md)

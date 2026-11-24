@@ -7,7 +7,8 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / NeurIPS
-- Authors: Lili Chen, Kevin Lu, Aravind Rajeswaran, Kimin Lee, Aditya Grover, Misha Laskin, Pieter Abbeel, Aravind Srinivas, Igor Mordatch
+- Authors: Lili Chen, Kevin Lu, Aravind Rajeswaran, Kimin Lee, Aditya Grover, Michael Laskin, Pieter Abbeel, Aravind Srinivas, Igor Mordatch
+- 저자 판본: 논문 표제면의 저자 표기와 순서. [표제면](https://proceedings.neurips.cc/paper/2021/file/7f489f642a0ddb10272b5c31057f0663-Paper.pdf#page=1)
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Reinforcement Learning, Transformer, policy
@@ -89,3 +90,7 @@ Decision Transformer는 목표 누적 보상과 이전 상태·행동을 조건�
 - **Actual contribution:** Training dataset consists of random walk trajectories and their per-node returns-to-go (middle). (p. 3, 1 Introduction).
 - **Evaluation boundary:** Table 3: Comparison between Decision Transformer (DT) and Percentile Behavior Cloning (%BC). In contrast, when we study low data regimes - such as Atari, where we use 1% of a ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** 1 for success or 0 for failure), as well as the environment starting state, as the conditioning information to initiate generation. (p. 5, 3 Method).
+
+## 공개 자료 대조
+
+- **데이터** · D4RL 등의 실험 자료를 사용하며 직접 배포하는 논문 고유 자료의 범위는 미확인이다. [검토 근거](https://arxiv.org/pdf/2106.01345#page=7)

@@ -13,7 +13,7 @@
 - Tags: 3D Vision, Navigation, Gaussian Splatting
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://gwxuan.github.io/IGL-Nav/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -53,7 +53,7 @@ IGL-Nav는 탐색 중 갱신하는 3차원 가우시안 지도에서 목표 사�
 
 ## Main Claims and Actual Contribution
 
-- 새 단안 영상으로 지도를 증분 갱신하고, 이산 공간에서 기하 정보를 대조해 목표 카메라의 초기 자세를 추정한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=4)
+- 자세가 주어진 RGB-D 관측열로 지도를 갱신한다. 목표 사진의 깊이·카메라 내부 파라미터를 사용해 목표 자세를 찾으며, 단안 추정값을 사용한 조건도 평가한다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=3) · [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=5) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=8)
 - 거친 추정치를 정제해 목표 시점과 관측 시점이 다른 이미지 목표 내비게이션에서 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=6)
 
 ## Evaluation Scope
@@ -83,3 +83,7 @@ IGL-Nav는 탐색 중 갱신하는 3차원 가우시안 지도에서 목표 사�
 - **Actual contribution:** To this end, we propose IGL-Nav, an Incremental 3D Gaussian Localization framework that (1) progressively constructs 3DGS through feed-forward prediction, eliminating offline optimization; and (2) enables efficient hierarchical goal sea ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** It is shown that using a 3-level subdivision achieves best performance, because a finer discretization will reduce quantization error and improve the accuracy of coarse localization. (p. 7, 4.3. Analysis of IGL-Nav).
 - **Explicit failure boundary:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image. (p. 8, 5. Conclusion).
+
+## 공개 자료 대조
+
+- **코드** · 공식 저장소의 배포 안내는 구현을 공개 예정으로 표시한다. [저자 공개 안내](https://raw.githubusercontent.com/GWxuan/IGL-Nav/c56e584d75a4b1b0ff56f7c8527e7665e151876b/README.md)

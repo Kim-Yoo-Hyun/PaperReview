@@ -4,7 +4,8 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2015 / ICML
-- Authors: Tom Schaul, Daniel Horgan, Karol Gregor, David Silver
+- Authors: Tom Schaul, Dan Horgan, Karol Gregor, David Silver
+- 저자 판본: 논문 표제면의 저자 표기와 순서. [표제면](https://proceedings.mlr.press/v37/schaul15.pdf#page=1)
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: CORE

@@ -2625,9 +2625,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://api.crossref.org/works/10.1109/cvpr.2017.16",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0012",
@@ -2726,9 +2726,9 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "R. Qi Charles",
+      "Charles R. Qi",
       "Hao Su",
-      "Mo Kaichun",
+      "Kaichun Mo",
       "Leonidas J. Guibas"
     ]
   },
@@ -3936,7 +3936,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_applicable",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -3988,9 +3988,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.neurips.cc/paper_files/paper/2021/hash/7f489f642a0ddb10272b5c31057f0663-Abstract.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.neurips.cc/paper/2021/file/7f489f642a0ddb10272b5c31057f0663-Paper.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0018",
@@ -4078,9 +4078,10 @@
         "verified_on": "2026-11-20"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://arxiv.org/pdf/2106.01345#page=7",
+        "evidence": "D4RL 등의 실험 자료를 사용하며 직접 배포하는 논문 고유 자료의 범위는 미확인이다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -4098,7 +4099,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2021/NeurIPS/2021_NeurIPS_Decision-Transformer-Reinforcement-Learning-via-Sequence-M/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -4123,7 +4124,7 @@
       "Aravind Rajeswaran",
       "Kimin Lee",
       "Aditya Grover",
-      "Misha Laskin",
+      "Michael Laskin",
       "Pieter Abbeel",
       "Aravind Srinivas",
       "Igor Mordatch"
@@ -4302,9 +4303,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss19/p026.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss19/p026.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "RSS 2023 표제면의 7명과 표기를 따른다. 후속 IJRR 저널판은 저자 구성과 순서가 다르다."
       }
     },
     "paper_id": "pr-0019",
@@ -4439,7 +4440,7 @@
       "Yilun Du",
       "Zhenjia Xu",
       "Eric Cousineau",
-      "Benjamin CM Burchfiel",
+      "Benjamin Burchfiel",
       "Shuran Song"
     ]
   },
@@ -5134,6 +5135,11 @@
         "method": "review_manifest_then_note_evidence_max; note_review manifests attach note-level provenance without changing paper-level review precedence",
         "reconciled_on": "2026-09-04",
         "tracker_status_is_independent": true
+      },
+      "authors_verification": {
+        "source": "https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "PMLR 웹 서지는 Brianna Zitkovich로 시작하고 게재 PDF는 Anthony Brohan으로 시작한다. 표제면의 54명을 인쇄 순서로 기록했다."
       }
     },
     "paper_id": "pr-0022",
@@ -5240,60 +5246,60 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Brianna Zitkovich",
-      "Tianhe Yu",
-      "Sichun Xu",
-      "Peng Xu",
-      "Ted Xiao",
-      "Fei Xia",
-      "Jialin Wu",
-      "Paul Wohlhart",
-      "Stefan Welker",
-      "Ayzaan Wahid",
-      "Quan Vuong",
-      "Vincent Vanhoucke",
-      "Huong Tran",
-      "Radu Soricut",
-      "Anikait Singh",
-      "Jaspiar Singh",
-      "Pierre Sermanet",
-      "Pannag R. Sanketi",
-      "Grecia Salazar",
-      "Michael S. Ryoo",
-      "Krista Reymann",
-      "Kanishka Rao",
-      "Karl Pertsch",
-      "Igor Mordatch",
-      "Henryk Michalewski",
-      "Yao Lu",
-      "Sergey Levine",
+      "Anthony Brohan",
+      "Noah Brown",
+      "Justice Carbajal",
+      "Yevgen Chebotar",
+      "Xi Chen",
+      "Krzysztof Choromanski",
+      "Tianli Ding",
+      "Danny Driess",
+      "Avinava Dubey",
+      "Chelsea Finn",
+      "Pete Florence",
+      "Chuyuan Fu",
+      "Montse Gonzalez Arenas",
+      "Keerthana Gopalakrishnan",
+      "Kehang Han",
+      "Karol Hausman",
+      "Alexander Herzog",
+      "Jasmine Hsu",
+      "Brian Ichter",
+      "Alex Irpan",
+      "Nikhil Joshi",
+      "Ryan Julian",
+      "Dmitry Kalashnikov",
+      "Yuheng Kuang",
+      "Isabel Leal",
       "Lisa Lee",
       "Tsang-Wei Edward Lee",
-      "Isabel Leal",
-      "Yuheng Kuang",
-      "Dmitry Kalashnikov",
-      "Ryan Julian",
-      "Nikhil J. Joshi",
-      "Alex Irpan",
-      "Brian Ichter",
-      "Jasmine Hsu",
-      "Alexander Herzog",
-      "Karol Hausman",
-      "Keerthana Gopalakrishnan",
-      "Chuyuan Fu",
-      "Pete Florence",
-      "Chelsea Finn",
-      "Kumar Avinava Dubey",
-      "Danny Driess",
-      "Tianli Ding",
-      "Krzysztof Marcin Choromanski",
-      "Xi Chen",
-      "Yevgen Chebotar",
-      "Justice Carbajal",
-      "Noah Brown",
-      "Anthony Brohan",
-      "Montserrat Gonzalez Arenas",
-      "Kehang Han"
+      "Sergey Levine",
+      "Yao Lu",
+      "Henryk Michalewski",
+      "Igor Mordatch",
+      "Karl Pertsch",
+      "Kanishka Rao",
+      "Krista Reymann",
+      "Michael Ryoo",
+      "Grecia Salazar",
+      "Pannag Sanketi",
+      "Pierre Sermanet",
+      "Jaspiar Singh",
+      "Anikait Singh",
+      "Radu Soricut",
+      "Huong Tran",
+      "Vincent Vanhoucke",
+      "Quan Vuong",
+      "Ayzaan Wahid",
+      "Stefan Welker",
+      "Paul Wohlhart",
+      "Jialin Wu",
+      "Fei Xia",
+      "Ted Xiao",
+      "Peng Xu",
+      "Sichun Xu",
+      "Tianhe Yu",
+      "Brianna Zitkovich"
     ]
   },
   {
@@ -5648,9 +5654,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2310.08864",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10611477#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "Open X-Embodiment Collaboration의 단체명과 기여자 명단을 해당 판본의 표제면에서 대조했다."
       }
     },
     "paper_id": "pr-0024",
@@ -5774,10 +5780,9 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Embodiment Collaboration",
-      "Abby O'Neill",
+      "Open X-Embodiment Collaboration",
+      "Abby O’Neill",
       "Abdul Rehman",
-      "Abhinav Gupta",
       "Abhiram Maddukuri",
       "Abhishek Gupta",
       "Abhishek Padalkar",
@@ -5794,7 +5799,6 @@
       "Anant Rai",
       "Anchit Gupta",
       "Andrew Wang",
-      "Andrey Kolobov",
       "Anikait Singh",
       "Animesh Garg",
       "Aniruddha Kembhavi",
@@ -5840,7 +5844,6 @@
       "Federico Ceola",
       "Fei Xia",
       "Feiyu Zhao",
-      "Felipe Vieira Frujeri",
       "Freek Stulp",
       "Gaoyue Zhou",
       "Gaurav S. Sukhatme",
@@ -5850,7 +5853,6 @@
       "Giulio Schiavi",
       "Glen Berseth",
       "Gregory Kahn",
-      "Guangwen Yang",
       "Guanzhi Wang",
       "Hao Su",
       "Hao-Shu Fang",
@@ -5859,7 +5861,6 @@
       "Heni Ben Amor",
       "Henrik I Christensen",
       "Hiroki Furuta",
-      "Homanga Bharadhwaj",
       "Homer Walke",
       "Hongjie Fang",
       "Huy Ha",
@@ -5873,7 +5874,6 @@
       "Jan Peters",
       "Jan Schneider",
       "Jasmine Hsu",
-      "Jay Vakil",
       "Jeannette Bohg",
       "Jeffrey Bingham",
       "Jeffrey Wu",
@@ -5926,7 +5926,7 @@
       "Lerrel Pinto",
       "Li Fei-Fei",
       "Liam Tan",
-      "Linxi \"Jim\" Fan",
+      "Linxi “Jim” Fan",
       "Lionel Ott",
       "Lisa Lee",
       "Luca Weihs",
@@ -5946,7 +5946,6 @@
       "Mohan Kumar Srirama",
       "Mohit Sharma",
       "Moo Jin Kim",
-      "Muhammad Zubair Irshad",
       "Naoaki Kanazawa",
       "Nicklas Hansen",
       "Nicolas Heess",
@@ -5959,7 +5958,7 @@
       "Oliver Kroemer",
       "Osbert Bastani",
       "Pannag R Sanketi",
-      "Patrick \"Tree\" Miller",
+      "Patrick “Tree” Miller",
       "Patrick Yin",
       "Paul Wohlhart",
       "Peng Xu",
@@ -5992,7 +5991,6 @@
       "Shikhar Bahl",
       "Shivin Dass",
       "Shubham Sonawani",
-      "Shubham Tulsiani",
       "Shuran Song",
       "Sichun Xu",
       "Siddhant Haldar",
@@ -6023,21 +6021,17 @@
       "Trevor Darrell",
       "Trinity Chung",
       "Vidhi Jain",
-      "Vikash Kumar",
       "Vincent Vanhoucke",
-      "Vitor Guizilini",
       "Wei Zhan",
       "Wenxuan Zhou",
       "Wolfram Burgard",
       "Xi Chen",
-      "Xiangyu Chen",
       "Xiaolong Wang",
       "Xinghao Zhu",
       "Xinyang Geng",
       "Xiyuan Liu",
       "Xu Liangwei",
       "Xuanlin Li",
-      "Yansong Pang",
       "Yao Lu",
       "Yecheng Jason Ma",
       "Yejin Kim",
@@ -6048,7 +6042,6 @@
       "Ying Xu",
       "Yixuan Wang",
       "Yonatan Bisk",
-      "Yongqiang Dou",
       "Yoonyoung Cho",
       "Youngwoon Lee",
       "Yuchen Cui",
@@ -6066,7 +6059,6 @@
       "Zhuo Xu",
       "Zichen Jeff Cui",
       "Zichen Zhang",
-      "Zipeng Fu",
       "Zipeng Lin"
     ]
   },
@@ -6840,10 +6832,15 @@
         "url": "https://vlmaps.github.io/",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/vlmaps/vlmaps",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -6956,9 +6953,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://vlmaps.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/vlmaps/vlmaps/58060f97239074338ab419a2090d43fa752d724d/vlmaps/map/vlmap.py",
+        "evidence": "언어 특징을 3차원 지도에 누적하는 VLMap 구현.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -6981,7 +6979,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2023/ICRA/2023_ICRA_VLMaps-Visual-Language-Maps-for-Robot-Navigation/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -8720,7 +8718,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -8869,13 +8867,16 @@
         "verified_on": "2026-11-20"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/drive/folders/0B2LlLwoO3nfZfi1LbGJINXJ1TUQxN1pxa3Q1MzlDZmY0WGk1RmhxazZvNFEydUREbXM4cTA?resourcekey=0-DpkG5eIqkwjKJ84qFcaUfw",
+        "evidence": "저자가 공유한 RLBench 훈련 시연 중 close_jar.zip을 파일명과 크기가 표시된 목록에서 확인했다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://github.com/peract/peract/releases/download/v1.0.0/peract_600k.zip",
+        "evidence": "시뮬레이션 다중 과제용 PerAct 600k 정책 체크포인트.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -8889,7 +8890,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2022/CoRL/2022_CoRL_Perceiver-Actor-A-Multi-Task-Transformer-for-Robotic-Manip/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -10011,9 +10012,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://api.crossref.org/works/10.1109/lra.2022.3180108",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://arxiv.org/pdf/2112.03227#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "RA-L 승인 원고 표제면은 마지막 저자를 Wolfram Burgard로 표기한다."
       }
     },
     "paper_id": "pr-0041",
@@ -10127,7 +10128,7 @@
       "Oier Mees",
       "Lukas Hermann",
       "Erick Rosete-Beas",
-      "Wolfram Burgard Burgard"
+      "Wolfram Burgard"
     ]
   },
   {
@@ -12516,9 +12517,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v270/kim25c.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0051",
@@ -12689,8 +12690,8 @@
       "Ashwin Balakrishna",
       "Suraj Nair",
       "Rafael Rafailov",
-      "Ethan P Foster",
-      "Pannag R Sanketi",
+      "Ethan Foster",
+      "Pannag Sanketi",
       "Quan Vuong",
       "Thomas Kollar",
       "Benjamin Burchfiel",
@@ -13502,7 +13503,12 @@
         "url": "https://voxact-b.github.io/",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/VoxAct-B/voxactb",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v270/liu25i.html",
         "kind": "publisher_record",
@@ -13511,7 +13517,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "released",
       "local_pdf_cache": false
     },
@@ -13648,19 +13654,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://voxact-b.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/VoxAct-B/voxactb/1cc074b1730f52a7fd35d069d8c9099d18718bca/peract/train.py",
+        "evidence": "저자 양팔 행동·안정화 정책의 학습 진입점.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/arthur801031/voxact-b",
-        "evidence": "배포 파일 목록에서 확인한 범위 · pretrained_weights.zip",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/arthur801031/voxact-b/blob/1c97d3e318a3d54bf2864a0bb346a1bae4b34c79/data/train/open_drawer_100_demos_corl_v1.zip",
+        "evidence": "저자의 양팔 Open Drawer 훈련 시연 ZIP. 같은 배포처의 pretrained_weights.zip은 CLIP·SAM 인코더 가중치다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/datasets/arthur801031/voxact-b/blob/1c97d3e318a3d54bf2864a0bb346a1bae4b34c79/weights/hand_over_item_10_demos_ours_vlm_v1_11_acting/PERACT_BC/seed11/weights/700000/QAttentionAgent_layer0.pt",
+        "evidence": "Hand Over Item의 행동 담당 팔에 학습한 복셀 정책 가중치. 역할과 과제별 정책 파일을 따로 배포한다.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -13674,7 +13683,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2024/CoRL/2024_CoRL_VoxAct-B-Voxel-Based-Acting-and-Stabilizing-Policy-for-Bim/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -14213,7 +14222,12 @@
         "url": "https://vis-www.cs.umass.edu/3ds-vla/",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/clorislili/3ds-vla",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/li25g.html",
         "kind": "publisher_record",
@@ -14222,8 +14236,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -14359,18 +14373,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://vis-www.cs.umass.edu/3ds-vla/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/clorislili/3ds-vla/3e51fedffa25f3039e2c58d85628b39c91be9a59/3ds-vla/test_model_2.py",
+        "evidence": "저자 배포판에 포함된 3DS-VLA 추론 코드.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/Clorisss/RLBench/blob/763cbdc3f14faf559d29ccf59d95aeb494aef945/RLBench.zip",
+        "evidence": "저자 배포의 RLBench 과제 자료 ZIP. 실물 전체 학습 자료의 공개 범위는 미확인이다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/Clorisss/3ds-vla/blob/6d952d6f4ad082ad0da314a49234a87ac2138b50/checkpoint-478000.pth",
+        "evidence": "3DS-VLA가 배포한 과제 모델의 checkpoint-478000.pth.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -14384,7 +14402,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/CoRL/2025_CoRL_3DS-VLA-A-3D-Spatial-Aware-Vision-Language-Action-Model-fo/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -14431,7 +14449,7 @@
     "folder": "2025/CoRL/2025_CoRL_Long-VLA-Unleashing-Long-Horizon-Capability-of-Vision-Lang",
     "pdf": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf",
     "page": "https://proceedings.mlr.press/v305/fan25a.html",
-    "project": "not identified",
+    "project": "https://long-vla.github.io",
     "venue_as_recorded": "CoRL",
     "venue_canonical": "CoRL",
     "identifiers": {},
@@ -14456,7 +14474,12 @@
         "url": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
+      "project": {
+        "url": "https://long-vla.github.io",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "code": null,
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/fan25a.html",
@@ -14466,7 +14489,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "not_released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -14519,9 +14542,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v305/fan25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/fan25a/fan25a.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "PMLR 게재 PDF 표제면은 Pengxiang Ding을 두 번째로 인쇄한다."
       }
     },
     "paper_id": "pr-0059",
@@ -14591,9 +14614,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "not_released",
+        "source": "https://long-vla.github.io",
+        "evidence": "프로젝트의 코드 버튼에 공개 예정이라고 표시되어 있다.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -14616,7 +14640,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/CoRL/2025_CoRL_Long-VLA-Unleashing-Long-Horizon-Capability-of-Vision-Lang/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -14637,9 +14661,9 @@
     },
     "authors": [
       "Yiguo Fan",
+      "Pengxiang Ding",
       "Shuanghao Bai",
       "Xinyang Tong",
-      "Pengxiang Ding",
       "Yuyang Zhu",
       "Hongchao Lu",
       "Fengqi Dai",
@@ -15011,9 +15035,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v305/black25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/black25a/black25a.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0061",
@@ -15128,14 +15152,14 @@
       "Karan Dhabalia",
       "Danny Driess",
       "Adnan Esmail",
-      "Michael Robert Equi",
+      "Michael Equi",
       "Chelsea Finn",
       "Niccolo Fusai",
       "Manuel Y. Galliker",
       "Dibya Ghosh",
       "Lachy Groom",
       "Karol Hausman",
-      "brian ichter",
+      "Brian Ichter",
       "Szymon Jakubczak",
       "Tim Jones",
       "Liyiming Ke",
@@ -15172,7 +15196,7 @@
     "folder": "2025/CoRL/2025_CoRL_GraspVLA-a-Grasping-Foundation-Model-Pre-trained-on-Billio",
     "pdf": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf",
     "page": "https://proceedings.mlr.press/v305/deng25a.html",
-    "project": "not identified",
+    "project": "https://pku-epic.github.io/GraspVLA-web/",
     "venue_as_recorded": "CoRL",
     "venue_canonical": "CoRL",
     "identifiers": {},
@@ -15197,8 +15221,18 @@
         "url": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/deng25a/deng25a.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://pku-epic.github.io/GraspVLA-web/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/PKU-EPIC/GraspVLA",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/deng25a.html",
         "kind": "publisher_record",
@@ -15207,8 +15241,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -15385,18 +15419,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/PKU-EPIC/GraspVLA/6acd035edf7fee9ef7d90246bd9911ccf2232b8e/vla_network/model/vla/assembled_vla.py",
+        "evidence": "언어·영상·연속 행동 모듈을 결합하는 GraspVLA 모델.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/vegebirrd/SynGrasp-1B/blob/411e82e0f40b1d95e05962a9cf3d881aa76c6443/front-side-290cat-500w_lerobot/000b701e-1381-43e6-a966-d03342f30f0e/data/chunk-000/file-000.parquet",
+        "evidence": "SynGrasp-1B의 LeRobot 형식 파지 궤적 샤드. 웹 공동학습 자료는 별도 범위다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/vegebirrd/GraspVLA/blob/e0b642edc7dfdf8e76cb7883320a0bbd85145f53/checkpoint/model.safetensors",
+        "evidence": "저자가 배포한 GraspVLA 모델 체크포인트.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -15410,7 +15448,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/CoRL/2025_CoRL_GraspVLA-a-Grasping-Foundation-Model-Pre-trained-on-Billio/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -17362,7 +17400,7 @@
     "folder": "2025/ICLR/2025_ICLR_AHA-A-Vision-Language-Model-for-Detecting-and-Reasoning-Ov",
     "pdf": "https://arxiv.org/pdf/2410.00371",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/70a06501001e1820fd1eb9ee821302d2-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://aha-vlm.github.io/",
     "venue_as_recorded": "ICLR 2025 Poster",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -17397,8 +17435,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://aha-vlm.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/NVlabs/AHA",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=JVkdSi7Ekg",
         "kind": "openreview",
@@ -17407,7 +17455,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -17537,9 +17585,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/NVlabs/AHA/0d39c0591566ddaf997be5822f3dead8e08501aa/aha/Data_Generation/rlbench-failgen/examples/ex_custom_data_generator.py",
+        "evidence": "FailGen으로 실패 시연을 생성하는 코드와 AHA 학습·평가 절차.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -17562,7 +17611,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/ICLR/2025_ICLR_AHA-A-Vision-Language-Model-for-Detecting-and-Reasoning-Ov/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -18556,7 +18605,7 @@
     "folder": "2025/ICLR/2025_ICLR_DenseMatcher-Learning-3D-Semantic-Correspondence-for-Categ",
     "pdf": "https://arxiv.org/pdf/2412.05268",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/7ba6b5b03ae07151a9a353b51f943290-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://tea-lab.github.io/DenseMatcher/",
     "venue_as_recorded": "ICLR 2025 Spotlight",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -18591,8 +18640,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://tea-lab.github.io/DenseMatcher/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/JunzheJosephZhu/DenseMatcher",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=8oFvUBvF1u",
         "kind": "openreview",
@@ -18601,8 +18660,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -18716,14 +18775,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/JunzheJosephZhu/DenseMatcher/fc3a2e3ddb038a87616903f1f784f790d267165b/densematcher/extractor.py",
+        "evidence": "DenseMatcher의 표면 대응 특징 추출 구현.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1bpgsNu8JewRafhdRN4woQL7ObQtfgcpu/view?usp=sharing",
+        "evidence": "저자가 배포한 DenseCorr3D.zip 대응 학습·평가 자료.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -18741,7 +18802,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/ICLR/2025_ICLR_DenseMatcher-Learning-3D-Semantic-Correspondence-for-Categ/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -20165,7 +20226,7 @@
     "folder": "2025/ICLR/2025_ICLR_RDT-1B-a-Diffusion-Foundation-Model-for-Bimanual-Manipulat",
     "pdf": "https://arxiv.org/pdf/2410.07864",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/49f80e4d2471ad4f2edf4f5f1ab62339-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://rdt-robotics.github.io/rdt-robotics/",
     "venue_as_recorded": "ICLR 2025 Poster",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -20200,8 +20261,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://rdt-robotics.github.io/rdt-robotics/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/thu-ml/RoboticsDiffusionTransformer",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=yAzN4tz7oI",
         "kind": "openreview",
@@ -20210,8 +20281,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -20383,18 +20454,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/thu-ml/RoboticsDiffusionTransformer/cd79363a1387e8f81c7724d070ef7e45fd23150f/models/rdt/model.py",
+        "evidence": "RDT 행동 확산 Transformer 정의와 학습·추론 코드.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/robotics-diffusion-transformer/rdt-ft-data/blob/a3f4b6624d4fc3a09b538f65081b37401fd8bd84/rdt_data.tar.gz.00",
+        "evidence": "저자의 양팔 미세조정 시연 배포본 중 첫 분할 아카이브. 다기종 사전학습 전체 자료의 배포와 구별한다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/robotics-diffusion-transformer/rdt-1b/blob/eb09036cc64ca4945051acbd1bd581d30a1d7711/pytorch_model.bin",
+        "evidence": "RDT-1B 사전학습 모델의 파라미터 파일.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -20408,7 +20483,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/ICLR/2025_ICLR_RDT-1B-a-Diffusion-Foundation-Model-for-Bimanual-Manipulat/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -20997,7 +21072,7 @@
     "folder": "2026/ICLR/2026_ICLR_From-Spatial-to-Actions-Grounding-Vision-Language-Action-M",
     "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://falcon-vla.github.io/",
     "venue_as_recorded": "ICLR 2026 Poster",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -21026,8 +21101,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://falcon-vla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/FALCON-VLA/FALCON",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=fzmittHfq3",
         "kind": "openreview",
@@ -21036,8 +21121,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -21089,9 +21174,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/3cbe9fcdccb2399bcd6e6d01cbcae1fd-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0086",
@@ -21176,18 +21261,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/FALCON-VLA/FALCON/a30c80aef8fc5e95badaa1b65ca40e25004bc87c/falcon/train/loss.py",
+        "evidence": "FALCON의 학습 손실 코드 및 CALVIN·SimplerEnv 평가 진입점.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/FALCON-VLA/CALVIN-3D_cam-params/blob/f7d9c7bd21f054180bddc8ac4b64ee799d7a7556/packaged_ABC_D/packaged_ABC_D.tar.gz",
+        "evidence": "저자가 전처리한 CALVIN의 카메라·3차원 입력 자료. 원래 로봇 데이터 전체의 재배포를 뜻하지 않는다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/FALCON-VLA/FALCON-series/blob/902eec199093478b500edd2cde2d8728c556d5de/falcon-esm-fc-calvin-abc/ckpts/falcon_esm_fc_calvin_abc.pt",
+        "evidence": "CALVIN ABC에서 학습한 FALCON 정책. 저장소는 다른 변형과 사전학습 파일도 제공한다.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -21201,7 +21290,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ICLR/2026_ICLR_From-Spatial-to-Actions-Grounding-Vision-Language-Action-M/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -21222,13 +21311,13 @@
     },
     "authors": [
       "Zhengshen Zhang",
-      "昊 李",
+      "Hao Li",
       "Yalun Dai",
       "Zhengbang Zhu",
       "Lei Zhou",
       "Chenchen Liu",
       "Dong Wang",
-      "Francis Tay",
+      "Francis E. H. Tay",
       "Sijin Chen",
       "Ziwei Liu",
       "Yuxiao Liu",
@@ -23415,7 +23504,7 @@
     "folder": "2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan",
     "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9baf31febefde7bd76023c2d2f13cbd7-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://HybridRobotics.github.io/MomaGraph/",
     "venue_as_recorded": "ICLR 2026 Oral",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -23444,8 +23533,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://HybridRobotics.github.io/MomaGraph/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/HybridRobotics/MomaGraph",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=3eTr9dGwJv",
         "kind": "openreview",
@@ -23454,8 +23553,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -23507,9 +23606,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/9baf31febefde7bd76023c2d2f13cbd7-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/9baf31febefde7bd76023c2d2f13cbd7-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0096",
@@ -23565,18 +23664,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/HybridRobotics/MomaGraph/aacc96ff274e9601532876b4dea96c83d955f489/eval.py",
+        "evidence": "MomaGraph의 계획 평가와 프롬프트 코드. 이 공개 파일에서 강화학습 전체 파이프라인의 배포는 확인되지 않았다.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/cheryyunl/MomaGraph-Bench/blob/a6f8e6a870ed1c3d4342808957593fbda4e1b21a/data/train-00000-of-00003.parquet",
+        "evidence": "MomaGraph-Bench가 제공하는 계획 평가 레코드 샤드.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/cheryyunl/MomaGraph-R1/blob/d447423d48112418b8707bb0baa08516ea6052bc/model-00001-of-00004.safetensors",
+        "evidence": "MomaGraph-R1 추론 모델의 분할 가중치.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -23590,7 +23693,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ICLR/2026_ICLR_MomaGraph-State-Aware-Unified-Scene-Graphs-with-Vision-Lan/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -23613,9 +23716,9 @@
       "Yuanchen Ju",
       "Yongyuan Liang",
       "Yen-Jen Wang",
-      "Gireesh Nandiraju",
+      "Nandiraju Gireesh",
       "Yuanliang Ju",
-      "Seungjae (Jay) Lee",
+      "Seungjae Lee",
       "Qiao Gu",
       "Elvis Hsieh",
       "Furong Huang",
@@ -25601,7 +25704,7 @@
     "folder": "2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro",
     "pdf": "https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf",
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/0dadf17389895a1d660a178d1140e07c-Abstract-Conference.html",
-    "project": "not identified from OpenReview",
+    "project": "https://github.com/ZXP-S-works/EquAct",
     "venue_as_recorded": "ICLR 2026 Poster",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -25630,8 +25733,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://github.com/ZXP-S-works/EquAct",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/ZXP-S-works/EquAct",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=d1wuA8oIH0",
         "kind": "openreview",
@@ -25640,7 +25753,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -25770,9 +25883,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/ZXP-S-works/EquAct/b0a5433e09ef10aa8195812269664d62dcd7209a/diffuser_actor/equ_act_optimization/equ_act.py",
+        "evidence": "EquAct의 등변 행동 모델 및 학습 코드.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -25795,7 +25909,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ICLR/2026_ICLR_EquAct-An-SE3-Equivariant-Multi-Task-Transformer-for-3D-Ro/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -27091,7 +27205,7 @@
     "folder": "2025/NeurIPS/2025_NeurIPS_RoboRefer-Towards-Spatial-Referring-with-Reasoning-in-Visi",
     "pdf": "https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf",
     "page": "https://neurips.cc/virtual/2025/poster/118306",
-    "project": "not identified from OpenReview",
+    "project": "https://zhoues.github.io/RoboRefer/",
     "venue_as_recorded": "NeurIPS 2025 Poster",
     "venue_canonical": "NeurIPS",
     "identifiers": {
@@ -27120,8 +27234,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://zhoues.github.io/RoboRefer/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/Zhoues/RoboRefer",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=OGxalNUHbJ",
         "kind": "openreview",
@@ -27136,8 +27260,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Robotics-enabling 3D perception",
@@ -27243,18 +27367,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Zhoues/RoboRefer/d97a995ad28376720a4c8beb64915c58ed16c844/llava/train/train_mem.py",
+        "evidence": "RoboRefer 학습 저장소의 학습 진입점. 저자는 SFT·강화학습 단계별 절차를 따로 안내한다.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/BAAI/RefSpatial-Bench/blob/5cb4c34a36c09962442fc5b76e2e462b75008329/data/location-00000-of-00001.parquet",
+        "evidence": "RefSpatial-Bench의 위치 지시 평가 레코드.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/Zhoues/RoboRefer-2B-SFT/blob/5838509249e43bc135ce55d05eace34edd2ffaf4/llm/model.safetensors",
+        "evidence": "RoboRefer-2B-SFT 모델의 언어 모듈 체크포인트. 강화학습 최종판과 구별한다.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -27268,7 +27396,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/NeurIPS/2025_NeurIPS_RoboRefer-Towards-Spatial-Referring-with-Reasoning-in-Visi/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -38192,7 +38320,7 @@
     "folder": "2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La",
     "pdf": "https://arxiv.org/pdf/2605.22283",
     "page": "https://icml.cc/virtual/2026/poster/66214",
-    "project": "not identified from OpenReview",
+    "project": "https://github.com/Hoantrbl/SOMA",
     "venue_as_recorded": "ICML 2026 regular",
     "venue_canonical": "ICML",
     "identifiers": {
@@ -38227,7 +38355,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
+      "project": {
+        "url": "https://github.com/Hoantrbl/SOMA",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "code": null,
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=5i888dLp8N",
@@ -38237,7 +38370,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "not_released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -38367,9 +38500,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "not_released",
+        "source": "https://raw.githubusercontent.com/Hoantrbl/SOMA/2e3992018798b0eefb444917cf09348824d03fcf/README.md",
+        "evidence": "공식 저장소는 README와 라이선스를 제공하고 코드는 공개 예정이라고 명시한다.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -38392,7 +38526,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ICML/2026_ICML_Spatial-Memory-for-Out-of-Vision-Manipulation-in-Vision-La/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -41279,7 +41413,7 @@
     "folder": "2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud",
     "pdf": "https://arxiv.org/pdf/2602.00807",
     "page": "https://icml.cc/virtual/2026/poster/60472",
-    "project": "not identified from OpenReview",
+    "project": "https://xianzhefan.github.io/Any3D-VLA.github.io",
     "venue_as_recorded": "ICML 2026 regular",
     "venue_canonical": "ICML",
     "identifiers": {
@@ -41314,8 +41448,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-20"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://xianzhefan.github.io/Any3D-VLA.github.io",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/XianzheFan/Any3D-VLA",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=zyMvoKYWMZ",
         "kind": "openreview",
@@ -41324,7 +41468,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -41451,9 +41595,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/XianzheFan/Any3D-VLA/7ce3a3e68d49619d8eedde15b8b32ae73b88262b/src/vla_network/vla_network/scripts/serve.py",
+        "evidence": "Any3D-VLA 정책 서버의 추론 코드.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -41461,8 +41606,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/XianzheFan/Any3D-VLA/blob/386572ad1400d8a4258a4e3193a1692184d017b8/grit-Concerto-mono-dinosiglip-16-128-40000/checkpoint-340000/model.safetensors",
+        "evidence": "저자가 배포한 Any3D-VLA 체크포인트.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -41476,7 +41623,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ICML/2026_ICML_Any3D-VLA-Enhancing-VLA-Robustness-via-Diverse-Point-Cloud/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -43163,7 +43310,7 @@
     "folder": "2025/ICRA/2025_ICRA_Gaussian-Splatting-Visual-MPC-for-Granular-Media-Manipulat",
     "pdf": "https://arxiv.org/pdf/2410.09740v3",
     "page": "https://api.crossref.org/works/10.1109/icra55743.2025.11128002",
-    "project": "not identified from venue audit",
+    "project": "https://rvl.cs.toronto.edu/gs-granular-media-mpc/",
     "venue_as_recorded": "ICRA 2025",
     "venue_canonical": "ICRA",
     "identifiers": {
@@ -43193,7 +43340,12 @@
         "url": "https://arxiv.org/pdf/2410.09740v3",
         "kind": "arxiv"
       },
-      "project": null,
+      "project": {
+        "url": "https://rvl.cs.toronto.edu/gs-granular-media-mpc/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "code": null,
       "alternate_at_audit": {
         "url": "https://www.proceedings.com/content/081/081087webtoc.pdf",
@@ -43203,8 +43355,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "not_released",
+      "data_status": "not_released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -43347,14 +43499,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "not_released",
+        "source": "https://weichengtseng.github.io/gs-granular-mani/",
+        "evidence": "저자의 Resource and Citation에서 자료를 공개 예정으로 표시했다.",
+        "verified_on": "2026-11-24"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_released",
+        "source": "https://weichengtseng.github.io/gs-granular-mani/",
+        "evidence": "저자의 Resource and Citation에서 자료를 공개 예정으로 표시했다.",
+        "verified_on": "2026-11-24"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -43372,7 +43526,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/ICRA/2025_ICRA_Gaussian-Splatting-Visual-MPC-for-Granular-Media-Manipulat/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -43411,7 +43565,7 @@
     "folder": "2025/ICRA/2025_ICRA_Persistent-Object-Gaussian-Splat-POGS-for-Tracking-Human-a",
     "pdf": "https://arxiv.org/pdf/2503.05189v1",
     "page": "https://api.crossref.org/works/10.1109/icra55743.2025.11127328",
-    "project": "not identified from venue audit",
+    "project": "https://berkeleyautomation.github.io/POGS",
     "venue_as_recorded": "ICRA 2025",
     "venue_canonical": "ICRA",
     "identifiers": {
@@ -43441,8 +43595,18 @@
         "url": "https://arxiv.org/pdf/2503.05189v1",
         "kind": "arxiv"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://berkeleyautomation.github.io/POGS",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/uynitsuj/pogs",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://www.proceedings.com/content/081/081087webtoc.pdf",
         "kind": "publisher_or_project",
@@ -43451,7 +43615,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -43572,9 +43736,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/uynitsuj/pogs/3d29f04febd34be68f4eb35e8baf5252adda011e/pogs/scripts/track_main_online_demo.py",
+        "evidence": "POGS의 온라인 물체 추적 실행 코드.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -43597,7 +43762,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/ICRA/2025_ICRA_Persistent-Object-Gaussian-Splat-POGS-for-Tracking-Human-a/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -47619,7 +47784,7 @@
     "folder": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with",
     "pdf": "https://arxiv.org/pdf/2507.01125",
     "page": "https://api.crossref.org/works/10.1109/LRA.2026.3653276",
-    "project": "not identified from venue audit",
+    "project": "https://stanfordmsl.github.io/VISTA/",
     "venue_as_recorded": "RA-L",
     "venue_canonical": "RA-L",
     "identifiers": {
@@ -47650,8 +47815,18 @@
         "url": "https://arxiv.org/pdf/2507.01125",
         "kind": "arxiv"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://stanfordmsl.github.io/VISTA/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/StanfordMSL/VISTA",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "venue_verification": {
         "url": "https://api.crossref.org/works/10.1109/LRA.2026.3653276",
         "kind": "publisher_record",
@@ -47666,7 +47841,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -47781,9 +47956,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/StanfordMSL/VISTA-Plan/3a87472cb56288941a83b06c67c9d28380f4e768/src/vista_plan/scripts/waypoint_publisher.py",
+        "evidence": "부모 저장소가 고정한 VISTA-Plan 하위 모듈의 웨이포인트 발행 코드.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -47806,7 +47982,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/RA-L/2026_RA-L_VISTA-Open-Vocabulary-Task-Relevant-Robot-Exploration-with/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -47849,7 +48025,7 @@
     "folder": "2026/ICRA/2026_ICRA_Open-Vocabulary-Spatio-Temporal-Scene-Graph-for-Robot-Perc",
     "pdf": "https://arxiv.org/pdf/2509.23107",
     "page": "https://arxiv.org/abs/2509.23107",
-    "project": "not identified from venue audit",
+    "project": "https://github.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph",
     "venue_as_recorded": "ICRA 2026",
     "venue_canonical": "ICRA",
     "identifiers": {
@@ -47879,8 +48055,18 @@
         "url": "https://arxiv.org/pdf/2509.23107",
         "kind": "arxiv"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://github.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
+      "code": {
+        "url": "https://github.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "alternate_at_audit": {
         "url": "https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_5.html",
         "kind": "publisher_or_project",
@@ -47889,7 +48075,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -48042,9 +48228,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph/cfa540c132c78b8a7d97cc788de5393fa255b919/scene_graph.py",
+        "evidence": "시간순 관측으로 장면 그래프를 구성하는 구현.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -48067,7 +48254,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ICRA/2026_ICRA_Open-Vocabulary-Spatio-Temporal-Scene-Graph-for-Robot-Perc/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -55722,7 +55909,7 @@
     "folder": "2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa",
     "pdf": "https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf",
     "page": "https://openaccess.thecvf.com/content/ICCV2025/html/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.html",
-    "project": "not identified",
+    "project": "https://gwxuan.github.io/IGL-Nav/",
     "venue_as_recorded": "ICCV 2025",
     "venue_canonical": "ICCV",
     "identifiers": {},
@@ -55747,11 +55934,16 @@
         "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf",
         "kind": "cvf"
       },
-      "project": null,
+      "project": {
+        "url": "https://gwxuan.github.io/IGL-Nav/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-24"
+      },
       "code": null
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "not_released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -55864,9 +56056,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "not_released",
+        "source": "https://raw.githubusercontent.com/GWxuan/IGL-Nav/c56e584d75a4b1b0ff56f7c8527e7665e151876b/README.md",
+        "evidence": "공식 저장소의 배포 안내는 구현을 공개 예정으로 표시한다.",
+        "verified_on": "2026-11-24"
       },
       "data": {
         "status": "not_identified",
@@ -55889,7 +56082,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2025/ICCV/2025_ICCV_IGL-Nav-Incremental-3D-Gaussian-Localization-for-Image-goa/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -62386,8 +62579,10 @@
         "verified_on": "2026-11-20"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/LIBERO-Safety/pi05_libero_safety/blob/e66d84bfec17770384550593e39975f7e21e3463/params/ocdbt.process_0/d/0e1c9bb47ff271aa3e0d60ea3f331e96",
+        "evidence": "LIBERO-Safety에서 미세조정한 π0.5의 Orbax 파라미터 샤드. 다른 비교 정책의 가중치는 포함하지 않는다.",
+        "verified_on": "2026-11-24"
       },
       "configuration": {
         "status": "reported",
@@ -62401,7 +62596,7 @@
         "status": "reported",
         "evidence": "04_evaluation.md trial/statistics cue"
       },
-      "reviewed_on": "2026-09-04",
+      "reviewed_on": "2026-11-24",
       "source_note": "2026/ECCV/2026_ECCV_LIBERO-Safety-A-Comprehensive-Benchmark-for-Physical-and-S/04_evaluation.md",
       "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
     },
@@ -122947,9 +123142,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v15/ross11a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.mlr.press/v15/ross11a/ross11a.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       }
     },
     "paper_id": "pr-0522",
@@ -123051,9 +123246,9 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Stephane Ross",
-      "Geoffrey Gordon",
-      "Drew Bagnell"
+      "Stéphane Ross",
+      "Geoffrey J. Gordon",
+      "J. Andrew Bagnell"
     ]
   },
   {
@@ -172179,9 +172374,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss20/p120.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss20/p120.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "RSS 2024 게재본 표제면의 저자 순서와 표기를 따른다. RSS 웹 서지와 후속 저자판은 명단에 차이가 있다."
       }
     },
     "paper_id": "pr-0732",
@@ -172300,15 +172495,15 @@
       "Joey Hejna",
       "Masha Itkina",
       "Marion Lepert",
-      "Yecheng Jason Ma",
+      "Jason Ma",
       "Patrick Tree Miller",
       "Jimmy Wu",
       "Suneel Belkhale",
       "Shivin Dass",
       "Huy Ha",
-      "Arhan Jain",
       "Abraham Lee",
       "Youngwoon Lee",
+      "Arhan Jain",
       "Marius Memmel",
       "Sungjae Park",
       "Ilija Radosavovic",
@@ -172316,19 +172511,18 @@
       "Albert Zhan",
       "Kevin Black",
       "Cheng Chi",
-      "Kyle Beltran Hatch",
+      "Kyle Hatch",
       "Shan Lin",
       "Jingpei Lu",
-      "Jean Mercat",
       "Abdul Rehman",
       "Pannag R Sanketi",
       "Archit Sharma",
       "Cody Simpson",
       "Quan Vuong",
-      "Homer Rich Walke",
+      "Homer Walke",
       "Blake Wulfe",
       "Ted Xiao",
-      "Jonathan Heewon Yang",
+      "Jonathan Yang",
       "Arefeh Yavary",
       "Tony Z. Zhao",
       "Christopher Agia",
@@ -172347,19 +172541,19 @@
       "Donovon Jackson",
       "Charlotte Le",
       "Yunshuang Li",
+      "Kevin Lin",
       "Roy Lin",
       "Zehan Ma",
       "Abhiram Maddukuri",
       "Suvir Mirchandani",
       "Daniel Morton",
       "Tony Nguyen",
-      "Abigail O'Neill",
+      "Abby O’Neill",
       "Rosario Scalise",
       "Derick Seale",
       "Victor Son",
       "Stephen Tian",
-      "Emi Tran",
-      "Andrew E. Wang",
+      "Andrew Wang",
       "Yilin Wu",
       "Annie Xie",
       "Jingyun Yang",
@@ -172372,14 +172566,13 @@
       "Abhinav Gupta",
       "Abhishek Gupta",
       "Dinesh Jayaraman",
-      "Joseph J Lim",
+      "Joseph J. Lim",
       "Jitendra Malik",
       "Roberto Martín-Martín",
       "Subramanian Ramamoorthy",
       "Dorsa Sadigh",
       "Shuran Song",
       "Jiajun Wu",
-      "Michael C. Yip",
       "Yuke Zhu",
       "Thomas Kollar",
       "Sergey Levine",
@@ -272022,9 +272215,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v37/schaul15.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.mlr.press/v37/schaul15.pdf#page=1",
+        "verified_on": "2026-11-24",
+        "basis": "논문 표제면의 저자 표기와 순서."
       },
       "identifier_status": "source_only",
       "primary_source_scope": "paper_specific"
@@ -272101,7 +272294,7 @@
     },
     "authors": [
       "Tom Schaul",
-      "Daniel Horgan",
+      "Dan Horgan",
       "Karol Gregor",
       "David Silver"
     ]

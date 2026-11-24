@@ -84,3 +84,7 @@ VLMaps는 언어로 지칭한 물체와 물체 사이의 위치를 3차원 지�
 - **Actual contribution:** Extensive experiments show that using VLMaps enables more effective long-horizon multi-object goal navigation than baseline alternatives, e.g., CoW [12] and LM-Nav [13], and, in particular, excels at enabling spatial open-vocabulary ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Subgoals in a Row 1 2 3 4 LM-Nav [13] 5 5 0 0 CoW [12] 33 5 0 0 CLIP Map 19 0 0 0 VLMaps (ours) 62 33 ... (p. 5, IV. EXPERIMENTS).
 - **Explicit failure boundary:** We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and 2) action noise, which can ... (p. 6, IV. EXPERIMENTS).
+
+## 공개 자료 대조
+
+- **코드** · 언어 특징을 3차원 지도에 누적하는 VLMap 구현. [배포 파일](https://raw.githubusercontent.com/vlmaps/vlmaps/58060f97239074338ab419a2090d43fa752d724d/vlmaps/map/vlmap.py) · [저자 배포 안내](https://raw.githubusercontent.com/vlmaps/vlmaps/58060f97239074338ab419a2090d43fa752d724d/README.md)

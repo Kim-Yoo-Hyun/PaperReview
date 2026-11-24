@@ -89,3 +89,8 @@ PerAct는 언어 지시와 RGB-D 복셀 관측에서 다음 그리퍼 동작을 
 - **Actual contribution:** In summary, our contributions are as follows: • A novel problem formulation for perceiving, acting, and specifying goals with Transformers. • An efficient action-centric framework for grounding language in 6-DoF ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 1. Multi-Task Test Results. Success rates (mean %) of various multi-task agents tasks trained with either 10 or 100 demonstrations per task and evaluated on 25 episodes per task. ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** The most common failures involved predicting incorrect gripper open actions, which often lead the agent into unseen states. (p. 8, 4 Results).
+
+## 공개 자료 대조
+
+- **가중치** · 시뮬레이션 다중 과제용 PerAct 600k 정책 체크포인트. [배포 파일](https://github.com/peract/peract/releases/download/v1.0.0/peract_600k.zip) · [저자 배포 안내](https://raw.githubusercontent.com/peract/peract/02fb87681c5a47be9dbf20141bedb836ee2d3ef9/README.md)
+- **데이터** · 저자가 공유한 RLBench 훈련 시연 중 close_jar.zip을 파일명과 크기가 표시된 목록에서 확인했다. [배포 파일](https://drive.google.com/drive/folders/0B2LlLwoO3nfZfi1LbGJINXJ1TUQxN1pxa3Q1MzlDZmY0WGk1RmhxazZvNFEydUREbXM4cTA?resourcekey=0-DpkG5eIqkwjKJ84qFcaUfw) · [저자 배포 안내](https://raw.githubusercontent.com/peract/peract/02fb87681c5a47be9dbf20141bedb836ee2d3ef9/README.md)

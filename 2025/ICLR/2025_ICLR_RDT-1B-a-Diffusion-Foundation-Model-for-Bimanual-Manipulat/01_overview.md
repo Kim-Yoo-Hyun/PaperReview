@@ -13,7 +13,7 @@
 - Tags: Robotics, Diffusion
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/49f80e4d2471ad4f2edf4f5f1ab62339-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2410.07864
-- Code/Project: not identified
+- Code/Project: https://rdt-robotics.github.io/rdt-robotics/
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,9 @@ RDT는 여러 로봇의 데이터를 사전학습한 확산 트랜스포머를 �
 - **Actual contribution:** In this paper, we introduce the Robotics Diffusion Transformer (RDT), the largest bimanual manipulation foundation model with strong generalizability. (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** 5.2 RESULTS ANALYSIS From the results in Table 3, we can see that RDT consistently outperforms other baselines. (p. 9, 5 EXPERIMENTS).
 - **Explicit failure boundary:** It probably makes ACT prone to failure. (p. 10, 5 EXPERIMENTS).
+
+## 공개 자료 대조
+
+- **코드** · RDT 행동 확산 Transformer 정의와 학습·추론 코드. [배포 파일](https://raw.githubusercontent.com/thu-ml/RoboticsDiffusionTransformer/cd79363a1387e8f81c7724d070ef7e45fd23150f/models/rdt/model.py) · [저자 배포 안내](https://raw.githubusercontent.com/thu-ml/RoboticsDiffusionTransformer/cd79363a1387e8f81c7724d070ef7e45fd23150f/README.md)
+- **가중치** · RDT-1B 사전학습 모델의 파라미터 파일. [배포 파일](https://huggingface.co/robotics-diffusion-transformer/rdt-1b/blob/eb09036cc64ca4945051acbd1bd581d30a1d7711/pytorch_model.bin) · [저자 배포 안내](https://raw.githubusercontent.com/thu-ml/RoboticsDiffusionTransformer/cd79363a1387e8f81c7724d070ef7e45fd23150f/README.md)
+- **데이터** · 저자의 양팔 미세조정 시연 배포본 중 첫 분할 아카이브. 다기종 사전학습 전체 자료의 배포와 구별한다. [배포 파일](https://huggingface.co/datasets/robotics-diffusion-transformer/rdt-ft-data/blob/a3f4b6624d4fc3a09b538f65081b37401fd8bd84/rdt_data.tar.gz.00) · [저자 배포 안내](https://raw.githubusercontent.com/thu-ml/RoboticsDiffusionTransformer/cd79363a1387e8f81c7724d070ef7e45fd23150f/README.md)

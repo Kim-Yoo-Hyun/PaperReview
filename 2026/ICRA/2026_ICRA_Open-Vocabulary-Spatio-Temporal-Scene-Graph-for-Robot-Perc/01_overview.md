@@ -13,7 +13,7 @@
 - Tags: Robotics, Graph Reasoning, semantic
 - Official paper: https://arxiv.org/abs/2509.23107
 - Full-text retrieval: https://arxiv.org/pdf/2509.23107
-- Code/Project: not identified
+- Code/Project: https://github.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -85,3 +85,7 @@ ST-OVSG는 물체 관계가 시간에 따라 바뀌는 장면을 기록해 지�
 - **Actual contribution:** The main contributions of this work can be summarized as follows: 1) We propose ST-OVSG, a novel spatio-temporal openvocabulary scene graph, which explicitly models both the spatial structure and temporal ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** These static results establish a baseline for subsequent experiments on dynamic environments, where temporal reasoning and latency-awareness play a central role. (p. 5, IV. EXPERIMENTS).
 - **Explicit failure boundary:** Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion blur or unusual poses. (p. 6, IV. EXPERIMENTS).
+
+## 공개 자료 대조
+
+- **코드** · 시간순 관측으로 장면 그래프를 구성하는 구현. [배포 파일](https://raw.githubusercontent.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph/cfa540c132c78b8a7d97cc788de5393fa255b919/scene_graph.py) · [저자 배포 안내](https://raw.githubusercontent.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph/cfa540c132c78b8a7d97cc788de5393fa255b919/README.md)

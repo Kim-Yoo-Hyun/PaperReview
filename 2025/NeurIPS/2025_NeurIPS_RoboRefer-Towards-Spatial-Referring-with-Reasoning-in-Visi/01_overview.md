@@ -14,7 +14,7 @@
 - Official paper: https://neurips.cc/virtual/2025/poster/118306
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/29416b66c2149872b9d1415a3fd2c5e0-Paper-Conference.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/81387e1e7f5169279b63c293ca88b1e4a8bc7e35.pdf
-- Code/Project: not identified
+- Code/Project: https://zhoues.github.io/RoboRefer/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (71 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -89,3 +89,9 @@ RoboRefer는 공간 관계가 여러 번 등장하는 지시에서 로봇이 가
 - **Actual contribution:** Our contributions are summarized as follows: (1) We propose RoboRefer, a 3D-aware reasoning VLM trained using a sequential SFT-RFT strategy with metric-sensitive process reward functions to achieve spatial referring. (p. 3, 1 Introduction).
 - **Evaluation boundary:** Figure 4: RefSpatial-Bench results. G.P., M.M., and R.P. donate Gemini-2.5-Pro [9], Molmo- 72B [15], and RoboPoint [5]. RoboRefer-RFT excels in unseen and multi-step cases. SFT stage enables strong spatial understanding. ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Another major limitation of CA-1M is the lack of semantic labels for most annotated objects. (p. 34, B.2.2 Inherent Challenges and Limitations in CA-1M).
+
+## 공개 자료 대조
+
+- **코드** · RoboRefer 학습 저장소의 학습 진입점. 저자는 SFT·강화학습 단계별 절차를 따로 안내한다. [배포 파일](https://raw.githubusercontent.com/Zhoues/RoboRefer/d97a995ad28376720a4c8beb64915c58ed16c844/llava/train/train_mem.py) · [저자 배포 안내](https://raw.githubusercontent.com/Zhoues/RoboRefer/d97a995ad28376720a4c8beb64915c58ed16c844/README.md)
+- **가중치** · RoboRefer-2B-SFT 모델의 언어 모듈 체크포인트. 강화학습 최종판과 구별한다. [배포 파일](https://huggingface.co/Zhoues/RoboRefer-2B-SFT/blob/5838509249e43bc135ce55d05eace34edd2ffaf4/llm/model.safetensors) · [저자 배포 안내](https://raw.githubusercontent.com/Zhoues/RoboRefer/d97a995ad28376720a4c8beb64915c58ed16c844/README.md)
+- **데이터** · RefSpatial-Bench의 위치 지시 평가 레코드. [배포 파일](https://huggingface.co/datasets/BAAI/RefSpatial-Bench/blob/5cb4c34a36c09962442fc5b76e2e462b75008329/data/location-00000-of-00001.parquet) · [저자 배포 안내](https://raw.githubusercontent.com/Zhoues/RoboRefer/d97a995ad28376720a4c8beb64915c58ed16c844/README.md)

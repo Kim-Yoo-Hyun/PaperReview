@@ -13,7 +13,7 @@
 - Tags: Robotics, Gaussian Splatting, Reinforcement Learning
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127328
 - Full-text retrieval: https://arxiv.org/pdf/2503.05189v1
-- Code/Project: not identified
+- Code/Project: https://berkeleyautomation.github.io/POGS
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,7 @@ POGS는 초기에 여러 시점에서 관측한 물체의 자세를 이후 스�
 - **Actual contribution:** This paper makes the following contributions: • Persistent Object Gaussian Splat (POGS), a novel feature field representation for tracking and manipulating previously unseen irregularly shaped objects. • A robot system ... (p. 2, Abstract).
 - **Evaluation boundary:** Jigsaw to Shelf Clothes Iron to Shelf Shoe to Shoerack Tier 1 Tier 2 Tier 1 Tier 2 Tier 1 Tier 2 No Depth No DINO POGS POGS No Depth ... (p. 6, 3) Persistent Object Tracking phase for online tracking).
 - **Explicit failure boundary:** Tracking remains running the entire time, and these consecutive object resets continue until POGS loses tracking of the objects, defined as when repeated grasp planning failures occur due to irrecoverable ... (p. 5, 3) Persistent Object Tracking phase for online tracking).
+
+## 공개 자료 대조
+
+- **코드** · POGS의 온라인 물체 추적 실행 코드. [배포 파일](https://raw.githubusercontent.com/uynitsuj/pogs/3d29f04febd34be68f4eb35e8baf5252adda011e/pogs/scripts/track_main_online_demo.py) · [저자 배포 안내](https://raw.githubusercontent.com/uynitsuj/pogs/3d29f04febd34be68f4eb35e8baf5252adda011e/README.md)

@@ -62,6 +62,35 @@ Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인�
 
 **중복 후보**는 0쌍이다. 배치 내부 1,225쌍과 배치↔나머지 원장 58,850쌍에서 공개 식별자(DOI·버전 제외 arXiv·OpenReview), 정규화 제목과 유사 제목을 검사했다. 제목의 대폭 변경과 식별자 결측이 겹치는 경우에는 한계가 있다. [유사도 판정 기준](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/REGISTRY_AUDIT.md#3-중복-의심)
 
+## 두 번째 배치 태그 매핑
+
+2026-11-24에 첫 배치와 겹치지 않는 CORE 20편 전부와 안정 ID 순으로 다음 NEXT 30편을 정규화했다. 두 배치의 누계는 CORE 50편, NEXT 50편이다. 별도 등록 심사를 거친 NEXT 23편까지 포함하면 집중 읽기 대상 500편 중 123편에 같은 축의 태그가 있다. 각 레코드에는 대조한 방법·평가 원문의 URL, 쪽수와 SHA-256, 교정 전 값이 있다. [두 번째 배치 50편](../sources/batches/core_next_02.yaml) · [첫 배치 50편](../sources/batches/core_next_01.yaml) · [별도 등록 23편](../sources/batches/gapfill_2026_11.yaml)
+
+| 기존 표기 | 원문에서 확인할 조건 | 기록할 축 |
+|---|---|---|
+| `Imitation Learning`, `diffusion policy`, `teleoperation` | 시연 행동을 예측하는 손실로 정책을 학습하는가 | 방법에 IL. 원격조작으로 자료만 수집한 경우에는 데이터 수집 방식에 기록한다. |
+| `offline reinforcement learning`, `Q-learning`, `recovery policy` | 보상·가치·제약 비용을 학습이나 행동 선택에 사용하는가 | 방법에 RL. 보상 조건부 시퀀스 예측은 목적과 최적화 방식을 함께 적는다. |
+| `VLA`, `Vision-Language Model`, `Graph Reasoning` | 영상과 지시에서 직접 행동을 생성하는가, 별도 제어기에 계획·좌표·진단을 제공하는가 | 입력의 언어와 행동 출력을 구별한다. VLA 전용 필드는 정책을 제안하거나 직접 학습한 논문에 적용한다. |
+| `3D Vision`, `Gaussian Splatting`, `Planning` | 실제 관측 센서와 모델 내부의 추정량은 무엇이며, 행동 후보를 어떤 모델로 평가하는가 | 카메라에서 받은 깊이와 RGB에서 추정한 깊이를 구별한다. 점군은 입력에 해당할 때 기타로, 상태 전이를 예측해 계획할 때만 방법에 모델기반을 적는다. |
+| `Navigation`, `mobile manipulation`, `bimanual manipulation` | 목표까지 이동하는가, 이동과 조작을 함께 수행하는가, 두 팔을 실제로 사용하는가 | 태스크와 로봇 형태를 각각 기록한다. 수집 기체·평가 기체가 다른 경우 그 역할을 적는다. |
+| `Dataset`, `Benchmark`, `real robot` | 학습·구축 자료의 출처와 평가 환경을 각각 식별할 수 있는가 | 데이터 출처는 학습·구축에 쓴 자료를 기준으로 정한다. 실제 기기에서의 평가만 확인되면 평가 조건에 기록한다. |
+
+**남은 분류 질문.** 행동의 직접 회귀·복셀 선택, 로봇 과제와 무관한 점군 분할·이미지 생성은 현재 열거값에 어디까지 포함할 것인가? 열거값으로 표현할 수 없는 축에는 `unknown`을 사용하고 실제 출력과 평가 대상을 해당 논문의 설명에 남긴다.
+
+**확인 범위.** 이번 50편 중 축 전체가 `unknown`인 논문은 방법 8편, 태스크 6편, 기체 6편, 입력 0편, 데이터 출처 2편이다. VLA·언어 조건부 행동 정책 17편과 휴머노이드 5편에는 전용 필드를 적용했고 SOMA가 양쪽에 속한다. 원문이 직접 밝힌 한계를 연결한 논문은 34편, 후속 연구가 지적한 한계를 직접 연결한 논문은 3편이다. 50편 모두 레코드 단위로는 `부분확인`이다. [원문 위치와 분류](../sources/batches/core_next_02.yaml)
+
+| 공개 범위 | Y | 부분 | N | 미확인 |
+|---|---:|---:|---:|---:|
+| 코드 | 33 | 5 | 4 | 8 |
+| 가중치 | 4 | 16 | 0 | 30 |
+| 데이터 | 0 | 22 | 1 | 27 |
+
+‘부분’은 특정 과제·구성요소·분할의 파일을 확인한 경우다. ‘N’ 다섯 건에는 저자의 공개 예정 안내가 있다. ‘미확인’에는 배포를 확인할 수 없거나 원장의 ‘해당 없음’을 Y/N으로 옮길 수 없는 항목이 포함된다. 22편에서 배포 파일 근거 34건, 공개 예정 안내 5건, 배포 미확인으로 바로잡은 데이터 1건을 원장에도 반영했다. VoxAct-B의 `pretrained_weights.zip`에는 지각 모델 가중치가 들어 있으며 양팔 정책과 훈련 시연은 각각 다른 경로로 배포된다. [VoxAct-B 저자 배포 안내](https://github.com/VoxAct-B/voxactb/blob/1cc074b1730f52a7fd35d069d8c9099d18718bca/README.md) · [원장 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
+
+- 14편에서 표제면의 저자 표기·순서를 반영했다. PointNet은 Charles R. Qi와 Kaichun Mo의 이름 순서를 교정했다. RT-2의 PMLR 웹 서지는 Brianna Zitkovich로, 게재 PDF는 Anthony Brohan으로 시작한다. 두 판본 표기와 기존 명단을 보존했다. [PointNet 게재본](https://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf#page=1) · [RT-2 웹 서지](https://proceedings.mlr.press/v229/zitkovich23a.html) · [RT-2 게재본](https://proceedings.mlr.press/v229/zitkovich23a/zitkovich23a.pdf#page=1)
+- IGL-Nav는 자세가 주어진 RGB-D 관측으로 지도를 구축한다. 목표 사진의 깊이와 카메라 내부 파라미터가 필요하며 단안 추정값을 쓴 조건도 평가했다. VISTA는 실측 장면에서의 시점 비교와 쿼드로터·Spot에서의 실제 탐색을 각각 평가했다. 두 논문의 개요와 감사 원장에 원문 위치를 반영했다. [IGL-Nav §3.1](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=3) · [IGL-Nav §5](https://openaccess.thecvf.com/content/ICCV2025/papers/Guo_IGL-Nav_Incremental_3D_Gaussian_Localization_for_Image-goal_Navigation_ICCV_2025_paper.pdf#page=8) · [VISTA §V](https://arxiv.org/pdf/2507.01125#page=7)
+- **중복 후보 0쌍.** 이번 배치 내부 1,225쌍, 나머지 원장과 60,100쌍에서 DOI·버전을 제외한 arXiv ID·OpenReview ID, 정규화 제목과 유사 제목을 대조했다. 공개 식별자가 없으면서 제목이 크게 바뀐 판본은 이 방법으로 놓칠 수 있다. [기존 유사도 기준](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/REGISTRY_AUDIT.md#3-중복-의심)
+
 ## 외부 목록 대조와 CORE 심화 감사
 
 2026-11-19에 서베이 3편의 참고문헌, 6개 학회 3개년 목록, 연구실·기업 3곳 및 큐레이션 1곳을 대조했다. 등록 심사 후보 17편의 출처를 논문별로 보존했다. [목록별 커버리지와 하위 주제 순위](../../research/EXTERNAL_COVERAGE.md) · [후보 YAML](../sources/batches/missing_candidates_2026.yaml)

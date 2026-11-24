@@ -88,3 +88,9 @@
 - **Actual contribution:** Our contributions are as follows: 1) We propose 3DS-VLA, equipping pretrained 2D VLMs with comprehensive 3D awareness for robust end-effector pose prediction. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Additionally, we perform an extra experiment where we first fine-tune the pretrained VLM on the OXE dataset [74], which only takes 2D images as input, and then continue finetuning on ... (p. 7, 4 Experiment).
 - **Explicit failure boundary:** This makes the pipeline prone to failure if the underlying models are inaccurate-for example, if GroundingDINO [71] misses critical keypoints on the cup handle that needs to be grasped, or ... (p. 8, 4 Experiment).
+
+## 공개 자료 대조
+
+- **코드** · 저자 배포판에 포함된 3DS-VLA 추론 코드. [배포 파일](https://raw.githubusercontent.com/clorislili/3ds-vla/3e51fedffa25f3039e2c58d85628b39c91be9a59/3ds-vla/test_model_2.py) · [저자 배포 안내](https://raw.githubusercontent.com/clorislili/3ds-vla/3e51fedffa25f3039e2c58d85628b39c91be9a59/readme.md)
+- **데이터** · 저자 배포의 RLBench 과제 자료 ZIP. 실물 전체 학습 자료의 공개 범위는 미확인이다. [배포 파일](https://huggingface.co/datasets/Clorisss/RLBench/blob/763cbdc3f14faf559d29ccf59d95aeb494aef945/RLBench.zip) · [저자 배포 안내](https://raw.githubusercontent.com/clorislili/3ds-vla/3e51fedffa25f3039e2c58d85628b39c91be9a59/readme.md)
+- **가중치** · 3DS-VLA가 배포한 과제 모델의 checkpoint-478000.pth. [배포 파일](https://huggingface.co/Clorisss/3ds-vla/blob/6d952d6f4ad082ad0da314a49234a87ac2138b50/checkpoint-478000.pth) · [저자 배포 안내](https://raw.githubusercontent.com/clorislili/3ds-vla/3e51fedffa25f3039e2c58d85628b39c91be9a59/readme.md)

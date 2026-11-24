@@ -88,3 +88,7 @@ LIBERO-Safety는 조작 과제의 성공과 주위 물체·금지 조건에 대�
 - **Actual contribution:** In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior Domain Definition Language (UBDDL) to ... (p. 3, 1 INTRODUCTION).
 - **Evaluation boundary:** Across diverse axes of visual and state stochasticity, including image noise (Noise), robot initial state (Init State), viewpoint shifts (View), and scene variations (Scene), the SR remains relatively stable, fluctuating ... (p. 13, 4 Experiment).
 - **Explicit failure boundary:** This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures. (p. 39, C.3 Additional Experimental Results).
+
+## 공개 자료 대조
+
+- **가중치** · LIBERO-Safety에서 미세조정한 π0.5의 Orbax 파라미터 샤드. 다른 비교 정책의 가중치는 포함하지 않는다. [배포 파일](https://huggingface.co/LIBERO-Safety/pi05_libero_safety/blob/e66d84bfec17770384550593e39975f7e21e3463/params/ocdbt.process_0/d/0e1c9bb47ff271aa3e0d60ea3f331e96) · [저자 배포 안내](https://raw.githubusercontent.com/LIBERO-SAFETY/LIBERO-Safety/19ec8df23eedfbb9265bafd3e56495fcebfcfcd0/README.md)

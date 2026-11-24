@@ -13,7 +13,7 @@
 - Tags: Robotics, 3D Vision, equivariant
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/0dadf17389895a1d660a178d1140e07c-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/0dadf17389895a1d660a178d1140e07c-Paper-Conference.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/ZXP-S-works/EquAct
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@ EquAct는 장면의 회전·이동에 맞춰 조작 자세 예측도 변하도�
 - **Actual contribution:** We propose a continuous SE(3)-equivariant keyframe policy that includes a novel equivariant U-net architecture, a novel invariant FiLM layer, and a novel equivariant field network. (p. 2, 1 Introduction).
 - **Evaluation boundary:** 5.2 Physical experiments Table 2: Physical experiments. avg. disass. pluck pick install SR ↑ pipe flower fruit toilet roll Var × Demo 3 × 10 3 × 15 3 × ... (p. 9, 5 Experiments).
 - **Explicit failure boundary:** In comparison, 3DDA struggles in these experiments, often skipping keyframe actions and resulting in failure. (p. 9, 5 Experiments).
+
+## 공개 자료 대조
+
+- **코드** · EquAct의 등변 행동 모델 및 학습 코드. [배포 파일](https://raw.githubusercontent.com/ZXP-S-works/EquAct/b0a5433e09ef10aa8195812269664d62dcd7209a/diffuser_actor/equ_act_optimization/equ_act.py) · [저자 배포 안내](https://raw.githubusercontent.com/ZXP-S-works/EquAct/b0a5433e09ef10aa8195812269664d62dcd7209a/README.md)

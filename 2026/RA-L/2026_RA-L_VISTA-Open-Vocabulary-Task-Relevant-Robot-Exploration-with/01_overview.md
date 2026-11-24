@@ -14,7 +14,7 @@
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2026.3653276
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2026.3653276
 - Full-text retrieval: https://arxiv.org/pdf/2507.01125
-- Code/Project: not identified
+- Code/Project: https://stanfordmsl.github.io/VISTA/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -53,7 +53,7 @@ VISTA는 언어로 지정한 대상을 찾는 동안 과제에 유용한 영역�
 ## Main Claims and Actual Contribution
 
 - 온라인 의미 가우시안 지도에서 목표와의 의미 유사도와 새 시점의 기하학적 관측 범위를 함께 계산한다. [PDF 3쪽](https://arxiv.org/pdf/2507.01125#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2507.01125#page=4)
-- 정적 데이터에서 시점 선택을 비교하고 실제 쿼드로터에서 대상 탐색을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2507.01125#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2507.01125#page=6)
+- 여섯 실측 장면에서 시점을 비교하고 쿼드로터와 Boston Dynamics Spot에서 실제 목표 탐색을 평가했다. [PDF 5쪽](https://arxiv.org/pdf/2507.01125#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2507.01125#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2507.01125#page=7)
 
 ## Evaluation Scope
 
@@ -83,3 +83,7 @@ VISTA는 언어로 지정한 대상을 찾는 동안 과제에 유용한 영역�
 - **Actual contribution:** We present VISTA, an algorithm for Viewpoint-based Image Selection with Semantic Task Awareness. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** The results suggest that our method is able to outperform both baselines on both maps because we reason about both semantic and geometric information gain. (p. 6, V. RESULTS).
 - **Explicit failure boundary:** In the second map, we expect methods that do not account for geometric information gain to struggle to find the query object. (p. 6, V. RESULTS).
+
+## 공개 자료 대조
+
+- **코드** · 부모 저장소가 고정한 VISTA-Plan 하위 모듈의 웨이포인트 발행 코드. [배포 파일](https://raw.githubusercontent.com/StanfordMSL/VISTA-Plan/3a87472cb56288941a83b06c67c9d28380f4e768/src/vista_plan/scripts/waypoint_publisher.py) · [저자 배포 안내](https://raw.githubusercontent.com/StanfordMSL/VISTA/d75639384ab7e2a01b226d54ea3cbe8f2351544d/.gitmodules)

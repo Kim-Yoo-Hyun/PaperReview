@@ -90,3 +90,9 @@ VoxAct-B는 언어 지시와 복셀 관측으로 양팔 조작에서 움직이�
 - **Actual contribution:** To this end, we propose VoxAct-B, a novel voxel-based, language-conditioned method for bimanual manipulation. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Figure 4: Example successful rollouts (one per row) of VoxAct-B on a real-world bimanual setup with UR5s. Ablation experiments. Table 2 reports results on Open Drawer in simulation, based on ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace. (p. 8, 6 Results).
+
+## 공개 자료 대조
+
+- **코드** · 저자 양팔 행동·안정화 정책의 학습 진입점. [배포 파일](https://raw.githubusercontent.com/VoxAct-B/voxactb/1cc074b1730f52a7fd35d069d8c9099d18718bca/peract/train.py) · [저자 배포 안내](https://raw.githubusercontent.com/VoxAct-B/voxactb/1cc074b1730f52a7fd35d069d8c9099d18718bca/README.md)
+- **데이터** · 저자의 양팔 Open Drawer 훈련 시연 ZIP. 같은 배포처의 pretrained_weights.zip은 CLIP·SAM 인코더 가중치다. [배포 파일](https://huggingface.co/datasets/arthur801031/voxact-b/blob/1c97d3e318a3d54bf2864a0bb346a1bae4b34c79/data/train/open_drawer_100_demos_corl_v1.zip) · [저자 배포 안내](https://raw.githubusercontent.com/VoxAct-B/voxactb/1cc074b1730f52a7fd35d069d8c9099d18718bca/README.md)
+- **가중치** · Hand Over Item의 행동 담당 팔에 학습한 복셀 정책 가중치. 역할과 과제별 정책 파일을 따로 배포한다. [배포 파일](https://huggingface.co/datasets/arthur801031/voxact-b/blob/1c97d3e318a3d54bf2864a0bb346a1bae4b34c79/weights/hand_over_item_10_demos_ours_vlm_v1_11_acting/PERACT_BC/seed11/weights/700000/QAttentionAgent_layer0.pt) · [저자 배포 안내](https://raw.githubusercontent.com/VoxAct-B/voxactb/1cc074b1730f52a7fd35d069d8c9099d18718bca/README.md)

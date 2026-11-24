@@ -5749,6 +5749,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:09de6103fdbb",
+      "resource_type": "code_or_project",
+      "name": "GraspVLA",
+      "url": "https://github.com/PKU-EPIC/GraspVLA",
+      "paper_ids": [
+        "pr-0062"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:0b2c5e3d2d82",
       "resource_type": "code_or_project",
       "name": "mil",
@@ -6640,6 +6652,18 @@
       "verified_on": "2026-11-24"
     },
     {
+      "resource_id": "code:304d052e581b",
+      "resource_type": "code_or_project",
+      "name": "EquAct",
+      "url": "https://github.com/ZXP-S-works/EquAct",
+      "paper_ids": [
+        "pr-0105"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:3055e3134835",
       "resource_type": "code_or_project",
       "name": "NaVid-VLN-CE",
@@ -6964,6 +6988,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:3862612102f6",
+      "resource_type": "code_or_project",
+      "name": "VISTA",
+      "url": "https://github.com/StanfordMSL/VISTA",
+      "paper_ids": [
+        "pr-0194"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:39834c86acdb",
       "resource_type": "code_or_project",
       "name": "ULIP",
@@ -7047,6 +7083,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:3b6383d8db6d",
+      "resource_type": "code_or_project",
+      "name": "MomaGraph",
+      "url": "https://github.com/HybridRobotics/MomaGraph",
+      "paper_ids": [
+        "pr-0096"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:3c8ecc53377f",
@@ -7264,6 +7312,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:46528199abad",
+      "resource_type": "code_or_project",
+      "name": "SOMA",
+      "url": "https://github.com/Hoantrbl/SOMA",
+      "paper_ids": [
+        "pr-0156"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:469a9a9a8fe0",
@@ -7518,6 +7578,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:4f0136b63e75",
+      "resource_type": "code_or_project",
+      "name": "pogs",
+      "url": "https://github.com/uynitsuj/pogs",
+      "paper_ids": [
+        "pr-0177"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:4f0cc1b597b2",
       "resource_type": "code_or_project",
       "name": "FuSe",
@@ -7768,18 +7840,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:58fd2d93e4da",
-      "resource_type": "code_or_project",
-      "name": "vlmaps.github.io",
-      "url": "https://vlmaps.github.io/",
-      "paper_ids": [
-        "pr-0028"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -8470,18 +8530,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:728fefe9d997",
-      "resource_type": "code_or_project",
-      "name": "voxact-b.github.io",
-      "url": "https://voxact-b.github.io/",
-      "paper_ids": [
-        "pr-0055"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:72ca13b24556",
       "resource_type": "code_or_project",
       "name": "stomp_planner_tutorial.html",
@@ -8540,6 +8588,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:755bf241399e",
+      "resource_type": "code_or_project",
+      "name": "gs-granular-media-mpc",
+      "url": "https://rvl.cs.toronto.edu/gs-granular-media-mpc/",
+      "paper_ids": [
+        "pr-0176"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:757a50bc5969",
@@ -9754,18 +9814,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:9e5d873a5a87",
-      "resource_type": "code_or_project",
-      "name": "3ds-vla",
-      "url": "https://vis-www.cs.umass.edu/3ds-vla/",
-      "paper_ids": [
-        "pr-0058"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:9e7d13fc5b4a",
       "resource_type": "code_or_project",
       "name": "lerobot",
@@ -9912,6 +9960,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:a1d3295d0f44",
+      "resource_type": "code_or_project",
+      "name": "DenseMatcher",
+      "url": "https://github.com/JunzheJosephZhu/DenseMatcher",
+      "paper_ids": [
+        "pr-0076"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:a1f961b782e2",
       "resource_type": "code_or_project",
       "name": "ScanNet",
@@ -9960,6 +10020,30 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:a2af3a89e7e5",
+      "resource_type": "code_or_project",
+      "name": "IGL-Nav",
+      "url": "https://gwxuan.github.io/IGL-Nav/",
+      "paper_ids": [
+        "pr-0230"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-24"
+    },
+    {
+      "resource_id": "code:a2ff1f792232",
+      "resource_type": "code_or_project",
+      "name": "FALCON",
+      "url": "https://github.com/FALCON-VLA/FALCON",
+      "paper_ids": [
+        "pr-0086"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:a35f23635db9",
       "resource_type": "code_or_project",
       "name": "RoboFlamingo",
@@ -9982,6 +10066,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:a4b1294e6577",
+      "resource_type": "code_or_project",
+      "name": "long-vla.github.io",
+      "url": "https://long-vla.github.io",
+      "paper_ids": [
+        "pr-0059"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:a4b6f2738abc",
@@ -10982,6 +11078,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:c49049937b72",
+      "resource_type": "code_or_project",
+      "name": "AHA",
+      "url": "https://github.com/NVlabs/AHA",
+      "paper_ids": [
+        "pr-0071"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:c5853a9c4702",
       "resource_type": "code_or_project",
       "name": "learning-agile-locomotion",
@@ -11040,6 +11148,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:c946a4a09fd2",
+      "resource_type": "code_or_project",
+      "name": "Spatio-Temporal_Open-Vocabulary_Scene_Graph",
+      "url": "https://github.com/kk-Stephen/Spatio-Temporal_Open-Vocabulary_Scene_Graph",
+      "paper_ids": [
+        "pr-0195"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:ca536efda2a2",
@@ -11571,6 +11691,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:db2a0672bcbf",
+      "resource_type": "code_or_project",
+      "name": "voxactb",
+      "url": "https://github.com/VoxAct-B/voxactb",
+      "paper_ids": [
+        "pr-0055"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:db8040c39260",
       "resource_type": "code_or_project",
       "name": "humanoid-ai.github.io",
@@ -11607,6 +11739,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:dc4334d7bbf2",
+      "resource_type": "code_or_project",
+      "name": "RoboticsDiffusionTransformer",
+      "url": "https://github.com/thu-ml/RoboticsDiffusionTransformer",
+      "paper_ids": [
+        "pr-0083"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:dd39ffcde30d",
       "resource_type": "code_or_project",
       "name": "mae",
@@ -11629,6 +11773,18 @@
       "evidence": "manifest_link",
       "availability": "not_released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:de5375a6784b",
+      "resource_type": "code_or_project",
+      "name": "3ds-vla",
+      "url": "https://github.com/clorislili/3ds-vla",
+      "paper_ids": [
+        "pr-0058"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:de63a46c4312",
@@ -12028,6 +12184,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:ea2ab8d265c9",
+      "resource_type": "code_or_project",
+      "name": "vlmaps",
+      "url": "https://github.com/vlmaps/vlmaps",
+      "paper_ids": [
+        "pr-0028"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:ea5997e96c7f",
       "resource_type": "code_or_project",
       "name": "stare-vla",
@@ -12280,6 +12448,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:f1fd82bc07c0",
+      "resource_type": "code_or_project",
+      "name": "RoboRefer",
+      "url": "https://github.com/Zhoues/RoboRefer",
+      "paper_ids": [
+        "pr-0111"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
+    },
+    {
       "resource_id": "code:f21e4509dbd4",
       "resource_type": "code_or_project",
       "name": "HIQL",
@@ -12374,6 +12554,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:f4fa7bfb43ad",
+      "resource_type": "code_or_project",
+      "name": "Any3D-VLA",
+      "url": "https://github.com/XianzheFan/Any3D-VLA",
+      "paper_ids": [
+        "pr-0168"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-24"
     },
     {
       "resource_id": "code:f5047b3379a2",
