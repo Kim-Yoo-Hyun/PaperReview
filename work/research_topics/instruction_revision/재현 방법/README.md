@@ -1,5 +1,30 @@
 # LIBERO 서랍 실험 재현
 
+<a id="drawer-first-camera"></a>
+
+## 실제 서랍 폭을 고정하고 첫 카메라 입력만 교환하기
+
+배치 2의 가운데·아래 칸 각각에 76 mm와 약 160 mm를 적용한다. 직전 폭 실험의 두 복귀 자세에서 여덟 출발 상태와 카메라 영상 16장을 가져온다. 각 경로를 재구성할 때 출발 물리 상태, 그리퍼와 물체 자세, 실제 렌더링한 첫 영상 해시를 원본과 대조한다. 자기 영상 대조에서도 두 PNG를 다시 읽어 정책에 보낸다. 처치에서는 같은 자세·같은 칸에서 폭만 다른 장면의 외부 영상, 손목 영상 또는 두 영상을 첫 질의에만 넣는다. 5제어(0.25초) 뒤부터는 각 경로가 도달한 상태의 실제 두 영상을 사용한다. [사전 설계](./drawer/drawer_first_camera.json) · [실행과 채점 코드](./drawer_first_camera.py)
+
+각 대조쌍의 시작 물리 상태를 동일하게 두고, 첫 명령부터는 서랍과 그릇을 정상 동역학으로 움직인다. 서버가 받은 영상·로봇 상태·지시·난수와 반환한 명령을 매 질의마다 대조한다. 첫 접촉은 그리퍼가 서랍의 움직이는 형상이나 그릇에 처음 닿은 제어 시점으로 센다. 수납은 공식 과제 영역 안에 그릇이 있는지 15초와 30초에 판정한다. 두 시점 모두 3초의 자세 복귀를 포함한다. 각 시행에 108회 정책 질의와 540개 후속 제어가 있다. 두 복귀 자세에 같은 여덟 난수 시드를 적용하고, 두 번째 모델 실행에서는 조건 순서를 뒤집는다.
+
+```sh
+recipe='work/research_topics/instruction_revision/재현 방법'
+archive="$recipe/results/2026-11-25-drawer-first-camera"
+(cd "$archive" && sha256sum -c SHA256SUMS)
+sh "$recipe/resume.sh" verify-drawer-first-camera "$archive"
+report_dir=$(mktemp -d)
+sh "$recipe/resume.sh" replay-drawer-first-camera "$archive" "$report_dir/physical.json"
+# 같은 정책으로 다시 수집할 때
+sh "$recipe/resume.sh" drawer-first-camera "$report_dir/new-study"
+```
+
+저장 자료를 재채점할 때는 현재 실험과 [직전 개방 폭 실험](#drawer-width)의 측정 원본을 함께 둔다. 새로 수집할 때는 아래 환경 설치 절차의 체크포인트와 로컬 NVIDIA GPU를 사용한다. 기록한 집계를 그리는 코드는 [결과 그림 생성기](./plot_drawer_first_camera.py)에 있다.
+
+11월 25일 로컬 RTX 5090에서 512경로를 수집했다. 동일한 시작 조건을 두 모델 실행 사이에 맞춘 256쌍 전부에서 첫 다섯 제어·첫 접촉 대상·30초 도착지가 같았다. 15초 수납은 255/256쌍, 540개 제어 전체와 종단 물리 상태는 241/256쌍이 일치했다. 직전 폭 실험과 이번 자기 영상 대조군을 맞춘 128쌍은 출발 물리 상태·두 첫 영상·로봇 상태가 같았다. 두 실험 사이 첫 명령의 최대 성분 차이는 쌍별 0.00040–0.00494였고, 첫 접촉과 30초 도착지는 128/128쌍, 15초 수납은 124/128쌍이 일치했다. [측정 원본](./results/2026-11-25-drawer-first-camera/study.zip) · [조건별 검산](./results/2026-11-25-drawer-first-camera/verification.json)
+
+수집 폴더와 압축 원본에서 각각 새 Docker 컨테이너로 512경로를 전부 물리 재생했다. 11월 26일 두 번째 검산을 마쳤다. 재생마다 276,480개 후속 제어의 접촉·수납 기록, 질의 시점의 물리 상태, 종단 상태가 수집값과 일치했다. 재렌더링한 영상은 관측 55,296시점 중 각각 28개와 27개에서 수집값과 달랐고, 두 재생 모두 첫 영상은 512/512회 일치했다. `physical_replay.json`의 `archive_repeat`에 두 번째 재생의 영상 차이와 결과 해시를 보존했다. [두 재생의 기록](./results/2026-11-25-drawer-first-camera/physical_replay.json) · [파일 체크섬](./results/2026-11-25-drawer-first-camera/SHA256SUMS)
+
 <a id="drawer-width"></a>
 
 ## 같은 물체 위치에서 개방 폭만 바꾸기

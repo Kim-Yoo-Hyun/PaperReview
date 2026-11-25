@@ -8,7 +8,7 @@ from scipy.spatial.transform import Rotation
 from robosuite.controllers import load_controller_config
 
 from atomic_control import capture_state
-from drawer_sim import client_for, observe, save, state_hash
+from drawer_sim import client_for, frame, observe, save, state_hash
 from stove_sim import Stove, environment, prefix
 from verify_atomic import PACKET, read
 from verify_stove import D as STOVE
@@ -149,7 +149,7 @@ def qualify(out):
     return write
 
 def trajectory(out, entry, replay=False, *, open_env=drawer_environment, restore_prefix=restore, prepare_fn=prepare,
-               scene_type=Scene):
+               scene_type=Scene, first_images=None):
     arm, mode, name = entry['arm'],entry['mode'],entry['session']
     length = entry['lead']
     reference = read(out/'preparation'/f'{arm}-{mode}-{length}.json')
@@ -174,6 +174,11 @@ def trajectory(out, entry, replay=False, *, open_env=drawer_environment, restore
             if tick == length:
                 assert (sample['physics'],sample['state']) == (reference['first']['physics'],reference['first']['state'])
                 assert scene.read() == reference['handoff']
+                if first_images is not None and not replay:
+                    assert sample['live'] == reference['first']['live']
+                    sample['sent'] = first_images
+                    for camera, signature in first_images.items():
+                        query[camera] = frame(out, signature)
             if replay:
                 old = saved['queries'][(tick-length)//period]
                 assert (tick,sample['physics'],sample['state']) == (old['tick'],old['physics'],old['state'])

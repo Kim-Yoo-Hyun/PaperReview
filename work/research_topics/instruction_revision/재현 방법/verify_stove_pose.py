@@ -134,14 +134,20 @@ def qualified(out):
     return selected,used,base,keys
 
 
-def check_receipts(out,e,tape,keys,seen,first):
+def check_receipts(out,e,tape,keys,seen,first,*,first_images=None):
     wire = [json.loads(line) for line in (out/e['receipts']).read_bytes().splitlines()]
     period = PLAN['replan_every']
     assert len(wire)==len(tape['queries'])==e['queries'] and len(tape['rows'])==len(wire)*period
     assert len(tape['final_physics'])==64
     for i,(sample,rec) in enumerate(zip(tape['queries'],wire,strict=True)):
         assert sample['tick']==e['lead']+i*period and rec['prompt']==e['source']
-        assert (sample['live'],sample['state'])==(rec['rgb_sha256'],rec['proprioception'])
+        expected = sample['live']
+        if i == 0 and first_images is not None:
+            assert expected == first['live'] and sample['sent'] == first_images
+            expected = first_images
+        elif first_images is not None:
+            assert 'sent' not in sample
+        assert (expected,sample['state'])==(rec['rgb_sha256'],rec['proprioception'])
         sequence = keys[str(e['key'])]
         k = e['key_offset']+i
         assert [rec['rng_before'],rec['rng_after']]==sequence[k:k+2]

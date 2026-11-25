@@ -62,8 +62,10 @@ def write_measurements(run, metadata_file, stage):
 
 def figure_filename(result):
     default = 'drawer_width.png' if 'width_comparisons' in result else 'middle_aperture.png'
+    if 'changed_camera_pixels' in result:
+        default = 'drawer_first_camera.png'
     name = result.get('figure_name', default)
-    assert name in ('middle_aperture.png', 'drawer_location.png', 'drawer_width.png')
+    assert name in ('middle_aperture.png', 'drawer_location.png', 'drawer_width.png', 'drawer_first_camera.png')
     return name
 
 
@@ -78,9 +80,13 @@ def add_replay(stage, proof_file, figure):
             for alternate in run['alternates'].values():
                 assert alternate['controls'] == run['policy_controls']
                 controls += alternate['controls']
+        assert proof['alternate_controls'] == controls
+    elif 'changed_camera_pixels' in result:
+        assert 'alternate_controls' not in proof
+        assert all('alternates' not in r for r in proof['runs'])
+        assert proof['total_controls'] == sum(r['lead'] + r['policy_controls'] for r in proof['runs'])
     else:
-        controls = sum(r['policy_controls'] for r in proof['runs'])
-    assert proof['alternate_controls'] == controls
+        assert proof['alternate_controls'] == sum(r['policy_controls'] for r in proof['runs'])
     figure_name = figure_filename(result)
     if 'standalone' in result:
         assert result['standalone']['paths']==proof['standalone']['paths']

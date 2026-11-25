@@ -226,10 +226,10 @@ def comparison(entries, outcomes, tick):
     return dict(by_mode=by_mode, paired=pairs)
 
 
-def path_outcomes(out, entry, prep, geometry, keys, frames):
+def path_outcomes(out, entry, prep, geometry, keys, frames, *, first_images=None):
     tape = read(out/'paths'/(entry['session']+'.json'))
     assert all(tape[k]==entry[k] for k in ('session','arm','mode','block','lead')) and tape['seed']==entry['key']
-    check_receipts(out,entry,tape,keys,frames,prep['first'])
+    check_receipts(out,entry,tape,keys,frames,prep['first'],first_images=first_images)
     rows = [prep['handoff']['upper'],*tape['rows']]
     assert len(rows)==entry['horizon']-entry['lead']+1
     check_destinations(rows,geometry)

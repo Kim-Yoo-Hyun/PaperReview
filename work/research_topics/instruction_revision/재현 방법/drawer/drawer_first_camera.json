@@ -1,0 +1,12 @@
+{
+  "question": "On the fixed layout-2 tabletop, can either camera at the first policy query change the first gripper contact or bowl destination when the physical drawer opening stays fixed?",
+  "parent": "results/2026-11-25-drawer-width/study.zip",
+  "parent_sha256": "0f36ef7d12268a396ad11f7ba5ec62d86a8c3ba7a5da375136ec3be4da1a72cb",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "physical_modes": ["narrow-middle", "full-middle", "narrow-bottom", "full-bottom"],
+  "swapped_cameras": {"self": [], "external": ["observation/image"], "wrist": ["observation/wrist_image"], "both": ["observation/image", "observation/wrist_image"]},
+  "assignment": "For the same returned posture and same drawer, load the two PNGs by pixel hash. The donor is the other width. Reinsert both recorded host images for self. Use only this pair of frozen images on the first query, retain host proprioception, prompt and random stream. After five controls supply both live views from that trajectory at every query.",
+  "cohort": "All four host drawer states, both postures and the same eight seeds at key offset 32. Rotate the sixteen state and treatment combinations within posture and seed. Reverse the order after a separate model load. 512 complete paths. Follow the original 540 policy controls at 20 Hz. The 15 s and 30 s endpoints include the three-second posture return.",
+  "outcomes": "For each host and treatment report first control differences, first gripper contact with a drawer or bowl, and actual bowl containment at 15 and 30 s. Pair treatments with self on posture, seed and model load. Report both directions, ties, delta to opposite-width self first command, and each posture by load cell. Frozen self images on both hosts must reproduce their first physical observation. Compare every server receipt from the second query onwards to the actual live pixels.",
+  "interpretation": "Evaluate the first command, contact and terminal destination separately. Report the number of first contacts changed from host-self to the opposite-width self contact. For each camera and direction require a majority of all eight paired seeds in each of four posture by reload cells for a consistent first-contact reversal here. Retain null, asymmetric and mixed outcomes, and report physical replay separately. A one-query null leaves later visual feedback open."
+}
