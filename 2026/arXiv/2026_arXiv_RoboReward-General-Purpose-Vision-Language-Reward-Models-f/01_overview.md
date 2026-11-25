@@ -43,3 +43,8 @@ C4의 독립 outcome과 reward model 차이를 정할 직접 기준이다.
 ## Verification Boundary
 
 counterfactual label 검증, temporal clipping, policy shift, benchmark leakage을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 가중치 — RoboReward-8B 가중치 샤드 · model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/teetone/RoboReward-8B/blob/3a185b4fce2b1253643105be1f234ae618b9732f/model-00001-of-00004.safetensors)
+- 데이터 — 재구성한 평가용 영상 · test/austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_115_attempt_1_score_2.mp4 [배포 파일](https://huggingface.co/datasets/teetone/RoboReward/blob/469b9af76e8539e8d2ac553b081307738fd92ca5/test/austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_115_attempt_1_score_2.mp4)

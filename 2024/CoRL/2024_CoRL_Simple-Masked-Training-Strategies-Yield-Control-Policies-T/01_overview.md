@@ -4,12 +4,12 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2024 / CoRL
-- Authors: Skand Skand, Bikram Pandit, Chanho Kim, Li Fuxin, Stefan Lee
+- Authors: Skand Peri, Bikram Pandit, Chanho Kim, Li Fuxin, Stefan Lee
 - Conference year: 2024; proceedings publication year: 2025. [PMLR volume 270](https://proceedings.mlr.press/v270/)의 개최일과 출판일을 구분한다.
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, evaluation, robustness
+- Tags: Robot Learning, sensor dropout, robustness, locomotion
 - Aliases:
 - Official paper: https://proceedings.mlr.press/v270/skand25a.html
 - Venue verification: https://proceedings.mlr.press/v270/skand25a.html
@@ -44,3 +44,7 @@ Locomotion과 manipulation, simulation과 실로봇의 sensor failure를 평가�
 ## Verification Boundary
 
 결손 종류·지속 시간·학습 노출, proprio와 image mask 차이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/skand25a/skand25a.pdf#page=1)

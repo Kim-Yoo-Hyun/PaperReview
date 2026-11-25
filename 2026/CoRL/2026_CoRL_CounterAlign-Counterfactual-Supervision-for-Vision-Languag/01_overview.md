@@ -1,6 +1,6 @@
 # CounterAlign: Counterfactual Supervision for Vision-Language-Action Models
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래의 요약·기여는 인용한 원문 쪽에서 추가 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CoRL
@@ -12,17 +12,18 @@
 - Aliases:
 - Official paper: https://arxiv.org/abs/2608.21740
 - Venue verification: https://www.corl.org/program/accepted-papers
-- Code/Project: not identified
+- Code/Project: https://counteralign.airoa.io/
 - Code: not_identified
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다.
 
 ## Problem and Importance
 
-VLA가 언어 지시 대신 시각적 shortcut을 따르는 문제를 다룬다.
+CounterAlign은 성공 시연에 맞지 않는 지시를 조합해 반사실적 음성 표본을 만들고 오프라인 RL로 조작 정책을 개선한다. [PDF 3쪽](https://arxiv.org/pdf/2608.21740v1#page=3)
 
 ## Core Idea and Contribution
 
-Instruction mismatch를 counterfactual supervision으로 사용해 reward/정책을 정렬한다.
+- 바른 지시와 잘못된 지시, 시연 행동과 정책 행동을 구별하는 신호로 이득을 추정한다. [PDF 4쪽](https://arxiv.org/pdf/2608.21740v1#page=4)
+- LIBERO-PRO와 실물 TX-G2 조작에서 지시·배치 변화에 대한 일반화를 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2608.21740v1#page=7)
 
 ## Observation–State–Action Interface
 
@@ -41,3 +42,7 @@ C2와 새로운 VLA 탐색에서 지시 준수 개선의 직접 baseline이다.
 ## Verification Boundary
 
 negative validity, reward leakage, scene overlap, constraint label 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 저자 프로젝트가 코드 공개 예정이라고 명시한다. [저자 공개 안내](https://counteralign.airoa.io/)

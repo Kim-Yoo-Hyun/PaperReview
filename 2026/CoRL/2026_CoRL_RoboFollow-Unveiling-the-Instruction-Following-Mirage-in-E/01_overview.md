@@ -8,7 +8,7 @@
 - Category: Benchmarks and Datasets
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: robot-evaluation, Benchmark, policy-comparison
+- Tags: robot-evaluation, Benchmark, instruction grounding, manipulation
 - Aliases:
 - Official paper: https://arxiv.org/abs/2609.25636
 - Venue verification: https://www.corl.org/program/accepted-papers
@@ -42,3 +42,12 @@ C2/D3의 instruction switch와 성공 지표를 검증할 핵심 benchmark다.
 ## Verification Boundary
 
 scene entropy, evaluator oracle, task infeasibility, real-robot coverage을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+실물 시행의 분모와 비교 조건은 [조건별 성공률](./04_evaluation.md#조건별-성공률)에 기록했다.
+
+## 공개 자료
+
+- 코드 — 지시를 바꾼 장면의 행동 평가 · evaluation/scene1.py [배포 파일](https://raw.githubusercontent.com/AutoLab-SAI-SJTU/RoboFollow/f642e3d19ddc0a3b0fb5795eef2cd17a12f286d8/evaluation/scene1.py)
+- 데이터 — RoboFollow 장면별 시연 · scene1/scene1_pickup_yellow_block_1_left/data/episode0.hdf5 [배포 파일](https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/blob/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene1/scene1_pickup_yellow_block_1_left/data/episode0.hdf5)

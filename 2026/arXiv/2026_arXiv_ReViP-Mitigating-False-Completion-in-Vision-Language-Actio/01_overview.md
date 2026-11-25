@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, proprioception, robustness
+- Tags: VLA, proprioception, task progress, false completion
 - Aliases: ReViP: Reducing False Completion in Vision-Language-Action Models with Vision–Proprioception Rebalance
 - Official paper: https://arxiv.org/abs/2601.16667
 - Venue verification: https://arxiv.org/abs/2601.16667
@@ -42,3 +42,7 @@ D1에서 단순 vision 강화나 stage feedback을 새 기여로 재주장하지
 ## Verification Boundary
 
 arXiv v3와 최신 project 방법 차이, observer latency, 공개 코드을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 저자 프로젝트가 코드 공개 예정이라고 명시한다. [저자 공개 안내](https://isee-laboratory.github.io/ReViP/)

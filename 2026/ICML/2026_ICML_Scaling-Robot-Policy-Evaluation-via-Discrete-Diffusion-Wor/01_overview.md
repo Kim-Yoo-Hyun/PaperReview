@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, evaluation, robustness
+- Tags: world model, discrete diffusion, policy evaluation, policy ranking
 - Aliases: dWorldEval, dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model
 - Official paper: https://proceedings.mlr.press/v306/li26hi.html
 - Venue verification: https://proceedings.mlr.press/v306/li26hi.html
@@ -42,3 +42,7 @@ World-model 평가를 연구할 때 시각 품질과 행동별 순위 신뢰도�
 ## Verification Boundary
 
 성공 평가기 독립성, 실패 데이터, final/preprint 차이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+이산 확산 세계 모델이 생성한 결과로 여러 정책의 순위를 추정한다. 원래 WorldEval의 공개 파일은 이 논문에 귀속하지 않았다. [방법과 평가](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/li26hi/li26hi.pdf#page=8)

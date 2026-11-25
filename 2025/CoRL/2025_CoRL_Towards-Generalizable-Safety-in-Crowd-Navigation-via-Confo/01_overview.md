@@ -4,16 +4,16 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / CoRL
-- Authors: Jianpeng Yao, Xiaopan Zhang, Yu Xia, Zejin Wang, Amit Roy-Chowdhury, Jiachen Li
+- Authors: Jianpeng Yao, Xiaopan Zhang, Yu Xia, Zejin Wang, Amit K. Roy-Chowdhury, Jiachen Li
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, evaluation, robustness
+- Tags: Navigation, safe RL, conformal prediction, pedestrian prediction
 - Aliases:
 - Official paper: https://proceedings.mlr.press/v305/yao25a.html
 - Venue verification: https://proceedings.mlr.press/v305/yao25a.html
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://gen-safe-nav.github.io/
+- Code: https://github.com/tasl-lab/GenSafeNav
 - Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,12 @@ GAP-P 계열에서 uncertainty 추가 자체를 새로운 navigation 기여로 �
 ## Verification Boundary
 
 보장의 단위, reactive crowd, calibration update와 intervention 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=1)
+
+## 공개 자료
+
+- 코드 — 보행자 예측 오차의 순차 보정 · dt_aci/one_step_dtai.py [배포 파일](https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/dt_aci/one_step_dtai.py)
+- 가중치 — 저자가 학습한 군중 내비게이션 정책 · trained_models/Ours_GST/checkpoints/05207.pt [배포 파일](https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/trained_models/Ours_GST/checkpoints/05207.pt)

@@ -12,7 +12,7 @@
 - Aliases: DyGRO-VLA
 - Official paper: https://proceedings.mlr.press/v306/lin26af.html
 - Venue verification: https://proceedings.mlr.press/v306/lin26af.html
-- Code/Project: https://github.com/EDEM-AI/DyGRO-VLA
+- Code/Project: https://edem-ai.github.io/DyGRO-VLA/
 - Code: project_only
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
@@ -42,3 +42,7 @@ Current trend. RL fine-tuning 중 task-specific overfitting을 줄이는 것이 
 ## Verification Boundary
 
 Task grouping, residual routing, representation loss와 unseen split leakage을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+여러 과제의 시연으로 초기화한 VLA에 온라인 잔차 정책을 학습하고 과제별 기울기 간섭을 조정한다. 실물 네 과제는 시뮬레이션에서 학습한 정책의 전이 평가다. [방법과 평가](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/lin26af/lin26af.pdf#page=6)

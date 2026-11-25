@@ -4,11 +4,11 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, wang chuang, zhihui peng, Hongyang Li
+- Authors: Haoran Jiang, Jin Chen, Qingwen Bu, Li Chen, Modi Shi, Yanjie Zhang, Delong Li, Chuanzhe Suo, Chuang Wang, Zhihui Peng, Hongyang Li
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
-- Tags: VLA, mobile-manipulation, control-interface
+- Tags: VLA, humanoid, loco-manipulation, latent action
 - Aliases:
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html
@@ -42,3 +42,11 @@ NaVILA 이후 VLA와 low-level RL의 역할을 비교할 NEXT다.
 ## Verification Boundary
 
 실행 가능한 codebase, latent supervision, controller budget을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/ff7373914a96956f2a7cacbdf3b0b8d8-Paper-Conference.pdf#page=1)
+
+## 공개 자료
+
+- 코드 — 저자가 자체 코드 공개 일정을 정하지 않았으며 이 저장소는 관련 자료를 모은다고 명시한다. [저자 공개 안내](https://github.com/OpenDriveLab/WholeBodyVLA/blob/7a86f5cb01fbe87254beda52b5ce4df26f070b0a/README.md)

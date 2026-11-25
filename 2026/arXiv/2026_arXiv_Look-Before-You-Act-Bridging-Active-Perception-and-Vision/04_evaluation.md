@@ -1,42 +1,40 @@
 # Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 평가 내용은 아래에 인용한 원문 쪽에서 추가 대조했다.
+> Source audit: 2026-11-25, 평가 설계와 주요 비교를 원문에서 확인했다.
 
 ## Evaluation in One Sentence
 
-LIBERO와 실제 robot manipulation을 보고한다.
+ActiveAlign은 손목 카메라가 시점을 바꾼 직후의 관측에서 조작을 시작하도록 VLA를 재학습해 시뮬레이션과 실물에서 비교했다. [PDF 5쪽](https://arxiv.org/pdf/2610.23378v1#page=5)
 
 ## Evaluation Type and Scope
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+LIBERO의 시작 시점을 교란한 시험과 두 실물 작업대의 평가를 수행했다. 실물 과제 다양성(표 VII)과 가림 정도(표 VIII)는 별도 실험이다. [PDF 7쪽](https://arxiv.org/pdf/2610.23378v1#page=7)
 
 ## Dataset / Benchmark Role
 
-LIBERO와 실제 robot manipulation을 보고한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+기존 시연의 중간 상태를 새 카메라 시점에 맞춘 뒤 나머지 동작을 재생했다. 재생에 성공한 궤적을 적응용 자료로 썼다. 따라서 시점 이동과 학습 자료 선택이 함께 작용할 수 있다. [PDF 4쪽](https://arxiv.org/pdf/2610.23378v1#page=4)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+표 I는 네 LIBERO 묶음의 평균 성공률(%), 표 VIII는 가림 수준별 실물 성공 수와 시행 수를 보고한다. 구체적인 값은 아래 표 대조에 있다. [PDF 5쪽](https://arxiv.org/pdf/2610.23378v1#page=5)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
+고정 시점, 시점만 바꾼 동결 정책, 같은 시점 선택 뒤 조작 정책을 적응시킨 조건을 비교했다. 마지막 조건은 조작 정책의 학습 자료도 달라진다. [PDF 5쪽](https://arxiv.org/pdf/2610.23378v1#page=5)
 
 ## Ablations and Sensitivity
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+저자는 시각 입력 변화, 로봇 상태 변화, 성공한 연결 시연의 선택 효과를 분석한다. 표 I와 VIII에서 이들 각각의 독립 기여를 읽어낼 수는 없다. [PDF 6쪽](https://arxiv.org/pdf/2610.23378v1#page=6)
 
 ## Generalization and Failure Cases
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 camera 행동 비용, state change, 성공 continuation 선택, data budget을 점검한다.
+정렬 후 시연을 재생할 수 있어야 자료를 만들 수 있다. 실패한 재생은 제외되므로 새로운 시점에서 시작 가능한 궤적 위주로 표본이 선택된다. [PDF 7쪽](https://arxiv.org/pdf/2610.23378v1#page=7)
 
 ## Statistics, Efficiency, and Reproducibility
 
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실물 가림 표는 조건별로 90회, 가림 수준별로 30회씩 집계했다. 이 표의 분모에 과제 다양성 평가를 합산하지 않는다. [PDF 7쪽](https://arxiv.org/pdf/2610.23378v1#page=7)
 
 ## Proposed Evaluation — Researcher Interpretation
 
@@ -46,4 +44,10 @@ Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와
 
 ## Evidence Anchor
 
-[공식 paper/abstract](https://arxiv.org/abs/2610.23378). Main table·appendix·negative result는 본문 수동 확인 필요.
+[공식 paper/abstract](https://arxiv.org/abs/2610.23378). 이번 대조의 범위는 위 쪽수와 표에 명시했다.
+
+## 조건별 성공률
+
+LIBERO 시점 교란에서 π0.5 성공률은 기본 46.3%, 시점 이동만 적용하면 11.5%, 적응 후 72.7%였다. 기본 정책 대비 차이는 26.4%p다. [표 I · PDF 5쪽](https://arxiv.org/pdf/2610.23378v1#page=5)
+
+실물 가림 평가의 전체 성공 횟수는 고정 시점 35/90, 시점 이동만 17/90, 적응 후 83/90이었다. 표 VII의 과제별 실험은 별도 집계다. [표 VIII · PDF 7쪽](https://arxiv.org/pdf/2610.23378v1#page=7)

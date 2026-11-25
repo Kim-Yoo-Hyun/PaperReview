@@ -229557,7 +229557,8 @@
     "title": "USER: A Unified and Extensible System for Online Real-World Policy Learning in Embodied AI",
     "aliases": [
       "USER",
-      "RLinf-USER"
+      "RLinf-USER",
+      "USER: A Unified and Extensible System for Real-World Online Policy Learning in Embodied AI"
     ],
     "year": 2026,
     "venue": "RSS",
@@ -229569,7 +229570,7 @@
       "distributed-system"
     ],
     "page": "https://roboticsproceedings.org/rss22/p037.html",
-    "project": "https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst",
+    "project": "https://github.com/RLinf/RLinf",
     "pdf": "",
     "identifiers": {
       "arxiv": "2602.07837",
@@ -229600,16 +229601,16 @@
       },
       "paper_pdf": null,
       "project": {
-        "url": "https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst",
+        "url": "https://github.com/RLinf/RLinf",
         "kind": "author_project",
         "scope": "project_landing",
-        "verified_on": "2026-10-19"
+        "verified_on": "2026-11-25"
       },
       "code": {
         "url": "https://github.com/RLinf/RLinf",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-10-19"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
@@ -229635,9 +229636,9 @@
       "schema_migrated_on": "2026-10-19",
       "schema_version": "1.0",
       "authors_verification": {
-        "source": "https://roboticsproceedings.org/rss22/p037.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://roboticsproceedings.org/rss22/p037.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -229705,8 +229706,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://github.com/RLinf/RLinf",
-        "evidence": "manifest_link"
+        "source": "https://raw.githubusercontent.com/RLinf/RLinf/3b98d93b0c8be5bb8764935c7e9d04cfa2658d62/rlinf/robotics/robots/franka.py",
+        "verified_on": "2026-11-25",
+        "evidence": "실물 온라인 학습 시스템 구성요소 · rlinf/robotics/robots/franka.py"
       },
       "data": {
         "status": "not_identified",
@@ -229753,8 +229755,9 @@
       "Zefang Huang",
       "Zhen Guo",
       "Xin Xu",
-      "Yuze Sheng",
       "Jiakai Zhou",
+      "Yuze Sheng",
+      "Si Xu",
       "Shizhe Zhang",
       "Feng Gao",
       "Wenhao Tang",
@@ -229780,7 +229783,7 @@
       "generalization"
     ],
     "page": "https://proceedings.mlr.press/v306/lin26af.html",
-    "project": "https://github.com/EDEM-AI/DyGRO-VLA",
+    "project": "https://edem-ai.github.io/DyGRO-VLA/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2605.17486"
@@ -229810,10 +229813,10 @@
       },
       "paper_pdf": null,
       "project": {
-        "url": "https://github.com/EDEM-AI/DyGRO-VLA",
+        "url": "https://edem-ai.github.io/DyGRO-VLA/",
         "kind": "author_project",
         "scope": "project_landing",
-        "verified_on": "2026-10-19"
+        "verified_on": "2026-11-25"
       },
       "code": null
     },
@@ -230119,9 +230122,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "not_released",
-        "source": "https://github.com/InternRobotics/Tac2Real",
-        "verified_on": "2026-11-20",
-        "evidence": "저자 README가 구현 공개를 예고한다. 현재 배포 트리에는 README와 소개 자료가 있다."
+        "source": "https://github.com/InternRobotics/Tac2Real/blob/4ba3decc1430acbda62861dd8220589d2b07c7c8/README.md",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 저장소가 구현 공개를 게재 이후로 예고한다. 확인한 리비전에는 구현 파일이 없다."
       },
       "data": {
         "status": "not_identified",
@@ -230542,8 +230545,8 @@
       "code": {
         "status": "not_released",
         "source": "https://gary3410.github.io/momanipVLA/",
-        "verified_on": "2026-11-20",
-        "evidence": "저자 사이트에서 이 논문의 코드 배포를 Coming Soon 또는 SOON으로 안내한다. 확인 범위는 해당 공식 배포처다."
+        "verified_on": "2026-11-25",
+        "evidence": "프로젝트의 코드 링크에 공개 예정이라고 표시되어 있다."
       },
       "data": {
         "status": "not_identified",
@@ -230801,8 +230804,9 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "proprioception",
-      "robustness"
+      "hypernetwork",
+      "instruction grounding",
+      "multitask manipulation"
     ],
     "page": "https://www.roboticsproceedings.org/rss22/p147.html",
     "project": "https://github.com/ReNginx/DISC",
@@ -230844,7 +230848,7 @@
         "url": "https://github.com/ReNginx/DISC",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-10-21"
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null
     },
@@ -230934,9 +230938,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/ReNginx/DISC/HEAD/train.py",
-        "evidence": "저자 구현 파일 · train.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/ReNginx/DISC/4979e1516246a2e5a2fc7c3cae7511c5f17e5f6d/model/hylap/hypogen2_impl/hypernetworks.py",
+        "verified_on": "2026-11-25",
+        "evidence": "지시 조건부 하이퍼네트워크 · model/hylap/hypogen2_impl/hypernetworks.py"
       },
       "data": {
         "status": "not_identified",
@@ -230945,9 +230949,9 @@
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · DISC-libero90.ckpt",
-        "source": "https://huggingface.co/api/models/ReNginx/DISC",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/ReNginx/DISC/blob/36b98d7496553df98e9e2150a502d99b190b6d11/DISC-libero90.ckpt",
+        "verified_on": "2026-11-25",
+        "evidence": "LIBERO-90 DISC 정책 · DISC-libero90.ckpt"
       },
       "configuration": {
         "status": "not_recorded",
@@ -231035,13 +231039,13 @@
         "url": "https://github.com/jeffacce/cap-policy",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-10-21"
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -231125,14 +231129,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/jeffacce/cap-policy/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/imitation-in-homes/loss_fns/diffusion_policy_loss_fn.py",
-        "verified_on": "2026-11-20",
-        "evidence": "CAP 저자 저장소의 모방학습 손실 구현. imitation-in-homes/loss_fns/diffusion_policy_loss_fn.py"
+        "source": "https://raw.githubusercontent.com/jeffacce/cap-policy/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/imitation-in-homes/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "가정 내 환경에서 수집한 시연 학습 · imitation-in-homes/train.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/zavierand/CAPs/blob/ef6b082c1927f715e106cfebee7fd451efcb0491/dataset_raw/Close/home_01/Env1/2025-08-31-16_41_25/compressed_video_h264.mp4",
+        "verified_on": "2026-11-25",
+        "evidence": "가정에서 수집한 원시 시연 영상 · dataset_raw/Close/home_01/Env1/2025-08-31-16_41_25/compressed_video_h264.mp4"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -231563,7 +231568,8 @@
     "tags": [
       "VLA",
       "proprioception",
-      "robustness"
+      "task progress",
+      "false completion"
     ],
     "page": "https://arxiv.org/abs/2601.16667",
     "project": "https://isee-laboratory.github.io/ReViP/",
@@ -231693,8 +231699,8 @@
       "code": {
         "status": "not_released",
         "source": "https://isee-laboratory.github.io/ReViP/",
-        "verified_on": "2026-11-20",
-        "evidence": "저자 사이트에서 이 논문의 코드 배포를 Coming Soon 또는 SOON으로 안내한다. 확인 범위는 해당 공식 배포처다."
+        "verified_on": "2026-11-25",
+        "evidence": "저자 프로젝트가 코드 공개 예정이라고 명시한다."
       },
       "data": {
         "status": "not_identified",
@@ -231753,8 +231759,9 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "proprioception",
-      "robustness"
+      "mixture of experts",
+      "depth",
+      "missing modality"
     ],
     "page": "https://arxiv.org/abs/2607.03693",
     "project": "not identified",
@@ -231942,8 +231949,9 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "proprioception",
-      "robustness"
+      "camera shift",
+      "RGB-D reprojection",
+      "asynchronous inference"
     ],
     "page": "https://arxiv.org/abs/2609.37150",
     "project": "not identified",
@@ -232124,7 +232132,7 @@
     "tags": [
       "VLA",
       "Benchmark",
-      "hardware-shift"
+      "simulated hardware perturbation"
     ],
     "page": "https://arxiv.org/abs/2610.18843",
     "project": "not identified",
@@ -232710,8 +232718,9 @@
     "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
     "tags": [
       "VLA",
-      "mobile-manipulation",
-      "control-interface"
+      "humanoid",
+      "loco-manipulation",
+      "latent action"
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html",
     "project": "https://wholebodyvla.github.io/",
@@ -232803,9 +232812,9 @@
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-21",
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/ff7373914a96956f2a7cacbdf3b0b8d8-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/ff7373914a96956f2a7cacbdf3b0b8d8-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -232843,9 +232852,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "not_released",
-        "source": "https://raw.githubusercontent.com/OpenDriveLab/WholebodyVLA/HEAD/README.md",
-        "evidence": "저자 안내에서 자체 구현의 미배포 확인. 비교 방법 재구현 또는 큐레이션 저장소만 공개.",
-        "verified_on": "2026-11-20"
+        "source": "https://github.com/OpenDriveLab/WholeBodyVLA/blob/7a86f5cb01fbe87254beda52b5ce4df26f070b0a/README.md",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 자체 코드 공개 일정을 정하지 않았으며 이 저장소는 관련 자료를 모은다고 명시한다."
       },
       "data": {
         "status": "not_identified",
@@ -232893,8 +232902,8 @@
       "Yanjie Zhang",
       "Delong Li",
       "Chuanzhe Suo",
-      "wang chuang",
-      "zhihui peng",
+      "Chuang Wang",
+      "Zhihui Peng",
       "Hongyang Li"
     ]
   },
@@ -233100,9 +233109,10 @@
     "category": "VLA and Generalist Robot Policies",
     "primary_track": "VLA and generalist robot policies",
     "tags": [
-      "VLA",
+      "Imitation Learning",
       "proprioception",
-      "robustness"
+      "modality imbalance",
+      "manipulation"
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2b3bb2c95195130977a51b3bb251c40a-Abstract-Conference.html",
     "project": "https://gewu-lab.github.io/GAP/",
@@ -233146,7 +233156,7 @@
         "url": "https://github.com/GeWu-Lab/GAP",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-10-21"
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null
     },
@@ -233236,9 +233246,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/GeWu-Lab/GAP/HEAD/costdirection.py",
-        "evidence": "저자 구현 파일 · costdirection.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/GeWu-Lab/GAP/2f605436c68eedf328c05520d52877604af730d3/gap/gap.py",
+        "verified_on": "2026-11-25",
+        "evidence": "모달리티별 기울기 조정 · gap/gap.py"
       },
       "data": {
         "status": "not_identified",
@@ -233523,7 +233533,12 @@
         "scope": "project_landing",
         "verified_on": "2026-10-22"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/Continual-VLAs/continual-openpi",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v306/liu26bu.html",
@@ -233533,7 +233548,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -233625,9 +233640,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://continual-vlas.github.io/forget-me-not/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Continual-VLAs/continual-openpi/a3f8ca4c5abbf84248ce2046e248054fdaab5186/src/openpi/continual/ewc.py",
+        "verified_on": "2026-11-25",
+        "evidence": "연속 VLA 학습 정규화 구현 · src/openpi/continual/ewc.py"
       },
       "data": {
         "status": "not_identified",
@@ -233682,11 +233698,11 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "action-interface",
-      "cross-embodiment"
+      "action representation",
+      "language generalization"
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7a0f8055c838df8e62329a76c7c6403d-Abstract-Conference.html",
-    "project": "not identified",
+    "project": "https://vlm2vla.github.io/",
     "pdf": "",
     "identifiers": {},
     "aliases": [
@@ -233710,8 +233726,18 @@
         "verified_on": "2026-10-22"
       },
       "preprint": null,
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://vlm2vla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/irom-princeton/vlm2vla",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7a0f8055c838df8e62329a76c7c6403d-Abstract-Conference.html",
@@ -233721,7 +233747,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -233762,9 +233788,9 @@
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-22",
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/7a0f8055c838df8e62329a76c7c6403d-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/7a0f8055c838df8e62329a76c7c6403d-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "source_only",
       "primary_source_scope": "paper_specific"
@@ -233813,9 +233839,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/irom-princeton/vlm2vla/27da5ad142e9d92d027db84a2d2c520ceace91e2/src/vlm2vla/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "행동의 언어 표현을 학습하는 VLM 미세조정 · src/vlm2vla/train.py"
       },
       "data": {
         "status": "not_identified",
@@ -233823,8 +233850,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/AasherH/vlm2vla/blob/d40f632269aa0d54159f7e07432ce794f3239f24/adapter_model.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "행동 언어화용 LoRA 어댑터 · adapter_model.safetensors"
       },
       "configuration": {
         "status": "not_recorded",
@@ -233855,7 +233884,7 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Asher Hancock",
+      "Asher J. Hancock",
       "Xindi Wu",
       "Lihan Zha",
       "Olga Russakovsky",
@@ -233874,7 +233903,7 @@
       "cross-embodiment"
     ],
     "page": "https://www.roboticsproceedings.org/rss22/p203.html",
-    "project": "not identified",
+    "project": "https://lap-vla.github.io/",
     "pdf": "",
     "identifiers": {},
     "aliases": [],
@@ -233896,8 +233925,18 @@
         "verified_on": "2026-10-22"
       },
       "preprint": null,
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://lap-vla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/lihzha/lap",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://www.roboticsproceedings.org/rss22/p203.html",
@@ -233907,7 +233946,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -233948,9 +233987,9 @@
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-22",
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss22/p203.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss22/p203.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "source_only",
       "primary_source_scope": "paper_specific"
@@ -233999,9 +234038,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/lihzha/lap/3958d1466d5b92445b67de7d4202c19608ad4d56/scripts/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "언어 행동 예측 정책 학습 · scripts/train.py"
       },
       "data": {
         "status": "not_identified",
@@ -234009,8 +234049,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/lihzha/LAP-3B/blob/601db9c1ab4bcaf6dddb160c7b2dec589a67b730/params/ocdbt.process_0/d/2a547295477492a7426cdd99bfd9c7a8",
+        "verified_on": "2026-11-25",
+        "evidence": "LAP-3B 파라미터 샤드 · params/ocdbt.process_0/d/2a547295477492a7426cdd99bfd9c7a8"
       },
       "configuration": {
         "status": "not_recorded",
@@ -234042,7 +234084,7 @@
     },
     "authors": [
       "Lihan Zha",
-      "Asher James Hancock",
+      "Asher J. Hancock",
       "Mingtong Zhang",
       "Tenny Yin",
       "Yixuan Huang",
@@ -234101,7 +234143,12 @@
         "scope": "project_landing",
         "verified_on": "2026-10-22"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/Adaptive-Action-Chunking/libero",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://openaccess.thecvf.com/CVPR2026?day=2026-06-06",
@@ -234111,7 +234158,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -234203,9 +234250,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://lance-lot.github.io/adaptive-chunking.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Adaptive-Action-Chunking/libero/ff8c8e421f7805b5845a72d07fbd8f1171df74bf/action_optimization/action_entropy_pi05.py",
+        "verified_on": "2026-11-25",
+        "evidence": "LIBERO에서 π0.5 행동 청크 길이 선택 · action_optimization/action_entropy_pi05.py"
       },
       "data": {
         "status": "not_identified",
@@ -234305,7 +234353,12 @@
         "scope": "project_landing",
         "verified_on": "2026-10-22"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/MaxDu17/MemoryAnchors",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://www.corl.org/program/accepted-papers",
@@ -234321,8 +234374,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -234413,14 +234466,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://robot-adaptation.github.io/MemoryAnchors",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/MaxDu17/MemoryAnchors/4bde628d4dc217df6f7ad16af4b48699d33b8137/memory_anchors/algos/anchor_er.py",
+        "verified_on": "2026-11-25",
+        "evidence": "행동 충돌을 이용한 리플레이 표본 선택 · memory_anchors/algos/anchor_er.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/MaxDu17/MemoryAnchors/4bde628d4dc217df6f7ad16af4b48699d33b8137/results/AnchorER-10_1pct/Libero10/2026.05.23-08.19.01_SelER_9010_libero_10_progressive_shorter_order00_libero_policy_libero_10_progressive_diffusion_unet_robomimic_encoder/checkpoints/125119.ckpt.json",
+        "verified_on": "2026-11-25",
+        "evidence": "LIBERO-10 작업별 평균 점수 집계 · 125119.ckpt.json (AnchorER 1% 리플레이)"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -234471,11 +234526,12 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "action-interface",
+      "pretraining",
+      "action representation",
       "cross-embodiment"
     ],
     "page": "https://arxiv.org/abs/2602.09722",
-    "project": "not identified",
+    "project": "https://research.beingbeyond.com/rethink_vla",
     "pdf": "",
     "identifiers": {
       "arxiv": "2602.09722"
@@ -234506,14 +234562,24 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-22"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://research.beingbeyond.com/rethink_vla",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/BeingBeyond/Rethink_VLA",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": null
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -234604,18 +234670,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/BeingBeyond/Rethink_VLA/d3739abda923ffddaf01d6d8d74bf3d439068106/shell/pretrain-M1-240k-stage2.sh",
+        "verified_on": "2026-11-25",
+        "evidence": "VLA 사전학습의 2단계 실행 설정 · shell/pretrain-M1-240k-stage2.sh"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/BeingBeyond/robocasa_human_single_lerobot/blob/2f97c13621549144a702ccd2b61f15b4c32e82ef/CloseDoubleDoor/data/chunk-000/episode_000000.parquet",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 변환 RoboCasa 인간 시연 · CloseDoubleDoor/data/chunk-000/episode_000000.parquet"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/wwwyyy/pretrain-oxe-eef-relative/blob/ee852ea26ed70b71eb04a62af03532094a5fe991/model.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 공개 OXE 사전학습 정책 · model.safetensors"
       },
       "configuration": {
         "status": "not_recorded",
@@ -234672,7 +234742,7 @@
       "robot-learning"
     ],
     "page": "https://arxiv.org/abs/2605.26820",
-    "project": "not identified",
+    "project": "https://github.com/Agentic-Intelligence-Lab/ContinualVLA",
     "pdf": "",
     "identifiers": {
       "arxiv": "2605.26820"
@@ -234703,14 +234773,24 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-22"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://github.com/Agentic-Intelligence-Lab/ContinualVLA",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/Agentic-Intelligence-Lab/ContinualVLA",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": null
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -234801,14 +234881,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/src/openpi/training/replay_buffer.py",
+        "verified_on": "2026-11-25",
+        "evidence": "연속 학습용 리플레이 버퍼 · src/openpi/training/replay_buffer.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/Ray0v0/cl-piper-single-stack-bowls/blob/f81ff5e07c31053b39e64aa621882d6d17705d52/data/chunk-000/episode_000000.parquet",
+        "verified_on": "2026-11-25",
+        "evidence": "단팔 PiPER 그릇 쌓기 시연 · data/chunk-000/episode_000000.parquet"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -235709,7 +235791,12 @@
         "scope": "project_landing",
         "verified_on": "2026-10-22"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/Physical-Intelligence/real-time-chunking-kinetix",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://papers.nips.cc/paper_files/paper/2025/hash/300ccb2187dedd4edcc07f7e76d8e553-Abstract-Conference.html",
@@ -235719,8 +235806,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -235760,9 +235847,9 @@
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-22",
       "authors_verification": {
-        "source": "https://papers.nips.cc/paper_files/paper/2025/hash/300ccb2187dedd4edcc07f7e76d8e553-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://papers.nips.cc/paper_files/paper/2025/file/300ccb2187dedd4edcc07f7e76d8e553-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -235811,18 +235898,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://pi.website/research/real_time_chunking",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Physical-Intelligence/real-time-chunking-kinetix/9296f31d62d5bfeb5779dcb2f9bcf71ca37f448b/src/model.py",
+        "verified_on": "2026-11-25",
+        "evidence": "Kinetix 시뮬레이션의 실시간 청크 조건부 정책 · src/model.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://storage.googleapis.com/rtc-assets/expert/data/worlds_l_car_launch.npz?generation=1753991658884531",
+        "verified_on": "2026-11-25",
+        "evidence": "Kinetix 자동차 발사 전문가 궤적 · expert/data/worlds_l_car_launch.npz"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://storage.googleapis.com/rtc-assets/bc/0/policies/worlds_l_car_launch.pkl?generation=1753991738990582",
+        "verified_on": "2026-11-25",
+        "evidence": "Kinetix 자동차 발사 모방 정책 · bc/0/policies/worlds_l_car_launch.pkl"
       },
       "configuration": {
         "status": "not_recorded",
@@ -235854,7 +235945,7 @@
     },
     "authors": [
       "Kevin Black",
-      "Manuel Galliker",
+      "Manuel Y. Galliker",
       "Sergey Levine"
     ]
   },
@@ -235909,7 +236000,7 @@
         "url": "https://github.com/nadunRanawaka1/SAIL",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -236013,9 +236104,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/nadunRanawaka1/SAIL/HEAD/robomimic/scripts/train.py",
-        "evidence": "저자 구현 파일 · robomimic/scripts/train.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/nadunRanawaka1/SAIL/1440c16b0017112d7ed5aba2291acd4d638726c2/robomimic/SAIL/precision_processing/dynamic_speed_awe.py",
+        "verified_on": "2026-11-25",
+        "evidence": "시뮬레이션 시연의 정밀도에 따른 속도 조정 · robomimic/SAIL/precision_processing/dynamic_speed_awe.py"
       },
       "data": {
         "status": "not_identified",
@@ -236075,10 +236166,11 @@
     "category": "VLA and Generalist Robot Policies",
     "primary_track": "VLA and generalist robot policies",
     "tags": [
-      "VLA",
-      "action-chunking",
-      "feedback",
-      "control-frequency"
+      "Imitation Learning",
+      "latent action",
+      "action chunking",
+      "asynchronous control",
+      "high-frequency manipulation"
     ],
     "page": "https://proceedings.mlr.press/v306/wang26lj.html",
     "project": "https://github.com/tars-robotics/RTR",
@@ -236120,9 +236212,9 @@
       },
       "code": {
         "url": "https://github.com/tars-robotics/RTR",
-        "kind": "official_repository",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-22"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -236134,7 +236226,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -236226,14 +236318,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/tars-robotics/RTR/0589f847bf4f61e1fb959f23cf3a0329de9bb9b3/src/rtr_async_sys/models/dp.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. src/rtr_async_sys/models/dp.py"
+        "source": "https://raw.githubusercontent.com/tars-robotics/RTR/0589f847bf4f61e1fb959f23cf3a0329de9bb9b3/src/rtr_async_sys/model_wrapper/kinedex_model_wrapper.py",
+        "verified_on": "2026-11-25",
+        "evidence": "KineDex 고주파 행동 복호화 및 비동기 제어 · src/rtr_async_sys/model_wrapper/kinedex_model_wrapper.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/sadpiggy/rtr_robot_sys_zarr/blob/2cc716dd9fd56d4dbf194936cd021a03af2f23cb/peel_cucumber_60hz.tar",
+        "verified_on": "2026-11-25",
+        "evidence": "60 Hz 오이 껍질 벗기기 시연 · peel_cucumber_60hz.tar"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -239635,7 +239728,7 @@
         "url": "https://github.com/robometer/robometer",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -239687,9 +239780,9 @@
       "schema_version": "1.0",
       "schema_migrated_on": "2026-10-22",
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss22/p140.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss22/p140.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -239739,21 +239832,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/robometer/robometer/HEAD/train.py",
-        "evidence": "저자 구현 파일 · train.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/robometer/robometer/352d160389daa964788de1ec933d1925f3a6de4f/robometer/models/rbm.py",
+        "verified_on": "2026-11-25",
+        "evidence": "시각 보상 모델 · robometer/models/rbm.py"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/robometer/rbm-1m-ood",
-        "evidence": "배포 파일 목록에서 확인한 범위 · meta/tasks.parquet",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/robometer/rbm-1m-ood/blob/3f3ee69ecc0ee0db627684da7d599ec26d08175c/data/chunk-000/file-000.parquet",
+        "verified_on": "2026-11-25",
+        "evidence": "RBM-1M 분포 밖 평가 표본 · data/chunk-000/file-000.parquet"
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · model-00001-of-00002.safetensors",
-        "source": "https://huggingface.co/api/models/robometer/Robometer-4B",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/robometer/Robometer-4B/blob/beef63bc914c5c189329d49c6d712d96d632aa34/model-00001-of-00002.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "Robometer-4B 가중치 샤드 · model-00001-of-00002.safetensors"
       },
       "configuration": {
         "status": "not_recorded",
@@ -239799,7 +239892,7 @@
       "Andreea Bobu",
       "Abhishek Gupta",
       "Stephen Tu",
-      "Erdem Biyik",
+      "Erdem Bıyık",
       "Jesse Zhang"
     ]
   },
@@ -239856,7 +239949,7 @@
     },
     "artifacts": {
       "code_status": "project_only",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -239964,13 +240057,16 @@
         "evidence": "Author arXiv abstract links HELM project; destination is a client-rendered shell. Code/data payload and runtime were not audited."
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/teetone/RoboReward/blob/469b9af76e8539e8d2ac553b081307738fd92ca5/test/austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_115_attempt_1_score_2.mp4",
+        "verified_on": "2026-11-25",
+        "evidence": "재구성한 평가용 영상 · test/austin_sirius_dataset_converted_externally_to_rlds/austin_sirius_dataset_converted_externally_to_rlds_originalsplit_train_index_115_attempt_1_score_2.mp4"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/teetone/RoboReward-8B/blob/3a185b4fce2b1253643105be1f234ae618b9732f/model-00001-of-00004.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "RoboReward-8B 가중치 샤드 · model-00001-of-00004.safetensors"
       },
       "configuration": {
         "status": "not_recorded",
@@ -240421,7 +240517,7 @@
       "policy-comparison"
     ],
     "page": "https://proceedings.mlr.press/v305/zhou25a.html",
-    "project": "not identified",
+    "project": "https://auto-eval.github.io/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2503.24278"
@@ -240450,8 +240546,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-22"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://auto-eval.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/zhouzypaul/auto_eval",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/zhou25a.html",
@@ -240461,7 +240567,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -240553,9 +240659,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/zhouzypaul/auto_eval/3ea3ff44c6950433cfbcb4294a3deaa616533745/auto_eval/success_detector/paligemma.py",
+        "verified_on": "2026-11-25",
+        "evidence": "로봇 평가 시스템의 시각 성공 판정 · auto_eval/success_detector/paligemma.py"
       },
       "data": {
         "status": "not_identified",
@@ -240810,7 +240917,7 @@
       "policy-comparison"
     ],
     "page": "https://roboticsproceedings.org/rss21/p077.html",
-    "project": "not identified",
+    "project": "https://tri-ml.github.io/step/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2503.10966"
@@ -240841,8 +240948,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-22"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://tri-ml.github.io/step/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/TRI-ML/sequentialized_barnard_tests",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://roboticsproceedings.org/rss21/p077.html",
@@ -240852,8 +240969,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -240944,14 +241061,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/TRI-ML/sequentialized_barnard_tests/3ae1623906f82fe472a352ed4a6b8e4a712f1f3d/sequentialized_barnard_tests/step.py",
+        "verified_on": "2026-11-25",
+        "evidence": "순차적 정책 비교 검정 · sequentialized_barnard_tests/step.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/TRI-ML/sequentialized_barnard_tests/3ae1623906f82fe472a352ed4a6b8e4a712f1f3d/data/example_clean_spill/TRI_CLEAN_SPILL_v4.npy",
+        "verified_on": "2026-11-25",
+        "evidence": "쏟은 액체 청소 정책의 시행별 비교 예제 · data/example_clean_spill/TRI_CLEAN_SPILL_v4.npy"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -242054,7 +242173,7 @@
       "manipulation"
     ],
     "page": "https://arxiv.org/abs/2608.21740",
-    "project": "not identified",
+    "project": "https://counteralign.airoa.io/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2608.21740",
@@ -242084,7 +242203,12 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-22"
       },
-      "project": null,
+      "project": {
+        "url": "https://counteralign.airoa.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "code": null,
       "paper_pdf": null,
       "venue_verification": {
@@ -242101,7 +242225,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "not_released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -242193,9 +242317,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "not_released",
+        "source": "https://counteralign.airoa.io/",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 프로젝트가 코드 공개 예정이라고 명시한다."
       },
       "data": {
         "status": "not_identified",
@@ -242269,7 +242394,8 @@
     "tags": [
       "robot-evaluation",
       "Benchmark",
-      "policy-comparison"
+      "instruction grounding",
+      "manipulation"
     ],
     "page": "https://arxiv.org/abs/2609.25636",
     "project": "https://github.com/AutoLab-SAI-SJTU/RoboFollow",
@@ -242310,9 +242436,9 @@
       },
       "code": {
         "url": "https://github.com/AutoLab-SAI-SJTU/RoboFollow",
-        "kind": "official_repository",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-22"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -242422,15 +242548,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/AutoLab-SAI-SJTU/RoboFollow/HEAD/evaluate.py",
-        "evidence": "저자 구현 파일 · evaluate.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/AutoLab-SAI-SJTU/RoboFollow/f642e3d19ddc0a3b0fb5795eef2cd17a12f286d8/evaluation/scene1.py",
+        "verified_on": "2026-11-25",
+        "evidence": "지시를 바꾼 장면의 행동 평가 · evaluation/scene1.py"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/AutoLab-SJTU/robofollow-data",
-        "evidence": "배포 파일 목록에서 확인한 범위 · scene2/scene2_pickup_left_cube/data/episode0.hdf5",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/AutoLab-SJTU/robofollow-data/blob/bbb1e266ed585f1557773de5a3f1e3b4cd944f97/scene1/scene1_pickup_yellow_block_1_left/data/episode0.hdf5",
+        "verified_on": "2026-11-25",
+        "evidence": "RoboFollow 장면별 시연 · scene1/scene1_pickup_yellow_block_1_left/data/episode0.hdf5"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -243110,7 +243236,7 @@
       "data-selection"
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
-    "project": "not identified",
+    "project": "https://robo-mimiclabs.github.io/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2506.13536",
@@ -243140,8 +243266,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-25"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://robo-mimiclabs.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/Gatech-RL2/mimiclabs",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
@@ -243151,8 +243287,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -243206,9 +243342,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -243242,14 +243378,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/Gatech-RL2/mimiclabs/0b81d7e8cc077de3a6da4cd02ffe6c605c793d9a/mimiclabs/mimicgen/scripts/generate_dataset.py",
+        "verified_on": "2026-11-25",
+        "evidence": "연구실 환경 변화에 따른 모방 데이터 생성 · mimiclabs/mimicgen/scripts/generate_dataset.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/vaibhavsaxena11/mimiclabs_datasets/blob/2c6890f13ed2a59f2034fa6ade77babcb4192b8f/mimiclabs_study/lab1/binBagel4/binBagel4_lab1%2BcamPoseAgentFNorm%2BobjSpatC20%2BrecepSpatL/demo.hdf5",
+        "verified_on": "2026-11-25",
+        "evidence": "MimicLabs 실험실 변형 시연 · mimiclabs_study/lab1/binBagel4/binBagel4_lab1+camPoseAgentFNorm+objSpatC20+recepSpatL/demo.hdf5"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -243288,7 +243426,7 @@
       "Matthew Bronars",
       "Nadun Ranawaka Arachchige",
       "Kuancheng Wang",
-      "Woo Shin",
+      "Woo Chul Shin",
       "Soroush Nasiriany",
       "Ajay Mandlekar",
       "Danfei Xu"
@@ -243307,7 +243445,7 @@
       "data-selection"
     ],
     "page": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
-    "project": "https://github.com/UT-Austin-RobIn/datamil",
+    "project": "https://robin-lab.cs.utexas.edu/datamodels4imitation/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2505.09603"
@@ -243337,16 +243475,16 @@
         "verified_on": "2026-10-25"
       },
       "project": {
-        "url": "https://github.com/UT-Austin-RobIn/datamil",
-        "kind": "official_project",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "url": "https://robin-lab.cs.utexas.edu/datamodels4imitation/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "code": {
         "url": "https://github.com/UT-Austin-RobIn/datamil",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -243412,9 +243550,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2026/file/033d9e8dbbbc0ad90e59222cf1db0fc2-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -243449,9 +243587,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/UT-Austin-RobIn/datamil/HEAD/scripts/selected_training_mw.py",
-        "evidence": "저자 구현 파일 · scripts/selected_training_mw.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/UT-Austin-RobIn/datamil/f8fc4abccacd1e2b070e68128a7f2bce98f4b303/datamil/metagradients/core/vjp_robodm.py",
+        "verified_on": "2026-11-25",
+        "evidence": "시연 선택용 메타 기울기 계산 · datamil/metagradients/core/vjp_robodm.py"
       },
       "data": {
         "status": "not_identified",
@@ -243494,7 +243632,7 @@
       "Shivin Dass",
       "Alaa Khaddaj",
       "Logan Engstrom",
-      "Aleksander Madry",
+      "Aleksander Mądry",
       "Andrew Ilyas",
       "Roberto Martín-Martín"
     ]
@@ -244119,11 +244257,11 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "evaluation",
-      "generalization"
+      "mechanistic interpretability",
+      "activation steering"
     ],
     "page": "https://proceedings.mlr.press/v305/haon25a.html",
-    "project": "not identified",
+    "project": "https://vla-mech-interp.github.io/",
     "pdf": "",
     "identifiers": {
       "arxiv": "2509.00328"
@@ -244152,8 +244290,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-10-25"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://vla-mech-interp.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/vla-mech-interp/mechanistic-steering-vlas",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/haon25a.html",
@@ -244163,7 +244311,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -244193,7 +244341,7 @@
     "problem": "VLA 내부 표현을 이해하고 실행 중 행동을 조절하는 수단이 부족하다.",
     "method": "Transformer activation의 semantic 방향을 찾고 inference 때 activation steering으로 행동을 조절한다.",
     "interface": "VLA 내부 activation·semantic 방향 → 개입된 action.",
-    "evaluation": "Pi0·OpenVLA를 LIBERO 및 UR5에서 평가한다고 보고한다.",
+    "evaluation": "LIBERO-Long 시뮬레이션에서 OpenVLA-7B를, 실물 UR5의 두 집기·놓기 과제에서 π0-FAST를 평가했다.",
     "role": "Instruction 대응이나 VLA 행동 교정을 연구할 때 fine-tuning 없는 직접 baseline이다.",
     "lineage": "OpenVLA/π0 → activation steering → instruction 개입의 대조",
     "question": "Semantic 개입 효과가 같은 크기의 무작위·비의미 방향 개입보다 일관적인가?",
@@ -244218,9 +244366,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v305/haon25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -244254,9 +244402,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/vla-mech-interp/mechanistic-steering-vlas/559c0f25a3cc5a20fc8b804774a88415404e0d22/src/libero_experiments/interventions.py",
+        "verified_on": "2026-11-25",
+        "evidence": "LIBERO에서 내부 표현을 개입한 정책 평가 · src/libero_experiments/interventions.py"
       },
       "data": {
         "status": "not_identified",
@@ -244297,7 +244446,7 @@
     },
     "authors": [
       "Bear Häon",
-      "Kaylene Caswell Stocking",
+      "Kaylene Stocking",
       "Ian Chuang",
       "Claire Tomlin"
     ]
@@ -244310,9 +244459,10 @@
     "category": "World Models, Safety, and Recovery",
     "primary_track": "World models, safety, uncertainty, and recovery",
     "tags": [
-      "Robotics",
-      "evaluation",
-      "robustness"
+      "Robot Learning",
+      "sensor dropout",
+      "robustness",
+      "locomotion"
     ],
     "page": "https://proceedings.mlr.press/v270/skand25a.html",
     "project": "https://pvskand.github.io/projects/RME",
@@ -244414,9 +244564,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v270/skand25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/skand25a/skand25a.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "source_only",
       "primary_source_scope": "paper_specific"
@@ -244492,7 +244642,7 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Skand Skand",
+      "Skand Peri",
       "Bikram Pandit",
       "Chanho Kim",
       "Li Fuxin",
@@ -244552,8 +244702,8 @@
       "code": {
         "url": "https://github.com/sylvestf/LIBERO-plus",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -244656,20 +244806,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://github.com/sylvestf/LIBERO-plus",
-        "evidence": "manifest_link"
+        "source": "https://raw.githubusercontent.com/sylvestf/LIBERO-plus/4976dc30028e805ff8094b55501d532c48fec182/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_light_1.bddl",
+        "verified_on": "2026-11-25",
+        "evidence": "LIBERO-Plus 조명 변화 과제 정의 · libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_light_1.bddl"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/Sylvest/LIBERO-plus",
-        "evidence": "배포 파일 목록에서 확인한 범위 · assets.zip",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/Sylvest/libero_plus_rlds/blob/fb0c7029b076030d5d57227229e4f7460def1f7c/libero_plus_mixdata.zip",
+        "verified_on": "2026-11-25",
+        "evidence": "LIBERO-Plus 변형 장면 혼합 시연 · libero_plus_mixdata.zip"
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · model-00001-of-00004.safetensors",
-        "source": "https://huggingface.co/api/models/Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata/blob/a85655ec941bae6644c9fbdf62db02b9726d7cf5/action_head--150000_checkpoint.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "혼합 자료로 조정한 OpenVLA-OFT 행동 헤드 · action_head--150000_checkpoint.pt"
       },
       "configuration": {
         "status": "not_recorded",
@@ -244723,8 +244874,9 @@
     "category": "VLA and Generalist Robot Policies",
     "primary_track": "VLA and generalist robot policies",
     "tags": [
-      "VLA",
+      "manipulation",
       "Benchmark",
+      "visual perturbation",
       "generalization"
     ],
     "page": "https://roboticsproceedings.org/rss20/p133.html",
@@ -244767,8 +244919,8 @@
       "code": {
         "url": "https://github.com/robot-colosseum/robot-colosseum",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -244871,15 +245023,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/robot-colosseum/robot-colosseum/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/variations/background_texture.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. colosseum/variations/background_texture.py"
+        "source": "https://raw.githubusercontent.com/robot-colosseum/robot-colosseum/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/variations/distractor_object.py",
+        "verified_on": "2026-11-25",
+        "evidence": "조작 견고성 벤치마크의 방해물 변형 · colosseum/variations/distractor_object.py"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/colosseum/colosseum-challenge",
-        "evidence": "배포 파일 목록에서 확인한 범위 · hockey.tar.gz",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/colosseum/colosseum-challenge/blob/b6e8897b0e2a9b74e4dc50174064661918b60236/basketball_in_hoop.tar.gz",
+        "verified_on": "2026-11-25",
+        "evidence": "농구공 과제의 평가 자료 · basketball_in_hoop.tar.gz"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -244932,7 +245084,8 @@
     "tags": [
       "VLA",
       "Benchmark",
-      "generalization"
+      "memory",
+      "long-horizon manipulation"
     ],
     "page": "https://proceedings.mlr.press/v306/dai26c.html",
     "project": "https://robomme.github.io/",
@@ -244973,8 +245126,8 @@
       "code": {
         "url": "https://github.com/RoboMME/robomme_benchmark",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -244986,7 +245139,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -245077,18 +245230,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/582ab30fa95ce5503261e03dbc7d4f37937dc39e/challenge_interface/policy.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. challenge_interface/policy.py"
+        "source": "https://raw.githubusercontent.com/RoboMME/robomme_benchmark/45efbf21036b40af201b24a6d5d37f0d1b088c64/scripts/evaluation.py",
+        "verified_on": "2026-11-25",
+        "evidence": "초판 RoboMME 평가기 · scripts/evaluation.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/Yinpei/robomme_data_h5/blob/a5e4e25ffe8af34f64944f9533d06455ce5f8337/record_dataset_BinFill.h5.tar.xz",
+        "verified_on": "2026-11-25",
+        "evidence": "BinFill 작업 기록 · record_dataset_BinFill.h5.tar.xz"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/Yinpei/mme_vla_suite/blob/5db4d53ddb98c7f80cab08792dd53d985d712ab1/perceptual-framesamp-context/79999.zip",
+        "verified_on": "2026-11-25",
+        "evidence": "MME-VLA 시각 기억 표본화 정책 · perceptual-framesamp-context/79999.zip"
       },
       "configuration": {
         "status": "not_recorded",
@@ -245138,9 +245294,10 @@
     "category": "World Models, Safety, and Recovery",
     "primary_track": "World models, safety, uncertainty, and recovery",
     "tags": [
-      "Robotics",
-      "evaluation",
-      "robustness"
+      "world model",
+      "discrete diffusion",
+      "policy evaluation",
+      "policy ranking"
     ],
     "page": "https://proceedings.mlr.press/v306/li26hi.html",
     "project": "https://dworldeval.github.io/",
@@ -245341,12 +245498,13 @@
     "category": "World Models, Safety, and Recovery",
     "primary_track": "World models, safety, uncertainty, and recovery",
     "tags": [
-      "Robotics",
-      "evaluation",
-      "robustness"
+      "Navigation",
+      "safe RL",
+      "conformal prediction",
+      "pedestrian prediction"
     ],
     "page": "https://proceedings.mlr.press/v305/yao25a.html",
-    "project": "not identified",
+    "project": "https://gen-safe-nav.github.io/",
     "pdf": "",
     "identifiers": {},
     "aliases": [],
@@ -245368,8 +245526,18 @@
         "verified_on": "2026-10-25"
       },
       "preprint": null,
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://gen-safe-nav.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/tasl-lab/GenSafeNav",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "paper_pdf": null,
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v305/yao25a.html",
@@ -245379,7 +245547,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -245434,9 +245602,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v305/yao25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "source_only",
       "primary_source_scope": "paper_specific"
@@ -245470,9 +245638,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/dt_aci/one_step_dtai.py",
+        "verified_on": "2026-11-25",
+        "evidence": "보행자 예측 오차의 순차 보정 · dt_aci/one_step_dtai.py"
       },
       "data": {
         "status": "not_identified",
@@ -245480,8 +245649,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://raw.githubusercontent.com/tasl-lab/GenSafeNav/01baf926a5c77c1a4ab28635658eb014ef4f1767/trained_models/Ours_GST/checkpoints/05207.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 학습한 군중 내비게이션 정책 · trained_models/Ours_GST/checkpoints/05207.pt"
       },
       "configuration": {
         "status": "not_recorded",
@@ -245516,7 +245687,7 @@
       "Xiaopan Zhang",
       "Yu Xia",
       "Zejin Wang",
-      "Amit Roy-Chowdhury",
+      "Amit K. Roy-Chowdhury",
       "Jiachen Li"
     ]
   },
@@ -246142,8 +246313,9 @@
     "primary_track": "VLA and generalist robot policies",
     "tags": [
       "VLA",
-      "evaluation",
-      "generalization"
+      "tactile",
+      "audio",
+      "multimodal manipulation"
     ],
     "page": "https://arxiv.org/abs/2501.04693",
     "project": "https://fuse-model.github.io/",
@@ -246187,8 +246359,8 @@
       "code": {
         "url": "https://github.com/fuse-model/FuSe",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -246200,7 +246372,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -246291,18 +246463,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/fuse-model/FuSe/HEAD/octo_digit/eval/fuse_eval.py",
-        "evidence": "저자 구현 파일 · octo_digit/eval/fuse_eval.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/fuse-model/FuSe/a8379b5209e0d047488670041a265e3bc73b8eff/octo_digit/eval/fuse_eval.py",
+        "verified_on": "2026-11-25",
+        "evidence": "멀티모달 FuSe 정책 평가 · octo_digit/eval/fuse_eval.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/oier-mees/FuSe/blob/87a4f25b7d23533aacaf8bfdb464e1c6df4ad02a/digit_dataset-train.tfrecord-00000-of-01024",
+        "verified_on": "2026-11-25",
+        "evidence": "실물 DIGIT 촉각 자료 · digit_dataset-train.tfrecord-00000-of-01024"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/oier-mees/FuSe/blob/eca579aad7d14cb0e224ba0bb62c48d1b5c353b6/FuSe_PaliVLA_model/15000/model_model_params/ocdbt.process_0/d/172a3a8da0873d619cea31d574d4b8ee",
+        "verified_on": "2026-11-25",
+        "evidence": "FuSe PaliVLA의 파라미터 샤드 · FuSe_PaliVLA_model/15000/model_model_params/ocdbt.process_0/d/172a3a8da0873d619cea31d574d4b8ee"
       },
       "configuration": {
         "status": "not_recorded",
@@ -246834,8 +247009,8 @@
       "code": {
         "url": "https://github.com/pranavatreya/roboarena_backend",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -246847,7 +247022,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -246901,9 +247076,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v305/atreya25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/atreya25a/atreya25a.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -246938,13 +247113,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://github.com/pranavatreya/roboarena_backend",
-        "evidence": "manifest_link"
+        "source": "https://raw.githubusercontent.com/pranavatreya/roboarena_backend/ca7b8116c68c2f75313441d751ccfae7d9daacb3/central_server/central_server.py",
+        "verified_on": "2026-11-25",
+        "evidence": "실제 정책 대조 평가용 중앙 서버 · central_server/central_server.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/pranavatreya/roboarena_backend/ca7b8116c68c2f75313441d751ccfae7d9daacb3/output/policy_analysis.json",
+        "verified_on": "2026-11-25",
+        "evidence": "평가 정책별 집계 결과 · output/policy_analysis.json"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -246985,8 +247162,11 @@
       "Moo Jin Kim",
       "Arhan Jain",
       "Artur Kuramshin",
+      "Clemens Eppner",
       "Cyrus Neary",
-      "Edward S. Hu",
+      "Edward Hu",
+      "Fabio Ramos",
+      "Jonathan Tremblay",
       "Kanav Arora",
       "Kirsty Ellis",
       "Luca Macesanu",
@@ -246994,13 +247174,14 @@
       "Meedeum Cho",
       "Ozgur Aslan",
       "Shivin Dass",
-      "Tony Wang",
+      "Jie Wang",
       "Xingfang Yuan",
+      "Xuning Yang",
       "Abhishek Gupta",
       "Dinesh Jayaraman",
       "Glen Berseth",
       "Kostas Daniilidis",
-      "Roberto Martín-Martín",
+      "Roberto Martin-Martin",
       "Youngwoon Lee",
       "Percy Liang",
       "Chelsea Finn",
@@ -247267,8 +247448,8 @@
       "code": {
         "url": "https://github.com/rail-berkeley/fmb",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -247286,7 +247467,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -247377,14 +247558,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/rail-berkeley/fmb/d4da6ce044a9806f41e58bf7423b5a3c05289925/robot_infra/franka_server.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. robot_infra/franka_server.py"
+        "source": "https://raw.githubusercontent.com/rail-berkeley/fmb/d4da6ce044a9806f41e58bf7423b5a3c05289925/Transformer/experiments/train_rlds_fmb.py",
+        "verified_on": "2026-11-25",
+        "evidence": "FMB 조립 시연의 모방 정책 학습 · Transformer/experiments/train_rlds_fmb.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://rail.eecs.berkeley.edu/datasets/fmb/single_object_manipulation.zip",
+        "verified_on": "2026-11-25",
+        "evidence": "단일 물체의 다단계 실물 시연 · single_object_manipulation.zip"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -247479,8 +247661,8 @@
       "code": {
         "url": "https://github.com/jhejna/remix",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -247552,9 +247734,9 @@
         "05_insights.md": "ABSTRACT_CHECKED"
       },
       "authors_verification": {
-        "source": "https://proceedings.mlr.press/v270/hejna25a.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/hejna25a/hejna25a.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "표제면의 저자 표기와 순서를 확인했다."
       },
       "identifier_status": "identified",
       "primary_source_scope": "paper_specific"
@@ -247589,9 +247771,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/jhejna/remix/HEAD/scripts/train_bc.py",
-        "evidence": "저자 구현 파일 · scripts/train_bc.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/jhejna/remix/7ff87a691f70cd044e651213c8665e94a3cc94e5/scripts/train_remix.py",
+        "verified_on": "2026-11-25",
+        "evidence": "데이터 혼합 비율 학습 · scripts/train_remix.py"
       },
       "data": {
         "status": "not_identified",
@@ -247632,7 +247814,7 @@
     },
     "authors": [
       "Joey Hejna",
-      "Chethan Anand Bhateja",
+      "Chethan Bhateja",
       "Yichen Jiang",
       "Karl Pertsch",
       "Dorsa Sadigh"
@@ -247694,8 +247876,8 @@
       "code": {
         "url": "https://github.com/NVlabs/dexmimicgen",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -247798,15 +247980,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/NVlabs/dexmimicgen/HEAD/add_license_header.py",
-        "evidence": "저자 구현 파일 · add_license_header.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/NVlabs/dexmimicgen/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_can_sort.py",
+        "verified_on": "2026-11-25",
+        "evidence": "양손 캔 정리 시뮬레이션 환경 · dexmimicgen/environments/two_arm_can_sort.py"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/MimicGen/dexmimicgen_datasets",
-        "evidence": "배포 파일 목록에서 확인한 범위 · generated/two_arm_coffee.hdf5",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/MimicGen/dexmimicgen_datasets/blob/181967e10c6277a653e7c9761f3978312af3646a/generated/two_arm_can_sort_random.hdf5",
+        "verified_on": "2026-11-25",
+        "evidence": "양손 캔 정리용 생성 시연 · generated/two_arm_can_sort_random.hdf5"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -247905,8 +248087,8 @@
       "code": {
         "url": "https://github.com/transic-robot/transic",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -248015,21 +248197,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/transic-robot/transic/HEAD/main/rl/train.py",
-        "evidence": "저자 구현 파일 · main/rl/train.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/transic-robot/transic/9af4ff7a392d9b033bb3a05d16f1aaa1aa2472d6/main/residual/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "실물 교정에서 잔차 정책 학습 · main/residual/train.py"
       },
       "data": {
         "status": "released",
-        "source": "https://huggingface.co/api/datasets/transic-robot/data",
-        "evidence": "배포 파일 목록에서 확인한 범위 · distillation/tasks/screw.hdf5",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/datasets/transic-robot/data/blob/9c2b5b0dc89f520f66f72ead3816292f54ea86cc/correction_data/insert/2024-01-04-15-25-37.hdf5",
+        "verified_on": "2026-11-25",
+        "evidence": "실물 삽입 작업의 사람 교정 시연 · correction_data/insert/2024-01-04-15-25-37.hdf5"
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · rl/screw.pth",
-        "source": "https://huggingface.co/api/models/transic-robot/models",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/transic-robot/models/blob/305ceba1ad1eda4536b0ce9311ce68fa3f46902a/residual/insert.pth",
+        "verified_on": "2026-11-25",
+        "evidence": "삽입 과제 잔차 정책 · residual/insert.pth"
       },
       "configuration": {
         "status": "not_recorded",
@@ -248510,7 +248692,7 @@
       "holonomic-base"
     ],
     "page": "https://proceedings.mlr.press/v270/wu25a.html",
-    "project": "https://github.com/jimmyyhwu/tidybot2",
+    "project": "https://tidybot2.github.io/",
     "pdf": "",
     "identifiers": {
       "openreview": "L4p6zTlj6k"
@@ -248538,16 +248720,16 @@
       },
       "preprint": null,
       "project": {
-        "url": "https://github.com/jimmyyhwu/tidybot2",
-        "kind": "official_project",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "url": "https://tidybot2.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "code": {
         "url": "https://github.com/jimmyyhwu/tidybot2",
         "kind": "official_code",
-        "scope": "paper_specific",
-        "verified_on": "2026-10-25"
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "paper_pdf": null,
       "venue_verification": {
@@ -248565,7 +248747,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "evidence": "ABSTRACT_CHECKED",
@@ -248656,18 +248838,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/jimmyyhwu/tidybot2/HEAD/main.py",
-        "evidence": "저자 구현 파일 · main.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/jimmyyhwu/tidybot2/c8dd23819f9cced476124a4b88538e6863ef53f7/base_controller.py",
+        "verified_on": "2026-11-25",
+        "evidence": "모바일 매니퓰레이터의 이동 기저 제어 · base_controller.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://www.dropbox.com/scl/fi/0lhco1tfoi7dxyjcsz1ok/sim-v1.hdf5?rlkey=4wyspmcr9xymvsy2s22t6girv&dl=1\"",
+        "verified_on": "2026-11-25",
+        "evidence": "sim-v1 시뮬레이션 시연 · sim-v1.hdf5"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://www.dropbox.com/scl/fi/tpmnl1lh2tljxsnq3nnr9/epoch-0500-train_loss-0.001.ckpt?rlkey=44ou4zfhu2de5hjse3v670qos&dl=1\"",
+        "verified_on": "2026-11-25",
+        "evidence": "sim-v1 행동 정책 · epoch-0500-train_loss-0.001.ckpt"
       },
       "configuration": {
         "status": "not_recorded",

@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, proprioception, robustness
+- Tags: VLA, mixture of experts, depth, missing modality
 - Aliases:
 - Official paper: https://arxiv.org/abs/2607.03693
 - Venue verification: https://www.corl.org/program/accepted-papers

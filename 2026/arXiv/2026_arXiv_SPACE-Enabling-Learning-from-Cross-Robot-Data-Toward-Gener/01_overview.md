@@ -1,6 +1,6 @@
 # SPACE: Enabling Learning from Cross-Robot Data Toward Generalist Policies
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래의 요약·기여는 인용한 원문 쪽에서 추가 대조했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -18,11 +18,12 @@
 
 ## Problem and Importance
 
-같은 움직임도 로봇 dynamics에 따라 다른 command를 요구한다.
+SPACE는 서로 다른 로봇에서 관측된 작업 공간의 상태 변화를 공통 행동 목표로 학습한다. [PDF 3쪽](https://arxiv.org/pdf/2606.24049v1#page=3)
 
 ## Core Idea and Contribution
 
-Cartesian state delta를 예측하고 action adapter로 robot command로 변환한다.
+- 공통 좌표계에서 다음 상태 변화를 예측하고 기체별 실행기가 필요한 제어 명령으로 변환한다. [PDF 4쪽](https://arxiv.org/pdf/2606.24049v1#page=4)
+- 서로 다른 팔과 휴대형 시연 수집 장치의 자료를 함께 썼을 때 실물 조작을 비교했다. [PDF 6쪽](https://arxiv.org/pdf/2606.24049v1#page=6)
 
 ## Observation–State–Action Interface
 

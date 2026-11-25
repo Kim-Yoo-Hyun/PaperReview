@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-Pi0·OpenVLA를 LIBERO 및 UR5에서 평가한다고 보고한다.
+LIBERO-Long 시뮬레이션에서 OpenVLA-7B를, 실물 UR5의 두 집기·놓기 과제에서 π0-FAST를 평가했다. [시뮬레이션 · PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=6) · [실물 · PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=7)
 
 ## Evaluation Type and Scope
 
@@ -14,7 +14,7 @@ Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 �
 
 ## Dataset / Benchmark Role
 
-Pi0·OpenVLA를 LIBERO 및 UR5에서 평가한다고 보고한다.
+LIBERO-Long 시뮬레이션에서 OpenVLA-7B를, 실물 UR5의 두 집기·놓기 과제에서 π0-FAST를 평가했다. [시뮬레이션 · PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=6) · [실물 · PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=7)
 
 Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
 

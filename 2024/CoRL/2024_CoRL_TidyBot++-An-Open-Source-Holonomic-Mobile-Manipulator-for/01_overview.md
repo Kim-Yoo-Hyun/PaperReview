@@ -13,7 +13,7 @@
 - Official paper: https://proceedings.mlr.press/v270/wu25a.html
 - Venue verification: https://proceedings.mlr.press/v270/wu25a.html
 - Conference edition: 2024 · https://proceedings.mlr.press/v270/
-- Code/Project: https://github.com/jimmyyhwu/tidybot2
+- Code/Project: https://tidybot2.github.io/
 - Code: https://github.com/jimmyyhwu/tidybot2
 - Source audit: 2026-10-25 공식 abstract/서지정보 및 명시된 저자 링크 확인. 이번 노트는 abstract 기반이며 본문 전체·코드 실행·payload는 미검증이다. CoRL 개최 2024, PMLR 출판 2025. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
@@ -43,3 +43,13 @@ TidyBot++는 좁은 실내에서도 어느 방향으로든 이동하며 여러 �
 ## Verification Boundary
 
 arm 지원 범위와 실제 검증 조합, base/arm 제어 주기, 비용·teleoperation protocol을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+전방향 이동 기저와 휴대전화 원격조작으로 실물 시연을 수집했다. 확인한 다운로드용 시연과 정책은 sim-v1 예제다. [방법과 평가](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/wu25a/wu25a.pdf#page=7)
+
+## 공개 자료
+
+- 코드 — 모바일 매니퓰레이터의 이동 기저 제어 · base_controller.py [배포 파일](https://raw.githubusercontent.com/jimmyyhwu/tidybot2/c8dd23819f9cced476124a4b88538e6863ef53f7/base_controller.py)
+- 가중치 — sim-v1 행동 정책 · epoch-0500-train_loss-0.001.ckpt [배포 파일](https://www.dropbox.com/scl/fi/tpmnl1lh2tljxsnq3nnr9/epoch-0500-train_loss-0.001.ckpt?rlkey=44ou4zfhu2de5hjse3v670qos&dl=1")
+- 데이터 — sim-v1 시뮬레이션 시연 · sim-v1.hdf5 [배포 파일](https://www.dropbox.com/scl/fi/0lhco1tfoi7dxyjcsz1ok/sim-v1.hdf5?rlkey=4wyspmcr9xymvsy2s22t6girv&dl=1")

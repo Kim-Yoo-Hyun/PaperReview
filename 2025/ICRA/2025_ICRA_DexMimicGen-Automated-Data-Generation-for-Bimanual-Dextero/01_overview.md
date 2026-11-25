@@ -42,3 +42,8 @@ source demonstration·새 초기 상태 → 합성 trajectory → imitation poli
 ## Verification Boundary
 
 object-state/segmentation 접근, source-target task 대응, 생성 실패 및 sim-to-real 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 양손 캔 정리 시뮬레이션 환경 · dexmimicgen/environments/two_arm_can_sort.py [배포 파일](https://raw.githubusercontent.com/NVlabs/dexmimicgen/940e8a1b3ad70eb1925ada6b364b197de6bb2af9/dexmimicgen/environments/two_arm_can_sort.py)
+- 데이터 — 양손 캔 정리용 생성 시연 · generated/two_arm_can_sort_random.hdf5 [배포 파일](https://huggingface.co/datasets/MimicGen/dexmimicgen_datasets/blob/181967e10c6277a653e7c9761f3978312af3646a/generated/two_arm_can_sort_random.hdf5)

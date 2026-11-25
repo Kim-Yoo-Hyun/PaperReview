@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, proprioception, robustness
+- Tags: VLA, hypernetwork, instruction grounding, multitask manipulation
 - Aliases:
 - Official paper: https://www.roboticsproceedings.org/rss22/p147.html
 - Venue verification: https://www.roboticsproceedings.org/rss22/p147.html
@@ -42,3 +42,8 @@ OpenVLA 이후 language-conditioned 행동 여부를 확인할 직접 비교군�
 ## Verification Boundary
 
 generated parameter 수, training budget, 동일 장면 통제을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 지시 조건부 하이퍼네트워크 · model/hylap/hypogen2_impl/hypernetworks.py [배포 파일](https://raw.githubusercontent.com/ReNginx/DISC/4979e1516246a2e5a2fc7c3cae7511c5f17e5f6d/model/hylap/hypogen2_impl/hypernetworks.py)
+- 가중치 — LIBERO-90 DISC 정책 · DISC-libero90.ckpt [배포 파일](https://huggingface.co/ReNginx/DISC/blob/36b98d7496553df98e9e2150a502d99b190b6d11/DISC-libero90.ckpt)

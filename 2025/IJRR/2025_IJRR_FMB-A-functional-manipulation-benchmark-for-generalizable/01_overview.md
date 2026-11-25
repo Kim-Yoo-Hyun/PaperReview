@@ -42,3 +42,8 @@ FMB는 표준화한 부품으로 실제 로봇의 개별 조작 기술과 여러
 ## Verification Boundary
 
 skill/전체 과제 성공 정의, object split, reset과 force/torque 접근을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — FMB 조립 시연의 모방 정책 학습 · Transformer/experiments/train_rlds_fmb.py [배포 파일](https://raw.githubusercontent.com/rail-berkeley/fmb/d4da6ce044a9806f41e58bf7423b5a3c05289925/Transformer/experiments/train_rlds_fmb.py)
+- 데이터 — 단일 물체의 다단계 실물 시연 · single_object_manipulation.zip [배포 파일](https://rail.eecs.berkeley.edu/datasets/fmb/single_object_manipulation.zip)

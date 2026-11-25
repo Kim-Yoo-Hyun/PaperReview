@@ -12,8 +12,8 @@
 - Aliases: Real-world Continual VLA
 - Official paper: https://arxiv.org/abs/2605.26820
 - Venue verification: https://arxiv.org/abs/2605.26820
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://github.com/Agentic-Intelligence-Lab/ContinualVLA
+- Code: https://github.com/Agentic-Intelligence-Lab/ContinualVLA
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. arXiv v3를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,8 @@ E1의 실환경 단순 baseline과 compute-matched 비교에 필요한 연구다
 ## Verification Boundary
 
 v3 변경점, normalization 범위, joint training compute, trial 수을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 연속 학습용 리플레이 버퍼 · src/openpi/training/replay_buffer.py [배포 파일](https://raw.githubusercontent.com/Agentic-Intelligence-Lab/ContinualVLA/d84ed7a811f95218e79ac5f0906465147ad7e1e3/src/openpi/training/replay_buffer.py)
+- 데이터 — 단팔 PiPER 그릇 쌓기 시연 · data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/Ray0v0/cl-piper-single-stack-bowls/blob/f81ff5e07c31053b39e64aa621882d6d17705d52/data/chunk-000/episode_000000.parquet)

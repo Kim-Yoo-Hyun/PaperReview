@@ -8,7 +8,7 @@
 - Category: Benchmarks and Datasets
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: VLA, Benchmark, hardware-shift
+- Tags: VLA, Benchmark, simulated hardware perturbation
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.18843
 - Venue verification: https://arxiv.org/abs/2610.18843

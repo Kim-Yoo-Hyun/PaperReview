@@ -4,15 +4,15 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
-- Authors: Hongzhi Zang, Shu'ang Yu, Hao Lin, Tianxing Zhou, Zefang Huang, Zhen Guo, Xin Xu, Yuze Sheng, Jiakai Zhou, Shizhe Zhang, Feng Gao, Wenhao Tang, Yufeng Yue, Quanlu Zhang, Xinlei Chen, Chao Yu, Yu Wang
+- Authors: Hongzhi Zang, Shu'ang Yu, Hao Lin, Tianxing Zhou, Zefang Huang, Zhen Guo, Xin Xu, Jiakai Zhou, Yuze Sheng, Si Xu, Shizhe Zhang, Feng Gao, Wenhao Tang, Yufeng Yue, Quanlu Zhang, Xinlei Chen, Chao Yu, Yu Wang
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: real-robot-learning, asynchronous, distributed-system
-- Aliases: USER, RLinf-USER
+- Aliases: USER, RLinf-USER, USER: A Unified and Extensible System for Real-World Online Policy Learning in Embodied AI
 - Official paper: https://roboticsproceedings.org/rss22/p037.html
 - Venue verification: https://roboticsproceedings.org/rss22/p037.html
-- Code/Project: https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst
+- Code/Project: https://github.com/RLinf/RLinf
 - Code: https://github.com/RLinf/RLinf
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
@@ -42,3 +42,13 @@ Current system. 실제 robot online RL에서 edge/cloud·buffer·weight synchron
 ## Verification Boundary
 
 Weight version tagging, replay consistency, crash recovery와 실제 robot 시간 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://roboticsproceedings.org/rss22/p037.pdf#page=1)
+
+RSS 목록에는 *Online Real-World*, 게재 PDF에는 *Real-World Online* 순서로 실렸다. USER: A Unified and Extensible System for Real-World Online Policy Learning in Embodied AI [게재본](https://roboticsproceedings.org/rss22/p037.pdf#page=1)
+
+## 공개 자료
+
+- 코드 — 실물 온라인 학습 시스템 구성요소 · rlinf/robotics/robots/franka.py [배포 파일](https://raw.githubusercontent.com/RLinf/RLinf/3b98d93b0c8be5bb8764935c7e9d04cfa2658d62/rlinf/robotics/robots/franka.py)

@@ -42,3 +42,7 @@ E2에서 retiming·tracking·feedback 이득을 분해할 핵심 IL baseline이�
 ## Verification Boundary
 
 target/command/torque 주기, motion 재표현, component ablation을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 시뮬레이션 시연의 정밀도에 따른 속도 조정 · robomimic/SAIL/precision_processing/dynamic_speed_awe.py [배포 파일](https://raw.githubusercontent.com/nadunRanawaka1/SAIL/1440c16b0017112d7ed5aba2291acd4d638726c2/robomimic/SAIL/precision_processing/dynamic_speed_awe.py)

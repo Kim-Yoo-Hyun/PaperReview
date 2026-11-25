@@ -43,3 +43,12 @@ VLA의 이득이 task specification 차이인지 가릴 강한 non-VLA baseline�
 ## Verification Boundary
 
 anchor 획득 비용, embodiment split, 실제 checkpoint release을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 README는 체크포인트 공개를 완료로 표시한다. 실행기의 기본값은 작업별 로컬 파일이며 이번에 확인한 배포처에는 해당 파일이 없었다. [공개 안내](https://github.com/jeffacce/cap-policy/blob/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/README.md) · [기본 경로](https://github.com/jeffacce/cap-policy/blob/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/imitation-in-homes/run.py)
+
+## 공개 자료
+
+- 코드 — 가정 내 환경에서 수집한 시연 학습 · imitation-in-homes/train.py [배포 파일](https://raw.githubusercontent.com/jeffacce/cap-policy/8ab11176ecb61a5e88f290958877ab17a6f3e8e2/imitation-in-homes/train.py)
+- 데이터 — 가정에서 수집한 원시 시연 영상 · dataset_raw/Close/home_01/Env1/2025-08-31-16_41_25/compressed_video_h264.mp4 [배포 파일](https://huggingface.co/datasets/zavierand/CAPs/blob/ef6b082c1927f715e106cfebee7fd451efcb0491/dataset_raw/Close/home_01/Env1/2025-08-31-16_41_25/compressed_video_h264.mp4)

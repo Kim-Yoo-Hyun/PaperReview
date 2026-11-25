@@ -26,7 +26,7 @@ VLA 내부 activation·semantic 방향 → 개입된 action.
 
 ## Evaluation Target
 
-Pi0·OpenVLA를 LIBERO 및 UR5에서 평가한다고 보고한다.
+LIBERO-Long 시뮬레이션에서 OpenVLA-7B를, 실물 UR5의 두 집기·놓기 과제에서 π0-FAST를 평가했다. [시뮬레이션 · PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=6) · [실물 · PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=7)
 
 ## Evidence Anchor
 

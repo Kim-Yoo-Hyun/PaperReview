@@ -42,3 +42,7 @@ Current trend / simulator. Tactile feedback을 이용하는 insertion·contact R
 ## Verification Boundary
 
 Tactile sensor calibration, contact parameter 분포, marker fidelity와 code 공개 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 저자 저장소가 구현 공개를 게재 이후로 예고한다. 확인한 리비전에는 구현 파일이 없다. [저자 공개 안내](https://github.com/InternRobotics/Tac2Real/blob/4ba3decc1430acbda62861dd8220589d2b07c7c8/README.md)

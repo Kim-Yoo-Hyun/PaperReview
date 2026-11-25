@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, evaluation, generalization
+- Tags: VLA, tactile, audio, multimodal manipulation
 - Aliases: FuSe
 - Official paper: https://arxiv.org/abs/2501.04693
 - Venue verification: https://api.crossref.org/works/10.1109/ICRA55743.2025.11127987
@@ -42,3 +42,9 @@ Diffusion generalist와 VLA의 실세계 manipulation 및 cross-modal prompting�
 ## Verification Boundary
 
 센서 동기화, 모달별 annotation 비용, 입력 결손과 추가 정보의 구별을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 멀티모달 FuSe 정책 평가 · octo_digit/eval/fuse_eval.py [배포 파일](https://raw.githubusercontent.com/fuse-model/FuSe/a8379b5209e0d047488670041a265e3bc73b8eff/octo_digit/eval/fuse_eval.py)
+- 가중치 — FuSe PaliVLA의 파라미터 샤드 · FuSe_PaliVLA_model/15000/model_model_params/ocdbt.process_0/d/172a3a8da0873d619cea31d574d4b8ee [배포 파일](https://huggingface.co/oier-mees/FuSe/blob/eca579aad7d14cb0e224ba0bb62c48d1b5c353b6/FuSe_PaliVLA_model/15000/model_model_params/ocdbt.process_0/d/172a3a8da0873d619cea31d574d4b8ee)
+- 데이터 — 실물 DIGIT 촉각 자료 · digit_dataset-train.tfrecord-00000-of-01024 [배포 파일](https://huggingface.co/datasets/oier-mees/FuSe/blob/87a4f25b7d23533aacaf8bfdb464e1c6df4ad02a/digit_dataset-train.tfrecord-00000-of-01024)

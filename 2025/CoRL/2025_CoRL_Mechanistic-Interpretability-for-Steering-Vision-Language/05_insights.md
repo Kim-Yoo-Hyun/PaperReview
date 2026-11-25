@@ -10,7 +10,7 @@
 
 Transformer activation의 semantic 방향을 찾고 inference 때 activation steering으로 행동을 조절한다.
 
-Pi0·OpenVLA를 LIBERO 및 UR5에서 평가한다고 보고한다.
+LIBERO-Long 시뮬레이션에서 OpenVLA-7B를, 실물 UR5의 두 집기·놓기 과제에서 π0-FAST를 평가했다. [시뮬레이션 · PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=6) · [실물 · PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=7)
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/haon25a.html). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 

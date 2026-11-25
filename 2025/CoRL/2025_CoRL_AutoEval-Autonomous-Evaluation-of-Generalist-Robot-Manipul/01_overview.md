@@ -12,8 +12,8 @@
 - Aliases:
 - Official paper: https://proceedings.mlr.press/v305/zhou25a.html
 - Venue verification: https://proceedings.mlr.press/v305/zhou25a.html
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://auto-eval.github.io/
+- Code: https://github.com/zhouzypaul/auto_eval
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,7 @@ C5/C6의 reset ledger와 반복 평가를 설계할 핵심 system 기준이다.
 ## Verification Boundary
 
 target start distribution, 자동 judge 오류, 제외 trial, human 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 로봇 평가 시스템의 시각 성공 판정 · auto_eval/success_detector/paligemma.py [배포 파일](https://raw.githubusercontent.com/zhouzypaul/auto_eval/3ea3ff44c6950433cfbcb4294a3deaa616533745/auto_eval/success_detector/paligemma.py)

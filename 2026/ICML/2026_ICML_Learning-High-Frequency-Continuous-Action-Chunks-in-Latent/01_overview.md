@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, action-chunking, feedback, control-frequency
+- Tags: Imitation Learning, latent action, action chunking, asynchronous control, high-frequency manipulation
 - Aliases: RTR
 - Official paper: https://proceedings.mlr.press/v306/wang26lj.html
 - Venue verification: https://proceedings.mlr.press/v306/wang26lj.html
@@ -42,3 +42,8 @@ E2에서 고주파 표현과 controller 변경을 분리할 직접 기준이다.
 ## Verification Boundary
 
 controller mode, interpolation baseline, VAE 데이터, refinement timing을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — KineDex 고주파 행동 복호화 및 비동기 제어 · src/rtr_async_sys/model_wrapper/kinedex_model_wrapper.py [배포 파일](https://raw.githubusercontent.com/tars-robotics/RTR/0589f847bf4f61e1fb959f23cf3a0329de9bb9b3/src/rtr_async_sys/model_wrapper/kinedex_model_wrapper.py)
+- 데이터 — 60 Hz 오이 껍질 벗기기 시연 · peel_cucumber_60hz.tar [배포 파일](https://huggingface.co/datasets/sadpiggy/rtr_robot_sys_zarr/blob/2cc716dd9fd56d4dbf194936cd021a03af2f23cb/peel_cucumber_60hz.tar)

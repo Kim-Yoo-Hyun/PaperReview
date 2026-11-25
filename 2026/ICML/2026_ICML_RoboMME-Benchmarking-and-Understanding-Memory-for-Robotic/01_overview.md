@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, Benchmark, generalization
+- Tags: VLA, Benchmark, memory, long-horizon manipulation
 - Aliases:
 - Official paper: https://proceedings.mlr.press/v306/dai26c.html
 - Venue verification: https://proceedings.mlr.press/v306/dai26c.html
@@ -42,3 +42,9 @@ RoboMME는 현재 영상만으로 결정하기 어려운 조작 과제에서 범
 ## Verification Boundary
 
 task dictionary와 goal/evaluator, history cutoff, raw ID와 split을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 초판 RoboMME 평가기 · scripts/evaluation.py [배포 파일](https://raw.githubusercontent.com/RoboMME/robomme_benchmark/45efbf21036b40af201b24a6d5d37f0d1b088c64/scripts/evaluation.py)
+- 가중치 — MME-VLA 시각 기억 표본화 정책 · perceptual-framesamp-context/79999.zip [배포 파일](https://huggingface.co/Yinpei/mme_vla_suite/blob/5db4d53ddb98c7f80cab08792dd53d985d712ab1/perceptual-framesamp-context/79999.zip)
+- 데이터 — BinFill 작업 기록 · record_dataset_BinFill.h5.tar.xz [배포 파일](https://huggingface.co/datasets/Yinpei/robomme_data_h5/blob/a5e4e25ffe8af34f64944f9533d06455ce5f8337/record_dataset_BinFill.h5.tar.xz)

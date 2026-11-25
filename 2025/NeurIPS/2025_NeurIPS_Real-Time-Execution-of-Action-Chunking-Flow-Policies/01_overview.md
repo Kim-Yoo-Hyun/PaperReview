@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: Kevin Black, Manuel Galliker, Sergey Levine
+- Authors: Kevin Black, Manuel Y. Galliker, Sergey Levine
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -13,7 +13,7 @@
 - Official paper: https://papers.nips.cc/paper_files/paper/2025/hash/300ccb2187dedd4edcc07f7e76d8e553-Abstract-Conference.html
 - Venue verification: https://papers.nips.cc/paper_files/paper/2025/hash/300ccb2187dedd4edcc07f7e76d8e553-Abstract-Conference.html
 - Code/Project: https://pi.website/research/real_time_chunking
-- Code: project_only
+- Code: https://github.com/Physical-Intelligence/real-time-chunking-kinetix
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,13 @@ Kinetix 실험과 실제 π0.5 양팔 평가를 구분해 보고한다.
 ## Verification Boundary
 
 prefix 길이, delay estimate, inpainting cost, simulator와 VLA 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://papers.nips.cc/paper_files/paper/2025/file/300ccb2187dedd4edcc07f7e76d8e553-Paper-Conference.pdf#page=1)
+
+## 공개 자료
+
+- 코드 — Kinetix 시뮬레이션의 실시간 청크 조건부 정책 · src/model.py [배포 파일](https://raw.githubusercontent.com/Physical-Intelligence/real-time-chunking-kinetix/9296f31d62d5bfeb5779dcb2f9bcf71ca37f448b/src/model.py)
+- 가중치 — Kinetix 자동차 발사 모방 정책 · bc/0/policies/worlds_l_car_launch.pkl [배포 파일](https://storage.googleapis.com/rtc-assets/bc/0/policies/worlds_l_car_launch.pkl?generation=1753991738990582)
+- 데이터 — Kinetix 자동차 발사 전문가 궤적 · expert/data/worlds_l_car_launch.npz [배포 파일](https://storage.googleapis.com/rtc-assets/expert/data/worlds_l_car_launch.npz?generation=1753991658884531)

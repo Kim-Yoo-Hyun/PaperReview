@@ -193,6 +193,32 @@ LoGoPlanner에 연결돼 있던 X-NavDP 체크포인트를 LoGoPlanner 전용 �
 
 분류상 남은 질문은 연속 행동을 직접 회귀하는 정책을 확산·흐름과 별도 값으로 표현할지, SIMPLER 같은 평가 중심 논문을 어떤 방법 태그로 검색할지다. RoboFlamingo·GR-1의 행동 회귀와 SIMPLER의 평가 역할을 근거에 적고 해당 축은 `unknown`으로 두었다. VLA 전용 필드 19편, 휴머노이드 전용 필드 11편, 저자 명시 한계 29편, 근거 위치를 확인한 직접 선행 관계 16건을 기록했다. [정규화 원장](../sources/batches/core_next_06.yaml) · [공개 자료 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
 
+## 일곱 번째 배치 태그 매핑
+
+| 기존 검색어·표현 | 원문을 확인한 뒤의 분류 |
+|---|---|
+| VLA, proprioception, robustness | DISC는 지시와 상태가 제어에 기여하는 경로를 나눈다. GAP는 시각·고유수용 입력 간 불균형을 다루는 모방학습이다. 비슷한 검색어로 등록된 두 CoRE-VLA 논문은 각각 전문가 선택과 카메라 시점 복원을 다룬다. |
+| action chunking, control frequency | KineDex는 행동 청크의 압축과 고주파 복호화를 학습한다. RTC와 AAC는 이미 학습한 정책을 실행할 때 청크의 경계 또는 길이를 바꾼다. |
+| reward learning, evaluation | Robometer와 RoboReward의 예측 대상은 진행도·보상이다. STEP은 정책 두 개의 성공·실패를 받아 비교 실험을 언제 끝낼지 결정한다. |
+| robot data, real-robot, sim-to-real | 정책 학습, 센서 보정, 실물 평가에 쓰인 자료를 구분했다. DyGRO-VLA의 실물 네 과제는 시뮬레이션 학습 이후의 전이 평가다. |
+
+2026년 11월 25일 *USER*부터 *TidyBot++*까지 NEXT 50편을 정규화했다. 일곱 배치 350편과 별도 등록한 NEXT 23편은 서로 겹치지 않는다. 집중 읽기 500편 중 **373편(74.6%)**을 마쳤다. 50편의 방법·평가 쪽수와 PDF 해시를 남겼고, 종전 요약 감사에 해시가 있던 44편은 이번 원문과 일치했다. 저자 13편, 검색 태그 18편, 프로젝트 주소 14편을 보완했다. [논문별 분류와 변경 전 값](../sources/batches/core_next_07.yaml) · [다음 50편](../../TODO.md)
+
+| 공개 판정 | 코드 | 가중치 | 데이터 |
+|---|---:|---:|---:|
+| Y | 22 | 0 | 0 |
+| 부분 | 10 | 13 | 20 |
+| N · 저자 안내 확인 | 5 | 0 | 0 |
+| 미확인 | 13 | 37 | 30 |
+
+RTC의 저자는 Kinetix 실험의 구현·정책·전문가 궤적을 배포했다. TidyBot++의 가중치와 시연은 sim-v1 예제에 해당한다. CAP 저자는 체크포인트 공개를 완료로 표시했지만 실행기의 기본 경로와 실제 배포처를 대조해도 가중치 파일을 특정할 수 없어 미확인으로 두었다. [RTC 저자 배포](https://github.com/Physical-Intelligence/real-time-chunking-kinetix) · [TidyBot++ 예제](https://github.com/jimmyyhwu/tidybot2) · [CAP 저자 안내](https://github.com/jeffacce/cap-policy) · [CAP 실행기](https://github.com/jeffacce/cap-policy/blob/main/imitation-in-homes/run.py)
+
+**서지와 평가 교정.** RSS의 USER 논문 목록과 게재본 표지에서 제목 어순이 다르다. 양쪽 제목을 연결하고 게재본의 Si Xu를 포함한 18인 저자 순서를 기록했다. RoboArena도 게재 PDF에 실린 공동저자 네 명을 복원해 30명을 기록했다. ActiveAlign은 시뮬레이션의 시점 교란과 실물 가림 시험을 분리했다. RoboFollow의 실물 파일럿은 지시 집합별 과제 구성 차이까지 평가 노트에 적었다. VLA 내부 활성화 개입 연구의 LIBERO-Long 결과는 OpenVLA-7B, 실물 UR5 결과는 π0-FAST에서 얻었다. [USER 목록](https://roboticsproceedings.org/rss22/p037.html) · [USER 표지](https://roboticsproceedings.org/rss22/p037.pdf#page=1) · [RoboArena 게재본 표지](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/atreya25a/atreya25a.pdf#page=1) · [ActiveAlign 표 VIII](https://arxiv.org/pdf/2610.23378v1#page=7) · [RoboFollow 실물 파일럿](https://arxiv.org/pdf/2609.25636v1#page=7) · [VLA 개입 실험](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/haon25a/haon25a.pdf#page=6)
+
+**중복 재검사.** 배치 내부 1,225쌍과 나머지 원장과의 60,100쌍에 대해 공개 식별자, 정규화한 제목·별칭·제목 앞의 약칭을 비교했다. 약칭이 겹친 CoRE-VLA와 CoRe-VLA는 저자와 arXiv ID가 다르다. 전자는 선택적 깊이 입력을, 후자는 카메라가 이동한 뒤의 좌표 정합을 평가해 두 항목을 유지했다. [전문가 선택](https://arxiv.org/abs/2607.03693) · [시점 복원](https://arxiv.org/abs/2609.37150)
+
+**남은 분류 질문.** 성공 횟수에 대한 순차 검정(STEP)과 보상 모델 학습을 공통 방법 축에서 어떻게 구분할 것인가? 휴대형 접촉 그리퍼로 수집한 시연(CAP)을 어느 출처로 검색할 것인가? 이번에는 기존 분류를 유지하고 해당 축의 불확실성을 표시했다. VLA 22편과 휴머노이드 2편에 전용 필드를 작성했고, 저자가 명시한 한계 17편과 직접 선행 관계 18건에 원문 위치를 연결했다. [배치 원장](../sources/batches/core_next_07.yaml) · [전체 원문 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
+
 ## 외부 목록 대조와 CORE 심화 감사
 
 2026-11-19에 서베이 3편의 참고문헌, 6개 학회 3개년 목록, 연구실·기업 3곳 및 큐레이션 1곳을 대조했다. 등록 심사 후보 17편의 출처를 논문별로 보존했다. [목록별 커버리지와 하위 주제 순위](../../research/EXTERNAL_COVERAGE.md) · [후보 YAML](../sources/batches/missing_candidates_2026.yaml)

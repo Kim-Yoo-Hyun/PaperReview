@@ -42,3 +42,9 @@ Perturbed 환경/지시 → 기존 VLA → task success와 조건별 분석.
 ## Verification Boundary
 
 난도 선정에 쓰인 model, perturbation validity, test contamination을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — LIBERO-Plus 조명 변화 과제 정의 · libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_light_1.bddl [배포 파일](https://raw.githubusercontent.com/sylvestf/LIBERO-plus/4976dc30028e805ff8094b55501d532c48fec182/libero/libero/bddl_files/libero_10/KITCHEN_SCENE3_turn_on_the_stove_and_put_the_moka_pot_on_it_light_1.bddl)
+- 가중치 — 혼합 자료로 조정한 OpenVLA-OFT 행동 헤드 · action_head--150000_checkpoint.pt [배포 파일](https://huggingface.co/Sylvest/openvla-7b-oft-finetuned-libero-plus-mixdata/blob/a85655ec941bae6644c9fbdf62db02b9726d7cf5/action_head--150000_checkpoint.pt)
+- 데이터 — LIBERO-Plus 변형 장면 혼합 시연 · libero_plus_mixdata.zip [배포 파일](https://huggingface.co/datasets/Sylvest/libero_plus_rlds/blob/fb0c7029b076030d5d57227229e4f7460def1f7c/libero_plus_mixdata.zip)

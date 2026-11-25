@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, proprioception, robustness
+- Tags: VLA, camera shift, RGB-D reprojection, asynchronous inference
 - Aliases:
 - Official paper: https://arxiv.org/abs/2609.37150
 - Venue verification: https://arxiv.org/abs/2609.37150

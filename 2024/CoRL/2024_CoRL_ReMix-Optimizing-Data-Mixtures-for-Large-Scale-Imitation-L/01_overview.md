@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2024 / CoRL
-- Authors: Joey Hejna, Chethan Anand Bhateja, Yichen Jiang, Karl Pertsch, Dorsa Sadigh
+- Authors: Joey Hejna, Chethan Bhateja, Yichen Jiang, Karl Pertsch, Dorsa Sadigh
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -43,3 +43,11 @@ DataMIL의 subset 선택과 domain-level mixture 최적화를 구분하는 필�
 ## Verification Boundary
 
 domain 정의, proxy/target 접근, normalization, selection 계산 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/hejna25a/hejna25a.pdf#page=1)
+
+## 공개 자료
+
+- 코드 — 데이터 혼합 비율 학습 · scripts/train_remix.py [배포 파일](https://raw.githubusercontent.com/jhejna/remix/7ff87a691f70cd044e651213c8665e94a3cc94e5/scripts/train_remix.py)

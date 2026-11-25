@@ -8,12 +8,12 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, action-interface, cross-embodiment
+- Tags: VLA, pretraining, action representation, cross-embodiment
 - Aliases: Rethinking VLA Scaling
 - Official paper: https://arxiv.org/abs/2602.09722
 - Venue verification: https://arxiv.org/abs/2602.09722
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://research.beingbeyond.com/rethink_vla
+- Code: https://github.com/BeingBeyond/Rethink_VLA
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,9 @@ E1에서 정상 action 정렬·mixture 자체의 설명력을 먼저 제거할 �
 ## Verification Boundary
 
 EEF frame, normalization, split, grouped blind protocol을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — VLA 사전학습의 2단계 실행 설정 · shell/pretrain-M1-240k-stage2.sh [배포 파일](https://raw.githubusercontent.com/BeingBeyond/Rethink_VLA/d3739abda923ffddaf01d6d8d74bf3d439068106/shell/pretrain-M1-240k-stage2.sh)
+- 가중치 — 저자 공개 OXE 사전학습 정책 · model.safetensors [배포 파일](https://huggingface.co/wwwyyy/pretrain-oxe-eef-relative/blob/ee852ea26ed70b71eb04a62af03532094a5fe991/model.safetensors)
+- 데이터 — 저자 변환 RoboCasa 인간 시연 · CloseDoubleDoor/data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/BeingBeyond/robocasa_human_single_lerobot/blob/2f97c13621549144a702ccd2b61f15b4c32e82ef/CloseDoubleDoor/data/chunk-000/episode_000000.parquet)

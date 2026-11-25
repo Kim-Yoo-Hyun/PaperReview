@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Vaibhav Saxena, Matthew Bronars, Nadun Ranawaka Arachchige, Kuancheng Wang, Woo Shin, Soroush Nasiriany, Ajay Mandlekar, Danfei Xu
+- Authors: Vaibhav Saxena, Matthew Bronars, Nadun Ranawaka Arachchige, Kuancheng Wang, Woo Chul Shin, Soroush Nasiriany, Ajay Mandlekar, Danfei Xu
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -12,8 +12,8 @@
 - Aliases:
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2025/hash/16466b6c95c5924784486ac5a3feeb65-Abstract-Conference.html
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://robo-mimiclabs.github.io/
+- Code: https://github.com/Gatech-RL2/mimiclabs
 - Source audit: 2026-10-25 공식 abstract와 publication metadata 및 명시된 project/code 공개 링크 확인. 본문 정독·코드 실행·payload 검증은 이번 등록 범위 밖이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,12 @@
 ## Verification Boundary
 
 camera와 task 분할, retrieval의 target 접근, 동일 학습 예산을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+저자 표기와 순서는 이 판본의 표제면을 따른다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/16466b6c95c5924784486ac5a3feeb65-Paper-Conference.pdf#page=1)
+
+## 공개 자료
+
+- 코드 — 연구실 환경 변화에 따른 모방 데이터 생성 · mimiclabs/mimicgen/scripts/generate_dataset.py [배포 파일](https://raw.githubusercontent.com/Gatech-RL2/mimiclabs/0b81d7e8cc077de3a6da4cd02ffe6c605c793d9a/mimiclabs/mimicgen/scripts/generate_dataset.py)
+- 데이터 — MimicLabs 실험실 변형 시연 · mimiclabs_study/lab1/binBagel4/binBagel4_lab1+camPoseAgentFNorm+objSpatC20+recepSpatL/demo.hdf5 [배포 파일](https://huggingface.co/datasets/vaibhavsaxena11/mimiclabs_datasets/blob/2c6890f13ed2a59f2034fa6ade77babcb4192b8f/mimiclabs_study/lab1/binBagel4/binBagel4_lab1%2BcamPoseAgentFNorm%2BobjSpatC20%2BrecepSpatL/demo.hdf5)

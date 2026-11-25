@@ -13,7 +13,7 @@
 - Official paper: https://arxiv.org/abs/2608.26545
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://robot-adaptation.github.io/MemoryAnchors
-- Code: project_only
+- Code: https://github.com/MaxDu17/MemoryAnchors
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 공식 OpenReview 검색 API의 Conference venueid·CoRL 2026 Poster를 확인했다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,8 @@ E1의 action-conflict replay와 가장 가까운 직접 비교군이다.
 ## Verification Boundary
 
 latent layer, action normalization, task order, replay step scaling을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 행동 충돌을 이용한 리플레이 표본 선택 · memory_anchors/algos/anchor_er.py [배포 파일](https://raw.githubusercontent.com/MaxDu17/MemoryAnchors/4bde628d4dc217df6f7ad16af4b48699d33b8137/memory_anchors/algos/anchor_er.py)
+- 데이터 — LIBERO-10 작업별 평균 점수 집계 · 125119.ckpt.json (AnchorER 1% 리플레이) [배포 파일](https://raw.githubusercontent.com/MaxDu17/MemoryAnchors/4bde628d4dc217df6f7ad16af4b48699d33b8137/results/AnchorER-10_1pct/Libero10/2026.05.23-08.19.01_SelER_9010_libero_10_progressive_shorter_order00_libero_policy_libero_10_progressive_diffusion_unet_robomimic_encoder/checkpoints/125119.ckpt.json)

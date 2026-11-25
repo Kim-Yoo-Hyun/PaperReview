@@ -13,7 +13,7 @@
 - Official paper: https://proceedings.mlr.press/v306/liu26bu.html
 - Venue verification: https://proceedings.mlr.press/v306/liu26bu.html
 - Code/Project: https://continual-vlas.github.io/forget-me-not/
-- Code: project_only
+- Code: https://github.com/Continual-VLAs/continual-openpi
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,7 @@ E1에서 복잡한 replay selector 전에 확인할 강한 단순 기준이다.
 ## Verification Boundary
 
 pretraining 중복, replay 비율, old-task 평가와 모듈별 동결을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 연속 VLA 학습 정규화 구현 · src/openpi/continual/ewc.py [배포 파일](https://raw.githubusercontent.com/Continual-VLAs/continual-openpi/a3f8ca4c5abbf84248ce2046e248054fdaab5186/src/openpi/continual/ewc.py)

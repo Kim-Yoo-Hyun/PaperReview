@@ -5545,18 +5545,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:024adf0a0e6e",
-      "resource_type": "code_or_project",
-      "name": "DyGRO-VLA",
-      "url": "https://github.com/EDEM-AI/DyGRO-VLA",
-      "paper_ids": [
-        "pr-0972"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:02cc2e311acd",
       "resource_type": "code_or_project",
       "name": "Uni-NaVid",
@@ -5809,6 +5797,18 @@
       "verified_on": "2026-11-24"
     },
     {
+      "resource_id": "code:0a130dbc293a",
+      "resource_type": "code_or_project",
+      "name": "lap",
+      "url": "https://github.com/lihzha/lap",
+      "paper_ids": [
+        "pr-0993"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:0b2c5e3d2d82",
       "resource_type": "code_or_project",
       "name": "mil",
@@ -5951,7 +5951,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:109fd7cf8d3e",
@@ -6179,7 +6179,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:1908a157d12c",
@@ -6287,7 +6287,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:1d0306f78ae7",
@@ -6587,7 +6587,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:2692811ea3c7",
@@ -6611,7 +6611,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:26f707147b82",
@@ -6949,7 +6949,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:32e18fe2936d",
@@ -7602,18 +7602,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:474d4e452041",
-      "resource_type": "code_or_project",
-      "name": "adaptive-chunking.github.io",
-      "url": "https://lance-lot.github.io/adaptive-chunking.github.io/",
-      "paper_ids": [
-        "pr-0994"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:489d417f76ec",
       "resource_type": "code_or_project",
       "name": "gemini-robotics-15-brings-ai-agents-into-the-physical-world",
@@ -7683,7 +7671,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:4b2524ff6215",
@@ -7827,7 +7815,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:4feac25a246a",
@@ -7984,7 +7972,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:55f714ef76a8",
@@ -8155,6 +8143,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:5b439a38dd22",
+      "resource_type": "code_or_project",
+      "name": "continual-openpi",
+      "url": "https://github.com/Continual-VLAs/continual-openpi",
+      "paper_ids": [
+        "pr-0991"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:5b8313c1ca25",
       "resource_type": "code_or_project",
       "name": "Behavior-Skill",
@@ -8237,6 +8237,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:5d2a5c3fe100",
+      "resource_type": "code_or_project",
+      "name": "GenSafeNav",
+      "url": "https://github.com/tasl-lab/GenSafeNav",
+      "paper_ids": [
+        "pr-1049"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:5daeff2a4ce7",
@@ -8357,7 +8369,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:61367686ec02",
@@ -8370,6 +8382,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:614e8c4ec2ac",
+      "resource_type": "code_or_project",
+      "name": "counteralign.airoa.io",
+      "url": "https://counteralign.airoa.io/",
+      "paper_ids": [
+        "pr-1033"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:6168fbd8af5a",
@@ -8744,6 +8768,18 @@
       "verified_on": "2026-11-25"
     },
     {
+      "resource_id": "code:6c1bb153a804",
+      "resource_type": "code_or_project",
+      "name": "MemoryAnchors",
+      "url": "https://github.com/MaxDu17/MemoryAnchors",
+      "paper_ids": [
+        "pr-0995"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:6c575906f856",
       "resource_type": "code_or_project",
       "name": "diffusion_policy",
@@ -8973,6 +9009,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:750aa1deba4d",
+      "resource_type": "code_or_project",
+      "name": "DyGRO-VLA",
+      "url": "https://edem-ai.github.io/DyGRO-VLA/",
+      "paper_ids": [
+        "pr-0972"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:755bf241399e",
@@ -9236,7 +9284,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:7ca095f3eb8b",
@@ -9296,7 +9344,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:808cd53ed8bd",
@@ -9517,6 +9565,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:87e15e83f7f6",
+      "resource_type": "code_or_project",
+      "name": "vlm2vla",
+      "url": "https://github.com/irom-princeton/vlm2vla",
+      "paper_ids": [
+        "pr-0992"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:8864c90458ee",
       "resource_type": "code_or_project",
       "name": "cover-vla",
@@ -9646,7 +9706,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:8b1630fca385",
@@ -9841,6 +9901,18 @@
       "verified_on": "2026-11-25"
     },
     {
+      "resource_id": "code:9006cb5a0fbc",
+      "resource_type": "code_or_project",
+      "name": "real-time-chunking-kinetix",
+      "url": "https://github.com/Physical-Intelligence/real-time-chunking-kinetix",
+      "paper_ids": [
+        "pr-1002"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:90da3def3f8c",
       "resource_type": "code_or_project",
       "name": "3DVG-Transformer",
@@ -9946,7 +10018,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:932a8c21c4a6",
@@ -10018,7 +10090,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:9528b203a284",
@@ -10139,18 +10211,6 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-24"
-    },
-    {
-      "resource_id": "code:98a65f15132d",
-      "resource_type": "code_or_project",
-      "name": "forget-me-not",
-      "url": "https://continual-vlas.github.io/forget-me-not/",
-      "paper_ids": [
-        "pr-0991"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
     },
     {
       "resource_id": "code:9a1771a110d7",
@@ -10728,7 +10788,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ab1e4de5aeae",
@@ -10850,6 +10910,18 @@
       "evidence": "manifest_link",
       "availability": "not_released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:aee951f4011e",
+      "resource_type": "code_or_project",
+      "name": "mechanistic-steering-vlas",
+      "url": "https://github.com/vla-mech-interp/mechanistic-steering-vlas",
+      "paper_ids": [
+        "pr-1043"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:af43e8e0e0be",
@@ -11054,7 +11126,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:b5ac7e3d7c16",
@@ -11171,6 +11243,18 @@
       "url": "https://github.com/NathanWu7/Tabero",
       "paper_ids": [
         "pr-0815"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:b916e265ea0e",
+      "resource_type": "code_or_project",
+      "name": "Rethink_VLA",
+      "url": "https://github.com/BeingBeyond/Rethink_VLA",
+      "paper_ids": [
+        "pr-0996"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -11669,6 +11753,18 @@
       "verified_on": "2026-11-24"
     },
     {
+      "resource_id": "code:ca1f276aa7b0",
+      "resource_type": "code_or_project",
+      "name": "auto_eval",
+      "url": "https://github.com/zhouzypaul/auto_eval",
+      "paper_ids": [
+        "pr-1025"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:ca536efda2a2",
       "resource_type": "code_or_project",
       "name": "mast3r",
@@ -11882,18 +11978,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:d0dec7cc7d3b",
-      "resource_type": "code_or_project",
-      "name": "MemoryAnchors",
-      "url": "https://robot-adaptation.github.io/MemoryAnchors",
-      "paper_ids": [
-        "pr-0995"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -12800,6 +12884,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:ebda6d1565be",
+      "resource_type": "code_or_project",
+      "name": "ContinualVLA",
+      "url": "https://github.com/Agentic-Intelligence-Lab/ContinualVLA",
+      "paper_ids": [
+        "pr-0997"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:ec21ed50a7d8",
       "resource_type": "code_or_project",
       "name": "NaVILA",
@@ -12822,6 +12918,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:ecb9da90125a",
+      "resource_type": "code_or_project",
+      "name": "sequentialized_barnard_tests",
+      "url": "https://github.com/TRI-ML/sequentialized_barnard_tests",
+      "paper_ids": [
+        "pr-1027"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ecda10f52ba0",
@@ -13133,7 +13241,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:f335ae39995d",
@@ -13292,6 +13400,18 @@
       "verified_on": "2026-11-25"
     },
     {
+      "resource_id": "code:f7a5d832514b",
+      "resource_type": "code_or_project",
+      "name": "mimiclabs",
+      "url": "https://github.com/Gatech-RL2/mimiclabs",
+      "paper_ids": [
+        "pr-1038"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:f7cf03d0fcff",
       "resource_type": "code_or_project",
       "name": "se3-transformer-public",
@@ -13436,18 +13556,6 @@
       "verified_on": "2026-11-25"
     },
     {
-      "resource_id": "code:fcccdde15790",
-      "resource_type": "code_or_project",
-      "name": "real_time_chunking",
-      "url": "https://pi.website/research/real_time_chunking",
-      "paper_ids": [
-        "pr-1002"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:fd23bf9bb5cf",
       "resource_type": "code_or_project",
       "name": "uncertainty_aware_residual_rl",
@@ -13542,6 +13650,18 @@
       "evidence": "manifest_link",
       "availability": "not_identified",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:ff3aa511c9cc",
+      "resource_type": "code_or_project",
+      "name": "libero",
+      "url": "https://github.com/Adaptive-Action-Chunking/libero",
+      "paper_ids": [
+        "pr-0994"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ffa479f23005",

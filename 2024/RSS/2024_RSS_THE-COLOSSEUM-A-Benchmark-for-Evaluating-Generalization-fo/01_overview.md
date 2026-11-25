@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, Benchmark, generalization
+- Tags: manipulation, Benchmark, visual perturbation, generalization
 - Aliases:
 - Official paper: https://roboticsproceedings.org/rss20/p133.html
 - Venue verification: https://roboticsproceedings.org/rss20/p133.html
@@ -42,3 +42,8 @@ LIBERO 계열에 한정하지 않고 manipulation 일반화를 점검할 benchma
 ## Verification Boundary
 
 복합 요인 상호작용, simulator와 실세계 조건의 대응을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 조작 견고성 벤치마크의 방해물 변형 · colosseum/variations/distractor_object.py [배포 파일](https://raw.githubusercontent.com/robot-colosseum/robot-colosseum/098a910ae1d490524adb49b8d50735b00a1a62de/colosseum/variations/distractor_object.py)
+- 데이터 — 농구공 과제의 평가 자료 · basketball_in_hoop.tar.gz [배포 파일](https://huggingface.co/datasets/colosseum/colosseum-challenge/blob/b6e8897b0e2a9b74e4dc50174064661918b60236/basketball_in_hoop.tar.gz)

@@ -13,7 +13,7 @@
 - Official paper: https://arxiv.org/abs/2604.04161
 - Venue verification: https://openaccess.thecvf.com/CVPR2026?day=2026-06-06
 - Code/Project: https://lance-lot.github.io/adaptive-chunking.github.io/
-- Code: project_only
+- Code: https://github.com/Adaptive-Action-Chunking/libero
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,11 @@ E2의 adaptive horizon 주장에 대한 직접 baseline이다.
 ## Verification Boundary
 
 entropy 추정 sample 수, 최소 이동량, sensor/inference timing을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문 대조
+
+실물 세 과제의 표는 GR00T와 GR00T+AAC를 비교한다. [저자판 표 5](https://arxiv.org/pdf/2604.04161v2#page=7) · [CVPR 게재본](https://openaccess.thecvf.com/content/CVPR2026/papers/Liang_Adaptive_Action_Chunking_at_Inference-time_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf)
+
+## 공개 자료
+
+- 코드 — LIBERO에서 π0.5 행동 청크 길이 선택 · action_optimization/action_entropy_pi05.py [배포 파일](https://raw.githubusercontent.com/Adaptive-Action-Chunking/libero/ff8c8e421f7805b5845a72d07fbd8f1171df74bf/action_optimization/action_entropy_pi05.py)

@@ -42,3 +42,7 @@ NaVILA·MoTo와 함께 VLA와 기하학적 실행 가능성의 경계를 비교�
 ## Verification Boundary
 
 waypoint frame, solver budget, controller, real-robot split을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 프로젝트의 코드 링크에 공개 예정이라고 표시되어 있다. [저자 공개 안내](https://gary3410.github.io/momanipVLA/)
