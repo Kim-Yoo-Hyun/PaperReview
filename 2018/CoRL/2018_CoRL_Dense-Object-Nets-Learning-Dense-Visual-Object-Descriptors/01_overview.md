@@ -83,3 +83,8 @@ Dense Object Nets는 여러 시점에서 같은 물체 지점에 대응하는 �
 - **Actual contribution:** In this paper, we propose and demonstrate using dense visual description as a representation for robotic manipulation. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Figure 3: (a) table describing the network training procedures referenced in experiments. (standard-SO = "standard single object". standard-SO-P is detailed in Appendix D.1). (b) Plots the cdf of the L2 ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure mode but there is still reasonable ... (p. 7, 5 Results).
+
+## 원문과 공개 자료
+
+- 코드 · 대응점 표현의 학습 코드 · dense_correspondence/training/training.py [배포 파일](https://raw.githubusercontent.com/RobotLocomotion/pytorch-dense-correspondence/76bf6499c325ad136a094fb341158a90eaa31d53/dense_correspondence/training/training.py)
+- 데이터 · 저자 배포 스크립트의 수동 주석 평가 자료 · evaluation_labeled_data_compressed.tar.gz [배포 파일](https://data.csail.mit.edu/labelfusion/pdccompressed/evaluation_labeled_data_compressed.tar.gz)

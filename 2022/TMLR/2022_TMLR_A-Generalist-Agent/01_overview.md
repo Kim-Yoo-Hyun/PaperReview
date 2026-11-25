@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / TMLR
-- Authors: Scott Reed, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, Yury Sulsky, Jackie Kay, Jost Tobias Springenberg, Tom Eccles, Jake Bruce, Ali Razavi, Ashley Edwards, Nicolas Heess, Yutian Chen, Raia Hadsell, Oriol Vinyals, Mahyar Bordbar, Nando de Freitas
+- Authors: Scott Reed, Konrad Żołna, Emilio Parisotto, Sergio Gómez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Giménez, Yury Sulsky, Jackie Kay, Jost Tobias Springenberg, Tom Eccles, Jake Bruce, Ali Razavi, Ashley Edwards, Nicolas Heess, Yutian Chen, Raia Hadsell, Oriol Vinyals, Mahyar Bordbar, Nando de Freitas
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, Generalist Agent, Transformer, Multimodal Learning, Google DeepMind
@@ -89,3 +89,7 @@ Gato는 영상·텍스트·행동을 일련의 토큰으로 표현해 동일한 
 - **Actual contribution:** During evaluation, the agent can be prompted using a successful demonstration of the desired task, which we do by default in all control results that we present here. (p. 4, 1 Introduction).
 - **Evaluation boundary:** Figure 10: Robotics fine-tuning results. Left: Comparison of real robot Skill Generalization success rate averaged across test triplets for Gato, expert, and CRR trained on 35k expert episodes (upper bound). ... (p. 12, Figure/Table caption).
 - **Explicit failure boundary:** After this point (at 5000), performance degrades slightly but does not drop far below the expert's performance. (p. 12, 1 Introduction).
+
+## 원문과 공개 자료
+
+- TMLR 게재 표제면에 따라 세 저자의 발음 구별 기호를 복원했다. [표제면](https://arxiv.org/pdf/2205.06175v3#page=1)

@@ -86,3 +86,7 @@ Gemini Robotics는 멀티모달 기반 모델을 실제 로봇 행동 생성에 
 - **Actual contribution:** Furthermore, an embodied AI agent must also go beyond passively understanding the spatial and physical concepts of the real world; it must also learn to take actions that have direct ... (p. 1, 1. Introduction).
 - **Evaluation boundary:** Gemini Robotics: Bringing AI into the Physical World Gemini GPT Claude Benchmark (p. 5, 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark).
 - **Explicit failure boundary:** While the PaliGemma-based 𝜋0 re-implement correctly approaches objects that were seen during training, it struggles with interpreting descriptive language attributes (e.g., "top black container", "blue clip") and fails to solve ... (p. 17, 3.3. Gemini Robotics can closely follow language instructions).
+
+## 원문과 공개 자료
+
+- 데이터 · 원문은 ALOHA 2 Sim Task suite 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://arxiv.org/pdf/2503.20020)

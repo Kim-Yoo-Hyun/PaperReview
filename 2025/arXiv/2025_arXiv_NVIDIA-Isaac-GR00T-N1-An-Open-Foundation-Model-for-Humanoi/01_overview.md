@@ -89,3 +89,9 @@ GR00T N1은 시각·언어 해석과 연속 행동 생성을 함께 학습하는
 - **Actual contribution:** We introduce GR00T N1, an open foundation model for generalist humanoid robots. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 9: Average Success Rate (%) across 24 Tasks in simulation and 8 tasks in the real world. In the RoboCasa simulation, we show all post-training results using 30, 100, ... (p. 16, Figure/Table caption).
 - **Explicit failure boundary:** (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp. (p. 24, 6. Conclusions).
+
+## 원문과 공개 자료
+
+- 가중치 · 원 GR00T-N1-2B 기본 모델 · model.safetensors [배포 파일](https://huggingface.co/nvidia/GR00T-N1-2B/blob/fc879581ca32f4f6d6e02cf0cc80452f6b0c3873/model.safetensors)
+- 코드 · 원 N1 전용 릴리스 브랜치의 정책 구현 · gr00t/model/policy.py [배포 파일](https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/755876a9afdb41ca6eb6383b36f4a0adb085c73f/gr00t/model/policy.py)
+- 데이터 · N1 릴리스의 모의 집어 옮기기 예제 에피소드 · demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet [배포 파일](https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/755876a9afdb41ca6eb6383b36f4a0adb085c73f/demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet)

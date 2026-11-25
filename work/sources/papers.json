@@ -193452,7 +193452,7 @@
     "pdf": "https://www.roboticsproceedings.org/rss21/p103.pdf",
     "page": "https://www.roboticsproceedings.org/rss21/p103.html",
     "project": "https://zhaohengyin.github.io/dexteritygen/",
-    "role": "RL로 저수준 dexterous primitive를 선학습하고 human teleoperation을 prompt로 쓰는 RSS 2026 foundation controller. Dexterous long-horizon skill과 contact stability의 최신 anchor.",
+    "role": "RSS 2025의 DexGen은 시뮬레이션에서 학습한 손안 조작을 실물 다지 손에 적용한다. 사람의 거친 손동작을 제어기 입력으로 쓰는 기준 사례다.",
     "folder": "2025/RSS/2025_RSS_DexterityGen-Foundation-Controller-for-Unprecedented-Dexte",
     "venue_as_recorded": "RSS",
     "venue_canonical": "RSS",
@@ -193490,7 +193490,7 @@
         "url": "https://github.com/zhaohengyin/lightning-grasp",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       },
       "venue_verification": {
         "url": "https://www.roboticsproceedings.org/rss21/p103.html",
@@ -193501,14 +193501,14 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_applicable",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
     "paper_type": "theory_or_foundation",
     "relations": [],
     "curation": {
-      "admission_reason": "RL로 저수준 dexterous primitive를 선학습하고 human teleoperation을 prompt로 쓰는 RSS 2026 foundation controller. Dexterous long-horizon skill과 contact stability의 최신 anchor.",
+      "admission_reason": "RSS 2025의 DexGen은 시뮬레이션에서 학습한 손안 조작을 실물 다지 손에 적용한다. 사람의 거친 손동작을 제어기 입력으로 쓰는 기준 사례다.",
       "rationale_status": "recorded",
       "roles": [
         "foundation"
@@ -193610,13 +193610,14 @@
       "code": {
         "status": "released",
         "source": "https://raw.githubusercontent.com/zhaohengyin/lightning-grasp/af43818e864b0389c97b73429e5e60de2a2de593/lygra/batch_grasp_optimizer.py",
-        "verified_on": "2026-11-20",
-        "evidence": "저자 사이트가 Code (I)로 연결하는 Lightning Grasp 물체 파지 최적화 구성요소. 전체 전신 제어기 배포 범위는 미확인. lygra/batch_grasp_optimizer.py"
+        "verified_on": "2026-11-25",
+        "evidence": "저자 페이지가 연결하는 파지 최적화 구성요소 Lightning Grasp · lygra/batch_grasp_optimizer.py"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://www.roboticsproceedings.org/rss21/p103.pdf",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 Allegro Hand 도구 조작 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -196139,7 +196140,7 @@
     },
     "artifacts": {
       "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "Planning and control",
@@ -196250,9 +196251,10 @@
         "evidence": "not_identified"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://ijcai.org/proceedings/2015/0274.pdf",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 탑 쌓기 계획 문제 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -196316,7 +196318,7 @@
     "lineage": "path-integral control → MPPI → GPU sampling MPC, learned world-model planning과 online recovery로 이어진다.",
     "folder": "2017/ICRA/2017_ICRA_Information-Theoretic-MPC-for-Model-Based-Reinforcement-Le",
     "pdf": "",
-    "project": "not identified",
+    "project": "https://github.com/AutoRally/autorally",
     "venue_as_recorded": "ICRA",
     "venue_canonical": "ICRA",
     "identifiers": {},
@@ -196338,11 +196340,16 @@
       "preprint": null,
       "paper_pdf": null,
       "project": null,
-      "code": null
+      "code": {
+        "url": "https://github.com/AutoRally/autorally",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "code_status": "released",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "Planning and control",
@@ -196450,14 +196457,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/AutoRally/autorally/48bae14fe4b2d56e5ca11fd2fec3d7dfac7a0e75/autorally_control/include/autorally_control/path_integral/mppi_controller.cu",
+        "verified_on": "2026-11-25",
+        "evidence": "AutoRally 차량의 MPPI 제어기 구현 · autorally_control/include/autorally_control/path_integral/mppi_controller.cu"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 cart-pole swing-up 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -196567,7 +196576,7 @@
     },
     "artifacts": {
       "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "Planning and control",
@@ -196719,9 +196728,10 @@
         "evidence": "not_identified"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://arxiv.org/pdf/1608.01335v2",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 FFRob pick-place-move 문제군 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -197670,12 +197680,12 @@
         "url": "https://github.com/notmahi/bet",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -197726,9 +197736,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.neurips.cc/paper_files/paper/2022/file/90d17e882adbdda42349db6f50123817-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "NeurIPS 표제면의 첫 세 저자 이름을 반영했다."
       }
     },
     "paper_id": "pr-0839",
@@ -197796,15 +197806,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/notmahi/bet/HEAD/run_on_env.py",
-        "evidence": "저자 구현 파일 · run_on_env.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/notmahi/bet/3d9d42352c0a0a6fb170369e95dde4ec3cfea951/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "BeT 시연 학습 코드 · train.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/90d17e882adbdda42349db6f50123817-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "evidence": "이전 자동 추출값에 논문별 배포 파일이나 저자의 배포 경로가 기록되지 않았다. 해당 버전의 공개 여부는 미확인."
+        "status": "released",
+        "source": "https://osf.io/download/4g53p/",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 OSF에 배포한 BeT 훈련 데이터 압축 파일 · bet_data_release.tar.gz"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -197842,9 +197852,9 @@
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
     "authors": [
-      "Nur Muhammad Shafiullah",
-      "Zichen Cui",
-      "Ariuntuya (Arty) Altanzaya",
+      "Nur Muhammad (Mahi) Shafiullah",
+      "Zichen Jeff Cui",
+      "Ariuntuya Altanzaya",
       "Lerrel Pinto"
     ]
   },
@@ -197898,7 +197908,12 @@
         "scope": "project_landing",
         "verified_on": "2026-11-20"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/RobotLocomotion/pytorch-dense-correspondence",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v87/florence18a.html",
         "kind": "publisher_record",
@@ -197907,8 +197922,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -198008,14 +198023,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://github.com/RobotLocomotion/pytorch-dense-correspondence",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/RobotLocomotion/pytorch-dense-correspondence/76bf6499c325ad136a094fb341158a90eaa31d53/dense_correspondence/training/training.py",
+        "verified_on": "2026-11-25",
+        "evidence": "대응점 표현의 학습 코드 · dense_correspondence/training/training.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://data.csail.mit.edu/labelfusion/pdccompressed/evaluation_labeled_data_compressed.tar.gz",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 배포 스크립트의 수동 주석 평가 자료 · evaluation_labeled_data_compressed.tar.gz"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -198322,7 +198339,7 @@
       "manipulation"
     ],
     "page": "https://proceedings.mlr.press/v205/nair23a.html",
-    "project": "https://r3m.cs.columbia.edu/",
+    "project": "https://sites.google.com/view/robot-r3m",
     "evidence": "ABSTRACT_CHECKED",
     "source_audit": "official proceedings abstract and project page checked; detailed result magnitudes remain UNVERIFIED.",
     "role": "egocentric video에서 학습한 reusable robot manipulation representation의 대표 baseline이다.",
@@ -198355,10 +198372,17 @@
       "preprint": null,
       "paper_pdf": null,
       "project": {
-        "url": "https://r3m.cs.columbia.edu/",
-        "kind": "publisher_or_project"
+        "url": "https://sites.google.com/view/robot-r3m",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/facebookresearch/r3m",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "venue_verification": {
         "url": "https://proceedings.mlr.press/v205/nair23a.html",
         "kind": "publisher_record",
@@ -198367,7 +198391,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -198470,9 +198494,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://r3m.cs.columbia.edu/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/facebookresearch/r3m/b2334e726887fa0206962d7984c69c5fb09cceab/r3m/train_representation.py",
+        "verified_on": "2026-11-25",
+        "evidence": "R3M 시각 표현 사전학습 코드 · r3m/train_representation.py"
       },
       "data": {
         "status": "not_identified",
@@ -198480,8 +198505,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1Xu0ssuG0N1zjZS54wmWzJ7-nb0-7XzbA/view",
+        "verified_on": "2026-11-25",
+        "evidence": "R3M 원 저자 로더가 지정한 ResNet-50 시각 인코더 · model.pt"
       },
       "configuration": {
         "status": "reported",
@@ -198575,7 +198602,12 @@
         "url": "https://eai-vc.github.io/",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/facebookresearch/eai-vc",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "venue_verification": {
         "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/022ca1bed6b574b962c48a2856eb207b-Abstract-Conference.html",
         "kind": "publisher_record",
@@ -198584,8 +198616,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -198689,18 +198721,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://eai-vc.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/facebookresearch/eai-vc/76fe35e87b1937168f1ec4b236e863451883eaf3/cortexbench/mujoco_vc/visual_imitation/train_loop.py",
+        "verified_on": "2026-11-25",
+        "evidence": "CortexBench의 모방학습 및 시각 인코더 평가 구현 · cortexbench/mujoco_vc/visual_imitation/train_loop.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://dl.fbaipublicfiles.com/eai-vc/trifinger_demos.zip",
+        "verified_on": "2026-11-25",
+        "evidence": "CortexBench의 TriFinger 이동·도달 시연 · trifinger_demos.zip"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://dl.fbaipublicfiles.com/eai-vc/vc1_vitl.pth",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 배포한 VC-1 대형 시각 인코더 · vc1_vitl.pth"
       },
       "configuration": {
         "status": "reported",
@@ -199955,7 +199991,7 @@
       "contact"
     ],
     "page": "https://api.crossref.org/works/10.1109/LRA.2020.2977257",
-    "project": "https://digit.ml/",
+    "project": "https://digit.ml/digit.html",
     "evidence": "ABSTRACT_CHECKED",
     "source_audit": "publisher metadata, abstract, and official project page checked; hardware details remain UNVERIFIED.",
     "role": "GelSight 원리를 compact·low-cost form factor로 옮겨 tactile robot learning을 확장한 대표 sensor platform이다.",
@@ -199991,14 +200027,16 @@
       "preprint": null,
       "paper_pdf": null,
       "project": {
-        "url": "https://digit.ml/",
-        "kind": "publisher_or_project"
+        "url": "https://digit.ml/digit.html",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "code": {
-        "url": "https://github.com/facebookresearch/digit360",
+        "url": "https://github.com/facebookresearch/digit-interface",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       },
       "alternate_at_audit": {
         "url": "https://doi.org/10.1109/LRA.2020.2977257",
@@ -200129,9 +200167,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/facebookresearch/digit360/HEAD/digit360/interface/examples/test_usb.py",
-        "evidence": "저자 구현 파일 · digit360/interface/examples/test_usb.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/facebookresearch/digit-interface/87a28bbf2beee8008a5308e9a12d72e1bc4fefb9/digit_interface/digit.py",
+        "verified_on": "2026-11-25",
+        "evidence": "원 DIGIT의 촉각 스트림 드라이버. 구슬 조작용 예측 제어기 전체의 공개 범위는 미확인 · digit_interface/digit.py"
       },
       "data": {
         "status": "not_identified",
@@ -201448,7 +201486,7 @@
     "lineage": "policy-gradient/EM control → MPO → distributed MPO, MT-Opt와 large-scale continuous robot RL로 이어진다.",
     "folder": "2018/ICLR/2018_ICLR_Maximum-a-Posteriori-Policy-Optimisation",
     "pdf": "",
-    "project": "not identified",
+    "project": "https://github.com/google-deepmind/acme",
     "venue_as_recorded": "ICLR",
     "venue_canonical": "ICLR",
     "identifiers": {
@@ -201479,7 +201517,12 @@
       },
       "paper_pdf": null,
       "project": null,
-      "code": null,
+      "code": {
+        "url": "https://github.com/google-deepmind/acme",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=S1ANxQW0b",
         "kind": "openreview",
@@ -201493,8 +201536,8 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "code_status": "released",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -201600,14 +201643,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/google-deepmind/acme/1bc05bea97b94a2da7e5315b315118bdaa98f1f3/acme/agents/tf/mpo/learning.py",
+        "verified_on": "2026-11-25",
+        "evidence": "DeepMind Acme가 제공하는 MPO 학습기. 2018년 실험 실행본과의 동일성은 미확인 · acme/agents/tf/mpo/learning.py"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://arxiv.org/pdf/1806.06920",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 DeepMind Control Suite 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -201663,7 +201708,7 @@
       "Reinforcement Learning",
       "Multi-Task Learning",
       "robot data",
-      "Google DeepMind"
+      "real-world manipulation"
     ],
     "page": "https://arxiv.org/abs/2104.08212",
     "evidence": "ABSTRACT_CHECKED",
@@ -201677,7 +201722,7 @@
     "lineage": "QT-Opt/MPO → MT-Opt → RT-1/Open X-Embodiment와 scalable generalist robot policy로 이어진다.",
     "folder": "2021/arXiv/2021_arXiv_MT-Opt-Continuous-Multi-Task-Robotic-Reinforcement-Learnin",
     "pdf": "",
-    "project": "not identified",
+    "project": "https://karolhausman.github.io/mt-opt/",
     "venue_as_recorded": "arXiv",
     "venue_canonical": "arXiv",
     "identifiers": {
@@ -201703,12 +201748,17 @@
         "kind": "arxiv"
       },
       "paper_pdf": null,
-      "project": null,
+      "project": {
+        "url": "https://karolhausman.github.io/mt-opt/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "code": null
     },
     "artifacts": {
       "code_status": "not_identified",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -201826,9 +201876,10 @@
         "evidence": "not_identified"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://storage.googleapis.com/gresearch/robotics/mt_opt_rlds/1.0.0/mt_opt_rlds-train.tfrecord-00000-of-02048",
+        "verified_on": "2026-11-25",
+        "evidence": "공식 RLDS 판본의 실물 조작 훈련 샤드 · mt_opt_rlds-train.tfrecord-00000-of-02048"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -201995,9 +202046,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://arxiv.org/abs/2205.06175",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://arxiv.org/pdf/2205.06175v3#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "TMLR 게재 표제면에 따라 세 저자의 발음 구별 기호를 복원했다."
       }
     },
     "paper_id": "pr-0857",
@@ -202105,12 +202156,12 @@
     },
     "authors": [
       "Scott Reed",
-      "Konrad Zolna",
+      "Konrad Żołna",
       "Emilio Parisotto",
-      "Sergio Gomez Colmenarejo",
+      "Sergio Gómez Colmenarejo",
       "Alexander Novikov",
       "Gabriel Barth-Maron",
-      "Mai Gimenez",
+      "Mai Giménez",
       "Yury Sulsky",
       "Jackie Kay",
       "Jost Tobias Springenberg",
@@ -202404,7 +202455,7 @@
     "lineage": "RT-1/RT-2 → RT-H → interpretable hierarchical VLA, skill correction과 recovery interfaces로 이어진다.",
     "folder": "2024/Robotics-Science-and-Sys/2024_Robotics-Science-and-Sys_RT-H-Action-Hierarchies-Using-Language",
     "pdf": "",
-    "project": "not identified",
+    "project": "https://rt-hierarchy.github.io/",
     "venue_as_recorded": "Robotics: Science and Systems",
     "venue_canonical": "Robotics: Science and Systems",
     "identifiers": {},
@@ -202425,7 +202476,12 @@
       },
       "preprint": null,
       "paper_pdf": null,
-      "project": null,
+      "project": {
+        "url": "https://rt-hierarchy.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "code": null,
       "venue_verification": {
         "url": "https://roboticsproceedings.org/rss20/p049.html",
@@ -202689,7 +202745,7 @@
     },
     "artifacts": {
       "code_status": "project_only",
-      "data_status": "not_applicable",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -202828,9 +202884,10 @@
         "evidence": "manifest_link"
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://arxiv.org/pdf/2503.20020",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 ALOHA 2 Sim Task suite 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -203012,7 +203069,7 @@
     "lineage": "GPU physics → Isaac Gym → Orbit/Isaac Lab과 large-scale humanoid/dexterity training으로 이어진다.",
     "folder": "2021/NeurIPS-Datasets-and-Ben/2021_NeurIPS-Datasets-and-Ben_Isaac-Gym-High-Performance-GPU-Based-Physics-Simulation-Fo",
     "pdf": "",
-    "project": "not identified",
+    "project": "https://developer.nvidia.com/isaac-gym",
     "venue_as_recorded": "NeurIPS Datasets and Benchmarks",
     "venue_canonical": "NeurIPS Datasets and Benchmarks",
     "identifiers": {
@@ -203041,8 +203098,18 @@
         "verified_on": "2026-11-20"
       },
       "paper_pdf": null,
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://developer.nvidia.com/isaac-gym",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/isaac-sim/IsaacGymEnvs",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "alternate_at_audit": {
         "url": "https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/",
         "kind": "publisher_or_project",
@@ -203056,7 +203123,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -203165,9 +203232,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/isaac-sim/IsaacGymEnvs/aeed298638a1f7b5421b38f5f3cc2d1079b6d9c3/isaacgymenvs/tasks/shadow_hand.py",
+        "verified_on": "2026-11-25",
+        "evidence": "NVIDIA의 Isaac Gym 학습 환경과 손 조작 과제 코드. 물리 엔진 소스의 배포를 뜻하지 않는다 · isaacgymenvs/tasks/shadow_hand.py"
       },
       "data": {
         "status": "not_identified",
@@ -203927,7 +203995,12 @@
         "url": "https://eureka-research.github.io/",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/eureka-research/Eureka",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "alternate_at_audit": {
         "url": "https://openreview.net/forum?id=IEduRUO55F",
         "kind": "openreview",
@@ -203935,7 +204008,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -203987,9 +204060,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://proceedings.iclr.cc/paper_files/paper/2024/file/70c26937fbf3d4600b69a129031b66ec-Paper-Conference.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "ICLR 게재본에 있는 Linxi “Jim” Fan과 Anima Anandkumar의 이름 표기를 반영했다."
       }
     },
     "paper_id": "pr-0864",
@@ -204043,9 +204116,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://eureka-research.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/eureka-research/Eureka/9eee42808b52d8abc14845d1547bfde886403ccc/eureka/eureka.py",
+        "verified_on": "2026-11-25",
+        "evidence": "보상 후보 생성·강화학습 평가·반복 개선 루프 · eureka/eureka.py"
       },
       "data": {
         "status": "not_identified",
@@ -204053,8 +204127,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://raw.githubusercontent.com/eureka-research/Eureka/9eee42808b52d8abc14845d1547bfde886403ccc/isaacgymenvs/isaacgymenvs/checkpoints/EurekaPenSpinning.pth",
+        "verified_on": "2026-11-25",
+        "evidence": "Eureka의 펜 회전 정책 체크포인트 · isaacgymenvs/isaacgymenvs/checkpoints/EurekaPenSpinning.pth"
       },
       "configuration": {
         "status": "reported",
@@ -204095,8 +204171,8 @@
       "Osbert Bastani",
       "Dinesh Jayaraman",
       "Yuke Zhu",
-      "Jim Fan",
-      "anima anandkumar"
+      "Linxi “Jim” Fan",
+      "Anima Anandkumar"
     ]
   },
   {
@@ -204148,7 +204224,12 @@
         "url": "https://eureka-research.github.io/dr-eureka/",
         "kind": "publisher_or_project"
       },
-      "code": null,
+      "code": {
+        "url": "https://github.com/eureka-research/DrEureka",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "venue_verification": {
         "url": "https://www.roboticsproceedings.org/rss20/p094.html",
         "kind": "publisher_record",
@@ -204157,8 +204238,8 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -204209,9 +204290,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss20/p094.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss20/p094.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 게재본에 병기된 Linxi “Jim” Fan의 이름을 반영했다."
       }
     },
     "paper_id": "pr-0865",
@@ -204275,18 +204356,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://eureka-research.github.io/dr-eureka/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/eureka-research/DrEureka/1d4e00700423170717654516f4ef4b24cb0f3a84/dr_eureka/dr_eureka.py",
+        "verified_on": "2026-11-25",
+        "evidence": "보상 및 도메인 무작위화 설계 구현 · dr_eureka/dr_eureka.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/eureka-research/DrEureka/1d4e00700423170717654516f4ef4b24cb0f3a84/forward_locomotion/runs/forward_locomotion/dr_eureka_best/metrics.pkl",
+        "verified_on": "2026-11-25",
+        "evidence": "전진 보행 실험의 저장 학습 지표로 범위를 한정 · forward_locomotion/runs/forward_locomotion/dr_eureka_best/metrics.pkl"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://raw.githubusercontent.com/eureka-research/DrEureka/1d4e00700423170717654516f4ef4b24cb0f3a84/forward_locomotion/runs/forward_locomotion/dr_eureka_best/checkpoints/ac_weights_last.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "DrEureka 사족 전진 보행 정책의 저장 가중치 · forward_locomotion/runs/forward_locomotion/dr_eureka_best/checkpoints/ac_weights_last.pt"
       },
       "configuration": {
         "status": "reported",
@@ -204324,7 +204409,7 @@
       "William Liang",
       "Hung-Ju Wang",
       "Yuke Zhu",
-      "Linxi Fan",
+      "Linxi “Jim” Fan",
       "Osbert Bastani",
       "Dinesh Jayaraman"
     ]
@@ -204353,7 +204438,7 @@
     "lineage": "OpenAI dexterous hand sim-to-real → DeXtreme → scalable dexterity training과 GR00T/dexterous foundation policies로 이어진다.",
     "folder": "2023/ICRA/2023_ICRA_DeXtreme-Transfer-of-Agile-In-hand-Manipulation-from-Simul",
     "pdf": "https://ieeexplore.ieee.org/ielx7/10160211/10160212/10160216.pdf",
-    "project": "not identified",
+    "project": "https://dextreme.org/",
     "venue_as_recorded": "ICRA",
     "venue_canonical": "ICRA",
     "identifiers": {
@@ -204388,8 +204473,18 @@
         "scope": "paper_specific",
         "verified_on": "2026-11-24"
       },
-      "project": null,
-      "code": null,
+      "project": {
+        "url": "https://dextreme.org/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/isaac-sim/IsaacGymEnvs",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "alternate_at_audit": {
         "url": "https://research.nvidia.com/publication/2023-06_dextreme-transfer-agile-hand-manipulation-simulation-reality",
         "kind": "publisher_or_project",
@@ -204403,7 +204498,7 @@
       }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -204517,9 +204612,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/isaac-sim/IsaacGymEnvs/aeed298638a1f7b5421b38f5f3cc2d1079b6d9c3/isaacgymenvs/tasks/dextreme/allegro_hand_dextreme.py",
+        "verified_on": "2026-11-25",
+        "evidence": "Allegro 재배향의 강화학습 환경 및 무작위화 코드 · isaacgymenvs/tasks/dextreme/allegro_hand_dextreme.py"
       },
       "data": {
         "status": "not_identified",
@@ -205148,11 +205244,16 @@
         "url": "https://developer.nvidia.com/isaac/gr00t",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/NVIDIA/Isaac-GR00T",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -205285,21 +205386,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://developer.nvidia.com/isaac/gr00t",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/755876a9afdb41ca6eb6383b36f4a0adb085c73f/gr00t/model/policy.py",
+        "verified_on": "2026-11-25",
+        "evidence": "원 N1 전용 릴리스 브랜치의 정책 구현 · gr00t/model/policy.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": "https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots",
-        "verified_on": "2026-11-20",
-        "evidence": "이전 자동 추출값에 논문별 배포 파일이나 저자의 배포 경로가 기록되지 않았다. 해당 버전의 공개 여부는 미확인."
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/755876a9afdb41ca6eb6383b36f4a0adb085c73f/demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet",
+        "verified_on": "2026-11-25",
+        "evidence": "N1 릴리스의 모의 집어 옮기기 예제 에피소드 · demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet"
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "원 논문의 같은 버전으로 명시된 저자 모델 파일 · model.safetensors",
-        "source": "https://huggingface.co/api/models/nvidia/GR00T-N1-2B",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/nvidia/GR00T-N1-2B/blob/fc879581ca32f4f6d6e02cf0cc80452f6b0c3873/model.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "원 GR00T-N1-2B 기본 모델 · model.safetensors"
       },
       "configuration": {
         "status": "reported",
@@ -205433,10 +205535,10 @@
         "kind": "publisher_or_project"
       },
       "code": {
-        "url": "https://github.com/nvidia/GR00T-dreams",
+        "url": "https://github.com/NVIDIA/GR00T-Dreams",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       },
       "alternate_at_audit": {
         "url": "https://research.nvidia.com/labs/lpr/publication/jang2025neural/",
@@ -205452,7 +205554,7 @@
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -205554,15 +205656,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/nvidia/GR00T-dreams/HEAD/IDM_dump/convert_directory.py",
-        "evidence": "저자 구현 파일 · IDM_dump/convert_directory.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/NVIDIA/GR00T-Dreams/ec3881d44545016871997f8e17dd15f1d792e91d/IDM_dump/dump_idm_actions.py",
+        "verified_on": "2026-11-25",
+        "evidence": "생성 영상에서 역동역학 의사 행동을 추출하는 DreamGen 구현 · IDM_dump/dump_idm_actions.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": "https://proceedings.mlr.press/v305/jang25a.html",
-        "verified_on": "2026-11-20",
-        "evidence": "이전 자동 추출값에 논문별 배포 파일이나 저자의 배포 경로가 기록되지 않았다. 해당 버전의 공개 여부는 미확인."
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/NVIDIA/GR00T-Dreams/ec3881d44545016871997f8e17dd15f1d792e91d/demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet",
+        "verified_on": "2026-11-25",
+        "evidence": "DreamGen 역동역학 훈련 명령에 포함한 시뮬레이션 예제 궤적 · demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -206773,7 +206875,7 @@
       }
     },
     "artifacts": {
-      "code_status": "project_only",
+      "code_status": "not_released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -206904,9 +207006,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://robofume.github.io",
-        "evidence": "manifest_link"
+        "status": "not_released",
+        "source": "https://robofume.github.io/",
+        "verified_on": "2026-11-25",
+        "evidence": "공식 프로젝트는 코드 공개를 예고하고 있다."
       },
       "data": {
         "status": "not_identified",
@@ -206968,11 +207071,12 @@
       "collision avoidance",
       "control barrier function",
       "aerial robotics",
-      "sim-to-real"
+      "sim-to-real",
+      "flight testing"
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p002.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p002.pdf",
-    "project": "not identified",
+    "project": "https://theairlab.org/visafe/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.002"
     },
@@ -207010,7 +207114,12 @@
         "url": "https://www.roboticsproceedings.org/rss21/p002.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
+      "project": {
+        "url": "https://theairlab.org/visafe/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "code": null
     },
     "artifacts": {
@@ -207081,7 +207190,9 @@
         "safety_or_recovery"
       ],
       "setting": [
-        "sim_to_real"
+        "real_robot",
+        "sim_to_real",
+        "simulation"
       ],
       "embodiment": [
         "aerial"
@@ -207237,12 +207348,14 @@
       },
       "code": {
         "url": "https://github.com/leggedrobotics/fdm",
-        "kind": "code"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -207365,18 +207478,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/leggedrobotics/fdm/06f5d8033bafed4f6838662af99ba31cbd4f5ce0/exts/fdm/fdm/env_cfg/env_cfg_heuristic_planner.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. exts/fdm/fdm/env_cfg/env_cfg_heuristic_planner.py"
+        "source": "https://raw.githubusercontent.com/leggedrobotics/fdm/06f5d8033bafed4f6838662af99ba31cbd4f5ce0/exts/fdm/fdm/model/fdm_model.py",
+        "verified_on": "2026-11-25",
+        "evidence": "지각 조건부 전방 동역학 모델 구현 · exts/fdm/fdm/model/fdm_model.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1aFuScInnLjh2eukqOnnL-5ydqcUSpUbE/view",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 제공하는 FDM 실물 파인튜닝 자료 · real_world_datasets.zip"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1mphOSa1ar3sw4IfVPSEcUnGXEN7wiBU9/view",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 연결한 실측 주행 파인튜닝 FDM · model.zip"
       },
       "configuration": {
         "status": "reported",
@@ -207431,7 +207547,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p007.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p007.pdf",
-    "project": "not identified",
+    "project": "https://dasc-lab.github.io/papers/2025/2025-certifiably-correct/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.007"
     },
@@ -207469,11 +207585,21 @@
         "url": "https://www.roboticsproceedings.org/rss21/p007.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://dasc-lab.github.io/papers/2025/2025-certifiably-correct/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/dasc-lab/certifiably-correct-mapping",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -207525,9 +207651,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p007.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p007.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면에서 Taekyung Kim과 Rajiv Govindjee의 순서를 확인했다."
       }
     },
     "paper_id": "pr-0878",
@@ -207591,9 +207717,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/dasc-lab/dasc_ros_nvblox/cce3c367ae00055fbaec5a986c0ecf3f04040aab/nvblox_ros/src/lib/conversions/certified_esdf_slice_conversions.cu",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 저장소가 고정한 하위 모듈에서 인증 ESDF 슬라이스를 변환하는 CUDA 구현을 확인했다. · certified_esdf_slice_conversions.cu"
       },
       "data": {
         "status": "not_identified",
@@ -207637,8 +207764,8 @@
     },
     "authors": [
       "Devansh R. Agrawal",
-      "Rajiv Govindjee",
       "Taekyung Kim",
+      "Rajiv Govindjee",
       "Trushant Adeshara",
       "Jiangbo Yu",
       "Anurekha Ravikumar",
@@ -207703,7 +207830,7 @@
     },
     "artifacts": {
       "code_status": "not_identified",
-      "data_status": "not_applicable",
+      "data_status": "not_identified",
       "local_pdf_cache": false
     },
     "primary_track": "Planning and control",
@@ -207810,9 +207937,10 @@
         "evidence": "원장에 기재된 프로젝트 폐쇄. 대체 구현은 확인 불가."
       },
       "data": {
-        "status": "not_applicable",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_identified",
+        "source": "https://www.roboticsproceedings.org/rss21/p008.pdf",
+        "verified_on": "2026-11-25",
+        "evidence": "원문은 MuSHR 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다."
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -207870,7 +207998,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p011.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p011.pdf",
-    "project": "https://github.com/SpatialVLA/SpatialVLA",
+    "project": "https://spatialvla.github.io/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.011"
     },
@@ -207909,12 +208037,16 @@
         "kind": "publisher_or_project"
       },
       "project": {
-        "url": "https://github.com/SpatialVLA/SpatialVLA",
-        "kind": "code"
+        "url": "https://spatialvla.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "code": {
         "url": "https://github.com/SpatialVLA/SpatialVLA",
-        "kind": "code"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
@@ -207970,9 +208102,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p011.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p011.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 게재본에서 Dong Wang을 포함한 네 번째 이후 저자의 순서를 확인했다."
       }
     },
     "paper_id": "pr-0880",
@@ -208035,9 +208167,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/train/spatialvla_pretrain.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. train/spatialvla_pretrain.py"
+        "source": "https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/model/modeling_spatialvla.py",
+        "verified_on": "2026-11-25",
+        "evidence": "SpatialVLA 모델 및 공간 행동 토큰 예측 구현 · model/modeling_spatialvla.py"
       },
       "data": {
         "status": "not_identified",
@@ -208046,9 +208178,9 @@
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · model-00001-of-00002.safetensors",
-        "source": "https://huggingface.co/api/models/IPEC-COMMUNITY/spatialvla-4b-224-pt",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/blob/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/model-00001-of-00002.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "SpatialVLA 기본 모델의 두 샤드 중 첫 번째 · model-00001-of-00002.safetensors"
       },
       "configuration": {
         "status": "reported",
@@ -208087,13 +208219,13 @@
       "Delin Qu",
       "Haoming Song",
       "Qizhi Chen",
+      "Dong Wang",
       "Yuanqi Yao",
       "Xinyi Ye",
-      "Jiayuan Gu",
-      "Zhigang Wang",
       "Yan Ding",
+      "Zhigang Wang",
+      "Jiayuan Gu",
       "Bin Zhao",
-      "Dong Wang",
       "Xuelong Li"
     ]
   },
@@ -208112,7 +208244,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p013.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p013.pdf",
-    "project": "https://github.com/jzhzhang/Uni-NaVid",
+    "project": "https://pku-epic.github.io/Uni-NaVid/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.013"
     },
@@ -208151,17 +208283,21 @@
         "kind": "publisher_or_project"
       },
       "project": {
-        "url": "https://github.com/jzhzhang/Uni-NaVid",
-        "kind": "code"
+        "url": "https://pku-epic.github.io/Uni-NaVid/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       },
       "code": {
         "url": "https://github.com/jzhzhang/Uni-NaVid",
-        "kind": "code"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -208269,20 +208405,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/jzhzhang/Uni-NaVid/HEAD/offline_eval_uninavid.py",
-        "evidence": "저자 구현 파일 · offline_eval_uninavid.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/jzhzhang/Uni-NaVid/79ef5ea3fea14c205342d1ab070563d84c7a966a/uninavid/train/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "Uni-NaVid의 영상·언어 내비게이션 학습 코드 · uninavid/train/train.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/Jzzhang/Uni-NaVid/blob/0437222534b2a19abeb20710bfd53c44c5bf3dd4/Nav-Finetune/open_uninavid_sampled_500.json",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 공개한 내비게이션 훈련 표본 주석 · Nav-Finetune/open_uninavid_sampled_500.json"
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · uninavid-7b-full-224-video-fps-1-grid-2/pytorch_model-00001-of-00002.bin",
-        "source": "https://huggingface.co/api/models/Jzzhang/Uni-NaVid",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/Jzzhang/Uni-NaVid/blob/0437222534b2a19abeb20710bfd53c44c5bf3dd4/uninavid-7b-full-224-video-fps-1-grid-2/pytorch_model-00001-of-00002.bin",
+        "verified_on": "2026-11-25",
+        "evidence": "Uni-NaVid 7B 영상 정책의 첫 가중치 샤드 · uninavid-7b-full-224-video-fps-1-grid-2/pytorch_model-00001-of-00002.bin"
       },
       "configuration": {
         "status": "reported",
@@ -208390,7 +208527,9 @@
       },
       "code": {
         "url": "https://github.com/OpenDriveLab/UniVLA",
-        "kind": "code"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
@@ -208498,8 +208637,8 @@
       "code": {
         "status": "released",
         "source": "https://raw.githubusercontent.com/OpenDriveLab/UniVLA/0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352/vla-scripts/train.py",
-        "verified_on": "2026-11-20",
-        "evidence": "해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. vla-scripts/train.py"
+        "verified_on": "2026-11-25",
+        "evidence": "UniVLA 잠재 행동 정책 훈련 구현 · vla-scripts/train.py"
       },
       "data": {
         "status": "not_identified",
@@ -208507,8 +208646,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/qwbu/univla-7b/blob/968e2896809c00968e8fd936e052476ce5ac1bd0/model-00001-of-00003.safetensors",
+        "verified_on": "2026-11-25",
+        "evidence": "UniVLA 7B 기본 모델의 첫 가중치 샤드 · model-00001-of-00003.safetensors"
       },
       "configuration": {
         "status": "reported",
@@ -208567,7 +208708,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p016.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p016.pdf",
-    "project": "not identified",
+    "project": "https://clip-rt.github.io/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.016"
     },
@@ -208605,11 +208746,21 @@
         "url": "https://www.roboticsproceedings.org/rss21/p016.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://clip-rt.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/clip-rt/clip-rt",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
+      "code_status": "released",
       "data_status": "not_identified",
       "local_pdf_cache": false
     },
@@ -208724,9 +208875,10 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/clip-rt/clip-rt/0b781442f4783709bddcb7b19943baf5517cb46e/open_clip/src/training/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "CLIP-RT 시각·언어·동작 정렬 학습 구현 · open_clip/src/training/train.py"
       },
       "data": {
         "status": "not_identified",
@@ -208734,8 +208886,10 @@
         "evidence": "existing manifest artifact status preserved"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/clip-rt/clip-rt-oxe-pretrained/blob/82c9f47ebb761d48fb04d612f9ecc075388c1bd4/cliprt-oxe-pretrained.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "Open X-Embodiment로 사전학습한 CLIP-RT 체크포인트 · cliprt-oxe-pretrained.pt"
       },
       "configuration": {
         "status": "reported",
@@ -209563,12 +209717,14 @@
       },
       "code": {
         "url": "https://github.com/haosulab/ManiSkill",
-        "kind": "code"
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -209631,9 +209787,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p021.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p021.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면의 Tse-kai Chan 표기를 반영했다."
       }
     },
     "paper_id": "pr-0887",
@@ -209708,17 +209864,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://github.com/haosulab/ManiSkill",
-        "evidence": "manifest_link"
+        "source": "https://raw.githubusercontent.com/haosulab/ManiSkill/62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3/mani_skill/envs/tasks/tabletop/pick_cube.py",
+        "verified_on": "2026-11-25",
+        "evidence": "ManiSkill3 탁상 조작 시뮬레이터 과제 구현 · mani_skill/envs/tasks/tabletop/pick_cube.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations/blob/d674485bbffdd533914e52d272fdda34c0515608/demos/AnymalC-Reach-v1.zip",
+        "verified_on": "2026-11-25",
+        "evidence": "ManiSkill3 ANYmal 도달 과제 시연 압축본 · demos/AnymalC-Reach-v1.zip"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations/blob/d674485bbffdd533914e52d272fdda34c0515608/demos/AnymalC-Reach-v1/rl/ppo_pd_joint_delta_pos_ckpt.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "ANYmal 도달 환경의 PPO 체크포인트 · demos/AnymalC-Reach-v1/rl/ppo_pd_joint_delta_pos_ckpt.pt"
       },
       "configuration": {
         "status": "reported",
@@ -209763,7 +209923,7 @@
       "Chen Bao",
       "Xinsong Lin",
       "Yulin Liu",
-      "Tse-Kai Chan",
+      "Tse-kai Chan",
       "Yuan Gao",
       "Xuanlin Li",
       "Tongzhou Mu",
@@ -209837,11 +209997,16 @@
         "url": "https://roboverseorg.github.io/",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/RoboVerseOrg/RoboVerse",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -209892,9 +210057,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p022.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p022.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면에서 Yen-Jen Wang, Dylan Goetting, Carlo Sferrazza를 포함한 37명의 이름과 순서를 확인했다."
       }
     },
     "paper_id": "pr-0888",
@@ -209939,14 +210104,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://roboverseorg.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/RoboVerseOrg/RoboVerse/5f3ec0185d2d3bcb59d53b0bd1f5b0f8a6f2ce14/roboverse_learn/il/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "RoboVerse 환경을 사용하는 모방학습 구현 · roboverse_learn/il/train.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/RoboVerseOrg/roboverse_data/blob/fab63ccaaed54f413901f86edc3fa1ab77a96500/trajs/calvin/env_A_out/episode_chunk_132_1802438_1809815/trajectory_env_A_1237_v2.pkl",
+        "verified_on": "2026-11-25",
+        "evidence": "RoboVerse 자료 배포본에 수록된 CALVIN 궤적 한 건 · trajs/calvin/env_A_out/episode_chunk_132_1802438_1809815/trajectory_env_A_1237_v2.pkl"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -209990,20 +210157,22 @@
       "Yuyang Li",
       "Bangjun Wang",
       "Boshi An",
-      "Haozhe Lou",
       "Charlie Tianyue Cheng",
+      "Haozhe Lou",
       "Peihao Li",
-      "Haozhe Chen",
+      "Yen-Jen Wang",
       "Yutong Liang",
+      "Dylan Goetting",
+      "Chaoyi Xu",
+      "Haozhe Chen",
       "Yuxi Qian",
+      "Yiran Geng",
       "Jiageng Mao",
       "Weikang Wan",
-      "Yiran Geng",
       "Mingtong Zhang",
       "Jiangran Lyu",
       "Siheng Zhao",
       "Jiazhao Zhang",
-      "Chaoyi Xu",
       "Jialiang Zhang",
       "Chengyang Zhao",
       "Haoran Lu",
@@ -210013,6 +210182,7 @@
       "Yuxuan Kuang",
       "Ruihai Wu",
       "Baoxiong Jia",
+      "Carlo Sferrazza",
       "Hao Dong",
       "Siyuan Huang",
       "Yue Wang",
@@ -210077,11 +210247,16 @@
         "url": "https://vysics-vision-and-physics.github.io/",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/DAIRLab/vysics",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Robotics-enabling 3D perception",
@@ -210184,14 +210359,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://vysics-vision-and-physics.github.io/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/DAIRLab/vysics/b7a76f954cd9371e5f4d9732cccc1c5187d0acef/run_all.sh",
+        "verified_on": "2026-11-25",
+        "evidence": "시각·물리 추정을 결합하는 Vysics 실행 파이프라인 · run_all.sh"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1VkqFZmnLhrIAS0Fn6j97Ko1oYMETyCjO/view",
+        "verified_on": "2026-11-25",
+        "evidence": "Vysics 평가 물체의 RGB-D 상호작용 영상 자료 · assets_rgbd.zip"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -210298,12 +210475,12 @@
         "url": "https://github.com/kywind/pgnd",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -210409,18 +210586,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/kywind/pgnd/HEAD/experiments/train/eval.py",
-        "evidence": "저자 구현 파일 · experiments/train/eval.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/kywind/pgnd/06ef5dbbe9612b56aaee317c938dcf953074c05f/pgnd/sim/model.py",
+        "verified_on": "2026-11-25",
+        "evidence": "입자·격자 신경 동역학 모델 구현 · pgnd/sim/model.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/kaifz/pgnd-dataset/blob/58932f8ac660a2cba3d880675181369a4dc66cbc/data/rope/rope.tar",
+        "verified_on": "2026-11-25",
+        "evidence": "PGND 변형체 실험의 로프 자료 · data/rope/rope.tar"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/kaifz/pgnd-checkpoints/blob/893e8b9b2f443f8c98066f7eadca0dbf7d92851d/experiments/log/rope/train/ckpt/100000.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "PGND 로프 실험의 저장 모델 · experiments/log/rope/train/ckpt/100000.pt"
       },
       "configuration": {
         "status": "reported",
@@ -210475,7 +210655,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p039.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p039.pdf",
-    "project": "not identified",
+    "project": "https://github.com/NilsDengler/manipulation_enhanced_map_prediction",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.039"
     },
@@ -210514,11 +210694,16 @@
         "kind": "publisher_or_project"
       },
       "project": null,
-      "code": null
+      "code": {
+        "url": "https://github.com/NilsDengler/manipulation_enhanced_map_prediction",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -210569,9 +210754,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p039.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p039.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면에서 Tobias Zaenker와 Jesper Mücke의 순서를 확인했다."
       }
     },
     "paper_id": "pr-0891",
@@ -210629,18 +210814,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/NilsDengler/manipulation_enhanced_map_prediction/8ffa53f0c32e31f81ac9c1a75612b2e5a9443456/shelf_gym/scripts/run_cnabu_pipeline.py",
+        "verified_on": "2026-11-25",
+        "evidence": "CNABU 시점·밀기 행동 선택 파이프라인 · shelf_gym/scripts/run_cnabu_pipeline.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/NilsDengler/manipulation_enhanced_map_prediction/8ffa53f0c32e31f81ac9c1a75612b2e5a9443456/shelf_gym/scripts/model/dataset.hdf5",
+        "verified_on": "2026-11-25",
+        "evidence": "선반 지도 예측 저장소의 HDF5 입력 표본 · shelf_gym/scripts/model/dataset.hdf5"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://github.com/NilsDengler/manipulation_enhanced_map_prediction/blob/8ffa53f0c32e31f81ac9c1a75612b2e5a9443456/shelf_gym/scripts/model/push_predictor_new.ckpt",
+        "verified_on": "2026-11-25",
+        "evidence": "물체를 밀 때의 지도 변화를 예측하는 체크포인트 · shelf_gym/scripts/model/push_predictor_new.ckpt"
       },
       "configuration": {
         "status": "reported",
@@ -210676,8 +210865,8 @@
     "authors": [
       "Joao Marcos Correia Marques",
       "Nils Dengler",
-      "Jesper Mücke",
       "Tobias Zaenker",
+      "Jesper Mücke",
       "Shenlong Wang",
       "Maren Bennewitz",
       "Kris Hauser"
@@ -210744,12 +210933,12 @@
         "url": "https://github.com/brown-ivl/v-hop",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -210800,9 +210989,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p037.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p037.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 게재본에서 세 번째 저자가 사용하는 이름은 Tuluhan Akbulut이다."
       }
     },
     "paper_id": "pr-0892",
@@ -210853,18 +211042,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/brown-ivl/v-hop/HEAD/train.py",
-        "evidence": "저자 구현 파일 · train.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/brown-ivl/v-hop/b849b3521b3ac70792a3707626694b0b0e987381/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "시각·촉각 물체 자세 추적기의 학습 코드 · train.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1wGhhdMtaI73hZQs1-i7h4___DfHXImDi/view",
+        "verified_on": "2026-11-25",
+        "evidence": "V-HOP 저자 저장소의 추적 자료 묶음 · subset.zip"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1aRIzmf4PaeC62diDl3ifxVq7p0wqP2ud/view",
+        "verified_on": "2026-11-25",
+        "evidence": "V-HOP 저자 저장소가 배포한 추적기 체크포인트 · v-hop.ckpt"
       },
       "configuration": {
         "status": "reported",
@@ -210900,7 +211092,7 @@
     "authors": [
       "Hongyu Li",
       "Mingxi Jia",
-      "Mete Tuluhan Akbulut",
+      "Tuluhan Akbulut",
       "Yu Xiang",
       "George Konidaris",
       "Srinath Sridhar"
@@ -210921,7 +211113,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p056.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p056.pdf",
-    "project": "not identified",
+    "project": "https://peilin-666.github.io/projects/PP-Tac/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.056"
     },
@@ -210959,12 +211151,22 @@
         "url": "https://www.roboticsproceedings.org/rss21/p056.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://peilin-666.github.io/projects/PP-Tac/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/bigai-ai/PP-Tac",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -211015,9 +211217,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p056.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p056.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면에서 Wanlin Li, Jianpeng Ma, Chenxi Xiao의 순서를 확인했다."
       }
     },
     "paper_id": "pr-0893",
@@ -211070,18 +211272,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/bigai-ai/PP-Tac/e4dc92daaf1cb31098316b7253821bcbbf77d095/Calibration/3SensorCalibration.py",
+        "verified_on": "2026-11-25",
+        "evidence": "R-Tac 센서 보정 코드. 전체 집기 정책과 범위를 구별 · Calibration/3SensorCalibration.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/bigai-ai/PP-Tac/e4dc92daaf1cb31098316b7253821bcbbf77d095/Calibration/sensor1/calib_extrinsic/01_02_06_14_22.png",
+        "verified_on": "2026-11-25",
+        "evidence": "R-Tac 센서 외부 보정의 촬영 표본 · Calibration/sensor1/calib_extrinsic/01_02_06_14_22.png"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://raw.githubusercontent.com/bigai-ai/PP-Tac/e4dc92daaf1cb31098316b7253821bcbbf77d095/Calibration/training/checkpoint/20241031/ckpt/model_18",
+        "verified_on": "2026-11-25",
+        "evidence": "R-Tac 센서 보정 훈련의 모델 파일 · Calibration/training/checkpoint/20241031/ckpt/model_18"
       },
       "configuration": {
         "status": "reported",
@@ -211117,9 +211323,9 @@
     "authors": [
       "Pei Lin",
       "Yuzhe Huang",
+      "Wanlin Li",
       "Jianpeng Ma",
       "Chenxi Xiao",
-      "Wanlin Li",
       "Ziyuan Jiao"
     ]
   },
@@ -211232,9 +211438,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p057.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p057.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 게재본에 쓰인 두 번째 저자의 이름은 Sergio Aguilera Marinovic이다."
       }
     },
     "paper_id": "pr-0894",
@@ -211332,7 +211538,7 @@
     },
     "authors": [
       "Sirui Chen",
-      "Sergio Francisco Aguilera Marinovic",
+      "Sergio Aguilera Marinovic",
       "Soshi Iba",
       "Rana Soltani Zarrin"
     ]
@@ -211399,12 +211605,12 @@
         "url": "https://github.com/TUWIEN-ASL/REASSEMBLE",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -211525,14 +211731,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/TUWIEN-ASL/REASSEMBLE/HEAD/scripts/conversions/h5_to_rlds.py",
-        "evidence": "저자 구현 파일 · scripts/conversions/h5_to_rlds.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/TUWIEN-ASL/REASSEMBLE/432cc15ce3e028edc2f98a786f28bf6baf31ac6f/REASSEMBLE/io.py",
+        "verified_on": "2026-11-25",
+        "evidence": "REASSEMBLE 기록을 여는 공식 입출력 코드 · REASSEMBLE/io.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://researchdata.tuwien.ac.at/api/records/0ewrv-8cb44/files/data.zip/content",
+        "verified_on": "2026-11-25",
+        "evidence": "TU Wien 공개 기록의 REASSEMBLE 주 시연 데이터 압축본 · data.zip"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -211804,7 +212011,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p072.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p072.pdf",
-    "project": "not identified",
+    "project": "https://robopil.github.io/code-diffuser/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.072"
     },
@@ -211842,12 +212049,22 @@
         "url": "https://www.roboticsproceedings.org/rss21/p072.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://robopil.github.io/code-diffuser/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/lyttttt3333/CodeDiffuser",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "not_released",
       "local_pdf_cache": false
     },
     "primary_track": "VLA and generalist robot policies",
@@ -211898,9 +212115,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p072.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p072.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면에 맞춰 Dale McConachie의 성을 교정했다."
       }
     },
     "paper_id": "pr-0897",
@@ -211961,18 +212178,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/lyttttt3333/CodeDiffuser/f74b21956351d38924e6c9ca9357d14739fc0f9d/diffusion_policy_code/general_dp/train.py",
+        "verified_on": "2026-11-25",
+        "evidence": "CodeDiffuser의 시뮬레이션 훈련 구현. 저자 로드맵에서 실물 배포 코드는 미완료다. · diffusion_policy_code/general_dp/train.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "not_released",
+        "source": "https://github.com/lyttttt3333/CodeDiffuser/blob/f74b21956351d38924e6c9ca9357d14739fc0f9d/README.md",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 저장소의 공개 계획에서 연구 데이터 다운로드 항목을 미완료로 표시했다."
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "not_released",
+        "source": "https://github.com/lyttttt3333/CodeDiffuser/blob/f74b21956351d38924e6c9ca9357d14739fc0f9d/README.md",
+        "verified_on": "2026-11-25",
+        "evidence": "저자 저장소의 공개 계획에서 모델 체크포인트 다운로드 항목을 미완료로 표시했다."
       },
       "configuration": {
         "status": "reported",
@@ -212011,7 +212232,7 @@
       "Guang Yin",
       "Yitong Li",
       "Yixuan Wang",
-      "Dale Mcconachie",
+      "Dale McConachie",
       "Paarth Shah",
       "Kunimatsu Hashimoto",
       "Huan Zhang",
@@ -212034,7 +212255,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p074.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p074.pdf",
-    "project": "not identified",
+    "project": "https://unified-video-action-model.github.io/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.074"
     },
@@ -212072,12 +212293,22 @@
         "url": "https://www.roboticsproceedings.org/rss21/p074.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://unified-video-action-model.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/ShuangLI59/unified_video_action",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -212215,19 +212446,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/ShuangLI59/unified_video_action/fe3dec81af565fbb2d686072722f12340be31293/unified_video_action/workspace/train_unified_video_action_workspace.py",
+        "verified_on": "2026-11-25",
+        "evidence": "공유 비디오·행동 모델 학습 구현 · unified_video_action/workspace/train_unified_video_action_workspace.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": "https://www.roboticsproceedings.org/rss21/p074.html",
-        "verified_on": "2026-11-20",
-        "evidence": "이전 자동 추출값에 논문별 배포 파일이나 저자의 배포 경로가 기록되지 않았다. 해당 버전의 공개 여부는 미확인."
+        "status": "released",
+        "source": "https://drive.google.com/file/d/14VqUC_LL411o9F_qdjVZlgiRBjZknw01/view",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 만든 다중 과제 PushT 자료 · pusht_multitask.zip"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1OduHcxfc2hqUYSccMQNf9g-vAt-q2UhF/view",
+        "verified_on": "2026-11-25",
+        "evidence": "PushT에서 학습한 UVA 체크포인트 · pusht.ckpt"
       },
       "configuration": {
         "status": "reported",
@@ -212328,12 +212562,12 @@
         "url": "https://github.com/dexwild/dexwild-training",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -212437,14 +212671,15 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/dexwild/dexwild-training/HEAD/pretrained_networks_example.py",
-        "evidence": "저자 구현 파일 · pretrained_networks_example.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/dexwild/dexwild-training/efc1643865f2c9265d2351a1ecfd0731368930e3/data4robotics/trainers/bc.py",
+        "verified_on": "2026-11-25",
+        "evidence": "사람·로봇 시연을 결합하는 DexWild 저장소의 행동 복제 학습기 · data4robotics/trainers/bc.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/boardd/dexwild-dataset/blob/df5cd775f985e79036ff23ad579abbe7752b8df1/clothes_data/human/human_clothes_data.part_00",
+        "verified_on": "2026-11-25",
+        "evidence": "DexWild 의류 조작 사람 시연 아카이브의 첫 분할 · clothes_data/human/human_clothes_data.part_00"
       },
       "checkpoint": {
         "status": "not_recorded",
@@ -212550,12 +212785,12 @@
         "url": "https://github.com/CMU-IntentLab/Forewarn",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
       "code_status": "released",
-      "data_status": "not_identified",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -212606,9 +212841,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p076.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p076.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 게재본에서 두 번째 저자가 사용하는 이름은 Ran Tian이다."
       }
     },
     "paper_id": "pr-0900",
@@ -212691,18 +212926,21 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/CMU-IntentLab/Forewarn/HEAD/scripts/train_wm_real_data.py",
-        "evidence": "저자 구현 파일 · scripts/train_wm_real_data.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/CMU-IntentLab/Forewarn/7e0b505436a7c9702b0fdcfef3d2b897f102906f/examples/policy_loop.py",
+        "verified_on": "2026-11-25",
+        "evidence": "기본 정책 후보를 잠재 세계 모델과 VLM으로 평가하는 실행 루프 · examples/policy_loop.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/yilin-wu/Forewarn_WM_data/blob/63adf739cc1e5a0330e59bcfa0cbee5729c4f0f3/GraspBag_data/GraspBag_demo.hdf5",
+        "verified_on": "2026-11-25",
+        "evidence": "FOREWARN 봉투 조작 세계 모델 학습 시연 · GraspBag_data/GraspBag_demo.hdf5"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://huggingface.co/yilin-wu/Forewarn_WMs/blob/3ab74faba14db800dc4d5e085fca9008d2a33d18/bag_ckpt/0106/234547/best_pretrain_joint_444_68.pt",
+        "verified_on": "2026-11-25",
+        "evidence": "FOREWARN 봉투 조작 세계 모델의 저장 가중치 · bag_ckpt/0106/234547/best_pretrain_joint_444_68.pt"
       },
       "configuration": {
         "status": "reported",
@@ -212737,7 +212975,7 @@
     },
     "authors": [
       "Yilin Wu",
-      "Thomas Tian",
+      "Ran Tian",
       "Gokul Swamy",
       "Andrea Bajcsy"
     ]
@@ -212803,7 +213041,7 @@
         "url": "https://github.com/RaindragonD/factr_teleop",
         "kind": "official_code",
         "scope": "project_landing",
-        "verified_on": "2026-11-20"
+        "verified_on": "2026-11-25"
       }
     },
     "artifacts": {
@@ -212930,9 +213168,9 @@
       "status": "metadata_audited",
       "code": {
         "status": "released",
-        "source": "https://raw.githubusercontent.com/RaindragonD/factr_teleop/HEAD/launch/rollout.py",
-        "evidence": "저자 구현 파일 · launch/rollout.py",
-        "verified_on": "2026-11-20"
+        "source": "https://raw.githubusercontent.com/RaindragonD/factr_teleop/7a07ab3629af03a91c0198df7c44a0082dca77ab/src/factr_teleop/factr_teleop/factr_teleop.py",
+        "verified_on": "2026-11-25",
+        "evidence": "FACTR 토크 피드백 원격조작 노드 · src/factr_teleop/factr_teleop/factr_teleop.py"
       },
       "data": {
         "status": "not_identified",
@@ -212998,7 +213236,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p106.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p106.pdf",
-    "project": "not identified",
+    "project": "https://jianglongye.com/dex1b/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.106"
     },
@@ -213036,7 +213274,12 @@
         "url": "https://www.roboticsproceedings.org/rss21/p106.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
+      "project": {
+        "url": "https://jianglongye.com/dex1b/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
       "code": null
     },
     "artifacts": {
@@ -213440,7 +213683,7 @@
       "dexterous manipulation",
       "correspondence",
       "contact maps",
-      "bimanual"
+      "single-arm manipulation"
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p110.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p110.pdf",
@@ -213486,11 +213729,16 @@
         "url": "https://aureleopku.github.io/CordViP",
         "kind": "publisher_or_project"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/xuanxuanzzzii/cordvip",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "project_only",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "Manipulation, contact, tactile, and dexterity",
@@ -213541,9 +213789,9 @@
         "tracker_status_is_independent": true
       },
       "authors_verification": {
-        "source": "https://www.roboticsproceedings.org/rss21/p110.html",
-        "verified_on": "2026-11-20",
-        "basis": "논문 표제면 또는 출판사 서지에 실린 순서"
+        "source": "https://www.roboticsproceedings.org/rss21/p110.pdf#page=1",
+        "verified_on": "2026-11-25",
+        "basis": "RSS 표제면에서 공동 기여 저자 Qiuxuan Feng과 Ning Chen의 순서를 확인했다."
       }
     },
     "paper_id": "pr-0904",
@@ -213558,7 +213806,6 @@
       ],
       "embodiment": [
         "arm",
-        "bimanual",
         "dexterous_hand"
       ],
       "interaction": [
@@ -213611,20 +213858,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "project_only",
-        "source": "https://aureleopku.github.io/CordViP",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/xuanxuanzzzii/cordvip/ad6d441abe7b0480cf79b0311db266965c1313b6/train_policy/policy/CordViP/CordViP/CordViP_policy.py",
+        "verified_on": "2026-11-25",
+        "evidence": "손·물체 대응 표현을 사용하는 실물 정책 구현 · train_policy/policy/CordViP/CordViP/CordViP_policy.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://huggingface.co/datasets/FengQiuxuan/CordViP/blob/15631769bc4ae91f12fbccd4e528c2acd096dcdd/recorded_data/demonstration_0/0",
+        "verified_on": "2026-11-25",
+        "evidence": "CordViP 저자 데이터 저장소의 첫 번째 기록 시연 표본 · recorded_data/demonstration_0/0"
       },
       "checkpoint": {
         "status": "reported",
-        "evidence": "배포 파일 목록에서 확인한 범위 · 2000.ckpt",
-        "source": "https://huggingface.co/api/models/FengQiuxuan/CordViP",
-        "verified_on": "2026-11-20"
+        "source": "https://huggingface.co/FengQiuxuan/CordViP/blob/a38ef22e010d2719e9913d2da2950b0c481c9975/2000.ckpt",
+        "verified_on": "2026-11-25",
+        "evidence": "CordViP 저자 모델 저장소의 체크포인트 · 2000.ckpt"
       },
       "configuration": {
         "status": "reported",
@@ -213659,8 +213908,8 @@
     },
     "authors": [
       "Yankai Fu",
-      "Ning Chen",
       "Qiuxuan Feng",
+      "Ning Chen",
       "Zichen Zhou",
       "Mengzhen Liu",
       "Mingdong Wu",
@@ -213686,7 +213935,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p145.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p145.pdf",
-    "project": "not identified",
+    "project": "https://prompting-with-the-future.github.io/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.145"
     },
@@ -213724,12 +213973,22 @@
         "url": "https://www.roboticsproceedings.org/rss21/p145.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://prompting-with-the-future.github.io/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/TritiumR/Prompting-with-the-Future",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "World models, safety, uncertainty, and recovery",
@@ -213848,18 +214107,22 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/TritiumR/Prompting-with-the-Future/58aa59160bfc6f04b45ea289defb06e192bdd5c4/main.py",
+        "verified_on": "2026-11-25",
+        "evidence": "디지털 트윈에서 후보 행동을 비교하는 MPC 실행 코드 · main.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1FoHgmYrFkmIgJn0nwsJpxw5dxqAqpsDJ/view",
+        "verified_on": "2026-11-25",
+        "evidence": "저자가 배포한 바구니 장면 COLMAP 입력 영상 · 00000.png"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "source": "https://drive.google.com/file/d/1je2e_SHnNzKkfBlFxG_OoSWL_pBpFZ6G/view",
+        "verified_on": "2026-11-25",
+        "evidence": "바구니 장면에 맞춰 최적화한 3D Gaussian Splatting 파라미터로, 정책 가중치와 구분 · point_cloud.ply"
       },
       "configuration": {
         "status": "reported",
@@ -213913,7 +214176,7 @@
     ],
     "page": "https://www.roboticsproceedings.org/rss21/p146.html",
     "pdf": "https://www.roboticsproceedings.org/rss21/p146.pdf",
-    "project": "not identified",
+    "project": "https://yangsizhe.github.io/robosplat/",
     "identifiers": {
       "doi": "10.15607/RSS.2025.XXI.146"
     },
@@ -213951,12 +214214,22 @@
         "url": "https://www.roboticsproceedings.org/rss21/p146.pdf",
         "kind": "publisher_or_project"
       },
-      "project": null,
-      "code": null
+      "project": {
+        "url": "https://yangsizhe.github.io/robosplat/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      },
+      "code": {
+        "url": "https://github.com/InternRobotics/robosplat",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-25"
+      }
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "primary_track": "RL, IL, offline learning, and robot data",
@@ -214078,14 +214351,16 @@
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "not_identified"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/InternRobotics/robosplat/372c9c735555ea79ffab1361afd4ca20f4ff1105/data_aug/generate_demo.py",
+        "verified_on": "2026-11-25",
+        "evidence": "3D 장면 편집으로 단일 시연을 증강하는 구현 · data_aug/generate_demo.py"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://drive.google.com/file/d/1i8bmdUAE_bf4ZP3-E5slG-PIoto9fyaA/view",
+        "verified_on": "2026-11-25",
+        "evidence": "RoboSplat 저자 배포처의 데이터 및 장면 자산 압축본 · data.zip"
       },
       "checkpoint": {
         "status": "not_recorded",

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Yilin Wu, Thomas Tian, Gokul Swamy, Andrea Bajcsy
+- Authors: Yilin Wu, Ran Tian, Gokul Swamy, Andrea Bajcsy
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, VLM verifier, policy steering, failure prevention, latent alignment
@@ -88,3 +88,10 @@ FOREWARN은 생성 정책이 제안한 행동들의 결과를 잠재 세계 모�
 - **Actual contribution:** Ultimately, this alignment step enables ‘our "VLM-in-the-loop" policy steering approach to interpret, action plans as behavior narrations and select high-quality plans by reasoning over those narrations even under novel task ... (p. 2, 1. InTRopucTION).
 - **Evaluation boundary:** In this task, the robot must pick up a fork from the table and place it inside a bowl. (p. 5, V. EXPERIMENTS).
 - **Explicit failure boundary:** However, at runtime, the policy exhibits a range of degradations, from complete task failures (such as the robot knocking down the cup during grasping, shown in the center of Figure ... (p. 1, 1. InTRopucTION).
+
+## 원문과 공개 자료
+
+- RSS 게재본에서 두 번째 저자가 사용하는 이름은 Ran Tian이다. [표제면](https://www.roboticsproceedings.org/rss21/p076.pdf#page=1)
+- 가중치 · FOREWARN 봉투 조작 세계 모델의 저장 가중치 · bag_ckpt/0106/234547/best_pretrain_joint_444_68.pt [배포 파일](https://huggingface.co/yilin-wu/Forewarn_WMs/blob/3ab74faba14db800dc4d5e085fca9008d2a33d18/bag_ckpt/0106/234547/best_pretrain_joint_444_68.pt)
+- 코드 · 기본 정책 후보를 잠재 세계 모델과 VLM으로 평가하는 실행 루프 · examples/policy_loop.py [배포 파일](https://raw.githubusercontent.com/CMU-IntentLab/Forewarn/7e0b505436a7c9702b0fdcfef3d2b897f102906f/examples/policy_loop.py)
+- 데이터 · FOREWARN 봉투 조작 세계 모델 학습 시연 · GraspBag_data/GraspBag_demo.hdf5 [배포 파일](https://huggingface.co/datasets/yilin-wu/Forewarn_WM_data/blob/63adf739cc1e5a0330e59bcfa0cbee5729c4f0f3/GraspBag_data/GraspBag_demo.hdf5)

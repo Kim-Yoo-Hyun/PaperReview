@@ -7,10 +7,10 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Yankai Fu, Ning Chen, Qiuxuan Feng, Zichen Zhou, Mengzhen Liu, Mingdong Wu, Tianxing Chen, Shanyu Rong, Jiaming Liu, Hao Dong, Shanghang Zhang
+- Authors: Yankai Fu, Qiuxuan Feng, Ning Chen, Zichen Zhou, Mengzhen Liu, Mingdong Wu, Tianxing Chen, Shanyu Rong, Jiaming Liu, Hao Dong, Shanghang Zhang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: Robotics, 3D perception, dexterous manipulation, correspondence, contact maps, bimanual
+- Tags: Robotics, 3D perception, dexterous manipulation, correspondence, contact maps, single-arm manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p110.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p110.pdf
 - Code/Project: https://aureleopku.github.io/CordViP
@@ -85,3 +85,11 @@ CordViP는 물체의 6D 자세와 손의 고유수용감각으로 손·물체 �
 - **Actual contribution:** To eliminate these limitations, we propose CordViP, a novel framework that ‘constructs and learns correspondences by leveraging the robust 6D pose estimation of objects and robot proprioception. (p. 1, Abstract).
 - **Evaluation boundary:** The visual results are shown in the figure 10. (p. 15, B. Implementation Details).
 - **Explicit failure boundary:** As shown in ‘Table VI, the image-based diffusion policy is highly sensitive to ‘camera viewpoints and completely fails across all three camera views. (p. 9, C. Efficiency).
+
+## 원문과 공개 자료
+
+- 물체 자세와 손 상태를 대응시켜 손·물체 점군을 정책에 넣는다. 실제 로봇은 UR5 팔 한 대와 LEAP Hand를 사용한다. [방법·평가](https://www.roboticsproceedings.org/rss21/p110.pdf#page=6)
+- RSS 표제면에서 공동 기여 저자 Qiuxuan Feng과 Ning Chen의 순서를 확인했다. [표제면](https://www.roboticsproceedings.org/rss21/p110.pdf#page=1)
+- 가중치 · CordViP 저자 모델 저장소의 체크포인트 · 2000.ckpt [배포 파일](https://huggingface.co/FengQiuxuan/CordViP/blob/a38ef22e010d2719e9913d2da2950b0c481c9975/2000.ckpt)
+- 코드 · 손·물체 대응 표현을 사용하는 실물 정책 구현 · train_policy/policy/CordViP/CordViP/CordViP_policy.py [배포 파일](https://raw.githubusercontent.com/xuanxuanzzzii/cordvip/ad6d441abe7b0480cf79b0311db266965c1313b6/train_policy/policy/CordViP/CordViP/CordViP_policy.py)
+- 데이터 · CordViP 저자 데이터 저장소의 첫 번째 기록 시연 표본 · recorded_data/demonstration_0/0 [배포 파일](https://huggingface.co/datasets/FengQiuxuan/CordViP/blob/15631769bc4ae91f12fbccd4e528c2acd096dcdd/recorded_data/demonstration_0/0)

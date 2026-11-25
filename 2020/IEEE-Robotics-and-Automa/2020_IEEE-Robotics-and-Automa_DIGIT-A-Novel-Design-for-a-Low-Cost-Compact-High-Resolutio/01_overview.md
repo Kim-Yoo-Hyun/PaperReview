@@ -13,7 +13,7 @@
 - Tags: Robotics, tactile sensing, dexterous manipulation, contact
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2020.2977257
 - Full-text retrieval: https://doi.org/10.1109/LRA.2020.2977257
-- Code/Project: https://digit.ml/
+- Code/Project: https://digit.ml/digit.html
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -81,3 +81,7 @@ DIGIT은 다지 손끝에 장착하는 소형 영상식 촉각 센서로 접촉 
 - **Actual contribution:** To better fulfill these requirements, in this paper, we present the design of a novel tactile sensor. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** LAMBETA et al.: DIGIT: A NOVEL DESIGN FOR A LOW-COST COMPACT HIGH-RESOLUTION TACTILE SENSOR 7 0 2 4 6 8 10 0 10 20 30 Number of actions Euclidean distance ... (p. 7, V. EXPERIMENTAL RESULTS).
 - **Explicit failure boundary:** (Bottom) Due to control noise, potential planning inaccuracies and the challenging nature of this task, the hand tends to drop marbles over time. (p. 7, V. EXPERIMENTAL RESULTS).
+
+## 원문과 공개 자료
+
+- 코드 · 원 DIGIT의 촉각 스트림 드라이버. 구슬 조작용 예측 제어기 전체의 공개 범위는 미확인 · digit_interface/digit.py [배포 파일](https://raw.githubusercontent.com/facebookresearch/digit-interface/87a28bbf2beee8008a5308e9a12d72e1bc4fefb9/digit_interface/digit.py)

@@ -13,7 +13,7 @@
 - Tags: Robotics, Reinforcement Learning, policy optimization, Off-Policy Learning
 - Official paper: https://arxiv.org/abs/1806.06920
 - Full-text retrieval: https://openreview.net/forum?id=S1ANxQW0b
-- Code/Project: not identified
+- Code/Project: https://github.com/google-deepmind/acme
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -81,3 +81,8 @@ MPO는 연속 제어에서 오프폴리시 경험으로 정책을 개선하는 �
 - **Actual contribution:** In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes. (p. 1, 1 INTRODUCTION).
 - **Evaluation boundary:** Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ature on three domains from the control suite. We plot the median performance over ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** The case for the Walker-2D parkour domain (where we compare against a PPO baseline) is even more striking: where standard PPO requires approximately 1M trajectories to find a good policy ... (p. 9, 5 EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 코드 · DeepMind Acme가 제공하는 MPO 학습기. 2018년 실험 실행본과의 동일성은 미확인 · acme/agents/tf/mpo/learning.py [배포 파일](https://raw.githubusercontent.com/google-deepmind/acme/1bc05bea97b94a2da7e5315b315118bdaa98f1f3/acme/agents/tf/mpo/learning.py)
+- 데이터 · 원문은 DeepMind Control Suite 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://arxiv.org/pdf/1806.06920)

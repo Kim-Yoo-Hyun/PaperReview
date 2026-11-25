@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICLR
-- Authors: Yecheng Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani, Dinesh Jayaraman, Yuke Zhu, Jim Fan, anima anandkumar
+- Authors: Yecheng Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani, Dinesh Jayaraman, Yuke Zhu, Linxi “Jim” Fan, Anima Anandkumar
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Reinforcement Learning, Reward Design, Large Language Model, NVIDIA
@@ -86,3 +86,9 @@ Eureka는 언어모델이 제안한 보상 코드를 강화학습 결과에 따�
 - **Actual contribution:** We introduce Evolution-driven Universal REward Kit for Agent (EUREKA), a novel reward design algorithm powered by coding LLMs with the following contributions: 1. (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Figure 10: EUREKA reward functions enjoy improved sample efficiency compared to various baseline reward functions on aggregate over 20 Dexterity tasks. Additional Evaluation Metrics. In Fig. 11, we present holistic ... (p. 28, Figure/Table caption).
 - **Explicit failure boundary:** This skill requires the cooperation of two hands to ensure that the cap does not fall 1[dist > 0.03] CatchAbreast (422, 52) This class corresponds to the Catch Abreast task. (p. 19, B ENVIRONMENT DETAILS).
+
+## 원문과 공개 자료
+
+- ICLR 게재본에 있는 Linxi “Jim” Fan과 Anima Anandkumar의 이름 표기를 반영했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2024/file/70c26937fbf3d4600b69a129031b66ec-Paper-Conference.pdf#page=1)
+- 가중치 · Eureka의 펜 회전 정책 체크포인트 · isaacgymenvs/isaacgymenvs/checkpoints/EurekaPenSpinning.pth [배포 파일](https://raw.githubusercontent.com/eureka-research/Eureka/9eee42808b52d8abc14845d1547bfde886403ccc/isaacgymenvs/isaacgymenvs/checkpoints/EurekaPenSpinning.pth)
+- 코드 · 보상 후보 생성·강화학습 평가·반복 개선 루프 · eureka/eureka.py [배포 파일](https://raw.githubusercontent.com/eureka-research/Eureka/9eee42808b52d8abc14845d1547bfde886403ccc/eureka/eureka.py)

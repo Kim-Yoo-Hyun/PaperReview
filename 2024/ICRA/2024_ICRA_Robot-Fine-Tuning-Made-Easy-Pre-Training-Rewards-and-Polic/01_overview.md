@@ -85,3 +85,7 @@ RoboFuME는 기존 조작 자료에서 시작해 실제 로봇이 사람이 매�
 - **Actual contribution:** We evaluate our framework by pre-training it on the Bridge dataset [19] and testing it on a diverse set of real-world downstream tasks: cloth folding, cloth covering, sponge pickand-place, placing ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** After 30k steps of autonomous online interaction, our method shows relative improvement of 51% upon the pre-trained performance, and outperforms BC by 58% on an average. (p. 5, V. EXPERIMENTS).
 - **Explicit failure boundary:** All tasks use 50 forward and 50 backward demos for the target task, and fewer than 20 combined trajectories of failures. (p. 5, V. EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 코드 · 공식 프로젝트는 코드 공개를 예고하고 있다. [저자 공개 안내](https://robofume.github.io/)

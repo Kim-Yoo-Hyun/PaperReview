@@ -82,3 +82,7 @@ Logic-Geometric Programming은 기호적 행동 순서가 연속 궤적의 제�
 - **Actual contribution:** Besides the novel formulation of manipulation planning as an LGP, we think of the concept of the effective end space and its optimization as a search heuristic as the core ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** For brevity, we provide a detailed definition of ψ(x(T)) and quantitative results on achieved scores in an appendix on the author webpage. (p. 5, 5 Experiments).
 - **Explicit failure boundary:** We did not consider articulated fingers and optimize over finger motions for grasping as this is unrealistic to transfer to real-world. (p. 5, 5 Experiments).
+
+## 원문과 공개 자료
+
+- 데이터 · 원문은 탑 쌓기 계획 문제 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://ijcai.org/proceedings/2015/0274.pdf)

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Joao Marcos Correia Marques, Nils Dengler, Jesper Mücke, Tobias Zaenker, Shenlong Wang, Maren Bennewitz, Kris Hauser
+- Authors: Joao Marcos Correia Marques, Nils Dengler, Tobias Zaenker, Jesper Mücke, Shenlong Wang, Maren Bennewitz, Kris Hauser
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, active perception, mapping, uncertainty, manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p039.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p039.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/NilsDengler/manipulation_enhanced_map_prediction
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,10 @@
 - **Actual contribution:** Therefore, we propose Calibrated Neural-Accelerated Belief Updates (CNABUs) to learn a belief propagation model that generalizes to novel scenarios and provides confidence: calibrated predictions for unknown areas. (p. 1, Abstract).
 - **Evaluation boundary:** We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared to state-of-the-art [Il]. (p. 6, V. EXPERIMENTS).
 - **Explicit failure boundary:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, and although the computer vision ... (p. 9, VI. LIMITATIONS).
+
+## 원문과 공개 자료
+
+- RSS 표제면에서 Tobias Zaenker와 Jesper Mücke의 순서를 확인했다. [표제면](https://www.roboticsproceedings.org/rss21/p039.pdf#page=1)
+- 가중치 · 물체를 밀 때의 지도 변화를 예측하는 체크포인트 · shelf_gym/scripts/model/push_predictor_new.ckpt [배포 파일](https://github.com/NilsDengler/manipulation_enhanced_map_prediction/blob/8ffa53f0c32e31f81ac9c1a75612b2e5a9443456/shelf_gym/scripts/model/push_predictor_new.ckpt)
+- 코드 · CNABU 시점·밀기 행동 선택 파이프라인 · shelf_gym/scripts/run_cnabu_pipeline.py [배포 파일](https://raw.githubusercontent.com/NilsDengler/manipulation_enhanced_map_prediction/8ffa53f0c32e31f81ac9c1a75612b2e5a9443456/shelf_gym/scripts/run_cnabu_pipeline.py)
+- 데이터 · 선반 지도 예측 저장소의 HDF5 입력 표본 · shelf_gym/scripts/model/dataset.hdf5 [배포 파일](https://raw.githubusercontent.com/NilsDengler/manipulation_enhanced_map_prediction/8ffa53f0c32e31f81ac9c1a75612b2e5a9443456/shelf_gym/scripts/model/dataset.hdf5)

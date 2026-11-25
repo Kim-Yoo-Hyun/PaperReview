@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Delin Qu, Haoming Song, Qizhi Chen, Yuanqi Yao, Xinyi Ye, Jiayuan Gu, Zhigang Wang, Yan Ding, Bin Zhao, Dong Wang, Xuelong Li
+- Authors: Delin Qu, Haoming Song, Qizhi Chen, Dong Wang, Yuanqi Yao, Xinyi Ye, Yan Ding, Zhigang Wang, Jiayuan Gu, Bin Zhao, Xuelong Li
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, Robotics, 3D spatial representation, action representation, cross-embodiment, robot data
 - Official paper: https://www.roboticsproceedings.org/rss21/p011.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p011.pdf
-- Code/Project: https://github.com/SpatialVLA/SpatialVLA
+- Code/Project: https://spatialvla.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,9 @@ SpatialVLA는 관측에 3D 위치를 부여하고 로봇 움직임을 적응형 
 - **Actual contribution:** In summary, the contributions of this work consist of a novel generalist robot policy that explores spatial representations for robot foundation models, sophisticated designs on Ego3D Posi tion Encoding and ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** For a more comprehensive evaluation, we conduct expernts on a real-world WidowX robot platform from the BridgeData V2 evaluation [64]. (p. 6, 10 Ablations on Design).
 - **Explicit failure boundary:** However, in moderately complex tasks (#3-7), ‘most policies, such as RT-1-X, Octo, and RoboVLM struggle with manipulation, frequently encountering issues like object nisidentfication and grasp failures. (p. 7, 10 Ablations on Design).
+
+## 원문과 공개 자료
+
+- RSS 게재본에서 Dong Wang을 포함한 네 번째 이후 저자의 순서를 확인했다. [표제면](https://www.roboticsproceedings.org/rss21/p011.pdf#page=1)
+- 가중치 · SpatialVLA 기본 모델의 두 샤드 중 첫 번째 · model-00001-of-00002.safetensors [배포 파일](https://huggingface.co/IPEC-COMMUNITY/spatialvla-4b-224-pt/blob/886c4557dfde53b44c0f74fde7d89bf83a26c3cd/model-00001-of-00002.safetensors)
+- 코드 · SpatialVLA 모델 및 공간 행동 토큰 예측 구현 · model/modeling_spatialvla.py [배포 파일](https://raw.githubusercontent.com/SpatialVLA/SpatialVLA/18fd74b2a633ec8d9ec7aadcd803969555cc9fbd/model/modeling_spatialvla.py)

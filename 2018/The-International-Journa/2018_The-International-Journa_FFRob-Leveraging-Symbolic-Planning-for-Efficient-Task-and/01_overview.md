@@ -85,3 +85,7 @@ FFRob은 기호 계획의 휴리스틱에 물체 배치와 로봇의 도달 가�
 - **Actual contribution:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions. (p. 2, 1.1 Approach).
 - **Evaluation boundary:** Experiment results over 50 trials. informative heuristic estimate. (p. 31, 11.4 Results).
 - **Explicit failure boundary:** In practice, we do not increase the sampling parameter sizes upon a sampling failure. (p. 30, 11 Experiments).
+
+## 원문과 공개 자료
+
+- 데이터 · 원문은 FFRob pick-place-move 문제군 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://arxiv.org/pdf/1608.01335v2)

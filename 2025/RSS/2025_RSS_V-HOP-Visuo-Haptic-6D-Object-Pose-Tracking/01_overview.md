@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Hongyu Li, Mingxi Jia, Mete Tuluhan Akbulut, Yu Xiang, George Konidaris, Srinath Sridhar
+- Authors: Hongyu Li, Mingxi Jia, Tuluhan Akbulut, Yu Xiang, George Konidaris, Srinath Sridhar
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, visuo-haptic perception, 6D pose, tactile sensing, state estimation, manipulation
@@ -86,3 +86,10 @@ V-HOP은 시각과 손의 접촉 관측을 결합해 조작 중인 물체의 6D 
 - **Actual contribution:** First, we introduce a novel unified haptic representation that facilitates cross-embodiment learning. (p. 1, 1. INTRODUCTION).
 - **Evaluation boundary:** Our results show that \V-HOP consistently outperforms FoundationPose in both ADD and ADD-S metrics under different levels of occlusion. ‘These results underscore the importance of integrating visual and haptic information ... (p. 7, experiment).
 - **Explicit failure boundary:** 1) If the grasp attempt fails, the robot must detect the failure based on the real-time object pose and reattempt the grasp. (p. 7, B. Bimanual Handover Experiment).
+
+## 원문과 공개 자료
+
+- RSS 게재본에서 세 번째 저자가 사용하는 이름은 Tuluhan Akbulut이다. [표제면](https://www.roboticsproceedings.org/rss21/p037.pdf#page=1)
+- 가중치 · V-HOP 저자 저장소가 배포한 추적기 체크포인트 · v-hop.ckpt [배포 파일](https://drive.google.com/file/d/1aRIzmf4PaeC62diDl3ifxVq7p0wqP2ud/view)
+- 코드 · 시각·촉각 물체 자세 추적기의 학습 코드 · train.py [배포 파일](https://raw.githubusercontent.com/brown-ivl/v-hop/b849b3521b3ac70792a3707626694b0b0e987381/train.py)
+- 데이터 · V-HOP 저자 저장소의 추적 자료 묶음 · subset.zip [배포 파일](https://drive.google.com/file/d/1wGhhdMtaI73hZQs1-i7h4___DfHXImDi/view)

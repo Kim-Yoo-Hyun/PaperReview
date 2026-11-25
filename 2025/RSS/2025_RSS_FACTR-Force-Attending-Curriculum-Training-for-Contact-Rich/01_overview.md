@@ -83,3 +83,7 @@ FACTR는 힘 피드백이 있는 원격조작과 시각 정보의 오염 정도�
 - **Actual contribution:** For the decoder, we introduce & action tokens, A ¢ R**¢. (p. 5, A. Problem Statement and Base Model).
 - **Evaluation boundary:** Our experiments show that our system allows users to ‘complete tasks with 64.7% higher task completion rate, 37.4% reduced completion time, and 83.3% improvement in the subjective ease of use ... (p. 7, B. Teleoperation Evaluation).
 - **Explicit failure boundary:** While without the curriculum, the policy does not pay enough attention 10 force, and either fails to lift or balance the novel boxes. (p. 8, C. Policy Evaluation).
+
+## 원문과 공개 자료
+
+- 코드 · FACTR 토크 피드백 원격조작 노드 · src/factr_teleop/factr_teleop/factr_teleop.py [배포 파일](https://raw.githubusercontent.com/RaindragonD/factr_teleop/7a07ab3629af03a91c0198df7c44a0082dca77ab/src/factr_teleop/factr_teleop/factr_teleop.py)

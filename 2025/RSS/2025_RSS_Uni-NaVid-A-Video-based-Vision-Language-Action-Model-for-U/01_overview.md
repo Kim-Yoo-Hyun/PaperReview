@@ -13,7 +13,7 @@
 - Tags: VLA, Navigation, embodied navigation, video policy, low-level control, robot data
 - Official paper: https://www.roboticsproceedings.org/rss21/p013.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p013.pdf
-- Code/Project: https://github.com/jzhzhang/Uni-NaVid
+- Code/Project: https://pku-epic.github.io/Uni-NaVid/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,9 @@ Uni-NaVid는 언어 지시와 RGB 영상 스트림을 받아 서로 다른 내�
 - **Actual contribution:** However, our goal is to train and ‘evaluate our method on mainstream datasets to clearly justify the performance of our approach. (p. 3, 1. Ivrropuction).
 - **Evaluation boundary:** The results in Table V demonstrate that our method achieves significant improvement over the zero-shot method (VLFM [93] and even outperforms the fine-tuned method (DAgRL+0D [94]) on the VAL SEEN ... (p. 8, B. Individual Task Results).
 - **Explicit failure boundary:** Despite the promising results, Uni-NaVid has several limitations. (p. 11, C. Qualitative Results in Real-World).
+
+## 원문과 공개 자료
+
+- 가중치 · Uni-NaVid 7B 영상 정책의 첫 가중치 샤드 · uninavid-7b-full-224-video-fps-1-grid-2/pytorch_model-00001-of-00002.bin [배포 파일](https://huggingface.co/Jzzhang/Uni-NaVid/blob/0437222534b2a19abeb20710bfd53c44c5bf3dd4/uninavid-7b-full-224-video-fps-1-grid-2/pytorch_model-00001-of-00002.bin)
+- 코드 · Uni-NaVid의 영상·언어 내비게이션 학습 코드 · uninavid/train/train.py [배포 파일](https://raw.githubusercontent.com/jzhzhang/Uni-NaVid/79ef5ea3fea14c205342d1ab070563d84c7a966a/uninavid/train/train.py)
+- 데이터 · 저자가 공개한 내비게이션 훈련 표본 주석 · Nav-Finetune/open_uninavid_sampled_500.json [배포 파일](https://huggingface.co/Jzzhang/Uni-NaVid/blob/0437222534b2a19abeb20710bfd53c44c5bf3dd4/Nav-Finetune/open_uninavid_sampled_500.json)

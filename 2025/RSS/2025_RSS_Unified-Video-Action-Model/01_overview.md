@@ -13,7 +13,7 @@
 - Tags: Robotics, world model, video action model, Diffusion, inverse dynamics, generalist policy
 - Official paper: https://www.roboticsproceedings.org/rss21/p074.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p074.pdf
-- Code/Project: not identified
+- Code/Project: https://unified-video-action-model.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,9 @@ UVA는 비디오와 로봇 행동을 공동 예측하되 실행 시에는 영상
 - **Actual contribution:** ‘To address these limitations, we propose UVA, « Unified Video and Action Mode! designed to simultaneously model videos and actions - capturing the underlying interactions between visuals and actions to ... (p. 1, 1. Iyrropucrion).
 - **Evaluation boundary:** We evaluate policy learning results with UVA compared to the baseline methods on a few different axes: 1) action prediction accuracy, 2) inference speed, 3) robustness to visual disturbances, 4) ... (p. 6, B. Real-world Benchmarks).
 - **Explicit failure boundary:** Limitation and Future Work: One limitation of our frame- ‘work is that it does not currently leverage large amounts of actionless video data, which could provide valuable additional supervision. (p. 10, IX. Discussion).
+
+## 원문과 공개 자료
+
+- 가중치 · PushT에서 학습한 UVA 체크포인트 · pusht.ckpt [배포 파일](https://drive.google.com/file/d/1OduHcxfc2hqUYSccMQNf9g-vAt-q2UhF/view)
+- 코드 · 공유 비디오·행동 모델 학습 구현 · unified_video_action/workspace/train_unified_video_action_workspace.py [배포 파일](https://raw.githubusercontent.com/ShuangLI59/unified_video_action/fe3dec81af565fbb2d686072722f12340be31293/unified_video_action/workspace/train_unified_video_action_workspace.py)
+- 데이터 · 저자가 만든 다중 과제 PushT 자료 · pusht_multitask.zip [배포 파일](https://drive.google.com/file/d/14VqUC_LL411o9F_qdjVZlgiRBjZknw01/view)

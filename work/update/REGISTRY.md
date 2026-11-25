@@ -143,6 +143,30 @@ Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인�
 - **저자와 판본.** 게재본 표제면을 기준으로 저자 표기 10편을 교정하고 이전 서지를 보존했다. Octopi의 둘째 저자는 Kelvin Lin, Reactive Diffusion Policy의 다섯째 저자는 Yuan Fang이다. TactAlign은 Akash Sharma의 소속이 게재본과 저자판에서 달라 판본을 함께 표시했다. [Octopi 표제면](https://www.roboticsproceedings.org/rss20/p066.pdf#page=1) · [Reactive Diffusion Policy 표제면](https://www.roboticsproceedings.org/rss21/p052.pdf#page=1) · [TactAlign 게재본](https://www.roboticsproceedings.org/rss22/p006.pdf#page=1) · [TactAlign 저자판](https://arxiv.org/pdf/2602.13579#page=1)
 - **남은 분류 질문.** 촉각 표현의 자기지도 학습, 실패 검출기 보정, 그래프에서의 이동 후보 선택에는 현행 방법·행동 표현 어휘를 어디까지 적용할 것인가? 공통 방법 축 14편, 기체 4편, 자료 출처 4편은 확인한 사실을 서술하고 해당 축은 `unknown`으로 두었다. 언어 조건부 행동 정책 15편과 G1 상지 조작 1편에 전용 필드를 붙였다. 50편 모두 레코드 단위로는 `부분확인`이다. 원문이 명시한 한계·적용 조건 22편, 후속 연구에서 지적한 한계 1편, 직접 선행 16건에는 해당 쪽을 연결했다. [분류와 증거](../sources/batches/core_next_04.yaml) · [원문 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
 
+## 다섯 번째 배치 태그 매핑
+
+| 기존 검색어·표기 | 원문에서 확인한 분류 기준 |
+|---|---|
+| task and motion planning, model predictive control | LGP·FFRob의 기하 제약과 MPPI의 미래 궤적 최적화를 `모델기반`으로 기록했다. 경험으로 정책을 개선한 경우에만 RL을 부여했다. |
+| representation learning, robot data | R3M의 사람 영상 사전학습과 로봇 행동 복제에 쓰인 자료를 구분했다. Dense Object Nets의 픽셀 대응 학습은 방법 축에 맞는 값이 없어 `unknown`이다. |
+| humanoid, dexterous manipulation | 고정 손목의 Allegro Hand, 팔에 장착한 다지 손, GR-1·H1의 상지 조작, 시뮬레이터가 지원하는 보행을 구별했다. |
+| VLA, world model, diffusion | RT-H의 공유 모델, CodeDiffuser의 고수준 지각 코드와 저수준 확산 정책, FOREWARN의 기존 행동 후보 평가를 원문에 따라 구분했다. |
+| RGB-D, tactile sensing | 입력 경로를 확인했다. SpatialVLA는 RGB에서 깊이를 추정하고, UniVLA는 실물 RGB-D 카메라의 RGB만 쓴다. DIGIT의 접촉 영상은 촉각으로 분류했다. |
+| code, weights, data | 드라이버·센서 보정 모델·장면별 파라미터·궤적은 확인한 구성요소와 파일을 명시했다. 공개 예고와 배포 파일 미확인은 따로 기록했다. |
+
+11월 25일 *DexterityGen*부터 *RoboSplat*까지 NEXT 50편의 원문을 대조했다. 다섯 배치 250편과 별도 등록 NEXT 23편을 합쳐 집중 읽기 500편 중 **273편(54.6%)**에 다축 태그가 있다. 각 레코드에 원문 쪽수, 판본 식별용 SHA-256, 변경 전 값과 공개 근거를 기록했다. [논문별 분류](../sources/batches/core_next_05.yaml) · [다음 50편](../../TODO.md)
+
+| 자료 | 공개 Y | 부분 공개 | 공개 예정 N | 미확인 |
+|---|---:|---:|---:|---:|
+| 코드 | 26 | 10 | 1 | 13 |
+| 가중치 | 1 | 18 | 1 | 30 |
+| 데이터 | 2 | 21 | 1 | 26 |
+
+- **공개 범위.** 원 DIGIT은 센서 드라이버를 배포했다. 기존 링크는 후속 센서 DIGIT 360을 가리켰다. DexGen의 공개 링크는 파지 최적화 모듈까지 확인된다. CodeDiffuser는 시뮬레이션 코드가 있고 실물 배포 코드와 데이터·체크포인트 다운로드는 저자 목록에 미완료로 표시돼 있다. [DIGIT 설계·드라이버](https://digit.ml/digit.html) · [DexGen](https://zhaohengyin.github.io/dexteritygen/) · [CodeDiffuser 배포 안내](https://github.com/lyttttt3333/CodeDiffuser)
+- **서지와 실험 조건.** 15편의 저자 표기·순서를 교정했다. RoboVerse 게재본의 37명 중 기존 목록에서 빠진 세 사람은 Yen-Jen Wang, Dylan Goetting, Carlo Sferrazza다. CordViP의 실물 실험은 UR5 한 대와 LEAP Hand 구성으로, 기존 양팔 검색 태그를 교정했다. [RoboVerse 표제면](https://www.roboticsproceedings.org/rss21/p022.pdf#page=1) · [CordViP 실물 구성](https://www.roboticsproceedings.org/rss21/p110.pdf#page=6)
+- **중복 후보.** 배치 내부 1,225쌍과 나머지 원장과의 60,100쌍에서 식별자와 제목·별칭을 대조했다. 제목 유사도로 잡힌 두 쌍은 GR00T N1(`pr-0869`)과 각각 N1.5(`pr-0917`), N1.6(`pr-0918`)이었다. 저자가 구분해 배포한 후속 버전이므로 세 ID를 유지했다. [N1 모델 카드](https://huggingface.co/nvidia/GR00T-N1-2B) · [N1.5 변경점](https://research.nvidia.com/labs/gear/gr00t-n1_5/) · [N1.6 변경점](https://research.nvidia.com/labs/gear/gr00t-n1_6/)
+- **남은 분류 질문.** 자기지도 시각 대응(Dense Object Nets), 센서 융합 자세 추적(V-HOP), 로봇 데이터 수집 시스템(AutoRT)에 별도 방법 태그가 필요한가? 세 편은 현행 방법 축에 `unknown`을 썼다. VLA 및 휴머노이드 전용 필드는 각각 10편에 작성했고, 원문 한계 30편과 직접 선행 관계 13건에는 페이지를 붙였다. 50편 모두 레코드 종합 판정은 `부분확인`이다. [배치 원장](../sources/batches/core_next_05.yaml) · [공개 자료 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
+
 ## 외부 목록 대조와 CORE 심화 감사
 
 2026-11-19에 서베이 3편의 참고문헌, 6개 학회 3개년 목록, 연구실·기업 3곳 및 큐레이션 1곳을 대조했다. 등록 심사 후보 17편의 출처를 논문별로 보존했다. [목록별 커버리지와 하위 주제 순위](../../research/EXTERNAL_COVERAGE.md) · [후보 YAML](../sources/batches/missing_candidates_2026.yaml)

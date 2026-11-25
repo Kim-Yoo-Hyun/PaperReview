@@ -88,3 +88,8 @@ REASSEMBLE은 NIST 조립 보드에서 부품을 집고 끼우고 빼고 놓는 
 - **Actual contribution:** To. bridge this gap, we present REASSEMBLE (Robotic assEmbly disASSEMBLy datasEt), a 1 new dataset designed specifically for contact-rich manipalation (p. 1, Abstract).
 - **Evaluation boundary:** Preliminary results demonstrate improved performance through the integration of visual, auditory, force-torque (wrench), gripper, and pose information. ‘These findings are promising, and we plan 10 conduct a more comprehensive analysis ... (p. 11, V. BENCHMARKS).
 - **Explicit failure boundary:** ‘The number of failed demonstrations per action can serve as ‘4 metric for task difficulty, as operators are more likely to fail ‘when the motion is complex. (p. 7, B. Action difficulty and failure modes).
+
+## 원문과 공개 자료
+
+- 코드 · REASSEMBLE 기록을 여는 공식 입출력 코드 · REASSEMBLE/io.py [배포 파일](https://raw.githubusercontent.com/TUWIEN-ASL/REASSEMBLE/432cc15ce3e028edc2f98a786f28bf6baf31ac6f/REASSEMBLE/io.py)
+- 데이터 · TU Wien 공개 기록의 REASSEMBLE 주 시연 데이터 압축본 · data.zip [배포 파일](https://researchdata.tuwien.ac.at/api/records/0ewrv-8cb44/files/data.zip/content)

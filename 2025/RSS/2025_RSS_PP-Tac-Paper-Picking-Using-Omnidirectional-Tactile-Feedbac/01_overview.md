@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Pei Lin, Yuzhe Huang, Jianpeng Ma, Chenxi Xiao, Wanlin Li, Ziyuan Jiao
+- Authors: Pei Lin, Yuzhe Huang, Wanlin Li, Jianpeng Ma, Chenxi Xiao, Ziyuan Jiao
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile sensing, dexterous manipulation, deformable objects, force control, slip detection
 - Official paper: https://www.roboticsproceedings.org/rss21/p056.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p056.pdf
-- Code/Project: not identified
+- Code/Project: https://peilin-666.github.io/projects/PP-Tac/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,10 @@ PP-Tac은 종이처럼 얇고 휘는 물체를 다지 손으로 집을 때 손�
 - **Actual contribution:** Despite recent advances in robotic Robots are increasingly popular as assistive agents in evhardware and embodied Al, existing systems continue to struggle eryday life, particularly within household environments (3) with ... (p. 1, Abstract).
 - **Evaluation boundary:** Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper bag) across four terrain setups (plane, ... (p. 9, Figure/Table caption).
 - **Explicit failure boundary:** However, vision-based methods often struggle in real-world DOM tasks due to variability in object appearance, unknown physical properties, visual occlusions [25, 6], and inconsistent lighting conditions [48, 22) ‘These limitations ... (p. 2, A. Deformable Object Manipulation).
+
+## 원문과 공개 자료
+
+- RSS 표제면에서 Wanlin Li, Jianpeng Ma, Chenxi Xiao의 순서를 확인했다. [표제면](https://www.roboticsproceedings.org/rss21/p056.pdf#page=1)
+- 가중치 · R-Tac 센서 보정 훈련의 모델 파일 · Calibration/training/checkpoint/20241031/ckpt/model_18 [배포 파일](https://raw.githubusercontent.com/bigai-ai/PP-Tac/e4dc92daaf1cb31098316b7253821bcbbf77d095/Calibration/training/checkpoint/20241031/ckpt/model_18)
+- 코드 · R-Tac 센서 보정 코드. 전체 집기 정책과 범위를 구별 · Calibration/3SensorCalibration.py [배포 파일](https://raw.githubusercontent.com/bigai-ai/PP-Tac/e4dc92daaf1cb31098316b7253821bcbbf77d095/Calibration/3SensorCalibration.py)
+- 데이터 · R-Tac 센서 외부 보정의 촬영 표본 · Calibration/sensor1/calib_extrinsic/01_02_06_14_22.png [배포 파일](https://raw.githubusercontent.com/bigai-ai/PP-Tac/e4dc92daaf1cb31098316b7253821bcbbf77d095/Calibration/sensor1/calib_extrinsic/01_02_06_14_22.png)

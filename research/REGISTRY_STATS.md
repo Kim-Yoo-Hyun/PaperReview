@@ -7,7 +7,7 @@
 ## Snapshot
 
 - Papers: **1252**
-- Resources in the combined view: **724**
+- Resources in the combined view: **737**
 - Curated relation edges: **91**
 - Papers with outgoing relations: **69**
 - Papers participating in a relation: **109**
@@ -112,19 +112,19 @@
 
 | Value | Count |
 |---|---:|
-| not_identified | 615 |
-| released | 457 |
-| project_only | 159 |
-| not_released | 21 |
+| not_identified | 603 |
+| released | 478 |
+| project_only | 149 |
+| not_released | 22 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1020 |
-| released | 150 |
-| not_applicable | 78 |
-| not_released | 4 |
+| not_identified | 1003 |
+| released | 173 |
+| not_applicable | 71 |
+| not_released | 5 |
 
 ## Evaluation type
 
@@ -191,9 +191,10 @@
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1121 |
-| reported | 127 |
+| not_recorded | 1105 |
+| reported | 142 |
 | not_applicable | 4 |
+| not_released | 1 |
 
 ## Configuration status
 

@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, safe control, collision avoidance, control barrier function, aerial robotics, sim-to-real`.
+- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, safe control, collision avoidance, control barrier function, aerial robotics, sim-to-real, flight testing`.
 - **Reading predecessor in the generated track queue:** Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Learned Perceptive Forward Dynamics Model for Safe and Platform-aware Robotic Navigation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

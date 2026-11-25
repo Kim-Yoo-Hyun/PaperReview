@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Sirui Chen, Sergio Francisco Aguilera Marinovic, Soshi Iba, Rana Soltani Zarrin
+- Authors: Sirui Chen, Sergio Aguilera Marinovic, Soshi Iba, Rana Soltani Zarrin
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile sensing, force uncertainty, dexterous manipulation, extrinsic manipulation, geometric planning
@@ -88,3 +88,7 @@ GeoDEx는 촉각 센서의 힘 측정에 오차가 있을 때 접촉 기하를 �
 - **Actual contribution:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
 - **Evaluation boundary:** The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for the success and failure cases is presented in table Ill, We can ... (p. 8, C. Hardware Results).
 - **Explicit failure boundary:** Through various experimental results, we show that while relying on direct inaccurate and noisy force readings from tactile sensors results in unstable or failed manipulation, our method enables successful grasping ... (p. 1, Abstract).
+
+## 원문과 공개 자료
+
+- RSS 게재본에 쓰인 두 번째 저자의 이름은 Sergio Aguilera Marinovic이다. [표제면](https://www.roboticsproceedings.org/rss21/p057.pdf#page=1)

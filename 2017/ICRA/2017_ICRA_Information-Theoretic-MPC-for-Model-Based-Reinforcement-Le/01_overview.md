@@ -13,7 +13,7 @@
 - Tags: Robotics, model predictive control, model-based RL, Planning
 - Official paper: https://ieeexplore.ieee.org/document/7989202/
 - Full-text retrieval: https://ieeexplore.ieee.org/document/7989202/
-- Code/Project: not identified
+- Code/Project: https://github.com/AutoRally/autorally
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,8 @@
 - **Actual contribution:** This limits the method's ability to discover novel optimal control behaviors. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** The final performance margins for both the cart-pole and quadrotor are within 10% of what can be achieved with perfect model knowledge, which indicates that, in this case, our MPC ... (p. 6, V. SIMULATED RESULTS).
 - **Explicit failure boundary:** Running the algorithm without a bootstrapped neural network results in repeated failures. (p. 5, V. SIMULATED RESULTS).
+
+## 원문과 공개 자료
+
+- 코드 · AutoRally 차량의 MPPI 제어기 구현 · autorally_control/include/autorally_control/path_integral/mppi_controller.cu [배포 파일](https://raw.githubusercontent.com/AutoRally/autorally/48bae14fe4b2d56e5ca11fd2fec3d7dfac7a0e75/autorally_control/include/autorally_control/path_integral/mppi_controller.cu)
+- 데이터 · 원문은 cart-pole swing-up 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://homes.cs.washington.edu/~bboots/files/InformationTheoreticMPC.pdf)

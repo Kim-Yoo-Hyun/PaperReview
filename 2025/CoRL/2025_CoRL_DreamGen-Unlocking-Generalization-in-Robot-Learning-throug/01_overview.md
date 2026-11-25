@@ -85,3 +85,8 @@ DreamGen은 비디오 세계 모델이 만든 로봇 영상에서 의사 행동�
 - **Actual contribution:** Lastly, we introduce DreamGen Bench (Section 4), a new video generation benchmark designed to evaluate how well different video world models adapt to novel robot embodiments. (p. 3, 1 Introduction).
 - **Evaluation boundary:** Figure 5: Real-world Robot Evaluation Results. The red rectangular box shows the range of object randomization during training and evaluation. Low Data denotes training 10% of available training data (only ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** 7 Limitation Our approach is complementary to existing methods that learn from videos, although we do not directly benchmark against them. (p. 9, 6 Conclusion).
+
+## 원문과 공개 자료
+
+- 코드 · 생성 영상에서 역동역학 의사 행동을 추출하는 DreamGen 구현 · IDM_dump/dump_idm_actions.py [배포 파일](https://raw.githubusercontent.com/NVIDIA/GR00T-Dreams/ec3881d44545016871997f8e17dd15f1d792e91d/IDM_dump/dump_idm_actions.py)
+- 데이터 · DreamGen 역동역학 훈련 명령에 포함한 시뮬레이션 예제 궤적 · demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet [배포 파일](https://raw.githubusercontent.com/NVIDIA/GR00T-Dreams/ec3881d44545016871997f8e17dd15f1d792e91d/demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet)

@@ -13,7 +13,7 @@
 - Tags: Robotics, synthetic data, demonstration generation, 3D perception, sim-to-real, manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p146.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p146.pdf
-- Code/Project: not identified
+- Code/Project: https://yangsizhe.github.io/robosplat/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,8 @@ RoboSplat은 한 번의 실제 시연을 3D 가우시안 장면으로 재구성�
 - **Actual contribution:** To generate high-fidelity and diverse data from a single expert trajectory, we present RoboSplat, a novel demonstration generation approach based on 3DGS. (p. 3, IV. METHODOLOGY).
 - **Evaluation boundary:** Success rate (SR) is chosen as the evaluation metric in all experiments. (p. 7, A. Experimental Setup).
 - **Explicit failure boundary:** The drawer is placed in a Sem%Sem workspace, with a fixed orientation, The target object is located in a 1em> 10em workspace, whose rotation falls into range [~E, 3]. (p. 6, A. Experimental Setup).
+
+## 원문과 공개 자료
+
+- 코드 · 3D 장면 편집으로 단일 시연을 증강하는 구현 · data_aug/generate_demo.py [배포 파일](https://raw.githubusercontent.com/InternRobotics/robosplat/372c9c735555ea79ffab1361afd4ca20f4ff1105/data_aug/generate_demo.py)
+- 데이터 · RoboSplat 저자 배포처의 데이터 및 장면 자산 압축본 · data.zip [배포 파일](https://drive.google.com/file/d/1i8bmdUAE_bf4ZP3-E5slG-PIoto9fyaA/view)

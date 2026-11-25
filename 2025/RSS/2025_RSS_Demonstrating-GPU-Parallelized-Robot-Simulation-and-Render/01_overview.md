@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-Kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Viswesh Nagaswamy Rajesh, Yong Woo Choi, Yen-Ru Chen, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su
+- Authors: Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Viswesh Nagaswamy Rajesh, Yong Woo Choi, Yen-Ru Chen, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, simulation, Benchmark, robot data, contact-rich manipulation, sim-to-real, humanoid
@@ -86,3 +86,10 @@ ManiSkill3는 접촉이 많은 로봇 과제를 위해 물리 시뮬레이션과
 - **Actual contribution:** The core contributions of ManiSkillS that set it apart from existing simulators are as follows: (p. 1, 1. INTRODUCTION).
 - **Evaluation boundary:** ManiSkill3 provides several popular robot learning. baselines as well as simple reproducible setups for end-to-end trainable vision-based sim2real policies. (p. 7, IV. BASELINES AND RESULTS).
 - **Explicit failure boundary:** Implementation Details: We further make several modifications to ReplicaCAD to make it completely interactive as some of the collision meshes for articulations were modelled incorrectly and thus did not support ... (p. 16, C. Room Scale Environments).
+
+## 원문과 공개 자료
+
+- RSS 표제면의 Tse-kai Chan 표기를 반영했다. [표제면](https://www.roboticsproceedings.org/rss21/p021.pdf#page=1)
+- 가중치 · ANYmal 도달 환경의 PPO 체크포인트 · demos/AnymalC-Reach-v1/rl/ppo_pd_joint_delta_pos_ckpt.pt [배포 파일](https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations/blob/d674485bbffdd533914e52d272fdda34c0515608/demos/AnymalC-Reach-v1/rl/ppo_pd_joint_delta_pos_ckpt.pt)
+- 코드 · ManiSkill3 탁상 조작 시뮬레이터 과제 구현 · mani_skill/envs/tasks/tabletop/pick_cube.py [배포 파일](https://raw.githubusercontent.com/haosulab/ManiSkill/62ff3a5896b4d5b4cf0ac4c8d79afe600c9404a3/mani_skill/envs/tasks/tabletop/pick_cube.py)
+- 데이터 · ManiSkill3 ANYmal 도달 과제 시연 압축본 · demos/AnymalC-Reach-v1.zip [배포 파일](https://huggingface.co/datasets/haosulab/ManiSkill_Demonstrations/blob/d674485bbffdd533914e52d272fdda34c0515608/demos/AnymalC-Reach-v1.zip)

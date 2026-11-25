@@ -89,3 +89,9 @@ DexGen은 시뮬레이션에서 배운 손안 조작을 바탕으로 사람이 �
 - **Actual contribution:** "Motivated by these observations, in this paper, we propose (p. 2, 1. INTRODUCTION).
 - **Evaluation boundary:** figure, DexGen can successfully improve the performance of these polici (p. 7, IV. EXPERIMENTS).
 - **Explicit failure boundary:** We find that without our assistance, the noisy ‘expert has much more frequent failures. (p. 7, B. Simulated Experiments).
+
+## 원문과 공개 자료
+
+- PPO로 수집한 손안 조작 궤적에서 명령 조건부 제어기를 학습한다. 손가락 관절 이력과 사람의 거친 명령을 쓰며 실물 구성은 Franka 팔에 장착한 Allegro Hand다. [방법·평가](https://www.roboticsproceedings.org/rss21/p103.pdf#page=6)
+- 코드 · 저자 페이지가 연결하는 파지 최적화 구성요소 Lightning Grasp · lygra/batch_grasp_optimizer.py [배포 파일](https://raw.githubusercontent.com/zhaohengyin/lightning-grasp/af43818e864b0389c97b73429e5e60de2a2de593/lygra/batch_grasp_optimizer.py)
+- 데이터 · 원문은 Allegro Hand 도구 조작 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://www.roboticsproceedings.org/rss21/p103.pdf)

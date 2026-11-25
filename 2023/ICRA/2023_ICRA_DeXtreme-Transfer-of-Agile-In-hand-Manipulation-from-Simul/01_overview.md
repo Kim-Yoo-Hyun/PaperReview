@@ -13,7 +13,7 @@
 - Tags: Robotics, dexterous manipulation, sim-to-real, Reinforcement Learning, NVIDIA
 - Official paper: https://arxiv.org/abs/2210.13702
 - Full-text retrieval: https://ieeexplore.ieee.org/ielx7/10160211/10160212/10160216.pdf
-- Code/Project: not identified
+- Code/Project: https://dextreme.org/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 - 대조 판본: 요약과 기여는 저자판 v2에서 확인했다. [원문](https://arxiv.org/pdf/2210.13702v2)
@@ -90,3 +90,7 @@ DeXtreme은 시뮬레이션에서 손안 재배향 정책과 시각 자세 추�
 - **Actual contribution:** 2.1 Task We propose a method for performing object reorientation on an anthropomorphic hand. (p. 3, 2 Method).
 - **Evaluation boundary:** Table 7: The results of running different models on the real robot. We run 10 trials per policy [1] to benchmark the average consecutive successes. Individual rows within each experiment ... (p. 14, Figure/Table caption).
 - **Explicit failure boundary:** However, we did not observe this as a significant limitation for our experiments, and our policies nevertheless achieved rollouts with high consecutive successes in the real world. (p. 10, 2 Method).
+
+## 원문과 공개 자료
+
+- 코드 · Allegro 재배향의 강화학습 환경 및 무작위화 코드 · isaacgymenvs/tasks/dextreme/allegro_hand_dextreme.py [배포 파일](https://raw.githubusercontent.com/isaac-sim/IsaacGymEnvs/aeed298638a1f7b5421b38f5f3cc2d1079b6d9c3/isaacgymenvs/tasks/dextreme/allegro_hand_dextreme.py)

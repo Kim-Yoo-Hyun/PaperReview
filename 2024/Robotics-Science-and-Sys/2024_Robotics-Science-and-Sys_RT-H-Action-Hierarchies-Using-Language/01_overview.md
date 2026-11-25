@@ -13,7 +13,7 @@
 - Tags: Robotics, VLA, Action Hierarchy, language, Google DeepMind
 - Official paper: https://www.roboticsproceedings.org/rss20/p049.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p049.html
-- Code/Project: not identified
+- Code/Project: https://rt-hierarchy.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (23 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@ RT-H는 고수준 지시와 로봇 제어 사이에 짧은 동작 언어를 두�
 - **Actual contribution:** Creating such an action hierarchy leads to several benefits: (1) It enables much better data sharing between different tasks at the level of language motions, leading to better language motion ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 3: Results on Diverse+Kitchen multi-task dataset, consisting of eight challenging evaluation tasks. 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). RT-H outperforms RT-2 ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** RT-2-IWR: We collect 30 episodes (failed episodes filtered out) of teleoperated corrections for the same eight tasks, using VR-based teleoperation instead of language motion corrections. (p. 9, V. EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 저자 프로젝트에서 연구와 자료 안내 범위를 확인했다. [프로젝트](https://rt-hierarchy.github.io/)

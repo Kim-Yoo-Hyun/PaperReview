@@ -88,3 +88,9 @@
 - **Actual contribution:** To overcome these issues, we propose a novel learned perceptive (p. 1, Body text (section boundary not confidently recovered)).
 - **Evaluation boundary:** Trained with a mix of simulated and real-world data, the 'DM captures the complex dynamics of a quadrupedal robot and enables zero-shot adjustments of the planning objective. ‘The presented network ... (p. 10, C. Platform-aware Predictions).
 - **Explicit failure boundary:** Second, the failure states observed in simulation environments do not perfectly translate to real-world failures, and real-world data lacks demonstrations. of collisions due to the risk of hardware damage, leaving ... (p. 10, C. Platform-aware Predictions).
+
+## 원문과 공개 자료
+
+- 가중치 · 저자가 연결한 실측 주행 파인튜닝 FDM · model.zip [배포 파일](https://drive.google.com/file/d/1mphOSa1ar3sw4IfVPSEcUnGXEN7wiBU9/view)
+- 코드 · 지각 조건부 전방 동역학 모델 구현 · exts/fdm/fdm/model/fdm_model.py [배포 파일](https://raw.githubusercontent.com/leggedrobotics/fdm/06f5d8033bafed4f6838662af99ba31cbd4f5ce0/exts/fdm/fdm/model/fdm_model.py)
+- 데이터 · 저자가 제공하는 FDM 실물 파인튜닝 자료 · real_world_datasets.zip [배포 파일](https://drive.google.com/file/d/1aFuScInnLjh2eukqOnnL-5ydqcUSpUbE/view)

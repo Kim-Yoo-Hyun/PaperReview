@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Guang Yin, Yitong Li, Yixuan Wang, Dale Mcconachie, Paarth Shah, Kunimatsu Hashimoto, Huan Zhang, Katherine Liu, Yunzhu Li
+- Authors: Guang Yin, Yitong Li, Yixuan Wang, Dale McConachie, Paarth Shah, Kunimatsu Hashimoto, Huan Zhang, Katherine Liu, Yunzhu Li
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: VLA, language grounding, code generation, 3D attention, diffusion policy, contact-rich manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p072.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p072.pdf
-- Code/Project: not identified
+- Code/Project: https://robopil.github.io/code-diffuser/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,10 @@ CodeDiffuser는 모호한 언어 지시를 실행 가능한 지각 코드로 바
 - **Actual contribution:** To address these challenges, we introduce novel robotic manipulation framework that can accomplish tasks specified by potentially ambiguous natural language. (p. 1, Abstract).
 - **Evaluation boundary:** Fig. 8: Evaluation of Entire System. (a) We qualitatively evaluate the entire pipeline from language instructions to low-level actions, ‘demonstrating how our system interprets semantic meanings from abstract instructions. Given ... (p. 10, Figure/Table caption).
 - **Explicit failure boundary:** Similarly, as the number of placement options increases, most failures occur during the placement stage of the task. ‘The observed correlation between (i) increased task ambiguity and (ii) declining task ... (p. 7, B. Analysis of Existing Imitation Learning Algorithm).
+
+## 원문과 공개 자료
+
+- RSS 표제면에 맞춰 Dale McConachie의 성을 교정했다. [표제면](https://www.roboticsproceedings.org/rss21/p072.pdf#page=1)
+- 가중치 · 저자 저장소의 공개 계획에서 모델 체크포인트 다운로드 항목을 미완료로 표시했다. [저자 공개 안내](https://github.com/lyttttt3333/CodeDiffuser/blob/f74b21956351d38924e6c9ca9357d14739fc0f9d/README.md)
+- 코드 · CodeDiffuser의 시뮬레이션 훈련 구현. 저자 로드맵에서 실물 배포 코드는 미완료다. · diffusion_policy_code/general_dp/train.py [배포 파일](https://raw.githubusercontent.com/lyttttt3333/CodeDiffuser/f74b21956351d38924e6c9ca9357d14739fc0f9d/diffusion_policy_code/general_dp/train.py)
+- 데이터 · 저자 저장소의 공개 계획에서 연구 데이터 다운로드 항목을 미완료로 표시했다. [저자 공개 안내](https://github.com/lyttttt3333/CodeDiffuser/blob/f74b21956351d38924e6c9ca9357d14739fc0f9d/README.md)

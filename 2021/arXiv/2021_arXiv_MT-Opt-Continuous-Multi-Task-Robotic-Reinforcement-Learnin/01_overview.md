@@ -10,10 +10,10 @@
 - Authors: Dmitry Kalashnikov, Jacob Varley, Yevgen Chebotar, Benjamin Swanson, Rico Jonschkowski, Chelsea Finn, Sergey Levine, Karol Hausman
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: Robotics, Reinforcement Learning, Multi-Task Learning, robot data, Google DeepMind
+- Tags: Robotics, Reinforcement Learning, Multi-Task Learning, robot data, real-world manipulation
 - Official paper: https://arxiv.org/abs/2104.08212
 - Full-text retrieval: https://arxiv.org/abs/2104.08212
-- Code/Project: not identified
+- Code/Project: https://karolhausman.github.io/mt-opt/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,7 @@ MT-Opt는 여러 실제 로봇과 과제의 경험을 공유해 조작 기술을
 - **Actual contribution:** We further make the following contributions: • We address the challenge of providing rewards by creating a scalable and intuitive success-classifier-based approach that allows to quickly define new tasks and ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Looking at the average performance across all task, we observe that MT-Opt significantly outperforms the baselines, in some cases with ≈3× average improvement. (p. 7, VII. EXPERIMENTS).
 - **Explicit failure boundary:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks. (p. 8, VII. EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 데이터 · 공식 RLDS 판본의 실물 조작 훈련 샤드 · mt_opt_rlds-train.tfrecord-00000-of-02048 [배포 파일](https://storage.googleapis.com/gresearch/robotics/mt_opt_rlds/1.0.0/mt_opt_rlds-train.tfrecord-00000-of-02048)

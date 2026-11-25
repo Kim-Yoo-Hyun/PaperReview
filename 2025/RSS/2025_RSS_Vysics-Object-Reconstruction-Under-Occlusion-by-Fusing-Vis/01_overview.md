@@ -87,3 +87,8 @@ Vysics는 가려진 물체의 운동을 설명하는 접촉 기하를 RGB-D 영�
 - **Actual contribution:** Fusing vision and contact rich physics, our method recovers the occluded geometry through object interactions with the robot and environment, The robot end effector in yellow shows the robot-object interaction, (p. 1, 1. INTRODUCTION).
 - **Evaluation boundary:** These robot interactions were teleoperated via commanded end effector poses tracked with impedance control. ‘The dataset includes the RGBD videos of the objects in interactions with object ‘mask annotations, as ... (p. 6, V. EXPERIMENTAL SETUP).
 - **Explicit failure boundary:** In the evaluation, we excluded the sessions in which BundleSDF lost track of the object and failed to yield the object trajectory. (p. 6, V. EXPERIMENTAL SETUP).
+
+## 원문과 공개 자료
+
+- 코드 · 시각·물리 추정을 결합하는 Vysics 실행 파이프라인 · run_all.sh [배포 파일](https://raw.githubusercontent.com/DAIRLab/vysics/b7a76f954cd9371e5f4d9732cccc1c5187d0acef/run_all.sh)
+- 데이터 · Vysics 평가 물체의 RGB-D 상호작용 영상 자료 · assets_rgbd.zip [배포 파일](https://drive.google.com/file/d/1VkqFZmnLhrIAS0Fn6j97Ko1oYMETyCjO/view)

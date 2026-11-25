@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / Robotics: Science and Systems
-- Authors: Yecheng Jason Ma, William Liang, Hung-Ju Wang, Yuke Zhu, Linxi Fan, Osbert Bastani, Dinesh Jayaraman
+- Authors: Yecheng Jason Ma, William Liang, Hung-Ju Wang, Yuke Zhu, Linxi “Jim” Fan, Osbert Bastani, Dinesh Jayaraman
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, sim-to-real, Reinforcement Learning, Large Language Model, NVIDIA
@@ -88,3 +88,10 @@ DrEureka는 강화학습 보상과 시뮬레이션 물성의 무작위화 범위
 - **Actual contribution:** In this work, we propose DrEureka (Domain Randomization Eureka), a novel algorithm that leverages LLMs to automate reward design and domain randomization parameter configuration simultaneously for sim-to-real transfer. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Note that while CEM and BayRn tackle the same problem, their iterative procedure is conceptually different from DrEureka, which trains all policies in parallel; thus, this comparison favors the baselines ... (p. 6, V. EXPERIMENTAL SETUP).
 - **Explicit failure boundary:** While DrEureka demonstrates the potential of leveraging LLMs for automating the sim-to-real transfer process in robotics, there are several areas of improvement to the current implementation: • Lack of visual ... (p. 9, VIII. LIMITATIONS).
+
+## 원문과 공개 자료
+
+- RSS 게재본에 병기된 Linxi “Jim” Fan의 이름을 반영했다. [표제면](https://www.roboticsproceedings.org/rss20/p094.pdf#page=1)
+- 가중치 · DrEureka 사족 전진 보행 정책의 저장 가중치 · forward_locomotion/runs/forward_locomotion/dr_eureka_best/checkpoints/ac_weights_last.pt [배포 파일](https://raw.githubusercontent.com/eureka-research/DrEureka/1d4e00700423170717654516f4ef4b24cb0f3a84/forward_locomotion/runs/forward_locomotion/dr_eureka_best/checkpoints/ac_weights_last.pt)
+- 코드 · 보상 및 도메인 무작위화 설계 구현 · dr_eureka/dr_eureka.py [배포 파일](https://raw.githubusercontent.com/eureka-research/DrEureka/1d4e00700423170717654516f4ef4b24cb0f3a84/dr_eureka/dr_eureka.py)
+- 데이터 · 전진 보행 실험의 저장 학습 지표로 범위를 한정 · forward_locomotion/runs/forward_locomotion/dr_eureka_best/metrics.pkl [배포 파일](https://raw.githubusercontent.com/eureka-research/DrEureka/1d4e00700423170717654516f4ef4b24cb0f3a84/forward_locomotion/runs/forward_locomotion/dr_eureka_best/metrics.pkl)

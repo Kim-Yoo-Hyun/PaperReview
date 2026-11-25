@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Devansh R. Agrawal, Rajiv Govindjee, Taekyung Kim, Trushant Adeshara, Jiangbo Yu, Anurekha Ravikumar, Dimitra Panagou
+- Authors: Devansh R. Agrawal, Taekyung Kim, Rajiv Govindjee, Trushant Adeshara, Jiangbo Yu, Anurekha Ravikumar, Dimitra Panagou
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, safe navigation, mapping, state estimation, uncertainty, formal guarantee
 - Official paper: https://www.roboticsproceedings.org/rss21/p007.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p007.pdf
-- Code/Project: not identified
+- Code/Project: https://dasc-lab.github.io/papers/2025/2025-certifiably-correct/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -85,3 +85,8 @@
 - **Actual contribution:** In Section IV and V we introduce the deflation mechanism for both map representations, In Section VI we propose methods to use the certified maps to acheive safe navigation, Finally ... (p. 2, 1. INTRODUCTION).
 - **Evaluation boundary:** Localization and Mapping (SLAM) systems now report translation error rates below 1% (19, 20], enabling more reliable navigation in real-world scenarios. (p. 2, experimental results).
 - **Explicit failure boundary:** In the baseline methods, the violation rates are between 6 and 60%, while in the certified methods, the violation rates are between 03%, Note, we cannot expect the certified methods ... (p. 9, Results).
+
+## 원문과 공개 자료
+
+- RSS 표제면에서 Taekyung Kim과 Rajiv Govindjee의 순서를 확인했다. [표제면](https://www.roboticsproceedings.org/rss21/p007.pdf#page=1)
+- 코드 · 저자 저장소가 고정한 하위 모듈에서 인증 ESDF 슬라이스를 변환하는 CUDA 구현을 확인했다. · certified_esdf_slice_conversions.cu [배포 파일](https://raw.githubusercontent.com/dasc-lab/dasc_ros_nvblox/cce3c367ae00055fbaec5a986c0ecf3f04040aab/nvblox_ros/src/lib/conversions/certified_esdf_slice_conversions.cu)

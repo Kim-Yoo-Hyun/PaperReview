@@ -13,7 +13,7 @@
 - Tags: Robotics, representation learning, video pretraining, manipulation
 - Official paper: https://proceedings.mlr.press/v205/nair23a.html
 - Full-text retrieval: https://proceedings.mlr.press/v205/nair23a.html
-- Code/Project: https://r3m.cs.columbia.edu/
+- Code/Project: https://sites.google.com/view/robot-r3m
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (18 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -81,3 +81,8 @@ R3M은 사람의 1인칭 영상에서 학습한 시각 표현을 고정한 채 �
 - **Actual contribution:** We hypothesize that a good representation for vision-based robotic manipulation consists of three components. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Figure 8: Performance over different views/dataset sizes. We report the success rate of R3M and baseline across each view (left) and dataset size (right). We see that the performance improvement ... (p. 17, Figure/Table caption).
 - **Explicit failure boundary:** While we were excited by strong results on a wide set of simulated and real robotic tasks, a number of important limitations remain. (p. 8, 2. We).
+
+## 원문과 공개 자료
+
+- 가중치 · R3M 원 저자 로더가 지정한 ResNet-50 시각 인코더 · model.pt [배포 파일](https://drive.google.com/file/d/1Xu0ssuG0N1zjZS54wmWzJ7-nb0-7XzbA/view)
+- 코드 · R3M 시각 표현 사전학습 코드 · r3m/train_representation.py [배포 파일](https://raw.githubusercontent.com/facebookresearch/r3m/b2334e726887fa0206962d7984c69c5fb09cceab/r3m/train_representation.py)

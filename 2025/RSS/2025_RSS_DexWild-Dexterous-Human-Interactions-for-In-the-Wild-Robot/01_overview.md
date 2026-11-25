@@ -87,3 +87,8 @@ DexWild는 사람이 직접 손으로 수행한 다양한 조작과 로봇 시�
 - **Actual contribution:** In this paper, we present DexWild, a system that enables effective learning of robust dexterous manipulation policies through co-training on human and robot demonstrations. (p. 2, 1. IyrRopuction).
 - **Evaluation boundary:** We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in DexWild but absent from robot ... (p. 6, C. Evaluation Environments).
 - **Explicit failure boundary:** This avoids the fragility of SLAMLbased wrist tracking, which often fails in feature-sparse environments or during occlusion-heavy tasks (e.g., drawer opening). (p. 4, A. Data Collection System).
+
+## 원문과 공개 자료
+
+- 코드 · 사람·로봇 시연을 결합하는 DexWild 저장소의 행동 복제 학습기 · data4robotics/trainers/bc.py [배포 파일](https://raw.githubusercontent.com/dexwild/dexwild-training/efc1643865f2c9265d2351a1ecfd0731368930e3/data4robotics/trainers/bc.py)
+- 데이터 · DexWild 의류 조작 사람 시연 아카이브의 첫 분할 · clothes_data/human/human_clothes_data.part_00 [배포 파일](https://huggingface.co/datasets/boardd/dexwild-dataset/blob/df5cd775f985e79036ff23ad579abbe7752b8df1/clothes_data/human/human_clothes_data.part_00)

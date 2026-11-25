@@ -89,3 +89,9 @@ CortexBench는 사전학습 시각 표현의 성능이 로봇 과제에 따라 �
 - **Actual contribution:** The visual cortex is a region of an organism's brain, which together with the motor cortex, enables sight to be converted into movement. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Figure 4: Comparison of VC-1 with existing PVRs. VC-1 matches or exceeds existing PVRs on all benchmarks except R3M on AD, MW, and DMC, indicating an opportunity for model adaptation. ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** In aggregate, these results suggests that MAE adaptation can be explored as a powerful alternative in few-shot domains or where E2E fine-tuning fails. (p. 9, Results).
+
+## 원문과 공개 자료
+
+- 가중치 · 저자가 배포한 VC-1 대형 시각 인코더 · vc1_vitl.pth [배포 파일](https://dl.fbaipublicfiles.com/eai-vc/vc1_vitl.pth)
+- 코드 · CortexBench의 모방학습 및 시각 인코더 평가 구현 · cortexbench/mujoco_vc/visual_imitation/train_loop.py [배포 파일](https://raw.githubusercontent.com/facebookresearch/eai-vc/76fe35e87b1937168f1ec4b236e863451883eaf3/cortexbench/mujoco_vc/visual_imitation/train_loop.py)
+- 데이터 · CortexBench의 TriFinger 이동·도달 시연 · trifinger_demos.zip [배포 파일](https://dl.fbaipublicfiles.com/eai-vc/trifinger_demos.zip)

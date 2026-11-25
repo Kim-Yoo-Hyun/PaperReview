@@ -83,3 +83,8 @@ UniVLA는 다양한 환경과 신체의 영상에서 과제와 관련된 잠재 
 - **Actual contribution:** In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling scalable and efficient decision-making by ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 4: Task setup on the LIBERO benchmark. TABLE I: Results on LIBERO benchmark across four evaluation suites. Our proposed UniVLA exhibits superior performance across all benchmarked tasks compared to ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** While UniVLA advances generalist robotic policies, several limitations remain. (p. 11, VI. LIMITATIONS AND FUTURE WORK).
+
+## 원문과 공개 자료
+
+- 가중치 · UniVLA 7B 기본 모델의 첫 가중치 샤드 · model-00001-of-00003.safetensors [배포 파일](https://huggingface.co/qwbu/univla-7b/blob/968e2896809c00968e8fd936e052476ce5ac1bd0/model-00001-of-00003.safetensors)
+- 코드 · UniVLA 잠재 행동 정책 훈련 구현 · vla-scripts/train.py [배포 파일](https://raw.githubusercontent.com/OpenDriveLab/UniVLA/0ab9e9dd3074ffa14fdd1a00aa2aa84e4f8e1352/vla-scripts/train.py)

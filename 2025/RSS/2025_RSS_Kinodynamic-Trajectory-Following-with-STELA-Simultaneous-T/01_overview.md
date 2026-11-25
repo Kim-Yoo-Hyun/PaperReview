@@ -86,3 +86,7 @@ STELA는 잡음이 있는 관측으로 과거 궤적을 추정하는 동시에 �
 - **Actual contribution:** Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired goal region without collisions. (p. 3, 1. INTRODUCTION).
 - **Evaluation boundary:** Fig. 11: STL results for MuSHR (sim). Three normalized metrics reported, Time to collision isthe rate of a trajectory traversed before a collision (no data if the success rate is ... (p. 11, Figure/Table caption).
 - **Explicit failure boundary:** The extreme noise level oj results mostly in failures, where 24% of failures arise from Indeterminant Linear System Exception, i. the accumulation of numerical errors, which does not occur for ... (p. 12, A. Experimemal setup).
+
+## 원문과 공개 자료
+
+- 데이터 · 원문은 MuSHR 실험에 사용한 자료를 보고한다. 이 연구의 해당 자료 배포 파일은 미확인이다. [검토 근거](https://www.roboticsproceedings.org/rss21/p008.pdf)

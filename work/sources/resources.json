@@ -5566,7 +5566,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:02e36557d993",
@@ -5599,6 +5599,18 @@
       "url": "https://github.com/daerduoCarey/where2act",
       "paper_ids": [
         "pr-0712"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:031fca4862f7",
+      "resource_type": "code_or_project",
+      "name": "PP-Tac",
+      "url": "https://github.com/bigai-ai/PP-Tac",
+      "paper_ids": [
+        "pr-0893"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -5663,6 +5675,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:05b6553da402",
+      "resource_type": "code_or_project",
+      "name": "digit-interface",
+      "url": "https://github.com/facebookresearch/digit-interface",
+      "paper_ids": [
+        "pr-0849"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:05c472092ca6",
@@ -5773,18 +5797,6 @@
       "verified_on": "2026-11-24"
     },
     {
-      "resource_id": "code:099cf0d4bcfc",
-      "resource_type": "code_or_project",
-      "name": "gr00t",
-      "url": "https://developer.nvidia.com/isaac/gr00t",
-      "paper_ids": [
-        "pr-0869"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:09de6103fdbb",
       "resource_type": "code_or_project",
       "name": "GraspVLA",
@@ -5880,6 +5892,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:0f2b27bfca8d",
+      "resource_type": "code_or_project",
+      "name": "unified_video_action",
+      "url": "https://github.com/ShuangLI59/unified_video_action",
+      "paper_ids": [
+        "pr-0898"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:0f50313d38f0",
@@ -6011,7 +6035,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:1347df68a66a",
@@ -6098,6 +6122,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:160133bb0ade",
+      "resource_type": "code_or_project",
+      "name": "Prompting-with-the-Future",
+      "url": "https://github.com/TritiumR/Prompting-with-the-Future",
+      "paper_ids": [
+        "pr-0905"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:185cae47dcc3",
       "resource_type": "code_or_project",
       "name": "capg",
@@ -6144,6 +6180,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:19688493b5da",
+      "resource_type": "code_or_project",
+      "name": "Eureka",
+      "url": "https://github.com/eureka-research/Eureka",
+      "paper_ids": [
+        "pr-0864"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:199997f56a14",
@@ -6284,18 +6332,6 @@
       "url": "https://extreme-parkour.github.io/",
       "paper_ids": [
         "pr-0662"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:1f5bbe5f3b72",
-      "resource_type": "code_or_project",
-      "name": "CordViP",
-      "url": "https://aureleopku.github.io/CordViP",
-      "paper_ids": [
-        "pr-0904"
       ],
       "evidence": "manifest_link",
       "availability": "project_only",
@@ -6563,7 +6599,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:278815b653f0",
@@ -6587,7 +6623,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:28800627d2c1",
@@ -6600,6 +6636,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:28b962579d66",
+      "resource_type": "code_or_project",
+      "name": "CodeDiffuser",
+      "url": "https://github.com/lyttttt3333/CodeDiffuser",
+      "paper_ids": [
+        "pr-0897"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:28fadbeb7acd",
@@ -6698,6 +6746,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:2d71e9e0ad02",
+      "resource_type": "code_or_project",
+      "name": "dex1b",
+      "url": "https://jianglongye.com/dex1b/",
+      "paper_ids": [
+        "pr-0902"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:2d7398ae0b7f",
@@ -6805,7 +6865,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:3161aab3ba53",
@@ -7181,6 +7241,18 @@
       "verified_on": "2026-11-25"
     },
     {
+      "resource_id": "code:3c7502bd2aed",
+      "resource_type": "code_or_project",
+      "name": "visafe",
+      "url": "https://theairlab.org/visafe/",
+      "paper_ids": [
+        "pr-0876"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:3c8ecc53377f",
       "resource_type": "code_or_project",
       "name": "GeoPredict",
@@ -7190,18 +7262,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:3d8ac25df8e0",
-      "resource_type": "code_or_project",
-      "name": "eureka-research.github.io",
-      "url": "https://eureka-research.github.io/",
-      "paper_ids": [
-        "pr-0864"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -7323,6 +7383,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:42a307ab2ce7",
+      "resource_type": "code_or_project",
+      "name": "robosplat",
+      "url": "https://github.com/InternRobotics/robosplat",
+      "paper_ids": [
+        "pr-0906"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:42c4da6f8cb0",
@@ -7506,6 +7578,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:49ca0223075b",
+      "resource_type": "code_or_project",
+      "name": "clip-rt",
+      "url": "https://github.com/clip-rt/clip-rt",
+      "paper_ids": [
+        "pr-0883"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:4aad1ad0374a",
       "resource_type": "code_or_project",
       "name": "bevfusion",
@@ -7671,18 +7755,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:4fd36cfdc408",
-      "resource_type": "code_or_project",
-      "name": "dr-eureka",
-      "url": "https://eureka-research.github.io/dr-eureka/",
-      "paper_ids": [
-        "pr-0865"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -8056,7 +8128,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:5df9e52ff332",
@@ -8118,6 +8190,18 @@
       "evidence": "manifest_link",
       "availability": "not_identified",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:606904d76577",
+      "resource_type": "code_or_project",
+      "name": "RoboVerse",
+      "url": "https://github.com/RoboVerseOrg/RoboVerse",
+      "paper_ids": [
+        "pr-0888"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:608a46020c97",
@@ -8213,6 +8297,18 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:639be5f2dbe4",
+      "resource_type": "code_or_project",
+      "name": "mt-opt",
+      "url": "https://karolhausman.github.io/mt-opt/",
+      "paper_ids": [
+        "pr-0856"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
       "verified_on": "2026-11-25"
     },
     {
@@ -8321,7 +8417,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:65f89dc7ca05",
@@ -8346,6 +8442,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:672324a26fd2",
+      "resource_type": "code_or_project",
+      "name": "cordvip",
+      "url": "https://github.com/xuanxuanzzzii/cordvip",
+      "paper_ids": [
+        "pr-0904"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:6732c80d4c90",
@@ -8418,6 +8526,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:68ff101e5e8a",
+      "resource_type": "code_or_project",
+      "name": "r3m",
+      "url": "https://github.com/facebookresearch/r3m",
+      "paper_ids": [
+        "pr-0842"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:695f366f2e3c",
@@ -8542,18 +8662,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:6dc5f2a624a6",
-      "resource_type": "code_or_project",
-      "name": "digit360",
-      "url": "https://github.com/facebookresearch/digit360",
-      "paper_ids": [
-        "pr-0849"
-      ],
-      "evidence": "manifest_link",
-      "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:6e23c5594057",
       "resource_type": "code_or_project",
       "name": "memer",
@@ -8600,6 +8708,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:6f9e4b16335c",
+      "resource_type": "code_or_project",
+      "name": "GR00T-Dreams",
+      "url": "https://github.com/NVIDIA/GR00T-Dreams",
+      "paper_ids": [
+        "pr-0870"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:7126961bb021",
@@ -8684,18 +8804,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:74a6fdb88ea0",
-      "resource_type": "code_or_project",
-      "name": "vysics-vision-and-physics.github.io",
-      "url": "https://vysics-vision-and-physics.github.io/",
-      "paper_ids": [
-        "pr-0889"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -8959,7 +9067,7 @@
         "pr-0875"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
+      "availability": "not_released",
       "verified_on": "2026-11-20"
     },
     {
@@ -9155,18 +9263,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:84b4f8697c70",
-      "resource_type": "code_or_project",
-      "name": "roboverseorg.github.io",
-      "url": "https://roboverseorg.github.io/",
-      "paper_ids": [
-        "pr-0888"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:85107af98acb",
       "resource_type": "code_or_project",
       "name": "human2humanoid",
@@ -9220,7 +9316,9 @@
       "name": "IsaacGymEnvs",
       "url": "https://github.com/isaac-sim/IsaacGymEnvs",
       "paper_ids": [
-        "pr-0737"
+        "pr-0737",
+        "pr-0861",
+        "pr-0866"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -9355,8 +9453,8 @@
         "pr-0840"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:89e55f3f83e4",
@@ -9563,6 +9661,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:8f64d8e8aa22",
+      "resource_type": "code_or_project",
+      "name": "rt-hierarchy.github.io",
+      "url": "https://rt-hierarchy.github.io/",
+      "paper_ids": [
+        "pr-0859"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:90da3def3f8c",
       "resource_type": "code_or_project",
       "name": "3DVG-Transformer",
@@ -9632,7 +9742,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:92ac251ac461",
@@ -10069,6 +10179,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:a0d2777609a8",
+      "resource_type": "code_or_project",
+      "name": "manipulation_enhanced_map_prediction",
+      "url": "https://github.com/NilsDengler/manipulation_enhanced_map_prediction",
+      "paper_ids": [
+        "pr-0891"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:a13776c91de4",
       "resource_type": "code_or_project",
       "name": "sg-pgm",
@@ -10246,7 +10368,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:a51b3f5cd08c",
@@ -10439,6 +10561,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:ab1e4de5aeae",
+      "resource_type": "code_or_project",
+      "name": "autorally",
+      "url": "https://github.com/AutoRally/autorally",
+      "paper_ids": [
+        "pr-0833"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ab2e688e945e",
@@ -10800,7 +10934,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:b761e5635ed8",
@@ -11115,18 +11249,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:bff4037cfd09",
-      "resource_type": "code_or_project",
-      "name": "GR00T-dreams",
-      "url": "https://github.com/nvidia/GR00T-dreams",
-      "paper_ids": [
-        "pr-0870"
-      ],
-      "evidence": "manifest_link",
-      "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:c01b5f5c6313",
       "resource_type": "code_or_project",
       "name": "RLDG",
@@ -11137,6 +11259,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:c09fe8dccf72",
+      "resource_type": "code_or_project",
+      "name": "certifiably-correct-mapping",
+      "url": "https://github.com/dasc-lab/certifiably-correct-mapping",
+      "paper_ids": [
+        "pr-0878"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:c0ce1bb284b5",
@@ -11197,6 +11331,18 @@
       "evidence": "manifest_link",
       "availability": "not_identified",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:c1d65a2b853c",
+      "resource_type": "code_or_project",
+      "name": "acme",
+      "url": "https://github.com/google-deepmind/acme",
+      "paper_ids": [
+        "pr-0855"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:c236b6182eb6",
@@ -11292,7 +11438,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:c8b0109c43fa",
@@ -11376,7 +11522,19 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:cc4b5749ac55",
+      "resource_type": "code_or_project",
+      "name": "DrEureka",
+      "url": "https://github.com/eureka-research/DrEureka",
+      "paper_ids": [
+        "pr-0865"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:cd1fd8f4f943",
@@ -11552,12 +11710,13 @@
       "name": "Isaac-GR00T",
       "url": "https://github.com/NVIDIA/Isaac-GR00T",
       "paper_ids": [
+        "pr-0869",
         "pr-0917",
         "pr-0918"
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:d217790e9a89",
@@ -12232,18 +12391,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:e6f7e7b563a1",
-      "resource_type": "code_or_project",
-      "name": "eai-vc.github.io",
-      "url": "https://eai-vc.github.io/",
-      "paper_ids": [
-        "pr-0843"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:e711c4344179",
       "resource_type": "code_or_project",
       "name": "robotics_transformer",
@@ -12905,18 +13052,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:f6566595b0b5",
-      "resource_type": "code_or_project",
-      "name": "r3m.cs.columbia.edu",
-      "url": "https://r3m.cs.columbia.edu/",
-      "paper_ids": [
-        "pr-0842"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:f766333e5a90",
       "resource_type": "code_or_project",
       "name": "horizon-reduction",
@@ -12975,6 +13110,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:f8e27b1930bf",
+      "resource_type": "code_or_project",
+      "name": "vysics",
+      "url": "https://github.com/DAIRLab/vysics",
+      "paper_ids": [
+        "pr-0889"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:f92992b0422c",
@@ -13049,6 +13196,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:fc8a3542a1a9",
+      "resource_type": "code_or_project",
+      "name": "eai-vc",
+      "url": "https://github.com/facebookresearch/eai-vc",
+      "paper_ids": [
+        "pr-0843"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:fc92f4ae7b5f",
       "resource_type": "code_or_project",
       "name": "flowbot3d",
@@ -13094,7 +13253,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:fd467c07c67a",

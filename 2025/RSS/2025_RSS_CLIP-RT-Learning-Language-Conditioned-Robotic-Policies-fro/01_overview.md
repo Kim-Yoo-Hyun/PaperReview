@@ -13,7 +13,7 @@
 - Tags: VLA, language supervision, motion primitives, contrastive imitation, Open X-Embodiment, real-world manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p016.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p016.pdf
-- Code/Project: not identified
+- Code/Project: https://clip-rt.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,8 @@ CLIP-RT는 사람이 말로 지정한 기본 동작을 시연 수집과 정책 �
 - **Actual contribution:** Sec- ‘ond, we propose a data collection framework that enables non-experts to collect robot data only through natural language and augment the human-collected demonstration data, Third, experiments demonstrate that CLIP-RT ... (p. 2, Abstract).
 - **Evaluation boundary:** [30], we measure the throughput and latency on an NVIDIA A100 GPU, As shown in Table I, CLIP-RT+ achieves 39% improved throughput (4.2Hz~>163.8H7) compared with OpenVLA based on its lightweight ... (p. 9, B. Adapting CLIP-RT to the LIBERO Benchmark).
 - **Explicit failure boundary:** This is particularly evident in sce requiring recovery from failure states, such as when an object, slips from the gripper, as shown in Figure 9-(d), The heuristies does not adequately ... (p. 8, 256 33%).
+
+## 원문과 공개 자료
+
+- 가중치 · Open X-Embodiment로 사전학습한 CLIP-RT 체크포인트 · cliprt-oxe-pretrained.pt [배포 파일](https://huggingface.co/clip-rt/clip-rt-oxe-pretrained/blob/82c9f47ebb761d48fb04d612f9ecc075388c1bd4/cliprt-oxe-pretrained.pt)
+- 코드 · CLIP-RT 시각·언어·동작 정렬 학습 구현 · open_clip/src/training/train.py [배포 파일](https://raw.githubusercontent.com/clip-rt/clip-rt/0b781442f4783709bddcb7b19943baf5517cb46e/open_clip/src/training/train.py)

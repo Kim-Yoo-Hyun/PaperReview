@@ -1,6 +1,6 @@
 # 원문 감사
 
-2026-11-25 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **46편**, 한 필드 이상 미확인인 논문은 **1,206편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
+2026-11-25 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **60편**, 한 필드 이상 미확인인 논문은 **1,192편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
 
 ## 요약·기여 원문 대조
 
@@ -163,8 +163,9 @@
 | core_next_02 | 22 | 34 | 5 | 1 | 0 |
 | core_next_03 | 43 | 67 | 2 | 6 | 49 |
 | core_next_04 | 43 | 88 | 5 | 0 | 50 |
+| core_next_05 | 42 | 78 | 3 | 7 | 50 |
 
-다축 정규화에서 저자 32편의 표기나 순서를 원문 표제면에 맞췄다. 각 레코드에 이전 저자 목록을 보존했다.
+다축 정규화에서 저자 47편의 표기나 순서를 원문 표제면에 맞췄다. 각 레코드에 이전 저자 목록을 보존했다.
 
 | 논문 | 표제면 대조 |
 |---|---|
@@ -199,6 +200,21 @@
 | IndustReal | 게재본 표제면에 따라 Michael A Lin → Michael A. Lin · Iretiayo A Akinola → Iretiayo Akinola · Gaurav S Sukhatme → Gaurav S. Sukhatme · Yashraj S Narang → Yashraj Narang로 반영했다. [원문](https://www.roboticsproceedings.org/rss19/p039.pdf#page=1) |
 | Reactive Diffusion Policy | 게재본 표제면에 따라 Fang Yuan → Yuan Fang로 반영했다. [원문](https://www.roboticsproceedings.org/rss21/p052.pdf#page=1) |
 | Can We Detect Failures Without Failure Data? Uncertainty-Aware Runtime Failure Detection for Imitation Learning Policies | 게재본 표제면에 따라 Rares Andrei Ambrus → Rares Ambrus로 반영했다. [원문](https://www.roboticsproceedings.org/rss21/p073.pdf#page=1) |
+| Behavior Transformers | NeurIPS 표제면의 첫 세 저자 이름을 반영했다. [원문](https://proceedings.neurips.cc/paper_files/paper/2022/file/90d17e882adbdda42349db6f50123817-Paper-Conference.pdf#page=1) |
+| A Generalist Agent | TMLR 게재 표제면에 따라 세 저자의 발음 구별 기호를 복원했다. [원문](https://arxiv.org/pdf/2205.06175v3#page=1) |
+| Eureka | ICLR 게재본에 있는 Linxi “Jim” Fan과 Anima Anandkumar의 이름 표기를 반영했다. [원문](https://proceedings.iclr.cc/paper_files/paper/2024/file/70c26937fbf3d4600b69a129031b66ec-Paper-Conference.pdf#page=1) |
+| DrEureka | RSS 게재본에 병기된 Linxi “Jim” Fan의 이름을 반영했다. [원문](https://www.roboticsproceedings.org/rss20/p094.pdf#page=1) |
+| Certifiably-Correct Mapping for Safe Navigation Despite Odometry Drift | RSS 표제면에서 Taekyung Kim과 Rajiv Govindjee의 순서를 확인했다. [원문](https://www.roboticsproceedings.org/rss21/p007.pdf#page=1) |
+| SpatialVLA | RSS 게재본에서 Dong Wang을 포함한 네 번째 이후 저자의 순서를 확인했다. [원문](https://www.roboticsproceedings.org/rss21/p011.pdf#page=1) |
+| Demonstrating GPU Parallelized Robot Simulation and Rendering for Generalizable Embodied AI with ManiSkill3 | RSS 표제면의 Tse-kai Chan 표기를 반영했다. [원문](https://www.roboticsproceedings.org/rss21/p021.pdf#page=1) |
+| RoboVerse | RSS 표제면에서 Yen-Jen Wang, Dylan Goetting, Carlo Sferrazza를 포함한 37명의 이름과 순서를 확인했다. [원문](https://www.roboticsproceedings.org/rss21/p022.pdf#page=1) |
+| Map Space Belief Prediction for Manipulation-Enhanced Mapping | RSS 표제면에서 Tobias Zaenker와 Jesper Mücke의 순서를 확인했다. [원문](https://www.roboticsproceedings.org/rss21/p039.pdf#page=1) |
+| V-HOP | RSS 게재본에서 세 번째 저자가 사용하는 이름은 Tuluhan Akbulut이다. [원문](https://www.roboticsproceedings.org/rss21/p037.pdf#page=1) |
+| PP-Tac | RSS 표제면에서 Wanlin Li, Jianpeng Ma, Chenxi Xiao의 순서를 확인했다. [원문](https://www.roboticsproceedings.org/rss21/p056.pdf#page=1) |
+| GeoDEx | RSS 게재본에 쓰인 두 번째 저자의 이름은 Sergio Aguilera Marinovic이다. [원문](https://www.roboticsproceedings.org/rss21/p057.pdf#page=1) |
+| CodeDiffuser | RSS 표제면에 맞춰 Dale McConachie의 성을 교정했다. [원문](https://www.roboticsproceedings.org/rss21/p072.pdf#page=1) |
+| From Foresight to Forethought | RSS 게재본에서 두 번째 저자가 사용하는 이름은 Ran Tian이다. [원문](https://www.roboticsproceedings.org/rss21/p076.pdf#page=1) |
+| CordViP | RSS 표제면에서 공동 기여 저자 Qiuxuan Feng과 Ning Chen의 순서를 확인했다. [원문](https://www.roboticsproceedings.org/rss21/p110.pdf#page=1) |
 | Universal Value Function Approximators | 논문 표제면의 저자 표기와 순서. [원문](https://proceedings.mlr.press/v37/schaul15.pdf#page=1) |
 
 ## CORE 공개 자료
@@ -237,12 +253,12 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---|
 | 11월 20일 교정 전 추가 확인 오류 | 37 / 1,252 (2.96%) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |
 | 이번 반영 후 확인 오류 | 0 / 1,252 (0.00%) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |
-| 현재 전 항목 통과 | 46 / 1,252 (3.67%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
-| 현재 미확인 필드 보유 | 1,206 / 1,252 (96.33%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
+| 현재 전 항목 통과 | 60 / 1,252 (4.79%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
+| 현재 미확인 필드 보유 | 1,192 / 1,252 (95.21%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
 
 11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 141/1,252편(11.26%)이다. 자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.
 
-**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–96.33%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
+**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–95.21%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
 
 ## 교정 재검증
 
@@ -259,16 +275,16 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 
 | 항목 | 11월 20일에 확인한 오류 | 현재 통과 | 존재 불확실 | 수정 필요 |
 |---|---:|---:|---:|---:|
-| 링크 | 0 | 1,215 | 37 | 0 |
+| 링크 | 0 | 1,216 | 36 | 0 |
 | 제목 | 0 | 1,252 | 0 | 0 |
 | 저자 | 6 | 1,252 | 0 | 0 |
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
 | 요약·기여 | 30 | 1,252 | 0 | 0 |
-| 코드 | 0 | 449 | 803 | 0 |
-| 가중치 | 0 | 129 | 1,123 | 0 |
-| 데이터 | 0 | 156 | 1,096 | 0 |
-| 태그 | 1 | 481 | 771 | 0 |
+| 코드 | 0 | 472 | 780 | 0 |
+| 가중치 | 0 | 145 | 1,107 | 0 |
+| 데이터 | 0 | 180 | 1,072 | 0 |
+| 태그 | 1 | 529 | 723 | 0 |
 
 링크는 대표 원문과 기재한 부가 주소별로 판정한다. 원문만 열리더라도 다른 링크의 판정은 유지한다. 잘못된 주소를 걷어낸 뒤 대체 주소가 확인되지 않은 경우에는 그 역할이 미확인이다. 저자의 공개 표명이나 배포 파일로 코드·가중치·데이터를 각각 판단한다. 배포 근거를 찾지 못한 상태는 ‘존재 불확실’이다. 기존 요약 판정에는 overview 대신 검증한 정규화 배치의 요약·기여를 대상으로 명시한 70편이 포함된다. 논문별 근거의 `scope`에서 대상 텍스트를 확인할 수 있다.
 
@@ -277,7 +293,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 18 | 0 | 0 | 31 |
-| NEXT | 450 | 28 | 0 | 274 | 405 |
+| NEXT | 450 | 42 | 0 | 226 | 390 |
 | REFERENCE | 510 | 0 | 0 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 0 | 131 | 242 |
 
@@ -293,8 +309,8 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | <a id="batch-06"></a>6 | [pr-0501–pr-0600](../work/sources/batches/source_audit_2026_11.jsonl#L501-L600) | 100 | 3 | 97 | 0 |
 | <a id="batch-07"></a>7 | [pr-0601–pr-0700](../work/sources/batches/source_audit_2026_11.jsonl#L601-L700) | 100 | 10 | 90 | 0 |
 | <a id="batch-08"></a>8 | [pr-0701–pr-0800](../work/sources/batches/source_audit_2026_11.jsonl#L701-L800) | 100 | 10 | 90 | 0 |
-| <a id="batch-09"></a>9 | [pr-0801–pr-0900](../work/sources/batches/source_audit_2026_11.jsonl#L801-L900) | 100 | 7 | 93 | 0 |
-| <a id="batch-10"></a>10 | [pr-0901–pr-1000](../work/sources/batches/source_audit_2026_11.jsonl#L901-L1000) | 100 | 3 | 97 | 0 |
+| <a id="batch-09"></a>9 | [pr-0801–pr-0900](../work/sources/batches/source_audit_2026_11.jsonl#L801-L900) | 100 | 19 | 81 | 0 |
+| <a id="batch-10"></a>10 | [pr-0901–pr-1000](../work/sources/batches/source_audit_2026_11.jsonl#L901-L1000) | 100 | 5 | 95 | 0 |
 | <a id="batch-11"></a>11 | [pr-1001–pr-1100](../work/sources/batches/source_audit_2026_11.jsonl#L1001-L1100) | 100 | 0 | 100 | 0 |
 | <a id="batch-12"></a>12 | [pr-1101–pr-1200](../work/sources/batches/source_audit_2026_11.jsonl#L1101-L1200) | 100 | 0 | 100 | 0 |
 | <a id="batch-13"></a>13 | [pr-1201–pr-1252](../work/sources/batches/source_audit_2026_11.jsonl#L1201-L1252) | 52 | 2 | 50 | 0 |

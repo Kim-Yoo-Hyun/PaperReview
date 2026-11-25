@@ -408,7 +408,7 @@ def audit_registry_profiles(
             status = value.get("status")
             allowed = ARTIFACT_STATUSES if key in {"code", "data"} else REPRO_STATUSES
             if key == "checkpoint":
-                allowed = REPRO_STATUSES | {"not_applicable"}
+                allowed = REPRO_STATUSES | {"not_applicable", "not_released"}
                 if status == "not_applicable" and not (value.get("source") and value.get("verified_on") and value.get("evidence")):
                     errors.append(f"missing checkpoint applicability evidence: {paper_id}")
             if status not in allowed:

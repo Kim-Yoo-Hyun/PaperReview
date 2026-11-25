@@ -82,3 +82,9 @@
 - **Actual contribution:** To address these limitations, we introduce a novel class of/ dynamic models called particle-grid neural dynamics. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 13: Additional Qualitative Comparisons on Dynamics Prediction. Given the initial states and actions (leftmost column), we present the prediction results of the MPM with parameter identification baseline, the GBND ... (p. 19, Figure/Table caption).
 - **Explicit failure boundary:** For example, physics-based simulators [12, 31] often struggle to generalize to the real world due to the inherent simto-real gap and the difficulties of system identification and state estimation, Meanwhile, ... (p. 1, I. INTRODUCTION).
+
+## 원문과 공개 자료
+
+- 가중치 · PGND 로프 실험의 저장 모델 · experiments/log/rope/train/ckpt/100000.pt [배포 파일](https://huggingface.co/kaifz/pgnd-checkpoints/blob/893e8b9b2f443f8c98066f7eadca0dbf7d92851d/experiments/log/rope/train/ckpt/100000.pt)
+- 코드 · 입자·격자 신경 동역학 모델 구현 · pgnd/sim/model.py [배포 파일](https://raw.githubusercontent.com/kywind/pgnd/06ef5dbbe9612b56aaee317c938dcf953074c05f/pgnd/sim/model.py)
+- 데이터 · PGND 변형체 실험의 로프 자료 · data/rope/rope.tar [배포 파일](https://huggingface.co/datasets/kaifz/pgnd-dataset/blob/58932f8ac660a2cba3d880675181369a4dc66cbc/data/rope/rope.tar)

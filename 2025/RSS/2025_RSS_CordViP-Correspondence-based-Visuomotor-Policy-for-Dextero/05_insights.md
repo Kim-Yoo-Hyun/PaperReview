@@ -49,7 +49,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, 3D perception, dexterous manipulation, correspondence, contact maps, bimanual`.
+- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, 3D perception, dexterous manipulation, correspondence, contact maps, single-arm manipulation`.
 - **Reading predecessor in the generated track queue:** FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** FlowPolicy: Enabling Fast and Robust 3D Flow-Based Policy via Consistency Flow Matching for Robot Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

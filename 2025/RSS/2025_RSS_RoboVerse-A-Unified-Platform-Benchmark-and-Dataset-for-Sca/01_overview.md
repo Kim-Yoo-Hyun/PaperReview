@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Haoran Geng, Feishi Wang, Songlin Wei, Yuyang Li, Bangjun Wang, Boshi An, Haozhe Lou, Charlie Tianyue Cheng, Peihao Li, Haozhe Chen, Yutong Liang, Yuxi Qian, Jiageng Mao, Weikang Wan, Yiran Geng, Mingtong Zhang, Jiangran Lyu, Siheng Zhao, Jiazhao Zhang, Chaoyi Xu, Jialiang Zhang, Chengyang Zhao, Haoran Lu, Yufei Ding, Ran Gong, Yuran Wang, Yuxuan Kuang, Ruihai Wu, Baoxiong Jia, Hao Dong, Siyuan Huang, Yue Wang, Jitendra Malik, Pieter Abbeel
+- Authors: Haoran Geng, Feishi Wang, Songlin Wei, Yuyang Li, Bangjun Wang, Boshi An, Charlie Tianyue Cheng, Haozhe Lou, Peihao Li, Yen-Jen Wang, Yutong Liang, Dylan Goetting, Chaoyi Xu, Haozhe Chen, Yuxi Qian, Yiran Geng, Jiageng Mao, Weikang Wan, Mingtong Zhang, Jiangran Lyu, Siheng Zhao, Jiazhao Zhang, Jialiang Zhang, Chengyang Zhao, Haoran Lu, Yufei Ding, Ran Gong, Yuran Wang, Yuxuan Kuang, Ruihai Wu, Baoxiong Jia, Carlo Sferrazza, Hao Dong, Siyuan Huang, Yue Wang, Jitendra Malik, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Dataset, Benchmark, simulation, multi-embodiment, robot data, generalization
@@ -89,3 +89,9 @@ RoboVerse는 여러 시뮬레이터와 로봇을 한 플랫폼에 연결하고 �
 - **Actual contribution:** Additionally, we propose unified benchmarks for imitation learning and reinforcement ‘data is resource-intensive learning, enabling consistent evaluation across different levels of ‘real-world scenarios generalization. (p. 1, Abstract).
 - **Evaluation boundary:** ‘TABLE Il: Baseline Results on ROBOVERSE Imitation Learning Benchmark. (p. 10, B. Results on the Imitation Learning Benchmark).
 - **Explicit failure boundary:** Conversely, a model trained solely on DROID data fails to transfer effectively to the ROBOVERSE scene, We hypothesize that this shortcoming stems from limited samples per scene coverage in DROID ... (p. 11, dataset).
+
+## 원문과 공개 자료
+
+- RSS 표제면에서 Yen-Jen Wang, Dylan Goetting, Carlo Sferrazza를 포함한 37명의 이름과 순서를 확인했다. [표제면](https://www.roboticsproceedings.org/rss21/p022.pdf#page=1)
+- 코드 · RoboVerse 환경을 사용하는 모방학습 구현 · roboverse_learn/il/train.py [배포 파일](https://raw.githubusercontent.com/RoboVerseOrg/RoboVerse/5f3ec0185d2d3bcb59d53b0bd1f5b0f8a6f2ce14/roboverse_learn/il/train.py)
+- 데이터 · RoboVerse 자료 배포본에 수록된 CALVIN 궤적 한 건 · trajs/calvin/env_A_out/episode_chunk_132_1802438_1809815/trajectory_env_A_1237_v2.pkl [배포 파일](https://huggingface.co/datasets/RoboVerseOrg/roboverse_data/blob/fab63ccaaed54f413901f86edc3fa1ab77a96500/trajs/calvin/env_A_out/episode_chunk_132_1802438_1809815/trajectory_env_A_1237_v2.pkl)

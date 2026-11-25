@@ -13,7 +13,7 @@
 - Tags: Robotics, Dataset, dexterous manipulation, synthetic data, grasping, articulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p106.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p106.pdf
-- Code/Project: not identified
+- Code/Project: https://jianglongye.com/dex1b/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -85,3 +85,7 @@ Dex1B는 다지 손의 파지와 관절 물체 조작을 위한 10억 개의 생
 - **Actual contribution:** + We introduce novel iterative data generation pipeline that combines optimization and generative models to gen~ erate large-scale dexterous demonstrations for grasping and articulation tasks. (p. 2, 7 S65 69K- Graplt).
 - **Evaluation boundary:** We adhere to the metrics established in the benchmark to ensure fair comparisons with baseline methods, which are divided into two categories: ‘quality (Success Rate, Qy-score, Penetration) and diversity (H ... (p. 6, A. Grasping Synthesis Evaluation).
 - **Explicit failure boundary:** While these methods help generate demonstrations at a certain scale, they each have limitations: human annotation is costly and imprecise, optimization-based methods are slow and sensitive to initialization, and RL-based ... (p. 2, 1. INrRopucTION).
+
+## 원문과 공개 자료
+
+- 저자 프로젝트에서 연구와 자료 안내 범위를 확인했다. [프로젝트](https://jianglongye.com/dex1b/)

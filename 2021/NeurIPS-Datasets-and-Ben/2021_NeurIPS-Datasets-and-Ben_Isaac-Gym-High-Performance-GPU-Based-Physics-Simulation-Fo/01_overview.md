@@ -13,7 +13,7 @@
 - Tags: Robotics, simulation, GPU, Reinforcement Learning, NVIDIA
 - Official paper: https://arxiv.org/abs/2108.10470
 - Full-text retrieval: https://research.nvidia.com/labs/srl/publication/makoviychuk-2021-isaac/
-- Code/Project: not identified
+- Code/Project: https://developer.nvidia.com/isaac-gym
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (32 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@ Isaac Gym은 물리 시뮬레이션과 정책 학습을 한 GPU에 배치해 다
 - **Actual contribution:** To address these bottlenecks, we present Isaac Gym - an end-to-end high performance robotics simulation platform. (p. 5, 1 Introduction).
 - **Evaluation boundary:** Figure 17: Trifinger learns a variety of dexterous manipulation behaviours in order to move the cube to the correct position and orientation. These results are obtained on the real TriFinger ... (p. 20, Figure/Table caption).
 - **Explicit failure boundary:** Running tens or hundreds of threads comes with other potential pitfalls including synchronization, context-switching overhead, and memory bandwidth limitations. (p. 6, 2 Background).
+
+## 원문과 공개 자료
+
+- 코드 · NVIDIA의 Isaac Gym 학습 환경과 손 조작 과제 코드. 물리 엔진 소스의 배포를 뜻하지 않는다 · isaacgymenvs/tasks/shadow_hand.py [배포 파일](https://raw.githubusercontent.com/isaac-sim/IsaacGymEnvs/aeed298638a1f7b5421b38f5f3cc2d1079b6d9c3/isaacgymenvs/tasks/shadow_hand.py)

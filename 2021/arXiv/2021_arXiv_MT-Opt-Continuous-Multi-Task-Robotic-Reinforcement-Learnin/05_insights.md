@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Reinforcement Learning, Multi-Task Learning, robot data, Google DeepMind`.
+- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Reinforcement Learning, Multi-Task Learning, robot data, real-world manipulation`.
 - **Reading predecessor in the generated track queue:** Maximum a Posteriori Policy Optimisation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Isaac Gym: High Performance GPU Based Physics Simulation For Robot Learning (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

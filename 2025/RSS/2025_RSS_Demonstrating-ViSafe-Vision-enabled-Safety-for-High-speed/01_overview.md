@@ -10,10 +10,10 @@
 - Authors: Parv Kapoor, Ian Higgins, Nikhil Varma Keetha, Jay Patrikar, Brady Moon, Zelin Ye, Yao He, Ivan Cisneros, Changliu Liu, Eunsuk Kang, Sebastian Scherer
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, safe control, collision avoidance, control barrier function, aerial robotics, sim-to-real
+- Tags: Robotics, safe control, collision avoidance, control barrier function, aerial robotics, sim-to-real, flight testing
 - Official paper: https://www.roboticsproceedings.org/rss21/p002.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p002.pdf
-- Code/Project: not identified
+- Code/Project: https://theairlab.org/visafe/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,7 @@ ViSafe는 카메라 관측으로 공중 이동체 사이의 안전거리를 유�
 - **Actual contribution:** Assured safe-separation is essential for achi y operatloa of alrborve vehicles in a shared ip resource-constrained aerial systems with this fty-critical capability, we present ViSafe, a high-speed vi ‘only airborne ... (p. 1, Abstract).
 - **Evaluation boundary:** These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. (p. 7, A. Experiment Design).
 - **Explicit failure boundary:** Across our wide array of simulation and real-world tests, ‘we find that our current system struggles when the intruder is below the horizon, As acknowledged in the benchmarking of ‘our ... (p. 11, B. Limitations).
+
+## 원문과 공개 자료
+
+- 카메라 관측으로 항공기 간 안전거리 제약을 적용하는 충돌 회피 시스템이다. 디지털 트윈과 실외 비행에서 분리 거리를 평가했다. [방법·평가](https://www.roboticsproceedings.org/rss21/p002.pdf#page=7)

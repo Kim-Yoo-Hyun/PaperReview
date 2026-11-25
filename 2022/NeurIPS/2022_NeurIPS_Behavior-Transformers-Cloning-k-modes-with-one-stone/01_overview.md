@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / NeurIPS
-- Authors: Nur Muhammad Shafiullah, Zichen Cui, Ariuntuya (Arty) Altanzaya, Lerrel Pinto
+- Authors: Nur Muhammad (Mahi) Shafiullah, Zichen Jeff Cui, Ariuntuya Altanzaya, Lerrel Pinto
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Imitation Learning, Transformer, multimodal actions
@@ -89,3 +89,9 @@ Behavior Transformer는 시연의 여러 행동 양식을 하나의 정책에서
 - **Actual contribution:** In this work, we present Behavior Transformers (BeT), a new method for learning behaviors from rich, distributionally multi-modal data. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Figure 5: Comparison between an RBC model and two BeT models, trained with and without historical context on a dataset with three distinct modes. BeT with history is better able ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD). (p. 6, 3 Experiments).
+
+## 원문과 공개 자료
+
+- NeurIPS 표제면의 첫 세 저자 이름을 반영했다. [표제면](https://proceedings.neurips.cc/paper_files/paper/2022/file/90d17e882adbdda42349db6f50123817-Paper-Conference.pdf#page=1)
+- 코드 · BeT 시연 학습 코드 · train.py [배포 파일](https://raw.githubusercontent.com/notmahi/bet/3d9d42352c0a0a6fb170369e95dde4ec3cfea951/train.py)
+- 데이터 · 저자가 OSF에 배포한 BeT 훈련 데이터 압축 파일 · bet_data_release.tar.gz [배포 파일](https://osf.io/download/4g53p/)

@@ -13,7 +13,7 @@
 - Tags: Robotics, world model, model predictive control, digital twin, VLM, contact-rich manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p145.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p145.pdf
-- Code/Project: not identified
+- Code/Project: https://prompting-with-the-future.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,9 @@ PWTF는 손으로 촬영한 영상에서 만든 디지털 트윈으로 행동 �
 - **Actual contribution:** To validate the effectiveness of our framework, in this section, we design eight real-world manipulation tasks that require 6 DoF control, semantic understanding, and diverse ‘manipulation skills, We compare our ... (p. 5, C. Motion Planning via Simulation-Informed Prompting).
 - **Evaluation boundary:** As shown in Table Ill, while performance varies across df= ferent tasks due to their diverse requirements, our full method achieves the best results in most of the tasks. (p. 6, B. Quantitative results).
 - **Explicit failure boundary:** + Planning error: When subtasks are not properly defined or the model fails to recognize the current stage, the robot may execute actions incorrectly. (p. 8, B. Quantitative results).
+
+## 원문과 공개 자료
+
+- 가중치 · 바구니 장면에 맞춰 최적화한 3D Gaussian Splatting 파라미터로, 정책 가중치와 구분 · point_cloud.ply [배포 파일](https://drive.google.com/file/d/1je2e_SHnNzKkfBlFxG_OoSWL_pBpFZ6G/view)
+- 코드 · 디지털 트윈에서 후보 행동을 비교하는 MPC 실행 코드 · main.py [배포 파일](https://raw.githubusercontent.com/TritiumR/Prompting-with-the-Future/58aa59160bfc6f04b45ea289defb06e192bdd5c4/main.py)
+- 데이터 · 저자가 배포한 바구니 장면 COLMAP 입력 영상 · 00000.png [배포 파일](https://drive.google.com/file/d/1FoHgmYrFkmIgJn0nwsJpxw5dxqAqpsDJ/view)
