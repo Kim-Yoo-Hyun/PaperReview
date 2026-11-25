@@ -90,3 +90,8 @@ RGB-D 예측에서 명시적 3D 운동 표현의 역할을 비교하는 world-mo
 - **Actual contribution:** We validate the effectiveness of our method on multiple benchmarks commonly used in robotic manipulation. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 5. Qualitative results on the Robodesk and Robosuite dataset. The trajectory comes from the validation set, which is split from the original training trajectories and is not used for ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** We hypothesize that the failure lies in that the visual reward cannot always point to the correct trajectory, which is also revealed by [87]. (p. 8, 4.2. Visual Planning).
+
+## 원문과 공개 자료
+
+- 코드 · RGB-D 장면 흐름 예측 구현 · models/flow_diffusion_module.py [배포 파일](https://raw.githubusercontent.com/sharinka0715/FlowDreamer/c7f24760c774fecfd1ed577719d64add2c028bdb/models/flow_diffusion_module.py)
+- 가중치 · Language Table 조건에 맞춘 깊이 추정기 가중치. 장면 흐름을 생성하는 주 모델의 체크포인트는 이 배포에서 확인하지 못했다 · depth_anything/languagetable_vits.pth [배포 파일](https://huggingface.co/sharinka0715/flowdreamer_pretrained/blob/b5b420be872b1818603b36d28d481e01aed1ec88/depth_anything/languagetable_vits.pth)

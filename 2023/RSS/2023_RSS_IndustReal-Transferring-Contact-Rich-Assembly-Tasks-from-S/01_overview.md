@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: Bingjie Tang, Michael A Lin, Iretiayo A Akinola, Ankur Handa, Gaurav S Sukhatme, Fabio Ramos, Dieter Fox, Yashraj S Narang
+- Authors: Bingjie Tang, Michael A. Lin, Iretiayo Akinola, Ankur Handa, Gaurav S. Sukhatme, Fabio Ramos, Dieter Fox, Yashraj Narang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, assembly, contact-rich manipulation, Reinforcement Learning, sim-to-real, industrial robotics
 - Official paper: https://arxiv.org/abs/2305.17110
 - Full-text retrieval: https://arxiv.org/pdf/2305.17110
-- Code/Project: https://research.nvidia.com/labs/srl/projects/industreal/
+- Code/Project: https://sites.google.com/nvidia.com/industreal
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,10 @@ IndustReal은 시뮬레이션에서 학습한 접촉 조립 정책을 실제 로
 - **Actual contribution:** Specifically, our primary contributions are the following: • Algorithms: For simulation, we propose three methods to allow RL agents to solve contact-rich tasks in a simulator: a simulation-aware policy update ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Asset Pick Insert Pick-Place-Insert Success Success Engage Success Engage Round peg 8 mm 19/20 7/10 7/10 7/10 7/10 Round peg 12 mm 19/20 7/10 9/10 7/10 7/10 Round peg 16 ... (p. 9, VI. REAL-WORLD EXPERIMENTS).
 - **Explicit failure boundary:** Engagement failures were almost exclusively due to slip between the gripper and object; we hypothesize that a highforce gripper (e.g., Robotiq) would fully resolve this issue. (p. 8, VI. REAL-WORLD EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Michael A Lin → Michael A. Lin · Iretiayo A Akinola → Iretiayo Akinola · Gaurav S Sukhatme → Gaurav S. Sukhatme · Yashraj S Narang → Yashraj Narang로 반영했다. [표제면](https://www.roboticsproceedings.org/rss19/p039.pdf#page=1)
+- 코드 · Isaac Gym에서 삽입 정책을 학습하는 논문 과제 구현 · isaacgymenvs/tasks/industreal/industreal_task_pegs_insert.py [배포 파일](https://raw.githubusercontent.com/isaac-sim/IsaacGymEnvs/aeed298638a1f7b5421b38f5f3cc2d1079b6d9c3/isaacgymenvs/tasks/industreal/industreal_task_pegs_insert.py)
+- 데이터 · 산업 삽입 시뮬레이션의 물체 형상 · assets/industreal/mesh/industreal_gears/industreal_gear_base.obj [배포 파일](https://raw.githubusercontent.com/isaac-sim/IsaacGymEnvs/aeed298638a1f7b5421b38f5f3cc2d1079b6d9c3/assets/industreal/mesh/industreal_gears/industreal_gear_base.obj)
+- 가중치 · 실물 배치용 IndustReal 페그 삽입 강화학습 정책 · src/industreallib/rl/checkpoints/industreal_policy_insert_pegs/nn/industreal_policy_insert_pegs.pth [배포 파일](https://media.githubusercontent.com/media/NVlabs/industreallib/72a964b9a00cd15b4fc54b7b0eda74454b8b05e9/src/industreallib/rl/checkpoints/industreal_policy_insert_pegs/nn/industreal_policy_insert_pegs.pth)

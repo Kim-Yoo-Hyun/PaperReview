@@ -10,7 +10,7 @@
 - Authors: Chuning Zhu, Raymond Yu, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, VLA, world model, video diffusion, action diffusion, robot data
+- Tags: Robotics, Imitation Learning, world model, video diffusion, action diffusion, robot data
 - Official paper: https://www.roboticsproceedings.org/rss21/p015.html
 - Full-text retrieval: https://arxiv.org/pdf/2504.02792
 - Code/Project: https://weirdlabuw.github.io/uwm/
@@ -88,3 +88,9 @@ Unified World Models는 행동과 미래 영상의 확산을 한 트랜스포머
 - **Actual contribution:** We show that this learning framework leads to improved policies compared to standard imitation learning since, (1) the unified architecture enables feature sharing between actions and pixels, resulting in additional ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Real Robot Experiments 1) Setup: To evaluate UWM and baselines as pretraining methods, we leverage the DROID dataset [25] as a source of pretraining data. (p. 6, IV. EXPERIMENTS).
 - **Explicit failure boundary:** Firstly, the proposed model does not yet learn from large scale human videos, bridging the embodiment gap. (p. 10, VII. LIMITATIONS).
+
+## 원문과 공개 자료
+
+- 영상과 행동을 하나의 확산 모델에서 예측한다. 지도 시연과 행동 표지가 없는 로봇 영상으로 학습하고 정책과 동역학 모델로 평가한다. §4의 현재·미래 관측은 여러 카메라 영상이고 행동은 별도로 모델링한다. [방법·평가](https://arxiv.org/pdf/2504.02792#page=3)
+- 코드 · 영상과 행동을 함께 학습하는 UWM 훈련 경로 · experiments/uwm/train_robomimic.py [배포 파일](https://raw.githubusercontent.com/WEIRDLabUW/unified-world-model/b7d4067c8859775e5b08f681e76d538015cdd445/experiments/uwm/train_robomimic.py)
+- 가중치 · LIBERO-90에서 사전학습한 UWM · libero_90.pt [배포 파일](https://drive.google.com/file/d/1VfdOL8SgCl2hFwQjnr-4KwqVzB-S6La7/view)

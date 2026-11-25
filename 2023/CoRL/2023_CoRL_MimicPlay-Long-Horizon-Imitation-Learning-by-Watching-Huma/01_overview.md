@@ -86,3 +86,9 @@ MimicPlay는 사람이 물체를 자유롭게 조작하는 영상에서 장기 �
 - **Actual contribution:** To summarize, the main contributions of our work are as follows: • A novel paradigm for learning 3D-aware latent plans from cheap human play data. • A hierarchical framework that ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** Therefore, in this experiment, we use the same teleoperated robot play dataset to train both high-level planner and low-level controller, and report the results of Ours (0% human) and baselines ... (p. 15, C Supplementary Experiment Results).
 - **Explicit failure boundary:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings. (p. 7, 5 Results).
+
+## 원문과 공개 자료
+
+- 코드 · 계층적 시연 정책의 네트워크 구현 · mimicplay/models/policy_nets.py [배포 파일](https://raw.githubusercontent.com/j96w/MimicPlay/334ad94390fb051093c332262986e44eb6d9d00b/mimicplay/models/policy_nets.py)
+- 가중치 · 시뮬레이션 하위 조작 정책 · lowlevel_model_epoch_950.pth [배포 파일](https://drive.google.com/file/d/1BBVRq_ojKzlu3r5UN1C1K6x1pSTie9B3/view)
+- 데이터 · 시뮬레이션 주방 평가 과제를 정의한 파일 · mimicplay/scripts/bddl_files/KITCHEN_SCENE9_SUBGOAL_eval-task-1_turn_on_stove.bddl [배포 파일](https://raw.githubusercontent.com/j96w/MimicPlay/334ad94390fb051093c332262986e44eb6d9d00b/mimicplay/scripts/bddl_files/KITCHEN_SCENE9_SUBGOAL_eval-task-1_turn_on_stove.bddl)

@@ -13,7 +13,7 @@
 - Tags: Robotics, VLA, affordance, progress estimation, long-horizon manipulation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://plan-lab.github.io/projects/palm/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (15 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -83,3 +83,8 @@ PALM은 긴 조작 중에 어디와 어떻게 상호작용할지와 현재 하�
 - **Actual contribution:** Our contributions are as follows: • We introduce PALM, a unified VLA framework that integrates structured affordance reasoning and progress-aware policy generation to enable reliable execution across longhorizon, contact-rich manipulati ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 1. In contrast to vanilla VLAs that directly map inputs to actions or to predictive methods that forecast dense future images, PALM introduces learnable queries to forecast a structured ... (p. 1, Figure/Table caption).
 - **Explicit failure boundary:** This absence of temporal grounding leads to characteristic long-horizon failure modes: repeated or unnecessary actions, skipped required subtasks, premature termination, and even declaring success in incorrect states. (p. 2, 1. Introduction).
+
+## 원문과 공개 자료
+
+- 코드 · 진행도와 행동을 예측하는 정책 모델 구현 · models/palm_model.py [배포 파일](https://raw.githubusercontent.com/PLAN-Lab/PALM/317a334dc9f58b691a3b4c5b4d065fc342aa65d2/models/palm_model.py)
+- 가중치 · PALM 정책 사전학습 가중치 · palm.pth [배포 파일](https://huggingface.co/PLAN-Lab/PALM/blob/62bef4e6512e8149b53c8fc4ce6ebdc3627eff22/palm.pth)

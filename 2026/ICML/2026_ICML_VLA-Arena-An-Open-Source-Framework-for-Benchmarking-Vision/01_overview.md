@@ -90,3 +90,9 @@ VLA-Arena는 여러 VLA의 과제 수행과 안전성을 같은 환경에서 비
 - **Actual contribution:** We introduce VLA-Arena, the first benchmark to structurally evaluate the performance and safety of VLAs. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 1. Comprehensive Comparison with Existing Robotics Benchmarks. Benchmarks are grouped by their underlying Physics Engine. Resources: Data (Fine-grained, filtered datasets), Frmwk (Open framework supporting custom uploads). Structu ... (p. 3, Figure/Table caption).
 - **Explicit failure boundary:** While VLAs have progressed rapidly, their capability boundaries, limitations, and failure modes remain poorly understood. (p. 2, 1. Introduction).
+
+## 원문과 공개 자료
+
+- 코드 · VLA 정책과 조작 과제를 연결하는 벤치마크 평가 구현 · vla_arena/cli/eval.py [배포 파일](https://raw.githubusercontent.com/PKU-Alignment/VLA-Arena/babe582ebffc82b979b77964a7e56417d02f63a4/vla_arena/cli/eval.py)
+- 가중치 · VLA-Arena에서 미세조정한 OpenVLA-OFT 정책 파일 · action_head--150000_checkpoint.pt [배포 파일](https://huggingface.co/VLA-Arena/openvla-7b-oft-finetuned-vla-arena/blob/c553bf1d163f5717ada47030933948f4321a60cf/action_head--150000_checkpoint.pt)
+- 데이터 · VLA-Arena의 L0_M 분할 조작 시연 HDF5 파일 · close_the_middle_layer_of_the_cabinet_demo.hdf5 [배포 파일](https://huggingface.co/datasets/VLA-Arena/VLA_Arena_L0_M_hdf5/blob/7b9292cffb81b6aa99e6af84a1b27fb8e352277d/close_the_middle_layer_of_the_cabinet_demo.hdf5)

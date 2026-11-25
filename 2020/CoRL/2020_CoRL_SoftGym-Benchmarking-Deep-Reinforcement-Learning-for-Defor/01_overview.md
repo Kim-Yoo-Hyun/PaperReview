@@ -84,3 +84,8 @@ SoftGym은 변형 물체 조작에서 관측 방식과 제어 알고리즘의 �
 - **Actual contribution:** In this paper, we present SoftGym, a set of open-source simulated benchmarks for manipulating deformable objects, with a standard OpenAI Gym API and Python interface for creating new environments. (p. 2, 1 Introduction).
 - **Evaluation boundary:** 6.2 Benchmarking results on SoftGym-Medium A summary of the final normalized performance of all baselines on the evaluation set is shown in Figure 2. (p. 7, 6 Experiments).
 - **Explicit failure boundary:** We do not include the latent over-shooting in our experiment as it does not improve much over the one-step case. (p. 17, B.4 PlaNet).
+
+## 원문과 공개 자료
+
+- 코드 · 변형체 벤치마크의 옷감 펼치기 환경 구현 · softgym/envs/cloth_flatten.py [배포 파일](https://raw.githubusercontent.com/Xingyu-Lin/softgym/bb383f64cd488062587714abbae38f27ed9f2457/softgym/envs/cloth_flatten.py)
+- 데이터 · 배포한 시뮬레이션 환경 초기 상태 · rope_configuration.pkl [배포 파일](https://drive.google.com/file/d/1f3FK_7gwnJLVm3VaSacvYS7o-19-XPrr/view)

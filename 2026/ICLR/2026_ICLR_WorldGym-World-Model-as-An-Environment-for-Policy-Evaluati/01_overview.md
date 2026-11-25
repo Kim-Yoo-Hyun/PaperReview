@@ -88,3 +88,9 @@ WorldGym은 실제 초기 영상에서 출발해 정책을 영상 세계 모델 
 - **Actual contribution:** Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform a comprehensive set of studies to ... (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Table 1: Policy Evaluations Results on Bridge OOD Language Tasks. "Move the pot to the counter" is perhaps the most challenging because the Bridge dataset does not contain trajectories which ... (p. 9, Figure/Table caption).
 - **Explicit failure boundary:** Notably, GPT-4o achieves very low false positives (i.e., the rollout is a failure but the VLM thinks it is a success), which is highly useful in policy evaluation. (p. 18, B.2 VALIDATING VLM SUCCESS PREDICTIONS).
+
+## 원문과 공개 자료
+
+- 코드 · 정책을 시험하는 학습 환경의 영상 예측 모델 구현 · src/world_model_eval/model.py [배포 파일](https://raw.githubusercontent.com/world-model-eval/world-model-eval/738510dd7d3b6f09846732acd757f0329f4851b3/src/world_model_eval/model.py)
+- 가중치 · 여러 로봇의 시각 전이를 예측하는 세계 모델 · mixed_openx_9robots_20frames_0p1actiondropout_580ksteps.pt [배포 파일](https://drive.google.com/file/d/1uiRP2BuavapMsyP9Cbr25mi_ymk9SEJb/view)
+- 데이터 · Bridge 평가용 시퀀스 표본 · sample_data/bridge/test/000000002.npz [배포 파일](https://raw.githubusercontent.com/world-model-eval/world-model-eval/738510dd7d3b6f09846732acd757f0329f4851b3/sample_data/bridge/test/000000002.npz)

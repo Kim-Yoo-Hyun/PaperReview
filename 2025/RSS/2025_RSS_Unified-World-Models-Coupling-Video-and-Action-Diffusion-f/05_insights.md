@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, VLA, world model, video diffusion, action diffusion, robot data`.
+- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, Imitation Learning, world model, video diffusion, action diffusion, robot data`.
 - **Reading predecessor in the generated track queue:** PIN-WM: Learning Physics-INformed World Models for Non-Prehensile Manipulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

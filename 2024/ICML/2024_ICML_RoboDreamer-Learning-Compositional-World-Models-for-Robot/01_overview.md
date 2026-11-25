@@ -84,3 +84,8 @@ RoboDreamer는 언어 지시를 구성 요소로 나눠 훈련에서 보지 못�
 - **Actual contribution:** This enables our approach to generalize to both new combinations of language and multimodal input. process by leveraging the inherent compositionality of natural language. (p. 2, 1. Introduction).
 - **Evaluation boundary:** According to the results presented in Table 3, RoboDreamer achieves superior task success rates compared to baseline models even if RoboDreamer is only given observation from single cameras. (p. 7, 4.2. Evaluation on Robotic Planning).
 - **Explicit failure boundary:** The scores are 0, 1, where 0 means the robotic planning in the generated videos is unreasonable or fails to solve tasks and 1 means the robotic planning is executable ... (p. 6, 4.1. Evaluation on Video Generation).
+
+## 원문과 공개 자료
+
+- 코드 · 구성적 비디오 모델을 학습하는 코드 · train_rtx.py [배포 파일](https://raw.githubusercontent.com/rainbow979/robodreamer/62aeebc8d892efae1eb46d7ff087574b3339dad8/train_rtx.py)
+- 데이터 · 로봇 지시의 구성 요소를 저장한 파싱 자료 · parse_text.pkl [배포 파일](https://raw.githubusercontent.com/rainbow979/robodreamer/62aeebc8d892efae1eb46d7ff087574b3339dad8/parse_text.pkl)

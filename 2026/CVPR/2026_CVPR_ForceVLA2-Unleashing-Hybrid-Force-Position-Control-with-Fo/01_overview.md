@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2026 / CVPR
-- Authors: Yang Li, Zhaxizhuoma Zhaxizhuoma, Hongru Jiang, Junjie Xia, Hongquan Zhang, Jinda Du, Yunsong Zhou, Jia Zeng, Ce Hao, Jieji Ren, Qiaojun Yu, Cewu Lu, Yu Qiao, Jiangmiao Pang
+- Authors: Yang Li, Zhaxizhuoma, Hongru Jiang, Junjie Xia, Hongquan Zhang, Jinda Du, Yunsong Zhou, Jia Zeng, Ce Hao, Jieji Ren, Qiaojun Yu, Cewu Lu, Yu Qiao, Jiangmiao Pang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, VLA, force sensing, hybrid force-position control, contact-rich manipulation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://sites.google.com/view/force-vla2/home
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,9 @@ ForceVLA2는 접촉 조작에서 원하는 힘과 위치를 함께 제어하도�
 - **Actual contribution:** To overcome these limitations, we propose ForceVLA2, a novel framework that equips VLAs with active hybrid force-position control with force awareness to enhance contact-rich manipulation, as shown in Fig. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Entries indicate success rate (%). gray : baseline results. (p. 8, 5.2. Main Experiment Results).
 - **Explicit failure boundary:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive tasks such as object search, ... (p. 7, 5.2. Main Experiment Results).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Zhaxizhuoma Zhaxizhuoma → Zhaxizhuoma로 반영했다. [표제면](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ForceVLA2_Unleashing_Hybrid_Force-Position_Control_with_Force_Awareness_for_Contact-Rich_CVPR_2026_paper.pdf#page=1)
+- 코드 · 저자는 ForceVLA2의 구현 공개를 준비 중이라고 명시했다. [저자 공개 안내](https://sites.google.com/view/force-vla2/home)
+- 데이터 · 저자는 ForceVLA2의 데이터 공개를 준비 중이라고 명시했다. [저자 공개 안내](https://sites.google.com/view/force-vla2/home)

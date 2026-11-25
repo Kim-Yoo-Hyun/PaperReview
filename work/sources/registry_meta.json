@@ -40,15 +40,30 @@
         },
         "order": "Prior formal batches and admitted gapfill A excluded; stable paper_id order within NEXT."
       }
+    },
+    {
+      "path": "work/sources/batches/core_next_04.yaml",
+      "schema": "appendix-a-template-4",
+      "registry_key": "registry_id",
+      "record_count": 50,
+      "verified_on": "2026-11-25",
+      "openness_reviewed_on": "2026-11-25",
+      "selection": {
+        "baseline_commit": "770ad11e36bc9073af081f109ebcb53c832655f9",
+        "tier_counts": {
+          "NEXT": 50
+        },
+        "order": "Prior formal batches and admitted gapfill A excluded; stable paper_id order within NEXT."
+      }
     }
   ],
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-11-24",
+  "generated_on": "2026-11-25",
   "paper_count": 1252,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "e3e48028201920612dacd799cccfc4a0ef36c64b83e1ead897287ef359399ec9",
+  "manifest_sha256": "d366010731d286b3f20f88e8631b12ad8dfd6a0fe6ea88511836d37ac00ebf7c",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
   "relation_count": 91,
@@ -87,7 +102,7 @@
     }
   ],
   "source_audit": {
-    "verified_on": "2026-11-24",
+    "verified_on": "2026-11-25",
     "path": "work/sources/batches/source_audit_2026_11.jsonl",
     "report": "research/SOURCE_AUDIT.md",
     "paper_count": 1252,
@@ -186,7 +201,7 @@
       "count": 43,
       "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
     },
-    "manifest_sha256": "e3e48028201920612dacd799cccfc4a0ef36c64b83e1ead897287ef359399ec9",
+    "manifest_sha256": "d366010731d286b3f20f88e8631b12ad8dfd6a0fe6ea88511836d37ac00ebf7c",
     "initial_verified_on": "2026-11-20",
     "artifact_recheck": {
       "verified_on": "2026-11-24",

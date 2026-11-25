@@ -13,7 +13,7 @@
 - Tags: equivariant, Diffusion, Robotics
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Ryu_Diffusion-EDFs_Bi-equivariant_Denoising_Generative_Modeling_on_SE3_for_Visual_Robotic_CVPR_2024_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://sites.google.com/view/diffusion-edfs
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,9 @@ Diffusion-EDFs는 장면과 조작 대상 좌표계의 변환을 모두 반영�
 - **Actual contribution:** This enables our method to be trained end-to-end from only 5∼10 human demonstrations without requiring any pre-training and object segmentation, yet are highly generalizable to out-of-distribution object configurations. (p. 1, 1. Introduction).
 - **Evaluation boundary:** On the other hand, Diffusion-EDFs maintain total success rates around 80% even in the most adversarial scenarios due to the local equivariance [37, 61] inherited from EDFs and our local ... (p. 6, 5. Experiments and Results).
 - **Explicit failure boundary:** In this task, even a minor error of a centimeter can result in complete failure due to noisy observation and the small size of mug handles. (p. 6, 5. Experiments and Results).
+
+## 원문과 공개 자료
+
+- 코드 · 다중 해상도 SE(3) 점수 모델 구현 · diffusion_edf/multiscale_score_model.py [배포 파일](https://raw.githubusercontent.com/tomato1mule/diffusion_edf/d1ae47fa4bf6e0133c5c373b20939c603d327fc0/diffusion_edf/multiscale_score_model.py)
+- 가중치 · 실물 병을 집는 실험의 에너지 모델 가중치 · checkpoints/real_bottle/Pick_EBM_250.pt [배포 파일](https://media.githubusercontent.com/media/tomato1mule/diffusion_edf/d1ae47fa4bf6e0133c5c373b20939c603d327fc0/checkpoints/real_bottle/Pick_EBM_250.pt)
+- 데이터 · 병을 선반에 놓는 시연 첫 단계의 장면 점군 · demo/panda_bottle_on_shelf/data/demo_0/step_0/scene_pcd/points.pt [배포 파일](https://media.githubusercontent.com/media/tomato1mule/diffusion_edf/d1ae47fa4bf6e0133c5c373b20939c603d327fc0/demo/panda_bottle_on_shelf/data/demo_0/step_0/scene_pcd/points.pt)

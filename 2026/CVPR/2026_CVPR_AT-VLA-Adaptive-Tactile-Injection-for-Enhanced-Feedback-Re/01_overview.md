@@ -13,7 +13,7 @@
 - Tags: Robotics, VLA, tactile sensing, contact-rich manipulation, real-time control
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_AT-VLA_Adaptive_Tactile_Injection_for_Enhanced_Feedback_Reaction_in_Vision-Language-Action_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/clorislili/AT-VLA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,7 @@ AT-VLA는 조작 중 촉각이 필요한 때와 모델 안에서 사용할 위�
 - **Actual contribution:** Our main contributions are as follows: 1) We propose Adaptive Tactile Injection, making the first attempt to balance pretrained knowledge with the learning of newly introduced tactile representations. (p. 2, 1. Introduction).
 - **Evaluation boundary:** As shown in Table 1, our model outperforms all baseline methods. (p. 6, 4.2. Contact-rich Task Evaluation).
 - **Explicit failure boundary:** In contrast, our model, although capable of grasping the lid, does not always guarantee a sufficiently firm grip, occasionally leading to failure cases where the gripper slips during unscrewing. (p. 6, 4.2. Contact-rich Task Evaluation).
+
+## 원문과 공개 자료
+
+- 코드 · 저자가 공개 범위를 추론과 배포 유틸리티로 명시했다 · internvl_chat/deploy/deploy.py [배포 파일](https://raw.githubusercontent.com/clorislili/AT-VLA/9d267ac3d367bb4ae772e4e0086982e38c681336/internvl_chat/deploy/deploy.py)

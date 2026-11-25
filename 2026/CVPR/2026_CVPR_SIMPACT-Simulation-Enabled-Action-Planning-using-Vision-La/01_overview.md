@@ -13,7 +13,7 @@
 - Tags: VLM, Planning, simulation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SIMPACT_Simulation-Enabled_Action_Planning_using_Vision-Language_Models_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://simpact-bot.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -89,3 +89,8 @@ SIMPACT는 시각언어 모델의 행동 계획을 물리 시뮬레이션으로 
 - **Actual contribution:** In summary, this paper makes the following contributions: • We introduce a test-time, zero-shot framework enabling VLMs to plan physics-aware embodied actions; • We present a pipeline for automatically generating ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 3. Ablation. Success rates (%) over 10 trials for each task after removing each component of our method. Results demonstrate the importance of VLM-conditioned sampling and the VLM's simulation-enabled ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** However, they struggle with tasks that require precise action planning, where small errors, such as pushing the wrong part of an object (in non-toppling push) or squeezing an incorrect region ... (p. 7, 4.2. Results).
+
+## 원문과 공개 자료
+
+- 코드 · 재구성 장면에서 후보 행동을 제안하는 계획 코드 · scripts/propose_actions.py [배포 파일](https://raw.githubusercontent.com/ShaoxiongYao/simpact/692aab2bb92e4df324d28c76630d17b08e814287/scripts/propose_actions.py)
+- 데이터 · 재구성 예제 장면에서 측정한 깊이 배열 · examples/dough_real2sim/1104_sand_6/capture/camera1_depth.npy [배포 파일](https://raw.githubusercontent.com/ShaoxiongYao/simpact/692aab2bb92e4df324d28c76630d17b08e814287/examples/dough_real2sim/1104_sand_6/capture/camera1_depth.npy)

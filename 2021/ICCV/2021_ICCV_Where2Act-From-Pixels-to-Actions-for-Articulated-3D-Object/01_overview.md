@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2021 / ICCV
-- Authors: Kaichun Mo, Leonidas J. Guibas, Mustafa Mukadam, Abhinav Gupta, Shubham Tulsiani
+- Authors: Kaichun Mo, Leonidas Guibas, Mustafa Mukadam, Abhinav Gupta, Shubham Tulsiani
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
 - Tags: Robotics, 3D Vision, affordance, articulated objects, active perception, point cloud
@@ -88,3 +88,9 @@ Where2Act는 관절 물체의 어느 지점을 어떤 방향으로 밀거나 당
 - **Actual contribution:** In summary, our contributions are: • we formulate the task of inferring affordances for manipulating 3D articulated objects by predicting per-pixel action likelihoods and proposals; • we propose an approach ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 4. We visualize the per-pixel action scoring predictions over the articulated parts given certain gripper orientations for interaction. In each set of results, the left two shapes shown in ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** With random interactions, there are many more failed interaction trials than the successful ones. (p. 6, 5.2. Metrics and Baselines).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Leonidas J. Guibas → Leonidas Guibas로 반영했다. [표제면](https://arxiv.org/pdf/2101.02692#page=1)
+- 코드 · 점군에서 상호작용 위치와 방향을 추정하는 구현 · code/models/model_3d.py [배포 파일](https://raw.githubusercontent.com/daerduoCarey/where2act/1daf1a24f7a372599b211108fa851f7ec3581330/code/models/model_3d.py)
+- 데이터 · 학습 범주의 시험 물체 분할 · stats/train_10cats_test_data_list.txt [배포 파일](https://raw.githubusercontent.com/daerduoCarey/where2act/1daf1a24f7a372599b211108fa851f7ec3581330/stats/train_10cats_test_data_list.txt)

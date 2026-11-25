@@ -83,3 +83,8 @@ RLBench는 다양한 로봇 팔 작업에서 시각·고유수용감각 관측�
 - **Actual contribution:** To that end, we present RLBench, which is an ambitious large-scale benchmark and learning environment designed to facilitate research in a number of both classical and deep-learning based robot manipulation ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Moving to simulation solves this, but at the risk of developing solutions that may not run as well in the real-world. (p. 3, III. BENCHMARK PROPERTIES).
 - **Explicit failure boundary:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in order to ensure that the ... (p. 5, IV. RLBENCH).
+
+## 원문과 공개 자료
+
+- 코드 · 로봇 조작 과제와 시연을 로드하는 환경 구현 · rlbench/environment.py [배포 파일](https://raw.githubusercontent.com/stepjam/RLBench/02720bba4c73fe02eb75df946b8791b806028a9d/rlbench/environment.py)
+- 데이터 · 도달 과제 한 시행의 저차원 시연 관측 · tests/unit/assets/tasks/reach_target/variation0/episodes/episode0/low_dim_obs.pkl [배포 파일](https://raw.githubusercontent.com/stepjam/RLBench/02720bba4c73fe02eb75df946b8791b806028a9d/tests/unit/assets/tasks/reach_target/variation0/episodes/episode0/low_dim_obs.pkl)

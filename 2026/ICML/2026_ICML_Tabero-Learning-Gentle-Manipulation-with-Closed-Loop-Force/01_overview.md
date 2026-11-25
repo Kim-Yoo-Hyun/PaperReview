@@ -87,3 +87,9 @@ Tabero는 촉각과 언어 지시로 조작 힘을 조절하는 정책을 평가
 - **Actual contribution:** In summary, our work makes the following contributions: The Tabero benchmark, which enables scalable visiontactile-language data generation by replaying open-source trajectories in a high-fidelity tactile simulator and establishes the f ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** When using the same robot kinematics and control policy as in the original dataset, our baseline configuration yields a success rate distribution that closely matches that reported in OpenVLA (Kim ... (p. 6, 4.1. Cross-Platform Data Validation).
 - **Explicit failure boundary:** 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation. (p. 7, 4.2. Tactile Data Diversity Analysis).
+
+## 원문과 공개 자료
+
+- 코드 · 환경 및 폐루프 추론 클라이언트 구현으로 학습 코드는 저자가 별도 저장소에서 제공한다 · benchmarks/common/closedloop_policy_inference.py [배포 파일](https://raw.githubusercontent.com/NathanWu7/Tabero/07e01d15369399a09f9898957d4a59e953be97ca/benchmarks/common/closedloop_policy_inference.py)
+- 가중치 · Tabero의 힘·촉각 미세조정 정책 파라미터 · checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999/params/ocdbt.process_0/d/03217ea9a027e1e4e2ba8c1cd897539a [배포 파일](https://huggingface.co/NathanWu7/pi0_lora_tacfield_tabero/blob/1ce3438ce5f290da65aff286935ecf97e9ea4046/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999/params/ocdbt.process_0/d/03217ea9a027e1e4e2ba8c1cd897539a)
+- 데이터 · Isaac Lab으로 옮긴 LIBERO 단일 과제 시연 HDF5 · assembled_hdf5/libero_10_task0_LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_demo.hdf5 [배포 파일](https://huggingface.co/datasets/NathanWu7/Isaaclab_Libero/blob/fe6263d3ff1f600f123522e298d6d755bc827d33/assembled_hdf5/libero_10_task0_LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket_demo.hdf5)

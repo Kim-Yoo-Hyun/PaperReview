@@ -87,3 +87,8 @@ SAFE는 VLA 내부 특징에서 과제 실패 가능성을 예측하고, 본 적
 - **Actual contribution:** VLAs are designed to accomplish diverse tasks and may frequently encounter novel task instructions and unseen environments during deployment. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Figure 6: SAFE-MLP achieves the best failure detection performance in real-world experiments with both π0-FAST Franka and OpenVLA WidowX. Plot (a) presents quantitative results, while (b-e) show qualitative examples from ... (p. 10, Figure/Table caption).
 - **Explicit failure boundary:** This means that the human annotator does not think these rollouts are failures until the very last moment, where the VLA model is probably on the right track and fails ... (p. 28, C.3 Failure Detection Time).
+
+## 원문과 공개 자료
+
+- 코드 · VLA 특징 시퀀스로 실패를 예측하는 구현 · failure_prob/model/lstm.py [배포 파일](https://raw.githubusercontent.com/vla-safe/SAFE/b8e31dfe4ea27d238f8f7b92f0c0f998a7179f78/failure_prob/model/lstm.py)
+- 데이터 · Franka에서 π0-FAST로 수집한 실물 시행 · pi0fast_droid_0510_all.zip [배포 파일](https://drive.google.com/file/d/13z_cdwnaJota2iHkZbhYgVALujZwtM3b/view)

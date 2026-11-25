@@ -13,7 +13,7 @@
 - Tags: 3D representation, Robotics, pretraining
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_SUGAR_Pre-training_3D_Visual_Representations_for_Robotics_CVPR_2024_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://cshizhe.github.io/projects/robot_sugar.html
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,9 @@ SUGAR는 복잡한 장면의 의미·기하·파지 가능성을 함께 표현�
 - **Actual contribution:** In summary, the contributions of our work are three-fold: • We present SUGAR - a framework with versatile transformer architecture for 3D point cloud representation learning on cluttered scenes. • ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 1. Zero-shot object recognition performance on three benchmarks. The Top1 accuracy is reported if not specified otherwise. The blue colored results in brackets on the ScanObjectNN dataset are obtained ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** While these 2D representations have demonstrated promising performance, they still fall short in addressing occlusions in complex cluttered scenes [79] and accurately predicting robotic actions [7] in the 3D world. (p. 1, 1. Introduction).
+
+## 원문과 공개 자료
+
+- 코드 · 3차원 표현에서 조작 행동을 예측하는 하류 모델 구현 · robo3d/models/pct_manipulator.py [배포 파일](https://raw.githubusercontent.com/vlc-robot/robot_sugar/9ae7bda91d12cbfa14ff3bc0c2422d76ae0b6526/robo3d/models/pct_manipulator.py)
+- 가중치 · 3차원 표현 사전학습 체크포인트 · pretrain.tar.gz [배포 파일](https://www.dropbox.com/scl/fi/wyq9pku4gmpwu2n6en55q/pretrain.tar.gz?rlkey=ma6fyeiittl7bad1ho3vx4qsa&st=rpc1en7w&dl=1)
+- 데이터 · 하류 조작 평가에 제공한 과제별 언어 지시 · robo3d/assets/rlbench/taskvar_instructions.jsonl [배포 파일](https://raw.githubusercontent.com/vlc-robot/robot_sugar/9ae7bda91d12cbfa14ff3bc0c2422d76ae0b6526/robo3d/assets/rlbench/taskvar_instructions.jsonl)

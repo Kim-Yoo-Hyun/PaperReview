@@ -2,7 +2,7 @@
 
 ## 재개 순서
 
-**다음 원장 작업은 다축 태그가 남은 NEXT 327편 중 앞의 50편이다.** 세 정규화 배치 150편과 별도 등록한 NEXT 23편을 제외하고 안정 ID 순으로 고른다. 현 원장에서는 *Dexterous World Models* (`pr-0686`)부터 *Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control* (`pr-0819`)까지다. 방법과 로봇 행동은 원문의 절·표에서, 공개 범위는 저자 배포처의 개별 파일과 공개 안내에서 확인한다. [직전 배치와 매핑](./work/update/REGISTRY.md#세-번째-배치-태그-매핑) · [별도 등록 배치](./work/sources/batches/gapfill_2026_11.yaml)
+**다음 원장 작업은 다축 태그가 남은 NEXT 277편 중 앞의 50편이다.** 네 정규화 배치 200편과 별도 등록한 NEXT 23편을 제외하고 안정 ID 순으로 고른다. *DexterityGen: Foundation Controller for Unprecedented Dexterity* (`pr-0820`)부터 *Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation* (`pr-0906`)까지다. 방법과 평가 조건은 원문에서, 공개 범위는 저자 배포 파일과 공개 안내에서 확인한다. [직전 배치와 매핑](./work/update/REGISTRY.md#네-번째-배치-태그-매핑) · [별도 등록 배치](./work/sources/batches/gapfill_2026_11.yaml)
 
 **다음 연구 작업은 G1이 걸쇠를 당기다가 저항이 갑자기 사라질 때 균형을 유지하는지 시뮬레이션에서 확인하는 것이다.** 후보 4의 첫 비교는 다음 순서로 진행한다. [선행 연구와 판별 기준](./work/research_topics/README.md#g1-load-release) · [공개 G1 모델](https://github.com/google-deepmind/mujoco_menagerie/blob/main/unitree_g1/README.md)
 
@@ -24,7 +24,7 @@ CORE 31편에 남은 공개 여부 55개는 새 배포 파일이나 저자의 �
 
 ## 직전 완료
 
-- **11월 24일 NEXT 50편 다축 정규화.** Clio부터 PIN-WM까지 원문·배포처를 대조했다. PointVLA·WMNav의 학습 방식, RoboPanoptes의 로봇 형태와 저자 명단 8편을 교정했다. 세 배치와 별도 등록분을 합해 집중 읽기 500편 중 173편에 다축 태그가 있다. 이번 배치의 공개 여부 150개 중 81개는 미확인이다. [논문별 근거](./work/sources/batches/core_next_03.yaml) · [집계와 이전 배치](./work/update/REGISTRY.md#세-번째-배치-태그-매핑)
+- **11월 25일 NEXT 50편 다축 정규화.** *Dexterous World Models*부터 *Memory Retrieval in Visuomotor Policies*까지 원문을 대조해 집중 읽기 500편 중 223편을 정규화했다. 공개 여부 150건 중 배포 파일을 확인한 항목은 88건, 저자가 공개를 예고한 항목은 5건, 미확인은 57건이다. 게재본 표제면에 맞춰 10편의 저자 표기도 교정했다. [논문별 근거](./work/sources/batches/core_next_04.yaml) · [집계와 이전 배치](./work/update/REGISTRY.md#네-번째-배치-태그-매핑)
 - **11월 24일 CORE 공개 자료와 DeXtreme 저자 대조.** 미확인 68개를 전부 검토해 배포 파일 7건, 연구 산출물에 해당하지 않는 항목 6건을 확인했다. 실험 데이터가 ‘해당 없음’으로 기록돼 있던 7편은 ‘배포 파일 미확인’으로 교정했다. DeXtreme은 ICRA 게재본 5977쪽에서 기존 저자 14명의 표기와 순서를 확인했다. [공개 범위와 판본](./research/SOURCE_AUDIT.md#core-공개-자료)
 - **11월 24일 수식·그림 전사 교정.** 10편의 노트 31개에서 91줄을 원문과 대조했다. 전체 표준 노트 6,260개를 다시 검색한 결과 글꼴 전용 문자와 유니코드 대체 문자는 0개였다. TD-MPC2의 문제 정의와 평가 노트에서도 잠재 공간 계획과 단일 과제 지표를 바로잡았다. [교정과 원문 위치](./research/SOURCE_AUDIT.md#노트의-수식과-도식)
 - **11월 24일 요약·기여 전수 대조 완료.** ARCHIVE 마지막 98편(*SR3R*~*LangRef3DGS*)의 요약 98개와 기여 196개를 게재본에 연결했다. 저자 표기·순서 12편, 학회 웹 서지와 인쇄 제목이 다른 2편을 반영했다. 평가 노트 49편 중 40편에서 평가 유형을 바로잡고 17편에 원문의 수치·조건을 명시했다. 전체 1,252편이 요약·기여 항목을 통과했다. [배치 원장](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [판본 교정](./work/update/REGISTRY.md#note-review)

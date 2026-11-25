@@ -89,3 +89,8 @@ Where2Explore는 관절 물체에서 상호작용할 위치를 골라 새로운 
 - **Actual contribution:** The results demonstrate our framework's capability to efficiently explore novel categories by exploiting geometric similarity. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Table 3: Ablations on the exploration strategy using different interaction budget (1, 2, 5). We also conduct few-shot affordance learning on representative categories separately to match the real-world scenario. Table ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Compared with AdaAfford, which fails to generalize to novel categories, our framework could still propose reasonable exploration strategies on novel categories leveraging local similarity. (p. 8, 5 Experiments).
+
+## 원문과 공개 자료
+
+- 코드 · 새 물체 범주의 소수 시행 적응 훈련 구현 · code/train_3d_few_shot.py [배포 파일](https://raw.githubusercontent.com/TritiumR/Where2Explore/43da0cb11ae635a12f874bcf462ffae8a826fbde/code/train_3d_few_shot.py)
+- 데이터 · 학습 범주에서 평가한 관절 물체 ID 목록 · stats/train_10cats_test_data_list.txt [배포 파일](https://raw.githubusercontent.com/TritiumR/Where2Explore/43da0cb11ae635a12f874bcf462ffae8a826fbde/stats/train_10cats_test_data_list.txt)

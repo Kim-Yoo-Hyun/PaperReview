@@ -10,7 +10,7 @@
 - Authors: Fangqi Zhu, Zhengyang Yan, Zicong Hong, Quanxin Shou, Xiao Ma, Song Guo
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
-- Tags: Robotics, world model, policy optimization, model predictive control
+- Tags: Robotics, world model, policy optimization, Reinforcement Learning
 - Official paper: https://iclr.cc/virtual/2026/poster/10007263
 - Full-text retrieval: https://arxiv.org/pdf/2511.09515
 - Code/Project: https://wm-po.github.io/
@@ -87,3 +87,10 @@ WMPO는 행동 조건부 영상 세계 모델에서 현재 VLA의 롤아웃을 �
 - **Actual contribution:** To this end, we propose World Model-based Policy Optimization (WMPO), as illustrated in Fig. (p. 2, 1 Introduction).
 - **Evaluation boundary:** 0 128 256 Rollout Budget 45 50 55 60 65 Success Rate (%) Base Policy DPO WMPO Figure 6 Lifelong learning results of WMPO and baselines. (p. 9, 4 Experiments).
 - **Explicit failure boundary:** In contrast, Fig 9 shows a failure case where the model does not correctly predict a failed trajectory. (p. 15, C Real World Cases).
+
+## 원문과 공개 자료
+
+- 행동 조건부 세계 모델에서 정책 롤아웃을 수집해 GRPO로 OpenVLA-OFT를 갱신한다. MimicGen의 네 과제와 Mobile ALOHA의 삽입 과제를 구분했다. [방법·평가](https://arxiv.org/pdf/2511.09515#page=3)
+- 코드 · 세계 모델을 활용하는 정책 갱신 훈련 코드 · verl/trainer/main_ppo.py [배포 파일](https://raw.githubusercontent.com/WM-PO/WMPO/c836d74ec6f4525c93fe980d54d0ca870118615a/verl/trainer/main_ppo.py)
+- 가중치 · WMPO 정책 최적화 후 Coffee P_128 체크포인트 샤드 · checkpoint_files/WMPO_models/coffee/P_128/model-00001-of-00007.safetensors [배포 파일](https://huggingface.co/fangqi/WMPO/blob/44da159ed68d0caa29541b8b1913e1791f988662/checkpoint_files/WMPO_models/coffee/P_128/model-00001-of-00007.safetensors)
+- 데이터 · 커피 시뮬레이션의 초기 상태 파일 · verl/utils/dataset/back/coffee_d0_states.pkl [배포 파일](https://raw.githubusercontent.com/WM-PO/WMPO/c836d74ec6f4525c93fe980d54d0ca870118615a/verl/utils/dataset/back/coffee_d0_states.pkl)

@@ -18,6 +18,8 @@ OpenVLA의 인용 관계를 확인해 원장 내 관계 17건을 추가하고 �
 
 TrajOpt `pr-0558`의 기존 arXiv 식별자 1310.7730은 감마선 폭발에 관한 다른 논문이었다. 저자 사이트의 16쪽 PDF가 당시 본문 검토 SHA-256과 일치했고, 출판사 DOI에서 정식 표제와 IJRR 2014 게재를 확인했다. 이 ID의 폴더·노트·색인·과거 읽기 경로를 교정하고 이전 검토 당시의 표제와 경로를 보존했다. [교정된 논문](../../2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co/01_overview.md) · [저자 배포본](https://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf) · [출판사 DOI](https://doi.org/10.1177/0278364914528132)
 
+<a id="taxonomy-batches"></a>
+
 ## 첫 배치 태그 매핑
 
 | 대상 축 | 배치의 기존 태그 | 판정 기준 |
@@ -115,6 +117,31 @@ Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인�
 - **판본과 수치.** 8편의 저자 표기·순서를 교정했다. PointVLA는 RA-L 서지의 5명과 저자판 표제면의 6명을 구분했다. Q-Transformer의 실물 평가는 72개 과제다. 셋째 범주의 과제 수는 §5.1 본문에 48개, 그림 4에 47개로 인쇄되어 있다. [PointVLA 게재 서지](https://doi.org/10.1109/LRA.2026.3653303) · [PointVLA 저자판](https://arxiv.org/pdf/2503.07511#page=1) · [Q-Transformer §5.1·그림 4](https://proceedings.mlr.press/v229/chebotar23a/chebotar23a.pdf#page=6)
 - **남은 분류 질문.** 장면 그래프 구축·지도화와 지도학습 기반 파지 자세 추정은 현행 방법 열거값으로 구분하기 어렵다. 방법 9편, 태스크 2편, 기체 1편, 데이터 출처 2편은 축 전체를 `unknown`으로 두고 실제 수행 역할을 서술했다. 입력 축은 50편에서 확인했다. VLA 전용 필드는 4편, 휴머노이드 전용 필드는 3편에 적용했다. [논문별 분류](../sources/batches/core_next_03.yaml)
 - **중복 후보 0쌍.** 배치 내부 1,225쌍과 나머지 원장과의 60,100쌍에서 공개 식별자, 정규화한 제목·별칭, 유사 제목을 대조했다. 공통 식별자 없이 제목이 크게 달라진 판본은 판별하기 어렵다. [중복 검사 기준](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/92d86a2ebcd2c2b99e32ff79424a5f2cd2eee747/research/REGISTRY_AUDIT.md#3-중복-의심)
+
+## 네 번째 배치 태그 매핑
+
+| 기존 표기 | 원문에서 확인하는 내용 | 사용하는 축 |
+|---|---|---|
+| World model, policy optimization, model predictive control | 예측 영상을 훈련 환경으로 쓰는지, 정책 점수만 매기는지, 실행 중에 모델로 행동을 계획하는지 구분한다. | 보상으로 정책을 갱신하면 RL, 예측 전이를 이용해 계획·학습하면 모델기반을 기록한다. |
+| Tactile sensing, force sensing, RGB-D | 광학식 촉각 영상, 손목 힘·토크, 장면 카메라와 추정한 깊이의 역할을 확인한다. | 접촉면 촉각, 힘·토크(기타), 장면 RGB와 센서 depth를 구별한다. |
+| VLA, failure detection, benchmark, memory | 해당 논문이 언어 조건부 행동 정책을 학습하는지, 기존 정책의 실패를 검출하거나 시험하는지 확인한다. | 전용 필드는 직접 학습·제안한 정책에 붙이고 평가한 정책은 별도로 명시한다. |
+| Human video, teleoperation, simulation | 사람이 물체를 다룬 영상인지, 사람이 로봇을 조작해 기록한 궤적인지, 시뮬레이터가 생성한 예제인지 확인한다. | 학습·데이터셋 구축의 출처를 기록하고 실물 평가 조건은 따로 적는다. |
+| Code, model, dataset | 저자 배포처에서 구현, 체크포인트, 학습·평가 파일을 개별 확인한다. | 제3자의 백본과 생성 스크립트는 원 논문의 가중치나 데이터 배포로 집계하지 않는다. |
+
+11월 25일 *Dexterous World Models*부터 *Memory Retrieval in Visuomotor Policies*까지 NEXT 50편을 정규화했다. 네 배치 200편과 별도 등록 23편을 합해 집중 읽기 500편 중 **223편(44.6%)**에 다축 분류가 있다. 다음 대상은 NEXT 277편이다. 배치 내부 1,225쌍과 나머지 원장과의 60,100쌍에서 DOI·버전을 제외한 arXiv ID·OpenReview ID, 제목·별칭과 유사 제목을 대조한 결과 중복 후보는 0쌍이었다. [50편의 원문 쪽수·배포처·변경 전 값](../sources/batches/core_next_04.yaml) · [다음 배치](../../TODO.md)
+
+| 공개 범위 | Y | 부분 | N · 저자 공개 예정 | 미확인 |
+|---|---:|---:|---:|---:|
+| 코드 | 31 | 9 | 3 | 7 |
+| 가중치 | 0 | 20 | 0 | 30 |
+| 데이터 | 0 | 28 | 2 | 20 |
+
+43편에서 배포 파일 88건과 저자의 공개 예정 안내 5건을 원장에 연결했다. 나머지 57건은 미확인이다. AT-VLA는 추론 구현을 공개했다. ActiveVLA는 구현·데이터 준비를 명시했고, 연결한 모델 저장소에는 가중치 파일이 없었다. FlowDreamer에서 확인한 파일은 깊이 추정 모듈이다. [AT-VLA 배포 안내](https://github.com/clorislili/AT-VLA) · [ActiveVLA 공개 안내](https://github.com/ZhenyangLiu/ActiveVLA-Injecting-Active-Perception-into-VLA) · [FlowDreamer 배포 파일](https://huggingface.co/sharinka0715/flowdreamer_pretrained/tree/main/depth_anything)
+
+- **다시 열린 출처.** UniSim의 실제 데모 페이지와 IndustReal의 저자 프로젝트를 찾아 링크를 교체했다. IndustReal은 실물 페그 삽입 정책 가중치도 공개했다. PDDLStream은 종전 OJS 주소가 자동 접속 확인 화면을 반환해 AAAI가 배포하는 같은 게재본으로 교체했다. PDF의 SHA-256은 이전 요약 감사와 일치한다. 이번 50편 모두 현재 링크 항목을 통과했다. [UniSim 데모](https://universal-simulator.github.io/unisim/) · [IndustReal 배포처](https://github.com/NVlabs/industreallib) · [PDDLStream 게재본](https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf)
+- **방법과 평가.** WMPO의 모델 예측 제어 태그를 세계 모델 안에서의 GRPO 정책 최적화로 교정했다. Counterfactual VLA는 주행 로그에서 반사실적 추론으로 궤적 예측을 수정한다. PALM 그림 4와 표 5의 실물 평가는 여섯 하위 동작을 하나의 지시로 수행하는 과제 한 개다. [WMPO §3–4](https://proceedings.iclr.cc/paper_files/paper/2026/file/6605c7d1c1ae1521b328d036df5be1ae-Paper-Conference.pdf) · [Counterfactual VLA §3–4](https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html) · [PALM 실물 평가](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_PALM_Progress-Aware_Policy_Learning_via_Affordance_Reasoning_for_Long-Horizon_Robotic_CVPR_2026_paper.pdf#page=8)
+- **저자와 판본.** 게재본 표제면을 기준으로 저자 표기 10편을 교정하고 이전 서지를 보존했다. Octopi의 둘째 저자는 Kelvin Lin, Reactive Diffusion Policy의 다섯째 저자는 Yuan Fang이다. TactAlign은 Akash Sharma의 소속이 게재본과 저자판에서 달라 판본을 함께 표시했다. [Octopi 표제면](https://www.roboticsproceedings.org/rss20/p066.pdf#page=1) · [Reactive Diffusion Policy 표제면](https://www.roboticsproceedings.org/rss21/p052.pdf#page=1) · [TactAlign 게재본](https://www.roboticsproceedings.org/rss22/p006.pdf#page=1) · [TactAlign 저자판](https://arxiv.org/pdf/2602.13579#page=1)
+- **남은 분류 질문.** 촉각 표현의 자기지도 학습, 실패 검출기 보정, 그래프에서의 이동 후보 선택에는 현행 방법·행동 표현 어휘를 어디까지 적용할 것인가? 공통 방법 축 14편, 기체 4편, 자료 출처 4편은 확인한 사실을 서술하고 해당 축은 `unknown`으로 두었다. 언어 조건부 행동 정책 15편과 G1 상지 조작 1편에 전용 필드를 붙였다. 50편 모두 레코드 단위로는 `부분확인`이다. 원문이 명시한 한계·적용 조건 22편, 후속 연구에서 지적한 한계 1편, 직접 선행 16건에는 해당 쪽을 연결했다. [분류와 증거](../sources/batches/core_next_04.yaml) · [원문 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
 
 ## 외부 목록 대조와 CORE 심화 감사
 

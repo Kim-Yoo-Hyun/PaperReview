@@ -86,3 +86,8 @@ HPT는 다른 로봇의 시각과 고유수용감각을 공통 토큰으로 바�
 - **Actual contribution:** We introduce Heterogeneous Pre-trained Transformers (HPT), a family of architecture designed to scalably learn from data across heterogeneous embodiments. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Figure 17: Simulation Task Performance compared with Single-Task Policy in LeRobot Implementation. We do evaluation in a different implementation in unseen simulation benchmarks. Left) we show that an improvement in ... (p. 22, Figure/Table caption).
 - **Explicit failure boundary:** In Figure 19, we show some failure cases of the learned HPT policies in the real world. (p. 24, C Failure Cases).
+
+## 원문과 공개 자료
+
+- 코드 · 로봇별 입출력을 공통 트랜스포머에 연결하는 공식 HPT 구현 · hpt/models/policy.py [배포 파일](https://raw.githubusercontent.com/liruiw/HPT/549433f70569917eab84dfe0eae9d84a7c4ad9a3/hpt/models/policy.py)
+- 가중치 · HPT-base 공통 트랜스포머의 모델 가중치 · model.pth [배포 파일](https://huggingface.co/liruiw/hpt-base/blob/4586c8c3918b4b6c9f70de925bf4993568f7d8f4/model.pth)

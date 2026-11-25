@@ -85,3 +85,8 @@ FlowBot3D는 관절 물체 점군의 각 점이 움직일 수 있는 방향을 �
 - **Actual contribution:** In this paper, we present FlowBot3D, a deep 3D visionbased robotic system that predicts dense per-point motion of an articulated object in 3D space, and leverages this prediction to produce ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Real-World Experiments To evaluate the performance of FlowBot3D when executed in a real robotic environment, we design a set of of realworld experiments in which we attempt to articulate a ... (p. 7, IV. RESULTS).
 - **Explicit failure boundary:** However, the remaining failure modes raise questions we would like to explore in future work. (p. 9, V. CONCLUSION).
+
+## 원문과 공개 자료
+
+- 코드 · 관절 흐름의 추정·평가 코드 · flowbot3d/evaluate_flow_models.py [배포 파일](https://raw.githubusercontent.com/r-pad/flowbot3d/5189de209d4021da06c6350039f6b8206e5b38ff/flowbot3d/evaluate_flow_models.py)
+- 가중치 · 배포 트리의 관절 흐름 예측 체크포인트 · pretrained/model.ckpt [배포 파일](https://media.githubusercontent.com/media/r-pad/flowbot3d/5189de209d4021da06c6350039f6b8206e5b38ff/pretrained/model.ckpt)

@@ -1,13 +1,13 @@
 # 레지스트리 통계
 
-- Generated: 2026-11-24 KST
+- Generated: 2026-11-25 KST
 - Source: [papers.json](../work/sources/papers.json)
 - 분포와 검색 필드는 원장·등급표·읽기 이력에서 생성한다. 교정 후 오류율과 미확인 항목은 [원문 감사](./SOURCE_AUDIT.md)에서 확인한다.
 
 ## Snapshot
 
 - Papers: **1252**
-- Resources in the combined view: **709**
+- Resources in the combined view: **724**
 - Curated relation edges: **91**
 - Papers with outgoing relations: **69**
 - Papers participating in a relation: **109**
@@ -112,19 +112,19 @@
 
 | Value | Count |
 |---|---:|
-| not_identified | 628 |
-| released | 435 |
-| project_only | 170 |
-| not_released | 19 |
+| not_identified | 615 |
+| released | 457 |
+| project_only | 159 |
+| not_released | 21 |
 
 ## Data status
 
 | Value | Count |
 |---|---:|
-| not_identified | 1046 |
-| released | 125 |
-| not_applicable | 79 |
-| not_released | 2 |
+| not_identified | 1020 |
+| released | 150 |
+| not_applicable | 78 |
+| not_released | 4 |
 
 ## Evaluation type
 
@@ -191,8 +191,8 @@
 
 | Value | Count |
 |---|---:|
-| not_recorded | 1136 |
-| reported | 112 |
+| not_recorded | 1121 |
+| reported | 127 |
 | not_applicable | 4 |
 
 ## Configuration status

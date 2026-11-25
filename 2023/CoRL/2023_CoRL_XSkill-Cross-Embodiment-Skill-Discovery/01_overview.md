@@ -83,3 +83,8 @@ XSkill은 사람과 로봇의 시연 영상에서 공통 기술을 발견하고,
 - **Actual contribution:** Together with the new cross-embodiment dataset in simulation and the real world, we hope to inspire future exploration in this area. • Introducing the first attempt toward this task XSkill ... (p. 2, 1 Introduction).
 - **Evaluation boundary:** During the inference, the robot must complete an unseen composition of subtasks after viewing a prompt video from the sphere agent demonstration. • Realworld Kitchen: is a new benchmark we ... (p. 6, 4 Evaluation).
 - **Explicit failure boundary:** However, directly following the skill sequence ˜z for execution often results in a fragile system that is sensitive to unexpected failures or speed mismatch. (p. 5, B P).
+
+## 원문과 공개 자료
+
+- 코드 · 실물 주방 데이터에서 기술을 추출하는 구현 · scripts/realworld/skill_discovery.py [배포 파일](https://raw.githubusercontent.com/real-stanford/xskill/b748071daeb031d6b42a8dcb88c38c52297e20af/scripts/realworld/skill_discovery.py)
+- 데이터 · 사람·로봇 기술 발견에 사용한 실물 주방 데이터 · real_kitchen_data.zip [배포 파일](https://xskill.cs.columbia.edu/data/real_kitchen_data.zip)

@@ -84,3 +84,8 @@ UniTouch는 구조가 다른 광학식 촉각 센서의 관측을 기존 시각�
 - **Actual contribution:** In this paper, we show that this approach can be adapted to tactile sensing. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 7. Prompt analysis for touch. We evaluate our prompt designs for zero-shot material classification on Touch and Go and ObjectFolder 2.0 datasets. set. Tab. 5 shows quantitative results, where ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** Failures occur when the grasped object slips by more than 3cm. (p. 6, 4.1. UniTouch representation).
+
+## 원문과 공개 자료
+
+- 코드 · UniTouch의 촉각 질의응답 구성요소인 Touch-LLM 구현 · touch_qa.py [배포 파일](https://raw.githubusercontent.com/cfeng16/UniTouch/15511cc9cde376cc51178b81c8c3c79d2a08ad5e/touch_qa.py)
+- 가중치 · UniTouch의 촉각 인코더 · last_new.ckpt [배포 파일](https://huggingface.co/chfeng/Touch-LLM/blob/f236b832e7ba21d85392ac151ebe057f3811d0db/last_new.ckpt)

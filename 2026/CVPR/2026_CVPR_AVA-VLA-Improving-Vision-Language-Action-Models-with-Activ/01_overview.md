@@ -10,10 +10,10 @@
 - Authors: Lei Xiao, Jifeng Li, Juntao Gao, Feiyang Ye, Yan Jin, Jingjing Qian, Jing Zhang, Yong Wu, Xiaoyuan Yu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, active perception, visual attention, POMDP, recurrent state, long-horizon
+- Tags: Robotics, VLA, robot manipulation, visual attention, POMDP, recurrent state, long-horizon
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://liauto-dsr.github.io/AVA-VLA-Page/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,10 @@ AVA-VLA는 과거 관측을 축약한 순환 상태를 이용해 현재 영상�
 - **Actual contribution:** Our contributions are threefold: • We propose the novel AVA-VLA framework to solve the critical limitation of lacking historical context in MDPbased VLA models. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 3. Comparison on the Mobile ALOHA real-world experiments. Evaluation across four manipulation tasks, including (a) Pick and Place, (b) Sequenced Instruction Understanding, (c) Flexible Object Folding, (d) Dexterous Action. ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a robust and spatially consistent focus ... (p. 8, 4.4. Analysis).
+
+## 원문과 공개 자료
+
+- 이전 행동과 관측을 축약한 상태가 현재 이미지 토큰의 가중치를 조절한다. 물리 카메라를 움직이는 능동 지각과 구별했다. [방법·평가](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=3)
+- 코드 · 행동 이력으로 영상 토큰을 가중하는 모듈 구현 · prismatic/models/attn_weight_generator.py [배포 파일](https://raw.githubusercontent.com/LiAuto-DSR/AVA-VLA/69ae5dfb90f4eb714259693bd2c222e0b3de6456/prismatic/models/attn_weight_generator.py)
+- 가중치 · LIBERO 네 묶음 공동 미세조정 정책의 행동 헤드 · action_head--40000_checkpoint.pt [배포 파일](https://huggingface.co/LiAuto-DSR/avavla-libero-4in1/blob/090bf68d234ea13bc78476236f82458b25b797b8/action_head--40000_checkpoint.pt)
+- 데이터 · 추론 입력 형식을 점검하는 LIBERO 관측 표본 · experiments/robot/libero/sample_libero_spatial_observation.pkl [배포 파일](https://raw.githubusercontent.com/LiAuto-DSR/AVA-VLA/69ae5dfb90f4eb714259693bd2c222e0b3de6456/experiments/robot/libero/sample_libero_spatial_observation.pkl)

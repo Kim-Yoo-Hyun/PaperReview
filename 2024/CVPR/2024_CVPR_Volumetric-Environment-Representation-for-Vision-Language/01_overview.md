@@ -13,7 +13,7 @@
 - Tags: Vision-Language Navigation, 3D geometry, representation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Liu_Volumetric_Environment_Representation_for_Vision-Language_Navigation_CVPR_2024_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/DefaultRui/VLN-VER
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@ VER는 여러 시점의 영상을 3차원 복셀 상태로 통합해 언어 지�
 - **Actual contribution:** In this article, we propose a Volumetric Environment Representation (VER) that quantizes the physical world into structured 3D cells (Fig. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 3. Quantitative results on R4R [39] (more details in §4.1). (RGS), and Remote Grounding Success weighted by Path Length (RGSPL) are also employed for object grounding. For R4R, Coverage ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** From Table 5, the limited range of neighborhood is insufficient to represent the candidate viewpoint for navigation (e.g., 75.80% → 73.75% of SR on R2R). (p. 7, 4.2. Diagnostic Experiment).
+
+## 원문과 공개 자료
+
+- 코드 · 공식 배포 중 3차원 복셀 환경 표현 구성요소 · projects/mmdet3d_plugin/bevformer/detectors/voxelformer.py [배포 파일](https://raw.githubusercontent.com/DefaultRui/VLN-VER/d925dfa3c815779c3b6b131ccc3ccf9df1fbfc3a/projects/mmdet3d_plugin/bevformer/detectors/voxelformer.py)

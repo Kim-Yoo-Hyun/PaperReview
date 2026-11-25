@@ -57,6 +57,11 @@ def current_checks(row, *, include_reviews=True):
             endpoints["code" if field == "code_url" else field] = follow[field]["status"]
     if "primary" in post.get("bibliography", {}):
         endpoints["primary"] = PASS
+    if include_reviews:
+        taxonomy = row.get("taxonomy_review", {})
+        for field in ("project", "pdf"):
+            if field in taxonomy:
+                endpoints[field] = PASS
     states["link"] = PASS if endpoints and all(s == PASS for s in endpoints.values()) else OPEN
     for field in post.get("bibliography", {}):
         if field in ("title", "authors", "year", "venue"):
@@ -148,9 +153,8 @@ def check_applied(rows, papers, root):
 
         def check_source(field, target):
             source_key = {"pdf": "paper_pdf", "code_url": "code"}.get(field, field)
-            current_project = row.get("taxonomy_review", {}).get("project")
-            if source_key == "project" and current_project:
-                target = current_project["url"]
+            if field in ("project", "pdf") and (latest := row.get("taxonomy_review", {}).get(field)):
+                target = latest["url"]
             actual = (paper["sources"].get(source_key) or {}).get("url")
             expect(f"sources.{source_key}", actual, target)
             if field in ("primary", "pdf"):
@@ -313,6 +317,11 @@ def check_applied(rows, papers, root):
         if project := taxonomy.get("project"):
             check_source("project", project["url"])
             expect("reviewed project link", paper["project"], project["url"])
+        if pdf := taxonomy.get("pdf"):
+            check_source("pdf", pdf["url"])
+            review = row["summary_review"]
+            expect("identical published PDF", pdf["sha256"], review["pdf_sha256"])
+            expect("current summary PDF", review["source"], pdf["url"])
         for field, item in artifacts.items():
             if item["status"] != PASS and "metadata_correction" not in item:
                 continue
@@ -470,7 +479,7 @@ def validate(rows, meta):
     for row in rows:
         if review := row.get("taxonomy_review"):
             if (not re.fullmatch(r"\d{4}-\d{2}-\d{2}", review["verified_on"])
-                or not (review.get("fields") or review.get("legacy_tags") or review.get("project"))):
+                or not (review.get("fields") or review.get("legacy_tags") or review.get("project") or review.get("pdf"))):
                 raise ValueError(f"Invalid taxonomy artifact review for {row['id']}")
             if tags := review.get("legacy_tags"):
                 if (tags["status"] != PASS or not tags.get("tags") or not tags.get("before") or not tags.get("basis")
@@ -479,6 +488,10 @@ def validate(rows, meta):
             if project := review.get("project"):
                 if "before" not in project or not all(project.get(key, "").startswith("https://") for key in ("url", "source")):
                     raise ValueError(f"Missing current project evidence for {row['id']}")
+            if pdf := review.get("pdf"):
+                if (not all(pdf.get(key, "").startswith("https://") for key in ("before", "url"))
+                    or not re.fullmatch(r"[0-9a-f]{64}", pdf.get("sha256", ""))):
+                    raise ValueError(f"Missing published PDF evidence for {row['id']}")
             for field, item in review.get("fields", {}).items():
                 finding = item["finding"]
                 if (field not in ("code", "weights", "data") or not item["basis"].strip()
@@ -658,7 +671,7 @@ def render(rows, meta):
         lines += ["## 다축 태그와 공개 자료", "",
                   "코드·가중치·데이터의 배포 범위를 항목별로 집계했다. "
                   "기존 검색 태그 판정은 원문의 방법·평가와 대조한 논문에만 반영했다. "
-                  "[배치별 분류와 미확인 범위](../work/update/REGISTRY.md#세-번째-배치-태그-매핑)", "",
+                  "[배치별 분류와 미확인 범위](../work/update/REGISTRY.md#taxonomy-batches)", "",
                   "| 배치 | 공개 근거를 갱신한 논문 | 배포 파일 | 저자의 공개 예정 안내 | 배포 미확인으로 교정 | 기존 검색 태그 대조 |",
                   "|---|---:|---:|---:|---:|---:|"]
         for batch in sorted({review["batch"] for review in taxonomy_reviews}):

@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / ICLR
-- Authors: Sherry Yang, Yilun Du, Seyed Ghasemipour, Jonathan Tompson, Leslie Kaelbling, Dale Schuurmans, Pieter Abbeel
+- Authors: Sherry Yang, Yilun Du, Kamyar Ghasemipour, Jonathan Tompson, Leslie Kaelbling, Dale Schuurmans, Pieter Abbeel
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, world model, interactive simulator, Vision-Language, zero-shot transfer
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c4d66eae503694424123b93ac0fbaf17-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2310.06114
-- Code/Project: https://universal-simulator.github.io/
+- Code/Project: https://universal-simulator.github.io/unisim/
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,8 @@ UniSim은 텍스트 명령이나 저수준 행동을 주면 뒤따를 시각 관
 - **Actual contribution:** The main contributions can be summarized as follows: • We take the first step toward building a universal simulator of real-world interaction by combining diverse datasets rich in along different ... (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot data in UniSim achieves the best ... (p. 22, Figure/Table caption).
 - **Explicit failure boundary:** The model only trained on generic internet data, without action-rich manipulation data such as EPICKITCHENS (Damen et al., 2018), fails to simulate action-rich manipulations (Appendix F). (p. 4, 1 INTRODUCTION).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Seyed Ghasemipour → Kamyar Ghasemipour로 반영했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2024/file/c4d66eae503694424123b93ac0fbaf17-Paper-Conference.pdf#page=1)
+- 저자 프로젝트의 하위 경로에서 시뮬레이터 데모와 평가 조건을 확인했다. [프로젝트](https://universal-simulator.github.io/unisim/)

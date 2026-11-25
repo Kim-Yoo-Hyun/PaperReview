@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: Samson Yu, Lin Kelvin, Anxing Xiao, Jiafei Duan, Harold Soh
+- Authors: Samson Yu, Kelvin Lin, Anxing Xiao, Jiafei Duan, Harold Soh
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, tactile sensing, Vision-Language, object properties, multimodal reasoning
@@ -84,3 +84,10 @@ Octopi는 촉각 영상을 언어 모델과 결합해 물체의 물리적 속성
 - **Actual contribution:** PHYSICLEAR and OCTOPI (with key contributions starred). (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** To address the above questions, we evaluated OCTOPI using (i) accuracy on the physical understanding tasks in PHYSICLEAR's test set, (ii) accuracy on scenario reasoning tasks, (iii) task success rate ... (p. 6, VI. EXPERIMENTAL RESULTS).
 - **Explicit failure boundary:** The choice of these specific properties was also informed by the data collection methodology [27], tailored to the limitations and strengths of the GelSight sensor, including considerations for its sensitivity ... (p. 3, III. PHYSICLEAR - TACTILE AND PHYSICAL).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Lin Kelvin → Kelvin Lin로 반영했다. [표제면](https://www.roboticsproceedings.org/rss20/p066.pdf#page=1)
+- 코드 · 촉각 입력과 언어 모델을 정렬하는 훈련 코드 · train_llm.py [배포 파일](https://raw.githubusercontent.com/clear-nus/octopi/b7f0b0b56a5be950a10c46aa40277dfd51050eab/train_llm.py)
+- 가중치 · 7B 구성의 촉각 인코더 · encoder.pt [배포 파일](https://drive.google.com/file/d/1Lb3Hv-Q6gNTbpeabvRj3La035qm6A7WX/view)
+- 데이터 · PhysiCLeAR 데이터에서 나무 자에 접촉한 실제 GelSight 영상 · dataset/wood_ruler_3.mov [배포 파일](https://raw.githubusercontent.com/clear-nus/octopi/b7f0b0b56a5be950a10c46aa40277dfd51050eab/dataset/wood_ruler_3.mov)

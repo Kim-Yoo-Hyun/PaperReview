@@ -13,7 +13,7 @@
 - Tags: Navigation, grounding, exploration
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_Move_to_Understand_a_3D_Scene_Bridging_Visual_Grounding_and_ICCV_2025_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://mtu3d.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -82,3 +82,9 @@ MTU3D는 RGB-D 관측에서 목표 물체와 다음 탐색 지점을 함께 추�
 - **Actual contribution:** Our main contributions can be summarized as follows: • We present MTU3D, bridging visual grounding and exploration for efficient and versatile embodied navigation. • We propose a unified objective that ... (p. 3, Method).
 - **Evaluation boundary:** Table 4. Sequential task navigation results on SG3D-Nav [87]. Multi-modal Lifelong Navigation. The results in Tab. 5 highlight the significant performance improvement of our MTU3D over baseline methods in lifelong ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** In contrast, reinforcement learning (RL)-based embodied agents can explore environments but often struggle with sample inefficiency [71], poor generalization due to limited training data [20, 57, 62] and the lack ... (p. 2, 1. Introduction).
+
+## 원문과 공개 자료
+
+- 코드 · 목표 물체와 탐색 후보를 함께 선택하는 쿼리 모델 구현 · model/query3d_vle.py [배포 파일](https://raw.githubusercontent.com/MTU3D/MTU3D/c10335ce8effd881e481a5f669add7d040aec947/model/query3d_vle.py)
+- 가중치 · MTU3D의 첫 단계 사전학습 가중치 · stage1-pretrain-all/pytorch_model.bin [배포 파일](https://huggingface.co/bigai/MTU3D/blob/b368c81ac25bc36797b91dcf68e567694d4efb30/stage1-pretrain-all/pytorch_model.bin)
+- 데이터 · MTU3D가 배포하는 환경 평가 자료 · embodied_bench_data.tar.gz [배포 파일](https://huggingface.co/datasets/bigai/MTU3D/blob/62921d393b3ed71a02c7644c6c8c9f4d011ad234/embodied_bench_data.tar.gz)

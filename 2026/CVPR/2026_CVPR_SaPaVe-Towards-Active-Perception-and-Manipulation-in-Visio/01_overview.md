@@ -13,7 +13,7 @@
 - Tags: VLA, active perception, Robotics
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_SaPaVe_Towards_Active_Perception_and_Manipulation_in_Vision-Language_Action_Models_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://lmzpai.github.io/SaPaVe
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -78,3 +78,7 @@ SaPaVe는 카메라 이동과 로봇팔 동작을 별도 출력으로 학습해 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 4 (Model)이다.
+
+## 원문과 공개 자료
+
+- 저자의 프로젝트에서 논문과 공개 안내를 확인했다. [프로젝트](https://lmzpai.github.io/SaPaVe)

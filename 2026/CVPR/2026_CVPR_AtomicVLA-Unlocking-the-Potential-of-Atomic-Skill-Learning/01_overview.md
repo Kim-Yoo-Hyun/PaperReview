@@ -13,7 +13,7 @@
 - Tags: Robotics, VLA, atomic skills, skill composition, long-horizon manipulation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_AtomicVLA_Unlocking_the_Potential_of_Atomic_Skill_Learning_in_Robots_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://zhanglk9.github.io/atomicvla-web/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,9 @@ AtomicVLA는 긴 조작 지시를 원자 기술로 계획하고 기술별 행동
 - **Actual contribution:** Overall, our contributions are as follows: • We introduce AtomicVLA, an end-to-end framework that unifies task planning and action execution for longhorizon tasks and continual skill expansion. • We propose ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Figure 4. Error Recovery Capability Demonstration. When encountering a skill execution failure, AtomicVLA automatically assesses the progress and re-executes the current skill. suites, outperforming the strong baseline by 2.4%. Notably, ... (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** Importantly, when an execution failure occurs, for example, the butter is grasped but subsequently dropped as illustrated in Fig. (p. 6, 4.2. Results on Simulation).
+
+## 원문과 공개 자료
+
+- 코드 · LIBERO용 원자 기술 정책의 학습과 추론 구현 · src/openpi/models/pi0.py [배포 파일](https://raw.githubusercontent.com/zhanglk9/AtomicVLA/33d2f98574a52838b9db34b334bd5cc6cbe57f50/src/openpi/models/pi0.py)
+- 가중치 · AtomicVLA LIBERO 정책의 배포 파라미터 · params/ocdbt.process_0/d/09045d82220c8f550ae12881e4738adc [배포 파일](https://huggingface.co/likui/AtomicVLA-libero/blob/633dd6ac2b04ff59938b93ebdd10d1ae84d52bef/params/ocdbt.process_0/d/09045d82220c8f550ae12881e4738adc)
+- 데이터 · LIBERO 학습에 사용한 분할·기술 주석 · data_split_json/libero_lerobot.json [배포 파일](https://raw.githubusercontent.com/zhanglk9/AtomicVLA/33d2f98574a52838b9db34b334bd5cc6cbe57f50/data_split_json/libero_lerobot.json)

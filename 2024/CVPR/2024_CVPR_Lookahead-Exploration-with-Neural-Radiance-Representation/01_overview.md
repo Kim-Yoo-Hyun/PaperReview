@@ -13,7 +13,7 @@
 - Tags: Vision-Language Navigation, NeRF, Planning
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_Lookahead_Exploration_with_Neural_Radiance_Representation_for_Continuous_Vision-Language_Navigation_CVPR_2024_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://github.com/MrZihan/HNR-VLN
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@
 - **Actual contribution:** In this work, our main contributions include: • We propose a hierarchical neural radiance representation model to produce multi-level semantic representations for future environments with better quality and efficiency. • ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** As illustrated in Table 1, for the val unseen split of the R2R-CE dataset, our model outperforms our baseline method ETPNav [9] by 4% on SR and 2% on SPL. (p. 6, 4.2. Comparison to State-of-the-Art Methods).
 - **Explicit failure boundary:** Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the volume density and fails to ... (p. 8, 4.3. Ablation Study).
+
+## 원문과 공개 자료
+
+- 코드 · 계층형 방사장 사전학습 부분을 배포했고 저자는 원 논문의 하류 미세조정 코드 공개 항목을 취소했다 · NeRF/models/etp/nerf.py [배포 파일](https://raw.githubusercontent.com/MrZihan/HNR-VLN/6c935c1f6f0d715b1c6bef28724bdfabb48b159e/NeRF/models/etp/nerf.py)

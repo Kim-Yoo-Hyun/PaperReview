@@ -13,7 +13,7 @@
 - Tags: VLM, spatial reasoning, Robotics
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Song_RoboSpatial_Teaching_Spatial_Understanding_to_2D_and_3D_Vision-Language_Models_CVPR_2025_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://chanh.ee/RoboSpatial/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,8 @@ RoboSpatial은 실제 실내·탁상 장면의 3D 스캔과 2D 영상을 짝지�
 - **Actual contribution:** This illustration demonstrates how a model trained on ROBOSPATIAL enables human-aligned spatial reasoning within the correct reference frame, supporting task grounding, planning, and detection for manipulation tasks. (p. 1, 1. Introduction).
 - **Evaluation boundary:** Results demonstrate that models trained on ROBOSPATIAL exhibit significantly improved spatial reasoning capabilities, consistently outperforming baseline methods on the evaluation benchmark ROBOSPATIAL-Val, a held-out validation subset ... (p. 2, Dataset).
 - **Explicit failure boundary:** To mitigate failure cases arising from poor object grounding, we also include an auxiliary grounding dataset during training, which provides additional supervision for object reference resolution. (p. 5, 4.1. Setup).
+
+## 원문과 공개 자료
+
+- 코드 · 공간 질답 주석 생성 파이프라인 구현 · robospatial/annotation_generator.py [배포 파일](https://raw.githubusercontent.com/NVlabs/RoboSpatial/7a1b901cd86ad980ff6d14c0c1fc9d556ccabb19/robospatial/annotation_generator.py)
+- 데이터 · RoboSpatial-Home의 물체 배치 가능성 평가 자료 · data/compatibility-00000-of-00001.parquet [배포 파일](https://huggingface.co/datasets/chanhee-luke/RoboSpatial-Home/blob/7ef1b43b20087ef284e0e9017ef51dd143814c59/data/compatibility-00000-of-00001.parquet)

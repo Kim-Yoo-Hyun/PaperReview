@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2023 / RSS
-- Authors: Minho Heo, Youngwoon Lee, Doohyun Lee, Joseph J Lim
+- Authors: Minho Heo, Youngwoon Lee, Doohyun Lee, Joseph J. Lim
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, Benchmark, assembly, long-horizon manipulation, real-world evaluation, reproducibility
@@ -88,3 +88,9 @@ FurnitureBench는 실물 가구 조립에서 긴 행동열과 정밀한 부품 �
 - **Actual contribution:** The main contributions of this paper are as follows: • We introduce FurnitureBench, a real-world furniture assembly benchmark, which allows robotics researchers to investigate RL, IL, and TAMP algorithms on ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 10: Full-assembly benchmark results. We report the number of completed phases averaged over 10 episodes and the error bars indicating the minimum and maximum completed phases. The background color ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** On the other hand, both algorithms struggle at "inserting" skill, which shows from 0% to 20% success rates. "Inserting" requires precise control to correctly align a screw and a hole, ... (p. 7, VI. BENCHMARKING RESULTS).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Joseph J Lim → Joseph J. Lim로 반영했다. [표제면](https://www.roboticsproceedings.org/rss19/p041.pdf#page=1)
+- 코드 · 가구 조립 과제와 시뮬레이션 환경 구현 · furniture_bench/envs/furniture_sim_env.py [배포 파일](https://raw.githubusercontent.com/clvrai/furniture-bench/a87960a2490a7a19c86ea16a5ef371718b2baa70/furniture_bench/envs/furniture_sim_env.py)
+- 데이터 · 저자가 안내하는 RLDS 미러의 실제 가구 조립 시연 분할 · furniture_bench_dataset_converted_externally_to_rlds-train.tfrecord-00000-of-01016 [배포 파일](https://huggingface.co/datasets/lerobot-raw/furniture_bench_dataset_raw/blob/a51b16bffc46bd340f6fa2ca80c6b86768219fc7/furniture_bench_dataset_converted_externally_to_rlds-train.tfrecord-00000-of-01016)

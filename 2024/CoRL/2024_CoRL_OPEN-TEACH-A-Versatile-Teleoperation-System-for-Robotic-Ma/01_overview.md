@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: Aadhithya Iyer, Zhuoran Peng, Yinlong Dai, Irmak Guzey, Siddhant Haldar, Soumith Chintala, Lerrel Pinto
+- Authors: Aadhithya Iyer, Zhuoran Peng, Yinlong Dai, Irmak Güzey, Siddhant Haldar, Soumith Chintala, Lerrel Pinto
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, teleoperation, cross-embodiment, dexterous manipulation, bimanual manipulation, data collection
@@ -83,3 +83,8 @@ Open Teach는 VR 헤드셋으로 여러 로봇 팔과 손을 조종하고 조작
 - **Actual contribution:** The contributions of this work is summarized as follows: 1) We present OPEN TEACH, an open-source system for plug-and-play teleoperation framework suitable for collecting demonstrations across different robot morphologies in ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Robot Setup Task Number of Demos Success Rate Franka-Allegro Open Box 3 9/10 Grasp Sponge 6 7/10 Pick Up Tea Sachet 4 7/10 Grasp Object and Twist 6 8/10 Allegro ... (p. 8, 4) How intuitive is the system for new users?).
 - **Explicit failure boundary:** However, we recognize a few limitations in this work: (a) OPEN TEACH relies on the accuracy of the in-built hand pose detection in the VR headset. (p. 8, VI. LIMITATIONS AND DISCUSSION).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Irmak Guzey → Irmak Güzey로 반영했다. [표제면](https://arxiv.org/pdf/2403.07870#page=1)
+- 코드 · 손과 팔 추적을 로봇 명령으로 변환하는 원격조작 구현 · openteach/components/operators/allegro.py [배포 파일](https://raw.githubusercontent.com/aadhithya14/Open-Teach/32a7d44b33953066ff27312a7b2b4c294f4f52c5/openteach/components/operators/allegro.py)

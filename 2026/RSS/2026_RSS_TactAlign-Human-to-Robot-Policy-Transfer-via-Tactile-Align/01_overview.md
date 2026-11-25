@@ -87,3 +87,7 @@ TactAlign은 센서와 손 구조가 다른 사람과 로봇의 촉각을 공통
 - **Actual contribution:** The core contributions of our work are: • We propose TactAlign, a method for aligning crosssensor tactile data from unpaired demonstrations of the same task. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** The dataset includes 1,472 robot force samples (24:1 train:test split) and 1,527 human force samples used only for evaluation. (p. 5, IV. EXPERIMENTS AND RESULTS).
 - **Explicit failure boundary:** Without alignment, the success rate is also 0%, with failures primarily arising from jamming, from which the policy cannot recover, often leading to complete unscrewing of the light bulb. (p. 7, 8. The pivoting and insertion).
+
+## 원문과 공개 자료
+
+- 코드 · 프로젝트는 구현 링크를 Coming Soon으로 표시한다. 연결된 공개 Git 저장소에 접근할 수 없었다. [저자 공개 안내](https://yswi.github.io/tactalign/)

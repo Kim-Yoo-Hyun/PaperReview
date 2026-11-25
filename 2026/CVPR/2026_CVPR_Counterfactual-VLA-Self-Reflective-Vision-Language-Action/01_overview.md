@@ -10,10 +10,10 @@
 - Authors: Zhenghao Peng, Wenhao Ding, Yurong You, Yuxiao Chen, Wenjie Luo, Thomas Tian, Yulong Cao, Apoorva Sharma, Danfei Xu, Boris Ivanovic, Boyi Li, Yan Wang, Marco Pavone
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, self-reflection, failure recovery, test-time reasoning
+- Tags: Robotics, VLA, self-reflection, trajectory prediction, test-time reasoning
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://pengzhenghao.github.io/cfvla/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (10 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,7 @@ CF-VLA는 자율주행에서 먼저 예측한 운전 의도를 시각 문맥에�
 - **Actual contribution:** Second, standard training pipelines rarely teach models to answer counterfactual questions such as: "Given the plan I just proposed, what will happen, and how should I change it?" In this ... (p. 2, 1. Introduction).
 - **Evaluation boundary:** Table 1. Evaluation results. CF-VLA improves trajectory accuracy (ADE, FDE), behavioral safety (Corner Distance, Collision, Off-road), and reasoning quality (IOU). ↓lower is better, ↑higher is better. (p. 6, Figure/Table caption).
 - **Explicit failure boundary:** Self-correction has been explored in embodied VLMs through replanning and failure recovery [11, 22], where the agent detects that an action it executed failed and then switches to an alternative ... (p. 2, 1. Introduction).
+
+## 원문과 공개 자료
+
+- 실차 주행 로그와 교사 VLM이 생성한 반사실적 설명으로 주행 궤적 토큰을 학습한다. 검증 분할의 개방루프 궤적 예측을 측정했다. [방법·평가](https://openaccess.thecvf.com/content/CVPR2026/papers/Peng_Counterfactual_VLA_Self-Reflective_Vision-Language-Action_Model_with_Adaptive_Reasoning_CVPR_2026_paper.pdf#page=3)

@@ -87,3 +87,9 @@ Sparsh는 광학식 촉각 센서의 영상에서 레이블 없이 학습한 표
 - **Actual contribution:** Our contributions are as follows: 1. (p. 2, 1 Introduction).
 - **Evaluation boundary:** Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields general touch representations that work across ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** In Figure 13, we illustrate a failure case for Sparsh (VJEPA), as its results do not align with the ground truth. (p. 24, Model).
+
+## 원문과 공개 자료
+
+- 코드 · 광학식 촉각 영상의 자기지도 학습 코드 · tactile_ssl/algorithm/dino.py [배포 파일](https://raw.githubusercontent.com/facebookresearch/sparsh/fee6a05a97330eca014b59c71ac41596fe3974a7/tactile_ssl/algorithm/dino.py)
+- 가중치 · Sparsh-DINO base 광학 촉각 인코더 · dino_vitbase.ckpt [배포 파일](https://huggingface.co/facebook/sparsh-dino-base/blob/89e38eaade8eeedfa0f9c8857a76f57a2acd8206/dino_vitbase.ckpt)
+- 데이터 · Touch-Slide 학습 자료의 접촉 표본 · banana/dataset_0.pkl [배포 파일](https://huggingface.co/datasets/facebook/touch-slide/blob/466860e825b8e9c5467718dd56c1ce116c50ceea/banana/dataset_0.pkl)

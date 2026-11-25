@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, world model, policy optimization, model predictive control`.
+- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, world model, policy optimization, Reinforcement Learning`.
 - **Reading predecessor in the generated track queue:** WorldGym: World Model as An Environment for Policy Evaluation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

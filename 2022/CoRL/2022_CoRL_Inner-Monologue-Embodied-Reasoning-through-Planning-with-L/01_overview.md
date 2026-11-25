@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2022 / CoRL
-- Authors: Wenlong Huang, Fei Xia, Ted Xiao, Harris Chan, Jacky Liang, Pete Florence, Andy Zeng, Jonathan Tompson, Igor Mordatch, Yevgen Chebotar, Pierre Sermanet, Tomas Jackson, Noah Brown, Linda Luu, Sergey Levine, Karol Hausman, brian ichter
+- Authors: Wenlong Huang, Fei Xia, Ted Xiao, Harris Chan, Jacky Liang, Pete Florence, Andy Zeng, Jonathan Tompson, Igor Mordatch, Yevgen Chebotar, Pierre Sermanet, Tomas Jackson, Noah Brown, Linda Luu, Sergey Levine, Karol Hausman, Brian Ichter
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, LLM planning, feedback, replanning, long-horizon manipulation
@@ -88,3 +88,7 @@ Inner Monologue는 로봇이 기술을 실행한 뒤 얻은 결과를 언어로 
 - **Actual contribution:** Inspired by the human thought process, we propose that such an inner monologue is a natural framework for incorporating feedback for LLMs. (p. 1, 1 Introduction).
 - **Evaluation boundary:** Figure 4: Failure causes on 120 evaluations. When disturbances are added (red), only the Inner Mono- logue variants consistently complete the instructions. Analysis. The results of real robot experiments are ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** Notably, we show that it can efficiently retry under observed stochastic failure, replan under systematic infeasibility, or request human feedback for ambiguous queries, resulting in significantly improved performance in dynamical ... (p. 2, 1 Introduction).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 brian ichter → Brian Ichter로 반영했다. [표제면](https://proceedings.mlr.press/v205/huang23c/huang23c.pdf#page=1)

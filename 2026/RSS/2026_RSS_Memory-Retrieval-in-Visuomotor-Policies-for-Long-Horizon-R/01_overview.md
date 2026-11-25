@@ -86,3 +86,9 @@ HALO는 긴 조작 중 과거 정보가 필요한 시점에 시연 이력에서 
 - **Actual contribution:** To address these challenges, we propose HALO: HistoryAware visuomotor policy for LOng-horizon robotic imitation learning. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** (Table II) We observe a similar trend in real-world settings, where HALO consistently outperforms the standard Transformer baseline by 19%. (p. 7, IV. EXPERIMENTS).
 - **Explicit failure boundary:** These errors introduce noise into the stored representations, which can degrade latent representation quality, leading to model drift and cascading failures over long horizons. (p. 3, III. HALO).
+
+## 원문과 공개 자료
+
+- 자연어 지시를 매 시점 입력하고 과거 관측·행동에서 필요한 시점을 검색한다. 표 II에는 인간 협업 조건을 포함한 다섯 평가 열이 있다. [방법·평가](https://www.roboticsproceedings.org/rss22/p010.pdf#page=3)
+- 코드 · 관측 기억에서 시점을 선택하는 top-k 검색 구현 · halo/models/policy/retriever_topk.py [배포 파일](https://raw.githubusercontent.com/UT-Austin-RobIn/HALO/7778638401cc07043e59e2381e84f2383401f491/halo/models/policy/retriever_topk.py)
+- 데이터 · ReMemBench에서 한 조작 시행의 시연 HDF5 · MemFruitInSinkLeftFar/2025-07-13-15-44-32/demo.hdf5 [배포 파일](https://huggingface.co/datasets/Rutav/ReMemBench-Dataset/blob/c73473e0c804a62902cc7e992124bf2459604482/MemFruitInSinkLeftFar/2025-07-13-15-44-32/demo.hdf5)

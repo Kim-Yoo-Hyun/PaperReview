@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Han Xue, Jieji Ren, Wendi Chen, Gu Zhang, Fang Yuan, Guoying Gu, Huazhe Xu, Cewu Lu
+- Authors: Han Xue, Jieji Ren, Wendi Chen, Gu Zhang, Yuan Fang, Guoying Gu, Huazhe Xu, Cewu Lu
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
 - Tags: Robotics, Diffusion, tactile sensing, contact-rich manipulation, slow-fast control, Imitation Learning
@@ -87,3 +87,10 @@ Reactive Diffusion Policy는 장기 동작을 느리게 예측하면서도 실�
 - **Actual contribution:** To address these challenges, we introduce TactAR, a low-cost teleoperation system that provides real-time tactile feedback through Augmented Reality (AR), along with Reactive Diffusion Policy (RDP), a novel slow-fast visuale ... (p. 1, Abstract).
 - **Evaluation boundary:** All devices are connected to a workstation with an Intel Core i9-14900K CPU and an NVIDIA RTX 4090 GPU for both data collection and evaluation 2) Baselines: We use the ... (p. 7, V. EXPERIMENTS).
 - **Explicit failure boundary:** We ‘observe that DP with pure visual input frequently predicts inaccurate trajectories and results in large contact forces (e.g. failure case 2 in Fig. (p. 9, B. Results).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Fang Yuan → Yuan Fang로 반영했다. [표제면](https://www.roboticsproceedings.org/rss21/p052.pdf#page=1)
+- 코드 · 실제 팔에서 시각·촉각 정책을 실행하는 코드 · eval_real_robot_flexiv.py [배포 파일](https://raw.githubusercontent.com/xiaoxiaoxh/reactive_diffusion_policy/824c5e8de1fd1811106907a04b5f0186e0138c0b/eval_real_robot_flexiv.py)
+- 가중치 · 들어 올리기 과제의 시각·촉각 잠재 확산 정책 · real_lift_image_tactile_emb_ldp_absolute_24fps/checkpoints/latest.ckpt [배포 파일](https://huggingface.co/WendiChen/reactive_diffusion_policy_model/blob/8e6364950d1e0aaa175a50e12262f70c3a9f1316/real_lift_image_tactile_emb_ldp_absolute_24fps/checkpoints/latest.ckpt)
+- 데이터 · 실제 물체 들어 올리기 작업의 시연 아카이브 · dataset_full/lift_v2.zip [배포 파일](https://huggingface.co/datasets/WendiChen/reactive_diffusion_policy_dataset/blob/821a9faa144158425f93c26e75d862c7e5994933/dataset_full/lift_v2.zip)

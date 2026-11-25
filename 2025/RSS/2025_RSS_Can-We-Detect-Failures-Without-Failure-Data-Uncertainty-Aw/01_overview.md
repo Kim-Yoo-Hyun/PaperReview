@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Chen Xu, Tony Khuong Nguyen, Emma Dixon, Christopher Rodriguez, Patrick Miller, Robert Lee, Paarth Shah, Rares Andrei Ambrus, Haruki Nishimura, Masha Itkina
+- Authors: Chen Xu, Tony Khuong Nguyen, Emma Dixon, Christopher Rodriguez, Patrick Miller, Robert Lee, Paarth Shah, Rares Ambrus, Haruki Nishimura, Masha Itkina
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: Robotics, failure detection, uncertainty, conformal prediction, Imitation Learning, runtime monitoring
@@ -87,3 +87,8 @@ FAIL-Detect는 성공 시연만으로 정상 범위를 학습해 조작 정책�
 - **Actual contribution:** A key novelty of our method is the ability to learn failure detection signals without access 10 failure data. (p. 1, 1. INTRODUCTION).
 - **Evaluation boundary:** Fig. 5: Quantitative results for the robot hardware experiments across two tasks with policies trained using FM and DP. We consider two different ways to compute the CP band: "setting-lependent" ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** We did not employ the VLM component of the STAC failure detector to remain as real-time feasible as possible. (p. 6, V. EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 게재본 표제면에 따라 Rares Andrei Ambrus → Rares Ambrus로 반영했다. [표제면](https://www.roboticsproceedings.org/rss21/p073.pdf#page=1)
+- 코드 · 불확실성 점수와 실패 검출을 비교하는 평가 코드 · UQ_test/eval_together.py [배포 파일](https://raw.githubusercontent.com/CXU-TRI/FAIL-Detect/b758e55f7c0c988188f2e4876ffc03ae8a3c30ed/UQ_test/eval_together.py)

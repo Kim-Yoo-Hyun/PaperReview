@@ -87,3 +87,8 @@ DiffSkill은 미분 가능한 물리 시뮬레이터에서 찾은 짧은 도구 
 - **Actual contribution:** To extend the use of differentiable physics models to these long-horizon tasks and enable the agent to directly consume visual observations, we propose DiffSkill: a novel framework where the agent ... (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / 0% 0.018 / 2.5% Direct ... (p. 8, 3 EXPERIMENTS).
 - **Explicit failure boundary:** This threshold is manually picked by observing the performance gap between successful and failed trajectories. (p. 6, 3 EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 코드 · 저자 분할 배포 중 과제·미분 시뮬레이션 구성요소 · core/diffskill/env_spec.py [배포 파일](https://raw.githubusercontent.com/Xingyu-Lin/DiffSkill/0cdb1271c7757d94269afb0066e1ce43002b34b5/core/diffskill/env_spec.py)
+- 데이터 · 변형체 실험의 초기·목표 구성 · datasets.zip [배포 파일](https://drive.google.com/file/d/11XZw-p2FX-yvoHMnc_yNO5x7iiLxwlwB/view)

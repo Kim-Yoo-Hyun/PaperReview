@@ -13,7 +13,7 @@
 - Tags: VLA, active perception, 3D manipulation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.pdf
-- Code/Project: not identified
+- Code/Project: https://zhenyangliu.github.io/ActiveVLA/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,8 @@ ActiveVLA는 조작에 중요한 3D 영역을 먼저 찾고 그 영역의 관측
 - **Actual contribution:** The contributions of this paper are summarized: • Active Perception for Vision-Language-Action Models: We propose ActiveVLA, a novel vision-language-action 8142 (p. 2, 1. Introduction).
 - **Evaluation boundary:** Results in Table 2 show that ActiveVLA achieves a new state of the art on COLOSSEUM, with an average success rate of 65.9% and an average rank of 1.07, outperforming ... (p. 7, 4.1. Experimental Results).
 - **Explicit failure boundary:** It performs exceptionally well in precision-demanding and contact-rich tasks such as Insert Peg and Open Drawer, and remains robust even under occlusions (e.g., Place Cups, 65.6%). (p. 6, 4.1. Experimental Results).
+
+## 원문과 공개 자료
+
+- 코드 · 저자 저장소는 학습·추론 코드와 실물 제어 코드 공개를 미완료 항목으로 명시한다. [저자 공개 안내](https://github.com/ZhenyangLiu/ActiveVLA-Injecting-Active-Perception-into-VLA/blob/4450b1188a24f3f1d1d3fb3e47d226d150b9e470/README.md)
+- 데이터 · 저자 저장소는 ActiveVLA 코드를 비롯한 데이터 공개를 준비 중이라고 명시한다. [저자 공개 안내](https://github.com/ZhenyangLiu/ActiveVLA-Injecting-Active-Perception-into-VLA/blob/4450b1188a24f3f1d1d3fb3e47d226d150b9e470/README.md)

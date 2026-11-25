@@ -2,7 +2,7 @@
 
 > Evidence maturity: `FULL_TEXT_CHECKED`.
 > Analysis basis: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://ojs.aaai.org/index.php/ICAPS/article/view/6739.
-> PDF retrieval source: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+> PDF retrieval source: https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
 
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
@@ -12,14 +12,14 @@
 - Tier: NEXT
 - Tags: Robotics, task and motion planning, symbolic planning, sampling, manipulation planning
 - Official paper: https://ojs.aaai.org/index.php/ICAPS/article/view/6739
-- Full-text retrieval: https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593
+- Full-text retrieval: https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf
 - Code/Project: https://github.com/caelan/pddlstream
 - Paper type: theory_or_foundation
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
 ## Why This Paper Is Here
 
-PDDLStream은 기호 행동 계획 중에 역기구학·충돌 검사처럼 연속값을 생성하는 외부 절차를 호출할 수 있게 한다. [PDF 1쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=1)
+PDDLStream은 기호 행동 계획 중에 역기구학·충돌 검사처럼 연속값을 생성하는 외부 절차를 호출할 수 있게 한다. [PDF 1쪽](https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf#page=1)
 
 ## Problem and Motivation
 
@@ -49,8 +49,8 @@ PDDLStream은 기호 행동 계획 중에 역기구학·충돌 검사처럼 연�
 
 ## Main Claims and Actual Contribution
 
-- 블랙박스 샘플러를 선언적으로 기술하고 원래 문제를 유한한 PDDL 계획 문제의 연속으로 바꾸는 알고리즘을 제시한다. [PDF 2쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=2) · [PDF 3쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=3)
-- 새 후보 계획 탐색과 기존 계획의 연속 파라미터 탐색을 조절하는 방법을 시뮬레이션 및 실물 계획 과제에서 평가했다. [PDF 7쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=7) · [PDF 8쪽](https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593#page=8)
+- 블랙박스 샘플러를 선언적으로 기술하고 원래 문제를 유한한 PDDL 계획 문제의 연속으로 바꾸는 알고리즘을 제시한다. [PDF 2쪽](https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf#page=2) · [PDF 3쪽](https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf#page=3)
+- 새 후보 계획 탐색과 기존 계획의 연속 파라미터 탐색을 조절하는 방법을 시뮬레이션 및 실물 계획 과제에서 평가했다. [PDF 7쪽](https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf#page=7) · [PDF 8쪽](https://cdn.aaai.org/ojs/6739/6739-40-9968-1-10-20200522.pdf#page=8)
 
 ## Evaluation Scope
 
@@ -78,3 +78,8 @@ PDDLStream은 기호 행동 계획 중에 역기구학·충돌 검사처럼 연�
 - **Actual contribution:** We propose PDDLStream, a planning language that introduces streams as an interface for incorporating sam- ∗We gratefully acknowledge support from NSF grants 1523767 and 1723381; from AFOSR grant FA9550-17-1-0165; from ... (p. 1, 1 Introduction).
 - **Evaluation boundary:** The Incremental and Focused algorithms serve as baselines that are representative of prior work (Garrett, Lozano-P´erez, and Kaelbling 2018). (p. 7, 9 Experiments).
 - **Explicit failure boundary:** Adaptive is able to quickly identify a collision-free pair of placements supporting a solution. (p. 8, 9 Experiments).
+
+## 원문과 공개 자료
+
+- 코드 · 기호 계획과 표본 생성의 결합 알고리즘 구현 · pddlstream/algorithms/focused.py [배포 파일](https://raw.githubusercontent.com/caelan/pddlstream/2c7d6f514b07ed018e18710192aa0f91c2e70ee2/pddlstream/algorithms/focused.py)
+- 데이터 · 블록 조작 예제 문제의 기호 도메인 정의 · examples/blocksworld/domain.pddl [배포 파일](https://raw.githubusercontent.com/caelan/pddlstream/2c7d6f514b07ed018e18710192aa0f91c2e70ee2/examples/blocksworld/domain.pddl)

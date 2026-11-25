@@ -87,6 +87,15 @@ class DocumentMaintenanceTest(unittest.TestCase):
                           "resources": {"code": {"status": PASS}},
                           "qualification": {"field": "authors", "status": OPEN}}}
         self.assertEqual(current_checks(row), {"link": OPEN, "code": PASS, "weights": OPEN, "authors": OPEN})
+        row["taxonomy_review"] = {"project": {"url": "https://example.org/current-project"}}
+        self.assertEqual(current_checks(row)["link"], PASS)
+        self.assertEqual(current_checks(row, include_reviews=False)["link"], OPEN)
+        row["followup"]["pdf"]["status"] = OPEN
+        self.assertEqual(current_checks(row)["link"], OPEN)
+        row["taxonomy_review"]["pdf"] = {"url": "https://example.org/paper.pdf"}
+        self.assertEqual(current_checks(row)["link"], PASS)
+        del row["taxonomy_review"]
+        row["followup"]["pdf"]["status"] = PASS
         row["postcheck"]["resources"]["project"] = {"status": PASS}
         self.assertEqual(current_checks(row)["link"], PASS)
 

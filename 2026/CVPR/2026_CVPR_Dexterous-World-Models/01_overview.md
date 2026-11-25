@@ -86,3 +86,8 @@ Dexterous World Models는 3차원 장면과 일인칭 사람 손 움직임을 �
 - **Actual contribution:** Our main contributions can be summarized as follows: (1) We introduce Dexterous World Models (DWM), a new formulation of world modeling via scene-action-conditioned video diffusion. (p. 2, 1. Introduction).
 - **Evaluation boundary:** Quantitatively, ours outperforms baselines across all metrics on real-world static camera videos. (p. 6, 4.1. Comparison).
 - **Explicit failure boundary:** CVX-Fun Fine-tuned often fails to interact with the correct target and hallucinates the object of interest. (p. 6, 4.1. Comparison).
+
+## 원문과 공개 자료
+
+- 코드 · 영상 세계 모델의 추론과 훈련 구현 · training/cogvideox/inference.py [배포 파일](https://raw.githubusercontent.com/snuvclab/dwm/19de79b879e662a133761e9f9afb60d4d92a618c/training/cogvideox/inference.py)
+- 데이터 · 저자 공개 Real-World Dynamic 평가 분할의 실측 일인칭 영상 · realworld/videos/00001.mp4 [배포 파일](https://huggingface.co/datasets/byungjun-kim/DWM-RealWorld-Dynamic/blob/b9e6da6b85707f7402bc61ea0dae100860db14f9/realworld/videos/00001.mp4)

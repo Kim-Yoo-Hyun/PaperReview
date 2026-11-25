@@ -88,3 +88,7 @@ Ditto는 물체를 한 번 움직이기 전후의 관측으로 관절과 부분 
 - **Actual contribution:** Given visual observations before and after interaction, our method jointly reconstructs the part-level geometry and articulation model of the object. (p. 1, 1. Introduction).
 - **Evaluation boundary:** On both datasets, Ditto gets significantly better results on all metrics compared with the baselines. (p. 7, 5.4. Articulated Object Reconstruction).
 - **Explicit failure boundary:** Failure of joint estimation also harms segmentation prediction because the joint parameter decoders and the segmentation decoder share the same feature planes. (p. 7, 5.4. Articulated Object Reconstruction).
+
+## 원문과 공개 자료
+
+- 코드 · 상호작용 전후 기하와 관절을 복원하는 구현 · src/models/geo_art_model_v0.py [배포 파일](https://raw.githubusercontent.com/UT-Austin-RPL/Ditto/f69579f49bbfaadc665fee511ad960f5243e1c1a/src/models/geo_art_model_v0.py)

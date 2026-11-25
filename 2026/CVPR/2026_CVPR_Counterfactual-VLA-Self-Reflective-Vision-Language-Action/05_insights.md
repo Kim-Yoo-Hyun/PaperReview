@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, VLA, self-reflection, failure recovery, test-time reasoning`.
+- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, VLA, self-reflection, trajectory prediction, test-time reasoning`.
 - **Reading predecessor in the generated track queue:** Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.
