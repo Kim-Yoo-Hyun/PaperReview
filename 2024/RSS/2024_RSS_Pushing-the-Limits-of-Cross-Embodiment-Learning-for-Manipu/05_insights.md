@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, cross-embodiment, goal-conditioned policy, manipulation, Navigation, robot data`.
+- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, cross-embodiment, image-goal policy, manipulation, Navigation, robot data`.
 - **Reading predecessor in the generated track queue:** MIRAGE: Cross-Embodiment Zero-Shot Policy Transfer with Cross-Painting (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** LIBERO-Safety: A Comprehensive Benchmark for Physical and Semantic Safety in Vision-Language-Action Models (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

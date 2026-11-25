@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: Lawrence Yunliang Chen, Karthik Dharmarajan, Kush Hari, Chenfeng Xu, Quan Vuong, Ken Goldberg
+- Authors: Lawrence Yunliang Chen, Kush Hari, Karthik Dharmarajan, Chenfeng Xu, Quan Vuong, Ken Goldberg
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, cross-embodiment, zero-shot transfer, policy transfer, manipulation, domain adaptation
 - Official paper: https://www.roboticsproceedings.org/rss20/p069.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p069.html
-- Code/Project: not identified
+- Code/Project: https://robot-mirage.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,9 @@ Mirage는 작업 공간과 그리퍼가 유사한 로봇팔 사이에서 대상 
 - **Actual contribution:** To summarize, our key contributions are: (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Study Results Table I shows that when the target robots have the same gripper as the source robot, most unseen target robots achieve very high task success rates. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
 - **Explicit failure boundary:** Less robust source policies leave little room for error, while more robust ones tend to retry even if the target robot fails to grasp the object the first time. (p. 5, IV. STATE-BASED TRANSFER EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://www.roboticsproceedings.org/rss20/p069.pdf#page=1)
+- 코드 — 외형 전이와 시뮬레이션 비교 · mirage/mirage/benchmark/robosuite/run_robosuite_benchmark.py [배포 파일](https://raw.githubusercontent.com/BerkeleyAutomation/mirage/3c8570b1bcca4c820f9a1708a2963331a762174e/mirage/mirage/benchmark/robosuite/run_robosuite_benchmark.py)
+- 가중치 — 통조림 집기에서 이종 로봇 전이를 평가하는 원본 정책 · mirage/mirage/models/can/image_no_proprio/model_epoch_500_PickPlaceCan_success_0.8.pth [배포 파일](https://raw.githubusercontent.com/BerkeleyAutomation/mirage/3c8570b1bcca4c820f9a1708a2963331a762174e/mirage/mirage/models/can/image_no_proprio/model_epoch_500_PickPlaceCan_success_0.8.pth)

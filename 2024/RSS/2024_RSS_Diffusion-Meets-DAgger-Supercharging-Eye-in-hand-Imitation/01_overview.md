@@ -13,7 +13,7 @@
 - Tags: Robotics, Imitation Learning, DAgger, diffusion model, compounding error, eye-in-hand
 - Official paper: https://www.roboticsproceedings.org/rss20/p048.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p048.html
-- Code/Project: not identified
+- Code/Project: https://sites.google.com/view/diffusion-meets-dagger
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,7 @@ Diffusion Meets DAgger는 손목 카메라의 시점이 시연에서 벗어났�
 - **Actual contribution:** We present experiments that evaluate the aforementioned design choices in developing a data creation framework to supercharge eye-in-hand imitation learning. (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 9: Diffusion vs NeRF We visualize perturbed samples generated using DMD and NeRF with different masking strategies. The top row shows images generated for a forward movement relative to ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to the receiving cup; the blue ... (p. 9, 24 Demo).
+
+## 원문과 공개 자료
+
+- 코드 — 시점 합성용 장면 주석과 확산 모델 미세조정 · data/generate_colmap_labels.py [배포 파일](https://raw.githubusercontent.com/ErinZhang1998/dmd_diffusion/75ab7cd7aaaa48c606c055b96f00f6335f4392ff/data/generate_colmap_labels.py)

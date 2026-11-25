@@ -63,7 +63,7 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 |---|---|---|---|---|
 | NEXT | [What Can RL Bring to VLA Generalization? An Empirical Study](../2025/NeurIPS/2025_NeurIPS_What-Can-RL-Bring-to-VLA-Generalization-An-Empirical-Study/01_overview.md) | 2025 / NeurIPS | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning](../2026/ICLR/2026_ICLR_SimpleVLA-RL-Scaling-VLA-Training-via-Reinforcement-Learni/01_overview.md) | 2026 / ICLR | `UNREAD` | `ABSTRACT_CHECKED` |
-| NEXT | [RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models](../2026/RSS/2026_RSS_RLux-VLA-A-Unified-and-Efficient-Framework-for-Reinforceme/01_overview.md) | 2026 / RSS | `UNREAD` | `ABSTRACT_CHECKED` |
+| NEXT | [RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models](../2026/RSS/2026_RSS_RLux-VLA-A-Unified-and-Efficient-Framework-for-Reinforceme/01_overview.md) | 2026 / RSS | `UNREAD` | `FULL_TEXT_CHECKED` |
 | NEXT | [A Generalist Pair-wise Progress Critic Model for Vision-Language-Action Robots](../2026/ICML/2026_ICML_A-Generalist-Pair-wise-Progress-Critic-Model-for-Vision-La/01_overview.md) | 2026 / ICML | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [Learning from Hindsight for VLA Reinforcement Learning](../2026/arXiv/2026_arXiv_Learning-from-Hindsight-for-VLA-Reinforcement-Learning/01_overview.md) | 2026 / arXiv | `UNREAD` | `ABSTRACT_CHECKED` |
 | NEXT | [CAST: Counterfactual Labels Improve Instruction Following in Vision-Language-Action Models](../2026/RA-L/2026_RA-L_CAST-Counterfactual-Labels-Improve-Instruction-Following-i/01_overview.md) | 2026 / RA-L | `UNREAD` | `ABSTRACT_CHECKED` |

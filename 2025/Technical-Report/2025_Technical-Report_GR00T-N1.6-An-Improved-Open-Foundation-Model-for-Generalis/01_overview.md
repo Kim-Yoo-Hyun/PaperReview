@@ -7,10 +7,10 @@
 - Authors: GEAR Team, Allison Azzolini, Johan Bjorck, Valts Blukis, Fernando Castañeda, Rahul Chand, Yan Chang, Danyi Chen, Nikita Cherniadev, Xingye Da, Runyu Ding, Shunjia Ding, Hassan Eslami, Linxi "Jim" Fan, Yu Fang, Max Fu, Shenyuan Gao, Yunhao Ge, Fengyuan Hu, Spencer Huang, Joel Jang, Xiaowei Jiang, Yunfan Jiang, Ryan Julian, Kaushil Kundalia, Jan Kautz, Zhiqi Li, Kevin Lin, Wei Liu, Runyu Lu, Zhengyi Luo, Loic Magne, Yunze Man, Ajay Mandlekar, Abhishek Mishra, Avnish Narayan, Connor Pederson, Nadun Ranawaka, Scott Reed, Sunil Srinivasa, You Liang Tan, Guanzhi Wang, Jing Wang, Qi Wang, Shihao Wang, Jimmy Wu, Yubo Wu, Yuqi Xie, Tianyi Xiong, Mengda Xu, Yinzhen Xu, Fu-En Yang, Seonghyeon Ye, Zhiding Yu, K.R. Zentner, Zhe Zhang, Kaiyuan Zheng, Ruijie Zheng, Yuke Zhu
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, humanoid, foundation model, whole-body control, long-horizon, robot data
+- Tags: VLA, humanoid, foundation model, loco-manipulation, long-horizon, robot data
 - Official paper: https://research.nvidia.com/labs/gear/gr00t-n1_6/
 - Full-text retrieval: https://research.nvidia.com/labs/gear/gr00t-n1_6/
-- Code/Project: https://github.com/NVIDIA/Isaac-GR00T
+- Code/Project: https://research.nvidia.com/labs/gear/gr00t-n1_6/
 - Paper type: theory_or_foundation
 - Source audit: 2026-11-23 NVIDIA 공식 웹 기술보고서 본문 대조.
 
@@ -64,3 +64,10 @@ GR00T N1.6은 N1.5의 시각언어 백본과 행동 생성기를 바꾸고 실�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (Discussion), p. 1 (Model and Data Improvements), p. 1 (Discussion), p. 1 (Introduction)이다.
+
+## 원문과 공개 자료
+
+- 코드 — N1.6 배포 태그의 정책 모델 · gr00t/model/gr00t_n1d6/gr00t_n1d6.py [배포 파일](https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/ead52833afbbf4243f8cd5e7664f48a94de03b19/gr00t/model/gr00t_n1d6/gr00t_n1d6.py)
+- 가중치 — NVIDIA N1.6-3B 모델 배포본 · model-00001-of-00002.safetensors [배포 파일](https://huggingface.co/nvidia/GR00T-N1.6-3B/blob/d0814e7ecb19202e7c8468b46098b0b7ef3a6d61/model-00001-of-00002.safetensors)
+- 데이터 — N1.6 태그에 포함된 cube-to-bowl 시연 · demo_data/cube_to_bowl_5/data/chunk-000/episode_000000.parquet [배포 파일](https://media.githubusercontent.com/media/NVIDIA/Isaac-GR00T/ead52833afbbf4243f8cd5e7664f48a94de03b19/demo_data/cube_to_bowl_5/data/chunk-000/episode_000000.parquet)
+- 코드와 소형 시연은 NVIDIA의 해당 버전 배포 태그에서 확인했다. 전체 사전학습 데이터 범위는 미확인이다.

@@ -40,7 +40,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `VLA, humanoid, foundation model, whole-body control, long-horizon, robot data`.
+- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `VLA, humanoid, foundation model, loco-manipulation, long-horizon, robot data`.
 - **Reading predecessor in the generated track queue:** GR00T N1.5: An Improved Open Foundation Model for Generalist Humanoid Robots (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Grounding Actions in Camera Space: Observation-Centric Vision-Language-Action Policy (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -10,10 +10,10 @@
 - Authors: Qinglun Zhang, Zhen Liu, Haoqiang Fan, Guanghui Liu, Bing Zeng, Shuaicheng Liu
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: Robotics, Imitation Learning, 3D point cloud, Flow Matching, diffusion policy, inference efficiency, manipulation
+- Tags: Robotics, Imitation Learning, 3D point cloud, Flow Matching, one-step action generation, inference efficiency, manipulation
 - Official paper: https://ojs.aaai.org/index.php/AAAI/article/view/33617
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/33617
-- Code/Project: not identified
+- Code/Project: https://github.com/zql-kk/FlowPolicy
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -90,3 +90,7 @@ FlowPolicy는 관측 점군에 조건화된 흐름의 속도 일관성을 학습
 - **Actual contribution:** In summary, our main contributions are threefold: • We first propose a 3D flow-based policy generation framework that conditions the 3D visual representation and can generate robust robotic actions with ... (p. 2, Abstract).
 - **Evaluation boundary:** Figure 5: Ablation on the number of expert demonstrations. We choose four typical tasks to explore the impact of dif- ferent numbers of demonstrations on FlowPolicy and DP3. Both generally ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the task (right). task. (p. 6, Abstract).
+
+## 원문과 공개 자료
+
+- 코드 — 점군 조건부 일관성 흐름 정책과 평가 · FlowPolicy/eval.py [배포 파일](https://raw.githubusercontent.com/zql-kk/FlowPolicy/86d10c14972b4eab083abec9026749c340f8e5ed/FlowPolicy/eval.py)

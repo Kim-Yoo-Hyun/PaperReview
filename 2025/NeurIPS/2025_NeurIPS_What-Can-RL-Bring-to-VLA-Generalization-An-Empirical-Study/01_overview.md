@@ -42,3 +42,8 @@ Benchmark / empirical study. Visual·semantic·execution generalization을 나�
 ## Verification Boundary
 
 Generalization split 생성, pretrained overlap, RL별 budget 및 real-robot 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — OpenVLA 일반화 비교용 강화학습 구현 · SimplerEnv/simpler_env/train_ms3_ppo.py [배포 파일](https://raw.githubusercontent.com/gen-robot/RL4VLA/de46e0174e7ac310255a2836718fcefab28b8963/SimplerEnv/simpler_env/train_ms3_ppo.py)
+- 가중치 — 일반화 실험의 RL 미세조정 OpenVLA · model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/gen-robot/openvla-7b-rlvla-rl/blob/93c54b036cc90ee394731fc73788406d7e65f057/model-00001-of-00004.safetensors)

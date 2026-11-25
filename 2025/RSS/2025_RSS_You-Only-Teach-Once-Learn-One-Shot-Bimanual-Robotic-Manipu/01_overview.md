@@ -87,3 +87,9 @@ YOTO는 사람의 양손 시연을 한 번 스테레오로 관찰해 얻은 동�
 - **Actual contribution:** As an altemative, we propose to project all 3D points {f!"°}/_, onto the 2D image, nd then lft these points to 3D by applying the stereo matching algorithm {92}. (p. 4, B. Hand Motion Extraction and Injection).
 - **Evaluation boundary:** ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple substeps and less exploration of efficient ... (p. 10, B. Results Comparison).
 - **Explicit failure boundary:** Due to space limitations, we did not continue the demonstration proliferation and policy training. (p. 11, B. Results Comparison).
+
+## 원문과 공개 자료
+
+- 코드 — 양팔 확산 정책 및 시연 증강 · BiDP/policies/agents/dp_policy.py [배포 파일](https://raw.githubusercontent.com/hnuzhy/YOTO/e923398a059255aadf4e62dad7ba850a3299fcf4/BiDP/policies/agents/dp_policy.py)
+- 가중치 — 증강 시연으로 학습한 서랍 양팔 정책 · bidp_drawer_withaug_ckpt00499.pth [배포 파일](https://huggingface.co/HoyerChou/YOTO/blob/aa14080cda9548ab30982c44d47d9d40dacf3358/bidp_drawer_withaug_ckpt00499.pth)
+- 데이터 — 전처리한 서랍 과제의 증강 시연 · drawer_preprocessed_aug100x_4.json [배포 파일](https://huggingface.co/HoyerChou/YOTO/blob/aa14080cda9548ab30982c44d47d9d40dacf3358/drawer_preprocessed_aug100x_4.json)

@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / RSS
-- Authors: Kun Wu, Chengkai Hou, Jiaming Liu, Zhengping Che, Xiaozhu Ju, Zhuqin Yang, Meng Li, Yinuo Zhao, Zhiyuan Xu, Guang Yang, Shichao Fan, Xinhua Wang, Fei Liao, Zhen Zhao, Guangyu Li, Zhao Jin, Lecheng Wang, Jilei Mao, Ning Liu, Pei Ren, Qiang Zhang, Yaoxu Lyu, Mengzhen Liu, He Jingyang, Yulin Luo, Zeyu Gao, Chenxuan Li, Chenyang Gu, Yankai Fu, Di Wu, Xingyu Wang, Sixiang Chen, Zhenyu Wang, Pengju An, Siyuan Qian, Shanghang Zhang, Jian Tang
+- Authors: Kun Wu, Chengkai Hou, Jiaming Liu, Zhengping Che, Xiaozhu Ju, Zhuqin Yang, Meng Li, Yinuo Zhao, Zhiyuan Xu, Guang Yang, Shichao Fan, Xinhua Wang, Fei Liao, Zhen Zhao, Guangyu Li, Zhao Jin, Lecheng Wang, Jilei Mao, Ning Liu, Pei Ren, Qiang Zhang, Yaoxu Lyu, Mengzhen Liu, Jingyang He, Yulin Luo, Zeyu Gao, Chenxuan Li, Chenyang Gu, Yankai Fu, Di Wu, Xingyu Wang, Sixiang Chen, Zhenyu Wang, Pengju An, Siyuan Qian, Shanghang Zhang, Jian Tang
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Dataset, Benchmark, multi-embodiment, robot data, long-horizon manipulation, failure data
@@ -88,3 +88,9 @@ RoboMIND는 네 가지 로봇 형태에서 공통 수집 규약으로 기록한 
 - **Actual contribution:** To support the development of such a large-scale dataset, we develop an intelligent data platform designed to collect, filter, and process the dataset efficiently. ‘This platform uses a cloudnative architecture ... (p. 4, I. INTRODUCTION).
 - **Evaluation boundary:** RoboMIND features standardized settings to form a large-scale real-world manipulation dataset. ‘As shown in Figure 8, we compare our dataset with Open XEmbodiment, another large-scale robotic learning dataset. (p. 8, B. Qualitative Analysis).
 - **Explicit failure boundary:** Touch Excess: Unnecessary contact with objects by the robotic arm; Movement not Smooth: Noticeable jerking or interruptions in robotic arm movements; Secondary Grabbing: Repeated grasping attempts after failures in robotic ... (p. 6, B. Data Preprocessing and Classification).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://www.roboticsproceedings.org/rss21/p152.pdf#page=1)
+- 코드 — RoboMIND 원격조작 기록을 읽는 예제 · static/quick_start.ipynb [배포 파일](https://raw.githubusercontent.com/x-humanoid-robomind/x-humanoid-robomind.github.io/28ede3eb1bc8a051be76e560a831fe3f0c32319f/static/quick_start.ipynb)
+- 데이터 — RoboMIND 1.0 AgileX 시연 · benchmark1_0_compressed/h5_agilex_3rgb/10_packplate.tar.gz.part-aa [배포 파일](https://huggingface.co/datasets/x-humanoid-robomind/RoboMIND/blob/e7ffe31d1fe983a42c3d7b79d192f554fc05b86e/benchmark1_0_compressed/h5_agilex_3rgb/10_packplate.tar.gz.part-aa)

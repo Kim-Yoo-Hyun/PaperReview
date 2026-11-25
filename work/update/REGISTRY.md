@@ -167,6 +167,32 @@ Y는 논문에 대응하는 저자 배포를 확인한 경우, 부분은 확인�
 - **중복 후보.** 배치 내부 1,225쌍과 나머지 원장과의 60,100쌍에서 식별자와 제목·별칭을 대조했다. 제목 유사도로 잡힌 두 쌍은 GR00T N1(`pr-0869`)과 각각 N1.5(`pr-0917`), N1.6(`pr-0918`)이었다. 저자가 구분해 배포한 후속 버전이므로 세 ID를 유지했다. [N1 모델 카드](https://huggingface.co/nvidia/GR00T-N1-2B) · [N1.5 변경점](https://research.nvidia.com/labs/gear/gr00t-n1_5/) · [N1.6 변경점](https://research.nvidia.com/labs/gear/gr00t-n1_6/)
 - **남은 분류 질문.** 자기지도 시각 대응(Dense Object Nets), 센서 융합 자세 추적(V-HOP), 로봇 데이터 수집 시스템(AutoRT)에 별도 방법 태그가 필요한가? 세 편은 현행 방법 축에 `unknown`을 썼다. VLA 및 휴머노이드 전용 필드는 각각 10편에 작성했고, 원문 한계 30편과 직접 선행 관계 13건에는 페이지를 붙였다. 50편 모두 레코드 종합 판정은 `부분확인`이다. [배치 원장](../sources/batches/core_next_05.yaml) · [공개 자료 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
 
+## 여섯 번째 배치 태그 매핑
+
+| 기존 검색어·표기 | 원문의 구분과 정규화 |
+|---|---|
+| lifelong learning, goal-conditioned policy | GOAT는 탐색 중 물체 기억을 누적한다. 조작·이동의 기종 간 학습은 목표 이미지를 사용한다. 각각 `lifelong navigation`, `image-goal policy`로 교정했다. |
+| flow, diffusion, action chunk | FlowPolicy의 단일 단계 흐름 생성과 DSRL의 고정 확산 정책 노이즈 제어를 구분했다. Q-chunking과 DQC에서 행동 묶음은 강화학습 가치 함수의 입력이다. |
+| world model, VLA post-training | VLAW는 성공 궤적을 골라 흐름 목적함수로 정책을 갱신한다. VLA-MBPO는 세계 모델에서 만든 짧은 궤적으로 강화학습한다. |
+| humanoid, whole-body control, navigation | GR00T의 실물 조작·이동 조작, NavDP·LoGoPlanner의 G1 경로 추종, OGBench·DQC의 모의 휴머노이드 목표 도달을 분리했다. |
+| sim-to-real, real-world | SimpleVLA-RL의 네 실물 과제에 적용한 정책은 시뮬레이션 자료로 학습했다. RLinf-VLA의 실물 서랍 닫기는 실물 시연과 모의 궤적을 함께 사용했다. |
+
+11월 25일 *PartInstruct*부터 *OopsieVerse*까지 NEXT 50편을 검토했다. 집중 읽기 500편 중 **323편(64.6%)**에 다축 태그가 있다. 공식 정규화 여섯 배치의 CORE 50편·NEXT 250편에 별도 등록한 NEXT 23편을 더한 수다. PDF 48편은 원문 쪽수와 SHA-256을, NVIDIA 웹 기술 보고서 두 편은 절 제목과 HTML SHA-256을 기록했다. AAAI 6편은 발행사가 기탁한 DOI 서지도 대조했다. 이 중 3편은 이전에 확인한 게재본과 해시가 동일한 사본을 사용했고 OC-VLA·MP1·Neural Assembler의 이번 쪽수는 저자 공개 판본 기준이다. [논문별 근거와 이전 값](../sources/batches/core_next_06.yaml)
+
+| 저자 배포물 | Y | 부분 | N | 미확인 |
+|---|---:|---:|---:|---:|
+| 코드 | 38 | 5 | 0 | 7 |
+| 가중치 | 3 | 19 | 0 | 28 |
+| 데이터 | 0 | 21 | 1 | 28 |
+
+86건에서 논문에 대응하는 배포 파일을 확인했다. 77건은 파일 내용을 일부 읽었고, 6건은 이용 동의가 필요한 저장소에서 리비전·파일명·크기를, 3건은 저자가 공유한 Drive 파일의 이름과 상세 페이지를 확인했다. SocialNav 저자는 원래 학습 코퍼스의 미공개 사유를 명시하면서 별도로 개편한 평가 벤치마크를 안내한다. GO-1과 GR00T N1.5·N1.6은 해당 모델의 배포 리비전을 각각 확인했다. [SocialNav 배포 안내](https://github.com/AMAP-EAI/SocialNav#-dataset--benchmark) · [N1.5](https://huggingface.co/nvidia/GR00T-N1.5-3B) · [N1.6](https://huggingface.co/nvidia/GR00T-N1.6-3B)
+
+LoGoPlanner에 연결돼 있던 X-NavDP 체크포인트를 LoGoPlanner 전용 파일로 교체했다. Gemini Robotics 1.5의 프로젝트 주소는 2.5가 표시되는 제품 페이지에서 1.5 발표 당시의 공식 페이지로 바꿨다. RLinf-VLA의 실물 서랍 닫기에서는 지도 미세조정(SFT) 정책과 시뮬레이션 RL을 추가한 정책이 각각 8/10회 성공했다. 논문은 같은 성공 횟수에서 밀기 동작의 효율 차이를 보고했다. [LoGoPlanner 배포](https://huggingface.co/InternRobotics/LoGoPlanner) · [Gemini Robotics 1.5 발표](https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/) · [RLinf-VLA 실물 평가](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9)
+
+50편 내부 1,225쌍과 나머지 1,202편과의 60,100쌍에서 제목·별칭·식별자를 비교했다. 유사 후보 네 쌍은 GR00T N1·N1.5·N1.6 사이의 세 쌍과 NavDP·LoGoPlanner 한 쌍이었다. 저자 사이트의 별칭 `NavDP--`는 구두점을 제거하면 `NavDP`와 일치한다. 원문과 배포 버전에서 네 쌍 모두 다른 연구로 확인했다. [GR00T N1.5 보고서](https://research.nvidia.com/labs/gear/gr00t-n1_5/) · [N1.6 보고서](https://research.nvidia.com/labs/gear/gr00t-n1_6/) · [LoGoPlanner의 별칭과 선행 연구](https://steinate.github.io/logoplanner.github.io/)
+
+분류상 남은 질문은 연속 행동을 직접 회귀하는 정책을 확산·흐름과 별도 값으로 표현할지, SIMPLER 같은 평가 중심 논문을 어떤 방법 태그로 검색할지다. RoboFlamingo·GR-1의 행동 회귀와 SIMPLER의 평가 역할을 근거에 적고 해당 축은 `unknown`으로 두었다. VLA 전용 필드 19편, 휴머노이드 전용 필드 11편, 저자 명시 한계 29편, 근거 위치를 확인한 직접 선행 관계 16건을 기록했다. [정규화 원장](../sources/batches/core_next_06.yaml) · [공개 자료 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
+
 ## 외부 목록 대조와 CORE 심화 감사
 
 2026-11-19에 서베이 3편의 참고문헌, 6개 학회 3개년 목록, 연구실·기업 3곳 및 큐레이션 1곳을 대조했다. 등록 심사 후보 17편의 출처를 논문별로 보존했다. [목록별 커버리지와 하위 주제 순위](../../research/EXTERNAL_COVERAGE.md) · [후보 YAML](../sources/batches/missing_candidates_2026.yaml)

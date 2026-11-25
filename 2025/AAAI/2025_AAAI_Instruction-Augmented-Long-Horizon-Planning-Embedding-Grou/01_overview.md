@@ -13,7 +13,7 @@
 - Tags: Robotics, task and motion planning, PDDL, mobile manipulation, long-horizon, language grounding, real-world
 - Official paper: https://ojs.aaai.org/index.php/AAAI/article/view/33610
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/33610
-- Code/Project: not identified
+- Code/Project: https://nicehiro.github.io/IALP/
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

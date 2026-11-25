@@ -41,3 +41,10 @@ Current trend. Fast action context와 slow history memory를 결합한다. NaVid
 ## Verification Boundary
 
 3D pruning에 필요한 입력, KV-cache 갱신, 실제 sensor/controller 지연을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — StreamVLN의 동영상·행동 문맥 모델 · streamvln/model/stream_video_vln.py [배포 파일](https://raw.githubusercontent.com/InternRobotics/StreamVLN/e48f6ff7e9201d93aae003e8f64b04c00cec13bc/streamvln/model/stream_video_vln.py)
+- 가중치 — StreamVLN 항법 정책 배포본 · model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/mengwei0427/StreamVLN_Video_qwen_1_5_r2r_rxr_envdrop_scalevln_v1_3/blob/f1f76c66083c362ddfcd2610167f9c4e4a46c027/model-00001-of-00004.safetensors)
+- 데이터 — ScaleVLN에서 선정한 학습 궤적 주석 · ScaleVLN/scalevln_subset_150k.json.gz [배포 파일](https://huggingface.co/datasets/cywan/StreamVLN-Trajectory-Data/blob/dc61ee9b4e90aa7ba63c1163b2134df5610dccb9/ScaleVLN/scalevln_subset_150k.json.gz)
+- IEEE 게재 서지에는 저자 11명이 등재됐다. 현재 arXiv 원고는 Tai Wang 다음에 Yuqiang Yang을 추가로 기재한다. 게재본 저자와 공개 원고 소속 근거를 따로 기록했다. [원문](https://api.crossref.org/works/10.1109/icra57385.2026.11696190)

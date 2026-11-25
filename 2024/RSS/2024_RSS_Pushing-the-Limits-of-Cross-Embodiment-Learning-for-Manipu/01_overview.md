@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: Jonathan Heewon Yang, Catherine Glossop, Arjun Bhorkar, Dhruv Shah, Quan Vuong, Chelsea Finn, Dorsa Sadigh, Sergey Levine
+- Authors: Jonathan Yang, Catherine Glossop, Arjun Bhorkar, Dhruv Shah, Quan Vuong, Chelsea Finn, Dorsa Sadigh, Sergey Levine
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, cross-embodiment, goal-conditioned policy, manipulation, Navigation, robot data
+- Tags: Robotics, cross-embodiment, image-goal policy, manipulation, Navigation, robot data
 - Official paper: https://www.roboticsproceedings.org/rss20/p093.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p093.html
-- Code/Project: not identified
+- Code/Project: https://extreme-cross-embodiment.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (16 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -85,3 +85,8 @@
 - **Actual contribution:** The advent of large-scale foundation models in machine learning has enabled harnessing diverse datasets to enhance sample efficiency, improve generalization, and facilitate transfer to novel domains [1]. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 5: Does navigation help manipulation? By aligning action coordinate frames, training on navigation and driving datasets results in a 20% improvement across five challenging tabletop manipulation tasks (success % ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** Gauging object distance is analogous to testing the robustness to a change in table height in tabletop manipulation, which previous works have identified as a common distribution shift artifact leading ... (p. 7, VI. ANALYSIS).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://www.roboticsproceedings.org/rss20/p093.pdf#page=1)
+- 코드 — 이동과 조작을 공유하는 정책의 release 브랜치 · scripts/train.py [배포 파일](https://raw.githubusercontent.com/JonathanYang0127/omnimimic/171039a0b44416a2d52953a4924d782d100e52db/scripts/train.py)

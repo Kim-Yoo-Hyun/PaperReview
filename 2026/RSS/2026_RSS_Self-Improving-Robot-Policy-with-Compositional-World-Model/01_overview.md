@@ -42,3 +42,10 @@ Current trend. Multi-view dynamics와 progress value를 분리하여 imagined ro
 ## Verification Boundary
 
 Progress label 생성, failure coverage, value calibration과 real rollout 예산을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 정책·가치 모델 학습과 동역학 학습 · policy_and_value/policy_offline_and_value/scripts/train.py [배포 파일](https://raw.githubusercontent.com/OpenDriveLab/RISE/5fac1e6ab9d50d4cc1ba4daeadf14023c8415955/policy_and_value/policy_offline_and_value/scripts/train.py)
+- 가중치 — RISE 동역학 모델 · dynamics_model/pretrained/diffusion_pytorch_model.safetensors [배포 파일](https://huggingface.co/OpenDriveLab-org/RISE_Assets/blob/8560926b85e5ea386d0edcf91724f25d2d0b0ed4/dynamics_model/pretrained/diffusion_pytorch_model.safetensors)
+- 데이터 — 배낭 조작 표본 궤적 · sample_data/hdf5/backpack_packing_sample_data/episode_0.hdf5 [배포 파일](https://huggingface.co/OpenDriveLab-org/RISE_Assets/blob/8560926b85e5ea386d0edcf91724f25d2d0b0ed4/sample_data/hdf5/backpack_packing_sample_data/episode_0.hdf5)
+- RSS 서지 제목의 앞에 게재 PDF는 RISE를 표기한다. [원문](https://roboticsproceedings.org/rss22/p012.pdf)

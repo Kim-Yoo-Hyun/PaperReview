@@ -12,7 +12,7 @@
 - Aliases: VLA-MBPO
 - Official paper: https://proceedings.mlr.press/v306/zhang26ez.html
 - Venue verification: https://proceedings.mlr.press/v306/zhang26ez.html
-- Code/Project: https://github.com/LAMDA-RL/VLA-MBPO
+- Code/Project: https://rhx11111.github.io/VLA-MBPO/
 - Code: https://github.com/LAMDA-RL/VLA-MBPO
 - Source audit: 2026-10-19: 공식 paper abstract 및 저자 project/code README 확인; abstract 기반 — 본문 수동 확인 필요.
 
@@ -41,3 +41,8 @@ Current trend. Multi-view consistency와 chunk-level branched rollout으로 worl
 ## Verification Boundary
 
 Multi-view conditioning, rollout branching state 분포, reward model과 실제 transfer 검증을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 세계 모델을 쓰는 LIBERO 정책 학습 · scripts/train_libero_rl.py [배포 파일](https://raw.githubusercontent.com/LAMDA-RL/VLA-MBPO/5e2b21044f2ef2189c22777643cf10e80a83bc13/scripts/train_libero_rl.py)
+- 가중치 — LIBERO 목표 조건부 BAGEL 세계 모델 · model.safetensors [배포 파일](https://huggingface.co/Rhx11111/Bagel-goal-256-2500/blob/d65f2d1c77ba4c4712c9890e042777f21a469a23/model.safetensors)

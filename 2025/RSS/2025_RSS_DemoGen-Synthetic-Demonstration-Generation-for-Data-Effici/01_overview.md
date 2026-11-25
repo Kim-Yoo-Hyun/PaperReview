@@ -13,7 +13,7 @@
 - Tags: Robotics, synthetic data, demonstration generation, 3D perception, Imitation Learning, manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p157.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p157.pdf
-- Code/Project: not identified
+- Code/Project: https://demo-generation.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (20 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,8 @@ DemoGen은 작업당 한 번의 시연에서 행동 궤적과 3D 관측을 함�
 - **Actual contribution:** In this work, we present Demo a low-cost, fully synthetic approach for automatic demonstration generation. (p. 1, Abstract).
 - **Evaluation boundary:** 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated settings, resulting in an equal training ... (p. 17, A. Policy Training and Implementation Details).
 - **Explicit failure boundary:** Failure-free action execution, ‘To ensure the validity of synthetic demonstrations without on-robot rollouts to filter ut failed trajectories, we require failure-Free action execution Unlike previous works (3, 20] that rely ... (p. 6, C. TAMP-based Action Generation).
+
+## 원문과 공개 자료
+
+- 코드 — 관측과 행동 시연의 합성 · demo_generation/demo_generation/demogen.py [배포 파일](https://raw.githubusercontent.com/TEA-Lab/DemoGen/69a4931e8ef7694b5f61ebf3b7f393457500032f/demo_generation/demo_generation/demogen.py)
+- 데이터 — 꽃병 과제의 원 시연 Zarr 행동 청크 · data/datasets/source/flower.zarr/data/action/0.0 [배포 파일](https://raw.githubusercontent.com/TEA-Lab/DemoGen/69a4931e8ef7694b5f61ebf3b7f393457500032f/data/datasets/source/flower.zarr/data/action/0.0)

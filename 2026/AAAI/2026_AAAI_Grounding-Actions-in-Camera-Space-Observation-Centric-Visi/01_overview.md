@@ -13,7 +13,7 @@
 - Tags: VLA, Robotics, action representation, camera space, cross-view generalization, real-world manipulation
 - Official paper: https://ojs.aaai.org/index.php/AAAI/article/view/38947
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/38947
-- Code/Project: not identified
+- Code/Project: https://github.com/ZTY0213/OC-VLA
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,7 @@ OC-VLA는 로봇 베이스 기준의 행동 목표를 카메라 좌표계로 옮
 - **Actual contribution:** To address these issues, we propose a novel paradigm that decouples the end-effector action from the robot base coordinate system and instead predicts actions directly in the third-person camera coordinate ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** Lastly, we present a comprehensive evaluation of the performance of our proposed method on both simulated benchmarks and real-world robotic platforms. (p. 4, IV. EXPERIMENTS).
 - **Explicit failure boundary:** Failures are highlighted with red circles. the same data. (p. 7, IV. EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 코드 — OC-VLA 저자가 지정한 Dita 학습 경로와 카메라 좌표계 구성 · scripts/train_diffusion_sim.py [배포 파일](https://raw.githubusercontent.com/RoboDita/Dita/db6907d8c0b9878570570e10d3a0599420072044/scripts/train_diffusion_sim.py)

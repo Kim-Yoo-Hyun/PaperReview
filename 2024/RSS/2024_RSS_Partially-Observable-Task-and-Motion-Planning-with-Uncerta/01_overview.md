@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: Aidan Curtis, George Matheos, Nishad Gothoskar, Vikash Mansinghka, Joshua B. Tenenbaum, Tomás Lozano-Pérez, Leslie Pack Kaelbling
+- Authors: Aidan Curtis, George Matheos, Nishad Gothoskar, Vikash Mansinghka, Joshua Tenenbaum, Tomás Lozano-Pérez, Leslie Pack Kaelbling
 - Primary track: Planning and control
 - Tier: NEXT
 - Tags: Robotics, TAMP, POMDP, uncertainty, risk-aware planning, closed-loop control
 - Official paper: https://www.roboticsproceedings.org/rss20/p118.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p118.html
-- Code/Project: not identified
+- Code/Project: https://aidan-curtis.github.io/tampura.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,8 @@ TAMPURA는 처음 상태와 행동 결과가 불확실한 작업·운동 계획�
 - **Actual contribution:** Our approach, TAMPURA, is to exploit a coarse model of each controller's preconditions and effects to rapidly solve deterministic, symbolic planning problems that guide the construction of a non-deterministic Markov ... (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** We applied TAMPURA to five simulated and two realworld robotics problems, illustrated in Figure 2 and Figure 1, (p. 7, VI. SIMULATED EXPERIMENTS & ANALYSIS).
 - **Explicit failure boundary:** 20:⃗ s ←[D[x] : x ∈zip(⃗Ψpre,⃗c,⃗Ψeff)] 21: ▷Compute f, num "failures" where c in Ψpre did not cause Ψeff. (p. 6, V. LEARNING THE SPARSE ABSTRACT MDP).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://www.roboticsproceedings.org/rss20/p118.pdf#page=1)
+- 코드 — 믿음 상태의 불확실성과 위험을 고려하는 계획기 · tampura/policies/tampura_policy.py [배포 파일](https://raw.githubusercontent.com/aidan-curtis/tampura/cdddf14b45d2608fc1d3bc9c72d8ee249c4638b2/tampura/policies/tampura_policy.py)

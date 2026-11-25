@@ -19,6 +19,14 @@ from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_taxonomy_locations_distinguish_web_sections_from_pdf_pages(self):
+        self.assertTrue(audit.valid_source_locations([1, 3], None))
+        self.assertTrue(audit.valid_source_locations(None, ["Model and Data Improvements"]))
+        for pages, sections in [([], None), ([0], None), ([True], None), (None, [" "]),
+                                ([1], ["Experiments"]), (None, "Experiments"), (None, None)]:
+            with self.subTest(pages=pages, sections=sections):
+                self.assertFalse(audit.valid_source_locations(pages, sections))
+
     def test_publication_header_requires_one_complete_canonical_value(self):
         matches = audit.overview_publication_matches
         self.assertTrue(matches("- Year/Venue: 2025 / T-RO (journal article)", 2025, "T-RO"))

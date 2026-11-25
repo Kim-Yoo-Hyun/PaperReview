@@ -88,3 +88,8 @@ Manual2Skill은 가구 설명서 그림에서 조립 순서와 부품의 상대 
 - **Actual contribution:** In this paper, we present Manual2Skill, a novel framework that enables robots to perform complex assembly tasks guided by highleyel manual instructions. (p. 1, Abstract).
 - **Evaluation boundary:** We present the results in Table IV, showing that our method outperforms the baseline and achieves a high success rate in real-world assembly tasks. (p. 9, C. Overall Performance Evaluation).
 - **Explicit failure boundary:** Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects or due to suboptimal grasping ... (p. 9, C. Overall Performance Evaluation).
+
+## 원문과 공개 자료
+
+- 코드 — 설명서 기반 조립 계획 평가와 단계별 자세 추정 · VLM_assembly_plan_gen/eval/manual_generation/eval.py [배포 파일](https://raw.githubusercontent.com/owensun2004/Manual2Skill/48e88ff79948d6752c6b339a8301dc894318cc6c/VLM_assembly_plan_gen/eval/manual_generation/eval.py)
+- 데이터 — 자세 추정을 위해 가공한 부품 자료 분할 · new_raw_data_part_00.tar.gz [배포 파일](https://huggingface.co/duzhuohanyue/Manual2Skill_split/blob/8884f21084253373e788f79b17bbea16c00c1d34/new_raw_data_part_00.tar.gz)

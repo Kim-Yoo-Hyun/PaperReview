@@ -10,7 +10,7 @@
 - Tags: VLA, humanoid, foundation model, Flow Matching, world model, robot data
 - Official paper: https://research.nvidia.com/labs/gear/gr00t-n1_5/
 - Full-text retrieval: https://research.nvidia.com/labs/gear/gr00t-n1_5/
-- Code/Project: https://github.com/NVIDIA/Isaac-GR00T
+- Code/Project: https://research.nvidia.com/labs/gear/gr00t-n1_5/
 - Paper type: theory_or_foundation
 - Source audit: 2026-11-23 NVIDIA 공식 웹 기술보고서 본문 대조.
 
@@ -71,3 +71,10 @@ GR00T N1.5는 기존 N1의 시각언어 표현과 정책 학습을 바꾼 버전
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (Introduction), p. 1 (Architecture), p. 2 (Generalization to novel behaviors using Neural Trajectories), p. 2 (Learning to manipulate novel objects from human ego videos), p. 3 (Post-training on Unitree G1)이다.
+
+## 원문과 공개 자료
+
+- 코드 — N1.5 배포 태그의 정책 모델 · gr00t/model/gr00t_n1.py [배포 파일](https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/4af2b622892f7dcb5aae5a3fb70bcb02dc217b96/gr00t/model/gr00t_n1.py)
+- 가중치 — NVIDIA N1.5-3B 모델 배포본 · model-00001-of-00003.safetensors [배포 파일](https://huggingface.co/nvidia/GR00T-N1.5-3B/blob/869830fc749c35f34771aa5209f923ac57e4564e/model-00001-of-00003.safetensors)
+- 데이터 — N1.5 태그에 포함된 모의 집기 시연 · demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet [배포 파일](https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/4af2b622892f7dcb5aae5a3fb70bcb02dc217b96/demo_data/robot_sim.PickNPlace/data/chunk-000/episode_000000.parquet)
+- 코드와 소형 시연은 NVIDIA의 해당 버전 배포 태그에서 확인했다. 전체 사전학습 데이터 범위는 미확인이다.

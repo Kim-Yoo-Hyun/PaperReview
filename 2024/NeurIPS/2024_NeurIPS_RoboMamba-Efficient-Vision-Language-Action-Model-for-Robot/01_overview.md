@@ -13,7 +13,7 @@
 - Tags: Robotics, VLA, Mamba, SE(3) pose, efficient inference, manipulation
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/46a126492ea6fb87410e55a58df2e189-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2024/hash/46a126492ea6fb87410e55a58df2e189-Abstract-Conference.html
-- Code/Project: not identified
+- Code/Project: https://sites.google.com/view/robomamba-web
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (26 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@ RoboMamba는 시각 인코더와 상태 공간 언어모델을 정렬하고 소�
 - **Actual contribution:** Drawing inspiration from this, we raise a question: "Can we develop an efficient robotic VLA model that possesses strong reasoning capabilities while also acquiring robot manipulation skills in a cost-effective ... (p. 2, 1.1 Hz).
 - **Evaluation boundary:** 4.5 Real-world experiments As shown in Figure 4, we visualize RoboMamba's reasoning results across various robotic downstream tasks. (p. 10, 4 Experiment).
 - **Explicit failure boundary:** Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational ... (p. 21, 2. Limitations).
+
+## 원문과 공개 자료
+
+- 코드 — 자세 예측 모듈. 학습 코드 전체는 저자에게 별도 요청 · src/model/manip.py [배포 파일](https://raw.githubusercontent.com/lmzpai/roboMamba/c2f52c49217a0e383eadb71a5751567fb05b452c/src/model/manip.py)

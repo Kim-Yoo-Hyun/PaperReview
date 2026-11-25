@@ -10,10 +10,10 @@
 - Authors: Matthew Chang, Theophile Gervet, Mukul Khanna, Sriram Yenamandra, Dhruv Shah, So Yeon Min, Kavit Shah, Chris Paxton, Saurabh Gupta, Dhruv Batra, Roozbeh Mottaghi, Jitendra Malik, Devendra Singh Chaplot
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
-- Tags: Robotics, Navigation, semantic memory, lifelong learning, mobile manipulation, open-world
+- Tags: Robotics, Navigation, semantic memory, lifelong navigation, mobile manipulation, open-world
 - Official paper: https://www.roboticsproceedings.org/rss20/p073.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p073.html
-- Code/Project: not identified
+- Code/Project: https://theophilegervet.github.io/projects/goat/
 - Paper type: system
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -79,3 +79,7 @@ GOAT는 물체 범주·이미지·자연어로 지정한 목표를 찾을 때 �
 - **Actual contribution:** This enables GOAT to distinguish between different instances of the same category to enable navigation to targets specified by images and fine-grained language descriptions. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** GOAT w/o memory achieves 61% success rate with an SPL of only 0.19 compared to the 0.64 of GOAT. (p. 5, V. RESULTS).
 - **Explicit failure boundary:** 68.2). d) Real-World Open-Vocabulary Detection: Limitations and Opportunities: An interesting and noteworthy observation is that despite the rapid advances in open (or large) vocabulary vision-and-language models (VLMs) [37, 43], we ... (p. 10, VII. DISCUSSION).
+
+## 원문과 공개 자료
+
+- 코드 — 저자 프로젝트가 연결한 HomeRobot 물체 인스턴스 지도 모듈 · src/home_robot/home_robot/mapping/instance/instance_map.py [배포 파일](https://raw.githubusercontent.com/facebookresearch/home-robot/ede6a67a2d0c0c8e12ad3b9726f330cea6cf90f5/src/home_robot/home_robot/mapping/instance/instance_map.py)

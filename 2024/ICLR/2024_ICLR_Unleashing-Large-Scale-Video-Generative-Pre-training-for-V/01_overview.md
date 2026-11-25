@@ -88,3 +88,8 @@ GR-1은 대규모 영상 생성 사전학습 뒤 언어 지시·관측·로봇 �
 - **Actual contribution:** Key contributions of the paper includes: • We show that large-scale video generative pre-training is able to effectively benefit visual robot manipulation learning. • We present a flexible GPT-style transformer ... (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Figure 6: Video Prediction Results. The images in green boxes are ground-truth images; the images in blue boxes are predicted images. results are shown in Fig. 9. GR-1 outperforms the ... (p. 9, Figure/Table caption).
 - **Explicit failure boundary:** Another failure mode of RT-1 is collision with the plate or the desk. (p. 8, 4 EXPERIMENT).
+
+## 원문과 공개 자료
+
+- 코드 — 언어·영상·로봇 상태를 입력받는 GR-1 정책 · models/gr1.py [배포 파일](https://raw.githubusercontent.com/bytedance/GR-1/4a2e956bb497586d82489eb4c98b27fb82b5ff47/models/gr1.py)
+- 가중치 — CALVIN ABCD-D 분할 정책 · snapshot_ABCD.pt [배포 파일](https://lf-robot-opensource.bytetos.com/obj/lab-robot-public/gr1_code_release/snapshot_ABCD.pt)

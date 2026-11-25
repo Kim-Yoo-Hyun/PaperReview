@@ -43,3 +43,9 @@ Current trend / real-robot system. Diffusion policy에서 imitation→offline/on
 ## Verification Boundary
 
 Evaluation success denominator, human intervention, offline/online 단계 및 distillation 손실을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 실물 확산 정책의 RL-100 학습 · RL-100/train_real.py [배포 파일](https://raw.githubusercontent.com/Lei-Kun/RL-100/6b6afceb7eb12525398207b5d6e66908863dc385/RL-100/train_real.py)
+- 데이터 — Adroit 문 과제의 오프라인 자료 · adroit_door_medium.zarr.tar.gz [배포 파일](https://huggingface.co/datasets/leokk/RL-100-adroit-door-medium/blob/ac99137a4b522f092978565b4a6d1fc503d01900/adroit_door_medium.zarr.tar.gz)
+- Science Robotics 게재 제목과 arXiv v4의 제목 표기가 다르다. v4는 RL-100이라는 이름을 앞에 둔다. [원문](https://arxiv.org/pdf/2510.14830v4)

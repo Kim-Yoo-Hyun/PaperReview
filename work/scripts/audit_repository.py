@@ -15,11 +15,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
-    from render_source_audit import check_applied, render as render_source_audit
+    from render_source_audit import check_applied, render as render_source_audit, valid_source_locations
     from registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
     from registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 except ModuleNotFoundError:
-    from .render_source_audit import check_applied, render as render_source_audit
+    from .render_source_audit import check_applied, render as render_source_audit, valid_source_locations
     from .registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
     from .registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
 
@@ -673,9 +673,12 @@ def audit_taxonomy_batches(batches, registry_ids, errors, warnings):
                 errors.append(f"missing previous registry identity: {appendix_id}")
             if selection:
                 evidence = record.get("evidence", {})
-                pages = evidence.get("method_evaluation_pages", [])
-                if (not pages or any(type(page) is not int or page < 1 for page in pages)
-                    or not re.fullmatch(r"[a-f0-9]{64}", evidence.get("pdf_sha256", ""))
+                pages = evidence.get("method_evaluation_pages")
+                sections = evidence.get("method_evaluation_sections")
+                digest = "html_sha256" if sections is not None else "pdf_sha256"
+                if (not valid_source_locations(pages, sections)
+                    or {"pdf_sha256", "html_sha256"}.intersection(evidence) != {digest}
+                    or not re.fullmatch(r"[a-f0-9]{64}", evidence.get(digest, ""))
                     or evidence.get("verified_on") != batch["verified_on"]
                     or not evidence.get("sources", {}).get("방법·평가 원문", "").startswith("https://")):
                     errors.append(f"missing taxonomy paper evidence: {appendix_id}")

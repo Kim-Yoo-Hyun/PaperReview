@@ -42,3 +42,8 @@ Current trend. Simulation training에서 real-world cross-embodiment local navig
 ## Verification Boundary
 
 Training oracle, depth/pose 입력, trajectory selector, robot footprint와 controller 한계을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 원래 NavDP의 궤적 추론 서버 · baselines/navdp/navdp_server.py [배포 파일](https://raw.githubusercontent.com/InternRobotics/NavDP/bff5eb8857f50e082243fb455d312409daabc3aa/baselines/navdp/navdp_server.py)
+- 데이터 — NavDP 평가 장면의 시작·목표 쌍 · assets/scenes/cluttered_easy/easy_0/pointgoal_start_goal_pairs.npy [배포 파일](https://raw.githubusercontent.com/InternRobotics/NavDP/bff5eb8857f50e082243fb455d312409daabc3aa/assets/scenes/cluttered_easy/easy_0/pointgoal_start_goal_pairs.npy)

@@ -13,7 +13,7 @@
 - Tags: Robotics, Imitation Learning, 3D point cloud, Flow Matching, action policy, inference efficiency, real-world manipulation
 - Official paper: https://ojs.aaai.org/index.php/AAAI/article/view/38919
 - Full-text retrieval: https://ojs.aaai.org/index.php/AAAI/article/view/38919
-- Code/Project: not identified
+- Code/Project: https://github.com/LogSSim/MP1
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,7 @@ MP1은 3D 점군에서 조건화한 평균 흐름을 학습해 신경망을 한 
 - **Actual contribution:** Our contributions are as follows: • We introduce MP1, the first MeanFlow-based robot learning framework. (p. 2, Abstract).
 - **Evaluation boundary:** Figure 6: Real-world setup. Real-world Experimental Results In Fig. 3, we present the performance of MP1 and Flowpol- icy on the hammer task in the simulation environment, as well as ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** However, a purely regression-based objective fails to impose explicit regularization on the policy's internal feature space (Wang and He 2025). (p. 2, Abstract).
+
+## 원문과 공개 자료
+
+- 코드 — 평균 흐름 행동 정책과 평가 · MP1/eval.py [배포 파일](https://raw.githubusercontent.com/LogSSim/MP1/e1e9e8fc60da9137b699ad4544d34fcb0222e624/MP1/eval.py)

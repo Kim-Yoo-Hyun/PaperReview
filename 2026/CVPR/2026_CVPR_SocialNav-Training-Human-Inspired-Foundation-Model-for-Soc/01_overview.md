@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / CVPR
-- Authors: Ziyi Chen, Yingnan Guo, Zedong Chu, Minghua Luo, Yanfen Shen, Mingchao Sun, Junjun Hu, Shichao Xie, Yang Kuan, Pei Shi, Zhining Gu, Lu Liu, Honglin Han, Xiaolong Wu, Mu Xu, Yu Zhang
+- Authors: Ziyi Chen, Yingnan Guo, Zedong Chu, Minghua Luo, Yanfen Shen, Mingchao Sun, Junjun Hu, Shichao Xie, Kuan Yang, Pei Shi, Zhining Gu, Lu Liu, Honglin Han, Xiaolong Wu, Mu Xu, Yu Zhang
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -42,3 +42,10 @@ Current trend / dataset. Semantic reasoning과 trajectory generation에 socially
 ## Verification Boundary
 
 Social label/reward 정의, 지역/환경별 규범 변화, reward hacking 및 evaluation split을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://openaccess.thecvf.com/content/CVPR2026/papers/Chen_SocialNav_Training_Human-Inspired_Foundation_Model_for_Socially-Aware_Embodied_Navigation_CVPR_2026_paper.pdf#page=1)
+- 코드 — 사회 규범 보상을 사용하는 정책 학습 · src/train/train_grpo.py [배포 파일](https://raw.githubusercontent.com/AMAP-EAI/SocialNav/b958f0683521a024d14d183593750bddac7f75b5/src/train/train_grpo.py)
+- 가중치 — ModelScope에 배포한 SAFE-GRPO 체크포인트 · model.safetensors [배포 파일](https://modelscope.cn/models/zjugyn/SocialNav-Qwen2-VL-SAFE-GRPO/resolve/2c729f68293db99f834c28ed8619ed27ee09a040/model.safetensors)
+- 데이터 — 저자는 개인정보를 이유로 원래 SocNav 학습 코퍼스의 배포 계획이 없다고 명시한다. 별도로 개편한 평가 벤치마크는 이 판정의 범위 밖이다. [저자 공개 안내](https://github.com/AMAP-EAI/SocialNav/blob/b958f0683521a024d14d183593750bddac7f75b5/README.md)

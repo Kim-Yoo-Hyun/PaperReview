@@ -13,7 +13,7 @@
 - Tags: Robotics, inverse kinematics, whole-body control, augmented Lagrangian, ADMM, real-time
 - Official paper: https://www.roboticsproceedings.org/rss20/p110.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p110.html
-- Code/Project: not identified
+- Code/Project: https://github.com/Simple-Robotics/Loik
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (14 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,7 @@
 - **Actual contribution:** Therefore, our contributions can significantly accelerate these downstream computationally expensive downstream tasks. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** We evaluate the performance of differential IK solvers in a benchmark of inverse kinematics scenarios, which we plan to release as open source software after peer-review of this work 2. (p. 8, V. EXPERIMENTAL VALIDATION AND BENCHMARKS).
 - **Explicit failure boundary:** Limitations While we have assessed the effectiveness of LOIK over a wide range of robots, we note that, at present, its expressivity presents a couple of limitations. (p. 10, V. EXPERIMENTAL VALIDATION AND BENCHMARKS).
+
+## 원문과 공개 자료
+
+- 코드 — 재귀식 미분 역기구학 풀이기 · include/loik/loik-loid-optimized.hxx [배포 파일](https://raw.githubusercontent.com/Simple-Robotics/Loik/12892d5d700b7eb5a3b135a0bc062cf01cbb9f12/include/loik/loik-loid-optimized.hxx)

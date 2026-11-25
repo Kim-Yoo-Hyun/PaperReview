@@ -42,3 +42,8 @@ Current trend. Critic과 actor의 chunk 길이를 분리한다. Q-chunking의 va
 ## Verification Boundary
 
 부분 chunk value 추정, policy extraction objective, reactive 평가의 실제 포함 여부을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 분리된 행동 묶음의 오프라인 학습과 평가 · main.py [배포 파일](https://raw.githubusercontent.com/ColinQiyangLi/dqc/df898256a77f3594b54a7268bd5f89915981da35/main.py)
+- 데이터 — 저자 실험 집계 자료 · exp_data/dqc-exp-data.pkl [배포 파일](https://raw.githubusercontent.com/ColinQiyangLi/dqc/df898256a77f3594b54a7268bd5f89915981da35/exp_data/dqc-exp-data.pkl)

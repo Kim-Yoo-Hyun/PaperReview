@@ -8,7 +8,7 @@
 - [누락 논문 등록 심사](./GAPFILL.md) · 36편의 등록·보류·중복 판정, 능동 인식과 촉각 조작의 검색식 및 등록 전후 커버리지
 - [OpenVLA 인용 계보](./OPENVLA_LINEAGE.md) · 선행 8편과 후속 15편의 원문 근거, 공통 한계와 후속 검증이 드문 조건
 - [CORE 심화 감사](../work/sources/batches/tier1_vla_humanoid.yaml) · VLA 정책의 실기 과제 수, 휴머노이드 제어의 검증 환경, 한계와 직접 선행
-- CORE 50편·NEXT 223편에 방법·기체·모달리티와 공개 범위가 있다. 원문 쪽수와 변경 전 값은 배치별 YAML에서 확인할 수 있다. [배치별 분류 기준](../work/update/REGISTRY.md#taxonomy-batches) · [최근 50편](../work/sources/batches/core_next_05.yaml) · [별도 등록 23편](../work/sources/batches/gapfill_2026_11.yaml) · [미확인 범위](../work/update/REGISTRY.md#다섯-번째-배치-태그-매핑)
+- CORE 50편·NEXT 273편에 방법·기체·모달리티와 공개 범위를 기록했다. 배치별 YAML에 원문 쪽수 또는 웹 기술 보고서의 절 제목과 변경 전 값이 있다. [배치별 분류 기준](../work/update/REGISTRY.md#taxonomy-batches) · [최근 50편](../work/sources/batches/core_next_06.yaml) · [별도 등록 23편](../work/sources/batches/gapfill_2026_11.yaml) · [미확인 범위](../work/update/REGISTRY.md#여섯-번째-배치-태그-매핑)
 - [연구 설계](./RESEARCH_GUIDE.md) · 공백 탐색, 가까운 선행 비교, 검증 단계
 - [로보틱스 공백 분석](../work/update/ROBOTICS_TRENDS.md#verified-gap-analysis) · 검증 원장의 태그 교집합과 반복된 한계. [직접 선행·최근 3개월 검색](../work/update/ROBOTICS_TRENDS.md#lab-gap-screen) · [로봇팔·G1 기준 석사 후보 5개](../work/research_topics/README.md#robotics-gap-candidates)
 

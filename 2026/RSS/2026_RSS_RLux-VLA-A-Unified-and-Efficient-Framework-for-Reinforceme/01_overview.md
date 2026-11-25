@@ -14,7 +14,7 @@
 - Venue verification: https://www.roboticsproceedings.org/rss22/p089.html
 - Code/Project: https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst
 - Code: https://github.com/RLinf/RLinf
-- Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
+- Source audit: 2026-11-23 요약·핵심 기여, 2026-11-25 시뮬레이션 및 실물 평가를 RSS 게재본에 대조했다. [평가 조건](./04_evaluation.md)
 
 2026-11-06: RSS 2026 공식 title을 RLinf-VLA로 정정. arXiv/DOI·paper_id·기존 folder 유지; 이전 RLux-VLA는 검색 alias이며 공식 title로 사용하지 않는다.
 
@@ -33,9 +33,7 @@ Simulator observation/reward → VLA rollout → training worker; resource alloc
 
 ## Evaluation Scope and Claim Boundary
 
-RSS abstract는 LIBERO, ManiSkill, RoboTwin simulation에서 training efficiency와 policy 성능을 비교한다.
-
-근거: [공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p089.html) · [저자 project/code](https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst). 그 밖의 수치, 기준선의 비교 조건, 실패 범위는 별도 대조가 필요하다.
+LIBERO·ManiSkill·RoboTwin에서 정책 성능과 학습 처리량을 비교했다. 실물 서랍 닫기에서 지도 미세조정 정책과 시뮬레이션 강화학습을 추가한 정책은 각각 10회 중 8회 성공했다. 저자는 강화학습을 추가한 정책에서 더 직접적인 밀기 동작을 관찰했다. [평가 노트](./04_evaluation.md) · [게재본 9쪽, 그림 15](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 
@@ -44,3 +42,8 @@ Current trend / system. 여러 VLA·RL 알고리즘·시뮬레이터를 비교�
 ## Verification Boundary
 
 Model별 action interface, GPU utilization 산정, asynchronous policy lag을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 분산 강화학습에 사용하는 OpenVLA 행동 인터페이스 · rlinf/models/embodiment/openvla/openvla_action_model.py [배포 파일](https://raw.githubusercontent.com/RLinf/RLinf/3b98d93b0c8be5bb8764935c7e9d04cfa2658d62/rlinf/models/embodiment/openvla/openvla_action_model.py)
+- 가중치 — OpenVLA-OFT·GRPO·LIBERO-object 정책 · model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/RLinf/RLinf-OpenVLAOFT-GRPO-LIBERO-object/blob/5c4a3495cb2ce9c84e9af7e75be6752147443d9f/model-00001-of-00004.safetensors)

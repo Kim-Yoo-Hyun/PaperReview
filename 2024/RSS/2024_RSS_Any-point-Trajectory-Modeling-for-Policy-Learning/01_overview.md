@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / RSS
-- Authors: Chuan Wen, Xingyu Lin, John Ian Reyes So, Kai Chen, Qi Dou, Yang Gao, Pieter Abbeel
+- Authors: Chuan Wen, Xingyu Lin, John So, Kai Chen, Qi Dou, Yang Gao, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, human video, video pretraining, trajectory prediction, Imitation Learning, language-conditioned
 - Official paper: https://www.roboticsproceedings.org/rss20/p092.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p092.html
-- Code/Project: not identified
+- Code/Project: https://xingyu-lin.github.io/atm/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -87,3 +87,9 @@ ATM은 행동 라벨이 없는 영상에서 임의의 영상 지점이 움직일
 - **Actual contribution:** We summarize our main contributions below: 1) We propose an Any-point Trajectory Model, a simple and novel framework that bridges video pre-training to policy learning, leveraging the structured representation of ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 5: Real robot experiments on a dining table setup consisting of five tasks. The left figure shows our real-world setup and the tasks. The top right figure shows an ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** Another limitation of our method is that the video dataset we use in this paper only contains small domain gaps. (p. 10, VI. LIMITATIONS).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://www.roboticsproceedings.org/rss20/p092.pdf#page=1)
+- 코드 — 언어 조건부 점 궤적 예측 모델 · atm/model/track_transformer.py [배포 파일](https://raw.githubusercontent.com/Large-Trajectory-Model/any-point-trajectory-modeling/b1f21173699c6dac75c885685b1ed42cb5c9ab5c/atm/model/track_transformer.py)
+- 가중치 — 저자 배포 ATM 체크포인트 묶음 · atm_release_checkpoints.zip [배포 파일](https://drive.google.com/file/d/1lG2hNG_-Etu2TG7XbGxOD40Gorj2DtLw/view)

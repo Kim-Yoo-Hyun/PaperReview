@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / ICLR
-- Authors: Haozhan Li, Yuxin Zuo, Jiale Yu, Yuhao Zhang, Yang Zhaohui, Kaiyan Zhang, Xuekai Zhu, Yuchen Zhang, Tianxing Chen, Ganqu Cui, Dehui Wang, Dingxiang Luo, Yuchen Fan, Youbang Sun, Jia Zeng, Jiangmiao Pang, Shanghang Zhang, Yu Wang, Yao Mu, Bowen Zhou, Ning Ding
+- Authors: Haozhan Li, Yuxin Zuo, Jiale Yu, Yuhao Zhang, Zhaohui Yang, Kaiyan Zhang, Xuekai Zhu, Yuchen Zhang, Tianxing Chen, Ganqu Cui, Dehui Wang, Dingxiang Luo, Yuchen Fan, Youbang Sun, Jia Zeng, Jiangmiao Pang, Shanghang Zhang, Yu Wang, Yao Mu, Bowen Zhou, Ning Ding
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -42,3 +42,9 @@ Current trend / system. OpenVLA-OFT에서 outcome reward와 scalable rollout/tra
 ## Verification Boundary
 
 실제 robot online training 범위, sparse reward 생성, data leakage 및 compute accounting을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://proceedings.iclr.cc/paper_files/paper/2026/file/cbfbcb4da14235bd69b134070898ae9d-Paper-Conference.pdf#page=1)
+- 코드 — LIBERO의 OpenVLA-OFT 강화학습 실행 설정 · examples/run_openvla_oft_rl_libero.sh [배포 파일](https://raw.githubusercontent.com/PRIME-RL/SimpleVLA-RL/7c51662df27b586f9e8a1ab35fcf849f2b8852f9/examples/run_openvla_oft_rl_libero.sh)
+- 가중치 — LIBERO-10 단일 시연 조건 RL 미세조정 모델 · model-00001-of-00007.safetensors [배포 파일](https://huggingface.co/Haozhan72/openvla-oft-libero10-traj1-rl/blob/d44ac12c3431fc1d2a4579d2e768bbeba60054d4/model-00001-of-00007.safetensors)

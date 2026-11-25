@@ -12,7 +12,7 @@
 - Aliases: VLAW
 - Official paper: https://proceedings.mlr.press/v306/guo26i.html
 - Venue verification: https://proceedings.mlr.press/v306/guo26i.html
-- Code/Project: https://sites.google.com/view/vla-w
+- Code/Project: https://sites.google.com/view/vlaw-arxiv
 - Code: https://github.com/Robert-gyj/Ctrl-World
 - Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
 
@@ -42,3 +42,7 @@ Current trend. 실제 rollout으로 world model의 failure coverage를 개선하
 ## Verification Boundary
 
 Policy update objective, 실패 data 구성, synthetic/real 혼합비와 evaluation leakage을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 저자 페이지에서 연결한 후처리용 Ctrl-World 세계 모델 · models/ctrl_world.py [배포 파일](https://raw.githubusercontent.com/Robert-gyj/Ctrl-World/99fb20683fd79dfa6d0c6feb9d49c6c55eecd50d/models/ctrl_world.py)

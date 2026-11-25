@@ -7,13 +7,13 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Seonghyeon Ye, Joel Jang, Byeongguk Jeon, Se June Joo, Jianwei Yang, Baolin Peng, Ajay Mandlekar, Reuben Tan, Yu-Wei Chao, Bill Yuchen Lin, Lars Liden, Kimin Lee, Jianfeng Gao, Luke Zettlemoyer, Dieter Fox, Minjoon Seo
+- Authors: Seonghyeon Ye, Joel Jang, Byeongguk Jeon, Sejune Joo, Jianwei Yang, Baolin Peng, Ajay Mandlekar, Reuben Tan, Yu-Wei Chao, Yuchen Lin, Lars Liden, Kimin Lee, Jianfeng Gao, Luke Zettlemoyer, Dieter Fox, Minjoon Seo
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
 - Tags: Robotics, VLA, latent action, human video, video pretraining, action representation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/45d74e190008c7bff2845ffc8e3facd3-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/hash/45d74e190008c7bff2845ffc8e3facd3-Abstract-Conference.html
-- Code/Project: not identified
+- Code/Project: https://latentactionpretraining.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (27 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -88,3 +88,10 @@ Latent Action Pretraining은 실제 행동 라벨 없이 영상 프레임 사이
 - **Actual contribution:** Vision-Language-Action Models (VLA) for robotics (Brohan et al., 2023; Kim et al., 2024) are trained by aligning large language models with vision encoders, and then finetuning it on on diverse ... (p. 1, 1 INTRODUCTION).
 - **Evaluation boundary:** 4.5 LEARNING FROM HUMAN MANIPULATION VIDEOS Scratch UniPi VPT LAPA 0 10 20 30 40 50 60 AVG Success Rate (%) 34.4 0.7 45.8 52.1 (a) SIMPLER Results Average Knock ... (p. 8, 4 EXPERIMENTS).
 - **Explicit failure boundary:** We observe that most failures of LAPA are due to early grasping. (p. 7, 4 EXPERIMENTS).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://proceedings.iclr.cc/paper_files/paper/2025/file/45d74e190008c7bff2845ffc8e3facd3-Paper-Conference.pdf#page=1)
+- 코드 — 잠재 행동 조건부 정책 모델 · latent_pretraining/llama_action.py [배포 파일](https://raw.githubusercontent.com/LatentActionPretraining/LAPA/46aca51d7faebcec02d7d323bbb3820c2df07bc6/latent_pretraining/llama_action.py)
+- 가중치 — LAPA-7B-openx 모델 매개변수 · params [배포 파일](https://huggingface.co/latent-action-pretraining/LAPA-7B-openx/blob/b5397375f9dd5e07fcaf2e88e6da8690524058b2/params)
+- 데이터 — Open X 동영상에서 만든 잠재 행동 학습 기록 · latent_action_pretraining_openx.jsonl [배포 파일](https://huggingface.co/latent-action-pretraining/LAPA-7B-openx/blob/b5397375f9dd5e07fcaf2e88e6da8690524058b2/latent_action_pretraining_openx.jsonl)

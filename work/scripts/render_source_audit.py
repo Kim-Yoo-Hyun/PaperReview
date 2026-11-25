@@ -362,6 +362,14 @@ def pct(n, total):
     return f"{100*n/total:.2f}%"
 
 
+def valid_source_locations(pages, sections):
+    if pages is not None and sections is None:
+        return isinstance(pages, list) and bool(pages) and all(type(p) is int and p > 0 for p in pages)
+    if sections is not None and pages is None:
+        return isinstance(sections, list) and bool(sections) and all(isinstance(s, str) and s.strip() for s in sections)
+    return False
+
+
 def validate(rows, meta):
     ids = [r["id"] for r in rows]
     if not rows or len(ids) != meta["paper_count"] or ids != sorted(set(ids)):
@@ -483,7 +491,8 @@ def validate(rows, meta):
                 raise ValueError(f"Invalid taxonomy artifact review for {row['id']}")
             if tags := review.get("legacy_tags"):
                 if (tags["status"] != PASS or not tags.get("tags") or not tags.get("before") or not tags.get("basis")
-                    or not tags.get("source", "").startswith("https://") or not tags.get("pdf_pages")):
+                    or not tags.get("source", "").startswith("https://")
+                    or not valid_source_locations(tags.get("pdf_pages"), tags.get("html_sections"))):
                     raise ValueError(f"Missing search tag evidence for {row['id']}")
             if project := review.get("project"):
                 if "before" not in project or not all(project.get(key, "").startswith("https://") for key in ("url", "source")):
@@ -672,7 +681,7 @@ def render(rows, meta):
                   "코드·가중치·데이터의 배포 범위를 항목별로 집계했다. "
                   "기존 검색 태그 판정은 원문의 방법·평가와 대조한 논문에만 반영했다. "
                   "[배치별 분류와 미확인 범위](../work/update/REGISTRY.md#taxonomy-batches)", "",
-                  "| 배치 | 공개 근거를 갱신한 논문 | 배포 파일 | 저자의 공개 예정 안내 | 배포 미확인으로 교정 | 기존 검색 태그 대조 |",
+                  "| 배치 | 공개 근거를 갱신한 논문 | 배포 파일 | 저자의 미공개·공개 예정 안내 | 배포 미확인으로 교정 | 기존 검색 태그 대조 |",
                   "|---|---:|---:|---:|---:|---:|"]
         for batch in sorted({review["batch"] for review in taxonomy_reviews}):
             group = [review for review in taxonomy_reviews if review["batch"] == batch]

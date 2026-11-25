@@ -42,3 +42,8 @@ Benchmark. Task success와 물리적 damage를 분리하고 damage-aware IL/RL �
 ## Verification Boundary
 
 Damage threshold/단위, simulator fidelity, user preference와 real-world damage validation을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — DamageSim과 손상을 측정하는 조작 환경 · damagesim/core/damageable_env.py [배포 파일](https://raw.githubusercontent.com/UT-Austin-RobIn/oopsieverse/a739f99e94f32c3229ae6932299e2e0e8c065480/damagesim/core/damageable_env.py)
+- 데이터 — 서랍 열기 벤치마크 장면의 초기 상태 · oopsiebench/envs/behavior1k/init_states/open_drawer.pkl [배포 파일](https://raw.githubusercontent.com/UT-Austin-RobIn/oopsieverse/a739f99e94f32c3229ae6932299e2e0e8c065480/oopsiebench/envs/behavior1k/init_states/open_drawer.pkl)

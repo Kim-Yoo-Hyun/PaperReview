@@ -42,3 +42,9 @@ Benchmark. Stitching·장기 horizon·pixel input 등의 능력을 구분하는 
 ## Verification Boundary
 
 Goal sampling, reward relabeling, split/dataset 품질과 성공률 aggregation을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 오프라인 조작 벤치마크 데이터 생성 및 기준선 · data_gen_scripts/generate_manipspace.py [배포 파일](https://raw.githubusercontent.com/seohongpark/ogbench/6eda27402c69681cfe584cc9f3a3fe2a24ec9163/data_gen_scripts/generate_manipspace.py)
+- 가중치 — 궤적 생성에 쓰는 전문가 정책 배포 묶음 · experts.tar.gz [배포 파일](https://rail.eecs.berkeley.edu/datasets/ogbench/experts.tar.gz)
+- 데이터 — OGBench antmaze-large-explore 궤적 · antmaze-large-explore-v0.npz [배포 파일](https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-explore-v0.npz)

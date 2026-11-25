@@ -42,3 +42,9 @@ Current trend / action-relevant 3D. State와 action을 3D point flow로 표현�
 ## Verification Boundary
 
 RGB-D calibration, point-flow action 변환, partial observability와 MPC cost 정의을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 행동 조건부 3D 점 흐름 모델 평가 · eval.py [배포 파일](https://raw.githubusercontent.com/NVlabs/PointWorld/05484826dfef74cbe278a3974179a5a16705d35d/eval.py)
+- 가중치 — DROID와 BEHAVIOR로 학습한 PointWorld · large-droid+behavior/model-best.pt [배포 파일](https://huggingface.co/nvidia/PointWorld_models/blob/b9e2e19a4f2bd65922e1f6d70aa953fe70aa9dba/large-droid%2Bbehavior/model-best.pt)
+- 데이터 — DROID에서 얻은 3D 주석 · droid/flows-fs-optimized/shard-000000/package.tar.zst.part-0000 [배포 파일](https://huggingface.co/datasets/nvidia/PointWorld-DROID/blob/dd9aaeec94bb14e27ab6b16b6e4aa0dbcf3ef56f/droid/flows-fs-optimized/shard-000000/package.tar.zst.part-0000)

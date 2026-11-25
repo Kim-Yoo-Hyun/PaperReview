@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, Imitation Learning, 3D point cloud, Flow Matching, diffusion policy, inference efficiency, manipulation`.
+- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, Imitation Learning, 3D point cloud, Flow Matching, one-step action generation, inference efficiency, manipulation`.
 - **Reading predecessor in the generated track queue:** CordViP: Correspondence-based Visuomotor Policy for Dexterous Manipulation in Real-World (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Sparsh: Self-supervised touch representations for vision-based tactile sensing (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

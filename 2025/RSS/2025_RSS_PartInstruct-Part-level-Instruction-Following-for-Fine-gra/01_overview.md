@@ -13,7 +13,7 @@
 - Tags: Robotics, Benchmark, part-level grounding, 3D manipulation, language instruction, long-horizon
 - Official paper: https://www.roboticsproceedings.org/rss21/p148.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p148.pdf
-- Code/Project: not identified
+- Code/Project: https://partinstruct.github.io/
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (24 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -83,3 +83,9 @@ PartInstruct는 지시가 가리키는 물체 부품과 그 부품에 가할 동
 - **Actual contribution:** In this work, we introduce Partinstruct, the first large-scale benchmark for both (p. 1, Abstract).
 - **Evaluation boundary:** Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error bars denote the standard errors calculated ... (p. 7, Figure/Table caption).
 - **Explicit failure boundary:** The Failure Cause was calculated by dividing the number of times a skill chain failed because of a specific skill or part by the total number of skill chain failures. (p. 21, C. Skill and Object Part Impact Study).
+
+## 원문과 공개 자료
+
+- 코드 — PartGym 시뮬레이터와 기준선 · PartInstruct/PartGym/env/bullet_env.py [배포 파일](https://raw.githubusercontent.com/SCAI-JHU/PartInstruct/9c0a322d73650edab58e254f56cdfeb688bb3284/PartInstruct/PartGym/env/bullet_env.py)
+- 가중치 — DP3-S 기준선 체크포인트 · checkpoints/DP3-S/latest.ckpt [배포 파일](https://huggingface.co/datasets/SCAI-JHU/PartInstruct/blob/e519e93dc5882cdaadad45bd7c26be6986b0a436/checkpoints/DP3-S/latest.ckpt)
+- 데이터 — 병 조작 부품별 시연 · demos/bottle.hdf5 [배포 파일](https://huggingface.co/datasets/SCAI-JHU/PartInstruct/blob/e519e93dc5882cdaadad45bd7c26be6986b0a436/demos/bottle.hdf5)

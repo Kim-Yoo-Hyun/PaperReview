@@ -46,7 +46,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, Navigation, semantic memory, lifelong learning, mobile manipulation, open-world`.
+- **Registry position:** `NEXT` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, Navigation, semantic memory, lifelong navigation, mobile manipulation, open-world`.
 - **Reading predecessor in the generated track queue:** ViNT: A Foundation Model for Visual Navigation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** end of this track queue (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

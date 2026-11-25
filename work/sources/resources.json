@@ -5518,7 +5518,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:01bbd518a1ed",
@@ -5855,7 +5855,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:0daa1c22a5d1",
@@ -5892,6 +5892,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:0f1a819c78d9",
+      "resource_type": "code_or_project",
+      "name": "FlowPolicy",
+      "url": "https://github.com/zql-kk/FlowPolicy",
+      "paper_ids": [
+        "pr-0924"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:0f2b27bfca8d",
@@ -6215,7 +6227,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:1a39dff9ffec",
@@ -6470,16 +6482,28 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:2380a990cbfc",
+      "resource_id": "code:22a9c3e694ef",
       "resource_type": "code_or_project",
-      "name": "YOTO",
-      "url": "https://hnuzhy.github.io/projects/YOTO",
+      "name": "x-humanoid-robomind.github.io",
+      "url": "https://github.com/x-humanoid-robomind/x-humanoid-robomind.github.io",
       "paper_ids": [
-        "pr-0908"
+        "pr-0910"
       ],
       "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:23852446e32a",
+      "resource_type": "code_or_project",
+      "name": "DemoGen",
+      "url": "https://github.com/TEA-Lab/DemoGen",
+      "paper_ids": [
+        "pr-0912"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:23cb6a7b68ca",
@@ -6724,6 +6748,30 @@
       "verified_on": "2026-11-24"
     },
     {
+      "resource_id": "code:2c25fff6e0f4",
+      "resource_type": "code_or_project",
+      "name": "YOTO",
+      "url": "https://github.com/hnuzhy/YOTO",
+      "paper_ids": [
+        "pr-0908"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:2c92a38678fc",
+      "resource_type": "code_or_project",
+      "name": "any-point-trajectory-modeling",
+      "url": "https://github.com/Large-Trajectory-Model/any-point-trajectory-modeling",
+      "paper_ids": [
+        "pr-0932"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:2d1b0f762255",
       "resource_type": "code_or_project",
       "name": "innermonologue.github.io",
@@ -6817,7 +6865,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:3090cfc5c86d",
@@ -6988,6 +7036,18 @@
       "verified_on": "2026-11-24"
     },
     {
+      "resource_id": "code:34caadb61c0d",
+      "resource_type": "code_or_project",
+      "name": "tampura",
+      "url": "https://github.com/aidan-curtis/tampura",
+      "paper_ids": [
+        "pr-0929"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:35513a720bd6",
       "resource_type": "code_or_project",
       "name": "harmonic_playback",
@@ -7045,7 +7105,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:35ff50079306",
@@ -7554,6 +7614,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:489d417f76ec",
+      "resource_type": "code_or_project",
+      "name": "gemini-robotics-15-brings-ai-agents-into-the-physical-world",
+      "url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
+      "paper_ids": [
+        "pr-0916"
+      ],
+      "evidence": "manifest_link",
+      "availability": "project_only",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:48ec88422729",
       "resource_type": "code_or_project",
       "name": "hatchetproject.github.io",
@@ -7795,6 +7867,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:518387e07d2b",
+      "resource_type": "code_or_project",
+      "name": "roboMamba",
+      "url": "https://github.com/lmzpai/roboMamba",
+      "paper_ids": [
+        "pr-0937"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:52496f4c5ebc",
       "resource_type": "code_or_project",
       "name": "action-atlas",
@@ -7927,6 +8011,30 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:56bb295b4833",
+      "resource_type": "code_or_project",
+      "name": "MP1",
+      "url": "https://github.com/LogSSim/MP1",
+      "paper_ids": [
+        "pr-0920"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:56fe88bd60ea",
+      "resource_type": "code_or_project",
+      "name": "dmd_diffusion",
+      "url": "https://github.com/ErinZhang1998/dmd_diffusion",
+      "paper_ids": [
+        "pr-0931"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:578d0731f9b8",
       "resource_type": "code_or_project",
       "name": "score_sde",
@@ -7961,6 +8069,18 @@
       "evidence": "manifest_link",
       "availability": "not_released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:58d9d477e8d4",
+      "resource_type": "code_or_project",
+      "name": "LAPA",
+      "url": "https://github.com/LatentActionPretraining/LAPA",
+      "paper_ids": [
+        "pr-0938"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:58eafa2b76d7",
@@ -8119,6 +8239,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:5daeff2a4ce7",
+      "resource_type": "code_or_project",
+      "name": "Loik",
+      "url": "https://github.com/Simple-Robotics/Loik",
+      "paper_ids": [
+        "pr-0944"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:5debe22099d2",
       "resource_type": "code_or_project",
       "name": "REASSEMBLE",
@@ -8250,6 +8382,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:61b3fab83d9b",
+      "resource_type": "code_or_project",
+      "name": "aligator",
+      "url": "https://github.com/Simple-Robotics/aligator",
+      "paper_ids": [
+        "pr-0942"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:627cbc55b2b9",
@@ -8552,6 +8696,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:6ac8747b2aa3",
+      "resource_type": "code_or_project",
+      "name": "mid-level-moe.github.io",
+      "url": "https://mid-level-moe.github.io/",
+      "paper_ids": [
+        "pr-0911"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:6b3a0af6caa1",
       "resource_type": "code_or_project",
       "name": "Spa-Bench",
@@ -8707,7 +8863,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:6f9e4b16335c",
@@ -8840,7 +8996,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:75818d991f42",
@@ -9394,7 +9550,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:88d4b6e992e6",
@@ -9538,7 +9694,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:8c50dd720722",
@@ -9623,6 +9779,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:8e44311455dd",
+      "resource_type": "code_or_project",
+      "name": "IALP",
+      "url": "https://nicehiro.github.io/IALP/",
+      "paper_ids": [
+        "pr-0923"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:8ec1fa038361",
@@ -9781,6 +9949,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:932a8c21c4a6",
+      "resource_type": "code_or_project",
+      "name": "omnimimic",
+      "url": "https://github.com/JonathanYang0127/omnimimic",
+      "paper_ids": [
+        "pr-0934"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:9362b8a02db3",
       "resource_type": "code_or_project",
       "name": "aawr",
@@ -9922,7 +10102,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:985be8ec1dc1",
@@ -10092,7 +10272,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:9f654dab2e0b",
@@ -10164,7 +10344,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:a07957b7a581",
@@ -10320,7 +10500,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:a37da9d55028",
@@ -10455,6 +10635,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:a81481ef1da1",
+      "resource_type": "code_or_project",
+      "name": "Consistency-Policy",
+      "url": "https://github.com/Aaditya-Prasad/Consistency-Policy",
+      "paper_ids": [
+        "pr-0930"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:a941ab207921",
       "resource_type": "code_or_project",
       "name": "humanoid-bench",
@@ -10464,18 +10656,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:a9491cbb9a90",
-      "resource_type": "code_or_project",
-      "name": "x-humanoid-robomind.github.io",
-      "url": "https://x-humanoid-robomind.github.io/",
-      "paper_ids": [
-        "pr-0910"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -10500,19 +10680,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:aa26712eaffd",
-      "resource_type": "code_or_project",
-      "name": "Furniture-Assembly-Web",
-      "url": "https://owensun2004.github.io/Furniture-Assembly-Web/",
-      "paper_ids": [
-        "pr-0909"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:aa6d69727207",
@@ -10850,7 +11018,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:b3fe0613de05",
@@ -10898,7 +11066,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:b5fb1eddbf94",
@@ -10958,7 +11126,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:b79e0d84fe73",
@@ -11381,6 +11549,18 @@
       "verified_on": "2026-11-24"
     },
     {
+      "resource_id": "code:c4eda965c1ee",
+      "resource_type": "code_or_project",
+      "name": "Dita",
+      "url": "https://github.com/RoboDita/Dita",
+      "paper_ids": [
+        "pr-0919"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:c5853a9c4702",
       "resource_type": "code_or_project",
       "name": "learning-agile-locomotion",
@@ -11427,6 +11607,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:c83efc52583e",
+      "resource_type": "code_or_project",
+      "name": "vlmimic.github.io",
+      "url": "https://vlmimic.github.io/",
+      "paper_ids": [
+        "pr-0940"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:c88e3847c835",
@@ -11827,6 +12019,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:d6821969f813",
+      "resource_type": "code_or_project",
+      "name": "home-robot",
+      "url": "https://github.com/facebookresearch/home-robot",
+      "paper_ids": [
+        "pr-0928"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:d68ba1485918",
       "resource_type": "code_or_project",
       "name": "EvoVLA",
@@ -11860,18 +12064,6 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
-    },
-    {
-      "resource_id": "code:d72f36f4a8a3",
-      "resource_type": "code_or_project",
-      "name": "gemini-robotics",
-      "url": "https://deepmind.google/en/models/gemini-robotics/gemini-robotics/",
-      "paper_ids": [
-        "pr-0916"
-      ],
-      "evidence": "manifest_link",
-      "availability": "project_only",
       "verified_on": "2026-11-20"
     },
     {
@@ -12124,7 +12316,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:dea7fcf4be70",
@@ -12365,6 +12557,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:e66a2556cf45",
+      "resource_type": "code_or_project",
+      "name": "Manual2Skill",
+      "url": "https://github.com/owensun2004/Manual2Skill",
+      "paper_ids": [
+        "pr-0909"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:e68549c9704f",
@@ -12629,7 +12833,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ed4f205dfba7",
@@ -12677,7 +12881,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ee7296e0d797",
@@ -12824,6 +13028,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:f1a7ff291802",
+      "resource_type": "code_or_project",
+      "name": "mirage",
+      "url": "https://github.com/BerkeleyAutomation/mirage",
+      "paper_ids": [
+        "pr-0933"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:f1d8ea795c0f",
       "resource_type": "code_or_project",
       "name": "implicit_q_learning",
@@ -12953,7 +13169,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:f46a165baea7",
@@ -13278,6 +13494,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:fdfd26f29e57",
+      "resource_type": "code_or_project",
+      "name": "PartInstruct",
+      "url": "https://github.com/SCAI-JHU/PartInstruct",
+      "paper_ids": [
+        "pr-0907"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:fe4d057d6841",

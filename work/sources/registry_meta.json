@@ -70,6 +70,21 @@
         },
         "order": "Prior formal batches and admitted gapfill A excluded; stable paper_id order within NEXT."
       }
+    },
+    {
+      "path": "work/sources/batches/core_next_06.yaml",
+      "schema": "appendix-a-template-4",
+      "registry_key": "registry_id",
+      "record_count": 50,
+      "verified_on": "2026-11-25",
+      "openness_reviewed_on": "2026-11-25",
+      "selection": {
+        "baseline_commit": "80d454fbc80f0a0578ddac6f85ee84d63e1bb1a8",
+        "tier_counts": {
+          "NEXT": 50
+        },
+        "order": "Prior formal batches and admitted gapfill A excluded; stable paper_id order within NEXT."
+      }
     }
   ],
   "schema": "work/sources/registry.schema.json",
@@ -78,7 +93,7 @@
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "ea02d626b2c0ed05a3bebd31b23ab6ed373b080b5320af28a0d76327294edcc3",
+  "manifest_sha256": "6490c6beee8cc4983a578ba812236adaece8fa0b33ad7dcfea78d05bc4415a26",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
   "relation_count": 91,
@@ -216,7 +231,7 @@
       "count": 43,
       "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
     },
-    "manifest_sha256": "ea02d626b2c0ed05a3bebd31b23ab6ed373b080b5320af28a0d76327294edcc3",
+    "manifest_sha256": "6490c6beee8cc4983a578ba812236adaece8fa0b33ad7dcfea78d05bc4415a26",
     "initial_verified_on": "2026-11-20",
     "artifact_recheck": {
       "verified_on": "2026-11-24",

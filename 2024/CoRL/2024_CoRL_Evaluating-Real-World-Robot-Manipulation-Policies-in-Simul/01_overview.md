@@ -7,7 +7,7 @@
 > Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
 
 - Year/Venue: 2024 / CoRL
-- Authors: Xuanlin Li, Kyle Hsu, Jiayuan Gu, Oier Mees, Karl Pertsch, Homer Rich Walke, Chuyuan Fu, Ishikaa Lunawat, Isabel Sieh, Sean Kirmani, Sergey Levine, Jiajun Wu, Chelsea Finn, Hao Su, Quan Vuong, Ted Xiao
+- Authors: Xuanlin Li, Kyle Hsu, Jiayuan Gu, Karl Pertsch, Oier Mees, Homer Rich Walke, Chuyuan Fu, Ishikaa Lunawat, Isabel Sieh, Sean Kirmani, Sergey Levine, Jiajun Wu, Chelsea Finn, Hao Su, Quan Vuong, Ted Xiao
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
 - Tags: Robotics, Benchmark, simulation, real-to-sim, policy evaluation, generalist policy
@@ -87,3 +87,9 @@ SIMPLER는 로봇 정책의 시뮬레이션 평가가 실물 성능과 순위를
 - **Actual contribution:** In summary, our contributions are as follows: • We introduce SIMPLER, a suite of simulated evaluation environments for commonly-used real robot manipulation setups. • We address the challenges inherent in ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 10: Comparison of SIMPLER-"Variant Aggregation" using SAPIEN (default) vs. Isaac Sim [49] on Google Robot "Pick Coke Can" and "Move Near" tasks. Both physics simulators lead to good correlation ... (p. 10, Figure/Table caption).
 - **Explicit failure boundary:** Additionally, our current "green-screening" approach is limited to fixed cameras and does not accurately capture object shadows and other visual details. (p. 11, VII. CONCLUSION).
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/li25c/li25c.pdf#page=1)
+- 코드 — 정책의 시뮬레이션 평가기 · simpler_env/evaluation/maniskill2_evaluator.py [배포 파일](https://raw.githubusercontent.com/simpler-env/SimplerEnv/eddb5690749a1e34267807c0f7b5eede323918d7/simpler_env/evaluation/maniskill2_evaluator.py)
+- 데이터 — Octo-Base의 시뮬레이션 평가 예제 영상 · octo-base.zip [배포 파일](https://huggingface.co/datasets/xuanlinli17/simpler-env-eval-example-videos/blob/610a6204d46cbc6fd9feb2c79d9a98117ce5bc22/octo-base.zip)

@@ -13,7 +13,7 @@
 - Tags: Robotics, mid-level representation, 3D perception, bimanual manipulation, diffusion policy, generalization
 - Official paper: https://www.roboticsproceedings.org/rss21/p155.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p155.pdf
-- Code/Project: not identified
+- Code/Project: https://mid-level-moe.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (12 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 
@@ -84,3 +84,7 @@
 - **Actual contribution:** We propose a novel mixture-of-experts policy architecture that can combine multiple specialized expert models, each trained on a distinct ‘mid-level representation, to improve the generalization of the policy. (p. 1, Abstract).
 - **Evaluation boundary:** In addition, we provide two ablations based on prior ‘works investigating a single representation: a keypoints-based ablation based on MOKA (25] and a language baseline based on RE-H [2]. (p. 7, C. Experiment Setup).
 - **Explicit failure boundary:** This sensitivity-robusness tradeoff' underscores the necessity of developing robot policies that balance adherence 10 mid-level representations with the ability to remain adaptable and resilient in the face of environmental variations. ... (p. 4, 1. Ivrropuction).
+
+## 원문과 공개 자료
+
+- RSS 게재 PDF에는 익명 심사 표지가 남았다. 정식 RSS 저자 표기를 유지하고 소속과 이름의 대조에는 서명된 저자 원고를 사용했다. 두 원고는 Jonathan Heewon Yang/Jonathan Yang, Chuyuan Fu/Chuyuan Kelly Fu로 표기가 다르다. [원문](https://arxiv.org/pdf/2506.06196#page=1)

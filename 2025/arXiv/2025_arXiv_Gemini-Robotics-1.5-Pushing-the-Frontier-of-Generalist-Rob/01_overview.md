@@ -13,7 +13,7 @@
 - Tags: VLA, embodied reasoning, motion transfer, cross-embodiment, long-horizon, humanoid
 - Official paper: https://arxiv.org/abs/2510.03342
 - Full-text retrieval: https://arxiv.org/pdf/2510.03342
-- Code/Project: https://deepmind.google/en/models/gemini-robotics/gemini-robotics/
+- Code/Project: https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (62 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

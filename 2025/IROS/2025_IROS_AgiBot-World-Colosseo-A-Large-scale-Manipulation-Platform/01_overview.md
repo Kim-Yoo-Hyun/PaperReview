@@ -13,7 +13,7 @@
 - Tags: Robotics, Dataset, multi-embodiment, long-horizon manipulation, robot data, humanoid, generalist policy
 - Official paper: https://api.crossref.org/works/10.1109/iros60139.2025.11247088
 - Full-text retrieval: https://arxiv.org/pdf/2503.06669
-- Code/Project: https://github.com/OpenDriveLab/AgiBot-World
+- Code/Project: https://agibot-world.com/
 - AgiBot World Alpha의 관측 파일은 공개 목록에 있으며, 내려받으려면 이용 조건에 동의해야 한다. [파일 목록](https://huggingface.co/api/datasets/agibot-world/AgiBotWorld-Alpha/tree/128665c9e0244c45d1cbe5c13f5a4706afd24f27/observations/327)
 - Paper type: benchmark_or_dataset
 - Source audit: full-text PDF body checked on 2026-09-03 (9 pages; PyMuPDF text; title-token overlap first two pages=1.0)
@@ -87,3 +87,10 @@ AgiBot World Colosseo는 실제 조작 데이터의 규모를 늘리는 수집 �
 - **Actual contribution:** Following our dataset, to address the limitations of previous robot foundation models that heavily rely on indomain robot datasets, we present Genie Operator-1 (GO1), a novel generalist policy that utilizes ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Fig. 1: Introducing AgiBot World Colosseo, an open-sourced large-scale manipulation platform comprising data, models, benchmarks and ecosystem. AgiBot World stands out for its unparalleled scale and diversity compared to prior ... (p. 1, Figure/Table caption).
 - **Explicit failure boundary:** Teleoperator Training Data Collection Data Upload Data Processing Quality Check Failure Recovery Annotation Data Delivery Data Discard No: Discard Edge-side Cloud-side Task Succeed Failed No Yes Validity Varification Model Training ... (p. 4, Dataset).
+
+## 원문과 공개 자료
+
+- 코드 — GO-1 제어 모델 및 평가 · go1/internvl/model/go1/modeling_go1.py [배포 파일](https://raw.githubusercontent.com/OpenDriveLab/AgiBot-World/98f136ea6b345db1a08451a2f543d67c1789a809/go1/internvl/model/go1/modeling_go1.py)
+- 가중치 — GO-1 모델 배포본 · model-00001-of-00002.safetensors [배포 파일](https://huggingface.co/agibot-world/GO-1/blob/0bc37be9caa20b5b3d4a569ec462409072d3e244/model-00001-of-00002.safetensors)
+- 데이터 — AgiBotWorld-Alpha 센서 관측 · observations/327/648642-685032.tar [배포 파일](https://huggingface.co/datasets/agibot-world/AgiBotWorld-Alpha/blob/128665c9e0244c45d1cbe5c13f5a4706afd24f27/observations/327/648642-685032.tar)
+- 등록 저자는 arXiv의 기여자 색인을 따른다. v5 표제면은 Team AgiBot-World라는 단체명을 쓰고 기여자는 별도 안내한다. [원문](https://arxiv.org/abs/2503.06669)

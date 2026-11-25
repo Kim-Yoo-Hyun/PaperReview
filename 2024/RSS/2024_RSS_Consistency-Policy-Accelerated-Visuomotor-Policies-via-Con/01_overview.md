@@ -13,7 +13,7 @@
 - Tags: Robotics, visuomotor policy, diffusion policy, consistency distillation, low latency, real-time control
 - Official paper: https://www.roboticsproceedings.org/rss20/p071.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p071.html
-- Code/Project: not identified
+- Code/Project: https://consistency-policy.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (11 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -86,3 +86,7 @@ Consistency Policy는 사전학습한 확산 정책을 소수 단계로 실행�
 - **Actual contribution:** Overall, we demonstrate that inference speed of our approach is on average about an order of magnitude faster than the fastest baseline (see Table I) and maintains similar or higher ... (p. 2, I. INTRODUCTION).
 - **Evaluation boundary:** Policy NFE Lift Can Square ToolHang Push-T DDPM 27 1.00 .97 ± .01 .93 ± .02 .79 ± .03 .87 ± .03 DDiM 9 1.00 .82 ± .03 .85 ± ... (p. 6, IV. EXPERIMENTS).
 - **Explicit failure boundary:** Differentiating with respect to every operation could lead to unstable training and slow or even failed convergence. (p. 4, 2) Student Model (Consistency Policy)).
+
+## 원문과 공개 자료
+
+- 코드 — 확산 교사를 증류한 학생 정책 · consistency_policy/student/ctm_policy.py [배포 파일](https://raw.githubusercontent.com/Aaditya-Prasad/Consistency-Policy/eed0c465d3c1aa6dcf22f10e784df07dec06beac/consistency_policy/student/ctm_policy.py)

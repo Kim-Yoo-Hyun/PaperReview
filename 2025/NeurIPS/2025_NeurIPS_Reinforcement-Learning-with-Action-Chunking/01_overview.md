@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / NeurIPS
-- Authors: Qiyang Li, Zhiyuan (Paul) Zhou, Sergey Levine
+- Authors: Qiyang Li, Zhiyuan Zhou, Sergey Levine
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -42,3 +42,9 @@ Current trend. Chunk 단위의 exploration과 TD backup을 결합한다. ACT/FAS
 ## Verification Boundary
 
 Chunk 실행 중 feedback 처리, n-step target 조건과 exploration budget을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://proceedings.neurips.cc/paper_files/paper/2025/file/50348e8f9aef984abe0ea1ec2a326f78-Paper-Conference.pdf#page=1)
+- 코드 — 행동 묶음 가치 학습 · agents/acfql.py [배포 파일](https://raw.githubusercontent.com/ColinQiyangLi/qc/48283b4f662bd1c127ec9fa80647b49759f10653/agents/acfql.py)
+- 데이터 — 확장한 cube-quadruple-play 궤적 분할 · cube-quadruple-play-v0-000.npz [배포 파일](https://rail.eecs.berkeley.edu/datasets/ogbench/cube-quadruple-play-100m-v0/cube-quadruple-play-v0-000.npz)

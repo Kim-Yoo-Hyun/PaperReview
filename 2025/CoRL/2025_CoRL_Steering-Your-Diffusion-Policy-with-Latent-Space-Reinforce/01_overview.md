@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / CoRL
-- Authors: Andrew Wagenmaker, Yunchu Zhang, Mitsuhiko Nakamoto, Seohong Park, Waleed Yagoub, Anusha Nagabandi, Abhishek Gupta, Sergey Levine
+- Authors: Andrew Wagenmaker, Mitsuhiko Nakamoto, Yunchu Zhang, Seohong Park, Waleed Yagoub, Anusha Nagabandi, Abhishek Gupta, Sergey Levine
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -12,7 +12,7 @@
 - Aliases: DSRL
 - Official paper: https://proceedings.mlr.press/v305/wagenmaker25a.html
 - Venue verification: https://proceedings.mlr.press/v305/wagenmaker25a.html
-- Code/Project: https://github.com/ajwagen/dsrl
+- Code/Project: https://diffusion-steering.github.io/
 - Code: https://github.com/ajwagen/dsrl
 - Source audit: 2026-11-23 요약과 핵심 기여 두 개를 원문 본문에 대조했다. 나머지 세부 분석은 기존 초록·공식 자료에 근거한다.
 
@@ -42,3 +42,10 @@ Current trend. Base policy weight를 고정하고 latent noise를 RL로 조정�
 ## Verification Boundary
 
 Latent exploration 범위, base policy API, 성공/실패 reward와 reset 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 저자 표기와 순서를 표제면에서 확인했다. [저자 원문](https://raw.githubusercontent.com/mlresearch/v305/main/assets/wagenmaker25a/wagenmaker25a.pdf#page=1)
+- 코드 — 확산 정책 입력 노이즈의 강화학습 · train_dsrl.py [배포 파일](https://raw.githubusercontent.com/ajwagen/dsrl/8d21b9cf55459f022c0e769bca1343edd9d30e5a/train_dsrl.py)
+- 가중치 — 저자 배포 DSRL RoboMimic transport 사전학습 확산 정책 · state_3000.pt [배포 파일](https://drive.google.com/file/d/1q24VrRytq9Zf2xbyMkZLnAmxw2e2UfAk/view)
+- 데이터 — 저자 배포 RoboMimic transport 전처리 학습 분할 · train.npz [배포 파일](https://drive.google.com/file/d/1ksLa4pQLsqyz17tgPEEca0-OKZ40tgAr/view)

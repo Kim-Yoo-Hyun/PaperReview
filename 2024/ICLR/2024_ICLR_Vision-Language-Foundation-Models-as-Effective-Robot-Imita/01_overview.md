@@ -85,3 +85,9 @@ RoboFlamingo는 OpenFlamingo로 현재 영상과 지시를 해석하고 별도 �
 - **Actual contribution:** To this end, we introduce RoboFlamingo, a novel vision-language manipulation framework that leverages publicly accessible pre-trained VLMs to effectively construct manipulation policies for robotics. (p. 2, 1 INTRODUCTION).
 - **Evaluation boundary:** Figure 3: Ablation studies on the ABCD →D setting. Note that the success rate of RoboFlamingo on subsequent tasks dropped more than HULC does. This may be due to our ... (p. 8, Figure/Table caption).
 - **Explicit failure boundary:** RoboFlamingo only takes a dozen steps to locate and move to the top of the drawer, and simultaneously releases the gripper to complete the task; while HULC keeps moving above ... (p. 16, B.5 QUALITATIVE EXAMPLES).
+
+## 원문과 공개 자료
+
+- 코드 — RoboFlamingo 체크포인트의 CALVIN 평가 · eval_ckpts.py [배포 파일](https://raw.githubusercontent.com/RoboFlamingo/RoboFlamingo/1475a07d043a62bb07ab11abfc71115bb72e2a16/eval_ckpts.py)
+- 가중치 — ABC에서 학습한 CALVIN 정책 · ABC_D/checkpoint_gripper_post_hist_1_aug_10_4_traj_cons_ws_12_mpt_3b_4.pth [배포 파일](https://huggingface.co/roboflamingo/RoboFlamingo/blob/b08c0a2ac4d2a92927ddc066e3eb077319bc5a94/ABC_D/checkpoint_gripper_post_hist_1_aug_10_4_traj_cons_ws_12_mpt_3b_4.pth)
+- 데이터 — 저자가 재서술한 CALVIN 언어 지시 · enrich_lang_annotations.json [배포 파일](https://raw.githubusercontent.com/RoboFlamingo/RoboFlamingo/1475a07d043a62bb07ab11abfc71115bb72e2a16/enrich_lang_annotations.json)

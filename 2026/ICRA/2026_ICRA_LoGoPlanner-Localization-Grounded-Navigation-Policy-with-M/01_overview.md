@@ -42,3 +42,10 @@ Current trend / enabling 3D. Metric-aware geometry와 history 기반 state estim
 ## Verification Boundary
 
 정책과 MPC가 각각 보는 pose, calibration, simulator GT 접근 및 metric scale supervision을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — 같은 저장소 안의 LoGoPlanner 전용 추론 서버 · baselines/logoplanner/logoplanner_server.py [배포 파일](https://raw.githubusercontent.com/InternRobotics/NavDP/bff5eb8857f50e082243fb455d312409daabc3aa/baselines/logoplanner/logoplanner_server.py)
+- 가중치 — LoGoPlanner 전용 궤적 정책 · logoplanner_policy.ckpt [배포 파일](https://huggingface.co/InternRobotics/LoGoPlanner/blob/a96ba4e2cd68ccc2ce5c7169e254a6f244520637/logoplanner_policy.ckpt)
+- 저자 사이트가 쓰는 별칭 NavDP--는 구두점을 없애면 선행 NavDP와 충돌한다. arXiv 식별자·방법·정책 파일이 다른 별도 연구다. [원문](https://arxiv.org/pdf/2512.19629v2)
+- 이전 판정이 가리킨 X-NavDP는 후속 연구다. 위 가중치는 LoGoPlanner의 전용 파일로, 이용 조건 동의가 필요하다.

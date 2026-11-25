@@ -13,7 +13,7 @@
 - Tags: Robotics, VLM, visual imitation, human video, fine-grained action, long-horizon manipulation
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2024/hash/8e6f3d53b2bef98fce17e699557f5f11-Abstract-Conference.html
-- Code/Project: not identified
+- Code/Project: https://vlmimic.github.io/
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (28 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 

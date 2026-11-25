@@ -42,3 +42,8 @@ Foundation lineage. RGB video history에서 next action을 출력하는 navigati
 ## Verification Boundary
 
 Camera-only 가정, action discretization, history truncation, 실제 low-level controller을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문과 공개 자료
+
+- 코드 — NaVid의 언어·영상 내비게이션 평가 · run.py [배포 파일](https://raw.githubusercontent.com/jzhzhang/NaVid-VLN-CE/ce2f804a43fb23f1d52431ec24be1acf74c3f4f4/run.py)
+- 가중치 — R2R·RxR로 학습한 원래 NaVid 모델 · navid-7b-full-224-video-fps-1-grid-2-r2r-rxr-training-split/pytorch_model-00001-of-00002.bin [배포 파일](https://huggingface.co/Jzzhang/NaVid/blob/1f96dbdc5c24594220395beeb447cbee728a84a9/navid-7b-full-224-video-fps-1-grid-2-r2r-rxr-training-split/pytorch_model-00001-of-00002.bin)

@@ -13,7 +13,7 @@
 - Tags: Robotics, MPC, optimal control, LQR, whole-body control, real-time
 - Official paper: https://www.roboticsproceedings.org/rss20/p002.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p002.html
-- Code/Project: not identified
+- Code/Project: https://github.com/Simple-Robotics/aligator
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; PyMuPDF text; title-token overlap first two pages=1.0)
 
@@ -81,3 +81,8 @@
 - **Actual contribution:** In this paper, we introduce a parallel algorithm to enhance the efficiency of model-predictive control (MPC) solvers [49, 16]. (p. 1, I. INTRODUCTION).
 - **Evaluation boundary:** The timing results of this experiment are shown in fig. (p. 10, VIII. EXPERIMENTS).
 - **Explicit failure boundary:** In our setting, the linear subproblem (47) does not have that same structure (such that our construction from section V cannot be iterated), however, it is still possible to leverage ... (p. 9, VII. DISCUSSION).
+
+## 원문과 공개 자료
+
+- 코드 — ALIGATOR의 근접 Riccati 해법 · include/aligator/gar/proximal-riccati.hxx [배포 파일](https://raw.githubusercontent.com/Simple-Robotics/aligator/5407fd1d48ece929547b7a8a2d150aa7b80cd59e/include/aligator/gar/proximal-riccati.hxx)
+- RSS 서지 표제와 PDF 표제가 다르다. PDF 표제는 Parallel and Proximal Constrained Linear-Quadratic Methods for Real-Time Nonlinear MPC다. [원문](https://www.roboticsproceedings.org/rss20/p002.pdf)

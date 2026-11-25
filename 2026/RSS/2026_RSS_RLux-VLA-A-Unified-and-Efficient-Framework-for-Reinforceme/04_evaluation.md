@@ -1,49 +1,33 @@
 # RLinf-VLA: A Unified and Efficient Framework for Reinforcement Learning of Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `FULL_TEXT_CHECKED`. RSS 게재본의 시뮬레이션과 실물 평가 절을 대조했다.
 
-## Evaluation in One Sentence
-
-RSS abstract는 LIBERO, ManiSkill, RoboTwin simulation에서 training efficiency와 policy 성능을 비교한다.
-
-## Evaluation Type and Scope
-
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+- **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 
 ## Dataset / Benchmark Role
 
-RSS abstract는 LIBERO, ManiSkill, RoboTwin simulation에서 training efficiency와 policy 성능을 비교한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+LIBERO, ManiSkill, RoboTwin의 모의 조작 과제로 정책을 비교했다. 실물 전이는 서랍 닫기 한 과제에서 평가했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=6) · [PDF 9쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9)
 
 ## Metrics and Success Definition
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+정책 성능은 과제 성공률로, 학습 시스템의 효율은 렌더링·행동 생성·학습의 GPU 배치에 따른 처리량으로 측정했다. [PDF 6쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=6) · [PDF 8쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=8)
 
 ## Baselines and Fairness
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
+실물 비교를 위해 OpenVLA에 실물 전문가 시연 20개와 모의 궤적 1,000개로 지도 미세조정을 했다. 비교 모델은 같은 체크포인트에서 출발해 시뮬레이터에서 강화학습을 추가했다. 저자는 실제 카메라 자세와 팔 구성을 모의 장면에 맞췄다. [PDF 9쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9)
+
+## Main Results / Claim–Evidence Map
+
+| 정책 | 실물 서랍 닫기 | 저자가 관찰한 행동 |
+|---|---|---|
+| 지도 미세조정 | 시행 10회 중 8회 성공 | 밀기 전에 회전하거나 거의 움직이지 않는 행동을 출력했다. [PDF 9쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9) |
+| 지도 미세조정 후 시뮬레이션 강화학습 | 시행 10회 중 8회 성공 | 그림 15에서 더 직접적이고 부드러운 밀기 동작을 보였다. [PDF 9쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9) |
 
 ## Ablations and Sensitivity
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+OpenVLA-OFT의 GRPO 학습에서 목표 도달 뒤 행동을 손실에서 제외하는 마스크와 궤적 길이 정규화는 LIBERO-Goal에서 유리했다. ManiSkill에서는 두 조작의 이득이 뚜렷하지 않았다. [PDF 9쪽](https://www.roboticsproceedings.org/rss22/p089.pdf#page=9)
 
-## Generalization and Failure Cases
+## 추가 비교 제안
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 Model별 action interface, GPU utilization 산정, asynchronous policy lag을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Proposed Evaluation — Researcher Interpretation
-
-동일 policy/algorithm/task에서 scheduling만 바꾸고 samples/sec·wall-clock time·고정 step 성공률을 보고한다.
-
-이 실험은 실행하지 않았으며, 수치나 결론을 미리 부여하지 않는다.
-
-## Evidence Anchor
-
-[공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p089.html) · [저자 project/code](https://github.com/RLinf/RLinf/blob/main/docs/source-zh/rst_source/resources/release_v0.3.rst). Main table·appendix·negative result는 본문 수동 확인 필요.
+같은 정책·알고리즘·과제에서 GPU 배치만 바꾸어 초당 표본 수, 경과 시간, 같은 상호작용 횟수에서의 성공률을 함께 비교할 수 있다. 이는 연구자의 후속 실험 제안이다.
