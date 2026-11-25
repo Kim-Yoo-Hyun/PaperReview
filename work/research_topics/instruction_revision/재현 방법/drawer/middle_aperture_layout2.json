@@ -1,0 +1,28 @@
+{
+  "question": "Does the layout-3 effect of a non-target middle drawer replicate on public middle-drawer reset row 2 for the official upper-drawer bowl task?",
+  "layout": 2,
+  "template": "drawer/middle_aperture.json",
+  "template_sha256": "822237c977d4e525334956c587f1ba67fc64d1285b9d06e9f5a7a4fd9f1a3835",
+  "parent": "results/2026-11-25-middle-aperture/study.zip",
+  "parent_sha256": "11117b5f92cf80863e0d0d13b67f39db754daaaef4cba2256f161545dceb4eaa",
+  "donor_archive": "results/2026-11-25-stove-layouts/study.zip",
+  "donor_archive_sha256": "6c0f1f597f84345dc319d693d4aefa2fcec0c9688f010200ef7e18656edec1ea",
+  "donors": "drawer/middle_aperture_layout2_donors.json",
+  "donors_sha256": "d6aa76fa9cc82212ad4b405757dc13a9f9a0c322f4e1fd1e404b5a18786bf681",
+  "arms": ["drawer-1-2-k0", "drawer-1-2-k1"],
+  "donor_physics": [
+    "b7bfe1b69201b8fd550a5f46bd89b9b7657d7024016dca64c0c590841b3986cd",
+    "f3c5b07dfc20e4b510ee6902eac4443a50542fabfa364de72ac2565e28fdb60f"
+  ],
+  "returned_physics": {
+    "drawer-1-2-k0": "5b1f9b65111f903ca672dea277e182497ae81e7ab94e50c1961ad44c89431c53",
+    "drawer-1-2-k1": "19851ce6a343176aa77a8f704353ee26ae3bf886beeadb270b0e4e0ab319cb58"
+  },
+  "prefix_contact": false,
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "selection": "Use all distinct naturally opened layout-2 end states in the archived drawer gates. Their second model load duplicated the action sequences and final states. Take the first representative for each hash before any upper-drawer policy outcomes. The gripper had cleared the drawer at both endpoints. The target, controller, posture return, observation and random streams follow the layout-3 protocol.",
+  "standalone": "First run the official upper task from the same warmed middle-drawer reset row 2 with the slide closed, no prefix or preparation, keys 0-7 at offset 0 and two fresh policy loads. Run 600 controls each, report the 8, 15 and 30 s deadlines. For primary competence require at least one path per load that opens the upper drawer and has the bowl inside at 15 s. Report any delayed success. Retain all paired paths even if direct competence is weak.",
+  "comparison": "Use the frozen 160-control opening, 60-control return, identical slide-only intervention and one-second stationary qualification as layout 3. Pair eight downstream seeds at offset 32 on each endpoint and repeat under a second model load. Assess the 15 s primary and the 30 s extension on the common clock including the 3 s return. Check first external contact, upper opening, top/middle/bottom containment, moving-drawer support and final-second release. Report each donor by reload cell and both directions of paired gains.",
+  "crossover": "Independently replay every standalone and both original paired branches. Apply all 540 stored policy commands from each paired path to the opposite drawer aperture, without further inference. Compare equal commands on both geometries at 8, 15 and 30 s. Check whether closed-source commands can still put the bowl in the upper drawer while the middle is open and whether open-source commands put it in the middle. Count transient and terminal outcomes separately.",
+  "decision": "Call the primary closure benefit replicated on layout 2 if standalone competence and physical matching pass and closed-only terminal upper placements exceed open-only in all four donor by reload cells at 15 s. Evaluate 30 s separately. Treat transfer of the 30 s wrong-middle destination and physical attainability as separate findings. Under an open physical middle drawer, compare paired 30 s upper placement for closed-source versus open-source commands within each cell. Reserve claims about other layouts, targets, checkpoints and learning."
+}

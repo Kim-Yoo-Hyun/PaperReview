@@ -10,13 +10,13 @@ run_volume=paper-revision-p0-runs
 mode=${1:-help}
 case "$mode" in
   help|-h|--help)
-    printf '%s\n' 'Local Docker stages: check → gpu → build → assets → smoke → results' \
-      'Use: sh "work/research_topics/instruction_revision/재현 방법/resume.sh" <stage>' \
-      'Optional: REVISION_GPU_DEVICE=<one numeric GPU index, default 0>' \
-      'Build/assets download into Docker only; smoke is one bounded native IO probe.'
+    printf '%s\n' 'Setup: check, gpu, build, assets, smoke, results' \
+      'Collect: drawer-location NEW_DIR, middle-aperture-layout2 NEW_DIR' \
+      'Score: verify-drawer-location DIR, verify-middle-aperture DIR, verify-stove-layouts DIR' \
+      'Replay: replay-drawer-location DIR [NEW_REPORT], replay-prior-closed DIR NEW_REPORT'
     exit 0 ;;
-  check|gpu|build|assets|smoke|results) ;;
-  *) printf 'Unknown stage: %s\n' "$mode" >&2; exit 2 ;;
+  check|gpu|build|assets|smoke|results|drawer-location|middle-aperture-layout2|verify-drawer-location|verify-middle-aperture|verify-stove-layouts|replay-drawer-location|replay-prior-closed) ;;
+  *) printf 'Unknown drawer study stage: %s\n' "$mode" >&2; exit 2 ;;
 esac
 
 if [ -n "${DOCKER_CONTEXT:-}" ]; then
@@ -33,7 +33,7 @@ esac
 d() (unset DOCKER_CONTEXT DOCKER_HOST; docker --host "$endpoint" "$@")
 platform=$(d version --format '{{.Server.Os}}/{{.Server.Arch}}')
 printf 'Local endpoint: %s; daemon: %s\n' "$endpoint" "$platform" >&2
-d info --format 'cpus={{.NCPU}} memory_bytes={{.MemTotal}} runtimes={{json .Runtimes}}' >&2
+d info --format 'cpus={{.NCPU}} memory_bytes={{.MemTotal}} runtimes={{range $name, $_ := .Runtimes}}{{$name}} {{end}}' >&2
 if [ "$platform" != linux/amd64 ]; then
   printf 'NOT_MET: linux/amd64 with NVIDIA CUDA/EGL is required; no emulation or fallback.\n' >&2
   exit 3
@@ -75,6 +75,47 @@ fi
 image_id=$(d image inspect --format '{{.Id}}' "$image")
 [ "$(d image inspect --format '{{index .Config.Labels "paperreview.task"}}' "$image_id")" = "$task" ] || exit 4
 [ "$(d image inspect --format '{{.Os}}/{{.Architecture}}' "$image_id")" = linux/amd64 ] || exit 4
+
+sim=/opt/resteer/.venv/bin/python
+policy=/opt/resteer/third_party/openpi/.venv/bin/python
+case "$mode" in
+  verify-drawer-location|verify-middle-aperture|verify-stove-layouts)
+    [ "$#" -eq 2 ] && [ -d "$2" ] || { echo 'Supply the recorded run or archive directory.' >&2; exit 2; }
+    case "$mode" in
+      verify-drawer-location) verifier=drawer_location.py ;;
+      verify-middle-aperture) verifier=verify_middle_aperture.py ;;
+      verify-stove-layouts) verifier=verify_stove_layouts.py ;;
+    esac
+    run_path=$(CDPATH= cd -- "$2" && pwd)
+    d run --rm --pull never --name "$container" --label "paperreview.task=$task" --network none \
+      --cap-drop ALL --security-opt no-new-privileges \
+      --mount "type=bind,src=$recipe_dir,dst=/packet,readonly" --mount "type=bind,src=$run_path,dst=/trial,readonly" \
+      --entrypoint "$sim" "$image_id" "/packet/$verifier" /trial
+    exit 0 ;;
+  replay-drawer-location|replay-prior-closed)
+    [ "$#" -ge 2 ] && [ "$#" -le 3 ] && [ -d "$2" ] || { echo 'Supply an existing run and optionally a new report.' >&2; exit 2; }
+    run_path=$(CDPATH= cd -- "$2" && pwd)
+    if [ "$mode" = replay-prior-closed ]; then
+      [ "$#" -eq 3 ] || { echo 'Supply a new report path for the historical replay.' >&2; exit 2; }
+      script=replay_prior_closed.py
+    else
+      script=drawer_location.py
+    fi
+    output=${3:-}
+    set -- --entrypoint "$sim" "$image_id" "/packet/$script" /trial
+    [ "$mode" = replay-prior-closed ] || set -- "$@" replay
+    if [ -n "$output" ]; then
+      [ ! -e "$output" ] || { echo 'The report path already exists.' >&2; exit 2; }
+      report_dir=$(CDPATH= cd -- "$(dirname -- "$output")" && pwd)
+      set -- --mount "type=bind,src=$report_dir,dst=/report" "$@" --output "/report/$(basename -- "$output")"
+    fi
+    d run --rm --pull never --name "$container" --label "paperreview.task=$task" --network none \
+      --gpus "device=$gpu_device" --shm-size 2g --env CUDA_VISIBLE_DEVICES=0 --env MUJOCO_EGL_DEVICE_ID=0 \
+      --env OMP_NUM_THREADS=1 --env OPENBLAS_NUM_THREADS=1 \
+      --mount "type=bind,src=$recipe_dir,dst=/packet,readonly" --mount "type=bind,src=$run_path,dst=/trial,readonly" "$@"
+    exit 0 ;;
+esac
+
 volume() {
   if ! d volume inspect "$1" >/dev/null 2>&1; then
     [ "$mode" != results ] || { printf 'No saved run volume.\n' >&2; exit 4; }
@@ -90,14 +131,31 @@ if [ "$mode" = results ]; then
     --mount "type=volume,src=$run_volume,dst=/runs,readonly" "$image_id" results
   exit 0
 fi
+
 volume "$data_volume"
+if [ "$mode" = drawer-location ] || [ "$mode" = middle-aperture-layout2 ]; then
+  [ "$#" -eq 2 ] && [ ! -e "$2" ] || { echo 'Supply a new output directory.' >&2; exit 2; }
+  parent=$(CDPATH= cd -- "$(dirname -- "$2")" && pwd)
+  leaf=$(basename -- "$2")
+  if [ "$mode" = drawer-location ]; then
+    set -- /packet/drawer_location.py "/output/$leaf" collect
+  else
+    set -- /packet/verify_middle_aperture.py "/output/$leaf" collect --layout 2
+  fi
+  d run --rm --pull never --name "$container" --label "paperreview.task=$task" --network none --hostname localhost \
+    --gpus "device=$gpu_device" --shm-size 2g --env CUDA_VISIBLE_DEVICES=0 --env MUJOCO_EGL_DEVICE_ID=0 \
+    --env "REVISION_IMAGE_ID=$image_id" --env JAX_COMPILATION_CACHE_DIR=/tmp/revision-jit \
+    --mount "type=volume,src=$data_volume,dst=/data,readonly" --mount "type=bind,src=$recipe_dir,dst=/packet,readonly" \
+    --mount "type=bind,src=$parent,dst=/output" --entrypoint "$policy" "$image_id" "$@"
+  exit 0
+fi
 if [ "$mode" = assets ]; then
   d run --rm --pull never --name "$container" --label "paperreview.task=$task" \
     --mount "type=volume,src=$data_volume,dst=/data" "$image_id" assets
 else
   volume "$run_volume"
   d run --rm --pull never --name "$container" --label "paperreview.task=$task" \
-    --network none --gpus "device=$gpu_device" --shm-size 2g \
+    --network none --hostname localhost --gpus "device=$gpu_device" --shm-size 2g \
     --env CUDA_VISIBLE_DEVICES=0 --env MUJOCO_EGL_DEVICE_ID=0 \
     --env "REVISION_IMAGE_ID=$image_id" \
     --mount "type=volume,src=$data_volume,dst=/data" \

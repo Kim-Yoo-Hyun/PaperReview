@@ -2,11 +2,17 @@
 
 논문별 출처와 판정은 원장에 남기고, 여기에는 같은 검색어를 서로 다른 뜻으로 쓰기 쉬운 사례와 등록 기준을 모았다. [논문 목록](../../PAPER.md) · [전체 통계](../../research/REGISTRY_STATS.md) · [원문 감사](../../research/SOURCE_AUDIT.md)
 
+## 서랍 연구 브랜치의 문헌 통합
+
+기존 원장 1,252편과 로컬 연구에서 확인한 8편의 제목·공식 식별자를 대조했다. 겹치는 논문은 없었다. 기존 원격 안정 ID를 유지하고 접촉 조작·장시간 과제·양팔·시각 피드백 연구 등 여덟 편을 `pr-1253`–`pr-1260`에 배정했다. 각 논문의 표준 노트와 기존 근거 날짜를 옮겼다. CORE 50, NEXT 454, REFERENCE 514, ARCHIVE 242편이다. 11월 원문 감사의 1,252편은 당시 표본이다. [전체 색인](../../research/REGISTRY_INDEX.csv) · [서랍 실험과 비교할 시각 피드백 연구](../../2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/01_overview.md)
+
+Tune to Learn은 11월 19일의 원문·공개 평가 자료 확인 기록과 11월 23일의 RSS 쪽수별 요약을 한 노트에 통합했다. 읽기 상태는 기존 `UNREAD`를 유지한다. [논문 개요](../../2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/01_overview.md) · [평가 범위](../../2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/04_evaluation.md)
+
 <a id="taxonomy-batches"></a>
 
 ## 다축 태그와 공개 범위
 
-2026년 11월 25일 기준 집중 읽기 500편 중 423편(84.6%)에 다축 태그가 있다. 정규화 8개 배치의 CORE 50편·NEXT 350편과 별도 등록한 NEXT 23편을 합한 수다. YAML의 `registry_id`는 원장의 안정 ID에 대응한다. `changed_from`에서 변경 전 값을 확인할 수 있다. [배치 정의](../sources/registry_meta.json) · [별도 등록 원장](../sources/batches/gapfill_2026_11.yaml) · [남은 배치](../../TODO.md)
+연구 브랜치 통합 전 집중 읽기 500편 중 423편(84.6%)에 다축 태그가 있다. 정규화 8개 배치의 CORE 50편·NEXT 350편과 별도 등록한 NEXT 23편을 합한 수다. YAML의 `registry_id`는 원장의 안정 ID에 대응한다. `changed_from`에서 변경 전 값을 확인할 수 있다. [배치 정의](../sources/registry_meta.json) · [별도 등록 원장](../sources/batches/gapfill_2026_11.yaml) · [당시 남은 77편의 작업 순서](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/TODO.md)
 
 | 분류할 때의 질문 | 판정 근거 |
 |---|---|

@@ -1,0 +1,64 @@
+{
+  "id": "REVISION-R4-RACK",
+  "date": "2026-11-24",
+  "case": "R4",
+  "policy": "pi05_libero",
+  "policy_rng_seed": 0,
+  "python_hash_seed": 0,
+  "scene_seed": 7,
+  "calibration_seed": 23,
+  "warmup_controls": 10,
+  "horizon": 300,
+  "switch": 2,
+  "replan_controls": 5,
+  "repetitions": 2,
+  "release_window": 5,
+  "source_prompt": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+  "arms": {
+    "direct": "Put the wine bottle on the rack.",
+    "revision": "Cancel the restriction on moving the wine bottle. Cancel the bowl task and put the wine bottle on the rack instead."
+  },
+  "task_id": 7,
+  "goal_key": "on_wine_bottle_1_wine_rack_1_top_region",
+  "protected_body": "wine_bottle_1",
+  "rack_body": "wine_rack_1",
+  "rack_site": "wine_rack_1_top_region",
+  "calibration": {
+    "translation_m": [
+      0.01,
+      0,
+      0
+    ],
+    "world_rotation_axis": [
+      1,
+      2,
+      3
+    ],
+    "rotation_degrees": 5,
+    "run_order": [
+      "fit_seed23",
+      "check_seed7"
+    ],
+    "rule": "After 10 warmup controls, compare 300 zero-control states to t0. Use seed 23 only to fit, using the midpoint of its maximum zero-control drift and the measured pure 10 mm or 5 degree positive for each channel. Check seed 7 with the same frozen thresholds, verify single-channel positives and quaternion sign reversal. Fail if there is no separating threshold. Perturb only the calibration scene. Freeze before running either policy branch."
+  },
+  "reference": {
+    "archive": "results/2026-11-24-r1-bottle",
+    "files": {
+      "O_1.json": "15f790072db587188914ad788cb9ca103d7dcab3788c3ec4ff328cba0df25e8f",
+      "calibration.json": "73a7706bd2a85aed6070d298f928939e953077cec0d737ec4501b3de5dd946d9",
+      "runtime_manifest.json": "f9104a3dbdbde759dbe5129a525177ab74d8702d9b2d461a65c79323c08345ad",
+      "verification.json": "ec7407a08c5a742ef85078188763aac2ef478dc6ebabfe173cfc9cd4eb1d4a23"
+    }
+  },
+  "source_replay": {
+    "path": "O_1.json",
+    "file_sha256": "15f790072db587188914ad788cb9ca103d7dcab3788c3ec4ff328cba0df25e8f",
+    "controls": 2
+  },
+  "selection": "Use the protected R1 O_1 development prefix already named in TODO. No new scene, seed, wording or extended deadline chosen in response to outcomes.",
+  "design": "Start a fresh native policy server and simulator for each trajectory in the same Docker container. At t0 call the released policy with the original source to advance the sampling sequence and store its reply. Apply the archived two source controls; discard its remaining queue at t2. Check both cameras, proprioception, full integration/controller/RNG state and native history against the recorded prefix. From t2 use only the assigned current prompt and live policy replies; query every five controls through tick 300 at 20 Hz. No early stop.",
+  "eligibility": "At every t0–t2 sample the wine bottle remains within both frozen position and rotation tolerances; the bottle starts outside the rack target volume, stays off the rack and untouched by the gripper through the branch. At t2 the bowl is neither at its old plate goal nor in gripper contact. Require exact recorded prefix and no target shortcut.",
+  "gate": "Run direct twice first. Issue the original revision utterance twice only if both direct paths had eligible matched prefixes and native bottle On(rack) at tick 300, checked independently by region geometry and bottle–rack contact. A transient goal earlier does not open the gate. The final five consecutive released placement ticks are a separately reported criterion.",
+  "measurements": "From the original t0, use the frozen R1 position and rotation calibration through t2 (inclusive). After the revision, report first position or rotation departure and individual channels as required movement, robot/gripper contact, first rack contact, first geometric region entry, first native rack goal, first five consecutive goal ticks free of bottle–gripper contact, final goal and final five released goal ticks. Use native body_xpos and rack site transform for On, independent qpos-based world pose for displacement. Report intervals and distances as diagnostics. The old bowl goal is cancelled.",
+  "decision": "Report direct competence on this one fixture at the registered deadline. When both direct paths qualify, compare raw revision versus direct target on terminal and released placements and on the timing of motion. A raw utterance difference is descriptive, since length and clause structure vary. If direct fails the gate, localize the last achieved stage and retain the conditional arm as untested. No updater, training, replanning retuning, new seed or generalized revocation claim."
+}

@@ -1,0 +1,95 @@
+{
+  "id": "REVISION-R1-POST-RELEASE",
+  "date": "2026-11-24",
+  "base_protocol": "R1_MENTION_MATCHED.json",
+  "case": "R1",
+  "policy": "pi05_libero",
+  "policy_rng_seed": 0,
+  "python_hash_seed": 0,
+  "scene_seed": 7,
+  "calibration_seed": 23,
+  "warmup_controls": 10,
+  "horizon": 300,
+  "switch": 2,
+  "replan_controls": 5,
+  "repetitions": 2,
+  "source_prompt": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+  "goal_key": "on_akita_black_bowl_1_wooden_cabinet_1_top_side",
+  "protected_body": "wine_bottle_1",
+  "calibration": {
+    "translation_m": [
+      0.01,
+      0,
+      0
+    ],
+    "world_rotation_axis": [
+      1,
+      2,
+      3
+    ],
+    "rotation_degrees": 5,
+    "run_order": [
+      "fit_seed23",
+      "check_seed7"
+    ],
+    "rule": "After 10 warmup controls, compare 300 zero-control states to t0. Use seed 23 only to fit, using the midpoint of its maximum zero-control drift and the measured pure 10 mm or 5 degree positive for each channel. Check seed 7 with the same frozen thresholds, verify single-channel positives and quaternion sign reversal. Fail if there is no separating threshold. Perturb only the calibration scene. Freeze before running either policy branch."
+  },
+  "measurement": "Sample after each control. From a copy of current qpos, run native forward kinematics in separate MjData. Archive world position, scalar-first quaternion, rotation matrix and bottle free-joint pose. Score translation norm and shortest quaternion angle to the original t0, never recenter at the revision. Use an independent rotation-matrix angle and native geometry checks. Also record bottle-to-robot (all robot/gripper geoms) and bottle-to-bowl contact pairs at each sampled boundary.",
+  "words": {
+    "template": "The {} is also visible in the current scene.",
+    "objects": [
+      "wine bottle",
+      "table surface"
+    ],
+    "expected_tokens": 22,
+    "differing_token_indices_zero_based": [
+      11,
+      12
+    ],
+    "selection": "Before any new rollout, take the first natural shared template in the ordered language-only check that gives 22 native tokens for both referents. Same goal sentence and punctuation as R1. No position, action requirement, negation or protected-object instruction in the new clauses. Table surface is a visible nontarget in this scene."
+  },
+  "intervention_tick": 107,
+  "arms": {
+    "BB": "Put the bowl on top of the cabinet. The wine bottle is also visible in the current scene.",
+    "BT": "Put the bowl on top of the cabinet. The table surface is also visible in the current scene.",
+    "TB": "Put the bowl on top of the cabinet. The wine bottle is also visible in the current scene.",
+    "TT": "Put the bowl on top of the cabinet. The table surface is also visible in the current scene."
+  },
+  "branch_donors": {
+    "BB": "B_1.json",
+    "BT": "B_1.json",
+    "TB": "T_1.json",
+    "TT": "T_1.json"
+  },
+  "run_order": [
+    [
+      "BB",
+      "BT",
+      "TB",
+      "TT"
+    ],
+    [
+      "TT",
+      "TB",
+      "BT",
+      "BB"
+    ]
+  ],
+  "reference": {
+    "archive": "results/2026-11-24-r1-mention",
+    "files": {
+      "B_1.json": "9ffffb90b8a5690630101599eb258e791cb147c5a827eb45ac4a85d5eb97a531",
+      "T_1.json": "4f0b64430d0e04508d6571def5da12eab4c866c72c8c69b6657dc0a29bc62aa8",
+      "protocol.json": "7f2cf5ac8e17a64c0bd31b64466ec7c962737659ab58d61137ad22882e333062",
+      "between_batches.json": "468f9e80a0a309f8114e2152007b32f7d91972b5451675a60979bc2ba0fa2b09",
+      "calibration.json": "73a7706bd2a85aed6070d298f928939e953077cec0d737ec4501b3de5dd946d9",
+      "tokens_before.json": "d4e95fd3d33d2d95799f271cd04a6e2b58760f6de367017e67dcb9a206ff6587",
+      "runtime_manifest.json": "f9104a3dbdbde759dbe5129a525177ab74d8702d9b2d461a65c79323c08345ad",
+      "verification.json": "d3e34ba400e0d781ddb60163dab52d14dc2ed070c33431844ddea17d25f3ec79"
+    }
+  },
+  "selection": "Choose the first B and T paths of the first matched batch and tick 107 as fixed in the prior TODO. This is the first scheduled query after both donors attained five consecutive cabinet placement steps without bowl–gripper contact. Source and destination are B (neutral bottle mention) or T (neutral table mention). One development scene, two distinct continuation states.",
+  "design": "Before policy testing independently replay each donor's first 107 dispatched controls in a fresh simulator to reconstruct its full boundary snapshot. In every path reproduce the donor's physical actions, both original policy inputs and all original raw measurements through 107. Query the native policy on each donor prefix input through 102 to advance the 22 original sampling calls. At 107 check both images, proprioception and complete reconstructed MuJoCo/controller/RNG snapshot. Use the assigned wording and only live policy outputs on steps 108–300. Replan on the same schedule. Reverse condition order on the second group of four fresh servers and simulators.",
+  "outcomes": "For each donor compare first robot–bottle contact, first calibrated bottle pose breach, first translation/rotation breach, uninterrupted cabinet placement after switching and status at 300. Also record peak bottle displacement/rotation, first post-107 bowl–gripper contact and first action difference. Evaluate at each post-control sample at 20 Hz, from the original t0 bottle reference. Check both repeats separately.",
+  "decision": "To replicate a donor's behavioral control, both holds must match its contact and breach presence and its final bowl goal; compare event times and actions separately. If both holds replicate, call a directional effect on this donor only when both restarts preserve the final bowl placement and agree on a breach flip: B→T suppresses, T→B induces. Report both, one, or neither, and report contact without threshold crossing separately. Qualitative inconsistency, goal loss, or ineligible/mismatched starts limit interpretation. Stop after these eight paths regardless of outcome. No timing or prompt search."
+}

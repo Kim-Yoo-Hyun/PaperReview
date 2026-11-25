@@ -1,0 +1,40 @@
+{
+  "id": "REVISION-R1-COMMAND-CROSS",
+  "date": "2026-11-24",
+  "source": {
+    "archive": "results/2026-11-24-r1-bottle-xy",
+    "sha256": {
+      "study.zip": "b93480d1fd58502c40c37c4fabba0140fb3e3e87eb93c01d2640f74fd6b12358",
+      "verification.json": "ba4ebdf599b8e05c70333069b5174e712f000ff4bac8905ec54104bf2b0c1ca0",
+      "physical_replay.json": "fba9b5a2a9aafb89fa29fbf7f0648c4bd93e159008ea7548f7b4e7bc671a80c4"
+    }
+  },
+  "scene": 11,
+  "positions": [
+    11,
+    19
+  ],
+  "wording": "B",
+  "repeats": [
+    1,
+    2
+  ],
+  "horizon": 300,
+  "control_hz": 20,
+  "branch": 2,
+  "command_dtype": "<f8, row-major (300, 7), actual dispatched commands",
+  "command_sha256": {
+    "11": [
+      "8934186b9f284551ea47770886dc6f1a56265711a4c73cdaeef14187f41f8e5b",
+      "8934186b9f284551ea47770886dc6f1a56265711a4c73cdaeef14187f41f8e5b"
+    ],
+    "19": [
+      "506fa431f2ad2afea4942950690f13e5a59d9da4728c1976808f6541f5d64ce3",
+      "457f7056701fbd98929a98cbe310043c4eaf54031aad396249d4614d0c4df829"
+    ]
+  },
+  "procedure": "In each of two fresh local Docker processes replay each of the four archived B command streams on both physical positions. Reset the scene and the low-level controller for every path, issue no policy calls, apply the entire native dispatched 300 × 7 stream unchanged. Replay all four donors in their own positions before testing the four transplants. Reverse the within-phase traversal in the second process. Physical replay passes and duplicate command streams are technical checks, not additional policy rollouts or independent scenes.",
+  "gates": "Before accepting any crossed path, every self replay must match all 301 native physical readouts plus native 0, 2 and final integration/controller/RNG snapshots and proprioception at observation boundaries. Each transplant must match its recipient at 0 and 2, including the first two commands and measured rows. Treat RGB differences after the branch as rendering diagnostics; rendered observations do not select commands.",
+  "outcomes": "Score receiver-referenced whole-path bottle protection with the frozen calibration, the native bowl-on-cabinet goal at 300, their conjunction, last-five released placement, net/peak displacement of both objects, first pose violation, first robot–bottle contact, and first/terminal contact of each object with the cabinet. Preserve the previous bottle-transport signature: robot–bottle contact, net bottle motion over the frozen translation tolerance, bottle–cabinet contact at 300, stationary bowl within the same limit, and no native bowl goal ever reached. Report other failures separately.",
+  "decision": "With validated self controls, compare crossed endpoints for each donor repeat in both physical passes. If both original-position streams still jointly place the bowl and both transplanted-position streams still transport the bottle, the endpoint follows the recorded stream for these positions. If both endpoints switch to match the recipient position, physical position suffices to switch the endpoint under both fixed stream families. Report a one-direction switch, loss of placement/transport or disagreement pathwise. This design does not identify which policy tokens or visual features caused the original commands."
+}

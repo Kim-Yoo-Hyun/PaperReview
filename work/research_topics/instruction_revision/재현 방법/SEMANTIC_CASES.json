@@ -5,7 +5,7 @@
   "status": "DRAFT_NOT_EXECUTED",
   "description": "Eight manually authored semantic cases; not observed failures, independent samples, parser/model evaluation, or runnable native fixtures.",
   "casebook": "../내용/README.md#cases",
-  "review": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review",
+  "review": "../../../update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review",
   "runtime_binding": {
     "executable": false,
     "p0_launcher_uses_this_file": false,

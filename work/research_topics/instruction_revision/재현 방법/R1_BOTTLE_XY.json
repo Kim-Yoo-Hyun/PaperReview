@@ -1,0 +1,88 @@
+{
+  "id": "REVISION-R1-BOTTLE-XY",
+  "date": "2026-11-24",
+  "reference": {
+    "archive": "results/2026-11-24-r1-neutral-layouts",
+    "files": {
+      "study.zip": "6d5d48448e954c42d52ac2d63d7d2630a16fc81cc03d81db646f917aea7d1f35",
+      "verification.json": "3391f8aca124b06c4c7c59f4f026e10553e375037f33958fd3fb61402c621cab"
+    }
+  },
+  "configurations": [
+    [
+      11,
+      11
+    ],
+    [
+      19,
+      19
+    ],
+    [
+      11,
+      19
+    ],
+    [
+      19,
+      11
+    ]
+  ],
+  "coordinate_order": "[base scene seed, seed supplying the initial bottle x/y]",
+  "raw_reset_xy_m": {
+    "11": [
+      -0.21181712510855244,
+      -0.06071462741218489
+    ],
+    "19": [
+      -0.21448225743632643,
+      -0.05406982204390558
+    ]
+  },
+  "state_tolerance": 1e-8,
+  "position_tolerance_m": 1e-9,
+  "order": {
+    "11-11": [
+      [
+        "B",
+        "T"
+      ],
+      [
+        "T",
+        "B"
+      ]
+    ],
+    "19-19": [
+      [
+        "T",
+        "B"
+      ],
+      [
+        "B",
+        "T"
+      ]
+    ],
+    "11-19": [
+      [
+        "T",
+        "B"
+      ],
+      [
+        "B",
+        "T"
+      ]
+    ],
+    "19-11": [
+      [
+        "B",
+        "T"
+      ],
+      [
+        "T",
+        "B"
+      ]
+    ]
+  },
+  "intervention": "At the native random reset before the ten zero-control warmup, write only the two horizontal coordinates of the bottle free joint. Forward dynamics and warmup are identical in all four cells. Verify the original source state and replay the same two archived source commands in both configurations of each base scene. Observe each new branch with both cameras. Each of the 16 independent policy/simulator restarts issues its own native source query before switching to one of the frozen 22-token clauses. No new policy inference is used to generate the two common commands.",
+  "qualification": "Before revised policy calls: exact raw state/control/RNG equality except the edited two coordinates, identical native controls and RNG per base at 0 and 2, matched base-scene controller/integration/proprioception within state_tolerance outside bottle x/y, matching bowl, plate and cabinet within position_tolerance_m. Bottle x/y at 0 and 2 must match the donor. Require both objects to contact only the support table at 0, 1 and 2 and during a separate 300-zero-command trial. The bottle must pass the prior translation/rotation calibration and bowl passive drift must stay below its translation tolerance. An ineligible cell cannot support a directional inference.",
+  "outcomes": "Use the previous joint endpoint (native bowl on cabinet at 300 and bottle within frozen 5.000125 mm / 2.5 degrees throughout) and the previous prespecified alternative bottle-transport signature. Sample first/terminal bowl–cabinet and bottle–cabinet contact, robot–bottle contact, first pose violation and net/peak body motion. Keep counts per cell and arm. The original-11 B/T must both jointly succeed twice, original-19 B must transport twice and T must jointly succeed twice to replicate the earlier contrast.",
+  "decision": "First score original cells. Infer tracking of bottle position on these two host scenes only if both originals reproduce, T jointly succeeds twice everywhere, and both B restarts switch in each transplant direction (base 11 transports with 19 x/y, base 19 jointly succeeds with 11 x/y). If the host pattern persists bidirectionally, record that this 7.159 mm transplant was insufficient. If all B restarts switch in just one direction, report the directional asymmetry. Mixed endpoints, failed T, or a failed original reproduction require pathwise reporting. These are two configurations of one simulator task and one policy; restarts are not independent layouts."
+}

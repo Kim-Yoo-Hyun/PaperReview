@@ -1,0 +1,15 @@
+{
+  "id": "R1-HELD-OUT-LAYOUTS",
+  "base": "R1_RAW_UPDATE.json",
+  "base_sha256": "b4106d4d8f1486fa0ee3bc1215b41a2075146a4c335663b2a81d6b4f6238158e",
+  "seeds": [
+    11,
+    19
+  ],
+  "reference_seed": 7,
+  "layout_gate": "At settled t0 record the 3D world positions of the bowl and bottle. In the registered order require at least one of these positions to differ by more than the frozen translation tolerance from seed 7 and from earlier eligible layouts. No seed replacement.",
+  "monitor_gate": "Validate the archived seed-23 thresholds using 300 zero commands on each new layout and the original single-channel positive and sign-flip checks. Freeze both layout decisions before any revised instruction.",
+  "branch_gate": "For each eligible seed infer the original protected-source instruction once on a fresh reset, record its first two commands, t0 and state 2, then stop. Require both target predicates false and the gripper clear of the bowl at t0 and t2, and the bottle pose within the fixed limits throughout this prefix. Freeze all eligible prefixes before any revised instruction.",
+  "design": "Use the same released model and the base protocol's wordings, wait, frequency, horizon and reversed repetition order. Replay the seed-specific protected prefix on each of six fresh policy/simulator paths. Verify identical commands, states, observations, RNG and controller within each layout. Do not pool repetitions as independent layouts.",
+  "decision": "Report each seed and each paired joint difference, and decompose failures into bowl placement and whole-path bottle protection. If all three wordings jointly succeed twice on both eligible new layouts, close the current R1 method search. An exclusion is reported without replacement, and cannot satisfy this two-layout stopping rule."
+}

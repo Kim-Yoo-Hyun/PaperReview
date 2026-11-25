@@ -1,8 +1,7 @@
-# 조사와 변경
+# 문헌 조사와 변경 기록
 
-- [로보틱스 연구 동향](./ROBOTICS_TRENDS.md) · 2024–2026 문헌과 12개 분야의 공백
-- [레지스트리 변경](./REGISTRY.md) · 최근 등록, 공개 상태, 원문 대조 근거
-- [종료·보류 결과](../research_topics/RESULTS.md) · 다시 쓸 수 있는 측정과 판정
-- [현행 연구 후보](../research_topics/README.md) · 비교, 다음 검증, 재현 경로
+- [레지스트리 변경](./REGISTRY.md)에서 최근 통합, 원장 식별자, 태그의 정의와 등록 근거를 확인한다.
+- [로보틱스 연구 동향](./ROBOTICS_TRENDS.md)에는 분야별 문헌 조사와 당시 평가한 연구 후보가 있다.
+- [원문 감사](../../research/SOURCE_AUDIT.md)는 당시 확인한 논문 집합과 교정 범위를 기록한다.
 
-공통 변경은 위 문서에 합치고 현재 할 일은 [TODO](../../TODO.md)에 둔다. 논문 조사·실험의 원자료는 실제로 참조하거나 재현하는 경로에 둔다. 날짜별 일지, 과거 인계, 종료 설계의 원문은 [정리 전 Git 이력](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update)에서 찾을 수 있다.
+서랍 실험의 측정값은 [연구 결과](../research_topics/instruction_revision/내용/README.md), 현재 후속 비교는 [TODO](../../TODO.md)에 있다. 이전 일지는 [통합 전 Git 이력](https://github.com/Kim-Yoo-Hyun/PaperReview/tree/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update)에서 확인할 수 있다.

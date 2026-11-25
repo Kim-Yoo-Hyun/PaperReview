@@ -276367,8 +276367,7 @@
     "page": "https://www.roboticsproceedings.org/rss22/p139.html",
     "project": "https://younghyopark.me/tune-to-learn/",
     "pdf": "",
-    "note_format": "abstract_analysis_v1",
-    "evidence": "ABSTRACT_CHECKED",
+    "evidence": "FULL_TEXT_CHECKED",
     "identifiers": {
       "arxiv": "2604.02523",
       "doi": "10.15607/RSS.2026.XXII.139"
@@ -276378,22 +276377,27 @@
         "url": "https://www.roboticsproceedings.org/rss22/p139.html",
         "kind": "official_publication",
         "scope": "paper_specific",
-        "verified_on": "2026-11-12"
+        "verified_on": "2026-11-19"
       },
       "preprint": {
         "url": "https://arxiv.org/abs/2604.02523",
         "kind": "arxiv",
         "scope": "paper_specific",
-        "verified_on": "2026-11-12"
+        "verified_on": "2026-11-19"
       },
       "paper_pdf": null,
       "project": {
         "url": "https://younghyopark.me/tune-to-learn/",
         "kind": "author_project",
         "scope": "project_landing",
-        "verified_on": "2026-11-12"
+        "verified_on": "2026-11-19"
       },
-      "code": null
+      "code": {
+        "url": "https://github.com/younghyopark/tune-to-learn",
+        "kind": "code",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      }
     },
     "publication": {
       "status": "peer_reviewed",
@@ -276405,21 +276409,21 @@
       "venue_id": "rss"
     },
     "artifacts": {
-      "code_status": "not_identified",
-      "data_status": "not_identified",
+      "code_status": "released",
+      "data_status": "released",
       "local_pdf_cache": false
     },
     "problem": "Position controller gain 선택이 로봇 정책 학습에 미치는 영향을 묻는다.",
-    "method": "정책과 제어 동역학의 상호작용을 바탕으로 BC·RL·sim-to-real에서 gain regime을 비교한다.",
+    "method": "토크 시연을 고정 이득별 위치 목표로 변환한 BC, 이득별 행동 배율을 탐색한 PPO, 실물 동정과 폐루프 전이 비교.",
     "interface": "정책의 목표 위치 → gain이 정한 controller → 로봇 상태 → 정책 feedback.",
-    "evaluation": "여러 과제·embodiment에서 학습 방식에 따라 gain 선호가 달라지는 결과를 보고한다.",
+    "evaluation": "시뮬레이션 BC 6과제, RL 표 I의 7과제, 실물 FR3 도달. 공개 배포본에서 BC 5과제 점수와 RL 3과제의 튜닝 기록 확인.",
     "role": "접촉 VLA RL의 이득을 baseline gain 튜닝과 분리해야 함을 보이는 직접 선행이다.",
     "lineage": "Impedance control → gain별 learnability 분석 → CompVLA·CONTACT-RL 공정 비교.",
     "question": "학습된 compliance의 성능 향상은 같은 비용의 고정 gain 튜닝 뒤에도 남는가?",
     "minimal_experiment": "고정 gain grid와 학습 gain을 같은 정책·데이터·튜닝 예산에서 비교한다.",
     "verification_questions": "gain 단위·controller rate·policy 반응·hyperparameter 예산·sim-to-real 차이",
-    "boundary": "RSS의 Shape 제목을 사용하고 저자 페이지의 Affect 제목은 alias로 연결한다. Workshop award를 RSS 수상으로 기록하지 않는다.",
-    "source_audit": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. RSS의 Shape 제목을 사용하고 저자 페이지의 Affect 제목은 alias로 연결한다. Workshop award를 RSS 수상으로 기록하지 않는다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다.",
+    "boundary": "고정 이득별 정책과 행동 배율의 재최적화를 평가했다. 접촉력에 따른 VLA의 실시간 강성 선택 및 충전기 삽입의 힘 제약 성공은 미측정.",
+    "source_audit": "2026-11-25 통합. 11월 19일 본문·부록과 저자 공개 자료를, 11월 23일 개요의 세 주장과 RSS 쪽수를 대조했다. 공식 제목·별칭과 저자 순서는 RSS 게재본을 따른다. 공개 점수 재분석과 정책 재학습·실물 재현을 구분한다.",
     "admission_tier": "NEXT",
     "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
     "paper_type": "method",
@@ -276446,18 +276450,18 @@
     "venue_canonical": "RSS",
     "provenance": {
       "metadata_source_kind": "publisher_or_project",
-      "content_evidence": "ABSTRACT_CHECKED",
+      "content_evidence": "FULL_TEXT_CHECKED",
       "source_audit_status": "recorded",
-      "metadata_checked_on": "2026-11-20",
-      "source_audit_note": "2026-11-12: 공식 publication/초록 또는 저자 source 확인. RSS의 Shape 제목을 사용하고 저자 페이지의 Affect 제목은 alias로 연결한다. Workshop award를 RSS 수상으로 기록하지 않는다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.",
+      "metadata_checked_on": "2026-11-25",
+      "source_audit_note": "2026-11-25 통합. 11월 19일 본문·부록과 저자 공개 자료를, 11월 23일 개요의 세 주장과 RSS 쪽수를 대조했다. 공식 제목·별칭과 저자 순서는 RSS 게재본을 따른다. 공개 점수 재분석과 정책 재학습·실물 재현을 구분한다.",
       "schema_version": "1.0",
       "schema_migrated_on": "2026-11-12",
       "note_evidence": {
-        "01_overview.md": "ABSTRACT_CHECKED",
-        "02_problem.md": "ABSTRACT_CHECKED",
-        "03_method.md": "ABSTRACT_CHECKED",
-        "04_evaluation.md": "ABSTRACT_CHECKED",
-        "05_insights.md": "ABSTRACT_CHECKED"
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
       },
       "authors_verification": {
         "source": "https://www.roboticsproceedings.org/rss22/p139.html",
@@ -276471,59 +276475,83 @@
     "evaluation_profile": {
       "profile_version": "1.0",
       "status": "structured_note_cues",
-      "type": "not_recorded",
+      "type": "EMPIRICAL / REAL-ROBOT OR HARDWARE",
       "settings": [
-        "not_recorded"
+        "simulation",
+        "real_robot"
       ],
       "protocol": {
-        "dataset_or_benchmark": "not_recorded",
-        "metrics": "not_recorded",
-        "baselines": "not_recorded",
-        "ablations": "not_recorded",
-        "split_or_generalization": "not_recorded",
-        "trials_or_seeds": "not_recorded",
-        "statistics": "not_recorded",
-        "failure_cases": "not_recorded"
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
+        "ablations": "reported",
+        "split_or_generalization": "reported",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
+        "failure_cases": "reported"
       },
-      "trial_evidence": [],
+      "trial_evidence": [
+        {
+          "count": 100,
+          "unit": "rollout",
+          "text": "BC appendix A-C7, 100 closed-loop evaluations per gain cell.",
+          "source": "2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/04_evaluation.md"
+        },
+        {
+          "count": 50,
+          "unit": "trial",
+          "text": "RL hyperparameter landscape, 50 tuning trials per gain setting.",
+          "source": "2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/04_evaluation.md"
+        },
+        {
+          "count": 5,
+          "unit": "seed",
+          "text": "Sample-efficiency analysis of qualifying RL configurations.",
+          "source": "2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/04_evaluation.md"
+        }
+      ],
       "benchmark_cues": [],
       "metric_cues": [],
       "source_note": "2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/04_evaluation.md",
-      "reviewed_on": "2026-11-12",
-      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+      "reviewed_on": "2026-11-19",
+      "basis": "RSS §§III–V and arXiv v1 appendices, including Tables I, II and VIII. Aggregate tuning records are distinguished from new trials."
     },
     "reproducibility": {
       "profile_version": "1.0",
       "status": "metadata_audited",
       "code": {
-        "status": "not_identified",
-        "source": "https://younghyopark.me/tune-to-learn/",
-        "evidence": "manifest_link"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/younghyopark/tune-to-learn/1775091ee2fdb683e1e767822e5caa87cdfdba4a/static/assets/shapeability_widget.html",
+        "evidence": "저자 웹 도구의 큐브 들기 점수 정의와 튜닝 결과 표시 코드를 확인했다. 전체 BC·PPO 학습 코드는 확인 범위 밖이다.",
+        "verified_on": "2026-11-25"
       },
       "data": {
-        "status": "not_identified",
-        "source": null,
-        "evidence": "existing manifest artifact status preserved"
+        "status": "released",
+        "source": "https://raw.githubusercontent.com/younghyopark/tune-to-learn/1775091ee2fdb683e1e767822e5caa87cdfdba4a/static/assets/optuna_csvs_12/optuna_action_scale_learnability-cat-rel-joint-reach-sysid-franka-v0_new_K16_D24_tpe.csv",
+        "evidence": "공개한 Optuna CSV 12개 중 FR3 관절 도달 K16·D24 파일에서 시행별 행동 배율과 점수 열을 확인했다.",
+        "verified_on": "2026-11-25"
       },
       "checkpoint": {
-        "status": "not_recorded",
-        "evidence": "no explicit checkpoint availability cue"
+        "status": "reported",
+        "evidence": "단일 Franka의 식기 선반 과제에서 K1024D128M10 조건으로 내보낸 ONNX 정책 파일을 확인했다.",
+        "source": "https://raw.githubusercontent.com/younghyopark/tune-to-learn/1775091ee2fdb683e1e767822e5caa87cdfdba4a/static/assets/models/dishrack_single_franka_2f85_v2/K1024D128M10/policy.onnx",
+        "verified_on": "2026-11-25"
       },
       "configuration": {
-        "status": "not_recorded",
-        "evidence": "note_cue_or_not_recorded"
+        "status": "reported",
+        "evidence": "RSS 본문 §III–V, arXiv v1 부록 표 II·VIII, 저자 웹 평가 코드·BC 점수·Optuna CSV·배포 설정 확인. 공개 기록을 재집계했고 원 정책 학습과 실물 실행은 미재현."
       },
       "environment": {
-        "status": "not_recorded",
-        "evidence": "04_evaluation.md section cue"
+        "status": "reported",
+        "evidence": "RSS 본문 §III–V, arXiv v1 부록 표 II·VIII, 저자 웹 평가 코드·BC 점수·Optuna CSV·배포 설정 확인. 공개 기록을 재집계했고 원 정책 학습과 실물 실행은 미재현."
       },
       "run_conditions": {
-        "status": "not_recorded",
-        "evidence": "04_evaluation.md trial/statistics cue"
+        "status": "reported",
+        "evidence": "RSS 본문 §III–V, arXiv v1 부록 표 II·VIII, 저자 웹 평가 코드·BC 점수·Optuna CSV·배포 설정 확인. 공개 기록을 재집계했고 원 정책 학습과 실물 실행은 미재현."
       },
-      "reviewed_on": "2026-11-12",
+      "reviewed_on": "2026-11-19",
       "source_note": "2026/RSS/2026_RSS_Tune-to-Learn-How-Controller-Gains-Shape-Robot-Policy-Lear/04_evaluation.md",
-      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+      "basis": "Pinned author deployment config/XML and evaluation interface examined. Published data reanalysis, no end-to-end paper training reproduction."
     },
     "lineage_profile": {
       "profile_version": "1.0",
@@ -288050,6 +288078,1519 @@
       "legacy_summary_candidate_paper_ids": [],
       "legacy_summary_present": false,
       "audited_on": "2026-11-20",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "InsertAnything: Generalizable Contact-Rich Precision Insertion from Simulation to Reality",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "reinforcement-learning",
+      "insertion",
+      "force-feedback",
+      "sim-to-real"
+    ],
+    "aliases": [
+      "InsertAnything"
+    ],
+    "identifiers": {
+      "arxiv": "2609.24511"
+    },
+    "page": "https://arxiv.org/abs/2609.24511",
+    "project": "https://mzhsoul.github.io/InsertAnything/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.24511",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "venue_verification": {
+        "url": "https://arxiv.org/abs/2609.24511",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.24511",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "project": {
+        "url": "https://mzhsoul.github.io/InsertAnything/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "code": {
+        "url": "https://github.com/mzhsoul/InsertAnything",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "구멍 위치에 오차가 있고 끼워맞춤 여유가 작을 때 정렬 실패와 걸림이 발생한다.",
+    "method": "시뮬레이션에서 정렬과 삽입을 나누어 보상하고 손끝 힘을 이용해 접촉 뒤의 수정 동작을 학습한다.",
+    "interface": "목표 자세와 3차원 손끝 힘이 입력이며 정책은 삽입을 위한 움직임을 출력한다.",
+    "evaluation": "저자는 실제 여러 형상에서 최소 공칭 간극 0.02 mm를 다뤘다. ManipulationNet의 20/20은 사람 개입을 허용한 프로토콜이며 다른 실험의 자율 지표와 구별한다.",
+    "role": "위치 오차가 있는 삽입에서 강성 학습에 앞서 대조할 힘 기반 동작 정책이다.",
+    "lineage": "Factory와 IndustReal의 시뮬레이션 기반 조립, FORGE의 힘 탐색을 ContactBench의 정렬 오차와 연결한다.",
+    "question": "같은 위치 오차와 하중 한도에서 손끝 힘을 이용한 동작 수정만으로 고정 경로의 실패가 줄어드는가?",
+    "minimal_experiment": "동일한 초기 오차에서 고정 하강과 힘 조건부 동작을 비교하며 최대 힘과 손을 뗀 뒤 안착을 함께 기록한다.",
+    "verification_questions": "형상별 시행 수, 목표 자세의 취득 방식과 사람 개입 범위",
+    "source_audit": "arXiv 초록과 저자 공개 저장소의 시뮬레이션·실기 진입점을 확인했다. 학회 게재는 확인되지 않았다.",
+    "curation": {
+      "admission_reason": "위치 오차가 있는 삽입에서 강성 학습에 앞서 대조할 힘 기반 동작 정책이다.",
+      "tier_reason": "위치 오차가 있는 삽입에서 강성 학습에 앞서 대조할 힘 기반 동작 정책이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R19 contact baselines and source datasets",
+      "rationale_reviewed_on": "2026-11-19",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2609.24511",
+        "checked_on": "2026-11-19",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "folder": "2026/arXiv/2026_arXiv_InsertAnything-Generalizable-Contact-Rich-Precision-Insert",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": null,
+      "source_audit_note": "arXiv 초록과 저자 공개 저장소의 시뮬레이션·실기 진입점을 확인했다. 학회 게재는 확인되지 않았다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-19",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1253",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_InsertAnything-Generalizable-Contact-Rich-Precision-Insert/04_evaluation.md",
+      "reviewed_on": "2026-11-19",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/mzhsoul/InsertAnything",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-19",
+      "source_note": "2026/arXiv/2026_arXiv_InsertAnything-Generalizable-Contact-Rich-Precision-Insert/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-19",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Tactile-Guided In-Contact Robotic Insertion via Physically Consistent Force-Array Representation Learning",
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "tactile",
+      "force-distribution",
+      "insertion",
+      "diffusion-policy"
+    ],
+    "aliases": [],
+    "identifiers": {
+      "doi": "10.1109/LRA.2026.3734929"
+    },
+    "page": "https://ieeexplore.ieee.org/document/11692602/",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/document/11692602/",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/11692602/",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "preprint": null,
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "journal",
+      "venue": "RA-L",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "ra-l"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "접촉 뒤 시야가 가려지면 커넥터의 작은 정렬 오차를 영상에서 판독하기 어렵다.",
+    "method": "접촉 후 시연에서 힘 분포 표현을 관측하는 diffusion policy를 학습하고 합력·모멘트만 쓰는 경우와 대조한다.",
+    "interface": "접촉 중의 촉각 입력을 삽입 동작으로 바꾼다. 센서 배열은 국소 하중의 분포를 보존한다.",
+    "evaluation": "IEEE 초록은 학습 분포 안에서 합력·모멘트만 쓴 변형이 약간 우세했고, 새 2·3핀과 USB·HDMI 커넥터 전이에서는 분포 표현이 유리했다고 보고한다.",
+    "role": "순합력과 국소 접촉 정보가 다른 판단을 주는 현재 삽입 연구의 실물 비교 논문이다.",
+    "lineage": "ContactBench의 하중 계측과 비교할 수 있다. 센서 측정값과 시뮬레이터 접촉점 배열에는 서로 다른 관측 권한이 있다.",
+    "question": "같은 합력에서도 접촉 위치가 다른 사례에서 분포 표현이 정렬 수정에 추가 정보를 주는가?",
+    "minimal_experiment": "커넥터별로 하중을 맞춘 뒤 합력·분포 입력의 성공과 최대 하중을 분리해 비교한다.",
+    "verification_questions": "센서 교정, 커넥터별 시행 수, 실물 분포 신호를 재현할 수 있는 범위",
+    "source_audit": "IEEE 공식 초록 색인과 Crossref의 IEEE 기탁 DOI·2026년 11월 저널 서지를 확인했다. 공개 코드의 정확한 저장소는 확인되지 않았다.",
+    "curation": {
+      "admission_reason": "순합력과 국소 접촉 정보가 다른 판단을 주는 현재 삽입 연구의 실물 비교 논문이다.",
+      "tier_reason": "순합력과 국소 접촉 정보가 다른 판단을 주는 현재 삽입 연구의 실물 비교 논문이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R19 contact baselines and source datasets",
+      "rationale_reviewed_on": "2026-11-19",
+      "scope_status": "active",
+      "roles": [
+        "method"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://ieeexplore.ieee.org/document/11692602/",
+        "checked_on": "2026-11-19",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_group": "Contact-rich, deformable, force, and dexterous manipulation",
+    "folder": "2026/RA-L/2026_RA-L_Tactile-Guided-In-Contact-Robotic-Insertion-via-Physically",
+    "venue_as_recorded": "RA-L",
+    "venue_canonical": "RA-L",
+    "paper_type": "method",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": null,
+      "source_audit_note": "IEEE 공식 초록 색인과 Crossref의 IEEE 기탁 DOI·2026년 11월 저널 서지를 확인했다. 공개 코드의 정확한 저장소는 확인되지 않았다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-19",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1254",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RA-L/2026_RA-L_Tactile-Guided-In-Contact-Robotic-Insertion-via-Physically/04_evaluation.md",
+      "reviewed_on": "2026-11-19",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-19",
+      "source_note": "2026/RA-L/2026_RA-L_Tactile-Guided-In-Contact-Robotic-Insertion-via-Physically/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-19",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "LADDER: A Long-Horizon Robot Manipulation Benchmark",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Benchmarks and Datasets",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "Benchmark",
+      "long-horizon",
+      "manipulation",
+      "subgoals"
+    ],
+    "aliases": [
+      "LADDER"
+    ],
+    "identifiers": {
+      "arxiv": "2610.18053"
+    },
+    "page": "https://arxiv.org/abs/2610.18053",
+    "project": "https://ladder.insait.ai/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.18053",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "venue_verification": {
+        "url": "https://arxiv.org/abs/2610.18053",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.18053",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "project": {
+        "url": "https://ladder.insait.ai/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "code": {
+        "url": "https://github.com/insait-institute/ladder",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "장면과 물체까지 바뀌면 긴 작업에서 정책이 실패한 이유를 단계 수의 증가와 분리하기 어렵다.",
+    "method": "같은 환경에서 하위 목표 수를 1–10개로 바꾸고 직접 지시, 하위 지시, 도구 선택을 비교한다.",
+    "interface": "언어 지시와 관측을 받는 실행 정책 또는 상위 조정기가 하위 동작·도구를 선택한다.",
+    "evaluation": "저자는 3개 시뮬레이션 평가군, 145과제, 시스템당 2,024회와 두 로봇 구성의 실물 실험을 보고했다. 시스템별 제어·추론 예산을 함께 봐야 한다.",
+    "role": "긴 조작의 계획 오류와 실행 오류를 추적할 수 있는 공개 실행 기록이 있어 일반 정책 비교에 직접 필요하다.",
+    "lineage": "RoboMME가 기억 의존성을 평가하는 축에 하위 목표 수와 실행 구조를 통제하는 축을 추가한다.",
+    "question": "첫 목표 뒤 과제가 실패할 때 다음 목표를 선택하기 이전과 실제 조작 이후의 실패 비율은 어떻게 다른가?",
+    "minimal_experiment": "동일 과제·정책·남은 시간을 맞춘 실행 쌍에서 단계별 완료와 다음 물체의 실제 접촉을 대조한다.",
+    "verification_questions": "시스템별 사용 가능한 성공 판정, 재시도 권한과 평가 예산",
+    "source_audit": "arXiv 초록, 저자 코드와 평가 에피소드의 공개 배포를 확인했다. 학회 게재는 확인되지 않았다.",
+    "curation": {
+      "admission_reason": "긴 조작의 계획 오류와 실행 오류를 추적할 수 있는 공개 실행 기록이 있어 일반 정책 비교에 직접 필요하다.",
+      "tier_reason": "긴 조작의 계획 오류와 실행 오류를 추적할 수 있는 공개 실행 기록이 있어 일반 정책 비교에 직접 필요하다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R19 contact baselines and source datasets",
+      "rationale_reviewed_on": "2026-11-19",
+      "scope_status": "active",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2610.18053",
+        "checked_on": "2026-11-19",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "admission_group": "VLA, cross-embodiment, and long-horizon planning",
+    "folder": "2026/arXiv/2026_arXiv_LADDER-A-Long-Horizon-Robot-Manipulation-Benchmark",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "benchmark_or_dataset",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": null,
+      "source_audit_note": "arXiv 초록, 저자 코드와 평가 에피소드의 공개 배포를 확인했다. 학회 게재는 확인되지 않았다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-19",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1255",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_LADDER-A-Long-Horizon-Robot-Manipulation-Benchmark/04_evaluation.md",
+      "reviewed_on": "2026-11-19",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/insait-institute/ladder",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "released",
+        "source": null,
+        "evidence": "existing manifest artifact status preserved"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-19",
+      "source_note": "2026/arXiv/2026_arXiv_LADDER-A-Long-Horizon-Robot-Manipulation-Benchmark/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-19",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "PoseIt: A Visual-Tactile Dataset of Holding Poses for Grasp Stability Analysis",
+    "year": 2022,
+    "venue": "IROS",
+    "category": "Benchmarks and Datasets",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "robot-data",
+      "tactile",
+      "grasp-stability",
+      "holding-pose"
+    ],
+    "aliases": [
+      "PoseIt"
+    ],
+    "identifiers": {
+      "arxiv": "2209.05022",
+      "doi": "10.1109/IROS47612.2022.9981562"
+    },
+    "page": "https://ieeexplore.ieee.org/document/9981562/",
+    "project": "https://publish.illinois.edu/robotouch/poseit-a-visual-tactile-dataset-of-holding-poses-for-grasp-stability-analysis/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/document/9981562/",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/9981562/",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2209.05022",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "project": {
+        "url": "https://publish.illinois.edu/robotouch/poseit-a-visual-tactile-dataset-of-holding-poses-for-grasp-stability-analysis/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "code": {
+        "url": "https://github.com/Robo-Touch/PoseIt",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "IROS",
+      "year": 2022,
+      "venue_year": 2022,
+      "presentation": "unknown",
+      "venue_id": "iros"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "REFERENCE",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "처음 들어 올렸을 때의 안정성이 팔을 다른 자세로 옮긴 뒤에도 유지되는지 알아야 한다.",
+    "method": "집기·자세 이동·흔들기 전 과정의 시각과 촉각 관측을 수집하고 다중 모달 시계열 분류기를 비교한다.",
+    "interface": "RGB-D, 손가락 촉각, 힘·토크와 로봇 상태가 자세별 안정성 예측의 입력이다.",
+    "evaluation": "저자 자료는 26개 물체의 실물 기록을 제공하며 초록은 미관측 물체와 자세에 대한 예측을 평가한다. 자세 이동 중 실패와 마지막 흔들기 결과는 별개다.",
+    "role": "들기 이후 실패가 발생한 단계를 공개 기록으로 재확인할 때 쓰는 데이터 기준이다.",
+    "lineage": "정적 grasp 판정에서 작업 자세를 바꾼 후의 안정성 평가로 연결한다.",
+    "question": "들기에서 안정했던 관측만 골랐을 때 이동 자세가 이후 실패를 추가로 예측하는가?",
+    "minimal_experiment": "물체를 분리한 검증에서 이동 중 실패와 흔들기 실패를 나누고 같은 힘 예산의 단순 대조를 포함한다.",
+    "verification_questions": "물체 분할, 파지 명령이 변경된 시점과 단계별 실패 라벨의 의미",
+    "source_audit": "IROS 논문의 IEEE 기탁 DOI, 저자 소속 대학의 서지, arXiv 초록과 데이터 README를 확인했다.",
+    "curation": {
+      "admission_reason": "들기 이후 실패가 발생한 단계를 공개 기록으로 재확인할 때 쓰는 데이터 기준이다.",
+      "tier_reason": "들기 이후 실패가 발생한 단계를 공개 기록으로 재확인할 때 쓰는 데이터 기준이다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R19 contact baselines and source datasets",
+      "rationale_reviewed_on": "2026-11-19",
+      "scope_status": "adjacent",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://ieeexplore.ieee.org/document/9981562/",
+        "checked_on": "2026-11-19",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2022/IROS/2022_IROS_PoseIt-A-Visual-Tactile-Dataset-of-Holding-Poses-for-Grasp",
+    "venue_as_recorded": "IROS",
+    "venue_canonical": "IROS",
+    "paper_type": "benchmark_or_dataset",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": null,
+      "source_audit_note": "IROS 논문의 IEEE 기탁 DOI, 저자 소속 대학의 서지, arXiv 초록과 데이터 README를 확인했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-19",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1256",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2022/IROS/2022_IROS_PoseIt-A-Visual-Tactile-Dataset-of-Holding-Poses-for-Grasp/04_evaluation.md",
+      "reviewed_on": "2026-11-19",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/Robo-Touch/PoseIt",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "released",
+        "source": null,
+        "evidence": "existing manifest artifact status preserved"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-19",
+      "source_note": "2022/IROS/2022_IROS_PoseIt-A-Visual-Tactile-Dataset-of-Holding-Poses-for-Grasp/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-19",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Searching in Space and Time: Unified Memory-Action Loops for Open-World Object Retrieval",
+    "year": 2026,
+    "venue": "ICRA",
+    "category": "Embodied Navigation and Mapping",
+    "primary_track": "Planning and control",
+    "tags": [
+      "mobile-manipulation",
+      "object-search",
+      "spatiotemporal-memory",
+      "Benchmark"
+    ],
+    "aliases": [
+      "STAR",
+      "STARBench"
+    ],
+    "identifiers": {
+      "arxiv": "2511.14004",
+      "doi": "10.1109/ICRA57385.2026.11696368"
+    },
+    "page": "https://ieeexplore.ieee.org/document/11696368/",
+    "project": "https://amrl.cs.utexas.edu/STAR/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/document/11696368/",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/document/11696368/",
+        "kind": "official_publication",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2511.14004",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "project": {
+        "url": "https://amrl.cs.utexas.edu/STAR/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "code": {
+        "url": "https://github.com/ut-amrl/STARBench",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "paper_pdf": null
+    },
+    "publication": {
+      "status": "peer_reviewed",
+      "kind": "conference",
+      "venue": "ICRA",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "icra"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "REFERENCE",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "동적 환경에서 과거 위치나 속성으로 지칭한 물체를 현재 찾아야 한다.",
+    "method": "장기 기억과 작업 기억을 이용해 과거 기록 조회와 물리적 탐색 중 다음 행동을 선택한다.",
+    "interface": "공간·시간 표현이 포함된 지시와 관측 이력으로 기억 조회·탐색 행동을 선택한다.",
+    "evaluation": "저자는 STARBench와 Tiago 실기에서 비교했다. 프로젝트의 360개 과제는 3개 아파트와 3개 과제군을 포함한다.",
+    "role": "기억 조회와 로봇의 실제 이동을 구별하는 공개 탐색 프로토콜로 참조한다.",
+    "lineage": "PARTNR의 협업 기록과 달리 시간·속성으로 지칭한 대상을 찾는 요청을 통제한다.",
+    "question": "이전 위치가 달라진 조건에서 기억 조회가 가까운 후보부터 방문하는 방법의 이동 비용을 줄이는가?",
+    "minimal_experiment": "동일 초기 위치와 후보 지도를 사용하고 이동·조회 비용과 최초 회수 성공을 기록한다.",
+    "verification_questions": "실물과 시뮬레이션의 과제 수, 기억 관측 주체, 대상 이동 빈도",
+    "source_audit": "ICRA 2026 IEEE 기탁 DOI와 저자 소속 연구실의 STARBench 설명, arXiv 초록을 확인했다. 코드 링크는 벤치마크 배포본이다.",
+    "curation": {
+      "admission_reason": "기억 조회와 로봇의 실제 이동을 구별하는 공개 탐색 프로토콜로 참조한다.",
+      "tier_reason": "기억 조회와 로봇의 실제 이동을 구별하는 공개 탐색 프로토콜로 참조한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R19 contact baselines and source datasets",
+      "rationale_reviewed_on": "2026-11-19",
+      "scope_status": "adjacent",
+      "roles": [
+        "system",
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://ieeexplore.ieee.org/document/11696368/",
+        "checked_on": "2026-11-19",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/ICRA/2026_ICRA_Searching-in-Space-and-Time-Unified-Memory-Action-Loops-fo",
+    "venue_as_recorded": "ICRA",
+    "venue_canonical": "ICRA",
+    "paper_type": "benchmark_or_dataset",
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": null,
+      "source_audit_note": "ICRA 2026 IEEE 기탁 DOI와 저자 소속 연구실의 STARBench 설명, arXiv 초록을 확인했다. 코드 링크는 벤치마크 배포본이다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-19",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1257",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/ICRA/2026_ICRA_Searching-in-Space-and-Time-Unified-Memory-Action-Loops-fo/04_evaluation.md",
+      "reviewed_on": "2026-11-19",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/ut-amrl/STARBench",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "released",
+        "source": null,
+        "evidence": "existing manifest artifact status preserved"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-19",
+      "source_note": "2026/ICRA/2026_ICRA_Searching-in-Space-and-Time-Unified-Memory-Action-Loops-fo/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-19",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Exploring the Limits of Combinatorial Generalization in Embodied Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Benchmarks and Datasets",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "Benchmark",
+      "skill-composition",
+      "long-horizon",
+      "initialization"
+    ],
+    "aliases": [
+      "RoboCombine"
+    ],
+    "identifiers": {
+      "arxiv": "2610.15425"
+    },
+    "page": "https://arxiv.org/abs/2610.15425",
+    "project": "https://github.com/AutoLab-SAI-SJTU/RoboCombine",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.15425",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "venue_verification": {
+        "url": "https://arxiv.org/abs/2610.15425",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.15425",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-19"
+      },
+      "code": {
+        "url": "https://github.com/AutoLab-SAI-SJTU/RoboCombine",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-19"
+      },
+      "paper_pdf": null,
+      "project": {
+        "url": "https://github.com/AutoLab-SAI-SJTU/RoboCombine",
+        "kind": "code"
+      }
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "REFERENCE",
+    "relations": [],
+    "note_format": "abstract_analysis_v1",
+    "evidence": "ABSTRACT_CHECKED",
+    "problem": "독립적으로 수행할 수 있는 동작도 앞 동작이 남긴 상태에서 바로 이어 수행하기 어렵다.",
+    "method": "RoboCombine은 단계 순서에 맞는 성공과 단계 간 전환을 측정한다. HSE는 계획·전환·행동을 나누며 PRTI는 개별 기술의 시작 상태를 확장한다.",
+    "interface": "전체 지시 또는 하위 지시와 전환 신호가 실행 정책에 전달된다. 정답 전환을 제공하는 평가 트랙이 따로 있다.",
+    "evaluation": "공개 저장소의 19개 조합 과제와 세 트랙을 확인했다. 초록에 보고된 PRTI 비교는 정답 전환 시각을 준 조건이다.",
+    "role": "첫 조작 이후 실패를 해석할 때 하위 지시와 인계 자세를 통제한 직접 선행으로 참조한다.",
+    "lineage": "LADDER의 단계 수별 평가와 함께 보면 지시 분할과 앞 단계가 남긴 물리 상태의 영향을 구별할 수 있다.",
+    "question": "다음 지시와 전환 시각을 고정했을 때 인계 자세 분포를 바꾸는 것만으로 순서 성공이 달라지는가?",
+    "minimal_experiment": "같은 두 기술에서 정답 전환과 동일 정책을 고정하고 앞 단계가 남긴 자세와 표준 시작 자세를 대조한다.",
+    "verification_questions": "각 트랙의 정답 신호, 단계별 분모, 자세 초기화 비용",
+    "source_audit": "arXiv 초록과 저자 공개 코드의 19개 과제·세 트랙을 확인했다. 저자 저장소의 NeurIPS 2026 표기는 공식 목록의 동일 논문과 확인될 때 갱신한다.",
+    "curation": {
+      "admission_reason": "첫 조작 이후 실패를 해석할 때 하위 지시와 인계 자세를 통제한 직접 선행으로 참조한다.",
+      "tier_reason": "첫 조작 이후 실패를 해석할 때 하위 지시와 인계 자세를 통제한 직접 선행으로 참조한다.",
+      "rationale_status": "recorded",
+      "rationale_basis": "REG-R19 contact baselines and source datasets",
+      "rationale_reviewed_on": "2026-11-19",
+      "scope_status": "adjacent",
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "role_basis": "manual admission review",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2610.15425",
+        "checked_on": "2026-11-19",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "folder": "2026/arXiv/2026_arXiv_Exploring-the-Limits-of-Combinatorial-Generalization-in-Em",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "benchmark_or_dataset",
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": null,
+      "source_audit_note": "arXiv 초록과 저자 공개 코드의 19개 과제·세 트랙을 확인했다. 저자 저장소의 NeurIPS 2026 표기는 공식 목록의 동일 논문과 확인될 때 갱신한다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-19",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1258",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_Exploring-the-Limits-of-Combinatorial-Generalization-in-Em/04_evaluation.md",
+      "reviewed_on": "2026-11-19",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/AutoLab-SAI-SJTU/RoboCombine",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-19",
+      "source_note": "2026/arXiv/2026_arXiv_Exploring-the-Limits-of-Combinatorial-Generalization-in-Em/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-19",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "See Selectively, Act Adaptively: Dual-Level Structural Decomposition for Bimanual Robot Manipulation",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "Vision-Language-Action",
+      "bimanual-manipulation",
+      "mixture-of-experts",
+      "imitation-learning"
+    ],
+    "identifiers": {
+      "arxiv": "2606.13279"
+    },
+    "page": "https://arxiv.org/abs/2606.13279",
+    "project": "https://choiyoonji.github.io/See-Selectively-Act-Adaptively/",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2606.13279",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-20"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2606.13279",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-20"
+      },
+      "project": {
+        "url": "https://choiyoonji.github.io/See-Selectively-Act-Adaptively/",
+        "kind": "author_project",
+        "scope": "project_landing",
+        "verified_on": "2026-11-20"
+      },
+      "paper_pdf": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "NEXT",
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-20 · arXiv v2 §§III–IV, tables I–II and author project. The coauthor lists the manuscript under review. No user reading status was assigned.",
+    "problem": "양팔이 다른 물체에 접근하는 단계와 한 물체를 함께 다루는 단계에서 필요한 팔 간 의존성과 손목 영상이 바뀐다.",
+    "method": "한 개의 양팔 전문가와 양쪽 단일 팔 전문가의 flow 출력을 관측에 따라 전환한다. 외부 뷰와 언어·상태가 모드를 선택하고 손목 뷰 가중치도 예측한다.",
+    "interface": "π₀.₅에 외부·양 손목 RGB와 지시·상태를 공급한다. 14차원 양팔 명령을 H=50 chunk로 생성하고 한 chunk 안에서는 선택 모드를 유지한다.",
+    "assumptions": "각 작업 시연 중 10%에 구간별 협조·독립과 손목 뷰 관련성을 사람이 표시한다. 양손의 상태·속도로 나머지 시연에 라벨을 전파한다.",
+    "evaluation": "RoboTwin 2.0 6과제와 실물 3과제를 평가했다. 작업당 시뮬레이션 시연 50개·평가 rollout 100회, 실물 시연 40개·평가 10회다. 시뮬레이션 Easy/Hard 평균은 81.2/58.0%, 동일 기반 단일 정책은 61.5/22.3%다.",
+    "limitations": "작업별 시연과 수동 모드 표지가 필요하다. 전체 성과에는 영상 선택과 행동 경로가 함께 작용한다. 온라인 탐색의 상호작용 효율은 이 평가의 지표 밖이다.",
+    "role": "양팔의 협조·독립 모드를 VLA가 정하는 선행을 고정해, 후보 ②의 남는 질문을 보상 기반 탐색 공분산의 행동 효과로 좁힌다.",
+    "lineage": "π₀.₅와 RoboTwin 2.0의 양팔 조작, StructRL의 정책 탐색 비교를 잇는다.",
+    "minimal_experiment": "같은 양팔 상태·평균 명령에서 전문가 라우팅과 탐색 공분산의 결합 강도를 따로 바꾸고, 공동 파지 유지와 독립 이동의 진전을 비교한다.",
+    "question": "동일 평균 행동에서 보상으로 조절한 양팔 탐색 공분산이 시연 라벨 라우팅이나 손 상태 규칙보다 더 많은 유효 접촉을 만드는가?",
+    "folder": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "relations": [],
+    "curation": {
+      "admission_reason": "시연 라벨로 양팔 협조·독립 경로를 고르는 직접 선행이다. 보상으로 탐색 공분산을 학습하는 후보와 비교한다.",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_status": "recorded",
+      "tier_reason": "시연 라벨로 양팔 협조·독립 경로를 고르는 직접 선행이다. 보상으로 탐색 공분산을 학습하는 후보와 비교한다.",
+      "rationale_reviewed_on": "2026-11-20",
+      "priority_source_check": {
+        "url": "https://arxiv.org/html/2606.13279v2",
+        "checked_on": "2026-11-20",
+        "scope": "official_abstract_or_project; priority review only"
+      },
+      "scope_status": "active"
+    },
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-20",
+      "source_audit_note": "2026-11-20 · arXiv v2 §§III–IV, tables I–II and author project. The coauthor lists the manuscript under review. No user reading status was assigned.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-20",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1259",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "simulation and real-robot manipulation",
+      "settings": [
+        "simulation",
+        "real_robot"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
+        "ablations": "reported",
+        "split_or_generalization": "reported",
+        "trials_or_seeds": "reported",
+        "statistics": "not_recorded",
+        "failure_cases": "reported"
+      },
+      "trial_evidence": [
+        {
+          "count": 100,
+          "unit": "rollout",
+          "text": "| RoboTwin | 100 rollouts |",
+          "source": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        },
+        {
+          "count": 10,
+          "unit": "trial",
+          "text": "| 실물 양팔 시스템 | 10 trials |",
+          "source": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom/04_evaluation.md",
+          "basis": "04_evaluation.md body cue; exact condition remains paper-specific"
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:robotwin",
+          "name": "RoboTwin",
+          "evidence": "cue_only",
+          "source": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom/04_evaluation.md",
+      "reviewed_on": "2026-11-20",
+      "basis": "Author full text v2 §§III–IV, Tables I–II and the linked evaluation note. Task-specific counts retained separately. Catalog matches are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": "https://choiyoonji.github.io/See-Selectively-Act-Adaptively/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "existing manifest artifact status preserved"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "reported",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-20",
+      "source_note": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-20",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "IMPACT-VLA: Interaction-aware Multimodal Propagation Attribution via Counterfactual Trajectories for Vision-Language-Action Policies",
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "VLA and Generalist Robot Policies",
+    "primary_track": "VLA and generalist robot policies",
+    "tags": [
+      "Vision-Language-Action",
+      "robot-manipulation",
+      "counterfactual-evaluation",
+      "interpretability",
+      "closed-loop-control"
+    ],
+    "identifiers": {
+      "arxiv": "2609.15005"
+    },
+    "page": "https://arxiv.org/abs/2609.15005",
+    "project": "not identified",
+    "pdf": "",
+    "sources": {
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.15005",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.15005",
+        "kind": "arxiv",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-24"
+      },
+      "paper_pdf": null,
+      "project": null,
+      "code": null
+    },
+    "publication": {
+      "status": "preprint",
+      "kind": "preprint",
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "admission_tier": "REFERENCE",
+    "evidence": "FULL_TEXT_CHECKED",
+    "source_audit": "2026-11-24 · arXiv v1 §§III–IV, Tables I, III and VI. Paper-specific public code not identified. No local reproduction or user reading-status assignment.",
+    "problem": "축약한 행동 변화량만 보면 특정 시점의 입력이 최종 조작 성공을 바꿨는지 알기 어렵다.",
+    "method": "성공 궤적의 전환점을 정책 질의 경계에 맞춘다. 구간과 모달리티를 짝지어 입력을 대체하고, 폐루프 재실행의 성공으로 Shapley 기여와 구간 간 상호작용을 추정한다.",
+    "interface": "고정 OpenVLA-OFT에 외부·손목 RGB, 고유감각, 언어를 제공한다. 8개 행동 단위의 질의 경계에 맞춰 지정 입력만 대체하며, 후속 관측은 각 경로에서 새로 얻는다.",
+    "assumptions": "과제별로 성공 기준 경로가 필요하다. 이후 경로에서도 이 경로가 정한 시간 경계를 고정한다.",
+    "evaluation": "LIBERO Spatial·Object·Goal 각 10과제에서 입력 중요도 순으로 제거·복원했다. 제거 부분 AUC는 저자 방법 0.810, 즉시 명령 변화를 사용한 기준 0.670이었다(Table III).",
+    "limitations": "선정한 정책과 대체 입력 분포에 의존한다. 단계 경계는 참조 궤적에서 얻으므로 개입 뒤 지연이 경로 편차에 섞일 수 있다. RL·SFT 학습 계보 대조는 이 비교의 대상 밖이다.",
+    "role": "시각 단서의 국소적 명령 변화와 최종 성공 차이를 폐루프에서 비교한 직접 선행이다. 종료한 WidowX 후보의 독립 논문 기여를 심사하거나 같은 평가를 재사용할 때 찾는 문헌이다.",
+    "lineage": "LIBERO와 OpenVLA-OFT의 정책 질의에 구간별 입력 개입을 더한다. RL4VLA의 물체 이동·테이블 교체 진단과 비교한다.",
+    "minimal_experiment": "한 상태에서 과제 관련 물체 영상과 배경을 따로 바꾸고 첫 명령 한 번만 실행한 뒤 파지와 손을 뗀 배치를 기록한다.",
+    "question": "과제 단계와 센서 단위의 중요도에서 더 나아가, 물리 사건에 대한 국소 영상 개입이 어느 행동 변경을 거쳐 다른 과제에서도 회복을 개선하는지 예측할 수 있는가?",
+    "folder": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "paper_type": "method",
+    "relations": [],
+    "curation": {
+      "admission_reason": "시각 피드백의 단계별 기여를 폐루프에서 검증할 때 사용하는 평가 비교법이다.",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent",
+      "tier_reason": "시각 피드백의 단계별 기여를 폐루프에서 검증할 때 사용하는 평가 비교법이다.",
+      "rationale_reviewed_on": "2026-11-24",
+      "priority_source_check": {
+        "url": "https://arxiv.org/abs/2609.15005",
+        "checked_on": "2026-11-24",
+        "scope": "official_abstract_or_project; priority review only"
+      }
+    },
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-24",
+      "source_audit_note": "2026-11-24 · arXiv v1 §§III–IV, Tables I, III and VI. Paper-specific public code not identified. No local reproduction or user reading-status assignment.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-24",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      }
+    },
+    "paper_id": "pr-1260",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "Simulation",
+      "settings": [
+        "simulation"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "reported",
+        "metrics": "reported",
+        "baselines": "reported",
+        "ablations": "reported",
+        "split_or_generalization": "reported",
+        "trials_or_seeds": "reported",
+        "statistics": "reported",
+        "failure_cases": "reported"
+      },
+      "trial_evidence": [
+        {
+          "count": 32,
+          "unit": "seed",
+          "text": "Trajectory propagation and recovery only: 32 paired rollout seeds per condition (arXiv v1 §IV-A).",
+          "source": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md",
+          "basis": "Full-text protocol for this comparison. Other comparisons use separate budgets."
+        }
+      ],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:libero",
+          "name": "LIBERO",
+          "evidence": "cue_only",
+          "source": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [
+        {
+          "resource_id": "metric:auc",
+          "name": "AUC",
+          "evidence": "cue_only",
+          "source": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md"
+        }
+      ],
+      "source_note": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md",
+      "reviewed_on": "2026-11-24",
+      "basis": "arXiv v1 §§III–IV, Tables I, III and VI checked directly and linked from 04_evaluation.md. Catalog links remain cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "existing manifest artifact status preserved"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "reported",
+        "evidence": "LIBERO simulation, arXiv v1 §IV-A"
+      },
+      "run_conditions": {
+        "status": "reported",
+        "evidence": "Fixed reference seed and paired recovery rollout seeds, arXiv v1 §IV-A"
+      },
+      "reviewed_on": "2026-11-24",
+      "source_note": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-24",
       "audit_scope": "all_registry",
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     }

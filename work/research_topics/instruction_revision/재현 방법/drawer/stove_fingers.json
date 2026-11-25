@@ -1,0 +1,17 @@
+{
+  "question": "Does the fixed return to the pre-drawer arm posture still improve stove activation when an equal-cost stationary preparation holds both finger joints at their measured drawer-end positions?",
+  "layout": 3,
+  "arms": ["drawer-1-3-k0", "drawer-2-3-k0"],
+  "donor_physics": ["ac96db54e7fd32c01d2750a3cb5e54d28301318122d57ae48bc38e9701e7d7a1", "828562e4cd1495a2988cf57eacd8e9d6ef0d6800ea707e96bbff03a6dd8d50e7"],
+  "parent": "results/2026-11-25-stove-layouts/study.zip",
+  "parent_sha256": "6c0f1f597f84345dc319d693d4aefa2fcec0c9688f010200ef7e18656edec1ea",
+  "donors": "drawer/stove_finger_donors.json",
+  "donors_sha256": "32a125dc126c5e6302beb9f1abfa0534cb4bc901e86c93b2af32c719f0395ebc",
+  "modes": ["immediate", "wait", "finger_hold", "pose"],
+  "blocks": [1, 2],
+  "pairing": "Run all four conditions afresh in each independent model load, for both exact endpoint hashes and all eight original stove RNG streams, with a rotating condition order reversed in block 2. Use the same checkpoint, prompt, key offsets, controller, budgets, scene and scoring as drawer/stove_layouts.json. Repetitions of a state and seed are not independent physical samples.",
+  "hold": "During the ordinary 60-step wait, set each native Panda position actuator target to its measured starting finger coordinate. Initialize the native gripper command accumulator to those two normalized targets and supply zero gripper increments. Retain the native position servos, contacts and arm controller. Resume the ordinary action interface at handoff.",
+  "physical_gate": "Before any stove inference, reproduce all three original preparations on both endpoints. The new hold must satisfy the original stationary posture, scene and target criteria plus the 2.5 mm finger tolerance at every one of its 60 control samples. Report contact retention separately. If either hold fails, report the physical failure without claiming a matched behavioural test.",
+  "outcomes": "From the drawer endpoint including preparation, score official stove-on and drawer-open at 160 and 300 controls, first moving-button contact, and first on. Summarize first-contact time only among paths reaching the button. Also score equal policy exposure, and report paired wins/losses by endpoint and model reload.",
+  "decision": "Support the posture-return advantage over the corrected wait on these two endpoints if both physical gates pass and paired 15-second gains exceed losses in every endpoint by reload cell. Report 8-second comparisons, the two original control arms and possible block disagreement separately. These endpoints share one fixture layout."
+}

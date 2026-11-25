@@ -1,30 +1,10 @@
 # Tune to Learn: How Controller Gains Shape Robot Policy Learning
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED` — 초록·명시한 project 근거. 전체 본문·구현 정독 및 사용자 읽기 완료가 아니다.
+> Evidence maturity: `FULL_TEXT_CHECKED` — RSS 본문과 arXiv v1의 지정 절·부록, 저자 공개 자료 대조 (2026-11-19).
 
-## Problem and Bottleneck
+## 문제와 가정
 
-Position controller gain 선택이 로봇 정책 학습에 미치는 영향을 묻는다.
+같은 동작 오차에 대한 모터 토크는 비례·감쇠 이득에 따라 달라진다. 그런데 상태 피드백을 받는 정책은 다음 목표 자체를 바꿀 수 있다. 저자들은 외력에 대한 자세 유지 보상과 부드럽게 양보하는 보상을 달리해 이 두 효과를 분리했다. 부록의 힘–변위 측정에서는 구동 강성이 32배 낮은 조건에서도 학습한 정책의 작업 수준 강성이 약 5배 높았다. 서로 다른 목적함수로 만든 예시이므로 이를 같은 보상에서 이득 하나만 바꾼 효과로 환산할 수 없다. [본문 §III](https://arxiv.org/html/2604.02523v1#S3) · [부록의 유효 강성 측정](https://arxiv.org/html/2604.02523v1#A1.SS2)
 
-## Formulation and Robotics Loop
-
-정책의 목표 위치 → gain이 정한 controller → 로봇 상태 → 정책 feedback.
-
-정책과 제어 동역학의 상호작용을 바탕으로 BC·RL·sim-to-real에서 gain regime을 비교한다.
-
-## Assumptions to Verify
-
-gain 단위·controller rate·policy 반응·hyperparameter 예산·sim-to-real 차이.
-
-위 항목은 연구자의 확인 질문이며 논문이 명시한 가정·실패로 확정한 것이 아니다.
-
-## Prior Work and Why It Matters
-
-Impedance control → gain별 learnability 분석 → CompVLA·CONTACT-RL 공정 비교.
-
-접촉 VLA RL의 이득을 baseline gain 튜닝과 분리해야 함을 보이는 직접 선행이다.
-
-## Evidence Boundary
-
-[공식 paper/abstract](https://www.roboticsproceedings.org/rss22/p139.html). RSS의 Shape 제목을 사용하고 저자 페이지의 Affect 제목은 alias로 연결한다. Workshop award를 RSS 수상으로 기록하지 않는다.
+지시·목표에 따른 정책 반응, 목표 위치, 관절 제어기, 접촉, 다음 관측이 한 루프를 이룬다. 같은 궤적을 따라갈 때 어떤 이득이 시연의 위치 목표를 모방하기 쉽게 하는지와, 정책이 스스로 수집한 경험으로 어떤 행동을 찾을 수 있는지는 별도 질문이다. [실험 설계](https://arxiv.org/html/2604.02523v1#S4)

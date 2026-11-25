@@ -1,0 +1,73 @@
+{
+  "id": "REVISION-R1-MENTION",
+  "date": "2026-11-24",
+  "case": "R1",
+  "base_protocol": "ATOMIC_CONTROL.json",
+  "policy": "pi05_libero",
+  "policy_rng_seed": 0,
+  "python_hash_seed": 0,
+  "scene_seed": 7,
+  "calibration_seed": 23,
+  "warmup_controls": 10,
+  "horizon": 300,
+  "switch": 2,
+  "replan_controls": 5,
+  "repetitions": 2,
+  "source_prompt": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+  "goal_key": "on_akita_black_bowl_1_wooden_cabinet_1_top_side",
+  "arms": {
+    "B": "Put the bowl on top of the cabinet. The wine bottle is also visible in the current scene.",
+    "T": "Put the bowl on top of the cabinet. The table surface is also visible in the current scene."
+  },
+  "protected_body": "wine_bottle_1",
+  "calibration": {
+    "translation_m": [
+      0.01,
+      0,
+      0
+    ],
+    "world_rotation_axis": [
+      1,
+      2,
+      3
+    ],
+    "rotation_degrees": 5,
+    "run_order": [
+      "fit_seed23",
+      "check_seed7"
+    ],
+    "rule": "After 10 warmup controls, compare 300 zero-control states to t0. Use seed 23 only to fit, using the midpoint of its maximum zero-control drift and the measured pure 10 mm or 5 degree positive for each channel. Check seed 7 with the same frozen thresholds, verify single-channel positives and quaternion sign reversal. Fail if there is no separating threshold. Perturb only the calibration scene. Freeze before running either policy branch."
+  },
+  "measurement": "Sample after each control. From a copy of current qpos, run native forward kinematics in separate MjData. Archive world position, scalar-first quaternion, rotation matrix and bottle free-joint pose. Score translation norm and shortest quaternion angle to the original t0, never recenter at the revision. Use an independent rotation-matrix angle and native geometry checks. Also record bottle-to-robot (all robot/gripper geoms) and bottle-to-bowl contact pairs at each sampled boundary.",
+  "design": "Four new development trajectories, B then T in repeat 1, B then T in repeat 2. Fresh server and simulator per trajectory. Reuse the archived O (constraint clause) and A (goal alone) as references, validate the checkpoint, original bottle constraint-bearing prefix, observations, first actions, and calibrated thresholds across all eight paths. The new neutral clauses differ only in the referent. Case-sensitive native tokenizer matched to O before rollout; inspect token IDs and verify every actual query without truncation.",
+  "score": "Primary: native bowl-on-cabinet at tick 300 AND bottle pose within archived translation/rotation limits for the entire period from original t0. Also score first native placement, first 5 consecutive goal + bowl-gripper-clear ticks, first bottle violation and its relation to released placement, first direct robot/bottle contact. Describe robot EEF-to-bottle-origin distance at policy query boundaries after released placement as a distance measure only.",
+  "decision": "Compare new B versus T on the exact same qualifying prefix. If B alone violates after release in both repeats, the selected neutral bottle mention is sufficient for a difference versus this neutral table sentence on this fixture. If both preserve, neutral bottle mention does not reproduce the O outcome here. If both violate, this pair does not single out bottle mention. If only T violates, record the reverse pattern. Separate failure to place, pre-release violation, missing measurements, or divergent endpoint repeats. Compare O/A as historical references; one setting and one pair of phrasings do not establish a population rate or general semantic mechanism. Full replay, outcome repeatability and fixed-action physical replay are distinct.",
+  "reference": {
+    "archive": "results/2026-11-24-r1-bottle",
+    "files": {
+      "calibration.json": "73a7706bd2a85aed6070d298f928939e953077cec0d737ec4501b3de5dd946d9",
+      "O_1.json": "15f790072db587188914ad788cb9ca103d7dcab3788c3ec4ff328cba0df25e8f",
+      "O_2.json": "91d73ed3a0790326f0e2a68f54efc282820bbf4e099dd4acd6b1f94bd0ac0969",
+      "A_1.json": "991088840acd3e891f765be75bea349be263d1056fd91de40f6e1b895b80de44",
+      "A_2.json": "1923db887de23853e74b8ae3d4ce058a4f4b9d4d8e20331d118e516c549d14b3",
+      "verification.json": "ec7407a08c5a742ef85078188763aac2ef478dc6ebabfe173cfc9cd4eb1d4a23"
+    },
+    "conditions": [
+      "O",
+      "A"
+    ]
+  },
+  "words": {
+    "template": "The {} is also visible in the current scene.",
+    "objects": [
+      "wine bottle",
+      "table surface"
+    ],
+    "expected_tokens": 22,
+    "differing_token_indices_zero_based": [
+      11,
+      12
+    ],
+    "selection": "Before any new rollout, take the first natural shared template in the ordered language-only check that gives 22 native tokens for both referents. Same goal sentence and punctuation as R1. No position, action requirement, negation or protected-object instruction in the new clauses. Table surface is a visible nontarget in this scene."
+  }
+}

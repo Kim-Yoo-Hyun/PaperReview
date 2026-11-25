@@ -1,0 +1,45 @@
+{
+  "id": "REVISION-R1-POSE",
+  "date": "2026-11-24",
+  "case": "R1",
+  "base_protocol": "ATOMIC_CONTROL.json",
+  "policy": "pi05_libero",
+  "policy_rng_seed": 0,
+  "python_hash_seed": 0,
+  "scene_seed": 7,
+  "calibration_seed": 23,
+  "warmup_controls": 10,
+  "horizon": 300,
+  "switch": 2,
+  "replan_controls": 5,
+  "repetitions": 2,
+  "source_prompt": "Put the bowl on the plate. Keep the wine bottle at its current position and orientation.",
+  "goal_key": "on_akita_black_bowl_1_wooden_cabinet_1_top_side",
+  "arms": {
+    "O": "Put the bowl on top of the cabinet. Keep the wine bottle at its original position and orientation.",
+    "A": "Put the bowl on top of the cabinet."
+  },
+  "protected_body": "wine_bottle_1",
+  "calibration": {
+    "translation_m": [
+      0.01,
+      0,
+      0
+    ],
+    "world_rotation_axis": [
+      1,
+      2,
+      3
+    ],
+    "rotation_degrees": 5,
+    "run_order": [
+      "fit_seed23",
+      "check_seed7"
+    ],
+    "rule": "After 10 warmup controls, compare 300 zero-control states to t0. Use seed 23 only to fit, using the midpoint of its maximum zero-control drift and the measured pure 10 mm or 5 degree positive for each channel. Check seed 7 with the same frozen thresholds, verify single-channel positives and quaternion sign reversal. Fail if there is no separating threshold. Perturb only the calibration scene. Freeze before running either policy branch."
+  },
+  "measurement": "Sample after each control. From a copy of current qpos, run native forward kinematics in separate MjData. Archive world position, scalar-first quaternion, rotation matrix and bottle free-joint pose. Score translation norm and shortest quaternion angle to the original t0, never recenter at the revision. Use an independent rotation-matrix angle and native geometry checks. Also record bottle-to-robot (all robot/gripper geoms) and bottle-to-bowl contact pairs at each sampled boundary.",
+  "design": "One natural ReSteer seed, independent policy/server/sim restart per arm and repetition. Run O then A twice. Both execute two controls of the identical constraint-bearing source, discard remaining queue and requery. Goal sentence including punctuation identical after revision, only O appends the constraint. Same latest camera pair, proprioception, replan interval, RNG key and fixed horizon as R8. Verify tokenization without truncation. No oracle early termination.",
+  "score": "Check every action's pre- and post-state. Prefix owns actions 1..2, suffix owns actions 3..300; s2 belongs to the last prefix post-state and the first suffix pre-state. Missing measurements are unknown. Both arms are evaluated against the retained constraint; primary outcome is native cabinet On at 300 plus bottle compliance throughout on a pre-eligible shared prefix. Report max translation/rotation, first violation and touched intervals, native goal timing, final five ticks of bowl release separately.",
+  "decision": "If both arms comply without measured bottle interaction, this layout supplies low evidence of constraint use regardless of action divergence. If O improves joint goal and compliance versus A, report only a paired development observation; if either misses the goal with the bottle protected, separate manipulation effects from violations. An unmatched or pre-violating prefix, invalid observer/tokens or discordant replay does not support an effect. No semantic-updater or policy training."
+}

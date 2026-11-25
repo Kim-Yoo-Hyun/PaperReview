@@ -42,7 +42,7 @@ CoRL 2026은 공식 목록에서 제목과 OpenReview ID를 확인했다. 초록
 
 ## 검증 원장에서 찾은 연구 공백
 
-2026-11-19 기준. 아래는 실험실 장비를 구체화하기 전에 제안했던 다섯 질문의 조사 근거다. 장비 조건을 반영한 [재판정·새 검색](#lab-gap-screen)과 [현행 후보](../research_topics/README.md#robotics-gap-candidates)를 함께 참조한다. 전체 1,250편 중 원장의 본문 확인 표시는 991편, 초록 확인은 259편이다. 본문 표시는 확인한 절의 범위를 포함한다. [원장](../sources/papers.json)
+2026-11-19 기준. 아래는 실험실 장비를 구체화하기 전에 제안했던 다섯 질문의 조사 근거다. 장비 조건을 반영한 [재판정·새 검색](#lab-gap-screen)과 [현행 후보](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/research_topics/README.md#robotics-gap-candidates)를 함께 참조한다. 전체 1,250편 중 원장의 본문 확인 표시는 991편, 초록 확인은 259편이다. 본문 표시는 확인한 절의 범위를 포함한다. [원장](../sources/papers.json)
 
 ### 태그 교차 집계
 
@@ -102,7 +102,7 @@ arXiv Atom API를 2026-11-19에 검색했다. 최초 제출일 범위는 2026-08
 
 ## 실물 장비를 기준으로 다시 찾은 연구 공백
 
-2026-11-19 KST. 학교의 RTX 5090·로봇팔·Unitree G1과 6개월~1년의 연구 기간을 반영했다. 과거 검색의 다섯 주제와 새 질문을 모두 직접 선행에 대조했다. 아래는 이 날짜에 공개된 문헌을 대상으로 한 탐색이다. [새 후보별 가장 가까운 연구·파일럿·중단 조건](../research_topics/README.md#robotics-gap-candidates)
+2026-11-19 KST. 학교의 RTX 5090·로봇팔·Unitree G1과 6개월~1년의 연구 기간을 반영했다. 과거 검색의 다섯 주제와 새 질문을 모두 직접 선행에 대조했다. 아래는 이 날짜에 공개된 문헌을 대상으로 한 탐색이다. [새 후보별 가장 가까운 연구·파일럿·중단 조건](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/research_topics/README.md#robotics-gap-candidates)
 
 ### 기존 다섯 제안의 재판정
 
@@ -226,7 +226,7 @@ ACM THRI에서도 보조 급식 연구의 신뢰도·수용성 증가와 행성 
 | 반복 실기 계측 가능 | 적은 측정으로 sim-to-real 정책 순위가 뒤집히는 원인을 식별할 수 있는가 | 외관과 지연·gain, 단순 보정과 domain randomization | 보정 예산을 맞추면 단순 지연 보정과 차이가 없다. |
 | 시뮬레이션 두 대부터 시작 | 재접속 후 어떤 임무 상태 공유가 중복 작업을 줄이는가 | 지도·발견 사건·역할 변경, 같은 통신 예산 | 주기적 사건 공유만으로 충분하다. |
 
-이 표는 장비를 특정하기 전의 조건별 탐색 질문이다. 학교 로봇팔과 G1의 접근성을 반영한 우선순위 및 기존 실기 전이·지도 제안의 투자 판단은 [현행 후보](../research_topics/README.md#robotics-gap-candidates)와 [선행 재검토](#lab-gap-screen)에 정리했다.
+이 표는 장비를 특정하기 전의 조건별 탐색 질문이다. 학교 로봇팔과 G1의 접근성을 반영한 우선순위 및 기존 실기 전이·지도 제안의 투자 판단은 [현행 후보](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/research_topics/README.md#robotics-gap-candidates)와 [선행 재검토](#lab-gap-screen)에 정리했다.
 
 ## 본문에서 확인한 비교 경계
 

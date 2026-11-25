@@ -36,7 +36,7 @@ Exact assumptions·negative results·transfer limits는 본문 확인 필요. �
 
 실행 전 source의 data split, checkpoint, reward·reset 접근과 metric 정의를 고정한다. 아직 실행한 실험은 없다.
 
-이 노트의 paper 재현은 미실행이다. 저장소의 별도 [GAP-N3-A 계약 검사](../../../work/experiments/proxy_observation_contract/README.md)는 source/합성 17/17 PASS이며 RoboMME native 재현이 아니다. [N3-B 환경 설정](../../../work/experiments/proxy_observation_contract/README.md#native-environment)과 실제 관측 일치 검증이 남아 있다.
+이 노트의 paper 재현은 미실행이다. 저장소의 별도 [GAP-N3-A 계약 검사](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/experiments/proxy_observation_contract/README.md)는 source/합성 17/17 PASS이며 RoboMME native 재현이 아니다. [N3-B 환경 설정](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/experiments/proxy_observation_contract/README.md#native-environment)과 실제 관측 일치 검증이 남아 있다.
 
 ### Research Gap and Falsifiable Question
 

@@ -1,0 +1,34 @@
+{
+  "task": "LIBERO-Goal/open_the_top_drawer_and_put_the_bowl_inside",
+  "prompt": "open the top drawer and put the bowl inside",
+  "goal": ["in", "akita_black_bowl_1", "wooden_cabinet_1_top_region"],
+  "open_goal": ["open", "wooden_cabinet_1_top_region"],
+  "bddl": "drawer/upper_bowl.bddl",
+  "bddl_sha256": "3056e4dc72ee590432cfb18c610fd077a572c8b8f256e45328031005dd0b6757",
+  "upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "parent": "results/2026-11-25-stove-fingers/study.zip",
+  "parent_sha256": "4e5b798d707ea100b9226a85fe0bdf78399f86e29d57b881ae59da6d015d868e",
+  "preparation_signatures": {
+    "drawer-1-3-k0": {
+      "immediate": "c19842c15a0e2e479eaabf0ed0db0c4775b7362ce510a3bb659a8113e089d1ed",
+      "finger_hold": "2980b01c912c23e5b78ff31daf6238b98142a59a097df34fd46806373da7996b",
+      "pose": "2b87133651b31f8faccd5e794547963ffd6bd97709620463cd80767a98c6e47c"
+    },
+    "drawer-2-3-k0": {
+      "immediate": "64e7e69ac1ec0442932bb9a5aa1b359c06e15c37c9d87ca3bf3fe6aa3145a36c",
+      "finger_hold": "40848510e8c9000191e6ad7f44a8773513a3ca269ea74d20c7486b4a9856eab7",
+      "pose": "66284c354ac061e8702ee3d06bf91a0cbdc2a97da76221c147237238f5dfe3c0"
+    }
+  },
+  "modes": ["immediate", "finger_hold", "pose"],
+  "deadlines": [160, 300, 600],
+  "primary": 300,
+  "extension": 600,
+  "release_window": 20,
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "scope": "Use official middle-drawer initial state 3 for every path. Restore the identical two contact donors, eight seeds, two independent model loads, 60 preparation controls, checkpoint and 20 Hz native physics of drawer/stove_fingers.json. The only new policy goal is the benchmark task language for upper-drawer bowl placement. The policy sees two live RGB views, proprioception and the task instruction.",
+  "standalone": "Before comparing preparations, run all eight seeds in each of two model loads from the standard warmed neutral state on the same layout. Record ever-in, in at the deadline, top-drawer contact and native top-open. An actual placement within 300 controls establishes standalone competence at the primary budget; a first placement by 600 only establishes extended-budget competence. If standalone fails, the endpoint comparisons remain diagnostic and do not establish a task-dependent preference.",
+  "paired": "Use every physical donor and seed in both model loads. Rotate mode order and reverse it in load 2. Count total time from the end of middle-drawer opening, including preparation. All paths continue through 600 controls even if In becomes true. Compare at equal total time, and additionally after 240 and 540 active policy controls.",
+  "outcomes": "Primary is native In at 300 total controls. Report 8, 15, and 30 s, first gripper contact with moving top drawer, first native top-open and first bowl-in. Also report ever-in, continuous in-region with no gripper-bowl contact over the final 20 controls, actual bowl/top-body contact at the deadline, and the middle drawer open at the deadline. Times to events are conditional on reaching them.",
+  "decision": "Claim a reversal from the stove result on this layout only if the standalone primary gate passes and finger hold beats return in paired terminal placements in every donor by model-load cell at 15 s. The symmetric rule describes a return advantage. Report ties, disagreements and any changes at 30 s; contact or openness alone cannot decide placement. Two physical donors and 16 unique donor/seed pairs limit generalization."
+}

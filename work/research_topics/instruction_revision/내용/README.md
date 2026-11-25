@@ -1,184 +1,40 @@
-# 부분 지시 수정
+# 위 칸 수납 지시와 열린 서랍의 위치
 
-**현행 투자 판단은 예비 후보다.** 지시 수정 후 제약 준수와 행동 실패를 구분할 수 있지만, 전체 이력을 다시 읽는 방식이나 규칙 기반 갱신과 비교했을 때 얻는 이득은 미검증이다. ReSteer가 측정한 상태별 지시 전환 가능성도 직접 비교해야 한다. [후보 우선순위](../../README.md#candidate-priority) · [ReSteer, RSS 2026](https://roboticsproceedings.org/rss22/p143.html)
+LIBERO-Goal의 같은 수납 지시에서 서랍 상태가 정책의 첫 접촉과 그릇의 도착지를 어떻게 바꾸는지 측정했다.
 
-**직접 선행과 남은 질문.** BAS-VLA는 물체·공간 관계를 바꾼 실물 실험에서 새 목표 성공을 측정했고, 시뮬레이션에서 하위 목표 순서 변경도 평가했다. 이 후보가 추가로 검증할 대상은 지시를 여러 번 수정할 때 새 목표를 달성하면서, 유효한 동안에는 제약을 지키고 철회된 뒤에는 필요한 행동을 재개하는지다. 전체 이력 재작성, 규칙 기반 갱신, 정답 지시, 개별 행동 수행 능력을 같은 조건에서 대조한다. [BAS-VLA 실물 표 6](https://arxiv.org/pdf/2609.23650v2#page=9) · [순서 변경 표 13](https://arxiv.org/pdf/2609.23650v2#page=15)
+<a id="drawer-location"></a>
 
-[원문 검토와 등록 근거](../../../sources/registry_admissions_2026-11-05.json) · [재현 방법](../재현%20방법/README.md)
+## 위 칸에 넣으라고 지시하면 그릇은 먼저 열어 둔 칸을 따라가는가
 
-<a id="buildup-status"></a>
+**약 160 mm를 연 배치에서는 가운데 칸만 열면 그릇이 30/32회 가운데로, 아래 칸만 열면 32/32회 아래로 갔다.** 같은 출발 상태와 난수에서 도착지가 가운데에서 아래로 함께 바뀐 쌍은 30/32였다. 출발 자세와 모델 실행의 네 조합에서 7/8·7/8·8/8·8/8쌍으로, 각 조합에서 절반을 넘는다는 사전 기준을 충족했다. 원래 물체 위치에서 서랍을 76 mm 당긴 비교는 0/32쌍이었다. [도착 칸과 교차 재생 그림](../재현%20방법/results/2026-11-25-drawer-location/drawer_location.png) · [짝별 점수](../재현%20방법/results/2026-11-25-drawer-location/verification.json)
 
-## 비실험 검토와 비교 설계
+| 탁자 배치 · 비교 폭 | 처음 당긴 칸 | 15초 위 칸 수납 | 30초 위 칸 | 30초 가운데 칸 | 30초 아래 칸 | 30초 어느 칸에도 없음 |
+|---|---|---:|---:|---:|---:|---:|
+| 원래 위치 · 76 mm | 모두 닫힘 | 32 | 32 | 0 | 0 | 0 |
+| 원래 위치 · 76 mm | 가운데 | 24 | 24 | 0 | 0 | 8 |
+| 원래 위치 · 76 mm | 아래 | 32 | 32 | 0 | 0 | 0 |
+| 물체 위치 조정 · 약 160 mm | 모두 닫힘 | 32 | 32 | 0 | 0 | 0 |
+| 물체 위치 조정 · 약 160 mm | 가운데 | 0 | 0 | 30 | 0 | 2 |
+| 물체 위치 조정 · 약 160 mm | 아래 | 0 | 0 | 0 | 32 | 0 |
 
-**판정: 좁은 평가 후보 유지 · 내부 비실험 설계 정리 · updater/observer·정책 효과 미검증.** [7단계 비실험 절차](../../../../research/RESEARCH_GUIDE.md#nonexperimental-workflow)를 기존 문헌·논리·계약에 적용해 정리했다. 아래 상태는 새 실험 결과나 11/04 신규 문헌 전수조사가 아니다.
+각 행은 32회다. 76 mm에서는 세 조건 모두 그리퍼가 서랍·그릇 중 위 칸에 먼저 닿았다. 약 160 mm에서는 모두 닫혀 있을 때는 위 칸에, 가운데나 아래 칸이 열려 있을 때는 두 조건 모두 32회 전부 그릇에 먼저 닿았다. 열린 조건에서는 15초에 이미 가운데 칸에 26/32회, 아래 칸에 32/32회 수납했다. 30초에 해당 칸에 들어간 그릇은 모두 그 칸의 움직이는 형상에 닿아 있었다. 마지막 1초 내내 그리퍼가 그릇을 놓은 경우는 가운데 30/30회, 아래 30/32회였다. [접촉·열림·그리퍼 해제 기록](../재현%20방법/results/2026-11-25-drawer-location/verification.json)
 
-**한 문단 기여 가설:** 부분 수정 후에도 유효한 조건을 따르는 로봇이 필요하다. 기여 후보는 **현재 지시를 잘못 갱신한 오류와, 올바른 지시를 행동으로 이행하지 못한 오류를 구분하고 유용한 개선 지점을 찾는 것**이다. 일반적인 대화 memory·제약 목록 관리는 선행과 구별되는 기여가 아니다.
+**아래 칸이 약 160 mm 열려 있어도 위 칸 수납은 가능했다.** 같은 물체 배치의 닫힌 장면에서 성공한 명령을 그대로 적용하면, 가운데만 열린 장면과 아래만 열린 장면 모두 15초와 30초에 32/32회 위 칸에 넣었다. 반대로 가운데 칸이 열린 장면의 명령을 아래 칸이 열린 장면에 적용하면 30초에 32/32회 아래로 들어갔다. 아래 칸이 열린 장면의 명령을 가운데 칸이 열린 장면에 적용하면 26/32회 가운데로 들어갔다. 두 열린 장면의 명령을 모두 닫힌 장면에 적용하면 세 칸 어디에도 들어가지 않았다(각 0/32회 수납). 서랍 개방은 그리퍼가 먼저 접촉하는 대상을 바꿨고, 명령을 고정해도 실제로 어느 칸이 열려 있는지가 도착지를 바꿨다. 이 결과만으로 정책이 가운데와 아래의 높이를 각각 겨냥했다고 해석하기는 어렵다. [전체 교차 재생](../재현%20방법/results/2026-11-25-drawer-location/physical_replay.json)
 
-| 비실험 단계 | 상태 | 현재 근거·완료 경계 |
-|---|---|---|
-| 1 문제·독자 | 정리됨 | [개요](#overview): 실행 중 목적지 변경·금지 철회를 사용하는 VLA interaction. 허용과 의무, 과거 위반과 이후 유효 구간을 구분 |
-| 2 가까운 선행 | 지정 범위 확인 | [source 비교](#source-review): Hi Robot·ReSteer·How-level, 계약의 ReBIND 인접 선행. 일반 feedback·constraint ledger는 기존 원리 |
-| 3 질문·대안 | 정리됨 | 8개 의미 사례, 전체 이력 재작성 H·상태 갱신 S·제한 규칙 R·정답 지시 O·단일 작업 A. 우연한 제약 준수와 이해를 구분 |
-| 4 기여 서술 | 가설 초안 | 위 오류 분해와 joint goal/constraint 결과가 중심. 단일 prompt나 작은 상위 모델의 차이만으로 일반 기억 능력 주장은 불가 |
-| 5 최소 비교 | 설계됨·미실행 | [비교 계약](../재현%20방법/COMPARISON_CONTRACT.json): R1/R4 중심, R7/R8 control, 공통 renderer·동일 분기 상태. 기존 R8 P0와 효과 비교는 별개 |
-| 6 실행 부담 | 준비 코드 있음·교정 미완 | P0 recipe/launcher는 있으나 image/native 실행은 미검증. 상위 updater·규칙 parser·renderer·observer·상태 복원 구현과 교정 필요 |
-| 7 외부 비판 | 질문 준비·미수신 | [기존 검토 질문](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#revision)과 아래 반론. 응답 기록 없음 |
+배치 2의 물체를 매번 원래 위치에 두고 아래 칸의 위치를 1 mm 간격으로 검사했다. 두 복귀 자세 모두 처음 접촉한 폭은 접시가 79 mm, 그릇이 111 mm였다. 이전 가운데 칸과 같은 약 160 mm 위치에 아래 칸을 놓으면 충돌 형상이 최대 9.96 mm 겹쳤다. 그 상태에서 1초 동안 팔을 정지시키자 그릇은 최대 4.54 mm, 접시는 2.69 mm 밀렸다. 공식 열림 기준은 140 mm 초과다. 141–159 mm의 정수 폭 19개와 두 종단의 원래 개방 폭 모두에서 간섭을 확인했다. [물리 검사와 재현](../재현%20방법/README.md#drawer-location)
 
-**결과에 따른 판단 — 아직 관측하지 않은 분기 포함**
+정책 결과를 보기 전에 두 비교를 정했다. 원래 물체 위치에서는 서랍을 **76 mm** 당겼다. **약 160 mm** 비교에서는 그릇을 45 mm, 접시를 120 mm 옮겨 아래 칸이 닿지 않게 했다. 각 비교 안에서는 물체 위치를 세 조건에 동일하게 적용했다. 12개 출발 상태 모두 1초 정지 검사에서 서랍과 물체의 이동은 0 mm였다. 각 조건에는 두 복귀 자세와 여덟 시드를 짝짓고 같은 체크포인트를 다시 불러와 반복했다. 15초와 30초에는 자세 복귀 3초가 포함된다. [설계와 판정 기준](../재현%20방법/drawer/drawer_location.json)
 
-| 다음 증거 | 바뀌는 판단 | 이 증거만으로 하지 않을 주장 |
-|---|---|---|
-| 자동 의미 출력은 틀리지만 정답 지시 O와 단일 작업 A는 성공 | 의미 갱신을 개선할 질문으로 좁힘 | 관측 전부터 S의 우월성을 확정 |
-| O도 실패하지만 A는 성공 | 복합 제약의 정책 입력/실행·물리 경로를 검토 | 철회 기억만의 문제라는 단정 |
-| A도 실패하거나 정답/상태 복원이 불일치 | 기본 능력·평가 구현을 먼저 교정 | 지시 이해 실패율로 집계 |
-| H 또는 R이 같은 공동 목표·제약 성능을 충분히 냄 | 단순 갱신 경로와 그 적용 범위를 결과로 남김 | 새 memory 모델의 필요성 |
+직전 배치 2 실험에서 위 칸 수납에 성공한 명령 32개도 추가로 재생했다. 원래 물체 위치에서는 모두 닫힌 장면과 아래 칸을 76 mm 당긴 장면 모두 32/32회 위 칸에 넣었다. 조정한 물체 위치에서는 모두 닫힌 장면에서 32/32회, 아래 칸을 약 160 mm 연 장면에서 30/32회 위 칸에 넣었다. 15초와 30초의 수치는 같았다. 같은 출발 상태에서 완전히 같은 명령열을 묶으면 17개다. [이전 명령의 원본 대조와 재생](../재현%20방법/results/2026-11-25-drawer-location/prior_closed.json)
 
-상위 모델 호출·입력 token·공통 renderer 비용과 VLA 제어 시간을 별도로 기록한다. 동일한 의미 정답이 동일 렌더링 입력으로 이어지는지부터 확인해야 한다. 상위 모델은 계약에 고정됐지만 weights·실행 prompt·메모리 사용은 미검증이며 전체 구현 공수는 아직 산정할 근거가 없다.
+이 결과의 범위는 배치 2와 정책 체크포인트 하나다. 원래 배치와 물체를 옮긴 배치 간에는 개방 폭과 그릇·접시 위치가 함께 달라졌다. 다음에는 조정한 물체 위치를 고정하고 가운데·아래 칸 각각의 개방 폭만 76 mm와 약 160 mm로 바꿔 목적지 전환을 비교한다. [다음 행동](../../../../TODO.md)
 
-**외부 검토 준비:** 가장 강한 외부 질문은 “명세 컴파일 선행에 비해 로봇의 시간별 제약 이행에서 새로 얻는 지식은 무엇이며, 정답 지시 대조가 그 주장을 실제로 구별하는가?”다. 위 개요와 사례 R1/R4, 비교 계약을 함께 제시한다. 실제 응답·반영이 생기면 내용과 source 위치를 기록한다. 미수신은 작은 탐색을 금지하는 진입 조건이 아니다.
+<a id="middle-aperture-layout2"></a>
 
-**다음 확인과 문서 종료점:** 문헌·의미 설계는 현재 범위에서 정리됐다. 첫 구현 주의 산출물은 공통 schema/renderer 연결과 observer의 참/거짓 사례 판별이며, native 효과는 이후 단계다. 실제 모델/시뮬레이션 검사는 재개 시 local Docker에서 수행한다. 동일 관측·동일 렌더링인데 결과가 달라지면 먼저 난수·상태·큐·구현 차이를 조사한다. 새로운 직접 선행·자료·반례·피드백 없이 같은 문서 검토를 반복할 내부 과제로 만들지 않는다. 실행 범위·상한은 기존 계약과 [재현 안내](../재현%20방법/README.md)가 관리한다.
+## 직전 배치 2 대조와 출발 상태
 
+물체를 원래 위치에 두고 가운데 칸만 약 160 mm 열어 둔 직전 실험에서 위 칸 수납은 15초에 0/32회였다. 가운데 칸을 닫으면 32/32회 위 칸에 넣었다. 열린 장면에서 닫힌 조건의 명령을 재생하면 24/32회 위 칸에 넣었다. 최신 실험은 같은 두 복귀 자세로 아래 칸까지 비교한다. [직전 실험 판정](../재현%20방법/results/2026-11-25-middle-aperture-layout2/verification.json) · [두 출발 상태의 원자료](../재현%20방법/results/2026-11-25-stove-layouts/study.zip)
 
-<a id="overview"></a>
+## 연구 범위
 
-<a id="overview-vla의-부분-지시-수정에서-제약-유지와-철회"></a>
-## VLA의 부분 지시 수정에서 제약 유지와 철회
-
-*Constraint Preservation and Revocation under Partial Instruction Revisions for Vision-Language-Action Policies*
-
-2026-11-01 · 비실험 문헌·분석 설계 보완 완료 · NVIDIA GPU 환경에서의 구현·실행·비교 검증 대기
-
-**핵심 질문:** 로봇이 작업하는 도중 사용자가 지시 일부를 바꾸면, VLA는 바뀐 목표를 수행하면서 여전히 유효한 제약을 유지하고 명시적으로 철회된 제약을 제거할 수 있는가? 전체 대화를 바탕으로 현재 지시를 매번 다시 작성하는 단순 방법만으로 충분한가?
-
-예를 들어 “그릇을 접시에 놓되 병은 움직이지 마”라는 지시에서 목적지만 캐비닛으로 바꾸면 병의 이동 금지는 유지되어야 한다. 이후 “병 이동 금지를 취소하고 병을 랙에 놓아”라고 하면 새로운 목표에는 병 이동이 필요하다. 단순히 “병을 움직여도 된다”라고 한 경우에는 실제로 병을 움직이지 않아도 올바른 행동이다. 철회 이후의 허용이 이전에 발생한 위반까지 없애지는 않는다.
-
-[Hi Robot, ICML 2025](https://proceedings.mlr.press/v267/shi25d.html)은 계층적 VLA로 복잡한 지시와 실행 중 피드백을 처리하며, [ReSteer, RSS 2026](https://roboticsproceedings.org/rss22/p143.html)는 중간 상태에서 새로운 작업 지시를 따르는 능력을 평가·개선한다. 본 후보는 이를 바탕으로 **부분 수정 후 어떤 조건이 유효한지에 대한 의미 판단과 실제 행동의 제약 준수를 함께 비교**하려는 질문이다. 일반적인 지시 전환이나 피드백 대응을 새로운 기여로 주장하지 않으며, 이 좁은 비교의 신규성과 연구 가치는 아직 확정되지 않았다.
-
-첫 실험 대상은 ReSteer의 공개 LIBERO 장면과 공개 π0.5 LIBERO 정책이다. 그릇·병·접시·캐비닛·랙에 연결한 수작업 사례 8개를 정리했으며, 먼저 목적지 변경 후 제약 유지와 금지 철회 후 필요한 행동 수행을 조사한다. 이 사례들은 실제 정책 실패가 관측된 데이터나 검증된 benchmark가 아니다. [사례·근거 검토](README.md#source-review).
-
-| 비교 조건 | 확인하려는 내용 |
-|---|---|
-| 전체 대화에서 현재 지시를 매번 다시 작성 | 단순한 자동 재명시로 충분한가 |
-| 목표·제약 목록을 유지하고 수정 발화를 반영 | 명시적인 상태 관리가 재명시보다 도움이 되는가 |
-| 사람이 작성한 정확한 전체 현재 지시 | 의미 갱신 오류를 제외해도 정책이 행동할 수 있는가 |
-| 제약을 제외한 짧은 단일 작업 지시 | 같은 물리 상태에서 기본 작업을 수행할 능력이 있는가 |
-
-자동 방법끼리는 같은 상위 모델·관측·대화 이력과 고정된 저수준 VLA를 사용하고, 입력 길이·호출 수·추론 비용을 기록한다. 사람이 작성한 정답 지시는 진단용이며 자동 방법에 제공하지 않는다. 같은 중간 상태에서 분기하고, 의미가 바뀌지 않는 재진술을 대조로 사용해 재질의·행동 큐 초기화의 영향을 구분한다. 이 전체 비교와 자동 의미 갱신기는 아직 구현하지 않았다.
-
-[GPU 전 추가 검토](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#instruction-revision)에서 규칙 기반 갱신 대안, 공통 의미 출력·문장 renderer, 수정 전후 위반·기술 오류의 분리 기준을 보완했다. 제약을 무시해도 병이 움직이지 않는 장면은 성공하더라도 지시 이해의 증거가 약하므로 제약 없는 목표 지시와 비교한다. 규칙 parser·상위 모델 검증은 아직 수행하지 않았다.
-
-[후속 비실험 보완](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review)에서 [8개 영문 발화·의미 정답](../재현%20방법/SEMANTIC_CASES.json)을 작성했다. 정답 문장에만 남아 있던 R4/R5의 취소·허용 표현을 제거해 자동 방법과 같은 활성 조건을 전달하도록 맞췄다. 수정 직전 action의 결과를 먼저 채점한 뒤 새 제약을 적용하고, 후속 비교는 같은 horizon에서 판단한다. 수작업 명세이며 실제 renderer·observer 실행이나 모델 정확도 검증은 아니다.
-
-주요 결과는 **수정 목표 달성과 유효한 기간 동안의 제약 준수를 함께 만족한 비율**이다. 목표 성공만으로 제약 준수를 판단하지 않고, 물체 위치·자세의 시간별 변화와 제약 추가·철회 시점을 기록한다. 이동 금지와 접촉 금지도 구별한다. 행동 실패만으로 철회된 금지가 기억에 남았다고 단정하지 않으며, 같은 상태의 직접 작업 지시와 비교한다. 측정 허용 오차와 상태 복원·평가 종료 조건은 비교 전에 고정해야 한다.
-
-현재 문헌 검토·사례 명세·코드와 체크포인트 버전 고정·Docker recipe·최소 실행 코드를 작성했다. **이미지 빌드와 native 정책 실행은 미검증**이다. 10월 31일 현재 Docker ARM64 환경에서 GPU 할당이 실패했으며, 패키지·모델을 host에 설치하지 않았다. [환경 설정·재개 절차](../재현%20방법/README.md#execution).
-
-NVIDIA CUDA·EGL을 지원하는 Linux x86-64 로컬 Docker에서 먼저 단순 목적지 전환 1건으로 실제 관측·두 추론 응답·행동 큐 교체를 확인한다. 최대 7회 정책 action의 이 검사는 연구 효과나 기본 작업 성공을 입증하지 않는다. 이후 시간별 제약 측정과 동일 상태 복원을 구현하고, 정확한 전체 지시 및 단일 작업 지시로 능력을 확인한 뒤 자동 방법을 비교한다. 설치·추론·시뮬레이션은 모두 Docker 내부에서 수행한다.
-
-전체 지시의 자동 재작성으로 충분하다면 복잡한 기억 구조나 추가 학습의 필요성은 줄어든다. 정확한 지시에서도 실패하면 물리적 수행 능력·제약 실행·정책 입력 표현을 먼저 조사한다. 의미 채점의 차이만 있고 행동 결과와 연결되지 않으면 VLA 연구 기여는 제한된다. 남은 buildup은 작은 공정 비교로 이 분기를 확인하고 선행 대비 지식·한계 및 외부 피드백을 검토해 진행·수정·중단을 판단하는 것이다. 한 번의 GPU 실행이나 유리한 결과를 완료 조건으로 삼지 않는다.
-
-11/01 [세 후보 비실험 완결 검토](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#revision)에서 인접 분야의 제약 철회·명세 컴파일 선행을 반영했다. [비교 계약](../재현%20방법/COMPARISON_CONTRACT.json)에 H/S의 첫 공통 모델 revision·decoding, 규칙 갱신·공통 renderer, 위치/회전 observer 정의와 조건부 교정 절차를 명시했다. 문헌·논리·분석 설계는 완료했지만 실제 updater/observer 구현·정책 효과·독립 외부 피드백은 남아 있다. 첫 모델에서의 차이를 일반 memory 우월성이나 새 ledger 방법으로 주장하지 않는다.
-
-현재 작업은 [TODO](../../../../TODO.md), 연구 질문의 상세 비교는 [VLA synthesis](../../../../synthesis/04_vla.md#gap-instruction-revision-2026)를 따른다. 이 문서는 연구 개요이며 별도의 우선순위 목록이나 실행 명세가 아니다.
-
-<a id="source-review"></a>
-
-<a id="source-review-2-공개-interface에서-확인한-것"></a>
-### 2. 공개 interface에서 확인한 것
-
-ReSteer는 commit `7329c159319a346b7245a69c128e5d4940c0763b`, How-level 공개 코드는 `478fad54689126e4303bdc6bcb3c8e064e5934ab`의 파일을 읽었다. 두 GitHub tree는 응답이 잘리지 않았음을 확인했다. Source를 읽은 것이 native 실행 검증이나 전체 code audit를 뜻하지 않는다.
-
-| 확인 대상 | 실제 source 사실 | 이번 설계에 주는 결론 |
-|---|---|---|
-| ReSteer [task 표](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/resteer/tasks.py), [장면](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/third_party/libero/libero/libero/bddl_files/libero_steerability/libero_goal_steerability.bddl) | Bowl/plate/bottle/cream cheese 등이 같은 장면에 있고 task별 goal key를 선택한다. BDDL 전체 goal 묶음과 한 target task의 성공은 다르다 | 설명용 색 블록 대신 실제 object ID에 사례를 연결했다. 복합 제약을 수행할 능력이 있다는 뜻은 아님 |
-| ReSteer [policy input](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/resteer/sim/libero.py#L95), [interface 문서](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/docs/interfaces.md) | 두 RGB·robot state와 `prompt` 문자열을 websocket 입력으로 전달 | 재작성한 문장을 전달할 경로는 있다. 복합/부정 지시·긴 history의 이해, token 제한, truncation은 별도 미검증 |
-| ReSteer [switch rollout](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/resteer/eval/rollout.py#L63) | 지정 step에 task를 바꾸고 action queue를 비운다. `step > switch_step`에서 target goal이 처음 성립하면 return한다 | 즉시 재질의의 재사용 경로. 기존 제약의 위반 이력이나 고정 종료 시점의 복합 결과를 그대로 얻는 평가기는 아님 |
-| ReSteer [평가 loop](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/resteer/eval/steerability.py#L143) | Target/repeat별 `sim.reset` 후 source→target rollout. RNG 기반 재개를 지원하지만 모든 arm이 같은 실제 중간 상태를 공유하는 구조는 아님 | 같은 seed라고 paired intermediate state라고 기록하지 않는다. Native branch 검증이 추가로 필요 |
-| ReSteer [state restore](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/third_party/libero/libero/libero/envs/env_wrapper.py#L121), [CMI state 설정](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/resteer/cmi/sample_actions.py#L67) | Flattened sim state의 get/set과 observation 재생성 함수가 있다. CMI helper는 reset/set/forward 뒤 **zero action 한 step**을 추가한다 | 이 helper를 같은 시점 복원의 증거로 쓰지 않는다. Controller 목표·환경 clock·action queue·policy RNG/내부 상태·object pose까지 실제 검증 필요 |
-| ReSteer [pose 접근](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/third_party/libero/libero/libero/envs/object_states/base_object_states.py#L47), [success dict](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/third_party/libero/libero/libero/envs/problems/libero_tabletop_manipulation.py#L144) | Object position/quaternion 및 goal별 predicate를 읽는 경로가 있다. 이 fork의 object `check_ontop`은 xy threshold 0.1을 사용한다 | 보호 물체의 구간별 pose 검사에는 새 observer가 필요. Predicate와 movement tolerance를 섞지 않고, dict 전체의 truthiness를 성공으로 쓰지 않음 |
-| How-level [온라인 correction](https://github.com/sangwu99/how-level-vla-Arxiv/blob/478fad54689126e4303bdc6bcb3c8e064e5934ab/diagnosis/online_intervention/system1/correction_pi0_evaluator.py#L112) | 고정 `base_instr`에 현재 correction을 붙이고 correction이 달라지면 queue를 비운다. SKIP이면 correction을 제거한다 | 자유로운 사용자 목표 수정·기간별 금지 관리와 동일한 계약은 아니다. 단순 append-only 대안으로 참고할 수 있음 |
-| SIMPLER-IN [episode loop](https://github.com/sangwu99/how-level-vla-Arxiv/blob/478fad54689126e4303bdc6bcb3c8e064e5934ab/simpler_in/eval/eval_client_pi0.py#L34), [평가 정의](https://github.com/sangwu99/how-level-vla-Arxiv/blob/478fad54689126e4303bdc6bcb3c8e064e5934ab/simpler_in/envs/simpler_in_envs.py) | Reset 후 instruction을 얻고 episode에서 사용한다. `success`와 `constraint_ok`를 따로 기록하며, Grasp는 grasp event, Place는 첫 landing을 저장한다 | 조건 준수 자체가 이미 평가 대상이다. 첫 grasp/landing을 고정하는 정의를 중간 수정·최종 상태 채점에 그대로 사용할 수 없음. Path/Grasp/Place의 `constraint_ok` 정의도 서로 같지 않음 |
-
-**Hi Robot:** [본문 §4–5](https://arxiv.org/html/2502.19417v1)은 사용자 개입 후 고수준 inference, 기존 지시 복귀, 부정 제약과 상황 피드백을 다룬다. 인간 고수준 oracle과 같은 저수준 정책을 쓰는 비교도 있다. [공식 project](https://www.pi.website/research/hirobot)에서 이번 검토에 필요한 task/evaluator·고수준 checkpoint의 재현 경로는 식별하지 못했다. 이를 전체 코드가 없다는 단정이나 논문 가치 판단으로 바꾸지 않는다. 우리의 정답 재명시 조건은 skill sequence까지 주는 Hi Robot oracle보다 적은 정보를 준다.
-
-이번 직접 대조는 세 논문의 지정 구간과 관련 공개 파일에 한정한다. SwitchVLA·Causeway 등은 10/29 경계 판단을 재사용하며 전체 방법을 새로 심사한 것으로 표시하지 않는다. README의 실행 명령은 실행하지 않았다. ReSteer가 보고한 release 재실행 결과와 논문의 수치도 혼합하지 않았다.
-
-<a id="source-review-3-사례별-선행-중복과-평가-가능성"></a>
-### 3. 사례별 선행 중복과 평가 가능성
-
-정확한 최초/수정/전체 지시·유효 시간·필요 행동은 [CASEBOOK](README.md#cases)이 소유한다.
-
-| 사례 | 기존 범위와의 관계 | 필요한 관측·현재 배치 |
-|---|---|---|
-| R1 목적지 변경 + 기존 금지 유지 | Hi Robot의 동적 제약과 직접 인접. 일반 “제약 유지”는 신규 아님 | 기존 bowl 목표 + 병 pose trajectory. **핵심**; 제약이 실제 행동 선택에 영향을 주는 장면인지는 미확인 |
-| R2 대상 변경 + 다른 물체 보호 | ReSteer task switching + 보호 조건 | Target goal·cheese pose. Grasp 전환의 추가 교란 때문에 후속 확장 |
-| R3 제한 추가 | Hi Robot의 실행 중 “leave it alone”과 직접 중첩 | 추가 시점의 pose 기준·과거 비소급. 시간 의미 확장 |
-| R4 금지 철회 + 필요한 대상 이동 | Hi Robot의 interjection 뒤 복귀와 인접. ReSteer의 target 성공만으로 의미 원인을 알 수 없음 | 병이 랙 밖인 witness + 병→랙 능력. **핵심**; 실패는 철회 실패와 동의어가 아님 |
-| R5 허용만 추가 | Dialogue-state semantics이며 action을 반드시 바꾸지 않음 | 의미 대조군. 행동상 비이동을 실패로 세지 않음 |
-| R6 달성한 하위 목표 유지 | 계층적 계획·복합 목표의 기존 범위 | 실제 prefix·병-on-rack의 구간별 유지. 첫 pilot에서는 제외 |
-| R7 의미 불변 재진술 | Instruction paraphrase와 reset/requery 영향의 기존 문제 | R1과 동일 source prefix·기존 제한. 대조군 |
-| R8 제약 없는 전환 | ReSteer가 이미 다루는 목표 전환 | 기본 IO·switch/continuation 대조군. 새 기여로 세지 않음 |
-
-**공백의 현재 표현:** “VLA가 조건을 유지하지 못한다”가 아니라, **동일한 실행 상태에서 부분 수정의 의미를 자동 재명시하는 것만으로 goal·활성 제약의 공동 준수가 어느 범위까지 회복되는가?**이다. 이 답이 기존 방법을 어떻게 사용하는지 바꾸면 평가 기여가 될 수 있다. 단순 prompt 차이 하나의 성능 수치만으로 독립 연구 가치를 확정하지 않는다.
-
-<a id="source-review-4-단순-baseline과-의미행동의-분리"></a>
-### 4. 단순 baseline과 의미/행동의 분리
-
-자동 baseline은 **원문 사용자 발화만으로** 현재 목표·조건을 추정해야 한다. CASEBOOK의 정답 슬롯, 수정 유형 ID, goal key, simulator 물체 pose, 정답 active interval을 입력으로 주면 자동 의미 해석을 검증한 것이 아니다.
-
-| arm | 허용된 정보와 처리 | 역할 |
-|---|---|---|
-| H: 전체 이력 재해석 | 최초 지시+모든 수정 발화를 같은 고정 상위 모델에 주고 현재 목표/조건을 출력. 고정 renderer가 policy 문장으로 바꿈 | 강한 기본 baseline |
-| S: 조건 목록 갱신 | 최초 상태부터 **자신이 추정한** 목표/조건 목록+새 발화를 같은 모델로 갱신. H와 같은 출력 형식·renderer·관측·호출 예산 | 학습 없는 단순 대안. 이전 목록을 매번 gold로 교체하지 않음 |
-| O: 정답 전체 지시 | 사람이 검수한 전체 현재 지시를 같은 frozen VLA에 제공 | 의미 업데이트 오류를 제외하는 정보 oracle. 배포 가능 방법과 동등한 정보 조건은 아님 |
-| A: 짧은 atomic task 지시 | 같은 상태에서 bowl→cabinet 또는 bottle→rack 같은 기존 task 문장 | 기본 continuation competence 대조. 보호 제약을 제거한 조건의 성공은 복합 제약 능력이 아님 |
-
-마지막 발화만 전달하거나 긴 대화를 raw prompt로 VLA에 직접 주는 조건은 선택적 약한 대조군이다. 그것을 이기는 것으로 S의 가치를 주장하지 않는다. 11/01 비교 계약에 H/S의 첫 공통 Qwen3-8B revision·decoding과 schema/renderer·parse failure 처리 명세를 고정했다. 실제 updater 구현·prompt의 실행 검증·weights/package 검증은 남아 있다. 초기에는 명시적 물체 이름을 사용해 text 의미 업데이트를 분리한다. 나중에 “그것” 같은 상황 지시를 추가하면 두 arm에 같은 이미지·history를 제공하고 별도 비교로 다룬다.
-
-ReSteer의 `prompt` 필드는 위 결과 문자열을 받는 경로일 뿐이다. Public policy가 해당 복합 문장을 이해하는지, tokenization에서 조건이 잘리는지, 원래 task label과 문체가 달라진 영향인지는 검증해야 한다. 따라서 **처음부터 H/S 모델을 설치·학습하기보다 O/A에서 능력과 관측 경로를 확인**한다. H/S를 비교할 때는 동일 상위 모델의 호출 수·입력 길이·추론 지연을 기록한다. 선언된 동일 token cap과 실제 사용 비용은 구별한다.
-
-의미 정확도는 목표/대상/유지/철회·유효 시간 정답과 비교한다. 행동 결과는 목표 성공과 기간별 제약 준수의 joint outcome으로 별도 기록한다. 이 둘을 비교한다고 곧바로 causal mediation이 증명되지는 않는다. O에서도 실패하면 상위 언어 문제가 아니라 continuation·제약 실행·prompt 분포·controller 차이 등이 남는다. 본 문제의 text-only 정답표만으로 VLA 논문 효과를 주장하지 않는다.
-
-<a id="cases"></a>
-
-<a id="cases-부분-지시-수정-수작업-사례-8개"></a>
-## 수작업 사례 8개
-
-- 작성: 2026-10-31 KST / GAP-REVISION1
-- 성격: **연구자가 작성한 의미·평가 사례**. 공개 데이터의 실제 episode, 정책 실패 사례, 실행 가능한 benchmark가 아니다. 모델 호출·시뮬레이션 없이 작성했다.
-- 연결: [공개 interface 검토와 판단](README.md#source-review), [canonical 연구 질문](../../../../synthesis/04_vla.md#gap-instruction-revision-2026), [TODO](../../../../TODO.md).
-- 후속 보완: [GPU 전 의미·평가 계약](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#instruction-revision). 제약 없는 목표·규칙형 갱신 대안, 공통 renderer, 수정 전 위반과 수정 후 비교, 비정보적 준수·기술 오류의 처리 기준을 추가했다. 아래 8개 사례의 의미는 유지하며 실제 정책 검증으로 승격하지 않는다.
-- 기반 장면: [ReSteer의 공개 LIBERO 장면](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/third_party/libero/libero/libero/bddl_files/libero_steerability/libero_goal_steerability.bddl). 아래 object 이름과 일부 goal predicate가 존재한다는 사실만 확인했으며, 복합 지시 수행 능력은 미확인이다.
-
-<a id="cases-공통-의미와-평가-규칙"></a>
-### 공통 의미와 평가 규칙
-
-`bowl` = `akita_black_bowl_1`, `bottle` = `wine_bottle_1`, `cheese` = `cream_cheese_1`, `plate` = `plate_1`. `cabinet top`은 `wooden_cabinet_1_top_side`, `rack`은 `wine_rack_1_top_region`이다. 이전 문서의 빨간/파란 블록은 설명용 예시였으며 실제 실행 대상으로 확정하지 않았다.
-
-- `t0`: 초기 안정화 뒤 첫 task action 직전. `τ`: 수정 발화 수신·반영 직전의 action 경계. `T`: 해당 비교의 평가 종료. 실제 step·시간·deadline은 아직 동결하지 않았다.
-- `U(x,r,[a,b))`: 기준 시점 `r`의 물체 pose에서 허용 오차 이상 이동/회전하지 않았음을 구간 전체에서 확인한다. **접촉 금지와 다르다.** 위치·회전 tolerance와 측정 주기는 후속 최소 검증 전에 정한다. 시작·끝 pose만 같다고 중간 이동까지 없었다고 판정하지 않는다.
-- `G(x,d)`: 최종 평가 시점에 물체 x가 목적지 d에 놓였다는 목표. 공개 `On` predicate의 기하·접촉 의미를 그대로 사용할지 명시해야 하며, 언어상 “올려놓기”와 완전히 같다고 가정하지 않는다.
-- `[t0,τ)`의 위반은 이후 철회해도 남는다. `τ`에 추가한 제한은 과거에 소급하지 않는다. 각 경계에서 pre-action/post-action 상태를 일관되게 기록하고, 종료 순간도 포함해 평가한다.
-- 아래 **전체 현재 지시**는 사람이 작성한 정답 조건이다. 자동 baseline에 제공하지 않는다. 자동 방법은 사용자 발화·자신의 추정 상태·동일하게 허용된 관측만 받는다.
-- 한국어는 검토용이고, 최초·수정 영문 발화와 수정 전후 의미 정답은 [SEMANTIC_CASES.json](../재현%20방법/SEMANTIC_CASES.json)에 고정했다. 이는 수작업 명세이며 실행 데이터·모델 정확도 결과가 아니다. 실제 tokenizer·물리 상태·상위 updater와의 연결은 미검증이다. 기존 P0 launcher는 이 파일을 읽지 않으며 R8 IO 예산은 그대로다.
-- 전체 현재 지시는 공통 renderer가 활성 목표·제약만 표현한 정답 후보다. R4/R5의 취소·허용 이력은 의미 감사에만 보존하고 VLA prompt에 추가하지 않는다. 세부 [표현·시점·종료 계약](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/PRE_GPU_BUILDUP_REVIEW_2026-10-31.md#remaining-work-review)을 따른다.
-- 제약 유효 구간은 **action 경계**로 해석한다. `τ` 직전 action이 만든 post-state `s_τ`는 이전 제약으로 검사한 뒤 수정 발화를 적용한다. 철회와 같은 tick에서 관측된 직전 이동을 누락하지 않는다. 이 명세가 연속 시간 전체를 관측했다는 뜻은 아니다.
-
-| 사례 | 수정 전후의 의미 | 평가에서 구분할 점 |
-|---|---|---|
-| <a id="cases-r1-목적지만-교체하고-기존-이동-금지를-유지"></a>R1 | 목적지만 교체해도 병의 원래 위치·자세를 유지한다. | R8과 같은 초기 상태에서 병을 움직일 가능성이 있는지 본다. |
-| <a id="cases-r2-조작-대상을-교체하고-별도-물체의-제한을-유지"></a>R2 | 조작 대상을 그릇에서 병으로 바꾸되 치즈를 움직이지 않는다. | 대상 선택과 파지 전환이 함께 달라지는 확장 사례다. |
-| <a id="cases-r3-실행-도중-새로운-금지를-추가"></a>R3 | 수정 시각부터 병 이동을 금지하고 원래 목표를 유지한다. | 이전 이동을 위반으로 세지 않는다. 새 제한이 물리적으로 가능한 상태인지 확인한다. |
-| <a id="cases-r4-금지를-명시적으로-철회하고-그-행동이-필요한-목표로-변경"></a>R4 | 병 이동 금지를 철회하고 병을 랙에 두도록 목표를 교체한다. | 철회 이전의 위반은 남는다. 병이 이미 랙 위인 경우를 구별한다. |
-| <a id="cases-r5-허용만-추가하고-이동을-요구하지-않음"></a>R5 | 병을 옮겨도 된다고 허용하고 그릇 목표를 유지한다. | 병을 옮기지 않아도 성공할 수 있다. 행동으로 철회 이행을 채점하는 분모에서 뺀다. |
-| <a id="cases-r6-이미-달성한-하위-목표를-유지하며-다음-목적지를-수정"></a>R6 | 이미 달성한 병–랙 관계를 유지하면서 그릇의 목적지를 바꾼다. | 실제 선행 행동으로 도달한 상태에서 이후에도 관계가 유지되는지 측정한다. |
-| <a id="cases-r7-의미가-바뀌지-않는-재진술"></a>R7 | 같은 목표를 재진술한다. 이전에 말한 병 이동 금지도 유효하다. | R1과 같은 실행 이력에서 재질의·행동 대기열 초기화의 효과를 본다. |
-| <a id="cases-r8-기존-보호-제약이-없는-목적지-전환"></a>R8 | 보호 제약이 없는 상태에서 그릇의 목적지만 바꾼다. | 일반 지시 전환의 기준선이다. 같은 상태에서 R1과 비교한다. |
-
-<a id="cases-이번-선정과-정답표의-한계"></a>
-### 이번 선정과 정답표의 한계
-
-첫 native 검증 후보는 **R8의 기본 입출력/전환**, 그다음 **R1·R4의 정확한 전체 지시 조건**이다. 비교를 확대할 때 R7과 R4의 직접 병→랙 지시를 대조군으로 사용한다. R5는 반드시 의미 검수에 포함하되 행동 성능 표의 철회 실패 분모에 섞지 않는다. R2·R3·R6는 첫 실행에 모두 넣지 않는다.
-
-8개 사례는 서로 독립적인 실험 표본 8개가 아니다. 겹치는 source prefix와 task가 있고, 수작업 정답은 다른 사람이 검수한 정답도 아니다. 지금 확인한 것은 의미 계약의 논리와 source 연결이며 **실제 feasible state, 정책 역량, 자연 실패 빈도, statistical power는 모두 미확인**이다. 평가 정답의 시간 정보·simulator pose·goal key는 자동 baseline과 policy 입력에서 분리한다.
+ReSteer는 실행 중 지시를 바꿀 수 있는 상태를 조사했다. 이 실험은 목표 문장을 고정하고 실제 서랍 상태와 저장한 제어 명령을 각각 바꿨다. 이로써 목표 칸에 도달할 수 있는지와 정책이 실행한 행동을 같은 상태에서 비교할 수 있다. 독립 배치·실물 전이와 제약 갱신기 학습 효과는 미검증이다. 앞선 그릇·병의 영상 개입에서는 선별한 한 상태에서 손목 한 픽셀이 운반 물체를 바꿨다. 해당 결과의 범위는 그 상태와 정책에 한정된다. [ReSteer 논문](https://roboticsproceedings.org/rss22/p143.html) · [설계와 원자료](./sources.json)

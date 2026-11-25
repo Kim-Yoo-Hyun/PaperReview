@@ -1,0 +1,73 @@
+{
+  "task": "LIBERO-Goal/turn_on_the_stove",
+  "baseline": "results/2026-11-25-drawer-stove/study.zip",
+  "baseline_sha256": "6c646070019aadacd520c2a7e9ceb240b6a9dead2f8c7599d6ed0f342ea081a9",
+  "arms": [
+    "A",
+    "B"
+  ],
+  "conditions": [
+    "immediate",
+    "wait",
+    "pose"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "blocks": 2,
+  "donor_tick": 160,
+  "budgets": [
+    160,
+    300
+  ],
+  "control_hz": 20,
+  "replan_every": 5,
+  "key_offset": 32,
+  "geometry": "The common target is the seven-joint arm posture and tool pose of the original drawer layout just before the drawer policy started (after its standard warmup). No task outcomes are used for choosing the target or the duration.",
+  "lead_options": [
+    40,
+    60,
+    80
+  ],
+  "clear_controls": 8,
+  "clear_translation_world_m": [
+    0,
+    0.075,
+    0.035
+  ],
+  "joint_kp": 120,
+  "joint_delta_limit_rad": 0.3,
+  "ramp_fraction": 0.65,
+  "open_gripper": -1,
+  "scene_objects": [
+    "akita_black_bowl_1_main",
+    "cream_cheese_1_main",
+    "wine_bottle_1_main",
+    "plate_1_main",
+    "wooden_cabinet_1_main",
+    "flat_stove_1_main",
+    "wine_rack_1_main"
+  ],
+  "limits": {
+    "tool_mm": 5,
+    "tool_deg": 3,
+    "joint_rad": 0.035,
+    "finger_mm": 2.5,
+    "final_velocity_rad_s": 0.06,
+    "drawer_mm": 3,
+    "object_mm": 2,
+    "object_deg": 2,
+    "stove_rad": 0.01,
+    "clear_tail": 5
+  },
+  "preparation": "Use the first common lead duration passing physics-only qualification on both donors. Pose uses eight open-gripper native OSC steps to clear the drawer, then a cosine-ramped robosuite joint-position servo aiming at the common posture with a final hold. Wait uses the same controller schedule and width command tracking the donor's original posture. Immediate has zero lead. Restore the native OSC for all policy actions. Compare object and drawer drift at every prep step, verify endpoints and full-robot contact in the pose tail.",
+  "evaluation": "Fresh rollouts for 2 arms x 3 conditions x 8 paired seeds x 2 separately loaded policy processes. Pair future diffusion streams across all arms/treatments. Total clock starts at drawer control 160, including clearance, travel and hold. Evaluate the official on predicate at total steps 160 and 300, first moving-switch contact from that same origin, ever-on and switch-off. No early stopping. Lead conditions receive identically many policy queries. Compare immediate and wait separately at both deadlines, with paired gains/losses in each arm and block. Also compare equal policy exposure as a secondary readout.",
+  "decision": "Call pose recovery on this layout only if both arms beat both controls at the 300-control deadline, and the direction recurs in each model block. Report the primary 160-control deadline separately. A qualified pose without those comparisons is insufficient. Other layouts, autonomous mode selection and learning require separate evidence."
+}

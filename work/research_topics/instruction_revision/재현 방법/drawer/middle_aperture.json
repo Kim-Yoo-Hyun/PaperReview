@@ -1,0 +1,20 @@
+{
+  "question": "At two matched return postures, does middle-drawer aperture change the first gripper contact and the destination of the bowl under the same top-drawer instruction?",
+  "parent": "results/2026-11-25-upper-bowl/study.zip",
+  "parent_sha256": "5cf4a9560d21781967567e56a23420d3b434850a50cc3872fb4f8727edd09078",
+  "task_design": "drawer/upper_bowl.json",
+  "donor_design": "drawer/stove_fingers.json",
+  "modes": ["open", "closed"],
+  "returned_physics": {
+    "drawer-1-3-k0": "7a43b07b1ed3a698ab9357058f8c80ba86c8dc3204f67ebf028bc1b1da3a1e7e",
+    "drawer-2-3-k0": "cbf3d04834ae9c6d77462c6e461fd12d32db48fc05060499a9e8fec967e89823"
+  },
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "hold_controls": 20,
+  "max_middle_drift_m": 0.001,
+  "intervention": "Replay all 160 donor controls and the same 60 posture-return controls in the native upper-bowl environment. At the recorded return endpoint keep the actual middle slide position or substitute the observed closed position from the original warmed layout. Set only the middle slide velocity to zero in both branches. Run the same forward dynamics refresh, preserve the pre-refresh solver warm start, and take no control step. At dispatch require exact equality of the integration state except this slide position and exact equality of controller, fingers, time, RNG and policy proprioception. Require the top drawer, bowl and remaining objects to match, no robot or middle-drawer contacts, and both alternative placements initially false. Check each endpoint and mode separately for 20 stationary OSC controls without a policy, using the existing pose and object tolerances and 1 mm maximum middle-drawer drift. The qualification hold is excluded from the policy paths.",
+  "design": "Both layout-3 returns, eight existing diffusion streams at key offset 32, two fresh model processes. Both branches are freshly inferred and run at 20 Hz with a five-control replan period. Alternate condition order over donor and seed, reverse order in load two. No early stopping. Clocks include the common 3 s posture return; compare at 8, 15 and 30 s (5, 12 and 27 s from dispatch).",
+  "primary": "Native bowl-in-top at total time 15 s. Report discordant paired gains/losses overall and in all four donor by model-load cells. Support a closure benefit on these handoffs if all physical gates pass and closed-only exceeds open-only in every cell. Symmetric rule for an opening benefit. Report 30 s separately; distinguish recovery at the primary deadline from delayed recovery.",
+  "secondary": "First gripper contact after dispatch, including ties, external contacts and separately contact with any drawer or bowl; time to top contact, native top-open, bowl contact and native entry into each drawer. Score top/middle/bottom occupancy, physical support against the corresponding moving drawer and continuous in-region with fingers released over the last 1 s. Count first command differences and both early and eventual placement. Eight paired seeds per physical start, repeated under a second model load, do not constitute 32 independent scenes.",
+  "scope": "Controlled simulator state intervention. Both cameras and actual mechanics reflect the chosen aperture. Standalone upper-task competence on this reset has already been measured; the parent neutral start is not part of the paired comparison."
+}

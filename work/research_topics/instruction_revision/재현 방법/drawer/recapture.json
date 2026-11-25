@@ -1,0 +1,16 @@
+{
+  "trigger": "The planned 64 fixed-command replays matched their anchor images everywhere. A subsequent independent physical verification of direct block 2, public start 1, reported different live pixels after control 55. That verifier retained the tick but not the differing bytes.",
+  "starts": [0,1],
+  "reference_block": 1,
+  "batches": 8,
+  "replays_per_start_per_batch": 16,
+  "parallel_simulators": 4,
+  "budget": "Eight independently launched local Docker containers, each replaying both complete 160-control anchors 16 times in fresh simulator processes. Save full natural frames, physical matches and all 32 query times on every replay. No camera, light, scene or pixel edit.",
+  "eligibility": "Same full physics, input state, instruction, companion image, 1-4 changed pixels and maximum one RGB level as in protocol.json. No eligible time at or after first native goal can enter the treatment.",
+  "selection": "One pair per public start and pre-/post-first-contact window. For start 1 before contact, test the observed tick 55 first; otherwise use earliest eligible query, then lowest replay ordinal. Do not use policy outputs or endpoints in selection.",
+  "branch_blocks": 4,
+  "branch_order": "A then B on odd blocks, B then A on even blocks, reverse pair order on even blocks. Same controls before the branch, same two archived inputs except the naturally different camera, live feedback thereafter.",
+  "secondary_noise_seeds": [0,1,2,3,4,5,6,7],
+  "noise_test": "Two fresh policy loads and reversed arm order. Compare the first command, first five and full chunk under each paired diffusion key. Only seed zero receives physical rollouts.",
+  "stop": "If the changed bytes cannot be independently captured within the budget, report the original mismatch as unclassified and withhold action and outcome attribution."
+}

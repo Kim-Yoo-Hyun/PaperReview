@@ -1,0 +1,53 @@
+{
+  "task": "LIBERO-Goal middle drawer then stove",
+  "layouts": [
+    2,
+    3
+  ],
+  "starts_file": "drawer/heldout_starts.json",
+  "starts_sha256": "46803ba878e3dc92851b99e04ef4abb8e93300c9aad5ce3d1ff20a1fdb16a95f",
+  "parent": "results/2026-11-25-stove-pose/study.zip",
+  "parent_sha256": "7c86b14cc95a72532a994149fb1603ba9435d7c1ddb1d97e811a2fa368898806",
+  "preparation": "drawer/stove_pose.json",
+  "preparation_sha256": "ce53c3f934f7c97ea459054c8e9bb8b385e7e266092f4b5dd6c78baf9ff17352",
+  "prepare_function_sha256": "0f25a524e62f154861eb58413b057894d0e2102dcd1eddd600897a543f519839",
+  "checkpoint_manifest_sha256": "3f7c1e54c7ddcac70682ab9a98470f4e2fb76cb8a9ee2c972500b0faf99cab19",
+  "rng_schedule_sha256": "40dfe29e5de74f9077d7b098b8b65121bcd7f56a25a60246d9640e49bd22dc9a",
+  "lead": 60,
+  "gate_seeds": [
+    0,
+    1
+  ],
+  "blocks": [
+    1,
+    2
+  ],
+  "stove_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "budgets": [
+    160,
+    300
+  ],
+  "modes": [
+    "immediate",
+    "wait",
+    "pose"
+  ],
+  "period": 5,
+  "control_hz": 20,
+  "drawer_horizon": 160,
+  "key_offset": 32,
+  "source": "Use zero-based rows 2 and 3 of the official drawer initialization file at the revision and SHA256 in drawer/protocol.json. Run both official tasks from each same drawer reset. The stove task's own layout IDs do not identify these states.",
+  "gate": "Before any continuation, collect both standalone tasks with seeds 0 and 1 in each of two freshly loaded models. Drawer needs moving-drawer contact and open at 160. Stove needs moving-button contact and on at 300. Report all layouts, seeds and blocks at both deadlines if applicable. A layout needs at least one success for each task. Use every qualifying naturally opened, stove-off drawer endpoint at 160 from a competent layout, including contact and noncontact endpoints. Pair continuation block b with drawer gate block b. No search or endpoint replacement.",
+  "transfer": "Always apply the original 60-control preparation and same joint target rule, gains and limits. Score every scheduled attempt, including preparation/scene drift failures. Do not retune the motion, timing, layouts or endpoints. Recheck the original scene and posture criteria for every endpoint individually. Report physical tolerance failures alongside stove outcomes.",
+  "outcomes": "From the drawer endpoint score switch-on at total control 160 and 300, first contact with the moving switch, ever-on and open drawer. Eight matched post-drawer RNG streams per natural endpoint and treatment. Reverse condition order on the second block. Compare paired successes and losses per layout and block, and after equal policy exposure (100/240 active controls). Keep totals per physical endpoint and expose repeated identical state hashes.",
+  "decision": "Assess the 15 s advantage over both immediate and wait separately in each of the two model blocks for each layout; also report 8 s separately. A strict two-layout transfer of the qualified posture requires both competence gates, all included pose/wait preparations passing the frozen physical limits, and a positive 15 s difference over each control in each block of both layouts. If an endpoint fails preparation, still score its fixed maneuver as applied, identify the physical reason, and report qualified-only counts separately."
+}

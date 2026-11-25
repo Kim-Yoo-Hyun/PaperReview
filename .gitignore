@@ -1,22 +1,25 @@
-# OS / editor
 .DS_Store
 .vscode/
 .idea/
-
-# Python / cache
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+.venv/
+venv/
 .cache/
-
-# Logs / temp
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+node_modules/
 *.log
 tmp/
 temp/
-/work/research_topics/contact_adaptation/재현 방법/runs/
-/work/research_topics/relation_exploration/재현 방법/runs/
-
-# Large or generated files
+runs/
+*.pt
+*.pth
+*.safetensors
+*.onnx
 *.zip
 *.tar
 *.tar.gz
@@ -26,9 +29,9 @@ temp/
 *.mp4
 *.mov
 *.avi
-
-# Optional: downloaded paper PDFs
-# If you want to upload only your own notes/reviews, keep this enabled.
 *.pdf
-/work/research_topics/pose_active_perception/재현 방법/runs/
-/work/research_topics/task_geometry_estimation/재현 방법/runs/
+
+# Measured drawer trials, their direct control and the source of the two starting postures.
+!/work/research_topics/instruction_revision/재현 방법/results/2026-11-25-drawer-location/study.zip
+!/work/research_topics/instruction_revision/재현 방법/results/2026-11-25-middle-aperture-layout2/study.zip
+!/work/research_topics/instruction_revision/재현 방법/results/2026-11-25-stove-layouts/study.zip

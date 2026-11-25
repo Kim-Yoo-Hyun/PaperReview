@@ -189,7 +189,7 @@ World-model policy ranking, 센서 결손 대비, 군중 예측 보정의 적용
 
 **2026-11-17 / 탐색 가설.** [SAFE](https://proceedings.neurips.cc/paper_files/paper/2025/hash/392d0d05e2f514063e6ce6f8b370834c-Abstract-Conference.html)의 VLA 내부 특징, [SFF](https://arxiv.org/abs/2611.11688)의 배포 후 monitor 갱신은 일반 탐지·재보정의 선행이다. [B2FF §5](https://arxiv.org/html/2606.09258v1)는 회복 가능한 이탈과 기존 skill을 가정하고 [AHEAD §6.1](https://arxiv.org/html/2606.02486v1)는 운동 추정의 불확실성 전파를 한계로 둔다. 공식 게재와 2026 preprint, 초록 확인과 지정 절 확인을 구분한다.
 
-새로 대조할 질문은 **시각 추정 오류와 행동 능력 부족을 구별하는 정보가 같은 비용의 재관측·재시도보다 유용한 복구 선택을 만드는가**다. Failure score·원인 설명·개입 성공 가능성은 서로 다르며 그 구분 자체는 기여가 아니다. 같은 상태의 정보 개입·기본 능력·단순 기준선 이후 남는 차이를 확인해야 한다. 근거·다음 비교와 기존 D1/FEEDBACK의 경계는 [주제 문서](../work/research_topics/visual_feedback/내용/README.md#reliability-scout-2026)에 통합한다. 새 방법/공백은 아직 확정하지 않았다. 이전 후보 중 7개는 [폐기](../work/research_topics/RESULTS.md)했고 아래 과거 문헌 질문을 자동 실행 계획으로 해석하지 않는다.
+새로 대조할 질문은 **시각 추정 오류와 행동 능력 부족을 구별하는 정보가 같은 비용의 재관측·재시도보다 유용한 복구 선택을 만드는가**다. Failure score·원인 설명·개입 성공 가능성은 서로 다르며 그 구분 자체는 기여가 아니다. 같은 상태의 정보 개입·기본 능력·단순 기준선 이후 남는 차이를 확인해야 한다. 근거·다음 비교와 기존 D1/FEEDBACK의 경계는 [주제 문서](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/research_topics/visual_feedback/%EB%82%B4%EC%9A%A9/README.md#reliability-scout-2026)에 통합한다. 새 방법/공백은 아직 확정하지 않았다. 이전 후보 중 7개는 [폐기](../work/research_topics/RESULTS.md)했고 아래 과거 문헌 질문을 자동 실행 계획으로 해석하지 않는다.
 
 ### Recovery 평가와 action-conditioned 세계 모델의 출처 경계
 
@@ -236,7 +236,7 @@ World-model policy ranking, 센서 결손 대비, 군중 예측 보정의 적용
 <a id="gap-authorization-2026"></a>
 ### GAP-AUTH — 정책의 목표 추정 오류가 보호 대상 설정으로 전파되는가?
 
-- **2026-10-27 GAP-AUTH4:** [로컬 지각·baseline 심사](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/VLA_CONTACT_AUTHORIZATION_BASELINE_REVIEW_2026-10-27.md), [source/비교/재개 gate](../work/sources/vla_contact_authorization_baseline_review_2026-10-27.json). 공식 YOLOE 20파일·AEGIS 2파일 지정 구간과 checkpoint metadata로 공통 지각 후보를 좁혔다. 초기 지시 grounding+identity 고정+최신 geometry 이후 고유 이득 미확보로 **현재 방법 채택 NO-GO·진단 HOLD**. Packet PARTIAL·native/효과 미검증이며 실험적 반증이 아니다. `CURATION-HYPOTHESIS`와 기존 후보 보류 유지.
+- **2026-10-27 GAP-AUTH4:** [로컬 지각·baseline 심사](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/VLA_CONTACT_AUTHORIZATION_BASELINE_REVIEW_2026-10-27.md), [source/비교/재개 gate](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/sources/vla_contact_authorization_baseline_review_2026-10-27.json). 공식 YOLOE 20파일·AEGIS 2파일 지정 구간과 checkpoint metadata로 공통 지각 후보를 좁혔다. 초기 지시 grounding+identity 고정+최신 geometry 이후 고유 이득 미확보로 **현재 방법 채택 NO-GO·진단 HOLD**. Packet PARTIAL·native/효과 미검증이며 실험적 반증이 아니다. `CURATION-HYPOTHESIS`와 기존 후보 보류 유지.
 - **직접 선행:** [KNOWS §3–4](https://arxiv.org/html/2606.09749v1)는 attention 목표를 보호에서 제외하며 낮은 confidence에는 전부 보호한다. [AEGIS](https://arxiv.org/html/2512.11891v2)는 지시 기반 외부 VLM과 CBF를, [RoboGuard](https://arxiv.org/html/2503.07885v2)는 독립 의미 사양 생성을 다룬다. 모두 같은 방법이라고 묶지 않으며 KNOWS/AEGIS의 공식 conference/journal status는 미확인이다. 독립 guard·의미 제약 자체는 새 기여가 아니다.
 - **남은 질문 — 연구자 해석:** 같은 geometry·tracking·controller·시점에서 **높은 신뢰도의 잘못된 목표**를 정책이 선택할 때, 내부 의도를 사용한 허용 판단도 같은 오선택을 하는가? 원 지시 기반 고정/독립 판단으로 바꾸면 정상 작업을 유지하면서 그 오류를 줄일 수 있는가? 물체 역할은 task contract에서 고정하며 위반을 물리적 손상과 동일시하지 않는다.
 - **반례와 경계:** 보호해야 할 물체를 장애물 집합에서 제외하면, 설정된 제약의 만족이 그 물체의 비접촉을 보장하지 않는다. 이는 이론의 반증이나 실측이 아니다. 첫 pre-grasp gripper 접촉에 범위를 한정하고 모든 link·모든 phase로 확대하지 않는다.

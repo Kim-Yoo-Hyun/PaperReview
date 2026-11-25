@@ -44,4 +44,4 @@ PPO/on-policy 학습·KL 제약에서 SimpleVLA-RL 후학습 보존 질문으로
 
 ## Related Research Review
 
-[지시별 행동 보존의 선행 대조](../../../work/research_topics/unified_vla_rl/내용/README.md#langret-n1)와 [source 원장](../../../work/sources/vla_masters_gap_scout_2026-11-12.json)에 지정 본문·공개 코드 검토 범위를 보존한다. 이 링크가 위 초록 노트나 사용자 reading status를 정독 완료로 승격하지 않는다.
+[지시별 행동 보존의 선행 대조](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/work/research_topics/unified_vla_rl/%EB%82%B4%EC%9A%A9/README.md#langret-n1)와 [source 원장](../../../work/sources/vla_masters_gap_scout_2026-11-12.json)에 지정 본문·공개 코드 검토 범위를 보존한다. 이 링크가 위 초록 노트나 사용자 reading status를 정독 완료로 승격하지 않는다.

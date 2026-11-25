@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-24",
+  "generated_on": "2026-11-25",
   "catalog_type": "metric",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -9060,6 +9060,11 @@
         {
           "paper_id": "pr-0816",
           "source": "2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1260",
+          "source": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

@@ -1,7 +1,0 @@
-*
-!Dockerfile
-!PLAN.json
-!resume.py
-!probe.py
-!actor.py
-!test_contract.py

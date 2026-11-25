@@ -1904,6 +1904,11 @@
           "paper_id": "pr-1239",
           "source": "2026/CoRL/2026_CoRL_VLA-FAIL-Efficient-Task-Failure-Detection-for-Finetuned-Vi/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1260",
+          "source": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "evidence": "cue_only",
@@ -3752,6 +3757,11 @@
         {
           "paper_id": "pr-1216",
           "source": "2026/CVPR/2026_CVPR_Action-Geometry-Prediction-with-3D-Geometric-Prior-for-Bim/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1259",
+          "source": "2026/arXiv/2026_arXiv_See-Selectively-Act-Adaptively-Dual-Level-Structural-Decom/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -7445,6 +7455,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:4059ca6af609",
+      "resource_type": "code_or_project",
+      "name": "See-Selectively-Act-Adaptively",
+      "url": "https://choiyoonji.github.io/See-Selectively-Act-Adaptively/",
+      "paper_ids": [
+        "pr-1259"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-20"
+    },
+    {
       "resource_id": "code:4191c3fe1522",
       "resource_type": "code_or_project",
       "name": "software.html",
@@ -9347,6 +9369,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:7cf4a743a587",
+      "resource_type": "code_or_project",
+      "name": "STARBench",
+      "url": "https://github.com/ut-amrl/STARBench",
+      "paper_ids": [
+        "pr-1257"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:7e85d1c32840",
       "resource_type": "code_or_project",
       "name": "SCFields",
@@ -10093,18 +10127,6 @@
       "verified_on": "2026-11-20"
     },
     {
-      "resource_id": "code:94997b0faa78",
-      "resource_type": "code_or_project",
-      "name": "tune-to-learn",
-      "url": "https://younghyopark.me/tune-to-learn/",
-      "paper_ids": [
-        "pr-1197"
-      ],
-      "evidence": "manifest_link",
-      "availability": "not_identified",
-      "verified_on": "2026-11-20"
-    },
-    {
       "resource_id": "code:94bf36d190e5",
       "resource_type": "code_or_project",
       "name": "RealVLG-R1",
@@ -10611,6 +10633,18 @@
       "verified_on": "2026-11-25"
     },
     {
+      "resource_id": "code:a45d7b6abba2",
+      "resource_type": "code_or_project",
+      "name": "InsertAnything",
+      "url": "https://github.com/mzhsoul/InsertAnything",
+      "paper_ids": [
+        "pr-1253"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:a4b1294e6577",
       "resource_type": "code_or_project",
       "name": "long-vla.github.io",
@@ -10873,6 +10907,18 @@
       "evidence": "manifest_link",
       "availability": "project_only",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:abea64e47260",
+      "resource_type": "code_or_project",
+      "name": "ladder",
+      "url": "https://github.com/insait-institute/ladder",
+      "paper_ids": [
+        "pr-1255"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:ac40c2aed70a",
@@ -11295,6 +11341,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:b97ec9cbf4c0",
+      "resource_type": "code_or_project",
+      "name": "PoseIt",
+      "url": "https://github.com/Robo-Touch/PoseIt",
+      "paper_ids": [
+        "pr-1256"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
     },
     {
       "resource_id": "code:b97f2e0d5ca4",
@@ -12365,6 +12423,18 @@
       "evidence": "manifest_link",
       "availability": "released",
       "verified_on": "2026-11-20"
+    },
+    {
+      "resource_id": "code:dbfaafe103c0",
+      "resource_type": "code_or_project",
+      "name": "tune-to-learn",
+      "url": "https://github.com/younghyopark/tune-to-learn",
+      "paper_ids": [
+        "pr-1197"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:dc4334d7bbf2",
@@ -13592,6 +13662,18 @@
       "verified_on": "2026-11-25"
     },
     {
+      "resource_id": "code:fcb14aceee2c",
+      "resource_type": "code_or_project",
+      "name": "RoboCombine",
+      "url": "https://github.com/AutoLab-SAI-SJTU/RoboCombine",
+      "paper_ids": [
+        "pr-1258"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-19"
+    },
+    {
       "resource_id": "code:fd23bf9bb5cf",
       "resource_type": "code_or_project",
       "name": "uncertainty_aware_residual_rl",
@@ -14226,6 +14308,11 @@
         {
           "paper_id": "pr-0816",
           "source": "2026/ICML/2026_ICML_Temporal-Difference-Calibration-in-Sequential-Tasks-Applic/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1260",
+          "source": "2026/arXiv/2026_arXiv_IMPACT-VLA-Interaction-aware-Multimodal-Propagation-Attrib/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

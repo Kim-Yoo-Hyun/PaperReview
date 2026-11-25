@@ -1,0 +1,58 @@
+{
+  "id": "REVISION-R1-FIRST-VIEW",
+  "date": "2026-11-24",
+  "scene_seed": 11,
+  "arm": "B",
+  "source": {
+    "archive": "results/2026-11-24-r1-bottle-xy",
+    "files": {
+      "study.zip": "b93480d1fd58502c40c37c4fabba0140fb3e3e87eb93c01d2640f74fd6b12358",
+      "verification.json": "ba4ebdf599b8e05c70333069b5174e712f000ff4bac8905ec54104bf2b0c1ca0"
+    }
+  },
+  "fixed_command_comparison": {
+    "file": "results/2026-11-24-r1-command-cross/verification.json",
+    "sha256": "2380c490747238e9d6607d6097e33aadb85f83e480ebd13a3fb95cc34c6ad01f"
+  },
+  "cells": [
+    [
+      11,
+      11
+    ],
+    [
+      19,
+      19
+    ],
+    [
+      11,
+      19
+    ],
+    [
+      19,
+      11
+    ]
+  ],
+  "cell_order": "[physical bottle position, position supplying both camera frames at the first revised query]. Run both own-image cells before crossed cells; two fresh server/simulator restarts per cell.",
+  "intervention_tick": 2,
+  "resume_live_tick": 7,
+  "controls": 300,
+  "hz": 20,
+  "repeats": [
+    1,
+    2
+  ],
+  "branch_rgb_sha256": {
+    "11": {
+      "observation/image": "5d78eb562f97427e580bf939067664322b67930c117ed61531d5d0cc419c39c4",
+      "observation/wrist_image": "86089fba29872d7cf3f40e52c1a009df108778ca6a3f4800492219121be9dcf2"
+    },
+    "19": {
+      "observation/image": "2965dffd1c5ece79fd1b2c2dc2fd7c6414b69f6a4ea8ac44ede02be037b31bea",
+      "observation/wrist_image": "5a28dc857c04342d677a2127129346276eeca1a89d1827595886d21480a82f82"
+    }
+  },
+  "intervention": "Render and record the recipient live scene at every query. Use the historical recipient prefix at 0 and 2, issue the native source query at 0, dispatch its two frozen source commands, and preserve the native policy RNG call sequence. At completed control 2 only, use the sealed agent and wrist frames from the assigned position; own arms use the same archive load path. Keep recipient proprioception, B prompt and checkpoint fixed. Execute exactly commands 3 through 7 from this reply. Beginning at completed control 7 submit only the live recipient frames, query the same policy every 5 controls through the 300-control horizon.",
+  "integrity": "Match the physical branch to the recipient prefix. Compare decoded pixel bytes, state, prompt and the 10x7 output on the simulator client and native policy server. Verify each fresh server starts at native JAX key 0 and consumes the same key sequence over 61 calls. The control-2 8D state must match across the two donor layouts. Score the first 5 actually dispatched commands against each current own-image block in the same repeat; record exact matches and per-component maximum absolute differences in native action units.",
+  "primary": "Record the first sampled robot contact with the bowl and bottle, first/terminal cabinet contact for each, native bowl-on-cabinet at 300 and bottle protection throughout against the recipient t0 frozen calibration. Reuse the registered bottle-transport signature and report other physical outcomes separately. Report technical restarts per cell and replay commanded paths twice in fresh simulators.",
+  "decision": "Require both own-image runs at physical 11 to jointly place the bowl/protect the bottle and both at physical 19 to transport the bottle before interpreting the crossed endpoints. With passing controls, both switches to donor outcome support first-query image sufficiency in both directions on this scene; neither switch with matching original endpoints is insufficient at this query; one switch supports only that direction. Report mixed repeats, contact changes or failure to achieve either endpoint separately. If own controls fail, score all paths and withhold directional attribution. A null endpoint does not test later feedback or individual cameras."
+}

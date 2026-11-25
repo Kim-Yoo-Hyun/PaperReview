@@ -1,0 +1,47 @@
+{
+  "id": "REVISION-R1-NEUTRAL-LAYOUTS",
+  "date": "2026-11-24",
+  "seeds": [
+    11,
+    19
+  ],
+  "reference": {
+    "archive": "results/2026-11-24-r1-layouts",
+    "files": {
+      "study.zip": "9bed61a9c5c0e4a3637da5e80788a5bf5f56999959a74e94a3667b5f8d1231a9",
+      "verification.json": "cac8d75b1d21bac6ca404b804dc380ffb520d82fd502ceb81fd8bfd70a9df001"
+    },
+    "prefix_sha256": {
+      "11": "e3df68a3a66d43901e79e6d2b325fbde80d4ca12d641073213e79571a7220efb",
+      "19": "0f58e5f7f0a96ca63c5d2debe72d8549e6757403a9fc0c71f0da05dd8b30ea74"
+    }
+  },
+  "mention_protocol": "R1_MENTION_MATCHED.json",
+  "mention_sha256": "7f2cf5ac8e17a64c0bd31b64466ec7c962737659ab58d61137ad22882e333062",
+  "order": {
+    "11": [
+      [
+        "B",
+        "T"
+      ],
+      [
+        "T",
+        "B"
+      ]
+    ],
+    "19": [
+      [
+        "T",
+        "B"
+      ],
+      [
+        "B",
+        "T"
+      ]
+    ]
+  },
+  "intervention": "Use only the frozen B (wine bottle) and T (table surface) prompts from the matched-mention protocol. Replay each layout's original first two commands from its protected-source prompt, then query the native policy for each continuation. Two fresh policy/simulator restarts per wording and layout, 300 controls, 20 Hz. Orders are counterbalanced. No new layout calibration or standalone source-prefix inference.",
+  "primary": "Per layout and wording: native bowl-on-cabinet at 300 and bottle pose within the frozen tolerance throughout. Report the components separately, net and peak displacement of both bodies from t0, first robot–bottle and bottle–cabinet contact, terminal bottle–cabinet contact, and violation relative to confirmed released placement.",
+  "bottle_transport": "First robot–bottle contact observed, bottle net displacement exceeds the frozen translation tolerance, bottle–cabinet contact at 300, bowl peak displacement at most that same tolerance and no native bowl goal ever observed. This is a descriptive signature, not a native task goal for the bottle.",
+  "decision": "Count the bottle-transport signature separately for B and T. Claim reproduction of the previously observed O signature by neutral mention on both layouts only if B shows it twice on each and T jointly succeeds twice on each. Otherwise report by layout, including post-placement violations and divergent restarts. Compare previously recorded raw update, O (explicit protection), and A (goal only) as separate historical arms, never pooled with current trials; seed 7 is development data. These two selected placements and single pair of wordings do not identify the causal effect of a protection verb."
+}

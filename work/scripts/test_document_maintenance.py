@@ -237,10 +237,9 @@ class DocumentMaintenanceTest(unittest.TestCase):
                                       create_missing_notes=False, overwrite_notes=False,
                                       write_registry=True, write_manifest=False)
             with patch.object(survey, "MANIFEST", manifest), patch.object(survey, "parse_args", return_value=args), \
-                    patch.object(survey, "build_papers") as legacy, patch.object(survey, "write_registry") as write, \
+                    patch.object(survey, "write_registry") as write, \
                     patch.object(survey, "write_manifest") as write_manifest, patch.object(survey, "write_notes") as notes:
                 survey.main()
-            legacy.assert_not_called()
             write.assert_called_once_with(papers)
             write_manifest.assert_not_called()
             notes.assert_not_called()

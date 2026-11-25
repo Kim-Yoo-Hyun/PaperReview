@@ -1432,6 +1432,44 @@ FOCUS_SOURCE_CHECKS.update({
 })
 FOCUS_REVIEW_DATES.update(dict.fromkeys(("pr-1251", "pr-1252"), "2026-11-20"))
 
+NEXT_GROUPS['Contact-rich, deformable, force, and dexterous manipulation'].extend([
+    '=InsertAnything: Generalizable Contact-Rich Precision Insertion from Simulation to Reality',
+    '=Tactile-Guided In-Contact Robotic Insertion via Physically Consistent Force-Array Representation Learning',
+])
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].extend([
+    '=LADDER: A Long-Horizon Robot Manipulation Benchmark',
+])
+FOCUS_PRIORITY_RATIONALES.update({
+    'pr-1253': '위치 오차가 있는 삽입에서 강성 학습에 앞서 대조할 힘 기반 동작 정책이다.',
+    'pr-1254': '순합력과 국소 접촉 정보가 다른 판단을 주는 현재 삽입 연구의 실물 비교 논문이다.',
+    'pr-1255': '긴 조작의 계획 오류와 실행 오류를 추적할 수 있는 공개 실행 기록이 있어 일반 정책 비교에 직접 필요하다.',
+})
+FOCUS_REFERENCE_RATIONALES.update({
+    'pr-1256': '들기 이후 실패가 발생한 단계를 공개 기록으로 재확인할 때 쓰는 데이터 기준이다.',
+    'pr-1257': '기억 조회와 로봇의 실제 이동을 구별하는 공개 탐색 프로토콜로 참조한다.',
+    'pr-1258': '첫 조작 이후 실패를 해석할 때 하위 지시와 인계 자세를 통제한 직접 선행으로 참조한다.',
+})
+FOCUS_SOURCE_CHECKS.update({
+    'pr-1253': 'https://arxiv.org/abs/2609.24511',
+    'pr-1254': 'https://ieeexplore.ieee.org/document/11692602/',
+    'pr-1255': 'https://arxiv.org/abs/2610.18053',
+    'pr-1256': 'https://ieeexplore.ieee.org/document/9981562/',
+    'pr-1257': 'https://ieeexplore.ieee.org/document/11696368/',
+    'pr-1258': 'https://arxiv.org/abs/2610.15425',
+})
+FOCUS_REVIEW_DATES.update(dict.fromkeys(['pr-1253', 'pr-1254', 'pr-1255', 'pr-1256', 'pr-1257', 'pr-1258'], '2026-11-19'))
+
+NEXT_GROUPS['VLA, cross-embodiment, and long-horizon planning'].append(
+    '=See Selectively, Act Adaptively: Dual-Level Structural Decomposition for Bimanual Robot Manipulation'
+)
+FOCUS_PRIORITY_RATIONALES['pr-1259'] = '시연 라벨로 양팔 협조·독립 경로를 고르는 직접 선행이다. 보상으로 탐색 공분산을 학습하는 후보와 비교한다.'
+FOCUS_SOURCE_CHECKS['pr-1259'] = 'https://arxiv.org/html/2606.13279v2'
+FOCUS_REVIEW_DATES['pr-1259'] = '2026-11-20'
+FOCUS_REFERENCE_RATIONALES['pr-1260'] = '시각 피드백의 단계별 기여를 폐루프에서 검증할 때 사용하는 평가 비교법이다.'
+FOCUS_SOURCE_CHECKS['pr-1260'] = 'https://arxiv.org/abs/2609.15005'
+FOCUS_REVIEW_DATES['pr-1260'] = '2026-11-24'
+
+
 SYNTHESIS_FILES = OrderedDict(
     [
         (

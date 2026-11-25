@@ -1,0 +1,44 @@
+{
+  "id": "REVISION-ATOMIC-R8",
+  "version": 1,
+  "registered_on": "2026-11-24",
+  "selection": "Use the existing R8 development seed and the two native atomic instructions fixed in the original transport packet. No selection by rollout outcomes.",
+  "source_task_id": 3,
+  "source_prompt": "put the bowl on the plate",
+  "arms": [
+    {
+      "arm": "plate",
+      "task_id": 3,
+      "prompt": "put the bowl on the plate",
+      "goal_key": "on_akita_black_bowl_1_plate_1"
+    },
+    {
+      "arm": "cabinet",
+      "task_id": 5,
+      "prompt": "put the bowl on top of the cabinet",
+      "goal_key": "on_akita_black_bowl_1_wooden_cabinet_1_top_side"
+    }
+  ],
+  "environment_seed": 7,
+  "policy_rng_seed": 0,
+  "python_hash_seed": 0,
+  "repetitions": 2,
+  "warmup_controls": 10,
+  "shared_source_controls": 2,
+  "action_horizon": 10,
+  "action_dim": 7,
+  "replan_controls": 5,
+  "policy_controls_per_path": 300,
+  "queries_per_path": 61,
+  "release_window": 5,
+  "checkpoint": "pi05_libero",
+  "source_commit": "7329c159319a346b7245a69c128e5d4940c0763b",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "run_order": "repeat 1 then repeat 2, plate then cabinet. Fresh policy server (same default JAX key) and simulator process per path. Local Docker only.",
+  "branch": "Both arms query the plate prompt on reset, execute its first two controls and discard its remaining queue. Both requery on the same pre-grasp branch. Only the requested destination changes. All later queries use the latest native views and state.",
+  "match": "Check the initial and branch MuJoCo integration state, action-controller targets, robot gripper, contact geometry, goal flags, RNG and both uint8 policy camera views plus 8-D proprioception. At the branch, both goals must start false and the gripper must be clear of the bowl. Confirm the same first two actions. Replay identically seeded prefixes instead of relying on a partial simulator restore.",
+  "primary": "Native requested On predicate at control 300 (one-based post-action ticks). No early goal stop. First hit and other destination are scored separately.",
+  "secondary": "Last five ticks with requested native On and zero bowl–gripper geometry contacts, first run and terminal interval. Describe under the recorded predicates only.",
+  "decision": "Report both atomic continuations supported on this development fixture only if both paired repetitions have matched prefixes and each arm meets its requested exclusive native goal at the deadline. Report release/contact evidence separately. A missing match or discordant repeat is unresolved. If a destination misses, identify the failed atomic arm before testing constraints. No ranking or population success rate.",
+  "budget": "4 development trajectories; 1200 policy controls + 40 settling controls; 244 model queries. Existing R8 two-query transport smoke is separate. No new scenes, training, learned semantic updater or protected-object test."
+}

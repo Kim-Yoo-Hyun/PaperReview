@@ -23,5 +23,12 @@ RUN uv python install 3.10.18 3.11.13 \
     && uv sync --project /opt/resteer/third_party/openpi --python 3.11.13 --frozen --no-dev \
     && uv cache clean
 WORKDIR /opt/resteer
+# NVIDIA Container Toolkit mounts the driver libraries; a slim base may only
+# ship Mesa's vendor entry, which cannot select this headless NVIDIA device.
+RUN mkdir -p /etc/glvnd/egl_vendor.d && \
+    printf '%s\n' '{"file_format_version":"1.0.0","ICD":{"library_path":"libEGL_nvidia.so.0"}}' \
+      > /etc/glvnd/egl_vendor.d/paperreview-nvidia.json
+ENV __EGL_VENDOR_LIBRARY_FILENAMES=/etc/glvnd/egl_vendor.d/paperreview-nvidia.json \
+    PYTHONHASHSEED=0
 COPY RESUME_PLAN.json ARTIFACTS.json inside.py native_probe.py /recipe/
 ENTRYPOINT ["/opt/resteer/third_party/openpi/.venv/bin/python", "/recipe/inside.py"]

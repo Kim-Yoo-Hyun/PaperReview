@@ -1,5 +1,3 @@
-# Preserve archived patch bytes, including unified-diff context prefixes.
-work/experiments/proxy_observation_contract/results/verified/source_repair.patch -whitespace
-# Preserve pre-existing replay artifact bytes, including their terminal blank line.
-"work/research_topics/unified_vla_rl/재현 방법/langret.Dockerfile" whitespace=-blank-at-eof
-"work/research_topics/unified_vla_rl/재현 방법/langret_requirements.txt" whitespace=-blank-at-eof
+# Match the exact simulator and verifier bytes captured in the drawer study archives.
+"work/research_topics/instruction_revision/재현 방법/stove_pose_sim.py" text eol=lf whitespace=-blank-at-eof
+"work/research_topics/instruction_revision/재현 방법/verify_stove_pose.py" text eol=lf whitespace=-blank-at-eof
