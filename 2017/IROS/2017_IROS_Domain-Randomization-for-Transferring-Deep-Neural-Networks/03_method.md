@@ -48,7 +48,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Random textures are chosen among the following: (a) A random RGB value (b) A gradient between two random RGB values (c) A checker pattern between ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 2 / I. INTRODUCTION - extractive body cue:** To our knowledge, this is the first successful transfer of a deep neural network trained only on simulated RGB images to the real world for ...
 - **p. 3 / III. METHOD - extractive body cue:** We render images using the MuJoCo Physics Engine's [45] built-in renderer.
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Domain randomization The purpose of domain randomization is to provide enough simulated variability at training time such that at test time the model is able ...
 - **p. 3 / III. METHOD - extractive body cue:** Random textures are chosen among the following: (a) A random RGB value (b) A gradient between two random RGB values (c) A checker pattern between ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** remainder, section, describes, specific, domain, randomization, neural, network, training, methodology, randomize, following, aspects, sample, during, Number, shape, distractor, objects, table.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Adding noise during pretraining appears to have a negligible effect.
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our object detectors are able to localize objects to within 1.5 cm (on average) in the real world and perform well in the presence of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), objective p. 4 (III. METHOD), p. 3 (III. METHOD), temporal p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Abstract), p. 2 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

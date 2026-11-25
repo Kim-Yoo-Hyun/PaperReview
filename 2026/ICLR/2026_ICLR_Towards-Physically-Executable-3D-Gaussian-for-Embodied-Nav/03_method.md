@@ -56,7 +56,6 @@ PDF body method statement (p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTA
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** We run A*-based shortest-path search to generate trajectories with a cost function that integrates free-space distance, narrow-passage penalties, and area preferences to ensure both obstacle ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTA
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** We selected 500k "trajectory-instruction" pairs from SAGE-Bench, with no overlap with the test set.
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** To diversify the dataset, start-end pairs are sampled across different rooms, functional areas, and object instances, and a minimum safety distance is enforced to avoid ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTA
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** Training was carried out on 8 NVIDIA Tesla H20 GPUs with a batch size of 256 and a learning rate of 2 × 10-5.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** We randomly selected 10k training samples and 1k validation samples from both traditional scanned mesh data and our 3DGS data, and conducted experiments with the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** training, data, include, VLN-CE, R2R, RxR, samples, selected, trajectory-instruction, pairs, SAGE-Bench, overlap, test, shortest-path, search, generate, trajectories, cost, function, integrates.
 - **Relevant PDF headings:** B DETAILED SAMPLING METHOD OF INTERIORGS (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,22 +111,11 @@ PDF body method statement (p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTA
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Overview of SAGE-Bench. SAGE-Bench includes a hierarchical instruction generation scheme, two major task types, two episode complexity categories, and three newly designed natural ...
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4 corroborate this finding: the NaVILA model (blue trajectory) exhibits unsmooth movement and persistent collisions that conventional metrics fail to reveal.
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Traditional 3DGS vs. Our work. Compared with traditional 3DGS, our InteriorGS pro- vides object-level 3DGS annotations across diverse indoor and outdoor scenes, including ...
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Overview of SAGE-3D, which consists of two key components: (1) Object-Level Semantic Grounding, 3DGS data is annotated by expect at the object level, ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 15 (A IMPLEMENTATION DETAILS), p. 15 (A IMPLEMENTATION DETAILS), objective p. 15 (A IMPLEMENTATION DETAILS), temporal p. 8 (4 EXPERIMENTS), p. 7 (3) Path Smoothness), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

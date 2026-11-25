@@ -152,7 +152,7 @@ def resource_ids_by_paper(resources: dict) -> dict[str, list[str]]:
     return output
 
 
-def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
+def build_index(papers: list[dict], resources: dict) -> tuple[list[str], list[dict[str, str]]]:
     tiers = read_tiers()
     status = read_status()
     ids_by_paper = resource_ids_by_paper(resources)
@@ -197,6 +197,8 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
         "outgoing_relations",
         "incoming_relation_count",
         "overview_path",
+        "tags",
+        "aliases",
     ]
     incoming_relations: Counter[str] = Counter()
     for paper in papers:
@@ -274,6 +276,8 @@ def build_index(papers: list[dict], resources: dict) -> list[dict[str, str]]:
                 ),
                 "incoming_relation_count": str(incoming_relations.get(paper_id, 0)),
                 "overview_path": path_key(paper["folder"]),
+                "tags": ";".join(paper.get("tags", [])),
+                "aliases": ";".join(paper.get("aliases", [])),
             }
         )
     return fieldnames, rows

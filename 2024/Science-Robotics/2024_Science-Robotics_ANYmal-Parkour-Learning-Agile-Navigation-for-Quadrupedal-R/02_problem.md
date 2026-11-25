@@ -64,8 +64,6 @@ PDF body contribution framing (p. 5 (3) We develop a neural terrain reconstructi
 | body cue at p. 5 | 3 (A2)), which is necessary for the leg to reach the other side of the gap and catch ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | At this location, it has to perform precise foothold placement to pass the last step and prepare for ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 14 (IV. MATERIALS AND METHODS), p. 5 (3) We develop a neural terrain reconstruction method that), p. 12 (IV. MATERIALS AND METHODS), p. 12 (IV. MATERIALS AND METHODS). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ locomotion writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), interface p. 14 (IV. MATERIALS AND METHODS), p. 5 (3) We develop a neural terrain reconstruction method that), p. 12 (IV. MATERIALS AND METHODS), p. 12 (IV. MATERIALS AND METHODS), objective p. 14 (IV. MATERIALS AND METHODS), p. 14 (IV. MATERIALS AND METHODS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

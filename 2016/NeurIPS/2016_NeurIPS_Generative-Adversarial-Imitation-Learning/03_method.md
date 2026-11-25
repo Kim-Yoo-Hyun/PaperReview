@@ -58,7 +58,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 - **p. 5 / 2 Background - extractive body cue:** (12) is the policy gradient for a reinforcement learning objective with cost c∗, Ho et al. propose an algorithm that alternates between two steps: 1.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 5 (2 Background), p. 5 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗), p. 4 (2 Background), p. 7 (2. Form a gradient estimate with Eq. (12) with c∗), p. 3 (2 Background).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 - **p. 6 / 2. Form a gradient estimate with Eq. (12) with c∗ - extractive body cue:** The discriminator network can be interpreted as a local cost function providing learning signal to the policy-specifically, taking a policy step that decreases expected cost ...
 - **p. 1 / Abstract - extractive body cue:** Consider learning a policy from example expert behavior, without interaction with the expert or access to reinforcement signal.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 - **p. 2 / 1 Introduction - extractive body cue:** networks [9], a technique from the deep learning community that has led to recent successes in modeling distributions of natural images: our algorithm harnesses generative ...
 - **p. 3 / 2 Background - extractive body cue:** A basic result [21] is that the set of valid occupancy measures D ≜{ρπ : π ∈Π} can be written as a feasible set of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** networks, technique, deep, learning, community, recent, successes, modeling, distributions, natural, images, algorithm, harnesses, generative, adversarial, training, states, actions, defining, expert.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. 
 - **p. 5 / 2. Form a gradient estimate with Eq. (12) with c∗ - extractive body cue:** This carefully constructed step scheme ensures that divergence does not occur due to high noise in estimating the gradient (12).
 - **p. 5 / 2 Background - extractive body cue:** If C does not include a cost function that explains expert behavior well, then attempting to recover a policy from such an encoding will not ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 4 (2 Background), p. 6 (2. Form a gradient estimate with Eq. (12) with c∗), p. 2 (2 Background), p. 4 (2 Background), p. 3 (2 Background), objective p. 4 (2 Background), p. 5 (2 Background), p. 2 (2 Background), p. 2 (2 Background), p. 4 (2 Background), p. 5 (2 Background), temporal p. 1 (1 Introduction), p. 1 (1 Introduction), p. 7 (6 Experiments), p. 2 (2 Background), p. 2 (2 Background), p. 5 (2. Form a gradient estimate with Eq. (12) with c∗).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

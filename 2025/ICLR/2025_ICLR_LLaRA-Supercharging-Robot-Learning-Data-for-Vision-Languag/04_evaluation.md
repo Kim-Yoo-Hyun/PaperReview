@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** Effectiveness of auxiliary datasets.
 - **p. 16 / A.1 DATASET PREPARATION - extractive body cue:** In this subsection, we give more details and examples of the datasets used in this paper.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: A real-world demonstration of LLaRA solving an unseen task. In this setting, LLaRA converts only eight thousand simulated expert trajectories from VIMA (Jiang ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 | Figure 2: LLaVA overview. A Large Language Model (LLM) is connected to the visual domain with suitable encoder and adap- tor neural networks. Consider ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 8: Visual reference for the initial image (top row) and successful end positions (bottom row) in three real-world tasks. We also show some ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 | Compared to VIMA, our best model not only achieves better performance but also requires less input and is trained on only 12% of the ... | comparison identity and matched condition | p. 8 (6 EXPERIMENTS) |
 | Table 8: Comparison between our converted instruction tuning datasets inBC and D-inBC for a VIMA-Bench sample. The task description of the episode is in ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
 | Table 9: Another comparison between two converted instruction tuning datasets. In this example, the reference images in the task description depict reference images with ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** On VIMA-0.8k, we control the total number of samples from the auxiliary dataset relative to the samples from the converted BC datasets and train all ...
 - **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The full accompanying dataset includes 660k expert trajectories, covering 13 of the 17 tasks.
 - **p. 21 / A.4 RT-2-STYLE BASELINES - extractive body cue:** So the action space is now 5 Degrees of Freedom (DoF): 4 numerical values present the 2D pick and place locations in robot coordinates, and ...
-- **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** The full accompanying dataset includes 660k expert trajectories, covering 13 of the 17 tasks.
-- **p. 21 / A.4 RT-2-STYLE BASELINES - extractive body cue:** So the action space is now 5 Degrees of Freedom (DoF): 4 numerical values present the 2D pick and place locations in robot coordinates, and ...
 
 ## Generalization and Failure Cases
 
@@ -137,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 | body limitation/failure cue | Table 17: Robostness evaluation results of D-inBC + Aux (B) + Oracle (VIMA-80k, 8 epochs) Prob. of Failure L1 (%) L2 (%) L3 (%) ... | p. 27 (Figure/Table caption) |
 | body limitation/failure cue | Given the current limitations of LLaVA (Liu et al., 2023a), to optimize performance, we propose two techniques: • Action history in query. | p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES) |
 | body limitation/failure cue | 8 has shown its great power in many aspects when the reference image contains a scene that has multiple objects instead of one, the ... | p. 17 (A.1.2 BUILD D-inBC FROM inBC) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -151,14 +136,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 | In this section, we provide more implementation details regarding dataset preparation, model training, inference, and RT-2 style baselines. | p. 16 (A IMPLEMENTATION DETAILS) |
 | In our implementation, the procedure begins by normalizing each element of the action to a range from 0 to 1. | p. 21 (A.4 RT-2-STYLE BASELINES) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 27 / Figure/Table caption - extractive body cue:** Table 17: Robostness evaluation results of D-inBC + Aux (B) + Oracle (VIMA-80k, 8 epochs) Prob. of Failure L1 (%) L2 (%) L3 (%) 0 ...
@@ -166,6 +143,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS
 - **p. 17 / A.1.2 BUILD D-inBC FROM inBC - extractive body cue:** 8 has shown its great power in many aspects when the reference image contains a scene that has multiple objects instead of one, the inBC ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (6 EXPERIMENTS), p. 6 (6 EXPERIMENTS), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), metrics p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 1 (Figure/Table caption), baselines p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 19 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 7 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 17 (A.1.2 BUILD D-inBC FROM inBC), p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

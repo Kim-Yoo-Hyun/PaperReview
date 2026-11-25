@@ -45,7 +45,6 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 - **p. 3 / 3. Problem Statement and Notations - extractive body cue:** While this framework enables basic language-to-geometry grounding, its spatial reasoning capability remains limited, as analyzed in Sec.
 - **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** Relying solely on primitive-level reasoning forces the model to infer object structure implicitly from fragmentary cues, leading to ambiguous alignment under viewpoint changes.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 - **p. 5 / 5.3. 3D Scene Graph Construction (3DSGC) - extractive body cue:** We use the pretrained model [18] to obtain the object-level representations and construct an object-level 3D scene graph Gsg = (V, E), where each node ...
 - **p. 7 / 6.1. Experimental Setting - extractive body cue:** We train GeoCGA for 4 epochs per scene with AdamW (learning rate 1 × 10-4, weight decay 1 × 10-2).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** pretrained, model, obtain, object-level, representations, construct, scene, graph, Gsg, where, node, represents, object, aggregated, descriptors, including, spatial, appearance, information, Relying.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,20 +102,10 @@ PDF body method statement (p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Spatial reasoning deficiency leads to coarse segmenta- tion in ReferSplat [13], while our method produces precise masks. consistent segmentation under complex spatial cues. ...
 - **p. 6 / 6.1. Experimental Setting - extractive body cue:** Ref-LERF emphasizes fine-grained referring understanding within individual scenes that involve intricate spatial layouts and strong occlusions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), p. 5 (5.3. 3D Scene Graph Construction (3DSGC)), objective 본문 anchor 없음, temporal p. 6 (6.1. Experimental Setting), p. 2 (1. Introduction), p. 2 (2. Related Work), p. 3 (3. Problem Statement and Notations), p. 3 (2. Related Work), p. 5 (5.2. Geometry-Aware Prompt Expansion (GAPE)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

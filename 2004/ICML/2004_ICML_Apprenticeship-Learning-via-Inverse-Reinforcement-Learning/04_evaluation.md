@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Gridworld), p. 4 (4. Theoretical resu
 - **p. 5 / 5.1. Gridworld - extractive body cue:** In particular, we do not rely on the expert's demonstrations to learn the state transition probabilities.
 - **p. 5 / 5.1. Gridworld - extractive body cue:** (Note log scale on x-axis.)9 Thus, by mainly in the question of how many times an expert must demonstrate a task before we learn to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Three iterations for max-margin algorithm. the reward function being optimized by the expert. The maximization in that step is equivalently written maxt,w t ...
@@ -79,21 +77,12 @@ PDF body evaluation/result cue (p. 6 (5.1. Gridworld), p. 4 (4. Theoretical resu
 | Since no "true" reward was ever specified or used in the experiments, we cannot report on the results of the algorithm according to R∗. | definition/direction/unit from same section | p. 6 (5.2. Car driving simulation) |
 | Figure 1. Three iterations for max-margin algorithm. the reward function being optimized by the expert. The maximization in that step is equivalently written maxt,w ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Screenshot of driving simulator. learning a compact representation of the reward function, our algorithm significantly outperforms the other methods. | comparison identity and matched condition | p. 6 (5.1. Gridworld) |
 | A comparison of the convergence speeds of the max-margin and projection versions of the algorithm on a 128x128 grid. | comparison identity and matched condition | p. 5 (5.1. Gridworld) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Gridworld), p. 4 (4. Theoretical resu
 | body limitation/failure cue | In the case where the true reward function R∗does not lie exactly in the span of the basis functions φ, the algorithm still enjoys ... | p. 4 (4. Theoretical results) |
 | body limitation/failure cue | If the algorithm sometimes does not terminate, or if it sometimes takes a very (perhaps exponentially) large number of iterations to terminate, then it ... | p. 4 (4. Theoretical results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Gridworld), p. 4 (4. Theoretical resu
 | Suppose the apprenticeship learning algorithm (either max-margin or projection version) is run using an estimate ˆµE for µE obtained by m Monte Carlo samples. | p. 4 (4. Theoretical results) |
 | Briefly, the projection method replaces step 2 of the algorithm with the following: - Set ¯µ(i-1) = ¯µ(i-2)+ (µ(i-1)-¯µ(i-2))T (µE-¯µ(i-2)) (µ(i-1)-¯µ(i-2))T (µ(i-1)-¯µ(i-2))(µ(i-1)-¯µ(i-2)) (This computes ... | p. 4 (3.1. A simpler algorithm) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 5.1. Gridworld - extractive body cue:** The agent has four actions to try to move in each of the four compass directions, but with 30% chance an action fails and results ...
@@ -156,6 +135,5 @@ PDF body evaluation/result cue (p. 6 (5.1. Gridworld), p. 4 (4. Theoretical resu
 - **p. 4 / 4. Theoretical results - extractive body cue:** If the algorithm sometimes does not terminate, or if it sometimes takes a very (perhaps exponentially) large number of iterations to terminate, then it would ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.2. Car driving simulation), p. 6 (5.2. Car driving simulation), p. 5 (5.1. Gridworld), p. 5 (5.1. Gridworld), metrics p. 4 (4. Theoretical results), p. 5 (4. Theoretical results), p. 5 (5.1. Gridworld), p. 6 (5.2. Car driving simulation), p. 7 (Figure/Table caption), p. 4 (4. Theoretical results), baselines p. 6 (5.1. Gridworld), p. 5 (5.1. Gridworld), results p. 6 (5.1. Gridworld), p. 4 (4. Theoretical results), p. 4 (4. Theoretical results), p. 5 (5.1. Gridworld), p. 5 (5.1. Gridworld), p. 6 (5.2. Car driving simulation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

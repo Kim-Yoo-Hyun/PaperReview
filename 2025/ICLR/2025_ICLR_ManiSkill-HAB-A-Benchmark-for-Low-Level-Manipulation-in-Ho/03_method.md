@@ -53,7 +53,6 @@ PDF body method statement (p. 8 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 6 (5 M
 - **p. 7 / 5 METHODOLOGY - extractive body cue:** We evaluate long-horizon task success (TidyHouse, PrepareGroceries, SetTable) by Progressive Completion Rate (%).
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 6 (5 METHODOLOGY), p. 6 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 19 (A.4.3 SAC VS PPO FOR RL TRAINING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 8 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 6 (5 M
 - **p. 8 / 5 METHODOLOGY - extractive body cue:** (2016), then concatenated with state observations.
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** In this work, we study a partially observable variant of each task, where the policy must use 2 128x128 depth images to infer collisions and ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 8 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 6 (5 M
 - **p. 7 / 5 METHODOLOGY - extractive body cue:** We train Pick with 50M timesteps and Place with 25M timesteps.
 - **p. 8 / 5 METHODOLOGY - extractive body cue:** As the dataset generation code is publicly available, users have the flexibility to create their own datasets with custom constraints tailored to their specific requirements.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, concatenated, state, observations, First, define, events, occur, timestep, Contact, nonzero, robot/target, pairwise, force, Grasped, object, step, Dropped, Excessive, Collisions.
 - **Relevant PDF headings:** 5 METHODOLOGY (p. 6); A.4.5 PER VS ALL-OBJECT POLICY LONG-HORIZON PERFORMANCE (p. 19); A.4.6 DIFFUSION POLICY BASELINES (p. 21).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 8 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 6 (5 M
 - **p. 10 / Figure/Table caption - extractive body cue:** Table 2: Trajectory labeling on Pick Cracker Box with all and per-object RL policies. We group the trajectories into four categories: success once (S-Once), excessive ...
 - **p. 24 / A.6.2 DEFINITIONS - extractive body cue:** Eplace = () ∧eexcessive collisions̸ ∈Eplace viii Didn't reach goal failure: Agent grasps x, but cannot manipulate x to within 15cm of gpos. /Eplace/ > ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 6 (5 METHODOLOGY), p. 6 (5 METHODOLOGY), p. 7 (5 METHODOLOGY), p. 7 (5 METHODOLOGY), objective p. 6 (5 METHODOLOGY), p. 6 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 7 (5 METHODOLOGY), temporal p. 7 (5 METHODOLOGY), p. 6 (5 METHODOLOGY), p. 7 (5 METHODOLOGY), p. 8 (5 METHODOLOGY), p. 17 (A.3 RL SUBTASK EVALUATION CURVES), p. 3 (2 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

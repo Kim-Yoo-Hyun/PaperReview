@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 5 / 4 Experiments - extractive body cue:** In our experiments, we aim to study how the pre-trained R3M representation can be re-used for multiple downstream robot learning tasks.
 - **p. 5 / 4 Experiments - extractive body cue:** First, we study if R3M enables more data efficient imitation learning on unseen environments and tasks compared to existing visual representations and learning from scratch.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Pre-Training Reusable Representations for Robot Manipulation (R3M): We pre-train a visual representation using diverse human video datasets like Ego4D [16], and study its ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 | The policy, π, is trained with a standard behavior cloning loss //at -π([zt, pt])//2 | definition/direction/unit from same section | p. 5 (4 Experiments) |
 | Finally, in the appendix, we take a deeper look at task performance of R3M and prior methods with different amounts of data, different camera ... | definition/direction/unit from same section | p. 5 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 | Figure 5: Real World Robot Learning with R3M. With R3M we are able to learn challenging tasks like putting lettuce in the pan, pushing ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 8: Performance over different views/dataset sizes. We report the success rate of R3M and baseline across each view (left) and dataset size (right). ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
 | Table 2: Importance of Data vs. Algo- rithm. We find that the MoCo-Ego4D and MVP models, which leverage the same or more data and ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,21 +116,11 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 | body limitation/failure cue | Specifically, we compare the full R3M with R3M(-Aug), which does not use crop augmentations, R3M(-L1), which does not include L1 regularization, and R3M(-Lang), which ... | p. 7 (2. We) |
 | body limitation/failure cue | For a robust evaluation, we consider multiple views for each environment (See Figure 3), and 3 dataset sizes: [5, 10, 25] in MetaWorld and ... | p. 6 (2. We) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -151,9 +130,8 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 6 / 2. We - extractive body cue:** For a robust evaluation, we consider multiple views for each environment (See Figure 3), and 3 dataset sizes: [5, 10, 25] in MetaWorld and Franka ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4 Experiments), p. 8 (Figure/Table caption), p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

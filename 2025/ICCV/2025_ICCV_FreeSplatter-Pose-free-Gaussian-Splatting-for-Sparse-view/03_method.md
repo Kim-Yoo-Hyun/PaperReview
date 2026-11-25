@@ -58,7 +58,6 @@ PDF body method statement (p. 5 (3.3. Training Details), p. 8 (4.5. Applications
 - **p. 7 / 0.027 Method - extractive body cue:** This disparity can be attributed to PF-LRM's GSO evaluation images being rendered under identical conditions (e.g., light intensity, camera distribution) as their training data, whereas ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Training Details), p. 3 (3.2. Model Architecture), p. 4 (3.3. Training Details), p. 4 (3.3. Training Details), p. 5 (3.3. Training Details), p. 7 (0.027 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 5 (3.3. Training Details), p. 8 (4.5. Applications
 - **p. 5 / 3.3. Training Details - extractive body cue:** (ii) For Method GSO OmniObject3D PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ Evaluate renderings at G.T. novel-view poses PF-LRM 25.08 ...
 - **p. 7 / 4.3. Camera Pose Estimation - extractive body cue:** For all of our evaluation datasets, we benchmark against MASt3R, the current state-of-the-art in zero-shot multi-view pose estimation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -98,13 +96,10 @@ PDF body method statement (p. 5 (3.3. Training Details), p. 8 (4.5. Applications
 - **p. 5 / 3.3. Training Details - extractive body cue:** We focus on reconstructing observed areas and adopt Splatt3R's [42] target-view masking strategy, computing rendering loss only for visible regions to prevent negative training guidance ...
 - **p. 7 / 0.027 Method - extractive body cue:** Due to the lack of code, we benchmark against PF-LRM using their provided evaluation datasets and inference results.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** overall, training, objective, mathca, thcal, mathrm, render, lambda, cdot, mathcal, align, label, loss, where, rendering, Lrender, combination, MSE, LPIPS, Tmax.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. Model Architecture (p. 3); Method (p. 7); 0.027 Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 5 (3.3. Training Details), p. 8 (4.5. Applications
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Sparse-view Reconstruction on PF-LRM's Evaluation Datasets. FreeSplatter-O synthesizes significantly better visual details than PF-LRM. The 1st row is from the GSO dataset, while ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Sparse-view Reconstruction on GSO dataset. * indi- cates that ground truth camera poses are used as input. at other pixels remain unconstrained. Besides, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Training Details), p. 8 (4.5. Applications in 3D AIGC), p. 3 (3.2. Model Architecture), p. 3 (3.2. Model Architecture), p. 4 (3.3. Training Details), p. 4 (3.3. Training Details), objective p. 5 (3.3. Training Details), p. 5 (3.3. Training Details), p. 3 (3.2. Model Architecture), p. 4 (3.3. Training Details), p. 4 (3.3. Training Details), p. 7 (0.027 Method), temporal p. 3 (3.2. Model Architecture), p. 3 (3.1. Preliminary), p. 4 (3.2. Model Architecture), p. 5 (3.3. Training Details), p. 8 (4.4. Ablation Studies), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

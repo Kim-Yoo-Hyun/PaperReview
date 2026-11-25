@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (3 Results), p. 16 (Figure/Table caption),
 - **p. 10 / 2.4 Evaluation - extractive body cue:** For LAMBADA and Storycloze there is no supervised training set available so we draw conditioning examples from the development set and evaluate on the test ...
 - **p. 13 / 3 Results - extractive body cue:** One note of caution is that an analysis of test set contamination identified that a significant minority of the LAMBADA dataset appears to be present ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1.1: Language model meta-learning. During unsupervised pre-training, a language model develops a broad set of skills and pattern recognition abilities. It then uses these ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (3 Results), p. 16 (Figure/Table caption),
 | Mean accuracy 95% Confidence Interval (low, hi) t compared to control (p-value) "I don't know" assignments Control 88% 84%-91% - 2.7% GPT-3 175B 52% ... | definition/direction/unit from same section | p. 27 (3 Results) |
 | While this setting decreases the performance of the smallest model by almost 20%, for GPT-3 it improves accuracy by 10%. | definition/direction/unit from same section | p. 12 (3 Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (3 Results), p. 16 (Figure/Table caption),
 | Despite these weaknesses, GPT-3 still outperforms a fine-tuned BERT-large on four of eight tasks and on two tasks GPT-3 is close to the state-of-the-art ... | comparison identity and matched condition | p. 20 (3 Results) |
 | Table 3.8: Performance of GPT-3 on SuperGLUE compared to fine-tuned baselines and SOTA. All results are reported on the test set. GPT-3 few-shot is ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
 | GPT-3 2.7B outperforms the SOTA 17B parameter Turing-NLG [Tur20] in this setting, and GPT-3 175B advances the state of the art by 18%. | comparison identity and matched condition | p. 12 (3 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 12 (3 Results), p. 16 (Figure/Table caption),
 | body limitation/failure cue | On COPA and ReCoRD GPT-3 achieves near-SOTA performance in the one-shot and few-shot settings, with COPA falling only a couple points short and achieving ... | p. 20 (3 Results) |
 | body limitation/failure cue | This suggests that the model really does appear to learn these tasks at test time, as the model cannot perform them zero-shot and their ... | p. 24 (3 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 12 (3 Results), p. 16 (Figure/Table caption),
 | In this work we do not fine-tune GPT-3 because our focus is on task-agnostic performance, but GPT-3 can be fine-tuned in principle and this ... | p. 6 (2 Approach) |
 | We measure the gradient noise scale during training and use it to guide our choice of batch size [MKAT18]. | p. 9 (2 Approach) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 33 / 3 Results - extractive body cue:** An important limitation of our contamination analysis is that we cannot be sure that the clean subset is drawn from the same distribution as the ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 12 (3 Results), p. 16 (Figure/Table caption),
 - **p. 24 / 3 Results - extractive body cue:** This suggests that the model really does appear to learn these tasks at test time, as the model cannot perform them zero-shot and their artificial ...
 
 - **Evidence anchors reviewed:** datasets p. 11 (3 Results), p. 29 (3 Results), p. 18 (3 Results), p. 33 (3 Results), p. 10 (2.4 Evaluation), p. 13 (3 Results), metrics p. 18 (3 Results), p. 10 (2.4 Evaluation), p. 12 (3 Results), p. 19 (3 Results), p. 26 (3 Results), p. 26 (3 Results), baselines p. 18 (3 Results), p. 19 (3 Results), p. 18 (3 Results), p. 20 (3 Results), p. 19 (Figure/Table caption), p. 12 (3 Results), results p. 12 (3 Results), p. 16 (Figure/Table caption), p. 11 (3 Results), p. 13 (3 Results), p. 17 (3 Results), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

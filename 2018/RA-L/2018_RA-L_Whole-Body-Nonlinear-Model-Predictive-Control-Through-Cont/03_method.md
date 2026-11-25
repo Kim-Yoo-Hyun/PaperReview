@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH),
 - **p. 4 / IV. SOFTWARE IMPLEMENTATION - extractive body cue:** The optimized control input obtained from the NMPC solver is then augmented with the output of two tracking controllers. instructions.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH),
 - **p. 1 / I. INTRODUCTION - extractive body cue:** We summarize our solver framework, which uses Auto-Differentiation and code generation to achieve high computational performance exceeding the current state of the art in robotics ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In this work, we demonstrate that an NMPC approach which continuously re-optimizes the state and control trajectories at high frequency, results in robust performance and ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH),
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contrast, GNMS-NMPC, algorithm, summarized, designs, state, reference, trajectory, simultaneously, control, policy, time-varying, state-feedback, controllers, form, xref, where, feedforward, action, linear.
 - **Relevant PDF headings:** III. NMPC APPROACH (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,23 +108,13 @@ PDF body method statement (p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH),
 - **p. 6 / VI. RESULTS - extractive body cue:** On the torque level the robot stayed well below the admissible torque level of ANYmal (40 Nm) without imposing additional constraints.
 - **p. 3 / IV. SOFTWARE IMPLEMENTATION - extractive body cue:** However, both parallel execution and vectorization cannot be leveraged automatically by standard compilers.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. NMPC APPROACH), p. 3 (III. NMPC APPROACH), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), objective p. 3 (III. NMPC APPROACH), p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), temporal p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (II. NMPC FOR RIGID BODY SYSTEMS), p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 3 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

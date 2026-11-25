@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESU
 - **p. 6 / 7 RESULTS - extractive body cue:** The camera performs various panning motions to produce an overview of the scene, and then zooms closer to some areas to increase detail in the ...
 - **p. 7 / 7 RESULTS - extractive body cue:** Certain parts of the scene are clearly distinguishable, e.g. the keyboard and the frisbee.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Typical operation of the system: Here, a desktop is tracked. The on-line generated map contains close to 3000 point features, of which the ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESU
 | Top: two views of the map with point features and keyframes drawn. | definition/direction/unit from same section | p. 7 (7 RESULTS) |
 | Figure 6: The system can easily track across multiple scales. Here, the map is initialised at the top-right scale; the user moves closer in ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESU
 | Trajectories compared to ground truth are shown on the right. | comparison identity and matched condition | p. 8 (7 RESULTS) |
 | Table 2: Bundle adjustment timings with various map sizes. The above timings are mean quantities. As the map grows be- yond 100 keyframes, global ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | z Ground truth EKF-SLAM Proposed method Figure 5: Comparison with EKF-SLAM on a synthetic sequence. | comparison identity and matched condition | p. 8 (7 RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESU
 | body limitation/failure cue | As the map grows beyond 100 keyframes, global bundle adjustment cannot keep up with exploration and is almost always aborted, converging only when the ... | p. 6 (7 RESULTS) |
 | body limitation/failure cue | Timings of individual mapping steps are difficult to obtain, they vary wildly not only with map size but also scene structure (both global and ... | p. 6 (7 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESU
 | A final pose estimate for the frame is computed from all the matches found. | p. 3 (3. A small number (50) of the coarsest-scale features are) |
 | The map-making steps are now individually described in detail. | p. 4 (3. A small number (50) of the coarsest-scale features are) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7 RESULTS - extractive body cue:** 8 LIMITATIONS AND FUTURE WORK This section describes some of the known issues with the system presented.
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESU
 - **p. 6 / 7 RESULTS - extractive body cue:** Timings of individual mapping steps are difficult to obtain, they vary wildly not only with map size but also scene structure (both global and local); ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESULTS), p. 6 (7 RESULTS), p. 7 (7 RESULTS), metrics p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESULTS), p. 1 (Figure/Table caption), p. 6 (7 RESULTS), p. 7 (7 RESULTS), baselines p. 6 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (Figure/Table caption), p. 8 (7 RESULTS), results p. 8 (7 RESULTS), p. 8 (7 RESULTS), p. 6 (7 RESULTS), p. 6 (7 RESULTS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

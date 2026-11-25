@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** We obtain the best FID results with a small amount of guidance (w = 0.1 or w = 0.3, depending on the dataset) and the ...
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Based on these findings, we conclude that only a relatively small portion of the model capacity of the diffusion model needs to be dedicated to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Classifier-free guidance on the malamute class for a 64x64 ImageNet diffusion model. Left to right: increasing amounts of classifier-free guidance, starting from non-guided ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8
 | The purpose of our experiments is to serve as a proof of concept to demonstrate that classifier-free guidance is able to attain a FID/IS ... | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
 | Interestingly, strongly guided samples such as these display saturated colors. | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8
 | Note that T = 256 is approximately the same number of sampling steps used by ADM-G (Dhariwal & Nichol, 2021), which is outperformed by ... | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | Furthermore, since we amortize the conditional and unconditional models into the same architecture without an extra classifier, we in fact are using less model ... | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | Figure 2: The effect of guidance on a mixture of three Gaussians, each mixture component represent- ing data conditioned on a class. The leftmost ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8
 | body limitation/failure cue | It would be an interesting avenue of future work to try to boost sample quality while maintaining sample diversity. | p. 9 (5 DISCUSSION) |
 | body limitation/failure cue | The 64 × 64 models used sampler noise interpolation coefficient v = 0.3 and were trained for 400 thousand steps; the 128 × 128 ... | p. 7 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8
 | We train diffusion models in continuous time (Song et al., 2021b; Chen et al., 2021; Kingma et al., 2021): letting x ∼p(x) and z ... | p. 2 (2 BACKGROUND) |
 | Note that the variances simplify to ˜σ2 λ′/λ as λ′ →λ, so v has an effect only when sampling with non-infinitesimal timesteps as done ... | p. 3 (2 BACKGROUND) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 DISCUSSION - extractive body cue:** Therefore, our classifier-free guided sampler follows step directions that do not resemble classifier gradients at all and thus cannot be interpreted as a gradient-based adversarial ...
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** The 64 × 64 models used sampler noise interpolation coefficient v = 0.3 and were trained for 400 thousand steps; the 128 × 128 models ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 2 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 6 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 2 (Figure/Table caption), results p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

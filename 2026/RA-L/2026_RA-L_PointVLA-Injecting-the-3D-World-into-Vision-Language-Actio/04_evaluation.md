@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 - **p. 8 / 4.6. Experimental Results on Simulation Bench - extractive body cue:** This benchmark encompasses a diverse set of tasks.
 - **p. 5 / 4.1. Implementation Details - extractive body cue:** In this work, we conduct real robot experiments on two embodiments: • Bimanual UR5e.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. PointVLA builds upon the strengths of VLA, which is pre-trained on large-scale 2D robot data while incorporating 3D world into the action expert. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 | Table 2. Experimental results on RoboTwin [32]. Performance comparison across different tasks and demonstrations (results for 20 and 50 demonstrations). ing. Experiments in both ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Figure 2. Overview of PointVLA framework. Left: The 2D image observation and instruction are processed by the vision-language model. The vanilla action expert remains ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 | We show experimental results on the bottom table. sented in Table 6, where our method outperforms all baselines in this scenario. | comparison identity and matched condition | p. 7 (4.2. Few-Shot Multi-Tasking) |
 | Baseline results, including those for the 3D Diffusion Policy and Diffusion Policy, are reported by RoboTwin. | comparison identity and matched condition | p. 8 (4.6. Experimental Results on Simulation Bench) |
 | Diffusion Policy is a well-established baseline for visuomotor policy learning, while DP3 extends it to the 3D domain. | comparison identity and matched condition | p. 8 (4.6. Experimental Results on Simulation Bench) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 | body limitation/failure cue | Furthermore, even increasing the model size (ScaleDP-1B) does not lead to significant improvement. | p. 7 (4.2. Few-Shot Multi-Tasking) |
 | body limitation/failure cue | Our observations show that conventional 2D-based VLA models, such as OpenVLA [25], DP [9], ScaleDP-1B [57], and DexVLA [46] all failed in this scenario. | p. 8 (4.5. Height Adaptability) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 | We believe that employing a more advanced point cloud encoder could further enhance model performance. | p. 4 (3.2. Injecting Point Cloud into VLA) |
 | The evaluation follows the same metrics-average score, a standard measure for long-horizon tasks [4, 31, 46]-by dividing the task into multiple steps and assessing ... | p. 5 (3.3. Which Blocks to Inject Point Cloud? A Skip) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Few-Shot Multi-Tasking - extractive body cue:** Notably, the Diffusion Policy fails in most cases, likely because the sample size for each task is too small, causing the action representation space to ...
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 8 (4.6. Experimental Results on Simulation Be
 - **p. 8 / 4.5. Height Adaptability - extractive body cue:** Our observations show that conventional 2D-based VLA models, such as OpenVLA [25], DP [9], ScaleDP-1B [57], and DexVLA [46] all failed in this scenario.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.6. Experimental Results on Simulation Bench), p. 5 (4. Experiment), p. 6 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), metrics p. 8 (4.6. Experimental Results on Simulation Bench), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), baselines p. 6 (Figure/Table caption), p. 6 (4.1. Implementation Details), p. 7 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), results p. 8 (4.6. Experimental Results on Simulation Bench), p. 8 (4.6. Experimental Results on Simulation Bench), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.2. Few-Shot Multi-Tasking), p. 7 (4.2. Few-Shot Multi-Tasking), p. 6 (4.1. Implementation Details).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

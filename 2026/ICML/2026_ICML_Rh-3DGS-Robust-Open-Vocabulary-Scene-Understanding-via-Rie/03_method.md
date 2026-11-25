@@ -58,7 +58,6 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 - **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** This adds cost and hurts real-time rendering.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.3. Visibility-Calibrated Distillation (VCD)), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 - **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** VCD down-weights mixed-depth and occlusion pixels.
 - **p. 5 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** We propose Visibility-Weighted Fr´echet Mean (VFM).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 - **p. 6 / 4.4. Visibility-Weighted Fr´echet Mean (VFM) - extractive body cue:** (20) We can anneal δ during training.
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** We implement all methods in PyTorch and train on a single NVIDIA GeForce RTX 4090 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Gaussian, stores, lowdimensional, semantic, latent, lightweight, decoder, maps, teacher, feature, space, Dec, optimize, model, end-to-end, Lrgb, LVFM, LLIC, where, photometric.
 - **Relevant PDF headings:** 4. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 3 (4.1. Problem Formulation and Notation), p. 4 (4
 - **p. 8 / 5.4. Ablation Study - extractive body cue:** We ablate each component on LERF (figurines).
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of Rh-3DGS. Given posed RGB images, a frozen teacher (e.g., SAM/CLIP) provides per-pixel semantic embeddings. Learnable 3D Gaussians are optimized through a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)), p. 3 (4.1. Problem Formulation and Notation), objective p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), temporal p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 6 (4.5. Lightweight Consistency Contrast (LIC)), p. 1 (1. Introduction), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

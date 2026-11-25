@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.1. Overview and Online Setting), p. 4 (3.2. C
 - **p. 4 / 3.2. Causal Transformer for 3D Gaussian Regression - extractive body cue:** S2GS processes an uncalibrated and unposed RGB image stream in a strictly causal manner.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 4 (3.3. Online Instance Tracking and Semantic), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 4 (3.2. Causal Transformer for 3D Gaussian Regression), p. 5 (3.4. Language-driven Open-vocabulary Segmentation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.1. Overview and Online Setting), p. 4 (3.2. C
 - **p. 3 / 3.2. Causal Transformer for 3D Gaussian Regression - extractive body cue:** At inference, key/value tensors from past frames are cached and reused, enabling efficient long-horizon streaming without re-forwarding previous inputs.
 - **p. 5 / 3.4. Language-driven Open-vocabulary Segmentation - extractive body cue:** In contrast, we focus on streaming inference, where queries are generated per frame and updated online over time, making global multi-view interaction infeasible.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 3 (3.1. Overview and Online Setting), p. 4 (3.2. C
 - **p. 3 / 3.2. Causal Transformer for 3D Gaussian Regression - extractive body cue:** Causal Transformer with online state.
 - **p. 2 / 4. Across multiple joint reconstruction-and-understanding - extractive body cue:** benchmarks and long-horizon online settings, S2GS achieves performance on par with or better than strong offline baselines, while significantly outperforming offline global paradigms in scalability ...
 - **p. 6 / 4.2. Results - extractive body cue:** Current-frame inference time and PGM under online streaming input.
-- **p. 2 / 4. Across multiple joint reconstruction-and-understanding - extractive body cue:** benchmarks and long-horizon online settings, S2GS achieves performance on par with or better than strong offline baselines, while significantly outperforming offline global paradigms in scalability ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, maintains, persistent, Gaussian, scene, representation, instance-aware, semantic, state, enabling, scalable, long-horizon, streaming, inference, causal, Transformer, encoder, guided, geometric, priors.
 - **Relevant PDF headings:** 3. Method (p. 3); 82.49 Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 3 (3.1. Overview and Online Setting), p. 4 (3.2. C
 - **p. 6 / 4.2. Results - extractive body cue:** This is expected, since offline baselines can exploit non-causal cross-view aggregation over the full input set to better resolve view ambiguity and occlusions when observations ...
 - **p. 8 / 4.2. Results - extractive body cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Overview and Online Setting), p. 4 (3.2. Causal Transformer for 3D Gaussian Regression), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 4 (3.3. Online Instance Tracking and Semantic), p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), objective p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 4 (3.3. Online Instance Tracking and Semantic), p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 4 (3.2. Causal Transformer for 3D Gaussian Regression), temporal p. 2 (1. Introduction), p. 4 (3.3. Online Instance Tracking and Semantic), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 3 (3.2. Causal Transformer for 3D Gaussian Regression).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

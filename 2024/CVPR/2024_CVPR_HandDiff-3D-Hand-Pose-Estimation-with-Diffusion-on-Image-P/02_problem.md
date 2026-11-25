@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 4 | Figure 2. The pipeline of the proposed HandDiff. HandDiff takes the normalized point cloud transformed from a 2D ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | Hand-depth images (first rows) are transformed into 3D points (second rows) in order to clearly present occlusions as ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. The Proposed Hand Pose Diffusion Model). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. The Proposed Hand Pose Diffusion Model), objective p. 5 (3.3. Training), p. 5 (3.3. Training).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

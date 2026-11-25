@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 7 / 4 Experiments - extractive body cue:** 4.1 Comparison with SOTA Methods As shown in Tables 1 and 2, we evaluate the navigation performance of our Dynam3D across three distinct continuous-environment VLN ...
 - **p. 9 / 4 Experiments - extractive body cue:** Instruction: "Please bring me the white fruit bowl filled with apples from the chair." Dynamic environment: During the robot's navigation process, the white fruit bowl ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Different vision-language large models for monocular VLN tasks. Compared to previous video-based representations (a), our Dynam3D (b) adopts dynamic hierarchical 3D representations offering ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | The agent is then guided back to the correct path, thereby strengthening its ability to recover from navigation errors. | definition/direction/unit from same section | p. 14 (A.1 Datasets and Experimental Details) |
 | Figure 1: Different vision-language large models for monocular VLN tasks. Compared to previous video-based representations (a), our Dynam3D (b) adopts dynamic hierarchical 3D representations ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | In the static environment (Table 4) Dynam3D achieves a 20% higher success rate than baselines, reaching 70% after pre-exploration. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Figure 1: Different vision-language large models for monocular VLN tasks. Compared to previous video-based representations (a), our Dynam3D (b) adopts dynamic hierarchical 3D representations ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | 4.5 Ablation Study Table 6 reports our ablation results. | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | body limitation/failure cue | The navigation performance significantly decreases without Subspace Alignment supervision (Table 6, row 3), highlighting the limitations of naive CLIP feature distillation for 3D instance ... | p. 9 (4 Experiments) |
 | body limitation/failure cue | In the dynamic setting (Figure 4 and Table 5), the target is manually moved to another location once the robot reach within two meters ... | p. 8 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | To mitigate memory consumption and enable efficient training of large models, we employ the Adafactor optimizer [58] in conjunction with Gradient Checkpointing [59]. | p. 14 (A.1 Datasets and Experimental Details) |
 | To encode 3D environments, we extract patch-level 2D features using CLIP [11] and project them into 3D space via depth maps and camera poses. | p. 2 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Different vision-language large models for monocular VLN tasks. Compared to previous video-based representations (a), our Dynam3D (b) adopts dynamic hierarchical 3D representations offering ...
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 8 / 4 Experiments - extractive body cue:** In the dynamic setting (Figure 4 and Table 5), the target is manually moved to another location once the robot reach within two meters of ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 14 (A.1 Datasets and Experimental Details), p. 14 (A.1 Datasets and Experimental Details), p. 9 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 14 (A.1 Datasets and Experimental Details), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 2 (Figure/Table caption), p. 9 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

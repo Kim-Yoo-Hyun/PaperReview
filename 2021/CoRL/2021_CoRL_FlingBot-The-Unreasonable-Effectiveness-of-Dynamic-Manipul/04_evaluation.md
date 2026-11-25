@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 - **p. 8 / 4.4 Results - extractive body cue:** In this experiment, we investigate these approaches' performance on cloths which have dimensions larger than the robot arm's reach range.
 - **p. 8 / 4 Evaluation - extractive body cue:** This demonstrates the difficulty of unfolding from highly crumpled initial configurations and dynamic action's superior efficiency. spite the cloth physical parameter variations in the training ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Cloth unfolding with dynamic inter- actions. Given a severely crumpled cloth, Fling- Bot uses a high-speed fling to unfurl the cloth with as ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 | Finally, we evaluate the algorithm's performance on the real-world setup. | definition/direction/unit from same section | p. 6 (4 Evaluation) |
 | While this choice also makes it possible for the normalized coverage to be greater than 1, it will still preserve performance rankings. | definition/direction/unit from same section | p. 6 (4 Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 | 2b) and "pick and drag" (similar to Seita et al., with no lift step compared to pick and place) primitive respectively. | comparison identity and matched condition | p. 7 (4 Evaluation) |
 | While the pick & place baseline discovered a similar strategy, its performance is inherently limited by quasi-static actions, requiring significantly more steps to achieve ... | comparison identity and matched condition | p. 7 (4 Evaluation) |
 | Meanwhile, all quasi-static baselines exhibited worse cloth unfolding efficiency. | comparison identity and matched condition | p. 9 (4.4 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 | body limitation/failure cue | 1, [Fling-Reg] completely fails to perform the task, demonstrating the advantage of encoding inductive biases which leverage equivariances in the problem structure. | p. 8 (4 Evaluation) |
 | body limitation/failure cue | Figure 9: To minimize collisions, arms should grasp points closer to their side (a) and be a reasonable distance away from each other (b). ... | p. 15 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 | While the pick & place primitive only takes a median time of 8.8s, it is unable to reach the high coverages even with many ... | p. 9 (4.4 Results) |
 | The network is trained using the Adam optimizer with a learning rate of 1e-3 and a weight decay of 1e-6. | p. 5 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / Figure/Table caption - extractive body cue:** Figure 8: Failure Cases in Simulation Experiments. 6.3 Real world fling parameter robustness In designing our motion primitive, we optimized fling parameters (waypoints, velocities, accelera- ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 9: To minimize collisions, arms should grasp points closer to their side (a) and be a reasonable distance away from each other (b). 6.6 ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4.4 Results), p. 7 (4 Evaluation), p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 9 (4.4 Results), metrics p. 9 (4.4 Results), p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 8 (4.4 Results), p. 9 (4.4 Results), p. 8 (4 Evaluation), p. 7 (4 Evaluation), p. 7 (4 Evaluation), p. 9 (4.4 Results), results p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (Figure/Table caption), p. 8 (4.4 Results), p. 9 (4.4 Results), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

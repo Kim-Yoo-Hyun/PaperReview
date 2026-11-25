@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), 
 | body cue at p. 4 | Fig. 3: Red and blue indicate two subsets of the source distribution. The left side of each of ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | We use Manus glove [25] with OSMO tactile sensors [45] for robust hand pose estimation under visual occlusions ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ tactile writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 2 (I. INTRODUCTION), p. 4 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

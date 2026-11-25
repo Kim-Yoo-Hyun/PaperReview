@@ -50,7 +50,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1
 - **p. 1 / 1 Introduction - extractive body cue:** Autoregressive decoding of discrete tokens is poorly suited to this kind of high-frequency continuous control, both because of the limited resolution of discretized actions and ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1
 - **p. 1 / Abstract - extractive body cue:** To address this challenge, recent VLA models have used specialized modules for efficient continuous control, such as action experts or continuous output heads, which typically ...
 - **p. 1 / 1 Introduction - extractive body cue:** A natural next step to bring the power of LLMs to the physical world is to further extend them to take physical actions, resulting in ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1
 - **p. 8 / 6 Experiments - extractive body cue:** Our model has the highest performance, low inference time, and follows language instructions well. π0-FAST also follows language well and has good performance, but requires ...
 - **p. 7 / 6 Experiments - extractive body cue:** How fast does our model train in terms of training steps?
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** While, number, different, designs, have, been, successful, common, theme, models, adapted, effective, dexterous, control, typically, augment, transformer, VLM, backbone, some.
 - **Relevant PDF headings:** A.3 Datasets for training the generalist model (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1
 - **p. 8 / 6 Experiments - extractive body cue:** We also show that removing VLM data (e.g. ours w/o VLM data) leads to slightly worse task completion percentage.
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Problems with standard VLA recipes. The robot is instructed to bus the spoon into the bin. π0 [7] (left) ignores the command and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), objective p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), temporal p. 2 (1 Introduction), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 9 (6 Experiments), p. 9 (6 Experiments), p. 5 (2 Related work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

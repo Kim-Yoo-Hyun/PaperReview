@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4
 - **p. 6 / 4.2.3. Multi-Sampling Strategy - extractive body cue:** We then fuse the images by selecting pixels with the lowest hallucination score across all candidate versions: ˜i[i] = ˜ik∗ G [i], k∗= arg min ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (4.1. 3DGS training), p. 4 (4.1. 3DGS training), p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4.1. 3DGS training), p. 6 (4.2.3. Multi-Sampling Strategy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4
 - **p. 3 / 3. Preliminary - extractive body cue:** We formulate it as: ic = FFD(P / c), (3) where P denotes the input calibrated images, c represents novel view pose and ic is ...
 - **p. 2 / 1. Introduction - extractive body cue:** To further enhance the performance of HAD, we propose a multi-sampling strategy that generates multiple images at the same novel view by conditioning the diffusion ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,16 +89,12 @@ PDF body method statement (p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4
 - **p. 4 / 4. Methodology - extractive body cue:** N}}, where I and C denote the RGB images and camera poses respectively, our goal is to reconstruct a high-fidelity 3DGS model capable of producing ...
 - **p. 4 / 4.1. 3DGS training - extractive body cue:** We formulate the 3DGS training as arg min Φ λinputLinput + λnovelLnovel (6) where Linput and Lnovel are the rendering losses for input views and ...
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** We fine-tune the network for 10k iterations with a batch size of 2 per GPU, requiring approximately 28 hours on eight NVIDIA V100 32GB GPUs.
-- **p. 5 / 4.1. 3DGS training - extractive body cue:** Specifically, unlike Difix3D [41], which employs a two-phase training strategy that first fully trains a 3DGS model and then progressively updates it with diffusion priors ...
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** For 3DGS training, we set the learning rates to 8e-5 for Gaussian means, 5e-2 for opacity, 1e-3 for rotation, 5e-4 for the 0-th order spherical ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, hallucination, score, network, consists, components, multi-view, feature, encoder, processes, multiple, input, views, estimation, branch, predicts, scores, novel, view, images.
 - **Relevant PDF headings:** 4. Methodology (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +114,10 @@ PDF body method statement (p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4
 - **p. 7 / 5.4. Ablation studies - extractive body cue:** Except for the dense view setting where we use 24 views, all ablation studies employ the 9-views setting.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of framework - We train 3DGS with input images and HAD-augmented novel views. HAD combines a pretrained diffusion prior (which generates images ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4.1. 3DGS training), p. 4 (4. Methodology), p. 4 (4.1. 3DGS training), p. 6 (4.2.3. Multi-Sampling Strategy), objective p. 4 (4.1. 3DGS training), p. 4 (4.1. 3DGS training), p. 5 (4.2.2. Hallucination Score Estimation), p. 5 (4.1. 3DGS training), p. 6 (4.2.3. Multi-Sampling Strategy), temporal p. 5 (4.1. 3DGS training), p. 5 (4.2.2. Hallucination Score Estimation), p. 4 (3. Preliminary), p. 2 (2. Related Works), p. 2 (2. Related Works), p. 3 (2. Related Works).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

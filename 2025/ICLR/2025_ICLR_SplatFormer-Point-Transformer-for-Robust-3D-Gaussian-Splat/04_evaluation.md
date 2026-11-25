@@ -45,8 +45,6 @@
 - **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Since object-centric scenes often possess concentrated spatial distribution, our current SplatFormer can be quite efficient for large-scale 3DGS during inference.
 - **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior in-distribution ...
@@ -80,8 +78,6 @@
 | Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, scales, and ... | definition/direction/unit from same section | p. 15 (B IMPLEMENTATION DETAILS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@
 | For LaRa, which is limited to four input views due to memory constraints, we chose four large-baseline views to maximize scene coverage. | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
 | While our method still faces challenges with high-frequency texture details, it outperforms previous approaches in terms of fidelity and consistency in out-of-distribution views, which ... | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | Figure 1: We investigate the out-of-distribution (OOD) novel view synthesis (NVS), where test views significantly differ from input views. This scenario contrasts with prior ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,7 +111,6 @@
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Following the OOD-NVS protocol, we rendered 20 objects from Google Scanned Objects (GSO) (Downs et al., 2022) and captured 4 real-world scenes.
 - **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
 - **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** We find that an RTX 4090 GPU can accommodate up to 4 million Gaussians.
-- **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
 
 ## Generalization and Failure Cases
 
@@ -135,8 +123,6 @@
 | body limitation/failure cue | Figure 3: Method Overview. We introduce SplatFormer, a generalizable 3D point transformer network designed for feed-forward refinement of Gaussian splats, enabling robust out-of-distribution novel-view ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in ... | p. 9 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +134,6 @@
 | The feature decoder is composed of five separate MLP branches, which are responsible for predicting the residuals for the means, opacity, quaternion, scales, and ... | p. 15 (B IMPLEMENTATION DETAILS) |
 | We find that an RTX 4090 GPU can accommodate up to 4 million Gaussians. | p. 17 (B IMPLEMENTATION DETAILS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6 CONCLUSION - extractive body cue:** In this work, we introduced a new out-of-distribution (OOD) novel view synthesis test scenario and demonstrated that most neural rendering methods, including those using regularization ...
@@ -166,6 +144,5 @@
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** While 3DGS performance degrades significantly as the viewing angle deviates from the input views, our method provides more robust synthesis for target views in the ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 2 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

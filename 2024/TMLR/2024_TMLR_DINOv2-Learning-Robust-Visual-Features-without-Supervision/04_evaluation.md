@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 - **p. 11 / 7 Results - extractive body cue:** We question if the ability of our models to produce high quality frozen features impact their performance when finetuned with supervision on a specific dataset.
 - **p. 12 / 7 Results - extractive body cue:** We use the best performing linear classifier as described above and simply run inference on those benchmarks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Visualization of the first PCA components. We compute a PCA between the patches of the images from the same column (a, b, c ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 | We compare with the accuracy obtained with linear probing and observe only modest improvements with fine-tuning: this suggests that DINOv2 features already perform well ... | definition/direction/unit from same section | p. 12 (7 Results) |
 | 7.1 We report top-1 accuracy for those three datasets in Table 7. | definition/direction/unit from same section | p. 13 (7 Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 | First, we show that our self-supervised features outperform the current state of the art by a very large margin. | comparison identity and matched condition | p. 11 (7 Results) |
 | Moreover, our model matches the accuracy of the OpenCLIP features on UCF and Kinetics (+0.1% and +0.5% respectively) and clearly outperforms them on SSv2 ... | comparison identity and matched condition | p. 13 (7 Results) |
 | Interestingly, our model significantly outperforms OpenCLIP ViT-G/14 on both variants of iNaturalist (+8.6% and +9.7% for 2018 and 2021 respectively), and lags slightly behind ... | comparison identity and matched condition | p. 13 (7 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 | body limitation/failure cue | Out-of-distribution generalization. | p. 16 (7 Results) |
 | body limitation/failure cue | Figure 8: Examples of out-of-distribution examples with frozen DINOv2-g features and a linear probe. PCA of patch features. We show the results of the ... | p. 17 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 | (2022) to finetune our encoders on ImageNet-1k at resolutions 224 × 224 or 448 × 448. | p. 12 (7 Results) |
 | We use the best performing linear classifier as described above and simply run inference on those benchmarks. | p. 12 (7 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 15 / 7 Results - extractive body cue:** This procedure is extremely simple but cannot easily produce high-resolution segmentations. +ms: a boosted version of the linear setup.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 13 (7 Results),
 - **p. 17 / Figure/Table caption - extractive body cue:** Figure 8: Examples of out-of-distribution examples with frozen DINOv2-g features and a linear probe. PCA of patch features. We show the results of the principal ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (7 Results), p. 13 (7 Results), p. 14 (7 Results), p. 14 (7 Results), p. 30 (B.1 Unsupervised pre-training), p. 11 (7 Results), metrics p. 9 (Figure/Table caption), p. 11 (7 Results), p. 31 (B.3 Linear probing evaluation), p. 18 (Figure/Table caption), p. 11 (7 Results), p. 12 (7 Results), baselines p. 12 (7 Results), p. 14 (7 Results), p. 11 (7 Results), p. 11 (7 Results), p. 13 (7 Results), p. 13 (7 Results), results p. 10 (Figure/Table caption), p. 13 (7 Results), p. 14 (7 Results), p. 14 (7 Results), p. 8 (Figure/Table caption), p. 11 (7 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

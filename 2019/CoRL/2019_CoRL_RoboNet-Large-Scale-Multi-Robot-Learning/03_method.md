@@ -48,7 +48,6 @@ PDF body method statement (p. 13 (C Database Implementation Details), p. 13 (C D
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 13 (C Database Implementation Details), p. 13 (C D
 - **p. 1 / 1 Introduction - extractive body cue:** Instead, we propose the opposite - using dramatically larger and more varied datasets collected in the real world.
 - **p. 12 / C Database Implementation Details - extractive body cue:** Data is stored in the widely adopted hdf5-format, and videos are encoded via MP4 for efficiency reasons.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 13 (C Database Implementation Details), p. 13 (C D
 - **p. 13 / C Database Implementation Details - extractive body cue:** We collected 300 new trajectories with a Robotiq 2-finger gripper, which differs significantly in visual appearance and dimensions from the Weiss Robotics gripper used in ...
 - **p. 12 / C Database Implementation Details - extractive body cue:** We provide code infrastructure that allows a user to filter certain subsets of attributes for training and testing.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** collected, trajectories, Robotiq, finger, gripper, differs, significantly, visual, appearance, dimensions, Weiss, Robotics, other, Sawyer, Figure, data, evaluate, four, different, models.
 - **Relevant PDF headings:** A.1 Action conditioned video-prediction model (p. 11).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 13 (C Database Implementation Details), p. 13 (C D
 - **p. 8 / 6 Discussion - extractive body cue:** Next, we discuss limitations of the dataset and evaluation, and additional directions for future work.
 - **p. 8 / 6 Discussion - extractive body cue:** While our results demonstrated a large degree of generalization, a number of important limitations remain, which we aim to study in future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 13 (C Database Implementation Details), p. 13 (C Database Implementation Details), p. 12 (C Database Implementation Details), p. 12 (C Database Implementation Details), objective 본문 anchor 없음, temporal p. 1 (1 Introduction), p. 13 (C Database Implementation Details), p. 4 (2 Related Work), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

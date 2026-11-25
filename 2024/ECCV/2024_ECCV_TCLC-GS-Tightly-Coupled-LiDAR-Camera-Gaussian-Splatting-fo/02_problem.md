@@ -64,8 +64,6 @@ PDF body contribution framing (p. 7 (3 Methodology), p. 3 (1 Introduction), p. 1
 | body cue at p. 10 | Metrics: Following the previous research [5,15,20,28,31], our image synthesis evaluation employs three widely-used benchmark metrics, i.e., peak signal-tonoise ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 12 | The significant improvement in depth synthesis performance can be attributed to the robust supervision provided by the rendered ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Methodology), p. 7 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ PDF body contribution framing (p. 7 (3 Methodology), p. 3 (1 Introduction), p. 1
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 4 (3 Methodology), p. 7 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), objective p. 6 (3 Methodology), p. 6 (3 Methodology), p. 8 (3 Methodology), p. 8 (3 Methodology).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

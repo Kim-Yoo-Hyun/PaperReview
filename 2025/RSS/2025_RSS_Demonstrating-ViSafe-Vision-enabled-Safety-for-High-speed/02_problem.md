@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (4) First-of-its-kind real-world flight test
 | body cue at p. 7 | The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Fig. 4. These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. Table I shows ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 2 (2) Custom-built SWaP-C hardware that simultaneously), p. 4 (IV. ViSafe FRAMEWORK), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 2 (I. INTRopI), p. 3 (B. Control Barrier Functions for Aerial Collision Avoidance), p. 3 (B. Control Barrier Functions for Aerial Collision Avoidance), p. 1 (Abstract), interface p. 2 (4) First-of-its-kind real-world flight tests demonstrating that), p. 2 (2) Custom-built SWaP-C hardware that simultaneously), p. 4 (IV. ViSafe FRAMEWORK), p. 1 (Abstract), objective p. 6 (C. Supervisory Safety Controller), p. 6 (C. Supervisory Safety Controller), p. 7 (C. Supervisory Safety Controller).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

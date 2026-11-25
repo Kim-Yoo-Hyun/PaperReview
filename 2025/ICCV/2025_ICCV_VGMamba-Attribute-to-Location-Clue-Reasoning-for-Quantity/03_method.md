@@ -50,7 +50,6 @@ PDF body method statement (p. 2 (3. Overview of State Space Models), p. 5 (4.4. 
 - **p. 2 / 3. Overview of State Space Models - extractive body cue:** The system is governed by differential equations that describe how the hidden state evolves over time: h′(t) = Ah(t) + Bx(t), y(t) = Ch(t), (1) ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (3. Overview of State Space Models), p. 5 (4.4. Training Objectives).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 2 (3. Overview of State Space Models), p. 5 (4.4. 
 - **p. 1 / 1. Introduction - extractive body cue:** Experimental results on multiple datasets verify the effectiveness of this mechanism. of 3D environments, this task becomes even more complex due to the sparsity and ...
 - **p. 3 / 3. Overview of State Space Models - extractive body cue:** To this end, we study whether the Mamba could be used to capture the relation between objects and language descriptions.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 2 (3. Overview of State Space Models), p. 5 (4.4. 
 
 - **p. 6 / 5.1.2. Implementation Details - extractive body cue:** We implement the proposed VGMamba model using PyTorch and train it end-to-end on a single NVIDIA A6000 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Recently, state, space, models, SSMs, have, attracted, much, attention, ability, model, continuous, systems, constructing, foundation, popular, Mamba, architecture, Building, previous.
 - **Relevant PDF headings:** 3. Overview of State Space Models (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 2 (3. Overview of State Space Models), p. 5 (4.4. 
 - **p. 6 / 5.1.3. Baseline Comparison - extractive body cue:** (iii) Unlike previous methods [13, 44] that show notable performance variations across settings, our VGMamba maintains consistently high accuracy, validating its robust generalization capability in ...
 - **p. 7 / 5.2.3. Baseline Comparison - extractive body cue:** 46.7%, surpassing the second-best competitor by 3.1%, which highlights its robustness in managing complex scenes with multiple potential matches.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (3. Overview of State Space Models), p. 5 (4.4. Training Objectives), p. 2 (3. Overview of State Space Models), p. 3 (3. Overview of State Space Models), p. 3 (3. Overview of State Space Models), objective p. 5 (4.4. Training Objectives), p. 2 (3. Overview of State Space Models), temporal p. 5 (4.3. Multi-modal Mamba Fusion), p. 7 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (3. Overview of State Space Models).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

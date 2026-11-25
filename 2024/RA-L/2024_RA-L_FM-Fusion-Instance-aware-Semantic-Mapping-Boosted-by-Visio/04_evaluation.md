@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8
 - **p. 5 / V. EXPERIMENT - extractive body cue:** In all the experiments, camera poses are provided by the dataset.
 - **p. 6 / V. EXPERIMENT - extractive body cue:** IEEE ROBOTICS AND AUTOMATION LETTERS, VOL.9, NO.3, MARCH 2024
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our system reads a sequence of RGB-D frames. The vision-language foundation models detect objects in open-set labels and high-quality masks. The SLAM modules ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8
 | Fig. 10: An image of object detection from Ablation-B and our method are shown in (a) and (b). The labels incorporated by text prompt ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 11: Reconstructions in SceneNN 096. False semantic and over-segmented instances are highlighted in red circles. So far, the system run offline. As shown ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8
 | We compared our method with Kimera 2 and a selfimplemented Fusion++. | comparison identity and matched condition | p. 5 (V. EXPERIMENT) |
 | The global TSDF map is integrated for every RGBD frame, while our method and all baselines run in every 10 frames to integrate the ... | comparison identity and matched condition | p. 5 (V. EXPERIMENT) |
 | Fig. 10: An image of object detection from Ablation-B and our method are shown in (a) and (b). The labels incorporated by text prompt ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8
 | body limitation/failure cue | We consider those limitations of foundation models. | p. 7 (6 Method) |
 | body limitation/failure cue | Compared with the original Fusion++ method, the main difference is that our implemented version does not maintain a foreground probability for each voxel. | p. 5 (V. EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8
 | The experiment is run on an Intel-i7 computer with Nvidia RTX-3090 GPU in an offline fashion. | p. 5 (V. EXPERIMENT) |
 | But we use Cluster-All for convenient implementation. | p. 5 (V. EXPERIMENT) |
 | 47.1ms 9.7 ms/obj Integration 71.9ms 14.9 ms/obj Total 1039.6 ms - TABLE IV: Runtime analysis for each frame in ScanNet. | p. 7 (6 Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -154,6 +133,5 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8
 - **p. 5 / V. EXPERIMENT - extractive body cue:** Compared with the original Fusion++ method, the main difference is that our implemented version does not maintain a foreground probability for each voxel.
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 6 (V. EXPERIMENT), metrics p. 5 (V. EXPERIMENT), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 7 (Figure/Table caption), results p. 5 (V. EXPERIMENT), p. 5 (V. EXPERIMENT), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

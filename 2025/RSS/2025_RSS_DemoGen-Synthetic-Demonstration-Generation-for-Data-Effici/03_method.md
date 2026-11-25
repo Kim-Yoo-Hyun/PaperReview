@@ -51,7 +51,6 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** To stabilize the training process, we use AdamW [32] optimizer and set the learning rate to be Le with a 500 step warmup.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 - **p. 6 / C. TAMP-based Action Generation - extractive body cue:** It is noteworthy that we found directly replacing the current state with the next target pose action (ie., 07°" < aj) ‘may impair performance, asthe ...
 - **p. 4 / A. Problem Formulation - extractive body cue:** The action a, consists of the robot arm and robot hhand commands, represented as a - (a""a!!™), where a7" © AP" is the target SE(3) ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** We list the training and ‘implementation details as follows,
 - **p. 4 / B. Benchmarking Spatial Generalization Capability - extractive body cue:** On the other hand, both 3D representations and pre-trained 2D visual encoders contribute to improved spatial generalization capabilities.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** real-world, experiments, DBSCAN, elustering, algorithm, discard, outlier, points, downsample, number, point, cloud, observations, simulator, skip, clustering, stage, clouds, Details, Policy.
 - **Relevant PDF headings:** A. Policy Training and Implementation Details (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 17 (A. Policy Training and Implementation Details)
 - **p. 11 / B. Cluttered Scene - extractive body cue:** When the scene becomes even more complex, e.g. clutter, DemoGen does not necessarily work well.
 - **p. 4 / B. Benchmarking Spatial Generalization Capability - extractive body cue:** We vary the number of demonstrations from 25 to 400, The object configurations are randomly sampled from a slightly larger range than the evaluation workspace ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 5 (A. Problem Formulation), p. 6 (C. TAMP-based Action Generation), objective p. 17 (A. Policy Training and Implementation Details), p. 6 (C. TAMP-based Action Generation), p. 17 (A. Policy Training and Implementation Details), temporal p. 17 (A. Policy Training and Implementation Details), p. 4 (A. Problem Formulation), p. 11 (B. Cluttered Scene), p. 17 (A. Policy Training and Implementation Details), p. 1 (Abstract), p. 2 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

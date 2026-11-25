@@ -46,8 +46,6 @@ ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개
 - **p. 7 / 5.2. Quantitative Analysis - extractive body cue:** The performance of 3D-QA on the ScanQA dataset and image caption metrics are presented in Table 3.
 - **p. 2 / 3.1. 3D-QA Task - extractive body cue:** 1, a 3D-QA task requires models to answer a question when given all the information of a 3D
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce the new task of question answering for 3D modeling. Given inputs of an entire 3D modeling and a linguistic question, models ...
@@ -81,8 +79,6 @@ ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개
 | Finally, we demonstrated the excellent performance of our model by visualizing qualitative examples of ScanQA, ScanRefer+MCAN (pipeline), and ground truth. | definition/direction/unit from same section | p. 8 (5.4. Qualitative Analysis) |
 | Auto-generated questions also include easy questions that can be answered with common sense. | definition/direction/unit from same section | p. 3 (3.2. Question-Answer Collection) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개
 | Table 11. Performance comparison for the ScanQA model with difference hidden size d (Fig. 5). Fig. 9 shows the results of the object localization ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
 | 5 shows the representative QA results of a baseline method and ScanQA. | comparison identity and matched condition | p. 8 (5.4. Qualitative Analysis) |
 | Figure 7. Example of mesh images about a question "What color is the bathroom door?" The upper panel is RandomImage, and the lower panel ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개
 |---|---|---|
 | body limitation/failure cue | Table 5. Feature ablation results ground-truth answers. We also included sentence evalua- tion metrics frequently used for image captioning models because some of the ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,19 +131,10 @@ ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개
 | We applied pretrained 2D-QA models to these images and computed the answer scores for each image. | p. 6 (Model) |
 | The proposed method uses some of the modules used in MCAN, such as transformer encoder and decoder layers, to create 3D and language features. | p. 6 (Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 5. Feature ablation results ground-truth answers. We also included sentence evalua- tion metrics frequently used for image captioning models because some of the questions ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (3.3. Dataset Statistics), p. 3 (3.2. Question-Answer Collection), p. 3 (3.3. Dataset Statistics), p. 4 (3.3. Dataset Statistics), p. 2 (3. ScanQA Dataset), p. 7 (5.2. Quantitative Analysis), metrics p. 13 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 1 (Figure/Table caption), p. 5 (5.1. Experimental Setup), p. 5 (5.1. Experimental Setup), p. 6 (Figure/Table caption), baselines p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 6 (Figure/Table caption), p. 15 (Figure/Table caption), p. 8 (5.4. Qualitative Analysis), p. 12 (Figure/Table caption), results p. 7 (5.2. Quantitative Analysis), p. 7 (5.2. Quantitative Analysis), p. 8 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

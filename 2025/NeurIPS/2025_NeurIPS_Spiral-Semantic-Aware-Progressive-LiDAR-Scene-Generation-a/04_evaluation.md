@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9
 - **p. 8 / 4 Experiments - extractive body cue:** As shown in the second and third rows of Table 3, although Spiral is not fine-tuned for such extreme weather conditions, its generated data still ...
 - **p. 11 / A Evaluation Metrics - extractive body cue:** In the main paper, we evaluate the generative quality of Spiral for the LiDAR scene x with semantic map y from three perspectives: range-view images, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption cue 없음
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9
 | However, the performance of Spiral starts to deteriorate when δ < 0.6. | definition/direction/unit from same section | p. 10 (4 Experiments) |
 | Spiral demonstrates superior inference efficiency compared to LiDM and LiDARGen. | definition/direction/unit from same section | p. 10 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9
 | As shown in the first row of Table 3, the generated samples from Spiral consistently improve the performance of SPVCNN++ and outperform those from ... | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Spiral demonstrates superior inference efficiency compared to LiDM and LiDARGen. | comparison identity and matched condition | p. 10 (4 Experiments) |
 | With fewer sampling steps, Spiral outperforms R2DM [18] using its default setting of NFE = 256, indicated by the dashed line. | comparison identity and matched condition | p. 10 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9
 | body limitation/failure cue | Additionally, we evaluate SPVCNN++ under the same settings on out-of-distribution subsets, fog and wet-ground, from Robo3D [53]. | p. 8 (4 Experiments) |
 | body limitation/failure cue | Examples of semantic artifacts are shown in 7○, 8○, 9○, and 11 ○, while geometric artifacts such as local distortion and large noise are ... | p. 8 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9
 | For the BEV-based evaluation, we first compute the semantic-aware histogram for the real and generated sets, {hs}r and {hs}g, and then compute the BEV-based ... | p. 12 (A.2 Evaluation on Bird's Eye View) |
 | Starting from a real sample x0 ∼q(x0), a forward process gradually adds Gaussian noise over T steps, such that the final sample approximates a ... | p. 4 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 4 Experiments - extractive body cue:** With δ = 0.3, the performance of the closed-loop inference even falls behind that of the open-loop inference.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9
 - **p. 8 / 4 Experiments - extractive body cue:** Examples of semantic artifacts are shown in 7○, 8○, 9○, and 11 ○, while geometric artifacts such as local distortion and large noise are illustrated ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), metrics p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), results p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

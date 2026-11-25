@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 7 | Robustness (RQ4): Can our pre-training world model generalize to diverse downstream learning paradigms? | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | We attribute this strong performance to our core contribution: by pre-training a model that explicitly represents temporal uncertainty, ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (4 METHODOLOGY), p. 4 (3 PRELIMINARIES), p. 5 (4 METHODOLOGY), p. 1 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), interface p. 5 (4 METHODOLOGY), p. 4 (3 PRELIMINARIES), p. 5 (4 METHODOLOGY), p. 1 (1 INTRODUCTION), objective p. 5 (4 METHODOLOGY), p. 5 (4 METHODOLOGY), p. 6 (4 METHODOLOGY).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

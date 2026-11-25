@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** Although the construction method is simple, it is no easy task to find a method that yields such desirable behavior.
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** Based on simulation experiments, such as the one shown above, we have concluded that the generated paths are not far from optimal and that the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -72,8 +70,6 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 | GENERATERRT (ini: At) 1 Tinit(tinie); | definition/direction/unit from same section | p. 2 (2. Rapidly-Exploring Random Trees) |
 | A crucial piece of analysis that remains open is the rate of convergence | definition/direction/unit from same section | p. 3 (3. Nice Properties of RRTs) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 | The key advantages of RRTs are: 1) the expansion of an RRT is heavily biased. toward unexplored portions of the state space; 2) the ... | comparison identity and matched condition | p. 2 (3. Nice Properties of RRTs) |
 | Based on several experiments in 2D, convex spaces, the ‘optimal path to the root in comparison to the path in the RRT, differ on ... | comparison identity and matched condition | p. 3 (3. Nice Properties of RRTs) |
 | For these reasons and out preliminary observations from. experimentation, it appears that an RRT-based planner may generally yield better performance than a probabilistic roadmap-based ... | comparison identity and matched condition | p. 3 (3. Nice Properties of RRTs) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -114,8 +103,6 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 | body limitation/failure cue | In a related paper [7], we presented an RRT-based, planner that computes collision-free kinodynamic trajec~ tories that fire thrusters for hovercrafts and satellites in, ... | p. 3 (4 Examples) |
 | body limitation/failure cue | Collision detection is a key bottleneck in path planning, and an RRT is completely suited for incremental collision detection, This allows the fastest-avaliable collision ... | p. 3 (3. Nice Properties of RRTs) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -125,14 +112,6 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 | The vector & denotes the derivative of state with respect to time, This controlstheoretic representation is powerful enough to encode virtually any kinematic and ... | p. 2 (2. Rapidly-Exploring Random Trees) |
 | In a related paper [7], we presented an RRT-based, planner that computes collision-free kinodynamic trajec~ tories that fire thrusters for hovercrafts and satellites in, ... | p. 3 (4 Examples) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / 9 Return T - extractive body cue:** Collision detection can be performed by an incremental method such as Mirtich's V-Clip.
@@ -141,9 +120,8 @@ PDF body evaluation/result cue (p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (
 - **p. 3 / 3. Nice Properties of RRTs - extractive body cue:** Collision detection is a key bottleneck in path planning, and an RRT is completely suited for incremental collision detection, This allows the fastest-avaliable collision detection ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), metrics p. 2 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (2. Rapidly-Exploring Random Trees), p. 3 (3. Nice Properties of RRTs), baselines p. 2 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs), results p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3. Nice Properties of RRTs), p. 3 (3. Nice Properties of RRTs).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

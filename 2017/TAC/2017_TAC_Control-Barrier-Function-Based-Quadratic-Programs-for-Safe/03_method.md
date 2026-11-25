@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 - **p. 7 / III. CONTROL BARRIER FUNCTIONS - extractive body cue:** Note that if U̸ = Rm, i.e., there are constraints on the input u, then the construction shown above for higher relative degree h may ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 1 (I. INTRODUCTION), p. 3 (B. Contributions), p. 7 (III. CONTROL BARRIER FUNCTIONS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 - **p. 12 / V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS - extractive body cue:** 1) Lane Keeping Problem Setup: Under the assumptions of constant longitudinal speed and a linear tire-force model, a two-state handling model can be augmented to ...
 - **p. 12 / V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS - extractive body cue:** In the model, the state is x := (y, ν, ψ, r), where y and ψ are the lateral displacement and the error yaw angle ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 
 - **p. 2 / B. Contributions - extractive body cue:** The relations established for barrier functions then extend to control barrier functions. perspective allows for the consideration of multiple control objectives (expressed via multiple CLFs) ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** While, tempting, decompose, problem, design, controller, individual, objective, then, integrate, resulting, controllers, software, integration, being, simple, relations, established, barrier, functions.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,23 +108,13 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1
 - **p. 13 / Figure/Table caption - extractive body cue:** Fig. 3. The projection of CF onto the (y, ˙y)-plane is bounded by the upper and lower curves. The subset CLK ⊂Int(CF ) is bounded ...
 - **p. 14 / VII. CONCLUSIONS - extractive body cue:** Future work will be devoted to building upon the foundations presented in this paper in the context of safety-critical control of cyber-physical systems, with a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 2 (B. Contributions), p. 1 (Abstract), p. 7 (III. CONTROL BARRIER FUNCTIONS), p. 2 (B. Contributions), p. 6 (III. CONTROL BARRIER FUNCTIONS), objective p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 1 (I. INTRODUCTION), p. 3 (B. Contributions), p. 7 (III. CONTROL BARRIER FUNCTIONS), temporal p. 1 (Abstract), p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 3 (II. RECIPROCAL AND ZEROING BARRIER FUNCTIONS), p. 3 (B. Contributions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

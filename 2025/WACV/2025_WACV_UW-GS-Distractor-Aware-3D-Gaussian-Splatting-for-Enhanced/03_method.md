@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem f
 - **p. 3 / 3.1. Problem formulation - extractive body cue:** During training, the 2D position gradient, an intermediate result in backward propagation, is used as evidence to indicate "color under-represented" issues [23].
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.4. Physical-based Density Control), p. 6 (3.6. Loss Function), p. 3 (3.1. Problem formulation), p. 3 (3.1. Problem formulation), p. 4 (3.4. Physical-based Density Control), p. 5 (3.4. Physical-based Density Control).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem f
 - **p. 3 / 3.1. Problem formulation - extractive body cue:** Based on its average value, the sparse point cloud obtained from COLMAP [36] is adaptively grown by splitting and cloning.
 - **p. 5 / 3.4. Physical-based Density Control - extractive body cue:** As a result, the point clouds at larger scales exhibit improved representational capability, thereby reducing both blur and needle-like artifacts.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem f
 - **p. 6 / 4. Experiment Configuration - extractive body cue:** For training, we carried out 15,000 iterations in a single RTX3090 GPU.
 - **p. 6 / 4. Experiment Configuration - extractive body cue:** We used their official implementation, but trained on the same sequence using the same dataset split strategy.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Therefore, color, appearance, model, physical-based, density, control, module, UW-GS, splatting, process, addresses, densification, failures, binary, motion, mask, handle, distractors, pixel-level.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.3. Color Appearance Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem f
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The diagram of our proposed UW-GS approach, combining a novel color appearance model, physical-based density control and binary motion mask to 3DGS. Our ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Left: Diagram of 2D Position gradient calculation. Right: Illustration of densification failures (G2 highlighted in orange) that appear to be not cloned or ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem formulation), p. 5 (3.5. Binary Motion Mask), p. 6 (3.6. Loss Function), p. 4 (3.3. Color Appearance Model), p. 3 (3.1. Problem formulation), objective p. 4 (3.4. Physical-based Density Control), p. 6 (3.6. Loss Function), p. 5 (3.6. Loss Function), p. 5 (3.4. Physical-based Density Control), p. 3 (3.1. Problem formulation), p. 3 (3.1. Problem formulation), temporal p. 3 (3.1. Problem formulation), p. 4 (3.4. Physical-based Density Control), p. 5 (3.5. Binary Motion Mask), p. 6 (4. Experiment Configuration), p. 6 (4. Experiment Configuration), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

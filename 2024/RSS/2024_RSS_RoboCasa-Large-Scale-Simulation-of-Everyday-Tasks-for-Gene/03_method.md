@@ -53,7 +53,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 5 (8) Navigation. These sk
 - **p. 6 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** This offers a promising outlook: data generation tools enable us to learn significantly more performant agents at a relatively low cost.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 5 (8) Navigation. These sk
 - **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** Due to the increased difficulty of these tasks and the challenges of multi-task learning, we opt to learn a singletask policy for each task.
 - **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** We compare learning these tasks from scratch with 50 human demonstrations versus fine-tuning a policy trained on machine-generated atomic task data.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 5 (8) Navigation. These sk
 - **p. 4 / III. ROBOCASA SIMULATION - extractive body cue:** We use these textures as a form of domain randomization to significantly increase the visual diversity of our training datasets.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Unlike computer vision and natural language processing domains, where massive visual and text data are abundant from online sources, robotic data is relatively scarce.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** employ, generative, tools, create, environment, textures, objects, introduce, tasks, systematic, evaluation, including, atomic, representing, foundational, sensorimotor, skills, composite, generated, guidance.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 5 (8) Navigation. These sk
 - **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** Some common failure modes include difficulty with fine-grained manipulation and difficulty effectively transitioning to the next stage of the task.
 - **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** The choice of policy architecture, learning algorithm, and finetuning strategy may play a critical role in performance, and these factors warrant investigation in future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 5 (8) Navigation. These skills do not constitute an exhaustive), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 4 (III. ROBOCASA SIMULATION), p. 5 (8) Navigation. These skills do not constitute an exhaustive), objective p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), temporal p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 1 (Body text (section not recovered)), p. 1 (Abstract), p. 2 (II. RELATED WORK), p. 2 (I. INTRODUCTION), p. 3 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

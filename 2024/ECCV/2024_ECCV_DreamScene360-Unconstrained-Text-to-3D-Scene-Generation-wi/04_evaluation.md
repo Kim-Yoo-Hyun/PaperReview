@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 - **p. 13 / 4 Experiments - extractive body cue:** In this part, we mainly focus on the generated panorama since panorama provides a holistic view of the 3D scene and provides an upper bound ...
 - **p. 14 / 4 Experiments - extractive body cue:** In the absence of geometric priors of the scene (a), the optimized 3D Gaussian rendering yields plausible results in panoramic camera views.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DreamScene360. We introduce a 3D scene generation pipeline that creates immersive scenes with full 360◦coverage from text prompts of any level of specificity. ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 | Fig. 2: Overall Architecture. Beginning with a concise text prompt, we employ a diffusion model to generate a 360◦panoramic image. A self-refinement process is ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Fig. 3: Diverse Generation. We demonstrate that our generated 3D scenes are di- verse in style, consistent in geometry, and highly matched with the ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 | These functionalities are otherwise hard to achieve in previous baselines that do not have global 2D representations, and as a result, our results provide ... | comparison identity and matched condition | p. 13 (4 Experiments) |
 | We provide quantitative comparisons in Tab. | comparison identity and matched condition | p. 12 (4 Experiments) |
 | We show visual comparisons against LucidDreamer [7] in Fig. | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 |---|---|---|
 | body limitation/failure cue | In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout. | p. 12 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,19 +129,10 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 11 (4 Experiments), p.
 | Moreover, the issue of prompt engineering in text-to-image generation [51, 52], becomes more pronounced in text-to-3D generation frameworks [1, 7, 46] that rely on ... | p. 2 (1 Introduction) |
 | Upon projecting the 3D Gaussians into a 2D space, the color C of a pixel is computed by volumetric rendering, which is performed using ... | p. 7 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 4 Experiments - extractive body cue:** In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout.
 
 - **Evidence anchors reviewed:** datasets p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), metrics p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), baselines p. 11 (4 Experiments), p. 10 (Figure/Table caption), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

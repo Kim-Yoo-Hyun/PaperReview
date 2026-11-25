@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.1. Cross-modality Features Extraction), p. 4 
 - **p. 5 / 3.2. Cross-Modality Contrastive Losses - extractive body cue:** Finally, our complete loss function is formed by the following combination of loss functions: LCCL-3DSGG = λ1LI3D + λ2LT 3D, (7) where the hyper-parameters λ1 ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (3. Methods), p. 3 (1) Prompt learning based methods adjust to downstream), p. 4 (3.1. Cross-modality Features Extraction), p. 4 (3.2. Cross-Modality Contrastive Losses), p. 5 (3.2. Cross-Modality Contrastive Losses), p. 5 (3.2. Cross-Modality Contrastive Losses).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.1. Cross-modality Features Extraction), p. 4 
 - **p. 4 / 3.1. Cross-modality Features Extraction - extractive body cue:** 3.1.3 3DSG Features Given the point set P of a scene s and the class-agnostic instance segmentation M, the task of 3DSGG first parses the ...
 - **p. 1 / 1) Visual contextual - extractive body cue:** Despite notable advancements in 3DSGG, existing stateof-the-art (SOTA) methods still encounter two obstacles that constrain their practicality in the open-vocabulary (OV) settings.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,15 +90,11 @@ PDF body method statement (p. 4 (3.1. Cross-modality Features Extraction), p. 4 
 - **p. 4 / 3.1. Cross-modality Features Extraction - extractive body cue:** Drawing from the VL-SAT method described in [48], we use a pretrained CLIP vision encoder Iθ to produce features for multi-view images.
 - **p. 4 / 3.1. Cross-modality Features Extraction - extractive body cue:** There is a wooden rectangle table behind of the beige armchair. %%% 3DSG Feature Extractor I3D Loss √ Positive term × Negative term T3D Loss ...
 - **p. 5 / 4.2. Implementation Details - extractive body cue:** Training is conducted using the Adam optimizer [24], with a batch size of 8, over 100 epochs.
-- **p. 4 / 3.1. Cross-modality Features Extraction - extractive body cue:** Drawing from the VL-SAT method described in [48], we use a pretrained CLIP vision encoder Iθ to produce features for multi-view images.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Drawing, VL-SAT, described, pretrained, CLIP, vision, encoder, produce, features, multi-view, images, There, wooden, rectangle, table, behind, beige, armchair, DSG, Feature.
 - **Relevant PDF headings:** 1) Prompt learning based methods adjust to downstream (p. 3); 3. Methods (p. 3); 4.3. Comparisons with SOTA Methods on Close-Set (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +114,10 @@ PDF body method statement (p. 4 (3.1. Cross-modality Features Extraction), p. 4 
 - **p. 8 / 4.5. Ablation Study - extractive body cue:** In EXP 10, we employed the prediction head from VL-SAT to infer features without prompts during the testing phase.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) Difference in training: Previous 3DSGG models trained on closed-set classes by fully supervised [12, 48, 61]. Our method trains a 3DSG feature ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Cross-modality Features Extraction), p. 4 (3.1. Cross-modality Features Extraction), p. 3 (3.1. Cross-modality Features Extraction), p. 3 (3.1. Cross-modality Features Extraction), p. 5 (3.2. Cross-Modality Contrastive Losses), p. 5 (3.2. Cross-Modality Contrastive Losses), objective p. 3 (1) Prompt learning based methods adjust to downstream), p. 3 (3. Methods), p. 4 (3.1. Cross-modality Features Extraction), p. 4 (3.2. Cross-Modality Contrastive Losses), p. 5 (3.2. Cross-Modality Contrastive Losses), p. 5 (3.2. Cross-Modality Contrastive Losses), temporal p. 3 (3. Methods), p. 3 (3.1. Cross-modality Features Extraction), p. 2 (1) Visual contextual), p. 2 (1) Visual con), p. 8 (5. Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 - **p. 5 / 5. Experiments - extractive body cue:** We study FM-Steer across diverse simulated and real-world robotic platforms, including humanoid robots, and compare it with previous state-of-the-art generalist policies, including prior test-time computing ...
 - **p. 5 / 5. Experiments - extractive body cue:** Our experiments evaluate whether FM-Steer can effectively enhance existing flow-based VLAs at test time while preserving the efficiency required for real-time robotic control.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present FM-Steer, a test-time computing framework exploring human-like thinking capabilities for dexterous robot control. Equipped with value-guided test-time sampling and cascaded action ...
@@ -74,8 +72,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 | Figure 2. Overview of FM-Steer. FM-Steer augments a flow-based VLA with two modules: the intermediate flow verifier and the Lite- Flow denoiser. Given an ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Table 2. SimplerEnv Results. We compare FM-Steer with two prior test-time computing methods, V-GPS [50] and RoboMonkey [33], on four WidowX tasks and Google ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -85,13 +81,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 | Figure 4. Real-world evaluation on WidowX, Franka, and AgiBot G-1 tasks. We evaluate FM-Steer across 3 real-robot platforms with varying backgrounds, poses, and motion ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 3. Ablations on LIBERO and SimplerEnv. We conduct ablation studies across LIBERO [44] and SimplerEnv [39] on Wid- owX and Google Robot tasks. ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 6. Real-world ablations on WidowX, Franka, and Agi- Bot G-1. We conduct ablation studies of FM-Steer across 3 differ- ent real-world robotic platforms, ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,7 +102,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 - **p. 4 / 4.1. Value-Guided Test-Time Sampling - extractive body cue:** Lite-Flow Denoiser Flow-Based VLA Flow Matching Head Intermediate Flow Verifier visual token text token action token special query token state token 90Hz 4Hz Stochasticity Sampling ...
 - **p. 5 / 4.2. Cascaded Action Denoising - extractive body cue:** 3rd person camera WidowX 250 Robot Arm Gripper AgiBot G-1 Humanoid Robot Head camera Left hand camera right hand camera effector Franka Panda Emika Robot ...
 - **p. 5 / 4.3. Training and Deployment Strategy - extractive body cue:** For example, at the initial timestep t, the original VLA generates N = 5 candidate action chunks {Aτ1 t , Aτ2 t , . . ...
-- **p. 5 / 5.1. Implementation Details - extractive body cue:** During deployment, we use a single RTX 4090 GPU for inference.
 
 ## Generalization and Failure Cases
 
@@ -126,8 +114,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 | body limitation/failure cue | Figure 3. Experimental setups on WidowX, AgiBot G-1, and Franka. We evaluate FM-Steer across 3 simulation environments and 3 different real-world robotic platforms, covering ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | Figure 5. Visualization of value-guided test-time sampling and cascaded action denoising. Panel (a) shows value maps of can- didate actions, where the ground-truth actions ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +123,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 | 4.2) to complete the remaining Euler forward steps. | p. 3 (4.1. Value-Guided Test-Time Sampling) |
 | During the forward Euler process used to compute the integral in Eq. | p. 3 (4.1. Value-Guided Test-Time Sampling) |
 | To ensure a fair comparison, we first adjust the hyperparameters of each method (e.g., chunk size and number of candidates) to achieve its best ... | p. 7 (5.3. Efficiency Improvement) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -156,6 +134,5 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 1 (Figure/Table 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Visualization of value-guided test-time sampling and cascaded action denoising. Panel (a) shows value maps of can- didate actions, where the ground-truth actions lie ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5. Experiments), metrics p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 5 (5. Experiments), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

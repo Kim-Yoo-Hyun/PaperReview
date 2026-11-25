@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (2 Preliminaries), p. 2 (1 Introduction), p. 5 (
 - **p. 7 / 2 Preliminaries - extractive body cue:** We apply the following general regression objective for training (for both diffusion and Gaussian policy): Lπ = Eo,F,M∼Dhuman∥M ⊙(πdepth(o, ˜F, t) -Fdepth)∥+ α∥M ⊙(πmotion(o, ˜F, ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 3 (2 Preliminaries), p. 6 (2 Preliminaries), p. 6 (2 Preliminaries), p. 7 (2 Preliminaries), p. 7 (2 Preliminaries).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (2 Preliminaries), p. 2 (1 Introduction), p. 5 (
 - **p. 7 / 2 Preliminaries - extractive body cue:** Model and Training Then, we train a policy network π to predict these labeled 3D motion field with the segmented RGBD image as input.
 - **p. 7 / 2 Preliminaries - extractive body cue:** (3) In this objective above, o is the segmented RGBD image observation, F is the groundtruth object 3D motion field (desired action over the object) ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 7 (2 Preliminaries), p. 2 (1 Introduction), p. 5 (
 - **p. 5 / 2 Preliminaries - extractive body cue:** Since all the input and output information are geometrical (no RGB textures), we propose to use a simulator to generate training data due to minimal ...
 - **p. 7 / 2 Preliminaries - extractive body cue:** Deployment In the inference time, we need to convert the predicted 3D motion field F to the robot action.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Model, Training, Then, train, policy, network, predict, labeled, motion, field, segmented, RGBD, image, input, Although, line, achieved, some, preliminary, success.
 - **Relevant PDF headings:** A Further Details on Model Architecture and Training (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 7 (2 Preliminaries), p. 2 (1 Introduction), p. 5 (
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Overview of proposed learning framework. We first pretrain a 3D motion field estimator in simulation (Phase I) and use it to estimate the ...
 - **p. 8 / 5 Experiments - extractive body cue:** Other recent methods fail on our setup due to their limitations (Table 2). to 256 × 256.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (2 Preliminaries), p. 2 (1 Introduction), p. 5 (2 Preliminaries), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), objective p. 1 (Abstract), p. 3 (2 Preliminaries), p. 6 (2 Preliminaries), p. 6 (2 Preliminaries), p. 7 (2 Preliminaries), p. 7 (2 Preliminaries), temporal p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 5 (2 Preliminaries), p. 7 (2 Preliminaries).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

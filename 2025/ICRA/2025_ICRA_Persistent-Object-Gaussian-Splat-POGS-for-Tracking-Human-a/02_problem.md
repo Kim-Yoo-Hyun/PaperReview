@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract)
 | body cue at p. 3 | We evaluate this experiment by recording the maximum number of sequential object resets before failure, the object grasp ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Tracking remains running the entire time, and these consecutive object resets continue until POGS loses tracking of the ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (Abstract), p. 3 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ PDF body contribution framing (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract)
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 4 (3) Persistent Object Tracking phase for online tracking), interface p. 2 (Abstract), p. 3 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 1 (Abstract), objective p. 3 (Abstract), p. 3 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 1 (Abstract), p. 1 (Abstract).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

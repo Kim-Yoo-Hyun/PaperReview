@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (4.2.1. ENCODER), p. 5 (4.2.3. THICKNESS PROCESS
 - **p. 6 / 4.2.3. THICKNESS PROCESSOR - extractive body cue:** Then, the updated embedding of node vi, z(l+1) i ∈Rd, is then computed as: z(l+1) i ←f V thick(zsurf,(l) i , e(l+1) i,thick), (18) where ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2.2. SURFACE PROCESSOR), p. 5 (4.2.2. SURFACE PROCESSOR), p. 6 (4.2.3. THICKNESS PROCESSOR), p. 6 (4.2.3. THICKNESS PROCESSOR).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (4.2.1. ENCODER), p. 5 (4.2.3. THICKNESS PROCESS
 - **p. 5 / 4.2.3. THICKNESS PROCESSOR - extractive body cue:** To address this, we define a Thickness threshold τ that dynamically regulates the interactions between nodes.
 - **p. 5 / 4.2.2. SURFACE PROCESSOR - extractive body cue:** The updated node embeddings zsurf,(l) i ∈Rd serve as the input for the corresponding l-th layer of the thickness processor.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 4 (4.2.1. ENCODER), p. 5 (4.2.3. THICKNESS PROCESS
 
 - **p. 5 / 4.2.3. THICKNESS PROCESSOR - extractive body cue:** By training on real-world data, the model dynamically adapts to identify the optimal threshold τ that captures interactions between opposing surfaces without relying on manual ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** outputs, geometric, encoders, later, input, embeddings, first, layer, processor, modules, addition, account, thickness-related, interactions, introduce, thickness, edge, thick, connecting, feature.
 - **Relevant PDF headings:** 4. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 4 (4.2.1. ENCODER), p. 5 (4.2.3. THICKNESS PROCESS
 - **p. 14 / Figure/Table caption - extractive body cue:** Figure 14. Comparisons between volume mesh and surface mesh. The methods used for comparison are based on the MGN framework with coordinate embeddings from our ...
 - **p. 14 / Figure/Table caption - extractive body cue:** Figure 13. R2 scores for all test data. In the shape IDs, ‘s' indicates seen shapes included in the training data, while ‘us' refers to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.2.1. ENCODER), p. 5 (4.2.3. THICKNESS PROCESSOR), p. 6 (4.2.3. THICKNESS PROCESSOR), p. 3 (4. Methodology), p. 5 (4.2.3. THICKNESS PROCESSOR), p. 6 (4.2.4. DECODER), objective p. 5 (4.2.2. SURFACE PROCESSOR), p. 5 (4.2.2. SURFACE PROCESSOR), p. 6 (4.2.3. THICKNESS PROCESSOR), p. 6 (4.2.3. THICKNESS PROCESSOR), temporal p. 8 (5.4.3. EVALUATION UNDER DYNAMIC SETTING), p. 3 (4. Methodology), p. 3 (4. Methodology), p. 4 (4. Methodology), p. 5 (4.2.3. THICKNESS PROCESSOR), p. 6 (5.2. Baselines).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

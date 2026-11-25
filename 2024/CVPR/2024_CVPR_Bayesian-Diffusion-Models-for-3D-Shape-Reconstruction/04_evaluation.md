@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 - **p. 7 / 4.2. Qualitative Results - extractive body cue:** 6, it can be seen clearly that our method surpasses baselines with respect to the reconstruction quality on the Pix3D dataset.
 - **p. 8 / 4.6. Human Evaluation - extractive body cue:** We randomly selected 20 comparison groups from the Chair, Airplane, and Car classes in the ShapeNet dataset, totaling 60 groups.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Baseline vs Bayesian Diffusion Models. Our BDM brings rich prior knowledge into the shape reconstruction process, fixing the incorrect predictions by the baseline ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 | To demonstrate the efficacy of our Bayesian Diffusion Model, we conducted our experiments on two datasets: the synthetic dataset ShapeNet [12] and the realworld ... | definition/direction/unit from same section | p. 5 (4. Experiment) |
 | Performance on Chair, Sofa and Table of Pix3D. | definition/direction/unit from same section | p. 7 (4.2. Qualitative Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 | We evaluate our BDM on the two baselines: PC2 and CCD-3DR. | comparison identity and matched condition | p. 7 (4.2. Qualitative Results) |
 | 6, it can be seen clearly that our method surpasses baselines with respect to the reconstruction quality on the Pix3D dataset. | comparison identity and matched condition | p. 7 (4.2. Qualitative Results) |
 | This is a remarkable improvement over the baseline (0 step). | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 | body limitation/failure cue | BDM overcomes the limitations in the traditional MCMC-based Bayesian inference that requires having the explicit distributions in performing stochastic gradient Langevin dynamics by tightly ... | p. 8 (5. Conclusion and Limitations) |
 | body limitation/failure cue | contrasts with the middle stage integration, which even degrades the performance of the baseline on F1. | p. 8 (4.4. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,20 +135,11 @@ PDF body evaluation/result cue (p. 6 (4.1. Quantitative Results), p. 6 (4.1. Qua
 | This table presents how different durations of prior integration affect CD and F1, ranging from 0 to 32 steps. | p. 8 (4.4. Ablation Study) |
 | In particular, we feed the intermediate point cloud from our reconstruction model into the prior model, forward it through a certain number of timesteps ... | p. 4 (3.4. Point Cloud Prior Integration) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion and Limitations - extractive body cue:** BDM overcomes the limitations in the traditional MCMC-based Bayesian inference that requires having the explicit distributions in performing stochastic gradient Langevin dynamics by tightly coupling ...
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** contrasts with the middle stage integration, which even degrades the performance of the baseline on F1.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.2. Qualitative Results), p. 5 (4. Experiment), p. 5 (4. Experiment), p. 6 (4. Experiment), p. 6 (4.1. Quantitative Results), p. 7 (4.2. Qualitative Results), metrics p. 6 (4.1. Quantitative Results), p. 6 (4.1. Quantitative Results), p. 8 (4.6. Human Evaluation), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 5 (4. Experiment), baselines p. 5 (4. Experiment), p. 6 (4. Experiment), p. 6 (4. Experiment), p. 7 (4.2. Qualitative Results), p. 7 (4.2. Qualitative Results), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Quantitative Results), p. 6 (4.1. Quantitative Results), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 8 (4.6. Human Evaluation), p. 7 (4.2. Qualitative Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

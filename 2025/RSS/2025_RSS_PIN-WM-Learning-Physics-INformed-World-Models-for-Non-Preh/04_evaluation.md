@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 - **p. 7 / A. Evaluations in Simulation - extractive body cue:** The initial object pose is randomized for each episode.
 - **p. 14 / A. Implementation Details for Baselines - extractive body cue:** Diffusion Policy is trained with successful trajectories collected from ‘expert policies trained in the environment with GT physical parameters, without any randomization,
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: PIN-WM is Jearned from few-shot and task-agnostic physical Interaction trajectories (random pushes of the blocks in this example), through end-to-end differentiable identification of ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 | The reward signal for policy learning is a handcrafted function to encourage the robot to push the object toward the target pose: r= -dy ... | definition/direction/unit from same section | p. 14 (A. Implementation Details for Baselines) |
 | + Does PIN-WM achieve more accurate system identifica | definition/direction/unit from same section | p. 6 (IV. RESULTS AND EVALUATIONS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 | + Does our method outperform other Real2Sim2Real meth | comparison identity and matched condition | p. 6 (IV. RESULTS AND EVALUATIONS) |
 | More implementation details of baseline methods are provided in Appendix A. | comparison identity and matched condition | p. 7 (A. Evaluations in Simulation) |
 | ASID [53] shows lower accuracy compared to PIN-WM in both push and flip tasks, since itis difficult for gradient-free optimization to | comparison identity and matched condition | p. 8 (A. Evaluations in Simulation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 | body limitation/failure cue | We can observe that Dreamer V2 quickly converges on the training dataset, but it does not generalize well on the test dataset. | p. 8 (A. Evaluations in Simulation) |
 | body limitation/failure cue | ‘¢ Methods that rely purely on data. representative is the well-known Dreamer V2 [27], which is a latent-space dynamies model from data for handling ... | p. 7 (A. Evaluations in Simulation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 | All RL-based policies are trained using PPO [66], with the same model architecture, reward function, hyperparameters, and stopping criterion based on the success rate. | p. 14 (A. Implementation Details for Baselines) |
 | We propagate recursive derivatives of Equation 11 across H/h simulation time steps and optimize 8. | p. 6 (B. Physics-INformed World Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / A. Evaluations in Simulation - extractive body cue:** Since neither of the two methods learns rendering parameters and their trained policies cannot work without aligned visual input, we add our rendering function Z ...
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 7 (A. Evaluations in Simulation), p. 8 (A. Ev
 - **p. 7 / A. Evaluations in Simulation - extractive body cue:** ‘¢ Methods that rely purely on data. representative is the well-known Dreamer V2 [27], which is a latent-space dynamies model from data for handling high-dimensional ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (A. Evaluations in Simulation), p. 8 (B. Evaluations in Real-World), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS), p. 8 (B. Evaluations in Real-World), p. 14 (A. Implementation Details for Baselines), metrics p. 14 (A. Implementation Details for Baselines), p. 7 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), baselines p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS), p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), results p. 7 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 8 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 6 (IV. RESULTS AND EVALUATIONS), p. 6 (IV. RESULTS AND EVALUATIONS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

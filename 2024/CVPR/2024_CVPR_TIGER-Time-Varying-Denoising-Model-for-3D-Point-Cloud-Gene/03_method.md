@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.3. Latent Point Cloud Trans
 - **p. 3 / 3.1. Problem Formulation - extractive body cue:** By giving a sequence of pre-defined noising scales β1, β2, ..., βT , the transition probability can be expressed as : q(Xt/Xt-1) = N( p ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Problem Formulation), p. 5 (3.4. Time Mask Generator).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.3. Latent Point Cloud Trans
 - **p. 6 / Method - extractive body cue:** TIGER generates high-quality and diverse 3D point clouds. where WD×3 is the projection matrix to map the noise into 3D space and Xt is the ...
 - **p. 1 / 1. Introduction - extractive body cue:** However, compared to 2D images, the cost and complexity of acquiring 3D point clouds make it crucial to exFigure 1.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.3. Latent Point Cloud Trans
 - **p. 4 / 3.3. Latent Point Cloud Transformer - extractive body cue:** Following [29], we use dual PatchNorm to project the latent point cloud into tokens, which place LayerNorm before and after an MLP layer for more ...
 - **p. 7 / Method - extractive body cue:** 2, our model trains much faster than LION, with only a quarter of its training time and a third of its inference time.
 - **p. 7 / Method - extractive body cue:** Training Time (GPU hours) Inference Time (s) PVD [55] 142 8.46 LION [53] 550 27.12 Tiger 164 9.73 Table 2.
-- **p. 7 / Method - extractive body cue:** 2, our model trains much faster than LION, with only a quarter of its training time and a third of its inference time.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, dive, details, time-varying, two-stream, architecture, including, encoder, part, latent, point, Transformer, time, mask, generator, decoder, Following, dual, PatchNorm, project.
 - **Relevant PDF headings:** 3. Method (p. 3); Method (p. 6); 4.2. Comparison with SoTA methods (p. 6); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +112,10 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.3. Latent Point Cloud Trans
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Illustration of our time-varying two-stream architecture (TIGER). The network's input is a noisy point cloud Xt at timestep t, and the goal is ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Our generation results (right) compared to baseline models (left). TIGER generates high-quality and diverse 3D point clouds. where WD×3 is the projection matrix ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Method), p. 4 (3.3. Latent Point Cloud Transformer), p. 4 (3.2. Noisy Point Cloud Encoder), p. 3 (3.2. Noisy Point Cloud Encoder), p. 5 (3.4. Time Mask Generator), p. 7 (Method), objective p. 3 (3.1. Problem Formulation), p. 4 (3.3. Latent Point Cloud Transformer), p. 5 (3.4. Time Mask Generator), p. 3 (3.1. Problem Formulation), temporal p. 1 (1. Introduction), p. 8 (4.3. Ablation and Analysis), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 4 (3.2. Noisy Point Cloud Encoder), p. 5 (3.4. Time Mask Generator).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

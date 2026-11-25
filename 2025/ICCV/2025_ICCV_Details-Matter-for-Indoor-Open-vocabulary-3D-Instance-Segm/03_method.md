@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (3.2. Open-Vocabulary Instance Classification), 
 - **p. 4 / 3.1. Image-based Proposal Generation - extractive body cue:** If the highest sIOU exceeds a predefined threshold τ tracking, the new observation is assigned to the corresponding tracklet for update.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1. Image-based Proposal Generation), p. 4 (3.1. Image-based Proposal Generation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 5 (3.2. Open-Vocabulary Instance Classification), 
 - **p. 3 / 3. Method - extractive body cue:** The task of OV-3DIS is to predict a list of 3D instance masks m ∈{0, 1}K×N that correspond to a list of user queries Q ...
 - **p. 6 / 3.2. Open-Vocabulary Instance Classification - extractive body cue:** We evaluate methods under three settings: image-based 3D proposals only (i.e., 2D only), point cloud-based 3D proposals only (i.e., 3D only), and a combination of ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 5 (3.2. Open-Vocabulary Instance Classification), 
 - **p. 3 / 3.1. Image-based Proposal Generation - extractive body cue:** Leveraging VFMs [28, 35, 43], image-based proposals provide a complementary approach for detecting novel classes not covered during the training of the 3D instance segmentation ...
 - **p. 3 / 3. Method - extractive body cue:** For point cloudbased 3D proposals, we utilize pre-trained 3D instance segmentation models [38, 45] and discard the class predictions, retaining only the class-agnostic masks.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, proposal, visual, encoder, Alpha-CLIP, project, onto, images, select, subset, highest, visibility, multiscale, feature, extraction, Leveraging, VFMs, image-based, proposals, provide.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 5 (3.2. Open-Vocabulary Instance Classification), 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of open-vocabulary predictions from our method in the ScanNet200 dataset [7]. Our method effectively retrieves instances based on functional descriptions (e.g., drink ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of image-based 3D proposal generation. We first remove overlaps between 2D predictions within each frame and lift them to 3D point cloud ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.2. Open-Vocabulary Instance Classification), p. 3 (3.1. Image-based Proposal Generation), p. 5 (3.2. Open-Vocabulary Instance Classification), p. 3 (3. Method), p. 4 (3.1. Image-based Proposal Generation), p. 4 (3.1. Image-based Proposal Generation), objective p. 5 (3.1. Image-based Proposal Generation), p. 5 (3.1. Image-based Proposal Generation), p. 4 (3.1. Image-based Proposal Generation), p. 4 (3.1. Image-based Proposal Generation), temporal p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 3 (3.1. Image-based Proposal Generation), p. 4 (3.1. Image-based Proposal Generation), p. 4 (3.1. Image-based Proposal Generation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

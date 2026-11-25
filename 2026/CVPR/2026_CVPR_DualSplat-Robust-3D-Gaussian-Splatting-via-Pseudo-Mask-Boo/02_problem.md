@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (3.2. Overview), p. 2 (1. Introduction), p. 
 | body cue at p. 2 | Fig. 2. These failure patterns can be explicitly mined as cues for transient discovery. Specifically, we first perform ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 3 | Table 1. Comparison of paradigms and mechanisms. Item Online suppression methods Ours(DualSplat) Paradigm Online Heuristic (Internal) Failure-to-Prior (External ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 2 (1. Introduction), p. 4 (3.2. Overview). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 3 (3.2. Overview), p. 2 (1. Introduction), p. 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 2 (1. Introduction), p. 4 (3.2. Overview), objective p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (B. Interaction-aware Generation of 3D Point
 | body cue at p. 1 | Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 15 | We utilize FoundationPose (60] to perform robust 6D pose estimation for various objects across tasks. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (A. Problem Formulation), p. 15 (B. Implementation Details), p. 4 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (A. Problem Formulation), p. 3 (A. Problem Formulation), interface p. 3 (A. Problem Formulation), p. 15 (B. Implementation Details), p. 4 (C. Comact and Coordination-Enhanced Feature Extraction), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), objective p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 3 (B. Interaction-aware Generation of 3D Point Clouds), p. 3 (B. Interaction-aware Generation of 3D Point Clouds), p. 5 (C. Comact and Coordination-Enhanced Feature Extraction), p. 15 (B. Implementation Details).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

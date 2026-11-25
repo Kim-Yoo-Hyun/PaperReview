@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Performance analysis of the proposed method based on changes in progressive mask expanding, identity-aware semantic consistency loss, and outlier filtering on the LERF dataset (the ...
 - **p. 8 / 4.5. 3D Scene Editing - extractive body cue:** To further demonstrate the practical applicability of the proposed method, we apply it to 3D scene editing tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) RGB images. (b)(c) Results of the cosine similar- ity between the text embedding of the input query and language features by the ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 | Performance analysis of the proposed method based on changes in progressive mask expanding, identity-aware semantic consistency loss, and outlier filtering on the LERF dataset ... | definition/direction/unit from same section | p. 8 (4.4. Ablation Study) |
 | These results demonstrate the effectiveness of the proposed method in open-vocabulary 3D semantic segmentation. | definition/direction/unit from same section | p. 6 (4.3. Performance Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 | As can be seen, the proposed method achieves 94.4 mIoU, which shows the superior performance compared to previous methods. | comparison identity and matched condition | p. 5 (4.3. Performance Evaluation) |
 | Consequently, our approach generates open-vocabulary 3D semantic masks more accurately compared to previous approaches. | comparison identity and matched condition | p. 6 (4.3. Performance Evaluation) |
 | As can be seen, the performance of open-vocabulary 3D semantic segmentation is considerably improved as each component is added to the baseline. | comparison identity and matched condition | p. 7 (4.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 | body limitation/failure cue | Furthermore, we also evaluate the performance of the proposed method with photometric metrics, such as peak signal-to-noise ratio (PSNR), structural similarity index (SSIM) [27], ... | p. 5 (4.3. Performance Evaluation) |
 | body limitation/failure cue | In addition, previous methods often fail to extract boundaries accurately due to the use of fixed threshold values in generating semantic segmentation masks(see Fig. | p. 6 (4.3. Performance Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,20 +130,11 @@ PDF body evaluation/result cue (p. 5 (4.3. Performance Evaluation), p. 5 (4.3. P
 | This scheme proceeds iteratively while newly added neighbor segments become new seed segments themselves. | p. 4 (3.3. Progressive Mask Expanding) |
 | The CLIP loss Lclip is computed by using the L1 norm between rasterized language feature maps and CLIP feature maps by following the approach ... | p. 5 (3.4. Loss Function) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.3. Performance Evaluation - extractive body cue:** Furthermore, we also evaluate the performance of the proposed method with photometric metrics, such as peak signal-to-noise ratio (PSNR), structural similarity index (SSIM) [27], and ...
 - **p. 6 / 4.3. Performance Evaluation - extractive body cue:** In addition, previous methods often fail to extract boundaries accurately due to the use of fixed threshold values in generating semantic segmentation masks(see Fig.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics), p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 7 (4.3. Performance Evaluation), metrics p. 5 (4.2. Datasets and Evaluation Metrics), p. 5 (4.2. Datasets and Evaluation Metrics), p. 6 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.5. 3D Scene Editing), baselines p. 7 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 6 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), results p. 5 (4.3. Performance Evaluation), p. 5 (4.3. Performance Evaluation), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 6 (4.3. Performance Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

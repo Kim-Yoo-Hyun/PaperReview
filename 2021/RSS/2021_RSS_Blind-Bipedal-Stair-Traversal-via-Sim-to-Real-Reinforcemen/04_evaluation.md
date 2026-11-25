@@ -40,8 +40,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (Figure/Table 
 
 - **p. 4 / IV. RESULTS - extractive body cue:** Each policy was trained until 300 million timesteps were sampled from the virtual environment, simulated with MuJoCo [22].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: In this work, we investigate the limits of blind bipedal locomo- tion. We present a training pipeline which produces policies capable of blindly ...
@@ -72,8 +70,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (Figure/Table 
 | Fig. 5: A comparison of the swing foot motion of the Stair LSTM policy and the Flat Ground LSTM policy while locomoting at 1.0 ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Fig. 6: The ground reaction forces and cumulative impulses of a Stair LSTM policy when it encounters varying ground height. The peak vertical force ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (Figure/Table 
 | We also trained a group of policies without stair terrain randomization, and denote these Flat Ground LSTM, to investigate the importance of the terrain ... | comparison identity and matched condition | p. 4 (IV. RESULTS) |
 | Fig. 4: We evaluate the probability of successfully climbing and descending stairs without falling as a function of commanded speed between 0.25 m/s and ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Fig. 5: A comparison of the swing foot motion of the Stair LSTM policy and the Flat Ground LSTM policy while locomoting at 1.0 ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -119,8 +108,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (Figure/Table 
 | body limitation/failure cue | Fig. 2: In order to ensure robustness over a variety of possible stair- like terrain, we randomize a number of parameters when generating stairs ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 3: The learned policies exhibit a high degree of blind robustness to a variety of stair-like terrain, and can reliably ascend and descend ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -130,14 +117,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (Figure/Table 
 | Given that maximum episode length is 300 discrete timesteps, this means each command will change at least once on average per episode. | p. 2 (II. REINFORCEMENT LEARNING FORMULATION) |
 | Each episode is limited to be 300 timesteps, which corresponds to about 7.5 seconds of simulation time. | p. 3 (II. REINFORCEMENT LEARNING FORMULATION) |
 | For recurrent policies, we sample batches of episodes from a replay buffer as in [19], while for feedforward policies we sample batches of timesteps. | p. 3 (II. REINFORCEMENT LEARNING FORMULATION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -149,6 +128,5 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 5 (Figure/Table 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: The learned policies exhibit a high degree of blind robustness to a variety of stair-like terrain, and can reliably ascend and descend stairs ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (IV. RESULTS), metrics p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (IV. RESULTS), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 4 (IV. RESULTS), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

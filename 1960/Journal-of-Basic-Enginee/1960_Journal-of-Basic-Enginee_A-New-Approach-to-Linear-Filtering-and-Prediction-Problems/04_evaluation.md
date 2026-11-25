@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 
 - **p. 7 / Introduction - extractive body cue:** Of course, the solution of Equation (32), or of its differential-equation equivalent, is a much simpler task than solution of the Wiener-Hopf equation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -70,21 +68,12 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 | In any case, y~ (t/t - 1) generates a linear manifold (possibly 0) which we denote by Z(t). | definition/direction/unit from same section | p. 6 (Introduction) |
 | 9 Q(t0 + τ) covariance of random excitation. | definition/direction/unit from same section | p. 8 (Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Without being able to separate in some sense causes and effects, i.e., without the assumption of causality, one can hardly hope for useful results. | comparison identity and matched condition | p. 4 (Introduction) |
 | In a few cases, ∆* and Φ* can be put into "closed form." Without discussing here how (if at all) such closed forms can ... | comparison identity and matched condition | p. 9 (Introduction) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -108,8 +97,6 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 - **p. 6 / Introduction - extractive body cue:** Therefore if t ≥ s we have Ex(t)x'(s) = ∑ - -∞ = 1 s r Φ(t; r + 1)Q(r) Φ'(s; r + 1).
 - **p. 7 / Introduction - extractive body cue:** If t1 ≥ t + 1, we first observe by repeated application of (16) that x(t + s) = Φ(t + s; t + 1)x(t ...
 - **p. 8 / Introduction - extractive body cue:** Problem I Problem II 1 x(t) (unobservable) state variables of random process. x(t) (observable) state variables of plant to be regulated.
-- **p. 6 / Introduction - extractive body cue:** Therefore if t ≥ s we have Ex(t)x'(s) = ∑ - -∞ = 1 s r Φ(t; r + 1)Q(r) Φ'(s; r + 1).
-- **p. 7 / Introduction - extractive body cue:** If t1 ≥ t + 1, we first observe by repeated application of (16) that x(t + s) = Φ(t + s; t + 1)x(t ...
 
 ## Generalization and Failure Cases
 
@@ -122,21 +109,11 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 | body limitation/failure cue | The first general solution of the noise-free regulator problem is due to the author [18]. | p. 8 (Introduction) |
 | body limitation/failure cue | The Dual Problem Let us now consider another problem which is conceptually very different from optimal estimation, namely, the noise-free regulator problem. | p. 8 (Introduction) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Once P*(t) has been computed via (32) starting at t = t0, the explicit specification of the optimal linear filter is immediately available from ... | p. 7 (Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -148,9 +125,8 @@ PDF body evaluation/result cue (p. 8 (Introduction), p. 4 (Introduction), p. 4 (
 - **p. 8 / Introduction - extractive body cue:** The Dual Problem Let us now consider another problem which is conceptually very different from optimal estimation, namely, the noise-free regulator problem.
 
 - **Evidence anchors reviewed:** datasets p. 7 (Introduction), metrics p. 7 (Introduction), p. 6 (Introduction), p. 7 (Introduction), p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction), baselines p. 4 (Introduction), p. 9 (Introduction), results p. 8 (Introduction), p. 4 (Introduction), p. 4 (Introduction), p. 7 (Introduction), p. 7 (Introduction), p. 8 (Introduction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

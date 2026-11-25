@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 - **p. 8 / 4.2. Qualitative Results - extractive body cue:** Including real-world data for training significantly improves both perceptual and pixel-level metrics across synthetic and real-world test sets, demonstrating that static-camera real-world interactions enhance generalization.
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** This is notable given that the real-world training data includes only static-camera interactions, demonstrating strong generalization to more complex real-world scenarios.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dexterous World Models predict egocentric visual dynamics of static 3D scenes, driven by dexterous hand manipulations.
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 | To incorporate such effects, we additionally use real-world human-object interaction videos recorded from fixed cameras [58], where Ct = C0 for all t ∈1, ... | definition/direction/unit from same section | p. 5 (3.3. Paired Interaction Video Dataset Construction) |
 | Our construction leverages fixed-camera setups to approximate this pairing, enabling supervision without requiring separate static captures or 3D scene reconstruction. | definition/direction/unit from same section | p. 5 (3.3. Paired Interaction Video Dataset Construction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 | Without hand-motion input, DWM simulates navigation only. | comparison identity and matched condition | p. 7 (4.2. Qualitative Results) |
 | Ablation on hand-motion conditioning. | comparison identity and matched condition | p. 8 (4.2. Qualitative Results) |
 | Ablation on training data composition. | comparison identity and matched condition | p. 8 (4.2. Qualitative Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 | body limitation/failure cue | InterDyn [2] produces spatially aligned hands with the input masks but fails to model resulting object dynamics. | p. 6 (4.1. Comparison) |
 | body limitation/failure cue | Baselines fail to perform meaningful actions or hallucinate incorrect interactions. | p. 7 (4.1. Comparison) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 | During inference, the model iteratively denoises zt to obtain ˆz0, which is decoded by VAE into a realistic interaction video. | p. 5 (3.2. Scene-Action-Conditioned Video Diffusion) |
 | The model operates in the latent space of a pretrained video variational autoencoder (VAE) [22, 52], which encodes an input video into latent tensors ... | p. 5 (3.2. Scene-Action-Conditioned Video Diffusion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.1. Comparison - extractive body cue:** CVX-Fun Fine-tuned often fails to interact with the correct target and hallucinates the object of interest.
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comp
 - **p. 7 / 4.1. Comparison - extractive body cue:** Baselines fail to perform meaningful actions or hallucinate incorrect interactions.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 7 (4.1. Comparison), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 6 (4.1. Comparison), p. 7 (4.1. Comparison), metrics p. 6 (4. Experiments), p. 6 (3.4. Action Evaluation with DWM), p. 7 (4.2. Qualitative Results), p. 7 (4.1. Comparison), p. 8 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), baselines p. 6 (4.1. Comparison), p. 6 (4.1. Comparison), p. 7 (4.1. Comparison), p. 7 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), p. 8 (4.2. Qualitative Results), results p. 8 (4.2. Qualitative Results), p. 6 (4.1. Comparison), p. 8 (4.3. Ablation Study), p. 6 (4.1. Comparison), p. 7 (4.2. Qualitative Results), p. 7 (4.1. Comparison).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

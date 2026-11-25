@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 - **p. 8 / 4.4. Experimental Analysis - extractive body cue:** We analyze the effect of different Gaussian parameters in Table 6 using the Occ-ScanNet-mini2 and the EmbodiedOcc-ScanNet-mini datasets.
 - **p. 5 / 4.1. EmbodiedOcc-ScanNet Benchmark - extractive body cue:** We conducted two tasks to evaluate our EmbodiedOcc framework: local occupancy prediction and embodied occupancy prediction.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Given streaming monocular RGB inputs, our EmbodiedOcc conducts embodied occupancy prediction in an online manner for indoor scenes. Different from existing methods which ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 | Our model demonstrates reasonable local perception ability and further achieves good online prediction with the Gaussian memory. | definition/direction/unit from same section | p. 8 (4.4. Experimental Analysis) |
 | Figure 4. Illustration of our Gaussian memory. During each update, the Gaussians within the current frustum are taken from the memory. Confidence values of ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 | As shown in Table 1, the results indicate that our local refinement module outperforms ISO [56]. | comparison identity and matched condition | p. 7 (4.3. Main Results) |
 | The results in the third row suggest that the depth-aware branch we employ is more reasonable compared to the naive method of directly initializing ... | comparison identity and matched condition | p. 8 (4.4. Experimental Analysis) |
 | As shown in the second row, without the assistance of depth information, the performance of embodied occupancy prediction drops sharply. | comparison identity and matched condition | p. 8 (4.4. Experimental Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 | body limitation/failure cue | Due to space limitations, we will use a more diverse set of samples to further show the visual effect of our EmbodiedOcc in the ... | p. 8 (4.4. Experimental Analysis) |
 | body limitation/failure cue | Besides, we replaced DepthAnything-V2 with IndoorDepth [6] in the last row to prove that our depth-aware branch does not rely on a specific depth ... | p. 8 (4.4. Experimental Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,20 +134,11 @@ PDF body evaluation/result cue (p. 7 (4.3. Main Results), p. 7 (4.3. Main Result
 | The runtime decomposition details show that our method is efficient while the main bottleneck is the image and depth backbones, suggesting that the overall ... | p. 8 (4.4. Experimental Analysis) |
 | Depth Aware Predicted Depth Map … … Input T-1 Input T … … … … Gaussian Memory T Gaussian Memory T-1 Occupancy T Occupancy ... | p. 3 (3.1. Embodied 3D Occupancy Prediction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.4. Experimental Analysis - extractive body cue:** Due to space limitations, we will use a more diverse set of samples to further show the visual effect of our EmbodiedOcc in the supplementary ...
 - **p. 8 / 4.4. Experimental Analysis - extractive body cue:** Besides, we replaced DepthAnything-V2 with IndoorDepth [6] in the last row to prove that our depth-aware branch does not rely on a specific depth prediction ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 5 (4.1. EmbodiedOcc-ScanNet Benchmark), metrics p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 6 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.4. Experimental Analysis), p. 7 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), baselines p. 7 (4.3. Main Results), p. 5 (4.1. EmbodiedOcc-ScanNet Benchmark), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 8 (4.4. Experimental Analysis), results p. 7 (4.3. Main Results), p. 7 (4.3. Main Results), p. 8 (4.4. Experimental Analysis), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

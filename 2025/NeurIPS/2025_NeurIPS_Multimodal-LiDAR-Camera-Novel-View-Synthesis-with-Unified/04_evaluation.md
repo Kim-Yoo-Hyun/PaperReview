@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 - **p. 10 / 5 Experiment - extractive body cue:** Additionally, it is not designed to handle dynamic scenes, which is a non-negligible limitation in autonomous driving scenarios.
 - **p. 10 / 5 Experiment - extractive body cue:** 6 Limitation MUP demonstrates strong performance in pose-free multimodal NVS and pose estimation under challenging large-scale scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: NVS results w/ and w/o accurate poses. Compared to continuous LiDAR-Camera Fields, projecting LiDAR point clouds onto images as discrete depth priors fails ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 | 6 Limitation MUP demonstrates strong performance in pose-free multimodal NVS and pose estimation under challenging large-scale scenes. | definition/direction/unit from same section | p. 10 (5 Experiment) |
 | Figure 5: Qualitative comparison of NVS. We compared MUP with pose-free and registration-first methods. Nope-NeRF and Colored-ICP-assisted fail due to the large-scale scene. BA-Alignmif ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 | Figure 1: NVS results w/ and w/o accurate poses. Compared to continuous LiDAR-Camera Fields, projecting LiDAR point clouds onto images as discrete depth priors ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Our method outperforms all approaches in both modalities. | comparison identity and matched condition | p. 9 (5 Experiment) |
 | Ablation of MSC2F and Consistency Loss. | comparison identity and matched condition | p. 10 (5 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 | body limitation/failure cue | Figure 5: Qualitative comparison of NVS. We compared MUP with pose-free and registration-first methods. Nope-NeRF and Colored-ICP-assisted fail due to the large-scale scene. BA-Alignmif ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Following [47, 16], we perturbed poses of car with additive noise corresponding to a standard deviation of 20 deg in rotation and 3m in ... | p. 8 (5 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 | Finally, the Image-enhanced CD is computed as LICD = ∑ (i,j)∈E CD(i,j). | p. 7 (4 Methodology) |
 | Our MMG module directly computes the inter-frame CD and propagates the gradient to the poses, guiding the optimization of the poses during the ill-conditioned ... | p. 7 (4 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 7 Conclusion - extractive body cue:** We revisit the limitations of single-modality pose-free methods in large-scale scenes.
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 Experiment)
 - **p. 8 / 5 Experiment - extractive body cue:** Following [47, 16], we perturbed poses of car with additive noise corresponding to a standard deviation of 20 deg in rotation and 3m in translation.
 
 - **Evidence anchors reviewed:** datasets p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 10 (5 Experiment), metrics p. 6 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 10 (5 Experiment), baselines p. 7 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 2 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), results p. 9 (Figure/Table caption), p. 9 (5 Experiment), p. 10 (5 Experiment), p. 10 (5 Experiment), p. 7 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

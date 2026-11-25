@@ -53,7 +53,6 @@ PDF body method statement (p. 7 (5. Optimization), p. 6 (4. Regularization for I
 - **p. 7 / 5. Optimization - extractive body cue:** The stop-gradient used in Lprop makes the optimization of Θprop independent from the optimization of ΘNeRF, and as such there is no need for a ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (4. Regularization for Interval-Based Models), p. 6 (4. Regularization for Interval-Based Models), p. 7 (5. Optimization), p. 7 (5. Optimization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 7 (5. Optimization), p. 6 (4. Regularization for I
 - **p. 4 / 3. Coarse-to-Fine Online Distillation - extractive body cue:** The proposal MLP is trained to produce proposal weights ˆw that are consistent with the NeRF MLP's w output.
 - **p. 4 / 2. Scene and Ray Parameterization - extractive body cue:** We apply this contraction to mip-NeRF Gaussians in Euclidean 3D space (gray ellipses) similarly to a Kalman filter to produce our contracted Gaussians (red ellipses), ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,16 +86,12 @@ PDF body method statement (p. 7 (5. Optimization), p. 6 (4. Regularization for I
 ## Training vs Inference
 
 - **p. 7 / 5. Optimization - extractive body cue:** We train our model (and all reported NeRF-like baselines) using a slightly modified version of mip-NeRF's learning schedule: 250k iterations of optimization with a batch ...
-- **p. 7 / 5. Optimization - extractive body cue:** We train our model (and all reported NeRF-like baselines) using a slightly modified version of mip-NeRF's learning schedule: 250k iterations of optimization with a batch ...
 - **p. 8 / 6. Results - extractive body cue:** D) Removing the proposal MLP and using a single MLP to model both the scene and the proposal weights does not degrade performance but increases ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Lrecon, Charbonnier, loss, achieves, slightly, more, stable, optimization, mean, squared, error, mip-NeRF, reformulation, provides, some, intuition, behaves, first, term, minimizes.
 - **Relevant PDF headings:** 4. Regularization for Interval-Based Models (p. 6); A. Additional Model Details (p. 11).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 7 (5. Optimization), p. 6 (4. Regularization for I
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 12. A visualization of our model with Stable View Synthesis [41] on scenes from the Tanks and Temples dataset [25]. Image quality is roughly ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. (a) A test-set image from our dataset's stump scene, with (b) our model's rendered image and depth map (median ray termination distance [37]). ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (5. Optimization), p. 6 (4. Regularization for Interval-Based Models), p. 6 (4. Regularization for Interval-Based Models), p. 7 (5. Optimization), objective p. 6 (5. Optimization), p. 6 (4. Regularization for Interval-Based Models), p. 7 (5. Optimization), p. 7 (5. Optimization), temporal p. 1 (Abstract), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 5 (3. Coarse-to-Fine Online Distillation), p. 5 (3. Coarse-to-Fine Online Distillation), p. 6 (4. Regularization for Interval-Based Models).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

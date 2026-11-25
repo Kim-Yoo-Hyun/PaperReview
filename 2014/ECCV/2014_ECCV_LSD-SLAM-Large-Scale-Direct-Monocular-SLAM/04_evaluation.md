@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 - **p. 12 / 4 Results - extractive body cue:** Note that for monocular SLAM this is a very challenging benchmark, as it contains fast rotational movement, strong motion blur and rolling shutter artifacts.
 - **p. 13 / 4 Results - extractive body cue:** The bottom row shows different close-ups of the scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Large-Scale Direct Monocular SLAM: LSD-SLAM generates a consistent global map, using direct image alignment and probabilistic, semi-dense depth maps instead of keypoints. Top: ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 | Fig. 2: In addition to accurate, semi-dense 3D reconstructions, LSD-SLAM also estimates the associated uncertainty. From left to right: Accumulated pointcloud thesholded with different ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 3: Overview over the complete LSD-SLAM algorithm. In practice, the residuals are highly correlated, such that Σξ is only a lower bound - ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 | Fig. 2: In addition to accurate, semi-dense 3D reconstructions, LSD-SLAM also estimates the associated uncertainty. From left to right: Accumulated pointcloud thesholded with different ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | For comparison we show respective results from semi-dense mono-VO [9], keypoint-based mono-SLAM [15], direct RGB-D SLAM [14] and keypointbased RGB-D SLAM [7]. | comparison identity and matched condition | p. 13 (4 Results) |
 | 10: Convergence radius and accuracy of sim(3) direct image alignment with and without ESM minimization (indicated by light / dark) for a different number ... | comparison identity and matched condition | p. 14 (4 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 | body limitation/failure cue | Fig. 3: Overview over the complete LSD-SLAM algorithm. In practice, the residuals are highly correlated, such that Σξ is only a lower bound - ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 4: Statistic normalization: (a) reference image. (b-d): tracked images and inverse variance σ-2 rp of the residual. For pure rotation, depth noise has ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 | The residual's variance σ2 rp(p,ξji) is computed using covariance propagation as described in Sec. | p. 8 (2 Preliminaries) |
 | Even though direct image alignment is non-convex, we found that with the steps proposed in Sec. | p. 14 (4 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / 4 Results - extractive body cue:** For LSD-SLAM, we also show the number of keyframes created. 'x' denotes tracking failure, '-' no available data.
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 R
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 4: Statistic normalization: (a) reference image. (b-d): tracked images and inverse variance σ-2 rp of the residual. For pure rotation, depth noise has no ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (4 Results), p. 12 (4 Results), p. 12 (4 Results), p. 13 (4 Results), metrics p. 14 (Figure/Table caption), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 12 (4 Results), p. 13 (4 Results), p. 14 (4 Results), baselines p. 3 (Figure/Table caption), p. 13 (4 Results), p. 14 (4 Results), results p. 12 (4 Results), p. 13 (4 Results), p. 13 (4 Results), p. 14 (4 Results), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

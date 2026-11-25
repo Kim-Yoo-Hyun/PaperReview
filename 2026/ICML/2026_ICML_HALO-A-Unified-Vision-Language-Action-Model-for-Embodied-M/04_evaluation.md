@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 - **p. 16 / C. Training Implementation - extractive body cue:** Details on Real-World Experiment Our real-world experiments are all conducted with COBOT Magic, a robot using the Mobile ALOHA system design (Fu et al., 2024) ...
 - **p. 8 / 4.5. Real-World Results - extractive body cue:** These tasks require multi-step planning, semantic grounding, and coordinated dual-arm control skills, making them valuable for evaluating the effectiveness of EM-CoT reasoning in real-world settings.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. HALO first performs textual reasoning and task planning, then predicts visual subgoals for fine-grained guidance, and finally generates actions conditioned on EM-CoT. This ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 | Our study focuses on: (i) whether the proposed unified VLA architecture with EM-CoT improves overall performance and generalization; (ii) whether HALO can generate informative ... | definition/direction/unit from same section | p. 6 (4. Experiments) |
 | Configuration Pre-training Fine-tuning Base Architecture Qwen2.5-1.5B × 3 Experts Total Parameters ≈4.5B Optimizer AdamW Learning Rate 1 × 10-4 5 × 10-5 Learning Rate ... | definition/direction/unit from same section | p. 16 (C. Training Implementation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 | As shown in Figure 7, HALO consistently outperforms the baseline policies π0 and π0.5 under both the basic and generalization settings. | comparison identity and matched condition | p. 8 (4.5. Real-World Results) |
 | Our study focuses on: (i) whether the proposed unified VLA architecture with EM-CoT improves overall performance and generalization; (ii) whether HALO can generate informative ... | comparison identity and matched condition | p. 6 (4. Experiments) |
 | While the baselines suffer noticeable performance degradation in the presence of visual distractions, lighting and background variations, and novel objects, HALO remains robust and ... | comparison identity and matched condition | p. 8 (4.5. Real-World Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 - **p. 7 / 4.2. Simulation Results - extractive body cue:** Besides, even without the explicit reasoning chain, HALO-w/o EM-CoT already surpasses the strongest baseline (π0) by a substantial margin of +28.92 points on average for ...
 - **p. 16 / C. Training Implementation - extractive body cue:** ("Put lemon into drawer") We collect 80 trajectories for each task, and process them through our automated pipeline to yield the EM-CoT data.
 - **p. 6 / 3.4. Training Recipe - extractive body cue:** Each task is evaluated 100 times under the Easy (Clean) and Hard (Domainrandomized) settings, and the average success rate across 50 tasks is reported.
-- **p. 16 / C. Training Implementation - extractive body cue:** ("Put lemon into drawer") We collect 80 trajectories for each task, and process them through our automated pipeline to yield the EM-CoT data.
 
 ## Generalization and Failure Cases
 
@@ -135,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 | body limitation/failure cue | While the baselines suffer noticeable performance degradation in the presence of visual distractions, lighting and background variations, and novel objects, HALO remains robust and ... | p. 8 (4.5. Real-World Results) |
 | body limitation/failure cue | Figure 3. Attention Masking Strategy for EM-CoT. (1) Spa- tial and semantic tokens utilize bidirectional attention within frames. (2) Noise tokens attend bidirectionally to ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | These results underscore the effectiveness and robustness of HALO for complex robotic manipulation. | p. 7 (4.2. Simulation Results) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -151,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 | See Appendix B for more details on this pipeline, including the pseudo code and tailored prompt used in each phase. | p. 4 (3.3. EM-CoT Data Pipeline) |
 | Proprio: Robot Trajectory Data Task Instruction: Observations: Compute Position red block, green block, and blue block in a left-to-right sequence, forming a row. | p. 5 (3.3. EM-CoT Data Pipeline) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** Notably, without any pre-training (w/o V+T+A), the model's performance falls to a complete 0% on hard tasks, demonstrating that pre-training is an absolutely foundational requirement ...
@@ -168,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (4.5. Real-World Results), p. 6 (4. Experim
 - **p. 7 / 4.2. Simulation Results - extractive body cue:** These results underscore the effectiveness and robustness of HALO for complex robotic manipulation.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.1. Experiment Settings), p. 7 (4.2. Simulation Results), p. 6 (4. Experiments), p. 8 (4.5. Real-World Results), p. 16 (C. Training Implementation), p. 16 (C. Training Implementation), metrics p. 8 (4.5. Real-World Results), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (4.3. Ablation Study), baselines p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.5. Real-World Results), p. 6 (4. Experiments), p. 8 (4.5. Real-World Results), results p. 8 (4.5. Real-World Results), p. 6 (4. Experiments), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.3. Ablation Study), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

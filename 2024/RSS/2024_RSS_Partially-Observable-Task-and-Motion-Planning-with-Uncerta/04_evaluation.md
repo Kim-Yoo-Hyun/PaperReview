@@ -41,8 +41,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 - **p. 9 / VII. REAL-WORLD IMPLEMENTATION - extractive body cue:** In this task, the robot is equipped with a single RGBD camera mounted to the gripper, and must find and pick up a small cube ...
 - **p. 7 / VI. SIMULATED EXPERIMENTS & ANALYSIS - extractive body cue:** We applied TAMPURA to five simulated and two realworld robotics problems, illustrated in Figure 2 and Figure 1,
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Top: Robot with wrist mounted camera looking for a banana. The robot plans to take information gathering actions based on a posterior estimate ...
@@ -72,8 +70,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 | Given the current probabilistic occupancy grid, generated from point cloud data from RGB-Depth cameras, we approximate a motion planning path with gripper interpolation and ... | definition/direction/unit from same section | p. 9 (VII. REAL-WORLD IMPLEMENTATION) |
 | Fig. 6: TAMPURA searching a workspace to find and pick up a cube, looking around and moving objects to find it. Top: images of ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 | Fig. 4: Comparisons of model-learning strategies on a simplified grid-world environment in which an agent must navigate from the blue cell to the green ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | The robot's task is to move these cubes into the bowl without colliding with a human's hand moving around in the workspace. | comparison identity and matched condition | p. 9 (VII. REAL-WORLD IMPLEMENTATION) |
 | Fig. 5: TAMPURA moving cubes into a bowl without hitting a human in the workspace. Top row: images of robot execution. Bottom row: the ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -114,8 +103,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 | body limitation/failure cue | The primary failure modes were (1) failure in perception (due, we believe, to improperly calibrated hard-coded camera poses), and (2) issues with tension in ... | p. 9 (VII. REAL-WORLD IMPLEMENTATION) |
 | body limitation/failure cue | Fig. 3: Uncertainty and Risk Aware Task and Motion Planning. (a) The robot's continuous space of probabilistic beliefs about world state is partitioned into ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -125,14 +112,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 | Here, Pre ⊆ΨB is the set of belief propositions that must hold for a controller c ∈C to be executed, Eff ⊆ΨB is the ... | p. 4 (IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP) |
 | Operator schemata In our implementation, the set of operators and the set of controllers are generated from a set of operator schemata. | p. 5 (IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / VIII. DISCUSSION - extractive body cue:** Despite these novelties, TAMPURA, and TAMP in general, have several limitations.
@@ -140,9 +119,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (VII. REAL-WOR
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: Uncertainty and Risk Aware Task and Motion Planning. (a) The robot's continuous space of probabilistic beliefs about world state is partitioned into a ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (VII. REAL-WORLD IMPLEMENTATION), p. 9 (VII. REAL-WORLD IMPLEMENTATION), p. 7 (VI. SIMULATED EXPERIMENTS & ANALYSIS), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (VI. SIMULATED EXPERIMENTS & ANALYSIS), p. 9 (VII. REAL-WORLD IMPLEMENTATION), p. 9 (VII. REAL-WORLD IMPLEMENTATION), p. 10 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 9 (VII. REAL-WORLD IMPLEMENTATION), p. 9 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 9 (VII. REAL-WORLD IMPLEMENTATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 - **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning Table 1.
 - **p. 6 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** Generalization performance comparison of models trained on CALVIN mixed-quality data to test environment D.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The proposed ReinboT model. We leverage CLIP (Radford et al., 2021) to encode robot language instructions, utilize ViT (Dosovitskiy et al., 2020; He ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 | Ablation experiments are conducted to verify the necessity of the designed reward components. | definition/direction/unit from same section | p. 6 (5.1. Generalization Evaluation on Mixed-quality Data) |
 | Figure 13. The dense reward and reward component of long-horizon tasks with language instructions of "Pick up the green cup for me" in the ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 | The baseline details are introduced in Appendix Sec. | comparison identity and matched condition | p. 6 (5.1. Generalization Evaluation on Mixed-quality Data) |
 | 1 shows that among the models trained only on data with text annotations, PIDM integrates vision and action into a closed loop and achieves ... | comparison identity and matched condition | p. 6 (5.1. Generalization Evaluation on Mixed-quality Data) |
 | The quantitative performance comparison of real-world tasks is in Fig. | comparison identity and matched condition | p. 8 (5.3. Evaluation on Real-world Tasks) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 | body limitation/failure cue | In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains ... | p. 5 (5.1. Generalization Evaluation on Mixed-quality Data) |
 | body limitation/failure cue | To promote data diversity, different degrees of Gaussian noise (0.05, 0.1, and 0.15) are added to the actions of the RoboFlamingo policy model during ... | p. 5 (5.1. Generalization Evaluation on Mixed-quality Data) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,20 +132,11 @@ PDF body evaluation/result cue (p. 8 (5.3. Evaluation on Real-world Tasks), p. 6
 | The implementation details are in Appendix Sec. | p. 5 (4.2. End-to-end Reinforced VLA model) |
 | ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning The hidden features ˆghidden t:t+k-1 is concatenated with the action features haction t:t+k-1 and are further ... | p. 5 (4.2. End-to-end Reinforced VLA model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** In addition to the original data collected by human teleoperation without language instructions in CALVIN (more than 20,000 trajectories), the autonomous data also contains failure ...
 - **p. 5 / 5.1. Generalization Evaluation on Mixed-quality Data - extractive body cue:** To promote data diversity, different degrees of Gaussian noise (0.05, 0.1, and 0.15) are added to the actions of the RoboFlamingo policy model during the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), metrics p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5. Experiments), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 8 (5.3. Evaluation on Real-world Tasks), p. 8 (5.3. Evaluation on Real-world Tasks), p. 3 (Figure/Table caption), baselines p. 8 (5.3. Evaluation on Real-world Tasks), p. 5 (5. Experiments), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 8 (5.3. Evaluation on Real-world Tasks), results p. 8 (5.3. Evaluation on Real-world Tasks), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 6 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5.1. Generalization Evaluation on Mixed-quality Data), p. 5 (5. Experiments), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

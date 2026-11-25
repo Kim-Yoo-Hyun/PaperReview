@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (5. Results and Findings), p. 8 (5. Results
 - **p. 8 / 5. Results and Findings - extractive body cue:** We report average SPL for a model trained on the source dataset in each row, as evaluated on test episodes for the target dataset in ...
 - **p. 2 / 2. We conduct the first cross-dataset generalization exper - extractive body cue:** iments {train, test} × {Matterport3D, Gibson} for multiple sensors {Blind1, RGB, RGBD, D} × {GPS+Compass} and find that only agents with depth (D) sensors generalize ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The ‘software stack' for training embodied agents involves (1) datasets providing 3D assets with semantic annotations, (2) simulators that render these assets and ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (5. Results and Findings), p. 8 (5. Results
 | Figure 10: Average number of collisions during successful navi- gation episodes for the different sensory configurations of the RL (PPO) baseline agent on test ... | definition/direction/unit from same section | p. 14 (Figure/Table caption) |
 | Figure 2: Example rendered sensor observations for three sensors (color camera, depth sensor, semantic instance mask) in two differ- ent environment datasets. A Matterport3D ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 7 (5. Results and Findings), p. 8 (5. Results
 | Second, we find a potentially counter-intuitive trend - agents trained on Gibson consistently outperform their counterparts trained on Matterport3D, even when evaluated on Matterport3D. | comparison identity and matched condition | p. 8 (5. Results and Findings) |
 | Table 5: Statistics of path length (in actions) for an oracle which greedily fits actions to follow the negative of geodesic distance gradient on ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | Figure 8: Architecture of Habitat-API. The core functionality defines fundamental building blocks such as the API for interacting with the simulator backend and receiving ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 7 (5. Results and Findings), p. 8 (5. Results
 | body limitation/failure cue | RGB and RGBD agents suffer a significant performance degradation, while the Blind agent is least affected (as we would expect). | p. 8 (5. Results and Findings) |
 | body limitation/failure cue | Figure 7: Performance of Habitat-Sim under different sensor frame memory transfer strategies for increasing image resolution. We see that ‘GPU->GPU' is unaffected by image ... | p. 12 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (5. Results and Findings), p. 8 (5. Results
 | Based on TensorFlow benchmarks, many popular network architectures run at frame rates that are 10-100x lower on a single GPU3. | p. 4 (3. Habitat Platform) |
 | This threshold significantly exceeds the number of steps an optimal agent requires to reach all goals (see the supplement). | p. 5 (4. PointGoal Navigation at Scale) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 7. Future Work - extractive body cue:** Another planned avenue of future work involves procedural generation of 3D environments by leveraging a combination of 3D reconstruction and virtual object datasets.
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 7 (5. Results and Findings), p. 8 (5. Results
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 7: Performance of Habitat-Sim under different sensor frame memory transfer strategies for increasing image resolution. We see that ‘GPU->GPU' is unaffected by image resolution ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5. Results and Findings), p. 7 (5. Results and Findings), p. 8 (5. Results and Findings), p. 8 (5. Results and Findings), p. 2 (2. We conduct the first cross-dataset generalization exper), metrics p. 7 (5. Results and Findings), p. 7 (Figure/Table caption), p. 8 (5. Results and Findings), p. 8 (5. Results and Findings), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (5. Results and Findings), p. 8 (5. Results and Findings), p. 8 (5. Results and Findings), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), results p. 7 (5. Results and Findings), p. 8 (5. Results and Findings), p. 7 (5. Results and Findings), p. 8 (5. Results and Findings), p. 4 (Figure/Table caption), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -52,7 +52,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 
 - **p. 4 / 2) Computing open-vocabulary features for the scene repre - extractive body cue:** This refinement updates the 3D segments in the hierarchical scene representation, reflecting the semantic merging.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (2) Computing open-vocabulary features for the scene repre), p. 1 (I. INTRODUCTION), p. 4 (2) Computing open-vocabulary features for the scene repre).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 
 - **p. 4 / 2) Computing open-vocabulary features for the scene repre - extractive body cue:** Object-features 4 are extracted using a method inspired by [7] and [8], leveraging class-agnostic object masks to identify optimal views for semantic feature extraction.
 - **p. 5 / IV. DATA - extractive body cue:** Using the SceneFun3D annotation tool [5], we performed fine-grained semantic annotation on high-resolution point clouds, and extended it to incorporate object-part hierarchy information.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Object-centric, open-vocabulary, segmentation, methods, typically, first, extract, class-agnostic, object, instance, masks, then, compute, feature, representation, represented, joint, vision-language, embedding, space.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Nevertheless, there are limitations to the geometrical segmentation method we employ for part segmentation, as it relies on surface normals.
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Discussion and Limitations One limitation of our work is the reliance on a simple geometrical over-segmentation method for identifying object parts.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 4 (2) Computing open-vocabulary features for the scene repre), p. 1 (Abstract), p. 4 (2) Computing open-vocabulary features for the scene repre), objective p. 4 (2) Computing open-vocabulary features for the scene repre), p. 4 (2) Computing open-vocabulary features for the scene repre), temporal p. 7 (V. EXPERIMENTS), p. 3 (III. METHOD), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 4 (2) Computing open-vocabulary features for the scene repre), p. 4 (2) Computing open-vocabulary features for the scene repre).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

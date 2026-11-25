@@ -46,7 +46,6 @@ PDF body method statement (p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRA
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** We freeze the 2D backbone models during training, and optimize a 4-block DiffusionNet with 512 channels on DenseCorr3Dfor 6000 steps with a batch size of ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRA
 - **p. 6 / 1 INTRODUCTION - extractive body cue:** 4.3.2 FEATURE PRESERVATION LOSS We can view our DiffusionNet refiner as an nonlinear operater embedding features from fmultiview into foutput.
 - **p. 6 / 1 INTRODUCTION - extractive body cue:** Therefore, we train a linear layer to approximately invert DiffusionNet and reconstruct Fmultiview, thereby preserving the rich information learned by SD-DINO: L_\text {pr e se ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRA
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** We freeze the 2D backbone models during training, and optimize a 4-block DiffusionNet with 512 channels on DenseCorr3Dfor 6000 steps with a batch size of ...
 - **p. 18 / A.3.2 TRAINING DENSEMATCHER - extractive body cue:** In total, training for 50 epochs takes ~12h hours on 8xNvidia A100 GPUs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** FeatUp, module, upsamples, features, x512, resolution, Thanks, network, found, only, lateral, views, plus, bottom, view, during, training, inferencing, sufficient, freeze.
 - **Relevant PDF headings:** A.2 METHOD DETAILS (p. 17); A.3.4 MODEL PERFORMANCE ON VARYING TOPOLOGIES (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,23 +105,13 @@ PDF body method statement (p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRA
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 1: Performance comparison on DenseCorr3D shape matching benchmark. We report the results on both the full test set and the held-out set. Ablation studies ...
 - **p. 16 / A.1.2 DATASET FILTERING - extractive body cue:** We remove all meshes that are bigger than 300MB in size.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 18 (A.3.2 TRAINING DENSEMATCHER), p. 18 (A.3.2 TRAINING DENSEMATCHER), objective p. 18 (A.3.2 TRAINING DENSEMATCHER), temporal p. 9 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 10 (7 CONCLUSION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

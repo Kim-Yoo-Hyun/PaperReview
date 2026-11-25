@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 1 (ABSTR
 - **p. 3 / 3 BACKGROUND - extractive body cue:** We can interpret the IRL problem as solving the maximum likelihood problem: max θ Eτ∼D [log pθ(τ)] , (1) Where pθ(τ) ∝p(s0) QT t=0 p(st+1/st, ...
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 5 (3 BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 1 (ABSTR
 - **p. 1 / ABSTRACT - extractive body cue:** Deep reinforcement learning methods can remove the need for explicit engineering of policy or value features, but still require a manually specified reward function.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Part of the challenge is that IRL is an ill-defined problem, since there are many optimal policies that can explain a set of demonstrations, and ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 1 (ABSTR
 - **p. 7 / 7 EXPERIMENTS - extractive body cue:** We train a quadrupedal "ant" agent to run forwards, and at test time we disable and shrink two of the front legs of the ant ...
 - **p. 3 / 3 BACKGROUND - extractive body cue:** They operate in a trajectory-centric formulation, where the discriminator takes on a particular form (fθ(τ) is a learned function; π(τ) is precomputed and its value ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** goal, forward, reinforcement, learning, find, optimal, policy, maximizes, expected, entropy-regularized, discounted, reward, under, where, denotes, sequence, states, actions, induced, dynamics.
 - **Relevant PDF headings:** A.3 POLICY OBJECTIVE (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 1 (ABSTR
 - **p. 6 / 7 EXPERIMENTS - extractive body cue:** We subtract a constant offset from all reward functions so that they share the same mean for visualization - this does not influence the optimal ...
 - **p. 7 / 7 EXPERIMENTS - extractive body cue:** GAIL learns successfully in the training domain, but does not acquire a representation that is suitable for transfer to test domains.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 1 (ABSTRACT), p. 3 (3 BACKGROUND), p. 4 (3 BACKGROUND), p. 5 (3 BACKGROUND), objective p. 3 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 2 (1 INTRODUCTION), p. 5 (3 BACKGROUND), p. 1 (1 INTRODUCTION), p. 3 (3 BACKGROUND), temporal p. 7 (7 EXPERIMENTS), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (2 RELATED WORK), p. 3 (3 BACKGROUND).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

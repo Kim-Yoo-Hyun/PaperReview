@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Arch
 - **p. 8 / 3.2.3. System-level Optimizations - extractive body cue:** Given the asynchronous execution structure, we optimize inference throughput through parallelism and caching. • CFG Parallelism.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Architecture), p. 8 (3.2.3. System-level Optimizations), p. 9 (3.2.4. Implementation-level Optimizations), p. 8 (3.1. Model Architecture).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Arch
 - **p. 7 / 3.1. Model Architecture - extractive body cue:** To retain the generalization capability of video models, we introduce minimal additional parameters: state encoders, action encoders, and decoders.
 - **p. 8 / 3.1. Model Architecture - extractive body cue:** Unlike pure video generation, our closed-loop setting allows ground-truth observations to replace generated frames in the KV cache after each action execution (see Figure 14).
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Arch
 - **p. 9 / 3.2.4. Implementation-level Optimizations - extractive body cue:** The key insight is that, at inference time, actions should denoise to their final values while being conditioned on a still-noisy video representation within the ...
 - **p. 11 / 4.1. Pretraining - extractive body cue:** We train for 100K steps with a global batch size of 128 for AgiBot and 100K steps with a global batch size of 128 for ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** retain, generalization, capability, video, models, introduce, minimal, additional, parameters, state, encoders, action, decoders, Autoregressive, generation, possesses, following, advantages, enables, faster.
 - **Relevant PDF headings:** 2.1. Vision Language Action Models (p. 4); 2.2. Video Model-based Robot Policies (p. 5); 3.1. Model Architecture (p. 6); 5.2. Model and Data Ablations (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Arch
 - **p. 11 / Figure/Table caption - extractive body cue:** Figure 6: Distribution statistics for the AgiBot pretraining corpus: episode durations, subtask density, and skill coverage across 7.2K episodes (∼500 hours). interaction with objects at ...
 - **p. 13 / Figure/Table caption - extractive body cue:** Figure 8: Seen Task Evaluation. DreamZero effectively learns from diverse data and generalizes to new environments, outperforming VLAs across all task categories. VLAs trained from ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Architecture), p. 6 (3.1. Model Architecture), p. 6 (3.1. Model Architecture), p. 8 (3.1. Model Architecture), p. 8 (3.1. Model Architecture), objective p. 8 (3.2.3. System-level Optimizations), p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Architecture), p. 9 (3.2.4. Implementation-level Optimizations), p. 9 (3.2.4. Implementation-level Optimizations), p. 8 (3.2.3. System-level Optimizations), temporal p. 8 (3.2.2. Asynchronous Closed-Loop Execution), p. 7 (3.1. Model Architecture), p. 8 (3.2.4. Implementation-level Optimizations), p. 9 (3.2.4. Implementation-level Optimizations), p. 9 (3.2.4. Implementation-level Optimizations), p. 10 (4.1. Pretraining).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

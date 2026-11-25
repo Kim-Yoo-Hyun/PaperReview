@@ -45,7 +45,6 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 - **p. 1 / 1. Introduction - extractive body cue:** Recently, large selfsupervised models have emerged as compelling learners for image representation [10, 16, 17].
 - **p. 2 / 1. Introduction - extractive body cue:** We enhance these models with 3D awareness through a view synthesis task, employing epipolar geometry to warp features from source images to target views.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 
 - **p. 5 / 4. Experiments - extractive body cue:** Datasets and implementation details For all our experiments, we train the geometric ControlNet on the official ARKitscene datasets [3], which provide around 450K posed low-resolution ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Formally, given, image, sample, noise, time, obtain, diffusion, features, where, represents, multi-scale, decoder, module, UNet, parameterized, pre-defined, schedule, satisfying, Following.
 - **Relevant PDF headings:** 3.1. Diffusion Model as a Feature Extractor (p. 3); 2.28 AP3D-N improvement over previous methods trained (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 3 (3.1. Diffusion Model as a Feature Extractor), p
 - **p. 5 / 4. Experiments - extractive body cue:** Note that in the following experiments, the pretrained geometric ControlNet is kept frozen.
 - **p. 8 / 4.4. Analysis and Ablation - extractive body cue:** The vanilla Stable Diffusion features achieve a 28.86% AP3D, exceeding CubeRCNN-VIT-B (MAE pretrained) by 3.63% and ResNet-50 DreamTeacher by 4.5% in AP30.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Diffusion Model as a Feature Extractor), p. 3 (3.1. Diffusion Model as a Feature Extractor), objective 본문 anchor 없음, temporal p. 5 (4. Experiments), p. 6 (4. Experiments), p. 8 (5. Conclusion and Limitations), p. 2 (1. Introduction), p. 2 (2. Related works), p. 3 (3) Amplifying 3D box predictions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

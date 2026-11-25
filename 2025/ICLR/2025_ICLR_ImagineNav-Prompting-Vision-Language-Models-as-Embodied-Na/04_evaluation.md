@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Specifically, we modified the final output layers of the ResNet18 and ViT to fit our dataset, allowing parameter updates during training.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Second, the synthesized image from the NVS does not align with the real observation, such as creating objects that are not present in the real ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The comparison between the conventional LLM-based navigation pipeline and our Imag- ineNav pipeline. The traditional LLM-based navigation framework, illustrated on the left, relies ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | As shown in Table 3, the best success rate and SPL are obtained when T is set to 11. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 | Figure 5: Visualization of the navigation trajectory. The top and bottom rows respectively show the complete top-down trajectories of successful and unsuccessful examples. 4.6 ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | We compared different backbones to evaluate their impacts on both the relative waypoint prediction and final navigation performances. | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
 | Please note that at row #2 without Where2Imagine, we simply generate future views at the six locations, which are two meters away from current ... | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | The experiments used real RGB without NVS model. | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | body limitation/failure cue | Figure 3: An example of the VLM analysis. By examining different future-view scenarios, the VLM pinpoints the direction most likely to incorporate the target ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | 4.5 ANALYSIS OF SUCCESSFUL AND FAILED TRAJECTORIES Figure 5 illustrates that our method achieves efficient path planning and navigation across different targets. | p. 8 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Each variant was tested for 100 epochs under conditions where the agent had access to real panoramic observations. | p. 9 (4 EXPERIMENTS) |
 | The task is considered successful if the agent reaches the target object with a geodesic distance smaller than a defined threshold (e.g., 1m) and ... | p. 4 (3 METHODOLOGY) |
 | Each episode has a maximum limit of 500 steps. <Navigation Goal>: Chair Novel View Synthesis Scene Generation Future-View Imagination Option：2 （x=-3.50,y=-3.85） Δx=0.5, Δy=2.05, θ=-23.6° ... | p. 4 (3 METHODOLOGY) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.5 ANALYSIS OF SUCCESSFUL AND FAILED TRAJECTORIES Figure 5 illustrates that our method achieves efficient path planning and navigation across different targets.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

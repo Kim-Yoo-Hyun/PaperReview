@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 - **p. 8 / 5.2. Ablation Study - extractive body cue:** The optimal reward scale varies between environments, and should be tuned for each task separately.
 - **p. 8 / 5.2. Ablation Study - extractive body cue:** Sensitivity of soft actor-critic to selected hyperparameters on Ant-v1 task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 1. Training curves on continuous control benchmarks. Soft actor-critic (yellow) performs consistently across all tasks and outperforming both on-policy and off-policy methods in the ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 | The stability of the algorithm also plays a large role in performance: easier tasks make it more practical to tune hyperparameters to achieve good ... | definition/direction/unit from same section | p. 6 (5. Experiments) |
 | Table 1. SAC Hyperparameters Parameter Value Shared optimizer Adam (Kingma & Ba, 2015) learning rate 3 · 10-4 | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 | Figure 4. Training curves for additional baseline (Trust-PCL) and for two SAC variants. Soft actor-critic with hard target update (blue) differs from standard SAC ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | We use an exponentially moving average, with a smoothing constant τ, to update the target value network weights as common in the prior work ... | comparison identity and matched condition | p. 8 (5.2. Ablation Study) |
 | Figure 1. Training curves on continuous control benchmarks. Soft actor-critic (yellow) performs consistently across all tasks and outperforming both on-policy and off-policy methods in ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 | body limitation/failure cue | Note that the policy is trained to maximize also the entropy, and the mean action does not, in general, correspond the optimal action for ... | p. 8 (5.2. Ablation Study) |
 | body limitation/failure cue | We turned off the exploration noise for evaluation for DDPG and PPO. | p. 6 (5. Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 | In the policy evaluation step of soft policy iteration, we wish to compute the value of a policy π according to the maximum entropy ... | p. 4 (4.1. Derivation of Soft Policy Iteration) |
 | The full soft policy iteration algorithm alternates between the soft policy evaluation and the soft policy improvement steps, and it will provably converge to ... | p. 4 (4.1. Derivation of Soft Policy Iteration) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** Our results suggest that stochastic, entropy maximizing reinforcement learning algorithms can provide a promising avenue for improved robustness and stability, and further exploration of maximum ...
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 7 (5.1. Comparative Ev
 - **p. 6 / 5. Experiments - extractive body cue:** We turned off the exploration noise for evaluation for DDPG and PPO.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Ablation Study), p. 7 (5.1. Comparative Evaluation), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), metrics p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), p. 7 (5.2. Ablation Study), p. 7 (5.2. Ablation Study), p. 13 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 7 (5.1. Comparative Evaluation), p. 7 (5.2. Ablation Study), p. 14 (Figure/Table caption), p. 8 (5.2. Ablation Study), p. 6 (Figure/Table caption), results p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), p. 7 (5.2. Ablation Study), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

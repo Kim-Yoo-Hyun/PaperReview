@@ -48,7 +48,6 @@ PDF body method statement (p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters),
 - **p. 5 / 1. Model Overall - extractive body cue:** Input Text Input Image Model Outputs Keys& Values Cross-Modality Queries Text Features Image Features Vanilla Text Features A Cross-Modality Decoder Layer Cross-Modality Query Self-Attention Image ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 19 (A.1 Hyperparameters), p. 5 (1. Model Overall).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters),
 - **p. 4 / 1 Introduction - extractive body cue:** It also establishes a new state of the art on the ODinW [23] zero-shot benchmark with a 26.1 mean AP.
 - **p. 19 / A.2 Pseudo Code Language-Guided Query Selection - extractive body cue:** We present the pseudo-code of the Language-Guided Query Selection module in Algorithm 1.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters),
 - **p. 19 / A.1 Hyperparameters - extractive body cue:** Item Value optimizer AdamW lr 1e-4 lr of image backbone 1e-5 lr of text backbone 1e-5 weight decay 0.0001 clip max norm 0.1 number of ...
 - **p. 9 / 4 Experiments - extractive body cue:** The model is trained on 64 Nvidia A100 GPUs with a total batch size of 64.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Input, Text, Image, Model, Outputs, Keys, Values, Cross-Modality, Queries, Features, Vanilla, Decoder, Layer, Query, Self-Attention, Cross-Attention, FFN, Updated, Item, Value.
 - **Relevant PDF headings:** 1. Model Overall (p. 5); C.4 Model Efficiency (p. 22); 1. Model Overall (p. 23).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters),
 - **p. 9 / 4 Experiments - extractive body cue:** 4.1 Implementation Details We trained two model variants, Grounding DINO T with Swin-T [32], and Grounding DINO L with Swin-L [32] as an image backbone, ...
 - **p. 10 / 4 Experiments - extractive body cue:** With stronger backbones and larger data, Grounding DINO sets a new record of 52.5 AP on the COCO object detection benchmark without seeing any COCO ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (1. Model Overall), p. 19 (A.1 Hyperparameters), p. 19 (A.2 Pseudo Code Language-Guided Query Selection), objective p. 19 (A.1 Hyperparameters), p. 5 (1. Model Overall), temporal p. 3 (1 Introduction), p. 4 (2 Related Work), p. 5 (2. A Feature Enhancer Layer), p. 5 (2. A Feature Enhancer Layer).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

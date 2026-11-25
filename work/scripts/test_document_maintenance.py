@@ -12,6 +12,8 @@ import audit_repository as audit
 import build_registry_views as views
 import audit_note_artifacts as artifacts
 import build_lit_survey as survey
+import build_reading_tiers as reading
+from normalize_taxonomy import registry
 import registry_profiles as profiles
 from reconcile_registry import build_facets
 from render_source_audit import OPEN, PASS, bibliography_digest, check_applied, cited_statement, current_checks, summary_headings
@@ -19,6 +21,22 @@ from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_every_tag_match_survives_alias_rendering_and_tier_parsing(self):
+        papers = [
+            {"category": "Control", "title": f"Paper {i:02d}", "folder": f"2025/RSS/p{i}",
+             "year": 2025, "venue": "RSS", "tags": ["control (robot)"],
+             "aliases": ["Shared", "Alternative (A|B)"] if i < 2 else []}
+            for i in range(13)
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            generated = Path(directory) / "PAPER.md"
+            generated.write_text(registry(papers))
+            with patch.object(reading, "REGISTRY", generated):
+                rows = reading.parse_registry()
+            self.assertEqual(generated.read_text().count(r"Shared, Alternative (A\|B)"), 2)
+        self.assertEqual([row["title"] for row in rows], [paper["title"] for paper in papers])
+        self.assertTrue(all(row["tags"] == "control (robot)" for row in rows))
+
     def test_taxonomy_locations_distinguish_web_sections_from_pdf_pages(self):
         self.assertTrue(audit.valid_source_locations([1, 3], None))
         self.assertTrue(audit.valid_source_locations(None, ["Model and Data Improvements"]))

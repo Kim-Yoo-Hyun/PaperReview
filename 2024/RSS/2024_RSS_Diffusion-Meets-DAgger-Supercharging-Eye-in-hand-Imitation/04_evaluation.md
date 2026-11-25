@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** We test DMD across four tasks: non-prehensile pushing, stacking, pouring, and hanging a shirt.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** It also maintains an 80% success rate with only 8 demonstrations, whereas BC drops to 20%.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Eye-in-hand Imitation learning with DMD: A common failure mode in an imitation learning setting is the problem of poor generalization due to compounding ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | While this strategy works for the pre-grasp trajectory that Zhou et al. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | The policy is trained by L1 regression to the (unit length) actions using the Adam optimizer with a learning rate of 1e-4. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | (c) Training the diffusion model with additional play data boosts the task success rate to 100%, compared to 80% when using the model trained ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | Fig. 10: Comparison of BC, SPARTN, and DMD for Staying on Course. We show the trajectories executed by BC, SPARTN [86], and DMD over ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | On the pushing task, we present visual comparisons to NeRF-based synthesis approach SPARTN [86] in Section IV-A2 and in-depth quantitative analysis (ablation of design ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | It c) NeRF Grabber-Mask ˜It Cannot generate in-hand apple Grabber needs to be paste in Move Forward Move Backward a) NeRF No-Mask ˜It Cannot ... | p. 7 (IV. EXPERIMENTS) |
 | body limitation/failure cue | BC often fails to lift the tall cups above the box and pushes the box forward continuously. | p. 8 (24 Demo) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | The pre-trained VQ-GAN codebooks is kept fixed. | p. 4 (III. APPROACH) |
 | The action label ˜at for ˜It is then computed as ˜at = ˜tTt+k = ˜tTt tTw (t+kTw)-1. | p. 4 (III. APPROACH) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 24 Demo - extractive body cue:** A common failure case for BC is that as the robot rotates the cup with coffee beans, it does not move the cup closer to ...
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 8 / 24 Demo - extractive body cue:** BC often fails to lift the tall cups above the box and pushes the box forward continuously.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

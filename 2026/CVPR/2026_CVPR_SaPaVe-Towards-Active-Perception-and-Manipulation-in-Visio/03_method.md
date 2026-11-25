@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 3 (
 - **p. 4 / Model - extractive body cue:** To bridge this gap, we propose Universal Spatial Knowledge Injection, which efficiently leverages as much 3D information as possible to directly optimize the action output.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.3. Two-Stage Training Strategy), p. 5 (3.3. Two-Stage Training Strategy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 3 (
 - **p. 2 / 1. Introduction - extractive body cue:** End-to-end Vision-LanguageAction (VLA) models [5, 6] aim to bridge this gap, but are typically trained on fixed near-optimal head-camera views, making them sensitive to viewpoint ...
 - **p. 5 / 3.4. ActiveViewPose-200K and ActiveManip-Bench - extractive body cue:** These templates, along with the images, are sent to GPT-4o to generate relevant instructions, which are then manually refined.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 3 (
 - **p. 5 / 3.3. Two-Stage Training Strategy - extractive body cue:** We thus use this dataset to train Camera Adapter and Camera Action Decoder by supervising camera movement (see Fig.
 - **p. 8 / 4.6. Ablation Studies - extractive body cue:** Forcing the use of a unified action decoder couples the two training stages in the action space, not only disrupting the semantic active perception priors ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Therefore, Decoupled, Action, Heads, Camera, Adapter, enable, model, acquire, rich, semantic, active, perception, priors, retain, general, manipulation, knowledge, data-efficient, manner.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. Architecture (p. 3); Model (p. 4); 4.4. Comparison with existing VLA models (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 3 (
 - **p. 7 / 4.4. Comparison with existing VLA models - extractive body cue:** Directly fine-tuning existing VLA models is insufficient to fully address active manipulation tasks In Tab.
 - **p. 7 / 4.4. Comparison with existing VLA models - extractive body cue:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 3 (3.2. Architecture), p. 4 (3.2. Architecture), p. 5 (3.4. ActiveViewPose-200K and ActiveManip-Bench), p. 5 (3.3. Two-Stage Training Strategy), objective p. 5 (3.3. Two-Stage Training Strategy), p. 5 (3.3. Two-Stage Training Strategy), p. 4 (Model), p. 3 (3.1. Problem Formulation), p. 4 (Model), temporal p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 6 (4. Experiments), p. 4 (Model), p. 1 (Abstract), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** (3) In dynamic environments, DovSG significantly outperforms Ok-Robot (which assumes a static scene) in long-term tasks, thanks to its ability to adapt to scene changes.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** As a result, Ok-Robot's success rate for long-term tasks in dynamic environments is approximately 30% lower than DovSG.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Overview of Our DovSG System. DovSG is a mobile robotic system designed to perform long-term tasks in real-world environments. It can detect changes ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Fig. 2. Initialization and Construction of 3D Scene Graphs. We first use the RGB-D-based DROID-SLAM [31] model to predict the pose of each frame ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Fig. 3. Adaptation in interactions with manually modified scenes. (1) We train the scene-specific regression MLP of the ACE model using RGB images and ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Our evaluation focuses on three key aspects: Dynamic Scene Adaptation and Scene Graph Generation: We recorded RGB observations during the robot's task execution and ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | 3) Baselines: To demonstrate our approach's adaptability to changing environments and the effectiveness of scene graph prediction, we evaluated scene changes and scene graph ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | (2) How effectively does this facilitate the completion of consecutive tasks without manual resets? | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | body limitation/failure cue | In the first row, we cropped the point cloud input into anyGrasp within a certain range around the target object, allowing anyGrasp to focus ... | p. 6 (III. METHOD) |
 | body limitation/failure cue | Although Ok-Robot can occasionally succeed in locating the correct object under minor changes (e.g., "Minor Adjustment"), it struggles with larger modifications such as "Appearance" ... | p. 7 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | (3) For each valid projected point i, we compute the depth and color difference: ∆zi = | p. 5 (III. METHOD) |
 | (4) For each object in Oneed_process, we recompute the spatial relationships as described in Sec. | p. 5 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** In the "Positional Shift" scenario, the residual effect of CLIP features can occasionally mislead the robot into navigating toward the object's historical location, ultimately causing ...
@@ -159,9 +138,8 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Although Ok-Robot can occasionally succeed in locating the correct object under minor changes (e.g., "Minor Adjustment"), it struggles with larger modifications such as "Appearance" or ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

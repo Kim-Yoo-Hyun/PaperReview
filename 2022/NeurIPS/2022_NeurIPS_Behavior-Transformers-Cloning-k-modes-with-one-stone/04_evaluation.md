@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 - **p. 7 / 3 Experiments - extractive body cue:** In each of our environments, the demonstrations contain different types of multi-modality.
 - **p. 8 / 3 Experiments - extractive body cue:** 4 that BeT visits certain strings of tasks more frequently than in the original demonstrations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Unconditional rollouts from BeT models trained from multi-modal demonstartions on the CARLA, Block push, and Franka Kitchen environments. Due to the multi-modal architecture ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 | For CARLA, we measure the probability of the car reaching the goal successfully. | definition/direction/unit from same section | p. 7 (3 Experiments) |
 | Here, we are interested in seeing the variance of the behavior of the model over different rollouts. | definition/direction/unit from same section | p. 7 (3 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 | CARLA Block: first block reached Push: red block target Push: green block target Kitchen Baselines Left Right Red Green Red Green Red Green Task ... | comparison identity and matched condition | p. 7 (3 Experiments) |
 | CARLA Block push Kitchen Driving Reach Push # Tasks completed Baselines Success R1 R2 P1 P2 1 2 3 4 5 RBC 0.98 0.67 ... | comparison identity and matched condition | p. 7 (3 Experiments) |
 | In contrast, for the same task, our strongest baseline IBC takes about 14 hours. | comparison identity and matched condition | p. 9 (3 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 | body limitation/failure cue | BeT falls under the second category, as it is a behavior cloning model. | p. 9 (4 Related Work) |
 | body limitation/failure cue | We see in Table 2 that in CARLA and Block push, BeT covers all the modes of the demonstration data, even in the few ... | p. 8 (3 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 | All of our datasets, code, and trained models will be made publicly available. | p. 3 (1 Introduction) |
 | We use a transformer decoder model, namely minGPT [11], with minor modifications, as our backbone. | p. 4 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3 Experiments - extractive body cue:** Since the models are all behavioral cloning algorithms, they share the failure mode of failing once the observations go out of distribution (OOD).
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 6 (3 Experiments
 - **p. 8 / 3 Experiments - extractive body cue:** We see in Table 2 that in CARLA and Block push, BeT covers all the modes of the demonstration data, even in the few cases ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 9 (3 Experiments), metrics p. 9 (3 Experiments), p. 8 (3 Experiments), p. 5 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), baselines p. 8 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 9 (3 Experiments), results p. 2 (Figure/Table caption), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 8 (3 Experiments), p. 8 (3 Experiments), p. 5 (3 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

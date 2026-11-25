@@ -47,7 +47,6 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Each task utilizes a different combination of reward terms.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** It would tend to output only two points to form a straight line, which easily yields a high reward and prematurely terminates exploration.
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** We would like to add two clarifying points: First, if the task output fails to meet the required parsing format, subsequent analysis cannot proceed successfully, ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,16 +78,12 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Training Hyperparameters: We conducted model training on eight NVIDIA A100 40G GPUs.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For all experiments, we focus on comparing SFT models trained with the same batch size and data, which we refer to as Embodied-SFT.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Embodied-SFT, exactly, same, data, trained, supervised, learning, loss, kept, batch, size, epochs, Training, Hyperparameters, conducted, model, eight, NVIDIA, A100, GPUs.
 - **Relevant PDF headings:** 3. Methodology & Reasoning (p. 26).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +103,10 @@ PDF body method statement (p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 1
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** 4.4 FURTHER ANALYSIS AND ABLATIONS Embodied-R1 Exhibits Strong Generalization.
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** In practice, we found that without this constraint, the model in the VTG task was prone to reward hacking behavior.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), objective p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), temporal p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1), p. 2 (8 Real-World Tasks).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

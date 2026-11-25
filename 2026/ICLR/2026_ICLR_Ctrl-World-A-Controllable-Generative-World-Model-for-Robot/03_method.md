@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** (2) Frame-level action conditioning tightly aligns visual dynamics with control signals, ensuring that generated rollouts reflect the causal effect of each action.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** 11: end for 12: Finetune πθ with Lθ = Eot,at:t+H∼Ds∥πθ(ot, l) -at:t+H∥2. initial observations and instructions, policy behavior tends to be highly deterministic.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Unlike these works, we leverage video generation to perform action-conditioned prediction, which enables using the model for both policy evaluation and policy improvement.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** During rollouts, the world model receives 15-step action chunks (corresponding to 1 s) and autoregressively predicts the next frames for 10 steps, producing 10 s-long ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Finally, we fine-tune the policy on the curated synthetic dataset for 2k steps, improving base model's capability in unfamiliar instructions and objects.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, robot, observation, includes, camera, views, pose, policy, outputs, H-step, action, chunk, given, instruction, goal, world, model, predict, outcomes, executing.
 - **Relevant PDF headings:** A MORE DETAILS FOR WORLD MODEL LEARNING (p. 16); B MORE DETAILS FOR POLICY EVALUATION (p. 16); C MORE DETAILS FOR POLICY IMPROVEMENT (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** We now evaluate whether Ctrl-World can be used to generate synthetic post-training data for improving VLA models without real-world data.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Ctrl-World is designed for policy-in-the-loop rollouts with generalist robot policies. It generates joint multi-view predictions (including wrist views), enforces fine-grained action control via ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 6 (5 EXPERIMENTS), p. 5 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

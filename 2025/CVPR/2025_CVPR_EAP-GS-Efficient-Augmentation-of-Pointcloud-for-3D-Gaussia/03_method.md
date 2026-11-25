@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4
 - **p. 6 / 3.2. Attentional Pointcloud Augmentation - extractive body cue:** The results of the rest scenes can be viewed in the supplementary material. easily applied to other 3DGS-based optimization methods with minimal overhead, as it ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 5 (3.2. Attentional Pointcloud Augmentation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4
 - **p. 2 / 1. Introduction - extractive body cue:** Techniques such as Neural Radiance Field (NeRF) [22] and 3D Gaussian Splatting (3DGS) [14] propose novel representation methods and utilize rendering equation supervised by 2D ...
 - **p. 2 / 1. Introduction - extractive body cue:** In practice, a sufficient number of images are often difficult to obtain due to various limitations.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4
 
 - **p. 7 / 4.2. Experimental Results - extractive body cue:** In contrast, DRGS mitigates training time through an early-stop strategy, but this may lead to insufficient training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** implement, algorithm, DetectorfreeSfM, leverages, detector-free, matcher, enhance, feature, extraction, texture-poor, scenarios, optimization, process, involves, splatting, Gaussian, image, domain, sorting, Gaussians.
 - **Relevant PDF headings:** 3. Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4
 - **p. 8 / 5. Discussion - extractive body cue:** Lacking a method to limit the error may be a limitation Figure 7.
 - **p. 8 / 5. Discussion - extractive body cue:** This issue is primarily due to data incompleteness, and a potential approach to further enhance performance would be to incorporate prior knowledge or generative models ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 6 (3.2. Attentional Pointcloud Augmentation), objective p. 4 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 6 (3.2. Attentional Pointcloud Augmentation), temporal p. 4 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.2. Attentional Pointcloud Augmentation), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (2.1. 3D Reconstruction), p. 3 (2.1. 3D Reconstruction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

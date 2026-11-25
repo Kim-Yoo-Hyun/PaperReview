@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2.
 - **p. 8 / 4.4. Exploration of Generalization - extractive body cue:** Additionally, the affordance-guided masking strategy enhances the model's understanding of the spatial geometry of the foreground region through reconstruction, while minimizing the impact of background ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2. Task-aware Masked Autoencoder), p. 5 (3.3. 2D Model-lifting Strategy), p. 5 (3.3. 2D Model-lifting Strategy), p. 8 (4.4. Exploration of Generalization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2.
 - **p. 3 / 3.1. Problem Statement - extractive body cue:** We then use a simple policy head π to predict the action a = π(2De(P, RS)).
 - **p. 7 / Method - extractive body cue:** Lift3D achieves a success rate of 62.5%, which is a 17-point improvement over the state-of-the-art 3D policy, DP3, which achieves 45.5%.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2.
 - **p. 4 / 3.2. Task-aware Masked Autoencoder - extractive body cue:** Guide a) Implicit 3D robotic representation (Stage 1) Robot State Point Cloud CLIP Image Encoder CLIP Text Encoder Similarity matrix Text MAE Decoder 2D Foundation ...
 - **p. 4 / 3.2. Task-aware Masked Autoencoder - extractive body cue:** Finally, to preserve the inherent capabilities of the foundation model, we introduce a distillation loss that constrains the distance between our model's visible token outputs ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Guide, Implicit, robotic, representation, Stage, Robot, State, Point, Cloud, CLIP, Image, Encoder, Text, Similarity, matrix, MAE, Decoder, Foundation, Model, Attention.
 - **Relevant PDF headings:** 3. Lift3D Method (p. 3); 3.3. 2D Model-lifting Strategy (p. 4); Method (p. 7); 4.5. Exploration of Model Scalability (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of Lift3D. a) For implicit 3D robotic representation, we leverage CLIP [55] to offline extract image attention maps based on task ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Generalization. ‘Object', ‘Background', and ‘Brightness' represent different manipulated objects, background scenes, and lighting conditions, respectively. The image above illustrates the three test scenarios, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2. Task-aware Masked Autoencoder), p. 5 (3.3. 2D Model-lifting Strategy), p. 3 (3.1. Problem Statement), p. 3 (3.2. Task-aware Masked Autoencoder), p. 7 (Method), objective p. 4 (3.2. Task-aware Masked Autoencoder), p. 4 (3.2. Task-aware Masked Autoencoder), p. 5 (3.3. 2D Model-lifting Strategy), p. 5 (3.3. 2D Model-lifting Strategy), p. 8 (4.4. Exploration of Generalization), p. 8 (4.4. Exploration of Generalization), temporal p. 6 (4.2. Real-World Experiment), p. 6 (4.1. Simulation Experiment), p. 2 (1. Introduction), p. 3 (3. Lift3D Method), p. 5 (4.1. Simulation Experiment), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

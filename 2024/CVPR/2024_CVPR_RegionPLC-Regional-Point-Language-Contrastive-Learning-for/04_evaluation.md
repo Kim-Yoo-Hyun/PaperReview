@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 4 (3.3. Benchmark and Analysis on Regional 3D
 - **p. 4 / 3.3. Benchmark and Analysis on Regional 3D - extractive body cue:** Our benchmark encompasses two settings: i) the B12/N7 setting including 12 annotated base categories and 7 unannotated novel categories, which requires a strong comprehension of ...
 - **p. 5 / 4.1. Basic Setups - extractive body cue:** To test the effectiveness of RegionPLC, we evaluate it on three popular datasets: 19827
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of our regional point-language contrastive learning framework. For regional 3D-language association, We develop a 3D-aware SFusion strategy effectively combining 3D vision-language pairs ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 4 (3.3. Benchmark and Analysis on Regional 3D
 | Table 7. SFusion results for zero-shot semantic segmentation con- sidering caption sources, overlap thresholds, and ratios. SFusion. We also study the effectiveness of our ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Figure 4. (a) Visualizations of RegionGR that integrates LLM for open-ended grounded 3D reasoning. (b) Demonstrating the versa- tility of RegionGR via more examples ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 4 (3.3. Benchmark and Analysis on Regional 3D
 | Table 4. Annotation-free 3D semantic segmentation on ScanNet. ‡ and ♯mean results reproduced by us and Uni3D, independently. learning from sparse language supervision instead ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 4. (a) Visualizations of RegionGR that integrates LLM for open-ended grounded 3D reasoning. (b) Demonstrating the versa- tility of RegionGR via more examples ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 2. Comparisons of different advanced manners for extract- ing regional language descriptions with 2D foundation models. prompts such as boxes and then caption ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,8 +109,6 @@ PDF body evaluation/result cue (p. 4 (3.3. Benchmark and Analysis on Regional 3D
 | body limitation/failure cue | Furthermore, our region-aware pointdiscriminative contrastive loss aids in learning distinctive and robust features from regional captions. | p. 8 (7. Conclusion) |
 | body limitation/failure cue | Figure 1. Overview of our regional point-language contrastive learning framework. For regional 3D-language association, We develop a 3D-aware SFusion strategy effectively combining 3D vision-language ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -133,20 +120,11 @@ PDF body evaluation/result cue (p. 4 (3.3. Benchmark and Analysis on Regional 3D
 | We adopt the sparse-convolutionbased UNet [11] as the 3D encoder with CLIP [25] text encoder as the final classifier for 3D semantic segmentation, and ... | p. 6 (Method) |
 | Annotation-free 3D semantic segmentation on ScanNet. ‡ and ♯mean results reproduced by us and Uni3D, independently. learning from sparse language supervision instead of pixelaligned ... | p. 7 (122.8 G) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Conclusion - extractive body cue:** Furthermore, our region-aware pointdiscriminative contrastive loss aids in learning distinctive and robust features from regional captions.
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of our regional point-language contrastive learning framework. For regional 3D-language association, We develop a 3D-aware SFusion strategy effectively combining 3D vision-language pairs ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 5 (4.1. Basic Setups), metrics p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 7 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 4 (3.3. Benchmark and Analysis on Regional 3D), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

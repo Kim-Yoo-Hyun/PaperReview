@@ -55,7 +55,6 @@ PDF body method statement (p. 18 (C. Implementation Derails), p. 18 (C. Implemen
 - **p. 18 / C. Implementation Derails - extractive body cue:** For BC policies we ensemble the MLP. add dropout and use the L2 Loss function for training.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (A. Minimizing Conditional Action Entropy), p. 3 (A. Minimizing Conditional Action Entropy), p. 18 (C. Implementation Derails).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 18 (C. Implementation Derails), p. 18 (C. Implemen
 - **p. 2 / A. Imitation Learning - extractive body cue:** Typically, we measure the similarity between the policy and expert using a divergence between their state visitation distributions:
 - **p. 3 / B. Demonstration Curation - extractive body cue:** where $ and A represent random variables for the state and action.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 18 (C. Implementation Derails), p. 18 (C. Implemen
 - **p. 19 / C. Implementation Derails - extractive body cue:** ‘Opuimizer ‘Adar Leaning Rate o0e01 1 Batch Size 256, A Training Steps 50,000 100,000 tion Chunk n 1 4 0 Image Resolution oss.
 - **p. 7 / A. Experimental Setup - extractive body cue:** When training VAEs from images we use matching ResNet-18 Decoder networks for ‘each view.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** action, encoders, decoders, same, architecture, state, methods, encoder, Having, high, marginal, entropy, avoids, pitfall, forcing, learned, policy, attention, when, making.
 - **Relevant PDF headings:** B. Method Details (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 18 (C. Implementation Derails), p. 18 (C. Implemen
 - **p. 8 / C. Mutual Information Estimators - extractive body cue:** This is particularly problematic for downstream data curation, as one often does not have ground truth labels to check the quality of the scoring function,
 - **p. 9 / C. Mutual Information Estimators - extractive body cue:** DemInf's performance is generally robust to this parameter, with no substantial change in performance in both HersheyKiss and Square MH.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 18 (C. Implementation Derails), p. 18 (C. Implementation Derails), p. 4 (B. Maximizing Marginal Action Entropy), p. 3 (A. Minimizing Conditional Action Entropy), p. 4 (B. Maximizing Marginal Action Entropy), p. 3 (A. Minimizing Conditional Action Entropy), objective p. 3 (A. Minimizing Conditional Action Entropy), p. 3 (A. Minimizing Conditional Action Entropy), p. 4 (B. Maximizing Marginal Action Entropy), p. 4 (B. Maximizing Marginal Action Entropy), p. 18 (C. Implementation Derails), temporal p. 19 (C. Implementation Derails), p. 3 (A. Minimizing Conditional Action Entropy), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 18 (C. Implementation Derails).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

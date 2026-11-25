@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 18 / A.1 TRAINING DETAILS - extractive body cue:** To maximize adaptation to embodied reasoning tasks, we keep all parameters trainable, including those in the large language model, the vision-language projector, and the visual ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 18 (A.1 TRAINING DETAILS), p. 4 (2 METHOD), p. 5 (2 METHOD), p. 5 (2 METHOD), p. 6 (2 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 3 / 2 METHOD - extractive body cue:** Section 2.3 discusses the training recipe that includes embodied reasoning pretraining and vision-language-action finetuning.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Meanwhile, a significant body of work extends vision-language models (VLMs) into vision-language-action models (VLAs) (Kim et al., 2024; Intelligence et al., 2025; Driess et al., ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 4 / 2 METHOD - extractive body cue:** During inference, we denoise the actions based on the image observation, language instruction, as well as the current robot state.
 - **p. 18 / A.1 TRAINING DETAILS - extractive body cue:** Configurations Values LLM sequence length 16, 384 Dynamic Resolution True Patch Size 448 Max Patch num 12 Freeze vision tower False Freeze multimodal projector False ...
 - **p. 3 / 2 METHOD - extractive body cue:** Section 2.3 discusses the training recipe that includes embodied reasoning pretraining and vision-language-action finetuning.
-- **p. 18 / A.1 TRAINING DETAILS - extractive body cue:** Configurations Values LLM sequence length 16, 384 Dynamic Resolution True Patch Size 448 Max Patch num 12 Freeze vision tower False Freeze multimodal projector False ...
 - **p. 9 / 3 EXPERIMENTS - extractive body cue:** 3.3 ABLATION STUDIES In this section, we adopt ablation studies regarding three key hyperparameters for VLA end-to-end training, i.e.,, the predicted action length P, the ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, training, phase, fine-tune, InternVL3, auto-regressive, language, modeling, loss, encoded, corresponding, encoders, then, projected, linear, projection, layer, same, embedding, space.
 - **Relevant PDF headings:** 2 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 7 / 3 EXPERIMENTS - extractive body cue:** In the following section, we further examine how these enhanced reasoning capabilities, embedded within VLMs, translate into improved performance when fine-tuned for downstream Vision-Language Action ...
 - **p. 22 / A.3 SIMULATION EVALUATION DETAILS - extractive body cue:** We fine-tune and evaluate the VLA models using various base models within the SimplerEnv simulation environment.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD), p. 4 (2 METHOD), p. 6 (2 METHOD), p. 18 (A.1 TRAINING DETAILS), objective p. 5 (2 METHOD), p. 4 (2 METHOD), p. 6 (2 METHOD), p. 18 (A.1 TRAINING DETAILS), p. 5 (2 METHOD), p. 18 (A.1 TRAINING DETAILS), temporal p. 5 (2 METHOD), p. 6 (2 METHOD), p. 5 (2 METHOD), p. 19 (A.2 DATA GENERATION DETAILS), p. 2 (3. Paint the canvas), p. 6 (2 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

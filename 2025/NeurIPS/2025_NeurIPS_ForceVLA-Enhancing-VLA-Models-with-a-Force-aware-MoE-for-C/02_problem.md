@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 8 | Figure 6: Variants of generalization settings used in our experiments. (a-b) Different object geome- tries; (c) variation in ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Visual Occlusion Unstable Socket Average π0-base[10] w/o F 48.00% 10.00% 66.67% 60.00% 10.00% 38.93% π0-base[10] w/ F 32.00% ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ tactile writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), interface p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), objective p. 3 (1 Introduction), p. 5 (1 Introduction), p. 4 (1 Introduction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

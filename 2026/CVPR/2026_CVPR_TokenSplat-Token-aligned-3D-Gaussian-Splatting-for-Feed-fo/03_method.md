@@ -58,7 +58,6 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 - **p. 4 / 3.4. Token Fusion for Scene Reconstruction - extractive body cue:** Features are then progressively fused from deep to shallow layers using the residual fusion module RF composed of residual blocks and upsampling: F fusion nl ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 - **p. 4 / 3.3. Asymmetric Dual-Flow Decoder - extractive body cue:** Camera tokens attend to their corresponding image tokens to extract geometric cues for pose estimation.
 - **p. 1 / 1. Introduction - extractive body cue:** More recent posefree frameworks [15, 31, 36, 44] attempt to infer both camera poses and 3D structure directly from sparse unposed images.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 - **p. 6 / 4.2. Experimental Results - extractive body cue:** This gain stems from our directionally constrained ADF-Decoder, which enforces disentangled interaction between camera and image tokens, leading to more stable pose learning.
 - **p. 8 / 4.3. Ablation Analysis - extractive body cue:** Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with SSIM ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** outputs, decoders, then, utilized, parallel, branches, Camera, Pose, Estimation, Head, predicts, per-view, transformations, while, Token-aligned, Gaussian, Prediction, module, aggregates, multi-view.
 - **Relevant PDF headings:** 3. Method (p. 2); 3.2. Architecture (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for
 - **p. 6 / 4.2. Experimental Results - extractive body cue:** FreeSplat generates numerous scattered Gaussians, while NoPoSplat and SPFSplat show poor scalability and fail to generalize to unseen distant viewpoints.
 - **p. 6 / 4.2. Experimental Results - extractive body cue:** On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of TokenSplat ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for Scene Reconstruction), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 3 (3.2. Architecture), p. 2 (3.1. Problem Formulation), p. 5 (3.6. Loss Functions), objective p. 5 (3.6. Loss Functions), p. 5 (3.6. Loss Functions), p. 3 (3.1. Problem Formulation), p. 3 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.3. Asymmetric Dual-Flow Decoder), p. 4 (3.4. Token Fusion for Scene Reconstruction), temporal p. 2 (3.1. Problem Formulation), p. 3 (3.2. Architecture), p. 5 (4.1. Experimental Settings), p. 5 (4. Experiment), p. 6 (4.2. Experimental Results), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

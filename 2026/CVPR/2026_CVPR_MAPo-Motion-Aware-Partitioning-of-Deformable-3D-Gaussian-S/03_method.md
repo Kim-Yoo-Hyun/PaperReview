@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Me
 - **p. 5 / 4.1.1. Dynamic Score Calculation - extractive body cue:** Effectiveness of temporal partitioning strategy and consistency loss on a toy example.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4. Method), p. 4 (4. Method), p. 5 (4.1.1. Dynamic Score Calculation), p. 5 (4.2. Cross-Frame Consistency Loss), p. 6 (4.2. Cross-Frame Consistency Loss).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Me
 - **p. 3 / 3. Preliminaries - extractive body cue:** 3D Gaussian Splatting 3D Gaussian Splatting introduces an explicit point-based representation where each point in the point cloud is equipped with four fundamental properties: mean ...
 - **p. 3 / 3. Preliminaries - extractive body cue:** For a given viewpoint, all 3DGs are first projected onto the 2D image plane.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,16 +90,12 @@ PDF body method statement (p. 5 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Me
 - **p. 6 / 4.2. Cross-Frame Consistency Loss - extractive body cue:** We apply Lcross only for training views whose frame indices are within 5 frames of any partition boundary.
 - **p. 7 / 5.2. Implementation Details - extractive body cue:** Storage, training time, and FPS are calculated on discussion.
 - **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** Storage, training time, and FPS are measured on flame salmon frag1.
-- **p. 7 / 5.2. Implementation Details - extractive body cue:** Storage, training time, and FPS are calculated on discussion.
 - **p. 7 / 5.2. Implementation Details - extractive body cue:** Method PSNR↑ SSIM↑ LPIPS↓ Storage↓ Training Time↓ FPS↑ D3DGS 25.81 0.890 0.233
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ensure, temporal, smoothness, introduce, cross-frame, consistency, loss, Lcross, consists, components, Lcurrent, Lgt, main, dynamic, score-based, partitioning, strategy, Since, only, enforces.
 - **Relevant PDF headings:** 4. Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 5 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Me
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. Ablation study on the Lcross. We visualize how Lcross improves temporal consistency and rendering quality across a par- tition boundary (frames 74-75). The ...
 - **p. 7 / 5.3.2. Qualitative Comparisons - extractive body cue:** The comparison highlights that baseline methods often produce degraded results in areas with complex or rapid motion.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Method), p. 5 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Method), p. 6 (4.2. Cross-Frame Consistency Loss), p. 6 (4.2. Cross-Frame Consistency Loss), objective p. 5 (4.1.3. Static 3D Gaussian Partitioning), p. 6 (4.2. Cross-Frame Consistency Loss), p. 4 (4. Method), p. 4 (4. Method), p. 5 (4.1.1. Dynamic Score Calculation), temporal p. 5 (4.2. Cross-Frame Consistency Loss), p. 5 (4.2. Cross-Frame Consistency Loss), p. 6 (4.2. Cross-Frame Consistency Loss), p. 7 (5.3.1. Quantitative Comparisons), p. 1 (Abstract), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

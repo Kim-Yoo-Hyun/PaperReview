@@ -65,8 +65,6 @@ PDF body contribution framing (p. 4 (V. MetHop), p. 4 (V. MetHop), p. 1 (Abstrac
 | body cue at p. 8 | This is particularly problematic for downstream data curation, as one often does not have ground truth labels to ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | DemInf's performance is generally robust to this parameter, with no substantial change in performance in both HersheyKiss and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Iyrropucrion), p. 2 (A. Imitation Learning), p. 3 (B. Demonstration Curation), p. 4 (B. Maximizing Marginal Action Entropy). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ il writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Iyrropucrion), p. 3 (B. Demonstration Curation), p. 3 (B. Demonstration Curation), p. 4 (V. MetHop), p. 4 (I N\), interface p. 1 (1. Iyrropucrion), p. 2 (A. Imitation Learning), p. 3 (B. Demonstration Curation), p. 4 (B. Maximizing Marginal Action Entropy), objective p. 3 (A. Minimizing Conditional Action Entropy), p. 3 (A. Minimizing Conditional Action Entropy), p. 18 (C. Implementation Derails).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

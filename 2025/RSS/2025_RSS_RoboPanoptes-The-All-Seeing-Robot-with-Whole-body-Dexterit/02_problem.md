@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. Ivrropuction), p. 1 (Abstract), p. 3 (IV
 | body cue at p. 4 | + Unreliable cameras: A system of many cameras is prone to unpredictable failures and delays, requiring the policy ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | Since our demonstration data contains behaviors of recovering from a sub-goal failure (c.g. failed grasps), we observe that ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 4 (V. DATA COLLECTION INTERFACE), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 4 (IV. MODULAR HARDWARE DESIGN), p. 2 (1. Ivrropuction), p. 3 (C. Whole-body Sensing), p. 1 (1. Ivrropuction), p. 1 (Abstract), interface p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 4 (V. DATA COLLECTION INTERFACE), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

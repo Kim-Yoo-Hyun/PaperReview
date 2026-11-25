@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (V. EVALUATIO
 - **p. 6 / V. EVALUATION - extractive body cue:** Intuitively, compressing new knowledge into fewer model parameters reduces the robot's ability to learn novel tasks.
 - **p. 7 / V. EVALUATION - extractive body cue:** 5: Increasing the dynamic expansion threshold γ reduces the number of added adapters and, consequently, the capability to learn new tasks (lower FWT), but does ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: CLARE autonomously and continually injects lightweight adapters into selected layers of a pre-trained vision-language-action model (VLA). During inference, the most relevant adapters are ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (V. EVALUATIO
 | CLARE achieves the highest overall performance, as measured by AUC, and demonstrates strong capabilities to acquire new skills without forgetting. "NA" indicates not available. | definition/direction/unit from same section | p. 7 (V. EVALUATION) |
 | The policy generates chunks of H = 16 end-effector displacement actions, and the first h = 8 actions are sent to a Cartesian controller ... | definition/direction/unit from same section | p. 5 (V. EVALUATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (V. EVALUATIO
 | LIBERO-Long LIBERO-Goal LIBERO-Spatial Method AUC ↑ FWT ↑ NBT ↓ AUC ↑ FWT ↑ NBT ↓ AUC ↑ FWT ↑ NBT ↓ SeqFFT 22.4±0.3 ... | comparison identity and matched condition | p. 7 (V. EVALUATION) |
 | CLARE achieves the highest overall performance, as measured by AUC, and demonstrates strong capabilities to acquire new skills without forgetting. "NA" indicates not available. | comparison identity and matched condition | p. 7 (V. EVALUATION) |
 | Fig. 1: CLARE autonomously and continually injects lightweight adapters into selected layers of a pre-trained vision-language-action model (VLA). During inference, the most relevant adapters ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (V. EVALUATIO
 | body limitation/failure cue | 5: Increasing the dynamic expansion threshold γ reduces the number of added adapters and, consequently, the capability to learn new tasks (lower FWT), but ... | p. 7 (V. EVALUATION) |
 | body limitation/failure cue | As shown in Figure 4, CLARE can sequentially learn and retain 40 distinct tasks, demonstrating the scalability and robustness of our autonomous routing strategy. | p. 6 (V. EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (V. EVALUATIO
 | We employ a lightweight encoder-decoder structure with ReLU activation functions for the adapters. | p. 3 (IV. METHODOLOGY) |
 | We pair each layer with an expanding set of autoencoder discriminators Dℓ= {D1 ℓ, D2 ℓ, . . . }, all of which receive ... | p. 4 (IV. METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. EVALUATION - extractive body cue:** In contrast, ER cannot avoid catastrophic forgetting of several tasks (e.g., T1 and T7), yielding an NBT of 23%.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (V. EVALUATIO
 - **p. 6 / V. EVALUATION - extractive body cue:** As shown in Figure 4, CLARE can sequentially learn and retain 40 distinct tasks, demonstrating the scalability and robustness of our autonomous routing strategy.
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 7 (V. EVALUATION), metrics p. 10 (Figure/Table caption), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (Figure/Table caption), p. 5 (V. EVALUATION), p. 7 (V. EVALUATION), baselines p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 10 (Figure/Table caption), p. 7 (V. EVALUATION), p. 7 (V. EVALUATION), p. 1 (Figure/Table caption), results p. 10 (Figure/Table caption), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 7 (V. EVALUATION), p. 5 (V. EVALUATION), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

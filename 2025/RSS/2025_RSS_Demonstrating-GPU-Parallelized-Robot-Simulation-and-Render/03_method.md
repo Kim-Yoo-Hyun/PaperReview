@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation
 - **p. 3 / 5) Scalable Dataset Generation Pipeline from Few - extractive body cue:** For more complex tasks without easily defined motion planning scripts or reward functions, ManiSkill3 relies on ‘online learning from demonstrations algorithms like RLPD [2] and ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 7 (A. Reinforcement Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation
 - **p. 4 / B. GPU Parallelized Simulation and Rendering - extractive body cue:** Fig, 3: Comparison of ManiSkill3 (Top row) and Isaac Lab (Bottom row) parallel rendering 640x480 RGB and depth image outputs of the Cartpole benchmark task
 - **p. 1 / 1. INTRODUCTION - extractive body cue:** As a result, algorithms like reinforcement learning (RL) that operate on visual input train too slowly to be practical.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation
 - **p. 8 / A. Reinforcement Learning - extractive body cue:** The trained policy is then zero-shot deployed on the real robot, using the same controller the policy was trained on in simulation,
 - **p. 1 / 1. INTRODUCTION - extractive body cue:** Importantly ManiSkill3 maintains extremely low GPU memory usage, typically 2-3x lower than that of other simulators which enables on device visual RL and larger neural ...
 - **p. 8 / A. Reinforcement Learning - extractive body cue:** 11: Wall-clock training time of PPO on GPU/CPU simulation showing the average success rate over time across 5 seeds.
-- **p. 3 / B. GPU Parallelized Simulation and Rendering - extractive body cue:** RL replay buffers or larger neural network models such as large vision language action models. ‘Training and inference can be kept extremely optimized on a ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, open, source, ManiSKilI, fastest, state-visual, GPU, parallelized, robotics, simulator, contact-rich, physics, targeting, generalizable, manipulation, replay, buffers, larger, neural, network.
 - **Relevant PDF headings:** A. Proximal Policy Optimization (PPO) (p. 21); B. Temporal Difference Learning for Model Predictive Con (p. 21); B. Vision-Language Action (VLA) Model Baselines (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +116,13 @@ PDF body method statement (p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation
 - **p. 7 / A. Reinforcement Learning - extractive body cue:** We also support evaluating (but not training) several vision-language action (VLA) models, namely Octo [40], RT-X [14], and RDT-IB [32 We leave to future work ...
 - **p. 8 / A. Reinforcement Learning - extractive body cue:** During simulation training and real-world evaluation, observations are restricted to RGB inputs and robot joint positions; ‘no demonstrations or privileged state information such as cube ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 3 (B. GPU Parallelized Simulation and Rendering), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (4) Simple Unified API to Easily Manage and Build), p. 7 (A. Reinforcement Learning), p. 8 (A. Reinforcement Learning), objective p. 7 (A. Reinforcement Learning), p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), temporal p. 3 (B. GPU Parallelized Simulation and Rendering), p. 1 (Abstract), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 4 (B. GPU Parallelized Simulation and Rendering), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

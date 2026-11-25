@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 - **p. 8 / 4.4. Ablation Studies - extractive body cue:** Moreover, as shown in the rows (2) and (4) of Table 3, applying the CEN module increases the PSNR metric by more than 5 dB ...
 - **p. 5 / 4.1. Implementation Details - extractive body cue:** These keyframes act as the training set, with remaining frames used as the testing set.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Estimated CRF and exposure-controlled renderings. Top row: recovered CRF curves (i.e., ours and HDR-GS [2]) and ren- dered scene radiance map. Bottom row: ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 | Moreover, with the improvement of localization accuracy, the PSNR metric is further enhanced. | definition/direction/unit from same section | p. 8 (4.4. Ablation Studies) |
 | The learning rate for Gaussian parameters follows PhotoSLAM [14]. | definition/direction/unit from same section | p. 5 (4.1. Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 | Figure 6. Qualitative comparison of diverse systems from EuRoC MAV and our self-collected dataset. CEN's effectiveness; 4) ORB-SLAM3 [3], a classic hand- crafted feature-based ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | We observe that, compared with HDR-GS, the proposed CEN can achieve higher-quality exposure-controlled renderings. | comparison identity and matched condition | p. 8 (Datasets) |
 | Section 4.4 reports ablation studies. | comparison identity and matched condition | p. 5 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 | body limitation/failure cue | Figure 3. Feature detection in illumination-varying scene. handcrafted features [3] lack sufficient robustness to such appearance variations, reducing the reliability of residual E(k, j). ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Overall, these comprehensive evaluation results validate the effectiveness of our illumination-robust localization pipeline. | p. 7 (4.3. Results and Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 | The learning rate for Gaussian parameters follows PhotoSLAM [14]. | p. 5 (4.1. Implementation Details) |
 | The learning rate for the MLP and exposure time are set to 0.001 and 0.02, respectively. | p. 5 (4.1. Implementation Details) |
 | We color code eac column as best and second best. 'X' denotes running failure in our experiments. '-' denotes no results, as we use ... | p. 6 (Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Results and Evaluation), p. 7 (4.3. R
 - **p. 7 / 4.3. Results and Evaluation - extractive body cue:** Overall, these comprehensive evaluation results validate the effectiveness of our illumination-robust localization pipeline.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), p. 5 (4.1. Implementation Details), metrics p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 1 (Figure/Table caption), p. 5 (4.1. Implementation Details), p. 3 (Figure/Table caption), baselines p. 5 (4.2. Experiment Setup), p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 6 (Figure/Table caption), p. 8 (Datasets), p. 5 (4. Experiments), results p. 7 (4.3. Results and Evaluation), p. 7 (4.3. Results and Evaluation), p. 8 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), p. 4 (Figure/Table caption), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

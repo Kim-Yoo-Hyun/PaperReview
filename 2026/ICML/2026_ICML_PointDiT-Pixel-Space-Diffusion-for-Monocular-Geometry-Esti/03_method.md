@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 - **p. 4 / 3.1. Point Map Generation with Flow Matching - extractive body cue:** Since this radius is only a synthetic proxy for the true depth, we down-weight sky pixels in the training loss rather than masking them out ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3.3. Training), p. 3 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 5 (3.3. Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 - **p. 3 / 3. Approach - extractive body cue:** Our method learns to transport a simple Gaussian noise distribution to the data distribution of point maps, conditioned on the input image.
 - **p. 5 / 3.4. Inference - extractive body cue:** At each step t, we predict the clean data ˆx, derive the velocity ˆvt, and update the state: zt+∆t ←zt + ∆t · ˆvt.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 - **p. 8 / 4.4. Evaluation Results - extractive body cue:** Thanks to its flow matching formulation, PointDiT can also benefit from additional inference steps using the same model.
 - **p. 10 / 4.5. Ablation and Analysis - extractive body cue:** To save compute, the 512 × 512 models in this part are fine-tuned on a 6dataset subset (Hypersim, VKITTI2, UrbanSyn, Synscapes, TartanAir, and OmniWorldGame; 1.48M ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** creates, train-test, discrepancy, since, inference, always, starts, model, then, struggle, initiate, flow, trajectory, prior, Lin, inherent, ambiguities, single-image, setting, matching.
 - **Relevant PDF headings:** 3. Approach (p. 3); 3.2. Architecture (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. 
 - **p. 7 / 4.4. Evaluation Results - extractive body cue:** PointDiTL attains comparable boundary quality at lower cost, and our smallest variant, PointDiT-B, stays competitive with fewer parameters.
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 6. Training cost. Number of epochs, H100 GPUs, and wall-clock time for the pre-training (256 × 256) and fine-tuning (512 × 512) stages of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. Architecture), p. 4 (3.2. Architecture), p. 4 (3.2. Architecture), p. 6 (3.4. Inference), objective p. 5 (3.3. Training), p. 5 (3.3. Training), p. 3 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), p. 4 (3.1. Point Map Generation with Flow Matching), temporal p. 8 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 4 (3.2. Architecture), p. 4 (3.1. Point Map Generation with Flow Matching), p. 5 (3.3. Training).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

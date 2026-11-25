@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 13 / 4 Experiments - extractive body cue:** The red mark signifies the pose deviates severely from the expert demonstration, whereas the green mark indicates that the pose aligns with the expert trajectory.
 - **p. 13 / 4 Experiments - extractive body cue:** In contrast, ManiGaussian returns to the red square and successfully slides the square to the yellow target, owing to that our method can correctly understand ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Consider the human instruction "stack two rose blocks", where the task is con- sidered successful if two rose blocks are stacked upon the ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | In contrast, ManiGaussian returns to the red square and successfully slides the square to the yellow target, owing to that our method can correctly ... | definition/direction/unit from same section | p. 13 (4 Experiments) |
 | This qualitative result demonstrates that our ManiGaussian learns the intricate scene-level dynamics successfully. | definition/direction/unit from same section | p. 14 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Then we compare our method with the state-of-the-art approaches to show the superiority in success rate (Section 4.2), and conduct an ablation study to ... | comparison identity and matched condition | p. 10 (4 Experiments) |
 | Planning Long Tools Motion Screw Occlusion Average ✗ ✗ ✗ 36.0 2.0 25.3 52.0 4.0 28.0 23.6 ✓ ✗ ✗ 46.0 4.0 52.0 52.0 ... | comparison identity and matched condition | p. 11 (4 Experiments) |
 | We first implement a vanilla baseline without any proposed technique, where we directly train the representation model and the action decoder to predict the ... | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | body limitation/failure cue | However, it ignores the scene-level spatiotemporal dynamics that demonstrate the interaction among objects, and the predicted actions still fail to achieve human goals because ... | p. 11 (4 Experiments) |
 | body limitation/failure cue | Planning Long Tools Motion Screw Occlusion Average ✗ ✗ ✗ 36.0 2.0 25.3 52.0 4.0 28.0 23.6 ✓ ✗ ✗ 46.0 4.0 52.0 52.0 ... | p. 11 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | For dynamic Gaussian Splatting, we leverage a Gaussian regressor to infer the Gaussian distribution of geometric and semantic features in the scene based on ... | p. 6 (3 Approach) |
 | (2) The positions, colors, rotations, scales, and opacities with the superscript t represent their counterparts at the tth step in the propagation, and f ... | p. 7 (3 Approach) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 5 Conclusion - extractive body cue:** The limitations stem from the necessity of multiple view supervision with camera calibration for the Gaussian Splatting framework.
@@ -171,9 +150,8 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 11 / 4 Experiments - extractive body cue:** Planning Long Tools Motion Screw Occlusion Average ✗ ✗ ✗ 36.0 2.0 25.3 52.0 4.0 28.0 23.6 ✓ ✗ ✗ 46.0 4.0 52.0 52.0 24.0 ...
 
 - **Evidence anchors reviewed:** datasets p. 11 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 13 (Figure/Table caption), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -62,8 +62,6 @@ PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 6 | (a) Foot stumble Foot slip Normal walk Normal walk Normal walk Climb upstairs Go downstairs Irregular foothold Adaptation ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | 6 shows the robot's foot reflex when faced with foot stumbling and slipping. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ locomotion writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 2 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ), objective p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

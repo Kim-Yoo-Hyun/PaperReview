@@ -58,7 +58,6 @@ PDF body method statement (p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 
 - **p. 5 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** This notation should not be confused with discrete dynamical systems, which denotes difference equations-those that are time discretized.
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 2 (Body text (section not recovered)), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (2 A Learnable Nonlinear Attractor Systems), p. 5 (2 A Learnable Nonlinear Attractor Systems).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 
 - **p. 7 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** Given that equation 2.2 is a linear differential equation, there exists a simple exponential function that relates time and the state x of this equation.
 - **PDF p. 7, Eq. (2.3) (DOC-QA2 원문 대조):** Forcing term f(x)=(ΣᵢΨᵢ(x)wᵢ/ΣᵢΨᵢ(x))·x(g−y₀). Phase x는 목표 도달 시 forcing을 소멸시키며 g−y₀는 movement amplitude scaling에 사용한다. 이 절의 전개는 g≠y₀를 가정한다.
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 
 - **p. 3 / 1 Introduction - extractive body cue:** In this letter, we propose a generic modeling approach to generate multidimensional systems of weakly nonlinear differential equations to 1With low-dimensional, we refer to systems ...
 - **p. 6 / 2 A Learnable Nonlinear Attractor Systems - extractive body cue:** Since the forcing term is chosen to be nonlinear in the state of the differential equations and since it transforms the simple dynamics of the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Thus, novel, component, introduce, replacement, time, means, following, first-order, linear, dynamics, where, constant, sections, first, modeling, section, then, examine, theoretical.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,12 @@ PDF body method statement (p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 
 - **p. 29 / 3 Evaluations - extractive body cue:** Without coupling terms, the dynamical system would just continue its time evolution, regardless of what happens to the point mass.
 - **p. 30 / 3 Evaluations - extractive body cue:** Without the coupling terms, y would already have evolved all the way to the goal position, and the error between ya and y would have ...
 - **p. 30 / 3 Evaluations - extractive body cue:** Essentially the perturbation simply delays the time evolution of the dynamical system without any large motor commands leading to possible harm. system, that is, both ...
-- **p. 24 / 3 Evaluations - extractive body cue:** Those online modulations are among the most important properties offered by a dynamical systems approach, and these properties cannot easily be replicated without the attractor ...
 - **p. 26 / 3 Evaluations - extractive body cue:** Trajectories starting at points where the direct line to the goal does not intersect with the obstacle are only minimally curved around the obstacle, while ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 6 (2 A Learnable Nonlinear Attractor Systems), objective p. 2 (Body text (section not recovered)), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (2 A Learnable Nonlinear Attractor Systems), p. 5 (2 A Learnable Nonlinear Attractor Systems), temporal p. 22 (3 Evaluations), p. 24 (3 Evaluations), p. 29 (3 Evaluations), p. 29 (3 Evaluations), p. 8 (2 A Learnable Nonlinear Attractor Systems), p. 16 (2.1.3 Stability Properties. Stability of our dynamical systems equations).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

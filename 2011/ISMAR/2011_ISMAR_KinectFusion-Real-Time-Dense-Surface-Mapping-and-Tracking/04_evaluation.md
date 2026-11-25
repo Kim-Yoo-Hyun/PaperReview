@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** The Kinect sensor was placed in a fixed location observing a tabletop scene mounted on a turntable.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For the purposes of our system, if the reconstruction volume is set to span solely the region of the rotating scene, the resulting depth image ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Example output from our system, generated in real-time with a handheld Kinect depth camera and no other sensing infrastructure. Normal maps (colour) and ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | Figure 4: A slice through the truncated signed distance volume showing the truncated function F > µ (white), the smooth distance field around the ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 1: Example output from our system, generated in real-time with a handheld Kinect depth camera and no other sensing infrastructure. Normal maps (colour) ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | 4.1 Metrically Consistent Reconstruction Our tracking and mapping system provides a constant time algorithm for a given area of reconstruction, and we are interested ... | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | But the frame-model tracking results in drift-free operation without explicit global optimisation. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Figure 1: Example output from our system, generated in real-time with a handheld Kinect depth camera and no other sensing infrastructure. Normal maps (colour) ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | body limitation/failure cue | The main failure case in standard indoor scenes is when the sensor is faced by a large planar scene which fills most of its ... | p. 9 (4 EXPERIMENTS) |
 | body limitation/failure cue | If either test fails, the system is placed into re-localisation mode. | p. 7 (3.1 Preliminaries) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | Our GPU based implementation uses all the available data at frame-rate. | p. 4 (3 METHOD) |
 | 3.4 Surface Prediction from Ray Casting the TSDF With the most up-to-date reconstruction available comes the ability to compute a dense surface prediction by ... | p. 5 (3.1 Preliminaries) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** 4.3 Observations and Failure Modes Our system is robust to a wide range of practical conditions in terms of scene structure and camera motion.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 - **p. 7 / 3.1 Preliminaries - extractive body cue:** If either test fails, the system is placed into re-localisation mode.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 1 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 - **p. 8 / 4.2. Results - extractive body cue:** However, by leveraging the geometry diffusion prior, the reconstructed scenes exhibit enhanced geometry quality.
 - **p. 8 / 4.2. Results - extractive body cue:** Real-S Real-L PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ PSNR↑ LPIPS↓ FID↓ Depth L2 ↓ (i) (Masked NeRF) 17.121 0.761 353.766 3.089 24.189 0.222 137.960 0.040 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of our MVIP-NeRF with two state-of-the-art approaches, Remove-NeRF [35] and SPIn-NeRF [17]. Existing methods heavily depend on explicit RGB and depth inpainting ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 | Figure 1. Comparison of our MVIP-NeRF with two state-of-the-art approaches, Remove-NeRF [35] and SPIn-NeRF [17]. Existing methods heavily depend on explicit RGB and depth ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 4. Effect of multi-view score distillation. The first row shows inpainting results without the multi-view score, while the second row shows the results ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 | Table 2. Ablation analysis. Our method is best compared to different variants of our method in inpainting the missing regions of the scene. Columns ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 1. Comparison of our MVIP-NeRF with two state-of-the-art approaches, Remove-NeRF [35] and SPIn-NeRF [17]. Existing methods heavily depend on explicit RGB and depth ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Our MVIP-NeRF achieves superior performance compared to other methods for several reasons. | comparison identity and matched condition | p. 7 (4.2. Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 | body limitation/failure cue | To assess geometric recovery, we compute the L2 errors between the depth maps rendered by our system and the (pseudo) ground-truth depth maps. | p. 6 (4.1. Experimental Setup) |
 | body limitation/failure cue | Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ... | p. 7 (4.2. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 | Rather than directly utilizing inconsistent 2D inpainting results as supervisions and resolving these inconsistencies post hoc, we employ two SDS losses to compute a ... | p. 4 (3.2. Problem formulation and overview) |
 | Nevertheless, the computed normals may exhibit some degree of noise, leading to an unclear geometric context. | p. 5 (3.4. Geometry Diffusion Prior) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** However, our work has several limitations: (i) the use of diffusion priors for iterative detail recovery affects efficiency, (ii) our method requires effort to tune ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (4.2. Results)
 - **p. 7 / 4.2. Results - extractive body cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), metrics p. 7 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Results), results p. 5 (Figure/Table caption), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 6 (4.2. Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

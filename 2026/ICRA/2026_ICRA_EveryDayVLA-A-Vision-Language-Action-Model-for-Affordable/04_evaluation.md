@@ -47,8 +47,6 @@
 - **p. 6 / V. RESULTS - extractive body cue:** Although our model performs similarly to [19] on picking and placing blocks (most common task in the collected dataset), the latter struggles when placing to ...
 - **p. 6 / V. RESULTS - extractive body cue:** Generalization results On generalization and robustness evaluation of unseen tasks, environments and conditions (Table IV), our model does the best.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. EveryDayVLA system. Top: EveryDayVLA finetunes a VLA for a low-cost manipulator to generate continuous and discrete actions, which are passed to an adaptive ...
@@ -78,8 +76,6 @@
 | THE BEST SCORES ARE HIGHLIGHTED IN BOLD, AND THE SECOND-BEST SCORES ARE UNDERLINED. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | Fig. 1. EveryDayVLA system. Top: EveryDayVLA finetunes a VLA for a low-cost manipulator to generate continuous and discrete actions, which are passed to an ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@
 | Baselines On the LIBERO simulation benchmark, we report success rates across all four task suites, comparing against Diffusion Policy [3], Octo [5], DiT Policy ... | comparison identity and matched condition | p. 4 (IV. EXPERIMENTS) |
 | Results on LIBERO simulation benchmark Across the four LIBERO suites, our method trails the top-performing baseline by an average of 3.9 % (Table II). | comparison identity and matched condition | p. 5 (V. RESULTS) |
 | Our ensembler shows a 1.6% improvement in success rate compared to the next best method. | comparison identity and matched condition | p. 6 (V. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@
 | body limitation/failure cue | In real-world trials, we evaluate both in-distribution and out-of-distribution scenarios against OpenVLA and OpenVLA-OFT. | p. 4 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Method Inference Rate (Hz) ↑ Latency (sec) ↓ OpenVLA [19] 4.2 0.2396 OpenVLA-OFT [35] 109.7 0.0729 Oursli 54.2-108.4 0.0738 TABLE IV GENERALIZATION AND ROBUSTNESS ... | p. 5 (V. RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@
 | EveryDayVLA uses the Prismatic-7B VLM [45], which uses a two part visual encoder, containing pretrained SigLIP [46] and DinoV2 [47] models. | p. 3 (III. METHOD) |
 | Top: We benchmark our model with static distractors, and a cluttered scene where we add different objects, and vary the arrangement after every single ... | p. 5 (V. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / VI. CONCLUSIONS - extractive body cue:** We also experience limitations in executing fine-grained manipulation, which is due to the limited servo precision as well as relatively low number of expert demonstrations ...
@@ -156,6 +135,5 @@
 - **p. 5 / V. RESULTS - extractive body cue:** Method Inference Rate (Hz) ↑ Latency (sec) ↓ OpenVLA [19] 4.2 0.2396 OpenVLA-OFT [35] 109.7 0.0729 Oursli 54.2-108.4 0.0738 TABLE IV GENERALIZATION AND ROBUSTNESS TO ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), metrics p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (IV. EXPERIMENTS), baselines p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (V. RESULTS), p. 6 (V. RESULTS), results p. 4 (IV. EXPERIMENTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

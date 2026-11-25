@@ -50,7 +50,6 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 - **p. 4 / 3. Implementation Details - extractive body cue:** In this section we describe our network parameters and the loss function that we optimize for.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3. Implementation Details), p. 5 (3.2. Loss), p. 5 (3.2. Loss).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 - **p. 7 / Method - extractive body cue:** SubCNN is the best performing image only method, while AVOD-FPN, SECOND, and PointPillars are the only 3D object detectors that predict orientation.
 - **p. 1 / 1. Introduction - extractive body cue:** A lidar uses a laser scanner to measure the distance to the environment, thus generating a sparse point cloud representation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 - **p. 6 / 4.3. Data Augmentation - extractive body cue:** Each box is rotated (uniformly drawn from [-π/20, π/20]) and translated (x, y, and z independently drawn from N(0, 0.25)) to further enrich the training ...
 - **p. 5 / 3.2. Loss - extractive body cue:** To optimize the loss function we use the Adam optimizer with an initial learning rate of 2 ∗10-4 and decay the learning rate by a ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** total, localization, loss, Lloc, SmoothL1, Since, angle, cannot, distinguish, flipped, boxes, softmax, classification, discretized, directions, Ldir, enables, network, learn, heading.
 - **Relevant PDF headings:** Method (p. 6); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +104,10 @@ PDF body method statement (p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data A
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Failure cases on KITTI. Same visualize setup from Figure 3 but focusing on several common failure modes. Next, we use a simplified version ...
 - **p. 5 / 3.2. Loss - extractive body cue:** The total localization loss is: Lloc = X b∈(x,y,z,w,l,h,θ) SmoothL1 (∆b) Since the angle localization loss cannot distinguish flipped boxes, we use a softmax classification ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 6 (4.3. Data Augmentation), p. 7 (Method), p. 4 (3. Implementation Details), objective p. 5 (3.2. Loss), p. 5 (3.2. Loss), p. 4 (3. Implementation Details), temporal p. 5 (3.1. Network), p. 6 (Method), p. 1 (A PP), p. 1 (Abstract), p. 2 (A PP), p. 2 (A PP).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

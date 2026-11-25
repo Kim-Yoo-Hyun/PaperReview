@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 12 (5 Experimen
 - **p. 13 / 5 Experiments - extractive body cue:** Regarding color representation, we directly decode RGB values instead of spherical harmonic (SH) coefficients (No.5), as decoding coefficients may result in a degradation of generalization, ...
 - **p. 14 / 5 Experiments - extractive body cue:** We report the quantitative results obtained with different strategies on the Real Forward-facing dataset [28].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison with existing methods. (a) We present the generalizable re- sults on the Real Forward-facing dataset [28]. Compared with other competitors, our method ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 12 (5 Experimen
 | Moreover, performance can benefit from the adaptive density control module described in Sec. | definition/direction/unit from same section | p. 12 (5 Experiments) |
 | For per-scene optimization, one strategy is to optimize the entire pipeline, similar to NeRF-based methods. | definition/direction/unit from same section | p. 12 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 12 (5 Experimen
 | We compare our method with state-of-the-art generalizable NeRF methods [6,9,22,40,54], as well as the recent generalizable Gaussian method [4]. | comparison identity and matched condition | p. 10 (5 Experiments) |
 | When optimizing the entire pipeline, our method can achieve better performance with faster inference speeds compared to previous generalizable NeRF methods, and results comparable ... | comparison identity and matched condition | p. 12 (5 Experiments) |
 | Additionally, adopting the hybrid Gaussian rendering approach (No.4) notably enhances performance compared to utilizing splatting (No.2) or volume rendering (No.3) alone. | comparison identity and matched condition | p. 13 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 12 (5 Experimen
 | body limitation/failure cue | When optimizing the entire pipeline, our method can achieve better performance with faster inference speeds compared to previous generalizable NeRF methods, and results comparable ... | p. 12 (5 Experiments) |
 | body limitation/failure cue | Regarding color representation, we directly decode RGB values instead of spherical harmonic (SH) coefficients (No.5), as decoding coefficients may result in a degradation of ... | p. 13 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 12 (5 Experimen
 | Second, with the encoded point-wise features, we can decode them into Gaussian parameters through an MLP. | p. 3 (1 Introduction) |
 | On a single RTX 3090 GPU, compared with the vanilla 3D-GS, our proposed method achieves better novel view synthesis with similar rendering speed (300+ ... | p. 3 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 6 Conclusion - extractive body cue:** As our method relies on MVS for depth estimation, it inherits limitations from MVS, such as decreased depth accuracy in areas with weak textures or ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 12 (5 Experimen
 - **p. 13 / 5 Experiments - extractive body cue:** Regarding color representation, we directly decode RGB values instead of spherical harmonic (SH) coefficients (No.5), as decoding coefficients may result in a degradation of generalization, ...
 
 - **Evidence anchors reviewed:** datasets p. 11 (5 Experiments), p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 13 (5 Experiments), metrics p. 13 (5 Experiments), p. 14 (5 Experiments), p. 2 (Figure/Table caption), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), baselines p. 13 (Figure/Table caption), p. 12 (5 Experiments), p. 2 (Figure/Table caption), p. 10 (5 Experiments), p. 12 (5 Experiments), p. 13 (5 Experiments), results p. 13 (Figure/Table caption), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 2 (Figure/Table caption), p. 11 (5 Experiments), p. 14 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (b) Based on the optimized 3DGS and training viewpoints, we generate virtual camera trajectories, and enhance the rendered views using our diffusion-based enhancement model.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** Overview of the proposed framework for scene exploration.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **p. 4 / 3.3. Virtual view sampling - extractive body cue:** (b) Based on the optimized 3DGS and training viewpoints, we generate virtual camera trajectories, and enhance the rendered views using our diffusion-based enhancement model.
 - **PDF p. 4, Fig. 2(c) (DOC-QA2 원문 대조):** 원래 training viewpoints와 diffusion으로 보강한 virtual viewpoints를 함께 사용해 scene을 추가 최적화한다. 뒤에 붙었던 숫자·기호는 인접 Fig. 3의 정보량 도식에서 섞인 것으로 이 문장에서 제거했다.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, simple, rasterization-based, algorithm, construct, occupancy, grid, camera, trajectories, maximizes, information, gain, sampled, trajectory, Trn, consists, progressively, shifting, virtual, viewpoints.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview
 - **p. 8 / 5.3. Ablation study - extractive body cue:** Ablations study on finetuning methods.
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** After generating the pseudo observation set, we fine-tune 3D Gaussians for 15K iterations, applying densification until 9K, with the same scheduling as 3DGS.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview), p. 4 (3.3. Virtual view sampling), p. 4 (3.3. Virtual view sampling), objective p. 3 (3.1. Overview), p. 3 (3.2. Scene initialization), p. 4 (3.3. Virtual view sampling), p. 4 (3.3. Virtual view sampling), temporal p. 3 (3.2. Scene initialization), p. 4 (3.3. Virtual view sampling), p. 6 (5.1. Experimental Setup), p. 1 (Body text (section not recovered)), p. 1 (Abstract), p. 2 (2.1. Novel view synthesis).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

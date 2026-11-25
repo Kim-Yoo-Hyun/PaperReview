@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 - **p. 5 / IV. RESULTS - extractive body cue:** All networks were trained for fifty million simulation timesteps, and each iteration we sampled about fifty thousand timesteps from the simulated environment.
 - **p. 4 / IV. RESULTS - extractive body cue:** Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, each ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
@@ -70,8 +68,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 | Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, ... | definition/direction/unit from same section | p. 4 (IV. RESULTS) |
 | Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -80,13 +76,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 | 5: Reward curve of LSTM and FF networks during training without dynamics randomization. | comparison identity and matched condition | p. 5 (IV. RESULTS) |
 | As can be seen in Figure 5, when trained without dynamics randomization, LSTM networks attain a significantly higher reward than feedforward networks, with surprisingly ... | comparison identity and matched condition | p. 5 (IV. RESULTS) |
 | Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -118,8 +107,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 | body limitation/failure cue | The policies were learned and tested first in simulation, then transferred to the robot, demonstrating the robustness and promise of this approach. | p. 6 (V. CONCLUSION) |
 | body limitation/failure cue | We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I. | p. 5 (IV. RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -131,14 +118,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 | Compute advantage estimates ˆAbuff. for epoch=1,2, ... | p. 4 (III. METHOD) |
 | Pseudocode of the recurrent version of the algorithm that we used can be seen in Algorithm 1. | p. 4 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
@@ -146,6 +125,5 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Fi
 - **p. 5 / IV. RESULTS - extractive body cue:** We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), metrics p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 4 (IV. RESULTS), p. 1 (Figure/Table caption), baselines p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption), results p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

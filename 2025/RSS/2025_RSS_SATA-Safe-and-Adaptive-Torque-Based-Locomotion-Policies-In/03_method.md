@@ -51,7 +51,6 @@ PDF body method statement (p. 5 (A. Implementation of the Growth Mechanism), p. 
 - **p. 5 / IV. GROWTH-BASED TRAINING - extractive body cue:** Our strategy also aligns conceptually with reward scheduling techniques, where the learning signal evolves in tandem with the agent's growing capabilities (70, 71].
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 5 (A. Implementation of the Growth Mechanism), p. 
 - **p. 4 / A. Biomechanical Modet - extractive body cue:** 3) Internal State Model: Our internal state model does not directly participate in torque calculation but serves as a feedback mechanism to provide the robot ...
 - **p. 5 / A. Implementation of the Growth Mechanism - extractive body cue:** Instead of granting the policy full access to the action space from the star of training, we propose that partially limiting the robot's abilities can ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 5 (A. Implementation of the Growth Mechanism), p. 
 - **p. 6 / A. Implementation of the Growth Mechanism - extractive body cue:** We utilize Proximal Policy Optimization (PPO) to train the control policy, The hyperparameters and neural network architecture are consistent with [33]. including a multilayer perceptron ...
 - **p. 6 / A. Implementation of the Growth Mechanism - extractive body cue:** ‘Domain randomization is applied during training to simulate real-world variability. ‘The specific randomization settings are as follows: Added base mass: Randomly increased by up to ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Instead, granting, policy, full, access, action, space, star, training, partially, limiting, robot, abilities, promote, more, efficient, exploration, Additionally, gradually, increasing.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 5 (A. Implementation of the Growth Mechanism), p. 
 - **p. 9 / 1 Saco case - extractive body cue:** [Locomotion on wet slippery surfaces, showing both sucess (a) and failure (b), Even when the foot ofthe robot sip and fall down in Tile cases, ...
 - **p. 9 / 1 Saco case - extractive body cue:** In contrast, Figure 11b shows a failure case, where the robot is given an abrupt command on the slippery surface.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (A. Implementation of the Growth Mechanism), p. 5 (IV. GROWTH-BASED TRAINING), p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism), objective p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism), p. 5 (IV. GROWTH-BASED TRAINING), p. 5 (IV. GROWTH-BASED TRAINING), temporal p. 5 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism), p. 4 (A. Biomechanical Modet), p. 2 (1. Iyrropuction), p. 5 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -53,7 +53,6 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 - **p. 15 / A.3.4 Training Data - extractive body cue:** An updated version of the Mujoco HAPTIX system is used to collect teleoperation demonstration data [39].
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 15 (A.3.4 Training Data).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 - **원문 대조:** Conditional VAE의 ELBO는 expected conditional reconstruction log-likelihood에서 posterior q_φ(z∣x,c)와 conditional prior p_θ(z∣c)의 KL을 뺀다. Context c는 현재·목표 state이고 z는 latent plan이다. ([PDF p. 11](https://arxiv.org/pdf/1903.01973#page=11), Appendix A.1.1, Eq. (6)).
 - **p. 17 / A.4.3 Coverage Analysis of Interaction Space - extractive body cue:** Our state models were trained on a smaller dataset, up to 180 minutes of play (see Fig 8). "Random": we collected a random exploration dataset ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 - **p. 17 / A.4.3 Coverage Analysis of Interaction Space - extractive body cue:** Our state models were trained on a smaller dataset, up to 180 minutes of play (see Fig 8). "Random": we collected a random exploration dataset ...
 - **p. 7 / 4 Experiments - extractive body cue:** Success is reported with confidence intervals over 3 seeded training runs for pixel experiments.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Action, space, DOF, agent, state, consists, cartesian, coordinates, position, effector, Euler, angles, representing, orientation, gripper, layers, sizes, depths, different, sub-networks.
 - **Relevant PDF headings:** A.2 Architecture Details (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 12 (A.2 Architecture Details), p. 12 (A.2 Architec
 - **p. 8 / 5 Conclusion - extractive body cue:** Future work includes exploring whether generalization is possible to novel objects or novel environments, as well as exploring the effects of imbalance in play data ...
 - **p. 17 / A.5 Limitations - extractive body cue:** We hope to explore this in future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 12 (A.2 Architecture Details), p. 12 (A.2 Architecture Details), p. 17 (A.4.3 Coverage Analysis of Interaction Space), p. 15 (A.3.4 Training Data), p. 15 (A.3.4 Training Data), p. 16 (A.4.3 Coverage Analysis of Interaction Space), objective p. 15 (A.3.4 Training Data), temporal p. 6 (2 Related Work), p. 6 (2 Related Work), p. 8 (4 Experiments), p. 5 (2 Related Work), p. 5 (2 Related Work), p. 11 (A.1 Theoretical Motivation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 5
 - **p. 5 / 3.5. Training Objective - extractive body cue:** (2)), confidence calibration loss (Eq.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.5. Training Objective), p. 5 (3.4. Adaptive Segmentation-Text Modeling).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 5
 - **p. 2 / 1. Introduction - extractive body cue:** The adaptive segmentation module adapts the text encoder by integrating learnable prompts across the input space and each layer of text encoder. • Extensive experiments ...
 - **p. 5 / 3.4. Adaptive Segmentation-Text Modeling - extractive body cue:** Specifically, at the input layer, we directly concatenate the trainable tokens with the text as the input of the text encoder.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 5
 - **p. 6 / 4. Experiments - extractive body cue:** Four trainable tokens are used in adapting text encoders.
 - **p. 5 / 3.4. Adaptive Segmentation-Text Modeling - extractive body cue:** One possible solution is fine-tuning VLMs to handle 3D data for better alignment between text encoders of VLMs and 3D models.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** better, adapt, text, encoder, scenarios, introduce, small, number, learnable, tokens, input, every, transformer, layer, ftext, During, inference, trainable, category, names.
 - **Relevant PDF headings:** 3.4. Adaptive Segmentation-Text Modeling (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,22 +104,11 @@ PDF body method statement (p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 5
 - **p. 7 / 4.3. Ablation Studies - extractive body cue:** Ablation studies on different numbers of learnable tokens of AIDE on ScanNet (B15/N4). conduct a series of experiments as shown in Tab.
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Previous methods use misaligned paired data (e.g., image/point cloud 1 is closest to text 2) and freeze the text encoder trained on 2D ...
 - **p. 5 / 4. Experiments - extractive body cue:** Due to space limitations, the details of benchmarks and partitions are deferred to Appendix C.1.
-- **p. 6 / 4.3. Ablation Studies - extractive body cue:** Due to the space limitation, ablation studies on the choice of temperatures (Tab.
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 5 (3.4. Adaptive Segmentation-Text Modeling), objective p. 5 (3.5. Training Objective), p. 5 (3.5. Training Objective), temporal p. 1 (Abstract), p. 8 (4.4. Qualitative Results-Generalization).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 - **p. 8 / A. Main Results - extractive body cue:** Additionally, our controllers successfully handle more complex scenarios, including stone platforms and tree-leaning postures, demonstrating their adaptability to diverse real-world conditions.
 - **p. 12 / B. More Implementation Details - extractive body cue:** In simulation, the stiffness values are set as 100 for the upper body, 40 for the ankle, 150 for the hip, and
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview. (a) Our propose framework HOST
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 | Fig. 2: Framework overview. (2) We train policies in simulation from scratch vwith multiple cris. and motion consrsnts operationalized by rewards, Smoothness regularization, and ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Reward functions within the same group are independently normalized, Whose assovited advantaged functions are eaimated via disinet criti. | definition/direction/unit from same section | p. 13 (B. More Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 | While the robot can learn to stand up without action bounds (HOST-w/o-Bound), its movements are excessively violent, as indicated by three performance metrics. | comparison identity and matched condition | p. 6 (B. Main Results) |
 | Motion oscillations are observed in all scenes without smoothness regularization, often leading to standing-up failures, In contrast, our method produces smooth and stable motions, ... | comparison identity and matched condition | p. 8 (A. Main Results) |
 | We present the complete set of ward functions and their detailed descriptions in Tulble V1 Several regularization reward terms are adapted from prior work ... | comparison identity and matched condition | p. 12 (B. More Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 - Numeric sentences retained from the body:
 - **p. 12 / B. More Implementation Details - extractive body cue:** Each iteration includes 50 steps per environment, with 5 learning epochs and 4 mini-batches per epoch, The discount factor + is set to 0.99, the ...
 - **p. 13 / B. More Implementation Details - extractive body cue:** Tom a Hi i Kp__kd Kp Kd Hip ry 30 30 Knee 6 308 04 Ankle 2 m0 2 mo 2 Shoulder 4 304 3504 ...
-- **p. 12 / B. More Implementation Details - extractive body cue:** Each iteration includes 50 steps per environment, with 5 learning epochs and 4 mini-batches per epoch, The discount factor + is set to 0.99, the ...
-- **p. 13 / B. More Implementation Details - extractive body cue:** Tom a Hi i Kp__kd Kp Kd Hip ry 30 30 Knee 6 308 04 Ankle 2 m0 2 mo 2 Shoulder 4 304 3504 ...
 
 ## Generalization and Failure Cases
 
@@ -137,8 +124,6 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 | body limitation/failure cue | Our proposed framework, HOST, advances humanoid standing-up control by addressing the limitations of existing methods, which either neglect hardware constraints or rely on predefined ... | p. 9 (VII. CoxcLusion) |
 | body limitation/failure cue | are handcrafted without collision models. | p. 12 (B. More Implementation Details) |
 | body limitation/failure cue | Fig. 5: Robustness analysis in simulation. Evaluation of contol policies under four environmental disturbances demonstrates the robustness of our contol | p. 6 (Figure/Table caption) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -152,14 +137,6 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 | Due to the unaailabity of the height ‘we compute the smoothness Fan Within two Seconds after staring Up. | p. 8 (B. Sim-to-real Analysis) |
 | ‘We select the successful episode to compute smocthaess to reflect the effect of L2C2 regularization tier. | p. 8 (B. Sim-to-real Analysis) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / B. Main Results - extractive body cue:** Without the proposed force curriculum, the robot fails to stand up on all terrains except the platform, as the other terrains require exploration from a ...
@@ -170,6 +147,5 @@ PDF body evaluation/result cue (p. 6 (B. Main Results), p. 6 (B. Main Results), 
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Robustness analysis in simulation. Evaluation of contol policies under four environmental disturbances demonstrates the robustness of our contol
 
 - **Evidence anchors reviewed:** datasets p. 8 (A. Main Results), p. 9 (B. Sim-to-real Analysis), p. 13 (B. More Implementation Details), p. 13 (B. More Implementation Details), p. 6 (B. Main Results), p. 6 (B. Main Results), metrics p. 6 (B. Main Results), p. 6 (B. Main Results), p. 8 (A. Main Results), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 8 (A. Main Results), baselines p. 6 (B. Main Results), p. 8 (A. Main Results), p. 12 (B. More Implementation Details), p. 6 (B. Main Results), p. 8 (A. Main Results), p. 12 (B. More Implementation Details), results p. 6 (B. Main Results), p. 6 (B. Main Results), p. 8 (A. Main Results), p. 8 (A. Main Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

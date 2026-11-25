@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 - **p. 7 / 5 Results - extractive body cue:** Although being trained with full human play data, Task-2 Task-3 Medium ALL 0.0 0.2 0.4 0.6 0.8 Success rate (%) Ours (human prompt) Ours (robot ...
 - **p. 16 / C Supplementary Experiment Results - extractive body cue:** (a) Distribution overlap of Ours (w/o KL) (b) Distribution overlap of Ours Figure 7: t-SNE visualization of the generated feature embeddings by taking human data ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a hierarchical ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 | Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | KL) fails to match the performance of Ours (50% human). | definition/direction/unit from same section | p. 8 (5 Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 | 2 unseen tasks, Ours surpasses all baselines by more than 35%. | comparison identity and matched condition | p. 8 (5 Results) |
 | With this hierarchical design, MIMICPLAY outperforms prior arts by over 50% in 14 challenging long-horizon manipulation tasks. | comparison identity and matched condition | p. 8 (5 Results) |
 | The results showcase the advantage of MIMICPLAY's hierarchical policy learning framework over the baselines, which is consistent with the real-world results (Tab. | comparison identity and matched condition | p. 15 (C Supplementary Experiment Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 | body limitation/failure cue | Figure 1: Human is able to complete a long-horizon task much faster than a teleoperated robot. This observation inspires us to develop MIMICPLAY, a ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Ours (0% human) variant still outputs a latent plan to open the box, which causes the task to fail since the box is already ... | p. 16 (C Supplementary Experiment Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 | We also list the hyperparameters for the baseline GC-BC (BC-trans) in Tab. | p. 19 (C Supplementary Experiment Results) |
 | F Training hyperparameters We list the hyperparameters for training the models in Tab. | p. 19 (C Supplementary Experiment Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5 Results - extractive body cue:** Ours (w/o GMM) even fails to match the performance of Ours (0% human) in the generalization task settings.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure
 - **p. 16 / C Supplementary Experiment Results - extractive body cue:** Ours (0% human) variant still outputs a latent plan to open the box, which causes the task to fail since the box is already open.
 
 - **Evidence anchors reviewed:** datasets p. 15 (C Supplementary Experiment Results), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 16 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 7 (5 Results), metrics p. 7 (5 Results), p. 7 (5 Results), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 15 (Figure/Table caption), p. 8 (5 Results), baselines p. 7 (5 Results), p. 14 (A Implementation details), p. 7 (5 Results), p. 8 (5 Results), p. 8 (5 Results), p. 15 (C Supplementary Experiment Results), results p. 7 (5 Results), p. 7 (5 Results), p. 1 (Figure/Table caption), p. 15 (C Supplementary Experiment Results), p. 17 (C Supplementary Experiment Results), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Open-Vocabulary Label Set ( entries) VLMap Creation LSeg Visual Encoder (Frozen) Input Depth Camera Pose Global Point Cloud Input Image Each Point Top-down Projection VLMap ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD), p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Each element Rij represents the label index of the input language list L at the grid map location (i,j).
 - **p. 2 / III. METHOD - extractive body cue:** To build the map, we, for each RGB-D frame, back-project all the depth pixels u=(u,v) to form a local depth point cloud that we transform ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. ME
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Zero-Shot, Spatial, Goal, Navigation, Language, section, describe, long-horizon, given, landmark, descriptions, specified, natural, instructions, move, first, left, side, counter, then.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,26 +104,15 @@ PDF body method statement (p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. ME
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: VLMaps enables a robot to perform complex zero-shot spatial goal navigation tasks given natural language commands, without additional data collection or model finetuning. ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 3: System overview. A VLMap is created by fusing pretrained visual-language features into the reconstruction of the environment to enable visual-spatial-language-based reasoning. By providing ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: VLMaps enables a robot to perform complex zero-shot spatial goal navigation tasks given natural language commands, without additional data collection or model finetuning. ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** This is because when the drone does not have access to a customized obstacle map, it fails to benefit from flying over ground objects to ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 3 (III. METHOD), temporal p. 5 (IV. EXPERIMENTS), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

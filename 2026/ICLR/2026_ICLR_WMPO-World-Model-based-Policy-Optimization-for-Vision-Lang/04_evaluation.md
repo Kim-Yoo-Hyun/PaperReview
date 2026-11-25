@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 - **p. 10 / 4 Experiments - extractive body cue:** For comparison, we also train an offline DPO policy using the same dataset.
 - **p. 7 / 4 Experiments - extractive body cue:** Simulation Environment Details We conduct experiments in the Mimicgen simulation [23].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 | 3), we observe that when both the base policy and WMPO deviate from the correct trajectory due to error accumulation and encounter a collision, ... | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | 4.5 Lifelong Learning In this section, we demonstrate that WMPO can continuously improve the performance of VLA by iteratively collecting real trajectories from the ... | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 | Collision Self-correction Continue moving down WMPO Base Policy … … Figure 3 Behavior analysis of the Square task (inserting the square into the stick) ... | comparison identity and matched condition | p. 7 (4 Experiments) |
 | With a small rollout budget of P=128, it already surpasses the strongest baseline by +9.8 points, demonstrating strong data efficiency. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | 0 128 256 Rollout Budget 45 50 55 60 65 Success Rate (%) Base Policy DPO WMPO Figure 6 Lifelong learning results of WMPO ... | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 | body limitation/failure cue | Collision Self-correction Continue moving down WMPO Base Policy … … Figure 3 Behavior analysis of the Square task (inserting the square into the stick) ... | p. 7 (4 Experiments) |
 | body limitation/failure cue | DPO attains modest improvements in the in-distribution setting compared to the base policy, but its performance degrades significantly under background and texture changes, suggesting ... | p. 9 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 | When applying the imagined trajectory to VLA optimization, we decode the images back into pixel space to better leverage the pretrained knowledge, rather than ... | p. 5 (1. Imagined Trajectory Generation) |
 | To mitigate this issue, we introduce a noisy-frame conditioning technique: during training, conditional frames Ii-m:i are perturbed with diffusion noise at 50/1000 steps rather ... | p. 5 (1. Imagined Trajectory Generation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4 Experiments - extractive body cue:** The baseline policy, trained only on expert demonstrations, has never observed collisions during training; it continues to push the square against the stick until the ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 10 (4 Experiments), p. 
 - **p. 9 / 4 Experiments - extractive body cue:** DPO attains modest improvements in the in-distribution setting compared to the base policy, but its performance degrades significantly under background and texture changes, suggesting reliance ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), metrics p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 6 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

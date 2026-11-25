@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** (2024), we collect demonstrations and train our policy under the Training setting (T), subsequently testing the trained policy on both T and New Poses (NP), ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** In contrast, ET-SEED consistently outperforms across all six tasks, with minimal performance drop when facing unseen object poses.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: ET-SEED is a visual imitation learning algorithm that marries SE(3) equivariant visual representations with diffusion policies. (a) ET-SEED achieve surprising efficiency and spatial ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9
 | Figure 5: Loss curve of P1Net, P2Net and P3Net. After only several gradient descent, the loss of P1Net converges almost to 0, while the ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 6: Loss curve of two diffusion process. After only several gradient descent, the loss of Inv.+Eqv. process onverges much faster than the Pure ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9
 | The DP3+Aug baseline utilizes augmentations during training. | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | Consistent with our simulation findings, in real world experiments, ET-SEED performs better than baselines in all the four tasks, given only 20 demonstrations. | comparison identity and matched condition | p. 10 (0.6 Results) |
 | Figure 1: ET-SEED is a visual imitation learning algorithm that marries SE(3) equivariant visual representations with diffusion policies. (a) ET-SEED achieve surprising efficiency and ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9
 | body limitation/failure cue | The standard deviation of the Gaussian noise is set to 10% of the workspace size. | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | In this variant, we use a standard PointNet++ to predict noise at each step. • Ours w/o Eqv-Diff: Our method without the SE(3) equivariant ... | p. 9 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9
 | In this paper, we propose ET-SEED, a trajectorylevel end-to-end SE(3) equivariant diffusion model for robotic manipulation. | p. 4 (4 METHOD) |
 | ET-SEED can theoretically guarantee the output actions are equivariant to any SE(3) transformation applied on the input observation, while only involving one equivariant denoising ... | p. 4 (4 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6 CONCLUSION - extractive body cue:** However, the proposed method has certain limitations.
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** In this variant, we use a standard PointNet++ to predict noise at each step. • Ours w/o Eqv-Diff: Our method without the SE(3) equivariant denoising ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (0.6 Results), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 8 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), baselines p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (0.6 Results), p. 1 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (Figure/Table caption), p. 10 (Figure/Table caption), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

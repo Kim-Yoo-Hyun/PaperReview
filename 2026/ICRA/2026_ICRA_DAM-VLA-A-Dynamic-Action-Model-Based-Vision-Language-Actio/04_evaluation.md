@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Furthermore, we fine-tune our DAM-VLA model on both simulated and real-world datasets.
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** For real-world evaluation, we construct a pick-and-place scenario in which a Franka robot is teleoperated to pick up a cup and place it into a ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DAM-VLA framework and experimental results. (a) We propose a DAM-VLA framework that dynamically integrates the inherent reasoning capabilities of VLMs with specialized diffusion-based ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | Fig. 3: The architecture of our DAM-VLA. Given an RGB image observation and a task description, the model predicts a sequence of temporal actions. ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 2: We identify three distinctions between the arm movement and the gripper manipulation using the task of placing a carrot on a plate ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | For a fair comparison, we also fine-tune the OpenVLA and CogACT baselines using the identical datasets. | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | Our model achieves the highest average success rate of 71%, outperforming competing methods by a substantial margin. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Section IV-D provides an ablation study to analyze the contribution of each component in our framework. | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | body limitation/failure cue | Dual-Scale Action Weighting To enhance the robustness in distinguishing between arm movement and gripper manipulation, we propose a dualscale action weighting mechanism for model ... | p. 4 (III. METHOD) |
 | body limitation/failure cue | To assess robustness, we divide the evaluation into in-distribution and out-ofdistribution scenarios, as illustrated in Figure 6. | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | The corresponding hyperparameters w1, w2, and w3 are set to 1.0, 1.0, and 0.0001, respectively. | p. 4 (III. METHOD) |
 | The total loss is computed as a weighted sum of the movement loss, the manipulation loss, and the classification loss. | p. 4 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: The evaluation encompasses both in-distribution and out-of-distribution scenarios. The in-distribution setting includes variations in object positions and lighting conditions consistent with the training ...
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** To assess robustness, we divide the evaluation into in-distribution and out-ofdistribution scenarios, as illustrated in Figure 6.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), results p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

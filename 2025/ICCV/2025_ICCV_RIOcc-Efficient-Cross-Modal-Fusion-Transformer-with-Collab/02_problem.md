@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (C Vox), p. 2 (C Vox), p. 4 (3.4.2. Semantic
 |---|---|---|
 | body cue at p. 4 | Figure 4. Detailed structure diagram of the wavelet encoder. The input BEV features undergo DWT and IWT to ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.2. Features Extraction), p. 4 (3.3. Dual-branch Pooling), p. 3 (3.1. Overall Architecture), p. 6 (3.7. Loss). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 2 (C Vox), p. 2 (C Vox), p. 4 (3.4.2. Semantic
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (C Vox), p. 1 (Abstract), p. 1 (C Vox), p. 4 (3.3. Dual-branch Pooling), p. 4 (3.3. Dual-branch Pooling), interface p. 3 (3.2. Features Extraction), p. 4 (3.3. Dual-branch Pooling), p. 3 (3.1. Overall Architecture), p. 6 (3.7. Loss), objective p. 5 (3.4.2. Semantic Encoder), p. 6 (3.7. Loss), p. 6 (3.7. Loss), p. 4 (3.3. Dual-branch Pooling), p. 4 (3.3. Dual-branch Pooling), p. 5 (3.5. Deformable Dual-Attention).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

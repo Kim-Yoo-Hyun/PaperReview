@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 - **p. 9 / C. Interaction point diversity - extractive body cue:** tions of each action have different durations, for visualization it is necessary to unify the number of the force and torque ‘measurements to identify patterns ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 12 (B. Motion Policy Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 - **p. 4 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** multimodal data, such as force-torque measurements, which are essential for understanding robotic actions. ‘Therefore, REASSEMBLE also addresses robotic action segmentation and incorporates multimodal data, including ...
 - **p. 8 / C. Interaction point diversity - extractive body cue:** We analyze whether any patterns occur in the demonstrated force and torque profiles of the actions.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 - **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** This dataset provides temporally labelled actions for long-duration videos, facilitating the training and evaluation of models for action segmentation.
 - **p. 10 / V. BENCHMARKS - extractive body cue:** In the computer vision community, ‘TAS is typically posed as a supervised learning problem [37], Where the model is trained using both data and ground ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** dataset, provides, temporally, labelled, actions, long-duration, videos, facilitating, training, evaluation, models, action, segmentation, development, various, robot, learning, fields, like, hicrarchical.
 - **Relevant PDF headings:** 2) A dataset with multi-task labels to support algorithm (p. 2); B. Motion Policy Learning (p. 11).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 3 (2) A dataset with multi-task labels to support 
 - **p. 8 / dataset - extractive body cue:** ‘The majority of failures in the ition (Figure 7, top left) occur because the gripper either misses the object or the ‘object slips out of ...
 - **p. 8 / dataset - extractive body cue:** failures in this action do occur if the object slips prematurely from the gripper and lands on the task board, which we classify as a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 4 (2) A dataset with multi-task labels to support algorithm), p. 13 (B. Motion Policy Learning), objective p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (C. Interaction point diversity), p. 9 (C. Interaction point diversity), temporal p. 5 (B. Sensors), p. 2 (Abstract), p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

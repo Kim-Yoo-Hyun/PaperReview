@@ -39,8 +39,6 @@
 - **p. 6 / 5.1. Experimental Setups - extractive body cue:** Following previous works [20, 35], we evaluate our model on the MVImgNet and DL3DV validation datasets, as well as the T3Bench benchmark [23].
 - **p. 6 / 5.1. Experimental Setups - extractive body cue:** We utilize four real-world datasets for training: RealEstate10K [93], MVImgNet [84], DL3DV10K [41], and ACID [43].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Generated 3D Gaussian Splattings and rendered views from diverse texts by VideoRFSplat. VideoRFSplat directly generates realistic 3D scenes from text without SDS [35, ...
@@ -74,8 +72,6 @@
 | Since these datasets lack paired textual descriptions, we generate textual annotations using InternVL-2.5-26B [12], producing multiple captions per sequence. | definition/direction/unit from same section | p. 6 (5.1. Experimental Setups) |
 | Figure 1. Generated 3D Gaussian Splattings and rendered views from diverse texts by VideoRFSplat. VideoRFSplat directly generates realistic 3D scenes from text without SDS ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@
 | Additionally, for evaluations on T3Bench [23], we include previously reported baseline results [20, 35]. | comparison identity and matched condition | p. 6 (5.1. Experimental Setups) |
 | Table 5. VideoRFSplat outperforms other methods in FID-8K (43.07), translation error (0.063), rotation error (0.4223), and CLIPScore (31.1). These results confirm that VideoRFSplat generates ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 5. Results on camera conditioned generation. VideoRFS- plat can perform camera-conditioned generation. models under identical conditions for 60K iterations with Mochi [69] and ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@
 | body limitation/failure cue | Figure 7. Architecture Comparison. For each example, Left: chan- nel concat architecture (SplatFlow). Right: our architecture. framed key objects. We hypothesize that uncertainty in ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | Figure 4. Asynchrnous schedule (δ = 0.2). During sampling, we denoise the pose modality faster than im- ages, as it is robust to fast ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@
 | Our proposed training scheme, which divides timesteps, demonstrates slightly better results. | p. 8 (Method) |
 | This suggests that our approach of dividing timesteps during training is not detrimental and achieves comparable or marginally improved performance. | p. 8 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Failure analysis of synchronized sampling and the effectiveness of asynchronous sampling. (Left) Early in sampling (t > 0.85), synchronous sampling induces excessive oscillations ...
@@ -152,6 +131,5 @@
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Asynchrnous schedule (δ = 0.2). During sampling, we denoise the pose modality faster than im- ages, as it is robust to fast denoising. ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups), metrics p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 6 (5.1. Experimental Setups), baselines p. 7 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experimental Results), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setups).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

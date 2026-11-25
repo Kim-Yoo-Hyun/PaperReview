@@ -56,7 +56,6 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 - **p. 4 / 2.3. Controller (C) Model - extractive body cue:** Advances in deep learning provided us with the tools to train large, sophisticated models efficiently, provided we can define a well-behaved, differentiable loss function.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (2.3. Controller (C) Model), p. 10 (5. Iterative Training Procedure), p. 10 (5. Iterative Training Procedure), p. 3 (2.3. Controller (C) Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 - **p. 6 / 3.4. Car Racing Dreams - extractive body cue:** We can ask it to produce the probability distribution of zt+1 given the current states, sample a zt+1 and use this sample as the real ...
 - **p. 8 / 4.3. Training Inside of the Dream - extractive body cue:** For instance, if the agent selects the left action, the M model learns to move the agent to the left and adjust its internal representation ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 - **p. 4 / 3.1. World Model for Feature Extraction - extractive body cue:** Training each model only required less than an hour of computation time on a single GPU.
 - **p. 4 / 3.1. World Model for Feature Extraction - extractive body cue:** We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Recent, Nagabandi, combines, model-based, traditional, model-free, training, first, initializing, policy, network, learned, must, subsequently, rely, methods, fine-tune, actual, environment, Here.
 - **Relevant PDF headings:** 2. Agent Model (p. 2); 2.1. VAE (V) Model (p. 2); 2.2. MDN-RNN (M) Model (p. 3); 2.3. Controller (C) Model (p. 3); 3.1. World Model for Feature Extraction (p. 4); V Model Only (p. 5); V MODEL (p. 6); V MODEL WITH HIDDEN LAYER (p. 6); 3. Train MDN-RNN (M) to model (p. 7); 6. Use learned policy from (5) on actual environment (p. 7); 4.4. Transfer Policy to Actual Environment (p. 8); 4.5. Cheating the World Model (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE 
 - **p. 12 / 7. Discussion - extractive body cue:** The choice of using a VAE for the V model and training it as a standalone model also has its limitations, since it may encode ...
 - **p. 13 / 7. Discussion - extractive body cue:** Experiments with those more general approaches are left for future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (4.5. Cheating the World Model), p. 3 (2.1. VAE (V) Model), p. 9 (4.5. Cheating the World Model), p. 3 (2.2. MDN-RNN (M) Model), p. 4 (2.3. Controller (C) Model), p. 2 (2. Agent Model), objective p. 3 (2.3. Controller (C) Model), p. 9 (4.5. Cheating the World Model), p. 10 (5. Iterative Training Procedure), p. 10 (5. Iterative Training Procedure), p. 4 (2.3. Controller (C) Model), p. 4 (2.3. Controller (C) Model), temporal p. 5 (3.1. World Model for Feature Extraction), p. 7 (4.1. Learning Inside of a Dream), p. 7 (4.1. Learning Inside of a Dream), p. 13 (7. Discussion), p. 5 (3.1. World Model for Feature Extraction), p. 2 (2.1. VAE (V) Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

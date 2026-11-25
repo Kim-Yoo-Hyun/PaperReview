@@ -56,7 +56,6 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 - **p. 18 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** We combine the foresight and hindsight model by first thresholding the probability from the foresight model by some value τ.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 - **p. 15 / A.1 Inner Monologue for Simulated Tabletop Rearrangement - extractive body cue:** At the start of the action plan, the language model first generates a list of desired sub-goals given the high-level instruction.
 - **p. 1 / 1 Introduction - extractive body cue:** This raises an intriguing possibility: beyond their ability to interpret natural language instructions, can language models further serve as reasoning models that combine multiple sources ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 - **p. 17 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** At inference time within Inner Monologue, we output the text "[success: no]" when the probability is below a certain threshold.
 - **p. 18 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** At inference time, the model is used infer among the possible instructions which one was achieved.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Low-level, Policies, single, policy, real, tabletop, rearrangement, environment, responsible, performing, object-centric, pick, place, actions, instructed, language, model, input, consists, initial.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 16 (A.2 Inner Monologue for Real-World Tabletop Re
 - **p. 15 / A.1 Inner Monologue for Simulated Tabletop Rearrangement - extractive body cue:** Environment Feedback: Object Recognition We provide the list of objects present in the scene at the start of each episode for the language model (without ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Inner Monologue enables grounded closed-loop feedback for robot planning with large language models by leveraging a collection of perception models (e.g., scene descriptors ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), objective p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), temporal p. 1 (1 Introduction), p. 2 (2 Related Work), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

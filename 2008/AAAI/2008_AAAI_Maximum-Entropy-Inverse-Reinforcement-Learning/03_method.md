@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (2. Recursively compute for N iterations), p. 1 
 - **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** We call this value a cost (i.e., a negative reward).
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 4 (2. Recursively compute for N iterations).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (2. Recursively compute for N iterations), p. 1 
 - **p. 3 / Abstract - extractive body cue:** of action outcomes, T , and an outcome sample, o, specifying the next state for every action.
 - **p. 4 / 2. Recursively compute for N iterations - extractive body cue:** These branching values yield local action probabilities (Step 3), from which state frequencies in each timestep can be computed (Steps 4 and 5) and summed ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (2. Recursively compute for N iterations), p. 1 
 - **p. 2 / Abstract - extractive body cue:** We use the maximum entropy distribution of paths conditioned on the transition distribution, T, and constrained to match feature expectations (Equation 1).
 - **p. 5 / A B - extractive body cue:** P(dest/˜ζA→B) ∝P(˜ζA→B/dest)P(dest) ∝ P ζB→dest eθ⊤fζ P ζA→dest eθ⊤fζ P(dest) These quantities can easily be computed using our inference algorithm (Algorithm 1).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Space, doesn, permit, full, exposition, incomplete, non-convex, log-likelihood, intuitive, expectation-maximization, algorithm, fits, maximumentropy, model, initial, feature, expectations, then, improves, estimates.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 3 (2. Recursively compute for N iterations), p. 1 
 - **p. 2 / Abstract - extractive body cue:** This arises quite frequently when, for instance, the behavior demonstrated by the agent is imperfect, or the planning algorithm only captures a part of the ...
 - **p. 2 / Abstract - extractive body cue:** We employ the principle of maximum entropy, which resolves this ambiguity by choosing the distribution that does not exhibit any additional preferences beyond matching feature ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2. Recursively compute for N iterations), p. 1 (Abstract), p. 1 (Abstract), p. 3 (2. Recursively compute for N iterations), p. 4 (2. Recursively compute for N iterations), p. 2 (Abstract), objective p. 3 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 4 (2. Recursively compute for N iterations), temporal p. 4 (2. Recursively compute for N iterations), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 - **p. 8 / 4.1. Simulation Experiments - extractive body cue:** Benchmark Method Gaussian Blur-H Gaussian Blur-L Gaussian Noise-H Gaussian Noise-L LIBERO Qwen-GR00T (Community, 2026) 30.0 76.0 55.7 87.9 LaRA-VLA (Ours) 42.9 79.4 76.0 92.7 SimplerEnv ...
 - **p. 8 / 4.2. Real-World Experiments - extractive body cue:** For data collection, we record 100 demonstration trajectories per task category at 30 Hz.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of CoT formulations in VLA models. (a) Textual CoT-based VLA explicitly generates discrete reasoning tokens and decodes them into actions through autoregressive ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 | Figure 12. Prompt for subtask description generation. actions without attending to explicit CoT-related tokens. Table 9 reports the results on four SimplerEnv tasks. Training ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | Latent tokens associated with different reasoning components form wellseparated and semantically coherent clusters, demonstrating clear functional specialization rather than degeneration into uniform or uninformative ... | definition/direction/unit from same section | p. 9 (4.3. Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 | As shown in Figure 5, LaRA-VLA achieves the highest average success rate among all compared methods, substantially outperforming ACT and ECoT and surpassing GR00T ... | comparison identity and matched condition | p. 8 (4.2. Real-World Experiments) |
 | Performance comparisons with state-of-the-art methods on SimplerEnv-WindowX, grouped by different CoT paradigms. | comparison identity and matched condition | p. 7 (4. Experiments) |
 | We further compare LaRA-VLA with Qwen-GR00T (Community, 2026), which serves as a no-CoT baseline without latent reasoning. | comparison identity and matched condition | p. 8 (4.3. Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 | body limitation/failure cue | Figure 12. Prompt for subtask description generation. actions without attending to explicit CoT-related tokens. Table 9 reports the results on four SimplerEnv tasks. Training ... | p. 17 (Figure/Table caption) |
 | body limitation/failure cue | On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on ... | p. 7 (4.1. Simulation Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 | Through the inverse dynamics supervision applied in earlier stages, this latent context already encodes coarse-grained actionrelevant information. | p. 6 (3.3. Training Procedures) |
 | During evaluation, each task is executed for 12 rollout trials. | p. 8 (4.2. Real-World Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Analysis - extractive body cue:** This suggests that the learned latent space does not collapse or become highly unstable under visual perturbations.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 8 (4.2. Real-World Experiments), p. 7 (4.1. S
 - **p. 7 / 4.1. Simulation Experiments - extractive body cue:** On LIBERO, LaRA-VLA achieves the best overall performance with an average success rate of 97.9%, including 99.8% on the Object suite and 96.6% on the ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments), p. 7 (4.1. Simulation Experiments), p. 6 (4. Experiments), p. 8 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), metrics p. 7 (4.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 7 (4.1. Simulation Experiments), p. 8 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), p. 15 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Simulation Experiments), p. 8 (4.2. Real-World Experiments), p. 7 (4. Experiments), p. 8 (4.3. Analysis), results p. 8 (4.2. Real-World Experiments), p. 7 (4.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 7 (4.1. Simulation Experiments), p. 17 (Figure/Table caption), p. 8 (4.2. Real-World Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

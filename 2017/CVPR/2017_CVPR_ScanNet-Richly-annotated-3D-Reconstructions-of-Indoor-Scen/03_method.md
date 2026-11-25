@@ -45,7 +45,6 @@ PDF body method statement (p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surfac
 - **p. 4 / 3.2. Surface Reconstruction - extractive body cue:** This annotation is in progress at ≈35%, with gray regions indicating unannotated surfaces.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -63,7 +62,6 @@ PDF body method statement (p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surfac
 - **p. 1 / 1. Introduction - extractive body cue:** Thus, existing work on 3D datasets often fall back to polygon or bounding box annotations on 2.5D RGB-D images [74, 92, 77], rather than directly ...
 - **p. 1 / 1. Introduction - extractive body cue:** While much effort has been made on 2D datasets [17, 44, 47], where images can be downloaded from the web and directly annotated, the situation ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -78,13 +76,10 @@ PDF body method statement (p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surfac
 
 - **p. 6 / 5.1. 3D Object Classification - extractive body cue:** [66], we use an SGD solver with learning rate 0.01 and momentum 0.9, decaying the learning rate by half every 20 epochs, and training the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** BundleFusion, produces, accurate, pose, alignments, then, perform, volumetric, integration, through, VoxelHashing, extract, high, resolution, surface, mesh, Marching, Cubes, algorithm, implicit.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -104,20 +99,10 @@ PDF body method statement (p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surfac
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Example reconstructed spaces in ScanNet annotated with instance-level object category labels through our crowdsourced annotation framework. ciently providing (dense) annotations in 3D is ...
 - **p. 8 / 6. Conclusion - extractive body cue:** We demonstrated that the richlyannotated scan data collected so far in ScanNet is useful in achieving state-of-the-art performance on several 3D scene understanding tasks; we ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surface Reconstruction), objective p. 4 (3.2. Surface Reconstruction), temporal p. 2 (2. Previous Work), p. 3 (3.1. RGB-D Scanning), p. 3 (3.1. RGB-D Scanning), p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surface Reconstruction), p. 6 (4. ScanNet Dataset).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

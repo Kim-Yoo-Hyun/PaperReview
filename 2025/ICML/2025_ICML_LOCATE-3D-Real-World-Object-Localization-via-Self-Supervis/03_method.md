@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINI
 - **p. 5 / 2.3.2. TRAINING LOCATE 3D - extractive body cue:** Following (Carion et al., 2020), we define a matching cost and use Hungarian Matching to assign object query predictions to ground truth objects.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINING LOCATE 3D).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINI
 - **p. 2 / 1. Introduction - extractive body cue:** LOCATE 3D is designed to operate on RGB-D sensor observations of static environments (e.g., homes in which objects remain stationary over short intervals).
 - **p. 4 / 2.3.1. LANGUAGE-CONDITIONED 3D DECODER - extractive body cue:** As illustrated in Figure 3, the decoder processes two inputs: the 3D-JEPA features Eθ(PtClift) and a text query t.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,18 +81,14 @@ PDF body method statement (p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINI
 
 - **p. 5 / 2.3.2. TRAINING LOCATE 3D - extractive body cue:** In order to not destroy the pretrained features we use a stage-wise learning rate scheduler (Kumar et al., 2022); specifically we start by training the ...
 - **p. 5 / 2.3.2. TRAINING LOCATE 3D - extractive body cue:** We apply progressively weighted deep supervision at every decoder layer and maintain an Exponential Moving Average (EMA) of the model weights to use for evaluation ...
-- **p. 5 / 2.3.2. TRAINING LOCATE 3D - extractive body cue:** In order to not destroy the pretrained features we use a stage-wise learning rate scheduler (Kumar et al., 2022); specifically we start by training the ...
 - **p. 6 / 4.1. How does LOCATE 3D compare to prior methods - extractive body cue:** Most prior work assumes access to refined meshes and mesh (object) region proposals at training and inference time.
 - **p. 5 / 2.3.2. TRAINING LOCATE 3D - extractive body cue:** LOCATE 3D trains the language-conditioned 3D decoder from scratch and fine-tunes the 3D-JEPA pretrained PTv3 encoder.
 - **p. 7 / 4.2. Understanding the impact of 3D-JEPA - extractive body cue:** For each configuration, we train the same type of decoder.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** order, destroy, pretrained, features, stage-wise, learning, rate, scheduler, Kumar, specifically, start, training, decoder, frozen, encoder, then, fine-tune, jointly, lower, apply.
 - **Relevant PDF headings:** 4.1. How does LOCATE 3D compare to prior methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +108,10 @@ PDF body method statement (p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINI
 - **p. 7 / 4.3. LOCATE 3D ablations - extractive body cue:** We find that using larger models (CLIP-L, SAM-H) improves results over smaller variants (CLIP-B, MobileSAM), suggesting benefits from scaling.
 - **p. 8 / 4.4. Evaluating LOCATE 3D in novel environments - extractive body cue:** Method Evaluation Dataset ScanNet LX3D Joint Eval SN++ ARKitScenes FRE Baselines GPT-4o VLM 37.6∗ 60.5∗ 26.8 18.9 CF + 3D-Decoder 53.8 46.1 21.8 48.9 Ablations ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINING LOCATE 3D), objective p. 5 (2.3.2. TRAINING LOCATE 3D), p. 5 (2.3.2. TRAINING LOCATE 3D), temporal p. 6 (4.1. How does LOCATE 3D compare to prior methods), p. 6 (4.1. How does LOCATE 3D compare to prior methods), p. 8 (4.5. Computational Analysis), p. 1 (Abstract), p. 3 (1. Introduction), p. 3 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

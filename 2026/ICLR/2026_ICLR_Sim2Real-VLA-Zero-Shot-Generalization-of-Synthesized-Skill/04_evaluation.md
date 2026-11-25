@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 18 / A.3 DETAILS ON REAL2SIM DATA PROJECTION - extractive body cue:** Task: {task_description} Target object list: {object_list} Instructions:
 - **p. 16 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** Regarding visual observation masking, the mask prediction module utilizes a standard CNN-based architecture to process raw visual inputs and yield stable object masks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: The pipeline of our Sim2Real-VLA model consists of two main components: a planning system ( Section 4.1) that enables embodied reasoning through a ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 | Table 10: Mean IoU between segmentation outputs across six tasks. "real vs. sim" compares masks predicted on real vs. simulated images under matched robot ... | definition/direction/unit from same section | p. 26 (Figure/Table caption) |
 | When more detailed or nuanced reward structures are needed, AI agents can design sophisticated reward functions (Ma et al., 2024a). | definition/direction/unit from same section | p. 17 (A.2 CONFIGURING REWARDS IN VLA MODELS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 | Figure 8: Data Efficiency Scaling. Success rates (at 40k steps) vs. number of real demonstrations. Baselines improve monotonically. Our method shows a "dip" at ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
 | Empirical evaluations demonstrate that this binding strategy significantly outperforms alternative architectures. | comparison identity and matched condition | p. 17 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS) |
 | Figure 9: Analysis of Training Dynamics and Efficiency. (a-b) Training curves of Sim2Real VLA under different data strategies. The Sim-then-Real (10 eps) strategy yields ... | comparison identity and matched condition | p. 25 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 - Numeric sentences retained from the body:
 - **p. 17 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** For the training protocol, we implement a cosine-annealing learning rate schedule with a maximum value of 1e-5 across 40,000 epochs, incorporating exponential moving average (EMA) ...
 - **p. 17 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** The training configuration utilizes a batch size of 8, requiring approximately 36 GPU hours to complete under these specified conditions.
-- **p. 17 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** For the training protocol, we implement a cosine-annealing learning rate schedule with a maximum value of 1e-5 across 40,000 epochs, incorporating exponential moving average (EMA) ...
-- **p. 17 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** The training configuration utilizes a batch size of 8, requiring approximately 36 GPU hours to complete under these specified conditions.
 
 ## Generalization and Failure Cases
 
@@ -135,8 +122,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 | body limitation/failure cue | These findings point toward a promising paradigm shift: building robotic foundation models that are trained entirely in simulation, yet are robust to realistic deployment. | p. 10 (1 INTRODUCTION) |
 | body limitation/failure cue | Through the implementation of joint training and domain randomization, the module ensures robust generalization across diverse objects and environmental conditions. | p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +130,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 | For the training protocol, we implement a cosine-annealing learning rate schedule with a maximum value of 1e-5 across 40,000 epochs, incorporating exponential moving average ... | p. 17 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS) |
 | Regarding the model architecture, we employ DiNOv2 as the visual encoder and T5-XXL as the language encoder. | p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS) |
 | Through the implementation of joint training and domain randomization, the module ensures robust generalization across diverse objects and environmental conditions. | p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,6 +141,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 16 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** Through the implementation of joint training and domain randomization, the module ensures robust generalization across diverse objects and environmental conditions.
 
 - **Evidence anchors reviewed:** datasets p. 17 (A.3 DETAILS ON REAL2SIM DATA PROJECTION), p. 17 (A.3 DETAILS ON REAL2SIM DATA PROJECTION), p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 18 (A.3 DETAILS ON REAL2SIM DATA PROJECTION), p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), metrics p. 9 (Figure/Table caption), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), p. 17 (A.2 CONFIGURING REWARDS IN VLA MODELS), baselines p. 24 (Figure/Table caption), p. 9 (Figure/Table caption), p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), p. 17 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 25 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 24 (Figure/Table caption), p. 17 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 23 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

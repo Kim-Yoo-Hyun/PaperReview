@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 - **p. 8 / 1 Introduction - extractive body cue:** We benchmark a variety of imitation learning algorithms on four tasks in our collected dataset (shown in Figure 7), including Diffusion Policy [58] with Denoising ...
 - **p. 8 / 1 Introduction - extractive body cue:** (d) Rock-Paper-Scissors (b) Squat (a) Catch-Release (c) Hammer-Catch Figure 7: OmniH2O autonomously conducts four tasks using LfD models trained with our collected data. minutes of ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: (a) OmniH2O enables teleoperating a full-size humanoid robot (Unitree H1) to complete tasks that require both high-precision manipulation and locomotion. (b) OmniH2O also ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 | Table 1: Simulation motion imitation evaluation of OmniH2O and baselines on dataset ˆ Q. All sequences Successful sequences | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Table 16: Here we describe the range of dynamics randomization for simulated dynamics randomization, ex- ternal perturbation, and terrain, which are important for sim-to-real ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 | We draw two key conclusions: (1) The Diffusion Policy significantly outperforms vanilla BC with ResNet; (2) In our LfD training, predicting a sequence of ... | comparison identity and matched condition | p. 8 (1 Introduction) |
 | Figure 9: The ablation of data augmentation. I Additional Physical Teleoperation Results Additional VR-based and RGB-based teleoperation demo are shown in Figure 10. 22 | comparison identity and matched condition | p. 22 (Figure/Table caption) |
 | Table 17: Quantitative LfD autonomous agents performance for 4 tasks. Metrics Catch-Release Squat Hammer-Catch Rock-Paper-Scissors (a) Ablation on Data size 25%data | comparison identity and matched condition | p. 24 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,7 +111,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 - **p. 6 / 1 Introduction - extractive body cue:** 4.1.2 Real-world Motion-Tracking Results Table 2: Real-world motion tracking evaluation on 20 standing motions in ˆ Q Tested sequences Method State Dimensions Eg-mpjpe ↓Empjpe ↓Eacc ...
 - **p. 7 / 1 Introduction - extractive body cue:** Real-world evaluation in Table 2(b) also shows that our choice of 25 steps of history achieves the best performance.
 - **p. 7 / 1 Introduction - extractive body cue:** Our dataset includes paired RGBD images from the head-mounted camera, the motion goals of H1's head and hands with respect to the root, and joint ...
-- **p. 8 / 1 Introduction - extractive body cue:** Metrics All Tasks (a) Ablation on Data size 25%data 50%data 100%data MSE Loss 1.30E-2 7.48E-3 5.25E-4 Succ rate 4/10 6.5/10 8/10 (b) Ablation on Sequence ...
 
 ## Generalization and Failure Cases
 
@@ -134,8 +122,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 | body limitation/failure cue | OmniH2O demonstrates great robustness under disturbances and unstructured terrains. | p. 7 (1 Introduction) |
 | body limitation/failure cue | (a) Disturbances (b) Outdoor Terrains Figure 5: OmniH2O shows superior robustness against human strikes and different outdoor terrains. | p. 7 (1 Introduction) |
 | body limitation/failure cue | In Table 1(d), we find that linear velocity information does not boost performance in simulation, but it introduces significant challenges in real-world deployment (details ... | p. 6 (1 Introduction) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -150,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 | Real-world evaluation in Table 2(b) also shows that our choice of 25 steps of history achieves the best performance. | p. 7 (1 Introduction) |
 | The training hyperparameters are in Appendix L. | p. 8 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 1 Introduction - extractive body cue:** Another limitation is safety; although the OmniH2O policy has shown great robustness, we do not have guarantees or safety checks for extreme disturbances or out-of-distribution ...
@@ -168,9 +146,8 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 7 (Figure/Table captio
 - **p. 6 / 1 Introduction - extractive body cue:** In Table 1(d), we find that linear velocity information does not boost performance in simulation, but it introduces significant challenges in real-world deployment (details illustrated ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (1 Introduction), p. 8 (1 Introduction), metrics p. 8 (1 Introduction), p. 8 (1 Introduction), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 22 (Figure/Table caption), p. 24 (Figure/Table caption), results p. 8 (1 Introduction), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (1 Introduction), p. 24 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

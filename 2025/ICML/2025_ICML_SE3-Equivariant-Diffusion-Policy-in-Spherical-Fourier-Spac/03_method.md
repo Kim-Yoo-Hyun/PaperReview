@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (4.1. Method Overview), p. 4 (4.2. Representing 
 - **p. 4 / 4.2. Representing State and Action by Spherical Signal - extractive body cue:** There are several advantages of using spherical Fourier features as latent features.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (4.3. Spherical Denoising Temporal U-net).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (4.1. Method Overview), p. 4 (4.2. Representing 
 - **p. 5 / 4.2. Representing State and Action by Spherical Signal - extractive body cue:** The robot state e is concatenated to the output of the encoder yielding C.
 - **p. 1 / 1. Introduction - extractive body cue:** SDP achieves translational invariance by formulating states and actions in the gripper frame (Chi et al., 2024).
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (4.1. Method Overview), p. 4 (4.2. Representing 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, three, components, Figure, spherical, encoder, embeds, state, multichannel, scene, feature, then, denoising, temporal, Unet, SDTU, estimates, noise, noisy, action.
 - **Relevant PDF headings:** 4. Method (p. 4); 4.1. Method Overview (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 4 (4.1. Method Overview), p. 4 (4.2. Representing 
 - **p. 9 / 6. Conclusion and Limitations - extractive body cue:** One limitation of the proposed method is that it operates in position control, ignoring contact forces, which leads to protective stops in the Flip Book ...
 - **p. 9 / 6. Conclusion and Limitations - extractive body cue:** Another limitation is the lowresolution point cloud processing in the observation encoder, which struggles to capture fine details, such as these in the Push Eraser ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Method Overview), p. 4 (4.2. Representing State and Action by Spherical Signal), p. 5 (4.4. Spherical FiLM Conditioning Layer), p. 5 (4.2. Representing State and Action by Spherical Signal), p. 6 (4.4. Spherical FiLM Conditioning Layer), objective p. 5 (4.3. Spherical Denoising Temporal U-net), p. 4 (4.2. Representing State and Action by Spherical Signal), temporal p. 4 (4.1. Method Overview), p. 4 (4.1. Method Overview), p. 5 (4.3. Spherical Denoising Temporal U-net), p. 5 (4.3. Spherical Denoising Temporal U-net), p. 6 (5.2. Physical Experiments), p. 6 (5.1. Simulation Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

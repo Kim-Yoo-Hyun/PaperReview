@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 4 (C H can be followed)): Using the results o
 - **p. 5 / C H can be followed - extractive body cue:** 3.1.2 Solving for the motion of a pushed object Each contact point between the pusher and the slider may be sticking, breaking free, or sliding ...
 - **p. 6 / C H can be followed - extractive body cue:** If the contact is frictionless, however, the object cannot be rotated.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The world frame F W and the slider frame F S.
@@ -80,20 +78,11 @@ PDF body evaluation/result cue (p. 4 (C H can be followed)): Using the results o
 | Proof: The center of friction only lies on a vertex of the convex hullif the supportfrictiondistribution s(x) integrates to zero everywhere else. | definition/direction/unit from same section | p. 7 (C H can be followed) |
 | The other is a distance r2 =p from the center of friction and on the opposite side from the endpoint, where p is the ... | definition/direction/unit from same section | p. 7 (C H can be followed) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,21 +114,11 @@ PDF body evaluation/result cue (p. 4 (C H can be followed)): Using the results o
 | body limitation/failure cue | In fact, with no information about the support friction distribution s(x) other than the center of friction, no velocity direction is guaranteed to be ... | p. 6 (C H can be followed) |
 | body limitation/failure cue | Figure 9: A plan found using stable pushes from only two edges. the set of stable pushing directions using STABLE. In light of Proposition ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -151,6 +130,5 @@ PDF body evaluation/result cue (p. 4 (C H can be followed)): Using the results o
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 9: A plan found using stable pushes from only two edges. the set of stable pushing directions using STABLE. In light of Proposition 2, ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (X. The Lie algebra), p. 3 (X. The Lie algebra), p. 7 (C H can be followed), p. 4 (C H can be followed), p. 4 (C H can be followed), p. 5 (C H can be followed), metrics p. 8 (Figure/Table caption), p. 4 (C H can be followed), p. 5 (C H can be followed), p. 5 (C H can be followed), p. 7 (C H can be followed), p. 7 (C H can be followed), baselines 본문 anchor 없음, results p. 4 (C H can be followed).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

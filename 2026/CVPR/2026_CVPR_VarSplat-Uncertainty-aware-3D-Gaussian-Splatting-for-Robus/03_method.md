@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 - **p. 3 / 3. Method - extractive body cue:** Unlike previous methods relying on pretrained predictors [19, 50], VarSplat learns this variance parameter from scratch, jointly optimizing them with appearance and geometry during mapping.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation), p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 3 (3. Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 - **p. 2 / 1. Introduction - extractive body cue:** The system is trained end-to-end online, jointly optimizing poses, Gaussian parameters, and σ2 as the map grows.
 - **p. 2 / 1. Introduction - extractive body cue:** Uniform photometric weighting leaves pose estimation vulnerable in lowtexture regions, around depth discontinuities, and on reflective surfaces.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 
 - **p. 5 / 3.3. Downstream Pose Estimation - extractive body cue:** Thanks to the explicit representation and the parallel optimization of poses and Gaussian parameters, we can simultaneously freeze the variance during tracking and registration, while ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** stay, consistent, Gaussian, view, square, MSE, variance, loss, Lvar, color, supervision, weighted, combination, SSIM, while, depth, between, rendered, ground-truth, Thanks.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. 
 - **p. 8 / 4.3. Ablation studies - extractive body cue:** Per-pixel uncertainty with vs. without depth on TUMRGBD (fr1/desk2).
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future works are provided in Supplementary Material.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation), p. 5 (3.3. Downstream Pose Estimation), p. 3 (3.1. Per-pixel uncertainty rendering), p. 3 (3. Method), objective p. 5 (3.3. Downstream Pose Estimation), p. 5 (3.2. Mapping), p. 4 (3.2. Mapping), p. 4 (3.2. Mapping), p. 3 (3.1. Per-pixel uncertainty rendering), p. 3 (3. Method), temporal p. 7 (4.2. Quantitative Evaluation), p. 2 (1. Introduction), p. 3 (3. Method), p. 4 (3.1. Per-pixel uncertainty rendering), p. 4 (3.2. Mapping), p. 5 (3.3. Downstream Pose Estimation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

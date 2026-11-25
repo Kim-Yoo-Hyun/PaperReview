@@ -44,8 +44,6 @@
 - **p. 8 / 4.3. Ablation Study on Layout Design - extractive body cue:** Given a novel scene type, e.g., Music Room, HOLODECK can synthesize new scenes for fine-tuning to improve the performance of pretrained agents in expert-designed environments.
 - **p. 6 / 4.1. Comparative Analysis on Residential Scenes - extractive body cue:** Besides, we add human-designed scenes from iTHOR [23] as the upper bound for reference.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Example outputs of HOLODECK-a large language model powered system, which can generate diverse types of environments (arcade, spa, museum), customize for styles (Victorian-style), ...
@@ -79,8 +77,6 @@
 | Figure 1. Example outputs of HOLODECK-a large language model powered system, which can generate diverse types of environments (arcade, spa, museum), customize for styles ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Given a text input, HOLODECK generates the 3D environment through multiple rounds of conversation with an LLM. as 3D-FRONT [11] restricts their ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@
 | The PROCTHOR baseline has access to the same set of Objaverse assets as HOLODECK. | comparison identity and matched condition | p. 6 (4.1. Comparative Analysis on Residential Scenes) |
 | HOLODECK's constraint-based approach outperforms the other methods significantly on bathroom, bedroom and living room. | comparison identity and matched condition | p. 7 (4.3. Ablation Study on Layout Design) |
 | Compared to PROCTHOR's performance in residential scenes, HOLODECK achieves higher human preference scores over half of (28 out of 52) the diverse scenes. | comparison identity and matched condition | p. 7 (4.2. HOLODECK on Diverse Scenes) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@
 | body limitation/failure cue | The ABSOLUTE method performs no better than RANDOM due to its tendency to create scenes with collision and boundary errors (see examples in the ... | p. 7 (4.3. Ablation Study on Layout Design) |
 | body limitation/failure cue | We present humans with four shuffled top-down images from each layout strategy and ask them to rank the four layouts considering out-of-boundary, object collision, ... | p. 7 (4.3. Ablation Study on Layout Design) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,20 +125,11 @@
 | Our large-scale This CVPR paper is the Open Access version, provided by the Computer Vision Foundation. | p. 1 (Abstract) |
 | Existing Embodied AI environments are typically crafted through manual design [5, 12, 23, 24], 3D scanning [7, 38, 40], or procedurally generated with hard-coded ... | p. 2 (1. Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.3. Ablation Study on Layout Design - extractive body cue:** The ABSOLUTE method performs no better than RANDOM due to its tendency to create scenes with collision and boundary errors (see examples in the supplement), ...
 - **p. 7 / 4.3. Ablation Study on Layout Design - extractive body cue:** We present humans with four shuffled top-down images from each layout strategy and ask them to rank the four layouts considering out-of-boundary, object collision, reachable ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.3. Ablation Study on Layout Design), p. 8 (4.3. Ablation Study on Layout Design), p. 8 (4.3. Ablation Study on Layout Design), p. 6 (4.1. Comparative Analysis on Residential Scenes), metrics p. 7 (4.3. Ablation Study on Layout Design), p. 6 (4.1. Comparative Analysis on Residential Scenes), p. 7 (4.2. HOLODECK on Diverse Scenes), p. 8 (4.3. Ablation Study on Layout Design), p. 8 (4.3. Ablation Study on Layout Design), p. 6 (4.2. HOLODECK on Diverse Scenes), baselines p. 6 (4. Human Evaluation), p. 6 (4.1. Comparative Analysis on Residential Scenes), p. 7 (4.3. Ablation Study on Layout Design), p. 7 (4.2. HOLODECK on Diverse Scenes), results p. 7 (4.2. HOLODECK on Diverse Scenes), p. 7 (4.3. Ablation Study on Layout Design), p. 8 (4.3. Ablation Study on Layout Design), p. 6 (4.2. HOLODECK on Diverse Scenes), p. 6 (4.1. Comparative Analysis on Residential Scenes), p. 8 (4.3. Ablation Study on Layout Design).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

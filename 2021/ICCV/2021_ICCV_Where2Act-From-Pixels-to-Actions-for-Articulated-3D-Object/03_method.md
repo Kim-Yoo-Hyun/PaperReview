@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 - **p. 4 / 4.2. Collecting Training Data - extractive body cue:** Then, we sample one position p∗ to conduct an additional interaction trial (p∗,R) according to the SoftMax normalized probability distribution over all possible interaction positions.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 - **p. 2 / 1. Introduction - extractive body cue:** We therefore limit our work to considering the plausible short-term interactions that an agent can perform given the current state of the object.
 - **p. 4 / 4.2. Collecting Training Data - extractive body cue:** 3 (b)) with pre-programmed interaction trajectories, each of which is parameterized by the gripper pose (p,R) ∈SE(3) at the beginning.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,15 +90,11 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 - **p. 4 / 4.2. Collecting Training Data - extractive body cue:** We employ a hybrid data sampling strategy where we first sample large amount of offline random interaction trajectories to bootstrap the learning and then adaptively ...
 - **p. 5 / 4.3. Training and Losses - extractive body cue:** We leverage the Min-of-N strategy [8] to train the action proposal module Dr, which is essentially a conditional generative model that maps a pixel p ...
 - **p. 5 / 4.3. Training and Losses - extractive body cue:** Given a batch of B interaction data points {(Si, pi,Ri,ri)}i where ri = 1 (positive) and ri = 0 (negative) denote the ground-truth interaction outcome, ...
-- **p. 4 / 4.3. Training and Losses - extractive body cue:** We empirically find it beneficial to first train the action scoring module Ds and then train the three decoders jointly.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** decode, per-pixel, actionable, information, three, decoding, heads, actionability, scoring, module, predicts, score, action, proposal, proposes, multiple, gripper, orientations, Rz/p, sampled.
 - **Relevant PDF headings:** 4. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +114,13 @@ PDF body method statement (p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modul
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 7. Failure Cases. We visualize some interesting failure cases, which demonstrate the difficulty of the task and some am- biguous cases that are hard ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. We visualize (a) the actionability scoring and (b) the action proposal predictions on an example cabinet with a door that can be slipped ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (4.1. Network Modules), p. 3 (4.1. Network Modules), p. 4 (4.3. Training and Losses), p. 4 (4.2. Collecting Training Data), p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses), objective p. 5 (4.3. Training and Losses), p. 5 (4.3. Training and Losses), p. 4 (4.1. Network Modules), p. 4 (4.2. Collecting Training Data), temporal p. 4 (4.1. Network Modules), p. 1 (Abstract), p. 4 (4.2. Collecting Training Data), p. 6 (5.2. Metrics and Baselines), p. 6 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

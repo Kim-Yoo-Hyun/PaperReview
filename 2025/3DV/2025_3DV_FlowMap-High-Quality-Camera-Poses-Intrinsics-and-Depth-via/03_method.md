@@ -54,7 +54,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 Int
 - **p. 3 / 1 Introduction - extractive body cue:** Gaussian Splats obtained from FlowMap are on par with those obtained from COLMAP [58], even though FlowMap only leverages gradient descent, is fully differentiable, and ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 Int
 - **p. 3 / 1 Introduction - extractive body cue:** Gaussian Splats obtained from FlowMap reconstructions far outperform the state-of-the-art gradient-based bundle-adjustment method, NoPe-NeRF [2], and those obtained using the SLAM algorithm DROIDSLAM [67], even ...
 - **p. 3 / 1 Introduction - extractive body cue:** FlowMap: Camera Poses, Intrinsics and Depth via Gradient Descent 3 using Gaussian Splatting [29].
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 Int
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Alongside, point, tracks, encourage, long-term, geometric, consistency, introduce, differentiable, re-parameterizations, depth, intrinsics, pose, amenable, first-order, optimization, Rather, feed-forward, estimates, parameterized.
 - **Relevant PDF headings:** A method (p. 17); 23 Method (p. 23).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 Int
 - **p. 14 / 8 Discussion - extractive body cue:** FlowMap has several limitations that suggest exciting directions for future work.
 - **p. 13 / 6 Results - extractive body cue:** However, on about 20 percent of scenes, this approach falls into a local minimum and reconstruction fails catastrophically.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), objective p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), temporal p. 1 (Body text (section not recovered)), p. 3 (2 Related Work), p. 5 (2 Related Work), p. 5 (2 Related Work), p. 8 (2 Related Work), p. 8 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

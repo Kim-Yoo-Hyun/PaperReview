@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. 
 - **p. 8 / 2 Layers - extractive body cue:** 0 50 Normalized Return Pen Sparse Door Sparse 0 200 400 600 800 1000 0 50 % Batch Reward Non-Zero 0 200 400 600 800 ...
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 5 (4.4. Per-Environment Design Choices), p. 5 (4.4. Per-Environment Design Choices), p. 1 (1. Introduction), p. 3 (4. Online RL with Offline Data), p. 4 (4.4. Per-Environment Design Choices), p. 2 (1. Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. 
 - **p. 1 / 1. Introduction - extractive body cue:** In real-world problems, however, we are often confronted with scenarios where samples are expensive, and furthermore, rewards are sparse, often exacerbated by high dimensional state ...
 - **p. 2 / 1. Introduction - extractive body cue:** We show that online off-policy RL algorithms can be remarkably effective at learning with offline data.
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. 
 - **p. 1 / 1. Introduction - extractive body cue:** We run RLPD for 300k steps due to early convergence. on having large amounts of online interaction with an environment, which is usually made feasible ...
 - **p. 7 / 4. Does the proposed workflow around environment - extractive body cue:** 0 100 200 300 0 20 40 60 80 Cheetah Run Expert UTD=1 (Online) UTD=1 (RLPD) UTD=10 (Online) UTD=10 (RLPD) Environment steps (£103) Normalized Return ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Determine, number, Critic, targets, subset, Initialize, empty, replay, buffer, offline, data, while, True, Receive, initial, observation, state, Take, action, Store.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. 
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 19. D4RL Ablation on Expert Data. We also test on the narrow Expert dataset, not tested by (Lee et al., 2021). In Figure 19 ...
 - **p. 7 / 5.1. RLPD Analysis and Ablation Study - extractive body cue:** Moreover, removing LayerNorm now 2V-D4RL normalized return is episode return divided by 10.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. Does the proposed workflow around environment), p. 3 (4. Online RL with Offline Data), p. 6 (4. Does the proposed workflow around environment), p. 1 (1. Introduction), p. 3 (4. Online RL with Offline Data), objective p. 5 (4.4. Per-Environment Design Choices), p. 4 (4.4. Per-Environment Design Choices), p. 3 (3. Preliminaries), p. 5 (4.4. Per-Environment Design Choices), p. 2 (1. Introduction), p. 8 (2 Layers), temporal p. 2 (2. Related work), p. 6 (4. Does the proposed workflow around environment), p. 5 (4.4. Per-Environment Design Choices), p. 1 (1. Introduction), p. 5 (4.4. Per-Environment Design Choices), p. 6 (4. Does the proposed workflow around environment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

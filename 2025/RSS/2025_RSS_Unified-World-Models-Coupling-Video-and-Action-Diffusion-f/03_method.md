@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** In this section, we introduce Unified World Models as a way to incorporate temporal dynamics into diffusion-based action prediction models, proving a bridge between the ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Video Prediction 𝑝(𝑜′/𝑜) Inverse Dynamics 𝑝(𝑎/𝑜, 𝑜′) Policy 𝑝(𝑎/𝑜) Forward Dynamics 𝑝(𝑜!/𝑜, 𝑎) Unified World Model 𝑎! 𝑎" 𝑎# 𝑎$ Diffusion Transformer 𝜖! % 𝜖" ...
 - **p. 4 / III. METHOD - extractive body cue:** At inference, we can flexibly draw samples from various distributions by controlling the timesteps ta and to′ as follows: 1) Policy To sample from the ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** We train all methods on the pretraining / co-training datasets for 100K steps and then finetune to the evaluation tasks (task-specific parameters shown in Table.
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** This suggests using diffusion time steps for masking as an effective strategy for co-training on multimodal data.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Encoder, Decoder, Unpatchify, Patchify, Unified, World, Model, Training, UWM, Marginal, Inference, Policy, Conditional, Inverse, Dynamics, Marginalization, Conditioning, Robot, data, random.
 - **Relevant PDF headings:** III. METHOD (p. 3); 2) Video Prediction Model To sample from the video (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** This limits its performance at accurately capturing the conditional action distribution without expanding model capacity.
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** These results imply that UWM effectively learns from large robotic datasets, due Pretraining Dataset (LIBERO-90) Finetuning Datasets (LIBERO-10) Book-Caddy Soup-Cheese Bowl-Drawer Moka-Moka Mug-Mug Fig.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), objective p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), temporal p. 3 (III. METHOD), p. 8 (IV. EXPERIMENTS), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 6 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

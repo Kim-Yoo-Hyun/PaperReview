@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 - **p. 5 / 3 Experiments - extractive body cue:** This high-dimensional continuous control task requires training a quadruped robot to roll over from its back, stand up, and walk forward at a fixed target ...
 - **p. 6 / 3 Experiments - extractive body cue:** Over time, grasping becomes precise and the robot learns to push objects out of corners.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: To study the applicability of Dreamer for sample-efficient robot learning, we apply the algorithm to learn robot locomotion, manipulation, and navigation tasks from ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 | The graph shows a single training run with the shaded area indicating one standard deviation within each time bin. | definition/direction/unit from same section | p. 5 (3 Experiments) |
 | We evaluate Dreamer on 4 robots, each with a different task, and compare its performance to appropriate algorithmic and human baselines. | definition/direction/unit from same section | p. 4 (3 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 | Baselines We compare to a strong learning algorithm for each of our experimental setups. | comparison identity and matched condition | p. 5 (3 Experiments) |
 | Specifically, we aim to answer the following research questions: • Does Dreamer enable robot learning directly in the real world, without simulators? • Does ... | comparison identity and matched condition | p. 4 (3 Experiments) |
 | In comparison, SAC quickly learns to roll off its back but fails to stand up or walk given the small data budget. | comparison identity and matched condition | p. 6 (3 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 | body limitation/failure cue | The filled circles indicate times where the robot fell on its back, requiring the learning of a robust strategy for getting back up. | p. 5 (3 Experiments) |
 | body limitation/failure cue | We hypothesize that Rainbow DQN and PPO fail because they require larger amounts of experience, which is not feasible for us to collect in ... | p. 6 (3 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 | In our implementation, a learner thread continuously trains the world model and actor critic behavior, while an actor thread in parallel computes actions for ... | p. 3 (2 Approach) |
 | This reduces accumulating errors and enables massively parallel training with a large batch size. | p. 3 (2 Approach) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 Discussion - extractive body cue:** Limitations While Dreamer shows promising results, learning on hardware over many hours creates wear on robots that may require human intervention or repair.
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5
 - **p. 6 / 3 Experiments - extractive body cue:** We hypothesize that Rainbow DQN and PPO fail because they require larger amounts of experience, which is not feasible for us to collect in the ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 4 (3 Experiments), p. 4 (3 Experiments), p. 5 (3 Experiments), metrics p. 6 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 1 (Figure/Table caption), p. 5 (3 Experiments), baselines p. 5 (3 Experiments), p. 1 (Figure/Table caption), p. 4 (3 Experiments), p. 5 (3 Experiments), p. 4 (3 Experiments), p. 6 (3 Experiments), results p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments), p. 6 (3 Experiments), p. 6 (3 Experiments), p. 4 (3 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -41,8 +41,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 - **p. 6 / B. Latent Space Analysis - extractive body cue:** This allows for better generalization to unseen commands, smoother motion interpolation, and more coherent transitions between behaviors.
 - **p. 7 / B. Latent Space Analysis - extractive body cue:** ‘can leverage to perform smooth transitions between motions and generate novel, unseen motions.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. tsining phase anda language-directed student
@@ -69,8 +67,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 | Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | ‘can leverage to perform smooth transitions between motions and generate novel, unseen motions. | definition/direction/unit from same section | p. 7 (B. Latent Space Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -79,13 +75,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 | We then analyze the learned latent space and its contribution to the policy's generalization to unseen commands, highlight key features such as smooth transitions ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Fig. 12. Lower-body Motion Examples. The framework also enables various lowercbady movements soch as stepping, squating and balancing. These motions are also sucessfully transfered ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -119,8 +108,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 | body limitation/failure cue | Moreover, the robot's movement stays agile and stable, demonstrating the framework's robustness to unseen latent codes, | p. 8 (C. Generalization to Unseen Texts) |
 | body limitation/failure cue | ‘dynamics of humanoid motion, achieving smooth and coherent transitions ~ such as running, stopping, and switching to limb ‘movements - within a single policy, ... | p. 8 (C. Generalization to Unseen Texts) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -134,14 +121,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 | To verify this property, we apply the tSNE algorithm to embed the high-dimensional latent codes of various motions into a 2D plane. | p. 6 (B. Latent Space Analysis) |
 | 5, we plot nine different ‘motions from four categories (walking, raising the left or right hhand, and clapping), with each category color-coded, | p. 6 (B. Latent Space Analysis) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks (top ...
@@ -152,9 +131,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption)): Fig. 9. Latent Spa
 - **p. 8 / C. Generalization to Unseen Texts - extractive body cue:** ‘dynamics of humanoid motion, achieving smooth and coherent transitions ~ such as running, stopping, and switching to limb ‘movements - within a single policy, without ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (B. Latent Space Analysis), p. 7 (B. Latent Space Analysis), metrics p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 7 (B. Latent Space Analysis), baselines p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

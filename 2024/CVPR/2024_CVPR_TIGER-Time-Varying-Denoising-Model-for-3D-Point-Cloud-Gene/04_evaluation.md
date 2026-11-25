@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Co
 - **p. 6 / 4.2. Comparison with SoTA methods - extractive body cue:** It is noteworthy that in order to compare with LION, which uses a different dataset splitting strategy (sampling from the first 10, 000 points instead ...
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** For each shape, we sample 2, 048 points and normalize them globally across the entire dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. An illustration of different roles played by convolution and attention operations in the denoising model. Convolution is good for learning local relationships, and ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Co
 | To further demonstrate the generalizability of our model, we train a universal TIGER model on all 55 categories of ShapeNetv2 [6]. | definition/direction/unit from same section | p. 8 (4.3. Ablation and Analysis) |
 | High quality and diverse 3D point clouds generated from our TIGER model trained on 55 ShapeNetv2 categories. long-range relationships in the data. | definition/direction/unit from same section | p. 8 (4.3. Ablation and Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Co
 | 1, we outperform LION in four out of six metrics. | comparison identity and matched condition | p. 6 (4.2. Comparison with SoTA methods) |
 | Figure 8. Visualization of attention maps in 3D point clouds. Col- umn (c) is the result of column (b) multiplied by position relation- ship ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | 4, our latent point cloud Transformer outperforms both PCT and Point Transformer under various settings. | comparison identity and matched condition | p. 7 (4.3. Ablation and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Co
 | body limitation/failure cue | Figure 2. Illustration of our time-varying two-stream architecture (TIGER). The network's input is a noisy point cloud Xt at timestep t, and the goal ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | Figure 7. Our generation results (right) compared to baseline models (left). TIGER generates high-quality and diverse 3D point clouds. where WD×3 is the projection ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Co
 | We compute position relationship map H by previous position embedding to reweigh the QKT matrix. where pos is a polynomial expression of λ. | p. 5 (3.3. Latent Point Cloud Transformer) |
 | The overview of our decoder is shown in Fig. | p. 6 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusions - extractive body cue:** Although we generate high-quality and natural samples, we cannot control the category of the generated shape.
@@ -155,6 +134,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Co
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Our generation results (right) compared to baseline models (left). TIGER generates high-quality and diverse 3D point clouds. where WD×3 is the projection matrix ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Comparison with SoTA methods), p. 6 (4.1. Experimental Setup), metrics p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (4.3. Ablation and Analysis), p. 8 (4.3. Ablation and Analysis), baselines p. 6 (Figure/Table caption), p. 6 (4.2. Comparison with SoTA methods), p. 7 (Figure/Table caption), p. 7 (4.3. Ablation and Analysis), results p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Comparison with SoTA methods), p. 6 (4.2. Comparison with SoTA methods), p. 7 (4.3. Ablation and Analysis), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

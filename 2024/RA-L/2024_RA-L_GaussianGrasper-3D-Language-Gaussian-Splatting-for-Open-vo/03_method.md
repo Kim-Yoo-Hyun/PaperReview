@@ -43,7 +43,6 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 - **p. 3 / III. METHODOLOGY - extractive body cue:** EFD: Efficient Feature Distillation Multi-view RGB-D Initialize 3D Gaussian Field Locate Normal-guided Grasp Pick up the hamburger Query Filter Grasping Generate Grasp Pose Candidates 3D ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (III. METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -62,7 +61,6 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Recently, there has been an increasing scholarly focus on language-guided robotic manipulation due to its vast potential in facilitating human-robot interaction, enabling robotic home services, ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Other methods [8], [9], [10], [11], [12], [13] that use 3D backbone to extract features and are supervised by 3D annotation or manipulation feedback can ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -77,13 +75,10 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** EFD, Efficient, Feature, Distillation, Multi-view, RGB-D, Initialize, Gaussian, Field, Locate, Normal-guided, Grasp, Pick, hamburger, Query, Filter, Grasping, Generate, Pose, Candidates.
 - **Relevant PDF headings:** III. METHODOLOGY (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -99,23 +94,13 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY)): EF
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** Besides, we report the quantitative results of the grasping success rate with and without the normal filter, as shown in Table II.
 - **p. 7 / V. LIMITATION - extractive body cue:** One limitation is that our reconstructed scene remains static.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), temporal p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 2 (II. RELATED WORK), p. 2 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

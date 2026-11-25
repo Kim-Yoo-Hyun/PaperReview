@@ -46,8 +46,6 @@
 - **p. 8 / 4 Experiments - extractive body cue:** For scene-level, we adopt two input views for a fair comparison with pixelSplat [8].
 - **p. 8 / 4 Experiments - extractive body cue:** We normalize the camera poses for scene-level input images following common practices in previous forward-facing reconstructions as done in [9,39].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Novel-view renderings of our predicted Gaussians from object captures (top left), text-conditioned generated object images (top right), scene captures (bottom left) and text-conditioned ...
@@ -81,8 +79,6 @@
 | We qualitatively show some results to demonstrate such a workflow for applying our models in this downstream 3D generation task. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 | For the image-to-3D application, we use the imageconditioned multi-view diffusion model in Zero123++ [52], which generates 6 structured views at fixed viewpoints. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@
 | Fig. 5: We compare scene-level GS-LRM with the best-performing baseline pixel- Splat [8]. We can observe that our model is better in sharpness (leftmost ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
 | We also made necessary changes for fair comparisons with baseline methods (Sec. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | We also tried to compare against another baseline SparseNeuS [36]; however, we found that it failed to produce plausible reconstructions given 4 highly sparse ... | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@
 | body limitation/failure cue | Please refer to our project page for the video and interactive rendering results. the view frustum, which means that unseen regions cannot be reconstructed. | p. 14 (4 Experiments) |
 | body limitation/failure cue | We also tried to compare against another baseline SparseNeuS [36]; however, we found that it failed to produce plausible reconstructions given 4 highly sparse ... | p. 9 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@
 | It's worth noting that this is an almost equal-compute comparison: LGM is trained on 32 A100 (80G VRAM) for 4 days, while our lowres ... | p. 10 (4 Experiments) |
 | From each output token, we decode the attributes of pixel-aligned Gaussians in the corresponding patch with a linear layer. | p. 4 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / 4 Experiments - extractive body cue:** 4.6 Limitations Although our method shows high-quality reconstruction results from posed sparse images, there are still a few limitations to be addressed in future work.
@@ -166,6 +145,5 @@
 - **p. 9 / 4 Experiments - extractive body cue:** We also tried to compare against another baseline SparseNeuS [36]; however, we found that it failed to produce plausible reconstructions given 4 highly sparse inputs; ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

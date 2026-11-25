@@ -61,8 +61,6 @@ PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p
 | body cue at p. 4 | In our experiments, we assume that the robot is equipped with a collision avoidance system independent of NoMaD. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | Consequently, the simulator restricts the robot from leaving the traversable area, and collision avoidance performance is not evaluated2. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 5 (2) Pre-Collection), p. 2 (A. ITG-based Visual Navigation). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 5 (2) Pre-Collection), p. 2 (A. ITG-based Visual Navigation), objective p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 1 (I. INTRODUCTION), p. 2 (III. 3DGS AS ENVIRONMENT REPRESENTATION).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

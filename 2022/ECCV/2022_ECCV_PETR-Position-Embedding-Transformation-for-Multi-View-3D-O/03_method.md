@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p.
 - **p. 5 / 3 Method - extractive body cue:** Object queries, generated from query generator, are updated through the interaction with 3D position-aware features in transformer decoder.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p. 5 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** Finally, the 3D position-aware features are flattened and serve as the input of the transformer decoder.
 - **p. 7 / 3 Method - extractive body cue:** Then the coordinates of 3D anchor points are input to a small MLP network with two linear layers and generate the initial object queries Q0.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p.
 
 - **p. 8 / 4 Experiments - extractive body cue:** All experiments are trained for 24 epochs (2x schedule) on 8 Tesla V100 GPUs with a batch size of 8.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Object, queries, generated, query, generator, updated, through, interaction, position-aware, features, transformer, decoder, layer, interact, multi-head, attention, feed-forward, network, Then, image.
 - **Relevant PDF headings:** 3 Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p.
 - **p. 14 / 4 Experiments - extractive body cue:** Finally, we provide some failure cases (see Fig.
 - **p. 14 / 4 Experiments - extractive body cue:** We mark the failure cases by red and green circles.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), objective p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 5 (3 Method), temporal p. 1 (1 Introduction), p. 8 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 1 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

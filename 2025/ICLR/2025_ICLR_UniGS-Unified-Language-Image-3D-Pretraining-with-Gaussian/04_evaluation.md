@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 - **p. 7 / 4 EXPERIMENT - extractive body cue:** Following Section 3.5, we collect 146000, 7929, 3483, and 61871 objects, optimized for Objaverse (including Objaverse-LVIS for evaluation only ), ABO, MVImgNet, and SUN RGBD ...
 - **p. 14 / B IMPLEMENTATION DETAILS - extractive body cue:** (2015) datasets; as well as the training and evaluation details on the Text-driven retrieval, Zero-shot classification, and scene recognition tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Left: information gap in different 3D representations. Middle: our UniGS, a novel unified text-image-3D pre-training framework, leverages 3DGS as the 3D representation. Right: ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 | The accuracy of Zero-shot classification on ABO under three optimization pipelines. items, respectively. | definition/direction/unit from same section | p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION) |
 | Table 11: Zero-shot classification on Objaverse with other 3DGS-driven methods. Avg. denotes mean average classification accuracy. Results illustrate the ability of UniGS to migrate ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 | (2023) and UniGS significantly outperform SOTA methods, emphasizing the effectiveness of 3DGS representation and proposed Gaussian-aware Guidance. | comparison identity and matched condition | p. 9 (4 EXPERIMENT) |
 | As for the baseline model, we further report the performance of the original Uni3D model trained with point clouds and the altered version trained ... | comparison identity and matched condition | p. 6 (4 EXPERIMENT) |
 | Table 9: Comparisons to state-of-the-art methods with the same data on Objaverse-LVIS zero- shot classification. Avg.: the mean average classification accuracy. Methods Source Backbone ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 | body limitation/failure cue | Note that 3DGS does not necessarily exist on the surface of objects, so there is a certain difference between point clouds and the 3D ... | p. 6 (4 EXPERIMENT) |
 | body limitation/failure cue | Moreover, the success of UniGS in SUN RGBD shows the robustness of 3DGS representation to the number of multi-view images. | p. 9 (4 EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 | Let N denotes the batch size and τ the temperature coefficient, the Language-3DGS Alignment training objective L(T, G) can be described as: L(T, G) ... | p. 4 (3 METHODOLOGY) |
 | Given a text-image-3DGS triplet, {XT , XI, XG}, text features, f T ∈RCT , image features, f I ∈RCI, and 3DGS features, f G ... | p. 4 (3 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 CONCLUSION - extractive body cue:** Limitations: Despite the robust and effective performance of UniGS for 3D representation learning and downstream applications, its current version lacks performance validation of out-door scenarios ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT)
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** Moreover, the success of UniGS in SUN RGBD shows the robustness of 3DGS representation to the number of multi-view images.
 
 - **Evidence anchors reviewed:** datasets p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 9 (4 EXPERIMENT), p. 14 (B.1 DETAILS OF ENSEMBLE DATASETS), p. 9 (4 EXPERIMENT), p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), p. 7 (4 EXPERIMENT), metrics p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 15 (B.2 DETAILS OF TRAINING AND EVALUATION), baselines p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 6 (4 EXPERIMENT), p. 16 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

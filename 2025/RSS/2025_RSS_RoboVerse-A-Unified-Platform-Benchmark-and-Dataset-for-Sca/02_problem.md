@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRop
 | body cue at p. 12 | While ROBOVERSE provides a comprehensive and sealable platform, several limitations remain. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 12 | Additionally, while our large-scale dataset presents significant potential for pretraining a foundation model, this exploration falls beyond the ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), p. 2 (1. IyrRopucTION). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 1 (Abstract), p. 3 (C. Benchmarking in Robotics), interface p. 2 (1. IyrRopucTION), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), p. 2 (1. IyrRopucTION), objective p. 2 (1. IyrRopucTION), p. 6 (IV. ROBOVERSE DATASET).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 - **p. 10 / B. Results Comparison - extractive body cue:** IV, following the mainstream in-distribution setting, we performed extensive policies training and real robot evaluations on five long-horizon tasks, and reported a detailed performance comparison ...
 - **p. 11 / B. Results Comparison - extractive body cue:** We can see that the two robot arms have leamed the movements demonstrated by human hands and complete these ‘complex tasks in an orderly manner.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our proposed YOTO (You Only Teach Once) facilitates v:
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 | (1) First, the diffusion-based strategy always performed better than the transformer-based ACT. | definition/direction/unit from same section | p. 10 (B. Results Comparison) |
 | We can see that the two robot arms have leamed the movements demonstrated by human hands and complete these ‘complex tasks in an orderly ... | definition/direction/unit from same section | p. 11 (B. Results Comparison) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 | Despite being a solid baseline, it performed the worst on this challenging longhorizon task. | comparison identity and matched condition | p. 9 (B. Results Comparison) |
 | ong-horizon bimanual manipulation tasks, the existing stateof-the-art methods still have a lot of room for improvement, such as the gradually decaying effect over multiple ... | comparison identity and matched condition | p. 10 (B. Results Comparison) |
 | In summary, these results verify that our BiDP indeed outperforms prior methods with the least amount of performance degradation in OOD generalization | comparison identity and matched condition | p. 11 (B. Results Comparison) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 | body limitation/failure cue | Here, we answer the questions raised at the beginning one by one, including basic in-distribution results and generalizations to out-of-distribution settings, | p. 8 (B. Results Comparison) |
 | body limitation/failure cue | Although above tests have new variations in object placements, we choose two tasks pul drawer and uncover 1id to perform more challenging ‘out-of-distribution (QOD) ... | p. 8 (A. Experiment Setups) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 | 2) High-Level Features Extraction: Given a video demonstration (the left stream) of one specified bimanual task, we run our vision perception pipeline to obtain ... | p. 4 (B. Hand Motion Extraction and Injection) |
 | For imitation learning, the agent mimics manipulation plans from labeled demonstrations D - {(O,A),}*,, where N is the number of trajectories, O = {0,,S/,S8}L, ... | p. 4 (A. Problem Formulation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / VI. CONCLUSION AND Limitation - extractive body cue:** In short, these limitations highlight the need for further innovations to enhance robustness, generalization, and scalability in bimanual robot manipulation,
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 10 (B. Results Comparison), p. 9 (B. Results 
 - **p. 8 / A. Experiment Setups - extractive body cue:** Although above tests have new variations in object placements, we choose two tasks pul drawer and uncover 1id to perform more challenging ‘out-of-distribution (QOD) evaluations ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (A. Experiment Setups), p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups), p. 11 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), metrics p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), p. 17 (A. Implementation Details of Our BiDP), p. 8 (A. Experiment Setups), p. 8 (B. Results Comparison), baselines p. 11 (B. Results Comparison), p. 8 (A. Experiment Setups), p. 8 (B. Results Comparison), p. 9 (B. Results Comparison), p. 10 (B. Results Comparison), p. 11 (B. Results Comparison), results p. 10 (B. Results Comparison), p. 9 (B. Results Comparison), p. 9 (B. Results Comparison), p. 11 (B. Results Comparison), p. 17 (A. Implementation Details of Our BiDP), p. 10 (B. Results Comparison).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

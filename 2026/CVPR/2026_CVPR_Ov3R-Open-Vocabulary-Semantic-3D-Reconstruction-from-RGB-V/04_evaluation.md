@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 6 / 4. Experiments - extractive body cue:** For the 3D reconstruction task, we follow [35] and train CLIP3R on ScanNet++ [58], Aria Synthetic Environments [2], and CO3D-v2 [44], which provide diverse scenarios ...
 - **p. 6 / 4. Experiments - extractive body cue:** We evaluate 3D reconstruction performance on Replica [48] and 7Scenes [46].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Ov3R is an Open-Vocabulary Semantic 3D Reconstruction Framework. It consists of two novel feed-forward modules, CLIP3R and 2D-3D OVS, and excels in both ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Table 4. Open-vocabulary 3D semantic segmentation results on ScanNetv2. On top: methods running on ground truth 3D re- constructions. At the bottom: methods running ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Table 6. Ablation study of 2D-3D OV. We report the advance- ment brought by different fusion strategies. shown in Figure 6, Ov3R accurately identifies ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Figure 5. Qualitative results - Dense Pointmaps on Replica. Compared to competing methods, Ov3R demonstrates superior complete- ness and geometric alignment, particularly visible in ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 5. Ablation study of CLIP3R on Replica. We study the impact of CLIP-insertion in I2P (CLIP-insert) and the CLIP- semantic supervision in L2W ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 6. Ablation study of 2D-3D OV. We report the advance- ment brought by different fusion strategies. shown in Figure 6, Ov3R accurately identifies ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | Figure 4. 2D-3D OVS Overview. After matching 2D and 3D segments across images and pointmaps, CLIP3R, DINO, and 3D-CLIP features are combined into a ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | Table 4. Open-vocabulary 3D semantic segmentation results on ScanNetv2. On top: methods running on ground truth 3D re- constructions. At the bottom: methods running ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | This 3D encoder is pre-trained on triplets of point clouds, corresponding images, and text using natural language supervision. | p. 5 (3.2. 2D-3D OVS) |
 | We run experiments on the 8 standard scenes of Replica, annotated with 51 different semantic classes, and evaluate the results directly in 3D space ... | p. 7 (4.3. Open-Vocabulary 3D Semantic Segmentation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Ov3R inherits one of the limitations of 3R models, i.e., the suboptimal accuracy of the retrieved camera poses.
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Open-vocabulary 3D semantic segmentation results on ScanNetv2. On top: methods running on ground truth 3D re- constructions. At the bottom: methods running on ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 6 (4. Experiments), metrics p. 6 (4. Experiments), p. 8 (Figure/Table caption), p. 6 (4. Experiments), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (4.1. 3D Reconstruction), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

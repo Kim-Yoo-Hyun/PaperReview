@@ -55,7 +55,6 @@ PDF body method statement (p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 4 / 3 Method - extractive body cue:** Later works [9] introduce regularized online adaptation (ROA) to collapse this into a single phase.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 5 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 3 / 1 Introduction - extractive body cue:** A single neural network is trained via RL in simulation to directly output motor commands from pixels [2, 43, 23].
 - **p. 4 / 3 Method - extractive body cue:** We wish to train a single neural network that goes directly from raw depth and onboard sensing to joint angle commands.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** W is sampled randomly in {0,1} at training time and controlled via remote at deployment time.
 - **p. 7 / 4 Results - extractive body cue:** The deployable policy can be trained on a single 3090 GPU in less than 20 hours.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Reinforcement, Learning, Scandots, Phase, above, rewards, learn, policy, model-free, simulation, Regularized, Online, Adaptation, ROA, train, estimator, recover, environmental, information, history.
 - **Relevant PDF headings:** 3 Method (p. 2); 3 Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 8 / 4 Results - extractive body cue:** Noisy is able to get some performance but has very large variance since it can rely on collisions with its legs to sense terrain geometry ...
 - **p. 9 / 4 Results - extractive body cue:** These sudden adjustments are out-ofdistribution for the policy and it cannot adapt fast enough, causing it to fail.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 4 (3 Method), p. 4 (3 Method), objective p. 5 (3 Method), p. 2 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 4 (3 Method), temporal p. 5 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

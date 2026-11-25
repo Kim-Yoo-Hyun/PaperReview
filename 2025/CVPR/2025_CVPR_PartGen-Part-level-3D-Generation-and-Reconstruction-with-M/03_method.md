@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (3. Method), p. 5 (3.5. Training data), p. 5 (3.
 - **p. 4 / 3.1. Background on 3D generation - extractive body cue:** The generator Φ is obtained by fine-tuning an image generation model pre-trained on Internet-scale 2D data, which is a significant advantage compared to learning a ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3.5. Training data).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (3. Method), p. 5 (3.5. Training data), p. 5 (3.
 - **p. 6 / 3.5. Training data - extractive body cue:** The images with blue borders are the inputs.
 - **p. 2 / 1. Introduction - extractive body cue:** We show that PartGen can be applied to different input modalities: starting from text, an image, or a real-world 3D scan, PartGen can generate 3D ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3. Method), p. 5 (3.5. Training data), p. 5 (3.
 - **p. 6 / 4.1. Part Segmentation - extractive body cue:** First, we fine-tune SAM2's mask decoder on our dataset, given the ground-truth masks and randomly selected seed points for different views.
 - **p. 4 / 3.2. Multi-view part segmentation - extractive body cue:** Then, we obtain Φseg by fine-tuning Φ to: (1) take as conditioning the multi-view image I, and (2) generate the color-coded multi-view segmentation map C, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, necessary, background, multiview, diffusion, briefly, describe, PartGen, applied, text, image, model, inputs, case, conditioning, training, data, consists, pairs, multi-view.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 3 (3. Method), p. 5 (3.5. Training data), p. 5 (3.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of PartGen. Our method begins with text, single images, or existing 3D objects to obtain an initial grid view of the object. ...
 - **p. 6 / 4.1. Part Segmentation - extractive body cue:** Second, we concatenate the four orthogonal views in a multi-view image I and fine-tune SAM2 to predict the multi-view mask M (in this case, the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Method), p. 5 (3.5. Training data), p. 5 (3.5. Training data), p. 4 (3.1. Background on 3D generation), p. 4 (3.2. Multi-view part segmentation), p. 3 (3.1. Background on 3D generation), objective p. 4 (3.2. Multi-view part segmentation), p. 4 (3.1. Background on 3D generation), temporal p. 3 (3. Method), p. 4 (3.2. Multi-view part segmentation), p. 4 (3.2. Multi-view part segmentation), p. 5 (3.4. Part reconstruction), p. 8 (5. Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

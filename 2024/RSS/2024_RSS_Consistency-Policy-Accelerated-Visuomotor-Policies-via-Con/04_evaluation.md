@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** 2) Plug Insertion: The robot has to pick up a plug and insert it into a socket.
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** Success rates and standard errors are presented for each task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Both Diffusion and Consistency Policy work by sampling random actions and denoising them into predictions of actions. xt denotes the current action distribution ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Trash Clean Up Plug Insertion Microwave Success Inference Success Inference Success Rate Rate Time (ms) Rate Time (ms) DDiM 0.8 ± .13 192 0.6 ... | definition/direction/unit from same section | p. 8 (IV. EXPERIMENTS) |
 | We begin by demonstrating Consistency Policy's strengths in accuracy and inference speed on a variety of common robotics baselines that include both image and ... | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | On Robomimic Can, single-step CP actually outperforms 3-step CP and registers a marginal improvement over DDPM. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Thus, we choose as our baseline method the faster and more realistic DDiM variant of Diffusion Policy, which uses 15 steps for policy inference. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | Results: Table IV shows how the baseline DDiM-variant of Diffusion Policy achieves similar average success rates as our method on the Rubbish Clean Up ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Fig. 1: Both Diffusion and Consistency Policy work by sampling random actions and denoising them into predictions of actions. xt denotes the current action ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | ParaDiGMS's experiments do not show any degradation in performance when using parallel sampling, but they do assume access to sufficient compute. | p. 5 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | We sample training times t from a uniform distribution over the discretized timesteps. | p. 4 (2) Student Model (Consistency Policy)) |
 | ParaDiGMS's experiments do not show any degradation in performance when using parallel sampling, but they do assume access to sufficient compute. | p. 5 (IV. EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / V. LIMITATIONS - extractive body cue:** In future work, we will explore how we can potentially re-introduce multimodality to Consistency Policy through more complex sampling schemes.
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** ParaDiGMS's experiments do not show any degradation in performance when using parallel sampling, but they do assume access to sufficient compute.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 9 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

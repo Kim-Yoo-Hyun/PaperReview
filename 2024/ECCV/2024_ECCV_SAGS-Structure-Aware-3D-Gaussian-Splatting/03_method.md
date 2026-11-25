@@ -53,7 +53,6 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 5 / 3 Method - extractive body cue:** In essence, 3D-GS methods attempt to reconstruct a scene from a sparse point cloud by employing a progressive growing scheme.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (3 Method), p. 8 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 3 / 1 Introduction - extractive body cue:** To sum up, our contributions can be summarized as follows: - We introduce the first structure-aware 3D Gaussian Splatting method that leverages both local and ...
 - **p. 2 / 1 Introduction - extractive body cue:** 1: Structure-Aware GS (SAGS) leverages the intrinsic structure of the scene and enforces point interaction using graph neural networks outperforming the structure agnostic optimization scheme ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 9 / 4 Experiments - extractive body cue:** Using the proposed structure-aware encoder, we manage to tackle the structure preservation limitations of previous 3D-GS methods and constrain the point displacements close to their ...
 - **p. 11 / 4 Experiments - extractive body cue:** We measured the Gaussians' displacements from their original positions, on the "train" scene from Tanks&Temples [16] dataset, and encoded them in a colormap scale.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** enforce, high, rendering, speed, defined, decoder, small, MLP, takes, input, structure-aware, encoding, view-dependent, point, positions, outputs, Gaussian, attributes, enable, interactions.
 - **Relevant PDF headings:** 3 Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 11 / 4 Experiments - extractive body cue:** Furthermore, Scaffold-GS method falls short in accurately representing flat surfaces, as can be seen in the walls and the table,
 - **p. 11 / 4 Experiments - extractive body cue:** Both the 3D-GS and Scaffold-GS methodologies depend on a rudimentary point optimization approach, that neglects the local topology and fails to guide the Gaussians in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 4 (3 Method), objective p. 8 (3 Method), p. 8 (3 Method), p. 5 (3 Method), temporal p. 8 (4 Experiments), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 8 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

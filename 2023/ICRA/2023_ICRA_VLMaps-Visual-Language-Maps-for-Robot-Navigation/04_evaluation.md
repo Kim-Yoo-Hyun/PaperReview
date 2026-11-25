@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** In each sequence, we randomly specify a starting position of the robot in one scene and then pick four among 30 object categories as subgoal ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Different from object navigation tasks where agents only need to approach a certain object type within a range disregarding the relative spatial shift to the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: VLMaps is a spatial map representation in which pretrained visual- language model features are fused into a 3D reconstruction of the physical world. ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Fig. 1: VLMaps is a spatial map representation in which pretrained visual- language model features are fused into a 3D reconstruction of the physical ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 3: System overview. A VLMap is created by fusing pretrained visual-language features into the reconstruction of the environment to enable visual-spatial-language-based reasoning. By ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | This metric indicates how efficient the actual path is compared to the ground truth shortest path when the navigation task is achieved. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | In contrast, while achieving similar success rate compared to the drone with a ground map, the drone with a drone map manages to navigate ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Fig. 1: VLMaps is a spatial map representation in which pretrained visual- language model features are fused into a 3D reconstruction of the physical ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Fig. 2: VLMaps enables a robot to perform complex zero-shot spatial goal navigation tasks given natural language commands, without additional data collection or model ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | This is because when the drone does not have access to a customized obstacle map, it fails to benefit from flying over ground objects ... | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | We then compute the pixel-to-category similarity matrix S=Q·ET, where S∈R ¯H ¯ W×M. | p. 3 (III. METHOD) |
 | The generated code can directly be executed on the robot with the built-in Python exec function. | p. 4 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We observe that failure cases are caused by: 1) inaccurate depth, which introduces noise during the map creation and decreases the landmark indexing accuracy and ...
@@ -161,9 +140,8 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** This is because when the drone does not have access to a customized obstacle map, it fails to benefit from flying over ground objects to ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (Figure/Table caption), results p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 11 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

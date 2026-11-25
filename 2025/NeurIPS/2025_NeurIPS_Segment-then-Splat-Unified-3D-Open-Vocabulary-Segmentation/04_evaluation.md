@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9
 - **p. 10 / 4 Experiments - extractive body cue:** Overall, the results validate the effectiveness of the partial mask filtering strategy, particularly in complex scenes with high object density.
 - **p. 7 / 4 Experiments - extractive body cue:** For static scenes, we use LangSplat [10], LEGaussians [11] and Gaussian Grouping [36] as the 2D pixel-based baselines.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Traditional 3D Open-Vocabulary Segmentation vs. our Segment-then-Splat Pipeline. (a) The traditional Splat-then-Segment pipeline learns a language field alongside the reconstruction of the entire ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9
 | For the 3D baselines, we choose OpenGaussian[13], and we also adapt LangSplat and LEGaussians for 3D segmentation by selecting Gaussians instead of pixels to ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | For geometric-appearances distance, we set λd to 0.5. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9
 | For static scenes, we use LangSplat [10], LEGaussians [11] and Gaussian Grouping [36] as the 2D pixel-based baselines. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | In addition, our method achieves nearly a ten-fold improvement in optimization speed compared to DGD, as learning a dynamic language field is computationally intensive. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | 4.3 Ablation Study Number of Supervised Objects. | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9
 | body limitation/failure cue | The new object detection stride ∆t in the robust object tracking is set to 10. | p. 8 (4 Experiments) |
 | body limitation/failure cue | Unlike 2D pixel-based methods, which are limited by occlusions, our approach can retrieve the complete object even from an occluded view. | p. 8 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9
 | These strategies transform SAM-based segmentation into a flexible, scene-adaptive tracking pipeline, which serves as the critical foundation for subsequent steps in our methodology. | p. 5 (3 Method) |
 | Specifically, we render each reconstructed object into 2D images, compute their Intersectionover-Union (IoU) against the provided masks, and discard masks exhibiting low IoU scores. | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 Conclusion - extractive body cue:** Another limitation is that our method cannot effectively handle text queries involving relational descriptions across multiple objects, such as "a sheep sitting on the chair ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9
 - **p. 8 / 4 Experiments - extractive body cue:** Unlike 2D pixel-based methods, which are limited by occlusions, our approach can retrieve the complete object even from an occluded view.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), metrics p. 10 (4 Experiments), p. 2 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments), baselines p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), results p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (Figure/Table caption), p. 8 (4 Experiments), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

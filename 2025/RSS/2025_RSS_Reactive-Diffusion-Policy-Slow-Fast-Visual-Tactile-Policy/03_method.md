@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 - **p. 6 / B. Slow-Fast Policy Learning - extractive body cue:** On the one hand, the downsampled latent representation reduces computational costs.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 6 (B. Slow-Fast Policy Learning), p. 6 (B. Slow-Fast Policy Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 - **p. 5 / B. Slow-Fast Policy Learning - extractive body cue:** 1 policy learning, a slow Latent Diffusion Policy (LDP) is trained to predict the latent action chuck according to the observation in a way similar ...
 - **p. 5 / B. Slow-Fast Policy Learning - extractive body cue:** Previous works [10, 71] have demonstrated that predicting action sequences or action chunks [36] effectively preserves temporal action consistency and handles non-Markovian or idle actions, ...
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 - **p. 9 / V. EXPERIMENTS - extractive body cue:** Please see Appendix D, F and I for more details on data collection, the inference process and the hyperparameters.
 - **p. 6 / architecture - extractive body cue:** ‘TABLE I: Inference Time of Different Modules on RTX 4090
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** policy, learning, slow, Latent, Diffusion, LDP, trained, predict, action, chuck, according, observation, similar, During, inference, sample, chunks, lower, frequency, within.
 - **Relevant PDF headings:** B. Slow-Fast Policy Learning (p. 5); architecture (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 5 (B. Slow-Fast Policy Learning), p. 7 (architectu
 - **p. 9 / B. Results - extractive body cue:** However, despite similar performance, these two DP baselines exhibit different failure modes.
 - **p. 10 / 056 O58 om - extractive body cue:** 8: Evaluation results and failure cases of baselines.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (B. Slow-Fast Policy Learning), p. 7 (architecture), p. 7 (architecture), p. 6 (B. Slow-Fast Policy Learning), p. 5 (B. Slow-Fast Policy Learning), p. 6 (B. Slow-Fast Policy Learning), objective p. 6 (B. Slow-Fast Policy Learning), p. 5 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction), p. 4 (A. 3D Deformation Field Extraction), p. 5 (A. 3D Deformation Field Extraction), p. 6 (B. Slow-Fast Policy Learning), temporal p. 5 (B. Slow-Fast Policy Learning), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 5 (B. Slow-Fast Policy Learning), p. 1 (I. Ivrropucrion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

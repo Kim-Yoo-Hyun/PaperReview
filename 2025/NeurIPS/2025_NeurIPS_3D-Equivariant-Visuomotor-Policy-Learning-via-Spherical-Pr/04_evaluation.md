@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 - **p. 20 / C Implementation of Our Policy - extractive body cue:** I Practical Guidelines for Data Collection Before starting data collection on the real robot, it is critical to establish a predefined task execution strategy to ...
 - **p. 20 / C Implementation of Our Policy - extractive body cue:** Such a strategy typically involves defining consistent action sequences, execution ranges, and task progression patterns, helping to avoid ambiguous or poorly structured scenarios that may ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose the first SO(3)-equivariant policy learning framework based on a single eye- in-hand RGB image, where the predicted action sequence transforms equivariantly ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 | Table 3: Success rates (%) on MimicGen tasks with 100 demonstrations, comparing pretrained and scratch initialization of the equivariant image encoder. Results are averaged ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | These results demonstrate that the proposed method generalizes well to real-world disturbances and maintains strong task performance under challenging visual conditions. | definition/direction/unit from same section | p. 10 (68.7 58.7 58.0 32.0 54.3 (-6.7)) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 | We compare against three strong baselines: (1) Diffusion Policy [5]: A diffusion-based policy without any equivariance, serving as the primary reference. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | Figure 9: Real-world experimental setup. We use a UR5 robot equipped with a Robotiq-85 gripper and custom-designed soft fingers. A GoPro camera is mounted ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
 | Baselines Our experiments aim to validate the benefits of explicitly modeling equivariance in eyein-hand visuomotor policies. | comparison identity and matched condition | p. 7 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 | body limitation/failure cue | Generalization Perspective Although gripper-relative control guarantees invariance under singlecamera setups, it does not generalize seamlessly to multi-camera or hybrid sensing configurations, where additional viewpoints ... | p. 19 (C Implementation of Our Policy) |
 | body limitation/failure cue | Finally, an equivariant decoder maps the denoised representation to the noise estimate ϵk. | p. 17 (C Implementation of Our Policy) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 | Results are averaged over three seeds. | p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)) |
 | Results Table 4 reports success rates over 20 trials per task. | p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6 Conclusion - extractive body cue:** Limitations Our method has several limitations for future investigation.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiments
 - **p. 17 / C Implementation of Our Policy - extractive body cue:** Finally, an equivariant decoder maps the denoised representation to the noise estimate ϵk.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 10 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 10 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 18 (C Implementation of Our Policy), metrics p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 10 (68.7 58.7 58.0 32.0 54.3 (-6.7)), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 7 (5 Experiments), p. 19 (Figure/Table caption), p. 7 (5 Experiments), results p. 9 (Figure/Table caption), p. 8 (5 Experiments), p. 9 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 10 (68.7 58.7 58.0 32.0 54.3 (-6.7)), p. 8 (5 Experiments), p. 19 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

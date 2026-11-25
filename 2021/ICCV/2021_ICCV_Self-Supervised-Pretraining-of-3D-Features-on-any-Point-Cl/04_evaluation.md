@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 - **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** In Table 2, we observe that small labeled datasets benefit more from pretraining.
 - **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive body cue:** For transfer learning, we use the standard KITTI [26] object detection benchmark, and PointRCNN [80] and Part-A2 [81] for down-stream models.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Label-efficiency of our self-supervised pretraining. We finetune detection models from scratch or using our pretraining as initialization. Our pretraining which uses unlabeled single-view ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 | Our joint loss gives the best performance. instances, while classes like chair have over 9000 instances. | definition/direction/unit from same section | p. 7 (4.2. Pretraining with Point Input Format) |
 | We use single-view depth map videos 4 | definition/direction/unit from same section | p. 4 (4. Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 | Compared to training from scratch, the within format pretraining only provides a benefit for the point input format PointNet++ models. | comparison identity and matched condition | p. 7 (4.3. Pretraining with Multiple Input Formats) |
 | Figure 1: Label-efficiency of our self-supervised pretraining. We finetune detection models from scratch or using our pretraining as initialization. Our pretraining which uses unlabeled ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | All the DepthContrast models outperform the scratch model. | comparison identity and matched condition | p. 8 (5.2. Impact of Single-view or Multi-view 3D Data) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,7 +117,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 - **p. 8 / 5.3. Generalization to Outdoor LiDAR data - extractive body cue:** 5x fewer labels Figure 5: Using outdoor LiDAR data.
 - **p. 3 / 3.1. Instance Discrimination - extractive body cue:** As using a large number of negatives is important for contrastive learning [13, 36, 59, 107], we 1Points in a depth map are a set, ...
 - **p. 4 / 3.3. Model Architecture - extractive body cue:** The network's final layer produces C dimensional per-point features for 1024 points after aggregation.
-- **p. 4 / 3.5. Implementation Details - extractive body cue:** We use a standard SGD optimizer with momentum 0.9, cosine learning rate scheduler [53] starting from 0.12 to 0.00012 and train the model for 1000 ...
 
 ## Generalization and Failure Cases
 
@@ -139,8 +127,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 | body limitation/failure cue | We observe overfitting on the small datasets like S3DIS where increasing the model capacity does not improve performance. | p. 5 (4.2. Pretraining with Point Input Format) |
 | body limitation/failure cue | For the voxel models, this pretraining does not improve consistently over training from scratch, which is in line with observations from recent work [109]. | p. 7 (4.3. Pretraining with Multiple Input Formats) |
 | body limitation/failure cue | This is not surprising given that our objective does not rely on multi-view information. | p. 8 (5.2. Impact of Single-view or Multi-view 3D Data) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -154,14 +140,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 | We describe the model architecture used for our input format-specific encoders. | p. 3 (3.3. Model Architecture) |
 | We use the standard LiDAR-specific model architectures as our format-specific encoders - PointnetMSG [80] for point clouds and SpconvSame perf. | p. 8 (5.3. Generalization to Outdoor LiDAR data) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Pretraining with Point Input Format - extractive body cue:** More importantly, the Redwood-vid dataset does not contain camera extrinsic parameters and thus cannot be registered to get a multi-view dataset which is a necessity ...
@@ -171,6 +149,5 @@ PDF body evaluation/result cue (p. 5 (4.2. Pretraining with Point Input Format),
 - **p. 8 / 5.2. Impact of Single-view or Multi-view 3D Data - extractive body cue:** This is not surprising given that our objective does not rely on multi-view information.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Transfer Datasets and Tasks), p. 5 (4. Experiments), p. 4 (4. Experiments), p. 7 (4.2. Pretraining with Point Input Format), p. 7 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), metrics p. 5 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 7 (4.3. Pretraining with Multiple Input Formats), p. 8 (5.1. Importance of Data Augmentation), p. 8 (5.1. Importance of Data Augmentation), p. 5 (4.2. Pretraining with Point Input Format), baselines p. 5 (Figure/Table caption), p. 5 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 7 (4.3. Pretraining with Multiple Input Formats), p. 1 (Figure/Table caption), p. 8 (5.2. Impact of Single-view or Multi-view 3D Data), results p. 5 (4.2. Pretraining with Point Input Format), p. 1 (Figure/Table caption), p. 6 (4.2. Pretraining with Point Input Format), p. 6 (4.2. Pretraining with Point Input Format), p. 4 (4. Experiments), p. 5 (4.2. Pretraining with Point Input Format).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

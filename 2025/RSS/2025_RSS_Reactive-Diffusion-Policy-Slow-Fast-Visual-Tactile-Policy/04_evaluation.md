@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 9 / B. Results - extractive body cue:** ‘TABLE Il: Policy Performance for Peeling Task
 - **p. 9 / B. Results - extractive body cue:** It may get stuck when making contact with the object (e.2., failure case 2 in Fig.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: TactAR is a low-cost and versatile teleoperation system which can provide real-time tactile / force feedback via
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | ‘TABLE Il: Policy Performance for Peeling Task | definition/direction/unit from same section | p. 9 (B. Results) |
 | Fig. 15: Improved MCTuc Sensor for our task, The left part is the gripper integrated illustration, and the right part is the detailed structure ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | However, despite similar performance, these two DP baselines exhibit different failure modes. | comparison identity and matched condition | p. 9 (B. Results) |
 | We have compared the performance of Diffusion Policy using raw tactile images (DP w. tactile img.) v.s. low-dim tactile embedding (DP w. tactile emb,) ... | comparison identity and matched condition | p. 9 (B. Results) |
 | Fig. 8: Evaluation results and failure cases of baselines. Please see the website for more details. | comparison identity and matched condition | p. 10 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | body limitation/failure cue | It is crucial to avoid exerting excessive force that could squeeze the cup while also ensuring that the force is sufficient to prevent the ... | p. 8 (V. EXPERIMENTS) |
 | body limitation/failure cue | Note that the estimated TCP force / torque Signals have relatively larger noise compared tothe force sensor mounted on the robot end effector (e.g. | p. 7 (V. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | Our TactAR system is built with low-cost hhardwares. ‘The Meta Quest3 VR heaset used for teleoperation and AR feedbacks costs $199. | p. 4 (A. 3D Deformation Field Extraction) |
 | We also support both single-arm and, bimanual arm control, Thus, TactAR will not be limited by specific hardware configuration parameters and de- ‘grees of ... | p. 4 (A. 3D Deformation Field Extraction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / B. Results - extractive body cue:** It may get stuck when making contact with the object (e.2., failure case 2 in Fig.
@@ -171,9 +150,8 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Note that the estimated TCP force / torque Signals have relatively larger noise compared tothe force sensor mounted on the robot end effector (e.g.
 
 - **Evidence anchors reviewed:** datasets p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 16 (B. Implementation Details of TactR), p. 16 (B. Implementation Details of TactR), metrics p. 9 (B. Results), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 9 (B. Results), baselines p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (B. Results), p. 9 (B. Results), p. 10 (Figure/Table caption), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 16 (B. Implementation Details of TactR), p. 16 (B. Implementation Details of TactR), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

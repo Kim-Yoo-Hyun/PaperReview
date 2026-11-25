@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 1 (13 Institutions), p
 | body cue at p. 9 | Fig. 8: Does DROID Improve Policy Performance and Robustness? We find that across all our evaluation tasks, co-training ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 17 | Fig. 12: Qualitative examples of scenes in DROID. We use GPT-4V to categorize scenes into 9 scene types. ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (III. DROID DATA COLLECTION SETUP), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (Dataset). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ robot_data writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 4 (III. DROID DATA COLLECTION SETUP), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (Dataset), objective p. 4 (III. DROID DATA COLLECTION SETUP), p. 3 (III. DROID DATA COLLECTION SETUP).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

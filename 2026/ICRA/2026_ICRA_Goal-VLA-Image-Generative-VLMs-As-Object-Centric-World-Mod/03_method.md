@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** 2: Overview of the Goal-VLA framework, which decouples the manipulation pipeline into three stages: (a) Goal State Reasoning: A VLM generates a goal image from ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Problem Formulation Given a single-view RGBD image observation O = (I ∈ RH×W ×3, D ∈RH×W ×1), and a natural language task description L , ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In contrast, while dense visual representations like goal images provide rich information [20]-[23], they typically require the low-level policy to be explicitly trained on paired ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Algorithm, Goal-VLA, Execution, Framework, Require, Initial, observation, Language, instruction, End-effector, pose, Pinit, Ensure, Action, sequence, procedure, Stage, Goal, State, Reasoning.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** Failures originating from the Spatial Grounding module are the primary obstacle in several precision-demanding tasks.
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** Failure Cases Analysis In our real-world experiments, we observe several typical failure modes as different tasks place varying demands on each module of our framework.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), temporal p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

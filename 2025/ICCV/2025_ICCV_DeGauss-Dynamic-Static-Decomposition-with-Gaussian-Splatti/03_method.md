@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 - **p. 3 / 3.3. Probabilistic Composition Mask Rasterization - extractive body cue:** Given the predicted mask elements \if mm od e \lbrace \else \textbraceleft \fi m_f^\prime , m_b^\prime \ } and the deformed attributes \ifm mod e ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.7. Loss function), p. 5 (3.7. Loss function), p. 4 (3.4. Background Brightness Control), p. 4 (3.6. Unsupervised scene decomposition).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 - **p. 3 / 3.1. 3D Gaussian Splatting - extractive body cue:** To render these Gaussians onto the image plane, we use differentiable splatting [40], which applies a projection transformation \protect \mathcal {P}(\mathcal {G} ).
 - **p. 4 / 3.6. Unsupervised scene decomposition - extractive body cue:** In our decoupled design, the dynamic/static gaussians rasterize the foreground/background renders Cf and Cb independently and compose (after rending) with the probabilistic mask Pf.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 
 - **p. 5 / 3.8. Partial Opacity Reset - extractive body cue:** This guarantees stable training, effectively controls gaussian density, and handles local minima.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, introduce, brightness, control, mask, enhances, background, branch, capacity, model, non-Lambertian, effects, spatial-temporal, module, comprises, encoder, decoder, Hexplane, extracts, spatio-temporal.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 4 (3.4. Background Brightness Control), p. 3 (3.2.
 - **p. 7 / 4.3. Results - extractive body cue:** Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene metrics ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.4. Background Brightness Control), p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian), p. 4 (3.4. Background Brightness Control), p. 5 (3.7. Loss function), p. 5 (3.8. Partial Opacity Reset), objective p. 5 (3.7. Loss function), p. 5 (3.7. Loss function), p. 4 (3.4. Background Brightness Control), p. 4 (3.6. Unsupervised scene decomposition), p. 3 (3.3. Probabilistic Composition Mask Rasterization), temporal p. 5 (4.2. Datasets), p. 5 (4.2. Datasets), p. 3 (3.2. Foreground deformable gaussian), p. 3 (3.2. Foreground deformable gaussian), p. 4 (3.4. Background Brightness Control), p. 6 (4.3. Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

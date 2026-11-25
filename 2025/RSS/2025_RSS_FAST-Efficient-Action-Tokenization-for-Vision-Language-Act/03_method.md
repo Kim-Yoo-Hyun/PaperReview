@@ -56,7 +56,6 @@ FAST는 정규화한 연속 행동 청크에 차원별 이산 코사인 변환(D
 - **p. 8 / B. Comparing Action Tokenizers for VLA Training - extractive body cue:** On both tasks, policies trained with naive tokenization are unable to make progress ‘on the task.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ FAST는 정규화한 연속 행동 청크에 차원별 이산 코사인 변환(D
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** We assume that policies output an "action chunk" [72, 41], a sequence of Hf actions (15, 7, 72], which makes it easier to produce temporally-consistent ...
 - **p. 4 / B. The FAST Tokenization Algorithm - extractive body cue:** We first normalize the input actions, such that the Ist and 99th quantile of values in the training dataset for each action dimension maps to ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ FAST는 정규화한 연속 행동 청크에 차원별 이산 코사인 변환(D
 - **p. 9 / C. Universal Action Tokenizer - extractive body cue:** One current limitation of the autoregressive VLA is its inference speed: while 7» with diffusion typically predicts one second action chunks within 100ms on an ...
 - **p. 10 / C. Universal Action Tokenizer - extractive body cue:** For state-of-the-art VLA training runs, which can often use thousands of GPU hours, a Sx reduction in required compute is significant.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, normalize, input, actions, Ist, quantile, values, training, dataset, action, dimension, maps, range, initial, normalization, step, useful, bring, data, specitied.
 - **Relevant PDF headings:** B. The FAST Tokenization Algorithm (p. 4); B. Discussion of Alternative Compression Approaches (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ FAST는 정규화한 연속 행동 청크에 차원별 이산 코사인 변환(D
 - **p. 9 / C. Universal Action Tokenizer - extractive body cue:** One current limitation of the autoregressive VLA is its inference speed: while 7» with diffusion typically predicts one second action chunks within 100ms on an ...
 - **p. 9 / C. Universal Action Tokenizer - extractive body cue:** We will leave a detailed investigation of the language following abilities of diffusion and autoregressive VLAS to future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 4 (B. The FAST Tokenization Algorithm), p. 9 (C. Universal Action Tokenizer), p. 5 (B. The FAST Tokenization Algorithm), p. 8 (B. Comparing Action Tokenizers for VLA Training), objective p. 4 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 5 (B. The FAST Tokenization Algorithm), p. 7 (B. Comparing Action Tokenizers for VLA Training), p. 8 (B. Comparing Action Tokenizers for VLA Training), temporal p. 7 (A. Experimental Setup), p. 1 (1. INTRODUCTION), p. 3 (1. INTRODUCTION), p. 1 (Abstract), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

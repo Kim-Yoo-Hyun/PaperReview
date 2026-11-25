@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (2 METHOD), p. 2 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 3 / 2 METHOD - extractive body cue:** Given an initial state s0, a goal state sg and the transition dynamics p of a differentiable simulator, we use gradient-based trajectory optimization to solve ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 5 (2 METHOD), p. 5 (2 METHOD), p. 14 (A IMPLEMENTATION DETAILS), p. 3 (2 METHOD), p. 3 (2 METHOD), p. 4 (2 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (2 METHOD), p. 2 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 3 / 2 METHOD - extractive body cue:** In this paper, we define a "skill" as a policy that uses a single tool to achieve a short-horizon goal sg, starting from an initial ...
 - **p. 5 / 2 METHOD - extractive body cue:** 2 to obtain cost C(k, z) ; Choose k, z that minimizes C(k, z); for i ←0 to H do Reset tools to initial poses ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 3 (2 METHOD), p. 2 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 4 / 2 METHOD - extractive body cue:** We use an MSE loss Lfea for model training, which was shown empirically to work better than a cross-entropy loss.
 - **p. 5 / 2 METHOD - extractive body cue:** Algorithm 1: Solve long-horizon planning with DiffSkill Input : Trajectory optimizer, skill horizon T, planning horizon H Initialize modules for neural skill abstraction πk, fk, ...
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** Model parameter Value dimension of latent space 8 MLP hidden node number 1024 Training parameters Value learning rate 0.001 batch size 128 optimizer Adam beta1 ...
-- **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** Model parameter Value dimension of latent space 8 MLP hidden node number 1024 Training parameters Value learning rate 0.001 batch size 128 optimizer Adam beta1 ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, initial, state, goal, transition, dynamics, differentiable, simulator, gradient-based, trajectory, optimization, solve, open-loop, action, sequence, Kelley, where, case, deformable, object.
 - **Relevant PDF headings:** 2 METHOD (p. 2); B COMPARISON WITH MODEL-FREE RL ON SINGLE-TOOL TASKS (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +115,13 @@ PDF body method statement (p. 3 (2 METHOD), p. 2 (2 METHOD), p. 4 (2 METHOD), p.
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 3: Summary of all hyper-parameters. B COMPARISON WITH MODEL-FREE RL ON SINGLE-TOOL TASKS In this work, we focus on solving long-horizon multi-tool tasks. But ...
 - **p. 6 / 3 EXPERIMENTS - extractive body cue:** In Table 3, we can see that the learned skills (labeled as Behavior Cloning) approach the normalized performance of the trajectory optimization (Trajectory Opt) on ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2 METHOD), p. 2 (2 METHOD), p. 4 (2 METHOD), p. 4 (2 METHOD), p. 5 (2 METHOD), p. 14 (A IMPLEMENTATION DETAILS), objective p. 14 (A IMPLEMENTATION DETAILS), p. 5 (2 METHOD), p. 5 (2 METHOD), p. 3 (2 METHOD), p. 4 (2 METHOD), p. 3 (2 METHOD), temporal p. 4 (2 METHOD), p. 3 (2 METHOD), p. 6 (3 EXPERIMENTS), p. 14 (A IMPLEMENTATION DETAILS), p. 2 (2 METHOD), p. 2 (2 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

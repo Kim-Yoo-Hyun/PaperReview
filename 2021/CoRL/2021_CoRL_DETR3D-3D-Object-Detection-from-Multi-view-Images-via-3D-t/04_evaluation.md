@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 - **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
 - **p. 7 / 4 Experiments - extractive body cue:** We visualize bounding boxes decoded from the object queries in each layer.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and a ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 | Also, FCOS3D uses disentangled heads for different bounding box parameters, which can increase performance. | definition/direction/unit from same section | p. 6 (4 Experiments) |
 | Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 | We also experimented with a self-supervised PackNet model with velocity supervision (as in the original paper), but we found that ground-truth depth supervision yielded ... | comparison identity and matched condition | p. 7 (4 Experiments) |
 | Figure 1: Overview of our method. The inputs to the model are a set of multi-view images, which are encoded by a ResNet and ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | We present our results as follows: first, we detail the dataset, metrics, and implementation in §4.1; then we compare our method to existing works ... | comparison identity and matched condition | p. 5 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 | body limitation/failure cue | Furthermore, the new detection head is input-agnostic, and including other modalities such as LiDAR/RADAR would enhance performance and robustness. | p. 8 (5 Conclusion) |
 | body limitation/failure cue | Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth ... | p. 6 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 | In the camera overlap regions, our method outperforms others by a substantial margin. • We release our code to facilitate reproducibility and future research. | p. 2 (1 Introduction) |
 | To gather scene-specific information, we back-project a set of reference points decoded from these object priors to each camera and fetch the corresponding image ... | p. 2 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 Conclusion - extractive body cue:** Some failure cases include the far ahead car in CAM FRONT, that was not detected.
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6
 - **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 3 (Figure/Table caption), p. 5 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

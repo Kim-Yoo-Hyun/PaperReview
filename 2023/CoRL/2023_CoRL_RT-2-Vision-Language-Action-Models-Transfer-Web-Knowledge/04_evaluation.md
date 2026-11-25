@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 - **p. 9 / 4. Experiments - extractive body cue:** Model Language-Table BC-Zero (Jang et al., 2021) 72 ± 3 RT-1 (Brohan et al., 2022) 74 ± 13 LAVA (Lynch et al., 2022) 77 ± ...
 - **p. 6 / 4. Experiments - extractive body cue:** Our experiments focus on real-world generalization and emergent capabilities of RT-2 and aim to answer the following questions: 6
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 | (b) Ablations of RT-2-PaLI-X showcasing the impact of parameter count and training strategy on generalization. | definition/direction/unit from same section | p. 10 (4. Experiments) |
 | First, we observe that training a very large model from scratch results in a very poor performance even for the 5B model. | definition/direction/unit from same section | p. 10 (4. Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 | To provide an additional point of comparison using open-source baselines and environments, we leverage the open-source Language-Table simulation environment from Lynch et al. | comparison identity and matched condition | p. 8 (4. Experiments) |
 | RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control (a) Performance comparison on various emergent skill evaluations (Figure 8) between RT-2 and two baselines. | comparison identity and matched condition | p. 10 (4. Experiments) |
 | All of the baselines use the exact same robotic data. | comparison identity and matched condition | p. 7 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 | body limitation/failure cue | We also show qualitative real-world out-of-distribution behaviors behaviors in Figure 5, demonstrating novel pushing tasks and targeting objects not before seen in this environment. | p. 8 (4. Experiments) |
 | body limitation/failure cue | RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control Figure 5 / Real-world out-of-distribution behaviors in the Language Table environment. | p. 9 (4. Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 | The smaller version of that model, consisting of 5B parameters, can run at a frequency of around 5 Hz. | p. 6 (3.3. Real-Time Inference) |
 | The largest model we evaluated, the 55B parameter RT-2-PaLI-X-55B model, can run at a frequency of 1-3 Hz. | p. 6 (3.3. Real-Time Inference) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / 5. Limitations - extractive body cue:** Even though RT-2 exhibits promising generalization properties, there are multiple limitations of this approach.
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 9 (4. Experiments), p. 8 (4. Experiments), p.
 - **p. 9 / 4. Experiments - extractive body cue:** RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control Figure 5 / Real-world out-of-distribution behaviors in the Language Table environment.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 8 (4. Experiments), p. 7 (4. Experiments), p. 11 (4. Experiments), metrics p. 8 (4. Experiments), p. 9 (4. Experiments), p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), baselines p. 7 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 8 (4. Experiments), p. 10 (4. Experiments), p. 7 (4. Experiments), results p. 9 (4. Experiments), p. 8 (4. Experiments), p. 8 (4. Experiments), p. 9 (4. Experiments), p. 10 (4. Experiments), p. 10 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

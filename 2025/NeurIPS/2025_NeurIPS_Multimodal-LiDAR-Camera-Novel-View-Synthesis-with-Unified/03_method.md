@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (4 Methodology), p. 5 (4 Methodology), p. 7 (4 M
 - **p. 7 / 4 Methodology - extractive body cue:** Based on these correspondences, we introduce a point-to-image error using photometric loss, which serves as a regularization term.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4 Methodology), p. 6 (4 Methodology), p. 5 (4 Methodology), p. 6 (4 Methodology), p. 7 (4 Methodology), p. 7 (4 Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (4 Methodology), p. 5 (4 Methodology), p. 7 (4 M
 - **p. 4 / 3 Preliminaries - extractive body cue:** 𝐈𝐈𝐈𝐈𝐈𝐈𝐈𝐈𝐈𝐈 Intensity Point Cloud World Coordinate System 𝑷𝑷𝟏𝟏 𝑷𝑷𝟐𝟐 𝑷𝑷𝟑𝟑 POSE Reconstruction Loss 𝐃𝐃𝐃𝐃𝐃𝐃𝐃𝐃𝐃𝐃 Ground Truth Unified Neural LiDAR-Camera Fields Camera-Mask LiDAR-Mask 𝐅𝐅𝐅𝐅𝐅𝐅𝐅𝐅𝐞𝐞𝟏𝟏 𝐅𝐅𝐅𝐅𝐅𝐅𝐅𝐅𝐞𝐞s𝟐𝟐 𝐅𝐅𝐅𝐅𝐅𝐅𝐅𝐅𝐞𝐞𝟑𝟑 ...
 - **p. 6 / 4 Methodology - extractive body cue:** Consequently, we adopt point cloud-based loss at the early stages and later employ image-based photometric loss to refine the poses.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (4 Methodology), p. 5 (4 Methodology), p. 7 (4 M
 - **p. 8 / 4 Methodology - extractive body cue:** 4.3 Overall Optimization Pipeline Consistency Constraint.
 - **p. 6 / 4 Methodology - extractive body cue:** Pn+1 = Pn -(1 -w)lrGLiDAR -w · lrGCamera, (3) where G is the gradient of the corresponding modality, Pn denotes the pose at the n-th ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** observation, multimodal, training, optimizing, hash, grid, stabilizes, pose, optimization, mitigates, modality, conflicts, Then, introduce, MMG, module, Section, provides, explicit, geometric.
 - **Relevant PDF headings:** 4 Methodology (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 5 (4 Methodology), p. 5 (4 Methodology), p. 7 (4 M
 - **p. 8 / 5 Experiment - extractive body cue:** For pose estimation, we follow [3], employing standard odometry metrics: Absolute Trajectory Error (ATE) and Relative Pose Error (RPE), with rotational (RPEr) and translational (RPEt) ...
 - **p. 10 / 7 Conclusion - extractive body cue:** We revisit the limitations of single-modality pose-free methods in large-scale scenes.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4 Methodology), p. 5 (4 Methodology), p. 7 (4 Methodology), p. 6 (4 Methodology), p. 7 (4 Methodology), p. 6 (4 Methodology), objective p. 5 (4 Methodology), p. 6 (4 Methodology), p. 5 (4 Methodology), p. 6 (4 Methodology), p. 7 (4 Methodology), p. 7 (4 Methodology), temporal p. 10 (5 Experiment), p. 9 (5 Experiment), p. 5 (4 Methodology), p. 5 (4 Methodology), p. 6 (4 Methodology), p. 6 (4 Methodology).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

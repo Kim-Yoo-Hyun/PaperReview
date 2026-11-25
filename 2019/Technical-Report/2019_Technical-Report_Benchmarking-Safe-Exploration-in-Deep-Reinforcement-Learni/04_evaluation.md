@@ -51,8 +51,6 @@
 - **p. 19 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian CarGoal1 0 10 20 30 AverageEpRet 20 40 60 80 AverageEpCost 0.00 0.02 0.04 0.06 0.08 CostRate CarGoal2 0 5 ...
 - **p. 20 / 5.3 Results - extractive body cue:** CPO PPO PPO-Lagrangian TRPO TRPO-Lagrangian DoggoGoal1 0 10 20 30 40 50 AverageEpRet 0 20 40 60 80 100 120 AverageEpCost 0.02 0.04 0.06 0.08 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 1: Pre-made robots in Safety Gym. These robots are used in our benchmark environments. (a) Position (b) Button (c) Push
@@ -86,8 +84,6 @@
 | By success, we mean attaining improvements simultaneously along both the episodic return axis and the constraint regret axis, while still producing a constraint-satisfying policy ... | definition/direction/unit from same section | p. 21 (5.3 Results) |
 | Figure 3: Constraint elements used in our environments. currently-highlighted button, which is the goal button. After the agent presses the correct button, the environment ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@
 | Comparing Training Runs: There are several ways to rank agents and training runs based on these measurements, and different comparison rules will be appropriate ... | comparison identity and matched condition | p. 14 (5 Experiments) |
 | The normalized values allow easy comparison to a reference point (in this case, unconstrained PPO). | comparison identity and matched condition | p. 16 (5.3 Results) |
 | These learning curves depict the metrics Jr(θ), Jc(θ), and ρc(θ) without normalization, and show the absolute performance of each algorithm. | comparison identity and matched condition | p. 16 (5.3 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@
 | Constraint definition | E[Σcₜ]≤d는 safety 요구를 하나로 합친 expected cumulative cost 제약이다. 모든 rollout에서 무사고를 보장하는 조건은 아니며, 정의 자체는 관측된 failure가 아니다. | PDF p. 14 §5 Eq. (3) |
 | body limitation/failure cue | 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise. | p. 15 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 - 표 1은 SG18의 각 환경에서 얻은 시드 3개의 결과를 평균한다. [PDF 16쪽](https://cdn.openai.com/safexp-short.pdf#page=16)
@@ -153,14 +140,6 @@
 | Dashed red lines indicate the target value for a constraint-satisfying policy (AverageEpCost curves) or approximately constraint-satisfying training run (CostRate curves). | p. 18 (5.3 Results) |
 | 6 Conclusions In this work, we took three main steps towards progress on the safe exploration problem. | p. 21 (5.3 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / 5 Experiments - extractive body cue:** [2017], we omit the learned failure predictor they used for cost shaping.
@@ -171,6 +150,5 @@
 - **p. 15 / 5 Experiments - extractive body cue:** 3Characteristic return and cumulative cost were obtained by averaging over the last five epochs of training to reduce noise.
 
 - **Evidence anchors reviewed:** datasets p. 15 (5 Experiments), p. 21 (5.3 Results), p. 15 (5 Experiments), p. 16 (5 Experiments), p. 16 (5.3 Results), p. 18 (5.3 Results), metrics p. 15 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), p. 15 (5 Experiments), p. 14 (5 Experiments), p. 14 (5 Experiments), baselines p. 21 (5.3 Results), p. 14 (5 Experiments), p. 21 (5.3 Results), p. 14 (5 Experiments), p. 16 (5.3 Results), p. 16 (5.3 Results), results p. 21 (5.3 Results), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 14 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

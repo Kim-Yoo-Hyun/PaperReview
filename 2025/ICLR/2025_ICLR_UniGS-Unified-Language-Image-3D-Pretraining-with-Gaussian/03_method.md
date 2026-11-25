@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** Next, we use rendered images for 3DGS optimization.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** To overcome this issue, we follow Uni3D (Zhou et al., 2024) and adopt off-the-shelf pre-trained large models (Sun et al., 2023; Fang et al., 2023; ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Specifically, UniGS achieves state-of-the-art results across different 3D tasks with remarkable improvements, including zero-shot classification (+9.36%), text-driven retrieval (+4.3%), and open-world understanding (+7.92%).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 14 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** We leverage the activation function tanh(·) to convert the features of 3DGS to the range [-1,1] and set the batch size of training and evaluation ...
 - **p. 15 / B.2 DETAILS OF TRAINING AND EVALUATION - extractive body cue:** UniGS will be further fine-tuned for 50 epochs on the training set to alleviate the impact of the text domain across different datasets.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contrastive, loss, between, text, modality, then, utilized, align, DGS, feature, representations, Finally, concatenate, features, respectively, generated, fundamental, encoder, advanced, through.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 3); 10000 3D points with official model (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Additional ablation study of the quality of 3DGS on the Zero-shot classification task. The accuracy of Zero-shot classification on ABO under three optimization ...
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 7: Additional ablation study on the FLOPs of UniGS. (a) FLOPs of each module, (b) 3D Encoder of UniGS. 76.5% of FLOPs are due ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), objective p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), temporal p. 3 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 1 (Body text (section not recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

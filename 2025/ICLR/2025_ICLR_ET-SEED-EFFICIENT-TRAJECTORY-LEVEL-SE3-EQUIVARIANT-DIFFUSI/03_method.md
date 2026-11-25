@@ -57,7 +57,6 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 6 / 4 METHOD - extractive body cue:** Inspired by standard diffusion model, ET-SEED progressively disturbs the noise-free action H0 ∈ SE(3) into a noisy action HK.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 6 / 4 METHOD - extractive body cue:** SE(3) Transformer have same network architecture, the feature types of input and output differ, resulting in different coefficient matrices in network forward.
 - **p. 6 / 4 METHOD - extractive body cue:** A colored point cloud and a random sampled action sequence are first passed through K -1 SE(3) invariant denoising steps and then a SE(3) equivariant ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** We evaluate all methods using two metrics, based on 20 evaluation rollouts, averaged over 5 random seeds.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** denoising, step, input, network, consists, observation, noisy, action, sequence, scalar, condition, outputs, predicted, relative, transformation, between, noise-free, general, example, works.
 - **Relevant PDF headings:** 4 METHOD (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Overview of our pipeline. A colored point cloud and a random sampled action sequence are first passed through K -1 SE(3) invariant denoising ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 5: Loss curve of P1Net, P2Net and P3Net. After only several gradient descent, the loss of P1Net converges almost to 0, while the losses ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (4 METHOD), p. 4 (4 METHOD), p. 7 (4 METHOD), p. 4 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), objective p. 5 (4 METHOD), p. 7 (4 METHOD), p. 7 (4 METHOD), p. 4 (4 METHOD), p. 6 (4 METHOD), temporal p. 4 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p. 7 (4 METHOD), p. 4 (4 METHOD), p. 5 (4 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 - **p. 5 / B. Trajectory Optimization as a Motion Planner - extractive body cue:** Beyond the ternary dynamics factor, there are costs imposed for the optimization by unary factors for obstacle avoidance (e(X.x)) over the intermediate state variables (X ...
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** Motion planning consists of finding a plan for a robot to ‘move in an environment from a stating state to a desired goal region without ...
 - **p. 5 / B. Trajectory Optimization as a Motion Planner - extractive body cue:** 3: An 6 for robot planning employs the robot's model dy = Folds.) on a dynamics factor to compute a trajectory of T states, Sarting ...
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 
 - **p. 12 / A. Experimemal setup - extractive body cue:** The low= cost trajectories returned from the SBMP are likely, however, to be in close proximity to obstacles, which makes following them susceptible to collisions ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** robot, planning, employs, model, Folds, dynamics, factor, compute, trajectory, states, Sarting, ending, goal, region, Nir, Beyond, ternary, there, costs, imposed.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,23 +104,13 @@ PDF body method statement (p. 5 (B. Trajectory Optimization as a Motion Planner)
 - **p. 7 / C. Inference over a Sliding Window - extractive body cue:** 4le) ‘observation factors are fot used for the ‘local "adaptation ‘component of the optimization,
 - **p. 7 / C. Inference over a Sliding Window - extractive body cue:** The prior, limit, and obstacle factors are not used for the trajectory estimation component of the optimization.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner), objective p. 5 (B. Trajectory Optimization as a Motion Planner), p. 5 (B. Trajectory Optimization as a Motion Planner), temporal p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (A. Trajectory Estimation), p. 1 (Body text (section boundary not confidently recovered)), p. 6 (B. The STELA Factor Graph), p. 6 (V. SIMULTANEOUS TRAIECTORY ESTIMATION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

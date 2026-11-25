@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (4 Method), p. 17 (C Implementation of Our Polic
 - **p. 17 / C Implementation of Our Policy - extractive body cue:** We train all models using the AdamW [38] optimizer with Exponential Moving Average, and adopt the DDPM [15] framework with 100 denoising steps for both ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (4 Method), p. 6 (4 Method), p. 7 (4 Method), p. 6 (4 Method), p. 18 (C Implementation of Our Policy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (4 Method), p. 17 (C Implementation of Our Polic
 - **p. 5 / 4 Method - extractive body cue:** First, we encode the input image I from the observation x using a standard SO(2)-equivariant image encoder λ.
 - **p. 5 / 4 Method - extractive body cue:** Equivariance Correction is similar to a canonicalization map c : X →G, where fcano = c(x)f(c(x)-1x) transforms the input to a canonical frame, then transforms ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (4 Method), p. 17 (C Implementation of Our Polic
 - **p. 7 / 5 Experiments - extractive body cue:** For each task, we train three independent models with different random seeds (0, 1, and 2) for each of the 100- and 200-demonstration settings.
 - **p. 8 / 68.7 58.7 58.0 32.0 54.3 (-6.7) - extractive body cue:** We compare the ISP-SO(2) with two variants: Pretraining, which initializes the image encoder with an 8
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** following, subsections, first, describe, observation, encoder, extracts, equivariant, features, images, then, diffusion, module, cases, denoising, network, outputs, sequence, action, steps.
 - **Relevant PDF headings:** 4 Method (p. 4); C Implementation of Our Policy (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (4 Method), p. 17 (C Implementation of Our Polic
 - **p. 7 / 5 Experiments - extractive body cue:** For eyein-hand control, we replace its image encoder with a standard ResNet [12], so only proprioception and denoising remain equivariant.
 - **p. 9 / 68.7 58.7 58.0 32.0 54.3 (-6.7) - extractive body cue:** ImageNet-1k [50]-pretrained equivariant ResNet-18, and Scratch, which trains the entire model from random initialization.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4 Method), p. 17 (C Implementation of Our Policy), p. 7 (4 Method), p. 16 (C Implementation of Our Policy), p. 16 (C Implementation of Our Policy), p. 6 (4 Method), objective p. 5 (4 Method), p. 6 (4 Method), p. 7 (4 Method), p. 6 (4 Method), p. 7 (4 Method), p. 17 (C Implementation of Our Policy), temporal p. 3 (3 Background), p. 17 (C Implementation of Our Policy), p. 5 (4 Method), p. 17 (C Implementation of Our Policy), p. 18 (C Implementation of Our Policy), p. 2 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

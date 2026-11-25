@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** 2) Scene updating: To validate the effectiveness of our proposed efficient scene updating, we execute an experiment whose process is (1) picking up the object ...
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** EACH OBJECT IS GRASPED THREE TIMES.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. We present a comparison between our method, 2D feature fusion, and LERF. When given the language query "hamburger", the features extracted by the ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | The collected images are processed by SAM and CLIP to generate segmentation maps and open-vocabulary feature maps. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENT) |
 | Fig. 2. The architecture of our proposed method. (a) is our proposed pipeline where we scan multi-view RGBD images for initialization and reconstruct 3D ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | Subsequently, we show the results of geometry reconstruction and conduct ablation study to demonstrate the effectiveness of our proposed normal-guided grasp. | comparison identity and matched condition | p. 5 (IV. EXPERIMENT) |
 | Besides, we report the quantitative results of the grasping success rate with and without the normal filter, as shown in Table II. | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
 | Fig. 1. We present a comparison between our method, 2D feature fusion, and LERF. When given the language query "hamburger", the features extracted by ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,30 +114,19 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 |---|---|---|
 | body limitation/failure cue | One limitation is that our reconstructed scene remains static. | p. 7 (V. LIMITATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | In terms of computing resources, we use an NVIDIA RTX-3090 GPU to reconstruct the feature field and reconstruct geometry. | p. 5 (IV. EXPERIMENT) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. LIMITATION - extractive body cue:** One limitation is that our reconstructed scene remains static.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), baselines p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (Figure/Table caption), results p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

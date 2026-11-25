@@ -55,7 +55,6 @@ PDF body method statement (p. 7 (5 Method), p. 7 (5 Method), p. 9 (5 Method), p.
 - **p. 9 / 5 Method - extractive body cue:** We train the detection backbone end-to-end with the detection loss.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (5 Method), p. 8 (5 Method), p. 8 (5 Method), p. 9 (5 Method), p. 9 (5 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 7 (5 Method), p. 7 (5 Method), p. 9 (5 Method), p.
 - **p. 9 / 5 Method - extractive body cue:** Language to object classification loss To further supervise the training, we include an object classification loss based on the input description.
 - **p. 9 / 5 Method - extractive body cue:** The higher the predicted confidence is, the more likely the proposal will be chosen as output.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 7 (5 Method), p. 7 (5 Method), p. 9 (5 Method), p.
 - **p. 9 / 5 Method - extractive body cue:** Implementation Details We implement our architecture using PyTorch and train the model end-to-end using ADAM [29] with a learning rate of 1e-3.
 - **p. 12 / 6 Experiments - extractive body cue:** Image best viewed in color. we take the average of 5 differently seeded subsamplings (of seed points and vote points) during inference (see supplemental for ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ScanRefer, architecture, PointNet, backbone, takes, input, point, cloud, aggregates, high-level, feature, maps, then, clustered, fused, object, proposals, voting, module, similar.
 - **Relevant PDF headings:** 5 Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 7 (5 Method), p. 7 (5 Method), p. 9 (5 Method), p.
 - **p. 30 / Figure/Table caption - extractive body cue:** Table 10: Variance between evaluation runs due to the random sampling of points in the VoteNet [49]. We train our model (xyz+multiview+normal+lobjcls) with the a ...
 - **p. 31 / Figure/Table caption - extractive body cue:** Table 11: Ablation study with different input lengths. We measure the percent- ages of predictions whose IoU with the ground truth boxes are greater than ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (5 Method), p. 7 (5 Method), p. 9 (5 Method), p. 6 (5 Method), p. 8 (5 Method), p. 8 (5 Method), objective p. 8 (5 Method), p. 9 (5 Method), p. 7 (5 Method), p. 8 (5 Method), p. 9 (5 Method), temporal p. 7 (5 Method), p. 8 (5 Method), p. 8 (5 Method), p. 9 (5 Method), p. 9 (5 Method), p. 10 (6 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

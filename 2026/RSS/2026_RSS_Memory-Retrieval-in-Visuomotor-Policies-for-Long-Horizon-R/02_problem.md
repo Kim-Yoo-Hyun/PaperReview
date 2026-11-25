@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 7 | In addition, we measure manipulation and memory failures in real-world evaluations, finding that HALO reduces them by 8% ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Method Retrieve Object Return to Container LSTM 0.14 0.12 Mamba 0.20 0.18 TransformerXL 0.12 0.20 Window Attention 0.13 ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (III. HALO), p. 3 (III. HALO), p. 4 (III. HALO), p. 4 (III. HALO). The downstream handoff is claimed only when the body describes it.
@@ -72,10 +70,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 3 (III. HALO), p. 3 (III. HALO), p. 4 (III. HALO), p. 4 (III. HALO), objective p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 4 (III. HALO), p. 4 (III. HALO), p. 5 (III. HALO), p. 5 (III. HALO).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

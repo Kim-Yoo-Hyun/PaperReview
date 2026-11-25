@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 5 (2 B
 | body cue at p. 9 | It would be an interesting avenue of future work to try to boost sample quality while maintaining sample ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | The 64 × 64 models used sampler noise interpolation coefficient v = 0.3 and were trained for 400 ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 INTRODUCTION), p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 3 (2 BACKGROUND). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 5 (2 BACKGROUND), p. 5 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 3 (2 BACKGROUND), interface p. 1 (1 INTRODUCTION), p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 3 (2 BACKGROUND), objective p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 BACKGROUND).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

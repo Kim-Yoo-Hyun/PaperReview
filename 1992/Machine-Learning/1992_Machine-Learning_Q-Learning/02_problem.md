@@ -60,8 +60,6 @@ PDF body contribution framing (p. 3 (2. The task for ~-learning), p. 4 (3. The c
 | body cue at p. 8 | Unfortunately, the theorem does not extend trivially to this case, and alternative proof methods such as those in ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | The theorem above only proves the convergence of a restricted version of Watkins' (1989) comprehensive Q-learning algorithm, since ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (2. The task for ~-learning), p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning), p. 1 (Body text (section boundary not confidently recovered)). The downstream handoff is claimed only when the body describes it.
@@ -69,10 +67,8 @@ rl writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), interface p. 2 (2. The task for ~-learning), p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning), p. 1 (Body text (section boundary not confidently recovered)), objective p. 3 (2. The task for ~-learning), p. 6 (3.2. The theorem), p. 7 (3.2. The theorem), p. 7 (3.2. The theorem), p. 2 (2. The task for ~-learning), p. 3 (2. The task for ~-learning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

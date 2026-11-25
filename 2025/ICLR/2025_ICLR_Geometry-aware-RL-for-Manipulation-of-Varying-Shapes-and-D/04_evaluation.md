@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** The computational overhead is measured as the ratio of training time per iteration (over seven tasks) relative to HEPi. and three (plus, star, pentagon)-and tested ...
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** However, in tasks with a lower-dimensional action space, such as 2D environments, well-tuned PPO performs comparably to TRPL in terms of final average return, though ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Left: A Cloth-Hanging task represented by a heterogeneous graph that comprises two disjoint node sets, objects, and actuators, connected through directed, fully-connected inter-edges. ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 | These tasks present a range of manipulation challenges, emphasizing the role of geometric structure and requiring complex exploration strategies to coordinate the agents in ... | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
 | Overall, performance improves as the sample space decreases. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 | Figure 7: Performance comparison on tasks with and without attention mechanisms over 10 seeds. Adding attention significantly increases the training time but does not ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Figure 20: Performance of different models on the Cloth-Hanging task across various sample spaces. Assuming the global scene located at r = [0, 1, ... | comparison identity and matched condition | p. 25 (Figure/Table caption) |
 | In this section, we outline the experimental setup and present the results comparing the proposed HEPi against other baselines. | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 | body limitation/failure cue | Figure 23: Ablation on different k-nearest neighbors for obj-to-act edges in MPNN + VNLocal (in Section 3.3) updates, evaluated on the Rigid-Insertion task with ... | p. 26 (Figure/Table caption) |
 | body limitation/failure cue | For final performance on rigid tasks, firstly in rigid-slding-2D and rigid-insertion-2D+z tasks, HEPi and Transformer policies perform comparably, suggesting that the limited task complexity ... | p. 7 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 | 원문 대조: Value function은 각 node feature에 inner MLP를 적용하고 모든 node에 대해 합산한 뒤 outer MLP를 통과시키는 DeepSets 구조다. Node 순서에 대한 permutation invariance를 유지한다. ([PDF p. 5](https://arxiv.org/pdf/2502.07005#page=5), Value Function) | [PDF p. 5](https://arxiv.org/pdf/2502.07005#page=5), Value Function |
 | This, however, requires careful hyperparameters turning to make it work stably, as pointed out by Andrychowicz et al. | p. 5 (3 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6 CONCLUSION - extractive body cue:** Limitation In our current setup, we abstract away the robot body, focusing solely on end-effector movements.
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For final performance on rigid tasks, firstly in rigid-slding-2D and rigid-insertion-2D+z tasks, HEPi and Transformer policies perform comparably, suggesting that the limited task complexity does ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 23 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 25 (Figure/Table caption), p. 6 (4 EXPERIMENTS), results p. 8 (Figure/Table caption), p. 25 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

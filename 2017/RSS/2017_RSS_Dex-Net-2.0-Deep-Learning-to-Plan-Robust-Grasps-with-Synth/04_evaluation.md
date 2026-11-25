@@ -49,8 +49,6 @@
 - **p. 7 / VI. EXPERIMENTS - extractive body cue:** Amount of Pretraining We trained three GQ-CNNs on the synthetic dataset of adversarial training objects (Adv-Synth) to study the effect of pretraining with Dex-Net for ...
 - **p. 8 / VI. EXPERIMENTS - extractive body cue:** The dataset contains rigid, articulated, and deformable objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Dex-Net 2.0 Architecture. (Center) The Grasp Quality Convolutional Neural Network (GQ-CNN) is trained offline to predict the robustness candidate grasps from depth images ...
@@ -84,8 +82,6 @@
 | The CEM-augmented Dex-Net 2.0 grasp planner achieved 94% success and 99% precision (68 successes out of 69 grasps classified as robust), and it took ... | definition/direction/unit from same section | p. 8 (VI. EXPERIMENTS) |
 | Fig. 1: Dex-Net 2.0 Architecture. (Center) The Grasp Quality Convolutional Neural Network (GQ-CNN) is trained offline to predict the robustness candidate grasps from depth ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@
 | The GQ-CNNs outperformed ML-RF and ML-SVM, achieving near-perfect validation accuracy. | comparison identity and matched condition | p. 7 (VI. EXPERIMENTS) |
 | Performance decreases with smaller training datasets, but the GQ-CNN methods outperform the image-based grasp quality metrics (IGQ) and point cloud registration (REG). | comparison identity and matched condition | p. 8 (VI. EXPERIMENTS) |
 | Each method was tested for 50 trials, and details on the methods used for comparison can be found in Section VI-C. | comparison identity and matched condition | p. 8 (VI. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@
 | body limitation/failure cue | Fig. 9: (Left) Grasp robustness predicted by a Grasp Quality Convolutional Neural Network (GQ-CNN) trained with Dex-Net 2.0 over the space of depth images ... | p. 10 (Figure/Table caption) |
 | body limitation/failure cue | We chose objects based on geometric features under three constraints: (a) small enough to fit within the workspace, (b) weight less than 0.25kg, the ... | p. 6 (VI. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@
 | All experiments ran on a Desktop running Ubuntu 14.04 with a 2.7 GHz Intel Core i5-6400 Quad-Core CPU and an NVIDIA GeForce 980, and ... | p. 5 (VI. EXPERIMENTS) |
 | Pretraining does not appear to affect performance. cient of µ = 0.5 in 50 physical trials per object in Train (400 datapoints). | p. 6 (VI. EXPERIMENTS) |
 | In each trial a human operator sampled an object pose by shaking the object in a box and placing it upside down in the ... | p. 6 (VI. EXPERIMENTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -169,6 +148,5 @@
 - **p. 6 / VI. EXPERIMENTS - extractive body cue:** We chose objects based on geometric features under three constraints: (a) small enough to fit within the workspace, (b) weight less than 0.25kg, the payload ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 5 (VI. EXPERIMENTS), p. 5 (VI. EXPERIMENTS), metrics p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 5 (Figure/Table caption), baselines p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), results p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 8 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

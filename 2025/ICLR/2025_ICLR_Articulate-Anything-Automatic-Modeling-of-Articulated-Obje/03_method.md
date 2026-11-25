@@ -44,7 +44,6 @@ PDF body method statement (p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBO
 - **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 16 (A.3 ROBOTIC TRAINING DETAILS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -63,7 +62,6 @@ PDF body method statement (p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBO
 - **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We randomize physics (friction, damping, frictionloss ect), objects' scales and poses to obtain robust policies.
 - **p. 23 / A.7 MESH RECONSTRUCTION - extractive body cue:** Ground-truth RGBD images were used by Real2Code.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -79,13 +77,10 @@ PDF body method statement (p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBO
 - **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train a Franka arm to perform four robotic manipulation tasks in the Robosuite simulator using PPO and our generated assets.The policy outputs joint and ...
 - **p. 16 / A.3 ROBOTIC TRAINING DETAILS - extractive body cue:** We train policies over 3 random seeds per task for 2 million environment steps using PPO in Stable-Baselines3 library Raffin et al.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** train, Franka, perform, four, robotic, manipulation, tasks, Robosuite, simulator, PPO, generated, assets, policy, outputs, joint, gripper, positions, randomize, physics, friction.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -105,20 +100,10 @@ PDF body method statement (p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBO
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 19: Comparable Inputs. We compare ARTICULATE-ANYTHING with two baselines, Real2Code and UDRFormer using the same input modalities. The ablation is done on the cor- ...
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** Both methods were trained or fine-tuned on five object categories in the PartNet-Mobility dataset.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 16 (A.3 ROBOTIC TRAINING DETAILS), p. 23 (A.7 MESH RECONSTRUCTION), objective p. 16 (A.3 ROBOTIC TRAINING DETAILS), temporal p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK), p. 4 (2 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

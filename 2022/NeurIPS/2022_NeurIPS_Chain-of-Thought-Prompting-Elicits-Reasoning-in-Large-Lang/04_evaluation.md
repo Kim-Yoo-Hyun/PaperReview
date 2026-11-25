@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.
 - **p. 8 / 3.2 Results - extractive body cue:** As the construction of these symbolic reasoning tasks is well-defined, for each task we consider an in-domain test set for which examples had the same ...
 - **p. 8 / 3.2 Results - extractive body cue:** And yet, small models still fail-the ability to perform abstract manipulations on unseen symbols for these three tasks only arises at the scale of 100B ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Chain-of-thought prompting enables large language models to tackle complex arithmetic, commonsense, and symbolic reasoning tasks. Chain-of-thought reasoning processes are highlighted. 36th Conference on ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.
 | These results demonstrate that chain-of-thought prompting can also improve performance on tasks requiring a range of commonsense reasoning abilities (though note that gain was ... | definition/direction/unit from same section | p. 7 (3.2 Results) |
 | With chain-of-thought prompting, PaLM 540B achieved strong performance relative to baselines, outperforming the prior state of the art on StrategyQA (75.6% vs 69.4%) and ... | definition/direction/unit from same section | p. 7 (3.2 Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.
 | This variant performs about the same as the baseline, which suggests that the sequential reasoning embodied in the chain of thought is useful for ... | comparison identity and matched condition | p. 6 (3.2 Results) |
 | source (examples in this dataset already included reasoning steps like a chain of thought).2 Figure 6 shows that these prompts performed comparably with our ... | comparison identity and matched condition | p. 7 (3.2 Results) |
 | Table 7: Ablation and robustness results for four datasets in commonsense and symbolic reasoning. Chain of thought generally outperforms ablations by a large amount. ... | comparison identity and matched condition | p. 23 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.
 | body limitation/failure cue | We first saw that chain-of-thought prompting improves performance by a large margin on arithmetic reasoning, yielding improvements that are much stronger than ablations and ... | p. 8 (6 Discussion) |
 | body limitation/failure cue | That is, chain-of-thought prompting does not positively impact performance for small models, and only yields performance gains when used with models of ∼100B parameters. | p. 4 (3.2 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.
 | The fourth is UL2 20B (Tay et al., 2022), and the fifth is Codex (Chen et al., 2021, code-davinci-002 in the OpenAI API). | p. 4 (1 Introduction) |
 | For each of 4 days, 5 more computers were added. | p. 6 (3.2 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Discussion - extractive body cue:** As for limitations, we first qualify that although chain of thought emulates the thought processes of human reasoners, this does not answer whether the neural ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.
 - **p. 4 / 3.2 Results - extractive body cue:** That is, chain-of-thought prompting does not positively impact performance for small models, and only yields performance gains when used with models of ∼100B parameters.
 
 - **Evidence anchors reviewed:** datasets p. 7 (3.2 Results), p. 5 (3.2 Results), p. 4 (3.2 Results), p. 5 (3.2 Results), p. 6 (3.2 Results), p. 7 (3.2 Results), metrics p. 6 (3.2 Results), p. 5 (3.2 Results), p. 5 (3.2 Results), p. 6 (3.2 Results), p. 16 (Figure/Table caption), p. 23 (Figure/Table caption), baselines p. 6 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.2 Results), p. 6 (3.2 Results), p. 7 (3.2 Results), p. 23 (Figure/Table caption), results p. 7 (3.2 Results), p. 7 (3.2 Results), p. 5 (3.2 Results), p. 5 (3.2 Results), p. 8 (3.2 Results), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

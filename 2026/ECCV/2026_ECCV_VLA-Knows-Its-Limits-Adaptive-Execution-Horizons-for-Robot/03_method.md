@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon), p. 
 - **p. 3 / 3.1. Preliminary - extractive body cue:** In the following, we first show that flow-matching policy performance exhibits a peaked trend with respect to the execution horizon, underscoring the need and feasibility ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (3.4. AutoHorizon), p. 4 (3.2. Existence of Optimal Execution Horizon), p. 4 (3.2. Existence of Optimal Execution Horizon), p. 5 (3.3. VLA Knows Its Limits), p. 6 (3.4. AutoHorizon).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon), p. 
 - **p. 1 / 1. Introduction - extractive body cue:** Within this paradigm, Vision-Language-Action (VLA) models [3, 12, 16, 19, 26, 27, 40] have emerged as a promising direction for their ability to ground visual ...
 - **p. 2 / 1. Introduction - extractive body cue:** (2) Building on these insights, we propose AutoHorizon, a novel attention-guided strategy that dynamically estimates the execution horizon for each action chunk, allowing the policy ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon), p. 
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** For GR00T N1.5, we adopt the publicly released pretrained checkpoints with the default prediction horizon of p = 16.
 - **p. 4 / 3.1. Preliminary - extractive body cue:** This invariance is consistently observed across different sampling steps, task rollouts, and pretrained models.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Intuitively, quantifies, strongly, i-th, query, action, attends, j-th, revealing, model, effectively, looks, ahead, objective, identify, first, turning, point, attention, trajectory-where.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 2); 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon), p. 
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** For GR00T N1.5, we adopt the publicly released pretrained checkpoints with the default prediction horizon of p = 16.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Visualization of average attention weights in π0.5 across different stages of task execution. Intra-chunk actions consistently attend to the same vision and language ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.4. AutoHorizon), p. 5 (3.4. AutoHorizon), p. 5 (3.3. VLA Knows Its Limits), p. 3 (3.1. Preliminary), p. 4 (3.2. Existence of Optimal Execution Horizon), p. 3 (3.1. Preliminary), objective p. 4 (3.2. Existence of Optimal Execution Horizon), p. 6 (3.4. AutoHorizon), p. 6 (3.4. AutoHorizon), p. 4 (3.2. Existence of Optimal Execution Horizon), p. 5 (3.3. VLA Knows Its Limits), p. 3 (3.1. Preliminary), temporal p. 4 (3.2. Existence of Optimal Execution Horizon), p. 5 (3.4. AutoHorizon), p. 4 (3.2. Existence of Optimal Execution Horizon), p. 6 (4.1. Experimental Settings), p. 7 (4.1. Experimental Settings), p. 3 (3.1. Preliminary).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

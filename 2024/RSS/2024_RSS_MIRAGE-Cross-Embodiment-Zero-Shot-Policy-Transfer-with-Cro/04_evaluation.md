@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 
 - **p. 2 / 3) Physical experiments with Franka and UR5 demonstrating - extractive body cue:** that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a ...
 - **p. 6 / IV. STATE-BASED TRANSFER EXPERIMENTS - extractive body cue:** We use the source robot trajectory data D to fit a forward dynamics model f on the transitions: f(pS r,t, aS t ) = pS ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of Mirage. We study zero-shot policy transfer across embodiments. Assume there is a policy trained on a source robot (left). At test ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 
 | For real experiments, however, we do not use depth due to noise and imprecision in the camera observations. | definition/direction/unit from same section | p. 6 (IV. STATE-BASED TRANSFER EXPERIMENTS) |
 | Fig. 5: Mirage applied to first-person wrist camera images and third- person front camera images. For each view, the top row shows the actual ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 
 | MIRAGE: A CROSS-EMBODIMENT TRANSFER STRATEGY FOR VISION-BASED POLICIES Motivated by the observation that target robots can successfully perform tasks to a large extent simply ... | comparison identity and matched condition | p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS) |
 | Note that Jaco has a 3-jaw gripper, but we include it for comparison. | comparison identity and matched condition | p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS) |
 | In comparison, with a 3-jaw gripper, Jaco's success rates are significantly lower than the others', especially on more challenging tasks, where the grasp configuration ... | comparison identity and matched condition | p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 
 | body limitation/failure cue | This is not surprising as the policy is trained with matching proprioceptive values and image observations, and large offsets in the proprioceptive values correspond ... | p. 9 (2) Can Mirage successfully zero-shot transfer trained vision) |
 | body limitation/failure cue | that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming ... | p. 2 (3) Physical experiments with Franka and UR5 demonstrating) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 
 | For the gripper, we similarly compute and set the joints of the source robot gripper in the renderer so that its width would roughly ... | p. 6 (IV. STATE-BASED TRANSFER EXPERIMENTS) |
 | The target robot then uses a forward dynamics model to obtain the desired end effector pose in the target robot frame and executes the ... | p. 1 (2 Google DeepMind) |
 | IV, we first train the source robot policies with behavior cloning (BC-RNN) on the provided demonstration data for each task (200 demos for Lift ... | p. 6 (2) Can Mirage successfully zero-shot transfer trained vision) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,9 +142,8 @@ PDF body evaluation/result cue (p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 
 - **p. 2 / 3) Physical experiments with Franka and UR5 demonstrating - extractive body cue:** that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 2 (3) Physical experiments with Franka and UR5 demonstrating), metrics p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 2 (3) Physical experiments with Franka and UR5 demonstrating), p. 10 (Figure/Table caption), baselines p. 2 (3) Physical experiments with Franka and UR5 demonstrating), p. 9 (Figure/Table caption), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), results p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 9 (Figure/Table caption), p. 2 (3) Physical experiments with Franka and UR5 demonstrating), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

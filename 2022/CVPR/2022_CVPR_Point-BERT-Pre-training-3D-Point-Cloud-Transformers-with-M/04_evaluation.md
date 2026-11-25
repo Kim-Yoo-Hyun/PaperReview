@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Visualization), p. 6 (4.2. Downstream
 - **p. 5 / 4. Experiments - extractive body cue:** Then we evaluate the proposed model with various downstream tasks, including object classification, part segmentation, few-shot learning and transfer learning.
 - **p. 6 / 4.2. Downstream Tasks - extractive body cue:** In this subsection, we report the experimental results on downstream tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of our main idea. Point-BERT is designed for pre-training of standard point cloud Transformers. By training a dVAE via point cloud reconstruction, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Visualization), p. 6 (4.2. Downstream
 | The commonly used ℓ1-style Chamfer Distance loss is employed during the reconstruction procedure. | definition/direction/unit from same section | p. 5 (4.1. Pre-training Setups) |
 | The learning rate is set to 0.0005 with a cosine learning schedule with 60,000 steps warming up. | definition/direction/unit from same section | p. 5 (4.1. Pre-training Setups) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Visualization), p. 6 (4.2. Downstream
 | Moreover, Point-BERT improves 0.69% and 0.5% mIoU over vanilla Transformers, while OcCo fails to improve baseline performance in part segmentation task. | comparison identity and matched condition | p. 7 (4.2. Downstream Tasks) |
 | We denote model A as our baseline, which is the Transformer training from scratch. | comparison identity and matched condition | p. 8 (4.3. Ablation Study) |
 | We also visualize the learning curves of our baseline Transformers and the proposed Point-BERT in Figure 5. | comparison identity and matched condition | p. 8 (4.4. Visualization) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Visualization), p. 6 (4.2. Downstream
 | body limitation/failure cue | While the superiority is degraded on the real-world dataset ScanObjectNN. | p. 7 (4.2. Downstream Tasks) |
 | body limitation/failure cue | Thus, randmask makes the task easier than block-mask, and further degrades the reconstruction performance. | p. 8 (4.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Visualization), p. 6 (4.2. Downstream
 | Our Transformer encoder can reasonably infer the point tokens of the missing patches. | p. 8 (4.3. Ablation Study) |
 | In practice, we reconstruct the local patches through the decoder of dVAE, based on the point tokens predicted by the Transformer encoder. | p. 8 (4.3. Ablation Study) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.1. Pre-training Setups - extractive body cue:** It is worth noting that the performance of dVAE is susceptible to hyper-parameters, which makes that the configurations of image-based dVAE [37] cannot be directly ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 8 (4.4. Visualization), p. 6 (4.2. Downstream
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** Thus, randmask makes the task easier than block-mask, and further degrades the reconstruction performance.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.4. Visualization), p. 7 (4.2. Downstream Tasks), p. 8 (4.4. Visualization), p. 5 (4.1. Pre-training Setups), p. 7 (4.2. Downstream Tasks), p. 6 (4.2. Downstream Tasks), metrics p. 8 (4.4. Visualization), p. 6 (4.2. Downstream Tasks), p. 8 (4.4. Visualization), p. 6 (4.1. Pre-training Setups), p. 7 (4.2. Downstream Tasks), p. 7 (4.2. Downstream Tasks), baselines p. 6 (4.2. Downstream Tasks), p. 6 (4.1. Pre-training Setups), p. 7 (4.2. Downstream Tasks), p. 7 (4.2. Downstream Tasks), p. 8 (4.3. Ablation Study), p. 8 (4.4. Visualization), results p. 8 (4.4. Visualization), p. 6 (4.2. Downstream Tasks), p. 6 (4.2. Downstream Tasks), p. 2 (Figure/Table caption), p. 7 (4.2. Downstream Tasks), p. 7 (4.2. Downstream Tasks).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

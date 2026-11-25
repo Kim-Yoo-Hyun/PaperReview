@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 - **p. 11 / 4 Experiments - extractive body cue:** Model Type Supervision PQ PQT h N PQSt N RQ RQT h N RQSt N SQ SQT h N SQSt N mIoU P3Former [47] closed-set ...
 - **p. 11 / 4 Experiments - extractive body cue:** We show that this is due to lack of supervision of the whole scene as P3Former achieves similar performance when only trained on base categories.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our method. Given a LiDAR point cloud and the corresponding camera images, LiDAR features are extracted with a learnable LiDAR encoder, ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | Fig. 2: (a) the proposed object-level distillation loss, and (b) the proposed voxel-level distillation loss. 3.3 | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Table 5: Performance on a different split. We compare the performance with a split with 5 novel classes (B11/N5). The novel things classes are ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | 4.1 Experimental Setting Following the state-of-the-art closed-set 3D panoptic segmentation work [27,40, 42,47,52,58], we conduct experiments and ablation studies on the nuScenes [4] and ... | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Following the most recent state-of-the-art model P3Former [47], we evaluate the models on the validation set(6019 frames). | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Table 4: Impact of each component. We evaluate the impact of each component using the base/novel split in Tab. 1. We observe that each ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 |---|---|---|
 | body limitation/failure cue | We experimentally verified that simply extending the 2D open-vocabulary segmentation method into 3D does not yield good performance, and demonstrated that our proposed model ... | p. 14 (5 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,19 +131,10 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | The predicted class logits are then computed from the cosine similarity between the predicted class embedding and the text embedding of every category name ... | p. 6 (3 Method) |
 | For the Text CLIP encoder, we use CLIP [39] with ViT-L/14 [45] backbone, following other state-of-the-art open vocabulary works [35]. | p. 8 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 5 Conclusion - extractive body cue:** We experimentally verified that simply extending the 2D open-vocabulary segmentation method into 3D does not yield good performance, and demonstrated that our proposed model design ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), baselines p. 10 (4 Experiments), p. 10 (4 Experiments), p. 13 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 12 (Figure/Table caption), results p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 12 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

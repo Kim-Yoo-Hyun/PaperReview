@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem For
 - **p. 6 / 3.4.2. Interaction Strategy - extractive body cue:** The benefit of this approach revolves around breaking down the complexity of long-horizon tasks and allowing us to optimize the success rate of each key-frame ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem Formulation), p. 4 (3.3.2. Policy Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem For
 - **p. 2 / 1. Introduction - extractive body cue:** Based on the input goal prompt, the model determines the 6 DoF contact pose, enabling it to interact with the object as required.
 - **p. 3 / 3.2. Data Collection - extractive body cue:** These are then served as information embedded in the input language prompt.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem For
 - **p. 3 / 3.3.1. Model Architecture - extractive body cue:** This approach aims to preserve the inherent existing pre-trained knowledge, particularly in simto-real transfer, while enhancing the model's ability to comprehend visual prompts and perform ...
 - **p. 3 / 3.3.1. Model Architecture - extractive body cue:** Simultaneously, text prompts 푃are encoded into text features using LLaMa's pre-trained tokenizer [51].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Therefore, introduce, following, losses, guide, policy, training, Text, Supervision, Loss, ensures, effective, alignment, model, visual, linguistic, input, making, sure, output.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.3.1. Model Architecture (p. 3); 3.3.2. Policy Learning (p. 3); 3.4.1. Model Inference (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem For
 - **p. 6 / 4.3. Ablation Study - extractive body cue:** Analysis on The Effect of Different Types of Prompt In Table 2 Ex1-Ex3, since our model is able to handle various input patterns thanks to ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. We design training pairs that convey varying levels of information to enable the model to comprehend each type of prompt and introduce loss ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem Formulation), p. 3 (3.3.1. Model Architecture), p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning), p. 5 (3.4.2. Interaction Strategy), objective p. 4 (3.3.2. Policy Learning), p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem Formulation), p. 3 (3.3.2. Policy Learning), p. 6 (3.4.2. Interaction Strategy), temporal p. 5 (3.4.2. Interaction Strategy), p. 2 (1. Introduction), p. 6 (3.4.2. Interaction Strategy), p. 6 (3.4.2. Interaction Strategy), p. 1 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -51,7 +51,6 @@ PDF body method statement (p. 1 (B EHAVIOR cloning (BC) with generative models h
 - **p. 4 / IV. WORLD MODEL LEARNING - extractive body cue:** While such stochasticity is beneficial for generative diversity, our objective is control, where we seek to isolate the effect of actions on future outcomes rather ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 4 (IV. WORLD MODEL LEARNING), p. 4 (IV. WORLD MODEL LEARNING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 1 (B EHAVIOR cloning (BC) with generative models h
 - **p. 4 / III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL - extractive body cue:** [Right] Each single-step predictor is a conditioned diffusion model, where a UNet iteratively denoises a noisy image sample conditioned on the observation history and action ...
 - **p. 1 / B EHAVIOR cloning (BC) with generative models has - extractive body cue:** We learn an actionconditioned world model that forecasts future observations given candidate action chunks.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,15 +87,11 @@ PDF body method statement (p. 1 (B EHAVIOR cloning (BC) with generative models h
 - **p. 4 / V. EXPERIMENTS - extractive body cue:** We further provide ablations and comparisons to illustrate: (i) the influence of K and M on performance, and (ii) how GPC compares with other baselines ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** All images shown are modelpredicted future observations, sampled from intermediate steps along the rollout horizon.
 - **p. 1 / B EHAVIOR cloning (BC) with generative models has - extractive body cue:** At inference time, GPC enhances the frozen policy using lightweight planning strategies.
-- **p. 1 / B EHAVIOR cloning (BC) with generative models has - extractive body cue:** We propose generative predictive control (GPC), a framework that strengthens pretrained diffusion-based BC policies at inference time by coupling them with an action-conditioned predictive world ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** generative, predictive, control, GPC, framework, strengthens, pretrained, diffusion-based, policies, inference, time, coupling, them, action-conditioned, world, model, online, planning, Fig, consists.
 - **Relevant PDF headings:** B EHAVIOR cloning (BC) with generative models has (p. 1); IV. WORLD MODEL LEARNING (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 1 (B EHAVIOR cloning (BC) with generative models h
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: GENERATIVE PREDICTIVE CONTROL (GPC). (a) GPC-RANK: The generative policy proposes multiple action sequences that are evaluated in imagination using the predictive world model; ...
 - **p. 4 / IV. WORLD MODEL LEARNING - extractive body cue:** Without freezing the noise, GPC-OPT fails, as stochastic gradients destabilize the reward optimization in (4).
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 4 (IV. WORLD MODEL LEARNING), p. 4 (IV. WORLD MODEL LEARNING), objective p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 4 (IV. WORLD MODEL LEARNING), p. 1 (B EHAVIOR cloning (BC) with generative models has), p. 4 (IV. WORLD MODEL LEARNING), temporal p. 5 (V. EXPERIMENTS), p. 1 (Abstract), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL), p. 3 (III. OVERVIEW OF GENERATIVE PREDICTIVE CONTROL).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

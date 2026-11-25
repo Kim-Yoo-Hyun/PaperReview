@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** On most scenes, we also surpassed MASt3R-SLAM, a recent feed-forward SLAM system.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Since MonoGS and DepthGS are designed primarily for indoor scenes, they often fail under the large scale variance and dynamics in KITTI; therefore, we mainly ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our Results for Reconstruction and Rendering & Tracking & Speed Metrics. Our method reconstructs high-quality Gaussian maps in complex scenes with multiple rooms ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption
 | Second, we examined the influence of submap clip length on tracking accuracy (ATE RMSE). | definition/direction/unit from same section | p. 10 (5 EXPERIMENTS) |
 | Figure 1: Our Results for Reconstruction and Rendering & Tracking & Speed Metrics. Our method reconstructs high-quality Gaussian maps in complex scenes with multiple ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption
 | Figure 1: Our Results for Reconstruction and Rendering & Tracking & Speed Metrics. Our method reconstructs high-quality Gaussian maps in complex scenes with multiple ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 7: Qualitative Analysis on reconstructed ScanNet scene 0054. All baselines failed to reconstruct the scene. C MODEL SIZE AND ACCELERATION C.1 MODEL SIZE ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
 | Without refinement (0 iterations), the direct output from our feed-forward model achieves a PSNR of 20.14. | comparison identity and matched condition | p. 10 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption
 | body limitation/failure cue | Figure 7: Qualitative Analysis on reconstructed ScanNet scene 0054. All baselines failed to reconstruct the scene. C MODEL SIZE AND ACCELERATION C.1 MODEL SIZE ... | p. 16 (Figure/Table caption) |
 | body limitation/failure cue | Figure 9: Case Study: Robust Relocalization Under Environmental Changes. The model gen- erates a hidden state from 8 context views captured at night (curtains ... | p. 20 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption
 | The relative pose is then computed as Tj→i = (Ta j )-1Ta i . | p. 6 (1 INTRODUCTION) |
 | The computed Sim(3) constraint enables global optimization of the entire trajectory via a pose graph. | p. 6 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** On KITTI, we primarily compare against S3POGS, as we encountered frequent failures while evaluating other indoor-focused GS-SLAM baselines due to the large-scale and high dynamic ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 9: Case Study: Robust Relocalization Under Environmental Changes. The model gen- erates a hidden state from 8 context views captured at night (curtains closed, ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 16 (Figure/Table caption), p. 10 (5 EXPERIMENTS), results p. 8 (5 EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

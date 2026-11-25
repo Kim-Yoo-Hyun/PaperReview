@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 - **p. 5 / 3.1. Cart-Pole Swing-up - extractive body cue:** Pilco successfully learned a sufficiently good dynamics model and a good controller for this standard benchmark problem fully automatically in only a handful of trials ...
 - **p. 6 / 3.3. Unicycle Riding - extractive body cue:** The dynamics of the robotic unicycle can be described by 12 coupled firstorder ODEs, see (Forster, 2009).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Small data set of observed transitions (left), multiple plausible deterministic function approximators (center), probabilistic function approximator (right). The probabilistic approximator models uncertainty about ...
@@ -77,20 +75,11 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 | Pilco successfully learned a sufficiently good dynamics model and a good controller for this standard benchmark problem fully automatically in only a handful of ... | definition/direction/unit from same section | p. 5 (3.1. Cart-Pole Swing-up) |
 | Figure 1. Small data set of observed transitions (left), multiple plausible deterministic function approximators (center), probabilistic function approximator (right). The probabilistic approximator models uncertainty ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | In the following, we compare pilco's data efficiency (required interaction time) to other RL methods that learn previously discussed tasks from scratch, i.e., without ... | comparison identity and matched condition | p. 6 (3.4. Data Efficiency) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,8 +111,6 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 | body limitation/failure cue | The goal was to ride the unicycle, i.e., to prevent it from falling. | p. 6 (3.3. Unicycle Riding) |
 | body limitation/failure cue | After 1.2 s, either the unicycle had fallen or the learned controller had managed to balance it very closely to the desired upright position. | p. 6 (3.3. Unicycle Riding) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 | (27) is known from time step t -1 and ∂µt/∂p(xt-1) is computed by applying the chain-rule to Eqs. | p. 4 (2.3. Analytic Gradients for Policy Improvement) |
 | Hence, we can analytically compute the gradients of the expected return Jπ with respect to the policy parameters θ, which we sketch in the ... | p. 4 (2.3. Analytic Gradients for Policy Improvement) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4. Discussion and Conclusion - extractive body cue:** Hence, pilco's unprecedented data efficiency cannot solely be attributed to any kind of reward shaping.
@@ -153,9 +132,8 @@ PDF body evaluation/result cue (p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table 
 - **p. 6 / 3.3. Unicycle Riding - extractive body cue:** After 1.2 s, either the unicycle had fallen or the learned controller had managed to balance it very closely to the desired upright position.
 
 - **Evidence anchors reviewed:** datasets p. 5 (3. Experimental Results), p. 6 (3.3. Unicycle Riding), p. 5 (3.1. Cart-Pole Swing-up), p. 6 (3.3. Unicycle Riding), metrics p. 6 (3.3. Unicycle Riding), p. 6 (3.3. Unicycle Riding), p. 3 (2.2. Policy Evaluation), p. 3 (2.2. Policy Evaluation), p. 5 (3. Experimental Results), p. 5 (3.1. Cart-Pole Swing-up), baselines p. 6 (3.4. Data Efficiency), results p. 6 (3.3. Unicycle Riding), p. 2 (Figure/Table caption), p. 3 (2.2. Policy Evaluation), p. 5 (3. Experimental Results), p. 5 (3.2. Cart-Double-Pendulum Swing-up), p. 6 (3.3. Unicycle Riding).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

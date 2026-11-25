@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP
 - **p. 3 / 3.1. MTAP for Action Chunking - extractive body cue:** To overcome these challenges, we introduce a versatile Multi-Token Action Prediction (MTAP) framework that enables efficient, parallelized action prediction within a unified discrete architecture.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP for Action Chunking), p. 4 (3.1. MTAP for Action Chunking), p. 5 (3.2. Multi-Modal Action Co-Training), p. 5 (3.3. Training VLA as VLM).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP
 - **p. 1 / 1. Introduction - extractive body cue:** As a result, unified approaches often run with a single-step history and fail to fully utilize the rich information of past observations and actions.
 - **p. 1 / 1. Introduction - extractive body cue:** Most VLAs apply VLMs as their feature extractors and feed representations into a decoupled continuous policy head, e.g., diffusion or flow policies (Team et al., ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP
 - **p. 4 / 3.2. Multi-Modal Action Co-Training - extractive body cue:** To support multi-modal co-training, we build a unified tokenization scheme that encodes all modalities.
 - **p. 7 / 4.2. Evaluation on SimplerEnv - extractive body cue:** Second, the model's dominance in the Visual Matching setting indicates exceptional robustness to sim-to-real visual shifts, suggesting that preserving the VLM's pre-trained visual representations enables ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** state, then, passed, through, shared, language, model, head, LMHead, produce, logits, future, action, overcome, challenges, introduce, versatile, Multi-Token, Prediction, MTAP.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 3 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP
 - **p. 5 / 4. Experiment - extractive body cue:** Across all settings, we compare RoboOmni against three representative and widely adopted unified VLA baselines: OpenVLA (Kim et al., 2024) is an autoregressive visionlanguage-action (VLA) ...
 - **p. 7 / 4.3. Real Robot Experiments - extractive body cue:** Ablation study of MTAP and different tokenizers.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP for Action Chunking), p. 4 (3.1. MTAP for Action Chunking), p. 4 (3.1. MTAP for Action Chunking), p. 5 (3.3. Training VLA as VLM), p. 5 (3.3. Training VLA as VLM), objective p. 5 (3.3. Training VLA as VLM), p. 4 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP for Action Chunking), p. 5 (3.2. Multi-Modal Action Co-Training), p. 4 (3.1. MTAP for Action Chunking), p. 3 (3.1. MTAP for Action Chunking), temporal p. 2 (2.1. Vision-Language-Action Models), p. 1 (Abstract), p. 2 (1. Introduction), p. 6 (4.1. Evaluation on Calvin), p. 6 (4.1. Evaluation on Calvin), p. 7 (4.2. Evaluation on SimplerEnv).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

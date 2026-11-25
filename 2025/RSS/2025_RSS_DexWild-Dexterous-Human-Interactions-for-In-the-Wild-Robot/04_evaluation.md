@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 - **p. 6 / C. Evaluation Environments - extractive body cue:** We evaluate our approach across three scenarios: 1) In-Domain: Environments where robot training data was collected, testing with novel objects 2) In-the-Wild: Environments present in ...
 - **p. 6 / B. Evaluation Tasks - extractive body cue:** Finally, in Bimanual Clothes Folding, the robot uses both hands to fold a clothing item, assessing manipulation of deformable objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DexWild enables dexterous policies to generalize to new objects, scenes, and embodiments. This is achieved by leveraging large-scale, real-world human embodiment data collected ...
@@ -75,20 +73,11 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 | Fig. 6: How does co-training help with scaling up in the wild performance? We evaluate our policy across three scenarios: (a) In-Domain | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 7: Left: Cross-Task Performance - Evaluating DexWild on the Cross-Embodiment Performance ~ Testing DexWild policy on the Orig = Demonstrating improved DexWild performance ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,22 +106,12 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 | body limitation/failure cue | dlomain settings (64.7% success rate) but degrade significantly in more challenging scenarios-in-the-wild (28.5%) and inthe-wild extreme (22.0%). | p. 6 (3) Does policy performance scale effectively with increasing) |
 | body limitation/failure cue | 1:5) degrades performance (54.5% in-domain, 50.9% in-thewild), indicating that robot data remains essential for grounding fine-grained control, | p. 7 (3) Does policy performance scale effectively with increasing) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Ni: Compute difision toss £p = I ~ el | p. 5 (B. Training Data Modalities and Preprocessing) |
 | 1: niilize poicy x» with ViT encoder dye | p. 5 (B. Training Data Modalities and Preprocessing) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -144,9 +123,8 @@ PDF body evaluation/result cue (p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table ca
 - **p. 7 / 3) Does policy performance scale effectively with increasing - extractive body cue:** 1:5) degrades performance (54.5% in-domain, 50.9% in-thewild), indicating that robot data remains essential for grounding fine-grained control,
 
 - **Evidence anchors reviewed:** datasets p. 6 (C. Evaluation Environments), p. 6 (B. Evaluation Tasks), metrics p. 6 (B. Evaluation Tasks), p. 5 (Figure/Table caption), p. 6 (V. ANALYSIS AND RI), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines 본문 anchor 없음, results p. 6 (V. ANALYSIS AND RI), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (B. Evaluation Tasks), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

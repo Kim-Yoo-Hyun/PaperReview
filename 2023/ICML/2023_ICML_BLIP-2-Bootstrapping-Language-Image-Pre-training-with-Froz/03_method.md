@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap 
 - **p. 5 / 3.4. Model Pre-training - extractive body cue:** Explain the advantages of this product.
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap Vision-Language Representation), p. 4 (3.3. Bootstrap Vision-to-Language Generative Learning), p. 4 (3.3. Bootstrap Vision-to-Language Generative Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap 
 - **p. 3 / 3.2. Bootstrap Vision-Language Representation - extractive body cue:** Image-grounded Text Generation (ITG) loss trains the Q-Former to generate texts, given input images as the condition.
 - **p. 1 / 1. Introduction - extractive body cue:** However, most state-of-the-art vision-language models incur a high computation cost during pre-training, due to end-to-end training using large-scale models and datasets.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,16 +91,12 @@ PDF body method statement (p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap 
 - **p. 4 / 3.3. Bootstrap Vision-to-Language Generative Learning - extractive body cue:** For encoder-decoder-based LLMs, we pre-train with the prefix language modeling loss, where we split a text into two parts.
 - **p. 4 / 3.3. Bootstrap Vision-to-Language Generative Learning - extractive body cue:** For decoderbased LLMs, we pre-train with the language modeling loss, where the frozen LLM is tasked to generate the text conditioned on the visual representation ...
 - **p. 5 / 3.4. Model Pre-training - extractive body cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models The audi e-tron quattro concept is a plug-in hybrid electric sports car that ...
-- **p. 5 / 3.4. Model Pre-training - extractive body cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models The audi e-tron quattro concept is a plug-in hybrid electric sports car that ...
 - **p. 7 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models Models #Trainable Params NoCaps Zero-shot (validation set) COCO Fine-tuned in-domain near-domain out-domain overall ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Right, self-attention, masking, strategy, objective, control, query-text, interaction, visual, feature, extraction, text, transformer, function, encoder, decoder, Since, architecture, Q-Former, does.
 - **Relevant PDF headings:** 3. Method (p. 2); 3.1. Model Architecture (p. 2); 3.4. Model Pre-training (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,22 +114,11 @@ PDF body method statement (p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap 
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 9. Hyperparameters for fine-tuning BLIP-2 on COCO image-text retrieval. albert einstein - the world is a book, and those who do not travel read ...
 - **p. 8 / 5. Limitation - extractive body cue:** The LLMs cannot learn from it the correlation among multiple image-text pairs in a single sequence.
 - **p. 8 / 5. Limitation - extractive body cue:** We aim to create a similar dataset in future work.
-- **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to significantly ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Model Architecture), p. 3 (3.2. Bootstrap Vision-Language Representation), p. 2 (3.1. Model Architecture), p. 2 (3. Method), p. 4 (3.3. Bootstrap Vision-to-Language Generative Learning), p. 4 (3.3. Bootstrap Vision-to-Language Generative Learning), objective p. 3 (3.2. Bootstrap Vision-Language Representation), p. 3 (3.1. Model Architecture), p. 4 (3.3. Bootstrap Vision-to-Language Generative Learning), p. 4 (3.3. Bootstrap Vision-to-Language Generative Learning), p. 5 (3.4. Model Pre-training), temporal p. 4 (3.4. Model Pre-training), p. 4 (3.4. Model Pre-training), p. 5 (3.4. Model Pre-training), p. 2 (1. Introduction), p. 8 (6. Conclusion), p. 8 (5. Limitation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

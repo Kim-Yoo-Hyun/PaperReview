@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 M
 - **p. 16 / C Implementation Details - extractive body cue:** E.2 Agent Setting We employed GPT-4o for agent construction.GPT-4o first receives our instruction inputs and returns JSON-formatted responses.
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 5 (3 Methodology), p. 16 (C Implementation Details), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 16 (C Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 M
 - **p. 4 / 3 Methodology - extractive body cue:** The right panel showcases the Agent Space, where OWMM-VLM processes task instructions, robot history, and visual inputs to perform chain-of-thought reasoning and generate high-level actions ...
 - **p. 5 / 3 Methodology - extractive body cue:** Following this insight, we train a versatile VLM model that takes the task instruction L, multimodal observations I, Ic t , and history Ht-1, and ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 5 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 M
 
 - **p. 13 / C Implementation Details - extractive body cue:** As for the training time, OWMM-VLM-8B is trained on 8X NVIDIA A100 GPUs for about 7 hours, and OWMM-VLM-38B is trained on 24X NVIDIA A100 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, linked, planner, takes, state, robot, point, clouds, converted, depth, additional, input, calculate, low-level, action, instruct, VLM, model, monitor, through.
 - **Relevant PDF headings:** 3 Methodology (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 5 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 M
 - **p. 8 / 5 Experiments - extractive body cue:** In other words, using the data from our data synthesis pipeline to conduct a supervised fine-tuning yields a significant enhancement in robotic decision-making performance.
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: Overview of OWMM-VLM. Our model is fine-tuned on InternVL-2.5[5], comprising a ViT, a 2-layer projection MLP, and a LLM. During training, ViT parameters ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), objective p. 5 (3 Methodology), p. 16 (C Implementation Details), p. 5 (3 Methodology), p. 16 (C Implementation Details), temporal p. 4 (3 Methodology), p. 17 (C Implementation Details), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 16 (C Implementation Details), p. 16 (C Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

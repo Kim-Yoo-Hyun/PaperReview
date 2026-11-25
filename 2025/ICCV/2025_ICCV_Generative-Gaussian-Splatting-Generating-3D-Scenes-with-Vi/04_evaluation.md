@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 - **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** Next, we re-render the generated scene as condition for the next step, biasing the model towards 3D-consistent inpainting.
 - **p. 8 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** For results on a longer trajectory, see Appendix E.3.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview: Given one or more input images, GGS leverages a video diffusion prior to directly generate a 3D radiance field parameterized via 3D ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 | Without the loss on novel viewpoints (No Lnv), image quality (PSNR) and consistency (TSED) drop significantly. | definition/direction/unit from same section | p. 8 (4.4. Ablation Studies) |
 | Compared to the 2D decoder (GGS), the 3D decoder improves 3D consistency but moderately degrades visual fidelity. | definition/direction/unit from same section | p. 8 (4.4. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 | We evaluate these baselines by padding the output camera trajectory and subsequently subsampling the generated results. | comparison identity and matched condition | p. 5 (4. Experiments) |
 | On RealEstate10K, our approach significantly improves image quality and 3D consistency over the baselines. | comparison identity and matched condition | p. 6 (4.1. Scene Synthesis From a Single Image) |
 | Compared to the 2D decoder (GGS), the 3D decoder improves 3D consistency but moderately degrades visual fidelity. | comparison identity and matched condition | p. 8 (4.4. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 | body limitation/failure cue | Peak Signal-to-Noise Ratio and LPIPS [80] quantify reconstruction quality. | p. 5 (4. Experiments) |
 | body limitation/failure cue | Compared to the 2D decoder (GGS), the 3D decoder improves 3D consistency but moderately degrades visual fidelity. | p. 8 (4.4. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 | All images are encoded into latent space. | p. 3 (3.1. Pose-Conditional Image-To-Video Architecture) |
 | To incorporate camera poses into the backbone, we adopt the approach from CameraCtrl [14], integrating the video model with a camera encoder P. | p. 3 (3.1. Pose-Conditional Image-To-Video Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Table 3. To address this limitation, we introduce a stronger bias in the model to learn correct spatial relationships be- tween frames. Specifically, we integrate ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Scene Synthesis From a Single Image),
 - **p. 8 / 4.4. Ablation Studies - extractive body cue:** Compared to the 2D decoder (GGS), the 3D decoder improves 3D consistency but moderately degrades visual fidelity.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 8 (4.3. Autoregressive Scene Synthesis), p. 7 (4.3. Autoregressive Scene Synthesis), metrics p. 7 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 7 (4.3. Autoregressive Scene Synthesis), baselines p. 7 (4.2. Scene Synthesis From Two Images), p. 6 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Scene Synthesis From a Single Image), p. 8 (4.4. Ablation Studies), results p. 6 (4.1. Scene Synthesis From a Single Image), p. 8 (4.3. Autoregressive Scene Synthesis), p. 6 (4.2. Scene Synthesis From Two Images), p. 5 (4. Experiments), p. 8 (4.4. Ablation Studies), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

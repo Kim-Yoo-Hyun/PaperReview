@@ -62,8 +62,6 @@ PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (2 Toyota Motor Euro
 | body cue at p. 6 | Object interactions, distance travelled and infeasible actions averaged over all episodes, including early terminated failures. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | This metric does not take into account the costs of object interactions. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 3 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 5 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 3 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), objective p. 1 (Abstract), p. 3 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), p. 4 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM), p. 5 (IV. MOMA-LLM).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (2.1. Embodied Reaso
 | body cue at p. 28 | Robust human-level embodied reasoning is critical for robots and other physically grounded agents. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 29 | This involves developing techniques to seamlessly integrate abstract reasoning with precise execution, leading to more robust and generalizable ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 14 (3. Robot Actions with Gemini Robotics), p. 7 (2.0 Flash. Predicted point labels are not visualized), p. 11 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 13 (2.0 Flash). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 13 (2.0 Flash), p. 3 (1. Introduction), p. 8 (3.5 Sonnet), p. 12 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 2 (1. Introduction), interface p. 14 (3. Robot Actions with Gemini Robotics), p. 7 (2.0 Flash. Predicted point labels are not visualized), p. 11 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 13 (2.0 Flash), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

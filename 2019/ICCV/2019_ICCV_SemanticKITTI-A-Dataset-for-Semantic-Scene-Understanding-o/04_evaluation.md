@@ -48,8 +48,6 @@ SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분
 - **p. 6 / 4.2. Multiple Scan Experiments - extractive body cue:** In this task, we allow methods to exploit information from a sequence of multiple past scans to improve the segmentation of the current scan.
 - **p. 6 / 4.2. Multiple Scan Experiments - extractive body cue:** For each method, we show in the upper part of the row the IoU for non-moving (unshaded) and in the lower part of the row ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our dataset provides dense annotations for each scan of all sequences from the KITTI Odometry Benchmark [19]. Here, we show multiple scans aggregated ...
@@ -83,8 +81,6 @@ SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분
 | Table 8: IoU results using a sequence of multiple past scans (in %). Scene Completion Semantic Scene Completion | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | We provided regular feedback to the annotators to improve the quality and accuracy of labels. | definition/direction/unit from same section | p. 4 (3.1. Labeling Process) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분
 | Table 2: Single scan results (19 classes) for all baselines on sequences 11 to 21 (test set). All methods were trained on sequences 00 ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 7: Approach statistics. ∗in number of epochs means that it was started from the pretrained weights of the single scan version. while being ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | We evaluate DarkNet53Seg and TangentConv, since these approaches can deal with a larger number of points without downsampling of the point clouds and could ... | comparison identity and matched condition | p. 6 (4.2. Multiple Scan Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분
 | body limitation/failure cue | Figure 7: Qualitative results for the semantic scene completion approach TS3D + DarkNet53Seg + SATNet. Left: Input volume. Middle: Network prediction. Right: Ground truth. ... | p. 15 (Figure/Table caption) |
 | body limitation/failure cue | In the case of our proposed dataset, the car carrying the LiDAR moves past 3D objects in the scene and thereby records their backsides, ... | p. 7 (5. Evaluation of Semantic Scene Completion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분
 | [49] and compute the IoU for the task of scene completion, which only classifies a voxel as being occupied or empty, i.e., ignoring the ... | p. 7 (5. Evaluation of Semantic Scene Completion) |
 | Other works experimented with new encoder-decoder CNN architectures as well as improving the loss term by adding adversarial loss components [58]. | p. 8 (5. Evaluation of Semantic Scene Completion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion and Outlook - extractive body cue:** In future work, we plan to provide also instance-level annotation over the whole sequence, i.e., we want to distinguish different objects in a scan, but ...
@@ -166,6 +145,5 @@ SemanticKITTI는 28개 범주에 주석을 붙였다. 표 2의 단일 스캔 분
 - **p. 7 / 5. Evaluation of Semantic Scene Completion - extractive body cue:** In the case of our proposed dataset, the car carrying the LiDAR moves past 3D objects in the scene and thereby records their backsides, which ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (3. The SemanticKITTI Dataset), p. 3 (3. The SemanticKITTI Dataset), p. 7 (5. Evaluation of Semantic Scene Completion), p. 7 (5. Evaluation of Semantic Scene Completion), p. 4 (3.2. Dataset Statistics), p. 4 (3.1. Labeling Process), metrics p. 7 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption), p. 6 (4.2. Multiple Scan Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 4 (3.1. Labeling Process), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), p. 6 (4.2. Multiple Scan Experiments), results p. 6 (4.2. Multiple Scan Experiments), p. 8 (5. Evaluation of Semantic Scene Completion), p. 8 (5. Evaluation of Semantic Scene Completion), p. 4 (3.1. Labeling Process), p. 4 (4.1. Single Scan Experiments), p. 6 (4.2. Multiple Scan Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

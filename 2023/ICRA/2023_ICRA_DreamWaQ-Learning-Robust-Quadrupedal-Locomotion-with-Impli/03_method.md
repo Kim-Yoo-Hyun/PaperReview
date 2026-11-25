@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 - **p. 4 / II. DREAMWAQ - extractive body cue:** the standard deviation to the mean, of the episodic reward over m domain-randomized environments.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Recent works have shown that by combining different proprioception modalities, a quadrupedal robot can learn to estimate its surrounding terrain [19]-[23] and body state [24].
 - **p. 4 / II. DREAMWAQ - extractive body cue:** The key idea is that bootstrapping is required when the CV of m agents' rewards is small to make the policy more robust against inaccurate ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In this paper, we proposed a framework called Dream Walking for Quadrupedal Robots (DreamWaQ), that trains a robust locomotion policy for quadrupedal robots with ...
 - **p. 5 / III. EXPERIMENTS - extractive body cue:** We hypothesize that this is made possible by two factors: 1) the forward-backward dynamics learning provides more accurate estimation in all terrains, and 2) using ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** shared, encoder, trained, provide, robust, body, state, context, estimation, jointly, only, explicitly, estimating, robot, context-aided, estimator, network, CENet, architecture, learn.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. IN
 - **p. 5 / III. EXPERIMENTS - extractive body cue:** In severe cases, inaccurate estimation can lead to catastrophic failure.
 - **p. 6 / III. EXPERIMENTS - extractive body cue:** (a) Foot stumble Foot slip Normal walk Normal walk Normal walk Climb upstairs Go downstairs Irregular foothold Adaptation Recovery (a) (b) Normal walk Fig.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION), p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 1 (I. INTRODUCTION), objective p. 3 (II. DREAMWAQ), p. 3 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 4 (II. DREAMWAQ), p. 2 (II. DREAMWAQ), p. 4 (II. DREAMWAQ), temporal p. 5 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

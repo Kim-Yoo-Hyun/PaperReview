@@ -45,8 +45,6 @@
 - **p. 7 / 4 Experiments - extractive body cue:** These datasets are preprocessed in two ways Gu et al.
 - **p. 9 / 4 Experiments - extractive body cue:** Specifically, SSRFlow reduces EPE3D by 41% and 22% compared to the second place Cheng and Ko (2023) under training on FT3Ds and SF-KITTI datasets, respectively.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the proposed network. Firstly, semantic features are hierarchically extracted and sent to GF to achieve global embedding between the two point ...
@@ -80,8 +78,6 @@
 | Figure 2: Flowchart of global flow embedding. ⊗and ⊕denote multiplication and concatenation, respectively. Specifically, within the DCA module, we employ a cross-attentive mechanism to ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Table 2: Runtime and performance of the methods evaluated on KITTIs. | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@
 | (2023) 0.0224 376ms MSBRNCheng and Ko (2023) 0.0118 275ms SSRFlow (Ours) 0.0059 101ms Table 3: Comparisons on the FT3Do and KITTIo datasets. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | (a) FT3Ds (b) KITTIs (c) SF-KITTI (d) LiDAR-KITTI Figure 4: Comparisons of scene flow datasets, including (a) synthetic stereo, (b) real-world stereo, and (c)(d) ... | comparison identity and matched condition | p. 7 (4 Experiments) |
 | The comprehensive results of the ablation experiments can be found in Table 5, while detailed information is presented in Table 6 and Table 7. | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@
 | body limitation/failure cue | Figure 10: Ablation studies and analysis of adaption losses. From Figure 9 it can be observed that using only KNN introduces noise points that ... | p. 15 (Figure/Table caption) |
 | body limitation/failure cue | Figure 11: (a) The occlusion occurs between the source frame and the target frame. In this scenario, red bounding boxes delineate points in the ... | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@
 | (4) The external position encoder PE∗instead of internal integration in the DCA module provides explicit position context during global flow embedding. | p. 4 (2 Methodology) |
 | Firstly, to establish the relative positional association between each point-pair, a position encoder PE∗in Euclidean space is introduced as follows, where η denotes concatenation. | p. 4 (2 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 2 Methodology - extractive body cue:** The KNN+Radius search strategy effectively mitigates the influence of noise points resulting from occlusion and sparsity in point clouds, as demonstrated in Sec B.2 of ...
@@ -166,6 +145,5 @@
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 11: (a) The occlusion occurs between the source frame and the target frame. In this scenario, red bounding boxes delineate points in the source ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), metrics p. 9 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), baselines p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), results p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 3 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

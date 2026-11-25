@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 - **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** We do not perform task-level replanning, which would involve querying the LLM at timestep t + 1 for a new sequence of skills ψt+1:H. saycan-gs ...
 - **p. 11 / 6.1 Feasibility planning is required - extractive body cue:** Bottom: For the non-PAP tasks, shooting outperforms greedy-search.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Second, they do not explicitly predict a multi-step plan, which prevents verification of desired properties or outcomes prior to execu- tion. Examples of ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 | For consistency, we use the same skill library Lψ, with independently trained policies π and Q-functions Qπ, the OOD rejection strategy (Section 4.5) and, ... | definition/direction/unit from same section | p. 8 (5.1 Baselines) |
 | We acquire innermono-gs by equipping [4] with generator-scorer for cost efficiency. | definition/direction/unit from same section | p. 8 (5.1 Baselines) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 | The following subsections describe the baseline methods we compare against, details on LLMs and prompts, the tasks over which planners are evaluated, and performance ... | comparison identity and matched condition | p. 8 (5 Experiments) |
 | Bottom: For the non-PAP tasks, shooting outperforms greedy-search. | comparison identity and matched condition | p. 11 (6.1 Feasibility planning is required) |
 | The results in Figure 7 suggest that, for the tasks we consider, our proposed goal prediction method leads to 10% higher success rates than ... | comparison identity and matched condition | p. 12 (6.4 Plan termination is made) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 | body limitation/failure cue | While we mitigate such failures by combining greedy-search and shooting in the hybrid Text2Motion algorithm, leveraging calibration techniques to increase the reliability LLM likelihoods ... | p. 12 (7 Limitations and Future Work) |
 | body limitation/failure cue | To further delineate the performance of Text2Motion from shooting and greedy-search, we also report the percentages of planning and execution failures. | p. 10 (5.5 Evaluation and metrics) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 | K do 7: s(j) 2:H+1, a(j) 1:H ←STAP(s1, ψ(j) 1:H, Lψ) 8: if F G sat(s(j) t ) == 1 for t ≤H + ... | p. 5 (4.2 Shooting-based planning) |
 | 11 by the Q-value evaluated at predicted future state st with optimized parameter a∗ t , both of which are computed by the geometric ... | p. 6 (4.3 Search-based planning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / 6.1 Feasibility planning is required - extractive body cue:** Text2Motion relies on greedy-search as a fallback if shooting fails, and thus can also contend with PAP tasks.
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 11 (6.2 Search-based reasoning is), p. 11 (6.
 - **p. 10 / 5.5 Evaluation and metrics - extractive body cue:** To further delineate the performance of Text2Motion from shooting and greedy-search, we also report the percentages of planning and execution failures.
 
 - **Evidence anchors reviewed:** datasets p. 9 (5.4 Task suite), p. 9 (5.4 Task suite), p. 8 (5.1 Baselines), p. 8 (5 Experiments), p. 11 (6.2 Search-based reasoning is), p. 10 (5.5 Evaluation and metrics), metrics p. 10 (5.5 Evaluation and metrics), p. 10 (6.1 Feasibility planning is required), p. 11 (6.2 Search-based reasoning is), p. 11 (6.2 Search-based reasoning is), p. 12 (6.4 Plan termination is made), p. 12 (6.4 Plan termination is made), baselines p. 10 (6.1 Feasibility planning is required), p. 10 (6.1 Feasibility planning is required), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 11 (6.1 Feasibility planning is required), p. 12 (6.4 Plan termination is made), results p. 11 (6.2 Search-based reasoning is), p. 11 (6.2 Search-based reasoning is), p. 10 (6.1 Feasibility planning is required), p. 12 (6.4 Plan termination is made), p. 12 (6.4 Plan termination is made), p. 10 (6.1 Feasibility planning is required).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

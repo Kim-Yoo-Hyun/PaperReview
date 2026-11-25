@@ -56,7 +56,6 @@
 - **p. 8 / A. Evaluating the base model - source paraphrase:** 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 8 (A. Evaluating the base model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** This enables our model to control robots at frequencies of up to 50 Hz for dexterous tasks such as laundry folding (see Figure 1), To ...
 - **p. 4 / 1. INTRODUCTION - extractive body cue:** To turn the base PaliGemma VLM_ into 7, we add action outputs that use flow matching [32, 28] to generate continuous action distributions.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@
 - **p. 7 / VI. EXPERIMENTAL EVALUATION - extractive body cue:** 6: Out-of-box evaluation tasks: To evaluate our base ‘model, we run it after pre-training on five tasks: shirt folding, bussing easy, bussing hard, grocery bagging. ...
 - **p. 8 / A. Evaluating the base model - source paraphrase:** 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of updates ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Formally, want, model, data, distribution, where, corresponds, action, chunk, future, actions, tasks, observation, consists, multiple, RGB, images, language, command, robot.
 - **Relevant PDF headings:** IV. THE x MODEL (p. 4); A. Evaluating the base model (p. 7); B. Model Architecture Details (p. 15); C. Non-VLM Baseline Architecture (p. 16); A. Evaluating the base model (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@
 - **p. 2 / Figure/Table caption - source paraphrase:** Fig. 2: π₀ controls a mobile manipulator to fold laundry. Our model is pre-trained on diverse data from 7 distinet robot configurations and 68 tasks, ...
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 11: Fine-tuning with varying amounts of data. =) can learn some easier tasks even with smaller amounts of data, and
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 4 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 7 (A. Evaluating the base model), objective p. 4 (IV. THE x MODEL), p. 5 (IV. THE x MODEL), p. 7 (A. Evaluating the base model), p. 5 (IV. THE x MODEL), p. 8 (A. Evaluating the base model), temporal p. 3 (1. INTRODUCTION), p. 11 (C. Learning new dexterous tasks), p. 3 (1. INTRODUCTION), p. 4 (1. INTRODUCTION), p. 5 (IV. THE x MODEL), p. 5 (IV. THE x MODEL).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

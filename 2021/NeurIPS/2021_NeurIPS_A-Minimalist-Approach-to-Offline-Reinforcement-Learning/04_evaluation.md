@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 7 / 6 Experiments - extractive body cue:** We evaluate our proposed approach on the D4RL benchmark of OpenAI gym MuJoCo tasks [Todorov et al., 2012, Brockman et al., 2016, Fu et al., ...
 - **p. 7 / 6 Experiments - extractive body cue:** Each evaluation consists of 10 episodes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Implementation changes offline RL algorithms make to the underlying base RL algorithm. † corresponds to details that add additional hyperparameter(s), and ‡ corresponds ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | Figure 4: Learning curves comparing the performance of TD3+BC against offline RL baselines in the D4RL datasets. Curves are averaged over 5 seeds, with ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | We report the final performance results in Table 2 and display the learning curves in Figure 4. | definition/direction/unit from same section | p. 7 (6 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | Although our method is very simplistic in nature, it surpasses, or matches, the performance of the current state-of-the-art offline RL algorithms in most tasks. | comparison identity and matched condition | p. 7 (6 Experiments) |
 | Figure 6: Percent difference of the performance of an ablation over α, compared to the full algorithm. Recall the form of the sole hyperparameter ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Figure 5: Percent difference of the performance of an ablation of our proposed approach, compared to the full algorithm. TD3+λ+BC+Norm refers to the complete ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | Table 3: Run time comparison of training each offline RL algorithm (does not include evaluation costs). (Left) Breakdown of the cost of the added ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | Figure 8: Benchmarking wall-clock training time of DT and TD3+BC over 1 million steps. Does not include evaluation costs. We remark that the DT ... | p. 19 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | As discussed in Section 4 a minimalist approach has a variety of benefits, such as reducing the number of hyperparameters to tune, increasing scalability ... | p. 6 (3 Background) |
 | Offline RL algorithms introduce new hyperparameters and often leverage secondary components such as generative models, while adjusting the underlying RL algorithm. | p. 1 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 7 Conclusion - extractive body cue:** Finally, we believe the sheer simplicity of our approach highlights a possible overemphasis on algorithmic complexity made by the community, and we hope to inspire ...
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 8: Benchmarking wall-clock training time of DT and TD3+BC over 1 million steps. Does not include evaluation costs. We remark that the DT was ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (6 Experiments), p. 7 (6 Experiments), metrics p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), p. 18 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (6 Experiments), p. 14 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (6 Experiments), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (6 Experiments), p. 8 (6 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

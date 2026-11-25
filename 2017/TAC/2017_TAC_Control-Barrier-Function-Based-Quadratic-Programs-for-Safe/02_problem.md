@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (B. Contributions), p. 2 (B. Contributions),
 |---|---|---|
 | body cue at p. 14 | Future work will be devoted to building upon the foundations presented in this paper in the context of ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 10 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 13 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 10 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 2 (B. Contributions). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 10 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 11 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), interface p. 10 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 13 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 10 (V. TWO AUTOMOTIVE SAFETY PROBLEMS VIA QPS), p. 2 (B. Contributions), objective p. 1 (Abstract), p. 2 (B. Contributions), p. 2 (B. Contributions), p. 1 (I. INTRODUCTION), p. 3 (B. Contributions), p. 7 (III. CONTROL BARRIER FUNCTIONS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

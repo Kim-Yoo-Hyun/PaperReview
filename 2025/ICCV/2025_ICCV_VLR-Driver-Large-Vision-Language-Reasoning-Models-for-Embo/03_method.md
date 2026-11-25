@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Pa
 - **p. 5 / 3.2.2. Decision Level CoT - extractive body cue:** Through this structured prompting strategy, the large model adheres to a progressive reasoning hierarchy, beginning with fundamental environmental perception and advancing to higher-level decision-making.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.3. Training Paradigm).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Pa
 - **p. 5 / 3.2.2. Decision Level CoT - extractive body cue:** The output information from the perception-level serves as a critical foundation for the driving decision level, enabling reliable AD behavior inference.
 - **p. 5 / 3.2.2. Decision Level CoT - extractive body cue:** Moreover, the integration of recursive CoT reasoning enables the model to mimic the step-by-step thought process of human drivers, facilitating more flexible, reliable, and interpretable ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Pa
 
 - **p. 4 / 3.1. Overview - extractive body cue:** In this study, we employ pre-trained LLaVA-NeXTVideo [50] as the VLM and CLIP [29] as the visual encoder.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, first, generate, multiple, candidate, decision, answers, current, driving, scenario, prompts, within, VLR, model, Then, following, ST-CoT, strategy, reasoning, process.
 - **Relevant PDF headings:** 3. Method (p. 4); 5.3. Comparisons with Existing Methods (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Pa
 - **p. 7 / 4.1. Data Collection - extractive body cue:** CP, CV, CL, RL, SS, OR, AB, YEV correspond to the Collision with a Pedestrian, Collision with another Vehicle, Collision with Layout, Red Light infractions, ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of VLR-Driver framework. We introduce VLR-Driver Dataset, an advanced visual-language-reasoning dataset designed for AD, featuring detailed annotations of scene descriptions, analytical reasoning, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Paradigm), p. 4 (3. Method), p. 4 (3.1. Overview), p. 5 (3.2.1. Perception Level CoT), p. 5 (3.2.2. Decision Level CoT), objective p. 6 (3.3. Training Paradigm), p. 6 (3.3. Training Paradigm), p. 4 (3.2. Spatiotemporal CoT Reasoning), p. 5 (3.3. Training Paradigm), p. 5 (3.2.2. Decision Level CoT), temporal p. 4 (3.1. Overview), p. 5 (3.2.1. Perception Level CoT), p. 6 (3.3. Training Paradigm), p. 8 (5.2. Metrics), p. 7 (4.2. Data Annotation), p. 2 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

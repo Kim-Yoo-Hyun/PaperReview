@@ -53,7 +53,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 
 - **p. 4 / 3.4. Sensor Data - extractive body cue:** Each range image pixel corresponds to a LiDAR return.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 3 (3.2. Coordinate Systems), p. 5 (4.1. Object Detection), p. 5 (4.1. Object Detection).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 
 - **p. 1 / 1. Introduction - extractive body cue:** To further accelerate the development of autonomous driving technology, we present the largest and most diverse multimodal autonomous driving dataset to date, comprising of images ...
 - **p. 3 / 3.2. Coordinate Systems - extractive body cue:** A Sensor frame is defined for each sensor.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 
 
 - **p. 2 / 1. Introduction - extractive body cue:** Our dataset currently consists of 1000 scenes for training and validation, and 150 scenes for testing, where each scene spans 20 s.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** dataset, currently, consists, scenes, training, validation, testing, where, scene, spans, first, low-level, synchronized, information, available, making, easier, conduct, research, LiDAR.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 
 - **p. 4 / 3.4. Sensor Data - extractive body cue:** Our experiments suggest that a highly elongated low-intensity return is a strong indicator for a spurious object, while low intensity alone is not a sufficient ...
 - **p. 8 / 5.3. Domain Gap - extractive body cue:** This result does not hold when evaluating on SF.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.4. Sensor Data), p. 5 (3.4. Sensor Data), objective p. 5 (3.4. Sensor Data), p. 3 (3.2. Coordinate Systems), p. 5 (4.1. Object Detection), p. 1 (1. Introduction), p. 2 (3.1. Sensor Specifications), p. 4 (3.4. Sensor Data), temporal p. 7 (5.2. Baselines for Multi-Object Tracking), p. 6 (5.1. Baselines for Object Detection), p. 7 (5.1. Baselines for Object Detection), p. 8 (5.4. Dataset Size), p. 8 (5.4. Dataset Size), p. 3 (3.1. Sensor Specifications).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Effective long-horizon robot manipulation often demands fine-grained memory to maintain a coherent trajectory across multiple stages.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Comparison with Visual Variations To assess robustness under real-world visual variations, we evaluate MAP-VLA on LIBERO-Long tasks subjected to various challenging visual conditions.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Simplified execution pipeline of existing VLA methods and MAP-VLA. specific memory prompts and the generalized base prompts. This whole framework, shown in Fig. ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Implementation Details The proposed MAP-VLA is based on the π0 model [4]. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | Fig. 2. The framework of MAP-VLA. Our method augments a frozen pre-trained VLA model with demonstration-derived memory prompts for enhanced action generation during task ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Comparison under Few-Shot Setting To further evaluate the adaptability of our method, we compare it with baseline approaches under few-shot learning scenarios. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | Fig. 1. Simplified execution pipeline of existing VLA methods and MAP-VLA. specific memory prompts and the generalized base prompts. This whole framework, shown in ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | We first compare MAP-VLA to baseline VLA models, OpenVLA [3] and π0 [4], on the challenging long-horizon manipulation tasks suite LIBERO-Long (also referred to ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | body limitation/failure cue | This reduced variability suggests improved robustness and reliability, as a result of encoding additional contextual memory into the prompt and dynamic prompt ensembling as ... | p. 6 (IV. EXPERIMENTS) |
 | body limitation/failure cue | In contrast, our MAP-VLA framework demonstrates memory-augmented robustness in such settings. | p. 7 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | (3) This process effectively encodes the demonstration memory of a stage into the prompt embeddings to augment action generation. | p. 4 (III. METHODOLOGY) |
 | The final stage-specific memory prompt Pk input to the VLA model is computed via element-wise addition: [Pk]j = [Pbase]j + [Vk]j , ∀j = ... | p. 4 (III. METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** However, the memoryless baseline policy π0 exhibits inconsistent and ambiguous object alignment behavior, especially during critical pick-and-place phases (as circled in the figure), often leading ...
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** In contrast, our MAP-VLA framework demonstrates memory-augmented robustness in such settings.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

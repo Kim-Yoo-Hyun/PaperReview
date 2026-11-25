@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 - **PDF p. 5, §4.1 / Algorithm 1, Eq. (9) (DOC-QA2 원문 대조):** Patch 최적화에서 shear (sh_x,sh_y)와 rotation θ를 무작위로 적용해 물리 환경 변화에 대한 공격의 강건성을 높인다. 좌표 변환 식과 효과 평가는 구별한다.
 - **p. 8 / 4.6. Systemic Discussion - extractive body cue:** Sematic-rich patches. noteworthy observation is that some of these patches bear a striking resemblance to the structural joints of a robotic arm.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Adversarial Vulnerabilities induced by malicious ma- nipulation. (A). Illustration of adversarial threats in robotic task execution. (B). Example of semantic-rich adversarial patches gener- ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 | These findings underscore a pressing security concern during the deployment of generalist robots, especially when considering application scenes that require reliable operations [11, 68]. | definition/direction/unit from same section | p. 7 (4.3. Main Result) |
 | We incorporate two key modifications to enhance the training stability of the generated patch. | definition/direction/unit from same section | p. 5 (4.1. Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 | The observed trend suggests larger patches give adversaries more optimization space to influence the model, aligning with prior work [12, 81]. | comparison identity and matched condition | p. 8 (4.4. Diagnostic Experiment) |
 | Although this success rate is lower than the corresponding digital-world performance (i.e., 100%), it highlights the effectiveness of our patches in physical-world applications as ... | comparison identity and matched condition | p. 8 (4.3. Main Result) |
 | Figure 1. Adversarial Vulnerabilities induced by malicious ma- nipulation. (A). Illustration of adversarial threats in robotic task execution. (B). Example of semantic-rich adversarial patches ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -142,8 +131,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 | body limitation/failure cue | This failure can be attributed to the fact that DoF4 controls the orientation along the x-axis, which can be redundant DoF in tasks. | p. 7 (4.3. Main Result) |
 | body limitation/failure cue | The figure shows how varying Inner-loop affects NAD in UADA, and patch sizes affect L1 distance and the failure rates in TMA, both targeting ... | p. 8 (4.3. Main Result) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -157,14 +144,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 | We attribute this phenomenon to the efficacy of the adversarial patch in perturbing the model's spatial perception, inducing a consistent deviation from the intended ... | p. 7 (4.3. Main Result) |
 | We discuss the impact of inner-loop steps to model performance in Fig. | p. 8 (4.4. Diagnostic Experiment) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Adversarial Vulnerabilities induced by malicious ma- nipulation. (A). Illustration of adversarial threats in robotic task execution. (B). Example of semantic-rich adversarial patches gener- ...
@@ -175,6 +154,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Main Result), p. 8 (4.3. Main Result)
 - **p. 8 / 4.3. Main Result - extractive body cue:** The figure shows how varying Inner-loop affects NAD in UADA, and patch sizes affect L1 distance and the failure rates in TMA, both targeting at ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.3. Main Result), p. 6 (4.2. Experiment Setup), p. 7 (4.3. Main Result), p. 8 (4.3. Main Result), p. 5 (4.1. Implementation Details), p. 7 (4.3. Main Result), metrics p. 8 (4.3. Main Result), p. 8 (Figure/Table caption), p. 6 (4.2. Experiment Setup), p. 3 (Figure/Table caption), p. 6 (4.2. Experiment Setup), p. 7 (4.3. Main Result), baselines p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 4 (4. Experiments), p. 8 (4.4. Diagnostic Experiment), p. 8 (4.3. Main Result), p. 1 (Figure/Table caption), results p. 6 (4.3. Main Result), p. 8 (4.3. Main Result), p. 8 (4.4. Diagnostic Experiment), p. 6 (4.2. Experiment Setup), p. 5 (4.1. Implementation Details), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

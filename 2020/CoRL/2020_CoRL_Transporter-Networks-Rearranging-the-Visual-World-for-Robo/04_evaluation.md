@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 - **p. 8 / 4 Results - extractive body cue:** Since it learns pick-conditioned placing, it can also stack plates with varying initial predicted pick locations from only 10 demonstrations on a real robot (bottom ...
 - **p. 8 / 4 Results - extractive body cue:** Transporter Networks test performance on real robots with human demonstration data.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. A Transporter Network is a simple model architecture that attends to a local region and predicts its spatial displacement (b) from visual input ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 | Figure 3. In this setting (a) where the task is to pick up the red block with an immobilizing grasp (e.g., suction) and place ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 7. In Towers of Hanoi (a), the task is to sequentially pick-and-place 3 disks from the first peg to the third peg without ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 | Simplified 2DoF (no rotation) block-insertion is harder to learn with demonstrations from a stochastic oracle than a deterministic one. | comparison identity and matched condition | p. 7 (4 Results) |
 | The benchmark is difficult - most baselines, while capable of over-fitting to the demonstration training set, generalize poorly with only 1,000 demonstrations. | comparison identity and matched condition | p. 7 (4 Results) |
 | Most baselines perform well with deterministic demonstrations, but begin to struggle with stochastic ones. | comparison identity and matched condition | p. 8 (4 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 | body limitation/failure cue | Our method does not require 3 cameras - having more cameras only improves visual coverage. | p. 6 (4 Results) |
 | body limitation/failure cue | We hypothesize that equivariance to rotations and translations enable them to learn these recovery behaviors even with little data on multi-step tasks (see Tab. | p. 7 (4 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 | For kit assembly, the robot uses a suction gripper and an industrial Photoneo PhoXi camera (for high resolution and accurate IR-depth). | p. 8 (4 Results) |
 | Despite COVID-19 lockdowns preventing physical access, we were still able to perform real experiments using our Unitybased [46] UI that enables people to remotely ... | p. 8 (4 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 Conclusion - extractive body cue:** In terms of its current limitations: it is sensitive to camera-robot calibration, and it remains unclear how to integrate torque/force actions with spatial action spaces.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4 Results), p
 - **p. 7 / 4 Results - extractive body cue:** We hypothesize that equivariance to rotations and translations enable them to learn these recovery behaviors even with little data on multi-step tasks (see Tab.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), baselines p. 20 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), results p. 7 (Figure/Table caption), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 20 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

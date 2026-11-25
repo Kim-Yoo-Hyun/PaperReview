@@ -58,7 +58,6 @@
 - **p. 6 / 3 METHOD - extractive body cue:** In our paper, we define two constraints for SK, depending on the type of manipulation task, as shown in Fig.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 7 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** In the inference phase, pre-trained foundation models are leveraged to interpret the robot's 3D visual observations and task language instructions, directly identifying task sub-goals.
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** During inference, the Detector, Planner, and Composer pipeline interprets visual observations and language instructions to derive gpos and gopen, which are processed into a GravMap ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** All models complete 600k training iterations on an NVIDIA RTX4090 GPU, with the final checkpoint selected using three random seeds for evaluation.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** For each base task, we collect 20 demonstrations for training and evaluate the final checkpoints using 3 random seeds over 25 episodes.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** third, prediction, head, predict, gripper, open/close, state, binary, crossentropy, BCE, loss, supervision, Lopen, open, aopen, last, heads, enable, GravMAD, better.
 - **Relevant PDF headings:** 3 METHOD (p. 4); A.4 DETAIL OF MODEL ARCHITECTURE AND HYPER-PARAMETERS FOR GRAVMAD (p. 18); A.5 COMPARISON BETWEEN GRAVMAD AND OTHER BASELINE MODELS (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@
 - **p. 17 / A.3.2 INFERENCE PHASE - extractive body cue:** Our pipeline consists of the following three components: 17
 - **p. 26 / Figure/Table caption - extractive body cue:** Figure 11: Failure cause analysis, including (a) visualization of failure examples; (b) comparison of imprecise labels and expected labels. identify ideal areas, leading to imprecise ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3 METHOD), p. 7 (3 METHOD), p. 18 (A.4 DETAIL OF MODEL ARCHITECTURE AND HYPER-PARAMETERS FOR GRAVMAD), p. 18 (A.4 DETAIL OF MODEL ARCHITECTURE AND HYPER-PARAMETERS FOR GRAVMAD), p. 6 (3 METHOD), p. 5 (3 METHOD), objective p. 7 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), temporal p. 8 (4 EXPERIMENTS), p. 15 (A.2 HEURISTICS FOR SUB-GOAL KEYPOSE DISCOVERY), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

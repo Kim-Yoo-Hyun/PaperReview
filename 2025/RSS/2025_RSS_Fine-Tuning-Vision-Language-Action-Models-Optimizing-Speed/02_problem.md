@@ -65,8 +65,6 @@ PDF body contribution framing (p. 3 (1. Iyrropucrion), p. 1 (Abstract), p. 1 (1.
 | body cue at p. 8 | Among VLAs, we observe distinct charac teristics: RDT-IB achieves good language following through its "Alternating Condition Injection" scheme ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | Top In some cases, RDT-IB fails 10 respond to missed howl placement, coatiauing 10 pour iagredieats into empey ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Abstract), p. 7 (3) LI regression objective), p. 1 (1. Iyrropucrion), p. 4 (B. Implementing Alternative Design Components). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (A. VIA Fine-Tuning Design Decisions), p. 2 (1. Iyrropucrion), p. 3 (A. VIA Fine-Tuning Design Decisions), p. 4 (B. Implementing Alternative Design Components), p. 1 (1. Iyrropucrion), interface p. 1 (Abstract), p. 7 (3) LI regression objective), p. 1 (1. Iyrropucrion), p. 4 (B. Implementing Alternative Design Components), objective p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (3) LI regression objective), p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

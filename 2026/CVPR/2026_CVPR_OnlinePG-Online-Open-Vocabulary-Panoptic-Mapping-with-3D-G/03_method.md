@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3.2. Local Consistent Map Construction), p. 3 (
 - **p. 5 / 3.3. Local-to-Global Map Fusion - extractive body cue:** Instead, we update the instance label T t g and weight Kt g grids similar to [25, 28]: • For matched instances: We merge the ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.3. Local-to-Global Map Fusion), p. 3 (3.1. Scene Representation), p. 4 (3.2. Local Consistent Map Construction), p. 5 (3.3. Local-to-Global Map Fusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3.2. Local Consistent Map Construction), p. 3 (
 - **p. 3 / 3.1. Scene Representation - extractive body cue:** The 3D scene properties can be rasterized to the 2D image plane via fast differentiable rasterization [24] for differentiable optimization.
 - **p. 5 / 3.3. Local-to-Global Map Fusion - extractive body cue:** However, since the local map contains newly explored regions while the global map contains historical regions, the correspondence matrix is inherently asymmetric, particularly in geometric ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3.2. Local Consistent Map Construction), p. 3 (
 
 - **p. 7 / 4.2. Main Experiments - extractive body cue:** We evaluate the runtime performance of OnlinePG on a desktop computer equipped with an AMD Ryzen 9 7950X CPU and an NVIDIA RTX 4090 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** i-th, keyframe, inside, sliding, window, LSeg, EntitySeg, extract, feature, instance, mask, mitigate, inconsistencies, segmentation, effective, segment, clustering, algorithm, synergistically, leverages.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 3 (3.2. Local Consistent Map Construction), p. 3 (
 - **p. 5 / 4.1. Experimental Settings - extractive body cue:** Since the baselines [31, 33, 50] marked with ∗ cannot obtain 3D panoptic results, we use the performance reported in [58], which uses a supervised ...
 - **p. 7 / 4.2. Main Experiments - extractive body cue:** While OnlineAnySeg can handle simple queries (e.g., "television"), it fails on some fine-grained and multi-instance queries (e.g., "pillow", "toilet paper", "bag") due to inaccurate 3D ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Local Consistent Map Construction), p. 3 (3. Method), p. 4 (3.2. Local Consistent Map Construction), p. 4 (3.2. Local Consistent Map Construction), p. 5 (3.3. Local-to-Global Map Fusion), p. 5 (3.3. Local-to-Global Map Fusion), objective p. 3 (3.1. Scene Representation), p. 5 (3.3. Local-to-Global Map Fusion), p. 3 (3.1. Scene Representation), p. 4 (3.2. Local Consistent Map Construction), p. 4 (3.2. Local Consistent Map Construction), p. 5 (3.3. Local-to-Global Map Fusion), temporal p. 7 (4.2. Main Experiments), p. 1 (Abstract), p. 2 (1. Introduction), p. 3 (3.2. Local Consistent Map Construction), p. 3 (3.1. Scene Representation), p. 4 (3.2. Local Consistent Map Construction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

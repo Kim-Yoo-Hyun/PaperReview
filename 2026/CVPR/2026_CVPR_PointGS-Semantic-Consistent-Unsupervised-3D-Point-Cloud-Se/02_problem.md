@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (3.3. Points to 3D G
 | body cue at p. 6 | This alignment enables a robust measurement of semantic consistency between the inferred partitions and the reference annotations, while ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 6 (3.5. Gaussian-to-Point Cloud Alignment). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (3.3. Points to 3D G
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.2. Preliminary), interface p. 2 (1. Introduction), p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 6 (3.5. Gaussian-to-Point Cloud Alignment), objective p. 4 (3.2. Preliminary), p. 3 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 5 (3.4. Semantic Information Distillation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Similarly, larger ViT variants overtake smaller ones as the dataset grows.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** While large ViT models perform worse than BiT ResNets (shaded area) when pre-trained on small datasets, they shine when pre-trained on larger datasets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | Table 5: Top1 accuracy (in %) of Vision Transformer on various datasets when pre-trained on Im- ageNet, ImageNet-21k or JFT300M. These values correspond to ... | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
 | We use a linear learning rate warmup and decay, see Appendix B.1 for details. | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | ViT-H/14 outperforms BiT-R152x4, and other methods, on the Natural and Structured tasks. | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | Figure 5: Performance versus pre-training compute for different architectures: Vision Transformers, ResNets, and hybrids. Vision Transformers generally outperform ResNets with the same compu- tational ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 8: Scaling different model dimensions of the Vision Transformer. performance of two ResNets - 50x1 and 152x2 - pre-trained on JFT with SGD ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | Further analysis of few-shot properties of ViT is an exciting direction of future work. | p. 7 (300 M) |
 | body limitation/failure cue | In this setting data size does not bottleneck the models' performances, and we assess performance versus pre-training cost of each model. | p. 8 (300 M) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,20 +134,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | The classification head is implemented by a MLP with one hidden layer at pre-training time and by a single linear layer at fine-tuning time. | p. 3 (3 METHOD) |
 | The resulting sequence of embedding vectors serves as input to the encoder. | p. 3 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 300 M - extractive body cue:** Further analysis of few-shot properties of ViT is an exciting direction of future work.
 - **p. 8 / 300 M - extractive body cue:** In this setting data size does not bottleneck the models' performances, and we assess performance versus pre-training cost of each model.
 
 - **Evidence anchors reviewed:** datasets p. 4 (4 EXPERIMENTS), p. 4 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (4 EXPERIMENTS), baselines p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -51,7 +51,6 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** By using this estimation objective we have more control over the policy change in both E and M steps, yielding robust learning.
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Instead it uses samples from the Q-function to compare different actions in a given state.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** In this paper we propose a novel off-policy algorithm that benefits from the best properties of both classes.
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, algorithm, reinforcement, learning, called, Maximum, aposteriori, Policy, Optimisation, MPO, coordinate, ascent, relativeentropy, objective, novel, off-policy, benefits, best, properties, classes.
 - **Relevant PDF headings:** A.2 REGULARIZED JOINT POLICY GRADIENT (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,23 +103,13 @@ PDF body method statement (p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRO
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 2: Ablation study of the MPO algorithm and comparison to common baselines from the liter- ature on three domains from the control suite. We ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 5 (2.1 RELATED WORK), p. 2 (1 INTRODUCTION), p. 2 (2.1 RELATED WORK), p. 3 (2.1 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

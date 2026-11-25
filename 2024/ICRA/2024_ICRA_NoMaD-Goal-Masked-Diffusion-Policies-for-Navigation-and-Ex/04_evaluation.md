@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 - **p. 5 / V. EVALUATION - extractive body cue:** The Autoregressive baseline uses a more expressive policy class and outperforms these baselines, but struggles in complex environments.
 - **p. 6 / V. EVALUATION - extractive body cue:** This suggests that training for these two behaviors involves learning shared representations and affordances, and a single policy can indeed excel at both task-agnostic and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: NoMaD is the first flexibly conditioned diffusion model of robot actions that can perform both goal-conditioned navigation and undirected exploration in previously unseen ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 | Fig. 1: NoMaD is the first flexibly conditioned diffusion model of robot actions that can perform both goal-conditioned navigation and undirected exploration in previously ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: Model Architecture. NoMaD uses two EfficientNet encoders ψ, ϕ to generate input tokens to a Transformer decoder. We use goal masking to ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 | We report the mean success rate for each baseline, as well as the mean number of collisions per experiment. | comparison identity and matched condition | p. 4 (V. EVALUATION) |
 | This baseline predicts point estimates of future actions conditioned on ct, rather than modeling the distribution. | comparison identity and matched condition | p. 4 (V. EVALUATION) |
 | NoMaD outperforms both the ViT- and CNN-based architectures, successfully reaching the goal while avoiding collisions. | comparison identity and matched condition | p. 6 (V. EVALUATION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 | body limitation/failure cue | VIB and Masked ViNT struggle in all the environments we tested and frequently end in collisions, likely due to challenges with effectively modeling multimodal ... | p. 5 (V. EVALUATION) |
 | body limitation/failure cue | For exploratory goal discovery, NoMaD outperforms the best published baseline (Subgoal Diffusion) by over 25% in terms of both efficiency and collision avoidance, and ... | p. 5 (V. EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 | We find the choice of visual encoder to be crucial for training diffusion policies, as summarized in Table III. | p. 6 (V. EVALUATION) |
 | We use a straight-through estimator [44] for propagating gradients to the observation and goal encoders during training. | p. 6 (V. EVALUATION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / VI. DISCUSSION - extractive body cue:** While our experiments provide a proof of concept that unified policies can provide more effective navigation in new environments, our system has a number of ...
@@ -159,9 +138,8 @@ PDF body evaluation/result cue (p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6
 - **p. 5 / V. EVALUATION - extractive body cue:** For exploratory goal discovery, NoMaD outperforms the best published baseline (Subgoal Diffusion) by over 25% in terms of both efficiency and collision avoidance, and succeeds ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (V. EVALUATION), p. 4 (V. EVALUATION), p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), metrics p. 4 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), baselines p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 4 (V. EVALUATION), p. 6 (V. EVALUATION), results p. 5 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 4 (V. EVALUATION), p. 4 (V. EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** ‘+ How well does the particle-grid model leam the dynamics of various types of deformable objects?
 - **p. 7 / A. Experiment Setup - extractive body cue:** Our method's prediction error is lower on both seen and unseen instances compared to the baseline.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Modeling deformable objects from RGB-D videos presents signi ‘Our Partice-Grid Neural Dynamics framework learns the behavior of deformable objects directly from real-world observations. ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 | ‘+ Can the model improve the performance of 3D actionconditioned video prediction and model-based planning? | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | Fig. 2: Overview of proposed framework: Particle-Grid Neural Dynamics. (a) A diagram of our dynamics model. Given particle positions 7X, and velocities V_ fused ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 | Our method's prediction error is lower on both seen and unseen instances compared to the baseline. | comparison identity and matched condition | p. 7 (A. Experiment Setup) |
 | Fig. 8: Quantitative Comparisons on Planning. For four manipulation tasks-cloth lifting, box closing, rope manipulation, and plush toy relocating -we present the error curve ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Fig, 5: Quantitative Comparisons on Generalization, Our method is compared with GBND on seen and unseen instances of the rope and cloth categories. | comparison identity and matched condition | p. 7 (A. Experiment Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 |---|---|---|
 | body limitation/failure cue | Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views. | p. 5 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,22 +129,13 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table capti
 | Model training begins from a given point cloud at time t, followed by iterative dynamics model rollouts for K° steps. | p. 5 (B. Model Components) |
 | With the collected tracking data, we define particle sets and their trajectories over a look-forward time window as Xenaueciae © RP", alongside corresponding robot, ... | p. 5 (B. Model Components) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views.
 
 - **Evidence anchors reviewed:** datasets p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), metrics p. 9 (Figure/Table caption), p. 7 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), p. 9 (Figure/Table caption), p. 7 (A. Experiment Setup), results p. 5 (IV. EXPERIMENTS), p. 9 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (A. Experiment Setup), p. 9 (Figure/Table caption), p. 6 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

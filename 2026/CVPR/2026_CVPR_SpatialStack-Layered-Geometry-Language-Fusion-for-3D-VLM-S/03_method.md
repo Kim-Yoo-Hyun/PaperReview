@@ -46,7 +46,6 @@ PDF body method statement (p. 8 (Model), p. 8 (Model)): 4, our two versions of S
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 8 (Model), p. 8 (Model)): 4, our two versions of S
 - **p. 8 / Model - extractive body cue:** Scaling to Qwen3.5, SpatialStack-5B further improves upon its baseline to set a new state-of-the-art.
 - **p. 8 / Model - extractive body cue:** Evaluation on General-purpose Capabilities.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 8 (Model), p. 8 (Model)): 4, our two versions of S
 - **p. 7 / 5.1. Training - extractive body cue:** Training is performed with a batch size of 64 and a learning rate of 1 × 10-5, optimized using the AdamW optimizer with a warmup ...
 - **p. 7 / 5.1. Training - extractive body cue:** During instruction tuning, the geometry encoder (VGGT) and the vision encoder are kept frozen, while the geometry token merger modules and the LLM decoder are ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** versions, SpatialStack, surpass, baselines, similar, scale, same, base, models, subsets, demonstrating, benefits, multi-level, geometry, feature, stacking, unified, spatial, perception, Proprietary.
 - **Relevant PDF headings:** Model (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,20 +103,10 @@ PDF body method statement (p. 8 (Model), p. 8 (Model)): 4, our two versions of S
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 7. Geometry-Language Fusion Order Ablation. Com- parison of our progressive hierarchical alignment against a reverse fusion strategy and baseline models. deep features. Tab. 6 ...
 - **p. 7 / 5.1. Training - extractive body cue:** We fine-tune the model using the standard language modeling cross-entropy loss.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (Model), p. 8 (Model), objective 본문 anchor 없음, temporal p. 2 (1. Introduction), p. 7 (5.2. Evaluation), p. 5 (4.2. VLM-SpatialStack), p. 6 (4.2. VLM-SpatialStack), p. 1 (Body text (section not recovered)), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

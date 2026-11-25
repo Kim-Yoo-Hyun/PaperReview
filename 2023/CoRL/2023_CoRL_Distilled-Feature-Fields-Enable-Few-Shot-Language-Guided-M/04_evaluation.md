@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 - **p. 6 / 4 Results - extractive body cue:** While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of the ...
 - **p. 8 / 4 Results - extractive body cue:** (Bottom Row) Robot executing grasps sequentially without rescanning.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Distilled Feature Fields Enable Open-Ended Manipulation. (1) Robot uses a selfie stick to scan RGB images of the scene (camera frustums shown). (2) ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 | Figure 3: Pipeline for Language-Guided Manipulation. (a) Encode the language query with CLIP, and compare its similarity to the average query point features over ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 3: Feature Map Resolu- tions. Resolutions of the fea- tures output by the vision models given a 1280 × 720 RGB image. NeRF ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 | We reset the scenes to about the same configuration for each compared method. | comparison identity and matched condition | p. 6 (4 Results) |
 | While the baselines using density, RGB color values, or intermediate features from NeRF achieve respectable performance, they struggle to identify the semantic category of ... | comparison identity and matched condition | p. 6 (4 Results) |
 | (Bottom Row) Robot executing grasps sequentially without rescanning. | comparison identity and matched condition | p. 8 (4 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 | body limitation/failure cue | Figure 3: Pipeline for Language-Guided Manipulation. (a) Encode the language query with CLIP, and compare its similarity to the average query point features over ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | The robot failed to grasp the stainless steel jug by its handle due to a small error in the grasp rotation. | p. 7 (4 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 | We consider a run successful if the robot grasps or places the correct corresponding object part for the task. | p. 7 (4 Results) |
 | Although this success rate is far from practical for industrial use, our overall strategy of using 2D visual priors for 3D scene understanding can ... | p. 7 (4 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4 Results - extractive body cue:** In comparison, 21/27 failures for CLIP ViT and ResNet combined may be attributed to this issue.
@@ -154,9 +133,8 @@ PDF body evaluation/result cue (p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Resu
 - **p. 7 / 4 Results - extractive body cue:** The robot failed to grasp the stainless steel jug by its handle due to a small error in the grasp rotation.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 8 (4 Results), metrics p. 7 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 6 (4 Results), p. 2 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 6 (4 Results), p. 6 (4 Results), p. 8 (4 Results), results p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

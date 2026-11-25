@@ -51,7 +51,6 @@ PDF body method statement (p. 1 (4 Tencent Data Platform), p. 2 (1 Introduction)
 - **p. 1 / 4 Tencent Data Platform - extractive body cue:** Furthermore, our work inspires the feasibility of applying unified architectures from languages and images to the point cloud.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 1 (4 Tencent Data Platform), p. 2 (1 Introduction)
 - **p. 2 / 1 Introduction - extractive body cue:** Therefore, after embedding point subsets into tokens, the point cloud can be processed similarly with languages and images.
 - **p. 3 / 1 Introduction - extractive body cue:** (iii) Point cloud carries information in a different density compared to languages and images.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 1 (4 Tencent Data Platform), p. 2 (1 Introduction)
 
 - **p. 10 / 4 Experiments - extractive body cue:** We pre-train our model for 300 epochs, with a batch size of 128.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, standard, Transformer, autoencoder, asymmetric, design, shifting, mask, tokens, operation, learns, high-level, latent, features, unmasked, point, patches, aiming, reconstruct, masked.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 1 (4 Tencent Data Platform), p. 2 (1 Introduction)
 - **p. 11 / 4 Experiments - extractive body cue:** We evaluate our approach on three variants, among which PB-T50-RS is the hardest setting.
 - **p. 13 / 4 Experiments - extractive body cue:** Ablation study on masking strategy.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (4 Tencent Data Platform), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 1 (4 Tencent Data Platform), temporal p. 10 (4 Experiments), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 7 (2 Related Work), p. 7 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

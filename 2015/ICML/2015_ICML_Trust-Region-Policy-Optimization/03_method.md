@@ -51,7 +51,6 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 - **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** Let us briefly summarize the relationship between the theory from Section 3 and the practical algorithm we have described: • The theory justifies optimizing a ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 - **p. 1 / 2 Preliminaries - extractive body cue:** Consider an infinite-horizon discounted Markov decision process (MDP), defined by the tuple (S, A, P, r, ρ0, γ), where S is a finite set of ...
 - **p. 2 / 2 Preliminaries - extractive body cue:** (3) Note that Lπ uses the visitation frequency ρπ rather than ρ˜π, ignoring changes in state visitation density due to changes in the policy.
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 - **p. 6 / 3. Approximately solve this constrained optimization - extractive body cue:** Relative entropy policy search (REPS) (Peters et al., 2010) constrains the state-action marginals p(s, a), while TRPO constrains the conditionals p(a/s).
 - **p. 6 / 3. Approximately solve this constrained optimization - extractive body cue:** Levine and Abbeel (2014) also use a KL divergence constraint, but its purpose is to encourage the policy not to stray from regions where the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** conjugate, gradient, algorithm, followed, line, search, altogether, only, slightly, more, expensive, computing, itself, Empirically, hard, robustly, choose, penalty, coefficient, constraint.
 - **Relevant PDF headings:** A Proof of Policy Improvement Bound (p. 10); B Perturbation Theory Proof of Policy Improvement Bound (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 5 (3. Approximately solve this constrained optimiz
 - **p. 6 / 3. Approximately solve this constrained optimization - extractive body cue:** Unlike REPS, our approach does not require a costly nonlinear optimization in the inner loop.
 - **p. 5 / 2 Preliminaries - extractive body cue:** We can greatly reduce the variance of the Q-value differences between rollouts by using the same random number sequence for the noise in each of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), objective p. 6 (3. Approximately solve this constrained optimization), p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), temporal p. 4 (2 Preliminaries), p. 2 (2 Preliminaries), p. 2 (2 Preliminaries), p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

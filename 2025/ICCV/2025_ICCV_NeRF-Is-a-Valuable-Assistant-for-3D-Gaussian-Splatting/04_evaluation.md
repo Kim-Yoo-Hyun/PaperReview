@@ -45,8 +45,6 @@
 - **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** Ablation of different components in NeRF-GS on Tank&Temples and DeepBlending datasets.
 - **p. 8 / 5.3. Qualitative Analysis of NeRF-GS - extractive body cue:** For example, on the DeepBlending dataset, vanilla 3DGS uses 2,461,023 Gaussians, while ours uses only 1,926,336.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. NeRF-GS establishes a bridge of communication be- tween NeRF and 3DGS, leveraging information sharing, modeling of distinct characteristics, and joint optimization to enable ...
@@ -80,8 +78,6 @@
 | Our NeRF-GS maintains high performance when the scene input views are reduced. | definition/direction/unit from same section | p. 7 (5.2. Comparison) |
 | Impact of Joint Optimization Strategy. | definition/direction/unit from same section | p. 8 (5.4. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@
 | The ablation results in Table 4 indicate that our proposed initialization significantly outperforms the alternatives. | comparison identity and matched condition | p. 8 (5.4. Ablation Studies) |
 | Across various sparsity levels, NeRF-GS consistently surpasses corresponding baselines. | comparison identity and matched condition | p. 6 (5.2. Comparison) |
 | Furthermore, it can be observed that the performance gap between NeRF-GS and baseline methods in sparse views is more pronounced than in full views, ... | comparison identity and matched condition | p. 7 (5.2. Comparison) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@
 | body limitation/failure cue | When associations between two branches are directly removed, such as feature sharing, loss constraints during joint training, etc., the NeRF-GS shows large visual quality ... | p. 7 (5.3. Qualitative Analysis of NeRF-GS) |
 | body limitation/failure cue | Removing mutual constraints between branch outputs leads to performance degradation. | p. 8 (5.4. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@
 | All experiments are conducted on an NVIDIA A100 GPU. | p. 5 (5.1. Implementation Details) |
 | Through shared spatial positions and corresponding encoded features, different branches within NeRF-GS can more comprehensively perceive and learn from limited 3D scene information. | p. 6 (5.2. Comparison) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Conclusion - extractive body cue:** These strategies effectively address several limitations of 3DGS, including initialization dependency, limited spatial awareness, insufficient Gaussian sphere correlation, and overfitting in sparse-view scenes.
@@ -161,6 +140,5 @@
 - **p. 8 / 5.4. Ablation Studies - extractive body cue:** Removing mutual constraints between branch outputs leads to performance degradation.
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Implementation Details), p. 5 (5.1. Implementation Details), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison), p. 7 (5.2. Comparison), p. 7 (5.2. Comparison), metrics p. 7 (5.3. Qualitative Analysis of NeRF-GS), p. 8 (5.4. Ablation Studies), p. 5 (5.1. Implementation Details), p. 5 (5.2. Comparison), p. 6 (5.2. Comparison), p. 6 (5.2. Comparison), baselines p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 6 (5.2. Comparison), p. 7 (5.2. Comparison), results p. 5 (5.2. Comparison), p. 5 (5.2. Comparison), p. 8 (5.4. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.2. Comparison), p. 8 (5.4. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

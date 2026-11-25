@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3. Methods), p. 5 (3.3. Unseen Viewpoints Regul
 - **p. 5 / 3.3. Unseen Viewpoints Regularization (UVR) - extractive body cue:** Illustration of benefits from the SDS loss.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.4. Advanced Floater Pruning), p. 4 (3.1. Mode-selection & Softmax-scaling Depth Ren), p. 3 (3. Methods), p. 3 (3. Methods), p. 4 (3.1. Mode-selection & Softmax-scaling Depth Ren), p. 5 (3.3. Unseen Viewpoints Regularization (UVR)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3. Methods), p. 5 (3.3. Unseen Viewpoints Regul
 - **p. 5 / 3.3. Unseen Viewpoints Regularization (UVR) - extractive body cue:** In the sparse-view setting, Gaussians that are well constrained under input viewpoints often appear as small fragmentation rendered from other sampled viewpoints.
 - **p. 6 / 3.4. Advanced Floater Pruning - extractive body cue:** As a result, some floaters may remain along the rays of the input views.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,15 +92,11 @@ PDF body method statement (p. 3 (3. Methods), p. 5 (3.3. Unseen Viewpoints Regul
 - **p. 5 / 3.3. Unseen Viewpoints Regularization (UVR) - extractive body cue:** Inspired by recent diffusion models [5, 9, 25, 26, 31, 45] and Score Distillation Sampling (SDS) [38] for zero-shot 3D reconstruction [6, 15, 16, 36], ...
 - **p. 6 / 3.4. Advanced Floater Pruning - extractive body cue:** Therefore, we propose a novel pruning operator to remove the Gaussians at false modes at the end of training.
 - **p. 4 / 3.2. Patch-based Depth Correlation Loss - extractive body cue:** We compute pseudo-ground truth depth maps using pretrained depth estimation models on the training views.
-- **p. 4 / 3.2. Patch-based Depth Correlation Loss - extractive body cue:** We compute pseudo-ground truth depth maps using pretrained depth estimation models on the training views.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, dissect, UVR, module, parts, Score, Distillation, Sampling, SDS, loss, depth, warping, designed, regularizing, viewpoints, distant, close, training, cameras, respectively.
 - **Relevant PDF headings:** 3. Methods (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +116,10 @@ PDF body method statement (p. 3 (3. Methods), p. 5 (3.3. Unseen Viewpoints Regul
 - **p. 7 / 4.2. Comparison - extractive body cue:** This limitation actually prompted the introduction of positional encoding [20, 37].
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** In contrast, FSGS excels in preserving fine details due to its densification technique but fails to reconstruct background geometry.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Methods), p. 5 (3.3. Unseen Viewpoints Regularization (UVR)), p. 3 (3. Methods), p. 5 (3.3. Unseen Viewpoints Regularization (UVR)), p. 6 (3.4. Advanced Floater Pruning), p. 4 (3.2. Patch-based Depth Correlation Loss), objective p. 6 (3.4. Advanced Floater Pruning), p. 4 (3.1. Mode-selection & Softmax-scaling Depth Ren), p. 3 (3. Methods), p. 3 (3. Methods), p. 4 (3.1. Mode-selection & Softmax-scaling Depth Ren), p. 5 (3.3. Unseen Viewpoints Regularization (UVR)), temporal p. 5 (3.3. Unseen Viewpoints Regularization (UVR)), p. 5 (3.3. Unseen Viewpoints Regularization (UVR)), p. 7 (4.3. Ablation Studies), p. 7 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

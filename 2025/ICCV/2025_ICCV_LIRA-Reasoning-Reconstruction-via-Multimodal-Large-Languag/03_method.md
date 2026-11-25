@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV
 - **p. 7 / 4.5. Runtime Analysis - extractive body cue:** Compared with other methods, our LIRA-Fast has advantages in both reasoning reconstruction speed and accuracy.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1.1. Incremental Geometric Reconstruction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV
 - **p. 1 / 1. Introduction - extractive body cue:** It inputs RGB-D sequences and reconstructs instruction-relevant instances and background environment.
 - **p. 2 / 1. Introduction - extractive body cue:** However, these methods contain much instruction-irrelevant information, and exhibit limited interaction and reasoning between target instance features and instruction features.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV
 - **p. 7 / 4.5. Runtime Analysis - extractive body cue:** To achieve real-time inference, we propose LIRA-Fast.
 - **p. 7 / 4.5. Runtime Analysis - extractive body cue:** The average inference time for each RGB-D keyframe in the FBV is provided.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, fimg, hseg, text, feature, prompt, input, mask, decoder, Fdec, segmentation, foundation, model, output, binary, mseg, candidate, instance, achieve, real-time.
 - **Relevant PDF headings:** 3. Method (p. 3); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV
 - **p. 8 / 5. Conclusion - extractive body cue:** Future work will consider further optimization in 3D space.
 - **p. 6 / 3.4. Benchmark - extractive body cue:** Erroneous projected pixels caused by occlusion are filtered out.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV), p. 7 (4.5. Runtime Analysis), p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV), p. 5 (3.1.2. 2D Reasoning Segmentation within the FBV), p. 7 (4.4. Explicit Instruction-Guided Reconstruction), objective p. 3 (3. Method), p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV), p. 4 (3.1.1. Incremental Geometric Reconstruction), p. 7 (4.5. Runtime Analysis), temporal p. 7 (4.5. Runtime Analysis), p. 1 (1. Introduction), p. 6 (4.1. Implementation Details), p. 3 (3.1.1. Incremental Geometric Reconstruction), p. 3 (3. Method), p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

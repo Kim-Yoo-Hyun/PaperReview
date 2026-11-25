@@ -49,7 +49,6 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 - **p. 7 / Model - extractive body cue:** MM-Spatial-3B substantially outperforms the (much larger) SOTA models, with CoT and depth input further improving performance.
 - **p. 8 / Model - extractive body cue:** MM-Spatial-3B outperforms the SOTA SpatialRGPT-VILA-1.5-8B 5 with different data mixtures 10 - 12 , with and without 8 depth input (SpatialRGPT uses depth maps via ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 - **p. 4 / 4.2. Data and Training - extractive body cue:** For the 3) supervised fine-tuning (SFT) stage, we start from the MM1.5 single-image SFT mixture, which includes datasets across multiple categories: General VQA, Knowledge (math, ...
 - **p. 5 / 5.1. Model Variants - extractive body cue:** Trained on singleview RGB inputs plus fully encoded depth maps, as described in Sec.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** MM1, architecture, focusing, mobile-friendly, variant, comprising, DFN-CLIP, image, encoder, decoder-only, LLM, backbone, bridged, C-Abstractor, AXLearn, model, training, suggesting, successfully, additional.
 - **Relevant PDF headings:** 4. Model (p. 4); 4.1. Model Architecture (p. 4); 5.1. Model Variants (p. 4); Model (p. 6); Model (p. 7); Model (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and T
 - **p. 2 / Dataset - extractive body cue:** We apply this pipeline to CA-1M [61] to generate Cubify Anything VQA (CAVQA), a new spatial understanding dataset for MLLM fine-tuning, covering diverse indoor scenes.
 - **p. 2 / Dataset - extractive body cue:** CA-VQA is the first dataset that is based on high-quality 3D ground truth, includes depth maps (both from sensors and monocular) and multi-view images, covers ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Model Architecture), p. 4 (4.2. Data and Training), p. 6 (Model), p. 6 (Model), p. 7 (Model), p. 7 (Model), objective 본문 anchor 없음, temporal p. 5 (5.1. Model Variants), p. 3 (2.2. 3D Spatial Understanding with MLLMs), p. 4 (3.3. Multi-view and Metric Depth Data), p. 1 (Body text (section not recovered)), p. 3 (2.2. 3D Spatial Understanding with MLLMs), p. 4 (3.3. Multi-view and Metric Depth Data).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

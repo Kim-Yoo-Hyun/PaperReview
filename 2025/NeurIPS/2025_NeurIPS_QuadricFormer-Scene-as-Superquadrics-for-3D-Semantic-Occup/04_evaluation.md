@@ -54,8 +54,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 - **p. 10 / B Additional Experiments - extractive body cue:** We visualize the position distributions of scene primitives using 1600 superquadrics versus 6400 Gaussians in Figure 8.
 - **p. 10 / B Additional Experiments - extractive body cue:** In contrast, our superquadric-based method learns well-structured spatial arrangements, enabling it to effectively model the scene structure with significantly fewer primitives.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Considering the ellipsoidal shape prior of Gaussians, we propose leveraging expressive superquadrics to build an efficient and powerful object-centric representation. Our QuadricFormer achieves ...
@@ -89,8 +87,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | The figure illustrates how varying ϵ1 and ϵ2 produces a wide range of shapes, from star-like and rounded shapes to square-like structures. | definition/direction/unit from same section | p. 11 (B Additional Experiments) |
 | Figure 1: Considering the ellipsoidal shape prior of Gaussians, we propose leveraging expressive superquadrics to build an efficient and powerful object-centric representation. Our QuadricFormer ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -101,13 +97,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | Figure 2: Comparisons between different representations. (a) Quadric-based method represents the same object with a smaller number of primitives and greater shape expressiveness. (b) ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Figure 1: Considering the ellipsoidal shape prior of Gaussians, we propose leveraging expressive superquadrics to build an efficient and powerful object-centric representation. Our QuadricFormer ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Table 1: 3D semantic occupancy prediction results on nuScenes. * means supervised by dense occupancy annotations as opposed to original LiDAR segmentation labels. Ch. ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 |---|---|---|
 | body limitation/failure cue | With random initialization, QuadricFormer cannot fully learn accurate superquadric positions, leaving some superquadrics in empty regions and reducing representation efficiency. | p. 9 (5 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,19 +141,10 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | Image Encoder Quadric Encoder Sparse Conv. | p. 5 (6 Superquadrics) |
 | Voxelization Cross Attn FFN Quadric Decoder x B Blocks Pos. | p. 5 (6 Superquadrics) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 Conclusion - extractive body cue:** With random initialization, QuadricFormer cannot fully learn accurate superquadric positions, leaving some superquadrics in empty regions and reducing representation efficiency.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 11 (B Additional Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 3 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

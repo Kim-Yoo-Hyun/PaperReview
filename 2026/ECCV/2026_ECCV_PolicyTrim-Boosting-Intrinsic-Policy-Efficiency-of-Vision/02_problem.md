@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (X. Wang et al), p. 5 (3 Method), p. 1 (Body
 | body cue at p. 25 | Fig. 6: Real-world execution visualization on the FlipMug task. C.5 Robustness under Visual Perturbations We further evaluate PolicyTrim ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 25 | Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3 Method), p. 4 (X. Wang et al), p. 1 (Body text (section not recovered)), p. 15 (2.48 Method). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (X. Wang et al), p. 4 (X. Wang et al), p. 2 (X. Wang et al), p. 1 (Body text (section not recovered)), p. 2 (X. Wang et al), interface p. 5 (3 Method), p. 4 (X. Wang et al), p. 1 (Body text (section not recovered)), p. 15 (2.48 Method), objective p. 5 (3 Method), p. 21 (B Implementation Details).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

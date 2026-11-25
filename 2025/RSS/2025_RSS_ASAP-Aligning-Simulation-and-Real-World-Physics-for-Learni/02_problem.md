@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract)
 | body cue at p. 12 | While ASAP demonstrates promising results in bridging the sim-to-real gap for agile humanoid control, our framework has several ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 11 | However, the performance of the action noise approach (MPJPE of 150) does not match the precision achieved by ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 4 (B. Phase-based Motion Tracking Policy Training), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), interface p. 5 (B. Training Delta Action Model), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), objective p. 10 (B. Different Usage of Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 11 (B. Different Usage of Delta Action Model).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -59,8 +59,6 @@ PDF body contribution framing (p. 1 (1 Introduction), p. 1 (1 Introduction)): Tn
 | body cue at p. 3 | In a related paper [7], we presented an RRT-based, planner that computes collision-free kinodynamic trajec~ tories that fire ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 3 | Collision detection is a key bottleneck in path planning, and an RRT is completely suited for incremental collision ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 planning writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (9 Return T), p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)). The downstream handoff is claimed only when the body describes it.
@@ -68,10 +66,8 @@ planning writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), interface p. 2 (9 Return T), p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), objective p. 2 (2. Rapidly-Exploring Random Trees), p. 1 (1 Introduction), p. 1 (1 Introduction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

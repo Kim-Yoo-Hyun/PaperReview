@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 12 (Figure/Table
 - **p. 1 / I. INTRODUCTION - extractive body cue:** The quest to enable humanoid robots to perform complex whole-body scene- and object-interaction tasks has long been constrained by a fundamental data bottleneck.
 - **p. 1 / Abstract - extractive body cue:** Moreover, preserving task-relevant interactions enables efficient data augmentation, from a single demonstration to different robot embodiments, terrains, and object configurations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: OMNIRETARGET enables reinforcement learning policies to learn complex, long-horizon loco-manipulation skills in challenging environments that transfer zero-shot from simulation to a Unitree G1 ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 12 (Figure/Table
 | Fig. 3: Cross-embodiment robot-object-terrain interaction. Drake [52], which correctly handles the differential geometry of rotations on the S3 manifold [53]. Our interaction-mesh-based kinematic pipeline ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Fig. 4: OMNIRETARGET generates systematic variations of (a) terrain height, (b) object initial pose, and (c) object shape from a single human demonstration, with ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 12 (Figure/Table
 | We comprehensively evaluate OMNIRETARGET by retargeting motions from OMOMO [1], LAFAN1 [2], and our in-house MoCap datasets, generating over 8-hour trajectories that achieve better ... | comparison identity and matched condition | p. 1 (Abstract) |
 | Fig. 10: Histograms from the downstream RL evaluation showing the failure patterns for the baselines in different tasks. VideoMimic, which fails systematically due to ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | Fig. 2: OMNIRETARGET overview. Human demonstrations are retargeted to the robot via interaction-mesh-based constrained optimization. Each spatial and shape augmentation is solved as a ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -110,7 +99,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 12 (Figure/Table
 
 - Numeric sentences retained from the body:
 - **p. 1 / Body text (section not recovered) - extractive body cue:** Thanks to the high-quality interaction-preserving motion retargeting, these policies are trained and deployed in a minimal and unified way: it involves only 5 rewards, 4 ...
-- **p. 1 / Body text (section not recovered) - extractive body cue:** Thanks to the high-quality interaction-preserving motion retargeting, these policies are trained and deployed in a minimal and unified way: it involves only 5 rewards, 4 ...
 
 ## Generalization and Failure Cases
 
@@ -120,21 +108,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 12 (Figure/Table
 | body limitation/failure cue | Fig. 3: Cross-embodiment robot-object-terrain interaction. Drake [52], which correctly handles the differential geometry of rotations on the S3 manifold [53]. Our interaction-mesh-based kinematic pipeline ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 5: Additional hardware results showing diverse, agile and human-like behaviors. • Observation noise: ±0.05 for orientation in Rot6D, ±0.5 m/s and ±0.2 rad/s ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | All code, retargeted datasets, and trained policies will be publicly released. | p. 1 (Abstract) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -143,6 +121,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 12 (Figure/Table
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Additional hardware results showing diverse, agile and human-like behaviors. • Observation noise: ±0.05 for orientation in Rot6D, ±0.5 m/s and ±0.2 rad/s for ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (I. INTRODUCTION), p. 1 (Abstract), metrics p. 12 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 1 (Abstract), p. 12 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 12 (Figure/Table caption), p. 3 (Figure/Table caption), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -58,7 +58,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. A
 - **p. 2 / 1. Introduction - extractive body cue:** FreGS [47] combines frequency regularization to model the local details, but its effectiveness is constrained by the use of a single-scale frequency spectrum.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (3.2. Localization and Geometry Mapping), p. 4 (4. SEGS-SLAM), p. 5 (4.4. Losses Design), p. 5 (4.3. Frequency Pyramid Regularization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. A
 - **p. 3 / 3.2. Localization and Geometry Mapping - extractive body cue:** ORB-SLAM3 [3] can track camera poses and generate point cloud accurately.
 - **p. 3 / 3.2. Localization and Geometry Mapping - extractive body cue:** The camera poses (R, t) and the point cloud {P0, . . . , Pη} ∈Rη×3 of the scene can be solved through local or ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. A
 - **p. 2 / 1. Introduction - extractive body cue:** Second, we propose Appearancefrom-Motion embedding (AfME), which takes poses as input and eliminates the need for training on the left half of each ground-truth image ...
 - **p. 1 / 1. Introduction - extractive body cue:** However, most SLAM algorithms based on 3D-GS have neglected the latent structure in the scene, which constrains their rendering quality.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Second, Appearance-from-Motion, embedding, AfME, enabling, Gaussians, better, model, image, appearance, variations, across, different, camera, poses, Appearancefrom-Motion, takes, input, eliminates, need.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. A
 - **p. 6 / 5.1. Experiment Setup - extractive body cue:** GS-SLAM∗denotes the result of GS-SLAM is taken from [42], all others are obtained in our experiments. '-' denotes the system does not provide valid results.
 - **p. 7 / 5.2. Results Analysis - extractive body cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1. Introduction), p. 4 (4.2. Appearance-from-Motion Embedding), p. 4 (4.1. Structure-Enhanced Photorealistic Mapping), p. 1 (1. Introduction), p. 2 (2. We), objective p. 5 (4.4. Losses Design), p. 3 (3.2. Localization and Geometry Mapping), p. 4 (4. SEGS-SLAM), p. 5 (4.3. Frequency Pyramid Regularization), p. 2 (1. Introduction), p. 2 (1. Introduction), temporal p. 8 (5.4. Limitations), p. 5 (5.1. Experiment Setup), p. 5 (5.1. Experiment Setup), p. 6 (5.1. Experiment Setup), p. 6 (5.1. Experiment Setup), p. 7 (5.2. Results Analysis).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

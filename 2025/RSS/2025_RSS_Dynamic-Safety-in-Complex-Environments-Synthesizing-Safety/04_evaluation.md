@@ -40,8 +40,6 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 - **p. 8 / B. Hardware Experiments - extractive body cue:** First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy map, ...
 - **p. 8 / B. Hardware Experiments - extractive body cue:** Robot states are estimated by an OptiTrack motion capture system,
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Safe set synthesis from perception data via Poisson's equation Hardware experimental footage: hitps//youtu.be/TBRUkAJGixL,
@@ -65,21 +63,12 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 | ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 ... | definition/direction/unit from same section | p. 8 (B. Hardware Experiments) |
 | First, we perceive and segment the environment using fixed RGB camera and the Meta SAM2 [49] segmentation algorithm, Next, we generate a 2D occupancy ... | definition/direction/unit from same section | p. 8 (B. Hardware Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | In each ease, the nominal controller attempted to drive the system directly 10 the goal without safety considerations. | comparison identity and matched condition | p. 8 (B. Hardware Experiments) |
 | From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective. | comparison identity and matched condition | p. 8 (B. Hardware Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -110,21 +99,11 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 | body limitation/failure cue | ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 ... | p. 8 (B. Hardware Experiments) |
 | body limitation/failure cue | Examining the value of h during the experiment, it ean be ‘observed that the robot effectively employed its safety filter to avoid collisions. | p. 9 (2 Nomina (Orange) & Safe (Bie) Inputs) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Another approach of constructing a forcing function is by designing a guidance vector field ¥ : % -> R°, which encodes the desired flux ... | p. 5 (B. Indirect Assignment - Variational Approach) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -135,6 +114,5 @@ PDF body evaluation/result cue (p. 8 (B. Hardware Experiments), p. 8 (B. Hardwar
 - **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive body cue:** Examining the value of h during the experiment, it ean be ‘observed that the robot effectively employed its safety filter to avoid collisions.
 
 - **Evidence anchors reviewed:** datasets p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), metrics p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), baselines p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments), results p. 8 (B. Hardware Experiments), p. 8 (B. Hardware Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

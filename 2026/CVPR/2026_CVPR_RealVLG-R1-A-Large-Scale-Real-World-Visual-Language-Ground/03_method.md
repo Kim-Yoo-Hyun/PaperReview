@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 - **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, segmentation, grasp rectangles, and contact ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 - **p. 1 / 1. Introduction - extractive body cue:** Isaac Newton Visual-Language Grounding (VLG) aims to establish semantic correspondences between natural language and visual entities in images, enabling models to accurately identify and localize ...
 - **p. 8 / Method - extractive body cue:** The visual grasping task imposes higher demands on physical reasoning and action coherence.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 - **p. 6 / 4.2. Policy Optimization with Verifiable Rewards - extractive body cue:** RealVLG-R1 fine-tunes pretrained LVLMs via reward-driven RL using task-specific verifiable rewards, enabling adaptive learning and improved generalization over bounding boxes, segmentation, grasp rectangles, and contact ...
 - **p. 8 / Method - extractive body cue:** Following the data split in Table 2, both RealVLG-R1 and Qwen2.5-VL+SFT were fine-tuned for 10 epochs using only 10% of the training set.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** policy, model, receives, image, task, prompt, then, generates, structured, outputs, according, requirements, unified, framework, RealVLG-R1, fine-tunes, pretrained, LVLMs, reinforcement-style, optimization.
 - **Relevant PDF headings:** 4. RealVLG-R1 Model (p. 5); 4.2. Policy Optimization with Verifiable Rewards (p. 5); Method (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 6 (4.3. Task-Specific Pipelines and Verifiable Rew
 - **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Dataset split for RealVLG-11B. age instance. 5 Based on the resulting Rect Grasp Poses and segmentation masks, grasp contact points are subse- quently ...
 - **p. 7 / 5.1. Data Quality Evaluation - extractive body cue:** Linguistic and grounding quality comparison. grasp points located within segmentation masks (Rg), and proportion of contact centers falling inside segmentation masks (Rc).
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 5 (4.1. Overview), p. 8 (Method), objective p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 8 (Method), p. 5 (4.2. Policy Optimization with Verifiable Rewards), p. 7 (4.3. Task-Specific Pipelines and Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), p. 6 (4.2. Policy Optimization with Verifiable Rewards), temporal p. 7 (5.2. RealVLG Benchmark), p. 8 (Method), p. 8 (Method), p. 1 (Abstract), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

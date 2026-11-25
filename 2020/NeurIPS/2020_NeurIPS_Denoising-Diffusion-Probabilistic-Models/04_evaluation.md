@@ -47,8 +47,6 @@ CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변�
 - **p. 6 / 4 Experiments - extractive body cue:** We find that the baseline option of predicting ˜µ works well only when trained on the true variational bound instead of unweighted mean squared error, ...
 - **p. 6 / 4 Experiments - extractive body cue:** 4.2 Reverse process parameterization and training objective ablation In Table 2, we show the sample quality effects of reverse process parameterizations and training objectives (Section ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Generated samples on CelebA-HQ 256 × 256 (left) and unconditional CIFAR10 (right) 34th Conference on Neural Information Processing Systems (NeurIPS 2020), Vancouver, Canada. ...
@@ -82,8 +80,6 @@ CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변�
 | Table 3: FID scores for LSUN 256 × 256 datasets | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 | Figure 1: Generated samples on CelebA-HQ 256 × 256 (left) and unconditional CIFAR10 (right) 34th Conference on Neural Information Processing Systems (NeurIPS 2020), Vancouver, ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변�
 | We also see that learning reverse process variances (by incorporating a parameterized diagonal Σθ(xt) into the variational bound) leads to unstable training and poorer ... | comparison identity and matched condition | p. 6 (4 Experiments) |
 | Figure 8: Interpolations of CelebA-HQ 256x256 images with 500 timesteps of diffusion. be a fully expressive conditional distribution. With these choices, DKL(q(xT ) ∥p(xT ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 2: Unconditional CIFAR10 reverse process parameterization and training objec- tive ablation. Blank entries were unstable to train and generated poor samples with out-of- ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변�
 | body limitation/failure cue | (LT does not appear because the forward process variances βt are fixed.) Algorithm 1 displays the complete training procedure with this simplified objective. | p. 5 (2 Background) |
 | body limitation/failure cue | Figure 2: The directed graphical model considered in this work. This paper presents progress in diffusion probabilistic models [53]. A diffusion probabilistic model (which ... | p. 2 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변�
 | 4.4 Interpolation We can interpolate source images x0, x′ 0 ∼q(x0) in latent space using q as a stochastic encoder, xt, x′ t ∼q(xt/x0), ... | p. 8 (4 Experiments) |
 | 3 Diffusion models and denoising autoencoders Diffusion models might appear to be a restricted class of latent variable models, but they allow a large ... | p. 3 (2 Background) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 2 Background - extractive body cue:** Blank entries were unstable to train and generated poor samples with out-ofrange scores.
@@ -168,9 +147,8 @@ CIFAR-10에서 생성 이미지의 FID 및 Inception Score를 측정하고, 변�
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: The directed graphical model considered in this work. This paper presents progress in diffusion probabilistic models [53]. A diffusion probabilistic model (which we ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), metrics p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 5 (4 Experiments), p. 7 (Figure/Table caption), baselines p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), results p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 13 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

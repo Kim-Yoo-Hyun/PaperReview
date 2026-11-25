@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2.
 - **p. 6 / 3.4. Language-Embeded Surface Fields - extractive body cue:** LSeg [19] is a 2D open-vocabulary segmentation network, while other methods [20, 34] are per-scene optimized language field models.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 5 (3.4. Language-Embeded Surface Fields).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2.
 - **p. 2 / 1. Introduction - extractive body cue:** In contrast, constructing language-embedded fields from sparse views is inherently more challenging due to the scarcity of input information, yet it is critical for expanding ...
 - **p. 5 / 3.2. Building the TriMap Video Diffusion - extractive body cue:** hierarchy masks {Mh/h = s, m, l} at inference time from only two input views segmented by DS, where s, m, l represents small, medium, ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2.
 - **p. 8 / 4.2. Main Results - extractive body cue:** Training Curve comparison between our LQC and regular autoencoder technique. curacy in both mIoU and mAcc metrics with a large margin, i.e., a 10.58\ % ...
 - **p. 5 / 3.2. Building the TriMap Video Diffusion - extractive body cue:** hierarchy masks {Mh/h = s, m, l} at inference time from only two input views segmented by DS, where s, m, l represents small, medium, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** learnable, embeddings, training, utilize, classic, dictionary, learning, algorithms, push, towards, encoder, outputs, left, operatorname, right, Query, Mask, RGB, Normal, Bear.
 - **Relevant PDF headings:** 2.2. Video Diffusion Models (p. 3); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2.
 - **p. 8 / 4.3. Ablations - extractive body cue:** We conduct ablation experiments with our TriMap Video Diffusion and Language Quantized Compressor techniques.
 - **p. 6 / 4.1. Experiment Setup - extractive body cue:** Finally, we apply SAM2 to annotate 300 clips of semantic video clips to fine-tune with RGB and normal videos with 1000 steps.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 4 (3.2. Building the TriMap Video Diffusion), p. 3 (3.1. Overview of LangScene-X), p. 3 (3.1. Overview of LangScene-X), objective p. 5 (3.4. Language-Embeded Surface Fields), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.3. Language Quantized Compressor), p. 3 (3.2. Building the TriMap Video Diffusion), p. 4 (3.2. Building the TriMap Video Diffusion), p. 6 (3.4. Language-Embeded Surface Fields), temporal p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.4. Language-Embeded Surface Fields), p. 4 (3.2. Building the TriMap Video Diffusion), p. 5 (3.4. Language-Embeded Surface Fields), p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

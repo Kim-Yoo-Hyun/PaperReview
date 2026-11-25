@@ -58,7 +58,6 @@ PDF body method statement (p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BAC
 - **PDF p. 27, Table A4 (DOC-QA2 원문 대조):** Table A4는 CD=(Accuracy+Completeness)/2, 두 방향 nearest-point L1 distance 평균, F-score=2PR/(P+R)를 정의한다. Precision/recall은 L1 distance<0.05인 비율이다. 이는 reconstruction metric 정의이며 training loss가 아니다.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 6 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 5 (3.1 BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BAC
 - **p. 6 / 3.1 BACKGROUND - extractive body cue:** In the initialization stage, we first apply chart alignment in MAtCha to obtain an initial depth map for each input view.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We propose a novel method that leverages the plane representation to derive scale-accurate geometric constraints, substantially improving ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BAC
 - **p. 7 / 3.1 BACKGROUND - extractive body cue:** 2, each loop begins by constructing a visibility grid from the current training views, followed by selecting novel viewpoints and inpainting their invisible regions; the ...
 - **p. 7 / 3.1 BACKGROUND - extractive body cue:** During each round of 2DGS training, our method adopts the same total loss formulation as MAtCha (Eq.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** OVERALL, TRAINING, STRATEGY, pipeline, consists, stages, initialization, stage, geometry-guided, generative, loop, begin, introducing, base, model, MAtCha, objective, Section, Given, input.
 - **Relevant PDF headings:** 3 METHOD (p. 4); C.4 CHOICE OF GENERATIVE MODELS (p. 23).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BAC
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 4: Qualitative comparison. Our approach achieves better appearance and geometry recon- struction with fewer Gaussian floaters in both observed and unobserved regions. The second ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Additionally, we present more experimental results in Appendix A, failure cases and discuss the method's limitations in Appendix D.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 4 (3.1 BACKGROUND), p. 6 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), objective p. 6 (3.1 BACKGROUND), p. 4 (3.1 BACKGROUND), p. 4 (3 METHOD), p. 7 (3.1 BACKGROUND), p. 7 (3.1 BACKGROUND), p. 27 (C.7 IMPLEMENTATION DETAILS), temporal p. 4 (3.1 BACKGROUND), p. 10 (4.2 RESULTS), p. 10 (5 CONCLUSION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.
 - **p. 6 / 3.3. Reasoning-Enhanced Action Adaptation - extractive body cue:** This asynchronous design highlights a key advantage of our dual-system architecture, allowing the reasoning MLLM to perform slow thinking while the action model executes fast ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 4 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 5 (3.3. Reasoning-Enhanced Action Adaptation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.
 - **p. 2 / 1. Introduction - extractive body cue:** Our main contributions are summarized as follows: • We propose ThinkAct, a dual-system framework that mutually enhances action execution and visualgrounded embodied reasoning connected by ...
 - **p. 4 / 3.2. Reinforced Visual Latent Planning for Embodied Reasoning - extractive body cue:** Reward Shaping from Action-Aligned Visual Feedback To tackle this challenge, we design a novel action-aligned visual feedback that captures long-horizon goals and encourages visual grounding ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** (2023) tasks are further fine-tuned for 75K iterations with batch size 128.
 - **p. 10 / 4.5. Analysis of ThinkAct - extractive body cue:** We fine-tune the action model on just 10 demonstrations per task and evaluate performance over 100 trials.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** During, reasoning-enhanced, action, adaptation, freeze, while, updating, model, state, encoder, latent, projector, target, environment, conditioning, visual, plan, inference, time, given.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 3); 2.2. Reasoning in Vision-Language-(Action) Models (p. 3); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** (2023) as the latent projector with 32 queries and fine-tune on 100K OXE samples for 120K iterations using batch size 256 and learning rate 2e-5.
 - **p. 8 / 4.2. Quantitative Evaluation - extractive body cue:** Note that, Qwen2.5-VL* indicates fine-tuning the original Qwen2.5-VL using EgoPlan-IT Chen et al.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.4. Learning Strategy and Inference), p. 4 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 4 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 5 (3.3. Reasoning-Enhanced Action Adaptation), objective p. 5 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 4 (3.1. Problem Formulation), p. 5 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 4 (3.1. Problem Formulation), p. 6 (3.4. Learning Strategy and Inference), p. 6 (3.3. Reasoning-Enhanced Action Adaptation), temporal p. 4 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 5 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning), p. 3 (3.1. Problem Formulation), p. 7 (4.2. Quantitative Evaluation), p. 1 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

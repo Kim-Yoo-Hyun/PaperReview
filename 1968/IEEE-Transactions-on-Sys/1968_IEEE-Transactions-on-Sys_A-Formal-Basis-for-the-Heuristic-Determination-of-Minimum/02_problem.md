@@ -59,8 +59,6 @@ PDF body contribution framing (p. 2 (2) The heuristic approach typically uses sp
 | body cue at p. 4 | Failure of A* to terminate could then only be caused by continued reopening of nodes within M steps ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 2 | If it expands nodes which obviously cannot be on an optimal path, it is wasting effort. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 planning writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM). The downstream handoff is claimed only when the body describes it.
@@ -68,10 +66,8 @@ planning writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (A. The Problem of Finding Paths Through Graphs), p. 1 (A. The Problem of Finding Paths Through Graphs), interface p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), p. 3 (II. AN ADMISSIBLE SEARCHING ALGORITHM), objective p. 2 (2) The heuristic approach typically uses special knowl).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

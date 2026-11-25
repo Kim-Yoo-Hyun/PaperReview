@@ -49,8 +49,6 @@ nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율
 - **p. 8 / 5.2. Ablation studies - extractive body cue:** Detector Tracker AMOTA↑AMOTP↓Ttrack Ttot CenterPoint-Voxel Point 63.7 0.606 1ms 62ms CBGS [67] Point 59.8 0.682 1ms > 182ms CenterPoint-Voxel M-KF 60.0 0.765 73ms 135ms CBGS ...
 - **p. 8 / 5.2. Ablation studies - extractive body cue:** To compare with prior work that did not evaluate on Waymo test, we also report results on the Waymo validation split in Table 11.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We present a center-based framework to represent, detect and track objects. Previous anchor-based methods use axis-aligned anchors with respect to ego-vehicle coordinate. When ...
@@ -84,8 +82,6 @@ nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율
 | Our model displays a consistent performance improvement over all categories and shows more significant improvements in small categories (+5.6 mAP for traffic cone) and ... | definition/direction/unit from same section | p. 6 (5.1. Main Results) |
 | Effects of different feature components In our two-stage CenterPoint model, we only use features from the 2D CNN feature map. | definition/direction/unit from same section | p. 7 (5.2. Ablation studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율
 | On nuScenes (Table 2), our model outperforms the last-year challenge winner CBGS [67] with multi-scale inputs and multi-model ensemble by 5.2% mAP and 2.2% ... | comparison identity and matched condition | p. 5 (5.1. Main Results) |
 | Here, we compare with two voxel feature extraction baselines: Voxel-Set Abstraction. | comparison identity and matched condition | p. 7 (5.2. Ablation studies) |
 | Our centerbased detectors perform much better than the anchor-based baseline when the box is rotated or deviates from the average box size, demonstrating the ... | comparison identity and matched condition | p. 7 (5.2. Ablation studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율
 | body limitation/failure cue | Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection. | p. 6 (5.1. Main Results) |
 | body limitation/failure cue | Two-stage refinement does not bring an improvement over the single-stage CenterPoint model on nuScenes in our experiments. | p. 7 (5.2. Ablation studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,20 +139,11 @@ nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율
 | At training time, only ground truth centers are supervised using an L1 regression loss. | p. 4 (4. CenterPoint) |
 | At inference time, we use this offset to associate current detections to past ones in a greedy fashion. | p. 4 (4. CenterPoint) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 5.1. Main Results - extractive body cue:** Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection.
 - **p. 7 / 5.2. Ablation studies - extractive body cue:** Two-stage refinement does not bring an improvement over the single-stage CenterPoint model on nuScenes in our experiments.
 
 - **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5. Experiments), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), metrics p. 4 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 8 (5.2. Ablation studies), p. 6 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), baselines p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 8 (5.2. Ablation studies), p. 5 (5.1. Main Results), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), results p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 12 (Figure/Table caption), p. 7 (5.2. Ablation studies), p. 7 (5.2. Ablation studies), p. 5 (5.1. Main Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

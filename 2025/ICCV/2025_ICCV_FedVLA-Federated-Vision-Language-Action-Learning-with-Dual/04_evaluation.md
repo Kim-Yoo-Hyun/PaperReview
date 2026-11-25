@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Validation loss comparison in ablation study across four tasks.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Visualization of expert activation distribution per task for different object types.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between centralized and federated VLA training. Centralized training collects all user data on the cloud, raising privacy concerns due to potential exposure ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 | The x-axis represents the training rounds, while the y-axis represents the validation loss. | definition/direction/unit from same section | p. 8 (4.3. Ablation Studies) |
 | Figure 1. Comparison between centralized and federated VLA training. Centralized training collects all user data on the cloud, raising privacy concerns due to potential ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 | The proposed DGMoE achieves consistently lower expert activation densities compared to vanilla topk MoE, which assigns tokens to a fixed number of experts, where ... | comparison identity and matched condition | p. 8 (4.4. Analysis on DGMoE) |
 | Ablation studies of proposed FedVLA without IOSP, DGMoE, and EDA. | comparison identity and matched condition | p. 7 (4.3. Ablation Studies) |
 | To further explore the effectiveness of the IOSP, DGMOE and EDA in FedVLA, we conduct ablation experiments by individually removing each module while keeping ... | comparison identity and matched condition | p. 7 (4.3. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 | body limitation/failure cue | For collision detection and dynamics simulation, we employ official physics engines to ensure accurate robotic interactions within the simulation environment. | p. 6 (4.1. Simulation) |
 | body limitation/failure cue | The integration of these modules together results in a architecture that supports FedVLA's robustness and adaptability across diverse tasks. | p. 7 (4.3. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 | The Clean Up task is harder in the manipulation aspect as it requires the robot interaction for multiple steps. | p. 7 (4.3. Ablation Studies) |
 | Specifically, the experimental setups are as follows: (1) remove the IOSP module and directly input the entire scene image and proprioception data into the ... | p. 7 (4.3. Ablation Studies) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4. Experiments - extractive body cue:** For evaluation, the success and failure of a trial are recoreded as 1 and 0.
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation), p. 6 (Figure/Table capti
 - **p. 7 / 4.3. Ablation Studies - extractive body cue:** The integration of these modules together results in a architecture that supports FedVLA's robustness and adaptability across diverse tasks.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Real-World), p. 6 (4.1. Simulation), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Real-World), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 7 (4.3. Ablation Studies), p. 7 (4.2. Real-World), p. 6 (4.1. Simulation), p. 6 (4.1. Simulation), p. 3 (Figure/Table caption), p. 8 (4.3. Ablation Studies), baselines p. 6 (4.1. Simulation), p. 6 (4. Experiments), p. 8 (4.4. Analysis on DGMoE), p. 8 (4.4. Analysis on DGMoE), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), results p. 6 (4.1. Simulation), p. 6 (Figure/Table caption), p. 7 (4.2. Real-World), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Analysis on DGMoE), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -58,8 +58,6 @@ PDF body contribution framing (p. 7 (4.3. Embodied Action in 3D World), p. 1 (1.
 |---|---|---|
 | body cue at p. 2 | Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (2. Model), p. 4 (2.3. Training & Inference), p. 6 (4.2. Scene-grounded Dialogue and Planning), p. 3 (2.1. Tokenization). The downstream handoff is claimed only when the body describes it.
@@ -67,7 +65,5 @@ PDF body contribution framing (p. 7 (4.3. Embodied Action in 3D World), p. 1 (1.
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (2. Model), p. 4 (2.3. Training & Inference), p. 6 (4.2. Scene-grounded Dialogue and Planning), p. 3 (2.1. Tokenization), objective p. 3 (2. Model), p. 3 (2.3. Training & Inference), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

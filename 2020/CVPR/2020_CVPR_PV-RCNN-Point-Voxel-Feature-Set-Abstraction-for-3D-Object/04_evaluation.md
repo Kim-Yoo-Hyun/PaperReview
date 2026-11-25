@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detec
 - **p. 6 / 4. Experiments - extractive body cue:** 4.2) and the newly introduced large-scale Waymo Open Dataset [20, 40] (Sec.
 - **p. 7 / 4.2. 3D Detection on the KITTI Dataset - extractive body cue:** To conduct evaluation on the test set with the KITTI official test server, the model is trained with 80% of all available train+val data and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our proposed PV-RCNN framework deeply integrates both the voxel-based and the PointNet-based networks via a two- step strategy including the voxel-to-keypoint 3D scene ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detec
 | Figure 1. Our proposed PV-RCNN framework deeply integrates both the voxel-based and the PointNet-based networks via a two- step strategy including the voxel-to-keypoint 3D ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | The cosine annealing learning rate strategy is adopted for the learning rate decay. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detec
 | Similarly, as shown in Table 2, our method outperforms previous stateof-the-art methods with large margins. | comparison identity and matched condition | p. 7 (4.2. 3D Detection on the KITTI Dataset) |
 | For 3D detection and bird-view detection of cyclist, our methods outperforms previous LiDAR-only methods with large margins on the moderate and hard difficulty levels ... | comparison identity and matched condition | p. 7 (4.2. 3D Detection on the KITTI Dataset) |
 | Hard RPN Baseline ✓ 90.46 80.87 77.30 Pool from Encoder ✓ ✓ 91.88 82.86 80.52 PV-RCNN ✓ ✓ ✓ 92.57 84.83 82.69 Table 7. | comparison identity and matched condition | p. 8 (4.3. 3D Detection on the Waymo Open Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detec
 |---|---|---|
 | body limitation/failure cue | We hope it could set up a strong baseline on the Waymo Open Dataset for future works. | p. 8 (4.3. 3D Detection on the Waymo Open Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,19 +125,10 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detec
 | Hard RPN Baseline ✓ 90.46 80.87 77.30 Pool from Encoder ✓ ✓ 91.88 82.86 80.52 PV-RCNN ✓ ✓ ✓ 92.57 84.83 82.69 Table 7. | p. 8 (4.3. 3D Detection on the Waymo Open Dataset) |
 | Performance comparison on the Waymo Open Dataset (version 1.2 released in March 2020) with 202 validation sequences for three categories. †: re-implemented by ourselves ... | p. 8 (4.2. 3D Detection on the KITTI Dataset) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. 3D Detection on the Waymo Open Dataset - extractive body cue:** We hope it could set up a strong baseline on the Waymo Open Dataset for future works.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.2. 3D Detection on the KITTI Dataset), p. 8 (4.2. 3D Detection on the KITTI Dataset), p. 8 (4.2. 3D Detection on the KITTI Dataset), p. 6 (4. Experiments), p. 7 (4.2. 3D Detection on the KITTI Dataset), metrics p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detection on the Waymo Open Dataset), p. 6 (4.1. Experimental Setup), p. 7 (4.2. 3D Detection on the KITTI Dataset), p. 8 (4.2. 3D Detection on the KITTI Dataset), p. 9 (Figure/Table caption), baselines p. 8 (4.3. 3D Detection on the Waymo Open Dataset), p. 6 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 7 (4.2. 3D Detection on the KITTI Dataset), p. 7 (4.2. 3D Detection on the KITTI Dataset), p. 8 (4.3. 3D Detection on the Waymo Open Dataset), results p. 7 (Figure/Table caption), p. 8 (4.3. 3D Detection on the Waymo Open Dataset), p. 7 (4.2. 3D Detection on the KITTI Dataset), p. 8 (4.3. 3D Detection on the Waymo Open Dataset), p. 1 (Figure/Table caption), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

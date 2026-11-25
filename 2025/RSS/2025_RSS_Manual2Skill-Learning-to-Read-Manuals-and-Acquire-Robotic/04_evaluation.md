@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 - **p. 15 / B. Pose Estimation Implementation - extractive body cue:** In contrast, our pose estimation dataset includes per-step data (i.e., subassemblies).
 - **p. 15 / B. Pose Estimation Implementation - extractive body cue:** As shown in Table VII, adding per-step data improves assembly prediction accuracy, demonstrating that per-step inference enhances robot assembly performance.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of Manual2Skill Framework. We propose Manual2 ‘enabling robots to understand and execute complex manipulation tasks in mi the input of our pipeline: ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 | squared error (MSE) loss to measire the distance between the round truth translation ¢ andthe predicted translation f: | definition/direction/unit from same section | p. 14 (B. Pose Estimation Implementation) |
 | These findings underscore the practicality and effectiveness of our approach for real-world implementation. ‘The primary | definition/direction/unit from same section | p. 9 (C. Overall Performance Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 | (Our system successfully assembles 29 out of 50 furniture pieces, whereas the baseline method assembles only 15. | comparison identity and matched condition | p. 8 (C. Overall Performance Evaluation) |
 | Method FLISAT VARIERA SUNDVIK_ KNAGGLIG Oracle Foxe ms 80 wo 900 Mean-Max Pool 525617 400 700 Ours 0 800 680. | comparison identity and matched condition | p. 9 (C. Overall Performance Evaluation) |
 | Although Mask Seg slightly outperforms the original version without mask segmentations, we chose the latter for all reported tables. | comparison identity and matched condition | p. 16 (B. Pose Estimation Implementation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 | body limitation/failure cue | Manually inspecting each assembly plan reveals common failure modes: the VLM frequently misidentifies parts (e.g. labeling a bench seat as a "tabletop"), generates physically ... | p. 16 (B. Pose Estimation Implementation) |
 | body limitation/failure cue | We analyze the faire cases in assembly graph generation mek os The most ffequent failure modes inchude: (1) The VLM a ae] | p. 17 (B. Pose Estimation Implementation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 | For each group of equivalent components, we apply the predicted transformation to the point cloud of each component and then compute the Chamfer distance ... | p. 14 (B. Pose Estimation Implementation) |
 | The issues of hallucinations in part identification and logical inconsistencies in assembly steps highlight the limitations of relying solely on the VLM's learned priors, ... | p. 16 (B. Pose Estimation Implementation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / C. Overall Performance Evaluation - extractive body cue:** Failures occur when the RRTConnect algorithm cannot find a feasible trajectory when the planned path results in collisions with the robotic arm or surrounding objects ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 9 (C. Overall Performance Evaluation), p. 8 (
 - **p. 17 / B. Pose Estimation Implementation - extractive body cue:** We analyze the faire cases in assembly graph generation mek os The most ffequent failure modes inchude: (1) The VLM a ae]
 
 - **Evidence anchors reviewed:** datasets p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 17 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation), metrics p. 16 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), baselines p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), results p. 9 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 8 (C. Overall Performance Evaluation), p. 9 (C. Overall Performance Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 - **p. 6 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2 achieves state-of-the-art result on the VQAv2 (Goyal et al., 2017) and GQA (Hudson & Manning, 2019) datasets.
 - **p. 7 / 4.1. Instructed Zero-shot Image-to-Text Generation - extractive body cue:** BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models Models #Trainable Params NoCaps Zero-shot (validation set) COCO Fine-tuned in-domain near-domain out-domain overall ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BLIP-2's framework. We pre-train a lightweight Querying Transformer following a two-stage strat- egy to bridge the modality gap. The first stage ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 | Figure 2. (Left) Model architecture of Q-Former and BLIP-2's first-stage vision-language representation learning objectives. We jointly optimize three objectives which enforce the queries (a ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Table 4. Comparison with state-of-the-art models fine-tuned for visual question answering. of-the-art performance with significant improvement on NoCaps over existing methods, demonstrating strong gener- ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 | Table 3. Comparison with state-of-the-art image captioning methods on NoCaps and COCO Caption. All methods optimize the cross- entropy loss during finetuning. C: CIDEr, ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 4. Comparison with state-of-the-art models fine-tuned for visual question answering. of-the-art performance with significant improvement on NoCaps over existing methods, demonstrating strong gener- ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 5. Comparison with state-of-the-art image-text retrieval methods, finetuned on COCO and zero-shot transferred to Flickr30K. COCO finetuning objectives Image →Text Text →Image R@1 ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 | body limitation/failure cue | We aim to create a similar dataset in future work. | p. 8 (5. Limitation) |
 | body limitation/failure cue | Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 | It extracts a fixed number of output features from the image encoder, independent of input image resolution. | p. 2 (3.1. Model Architecture) |
 | We propose Q-Former as the trainable module to bridge the gap between a frozen image encoder and a frozen LLM. | p. 2 (3.1. Model Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Limitation - extractive body cue:** The LLMs cannot learn from it the correlation among multiple image-text pairs in a single sequence.
@@ -154,6 +133,5 @@ PDF body evaluation/result cue (p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Effect of vision-language representation learning on vision-to-language generative learning. Without representation learning, the Q-Former fails the bridge the modality gap, leading to significantly ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (4.1. Instructed Zero-shot Image-to-Text Generation), metrics p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 6 (4. Experiment), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (4. Experiment), p. 6 (4.1. Instructed Zero-shot Image-to-Text Generation), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

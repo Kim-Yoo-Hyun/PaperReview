@@ -58,7 +58,6 @@ PDF body method statement (p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic 
 - **p. 3 / 3.1 Footstep planning as a mixed-integer convex - extractive body cue:** If the objective function and constraints are convex, then such an optimization can be solved extremely efficiently (Boyd and Vandenberghe 2004).
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (3.1 Footstep planning as a mixed-integer convex), p. 7 (3.1.3 Determining the number of footsteps), p. 8 (3.2 Dynamic motion planning), p. 9 (3.2 Dynamic motion planning), p. 12 (4.4 Additional costs and constraints), p. 10 (4.1 General formulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic 
 - **p. 8 / 3.2 Dynamic motion planning - extractive body cue:** Transcription methods, on the other hand, include a finite set of states along the trajectory as decision variables and incorporate the dynamics of the system ...
 - **p. 8 / 3.2 Dynamic motion planning - extractive body cue:** By simultaneously optimizing the states and inputs along the trajectory, transcription methods avoid numerical issues that can be present in shooting methods (in which small ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic 
 - **p. 3 / 3.1 Footstep planning as a mixed-integer convex - extractive body cue:** If the objective function and constraints are convex, then such an optimization can be solved extremely efficiently (Boyd and Vandenberghe 2004).
 - **p. 3 / 3 Motion planning - extractive body cue:** Then we solve an optimization problem that assigns contacts to these regions in a way that minimizes cost while respecting kinematic and dynamic constraints.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** polytope, representation, planner, since, always, larger, volume, inscribed, ellipsoid, represented, linear, constraints, will, discussed, below, redundant, multiple-force, description, total, wrench.
 - **Relevant PDF headings:** 4 Controller design (p. 9); 5.1 Requirements and approach (p. 14); 5.4 Process model (p. 15); 5.5 Measurement model (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic 
 - **p. 22 / 6.4.1 Running - extractive body cue:** 13), require at least 3cm of clearance between links to avoid self-collisions, and constrain the gaze of the robot's head cameras to be no more ...
 - **p. 19 / 6.1 State estimation evaluation - extractive body cue:** In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.1.1 Convex decomposition), p. 8 (3.2 Dynamic motion planning), p. 11 (4.4 Additional costs and constraints), p. 8 (3.2 Dynamic motion planning), p. 10 (4 Controller design), p. 3 (3.1 Footstep planning as a mixed-integer convex), objective p. 3 (3 Motion planning), p. 6 (3.1.3 Determining the number of footsteps), p. 10 (4.1 General formulation), p. 10 (4.1 General formulation), p. 13 (4.5 Efficient QP solver), p. 3 (3.1 Footstep planning as a mixed-integer convex), temporal p. 17 (5.5.1 Leg kinematics), p. 17 (5.5.1 Leg kinematics), p. 11 (4.2 COM and COP stabilization), p. 13 (4.5 Efficient QP solver), p. 13 (4.5 Efficient QP solver), p. 1 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

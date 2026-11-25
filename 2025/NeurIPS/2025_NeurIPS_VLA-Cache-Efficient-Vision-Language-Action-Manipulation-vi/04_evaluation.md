@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiment)
 - **p. 9 / 5 Experiment - extractive body cue:** (b) Real-world task under dynamic background.
 - **p. 8 / 5 Experiment - extractive body cue:** More details about real-world experiments are available in the AppendixE.4.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: During the inference of the VLA model, static tokens of the input image remain largely consistent across steps. This consistency allows for caching ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiment)
 | Table 6: Comparison of success rates across different tasks in the LIBERO-Spatial benchmark. | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
 | Table 10: Varying the relevance threshold τ (with k=100). Overall, efficiency (FLOPs and latency) improves monotonically with larger k and τ, while success rate ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiment)
 | It performs robustly across tasks and exceeds the baseline on goal-oriented manipulation. | comparison identity and matched condition | p. 8 (5 Experiment) |
 | Best values are in bold. #Tokens Methods SR % ↑ FLOPs ↓ Latency (ms) ↓ 0 Baseline 84.4 1.888 52.37 50 SparseVLM 79.8 1.358 ... | comparison identity and matched condition | p. 8 (5 Experiment) |
 | As shown in Table 7, success rate of baseline dropped from 95% to 80% under noise. | comparison identity and matched condition | p. 9 (5 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiment)
 | body limitation/failure cue | As shown in Table 7, success rate of baseline dropped from 95% to 80% under noise. | p. 9 (5 Experiment) |
 | body limitation/failure cue | To assess robustness, we introduced background motion (e.g., human hands and moving objects) in the PickPot task. | p. 9 (5 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiment)
 | Initially proposed in the Transformer architecture [37], KV caching enables the model to reuse previously computed key (K) and value (V) vectors for each ... | p. 3 (3 Methodology) |
 | Concretely, given a sequence of input tokens X, the self-attention mechanism computes: Q = XWQ, K = XWK, V = XWV , (1) Attn(Q, ... | p. 3 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 18 / Figure/Table caption - extractive body cue:** Table 11: Real-world results with trial counts and success rates. Results with Counts and Rates. Table 11 reports per-task successes and failures, along with the ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (5 Experiment)
 - **p. 9 / 5 Experiment - extractive body cue:** To assess robustness, we introduced background motion (e.g., human hands and moving objects) in the PickPot task.
 
 - **Evidence anchors reviewed:** datasets p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 8 (5 Experiment), metrics p. 9 (Figure/Table caption), p. 7 (5 Experiment), p. 9 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 8 (5 Experiment), baselines p. 7 (5 Experiment), p. 15 (Figure/Table caption), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), results p. 9 (Figure/Table caption), p. 8 (5 Experiment), p. 9 (5 Experiment), p. 16 (Figure/Table caption), p. 7 (5 Experiment), p. 8 (5 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

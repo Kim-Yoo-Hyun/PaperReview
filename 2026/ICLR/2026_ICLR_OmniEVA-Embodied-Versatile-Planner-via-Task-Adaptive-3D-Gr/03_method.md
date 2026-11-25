@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 17 (A.
 - **p. 17 / A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS - extractive body cue:** The ViT encoder is frozen, while the LLM backbone is updated with a reduced learning rate of 5e -7 to prioritize learning within the TAGR ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 17 (A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 17 (A.
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** Right: Illustrative examples of the gated router's activation state across different tasks. task to be performed, and 2) the scene condition, reflecting the structural complexity ...
 - **p. 18 / A.2.2 TEXTUAL AND COORDINATE-BASED OUTPUTS - extractive body cue:** 2D Spatial Annotations For tasks such as 2D visual grounding and image captioning, inputs and outputs can be expressed using normalized pixel coordinates within the ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 17 (A.
 - **p. 17 / A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS - extractive body cue:** Detailed hyper-parameters as given in Table 7 TAGR Pretraining During TAGR pretraining, we freeze the sentence transformer and train the MLP encoder with a learning ...
 - **p. 17 / A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS - extractive body cue:** Each training group generates 8 candidate outputs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** OVERVIEW, OmniEVA, builds, pretrained, MLLMs, typically, comprises, three, principal, components, vision, transformer, encoder, Eimg, converts, RGB, image, sequence, discrete, visual.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 3); A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 17 (A.
 - **p. 28 / C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING - extractive body cue:** It poses a significant challenge for MLLMs, which often struggle to generate accurate 3D bounding boxes without priors from off-the28
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Ablation Results of the proposed TE-GRPO Method on Local Mobile-Manipulation Tasks As shown in Figure 5, OmniEVA-ER-jointly optimized with rtask and rembod -demonstrates ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 17 (A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS), p. 3 (3 METHODOLOGY), p. 17 (A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS), p. 4 (3 METHODOLOGY), objective p. 18 (A.3 IMPLEMENTATION DETAIL OF EMBODIMENT-AWARE REASONING), p. 17 (A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS), temporal p. 3 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 17 (A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS), p. 18 (A.2.1 VISUAL INPUT MODALITIES), p. 18 (A.2.1 VISUAL INPUT MODALITIES), p. 17 (A.1 MODEL ARCHITECTURE AND TRAINING CONFIGURATIONS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 - **p. 4 / II. METHOD - extractive body cue:** 4: Energy landscape induced by NDFs - Given a demonstration in the form of a pointcloud-point tuple (ˆP, ˆx), and the pointcloud of an unseen ...
 - **p. 6 / II. METHOD - extractive body cue:** We assume a segmented object point cloud and a static environment that remains fixed between demonstration-time and test-time.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Given a few (∼5-10) demonstrations of a manipulation task (left), Neural Descriptor Fields (NDFs) generalize the task to novel object instances in any ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 | Instead, we propose and demonstrate that we may leverage recently proposed neural implicit shape representations [5, 21, 27] to parameterize f and learn its ... | definition/direction/unit from same section | p. 3 (II. METHOD) |
 | This bottleneck forces the model to use these few latent variables to parameterize the salient features of the object category, which is impressively demonstrated ... | definition/direction/unit from same section | p. 3 (II. METHOD) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 | We find that while the performance of NDFs decreases significantly in the singledemonstration case, it still significantly outperforms DON, and more demonstrations yield significant ... | comparison identity and matched condition | p. 7 (II. METHOD) |
 | Prior work has leveraged this property of the activations of Φ to classify which semantic part of an object a given coordinate x belongs ... | comparison identity and matched condition | p. 3 (II. METHOD) |
 | We then conduct ablation studies of the choice of parameterizing NDFs as the concatenation of pretrained | comparison identity and matched condition | p. 6 (II. METHOD) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,7 +112,6 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 
 - Numeric sentences retained from the body:
 - **p. 6 / II. METHOD - extractive body cue:** To pretrain DON [10] and NDF, we generate a dataset of 100,000 objects of mug, bowl and bottle categories at random tabletop poses.
-- **p. 6 / II. METHOD - extractive body cue:** To pretrain DON [10] and NDF, we generate a dataset of 100,000 objects of mug, bowl and bottle categories at random tabletop poses.
 
 ## Generalization and Failure Cases
 
@@ -135,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 | body limitation/failure cue | Fig. 8: Qualitative Examples of Grasp Predictions - Both DON and NDF predict successful grasps on upright mugs. When mugs exhibit arbitrary poses, DON ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Furthermore, we assume the placement target remains static: future work may explore similarly inferring an object-centric representation of the placement target. | p. 8 (VI. DISCUSSION AND CONCLUSION) |
 | body limitation/failure cue | This is an attractive property, as at test time, we regularly only observe partial point clouds of objects due to occlusions. | p. 3 (II. METHOD) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -151,14 +137,6 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 | 7 we visualize the optimization steps taken by (11) for optimizing a grasp pose of the end-effector. | p. 5 (II. METHOD) |
 | We then leverage (10) to encode each pose Ti ∗ into its vector of descriptors Zi ∗, conditional on the respective object point cloud ... | p. 5 (II. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VI. DISCUSSION AND CONCLUSION - extractive body cue:** Several limitations and avenues for future work remain.
@@ -169,9 +147,8 @@ PDF body evaluation/result cue (p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. 
 - **p. 3 / II. METHOD - extractive body cue:** This is an attractive property, as at test time, we regularly only observe partial point clouds of objects due to occlusions.
 
 - **Evidence anchors reviewed:** datasets p. 7 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), metrics p. 6 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), p. 1 (Figure/Table caption), baselines p. 6 (II. METHOD), p. 7 (II. METHOD), p. 7 (II. METHOD), p. 3 (II. METHOD), p. 6 (II. METHOD), results p. 6 (II. METHOD), p. 6 (II. METHOD), p. 7 (II. METHOD), p. 7 (II. METHOD), p. 5 (II. METHOD), p. 3 (II. METHOD).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

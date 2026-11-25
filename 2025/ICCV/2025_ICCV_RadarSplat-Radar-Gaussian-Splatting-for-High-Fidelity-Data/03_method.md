@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.6. Training Losses), p. 5 (3.4. Denoising and
 - **p. 4 / 3.2. Multipath and Saturation Noise Detection - extractive body cue:** Unlike [5], which removes noise using a dynamic threshold that does not adapt to the radar equation, we instead detect and model radar noise to ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.5.1. Rendering with Elevation Projection), p. 3 (3. Methods), p. 3 (3. Methods), p. 4 (3.2. Multipath and Saturation Noise Detection), p. 5 (3.5. Radar Gaussian Splatting), p. 6 (3.6. Training Losses).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.6. Training Losses), p. 5 (3.4. Denoising and
 - **p. 5 / 3.4. Denoising and Occupancy Map Pre-processing - extractive body cue:** The denoised image is then used to generate an initial occupancy map following [5].
 - **p. 3 / 3. Methods - extractive body cue:** To account for radar noise, we propose a noise detection method (Sec.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 6 (3.6. Training Losses), p. 5 (3.4. Denoising and
 - **p. 6 / 3.6. Training Losses - extractive body cue:** Additionally, Locc corresponds to the L1 error between the rendered occupancy state Iα output by RadarSplat and the initial occupancy map Iocc estimated in the ...
 - **p. 3 / 3. Methods - extractive body cue:** Finally, we define the RadarSplat training loss (Sec.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** refine, model, introduce, regularization, losses, denoising, algorithm, removes, noise, across, detected, noisy, azimuth, angles, multi, identified, Sec, Next, rendering, pipeline.
 - **Relevant PDF headings:** 3. Methods (p. 3); 3.3. Modeling Multipath Effects (p. 4); 3.5.3. Spectral Leakage Modeling (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 6 (3.6. Training Losses), p. 5 (3.4. Denoising and
 - **p. 8 / 4.4. Ablation Studies - extractive body cue:** RadarSplat also fails to model other noises when disabling the proposed noise probability. reconstruction.
 - **p. 8 / 5. Conclusion - extractive body cue:** This enables radar inverse rendering for radar signal decomposition, high-fidelity radar data synthesis, and robust noise-free occupancy prediction.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.6. Training Losses), p. 5 (3.4. Denoising and Occupancy Map Pre-processing), p. 5 (3.5. Radar Gaussian Splatting), p. 6 (3.6. Training Losses), p. 3 (3. Methods), p. 3 (3. Methods), objective p. 5 (3.5.1. Rendering with Elevation Projection), p. 5 (3.5. Radar Gaussian Splatting), p. 6 (3.6. Training Losses), p. 3 (3. Methods), p. 3 (3. Methods), p. 4 (3.2. Multipath and Saturation Noise Detection), temporal p. 6 (4.1. Experimental Setup), p. 4 (3.2. Multipath and Saturation Noise Detection), p. 4 (3.2. Multipath and Saturation Noise Detection), p. 5 (3.3. Modeling Multipath Effects), p. 5 (3.5.1. Rendering with Elevation Projection), p. 6 (4.2. Novel Radar View Rendering).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

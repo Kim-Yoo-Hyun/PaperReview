@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 7 (0.027 Method), p. 2
 | body cue at p. 4 | Figure 3. Sparse-view Reconstruction on PF-LRM's Evaluation Datasets. FreeSplatter-O synthesizes significantly better visual details than PF-LRM. The 1st ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Figure 4. Sparse-view Reconstruction on GSO dataset. * indi- cates that ground truth camera poses are used as ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Model Architecture), p. 8 (4.5. Applications in 3D AIGC), p. 3 (3.2. Model Architecture), p. 3 (3. Method). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 7 (0.027 Method), p. 2
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.2. Model Architecture), p. 8 (4.5. Applications in 3D AIGC), p. 3 (3.2. Model Architecture), p. 3 (3. Method), objective p. 5 (3.3. Training Details), p. 3 (3.2. Model Architecture), p. 4 (3.3. Training Details), p. 4 (3.3. Training Details), p. 5 (3.3. Training Details), p. 7 (0.027 Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

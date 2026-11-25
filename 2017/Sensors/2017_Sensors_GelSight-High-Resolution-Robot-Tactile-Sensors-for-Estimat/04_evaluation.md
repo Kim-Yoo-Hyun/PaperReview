@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 - **p. 15 / 5. Evaluation - extractive body cue:** In this section, we take the new compact GelSight sensor mentioned in [29] as an example to evaluate the sensor's performance in estimating object shapes ...
 - **p. 16 / 5.1. Evaluation of Shape Measurement - extractive body cue:** The ground truth of the geometry is hard to get, but the reconstructed 3D structures capture both the overall shape and local textures of the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. (a) a cookie is pressed against the skin of an elastomer block; (b) the skin is distorted, as shown in this view from ...
@@ -82,21 +80,12 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 | Figure 2. (a) basic principle of the Gelsight and the desktop design introduced in [7]. There are four main components for the GelSight sensor: ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 1. The minimum distinguishable force of the fingertip GelSight (Setup shown in Figure 14a, using the shape measurement and marker measurement respectively. The ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | In the figures, we compared the measured values and the ground truth, of the pitch and yaw angles of the surface normal. | comparison identity and matched condition | p. 16 (5.1. Evaluation of Shape Measurement) |
 | The comparison between the output of the neural network and ground truth from the force/torque sensor is summarized in Figure 14b-e. | comparison identity and matched condition | p. 17 (5.2. Evaluation of Force Measurement) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 | body limitation/failure cue | As indicated in Section 3.7, the GelSight sensor can estimate the slip and incipient slip state from the stretching of the surface. | p. 18 (6. Application) |
 | body limitation/failure cue | The results also show that the GelSight measurement of force can be robust regardless of the geometry of the contact objects. | p. 17 (5.2. Evaluation of Force Measurement) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -136,14 +123,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 | The CNN model for measuring force and torque is adjusted from VGG-16 net [34], pre-trained on the computer vision dataset ImageNet [35]. | p. 17 (5.2. Evaluation of Force Measurement) |
 | In the long run, for making a good force measurement with GelSight, we should either collect a more comprehensive dataset (simulation methods could be ... | p. 18 (5.2. Evaluation of Force Measurement) |
 | (4) We solve the Poission Equation (3) using fast Poisson solver with discrete sine transform (DST), thus we can get a fast computation on ... | p. 8 (3.3. Algorithm for Measuring Shape) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -155,9 +134,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 15 (5. Evaluatio
 - **p. 17 / 5.2. Evaluation of Force Measurement - extractive body cue:** The results also show that the GelSight measurement of force can be robust regardless of the geometry of the contact objects.
 
 - **Evidence anchors reviewed:** datasets p. 18 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 16 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), metrics p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), p. 16 (5.1. Evaluation of Shape Measurement), p. 4 (Figure/Table caption), baselines p. 16 (5.1. Evaluation of Shape Measurement), p. 17 (5.2. Evaluation of Force Measurement), results p. 9 (Figure/Table caption), p. 15 (5. Evaluation), p. 16 (5.1. Evaluation of Shape Measurement), p. 16 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

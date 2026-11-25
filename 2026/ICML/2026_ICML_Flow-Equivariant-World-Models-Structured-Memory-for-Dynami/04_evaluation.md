@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4.3. 3D Dynamic Block World Benchmark), p.
 - **p. 7 / 4.3. 3D Dynamic Block World Benchmark - extractive body cue:** On the 3D Dynamic Block World dataset, we compare our Transformer-Based FloWM from Section 3.2 and Fig.
 - **p. 8 / 4.3. 3D Dynamic Block World Benchmark - extractive body cue:** In total the experiment is run across 8 episodes, and requires no additional trained parameters.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Flow Equivariant World Models (FloWM) maintain structured dynamic memory in partially observed environ- ments. When an agent observes dynamics, turns away, then turns ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4.3. 3D Dynamic Block World Benchmark), p.
 | Figure 11. Probe Prediction Through Time on a test set rollout on Dynamic Block World. a) Here we visualize the position prediction for the ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 | Table 6. As with the static MNIST World dataset, in this setting, the default configuration of FloWM with velocity channels only adds noise to ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.3. 3D Dynamic Block World Benchmark), p.
 | For the 3D Block World dataset, we additionally implement a Recurrent State Space Model (RSSM) based on Dreamer V3's world model, as a representative ... | comparison identity and matched condition | p. 6 (4.1. Diffusion-based and Recurrent Baselines) |
 | As presented in Figure 7 and Table 3, FloWM quickly finds its way to the red block, while the baselines often hallucinate a red ... | comparison identity and matched condition | p. 8 (4.3. 3D Dynamic Block World Benchmark) |
 | Though this task is relatively simple, we believe it demonstrates the downstream utility of being able to properly predict dynamics in partially observed settings, ... | comparison identity and matched condition | p. 8 (4.3. 3D Dynamic Block World Benchmark) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (4.3. 3D Dynamic Block World Benchmark), p.
 | body limitation/failure cue | Figure 5. FloWM generalizes further and trains faster. a) Timesteps 0 to 49 are given as observations. Models are trained to predict up to ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Perceptually, the DFoT and SSM models frequently hallucinate new objects and forget old ones, while the RSSM model degrades to a blurry average of ... | p. 7 (4.3. 3D Dynamic Block World Benchmark) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (4.3. 3D Dynamic Block World Benchmark), p.
 | Therefore, instead, we simply treat the output of the encoder as if it were performing this equivariant lift, and anticipate that the transformation T ... | p. 5 (3.1. Generalized Flow Equivariance) |
 | The flow ψt maps from some initial group element g0 to a new element gt (i.e. ψt(ν) · g0 = gt) by following the ... | p. 2 (3.1. Generalized Flow Equivariance) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6. Discussion - extractive body cue:** Similarly, future work may extend FloWM beyond the current discrete velocity sets V to continuous families; however prior empirical and theoretical results suggest that even ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 8 (4.3. 3D Dynamic Block World Benchmark), p.
 - **p. 7 / 4.3. 3D Dynamic Block World Benchmark - extractive body cue:** Perceptually, the DFoT and SSM models frequently hallucinate new objects and forget old ones, while the RSSM model degrades to a blurry average of many ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.3. 3D Dynamic Block World Benchmark), p. 8 (4.3. 3D Dynamic Block World Benchmark), p. 6 (4.2. 2D MNIST World Benchmark), p. 6 (4.1. Diffusion-based and Recurrent Baselines), p. 7 (4.3. 3D Dynamic Block World Benchmark), p. 8 (4.3. 3D Dynamic Block World Benchmark), metrics p. 8 (4.3. 3D Dynamic Block World Benchmark), p. 8 (4.3. 3D Dynamic Block World Benchmark), p. 7 (4.2. 2D MNIST World Benchmark), p. 7 (4.2. 2D MNIST World Benchmark), p. 26 (Figure/Table caption), p. 6 (4. Experiments), baselines p. 7 (4.2. 2D MNIST World Benchmark), p. 7 (4.3. 3D Dynamic Block World Benchmark), p. 6 (4.1. Diffusion-based and Recurrent Baselines), p. 6 (4.1. Diffusion-based and Recurrent Baselines), p. 8 (4.3. 3D Dynamic Block World Benchmark), p. 8 (4.3. 3D Dynamic Block World Benchmark), results p. 8 (4.3. 3D Dynamic Block World Benchmark), p. 23 (Figure/Table caption), p. 6 (4. Experiments), p. 7 (4.3. 3D Dynamic Block World Benchmark), p. 7 (4.2. 2D MNIST World Benchmark), p. 8 (4.3. 3D Dynamic Block World Benchmark).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

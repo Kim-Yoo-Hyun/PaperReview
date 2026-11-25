@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 - **p. 3 / 1 Introduction - extractive body cue:** Each particle is connected to its eight neighbors by a spring, i.e. a stretching constraint.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 - **p. 2 / 1 Introduction - extractive body cue:** Currently, SoftGym includes 10 challenging environments involving manipulation of rope, cloth and fluid of variable properties, with different options for the state and action spaces.
 - **p. 4 / 1 Introduction - extractive body cue:** SoftGym-Hard contains four more tasks: PourWaterAmount This task is similar to PourWater but requires a specific amount of water poured into the target cup, indicated ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 - **p. 5 / 1 Introduction - extractive body cue:** We use these positions as input to a policy trained using SAC [49]; we use the standard multi-layer perceptron (MLP) as the architecture for the ...
 - **p. 6 / 1 Introduction - extractive body cue:** The x-axis shows the number of training time steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Due, large, number, samples, required, reinforcement, learning, well, difficulty, specifying, reward, function, works, start, training, policy, simulation, then, transfer, real.
 - **Relevant PDF headings:** B Algorithm Details (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1
 - **p. 7 / 6 Experiments - extractive body cue:** On the other hand, this method does not perform very well on the FoldCloth task.
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 7: Architecture of the deconvolutional neural network (VAE decoder) in PlaNet. We use a GRU [56] with 200 hidden nodes as the deterministic path ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), p. 5 (1 Introduction), objective p. 5 (1 Introduction), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), temporal p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (1 Introduction), p. 8 (6 Experiments), p. 8 (6 Experiments), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

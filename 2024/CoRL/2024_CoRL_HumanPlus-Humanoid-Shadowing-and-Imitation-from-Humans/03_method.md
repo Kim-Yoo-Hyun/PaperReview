@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 - **p. 7 / 6. Imitation of Human Skills - extractive body cue:** We incorporate an L2 feature loss on these predicted image features, compelling the transformer to predict corresponding image feature tokens for future states after execution ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 7 (6. Imitation of Human Skills).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 - **p. 6 / 5. Shadowing of Human Motion - extractive body cue:** Our low-level policy operates at 50Hz and has a context length of 8, so it can adapt to different environments given the observation history [67].
 - **p. 3 / 1. Introduction - extractive body cue:** Using forward dynamics prediction on image features, our method shows improved performance by regularizing on image feature spaces and preventing the vision-based skill policy from ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 - **p. 2 / 1. Introduction - extractive body cue:** We leverage this dataset by first retargeting human poses to humanoid poses and then training a task-agnostic low-level policy called Humanoid Shadowing Transformer conditioning on ...
 - **p. 1 / Abstract - extractive body cue:** We first train a low-level policy in simulation via reinforcement learning using existing 40-hour human motion datasets.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** leverage, dataset, first, retargeting, human, poses, humanoid, then, training, task-agnostic, low-level, policy, called, Shadowing, Transformer, conditioning, retargeted, modify, Action, Chunking.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 2 (1. Introduction), p. 7 (6. Imitation of Human S
 - **p. 10 / 9. Experiments on Imitation - extractive body cue:** Throughout the development of our system, we encountered several limitations.
 - **p. 10 / 9. Experiments on Imitation - extractive body cue:** It fails the Wear a Shoe and Walk task completely, where depth perception is crucial.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 5 (4. Human Body and Hand Data), p. 3 (1. Introduction), p. 7 (6. Imitation of Human Skills), p. 1 (Abstract), objective p. 6 (5. Shadowing of Human Motion), p. 2 (1. Introduction), p. 5 (4. Human Body and Hand Data), p. 6 (5. Shadowing of Human Motion), p. 7 (5. Shadowing of Human Motion), p. 7 (6. Imitation of Human Skills), temporal p. 6 (5. Shadowing of Human Motion), p. 5 (5. Shadowing of Human Motion), p. 10 (8.2. Robustness Evaluation), p. 10 (8.2. Robustness Evaluation), p. 4 (2. Related Work), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

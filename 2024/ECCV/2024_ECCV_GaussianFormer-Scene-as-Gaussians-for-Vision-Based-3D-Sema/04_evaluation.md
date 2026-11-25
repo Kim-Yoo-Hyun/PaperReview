@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 - **p. 11 / 4 Experiments - extractive body cue:** We provide the efficiency comparisons of different scene representations in Table 3.
 - **p. 11 / 4 Experiments - extractive body cue:** Furthermore, the flexibility of 3D Gaussians also benefits the predictions for general objects (i.e. categories with other- prefix) which often have distinct shapes and appearances ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Considering the universal approximating ability of Gaussian mixture [9, 12], we propose an object-centric 3D semantic Gaussian representation to describe the fine- grained ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | Notably, GaussianFormer achieves comparable performance with state-of-the-art models, excelling at some smaller categories such as motorcycle and general categories such as othervehicle. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 | Our method demonstrates significantly reduced memory usage compared to other representations. | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | Our method demonstrates significantly reduced memory usage compared to other representations. | comparison identity and matched condition | p. 12 (4 Experiments) |
 | In Table 1, we present a comprehensive quantitative comparison of various methods for multi-view 3D semantic occupancy prediction on nuScenes validation set, with dense ... | comparison identity and matched condition | p. 10 (4 Experiments) |
 | Fig. 1: Considering the universal approximating ability of Gaussian mixture [9, 12], we propose an object-centric 3D semantic Gaussian representation to describe the fine- ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 |---|---|---|
 | body limitation/failure cue | This is because the positions of Gaussians are sensitive to noise which quickly converge to a trivial solution without regularization for coherence during refinement. | p. 12 (26500 M) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,19 +129,10 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | The learning rate warms up in the first 500 iterations to a maximum value of 2e-4 and decreases according to a cosine schedule. | p. 10 (4 Experiments) |
 | We then decode the properties of 3D semantic Gaussians from the updated queries as the scene representation. | p. 3 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 26500 M - extractive body cue:** This is because the positions of Gaussians are sensitive to noise which quickly converge to a trivial solution without regularization for coherence during refinement.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), metrics p. 13 (Figure/Table caption), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 1 (Figure/Table caption), results p. 10 (4 Experiments), p. 14 (Figure/Table caption), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

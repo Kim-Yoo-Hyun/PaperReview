@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 4 (3.1. Model Arch
 - **p. 4 / 3.1. Model Architecture - extractive body cue:** One of its key advantages is that it only requires 3D point cloud coordinates as input during prediction while leveraging knowledge transfer from the pretrained ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.3. Training Strategy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 4 (3.1. Model Arch
 - **p. 5 / 3.3. Training Strategy - extractive body cue:** This adaptation of the tasks is designed for user-assistant interactions, as proposed by the authors of Chat-Scene.
 - **p. 2 / 1. Introduction - extractive body cue:** In this paper, we introduce 3DGraphLLM, a novel learnable representation of a 3D scene graph designed for use as input to an LLM (see Fig.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 4 (3.1. Model Arch
 - **p. 5 / 3.3. Training Strategy - extractive body cue:** We use the semantic relationships encoder [52] pretrained using ground-truth (GT) point cloud scene segmentation data.
 - **p. 6 / 4. Experiments - extractive body cue:** We use a batch size of 8 and train 3DGraphLLM for 3 epochs with an initial learning rate of 5 · 10-6, following a cosine ...
 - **p. 8 / 4.2. Ablation Studies - extractive body cue:** 4, increasing the number of nearest neighbors enhances visual grounding quality with a slight increase in inference time.
-- **p. 5 / 3.3. Training Strategy - extractive body cue:** We use the semantic relationships encoder [52] pretrained using ground-truth (GT) point cloud scene segmentation data.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** adapt, extracted, features, language, model, three, trainable, projection, modules, Object, maps, image, objects, point, cloud, Semantic, Relation, relationships, between, Therefore.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. Model Architecture (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 4 (3.1. Model Arch
 - **p. 5 / 4. Experiments - extractive body cue:** To assess 3DGraphLLM performance under realistic conditions, we perform fine-tuning on predicted instance segmentation using 3D vision-language benchmarks 8889
 - **p. 6 / 4. Experiments - extractive body cue:** For fine-tuning the language model, we apply LoRA [23] with a rank of 16.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Model Architecture), p. 4 (3.1. Model Architecture), p. 3 (3.1. Model Architecture), p. 3 (3.1. Model Architecture), p. 5 (3.3. Training Strategy), p. 5 (3.3. Training Strategy), objective p. 5 (3.3. Training Strategy), p. 5 (3.3. Training Strategy), p. 4 (3.1. Model Architecture), temporal p. 3 (3. Method), p. 4 (3.2. Flat Graph Representation), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

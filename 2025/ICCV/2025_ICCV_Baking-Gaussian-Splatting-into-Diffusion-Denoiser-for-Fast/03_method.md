@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 
 - **p. 6 / 3.2. Scene-Object Mixed Training Strategy - extractive body cue:** Similar to the denoising loss Lde in Eq.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1. DiffusionGS), p. 5 (3.2. Scene-Object Mixed Training Strategy), p. 5 (3.2. Scene-Object Mixed Training Strategy), p. 6 (3.2. Scene-Object Mixed Training Strategy), p. 6 (3.2. Scene-Object Mixed Training Strategy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 
 - **p. 4 / 3.1. DiffusionGS - extractive body cue:** As the number of original 3D Gaussians is not a constant, we adopt the pixel-aligned 3D Gaussians [66] as the output, whose number is fixed.
 - **p. 3 / 3.1. DiffusionGS - extractive body cue:** Different from the normal diffusion model that predicts noise, our DiffusionGS aims to recover clean 3D Gaussian point clouds.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 
 - **p. 6 / 4. Experiment - extractive body cue:** In mixed training, we use 32 A100 GPUs to train the model on Objaverse, MVImgNet, RealEstate10K, and DL3DV10K for 40K iterations at the per-GPU batch ...
 - **p. 5 / 3.2. Scene-Object Mixed Training Strategy - extractive body cue:** Then the constraints are \s ma l l \ theta _{ c d}^{(i)} \leq \theta _1,~~\theta _{dn}^{(i,j)} \leq \theta _2, \vspace {-1.5mm} (9) where θ1 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** input, images, concatenated, viewpoint, conditions, patchified, linearly, projected, then, positional, embedding, derive, tokens, Transformer, backbone, consists, blocks, weighted, controlled, loss.
 - **Relevant PDF headings:** 2.1. Diffusion Models for Image-to-3D Generation (p. 3); 3. Method (p. 3); Method (p. 7); 4.1. Comparison with State-of-the-art Methods (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 7. Visual results of single-view scene reconstruction. We train the feedforward methods with the same scene data for fairness. Previous methods yield blurry images ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Single-view object generation (upper) and scene reconstruction (lower) results of our method. For single-view object generation, the prompt views are shown in the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 6 (3.2. Scene-Object Mixed Training Strategy), p. 6 (3.2. Scene-Object Mixed Training Strategy), p. 3 (3.1. DiffusionGS), p. 4 (3.1. DiffusionGS), objective p. 4 (3.1. DiffusionGS), p. 5 (3.2. Scene-Object Mixed Training Strategy), p. 5 (3.2. Scene-Object Mixed Training Strategy), p. 6 (3.2. Scene-Object Mixed Training Strategy), p. 6 (3.2. Scene-Object Mixed Training Strategy), temporal p. 3 (3.1. DiffusionGS), p. 4 (3.1. DiffusionGS), p. 4 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 5 (3.1. DiffusionGS), p. 6 (3.2. Scene-Object Mixed Training Strategy).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

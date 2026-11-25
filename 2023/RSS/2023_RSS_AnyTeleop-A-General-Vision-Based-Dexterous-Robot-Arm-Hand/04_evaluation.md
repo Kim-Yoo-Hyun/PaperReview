@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM E
 - **p. 7 / VI. SYSTEM EVALUATION - extractive body cue:** To ensure a more fair comparison, we replicate the ten manipulation tasks proposed in Robotic Telekinesis [54] with the same XArm6 robot, Allegro hand, and ...
 - **p. 7 / VI. SYSTEM EVALUATION - extractive body cue:** Task AnyTeleop Telekinesis [54] Pickup Box Object 1.0 0.9 Pickup Fabric Toy 1.0 0.9 Box Rotation 0.6 0.6 Scissor Pickup 0.8 0.7 Cup Stack 0.9 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We present AnyTeleop, a vision-based teleoperation system for a variety of scenarios to solve a wide range of manipulation tasks. AnyTeleop can be ...
@@ -79,21 +77,12 @@ PDF body evaluation/result cue (p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM E
 | Fig. 5. In this setting, operator #1 control a robot hand, and operator #2 control a human hand. Collaborative Teleoperation System Design. Fig. 6 ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | Fig. 7: Hand Pose Detection Visualization. This figure visualizes the hand detection results, with the white bounding box highlighting the predicted area and red ... | definition/direction/unit from same section | p. 14 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | As shown in Table IV, AnyTeleop can get a higher success rate of 8/10 tasks and the same success rate on 2/10 compared with ... | comparison identity and matched condition | p. 7 (VI. SYSTEM EVALUATION) |
 | Although AnyTeleop is designed to be more general, it can still outperform the baseline system that was specifically designed for the XArm6-Allegro hardware. | comparison identity and matched condition | p. 7 (VI. SYSTEM EVALUATION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM E
 | body limitation/failure cue | On the contrary, the baseline system utilizes retargeting to generate joint trajectory for robot arm, which may lead to several self-collision for robot arm. | p. 8 (VII. APPLICATIONS) |
 | body limitation/failure cue | We also compare it with a pure reinforcement learning (RL) based algorithm from [44] which does not utilize demonstrations. | p. 7 (VII. APPLICATIONS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM E
 | It enables smooth deployment on different simulators or real hardware. | p. 2 (I. INTRODUCTION) |
 | For real-world teleoperation, AnyTeleop can outperform a previous system [54] designed for specific robot hardware with higher success rates on 8 out of 10 ... | p. 2 (I. INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / Figure/Table caption - extractive body cue:** Fig. 7: Hand Pose Detection Visualization. This figure visualizes the hand detection results, with the white bounding box highlighting the predicted area and red points ...
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM E
 - **p. 7 / VII. APPLICATIONS - extractive body cue:** We also compare it with a pure reinforcement learning (RL) based algorithm from [44] which does not utilize demonstrations.
 
 - **Evidence anchors reviewed:** datasets p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), metrics p. 7 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), p. 6 (VI. SYSTEM EVALUATION), p. 6 (VI. SYSTEM EVALUATION), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 7 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), results p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), p. 6 (VI. SYSTEM EVALUATION), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

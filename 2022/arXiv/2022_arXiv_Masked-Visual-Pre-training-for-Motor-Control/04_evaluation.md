@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 8 / 5.4. Additional Comparisons - extractive body cue:** We believe it would be interesting to perform a controlled study on in-the-wild images with text annotations, like from the recently released Ego4D dataset (Grauman ...
 - **p. 7 / 5.3. Ablations - extractive body cue:** We conjecture that it may be due to (a) the RL signal being unstable and hard to tune; (b) noisy gradients from the RL objective ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We explore learning complex motor control from pixels. We show that we are able to solve a range of motor control tasks with ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | We hand-design task-specific dense reward functions for training RL policies. | definition/direction/unit from same section | p. 4 (3.4. Observations and Actions) |
 | We always report the performance yielded by the best learning rate aggregated over seeds unless otherwise specified. | definition/direction/unit from same section | p. 5 (4. Experimental Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | MVP trained on HOI data outperforms the counterpart trained on ImageNet data on 7 out of 8 tasks. | comparison identity and matched condition | p. 6 (5.3. Ablations) |
 | Steps (M) KukaReach Oracle MVP Supervised Figure 10. | comparison identity and matched condition | p. 7 (5.3. Ablations) |
 | We compare our learnt representations to a random features baseline. | comparison identity and matched condition | p. 7 (5.3. Ablations) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | We do not observe clear gains from preliminary model scaling and believe that scaling data and model size is an exciting area for future ... | p. 8 (5.3. Ablations) |
 | body limitation/failure cue | Other hyperparams use defaults: Adam optimizer with β1 = 0.9 and β2 = 0.999, gradient norm of 1, initial noise standard deviation of 1.0. | p. 5 (4. Experimental Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | This proprioceptive information is readily available on real robot hardware. | p. 3 (2.2. Learning Motor Control from Pixels) |
 | The scarcity of GPU memory is a bottleneck for learning motor control from pixels. | p. 4 (3.6. Distributed Training) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / 3.1. Motivation - extractive body cue:** While there exist a number of excellent benchmarks for motor control, e.g., DMC (Tassa et al., 2018), RLBench (James et al., 2020), Robosuite (Zhu et ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 5 / 4. Experimental Setup - extractive body cue:** Other hyperparams use defaults: Adam optimizer with β1 = 0.9 and β2 = 0.999, gradient norm of 1, initial noise standard deviation of 1.0.
 
 - **Evidence anchors reviewed:** datasets p. 4 (3.4. Observations and Actions), p. 4 (3.1. Motivation), p. 6 (5.1. Sample Complexity), p. 6 (5.2. Generalization), p. 5 (4. Experimental Setup), p. 5 (4. Experimental Setup), metrics p. 5 (3.6. Distributed Training), p. 6 (4. Experimental Setup), p. 6 (5.2. Generalization), p. 7 (5.3. Ablations), p. 7 (5.3. Ablations), p. 4 (3.4. Observations and Actions), baselines p. 5 (3.6. Distributed Training), p. 6 (5.1. Sample Complexity), p. 8 (5.4. Additional Comparisons), p. 6 (5.3. Ablations), p. 7 (5.3. Ablations), p. 7 (5.3. Ablations), results p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5.1. Sample Complexity), p. 8 (5.3. Ablations), p. 8 (5.4. Additional Comparisons), p. 6 (4. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

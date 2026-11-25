@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Class-agnostic evaluation on the ScanNet200 [7]. the ScanNet200 dataset.
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Full ablation study on all three datasets can be found in the supplementary materials.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of open-vocabulary predictions from our method in the ScanNet200 dataset [7]. Our method effectively retrieves instances based on functional descriptions (e.g., drink ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 | Different Tracklet Matching Strategies. | definition/direction/unit from same section | p. 8 (4.4. Ablation Study) |
 | Figure 4. Effectiveness of 3D proposal refinement. Red boxes indicate the object of interest, and segments of different colors de- note 3D superpoints. Without ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 | We validate our method and baselines on the validation set, reporting performance for each category group (i.e., head, common, tail) as well as the ... | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | However, we note that our method with CLIP still surpasses existing baselines by a large margin (i.e., 3.8% over Open3DIS and 2.8% over OpenYOLO3D). | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
 | Table 1. OV-3DIS results on the ScanNet200 validation set [7]. Top-1 evaluation protocol refers to assigning one predicted class per instance mask, and Top-K ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 | body limitation/failure cue | However, it lags behind OpenYOLO3D [2] in terms of mAP, which does not use CLIP for instance classification. | p. 7 (4.2. Quantitative Results) |
 | body limitation/failure cue | We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP. | p. 7 (4.2. Quantitative Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 | More detailed implementation can refer to supplementary materials. | p. 5 (3.1. Image-based Proposal Generation) |
 | For each merging iteration, we compute IOU between a pair of 3D proposals, constructing a cost matrix Cmerge ∈[0, 1]K×K that is a strictly ... | p. 5 (3.1. Image-based Proposal Generation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Improving such limitations remains our future work.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Qualitative Results), p. 6 (Figure/Ta
 - **p. 7 / 4.2. Quantitative Results - extractive body cue:** We hypothesize that the domain gap between real-world data and synthetic data from Replica may degrade the performance of Alpha-CLIP.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), metrics p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 5 (Figure/Table caption), p. 7 (4.4. Ablation Study), baselines p. 7 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 6 (Figure/Table caption), results p. 7 (4.3. Qualitative Results), p. 6 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

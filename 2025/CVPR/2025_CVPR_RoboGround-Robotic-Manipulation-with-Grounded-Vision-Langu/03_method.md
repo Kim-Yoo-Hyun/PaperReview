@@ -55,7 +55,6 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 - **p. 5 / 4.3. Grounded Policy Network - extractive body cue:** To enable action prediction, a learnable ACT token with feature Za is also included.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (4.3. Grounded Policy Network), p. 6 (4.4. Training and Inference), p. 6 (4.4. Training and Inference).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 - **p. 1 / 1. Introduction - extractive body cue:** Research in this area typically falls into two categories: accessible yet coarse-grained representations, such as language instructions [2, 49], which are easy to generate but ...
 - **p. 2 / 1. Introduction - extractive body cue:** As shown in Figure 1, existing datasets [10, 26-28, 40] often suffer from limited instruction diversity and scene complexity, leading policy networks to overfit to ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 - **p. 6 / 4.4. Training and Inference - extractive body cue:** To optimize inference time, segmentation masks are extracted from the grounded VLM only once, at the beginning of the episode.
 - **p. 5 / 4.3. Grounded Policy Network - extractive body cue:** The result is then fed into a pre-trained ViTMAE encoder [16].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Since, actions, continuous, Smooth-L1, loss, Larm, optimization, policy, network, employ, language-conditioned, transformer, architecture, following, GR-1, model, then, incorporate, grounding, knowledge.
 - **Relevant PDF headings:** 4. Method (p. 4); 4.2. Grounded Vision-Language Model (p. 4); 4.3. Grounded Policy Network (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Data Generation Pipeline. The pipeline is composed of three key stages: (a) First, we extract informative object attributes in both keyword and descriptive ...
 - **p. 7 / 5.2. Main Results - extractive body cue:** This limitation likely arises from design shortcomings, as these models encode language input as a single, global text feature, which is inadequate for the nuanced ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network), p. 4 (4.1. Overview), p. 5 (4.3. Grounded Policy Network), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview), objective p. 6 (4.4. Training and Inference), p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network), p. 5 (4.3. Grounded Policy Network), temporal p. 5 (4.3. Grounded Policy Network), p. 5 (4.3. Grounded Policy Network), p. 6 (4.4. Training and Inference), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview), p. 4 (3.2. Diverse Instructions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

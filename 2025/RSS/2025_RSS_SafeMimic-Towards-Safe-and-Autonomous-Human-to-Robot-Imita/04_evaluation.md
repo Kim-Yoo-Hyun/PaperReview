@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 - **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** ‘+ boxing an item: Pick the object from the table and place it in a box, requiring a top-down grasp by the robot to avoid ...
 - **p. 7 / C. Learning from Previous Successful Exploration - extractive body cue:** Similarly, for the store_in_dzawer task, the human-like grasp leads to joint limits being reached and so the robot explores and adapts its grasp to successfully ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Robot imitating «single video of a human ‘manipulation wsk safely and autonomously with SAFEMIMC. From a video ‘oa muli-step mbile manipulation ask (op), ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 | For all three demonstrators, SAFEMIMIC was able to successfully recover, parse and translate the demonstrated behavior. | definition/direction/unit from same section | p. 8 (C. Learning from Previous Successful Exploration) |
 | Both the IL baselines, 1L (a12 safe actions) and 12 (successful episodes) observe slightly lower unsafe action rates at 10.8% and 9.5% respectively, but ... | definition/direction/unit from same section | p. 8 (C. Learning from Previous Successful Exploration) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 | The Direct Execution baseline achieves 0% final success rate on all the seven tasks, demonstrating the need for exploration in order to effectively adapt ... | comparison identity and matched condition | p. 7 (C. Learning from Previous Successful Exploration) |
 | Both the IL baselines, 1L (a12 safe actions) and 12 (successful episodes) observe slightly lower unsafe action rates at 10.8% and 9.5% respectively, but ... | comparison identity and matched condition | p. 8 (C. Learning from Previous Successful Exploration) |
 | explored hy" SAFEMIMIC with (cgh0) and without policy memory lef, Successful attempts from an ial exploration are recorded and use to tain the policy ... | comparison identity and matched condition | p. 8 (C. Learning from Previous Successful Exploration) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,7 +110,6 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 
 - Numeric sentences retained from the body:
 - **p. 8 / C. Learning from Previous Successful Exploration - extractive body cue:** We also tested one human demonstrator across three environments on the shelving task to ensure SAFEMIMIC is robust to different objects and room layouts We ...
-- **p. 8 / C. Learning from Previous Successful Exploration - extractive body cue:** We also tested one human demonstrator across three environments on the shelving task to ensure SAFEMIMIC is robust to different objects and room layouts We ...
 
 ## Generalization and Failure Cases
 
@@ -133,8 +121,6 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 | body limitation/failure cue | However, there are some limitations of the method that offer exciting avenues for future work. | p. 8 (V. LIMITATIONS AND FUTURE WORK) |
 | body limitation/failure cue | Q2) How effectively does SAFEMIMIC reduce safetycritical failures? | p. 7 (C. Learning from Previous Successful Exploration) |
 | body limitation/failure cue | This task requires differentiating the human's semantic goal, and avoiding collisions and adapting grasps for successful placement. | p. 5 (C. Learning from Previous Successful Exploration) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -149,14 +135,6 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 | Similarly, for ‘manipulation segments, SAFEMIMIC first transforms the hand pose to be relative to the human body and then computes the relative motion of ... | p. 4 (I. INrRopucTION) |
 | If the segment has not been ‘completed, the process repeats with a new set of actions around the human demonstrated one (see pseudocode in ... | p. 5 (B. Safe and Autonomous Real-World Adaptation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / V. LIMITATIONS AND FUTURE WORK - extractive body cue:** Scaling to other types of safety violations or task failures presents an opportunity for future work.
@@ -167,9 +145,8 @@ PDF body evaluation/result cue (p. 7 (C. Learning from Previous Successful Explo
 - **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** This task requires differentiating the human's semantic goal, and avoiding collisions and adapting grasps for successful placement.
 
 - **Evidence anchors reviewed:** datasets p. 6 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 5 (B. Safe and Autonomous Real-World Adaptation), metrics p. 6 (Figure/Table caption), p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 5 (C. Learning from Previous Successful Exploration), p. 5 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), baselines p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), p. 8 (C. Learning from Previous Successful Exploration), results p. 7 (C. Learning from Previous Successful Exploration), p. 7 (C. Learning from Previous Successful Exploration), p. 6 (C. Learning from Previous Successful Exploration), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (C. Learning from Previous Successful Exploration).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

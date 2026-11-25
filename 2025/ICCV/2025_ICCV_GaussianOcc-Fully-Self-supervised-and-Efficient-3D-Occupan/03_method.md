@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 - **p. 5 / 4.2. Implementation details - extractive body cue:** In our Gaussian splatting setting, we further upsample the final output to 512×512×32 for improved performance since we observe that a finer voxel grid leads ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (Method), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 3 (3.1. Preliminaries), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 7 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 - **p. 3 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Therefore, apart from the spatial loss, [43] proposes to facilitate the Structure-fromMotion (SFM) to extract sparse depth information for direct depth supervision to provide a ...
 - **p. 4 / 3.2. Scale-aware training by Gaussian Splatting - extractive body cue:** Due to the presence of the other side's overlap region, the unprojected 3D scene remains complete if the depth map is predicted well.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 - **p. 3 / 3.1. Preliminaries - extractive body cue:** Our design allows us to benefit from the Gaussian splatting rendering for the scale-aware training by cross-view constraint and faster rendering on voxel grids, as ...
 - **p. 5 / 4.2. Implementation details - extractive body cue:** We train the models for 12 epochs on both the nuScenes and DDAD.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Overlap, mask, nuScenes, DDAD, though, have, vertices, region, during, splatting, rendering, after, optimization, network, would, predict, opacity, zero, then, contribute.
 - **Relevant PDF headings:** 3. Method (p. 3); Method (p. 5); Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 
 - **p. 5 / 4.3. Main results - extractive body cue:** As highlighted by the red rectangle, the sky region has a short-range depth value, but this does not appear in the rendered 3D occupancy estimation ...
 - **p. 5 / 4.3. Main results - extractive body cue:** Note that RenderOcc [36] does not require the 3D occupancy label, but it is not a self-supervised method since it uses the ground truth depth ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3. Fast rendering by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 5 (4.2. Implementation details), p. 5 (4.2. Implementation details), p. 7 (Method), p. 3 (3.2. Scale-aware training by Gaussian Splatting), objective p. 7 (Method), p. 3 (3.1. Preliminaries), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 5 (4.2. Implementation details), temporal p. 5 (4.3. Main results), p. 3 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.2. Scale-aware training by Gaussian Splatting), p. 4 (3.4. Loss function), p. 7 (4.4. Ablation Study), p. 8 (4.4. Ablation Study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

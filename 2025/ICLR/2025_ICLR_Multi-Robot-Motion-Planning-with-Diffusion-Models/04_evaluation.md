@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 - **p. 17 / A.4 IMPLEMENTATION DETAILS - extractive body cue:** In our experiments, the size of each local map was 2 × 2 units, and the diameter of each disk robot was 0.1 units.
 - **p. 16 / A.3 ADDITIONAL QUALITATIVE RESULTS - extractive body cue:** To better capture the behavior of the various trajectory generators discussed in this paper, Fig.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective constraint ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 | Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | To create the datasets, we endow each map with a motion pattern function that, given start and goal configurations, generates the critical motions that ... | definition/direction/unit from same section | p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 | Figure 3: Analysis of success rates and data adherence scores, in randomly generated planning queries, of all MMD instantiations and a MAPF method with ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 1: Comparison of methods by number of agents in the Empty environment (left) and the Highways environment (right). S is the success rate ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
 | We also include details on our baseline implementations. | comparison identity and matched condition | p. 18 (A.4 IMPLEMENTATION DETAILS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 | body limitation/failure cue | Figure 4: Scalability tests in high-congestion free-space MRMP. Circle (top row) asks robots to swap positions between opposite points on the perimeter. Weave (below), ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 | This can be utilized in MMD replanning by initially adding noise to the stored trajectory for a limited number of steps (3 in our ... | p. 5 (3 METHOD) |
 | Each experiment with n robots begins by randomly picking start and goal states on a map for various algorithms to compute valid trajectories τ ... | p. 6 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6 CONCLUSION - extractive body cue:** Currently, MMD focuses on coordinating robots, seeking to produce collision-free data-driven trajectories.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 15 (Figure/Table
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of how MMD- CBS generates collision-free trajectories with constrained diffusion models. 3.1 CONSTRAINTS IN DIFFUSION MODELS An intuitive and effective constraint ...
 
 - **Evidence anchors reviewed:** datasets p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 20 (A.7 TRAINING AND DATASET GENERATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.4 IMPLEMENTATION DETAILS), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), metrics p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (Figure/Table caption), p. 19 (Figure/Table caption), p. 16 (A.3 ADDITIONAL QUALITATIVE RESULTS), p. 17 (A.3 ADDITIONAL QUALITATIVE RESULTS), baselines p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 18 (A.4 IMPLEMENTATION DETAILS), results p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption), p. 19 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

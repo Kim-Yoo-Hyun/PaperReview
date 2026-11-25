@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 - **p. 12 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** "The experiments conducted with these two test scenes are similar to those in Section V.
 - **p. 13 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** IEEE TRANSACTIONS ON ROBOTICS AND AUTOMATION, VOL.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 4. Results wih customized planner for scene of Fig. 2 (20 expansion) Pee. all / Sie of all chock for connection to roadinap see) ...
@@ -70,20 +68,11 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 | In this section we demonstrate that the | definition/direction/unit from same section | p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
 | AS in Section V, we estimate the average number of collision checks needed during learning and the percentage of times that our planner succeeds ... | definition/direction/unit from same section | p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -118,8 +107,6 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 | body limitation/failure cue | (1); and collision checking is done analytically, using routines from the PLAGEO library [19]. | p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION) |
 | body limitation/failure cue | For more complicated ‘geometries, the use of an iterative collision checker, like the ‘one in {4}, will be advantageous. | p. 13 (VI. Coxctusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -133,14 +120,6 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 | These paths are computed using a simple and fast local planner. | p. 1 (Abstract) |
 | This planner has been used to compute paths of an 8-dof manipulator among vertical | p. 2 (I. RELATION 70 Previous Work) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / VI. RESULTS WITH GENERAL IMPLEMENTATION - extractive body cue:** Unlike the ‘customized implementation, this implementation does not use any specific techniques for local path planning, collision ‘checking, or distance computation.
@@ -150,9 +129,8 @@ PDF body evaluation/result cue (p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION),
 - **p. 13 / VI. Coxctusion - extractive body cue:** For more complicated ‘geometries, the use of an iterative collision checker, like the ‘one in {4}, will be advantageous.
 
 - **Evidence anchors reviewed:** datasets p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), metrics p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 11 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), baselines 본문 anchor 없음, results p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 12 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 13 (VI. RESULTS WITH GENERAL IMPLEMENTATION), p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

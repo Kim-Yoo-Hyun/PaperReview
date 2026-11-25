@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BA
 - **p. 4 / 2 BACKGROUND - extractive body cue:** (7) uses denoising score matching, but other score matching objectives, such as sliced 4
 - **p. 6 / 2 BACKGROUND - extractive body cue:** We test PC samplers on SMLD and DDPM models (see Algorithms 2 and 3 in Appendix G) trained with original discrete objectives given by Eqs.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Solving a reverse- time SDE yields a score-based generative model. Transform- ing data to a simple noise dis- tribution can be accomplished with ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BA
 | 4 SOLVING THE REVERSE SDE After training a time-dependent score-based model sθ, we can use it to construct the reverse-time SDE and then simulate ... | definition/direction/unit from same section | p. 5 (2 BACKGROUND) |
 | Figure 4: Left: Class-conditional samples on 32 ˆ 32 CIFAR-10. Top four rows are automobiles and bottom four rows are horses. Right: Inpainting (top ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BA
 | Figure 8: Left: The dimension-wise difference between encodings obtained by Model A and B. As a baseline, we also report the difference between shuffled ... | comparison identity and matched condition | p. 21 (Figure/Table caption) |
 | This enables applications such as class-conditional generation, image inpainting, colorization and other inverse problems, all achievable using a single unconditional score-based model without re-training. | comparison identity and matched condition | p. 2 (1 INTRODUCTION) |
 | 9 (Appendix G), we additionally provide qualitative comparison for 6 | comparison identity and matched condition | p. 6 (2 BACKGROUND) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BA
 | body limitation/failure cue | For continuous state spaces, the DDPM training objective implicitly computes scores at each noise scale. | p. 1 (1 INTRODUCTION) |
 | body limitation/failure cue | Consider a sequence of positive noise scales σmin " σ1 ă σ2 ă ¨ ¨ ¨ ă σN " σmax. | p. 2 (2 BACKGROUND) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BA
 | (13), we can encode any datapoint xp0q into a latent space xpTq. | p. 7 (2 BACKGROUND) |
 | This allows us to compute the exact likelihood on any input data (details in Appendix D.2). | p. 7 (2 BACKGROUND) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 CONCLUSION - extractive body cue:** Future work would benefit from improved methods to automatically select and tune these hyperparameters, as well as more extensive investigation on the merits and limitations ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BA
 - **p. 2 / 2 BACKGROUND - extractive body cue:** Consider a sequence of positive noise scales σmin " σ1 ă σ2 ă ¨ ¨ ¨ ă σN " σmax.
 
 - **Evidence anchors reviewed:** datasets p. 3 (2 BACKGROUND), p. 7 (2 BACKGROUND), p. 9 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 BACKGROUND), metrics p. 6 (Figure/Table caption), p. 1 (ABSTRACT), p. 8 (Figure/Table caption), p. 1 (ABSTRACT), p. 3 (2 BACKGROUND), p. 4 (Figure/Table caption), baselines p. 7 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 6 (2 BACKGROUND), p. 21 (Figure/Table caption), p. 2 (1 INTRODUCTION), p. 6 (2 BACKGROUND), results p. 1 (ABSTRACT), p. 6 (2 BACKGROUND), p. 9 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 8 (2 BACKGROUND).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 23 | Figure 19: (a) Initial Condition Overlay. We visualize different rollout initial conditions during test times. (b) Failure Cases ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | We hope this perspective will inspire future work in handling the heterogeneous nature of robotic data for robotic ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ robot_data writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction), p. 8 (1 Introduction), interface p. 6 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), objective p. 17 (A.1 Dataset Details).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

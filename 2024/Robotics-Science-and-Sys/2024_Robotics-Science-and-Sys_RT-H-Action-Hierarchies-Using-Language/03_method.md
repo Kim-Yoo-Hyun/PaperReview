@@ -48,7 +48,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body t
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The advantage of language in these settings is to encode the shared structure between similar tasks (e.g., "pick coke can" vs. "pick an apple"), reducing ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body t
 - **p. 2 / I. INTRODUCTION - extractive body cue:** These works often share a common paradigm: given a high-level task described in language like "pick coke can", they learn policies that map observations and ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Motivated by the benefits of language motions, we propose an end-to-end framework, RT-H (Robot Transformer with Action Hierarchies), for learning these action hierarchies: at each ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body t
 
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** In Table I, we report the minimum MSE across training checkpoints for RT-H, RT-H-Joint, and RT-2 when trained on either the Diverse+Kitchen dataset or the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Motivated, benefits, language, motions, end-to-end, framework, RT-H, Robot, Transformer, Action, Hierarchies, learning, step, conditions, observation, highlevel, task, description, predict, current.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,23 +102,13 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body t
 - **p. 10 / V. EXPERIMENTS - extractive body cue:** 8 also shows the shared structure between seemingly diverse tasks: each of these tasks require some picking behavior to begin the task, and by learning ...
 - **p. 9 / V. EXPERIMENTS - extractive body cue:** RT-HInterveneAction performs better than RT-H, but fine-tuning actions sometimes leads to policy degeneration, since actions produced by RT-H during intervention can be suboptimal. human decides ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), objective p. 2 (I. INTRODUCTION), temporal p. 4 (II. RELATED WORK), p. 5 (II. RELATED WORK), p. 5 (II. RELATED WORK), p. 2 (I. INTRODUCTION), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

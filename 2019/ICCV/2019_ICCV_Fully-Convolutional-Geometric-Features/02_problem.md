@@ -63,8 +63,6 @@ PDF body contribution framing (p. 3 (4.2. Hardest-contrastive and Hardest-triple
 | body cue at p. 4 | First, we create a matrix P that contains the indices of positive pairs (i, j) as well as ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | If ICP fails or the number of overlapping voxels is less than 1k, we removed the pair from ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 4 (5. Implementation), p. 8 (6.7. Runtime), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 3 (4.2. Hardest-contrastive and Hardest-triple
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 4 (5. Implementation), p. 8 (6.7. Runtime), p. 1 (1. Introduction), objective p. 7 (6.4. Hardest-contrastive and Hardest-triplet Losses), p. 4 (4.2. Hardest-contrastive and Hardest-triplet Losses), p. 4 (4.2. Hardest-contrastive and Hardest-triplet Losses), p. 3 (4.2. Hardest-contrastive and Hardest-triplet Losses), p. 3 (4.2. Hardest-contrastive and Hardest-triplet Losses), p. 7 (6.4. Hardest-contrastive and Hardest-triplet Losses).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

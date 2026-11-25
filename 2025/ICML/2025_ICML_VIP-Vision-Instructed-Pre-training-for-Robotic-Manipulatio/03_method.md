@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.1. Vision Intructed Pre-training), p. 5 (3.3.
 - **p. 5 / 3.2. Sparse Point Flow - extractive body cue:** VIP: Vision Instructed Pre-training for Robotic Manipulation lems, we gradually remove point flows during pre-training by masking them with an increasing probability.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.1. Vision Intructed Pre-training), p. 5 (3.2. Sparse Point Flow).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.1. Vision Intructed Pre-training), p. 5 (3.3.
 - **p. 4 / 3.1. Vision Intructed Pre-training - extractive body cue:** F1, FT , and Fp are input to the action decoder (e.g., Transformer decoders or diffusion heads) of the pre-trained policy to produce T action ...
 - **p. 5 / 3.3. Vision Instruction after Pre-train - extractive body cue:** First of all, the future observation ot+1 is affected by both the current state st and action at.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 4 (3.1. Vision Intructed Pre-training), p. 5 (3.3.
 - **p. 5 / 3.3. Vision Instruction after Pre-train - extractive body cue:** To bridge this gap, we propose to replace the future frame in pre-training as the cropped image region of the object to manipulate during fine-tuning ...
 - **p. 4 / 3.1. Vision Intructed Pre-training - extractive body cue:** F1, FT , and Fp are input to the action decoder (e.g., Transformer decoders or diffusion heads) of the pre-trained policy to produce T action ...
 - **p. 7 / 4. Experiments - extractive body cue:** In VIP, the pre-trained model parameters are updated using AdamW (Loshchilov, 2017) and the learning rate is 1e-5.
-- **p. 4 / 3.1. Vision Intructed Pre-training - extractive body cue:** In VIP, we first transform I1 and It as visual features F1 and Ft by a shared encoder like ResNet (He et al., 2016) in ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** VIP, first, transform, visual, features, shared, encoder, like, ResNet, pre-trained, policy, future, observation, affected, current, state, action, data, sample, robotic.
 - **Relevant PDF headings:** 3. Method (p. 3); 4.3. Method Analysis (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 4 (3.1. Vision Intructed Pre-training), p. 5 (3.3.
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of VIP. The input to the pre-trained policy includes two image frames (the observation frame and future frame) and sparse point ...
 - **p. 7 / 4. Experiments - extractive body cue:** The pre-training consists of 120K iterations and fine-tuning comprises 8K iterations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Vision Intructed Pre-training), p. 5 (3.3. Vision Instruction after Pre-train), p. 3 (3.1. Vision Intructed Pre-training), p. 5 (3.3. Vision Instruction after Pre-train), p. 4 (3.1. Vision Intructed Pre-training), p. 3 (3.1. Vision Intructed Pre-training), objective p. 4 (3.1. Vision Intructed Pre-training), p. 4 (3.2. Sparse Point Flow), p. 5 (3.2. Sparse Point Flow), temporal p. 4 (3.2. Sparse Point Flow), p. 4 (3.2. Sparse Point Flow), p. 3 (3.1. Vision Intructed Pre-training), p. 5 (3.3. Vision Instruction after Pre-train), p. 5 (3.3. Vision Instruction after Pre-train), p. 6 (4. Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

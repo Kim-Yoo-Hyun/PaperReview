@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup
 - **p. 8 / 7.2. Results - extractive body cue:** Visualized assessments on different datasets.
 - **p. 8 / 7.2. Results - extractive body cue:** ObjSDF++ ObjSDF++ Ours Ours Room_0 Room_0 Office_4 Background Foreground Decomposed Objects Replica Office_4 Background Decomposed Results Scene_0050 Scene_0000 Apartment ScanNet NICE-SLAM Billiard room Self-captured scene ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Indoor scenes consist of complex compositions of objects and backgrounds. Our proposed method, Total-Decom, (a) performs 3D reconstruction from posed multiview images, (b) ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup
 | Figure 2. Visualization for distilled generalized features. ever, these methods rely heavily on accurate multi-view consistent ground-truth instance-level labels and cannot ef- fectively preserve ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 5. Overview of Total-Decom. (1) Foreground and background decomposed neural reconstruction. We have four networks in this stage to predict the geometry, appearance, ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup
 | We mainly compared our approach with the ObjSDF++, the state-of-the-art method that decomposes the scene structure with pseudo geometry priors as far as we ... | comparison identity and matched condition | p. 7 (7.2. Results) |
 | The compared methods are mainly divided into two categories. | comparison identity and matched condition | p. 7 (7.1. Experiment Setup) |
 | Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup
 | body limitation/failure cue | Since this type of method does not introduce geometric constraints, we mainly compare the way of decomposition. | p. 7 (7.1. Experiment Setup) |
 | body limitation/failure cue | To further demonstrate the robustness of our method, we also use the ScanNet [6] as the real-world dataset which provides 1513 scenes. | p. 7 (7.1. Experiment Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup
 | Then, given rendered images and features from the mesh surface, our method employs the SAM decoder to convert image clicks into dense object masks ... | p. 4 (4. Overview) |
 | Passing the feature image and user-selected prompt into the SAM decoder allows us to obtain the 2D mask of the regions of interest. | p. 5 (5. Neural Implicit Feature Distillation and Sur) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Comparison on different decomposition methods with SAM feature. SAM + region growing represents object extraction with our method. SAM + similarity indicates object ...
@@ -154,6 +133,5 @@ PDF body evaluation/result cue (p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup
 - **p. 7 / 7.1. Experiment Setup - extractive body cue:** To further demonstrate the robustness of our method, we also use the ScanNet [6] as the real-world dataset which provides 1513 scenes.
 
 - **Evidence anchors reviewed:** datasets p. 7 (7.1. Experiment Setup), p. 7 (7.2. Results), p. 8 (7.2. Results), p. 8 (7.2. Results), metrics p. 7 (7.1. Experiment Setup), p. 7 (7.2. Results), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup), p. 3 (Figure/Table caption), results p. 7 (7.2. Results), p. 7 (7.1. Experiment Setup), p. 8 (7.2. Results), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

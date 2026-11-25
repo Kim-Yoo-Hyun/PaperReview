@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM F
 - **p. 2 / III. PROBLEM FORMULATION - extractive body cue:** The only exception, D, instead denotes probability distributions.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM F
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our algorithmic approach is then to train a failure predictor (e.g., in the form of a neural network that takes as input a history of ...
 - **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** Let rf : E × Π →X T × YT denote the function that ‘rolls out' the system with the given policy and the predictor ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM F
 - **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** When the failure predictor stops the rollout due to a prediction of failure, we re-run the trial without the failure predictor to determine the true ...
 - **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** Thus there are four possible outcomes: (1) true positive (1∩1), predicting 1 at least once before failure; (2) true negative (0 ∩0), never predicting 1 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** evaluate, performance, failure, predictor, introduce, error, applying, environment, where, policy, running, Tfail, step, when, occurs, whole, rollout, successful, Let, denote.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM F
 - **p. 8 / V. EXPERIMENTAL RESULTS - extractive body cue:** Since the gripper does not reach the mug in the first two out of five steps of the rollout, we only train the failure predictor ...
 - **p. 3 / IV. FAILURE PREDICTION WITH GUARANTEED ERROR - extractive body cue:** BOUNDS Our approach for learning failure predictors with guaranteed error bounds relies on a reduction to results from the PACBayes generalization theory from supervised learning; ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), objective p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), p. 2 (III. PROBLEM FORMULATION), p. 2 (III. PROBLEM FORMULATION), temporal p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 8 (V. EXPERIMENTAL RESULTS), p. 8 (V. EXPERIMENTAL RESULTS), p. 3 (III. PROBLEM FORMULATION), p. 2 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

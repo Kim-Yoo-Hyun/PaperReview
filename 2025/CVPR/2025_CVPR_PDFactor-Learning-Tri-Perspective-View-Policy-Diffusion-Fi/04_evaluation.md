@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 - **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We evaluate 25 episodes per task on 18 challenging tasks from RLBench and report mean and standard deviation of success rates (%) across 5 random ...
 - **p. 7 / 4.3. Ablation Study & Model Analysis - extractive body cue:** We train PDFactor and RVT-2 for 18 tasks with an increasing number of demonstrations. ding.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Policy Representations. (a) Explicit policy predicts a specific action distribution along the 3D space. (b) Implicit pol- icy, e.g., energy-based and diffusion-based models, ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 | 0 10 20 30 40 50 60 70 80 Training Steps (k) 0.8 0.7 0.6 0.5 Success Rate Model PDFactor-2 PDFactor-B PDFactor-S PDFactor-T RVT-2 ... | definition/direction/unit from same section | p. 8 (4.3. Ablation Study & Model Analysis) |
 | Figure 1. Policy Representations. (a) Explicit policy predicts a specific action distribution along the 3D space. (b) Implicit pol- icy, e.g., energy-based and diffusion-based ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 | We evaluate the success rate and inference speed with different diffusion steps in comparison to state-of-the-art diffusion-based method. | comparison identity and matched condition | p. 8 (4.3. Ablation Study & Model Analysis) |
 | PDFactor demonstrates faster convergence with a higher performance than previous state-of-the-art RVT-2. | comparison identity and matched condition | p. 8 (4.3. Ablation Study & Model Analysis) |
 | Table 3. Ablation on denoising MLP depth. Inference speed is measured in FPS. 10 25 50 100 Demonstrations 0.4 | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 | body limitation/failure cue | We observe that the average success rate drops by 9%, indicating the importance of feature projection to avoid visual occlusions. | p. 7 (4.3. Ablation Study & Model Analysis) |
 | body limitation/failure cue | Variants Planning Tools Long Rotation Motion Multimodal Precision Occlusion Avg. | p. 8 (4.3. Ablation Study & Model Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 | At inference time, next keyframe action is sampled via a reverse diffusion process following DDPM: \m a t hbf | p. 5 (3. We aim to model their joint dis) |
 | For language instruction \protect \mathbf {l}, we use pretrained CLIP language encoder [55] to extract a sequence of N_{t} tokens following previous works [21, ... | p. 4 (3.3. Tri-Perspective View Transformer) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Future works could explore recent techniques on reducing diffusive sampling steps while maintaining optimal accuracy.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 - **p. 8 / 4.3. Ablation Study & Model Analysis - extractive body cue:** Variants Planning Tools Long Rotation Motion Multimodal Precision Occlusion Avg.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.4. Evaluation in the Real World), p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 8 (4.4. Evaluation in the Real World), p. 7 (4.3. Ablation Study & Model Analysis), p. 7 (4.3. Ablation Study & Model Analysis), metrics p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Study & Model Analysis), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), baselines p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis), p. 7 (Figure/Table caption), results p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 8 (Figure/Table caption), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Ablation Study & Model Analysis), p. 7 (4.3. Ablation Study & Model Analysis), p. 8 (4.3. Ablation Study & Model Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

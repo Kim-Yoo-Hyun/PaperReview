@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** All the ablation models are trained and tested on the DexYCB dataset .
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** The joints must be generated in a specific permutation in order to match the permutation defined by the dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the hand pose diffusion concept. The model extracts features from input depth images and correspond- ing point clouds as joint-wise and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | The diffusion timestep was set to 500 with a cosine variance scheduler. | definition/direction/unit from same section | p. 5 (4.1. Experiment Settings) |
 | The qualitative results visualized in Figure 3 also reveal that HandDiff can estimate accurate poses from hand-object interaction scenarios with various occlusions. | definition/direction/unit from same section | p. 7 (4.3. Comparison with State-of-the-Art Methods) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | Input indicates the input type of 2D depth image (D), 3D voxels (V), or 3D point cloud (P). † The results are reported from ... | comparison identity and matched condition | p. 6 (4.2. Datasets and Evaluation Metrics) |
 | The reason is intuitive that the quantity of hand keypoints to be denoised is relatively small compared to other heavy image/point cloud denoising tasks, ... | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
 | Ablations of different proposed components. | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | body limitation/failure cue | Qualitative results of HandDiff on the DexYCB datasets including different grabbing poses (top), self-occlusions (middle), and object occlusions (bottom). | p. 6 (4.3. Comparison with State-of-the-Art Methods) |
 | body limitation/failure cue | Briefly, 3DDPM is a share-weight point-wise denoiser conditioned on a global shape latent. | p. 7 (4.4. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | The depth image and the N points are first supplied into a local condition encoder that extracts local and global features. | p. 3 (3. The Proposed Hand Pose Diffusion Model) |
 | Due to the irregularity and disorder of the input point set, we exploit the hierarchical point cloud encoder [25, 34] proposed by PointNet++ [34] ... | p. 3 (3. The Proposed Hand Pose Diffusion Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** However, a limitation of HandDiff is its inability to handle scenarios with interacting hands.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 - **p. 7 / 4.4. Ablation Study - extractive body cue:** Briefly, 3DDPM is a share-weight point-wise denoiser conditioned on a global shape latent.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.2. Datasets and Evaluation Metrics), p. 7 (4.3. Comparison with State-of-the-Art Methods), p. 5 (4.2. Datasets and Evaluation Metrics), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 7 (4.3. Comparison with State-of-the-Art Methods), metrics p. 5 (4.2. Datasets and Evaluation Metrics), p. 6 (16.05 21.22 27.01 17.93 20.55 RGB), p. 7 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), baselines p. 7 (4.3. Comparison with State-of-the-Art Methods), p. 7 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.2. Datasets and Evaluation Metrics), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), results p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 5 (4.2. Datasets and Evaluation Metrics), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), p. 7 (4.3. Comparison with State-of-the-Art Methods).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -55,7 +55,6 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 - **p. 19 / C.4 METRICS - extractive body cue:** We optimize the DPT head for 2500 steps using a learning rate of 1×10-4 and a batch size of 4.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 18 (C.2 TRAINING), p. 18 (C.4 METRICS), p. 24 (C.4 METRICS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 - **p. 5 / 3 PRELIMINARIES - extractive body cue:** Angular Alignment enforces directional correspondence between the hidden states of the diffusion model, denoted by h, and specified target features, denoted by y.
 - **p. 5 / 3 PRELIMINARIES - extractive body cue:** In practice, the target features y ∈RL×N×P ×D, where L denotes the number of layers, N denotes the number of input images, P denotes the ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 - **p. 18 / C.2 TRAINING - extractive body cue:** Training proceeds for 2 epochs using a learning rate of 8 × 10-6 and a global batch size of 40.
 - **p. 20 / C.4 METRICS - extractive body cue:** For fine-tuning, our method requires only a few thousand steps and completes within hours, yielding substantial efficiency gains over full pre-training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Frames, FVD, LPIPS, SSIM, PSNR, RPE, RVE, DFoT, Song, Geometry, Forcing-4, Forcing-8, Forcing-16, default, ALIGNMENT, CONTEXT, LENGTH, Forcing, feeds, VGGT.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 
 - **p. 19 / C.4 METRICS - extractive body cue:** D SUPPLEMENTARY EXPERIMENTS D.1 ABLATION ON TEACHER MODEL Geometry Forcing does not depend on a specific 3D foundation model but still requires the 3D foundation ...
 - **p. 19 / Figure/Table caption - extractive body cue:** Table 7: Ablation study on teacher model. Our method (Geometry Forcing) is compatitable with different teacher models including VGGT and Pi3. Bold values denote the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 20 (C.4 METRICS), p. 18 (C.4 METRICS), p. 18 (C.2 TRAINING), p. 21 (C.4 METRICS), p. 21 (C.4 METRICS), p. 19 (C.4 METRICS), objective p. 18 (C.2 TRAINING), p. 18 (C.4 METRICS), p. 20 (C.4 METRICS), p. 24 (C.4 METRICS), p. 19 (C.4 METRICS), temporal p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 22 (C.4 METRICS), p. 4 (3 PRELIMINARIES), p. 7 (5 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

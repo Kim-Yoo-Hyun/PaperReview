@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (VII. APPLICATIONS), p. 8 (VII. APPLICATIONS), p
 - **p. 7 / VII. APPLICATIONS - extractive body cue:** We follow [43] to choose Demo Augmented Policy Gradient (DAPG) [46] as the imitation algorithm.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 7 (VII. APPLICATIONS), p. 5 (IV. TELEOPERATION SERVER).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (VII. APPLICATIONS), p. 8 (VII. APPLICATIONS), p
 - **p. 6 / V. WEB-BASED TELEOPERATION VIEWER - extractive body cue:** Operators can get visual feedback from the browser window and move their hands to control the corresponding robot.
 - **p. 7 / VII. APPLICATIONS - extractive body cue:** We follow [43] to choose Demo Augmented Policy Gradient (DAPG) [46] as the imitation algorithm.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 7 (VII. APPLICATIONS), p. 8 (VII. APPLICATIONS), p
 
 - **p. 7 / VII. APPLICATIONS - extractive body cue:** We can first collect demonstrations on several dexterous manipulation tasks and then use the data to train imitation learning algorithms.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, collect, demonstrations, several, dexterous, manipulation, tasks, then, data, train, imitation, learning, algorithms, Compared, demonstration, collected, baseline, system, benefits, contribute.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 7 (VII. APPLICATIONS), p. 8 (VII. APPLICATIONS), p
 - **p. 8 / VII. APPLICATIONS - extractive body cue:** On the contrary, the baseline system utilizes retargeting to generate joint trajectory for robot arm, which may lead to several self-collision for robot arm.
 - **p. 7 / VII. APPLICATIONS - extractive body cue:** We also compare it with a pure reinforcement learning (RL) based algorithm from [44] which does not utilize demonstrations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (VII. APPLICATIONS), p. 8 (VII. APPLICATIONS), p. 3 (III. SYSTEM OVERVIEW), p. 4 (IV. TELEOPERATION SERVER), p. 5 (IV. TELEOPERATION SERVER), p. 5 (IV. TELEOPERATION SERVER), objective p. 5 (IV. TELEOPERATION SERVER), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 7 (VII. APPLICATIONS), p. 7 (VII. APPLICATIONS), temporal p. 5 (IV. TELEOPERATION SERVER), p. 6 (VI. SYSTEM EVALUATION), p. 6 (VI. SYSTEM EVALUATION), p. 7 (VI. SYSTEM EVALUATION), p. 3 (II. RELATED WORK), p. 3 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

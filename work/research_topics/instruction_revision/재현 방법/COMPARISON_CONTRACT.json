@@ -7,7 +7,7 @@
   "automatic_execution_authorized": false,
   "source_cases": "SEMANTIC_CASES.json",
   "p0_unchanged": "RESUME_PLAN.json",
-  "review": "../../../update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#revision",
+  "review": "https://github.com/Kim-Yoo-Hyun/PaperReview/blob/cb650415f47a2a45ad883dabe5bd20c382b5c183/work/update/THREE_CANDIDATES_NONEXPERIMENTAL_2026-11-01.md#revision",
   "question": "After a partial instruction revision, is explicit predicted constraint-state updating useful beyond full-history recomputation and a limited rule parser, under a common frozen VLA interface?",
   "scope": {
     "primary_cases": [

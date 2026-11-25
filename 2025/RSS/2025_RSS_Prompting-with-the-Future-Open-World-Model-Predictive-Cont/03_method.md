@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 - **p. 4 / C. Motion Planning via Simulation-Informed Prompting - extractive body cue:** Our approach decomposes tasks into subgoals, adaptively selects viewpoints to facilitate VLM reasoning, and ‘optimizes actions through sampling-based planning.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (C. Motion Planning via Simulation-Informed Prompting), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 5 (C. Motion Planning via Simulation-Informed Prompting).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 - **p. 5 / C. Motion Planning via Simulation-Informed Prompting - extractive body cue:** Since robot actions are defined in SE2(3) space but the VLM operates solely on 2D visual inputs, spatial reasoning critically depends on viewpoint selection.
 - **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** Each action ay € R is defined as the 6-DoF gripper pose and the finger status (open or closed
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 
 - **p. 3 / III. PROBLEM FORMULATION - extractive body cue:** We do not assume access to task-specific training data, in-context ‘examples, or hard-coded motion primitives as used in prior work (20, 27, 13, 25].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Physical, simulation, Finally, integrate, physics, simulator, equipped, robot, URDF, model, dynamics, lunder, interaction, computes, physically, plausible, state, transitions, when, applying.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 4 (A. Construction of Interactive Digital Twins), 
 - **p. 5 / A. Experimental setup - extractive body cue:** MOKA [13] chooses the 2D keypoints as intermediate representations for VLM to predict, which are then converted into actions based on the depth information from ...
 - **p. 5 / A. Experimental setup - extractive body cue:** A task is considered a failure if the robot causes imeversible results or if the maximum step budget or time limit is reached. ‘The task ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (A. Construction of Interactive Digital Twins), p. 3 (A. Construction of Interactive Digital Twins), p. 3 (III. PROBLEM FORMULATION), p. 4 (A. Construction of Interactive Digital Twins), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 5 (C. Motion Planning via Simulation-Informed Prompting), objective p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 4 (C. Motion Planning via Simulation-Informed Prompting), p. 3 (III. PROBLEM FORMULATION), p. 5 (C. Motion Planning via Simulation-Informed Prompting), p. 4 (C. Motion Planning via Simulation-Informed Prompting), temporal p. 5 (A. Experimental setup), p. 3 (III. PROBLEM FORMULATION), p. 3 (III. PROBLEM FORMULATION), p. 6 (B. Quantitative results), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

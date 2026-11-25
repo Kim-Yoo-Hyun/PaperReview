@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (3. Methodology), p. 5 (3.2. Model Design Choice
 - **p. 5 / 3.2. Model Design Choices - extractive body cue:** To balance the contribution of each component to the overall loss, we typically set α = 10 in all experiments.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.2. Model Design Choices), p. 5 (3.2. Model Design Choices).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (3. Methodology), p. 5 (3.2. Model Design Choice
 - **p. 4 / 3.1. Architecture - extractive body cue:** For vision-language processing, we leveraged Qwen2VL (Wang et al., 2024b), a state-of-the-art vision-language model available in three sizes: 2B, 8B, and 72B parameters.
 - **p. 4 / 3.1. Architecture - extractive body cue:** It is also possible to use any other pre-trained VLM as backbone, since we decouple the vision-language understanding with action generation, making the overall architecture ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3. Methodology), p. 5 (3.2. Model Design Choice
 - **p. 4 / 3.1. Architecture - extractive body cue:** It is also possible to use any other pre-trained VLM as backbone, since we decouple the vision-language understanding with action generation, making the overall architecture ...
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** We use 2e-5 as a fixed learning rate to train the model, similar to OpenVLA.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** section, introduce, overall, framework, explore, design, choices, inform, model, architecture, Because, larger, models, typically, needs, more, data, training, OXE, Droid.
 - **Relevant PDF headings:** 3. Methodology (p. 3); 3.1. Architecture (p. 3); 3.2. Model Design Choices (p. 5); 4.4. Behavior Analysis of Robot Foundation Model (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 3 (3. Methodology), p. 5 (3.2. Model Design Choice
 - **p. 7 / 4.4. Behavior Analysis of Robot Foundation Model - extractive body cue:** Failure case analysis via self-generated reasoning.
 - **p. 8 / 5. Conclusion - extractive body cue:** Additionally, we show that DiVLA has robust generalization capabilities, adapting effectively to new instructions, tasks, and environments.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Methodology), p. 5 (3.2. Model Design Choices), p. 3 (3. Methodology), p. 4 (3.1. Architecture), p. 5 (3.1. Architecture), p. 4 (3.1. Architecture), objective p. 5 (3.2. Model Design Choices), p. 5 (3.2. Model Design Choices), temporal p. 3 (3. Methodology), p. 2 (1. Introduction), p. 3 (3.1. Architecture), p. 4 (3.1. Architecture), p. 5 (3.2. Model Design Choices), p. 7 (4.4. Behavior Analysis of Robot Foundation Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

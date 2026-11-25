@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (
 - **p. 8 / 4 Experiment - extractive body cue:** Method Aloha-AgileX Piper Franka UR5 ARX-X5 Average RoboTwin 1.0 65.1% 2.4% 67.3% 57.6% 68.6% 52.2% RoboTwin 2.0 78.8% 25.1% 67.2% 57.1% 74.2% 60.5% Difference +13.7% ...
 - **p. 9 / 4 Experiment - extractive body cue:** 4.4 Evaluation on Sim-to-Real Performance Seen Bg + not Cluttered Unseen Bg + not Cluttered Seen Bg + Cluttered Unseen Bg + Cluttered Figure 10: ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Overview of RoboTwin 2.0. RoboTwin 2.0 is a scalable framework for bimanual manipu- lation, integrating an expert data generation pipeline with a 50-task ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (
 | Table 11: Success Rates of Different Embodiments on RoboTwin 2.0 Tasks. RoboTwin1.0 RoboTwin2.0 Task Name Aloha ARX Franka Piper | definition/direction/unit from same section | p. 24 (Figure/Table caption) |
 | To further improve robustness to camera jitter and calibration errors, we apply random 3D perturbations to simulated camera poses (position and orientation), with the ... | definition/direction/unit from same section | p. 10 (4 Experiment) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (
 | For comparison, we also evaluate the released pretrained weights of RDT and Pi0 without additional fine-tuning. | comparison identity and matched condition | p. 9 (4 Experiment) |
 | This setup directly tests whether RoboTwin 2.0 enables robust policy generalization without additional real-world data from visually complex environments. | comparison identity and matched condition | p. 10 (4 Experiment) |
 | Table 7: Code Generation Efficiency and Quality Comparison. Evaluation of prompt and generated code characteristics, along with code similarity metrics (AST Structural Similarity, CodeBERT, ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (
 | body limitation/failure cue | These results demonstrate that our approach provides additional feasible grasp options that effectively mitigate the planning limitations of low-DoF manipulators. | p. 9 (4 Experiment) |
 | body limitation/failure cue | Stack Bowls Two 0.0% 0.0% 30.0% 41.0% 8.0% 55.0% 49.0% 62.0% Pick Dual Bottles 0.0% 0.0% 13.0% 12.0% 12.0% 15.0% 17.0% 7.0% Move Can ... | p. 9 (4 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (
 | The code agent synthesizes task programs from instructions, while the observer monitors execution in simulation, detects failures, and suggests corrections. | p. 3 (2 Method) |
 | Code Repair and Iterative Refinement. | p. 4 (2 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 6 Conclusion - extractive body cue:** Our system integrates MLLM-based task generation, embodiment-adaptive behavior synthesis, and comprehensive domain randomization to address key limitations in prior synthetic data generator.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (
 - **p. 9 / 4 Experiment - extractive body cue:** Stack Bowls Two 0.0% 0.0% 30.0% 41.0% 8.0% 55.0% 49.0% 62.0% Pick Dual Bottles 0.0% 0.0% 13.0% 12.0% 12.0% 15.0% 17.0% 7.0% Move Can Pot ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiment), p. 10 (4 Experiment), p. 10 (4 Experiment), p. 7 (50 Tasks for Data Generation and Benchmarking), p. 9 (4 Experiment), p. 8 (4 Experiment), metrics p. 8 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 18 (Figure/Table caption), p. 19 (Figure/Table caption), baselines p. 9 (4 Experiment), p. 8 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment), p. 17 (Figure/Table caption), results p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 8 (4 Experiment), p. 18 (Figure/Table caption), p. 10 (4 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

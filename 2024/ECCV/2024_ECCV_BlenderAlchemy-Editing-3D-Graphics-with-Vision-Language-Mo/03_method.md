@@ -52,7 +52,6 @@ PDF body method statement (p. 7 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** Inspired by works like [51], we propose a visual state evaluator V (S1, S2, I), which is tasked with returning whichever of the two visual ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 7 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p.
 - **p. 3 / 1 Introduction - extractive body cue:** 2: Iterative visual program editing employs a edit generator G and a state evaluator V in each iteration to explore and prune different potential program ...
 - **p. 6 / 3 Method - extractive body cue:** Then our goal is to discover some edited version of p0, called p1, such that F({p1}, Sbase) produces a visual state better aligned with some ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 7 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p.
 
 - **p. 8 / 3 Method - extractive body cue:** In practice, such restrictions are softly enforced through incontext prompting of VLMs, and though their inputs encourage them to abide by these constraints, the model ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** BlenderAlchemy, discover, good, edit, introduce, procedure, outlined, Algorithm, iterative, refinement, loop, repeatedly, uses, visual, state, evaluator, select, among, hypotheses, generator.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,24 +105,13 @@ PDF body method statement (p. 7 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p.
 - **p. 11 / 4 Experiments - extractive body cue:** Our system is the same as for text-based material editing, but without the need for visual imagination.
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Iterative visual program editing employs a edit generator G and a state evaluator V in each iteration to explore and prune different potential ...
 - **p. 11 / 4 Experiments - extractive body cue:** We find that a version of our system that has no visual components (-Vision) still outperforms BlenderGPT.
-- **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Iterative visual program editing employs a edit generator G and a state evaluator V in each iteration to explore and prune different potential ...
 - **p. 9 / 4 Experiments - extractive body cue:** For instance, observe that for the "digital camouflage" example, BlenderAlchemy is able to produce the "sharper angles" that the original description requests (See Figure 3) ...
 - **p. 14 / 4 Experiments - extractive body cue:** We've demonstrated BlenderAlchemy on editing materials, geometry and lighting, and hope that future works will extend this to other workflows as well.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), objective p. 8 (3 Method), p. 7 (3 Method), temporal p. 7 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 8 (3 Method), p. 10 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -41,7 +41,6 @@ PDF body method statement (p. 3 (1. Phong's model for RGB rendering from Depth (
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** sim state s_t and parameters δ -> sim action/rollout -> physics/model/planning objective -> fidelity, throughput and downstream task utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -59,7 +58,6 @@ PDF body method statement (p. 3 (1. Phong's model for RGB rendering from Depth (
 - **p. 1 / I. INTRODUCTION - extractive body cue:** This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], [3], [4] which ...
 - **Normalized interface:** observation=simulated state, geometry, contact와 control input; state=dynamics/contact state 또는 learned simulator representation; output/action=simulation step, trajectory 또는 environment query.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -74,13 +72,10 @@ PDF body method statement (p. 3 (1. Phong's model for RGB rendering from Depth (
 
 - **p. 6 / IV. SIMULATED EXPERIMENTS - extractive body cue:** We trained 10 epochs for each dataset size using Adam optimizer [32] with a learning rate of 5e-4 and batch size of 32.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** less, powerful, PyBullet, built-in, camera, provide, depth, contact, area, render, RGB, image, researchers, implemented, renderer, Phong, reflection, model, Hence, difficult.
 - **Relevant PDF headings:** 1. Phong's model for RGB rendering from Depth (simple (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -100,20 +95,10 @@ PDF body method statement (p. 3 (1. Phong's model for RGB rendering from Depth (
 - **p. 6 / IV. SIMULATED EXPERIMENTS - extractive body cue:** (Left) Examples of a successful grasp and a failure grasp.
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 8: TACTO supports rendering shadows to obtain more realistic simula- tions. The real-world measurement is collected from a DIGIT sensor touching a ball of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple), objective 본문 anchor 없음, temporal p. 4 (3. OpenGL for RGB rendering from synchronized scenes), p. 1 (body section not recovered), p. 7 (IV. SIMULATED EXPERIMENTS), p. 7 (IV. SIMULATED EXPERIMENTS), p. 1 (body section not recovered), p. 2 (III. A FAST AND FLEXIBLE SIMULATOR OF VISION-BASED).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

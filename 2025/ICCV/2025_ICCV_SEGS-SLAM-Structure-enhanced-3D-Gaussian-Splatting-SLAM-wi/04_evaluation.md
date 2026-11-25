@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 - **p. 7 / 5.2. Results Analysis - extractive body cue:** Camera Type RGB-D Monocular Stereo Datasets Replica TUM R Avg.
 - **p. 8 / 5.4. Limitations - extractive body cue:** Currently, AFME is only capable of handling static scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our method SEGS-SLAM outperforms SOTA methods (GS-ICP SLAM [11], Photo-SLAM [14], SplaTAM [16], MonoGS [26]) in photorealistic mapping quality across monocular, stereo, and ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 | Table 2. Quantitative evaluation of our method compared to SOTA methods for Monocular (Mono) and Stereo cameras on Replica, TUM RGB-D, and EuRoC MAV ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Moreover, following FreGS [47], we activate FPR once the structure of anchor points stabilizes and terminate it based on the completion of anchor point ... | definition/direction/unit from same section | p. 5 (5.1. Experiment Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 | 4, our full method (5) outperforms the model without AfME (4) in terms of PSNR scores. | comparison identity and matched condition | p. 8 (5.3. Ablation Studies) |
 | Figure 1. Our method SEGS-SLAM outperforms SOTA methods (GS-ICP SLAM [11], Photo-SLAM [14], SplaTAM [16], MonoGS [26]) in photorealistic mapping quality across monocular, stereo, ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | We first list the baseline methods used to evaluate photorealistic mapping. | comparison identity and matched condition | p. 5 (5.1. Experiment Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 | body limitation/failure cue | GS-SLAM∗denotes the result of GS-SLAM is taken from [42], all others are obtained in our experiments. '-' denotes the system does not provide valid ... | p. 6 (5.1. Experiment Setup) |
 | body limitation/failure cue | The best results are marked as best score , second best score and third best score . '-' denotes that the system does not ... | p. 7 (5.2. Results Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 | 4 (b), the input of the encoder Mθa is the the camera pose (R, t). | p. 4 (4.2. Appearance-from-Motion Embedding) |
 | On the other hand, AfME encodes the camera poses to model appearance variations. | p. 4 (4. SEGS-SLAM) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5.4. Limitations - extractive body cue:** One limitation of our method is that a poorly structured point cloud leads to a decline in photorealistic mapping quality.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Results Analysis), p. 6 (5.2. Results
 - **p. 7 / 5.2. Results Analysis - extractive body cue:** The best results are marked as best score , second best score and third best score . '-' denotes that the system does not provide ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 5 (5.1. Experiment Setup), p. 7 (5.2. Results Analysis), metrics p. 7 (5.2. Results Analysis), p. 2 (3. Extensive evaluations on various public datasets demon), p. 6 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 6 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), baselines p. 6 (5.1. Experiment Setup), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 1 (Figure/Table caption), p. 5 (5.1. Experiment Setup), results p. 7 (5.2. Results Analysis), p. 6 (5.2. Results Analysis), p. 7 (5.2. Results Analysis), p. 8 (5.3. Ablation Studies), p. 2 (3. Extensive evaluations on various public datasets demon), p. 8 (5.3. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

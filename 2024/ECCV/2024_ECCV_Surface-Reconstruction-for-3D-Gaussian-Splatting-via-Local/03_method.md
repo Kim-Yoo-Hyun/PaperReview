@@ -56,7 +56,6 @@ PDF body method statement (p. 9 (3 Method), p. 10 (3 Method), p. 5 (3 Method), p
 - **p. 6 / 3 Method - extractive body cue:** As the sparsely initialized Gaussians may fail to represent scene details, 3DGS introduces a densification operation that performs splits and merges for Gaussians based on ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 9 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 9 (3 Method), p. 10 (3 Method), p. 5 (3 Method), p
 - **p. 6 / 3 Method - extractive body cue:** To address the above issues, our first thought is to leverage the monocular geometry cues [11] to guide the 3DGS training, including both surface normal ...
 - **p. 7 / 3 Method - extractive body cue:** In addition to the local geometry cue like surface normal to guide the covariance learning, we can also adopt the monocular depth to guide the ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 9 (3 Method), p. 10 (3 Method), p. 5 (3 Method), p
 - **p. 12 / 4 Experiments - extractive body cue:** Notably, the average training time of our approach on this dataset is about 40 minutes, which is similar to SuGaR.
 - **p. 14 / 4 Experiments - extractive body cue:** Although the MonoSDF (MLP) adopts pure MLP structure which shows robustness to the camera noise, the training time of such a variant gets much longer ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, train, model, color, reconstruction, loss, original, DGS, together, monocular, related, losses, Sec, After, optimization, Gaussian, means, normals, Poisson, surface.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 9 (3 Method), p. 10 (3 Method), p. 5 (3 Method), p
 - **p. 14 / 4 Experiments - extractive body cue:** Although the MonoSDF (MLP) adopts pure MLP structure which shows robustness to the camera noise, the training time of such a variant gets much longer ...
 - **p. 12 / 4 Experiments - extractive body cue:** 4: Reconstructed surface by ablating proposed components on Replica [44].
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (3 Method), p. 10 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 9 (3 Method), p. 7 (3 Method), objective p. 9 (3 Method), p. 9 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 6 (3 Method), temporal p. 5 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

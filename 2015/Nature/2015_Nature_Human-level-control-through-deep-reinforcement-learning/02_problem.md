@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A
 | body cue at p. 6 | Thevaluesofallthehyperparametersandoptimizationparameterswereselected by performing an informal search on the games Pong, Breakout, Seaquest, Space Invaders and Beam Rider. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | At time point 2, the agent starts moving the paddle towards the ball and the value of the ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ control writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 4 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), p. 3 (V O L), p. 4 (2 6 F E B R U A R Y), interface p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), objective p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 8 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

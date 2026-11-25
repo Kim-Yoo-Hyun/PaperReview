@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.
 - **p. 3 / 3.2. Max-Return Sequence Modeling - extractive body cue:** Reinformer was trained by minimizing the sum of two loss functions L = La + Lg.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 2 (3.2. Max-Return Sequence Modeling), p. 3 (3.2. Max-Return Sequence Modeling), p. 3 (4.1. Reward Densification), p. 4 (4.2. End-to-end Reinforced VLA model), p. 4 (4.2. End-to-end Reinforced VLA model), p. 5 (4.3. Discussion and Analysis of ReinboT).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.
 - **p. 5 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** Algorithm 1 ReinboT: Test-time Execution 1: ReinboT model πϕ, Pφ, Pω, initial image state o0,test, initial proprioception s0,test, language instruction ltest, and environment Env. // ...
 - **p. 5 / 4.2. End-to-end Reinforced VLA model - extractive body cue:** ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning The hidden features ˆghidden t:t+k-1 is concatenated with the action features haction t:t+k-1 and are further input ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, first, input, language, instruction, image, state, ot-u, proprioception, st-u, backbone, network, obtain, features, hRTG, haction, corresponding, RTG, ACTION, token.
 - **Relevant PDF headings:** 2.1. Offline RL via Sequence Modeling (p. 2); 2.2. VLA Model Integrating with RL (p. 2); 3.1. Imitation Learning of VLA Model (p. 2); 3.2. Max-Return Sequence Modeling (p. 2); 4. Methodology (p. 3); 4.2. End-to-end Reinforced VLA model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.
 - **p. 14 / Figure/Table caption - extractive body cue:** Figure 9. The dense reward and reward component of long-horizon tasks with language instructions of "slide the door to the left" in CALVIN mixed-quality training ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 13. The dense reward and reward component of long-horizon tasks with language instructions of "Pick up the green cup for me" in the real-world ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), p. 4 (4.2. End-to-end Reinforced VLA model), p. 5 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), p. 5 (4.3. Discussion and Analysis of ReinboT), objective p. 5 (4.3. Discussion and Analysis of ReinboT), p. 3 (4.1. Reward Densification), p. 5 (4.3. Discussion and Analysis of ReinboT), p. 2 (3.2. Max-Return Sequence Modeling), p. 4 (4.2. End-to-end Reinforced VLA model), p. 3 (3.2. Max-Return Sequence Modeling), temporal p. 3 (4.1. Reward Densification), p. 7 (5.2. Ablation Study), p. 3 (4. Methodology), p. 4 (4.1. Reward Densification), p. 4 (4.1. Reward Densification), p. 5 (4.2. End-to-end Reinforced VLA model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

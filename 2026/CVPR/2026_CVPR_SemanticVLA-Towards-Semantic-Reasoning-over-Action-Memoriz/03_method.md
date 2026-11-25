@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1.
 - **p. 5 / 3.4. Training Recipe - extractive body cue:** Finally in Stage 3, we fine-tune the complete model end-to-end on downstream benchmarks, enabling flow matching action decoding while preserving VLM reasoning through weak regularization.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.1. Semantic Latent Action Tokenizer), p. 3 (3.1. Semantic Latent Action Tokenizer), p. 4 (3.2. VLM Co-training with Trace and Latent Action), p. 5 (3.3. Flow Matching Action Decoding).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1.
 - **p. 2 / 1. Introduction - extractive body cue:** This synergy enables trace to leverage VLM's compositional reasoning for structured waypoint generation, while latent tokens learn compact, semantically-rich visuomotor primitives by fusing trace intension ...
 - **p. 2 / 1. Introduction - extractive body cue:** Recent studies reveal critical brittleness under instruction rephrasing [17, 18] and sharp performance drops on reasoning-intensive tasks [35, 49]-VLAs succeed at direct instructions like "place ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1.
 - **p. 5 / 3.4. Training Recipe - extractive body cue:** In Stage 2, we co-train the VLM to jointly predict trace coordinates and latent action tokens on the same dataset for 100K steps with batch ...
 - **p. 4 / 3.2. VLM Co-training with Trace and Latent Action - extractive body cue:** To enable latent action prediction, we augment the VLM vocabulary with special tokens {ACT_1, ..., ACT_K} indexing into the pretrained codebook from Section 3.1.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Following, established, architectures, decoder, predicts, velocity, fields, through, cross-attention, between, latent, visual, features, generating, actions, iterative, denoising, extract, DINOv2, hvisual.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1.
 - **p. 6 / 4.1. Simulation Benchmarks - extractive body cue:** Our trace-guided latent pretraining provides explicit spatial semantics beyond UniVLA and VQ-VLA, whose latents lack geometric scaffolding and rely solely on visual reconstruction or raw ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SemanticVLA Overview. Current VLA models struggle with instruction variations and reasoning-intensive tasks, often mem- orizing patterns rather than understanding semantics. We introduce a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Flow Matching Action Decoding), p. 4 (3.1. Semantic Latent Action Tokenizer), p. 5 (3.3. Flow Matching Action Decoding), p. 3 (3.1. Semantic Latent Action Tokenizer), p. 4 (3.1. Semantic Latent Action Tokenizer), p. 3 (3. Method), objective p. 4 (3.1. Semantic Latent Action Tokenizer), p. 3 (3.1. Semantic Latent Action Tokenizer), p. 4 (3.2. VLM Co-training with Trace and Latent Action), p. 5 (3.3. Flow Matching Action Decoding), p. 3 (3. Method), p. 5 (3.4. Training Recipe), temporal p. 5 (3.4. Training Recipe), p. 4 (3.2. VLM Co-training with Trace and Latent Action), p. 5 (3.3. Flow Matching Action Decoding), p. 6 (4.1. Simulation Benchmarks), p. 6 (4.2. Real-world Robotics Evaluation), p. 3 (3.1. Semantic Latent Action Tokenizer).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

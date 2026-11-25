@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** 3.3 Training Loss Our model predicts a set of 3D Gaussian parameters {(µj, αj, Σj, cj)}H×W ×K j=1 , which are then used for rendering ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p.
 - **p. 2 / 1 Introduction - extractive body cue:** Specifically, it predicts a probabilistic depth distribution for each input view and then samples depths from that predicted distribution.
 - **p. 6 / 3 Method - extractive body cue:** (4) Overall, we obtain K cost volumes {Ci}K i=1 for K input views.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p.
 - **p. 8 / 4 Experiments - extractive body cue:** All models are trained on a single A100 GPU for 300,000 iterations with the Adam [19] optimizer.
 - **p. 9 / 4 Experiments - extractive body cue:** This includes pixelNeRF [46], GPNR [33], AttnRend [10] and pixelSplat [1], with results taken directly from the pixelSplat [1] paper, and the recent state-of-the-art NeRF-based ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, multi-view, Transformer, selfand, cross-attention, layers, exchange, information, between, different, views, better, efficiency, Swin, local, window, attention, architecture, Training, Loss.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p.
 - **p. 13 / 4 Experiments - extractive body cue:** Our full model without "depth refinement" (Sec.
 - **p. 13 / 4 Experiments - extractive body cue:** 4.3 Ablations We conduct thorough ablations on RealEstate10K to analyze MVSplat.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), temporal p. 6 (3 Method), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 14 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

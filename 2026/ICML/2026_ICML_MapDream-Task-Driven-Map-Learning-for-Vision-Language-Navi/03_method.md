@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-train
 - **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** MapDream: Task-Driven Map Learning for Vision-Language Navigation reward-and is carried out using Group Relative Policy Optimization (GRPO) (Shao et al., 2024).
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.4. Reinforcement Fine-tuning), p. 4 (3.3. Supervised Pre-training), p. 4 (3.4. Reinforcement Fine-tuning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-train
 - **p. 5 / 3.4. Reinforcement Fine-tuning - extractive body cue:** MapDream: Task-Driven Map Learning for Vision-Language Navigation reward-and is carried out using Group Relative Policy Optimization (GRPO) (Shao et al., 2024).
 - **p. 1 / 1. Introduction - extractive body cue:** As a result, in current VLN pipelines, aggregating past observations into a persistent spatial state is a standard and integral component.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-train
 - **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** The model is trained for 2000 steps with a learning rate of 1 × 10-6, jointly fine-tuning both the map module and the VLN policy.
 - **p. 4 / 3.3.1. MAP SUPERVISION - extractive body cue:** We adopt lightweight ground-truth map signals during supervised pre-training to encode navigation-critical cues; this design is not exclusive, and alternative compact variants are possible.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, features, two-module, system, composed, task-driven, module, VLN, policy, spatial, representation, learning, action, prediction, supervised, pre-training, stage, establishes, reliable, mapping-to-control.
 - **Relevant PDF headings:** 3. Method (p. 4); 3.2. Map-in-the-Loop Architecture (p. 4); 3.3.3. PRE-TRAINING THE VLN POLICY (p. 4); 4.3. Comparison with State-of-the-Art Methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-train
 - **p. 5 / 4.2.2. TRAINING DETAILS - extractive body cue:** Stage 1 performs supervised pre-training of both the map module and the VLN policy, while Stage 2 jointly fine-tunes them with reinforcement learning.
 - **p. 6 / 4.2.2. TRAINING DETAILS - extractive body cue:** The model is trained for 2000 steps with a learning rate of 1 × 10-6, jointly fine-tuning both the map module and the VLN policy.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Overview), p. 4 (3.3. Supervised Pre-training), p. 5 (3.4. Reinforcement Fine-tuning), p. 5 (3.4. Reinforcement Fine-tuning), objective p. 4 (3.3.3. PRE-TRAINING THE VLN POLICY), p. 4 (3.2. Map-in-the-Loop Architecture), p. 5 (3.4. Reinforcement Fine-tuning), p. 5 (3.4. Reinforcement Fine-tuning), temporal p. 4 (3.2. Map-in-the-Loop Architecture), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 6 (4.2.2. TRAINING DETAILS), p. 4 (3.2. Map-in-the-Loop Architecture), p. 5 (3.4. Reinforcement Fine-tuning), p. 5 (3.4. Reinforcement Fine-tuning).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

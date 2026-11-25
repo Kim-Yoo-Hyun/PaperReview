@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (
 - **p. 8 / 4.2. Results - extractive body cue:** The performance is evaluated using the mIoU metric for time-agnostic queries on the HyperNeRF dataset.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** To validate the effectiveness of our design choices, we conduct ablation studies on our extended HyperNeRF dataset, as summarized in Table 2.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. Overview of the ST4R-Splat framework. It mainly consists of three main components: (I) MLLM-based object captioning for generating decoupled textual supervision, (II) an ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (
 | It fails to effectively obtain features representing the temporal state, resulting in a substantial drop in accuracy (51.92% Acc). | definition/direction/unit from same section | p. 8 (4.2. Results) |
 | Figure 1. Overview of the ST4R-Splat framework. It mainly consists of three main components: (I) MLLM-based object captioning for generating decoupled textual supervision, (II) ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (
 | Quantitative comparisons on the HyperNeRF dataset. | comparison identity and matched condition | p. 7 (4.2. Results) |
 | Ablation study of different components in our ST4R-Splat framework. | comparison identity and matched condition | p. 8 (4.2. Results) |
 | Qualitative comparison of time-sensitive query results in novel viewpoints between 4DLangSplat [22] and our method. | comparison identity and matched condition | p. 8 (4.2. Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (
 | body limitation/failure cue | Figure 1. Overview of the ST4R-Splat framework. It mainly consists of three main components: (I) MLLM-based object captioning for generating decoupled textual supervision, (II) ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | For robust object segmentation and tracking, we use the Unipixel [25] model along with the Grounded-SAM-2 [24, 30] model. | p. 6 (4.1. Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -134,14 +121,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (
 | Following the established practice in referring segmentation [9], we use the BERT [5] model to encode text embeddings for the instance-aware 4D gaussian referring ... | p. 6 (4.1. Setup) |
 | This results in a pre-computed cache of state features: Ck = {ck,t / t ∈[0, T]}. | p. 5 (3.5. Instance-Level Temporal State Modeling) |
 | We generate and encode time-aware state captions for each instance ok across all timestamps t. | p. 5 (3.5. Instance-Level Temporal State Modeling) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -152,6 +131,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (
 - **p. 6 / 4.1. Setup - extractive body cue:** For robust object segmentation and tracking, we use the Unipixel [25] model along with the Grounded-SAM-2 [24, 30] model.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Setup), p. 6 (4.1. Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.3. Ablation Studies), metrics p. 6 (4.1. Setup), p. 6 (4.1. Setup), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 4 (Figure/Table caption), baselines p. 6 (4.1. Setup), p. 6 (4.1. Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), results p. 6 (4.2. Results), p. 6 (4.2. Results), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

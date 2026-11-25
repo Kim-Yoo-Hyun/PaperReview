@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** We would like to understand how they affect weight distribution over the dataset and the resulting learning performance.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** In contrast, our method can identify the good behavior in the dataset, and avoid learning these failure behavior patterns (see next sections).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Collecting high-quality human demonstrations for imitation learning can be very difficult. Consider the problem of using a spoon, tying a rubber band, and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | Fig. 2: Overview of our algorithm. We first build a graph to represent the demonstration dataset and run a graph search to evaluate the ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | We first study how much performance gain our method can achieve compared to the state-of-the-art imitation learning baseline. | definition/direction/unit from same section | p. 5 (V. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | We observe that the baselines appear to repeat the failed human attempts during demo collection more frequently compared to our method. | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
 | 9: Relative Success rate and Normalized Proficiency improvement compared to baseline BC (DP) under different α. | comparison identity and matched condition | p. 8 (V. EXPERIMENTS) |
 | IQL [24] is a strong offline RL baseline. | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | body limitation/failure cue | Then, through both quantitative and qualitative analysis, we show that our method identify and chain useful behaviors in the dataset to learn a robust ... | p. 5 (V. EXPERIMENTS) |
 | body limitation/failure cue | We observe that the baselines appear to repeat the failed human attempts during demo collection more frequently compared to our method. | p. 7 (V. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | Here, the cost function is the number of steps taken to reach og. | p. 3 (IV. POLICY LEARNING) |
 | We introduce the implementation details in the remaining sections. | p. 3 (IV. POLICY LEARNING) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** However, in many cases, they will get stuck or go out of distribution, leading to a complete failure.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** We observe that the baselines appear to repeat the failed human attempts during demo collection more frequently compared to our method.
 
 - **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

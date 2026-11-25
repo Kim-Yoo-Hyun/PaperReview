@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 - **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** The diffusion model ϵθ predicts the noise according to xt, c, t and is then optimized by calculating the ℓ2 loss between the predicted and ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 3 (3.1. Brief introduction of diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models), p. 5 (4.2. Structural loss).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 - **p. 6 / 4.3. Optimization procedure - extractive body cue:** As for Gstu, we follow the proposed method to select 1 30 of the points from the entire point cloud as key points for calculating ...
 - **p. 2 / 1. Introduction - extractive body cue:** Generally, our proposed ScoreLiDAR achieves better scene completion performance and speed trade-off. widely adopted sensors due to its broader detection range and higher detection precision ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 - **p. 3 / 3.1. Brief introduction of diffusion models - extractive body cue:** In this process, the number of required inference steps varies depending on different sampling methods.
 - **p. 4 / 4. Method - extractive body cue:** Our goal is to distill a pre-trained 3D LiDAR scene completion diffusion model into a student model with significantly fewer sampling steps, enabling efficient and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Firstly, introduce, distillation, tailored, LiDAR, scene, completion, diffusion, models, Sec, Then, structural, loss, improve, process, scene-wise, point-wise, model, predicts, noise.
 - **Relevant PDF headings:** 3.1. Brief introduction of diffusion models (p. 3); 3.2. 3D LiDAR scene completion diffusion models (p. 3); 4. Method (p. 4); Model (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief 
 - **p. 8 / 6. Conclusion - extractive body cue:** Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the teacher ...
 - **p. 7 / 5.2. Ablation study - extractive body cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Method), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), p. 5 (4.2. Structural loss), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models), objective p. 5 (4.2. Structural loss), p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss), p. 6 (4.3. Optimization procedure), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models), temporal p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 4 (4. Method), p. 5 (4.2. Structural loss), p. 6 (5. Experiment), p. 6 (5. Experiment), p. 7 (5.2. Ablation study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 - **p. 8 / 4) What previously infeasible downstream use-cases can - extractive body cue:** The robot is provided with rearrangment goals involving novel objects.
 - **p. 9 / 4) What previously infeasible downstream use-cases can - extractive body cue:** The robot arm then computes a motion plan (using the AIRobot library [69]) to push the object to the specified target region (i.e., to the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: ConceptFusion presents an approach to build open-set multimodal 3D maps from RGB images and depth estimates from additional sources such as depth/stereo cameras ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 | For each technique evaluated, we report the 3D mean intersection-over-union (IoU) metric, and also detection accuracies at IoU thresholds of 0.15, 0.25, and 0.5. | definition/direction/unit from same section | p. 7 (4) What previously infeasible downstream use-cases can) |
 | Here, we again observe that ConceptFusion outperforms other finetuned foundation models by a significant margin in terms of both 3D mIoU and detection accuracy. | definition/direction/unit from same section | p. 8 (4) What previously infeasible downstream use-cases can) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 | We therefore implement two baseline approaches that leverage LSeg and OpenSeg features respectively, and apply our feature fusion technique to obtain | comparison identity and matched condition | p. 6 (4) What previously infeasible downstream use-cases can) |
 | We see that ConceptFusion outperforms all other approaches by a significant margin. | comparison identity and matched condition | p. 7 (4) What previously infeasible downstream use-cases can) |
 | Furthermore, ConceptFusion is competitive to privileged baselines for this task. | comparison identity and matched condition | p. 8 (4) What previously infeasible downstream use-cases can) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 - **p. 6 / IV. THE ConceptFusion APPROACH - extractive body cue:** The pixel-aligned feature extraction processes run offline (10-15 seconds / image) on an NVIDIA RTX 3090 GPU.
 - **p. 7 / 4) What previously infeasible downstream use-cases can - extractive body cue:** Each image in this dataset has 3-5 objects; each object has one structured text query, and 540 unstructured text queries (freeform queries, crowdsourced from human ...
 - **p. 10 / VI. OUTLOOK - extractive body cue:** Approach mAcc f-mIoU ConceptFusion (w/ Mask2Former [60]) 24.16 31.31 ConceptFusion (w/ SAM [57]) 31.53 38.70 spatial reasoning queries over 5 scenes from the ScanRefer validation ...
-- **p. 6 / IV. THE ConceptFusion APPROACH - extractive body cue:** Our odometry and mapping approaches run at frame-rate (15 Hz).
-- **p. 6 / IV. THE ConceptFusion APPROACH - extractive body cue:** The pixel-aligned feature extraction processes run offline (10-15 seconds / image) on an NVIDIA RTX 3090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -140,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 | body limitation/failure cue | As investigated in [82, 83, 73], CLIP does not inherently capture spatial relationships or compositions. | p. 12 (VII. CONCLUSION) |
 | body limitation/failure cue | However, this approach still fails for room-level containment queries of type is <OBJ> in <ROOM>); which require additional context. | p. 10 (VI. OUTLOOK) |
 | body limitation/failure cue | The "Remove uniqueness term..." variant fuses features computed from individual masks with those computed over the entire image, but does not account for mask ... | p. 10 (4) What previously infeasible downstream use-cases can) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -156,14 +141,6 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 | In some trials, the object set also includes distractors placed to hamper perception and/or manipulation planning. | p. 8 (4) What previously infeasible downstream use-cases can) |
 | Of the approaches presented here, LSeg requires per-pixel CLIP features as labels, OpenSeg leverages per-image captions for labels, and CLIPSeg trains a shallow decoder ... | p. 8 (4) What previously infeasible downstream use-cases can) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4) What previously infeasible downstream use-cases can - extractive body cue:** The GenericLLM-Agent fails to achieve the specified task since it does not have an explicit 3D map representation, devoiding the LLM of the requisite context ...
@@ -174,9 +151,8 @@ PDF body evaluation/result cue (p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4)
 - **p. 10 / 4) What previously infeasible downstream use-cases can - extractive body cue:** The "Remove uniqueness term..." variant fuses features computed from individual masks with those computed over the entire image, but does not account for mask uniqueness ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can), p. 6 (4) What previously infeasible downstream use-cases can), p. 7 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK), metrics p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (VI. OUTLOOK), p. 6 (IV. THE ConceptFusion APPROACH), p. 9 (Figure/Table caption), p. 10 (VI. OUTLOOK), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (4) What previously infeasible downstream use-cases can), p. 10 (VI. OUTLOOK), p. 6 (4) What previously infeasible downstream use-cases can), p. 7 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), results p. 6 (IV. THE ConceptFusion APPROACH), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can), p. 9 (Figure/Table caption), p. 10 (4) What previously infeasible downstream use-cases can), p. 8 (4) What previously infeasible downstream use-cases can).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

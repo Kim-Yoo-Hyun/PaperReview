@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 - **p. 5 / 4. Experiments - extractive body cue:** We evaluate our method on 20 unseen test scenes and report averaged metrics.
 - **p. 5 / 4. Experiments - extractive body cue:** Dataset We train and evaluate our model on the ScanNet++ dataset [52].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting optimization ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 | Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 | Baselines We compare our method with several recent 3D surface reconstruction approaches: SuGaR [22], 2DGS [25], GS2Mesh [46], PGSR [9], and MonoSDF [54]. | comparison identity and matched condition | p. 5 (4. Experiments) |
 | Figure 1. QuickSplat performs surface reconstruction of large indoor scenes from multi-view images as input. We learn strong priors for initialization of gaussian splatting ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | After running our iterative optimization for t=5 timesteps, we optionally refine the Gaussians for another 2000 steps of gradient descent (without adaptive density control). | comparison identity and matched condition | p. 5 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 | body limitation/failure cue | Lastly, even though we significantly reduce optimization runtime, our method does not yet reconstruct in real-time, but could be integrated with recent SLAM-based approaches ... | p. 8 (4.3. Limitations) |
 | body limitation/failure cue | Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 | We compare the quality and optimization runtime of our reconstructed surfaces against baseline methods, and show averaged results on the test scenes in ScanNet++ ... | p. 6 (Method) |
 | Both our method without post-training ("w/o opt") and with additional SGD iterations ("w/ opt") obtain better geometry while achieving orders of magnitude faster runtime. ... | p. 6 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Limitations - extractive body cue:** Second, we assume static environments and therefore cannot reconstruct dynamic scenes (e.g., people walking inside of a room).
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 5 (4. Experiments), p. 6 (Figure/Table captio
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Ablation study. We ablate the impact of our learned priors for initialization, densification, and optimization updates. Only using our optimizer network does not ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), metrics p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4. Experiments), p. 1 (Figure/Table caption), p. 5 (4. Experiments), results p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

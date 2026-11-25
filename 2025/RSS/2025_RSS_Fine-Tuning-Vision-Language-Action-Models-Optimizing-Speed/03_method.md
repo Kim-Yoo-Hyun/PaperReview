@@ -55,7 +55,6 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 - **p. 15 / C. Feature-wise Linear Modulation (FILM) Implementation - extractive body cue:** For faster convergence, we decay the leaming rate from Se-4 to Se-S after 100K gradient steps.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (3) LI regression objective), p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 - **p. 14 / A. Model Architecture Details - extractive body cue:** These projected features are concatenated with language ‘embeddings along the sequence dimension before being pro- ‘cessed by the Llama-2 decoder to output a 7-limensional robot, ...
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** Our parallel decoding approach, when paired with action chunking, achieves significantly greater speedups: 26x to 43% throughput with much lower latency (0.07 ms for single-arm ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,16 +91,12 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 - **p. 7 / 3) LI regression objective - extractive body cue:** Given that the alternative fine-tuning formulation, along with additional model inputs and outputs, induces a distri bution shift between the base VLA's pretraining and finetuning, ...
 - **p. 7 / 3) LI regression objective - extractive body cue:** In this section, we use an augmented version of our VLA fine-tuning recipe (OFT+) that additionally includes feature- ‘wise linear modulation (FiLM) for enhanced language ...
 - **p. 8 / 3) LI regression objective - extractive body cue:** We fine-tune OpenVLA using OFT+ on each task independently for 50-150K gradient steps (total batch size 32 with 8 A100/H100-80GB GPUs) with action chunk size ...
-- **p. 8 / 3) LI regression objective - extractive body cue:** We fine-tune OpenVLA using OFT+ on each task independently for 50-150K gradient steps (total batch size 32 with 8 A100/H100-80GB GPUs) with action chunk size ...
 - **p. 15 / C. Feature-wise Linear Modulation (FILM) Implementation - extractive body cue:** We maintain the same convergence criterion as in the LIBERO experiments (training until mean normalized LI loss falls below 0.01) and similar learning rate decay ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** regression, MLP, action, head, consists, layers, ReLU, activation, mapping, final, Llama-2, decoder, layer, hidden, states, directly, continuous, actions, Diffusion, Policy.
 - **Relevant PDF headings:** 2) How does each design decision affect model inference (p. 5); B. Methods in Comparison (p. 8); A. Model Architecture Details (p. 14); 1) Single OpenVLA-OFT Policy for All LIBERO Task Suites (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +116,13 @@ PDF body method statement (p. 14 (B. Implementation Details), p. 15 (C. Feature-
 - **p. 14 / C. Feature-wise Linear Modulation (FILM) Implementation - extractive body cue:** [37], we multiply F by (1 +7) instead of 7 since + and 9 are near zero at initialization. ‘This helps preserve the visual encoder's ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: OpenVLA-OFT+ on the bimanual ALOHA robot. Our Optimized Fine-Tuning (OFT) recipe enhances fnesuned OpeaVLA pic and inpt-outptfeibliy. The resulting OpeaVLA-OFT+ policies execute diverse ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (B. Implementation Details), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 7 (3) LI regression objective), p. 14 (A. Model Architecture Details), p. 7 (3) LI regression objective), p. 8 (3) LI regression objective), objective p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (3) LI regression objective), p. 14 (B. Implementation Details), p. 14 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), temporal p. 2 (1. Iyrropucrion), p. 6 (C. LIBERO Inference Efficiency), p. 1 (1. Iyrropucrion), p. 14 (B. Implementation Details), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

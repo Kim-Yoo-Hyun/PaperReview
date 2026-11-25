@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 - **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** Model Architecture Reconstruction Loss (MAE) [cm] LSTM 2.806 Transformer 4.221 MLP 4.932 LSTM (w/o robot states) 4.448 loop performance in simulation shown in Figure 7-B.
 - **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** For example, the robot will walk up high step-ups by sliding the foot along the vertical surface of the terrain.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our fully learned controller integrates vision and locomotion for reactive and agile gaits over terrains. The proposed approach enables bipedal robot Cassie traversing ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 | Fig. 1: Our fully learned controller integrates vision and locomotion for reactive and agile gaits over terrains. The proposed approach enables bipedal robot Cassie ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: Overview of the locomotion policy with vision module. Figure 2 illustrates our overall system, which has two main components: 1) a locomotion ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 | In Termination due to foot collision, compared to LSTM, other models fails with higher chances from unfavorable foot collisions. | comparison identity and matched condition | p. 6 (VI. SIMULATION RESULTS) |
 | Additionally, the comparison also includes an LSTM model, LSTM w/o robot states, that does not use robot states as input. | comparison identity and matched condition | p. 5 (VI. SIMULATION RESULTS) |
 | Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 | body limitation/failure cue | In Termination due to foot collision, compared to LSTM, other models fails with higher chances from unfavorable foot collisions. | p. 6 (VI. SIMULATION RESULTS) |
 | body limitation/failure cue | Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 | LSTM has implicit history, Transformer has a fixed window size of 0.6 seconds to allow reasonable inference during runtime, and MLP does not have ... | p. 5 (VI. SIMULATION RESULTS) |
 | Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision ... | p. 6 (VI. SIMULATION RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: A. Ablation study on policy with simulation heightmap. B. Ablation study on policy with different heightmap predictor architectures. Each ablation study uses data ...
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (VI. SIMULATIO
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), metrics p. 5 (VI. SIMULATION RESULTS), p. 6 (Figure/Table caption), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 5 (VI. SIMULATION RESULTS), p. 4 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 5 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 6 (VI. SIMULATION RESULTS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

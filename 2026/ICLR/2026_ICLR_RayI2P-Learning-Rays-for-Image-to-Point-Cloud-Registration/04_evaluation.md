@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Here ✗indicates method that doesn't use Lfoc. σ KITTI nuScenes RTE(m)↓ RRE(◦)↓ Acc(%)↑ RTE(m)↓ RRE(◦)↓ Acc(%)↑ ✗ 0.10±0.09 1.02±1.00 99.18 0.42±0.31 1.94±6.22 94.44 8 0.11±0.09 ...
 - **p. 16 / A.6 MORE IMPLEMENTATION DETAILS - extractive body cue:** The output feature map is downsampled by a factor of 8 relative to the input image, yielding a resolution of 20 × 64 for KITTI ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Illustration of the iterative pose optimization process in matching-free methods such as DeepI2P. Green points indicate 3D points predicted to lie within ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | However, further increasing σ beyond 32, along with the removal of the focus loss, leads to performance degradation. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 | Figure 5: Visual comparison between classical pose solver and our proposed ray-guided pose re- gression module. Classical pose solver suffers from unstable predictions under ... | definition/direction/unit from same section | p. 15 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | 4.5 ABLATION STUDY Ablation on Ray-guided Pose Regression Module. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Figure 3: Qualitative comparison of Image-to-Point Cloud registration results on KITTI dataset. backbone network, where the output channel dimension is 512. For the 3D ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 5: Ablation studies on patch size associated with each ray. Each ray corresponds to a p × p local image patch. p KITTI ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | body limitation/failure cue | Figure 7: Failure Cases Under Completely Incorrect Overlap Prediction. Visualization of a rare but critical failure mode where the predicted overlapping region contains no ... | p. 18 (Figure/Table caption) |
 | body limitation/failure cue | Under this condition, the cross attention mechanism is misled and lacks access to any informative cues, resulting in failed ray-level reasoning across the modalities. | p. 16 (A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | We implement our code using PyTorch 1.13.1 and CUDA 11.7. | p. 16 (A.6 MORE IMPLEMENTATION DETAILS) |
 | To address this difficulty, we instead adopt a more expressive formulation by representing the camera as a bundle of rays associated with image patches, ... | p. 4 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive body cue:** This failure mode, although observed only in rare extreme cases, reveals a fundamental limitation of the current framework: when the predicted overlap region is entirely ...
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 - **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive body cue:** Under this condition, the cross attention mechanism is misled and lacks access to any informative cues, resulting in failed ray-level reasoning across the modalities.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 16 (A.6 MORE IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 14 (A.1 EVALUATION METRICS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

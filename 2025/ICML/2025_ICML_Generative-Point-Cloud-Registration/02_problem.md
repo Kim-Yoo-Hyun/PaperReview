@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | 6 (right) shows that RGB data from real-world conditions can degrade under poor lighting, negatively impacting RGB-D matching ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Our results indicate that both overly high ω (which overemphasizes geometry) and overly low ω (which overemphasizes color) ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.5. Geometric-Color Fused Point Descriptor), p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.5. Geometric-Color Fused Point Descriptor), p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 2 (1. Introduction), objective p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 3 (3. Approach).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

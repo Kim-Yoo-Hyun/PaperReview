@@ -52,7 +52,6 @@ PDF body method statement (p. 5 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 7 / 4 METHOD - extractive body cue:** These components are combined to form a 3D-aware, language-aligned representation for downstream fine-grained action prediction, following the architecture of prior work (Goyal et al., 2024).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (4 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 5 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 4 / 3 BACKGROUND - extractive body cue:** In coarse-to-fine policies, the 3D position ptk output by the coarse branch for the next key-frame is typically used as the 3D keypoint to zoom ...
 - **p. 5 / 3 BACKGROUND - extractive body cue:** The fine-grained action predictor fuses the corresponding step instruction with a 3D-aware visual representation from refined observations to predict the final action.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** 5) CLAP w/o Pre-trained Encoder An ablation study (comparing Exp ID 5 and Exp ID 6) on the coarse planner confirms that incorporating the 3D-aware ...
 - **p. 6 / 4 METHOD - extractive body cue:** Considering the significant domain shift between the images focused around predicted ptk from those used to pretrain standard VLMs, we decide to employ instead pre-trained ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** hierarchical, policy, consists, coarse, task, planner, fine-grained, action, predictor, Figure, Instead, inspired, Chain-of-Thought, reasoning, Zawalski, Zhao, robotics, design, process, training.
 - **Relevant PDF headings:** 4 METHOD (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 5 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p.
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** It is LoRA fine-tuned (Hu et al., 2022) with the object keypoint dataset, language plans, and robot trajectories.
 - **p. 16 / A.5 ADDITIONAL ABLATION STUDY - extractive body cue:** Further increasing the number of robot trajectory improves on the in-domain performance (L1) while does not help in the average success rate.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4 METHOD), p. 6 (4 METHOD), p. 7 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p. 7 (4 METHOD), objective p. 6 (4 METHOD), p. 7 (4 METHOD), temporal p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 4 (3 BACKGROUND), p. 6 (4 METHOD), p. 5 (4 METHOD), p. 5 (4 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

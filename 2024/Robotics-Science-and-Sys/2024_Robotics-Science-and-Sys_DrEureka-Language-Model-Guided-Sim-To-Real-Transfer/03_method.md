@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** Finally, we use RL to train policies for each reward and DR combination, resulting in a set of policies where πfinal,i = A(M, Ti, RDrEureka), ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 4 (IV. METHOD), p. 4 (IV. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To make Eureka reward functions more amenable for real-world transfer, we propose to include safety instructions in the prompt to automatically generate reward functions that ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Instead, DrEureka decomposes the optimization into three stages: an LLM first synthesizes reward functions, then an initial policy is rolled out in perturbed simulations to ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 - **p. 6 / V. EXPERIMENTAL SETUP - extractive body cue:** Second, we consider a baseline that trains with the human-designed DR (Human-Designed DR) in the original implementation.
 - **p. 4 / IV. METHOD - extractive body cue:** This is a challenging problem because we do not have access to the real-world environment M ∗at training time.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Algorithm, Reward, Aware, Physics, Prior, RAPP, Require, Reinforcement, learning, policy, initial, simulator, success, criteria, domain, randomization, parameters, respective, search, values.
 - **Relevant PDF headings:** IV. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHO
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: DrEureka takes the task and safety instruction, along with environment source code, and runs Eureka to generate a regularized reward function and policy. ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6: Walking Globe sim and real environments. In lab settings, we loosely strap the robot horizontally to a center point to prevent robot from ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD), objective p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD), temporal p. 5 (V. EXPERIMENTAL SETUP), p. 5 (IV. METHOD), p. 6 (V. EXPERIMENTAL SETUP), p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM SETTING), p. 8 (2) How important is each component of DrEureka?).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

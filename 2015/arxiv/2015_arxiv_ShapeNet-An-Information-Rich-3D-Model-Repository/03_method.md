@@ -50,7 +50,6 @@ PDF body method statement (p. 6 (4.2. Hierarchical Rigid Alignment), p. 1 (1. In
 - **p. 1 / 1. Introduction - extractive body cue:** Recently, data-driven methods from the machine learning community have been exploited by researchers in vision and NLP (natural language processing). "Big data" in the visual ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 6 (4.2. Hierarchical Rigid Alignment), p. 1 (1. In
 - **p. 6 / 4.2. Hierarchical Rigid Alignment - extractive body cue:** The goal of this step is to establish a consistent canonical orientation for models within each category.
 - **p. 6 / 4.2. Hierarchical Rigid Alignment - extractive body cue:** Following the above discussion, it is natural for us to propose a hierarchical alignment method, with a small amount of human supervision.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 6 (4.2. Hierarchical Rigid Alignment), p. 1 (1. In
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** alignment, level, first, geometric, algorithm, described, Appendix, then, human, experts, check, correct, possible, misalignments, Motivated, far-reaching, impact, dataset, efforts, Penn.
 - **Relevant PDF headings:** 3.3. Annotation Methodology (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,20 +102,10 @@ PDF body method statement (p. 6 (4.2. Hierarchical Rigid Alignment), p. 1 (1. In
 - **p. 6 / 4.1. Category Annotation - extractive body cue:** Although we do not currently use these models, the plane can easily be identified and removed through simple geometric analysis.
 - **p. 6 / 4.1. Category Annotation - extractive body cue:** Through inspection, we identify and group 3D models into the following categories: single 3D models, 3D scenes, billboards, and big ground plane. • Single 3D ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.2. Hierarchical Rigid Alignment), p. 1 (1. Introduction), p. 6 (4.1. Category Annotation), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), objective p. 1 (1. Introduction), temporal p. 2 (2. Background and Related Work), p. 2 (2. Background and Related Work), p. 3 (3.1. Data Collection), p. 3 (3.1. Data Collection), p. 5 (3.4. Annotation Schema and Web API), p. 6 (4.2. Hierarchical Rigid Alignment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

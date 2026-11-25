@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 - **p. 12 / 4 Experiments - extractive body cue:** We also compare with recent work PoRF [2] on our dataset.
 - **p. 13 / 7.71 3.77† - extractive body cue:** SG-NeRF (Ours) 0.87 2.39 0.88 0.38 1.13 1.13 Results on the DTU dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 | 6) as 1.0 to balance the initial and updated confidence scores. | definition/direction/unit from same section | p. 10 (4 Experiments) |
 | We follow the evaluation protocol in the literature [24,49] and report Chamfer distance and F-score for evaluating the mesh quality. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 | In contrast, our method shows robustness to pose errors and outperforms NeuS by 61% in Chamfer distance and by 15% in F-score. | comparison identity and matched condition | p. 12 (4 Experiments) |
 | Compared to the competitors, our method achieves the best overall performance among all the methods. | comparison identity and matched condition | p. 13 (7.71 3.77†) |
 | A noticeable performance drop is observed when compared to our full method (as indicated by w/o τ in the table). | comparison identity and matched condition | p. 13 (7.71 3.77†) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 | body limitation/failure cue | The subpar performance of the competitors is due to their pose optimization processes, namely, local optimizations, which cannot rectify the poses with significant errors. | p. 12 (4 Experiments) |
 | body limitation/failure cue | As shown, our method is more robust to outlier poses, producing less distortion and better geometric detail. | p. 12 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 | As illustrated in Figure 4, it is computed on top of keypoint matches. | p. 8 (3 Method) |
 | SG-NeRF 9 Optimized Source Ray & MoG Compute IoU Source Ray & MoG Reference (Fixed) Ray & MoG ⨁ = Fig. | p. 9 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 
 - **p. 12 / 4 Experiments - extractive body cue:** As shown, our method is more robust to outlier poses, producing less distortion and better geometric detail.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 13 (7.71 3.77†), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), metrics p. 14 (Figure/Table caption), p. 12 (4 Experiments), p. 14 (7.71 3.77†), p. 10 (4 Experiments), p. 13 (7.71 3.77†), p. 13 (7.71 3.77†), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (7.71 3.77†), p. 13 (7.71 3.77†), results p. 13 (7.71 3.77†), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (7.71 3.77†), p. 14 (7.71 3.77†), p. 14 (7.71 3.77†).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

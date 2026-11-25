@@ -58,7 +58,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1
 - **p. 6 / 1 Introduction - extractive body cue:** To this end, we train vision-based reward models to detect when a task has succeeded.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 5 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1
 - **p. 4 / 1 Introduction - extractive body cue:** Note that the dimensionality of the actions and proprioception observations vary across embodiments.
 - **p. 7 / 1 Introduction - extractive body cue:** The proprioception observations for Panda and Sawyer have different dimensionalities, and even for the common 7-DoF case, the physical and kinematic characteristics between the embodiments ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1
 - **p. 4 / 1 Introduction - extractive body cue:** 2.1.1 Architecture and pretraining Our model is based on the transformer architecture described in Gato (Reed et al., 2022).
 - **p. 11 / 4.3 Evaluation - extractive body cue:** When fine-tuning a generalist to a specific real-world task, it can be difficult to determine the optimal number of fine-tuning steps, since there is no ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** main, contributions, outlined, below, demonstrate, first, time, large, transformer, sequence, model, solve, dexterous, tasks, multiple, real, robotic, embodiments, differing, observation.
 - **Relevant PDF headings:** A Model Card (p. 31).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1
 - **p. 16 / 5 Experiments - extractive body cue:** The reported numbers are averages of task variants within each grouping. tasks, e.g. as RoboCat was trained on real-world fruit and vegetable lifting data, it ...
 - **p. 18 / 5 Experiments - extractive body cue:** 5.4 Further ablations We report a number of additional ablations and evaluations in the appendix.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 4 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 4 (1 Introduction), objective p. 5 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), temporal p. 5 (1 Introduction), p. 6 (1 Introduction), p. 11 (4.3 Evaluation), p. 11 (4.3 Evaluation), p. 2 (1 Introduction), p. 4 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3. Training Procedures), p. 4 (3.2. Model Arc
 - **p. 4 / 3.2. Model Architecture - extractive body cue:** In the final stage, we remove explicit action token prediction and instead activate a dedicated action expert, decoupling action generation from token-level autoregressive decoding.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.3. Training Procedures), p. 5 (3.3. Training Procedures), p. 4 (3.3. Training Procedures), p. 6 (3.3. Training Procedures), p. 6 (3.3. Training Procedures).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3. Training Procedures), p. 4 (3.2. Model Arc
 - **p. 6 / 3.3. Training Procedures - extractive body cue:** Here, text tokens serve as a unified abstraction that corresponds to language instructions and textual chain-of-thought in Stages I and II, and to text latents ...
 - **p. 6 / 3.3. Training Procedures - extractive body cue:** Attention mechanism used in LaRA-VLA. of the current visual observation and language instruction, the intermediate text-based reasoning latent, and the predicted future visual latent produced ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,16 +91,12 @@ PDF body method statement (p. 5 (3.3. Training Procedures), p. 4 (3.2. Model Arc
 - **p. 5 / 3.3. Training Procedures - extractive body cue:** Embodied reasoning is modeled as a sequence of continuous latent states, and discrete CoT tokens are progressively replaced by latent representations during training.
 - **p. 4 / 3. Method - extractive body cue:** We then introduce the model architecture of LaRA-VLA and detail its training procedures in Sections 3.2 and 3.3, respectively.
 - **p. 6 / 3.3. Training Procedures - extractive body cue:** We introduce an attention mechanism tailored to our three-stage training paradigm, as illustrated in Figure 3.
-- **p. 5 / 3.3. Training Procedures - extractive body cue:** Training proceeds in three stages: (i) explicit CoT fine-tuning with aligned visual prediction latents and inverse-dynamics supervision for actions; (ii) a curriculum-based transition from explicit ...
 - **p. 5 / 3.3. Training Procedures - extractive body cue:** To stabilize visual latent learning and prevent representation collapse, we follow prior work (Chen et al., 2025a) and update the parameters used to compute target ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Training, proceeds, three, stages, explicit, CoT, fine-tuning, aligned, visual, prediction, latents, inverse-dynamics, supervision, actions, curriculum-based, transition, compact, text, gradually, reducing.
 - **Relevant PDF headings:** 2.1. Vision Language Action Models (p. 3); 3. Method (p. 4); 3.2. Model Architecture (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +116,10 @@ PDF body method statement (p. 5 (3.3. Training Procedures), p. 4 (3.2. Model Arc
 - **p. 8 / 4.1. Simulation Experiments - extractive body cue:** Ablation study of different forms of CoT supervision on SimplerEnv.
 - **p. 8 / 4.3. Analysis - extractive body cue:** We further compare LaRA-VLA with Qwen-GR00T (Community, 2026), which serves as a no-CoT baseline without latent reasoning.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Training Procedures), p. 4 (3.2. Model Architecture), p. 5 (3.3. Training Procedures), p. 4 (3. Method), p. 6 (3.3. Training Procedures), p. 6 (3.3. Training Procedures), objective p. 5 (3.3. Training Procedures), p. 5 (3.3. Training Procedures), p. 4 (3.3. Training Procedures), p. 6 (3.3. Training Procedures), p. 6 (3.3. Training Procedures), p. 4 (3.2. Model Architecture), temporal p. 5 (3.3. Training Procedures), p. 6 (3.3. Training Procedures), p. 4 (3.1. Data Collection), p. 4 (3.3. Training Procedures), p. 5 (3.3. Training Procedures), p. 8 (4.2. Real-World Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

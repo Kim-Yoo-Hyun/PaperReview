@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 - **p. 7 / V. EXPERIMENTS AND RESULTS - extractive body cue:** The samples lie within a cone that defines the friction coefficient to be µ = 0.33 grasped object pose is constant w.r.t. to the robot ...
 - **p. 8 / V. EXPERIMENTS AND RESULTS - extractive body cue:** We use the first object (hbox) for benchmarking primitives 1-4 while using the remaining more diverse and complex objects for extrinsic pivoting since it is ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Overview of Approach: First Panel: our general setup where the robot is grasping an object with tactile sensors and is tasked with manipulating ...
@@ -86,21 +84,12 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 | This would significantly enhance the accuracy and adaptability of our approach, enabling robots to handle objects with diverse and dynamic frictional characteristics. | definition/direction/unit from same section | p. 10 (V. EXPERIMENTS AND RESULTS) |
 | 7 (left) illustrates the setup used. | definition/direction/unit from same section | p. 6 (V. EXPERIMENTS AND RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | To ensure a fair comparison with the baseline methods, we evaluate two different versions of each: one with 100 QP queries and another with ... | comparison identity and matched condition | p. 9 (V. EXPERIMENTS AND RESULTS) |
 | However, it is important to highlight that the sample-based methods exhibited higher errors compared to the bubbles. | comparison identity and matched condition | p. 9 (V. EXPERIMENTS AND RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 | body limitation/failure cue | The desired contact mode is sticking contact between the grasped and extrinsic objects contacts, while the contact between the extrinsic object and the environment ... | p. 8 (V. EXPERIMENTS AND RESULTS) |
 | body limitation/failure cue | Additionally, we observed instances of slippage between the sensor and the grasped object, which violates the assumption of sticking contact between them. | p. 9 (V. EXPERIMENTS AND RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 | 4) Given the object and robot poses, the external wrench, and the contact forces compute the loss function L and backpropagate the gradients through ... | p. 5 (IV. METHODOLOGY) |
 | Lpenetration = 1 K K X k=1 ∥-1 10 log(-ϕk)∥2 Our implementation is based on cvxpylayers [39] to differentiate over the QP and pytorch ... | p. 6 (IV. METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / V. EXPERIMENTS AND RESULTS - extractive body cue:** Furthermore, our approach does not reason about the physical limitations of the bubbles in terms of achievable forces and torques.
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXP
 - **p. 9 / V. EXPERIMENTS AND RESULTS - extractive body cue:** Additionally, we observed instances of slippage between the sensor and the grasped object, which violates the assumption of sticking contact between them.
 
 - **Evidence anchors reviewed:** datasets p. 10 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS), p. 6 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), metrics p. 8 (V. EXPERIMENTS AND RESULTS), p. 10 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), baselines p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), results p. 10 (V. EXPERIMENTS AND RESULTS), p. 7 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 8 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS), p. 9 (V. EXPERIMENTS AND RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

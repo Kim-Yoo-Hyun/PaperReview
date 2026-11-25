@@ -50,7 +50,6 @@ PDF body method statement (p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 
 - **p. 3 / 3.1. Preliminary - extractive body cue:** The Deformable Self-Attention (DSA) mechanism refines voxel features by enabling interactions within the 3D space: DSA(F3D, F3D) = DA(f, p, F3D), (2) where f is ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 3 (3.1. Preliminary).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 
 - **p. 2 / 1. Introduction - extractive body cue:** Our key contributions are: • We propose DepthSSC, a new method that integrates spatial transformation with geometric awareness to address the issues of inaccurate depth ...
 - **p. 4 / 3.2. Spatially-Transformed Graph Fusion - extractive body cue:** To address these spatial alignment issues, we propose the Spatially-Transformed Graph Fusion (ST-GF) module, as shown in Figure 3.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ST-GF, module, designed, three, primary, objectives, correcting, geometric, distortions, predicting, affine, transformation, matrix, allows, flexible, adjustments, voxel, position, including, rotation.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Goal of Our Approach. Demonstrates DepthSSC's su- periority in handling complex 3D environments for semantic scene completion. Contrasted with VoxFormer, DepthSSC excels in ...
 - **p. 7 / 4.4. Robustness experiment - extractive body cue:** To evaluate the robustness of the ST-GF module under depth input errors, we simulate errors in depth measurements by artificially introducing Gaussian noise with vary2160
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 3 (3.1. Preliminary), p. 3 (3. Method), objective p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 3 (3.1. Preliminary), temporal p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 1 (1. Introduction), p. 2 (44.89 IoU on the SemanticKITTI benchmark (hidden).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

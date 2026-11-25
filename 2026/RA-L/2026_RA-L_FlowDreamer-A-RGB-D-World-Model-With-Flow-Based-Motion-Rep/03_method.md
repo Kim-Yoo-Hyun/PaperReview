@@ -54,7 +54,6 @@ PDF body method statement (p. 14 (A. Implementation Details), p. 13 (A. Implemen
 - **p. 14 / A. Implementation Details - extractive body cue:** Extended Experimental Results In this section, we conduct real-world experiments to evaluate the feasibility of our pipeline.
 - **Formal bridge:** RGB-D observation과 action 조건 -> 예측 3D scene flow 및 다음 RGB-D -> motion/frame prediction과 visual goal 평가; 정확한 loss는 원문 anchor 참조 -> 영상 예측 품질 및 visual-planning task success; 안전 보장 주장은 아님.
 - **Equation/algorithm anchors:** p. 7 (4.2. Visual Planning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 14 (A. Implementation Details), p. 13 (A. Implemen
 - **p. 14 / A. Implementation Details - extractive body cue:** Next, we input the aligned metric depth along with the RGB image into RAFT-3D to obtain frame-paired 3D scene flows and use the estimation result ...
 - **p. 1 / 1. Introduction - extractive body cue:** In this paper, we specifically focus on world models that operate on RGB-D frames (RGB-D world models), which are commonly adopted sensory observations in robot ...
 - **Normalized interface:** observation=RGB-D 관측과 로봇 action 조건; state=명시적 3D scene flow와 RGB-D 표현; output/action=예측 RGB-D; visual planning에서는 후보 action 평가.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 14 (A. Implementation Details), p. 13 (A. Implemen
 - **p. 13 / A. Implementation Details - extractive body cue:** Each model is trained on 8 GPUs in parallel, with a batch size of 16 per GPU.
 - **p. 14 / A. Implementation Details - extractive body cue:** Future works could explore a better tradeoff between inference time and prediction performance.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** provide, simple, version, FlowDreamer, only, relies, current, observations, actions, just, aiming, demonstrate, effectiveness, explicit, dynamics, modeling, AdamW, optimizer, training, mixed.
 - **Relevant PDF headings:** 2.1. Generative World Models in Robotics (p. 2); 2.2. Dynamics Modeling (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 14 (A. Implementation Details), p. 13 (A. Implemen
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future directions can be found in the Appendix.
 - **p. 8 / 4.3. Additional Analysis on Flow Prediction - extractive body cue:** We can observe that the robot did not really take contrary actions due to the action input at stage 2, while its performance becomes worse ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (A. Implementation Details), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), p. 6 (4.2. Visual Planning), p. 6 (4.2. Visual Planning), objective p. 6 (4.2. Visual Planning), p. 7 (4.2. Visual Planning), p. 8 (4.2. Visual Planning), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), temporal p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), p. 14 (A. Implementation Details), p. 3 (2.2. Dynamics Modeling), p. 3 (2.2. Dynamics Modeling).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

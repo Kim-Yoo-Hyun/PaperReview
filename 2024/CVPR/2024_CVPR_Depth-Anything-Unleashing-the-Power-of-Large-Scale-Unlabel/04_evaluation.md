@@ -45,8 +45,6 @@
 - **p. 8 / 4.6. Qualitative Results - extractive body cue:** We visualize our model predictions on the six unseen datasets in Figure 3.
 - **p. 9 / 9. More Qualitative Results - extractive body cue:** Please refer to the following pages for comprehensive qualitative results on six unseen test sets (Figure 5 for KITTI [18], Figure 6 for NYUv2 [55], ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [36]. Middle two: SA-1B [27] (a hold-out unseen set). ...
@@ -80,8 +78,6 @@
 | Figure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [36]. Middle two: SA-1B [27] (a hold-out unseen ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Table 1. In total, our Depth Anything is trained on 1.5M labeled images and 62M unlabeled images jointly. our easy-to-acquire and diverse unlabeled images ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@
 | Figure 2. Our pipeline. Solid line: flow of labeled images, dotted line: unlabeled images. We especially highlight the value of large-scale unlabeled images. The ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Table 3. Fine-tuning and evaluating on NYUv2 [55] with our pre-trained MDE encoder. We highlight best, second best results, as well as most discriminative ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 5. Zero-shot metric depth estimation. The first three test sets in the header are indoor scenes, while the last two are outdoor scenes. ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@
 - **p. 9 / 6. More Implementation Details - extractive body cue:** Concretely, the training resolution is 392×518 on NYUv2 [55] and 384×768 on KITTI [18] to match the patch size of our encoder.
 - **p. 9 / 6. More Implementation Details - extractive body cue:** The batch size is 16 and the model is trained for 5 epochs.
 - **p. 9 / 6. More Implementation Details - extractive body cue:** The training resolution is set as 896×896 on both ADE20K [89] and Cityscapes [15].
-- **p. 9 / 6. More Implementation Details - extractive body cue:** All images are cropped to 518×518 during training.
 
 ## Generalization and Failure Cases
 
@@ -136,8 +124,6 @@
 | body limitation/failure cue | Table 1. In total, our Depth Anything is trained on 1.5M labeled images and 62M unlabeled images jointly. our easy-to-acquire and diverse unlabeled images ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2. Our pipeline. Solid line: flow of labeled images, dotted line: unlabeled images. We especially highlight the value of large-scale unlabeled images. The ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Table 8. Transferring our MDE encoder to ADE20K for semantic segmentation. We use Mask2Former as our segmentation model. since the labeled images are already ... | p. 7 (Figure/Table caption) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -152,14 +138,6 @@
 | Comparison with MiDaS trained encoder in downstream tasks. | p. 7 (Method) |
 | Transferring our MDE encoder to ADE20K for semantic segmentation. | p. 7 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** In this work, we present Depth Anything, a highly practical solution to robust monocular depth estimation.
@@ -170,6 +148,5 @@
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 8. Transferring our MDE encoder to ADE20K for semantic segmentation. We use Mask2Former as our segmentation model. since the labeled images are already sufficient. ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 8 (4.6. Qualitative Results), p. 9 (9. More Qualitative Results), metrics p. 9 (9. More Qualitative Results), p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 8 (4.6. Qualitative Results), p. 8 (4.6. Qualitative Results), p. 10 (9. More Qualitative Results), baselines p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 8 (Figure/Table caption), p. 5 (4.1. Implementation Details), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 5 (4.2. Zero-Shot Relative Depth Estimation), p. 8 (Figure/Table caption), p. 8 (4.6. Qualitative Results), p. 9 (9. More Qualitative Results), p. 9 (9. More Qualitative Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

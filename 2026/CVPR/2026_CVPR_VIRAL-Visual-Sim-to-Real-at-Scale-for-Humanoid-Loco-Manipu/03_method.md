@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 - **p. 4 / 2.1. Key Elements of Teacher Training - extractive body cue:** Frames of reference state initialization for teacher RL. skills for high-DoF humanoids with RL typically demands heavy reward engineering still often yields suboptimal or poor ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 - **p. 4 / 2.2. Key Elements of Student Training - extractive body cue:** The resulting student observation ostudent therefore integrates both visual embeddings and the proprioception available on real hardware, enabling the policy to reason over rich visual ...
 - **p. 1 / 1. Introduction - extractive body cue:** Humanoid robots are often framed as the natural embodiment of general-purpose physical intelligence: machines that could ultimately take on a large fraction of physical work ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,17 +87,13 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 - **p. 4 / 2.2. Key Elements of Student Training - extractive body cue:** This mixed-policy rollout combines the fast initialization of BC with the state-coverage benefits of DAgger, producing a more resilient vision-based controller.
 - **p. 5 / 2.2. Key Elements of Student Training - extractive body cue:** We identify scaling up GPUs for both teacher and student training as critical in our ablation studies in Figure 14 and Figure 15.
 - **p. 5 / 2.2. Key Elements of Student Training - extractive body cue:** This implementation preserves the simplicity of single-GPU training while enabling near-linear scaling to large clusters for high-throughput visual sim-to-real learning.
-- **p. 5 / 2.2. Key Elements of Student Training - extractive body cue:** This implementation preserves the simplicity of single-GPU training while enabling near-linear scaling to large clusters for high-throughput visual sim-to-real learning.
 - **p. 5 / 2.2. Key Elements of Student Training - extractive body cue:** To scale up visual simulation training throughput, we implement a customized version of TRL [68] with support of Accelerate [22] for efficient scaling across multiple ...
 - **p. 3 / 2.1. Key Elements of Teacher Training - extractive body cue:** The teacher is trained with PPO [59] with a custom implementation of TRL [68] to train across GPUs in a distributed manner.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Proprioception, consists, oprop-priv, finger, where, base, linear, angular, velocities, projected, gravity, last, action, joint, positions, fingertip, forces, student, vision, backbone.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +113,13 @@ PDF body method statement (p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 16. Ablation of object generalization of teacher policy.
 - **p. 3 / 2.1. Key Elements of Teacher Training - extractive body cue:** Note that VIRAL framework does not have designs overfitting to specific WBC policy, and can be extended to other humanoid WBC controllers [44, 78].
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.2. Key Elements of Student Training), p. 5 (2.2. Key Elements of Student Training), p. 5 (2.2. Key Elements of Student Training), objective p. 3 (2.1. Key Elements of Teacher Training), p. 3 (2.1. Key Elements of Teacher Training), p. 4 (2.1. Key Elements of Teacher Training), p. 4 (2.1. Key Elements of Teacher Training), temporal p. 4 (2.2. Key Elements of Student Training), p. 3 (2.1. Key Elements of Teacher Training), p. 5 (2.3. Key Elements of Sim-to-Real Transfer), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

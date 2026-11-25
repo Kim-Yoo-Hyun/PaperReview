@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 23 (Figure/Table
 - **p. 8 / 4 Experiments - extractive body cue:** Pre-recorded IKER (Zero-Shot) Ours (Zero-Shot) Ours (Few-Shot) Oracle Success Rate (%) 13 45 84 87 95 Apple 25 63 88 86 96 Bottle 49 23 ...
 - **p. 6 / 4 Experiments - extractive body cue:** We conduct a comprehensive suite of experiments to assess the effectiveness, generality, and robustness of our method across a diverse range of dexterous manipulation tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of our method: a VLM generates hand and object keypoint trajectories from a language command and scene image. A low-level residual RL ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 23 (Figure/Table
 | Thus, we mainly focus our experiments on comparison with a variety of oracles and ablations: • Iterative Keypoint Rewards (IKER): We implement Iterative Keypoint ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | Crucially, the capabilities evaluated by our task set are difficult to design reward functions for (articulated object manipulation or requiring complex and unstructured motion) ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 23 (Figure/Table
 | Our method with few-shot adaptation achieves consistently high success rates, with an average success rate of 72%, often approaching the performance of the oracle ... | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Performance of the pre-recorded baseline remains poor for all tasks, except in the drawer task, where the novel plans are likely less important at ... | comparison identity and matched condition | p. 8 (4 Experiments) |
 | For the Traj. oracle, we use VLM keypoints but script plans for τ. | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 23 (Figure/Table
 | body limitation/failure cue | 3) What causes VLM scaffolds to fail? | p. 7 (4 Experiments) |
 | body limitation/failure cue | We compare against additional reinforcement learning and imitation learning baselines and additionally ablate adding systematic noise into VLM predictions in Section E We evaluate ... | p. 7 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 23 (Figure/Table
 | Further training details and hyperparameters are in Section A. | p. 6 (2. Plan Generation 𝜏) |
 | Practically, πl is implemented as a multi-layer perceptron where keypoints are provided in a fixed order and future planning steps τt:T are down-sampled to ... | p. 6 (2. Plan Generation 𝜏) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4 Experiments - extractive body cue:** To comprehensively evaluate the failure modes of our pipeline across all tasks, we present a Sankey diagram in Fig.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 23 (Figure/Table
 - **p. 7 / 4 Experiments - extractive body cue:** We compare against additional reinforcement learning and imitation learning baselines and additionally ablate adding systematic noise into VLM predictions in Section E We evaluate two ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (Figure/Table caption), p. 7 (4 Experiments), p. 22 (Figure/Table caption), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 8 (Figure/Table caption), p. 23 (Figure/Table caption), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

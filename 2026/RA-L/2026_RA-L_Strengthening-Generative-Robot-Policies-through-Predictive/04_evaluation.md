@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** Besides, we compare the world model against two baselines: deep visual foresight [40], which uses CNNs and LSTMs for prediction,1 and AVDC [26], a video ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** 3: WORLD MODEL PREDICTIONS IN GPC FOR VISIONBASED SIMULATION TASKS.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: GENERATIVE PREDICTIVE CONTROL (GPC). (a) GPC-RANK: The generative policy proposes multiple action sequences that are evaluated in imagination using the predictive world model; ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | We further provide ablations and comparisons to illustrate: (i) the influence of K and M on performance, and (ii) how GPC compares with other ... | definition/direction/unit from same section | p. 4 (V. EXPERIMENTS) |
 | Fig. 2: DIFFUSION-BASED VISUAL WORLD MODELING. [Left] Recursive single-step prediction produces multi- step futures. [Right] Each single-step predictor is a condi- tioned diffusion model, ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | Using the Push-T task, we analyze the impact of K and M, compare against additional MPC-style baselines without diffusion-policy warm-start, and study the role ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
 | Clearly, all GPCRANK, GPC-OPT, and GPC-RANK+OPT variants outperform pure behavior cloning. | comparison identity and matched condition | p. 5 (V. EXPERIMENTS) |
 | During evaluation, we use 100 action candidates for all baselines. | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | body limitation/failure cue | Without freezing the noise, GPC-OPT fails, as stochastic gradients destabilize the reward optimization in (4). | p. 4 (IV. WORLD MODEL LEARNING) |
 | body limitation/failure cue | Dϕ is trained by adding random noises to the clean images and then predicting the noise. | p. 4 (IV. WORLD MODEL LEARNING) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,20 +133,11 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p.
 | We propose generative predictive control (GPC), a framework that strengthens pretrained diffusion-based BC policies at inference time by coupling them with an action-conditioned predictive ... | p. 1 (B EHAVIOR cloning (BC) with generative models has) |
 | We therefore fix oNd t+1 = 0 at inference time, making the world model deterministic and producing the most likely future prediction. | p. 4 (IV. WORLD MODEL LEARNING) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / IV. WORLD MODEL LEARNING - extractive body cue:** Without freezing the noise, GPC-OPT fails, as stochastic gradients destabilize the reward optimization in (4).
 - **p. 4 / IV. WORLD MODEL LEARNING - extractive body cue:** Dϕ is trained by adding random noises to the clean images and then predicting the noise.
 
 - **Evidence anchors reviewed:** datasets p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 8 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 2 (Figure/Table caption), baselines p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

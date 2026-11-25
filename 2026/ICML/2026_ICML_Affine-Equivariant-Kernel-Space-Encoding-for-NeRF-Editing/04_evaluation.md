@@ -43,8 +43,6 @@
 - **p. 8 / 5. Experiments - extractive body cue:** Ablation study of EKS reporting PSNR for static reconstruction and edited scenes.
 - **p. 8 / 5. Experiments - extractive body cue:** Physics simulations with Gaussian Splatting methods.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. EKS overview. EKS represents positional features using spatially localized anisotropic Gaussian kernels, enabling stable and fine-grained interactive editing while maintaining the high-fidelity rendering ...
@@ -78,8 +76,6 @@
 | Figure 3. Evolution of two physical simulations. From left to right: (1) A rubber duck falling onto a pillow and deforming it. (2) A ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 4. Model overview. Top: During training, a subset of Gaussians is selected using Ray-Traced Gaussian Proximity Search (RT-GPS), which also handles pruning. The ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | In addition, we performed simulations following PhysGaussian (Xie et al., 2024) and compared EKS qualitatively against both PhysGaussian and GASP (Borycki et al., 2024). | comparison identity and matched condition | p. 7 (5. Experiments) |
 | Using Euclidean KNN introduces artifacts similar to point-based baselines, while removing hash-grid feature distillation has a smaller quantitative impact. | comparison identity and matched condition | p. 8 (5. Experiments) |
 | Ablation study of EKS reporting PSNR for static reconstruction and edited scenes. | comparison identity and matched condition | p. 8 (5. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,22 +118,12 @@
 | body limitation/failure cue | From left to right: (1) Physics-based simulation, showing an object falling onto a tilted table and bouncing off. | p. 6 (5. Experiments) |
 | body limitation/failure cue | Whether simulating leaves falling from a plant, squashing a soft object, or draping cloth over complex geometry, our method maintains high rendering fidelity while ... | p. 7 (5. Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | In contrast, EKS avoids these artifacts and consistently produces smooth surfaces with high reconstruction quality across all evaluated scenes, as the Gaussians encode latent ... | p. 7 (5. Experiments) |
 | The final feature vector is computed as a weighted interpolation of the Gaussian features using a Mahalanobis-distance-based weighting scheme: v (G) = k X ... | p. 5 (4. Proposed Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -156,6 +135,5 @@
 - **p. 7 / 5. Experiments - extractive body cue:** Whether simulating leaves falling from a plant, squashing a soft object, or draping cloth over complex geometry, our method maintains high rendering fidelity while enabling ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 7 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), metrics p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), baselines p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), results p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

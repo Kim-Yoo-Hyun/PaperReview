@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 - **p. 7 / 5 Experiments - extractive body cue:** Borrowing from safety considerations in robotics [78, 79], our evaluation focuses on two metrics: the task success rate (SR) and the cumulative cost (CC).
 - **p. 8 / 5 Experiments - extractive body cue:** Right: CC incurred by each model on these benchmarks. demonstrates substantial safety improvements, achieving an average reduction in CC of 83.58% compared to the strongest ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The Integrated Safety Approach (ISA) pipeline. Our proposed pipeline employs multi- faceted framework for the systematic safety alignment of vision-language-action (VLA) models. challenges ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 | Table 10: Safety under Semantic and Perceptual Perturbations. Performance is measured by Success Rate (SR ↑) / Cumulative Cost (CC ↓). Method / Perturbation ... | definition/direction/unit from same section | p. 31 (Figure/Table caption) |
 | Left: Task success rate over training steps. | definition/direction/unit from same section | p. 32 (C.1 Details of SafeRL Training) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 | First, SPOC is a state-of-the-art VLA trained solely on simulated data. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | IL-only: SPOC [32], which is a state-of-the-art imitation learning method. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | We compare this against baselines using fixed penalty coefficients for safety costs, as shown in Figure 6. | comparison identity and matched condition | p. 9 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 | body limitation/failure cue | Algorithm 1 Corner Safety Component Require: Agent Position p, Detection Radius r, Corner Threshold ϵ, Map Points Set S 1: Integer N ←0 2: ... | p. 34 (C.4 Experimental Environment and Costs) |
 | body limitation/failure cue | For FLaRe, higher safety costs are more prevalent in task failures, suggesting that unsafe behaviors often contribute to or coincide with failure. | p. 8 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 | Left: Task success rate over training steps. | p. 32 (C.1 Details of SafeRL Training) |
 | Algorithm 4 Critical Points Safety via Perturbation Require: Status Change Objects S, Movement Threshold δ 1: U ←∅ ▷Initialize set of unstable objects 2: ... | p. 35 (C.4 Experimental Environment and Costs) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 26 / Figure/Table caption - extractive body cue:** Figure 11: Qualitative comparison of ISA-aligned VLA and unaligned VLA behaviors. Left: Trajectory comparison for a representative task. The ISA-aligned VLA exhibits a smoother, more ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 9 (5 Experiments
 - **p. 8 / 5 Experiments - extractive body cue:** For FLaRe, higher safety costs are more prevalent in task failures, suggesting that unsafe behaviors often contribute to or coincide with failure.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 10 (5 Experiments), p. 39 (C.4 Experimental Environment and Costs), p. 34 (C.4 Experimental Environment and Costs), p. 36 (C.4 Experimental Environment and Costs), p. 39 (C.4 Experimental Environment and Costs), metrics p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 30 (Figure/Table caption), p. 31 (Figure/Table caption), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), results p. 8 (Figure/Table caption), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 36 (C.4 Experimental Environment and Costs), p. 7 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 - **p. 6 / 5 Experiments - extractive body cue:** Further, the paths have 20 time steps per manipulation; for 25 objects this is a (15dimensional) trajectory with 1000 time steps across 50 manipulations.
 - **p. 6 / 5 Experiments - extractive body cue:** But this demonstration shows that such problems can be solved also when the objective is given in terms of an objective function ψ(x(T)), and that ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 1: Typical initial configuration. action sequences a1:K. We put substantial effort in efficiently computing the combinatorial set of all feasible actions (unifi- cations of ...
@@ -68,20 +66,11 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 | The resulting trajectories are smooth and collision free (if keyframe optimization indicated feasibility) and generate the optimized end state. | definition/direction/unit from same section | p. 6 (5 Experiments) |
 | The example demonstrates success on our construction problems, leading to (locally, approximately) optimal full manipulation paths across up to 50 manipulations. | definition/direction/unit from same section | p. 6 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -108,22 +97,12 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 | body limitation/failure cue | The geometric and differential constraints hpath, gpath implement zero velocity of the object-hand pose while inhand, zero velocities and accelerations during pick and place, ... | p. 5 (5 Experiments) |
 | body limitation/failure cue | The resulting trajectories are smooth and collision free (if keyframe optimization indicated feasibility) and generate the optimized end state. | p. 6 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | There is no doubt that existing TAMP approaches could solve an analogous feasibility problem if the objective was instead encoded in a symbolic way. | p. 6 (5 Experiments) |
 | Further, the paths have 20 time steps per manipulation; for 25 objects this is a (15dimensional) trajectory with 1000 time steps across 50 manipulations. | p. 6 (5 Experiments) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -132,9 +111,8 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments)): For
 - **p. 6 / 5 Experiments - extractive body cue:** The resulting trajectories are smooth and collision free (if keyframe optimization indicated feasibility) and generate the optimized end state.
 
 - **Evidence anchors reviewed:** datasets p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), metrics p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), baselines 본문 anchor 없음, results p. 5 (5 Experiments), p. 6 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Additionally, we conduct ablation studies in both simulation and real-world settings to investigate the effectiveness of incorporating contact audio signals into VLA. a) Simulation Experiments ...
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** Ablation Studies Ablation studies on RLBench in Table III and real robot experiments in Table IV reveal the importance of both audio modality integration and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Unlike VLA models, Audio-VLA incorporates audio perception, enabling better assessment of contact states and understanding of manipulation dynamics. events [13] and interaction feedback ...
@@ -79,8 +77,6 @@
 | Fig. 1: Unlike VLA models, Audio-VLA incorporates audio perception, enabling better assessment of contact states and understanding of manipulation dynamics. events [13] and interaction ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: Architecture of Audio-VLA. The model consists of multi-modal encoders including audio, vision, and proprioceptive modules, multi-modal Projector that map heterogeneous features to ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | 표 I의 표준 환경에서 Audio-VLA의 평균 성공률은 LIBERO 97.6%, RLBench 55.1%다. [표 I](https://arxiv.org/pdf/2511.09958v1#page=7) | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | In contact-intensive Tasks 2 and 3, Audio-VLA maintains over 66% performance retention, significantly outperforming comparative methods. | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | The pre-trained audio encoder cannot effectively process manipulation-specific sounds without LoRA [26]. | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@
 | body limitation/failure cue | Experimental results demonstrate that Audio-VLA achieves superior performance in both simulation environments and real-world tasks, proving the contribution of contact audio perception in overcoming ... | p. 7 (V. CONCLUSION) |
 | body limitation/failure cue | Audio-VLA overcomes these limitations through acoustic signatures of interaction physics. | p. 6 (IV. EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@
 | Subsequently, we extract the action hidden states Hact from Hdec, where each vector h(m) ∈Rdllm for m = 1, . . . , K ... | p. 4 (III. METHOD) |
 | I(·) t ∈RB×3×H×W denotes the raw RGB images from different camera viewpoints at timestep t, with B representing the batch size, H = W ... | p. 3 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Our proposed Audio-VLA demonstrates that acoustic perception addresses fundamental limitations of vision-only approaches in manipulation tasks, providing irreplaceable information particularly when visual perception fails to ...
@@ -162,6 +141,5 @@
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Audio-VLA overcomes these limitations through acoustic signatures of interaction physics.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), baselines p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

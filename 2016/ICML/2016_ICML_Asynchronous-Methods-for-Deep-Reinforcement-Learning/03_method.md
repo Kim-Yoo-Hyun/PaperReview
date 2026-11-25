@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Asynchronous RL Framework),
 - **p. 2 / 3. Reinforcement Learning Background - extractive body cue:** The goal of the agent is to maximize the expected return from each state st.
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 3 (4. Asynchronous RL Framework), p. 4 (4. Asynchronous RL Framework), p. 2 (3. Reinforcement Learning Background), p. 3 (3. Reinforcement Learning Background), p. 4 (4. Asynchronous RL Framework), p. 1 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Asynchronous RL Framework),
 - **p. 4 / 4. Asynchronous RL Framework - extractive body cue:** The policy and the value function are updated after every tmax actions or when a terminal state is reached.
 - **p. 4 / 4. Asynchronous RL Framework - extractive body cue:** In order to compute a single update, the algorithm first selects actions using its exploration policy for up to tmax steps or until a terminal ...
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Asynchronous RL Framework),
 - **p. 6 / 5.5. Scalability and Data Efficiency - extractive body cue:** We analyzed the effectiveness of our proposed framework by looking at how the training time and data efficiency changes with the number of parallel actor-learners.
 - **p. 7 / 5.6. Robustness and Stability - extractive body cue:** For each of the four algorithms we trained models on five games (Breakout, Beamrider, Pong, Q*bert, Space Invaders) using 50 different learning rates and random ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** conceptually, simple, lightweight, framework, deep, reinforcement, learning, uses, asynchronous, gradient, descent, optimization, neural, network, controllers, Initialize, thread, step, counter, target.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Asynchronous RL Framework),
 - **p. 6 / 5.5. Scalability and Data Efficiency - extractive body cue:** Somewhat surprisingly, asynchronous one-step Q-learning and Sarsa algorithms exhibit superlinear speedups that cannot be explained by purely computational gains.
 - **p. 7 / 5.6. Robustness and Stability - extractive body cue:** Finally, we analyzed the stability and robustness of the four proposed asynchronous algorithms.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 3 (4. Asynchronous RL Framework), p. 4 (4. Asynchronous RL Framework), p. 1 (Abstract), p. 3 (4. Asynchronous RL Framework), p. 4 (4. Asynchronous RL Framework), objective p. 3 (4. Asynchronous RL Framework), p. 2 (3. Reinforcement Learning Background), p. 4 (4. Asynchronous RL Framework), p. 3 (4. Asynchronous RL Framework), p. 1 (Abstract), p. 2 (3. Reinforcement Learning Background), temporal p. 2 (3. Reinforcement Learning Background), p. 2 (3. Reinforcement Learning Background), p. 1 (1. Introduction), p. 1 (48.
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

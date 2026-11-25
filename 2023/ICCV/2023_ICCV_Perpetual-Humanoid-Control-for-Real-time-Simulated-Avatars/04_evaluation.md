@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 - **p. 8 / 4.1. Motion Imitation - extractive body cue:** Fig.4 shows a qualitative result on a live demonstration of using poses estimated from an office environment.
 - **p. 8 / 4.1. Motion Imitation - extractive body cue:** Similarly, we see that keypoint-based controller (ours-kp) outperforms rotation-based, which can be explained by 1) estimating 3D keypoint directly from images is an easier task ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose a motion imitator that can naturally recover from falls and walk to far-away reference motion, perpetually controlling simulated avatars without requiring ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 | Figure 3: Goal-conditioned RL framework with Adversarial Mo- tion Prior. Each primitive P(k) and composer C is trained using the same procedure, and here ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 1: We propose a motion imitator that can naturally recover from falls and walk to far-away reference motion, perpetually controlling simulated avatars without ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 | Similarly, we see that keypoint-based controller (ours-kp) outperforms rotation-based, which can be explained by 1) estimating 3D keypoint directly from images is an easier ... | comparison identity and matched condition | p. 8 (4.1. Motion Imitation) |
 | We perform ablation on the noisy input from H36M-Test-Image* to better showcase the controller's ability to imitate noisy data. | comparison identity and matched condition | p. 8 (4.1. Motion Imitation) |
 | Figure 1: We propose a motion imitator that can naturally recover from falls and walk to far-away reference motion, perpetually controlling simulated avatars without ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 | body limitation/failure cue | Figure 1: We propose a motion imitator that can naturally recover from falls and walk to far-away reference motion, perpetually controlling simulated avatars without ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: Our progressive training procedure to train primitives P(1), P(2), · · · , P(K) by gradually learning harder and harder sequences. Fail ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 | Based on the simulation state st and reference motion ˆqt, the reward function R computes a reward rt = R(st, ˆqt) as the learning ... | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad) |
 | The AMP discriminator D(sp t-10:t) computes a real and fake value based on the current prioproception of the humanoid. | p. 4 (3.1. Goal Conditioned Motion Imitation with Ad) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Discussions - extractive body cue:** Although we can train single-clip controller to overfit on these sequences (see the supplement), our full controller often fails to learn these sequences.
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Our progressive training procedure to train primitives P(1), P(2), · · · , P(K) by gradually learning harder and harder sequences. Fail recovery ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), metrics p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.2. Fail-state Recovery), p. 8 (4.1. Motion Imitation), p. 6 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation), p. 1 (Figure/Table caption), results p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 7 (4.1. Motion Imitation), p. 8 (4.2. Fail-state Recovery).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

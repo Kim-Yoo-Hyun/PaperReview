@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (Abstract), p. 3 (I.
 | body cue at p. 8 | First, while our method is zero-shot and is not bound to any particular foundation model, it does inherit ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Closed-Set Object Evaluation While Clio is designed for open-set detection, we include results on the closed-set Replica [17] ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 3 (I. INTRODUCTION), p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -72,10 +70,8 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), interface p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 3 (I. INTRODUCTION), p. 5 (IV. TASK-DRIVEN CLUSTERING), p. 2 (Abstract), objective p. 4 (IV. TASK-DRIVEN CLUSTERING), p. 5 (IV. TASK-DRIVEN CLUSTERING).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -43,8 +43,6 @@
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** Results are averaged over three scenes.
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** Novel view synthesis comparisons on the MuSHRoom dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present AGS-Mesh, a method that adaptively integrates geometric priors into Gaussian Splatting for indoor room reconstruction using a mobile device. We enhance ...
@@ -78,8 +76,6 @@
 | We evaluate mesh reconstruction performance and novel-view synthesis quality. | definition/direction/unit from same section | p. 6 (5. Experiments) |
 | Figure 1. We present AGS-Mesh, a method that adaptively integrates geometric priors into Gaussian Splatting for indoor room reconstruction using a mobile device. We ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | We observe that utilizing noisy depths significantly improves the baseline. | comparison identity and matched condition | p. 7 (5.3. Ablation Studies) |
 | We note that monocular depth supervision greatly under-performs compared to directly using noisy sensor depth readings for indoor room reconstruction. | comparison identity and matched condition | p. 8 (5.3. Ablation Studies) |
 | Figure 9. Novel view synthesis comparisons on the MuSHRoom dataset. From left to right: 2DGS [19] baseline, 2DGS with our proposed DNC and ANR ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@
 | body limitation/failure cue | Lastly, the DNC and ANR terms help preserve details for objects and reduce overall noise. | p. 8 (5.3. Ablation Studies) |
 | body limitation/failure cue | Figure 8. Qualitative visuals of our Depth Normal Consistency (DNR) and Adaptive Normal Regularization (ANR) terms. We visualize sensor depth and normals obtained from ... | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@
 | We implement our method using two recent open-source Gaussian splatting frameworks 2DGS [19] and Splatfacto [41] (a 3DGS re-implementation). | p. 6 (5. Experiments) |
 | The mesh metrics are averaged over 6 scenes: "coffee room", "honka", "kokko", "sauna", "computer", and "vr room". | p. 7 (5.2. Novel View Synthesis) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Demonstration of iPhone and Kinect sensor depths. The iPhone struggles to capture accurate depth values for (a) objects at a far distance, and ...
@@ -154,6 +133,5 @@
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 8. Qualitative visuals of our Depth Normal Consistency (DNR) and Adaptive Normal Regularization (ANR) terms. We visualize sensor depth and normals obtained from a ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.2. Novel View Synthesis), p. 7 (5.2. Novel View Synthesis), p. 8 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), metrics p. 6 (5. Experiments), p. 7 (Figure/Table caption), p. 7 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (5.3. Ablation Studies), baselines p. 6 (5. Experiments), p. 8 (Figure/Table caption), p. 6 (5. Experiments), p. 7 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), p. 17 (Figure/Table caption), results p. 7 (5.3. Ablation Studies), p. 6 (5.1. 3D Reconstruction Evaluation), p. 6 (5.1. 3D Reconstruction Evaluation), p. 7 (Figure/Table caption), p. 8 (5.3. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

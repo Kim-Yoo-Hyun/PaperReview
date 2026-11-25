@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 - **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** Comparing LDMs with varying compression on the CelebA-HQ (left) and ImageNet (right) datasets.
 - **p. 6 / 4.2. Image Generation with Latent Diffusion - extractive body cue:** Analyzing the training of class-conditional LDMs with different downsampling factors f over 2M train steps on the ImageNet dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Boosting the upper bound on achievable quality with less agressive downsampling. Since diffusion models offer excel- lent inductive biases for spatial data, we ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 | Table 11. ×4 upscaling results on ImageNet-Val. (2562); †: FID features computed on validation split, ‡: FID features computed on train split. We also ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 | Figure 2. Illustrating perceptual and semantic compression: Most bits of a digital image correspond to imperceptible details. While DMs allow to suppress this semantically ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 | Fig. 8. See Sec. D.3 for the quantitative evaluation and im- plementation details. Lastly, following prior work [3, 15, 21, 23], we evalu- ate ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | LDM-{4-8} outperform models with unsuitable ratios of perceptual and conceptual compression. | comparison identity and matched condition | p. 5 (4.1. On Perceptual Compression Tradeoffs) |
 | Pixel-based LDM-1 requires substantially larger train times compared to models with larger downsampling factors (LDM-{4-16}). | comparison identity and matched condition | p. 6 (4.2. Image Generation with Latent Diffusion) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 | body limitation/failure cue | Figure 10. ImageNet 64→256 super-resolution on ImageNet-Val. LDM-SR has advantages at rendering realistic textures but SR3 can synthesize more coherent fine structures. See appendix ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | Figure 15. Illustrating the effect of latent space rescaling on convolutional sampling, here for semantic image synthesis on landscapes. See Sec. 4.3.2 and Sec. ... | p. 20 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 | This model can be interpreted as a VQGAN [23] but with the quantization layer absorbed by the decoder. | p. 4 (3.1. Perceptual Image Compression) |
 | These models can be interpreted as an equally weighted sequence of denoising autoencoders ϵθ(xt, t); t = 1 . . . | p. 4 (3.2. Latent Diffusion Models) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5. Limitations & Societal Impact - extractive body cue:** Limitations While LDMs significantly reduce computational requirements compared to pixel-based approaches, their sequential sampling process is still slower than that of GANs.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 5 (4.1. On Perceptual Compression Tradeoffs),
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 15. Illustrating the effect of latent space rescaling on convolutional sampling, here for semantic image synthesis on landscapes. See Sec. 4.3.2 and Sec. D.1. ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), p. 6 (4.2. Image Generation with Latent Diffusion), metrics p. 6 (4.2. Image Generation with Latent Diffusion), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), p. 20 (Figure/Table caption), p. 25 (Figure/Table caption), baselines p. 5 (4.2. Image Generation with Latent Diffusion), p. 7 (Figure/Table caption), p. 23 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 6 (4.2. Image Generation with Latent Diffusion), results p. 5 (4.1. On Perceptual Compression Tradeoffs), p. 23 (Figure/Table caption), p. 6 (4.2. Image Generation with Latent Diffusion), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4.1. On Perceptual Compression Tradeoffs).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

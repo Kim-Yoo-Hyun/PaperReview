@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 - **p. 9 / C. ALOHA Task Performance Results - extractive body cue:** 7: Sample successful OpenVLA-OFTS rollouts on the ALOHA robot.
 - **p. 14 / B. Implementation Details - extractive body cue:** Low-dimensional robot states are also projected to the language embedding space through a 2-layer MLP with GELU activation
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: OpenVLA-OFT+ on the bimanual ALOHA robot. Our Optimized Fine-Tuning (OFT) recipe enhances fnesuned OpeaVLA pic and inpt-outptfeibliy. The resulting OpeaVLA-OFT+ policies execute diverse ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 | Bold and underlined values show best and second-best performance | definition/direction/unit from same section | p. 10 (C. ALOHA Task Performance Results) |
 | ‘otably, OpenVLA-OFT+'s throughput (77.9 Hz) approaches RDT-1B's (84.1 Hz) despite being 7% larger, as it generates actions in a single forward pass rather than ... | definition/direction/unit from same section | p. 10 (C. ALOHA Task Performance Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 | The baseline methods trained from scratch show varying levels of success. | comparison identity and matched condition | p. 8 (C. ALOHA Task Performance Results) |
 | While its language following slightly trails RDT1B's, mo achieves better overall task completion, making it the strongest baseline. | comparison identity and matched condition | p. 9 (C. ALOHA Task Performance Results) |
 | In contrast, OpenVLA-OFT+ achieves 77.9 Hz throughput, though its latency is higher compared 10 the policies in the prior LIBERO experiments since it must ... | comparison identity and matched condition | p. 9 (C. ALOHA Task Performance Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 | body limitation/failure cue | We maintain the same convergence criterion as in the LIBERO experiments (training until mean normalized LI loss falls below 0.01) and similar learning rate ... | p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation) |
 | body limitation/failure cue | While LI regression may help smoothen out noise in training demonstrations by encouraging the policy to learn the median mode in demonstrated actions, it ... | p. 10 (VII. Discussion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 | + DDIM [46] sampler with 50 diffusion timesteps | p. 14 (B. Implementation Details) |
 | ‘otably, OpenVLA-OFT+'s throughput (77.9 Hz) approaches RDT-1B's (84.1 Hz) despite being 7% larger, as it generates actions in a single forward pass rather than ... | p. 10 (C. ALOHA Task Performance Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / C. ALOHA Task Performance Results - extractive body cue:** On the other hand, zy demonstrates more robust execution ‘with smoother motions and better reactivity to feedback, often successfully recovering from initial failures (as shown ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 9 (C. ALOHA Task Performance Results), p. 5 (
 - **p. 10 / VII. Discussion - extractive body cue:** While LI regression may help smoothen out noise in training demonstrations by encouraging the policy to learn the median mode in demonstrated actions, it may ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (A. LIBERO Experimental Setup), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 10 (C. ALOHA Task Performance Results), metrics p. 9 (C. ALOHA Task Performance Results), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), baselines p. 8 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), results p. 9 (C. ALOHA Task Performance Results), p. 5 (A. LIBERO Experimental Setup), p. 8 (C. ALOHA Task Performance Results), p. 9 (C. ALOHA Task Performance Results), p. 15 (C. Feature-wise Linear Modulation (FILM) Implementation), p. 8 (C. ALOHA Task Performance Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Evaluation on Different Tasks), p. 7 
 - **p. 8 / 5.1. Evaluation on Different Tasks - extractive body cue:** We introduce a multi-resolution benchmark on DL3DV (Ling et al., 2024) following FLARE (Zhang et al., 2025) to fairly compare methods with different input resolutions ...
 - **p. 6 / 5. Experiments - extractive body cue:** We evaluate WorldMirror on comprehensive tasks: point map reconstruction, camera pose estimation, surface normal 6
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. WorldMirror is a feed-forward 3D reconstruction model that takes images with optional priors (depth, intrinsics, poses) and produces point clouds, 3DGS, cameras, depth, ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Evaluation on Different Tasks), p. 7 
 | 6 illustrates how different priors contribute to reconstruction quality, with quantitative results in Sec. | definition/direction/unit from same section | p. 8 (5.2. Evaluation on Different Input Configurations) |
 | Table 1. Point map Reconstruction on 7-Scenes, NRGBD, and DTU. We report the performance of WorldMirror under different input configurations. Best and second best ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Evaluation on Different Tasks), p. 7 
 | Table 4. Multi-resolution novel view synthesis evaluation on DL3DV. ∗denotes using the pose-free optimization (Ye et al., 2024a) for fair comparison with non-pose-free baselines ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 4. Qualitative Comparisons of Novel View Synthesis. We compare with FLARE and AnySplat on RealEstate10K and DL3DV. The first four columns correspond to ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 10. Visual Comparisons on 7-Scenes, NRGBD, and DTU datasets. WorldMirror delivers superior reconstruction fidelity compared to VGGT, effectively capturing spatial relationships within scenes ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Evaluation on Different Tasks), p. 7 
 | body limitation/failure cue | Trained with dynamic resolutions, our model generalizes robustly across varying resolutions and consistently surpasses baselines. | p. 8 (5.1. Evaluation on Different Tasks) |
 | body limitation/failure cue | Figure 11. Visual Comparisons of In-The-Wild Multi-View 3D Reconstruction. WorldMirror delivers superior reconstruction fidelity with in-the-wild images as input, generating more plausible results in ... | p. 23 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Evaluation on Different Tasks), p. 7 
 | 3.1), which encodes diverse input modalities, including camera intrinsics, poses, and depth maps, into a unified token sequence; and (2) Unified Spatial Prediction (Sec. | p. 3 (3. Method) |
 | Additionally, Fi is processed by an MLP decoder to estimate camera parameters ˆEi. | p. 4 (3.2. Unified Spatial Prediction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / Figure/Table caption - extractive body cue:** Table 12. Robustness evaluation of WorldMirror with noisy priors on 7-Scenes and DTU datasets. The model exhibits graceful degradation under various noise conditions. Prior Type ...
@@ -155,6 +134,5 @@ PDF body evaluation/result cue (p. 8 (5.1. Evaluation on Different Tasks), p. 7 
 - **p. 23 / Figure/Table caption - extractive body cue:** Figure 11. Visual Comparisons of In-The-Wild Multi-View 3D Reconstruction. WorldMirror delivers superior reconstruction fidelity with in-the-wild images as input, generating more plausible results in challenging ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.1. Evaluation on Different Tasks), p. 7 (5. Experiments), p. 8 (5.1. Evaluation on Different Tasks), p. 8 (5.1. Evaluation on Different Tasks), p. 6 (5. Experiments), metrics p. 7 (5.1. Evaluation on Different Tasks), p. 7 (5.1. Evaluation on Different Tasks), p. 17 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (5. Experiments), p. 8 (5.3. Comparison with Prior-guided Methods), baselines p. 7 (5.1. Evaluation on Different Tasks), p. 8 (5.3. Comparison with Prior-guided Methods), p. 8 (5.3. Comparison with Prior-guided Methods), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 8 (5.1. Evaluation on Different Tasks), p. 7 (5.1. Evaluation on Different Tasks), p. 7 (5.1. Evaluation on Different Tasks), p. 8 (5.4. Ablation Study), p. 15 (Figure/Table caption), p. 17 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

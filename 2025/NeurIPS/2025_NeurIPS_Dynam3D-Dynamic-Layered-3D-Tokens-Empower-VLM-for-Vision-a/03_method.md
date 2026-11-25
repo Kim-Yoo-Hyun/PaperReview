@@ -51,7 +51,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** Compared to previous video-based representations (a), our Dynam3D (b) adopts dynamic hierarchical 3D representations offering advantages in spatial geometry and semantic understanding. pre-exploration knowledge and ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 1 / 1 Introduction - extractive body cue:** These models pre-trained on large-scale internet data demonstrate strong language understanding and multimodal reasoning abilities, which enable effective instruction following and continuous prediction of navigation ...
 - **p. 2 / 1 Introduction - extractive body cue:** Given language instructions and action history, the 3D-VLM directly predicts navigation actions, e.g., turn θ degrees, move forward d cm, or stop.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 9 / 4 Experiments - extractive body cue:** Most navigation episodes can be completed within 20 to 40 navigation steps, our navigation system supports real-time 3D representation updates and navigation action prediction for ...
 - **p. 14 / A.1 Datasets and Experimental Details - extractive body cue:** To mitigate memory consumption and enable efficient training of large models, we employ the Adafactor optimizer [58] in conjunction with Gradient Checkpointing [59].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, main, contributions, include, Dynam3D, multi-level, patch-instance-zone, representation, model, performs, online, instance, zone-level, encoding, real-time, hierarchical, updates, dynamic, environments, introduce.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,23 +106,12 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 9 / 4 Experiments - extractive body cue:** The navigation performance significantly decreases without Subspace Alignment supervision (Table 6, row 3), highlighting the limitations of naive CLIP feature distillation for 3D instance supervision.
 - **p. 14 / A.1 Datasets and Experimental Details - extractive body cue:** After removing samples with impassable paths, we obtain 4M+ instruction-trajectory pairs in continuous settings.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Different vision-language large models for monocular VLN tasks. Compared to previous video-based representations (a), our Dynam3D (b) adopts dynamic hierarchical 3D representations offering ...
-- **p. 9 / 4 Experiments - extractive body cue:** The navigation performance significantly decreases without Subspace Alignment supervision (Table 6, row 3), highlighting the limitations of naive CLIP feature distillation for 3D instance supervision.
 - **p. 8 / 4 Experiments - extractive body cue:** In the dynamic setting (Figure 4 and Table 5), the target is manually moved to another location once the robot reach within two meters of ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Abstract), objective p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), temporal p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

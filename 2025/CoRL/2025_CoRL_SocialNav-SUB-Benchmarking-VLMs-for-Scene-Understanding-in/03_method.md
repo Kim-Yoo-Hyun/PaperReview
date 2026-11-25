@@ -47,7 +47,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Body text (section not r
 - **p. 1 / Body text (section not recovered) - extractive body cue:** Through experiments with state-of-the-art VLMs, we find that while the best-performing VLM achieves an encouraging probability of agreeing with human answers, it still underperforms simpler ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Body text (section not r
 - **p. 2 / 1 Introduction - extractive body cue:** We run experiments on state-of-the-art large VLMs which reveal notable performance gaps between state-of-the-art large VLMs and both human and rule-based baselines.
 - **p. 3 / 1 Introduction - extractive body cue:** Next-Video [17]) on our benchmark against human and rule-based baselines.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Body text (section not r
 
 - **p. 2 / 1 Introduction - extractive body cue:** Trained in diverse large-scale multimodal datasets that span various real-world scenarios, large VLMs often learn underlying patterns of human behavior that may implicitly encode an ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Moreover, studies, SPACE, indicate, state-of-the-art, large, VLMs, still, lack, robust, spatial, reasoning, raising, questions, about, whether, understand, scenes, complex, realistic.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,20 +102,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Body text (section not r
 - **p. 20 / Figure/Table caption - extractive body cue:** Table 6: Qualitative descriptions of the text components for questions used in SOCIALNAV- SUB, their pertaining primary reasoning capability, and the number of unique questions ...
 - **p. 7 / 4.3 Discussion - extractive body cue:** Overall, our evaluation reveals that while state-of-the-art large VLMs like OpenAI o4-mini and Gemini 2.0 show promising advances, they still fall short of human oracle ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Body text (section not recovered)), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), objective p. 1 (Body text (section not recovered)), temporal p. 5 (2 Related Work), p. 1 (Body text (section not recovered)), p. 5 (2 Related Work), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

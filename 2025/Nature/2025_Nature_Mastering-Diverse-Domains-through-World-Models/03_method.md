@@ -58,7 +58,6 @@ PDF body method statement (p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 4 / Abstract - extractive body cue:** The two losses differ in the stop-gradient operator sg(·) and their loss scale.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 5 (Abstract), p. 6 (Abstract), p. 3 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 4 / Abstract - extractive body cue:** Given a sequence batch of inputs x1:T, actions a1:T, rewards r1:T, and continuation flags c1:T, the world model parameters ϕ are optimized end-to-end to minimize ...
 - **p. 5 / Abstract - extractive body cue:** Moreover, we transform vector observations using the symlog function described later, to prevent large inputs and large reconstruction gradients, further stabilizing the trade-off with the ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 6 / Abstract - extractive body cue:** The critic replay loss uses the imagination returns Rλ t at the start states of the imagination rollouts as on-policy value annotations for the replay ...
 - **p. 10 / Abstract - extractive body cue:** Because of the training time in this complex domain, extensive tuning would be difficult for Minecraft.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** algorithm, consists, three, neural, networks, world, model, predicts, outcomes, potential, actions, critic, judges, value, outcome, actor, chooses, reach, most, valuable.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 2 / Abstract - extractive body cue:** Creating a general algorithm that learns to master new domains without having to be reconfigured has been a central challenge in artificial intelligence and would ...
 - **p. 3 / Abstract - extractive body cue:** The actor and critic predict actions at and values vt and learn from trajectories of abstract representations predicted by the world model. problem without human ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p. 6 (Abstract), p. 6 (Abstract), p. 4 (Abstract), objective p. 4 (Abstract), p. 7 (Abstract), p. 6 (Abstract), p. 7 (Abstract), p. 6 (Abstract), p. 4 (Abstract), temporal p. 10 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 8 (Abstract), p. 1 (Abstract), p. 2 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

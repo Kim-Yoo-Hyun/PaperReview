@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 - **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** Pretraining with DINO on a landmark dataset performs particularly well.
 - **p. 6 / 4.2. Properties of ViT trained with SSL - extractive body cue:** We consider the revisited [53] Oxford and Paris image retrieval datasets [50].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Self-attention from a Vision Transformer with 8 × 8 patches trained with no supervision. We look at the self-attention of the [CLS] token ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 | We report the Mean Average Precision (mAP) for the Medium (M) and Hard (H) splits. | definition/direction/unit from same section | p. 6 (4.2. Properties of ViT trained with SSL) |
 | Table 6: Transfer learning by finetuning pretrained models on different datasets. We report top-1 accuracy. Self-supervised pretraining with DINO transfers better than supervised pretraining. ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 | We pretrain the models on the ImageNet dataset [60] without labels. | comparison identity and matched condition | p. 5 (3.2. Implementation and evaluation protocols) |
 | We consider two different settings: comparison with the same architecture and across architectures. | comparison identity and matched condition | p. 5 (4.1. Comparing with SSL frameworks on ImageNet) |
 | Table 1: Networks configuration. "Blocks" is the number of Transformer blocks, "dim" is channel dimension and "heads" is the number of heads in multi-head ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 | body limitation/failure cue | 4, we show that a supervised ViT does not attend well to objects in presence of clutter both qualitatively and quantitatively. | p. 7 (4.2. Properties of ViT trained with SSL) |
 | body limitation/failure cue | First, we observe that in the absence of momentum, our framework does not work (row 2) and more advanced operations, SK for example, are ... | p. 8 (5.1. Importance of the Different Components) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 | Nonetheless, a base ViT with 8 × 8 patches trained with DINO achieves 80.1% top-1 in linear classification and 77.4% with a k-NN classifier ... | p. 6 (4.1. Comparing with SSL frameworks on ImageNet) |
 | ViT-S/16 ImNet 33.5 8.9 63.0 37.2 DINO ResNet-50 ImNet 35.4 11.1 55.9 27.5 DINO ViT-S/16 ImNet 41.8 13.7 63.1 34.4 DINO ViT-S/16 GLDv2 51.5 ... | p. 6 (4.1. Comparing with SSL frameworks on ImageNet) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 9 SwAV - extractive body cue:** However, the performance gain from using smaller patches comes at the expense of throughput: when using 5×5 patches, the throughput falls to 44 im/s, vs ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Comparing with SSL frameworks on Imag
 - **p. 8 / 5.1. Importance of the Different Components - extractive body cue:** First, we observe that in the absence of momentum, our framework does not work (row 2) and more advanced operations, SK for example, are required ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols), p. 7 (4.2. Properties of ViT trained with SSL), p. 6 (4.1. Comparing with SSL frameworks on ImageNet), p. 6 (4.2. Properties of ViT trained with SSL), metrics p. 15 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 9 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 7 (4.2. Properties of ViT trained with SSL), p. 6 (4.2. Properties of ViT trained with SSL), baselines p. 6 (4.2. Properties of ViT trained with SSL), p. 6 (4.2. Properties of ViT trained with SSL), p. 14 (Figure/Table caption), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (4.1. Comparing with SSL frameworks on ImageNet), p. 4 (Figure/Table caption), results p. 6 (4.1. Comparing with SSL frameworks on ImageNet), p. 7 (4.2. Properties of ViT trained with SSL), p. 14 (Figure/Table caption), p. 6 (4.2. Properties of ViT trained with SSL), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

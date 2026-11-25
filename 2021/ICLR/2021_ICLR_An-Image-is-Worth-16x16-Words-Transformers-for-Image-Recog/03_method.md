@@ -47,7 +47,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 3 / 3 METHOD - extractive body cue:** An advantage of this intentionally simple setup is that scalable NLP Transformer architectures - and their efficient implementations - can be used almost out of ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 4 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Therefore, in large-scale image recognition, classic ResNetlike architectures are still state of the art (Mahajan et al., 2018; Xie et al., 2020; Kolesnikov et al., ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** When pre-trained on the public ImageNet-21k dataset or the in-house JFT-300M dataset, ViT approaches or beats state of the art on multiple image recognition benchmarks.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** VTAB (19 tasks) 65 70 75 80 Accuracy [%] Natural (7 tasks) 70 80 90 Specialized (4 tasks) 80 82 85 88 90 Structured (8 ...
 - **p. 3 / 3 METHOD - extractive body cue:** The classification head is implemented by a MLP with one hidden layer at pre-training time and by a single linear layer at fine-tuning time.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Transformer, encoder, Vaswani, consists, alternating, layers, multiheaded, selfattention, MSA, Appendix, MLP, blocks, Similar, BERT, class, token, prepend, learnable, embedding, sequence.
 - **Relevant PDF headings:** 3 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 8: Results of the ablation study on positional embeddings with ViT-B/16 model evaluated on ImageNet 5-shot linear. the difference in performance is fully explained ...
 - **p. 17 / Figure/Table caption - extractive body cue:** Figure 9. D.4 POSITIONAL EMBEDDING We ran ablations on different ways of encoding spatial information using positional embedding. We tried the following cases: • Providing ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), objective p. 4 (3 METHOD), p. 3 (3 METHOD), temporal p. 4 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

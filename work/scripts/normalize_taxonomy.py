@@ -67,14 +67,10 @@ def registry(papers: list[dict]) -> str:
         "# 논문 목록", "",
         f"- Generated: {datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST",
         f"- Total papers with folders: {len(papers)}",
-        "- Long-term reading tiers: [READING_PLAN.md](./research/READING_PLAN.md) and [READING_TIERS.csv](./research/READING_TIERS.csv)",
-        "- Reading progress and synthesis: [READING_STATUS.csv](./research/READING_STATUS.csv), [READING_STATUS.md](./research/READING_STATUS.md), [synthesis/README.md](./synthesis/README.md)",
-        "- Scope: Robotics manipulation and navigation across robots, with current gap scouting focused on VLA + RL within a single policy; existing VLA-only research and action-relevant 3D vision remain in scope.",
-        "- Research candidate assessment: [current topic priorities](./work/research_topics/README.md#candidate-priority); selected actions and dependencies: [TODO.md](./TODO.md). Candidate investment order is separate from paper reading tiers.",
-        "- Machine-readable registry: [papers.json](./work/sources/papers.json), [registry.schema.json](./work/sources/registry.schema.json), and [registry_meta.json](./work/sources/registry_meta.json)",
-        "- Evaluation/resource view: [resources.json](./work/sources/resources.json) (the existing benchmark/metric cue catalogs are generation inputs)",
-        "- Generated search/index views: [REGISTRY_INDEX.csv](./research/REGISTRY_INDEX.csv) and [REGISTRY_STATS.md](./research/REGISTRY_STATS.md)",
-        "- Taxonomy: one canonical category per paper and one primary robotics track for CORE/NEXT; cross-cutting roles are represented with normalized tags.", "",
+        "", '<a id="keyword-index"></a>', '<a id="alias-index"></a>', "",
+        "분야별 표에서 제목과 태그를 찾을 수 있다. 별칭은 해당 논문의 제목 뒤에 표시한다. "
+        "여러 분야를 한 번에 검색할 때는 색인의 `tags`와 `aliases` 열을 사용한다. "
+        "[전체 검색 색인](./research/REGISTRY_INDEX.csv) · [읽기 계획](./research/READING_PLAN.md) · [원장](./work/sources/papers.json)", "",
     ]
     for category in sorted(groups, key=str.casefold):
         lines += [f"## {category}", "", "| Year | Venue | Paper | Tags | PDF | Code/Project |", "|---:|---|---|---|---|---|"]
@@ -89,32 +85,13 @@ def registry(papers: list[dict]) -> str:
                     project = source["url"]
                     break
             project = f"[link]({project})" if project.startswith("http") else project
-            lines.append(f"| {item['year']} | {venue_label(item.get('venue_canonical', item['venue']))} | [{item['title']}](./{folder}/01_overview.md) | {', '.join(item['tags'])} | {pdf} | {project} |")
+            paper_link = f"[{item['title']}](./{folder}/01_overview.md)"
+            aliases = [alias.replace("\\", "\\\\").replace("|", "\\|") for alias in item.get("aliases", [])]
+            if aliases:
+                paper_link += " (" + ", ".join(aliases) + ")"
+            lines.append(f"| {item['year']} | {venue_label(item.get('venue_canonical', item['venue']))} | {paper_link} | {', '.join(item['tags'])} | {pdf} | {project} |")
         lines.append("")
-    lines += ["## Keyword Index", ""]
-    tags: dict[str, list[dict]] = {}
-    for item in papers:
-        for tag in item["tags"]:
-            tags.setdefault(tag, []).append(item)
-    for tag in sorted(tags, key=str.casefold):
-        refs = ", ".join(
-            f"[{re.sub(r'[^A-Za-z0-9]+', '-', p['title']).strip('-')[:24]}](./{urllib.parse.quote(p['folder'])}/01_overview.md)"
-            for p in tags[tag][:12]
-        )
-        lines.append(f"- **{tag}**: {refs}")
-    aliases: dict[str, list[dict]] = {}
-    for paper in papers:
-        for alias in paper.get("aliases", []):
-            aliases.setdefault(alias, []).append(paper)
-    if aliases:
-        lines += ["", "## Alias Index", ""]
-        for alias in sorted(aliases, key=str.casefold):
-            refs = ", ".join(
-                f"[{re.sub(r'[^A-Za-z0-9]+', '-', p['title']).strip('-')[:24]}](./{urllib.parse.quote(p['folder'])}/01_overview.md)"
-                for p in aliases[alias]
-            )
-            lines.append(f"- **{alias}**: {refs}")
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines)
 
 
 def main() -> None:

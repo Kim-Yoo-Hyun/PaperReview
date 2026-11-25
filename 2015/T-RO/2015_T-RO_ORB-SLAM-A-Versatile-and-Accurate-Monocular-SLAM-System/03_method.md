@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac)
 - **p. 2 / B UNDLE ADJUSTMENT (BA) is known to provide ac - extractive body cue:** Notably, we achieve better camera localization accuracy than the state of the art in direct methods [10], which optimize directly over pixel intensities instead of ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (III. SYSTEM OVERVIEW), p. 6 (III. SYSTEM OVERVIEW), p. 8 (VI. LOCAL MAPPING), p. 6 (III. SYSTEM OVERVIEW), p. 8 (VI. LOCAL MAPPING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac)
 - **p. 6 / III. SYSTEM OVERVIEW - extractive body cue:** IEEE TRANSACTIONS ON ROBOTICS 5 accurate results.
 - **p. 8 / VI. LOCAL MAPPING - extractive body cue:** This policy makes our map contain very few outliers.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac)
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Nowadays, know, achieve, accurate, non-prohibitive, computational, cost, real, time, SLAM, algorithm, provide, Corresponding, observations, scene, features, points, among, subset, selected.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac)
 - **p. 15 / VIII. EXPERIMENTS - extractive body cue:** In sequence 08 there are no loops and drift cannot be corrected, which makes clear the need of loop closures to achieve accurate reconstructions.
 - **p. 10 / VIII. EXPERIMENTS - extractive body cue:** The big loop on the right does not perfectly align because it was traversed in opposite directions and the place recognizer was not able to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 5 (III. SYSTEM OVERVIEW), p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 5 (III. SYSTEM OVERVIEW), p. 6 (IV. AUTOMATIC MAP INITIALIZATION), p. 7 (V. TRACKING), objective p. 5 (III. SYSTEM OVERVIEW), p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 5 (III. SYSTEM OVERVIEW), p. 6 (III. SYSTEM OVERVIEW), p. 8 (VI. LOCAL MAPPING), p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), temporal p. 13 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 11 (VIII. EXPERIMENTS), p. 11 (VIII. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

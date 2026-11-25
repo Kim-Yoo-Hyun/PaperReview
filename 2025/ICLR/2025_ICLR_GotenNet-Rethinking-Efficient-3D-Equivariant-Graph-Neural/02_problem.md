@@ -63,8 +63,6 @@ PDF body contribution framing (p. 1 (ABSTRACT), p. 2 (B L), p. 2 (B L), p. 1 (AB
 | body cue at p. 4 | Figure 2: Architecture of GotenNet. The overall framework (a) includes an embedding, an interaction module, and a decoder; ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | The best log error of -4.65 in the random split further demonstrates the model's robustness on larger datasets. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (ABSTRACT), p. 2 (B L), p. 2 (B L), p. 1 (ABSTRACT). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 1 (ABSTRACT), p. 2 (B L), p. 2 (B L), p. 1 (AB
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (B L), p. 1 (B L), p. 1 (ABSTRACT), p. 2 (B L), interface p. 1 (ABSTRACT), p. 2 (B L), p. 2 (B L), p. 1 (ABSTRACT), objective p. 1 (ABSTRACT).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

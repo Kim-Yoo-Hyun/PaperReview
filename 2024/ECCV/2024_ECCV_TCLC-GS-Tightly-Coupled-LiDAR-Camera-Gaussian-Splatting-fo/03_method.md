@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 M
 - **p. 5 / 3 Methodology - extractive body cue:** Subsequently, we obtain the optimized octree implicit representations and colorized 3D mesh of the global scene.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 Methodology), p. 6 (3 Methodology), p. 8 (3 Methodology), p. 8 (3 Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 M
 - **p. 8 / 3 Methodology - extractive body cue:** I refers to the original RGB image, and D refers to the dense depth rendered from 3D mesh by Ray Tracing.
 - **p. 8 / 3 Methodology - extractive body cue:** Lssim refers to Structural Similarity Index Measure (SSIM) term between the original RGB and rendered RGB images, and Lsmooth refers to inverse depth smooth [7] ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 M
 - **p. 8 / 3 Methodology - extractive body cue:** Additionally, to enhance training robustness, we use very shallow MLPs to encode the c and Fi(v) before their integration into the 3D Gaussians.
 - **p. 6 / 3 Methodology - extractive body cue:** We randomly initialize the corner features when creating the octree and optimizing them during training.
 - **p. 8 / 3 Methodology - extractive body cue:** These sky masks are only necessary during training and not during inference.
-- **p. 8 / 3 Methodology - extractive body cue:** Additionally, to enhance training robustness, we use very shallow MLPs to encode the c and Fi(v) before their integration into the 3D Gaussians.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** TCLCGS, framework, composed, primary, learning, components, octree, implicit, feature, SDF, RGB, decoders, Fig, pipeline, TCLC-GS, first, merge, LiDAR, sweeps, together.
 - **Relevant PDF headings:** 3 Methodology (p. 4); 13 Method (p. 13).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 M
 - **p. 10 / 4 Experiments - extractive body cue:** Metrics: Following the previous research [5,15,20,28,31], our image synthesis evaluation employs three widely-used benchmark metrics, i.e., peak signal-tonoise ratio (PSNR), structural similarity index measure (SSIM), ...
 - **p. 12 / 4 Experiments - extractive body cue:** The significant improvement in depth synthesis performance can be attributed to the robust supervision provided by the rendered dense depths derived from the generated accurate ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 8 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), objective p. 6 (3 Methodology), p. 6 (3 Methodology), p. 8 (3 Methodology), p. 8 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), temporal p. 10 (4 Experiments), p. 10 (4 Experiments), p. 14 (13 Method), p. 1 (body section not recovered), p. 4 (3 Methodology), p. 4 (3 Methodology).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

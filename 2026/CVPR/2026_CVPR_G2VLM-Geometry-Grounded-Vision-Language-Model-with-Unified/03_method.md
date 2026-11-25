@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Re
 - **p. 4 / 3.2. Visual Geometry Learning - extractive body cue:** The point cloud reconstruction loss, Lpoints, is defined using the optimal scale factor s∗: Lpoints = 1 3NHW N X i=1 H×W X j=1 1 ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Spatial Reasoning Learning), p. 4 (3.2. Visual Geometry Learning), p. 5 (3.3. Spatial Reasoning Learning), p. 4 (3.2. Visual Geometry Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Re
 - **p. 6 / Model - extractive body cue:** OST-Bench∗denotes a subset with ≤15 input frames.
 - **p. 6 / Model - extractive body cue:** OmniSpatial∗denotes evaluation on its two main categories: Spatial Interaction (SI) and Perspective Taking (PT).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Re
 - **p. 5 / 3.3. Spatial Reasoning Learning - extractive body cue:** For joint-training, we use AdamW optimizer for 16K iterations with a lr of 2e-5 on 64 A800 GPUs over 3 days.
 - **p. 5 / 3.3. Spatial Reasoning Learning - extractive body cue:** Across all training, we employ gradient norm clipping with a threshold of 1.0 to ensure training stability and leverage bfloat16 precision and gradient checkpointing to ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** illustrated, Figure, G2VLM, adopts, Mixture-ofTransformer-Experts, MoT, architecture, consists, transformer, experts-one, geometry, perception, expert, dedicated, visual, learning, semantic, multimodal, understanding, joint-training.
 - **Relevant PDF headings:** 3. Unified Spatial Vision-Language Model (p. 4); 3.1. Model Architecture (p. 4); Model (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,22 +108,11 @@ PDF body method statement (p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Re
 - **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** These results underscore our model's strong capabilities, particularly since it does not use camera tokens (like VGGT) which provides a strong camera pose prior or ...
 - **p. 8 / 5. Conclusion - extractive body cue:** While our model exhibits strong generalization abilities in both visual geometry and spatial reasoning, one potential limitation is training instability with large-scale models.
 - **p. 7 / 4.2. Spatial Understanding & Reasoning Results - extractive body cue:** We leave the scaling of our model to future work, as this is a promising direction to unlock even stronger performance.
-- **p. 7 / 4.1. Visual Geometry Results - extractive body cue:** These results underscore our model's strong capabilities, particularly since it does not use camera tokens (like VGGT) which provides a strong camera pose prior or ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Reasoning Learning), p. 4 (3.1. Model Architecture), p. 5 (3.3. Spatial Reasoning Learning), p. 6 (Model), p. 6 (Model), objective p. 5 (3.3. Spatial Reasoning Learning), p. 4 (3.2. Visual Geometry Learning), p. 5 (3.3. Spatial Reasoning Learning), p. 4 (3.2. Visual Geometry Learning), temporal p. 2 (1. Introduction), p. 6 (Model), p. 7 (4.2. Spatial Understanding & Reasoning Results), p. 8 (4.3. Discussions and Ablation Study), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

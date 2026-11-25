@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 14 (2.60 93.19 Random)
 - **p. 9 / 4 Experiments - extractive body cue:** We conduct the following experiments with our Point-MAE. a) We pre-train our model on ShapeNet [5] training set. b) We evaluate our pre-trained model on ...
 - **p. 13 / 4 Experiments - extractive body cue:** Point-MAE 13 input for each object, which results in 128 point patches.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Illustration of masked autoencoding. A portion of input data is masked, then an autoencoder is trained to recover the masked parts from original ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 14 (2.60 93.19 Random)
 | Furthermore, given 8192 points as input, our Point-MAE achieves 94.04% accuracy. | definition/direction/unit from same section | p. 12 (4 Experiments) |
 | We report mean IoU for all instances mIoUI (%), with IoU (%) for each category. | definition/direction/unit from same section | p. 13 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 14 (2.60 93.19 Random)
 | Our Point-MAE significantly advances state-of-the-art accuracies of four settings by 1.5%-2.3%, with smaller deviations. | comparison identity and matched condition | p. 12 (4 Experiments) |
 | Our Point-MAE achieves 86.1% mIoU, improving the baseline by 1% mIoU. | comparison identity and matched condition | p. 13 (4 Experiments) |
 | Our Point-MAE with a simple segmentation head also outperforms Point-BERT [54], which uses DGCNN [44] and propagation in their segmentation head. | comparison identity and matched condition | p. 13 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 14 (2.60 93.19 Random)
 | body limitation/failure cue | Our segmentation head is relatively simple and does not use any propagating operation or DGCNN [44]. | p. 13 (4 Experiments) |
 | body limitation/failure cue | The performance degrades largely with low making ratios and also degrades slightly if the masking ratio is too high. | p. 14 (2.60 93.19 Random) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 14 (2.60 93.19 Random)
 | Masked Autoencoders for Point Cloud Self-supervised Learning Yatian Pang2 Wenxiao Wang3 Francis E.H. | p. 1 (Body text (section not recovered)) |
 | As a promising scheme of self-supervised learning, masked autoencoding has significantly advanced natural language processing and computer vision. | p. 1 (4 Tencent Data Platform) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 2.60 93.19 Random - extractive body cue:** The leakage of location information makes the reconstruction task less challenging, and the model cannot learn latent features well, leading to worse fine-tune performance.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 14 (2.60 93.19 Random)
 - **p. 14 / 2.60 93.19 Random - extractive body cue:** The performance degrades largely with low making ratios and also degrades slightly if the masking ratio is too high.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), metrics p. 13 (4 Experiments), p. 12 (4 Experiments), p. 14 (2.60 93.19 Random), p. 14 (2.60 93.19 Random), p. 11 (4 Experiments), p. 11 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), results p. 11 (4 Experiments), p. 14 (2.60 93.19 Random), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 14 (2.60 93.19 Random), p. 13 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Figure 5: Sensitivity Experiments: We report the final number of task ...
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** We then study the sensitivity of Recovery RL to the number of offline transitions used to pretrain πrec and ˆQπ φ,risk (right) and find that ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Recovery RL can safely learn policies for contact-rich tasks from high-dimensional image observations in simulation experiments and on a physical robotic system. We ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 | We hypothesize that the model-based recovery mechanism is better able to compensate for approximation errors in ˆQπ φ,risk, resulting in a more robust recovery ... | definition/direction/unit from same section | p. 7 (V. EXPERIMENTS) |
 | Figure 10: Simulation Experiments Reward Learning Curve: We show the total reward attained in each episode smoothed over a 100 episode length window for ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 | Figure 10: Simulation Experiments Reward Learning Curve: We show the total reward attained in each episode smoothed over a 100 episode length window for ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | Figure 6: Physical Experiment: We evaluate Recovery RL on an image-based obstacle avoidance task (red obstacles) on the dVRK (Figure 1). We supply all ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Recovery RL and all comparisons which have a safety critic are given the same offline dataset Doffline. | comparison identity and matched condition | p. 5 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 | body limitation/failure cue | Figure 1: Recovery RL can safely learn policies for contact-rich tasks from high-dimensional image observations in simulation experiments and on a physical robotic system. ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: Recovery RL: For intuition, we illustrate Recovery RL on a 2D maze navigation task where a constraint violation corresponds to hitting a ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 | Figure 5: Sensitivity Experiments: We report the final number of ... | p. 7 (V. EXPERIMENTS) |
 | In Section IV-C we discuss how the safety critic and recovery policy are initialized from offline data and in Section IV-D we discuss implementation ... | p. 3 (IV. RECOVERY RL) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free and model-based recovery policies, while for the object extraction ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table captio
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Recovery RL: For intuition, we illustrate Recovery RL on a 2D maze navigation task where a constraint violation corresponds to hitting a wall. ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), baselines p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 13 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

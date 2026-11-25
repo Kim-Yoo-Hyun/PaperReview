@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Comparison with the state of the art)
 - **p. 8 / 8.4 GB - extractive body cue:** We compare ASMK on MASt3R features to the off-the-shelf retrieval method FIRe [66], also based on ASMK, on the Aachen-Day-Night [45] and InLoc [53] datasets.
 - **p. 8 / 8.4 GB - extractive body cue:** 14.3 min Table 4: Ablation of scene graph construction on Tanks&Temples (200 view subset).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Top: Relative rotation (RRA) and translation (RTA) accuracies on the CO3Dv2 dataset when varying the number of input views with random subsampling (the ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Comparison with the state of the art)
 | Finally, we report the successful registration rate as a percentage, denoted as Reg. | definition/direction/unit from same section | p. 6 (5.1. Experimental setup) |
 | Table 7: Comparison of retrieval based on MASt3R features. We compare the visual localization accuracy using top-20 retrieved images with ASMK (top row), a ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Comparison with the state of the art)
 | Results reported in table 3 shows that MASt3R-SfM outperforms all competing approaches by a large margin on average. | comparison identity and matched condition | p. 7 (5.2. Comparison with the state of the art) |
 | Except for the ‘complete' case, we try to match the number of pairs used in the baseline retrieval strategy. | comparison identity and matched condition | p. 8 (8.4 GB) |
 | We finally present several ablations. | comparison identity and matched condition | p. 6 (5. Experimental Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Comparison with the state of the art)
 | body limitation/failure cue | Thanks to the strong priors encoded in the underlying MASt3R foundation model upon which our approach is based, it can even deal with cases ... | p. 9 (6. Conclusion) |
 | body limitation/failure cue | The fact that COLMAP and VGGSfM also perform relatively poorly indicates a high sensitivity to not having highly overlapping images, meaning that in the ... | p. 7 (5.2. Comparison with the state of the art) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Comparison with the state of the art)
 | We then compute local 3D reconstruction and matches for each edge using again a frozen MASt3R's decoder. | p. 4 (4. Proposed Method) |
 | Note that this method is training-free, only requiring to compute the whitening matrix and the codebook once from a representative set of features. | p. 4 (4.1. Scene graph) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6. Conclusion - extractive body cue:** After analyzing the results, we observe that failures are due to the presence of outlier (false) matches between similar-looking structures.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Comparison with the state of the art)
 - **p. 7 / 5.2. Comparison with the state of the art - extractive body cue:** The fact that COLMAP and VGGSfM also perform relatively poorly indicates a high sensitivity to not having highly overlapping images, meaning that in the end ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.2. Comparison with the state of the art), p. 6 (5.1. Experimental setup), p. 6 (5.1. Experimental setup), p. 7 (5.2. Comparison with the state of the art), p. 8 (8.4 GB), p. 8 (8.4 GB), metrics p. 8 (8.4 GB), p. 15 (Figure/Table caption), p. 6 (5.1. Experimental setup), p. 7 (5.2. Comparison with the state of the art), p. 9 (8.4 GB), p. 4 (Figure/Table caption), baselines p. 8 (8.4 GB), p. 6 (5. Experimental Results), p. 7 (5.2. Comparison with the state of the art), p. 7 (5.2. Comparison with the state of the art), p. 8 (8.4 GB), p. 6 (5. Experimental Results), results p. 7 (5.2. Comparison with the state of the art), p. 7 (5.2. Comparison with the state of the art), p. 8 (8.4 GB), p. 9 (8.4 GB), p. 8 (8.4 GB), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

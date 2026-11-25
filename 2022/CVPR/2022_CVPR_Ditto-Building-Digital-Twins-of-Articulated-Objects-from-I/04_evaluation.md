@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 - **p. 8 / 5.6. Real-World Experiments - extractive body cue:** Moreover, we import the digital twin of the faucet into Robosuite [62], a robot learning simulation framework.
 - **p. 7 / 5.4. Articulated Object Reconstruction - extractive body cue:** On both datasets, Ditto gets significantly better results on all metrics compared with the baselines.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We build digital twins of articulated objects through in- teractive perception. Given visual observations before and after interaction, our method jointly reconstructs the ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 | Share Feature baseline has the worst performance in Mobile CD. | definition/direction/unit from same section | p. 8 (5.5. Ablation Studies) |
 | Figure 2. Model architecture of Ditto. The input consists of point cloud observations before and after interaction. After a PointNet++ [44] encoder, we fuse ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 | Both the Correspondence [7] and Global Joint [18] baselines perform poorly on articulation estimation. | comparison identity and matched condition | p. 7 (5.4. Articulated Object Reconstruction) |
 | Share Feature baseline has the worst performance in Mobile CD. | comparison identity and matched condition | p. 8 (5.5. Ablation Studies) |
 | Finally, the Share Decoder baseline applies one decoder for both geometry and motion features. | comparison identity and matched condition | p. 8 (5.5. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 | body limitation/failure cue | In comparison, Ditto does not suffer from such a bottleneck as an end-to-end method. | p. 7 (5.4. Articulated Object Reconstruction) |
 | body limitation/failure cue | Even though we use multi-view depth images, the point cloud may still be incomplete due to the self-occlusion of the objects. | p. 6 (5.1. Datasets) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 | This decoder needs to reason about geometry and articulation simultaneously. | p. 8 (5.5. Ablation Studies) |
 | Finally, the Share Decoder baseline applies one decoder for both geometry and motion features. | p. 8 (5.5. Ablation Studies) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.4. Articulated Object Reconstruction - extractive body cue:** Failure of joint estimation also harms segmentation prediction because the joint parameter decoders and the segmentation decoder share the same feature planes.
@@ -160,9 +139,8 @@ PDF body evaluation/result cue (p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articul
 - **p. 6 / 5.1. Datasets - extractive body cue:** Even though we use multi-view depth images, the point cloud may still be incomplete due to the self-occlusion of the objects.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.2. Baselines), p. 6 (5.1. Datasets), p. 6 (5.1. Datasets), p. 8 (5.4. Articulated Object Reconstruction), p. 8 (5.6. Real-World Experiments), p. 7 (5.4. Articulated Object Reconstruction), metrics p. 7 (5.3. Evaluation Metrics), p. 8 (5.5. Ablation Studies), p. 7 (5.3. Evaluation Metrics), p. 12 (Figure/Table caption), p. 6 (5.2. Baselines), p. 6 (5.1. Datasets), baselines p. 7 (5.4. Articulated Object Reconstruction), p. 6 (5.2. Baselines), p. 6 (5.2. Baselines), p. 7 (5.4. Articulated Object Reconstruction), p. 8 (5.5. Ablation Studies), p. 8 (5.5. Ablation Studies), results p. 8 (5.5. Ablation Studies), p. 7 (5.4. Articulated Object Reconstruction), p. 7 (5.4. Articulated Object Reconstruction), p. 8 (5.5. Ablation Studies), p. 12 (Figure/Table caption), p. 6 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

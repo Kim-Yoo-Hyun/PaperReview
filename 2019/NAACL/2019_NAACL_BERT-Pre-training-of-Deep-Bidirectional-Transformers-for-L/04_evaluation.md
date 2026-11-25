@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 - **p. 7 / 4 Experiments - extractive body cue:** 4.4 SWAG The Situations With Adversarial Generations (SWAG) dataset contains 113k sentence-pair completion examples that evaluate grounded commonsense inference (Zellers et al., 2018).
 - **p. 8 / 4 Experiments - extractive body cue:** This is directly comparable to OpenAI GPT, but using our larger training dataset, our input representation, and our fine-tuning scheme.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overall pre-training and fine-tuning procedures for BERT. Apart from output layers, the same architec- tures are used in both pre-training and fine-tuning. The ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 | 5.2 Effect of Model Size In this section, we explore the effect of model size on fine-tuning task accuracy. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | The reported Dev and Test scores are averaged over 5 random restarts using those hyperparameters. layer in the output. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 | The results compared to prior leaderboard entries and top published work (Sun et al., 2018; Wang et al., 2018b) are shown in Table 3, ... | comparison identity and matched condition | p. 7 (4 Experiments) |
 | BERTLARGE performs competitively with state-of-the-art methods. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Dev Set Tasks MNLI-m QNLI MRPC SST-2 SQuAD (Acc) (Acc) (Acc) (Acc) (F1) BERTBASE 84.4 88.4 86.7 92.7 88.5 No NSP 83.9 84.9 86.5 ... | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 | body limitation/failure cue | Given a question and a passage from 9The GLUE data set distribution does not include the Test labels, and we only made a single ... | p. 6 (4 Experiments) |
 | body limitation/failure cue | The left-only constraint was also applied at fine-tuning, because removing it introduced a pre-train/fine-tune mismatch that degraded downstream performance. | p. 8 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 | We trained a number of BERT models with a differing number of layers, hidden units, and attention heads, while otherwise using the same hyperparameters ... | p. 8 (4 Experiments) |
 | Hyperparameters were selected using the Dev set. | p. 9 (4 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4 Experiments - extractive body cue:** Additionally, for BERTLARGE we found that finetuning was sometimes unstable on small datasets, so we ran several random restarts and selected the best model on ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8
 - **p. 8 / 4 Experiments - extractive body cue:** The left-only constraint was also applied at fine-tuning, because removing it introduced a pre-train/fine-tune mismatch that degraded downstream performance.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 8 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 6 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), results p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

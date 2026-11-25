@@ -56,7 +56,6 @@ PDF body method statement (p. 17 (6.2 Relation to other balancing approaches), p
 - **p. 3 / 2.1 Modelling Assumptions and Problem Formulation - extractive body cue:** Contact constraints End effectors are constrained to remain stationary.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 4 (2.1 Modelling Assumptions and Problem Formulation), p. 17 (6.2 Relation to other balancing approaches), p. 3 (2.1 Modelling Assumptions and Problem Formulation), p. 3 (2.1 Modelling Assumptions and Problem Formulation), p. 4 (2.1 Modelling Assumptions and Problem Formulation), p. 6 (3.1 Linear and angular momentum models).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 17 (6.2 Relation to other balancing approaches), p
 - **p. 4 / 2.1 Modelling Assumptions and Problem Formulation - extractive body cue:** The goal of the controller is to find ¨q, λ and τ (and therefore a control command) that satisfies these objectives as well as possible.
 - **p. 17 / 6.2 Relation to other balancing approaches - extractive body cue:** However, with the optimization problem being complicated, they actually solve a simpler problem where the contact forces are first determined and then desired accelerations and ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 17 (6.2 Relation to other balancing approaches), p
 - **p. 3 / 2.1 Modelling Assumptions and Problem Formulation - extractive body cue:** In our case, we approximate the cones by pyramids to have linear inequality constraints in the contact forces.
 - **p. 15 / 5.4 Single Support Experiments - extractive body cue:** Concerning computation time, the controller computes a solution in average well below 1ms but a maximum at 1.05ms is reached a few times during the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** However, optimization, problem, being, complicated, they, actually, solve, simpler, where, contact, forces, first, determined, then, desired, accelerations, torques, computed, through.
 - **Relevant PDF headings:** 2.1 Modelling Assumptions and Problem Formulation (p. 3); 3.1 Linear and angular momentum models (p. 6); 4.4 Dynamic model (p. 8); 5.2.2 Comparison of momentum controllers (p. 11); 6.2 Relation to other balancing approaches (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 17 (6.2 Relation to other balancing approaches), p
 - **p. 15 / 5.4 Single Support Experiments - extractive body cue:** Then an unloading phase occurs during which the contact force regularization enforces a zero contact force to guarantee a continuous transition when the double support ...
 - **p. 17 / 6.2 Relation to other balancing approaches - extractive body cue:** Also, separating the EoM from kinematic contact constraints allows to keep solutions consistent with the dynamics even in postures where the feet cannot be kept ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 17 (6.2 Relation to other balancing approaches), p. 17 (6.2 Relation to other balancing approaches), p. 3 (2.1 Modelling Assumptions and Problem Formulation), p. 3 (2.1 Modelling Assumptions and Problem Formulation), p. 4 (2.1 Modelling Assumptions and Problem Formulation), p. 4 (2.1 Modelling Assumptions and Problem Formulation), objective p. 4 (2.1 Modelling Assumptions and Problem Formulation), p. 17 (6.2 Relation to other balancing approaches), p. 4 (2.1 Modelling Assumptions and Problem Formulation), p. 17 (6.2 Relation to other balancing approaches), p. 3 (2.1 Modelling Assumptions and Problem Formulation), p. 3 (2.1 Modelling Assumptions and Problem Formulation), temporal p. 7 (3.2 LQR design for momentum control), p. 7 (4.1 Sarcos Humanoid Robot), p. 8 (4.5 Experimental tools), p. 9 (5.1 Processing Time), p. 9 (5.1 Processing Time), p. 10 (5.1 Processing Time).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

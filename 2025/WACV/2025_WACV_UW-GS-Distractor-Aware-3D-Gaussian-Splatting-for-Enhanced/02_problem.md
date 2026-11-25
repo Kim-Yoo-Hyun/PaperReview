@@ -65,8 +65,6 @@ PDF body contribution framing (p. 4 (3.3. Color Appearance Model), p. 1 (1. Intr
 | body cue at p. 4 | Figure 2. The diagram of our proposed UW-GS approach, combining a novel color appearance model, physical-based density control ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Figure 3. Left: Diagram of 2D Position gradient calculation. Right: Illustration of densification failures (G2 highlighted in orange) ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Overview of UW-GS), p. 4 (3.3. Color Appearance Model), p. 6 (3.6. Loss Function), p. 6 (3.6. Loss Function). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ PDF body contribution framing (p. 4 (3.3. Color Appearance Model), p. 1 (1. Intr
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem formulation), p. 1 (1. Introduction), interface p. 4 (3.2. Overview of UW-GS), p. 4 (3.3. Color Appearance Model), p. 6 (3.6. Loss Function), p. 6 (3.6. Loss Function), objective p. 4 (3.4. Physical-based Density Control), p. 6 (3.6. Loss Function), p. 3 (3.1. Problem formulation), p. 3 (3.1. Problem formulation), p. 4 (3.4. Physical-based Density Control), p. 5 (3.4. Physical-based Density Control).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 7 | However, when the viewpoint shift becomes excessively large, spatial geometric occlusions occur, leading to a noticeable degradation in ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Ablation Types Success Rate DiffuView 89.2 DiffuView w/o Robotics Data Pretraining 63.3 DiffuView w/o Pl¨ucker Embedding 76.2 DiffuView ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 4 (3. Method). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 4 (3. Method), objective p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

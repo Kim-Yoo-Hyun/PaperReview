@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 8 / 4.3. Additional Analysis on Flow Prediction - extractive body cue:** We first reverse the direction of input flows at stage 2 while the robot action remains unchanged.
 - **p. 8 / 4.3. Additional Analysis on Flow Prediction - extractive body cue:** We can observe that the robot did not really take contrary actions due to the action input at stage 2, while its performance becomes worse ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Proposed RGB-D world model with flow-based mo- tion representations. FlowDreamer adopts a two-stage prediction framework, which explicitly predict scene flow as motion repre- ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | benchmarks, demonstrating the efficacy of our approach in both visual performance and visual planning tasks. | definition/direction/unit from same section | p. 2 (3. We perform comprehensive evaluations across several) |
 | In this section, we conduct extensive experiments in four different benchmarks to verify the performance of FlowDreamer. | definition/direction/unit from same section | p. 4 (4. Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | We also design a conditional MinkowskiNet [13] as a point-cloud-based baseline. | comparison identity and matched condition | p. 13 (A. Implementation Details) |
 | For the Language Table environment, we generate trajectories by the RRT* oracle policy provided in the official repositories. | comparison identity and matched condition | p. 13 (A. Implementation Details) |
 | However, our performance still outperforms Vanilla, as Vanilla cannot even keep the consistency of the background during generation. | comparison identity and matched condition | p. 14 (A. Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 13 / A. Implementation Details - extractive body cue:** For the RT-1 SimplerEnv environment, we choose 5 tasks implemented by SimplerEnv [46]: pick coke can, pick object, move near, open drawer, close drawer, and ...
 - **p. 14 / A. Implementation Details - extractive body cue:** We conduct video prediction experiments on the real-world RT-1 robot manipulation dataset.
 - **p. 7 / 4.2. Visual Planning - extractive body cue:** We run our experiments with 4 seeds on RoboDesk tasks and 3 seeds with Robosuite tasks, which keeps same with other VP2 experiments.
-- **p. 13 / A. Implementation Details - extractive body cue:** Each model is trained on 8 GPUs in parallel, with a batch size of 16 per GPU.
-- **p. 13 / A. Implementation Details - extractive body cue:** For the RT-1 SimplerEnv environment, we choose 5 tasks implemented by SimplerEnv [46]: pick coke can, pick object, move near, open drawer, close drawer, and ...
 
 ## Generalization and Failure Cases
 
@@ -138,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | However, our performance still outperforms Vanilla, as Vanilla cannot even keep the consistency of the background during generation. | p. 14 (A. Implementation Details) |
 | body limitation/failure cue | Depth map Dt and the scene flow ˆft→t+1 are firstly downsampled to the same shape of zt by several convolutional layers, and then channel-wise ... | p. 4 (3.3. Future Generation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 | Future works could explore a better tradeoff between inference time and prediction performance. | p. 14 (A. Implementation Details) |
 | We run our experiments with 4 seeds on RoboDesk tasks and 3 seeds with Robosuite tasks, which keeps same with other VP2 experiments. | p. 7 (4.2. Visual Planning) |
 | We report the mean and the min/max performance of different methods over multiple runs with different random seeds. | p. 7 (4.2. Visual Planning) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -168,9 +145,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 4 / 3.3. Future Generation - extractive body cue:** Depth map Dt and the scene flow ˆft→t+1 are firstly downsampled to the same shape of zt by several convolutional layers, and then channel-wise concatenated ...
 
 - **Evidence anchors reviewed:** datasets p. 14 (A. Implementation Details), p. 14 (A. Implementation Details), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 2 (3. We perform comprehensive evaluations across several), p. 4 (4. Experiments), metrics p. 7 (Figure/Table caption), p. 8 (4.3. Additional Analysis on Flow Prediction), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details), results p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 13 (A. Implementation Details), p. 14 (A. Implementation Details).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

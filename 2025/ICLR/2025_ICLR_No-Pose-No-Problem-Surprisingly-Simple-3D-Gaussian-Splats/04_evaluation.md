@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** This advantage arises primarily from our minimal geometric priors in the network structure, allowing it to adapt effectively to various types of scenes.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Ref. pixelSplat MVSplat Ours GT (a) Cross-Dataset Generalize: RE10K →DTU Ref. pixelSplat MVSplat Ours GT (b) Cross-Dataset Generalize: RE10K →ScanNet++ Figure 6: Cross-dataset generalization.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: NoPoSplat. Given sparse unposed images, our method reconstructs 3D Gaussians of different views in a canonical space using a feed-forward network. The resulting ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 | Furthermore, our method does not require an explicit matching loss during training, meaning no ground truth depth is necessary. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 | To demonstrate the effectiveness of our canonical Gaussian prediction, we compare it with the transform-then-fuse pipeline commonly used by pose-required methods (Charatan et al., ... | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 | 4, NoPoSplat significantly outperforms all SOTA pose-free approaches. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | For a fair comparison with baseline models, we report all quantitative results and baseline comparisons under 256×256. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | The results show that even without camera poses as input, our method produces higher-quality 3D Gaussians resulting in better color/depth rendering over baselines. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** As shown on the right, our method can predict 3D Gaussians from two 256 × 256 input images in 0.015 seconds (66 fps), which is ...
 - **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** For the 256 × 256 version of the model, training was conducted on 8 NVIDIA GH200 GPUs (each with >80 GB memory) for approximately 6 ...
 - **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** While this setup required more time (approximately 90 hours), it achieved comparable performance (PSNR on RE10K: 25.018 with A6000 vs.
-- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** For the 256 × 256 version of the model, training was conducted on 8 NVIDIA GH200 GPUs (each with >80 GB memory) for approximately 6 ...
-- **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** While this setup required more time (approximately 90 hours), it achieved comparable performance (PSNR on RE10K: 25.018 with A6000 vs.
 
 ## Generalization and Failure Cases
 
@@ -140,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 | body limitation/failure cue | Figure 2: Comparison with pose-required sparse-view 3D Gaussian splatting pipeline. Previ- ous methods first generate Gaussians in each local camera coordinate system and then ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Furthermore, our method does not require an explicit matching loss during training, meaning no ground truth depth is necessary. | p. 8 (4 EXPERIMENTS) |
 | body limitation/failure cue | These issues are largely due to the noises introduced in their transform-then-fuse pipeline. | p. 8 (4 EXPERIMENTS) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -156,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 | Both encoder and decoder utilize pure Vision Transformer (ViT) structures, without injecting any geometric priors (e.g. epipolar constraints employed in pixelSplat (Charatan et al., ... | p. 4 (3 METHOD) |
 | The encoder shares the same weights for different views. | p. 5 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 11: RealEstate10k performance with different number of input views. Addtional Comparison with Splatt3R. In Tab.1 of the main paper, we compare our method with ...
@@ -174,6 +151,5 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** These issues are largely due to the noises introduced in their transform-then-fuse pipeline.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 21 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

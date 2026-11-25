@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 - **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** To ensure consistency across datasets, we standardize orientations by selecting the rotation variant that minimizes the angular deviation between the local PCA axes of the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (2.2.2. Implicit 2D Grounding).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 - **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** Each 3D bounding box is expressed in a unified, language-based format compatible with 2D HTML-style outputs, eliminating the need for task-specific heads.
 - **p. 5 / 2.4. Data Construction and Composition - extractive body cue:** To construct the implicit grounding corpus, we start from RefSpatial [23], which includes 2D samples from OpenImages [53], 3D video data from CA-1M [54], and ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 - **p. 5 / Method - extractive body cue:** Together, region-prompt grounding, structured 3D box representation, intrinsic normalization, and scalable training signals address both linguistic and geometric ambiguities of monocular 3D grounding.
 - **p. 6 / 3.1. Implementation Details - extractive body cue:** During this stage, we freeze the visual encoder and train the remaining modules.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, explicit, implicit, forms, grounding, designed, strengthen, spatial, reasoning, capacity, vision-language, model, first, predicts, coordinates, then, encodes, predicted, region, obtain.
 - **Relevant PDF headings:** 2. Method (p. 3); Method (p. 5); Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Results on the BLINK-Depth benchmark for point-level region spatial understanding. Left: comparison with VLM base- lines. Right: visualization of one sample. Our method ...
 - **p. 6 / 3.2. 3D Object Detection - extractive body cue:** This makes its 3D predictions unstable under changes in image size.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.2.2. Implicit 2D Grounding), p. 5 (2.4. Data Construction and Composition), p. 3 (2.1. Foundational Spatial VLM), p. 5 (Method), objective p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), temporal p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 3 (2.1. Foundational Spatial VLM), p. 4 (2.3. Monocular 3D Grounding via Region Prompt), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

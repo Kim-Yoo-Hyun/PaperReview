@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.
 - **p. 10 / 4.2 RESULTS - extractive body cue:** (5) utilizing ground truth depth in dataset.
 - **p. 10 / 4.2 RESULTS - extractive body cue:** We apply our method to the 3DGS-based framework, and the geometry is enhanced on the Mushroom, ScanNet, and Replica datasets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Pipeline of the proposed FDS. For each input view, we apply the FDS camera sampling scheme to generate corresponding unobserved sampled view. We ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.
 | We removed the depth distortion loss in 2DGS because we found that it degrades its results in indoor scenes. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | We also experiment with modifying the FDS loss. | definition/direction/unit from same section | p. 10 (4.2 RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.
 | The comparison results on Mushroom dataset are shown in Tab. | comparison identity and matched condition | p. 9 (4.2 RESULTS) |
 | Figure 3. Comparison of depth reconstruction on Mushroom and ScanNet datasets. The original 3DGS or 2DGS model equipped with FDS can remove unwanted floaters ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 4. Ablation study on FDS strategies. Mθ(X, Cs) Loss Metric X = Ci X = Ii Next Input view Sampled view | comparison identity and matched condition | p. 10 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.
 | body limitation/failure cue | We removed the depth distortion loss in 2DGS because we found that it degrades its results in indoor scenes. | p. 7 (4 EXPERIMENTS) |
 | body limitation/failure cue | This demonstrates the robustness and effectiveness of the FDS method across different datasets. | p. 8 (4.2 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.
 | The entire framework is implemented in PyTorch (Paszke et al., 2019), and all experiments are conducted on a single NVIDIA 4090D GPU. | p. 7 (4 EXPERIMENTS) |
 | 4.1 SETUPS 4.1.1 IMPLEMENTATION DETAILS We apply our FDS method to two types of 3DGS: the original 3DGS, and 2DGS (Huang et al., 2024). | p. 7 (4 EXPERIMENTS) |
 | Interpretive Experiments: To demonstrate the mutual refinement of two flows in our FDS, for each view, we sample the unobserved views multiple times to ... | p. 10 (4.2 RESULTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.
 - **p. 8 / 4.2 RESULTS - extractive body cue:** This demonstrates the robustness and effectiveness of the FDS method across different datasets.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS), metrics p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 7 (4 EXPERIMENTS), baselines p. 9 (4.2 RESULTS), p. 8 (4.2 RESULTS), p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption), results p. 8 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 8 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

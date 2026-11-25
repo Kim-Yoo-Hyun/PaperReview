@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation Results), p. 9 (Figure/Tab
 - **p. 7 / 5.1. Experimental Setup - extractive body cue:** To determine li, we utilize the simulator's ground truth to calculate the minimum number of steps required to complete the tasks in each stage via ...
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** To provide a more robust assessment of execution efficiency, we employ the standard Success weighted by normalized inverse Path Length (SPL) (Anderson et al., 2018) ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Existing methods for OVMM typically plan navi- gation and manipulation as separate stages, which can result in navigation endpoints that are suboptimal ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation Results), p. 9 (Figure/Tab
 | SR SR SPL SR SPL SR SPL SR SPL Heuristic 54.1 16.7 48.5 16.6 31.3 4.8 5.1 0.8 34.8 S1,2,3,4 66.1 23.5 62.6 23.2 ... | definition/direction/unit from same section | p. 8 (5.2. Evaluation Results) |
 | Figure 5. Failure cases of 3D-IC on OVMM Dataset. The failure cases are categorized according to the four standard stages of the Open Vocabulary ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation Results), p. 9 (Figure/Tab
 | Qualitative comparison between the baseline and our method. | comparison identity and matched condition | p. 7 (5.2. Evaluation Results) |
 | 3, we adopt the standard Open-Vocabulary Mobile Manipulation (OVMM) baseline setting (Yenamandra et al., 2023). | comparison identity and matched condition | p. 6 (5.1. Experimental Setup) |
 | For each case, Row 1 displays the 2D semantic map from the Heuristic baseline, and Row 2 shows the third-person view at the episode's ... | comparison identity and matched condition | p. 7 (5.2. Evaluation Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation Results), p. 9 (Figure/Tab
 | body limitation/failure cue | These examples highlight the advantages of 3D-IC over the baseline, specifically in considering optimal docking orientation, avoiding obstacle occlusion during placement, and generating more ... | p. 7 (5.2. Evaluation Results) |
 | body limitation/failure cue | In the OVMM benchmark, the "steps" metric calculates the average number of steps across all episodes where the agent actively terminates, including failed episodes. | p. 6 (5.1. Experimental Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation Results), p. 9 (Figure/Tab
 | To further compute the term 1 K PK k=1 P(wk), local features surrounding each waypoint wk are queried from Mt and organized via a ... | p. 5 (4.3. Joint Planning with 3D-IC) |
 | The policy is optimized using a standard autoregressive cross-entropy loss: L(θ) = -PT t=1 log pθ (xt / xprompt, x<t), where the loss is ... | p. 6 (4.3. Joint Planning with 3D-IC) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.2. Evaluation Results - extractive body cue:** Each Move tomato from table to counter Move apple from couch to table Move knife from cabinet to table baseline baseline 3D-IC 3D-IC High Navigation ...
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation Results), p. 9 (Figure/Tab
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** In the OVMM benchmark, the "steps" metric calculates the average number of steps across all episodes where the agent actively terminates, including failed episodes.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 8 (5.2. Evaluation Results), p. 8 (5.3. Real-world Evaluation), p. 9 (5.3. Real-world Evaluation), p. 9 (5.3. Real-world Evaluation), metrics p. 7 (5.2. Evaluation Results), p. 9 (5.3. Real-world Evaluation), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 9 (5.4. Comparison with SOTA Methods), p. 8 (5.2. Evaluation Results), baselines p. 9 (5.3. Real-world Evaluation), p. 8 (5.2. Evaluation Results), p. 9 (5.4. Comparison with SOTA Methods), p. 7 (5.2. Evaluation Results), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Evaluation Results), results p. 7 (5.2. Evaluation Results), p. 9 (Figure/Table caption), p. 9 (5.4. Comparison with SOTA Methods), p. 8 (5.3. Real-world Evaluation), p. 7 (5.2. Evaluation Results), p. 8 (5.2. Evaluation Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -46,7 +46,6 @@ PDF body method statement (p. 6 (4.4. Losses), p. 6 (4.4. Losses)): We use a com
 - **p. 6 / 4.4. Losses - extractive body cue:** Finally, our total loss is defined as \Lo = \Lo _ {seg}(\bar {\mas k }_{l oc}, \mask _{loc}) + \Lo _{rot} + \Lo _{seg}(\bar {\mask ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (4.4. Losses), p. 6 (4.4. Losses).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 6 (4.4. Losses), p. 6 (4.4. Losses)): We use a com
 - **p. 2 / 1. Introduction - extractive body cue:** The asset's size and shape restrict feasible placements; given the same scene and instruction, a large object has fewer valid locations than a small one.
 - **p. 6 / 4.4. Losses - extractive body cue:** (2) The loss for the rotation prediction is given by \m a thca l {L}_ {rot} = \text {BCE}(\bar {\mask }_{rot}, \mask _{rot}), (3) where ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 6 (4.4. Losses), p. 6 (4.4. Losses)): We use a com
 
 - **p. 4 / 3.2.2. Benchmark metrics - extractive body cue:** To evaluate placement performance, we compute metrics that capture constraint validity overall and by subgroup: • Global Constraint Accuracy: The percentage of all constraints (across ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** combination, Binary, Cross, Entropy, BCE, Dice, losses, when, comparing, ground, truth, mask, predicted, text, Finally, total, loss, defined, shoe, example.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 6 (4.4. Losses), p. 6 (4.4. Losses)): We use a com
 - **p. 8 / 6. Limitations and Future Work - extractive body cue:** Despite these limitations, we believe our work lays the groundwork for further research in this area.
 - **p. 7 / 5.1. Quantitative results - extractive body cue:** Due to its frequent failure to accurately detect floor regions, we substitute in ground truth floor masks, while other anchor objects are selected based on ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.4. Losses), p. 6 (4.4. Losses), objective p. 6 (4.4. Losses), p. 6 (4.4. Losses), temporal p. 1 (1. Introduction), p. 3 (3. Language-Guided 3D Object Placement), p. 3 (3.1. Physical plausibility and language constraints), p. 5 (3.2.3. Benchmark statistics), p. 5 (3.2.3. Benchmark statistics), p. 6 (4.2. Asset encoding).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

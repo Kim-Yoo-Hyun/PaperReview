@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 - **p. 10 / 6 Experiments - extractive body cue:** 6.2 Comparing with previous methods Occ3D-nuScenes.
 - **p. 10 / 6 Experiments - extractive body cue:** The observations are consistent with those in the Occ3D-Waymo dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our Occ3D dataset demonstrates rich semantic and geometric expressiveness. (a) Diversity of scenes in the Occ3D dataset; (b) Out-of-vocabulary objects, also known as ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 | Figure 8: Occlusion reasoning and camera visibility. Grey voxels are unobserved in the LiDAR view and red voxels are observed in the accumulative LiDAR ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 | Figure 2: Overview of the label generation pipeline. The pipeline consists of three main steps: voxel densification, occlusion reasoning, and image-guided voxel refinement.Voxel densification ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 | The voxel embedding will first pass through four encoder layers without token selection. | comparison identity and matched condition | p. 9 (6 Experiments) |
 | Table 1: Dataset comparison. Comparing Occ3D Datasets with other occupancy prediction datasets. Surround = ✓represents surround-view image inputs. C, D, L denote camera, depth ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Figure 5: The architecture of CTF-Occ network. CTF-Occ consists of an image backbone, a coarse-to-fine voxel encoder, and an implicit occupancy decoder. in a ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 | body limitation/failure cue | Figure 2. Initially, in voxel densification, we increase the density of the point clouds by performing multi-frame aggregation for both static and dynamic objects ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Figure 8: Occlusion reasoning and camera visibility. Grey voxels are unobserved in the LiDAR view and red voxels are observed in the accumulative LiDAR ... | p. 18 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 | We focus on CC and PED to verify the effectiveness of our implementation on small objects. | p. 10 (6 Experiments) |
 | To overcome these hurdles, we create a semi-automatic label generation pipeline that consists of three steps: voxel densification, occlusion reasoning, and image-guided voxel refinement. | p. 2 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (1) 3D bounding box representation erases the geometric details of objects, a construction vehicle has a mechanical arm that protrudes from the main ...
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 10 (6 Experiments), p. 10 (6 Experiments), p.
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 8: Occlusion reasoning and camera visibility. Grey voxels are unobserved in the LiDAR view and red voxels are observed in the accumulative LiDAR view ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (6 Experiments), p. 9 (6 Experiments), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 10 (6 Experiments), p. 10 (6 Experiments), metrics p. 10 (6 Experiments), p. 8 (6 Experiments), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (6 Experiments), p. 10 (6 Experiments), baselines p. 10 (6 Experiments), p. 10 (6 Experiments), p. 9 (6 Experiments), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 10 (6 Experiments), p. 10 (6 Experiments), p. 18 (Figure/Table caption), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 9 (6 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 - **p. 9 / 5.7. Comparison to Visual Prompting Alternatives - extractive body cue:** Within the same frozen VLA, we additionally compare against a broad set of visual prompting strategies adopted in prior robotics work, including opaque masks, bounding ...
 - **p. 9 / 5.6. Efficiency of VAP - extractive body cue:** This confirms that VAP enhances performance without compromising the real-time responsiveness of the robotic system.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Manipulating personal objects with VLA. Existing vision-language-action (VLA) models cannot handle per- sonal objects such as <my cup>, because they can only interpret ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 | While baselines occasionally register high interaction rates (CMR) in confined setups, they fail to translate this into successful task completion. | definition/direction/unit from same section | p. 8 (5.3. Results on Simulation Benchmarks) |
 | Table 13. Error-mode breakdown for VAP across benchmarks with more details. "Fail (%)" is computed over all evaluation episodes. Case 1-3 are computed conditional ... | definition/direction/unit from same section | p. 39 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 | Table 2. Performance on the Personalized-SIMPLER benchmark with the Google Robot platform. Track 1 evaluates visual matching under unseen personal objects, and Track 2 ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | This section describes the experimental setup, metrics, and baselines used to evaluate VAP on the benchmarks in Section 4. | comparison identity and matched condition | p. 6 (5. Experiments) |
 | Table 11. Short and long textual descriptions for personal objects used in our benchmarks. Short descriptions and long descriptions are used as rich prompts ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 | body limitation/failure cue | Figure 3. VAP builds a visual memory from a few reference images, grounds the target with frozen detection and segmentation, and prompts a frozen ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Failure analysis across benchmarks. | p. 8 (5.4. Results on Real-world Benchmark) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 | We report SR over 20 trials for all tasks, and CMR specifically for pick-and-place tasks (inapplicable to selection). | p. 9 (5.5. Error Case Analysis) |
 | We provide qualitative examples and several plausible design directions in Appendix D (see also Appendix D.2), and leave their implementation to future work. | p. 9 (5.5. Error Case Analysis) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 42 / Figure/Table caption - extractive body cue:** Figure 23. Case 3 (correct prompt): correct instance highlighted but manipulation fails. The mask prompt consistently highlights the intended personal object in all relevant views, ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 8 (5.4. Results on Real-world Benchmark), p. 
 - **p. 8 / 5.4. Results on Real-world Benchmark - extractive body cue:** Failure analysis across benchmarks.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Real-world Benchmarks), p. 6 (4.2. Real-world Benchmarks), p. 8 (5.4. Results on Real-world Benchmark), p. 7 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 8 (5.3. Results on Simulation Benchmarks), metrics p. 45 (Figure/Table caption), p. 7 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 9 (5.5. Error Case Analysis), p. 9 (Figure/Table caption), p. 8 (5.2. Baselines), baselines p. 7 (5.1. Experimental Setup), p. 8 (5.3. Results on Simulation Benchmarks), p. 8 (5.2. Baselines), p. 7 (Figure/Table caption), p. 6 (5. Experiments), p. 19 (Figure/Table caption), results p. 8 (5.4. Results on Real-world Benchmark), p. 7 (5.1. Experimental Setup), p. 8 (5.2. Baselines), p. 7 (5.1. Experimental Setup), p. 9 (5.5. Error Case Analysis), p. 45 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

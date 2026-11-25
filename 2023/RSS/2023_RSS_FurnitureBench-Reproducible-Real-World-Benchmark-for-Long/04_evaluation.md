@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCH
 - **p. 8 / VI. BENCHMARKING RESULTS - extractive body cue:** In Table IV, the IQL-R3M policies trained with 2000 demonstrations in the mixed dataset (Mixed data) show significant improvements, 4.6 and 3.7 completed phases on ...
 - **p. 6 / V. EXPERIMENTAL SETUP - extractive body cue:** Our benchmark first measures the number of completed part assembly.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: FurnitureBench: reproducible real-world furniture assembly benchmark. Benchmarking furniture assembly poses to address many robotic manipulation challenges: long-horizon planning, dexterous control, and visual perception. ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCH
 | Fig. 17: Furniture 3D models. IKEA model furniture (left), 3D furniture model (middle), and 3D printed furniture model (right). Each furniture model introduces unique ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 | We provide three different levels of randomness in the initial states: (a) low fixes part poses and allows only a little human error, (b) ... | definition/direction/unit from same section | p. 6 (V. EXPERIMENTAL SETUP) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCH
 | In Table IV, the IQL-R3M policies trained with 2000 demonstrations in the mixed dataset (Mixed data) show significant improvements, 4.6 and 3.7 completed phases ... | comparison identity and matched condition | p. 8 (VI. BENCHMARKING RESULTS) |
 | 3This paper focuses on benchmarking end-to-end learning approaches since engineering furniture assembly procedures using TAMP without having access to state information is beyond the ... | comparison identity and matched condition | p. 7 (VI. BENCHMARKING RESULTS) |
 | This result means that the policies mostly fail to grasp the table leg without the wrist camera. | comparison identity and matched condition | p. 8 (VI. BENCHMARKING RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCH
 | body limitation/failure cue | It always achieves the phase 3 (grasping the leg) but fails at inserting 60% of the time. | p. 8 (VI. BENCHMARKING RESULTS) |
 | body limitation/failure cue | This result reassures that "inserting" is the most challenging skill as it involves stochastic and frequent collisions. | p. 8 (VI. BENCHMARKING RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCH
 | Please refer to Section D for implementation details. • BC (Behavioral Cloning [48]) fits a policy to the demonstration state-action pairs (s, a) with ... | p. 6 (V. EXPERIMENTAL SETUP) |
 | Each individual trial is conducted according to the following procedure: | p. 7 (V. EXPERIMENTAL SETUP) |
 | The task horizon is approximately 500 timesteps. | p. 7 (VI. BENCHMARKING RESULTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCH
 - **p. 8 / VI. BENCHMARKING RESULTS - extractive body cue:** This result reassures that "inserting" is the most challenging skill as it involves stochastic and frequent collisions.
 
 - **Evidence anchors reviewed:** datasets p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCHMARKING RESULTS), p. 6 (V. EXPERIMENTAL SETUP), p. 8 (VI. BENCHMARKING RESULTS), p. 8 (VI. BENCHMARKING RESULTS), p. 6 (V. EXPERIMENTAL SETUP), metrics p. 8 (Figure/Table caption), p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCHMARKING RESULTS), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 35 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL SETUP), p. 6 (V. EXPERIMENTAL SETUP), p. 7 (VI. BENCHMARKING RESULTS), p. 8 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCHMARKING RESULTS), p. 8 (VI. BENCHMARKING RESULTS), results p. 7 (VI. BENCHMARKING RESULTS), p. 7 (VI. BENCHMARKING RESULTS), p. 8 (VI. BENCHMARKING RESULTS), p. 6 (Figure/Table caption), p. 8 (VI. BENCHMARKING RESULTS), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

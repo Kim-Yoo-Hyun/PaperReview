@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 - **p. 8 / B. Quantitative results - extractive body cue:** + Planning error: When subtasks are not properly defined or the model fails to recognize the current stage, the robot may execute actions incorrectly.
 - **p. 8 / B. Quantitative results - extractive body cue:** For example, the robot may attempt to move the gripper directly to the drum without first picking up the drumstick.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Construction of interactive digital twins. Starting from a video scan of the environment, we construct an interactive digital twin that combines mesh-based simulation ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 | PWTF better leverages the reasoning ability of VLM and improves the performance ‘on most of the tasks. | definition/direction/unit from same section | p. 6 (B. Quantitative results) |
 | Fig. 2: Construction of interactive digital twins. Starting from a video scan of the environment, we construct an interactive digital twin that combines mesh-based ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 | ‘Table II compares the success rates of our method against those of the baselines. | comparison identity and matched condition | p. 5 (B. Quantitative results) |
 | In the "wio CEM" setting, we simply take the mean value of the selected actions without optimizing the action distribution or resampling, | comparison identity and matched condition | p. 6 (B. Quantitative results) |
 | For example, the robot may attempt to move the gripper directly to the drum without first picking up the drumstick. | comparison identity and matched condition | p. 8 (B. Quantitative results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 | body limitation/failure cue | We show the action ‘optimization results of one planning step in subtask "wipe the spilled tea", Our digital twin could simulate diverse results with ... | p. 6 (B. Quantitative results) |
 | body limitation/failure cue | We visualize the action optimization process for a single planning step in the "clean up" task in Figure 4, Initially, the digital twin simulates ... | p. 6 (B. Quantitative results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 | Planning steps __ [=] VIM changes view to cross-vaidate the optimal ation t | p. 7 (B. Quantitative results) |
 | 5: E We highlight some key steps where VLM aligning the gripper from different perspes | p. 7 (B. Quantitative results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / A. Experimental setup - extractive body cue:** A task is considered a failure if the robot causes imeversible results or if the maximum step budget or time limit is reached. ‘The task ...
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 6 (B. Quantitative results), p. 8 (B. Quantit
 - **p. 6 / B. Quantitative results - extractive body cue:** We visualize the action optimization process for a single planning step in the "clean up" task in Figure 4, Initially, the digital twin simulates a ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (A. Experimental setup), p. 6 (B. Quantitative results), p. 5 (A. Experimental setup), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 8 (B. Quantitative results), metrics p. 5 (A. Experimental setup), p. 5 (B. Quantitative results), p. 8 (B. Quantitative results), p. 8 (B. Quantitative results), p. 6 (B. Quantitative results), p. 6 (B. Quantitative results), baselines p. 5 (A. Experimental setup), p. 5 (B. Quantitative results), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), results p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 6 (B. Quantitative results), p. 8 (B. Quantitative results), p. 5 (A. Experimental setup), p. 5 (B. Quantitative results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

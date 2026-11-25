@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3.3. Iterative Inpainting and Refinement), p. 5
 - **p. 4 / 3.2. Appearance Generation - extractive body cue:** Specifically, for each overlap region Ri,j, we define the loss as one minus the absolute cosine similarity between the normal ng at a Gaussian g ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Preliminary Preparation), p. 3 (3.1. Preliminary Preparation), p. 4 (3.2. Appearance Generation), p. 5 (3.3. Iterative Inpainting and Refinement), p. 5 (3.3. Iterative Inpainting and Refinement).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3.3. Iterative Inpainting and Refinement), p. 5
 - **p. 5 / 3.3. Iterative Inpainting and Refinement - extractive body cue:** To systematically identify the unseen regions, we propose a visibility-based optimization approach that predicts camera poses observing the largest invisible regions in the point cloud.
 - **p. 6 / 3.3. Iterative Inpainting and Refinement - extractive body cue:** Due to noises and uneven density in the raw point cloud data, some points may remain difficult to observe after image inpainting-based Gaussian inpainting.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (3.3. Iterative Inpainting and Refinement), p. 5
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** systematically, identify, unseen, regions, visibility-based, optimization, predicts, camera, poses, observing, largest, invisible, point, cloud, strategy, follows, two-phase, first, addresses, cardinal.
 - **Relevant PDF headings:** 2.1. 3D Generative Models (p. 2); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 5 (3.3. Iterative Inpainting and Refinement), p. 5
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Overview of GaussianGrow. Stage 1. We leverage depth-aware ControlNet for primary view generation, with a geometry- aware diffusion model for multi-view synthesis. Additional ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. Spatial Inpainting. Due to noises and uneven density in the raw point cloud data, some points may remain difficult to observe after image ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Iterative Inpainting and Refinement), p. 5 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), p. 3 (3.2. Appearance Generation), p. 3 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), objective p. 5 (3.3. Iterative Inpainting and Refinement), p. 5 (3.3. Iterative Inpainting and Refinement), p. 3 (3.1. Preliminary Preparation), p. 3 (3.1. Preliminary Preparation), p. 4 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), temporal p. 3 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), p. 5 (3.2. Appearance Generation), p. 6 (3.3. Iterative Inpainting and Refinement), p. 6 (3.3. Iterative Inpainting and Refinement).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

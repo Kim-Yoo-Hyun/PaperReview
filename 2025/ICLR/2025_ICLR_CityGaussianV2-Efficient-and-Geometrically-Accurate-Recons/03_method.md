@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** The derived outputs are used for loss calculation.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 6 / 3 METHOD - extractive body cue:** Suppose that the images assigned to m-th block using CityGS (Liu et al., 2024)'s strategy is Vm, then the average contribution is: Cn = 1 ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Another challenge lies in the evaluation protocol: due to insufficient observations in boundary regions, geometry estimation becomes error-prone and unstable in these areas.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** The tiny version (ours-t) can even halve the training time.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** 2, the small version of CityGaussianV2 (ours-s) reduces training time by 25% and memory usage by over 50%, while delivering superior geometric performance and on-par ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, pre-trains, coarse, model, full, training, data, schedule, DGS, bypass, distillation, step, degree, start, reducing, feature, dimension, derived, outputs, loss.
 - **Relevant PDF headings:** 3 METHOD (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 16 / Figure/Table caption - extractive body cue:** Table 4: Detailed comparison among SOTA among parallel training methods. 2DGS* here means applying CityGS's training strategy to 2DGS without our proposed optimization mechanism. And ...
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 7: Ablation on gradient source of densification. The experiments are conducted on the Resi- dence scene of the GauU-Scene dataset ((Xiong et al., 2024)). ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), temporal p. 2 (1 INTRODUCTION), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

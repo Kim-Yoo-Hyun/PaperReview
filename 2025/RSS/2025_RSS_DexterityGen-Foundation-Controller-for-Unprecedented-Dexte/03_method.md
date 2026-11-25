@@ -54,7 +54,6 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 - **p. 5 / C. DexGen Model Architecture - extractive body cue:** Here we use 3D keypoint motions Ar € R™***% in the robot hand frame as an intermediate action representation, This representation is particularly advantageous for ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 4 (III. THE DEXGEN CONTROLLER), p. 6 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** Additionally, existing discrete haptic feedback (e-. binary vibration) alone is often inadequate for conveying complex touch interactions and contact geometries.
 - **p. 5 / A. Preliminaries - extractive body cue:** We can also specify Keypoints and actions for other robots to implement our proposed algorithm.
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 - **p. 5 / B. Large-Scale Behavior Dataset Generation - extractive body cue:** Generating this dataset (by rolling out trained RL. policies) requires 300 GPU hours.
 - **p. 6 / C. DexGen Model Architecture - extractive body cue:** We train these models with the AdamW optimizer (35, 29] for 15 epochs using 96 GPUs, which takes approximately 3 days.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** inverse, dynamics, model, simple, residual, multilayer, perceptron, outputs, normal, distribution, actions, conditioned, current, robot, state, motion, command, first, module, diffusion.
 - **Relevant PDF headings:** III. THE DEXGEN CONTROLLER (p. 4); C. DexGen Model Architecture (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,26 +111,15 @@ PDF body method statement (p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen 
 - **p. 5 / B. Large-Scale Behavior Dataset Generation - extractive body cue:** 5: Our large-scale, multi-task pretraining dataset covers diverse grasp to grasp transitions (arrows).
 - **p. 5 / B. Large-Scale Behavior Dataset Generation - extractive body cue:** To achieve this, we require a large~ scale behavior dataset to pretrain our DexGen model, ensuring ‘comprehensive coverage of the state space.
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: Part of our real world testing objects, which are rot present in our pretraining dataset. We include objects of different sizes, masses, and ...
-- **p. 7 / B. Simulated Experiments - extractive body cue:** We find that without our assistance, the noisy ‘expert has much more frequent failures.
 - **p. 7 / B. Simulated Experiments - extractive body cue:** We record the average number of critical failures (drop the object) and the number of goal achievements within a certain time of different policies
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), p. 4 (III. THE DEXGEN CONTROLLER), p. 4 (III. THE DEXGEN CONTROLLER), objective p. 4 (III. THE DEXGEN CONTROLLER), p. 6 (C. DexGen Model Architecture), p. 6 (C. DexGen Model Architecture), p. 5 (C. DexGen Model Architecture), temporal p. 7 (B. Simulated Experiments), p. 7 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 8 (B. Simulated Experiments), p. 4 (A. Preliminaries), p. 5 (A. Preliminaries).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

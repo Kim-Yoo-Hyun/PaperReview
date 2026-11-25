@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 - **p. 7 / 4.2. Results and Analysis - extractive body cue:** Following LSM's approach, we map category labels from the Scannet dataset into common categories: Wall, Floor, Ceiling, Chair, Table, Bed, Sofa, Others.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** SpatialSplat generalizes well on OOD data. and NeRF-DFF [23], pre-scene optimization methods for semantic 3D reconstruction based on 3DGS [19] and NeRF [29], respectively.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between previous methods and our SpatialSplat. (a): Previous methods predict pixel-wise Gaussians, associating each primitive with compressed semantic feature. (b): Our SpatialSplat ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 | Following LSM's approach, we map category labels from the Scannet dataset into common categories: Wall, Floor, Ceiling, Chair, Table, Bed, Sofa, Others. | definition/direction/unit from same section | p. 7 (4.2. Results and Analysis) |
 | This is achieved by lifting both 2D instance and uncompressed semantic into 3D space, enabling more efficient semantic learning while mitigating the blurred contours ... | definition/direction/unit from same section | p. 7 (4.2. Results and Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 | For a fair comparison, we train the model at a resolution of 256 × 256, consistent with our baseline. | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | Our experiments primarily focus on two-view settings to ensure a fair comparison with our baseline. | comparison identity and matched condition | p. 8 (4.3. Ablations and Analysis) |
 | Figure 1. Comparison between previous methods and our SpatialSplat. (a): Previous methods predict pixel-wise Gaussians, associating each primitive with compressed semantic feature. (b): Our ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 | body limitation/failure cue | Furthermore, as our method does not rely on dense semantic supervision, we leverage a lightweight pretrained 2D model, significantly accelerating inference speed. | p. 8 (25.58 MB) |
 | body limitation/failure cue | Out-of-distribution (OOD) comparison on Replica dataset. | p. 6 (4.1. Experimental Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 | The encoder weights are shared across different input views. | p. 3 (3.1. 3D Geometry Prediction) |
 | Both the encoder and decoder in our geometric prediction module are built on pure ViT structures, requiring no geometric priors as in previous methods ... | p. 3 (3.1. 3D Geometry Prediction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** In challenging cases where LSM fails, such as the table legs in the first two rows and the corners in the last two rows, our ...
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 6 (4.2. Resul
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Out-of-distribution (OOD) comparison on Replica dataset.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 5 (4.1. Experimental Setup), p. 8 (25.58 MB), p. 6 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Results and Analysis), p. 8 (25.58 MB), p. 6 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), baselines p. 7 (4.2. Results and Analysis), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Ablations and Analysis), p. 1 (Figure/Table caption), results p. 6 (4.1. Experimental Setup), p. 6 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), p. 7 (4.2. Results and Analysis), p. 8 (4.3. Ablations and Analysis), p. 8 (4.3. Ablations and Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

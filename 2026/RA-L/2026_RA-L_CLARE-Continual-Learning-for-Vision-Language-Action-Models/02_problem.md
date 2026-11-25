@@ -61,8 +61,6 @@ PDF body contribution framing (p. 3 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY)): 
 | body cue at p. 7 | 5: Increasing the dynamic expansion threshold γ reduces the number of added adapters and, consequently, the capability to ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | As shown in Figure 4, CLARE can sequentially learn and retain 40 distinct tasks, demonstrating the scalability and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP), p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. PROBLEM SETUP), p. 3 (III. PROBLEM SETUP), interface p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP), p. 3 (III. PROBLEM SETUP), p. 2 (III. PROBLEM SETUP), objective p. 3 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 4 (IV. METHODOLOGY), p. 5 (IV. METHODOLOGY).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

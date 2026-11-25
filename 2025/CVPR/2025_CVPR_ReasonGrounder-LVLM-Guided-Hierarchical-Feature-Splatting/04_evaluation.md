@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 - **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** The ReasoningGD dataset provides complete masks of occluded objects as ground truth, enabling quantitative evaluation. sonGrounder's evaluation on the LERF and ReasoningGD datasets in Figure ...
 - **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** Qualitative results of amodal perception of novel views on the LERF and proposed ReasoningGD datasets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of open-vocabulary 3D visual grounding and reasoning. In a given scene, the user observes from a per- spective with occlusions and asks ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 | Quantitative results from five typical scenes, shown in Table 6, demonstrate that ReasonGrounder excels in amodal perception, successfully localizing target objects even when occluded ... | definition/direction/unit from same section | p. 7 (4.2. Evaluation on 3D Reasoning) |
 | Each scene is generated using the Blenderproc [10] toolkit and contains 100 RGB-D images, annotated with object labels, camera poses, and 2D modal and ... | definition/direction/unit from same section | p. 5 (4. Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 | We show the superior quality of openvocabulary 3D visual grounding in ReasonGrounder compared to other methods in challenging and realistic 3D scenes. | comparison identity and matched condition | p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding) |
 | As shown in Table 5, our method outperforms in all edge cases. | comparison identity and matched condition | p. 7 (4.2. Evaluation on 3D Reasoning) |
 | Table 7. Ablation studies. The results are presented for two dif- ferent scenes: the Figurines scene from the LERF dataset and the 001 scene ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,21 +120,11 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 | body limitation/failure cue | To test robustness, we selected five challenging scenes with small proportions, including multi-hierarchical structures and similar objects, along with ten text queries per scene ... | p. 7 (4.2. Evaluation on 3D Reasoning) |
 | body limitation/failure cue | This highlights the robustness of our ReasonGrounder in complex situations. | p. 8 (4.2. Evaluation on 3D Reasoning) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 - **p. 8 / 4.2. Evaluation on 3D Reasoning - extractive body cue:** This highlights the robustness of our ReasonGrounder in complex situations.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 7 (4.2. Evaluation on 3D Reasoning), p. 7 (4.2. Evaluation on 3D Reasoning), p. 5 (4. Experiments), p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), metrics p. 6 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), p. 8 (4.2. Evaluation on 3D Reasoning), p. 7 (4.2. Evaluation on 3D Reasoning), p. 8 (Figure/Table caption), baselines p. 7 (4.2. Evaluation on 3D Reasoning), p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), p. 7 (4.2. Evaluation on 3D Reasoning), p. 8 (Figure/Table caption), results p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), p. 8 (4.2. Evaluation on 3D Reasoning), p. 6 (4.1. Evaluation on Open-set 3D Visual Grounding), p. 7 (4.2. Evaluation on 3D Reasoning), p. 8 (4.2. Evaluation on 3D Reasoning), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

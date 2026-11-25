@@ -49,7 +49,6 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** We find that by adding the regularization term, the optimization becomes more stable and our model achieves better performance.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 - **p. 4 / 4.2. PointNet Architecture - extractive body cue:** Local and Global Information Aggregation The output from the above section forms a vector [f1, . . . , fK], which is a global signature ...
 - **p. 2 / 3. Problem Statement - extractive body cue:** Our proposed deep network outputs k scores for all the k candidate classes.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 - **p. 7 / 5.1. Applications - extractive body cue:** At training time, we randomly sample 4096 points in each block on-the-fly.
 - **p. 6 / 5.1. Applications - extractive body cue:** With only fully connected layers and max pooling, our net gains a strong lead in inference speed and can be easily parallelized in CPU as ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** mininetwork, itself, resembles, network, composed, basic, modules, point, independent, feature, extraction, pooling, fully, connected, layers, three, layer, symmetric, function, aggregate.
 - **Relevant PDF headings:** 4.2. PointNet Architecture (p. 3); 5.2. Architecture Design Analysis (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,13 @@ PDF body method statement (p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNe
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 24. Examples of semantic segmentation and object detection. First row is input point cloud, where walls and ceiling are hided for clarity. Second and ...
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 23. PointNet segmentation failure cases. In this figure, we summarize six types of common errors in our segmentation application. The prediction and the ground-truth ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), objective p. 4 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture), temporal p. 7 (5.2. Architecture Design Analysis), p. 8 (5.4. Time and Space Complexity Analysis), p. 2 (3. Problem Statement), p. 2 (2. Related Work), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

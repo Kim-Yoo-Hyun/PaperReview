@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments), p. 5
 - **p. 6 / 5 Experiments - extractive body cue:** 5.2 Reinforcement Learning Experiments We evaluate the RL performance of BoT and baselines using PPO [30] on 4 robotic control tasks in Isaac Gym [31]: ...
 - **p. 7 / 5 Experiments - extractive body cue:** 5.3 Real World Experiments The Isaac Gym simulated locomotion environments are widely popular for sim-to-real transfer of RL policies without requiring adaptation in the real-world ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Body Transformer (BoT) is an architecture that considers physical agents as graphs of sensors and actuators as nodes, and edges reflecting the structure ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments), p. 5
 | We measure the average runtime of each implementation of the attention mechanism across 10,000 set of randomly generated Q, K, V , and M. | definition/direction/unit from same section | p. 8 (5 Experiments) |
 | For each randomization, the generated masks M have a diagonal of 1s and sparsity equal to that used in the MoCapAct experiments (β = ... | definition/direction/unit from same section | p. 8 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments), p. 5
 | 5.2 Reinforcement Learning Experiments We evaluate the RL performance of BoT and baselines using PPO [30] on 4 robotic control tasks in Isaac Gym ... | comparison identity and matched condition | p. 6 (5 Experiments) |
 | For a fair computational comparison, we re-implement the scaled dot product in Equation (1) using CPU-based NumPy and evaluate on a 7 | comparison identity and matched condition | p. 7 (5 Experiments) |
 | 5.3 Real World Experiments The Isaac Gym simulated locomotion environments are widely popular for sim-to-real transfer of RL policies without requiring adaptation in the ... | comparison identity and matched condition | p. 7 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments), p. 5
 |---|---|---|
 | body limitation/failure cue | We leave the extension of BoT to the temporal dimension as future work, as it promises to further improve real world deployment of robot ... | p. 8 (6 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,19 +135,10 @@ PDF body evaluation/result cue (p. 5 (5 Experiments), p. 6 (5 Experiments), p. 5
 | For a fair computational comparison, we re-implement the scaled dot product in Equation (1) using CPU-based NumPy and evaluate on a 7 | p. 7 (5 Experiments) |
 | To verify that our architecture is suitable for real-world applications, e.g., running in real time, we deploy one of the BoT policies trained above ... | p. 7 (5 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6 Conclusion - extractive body cue:** We leave the extension of BoT to the temporal dimension as future work, as it promises to further improve real world deployment of robot policies, ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 5 (5 Experiments), p. 7 (5 Experiments), baselines p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), results p. 5 (5 Experiments), p. 6 (5 Experiments), p. 5 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 - **p. 10 / V. CAPABILITY EXPERIMENTS - extractive body cue:** We test the policy robustness with different inference time perturbations such as moving robot base, novel objects, different lighting conditions, and adding different and more ...
 - **p. 9 / V. CAPABILITY EXPERIMENTS - extractive body cue:** In addition, the misalignment between the gripper and robot action (due to their different execution latency) leads to suboptimal object release during tossing.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Universal Manipulation Interface (UMI) is a portable, intuitive, low-cost data collection and policy learning framework. This framework allows us to transfer diverse human ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 | Cafe Table Water Fountain Success Rate CLIP ViT finetune with narrow-domain Data 0 / 10 0 / 10 0.0 In-the-wild Data Training Cup 16 ... | definition/direction/unit from same section | p. 9 (V. CAPABILITY EXPERIMENTS) |
 | What's the accuracy of the SLAM system? | definition/direction/unit from same section | p. 6 (IV. EVALUATIONS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 | The delta action baseline achieves 16/20 = 80% success rate. | comparison identity and matched condition | p. 8 (V. CAPABILITY EXPERIMENTS) |
 | The most salient failure case is when the two arms lift the bottom hem of the shirt, where the baseline policy often misses one ... | comparison identity and matched condition | p. 9 (V. CAPABILITY EXPERIMENTS) |
 | 9(b), the robot with the baseline policy doesn't even move toward the cup. | comparison identity and matched condition | p. 10 (VI. IN-THE-WILD GENERALIZATION EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 | body limitation/failure cue | The red arrow indicates failure behavior, green arrow indicates desired behavior. | p. 8 (V. CAPABILITY EXPERIMENTS) |
 | body limitation/failure cue | The most salient failure case is when the two arms lift the bottom hem of the shirt, where the baseline policy often misses one ... | p. 9 (V. CAPABILITY EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 | Dish Washing Task The robot needs to execute 7 steps of sequentially dependent actions (turn on faucet, grasp plate, pick up sponge, wash and ... | p. 9 (V. CAPABILITY EXPERIMENTS) |
 | The following sections describe how we enable the above goals through our hardware and policy interface design. | p. 3 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / VIII. LIMITATIONS AND FUTURE WORKS - extractive body cue:** While UMI demonstrates policy efficacy across a wide range of tasks and scenarios, a few limitations remain.
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPAB
 - **p. 9 / V. CAPABILITY EXPERIMENTS - extractive body cue:** The most salient failure case is when the two arms lift the bottom hem of the shirt, where the baseline policy often misses one of ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EVALUATIONS), p. 6 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), metrics p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 9 (V. CAPABILITY EXPERIMENTS), baselines p. 8 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 9 (V. CAPABILITY EXPERIMENTS), p. 10 (VI. IN-THE-WILD GENERALIZATION EXPERIMENTS), results p. 7 (V. CAPABILITY EXPERIMENTS), p. 7 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 8 (V. CAPABILITY EXPERIMENTS), p. 11 (Figure/Table caption), p. 9 (V. CAPABILITY EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

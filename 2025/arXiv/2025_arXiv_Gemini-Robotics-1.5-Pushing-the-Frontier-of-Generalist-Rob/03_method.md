@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 - **p. 9 / 3.3. Thinking Helps Acting - extractive body cue:** 6 demonstrates that enabling the thinking mode yields a sizable improvement in the progress score for these tasks.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 10 (3.3. Thinking Helps Acting), p. 13 (4.1. Generality), p. 14 (4.2. Frontier capabilities for Embodied Reasoning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 - **p. 5 / 3. Gemini Robotics 1.5 is a general multi-embodiment Vision-Language-Action - extractive body cue:** Gemini Robotics 1.5 can generalize to new environments and tasks To understand GR 1.5's generalization performance on short-horizon tasks, we use the same methodology as ...
 - **p. 15 / 4.2. Frontier capabilities for Embodied Reasoning - extractive body cue:** For the offline evaluations, we leverage various types of videos of real-world interaction, which cover a mix of embodiments, camera viewpoints, and input formats.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 - **p. 11 / 4. Gemini Robotics-ER 1.5 is a generalist embodied reasoning model - extractive body cue:** Able to scale embodied reasoning performance via inference time compute.
 - **p. 14 / 4.2. Frontier capabilities for Embodied Reasoning - extractive body cue:** Real-time SD considers model inference latency when computing prediction accuracy, while offline success detection assumes unlimited inference time for each prediction.
 - **p. 15 / 4.2. Frontier capabilities for Embodied Reasoning - extractive body cue:** In the offline setting, we allow models unlimited inference time for success detection.
-- **p. 15 / 4.2. Frontier capabilities for Embodied Reasoning - extractive body cue:** We find that models often require long inference time making real-time usage challenging, since stale success predictions quickly become irrelevant during dynamic robot interactions.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** GR-ER, orchestrator, Action, model, translates, instructions, issued, lowlevel, robot, actions, full, agentic, system, consists, implemented, VLM, VLA, respectively, processes, user.
 - **Relevant PDF headings:** 2. Method Overview (p. 3); 2.1. Model & Architecture (p. 3); 4. Gemini Robotics-ER 1.5 is a generalist embodied reasoning model (p. 10).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +112,13 @@ PDF body method statement (p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & 
 - **p. 4 / 2.3. Evaluation - extractive body cue:** To improve research iteration speed, we have developed methods for evaluation without real robots in the loop.
 - **p. 22 / 7. Discussion - extractive body cue:** Its performance on tasks like visual and spatial thinking, task planning, progress estimation, and success detection is critical for robust, real-world robotic applications.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), p. 10 (4. Gemini Robotics-ER 1.5 is a generalist embodied reasoning model), p. 13 (4.2. Frontier capabilities for Embodied Reasoning), p. 4 (2.1. Model & Architecture), p. 12 (4.1. Generality), objective p. 3 (2.1. Model & Architecture), p. 10 (3.3. Thinking Helps Acting), p. 13 (4.1. Generality), p. 14 (4.2. Frontier capabilities for Embodied Reasoning), p. 5 (3. Gemini Robotics 1.5 is a general multi-embodiment Vision-Language-Action), p. 9 (3.3. Thinking Helps Acting), temporal p. 9 (3.3. Thinking Helps Acting), p. 15 (4.2. Frontier capabilities for Embodied Reasoning), p. 2 (1. Introduction), p. 3 (2.1. Model & Architecture), p. 3 (2.1. Model & Architecture), p. 4 (2.3. Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

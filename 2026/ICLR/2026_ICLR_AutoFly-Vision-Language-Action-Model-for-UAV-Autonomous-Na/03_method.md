@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALT
 - **p. 22 / A.5.4 PARALLEL INFERENCE ARCHITECTURE - extractive body cue:** The architecture employs two parallel processes: a vision pipeline handling RGB encoding, depth generation, and feature projection, and an LLM pipeline processing multimodal tokens for ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (3 METHOD), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 21 (A.4.1 BASELINE CONSTRUCTION DETAILS), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALT
 - **p. 20 / A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES - extractive body cue:** We collect an additional 1,000 episodes (∼350K vision-language-action pairs) to evaluate the effect of increased training data. • Data Augmentation.
 - **p. 20 / A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES - extractive body cue:** We replace the SigLIP visual backbone with SigLIP 2 (fused with DINOv2), a state-of-the-art RGB encoder, to assess whether improved visual features can substitute for ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALT
 - **p. 22 / A.5.4 PARALLEL INFERENCE ARCHITECTURE - extractive body cue:** The optimized pipeline achieves near-optimal throughput where total inference time approaches the LLM inference duration plus inter-process communication overhead (approximately 15-20ms).
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.1 IMPLEMENTATION DETAILS This section presents implementation details across three components: training details, evaluation details, and robot setup.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** TASK, FORMULATION, formulate, autonomous, navigation, learning, control, policy, takes, current, RGB, observation, language, instruction, coarse, positional, directional, guidance, encoded, initial.
 - **Relevant PDF headings:** 3 METHOD (p. 4); A.2.3 DATA COLLECTION ALGORITHM BASED ON RL (p. 16); A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES (p. 20); A.4 METHODOLOGY DETAILS (p. 21); A.5.1 DISTRIBUTED SYSTEM ARCHITECTURE (p. 21); A.5.3 MODEL ACCELERATION (p. 22); A.5.4 PARALLEL INFERENCE ARCHITECTURE (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALT
 - **p. 10 / Figure/Table caption - extractive body cue:** Table 5: Results (%) for depth projector ablations.
 - **p. 10 / Figure/Table caption - extractive body cue:** Table 7: Results (%) for depth-vision- language alignment study. Variant SR CR PER (a) Siam 47.9
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 4 (3 METHOD), p. 20 (A.3.4 ANALYSIS OF SIMPLER ALTERNATIVE APPROACHES), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), objective p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 17 (A.2.3 DATA COLLECTION ALGORITHM BASED ON RL), p. 4 (3 METHOD), p. 21 (A.4.1 BASELINE CONSTRUCTION DETAILS), p. 22 (A.5.4 PARALLEL INFERENCE ARCHITECTURE), p. 22 (A.5.4 PARALLEL INFERENCE ARCHITECTURE), temporal p. 22 (A.5.4 PARALLEL INFERENCE ARCHITECTURE), p. 22 (A.5.2 NETWORK COMMUNICATION PROTOCOL), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 8 (4 EXPERIMENTS), p. 19 (A.3.3 EVALUATION ON CHALLENGING SCENARIOS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

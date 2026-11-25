@@ -49,7 +49,6 @@ PDF body method statement (p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learni
 - **p. 5 / 3.2. Policy Learning - extractive body cue:** = \ma th bb {E }_{( \math bf {a}_0,\mathbf {z}_{\text {obs}},\mathbf {l}),\,t,\,\boldsymbol {\varepsilon }} \Big [ \big \/ \boldsymbol {\varepsilon } - \boldsymbol {\varepsilon }_{\psi ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learni
 - **p. 2 / 1. Introduction - extractive body cue:** In the second stage, we integrate the pretrained model into an action diffusion policy network, where the learned representations serve as structured visual features to ...
 - **p. 2 / 1. Introduction - extractive body cue:** Representative works such as MVP [52], 3D-MVP [38], LIFT3D [21], EmbodiedMAE [10], and CL3R [7] adopt this paradigm, where the model learns to reconstruct masked ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learni
 - **p. 4 / 3. Method - extractive body cue:** 2, DiffuView first pretrains a multi-view diffusion model to infer geometric correspondences across different camera views, enabling the encoder to capture cross view aligned representations.
 - **p. 6 / 4.2. Simulation Experiments - extractive body cue:** To perform the denoising process, we utilize the DDIM-solver, a numerical ODEbased sampler designed for diffusion models, and apply 10 denoising steps during inference.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Thanks, flexible, view, inference, design, pretrained, model, serve, complementary, roles, during, downstream, learning, feature, extractor, action, policy, training, viewpoint-adaptive, encoder.
 - **Relevant PDF headings:** 3. Method (p. 4); 3.2. Policy Learning (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learni
 - **p. 6 / 4.3. View Generalization Experiments - extractive body cue:** 3, the pretrained module enables the policy to maintain stable manipulation performance under large viewpoint shifts, whereas the baseline 23606
 - **p. 6 / 4.3. View Generalization Experiments - extractive body cue:** However, our pretrained model serves dual roles - acting as a feature extractor during the training phase, and as a view-adaptive module during inference.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 4 (3. Method), objective p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), temporal p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 6 (4.2. Simulation Experiments), p. 4 (3. Method), p. 4 (3.1. Multi-View Diffusion Pretraining), p. 6 (4.2. Simulation Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

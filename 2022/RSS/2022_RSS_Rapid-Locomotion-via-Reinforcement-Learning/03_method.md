@@ -50,7 +50,6 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** The details of the reward function are in Table VI (Appendix).
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** The main idea is that accurately matching the teacher's actions forces the student to implicitly infer domain parameters (dt) from a state history of h ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Reinforcement learning (RL) provides a way to learn such a policy.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. ME
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** detailed, Section, III-C, policy, takes, input, history, previous, observations, actions, denoted, ot-H, where, gori, at-1, Body, TABLE, Network, architecture, encoder.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. ME
 - **p. 7 / IV. RESULTS - extractive body cue:** Response to Terrain Changes and Hardware Failures We tested our system in a diverse set of challenging real-world scenarios: (1) ascending a steep incline made ...
 - **p. 7 / IV. RESULTS - extractive body cue:** While these results highlight the robustness of policies, we want to emphasize that we are not claiming that such (or even more) robustness cannot be ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. METHOD), temporal p. 3 (III. METHOD), p. 2 (II. EXPERIMENTAL SETUP), p. 2 (II. EXPERIMENTAL SETUP), p. 3 (III. METHOD), p. 4 (1) Teacher), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

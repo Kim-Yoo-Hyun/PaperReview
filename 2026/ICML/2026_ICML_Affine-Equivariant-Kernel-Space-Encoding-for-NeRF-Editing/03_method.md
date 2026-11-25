@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (4. Proposed Method), p. 4 (4. Proposed Method),
 - **p. 6 / 4. Proposed Method - extractive body cue:** By monitoring these axes, we can both restore view-dependent features and update the anisotropic scales of the Gaussians consistently after deformation.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4. Proposed Method), p. 6 (4. Proposed Method), p. 6 (4. Proposed Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (4. Proposed Method), p. 4 (4. Proposed Method),
 - **p. 2 / 1. Introduction - extractive body cue:** Motivated by these observations, we address a fundamental limitation in NeRF editing task: the absence of a transformation-aware space encoding.
 - **p. 2 / 1. Introduction - extractive body cue:** Recent advances in explicitly parametrized scene representations demonstrate that spatial locality and explicit structure can substantially improve editability and interaction (Kerbl et al., 2023; Malarz ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (4. Proposed Method), p. 4 (4. Proposed Method),
 - **p. 5 / 4. Proposed Method - extractive body cue:** During training, both the hash-grid parameters Φ and the Gaussian positions µi are optimized jointly, allowing the Gaussians to explore the multi-resolution feature space and ...
 - **p. 6 / 4. Proposed Method - extractive body cue:** Pruning and Densification To enable Gaussian kernels to better represent the latent feature space, we adopt densification and pruning strategies that regulate the number of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, Gaussian, kernels, enhanced, trainable, latent, feature, vector, NeRF-based, neural, network, predict, colour, opacity, nearest, features, address, limitation, introduce, Hash.
 - **Relevant PDF headings:** 4. Proposed Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,12 @@ PDF body method statement (p. 4 (4. Proposed Method), p. 4 (4. Proposed Method),
 - **p. 7 / 5. Experiments - extractive body cue:** In the Drums scene, the gong is consistently restored without visible holes.
 - **p. 7 / 5. Experiments - extractive body cue:** Affine-Equivariant Kernel Space Encoding for NeRF Editing Chair Drums Lego Mic Materials Ship Hotdog Ficus Non Editable INGP 31.97 22.67 33.44 31.38 22.66 28.83 34.04 ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Physical simulations. From left to right: (1) Rigid body simulation of falling leaves. (2) Soft body simulation of the Lego dozer being squished. ...
-- **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Physical simulations. From left to right: (1) Rigid body simulation of falling leaves. (2) Soft body simulation of the Lego dozer being squished. ...
 - **p. 8 / 6. Conclusions - extractive body cue:** By representing latent features with anisotropic Gaussian kernels and aggregating them using Mahalanobis-distance-based neighbourhoods, our method preserves local feature structure under affine transformations, addressing a ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Proposed Method), p. 4 (4. Proposed Method), p. 5 (4. Proposed Method), p. 6 (4. Proposed Method), p. 5 (4. Proposed Method), p. 6 (4. Proposed Method), objective p. 5 (4. Proposed Method), p. 6 (4. Proposed Method), p. 5 (4. Proposed Method), p. 6 (4. Proposed Method), temporal p. 7 (5. Experiments), p. 2 (2. Related Works), p. 2 (2. Related Works), p. 3 (3. Preliminary), p. 3 (2. Related Works).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

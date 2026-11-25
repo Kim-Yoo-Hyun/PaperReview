@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 - **p. 7 / 6 Experiments - extractive body cue:** 6.2 Benchmarking results on SoftGym-Medium A summary of the final normalized performance of all baselines on the evaluation set is shown in Figure 2.
 - **p. 6 / 6 Experiments - extractive body cue:** 6.1 Experimental Setup For each task, we compute a lower bound and upper bound on performance so that we can more easily analyze the performance ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Visualizations of all tasks in SoftGym. These tasks can be used to evaluate how well an algorithm works on a variety of deformable ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 | Table 1: Different task variations in all tasks. Refer to the appendix for more details of the ranges of the variations and how they ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 | Figure 6. We see that the performance of CEM is sensitive to the planning horizon in TransportWater, FoldCloth and DropCloth, whereas the performance is ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 | While it outperforms the rest of the baselines due to the use of the segmentation map and a better action space for exploration, the ... | comparison identity and matched condition | p. 7 (6 Experiments) |
 | Compared to the reduced state oracle, image based methods have much worse performance in certain tasks such as FoldCloth or StraightenRope, indicating that there ... | comparison identity and matched condition | p. 7 (6 Experiments) |
 | Table 2: Action repetition and task horizon. B.1 CEM with Dynamics Oracle For CEM, we use 10 optimization iteration. Model predictive control is used. ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 | body limitation/failure cue | On the other hand, this method does not perform very well on the FoldCloth task. | p. 7 (6 Experiments) |
 | body limitation/failure cue | Table 7: Architecture of the deconvolutional neural network (VAE decoder) in PlaNet. We use a GRU [56] with 200 hidden nodes as the deterministic ... | p. 17 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 | Robotic manipulation of deformable objects has wide application both in our daily lives, such as folding laundry and making food, and in industrial applications, ... | p. 1 (1 Introduction) |
 | Given the current particle positions pi and velocities vi, FleX first computes a predicted position ˆpi = pi +∆tvi 2 | p. 2 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 6 Experiments - extractive body cue:** from a policy that always does nothing.
@@ -157,9 +136,8 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 7: Architecture of the deconvolutional neural network (VAE decoder) in PlaNet. We use a GRU [56] with 200 hidden nodes as the deterministic path ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 6 (6 Experiments), metrics p. 16 (Figure/Table caption), p. 16 (Figure/Table caption), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 6 (Figure/Table caption), baselines p. 7 (6 Experiments), p. 7 (6 Experiments), p. 15 (Figure/Table caption), results p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (6 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

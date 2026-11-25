@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** After each successful merge, the point cloud of node n is denoised using DBSCAN and downsampled to reduce redundancy, and then the semantic features are ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** For each image, each o[i] mj ∈O[i] m is compared to the nodes' point cloud in the graph representing objects.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** As a result, even state-of-the-art object detectors struggle with low detection accuracy in both 2D and 3D.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. ME
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Further, we compare these models on a variant dataset, which we compute using the slicing-aided hyper inference (SAHI) mechanism [46], and refer to it as ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We note that the exact numerical results are difficult to compare, as [5] does not release either the model checkpoints or the full train/test split.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** process, consists, three, phases, Detection, Instance, segmentation, entities, captured, images, feature, extraction, Node, creation, Multi-view, geometric, semantic, merging, Edge, Relationship.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. ME
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. An example of a generated 3D scene graph and its application. The model represents both object and functional element nodes linked through intra-object ...
 - **p. 7 / VI. CONCLUSIONS - extractive body cue:** It does not rely on segmenting a pre-existing highquality point cloud, which makes it also suitable for robotics applications with affordable RGB-D sensing.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 2 (III. METHOD), objective p. 3 (III. METHOD), p. 4 (III. METHOD), temporal p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORK), p. 2 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

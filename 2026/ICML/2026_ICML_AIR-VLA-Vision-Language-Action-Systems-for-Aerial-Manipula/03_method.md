@@ -43,7 +43,6 @@ PDF body method statement (p. 5 (3.4. Dataset Construction), p. 5 (3.4. Dataset 
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -62,7 +61,6 @@ PDF body method statement (p. 5 (3.4. Dataset Construction), p. 5 (3.4. Dataset 
 - **p. 5 / 3.4. Dataset Construction - extractive body cue:** Furthermore, LLMs are leveraged to generate natural language instructions featuring complex structures and implicit intents, ensuring dense coverage of the semantic space.
 - **p. 5 / 3.4. Dataset Construction - extractive body cue:** Tailored to aerial perspectives, the sensor configuration comprises: (1) a UAV front-down RGB-D camera for global bird's-eye views, (2) a manipulator wrist RGB-D camera for ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -77,13 +75,10 @@ PDF body method statement (p. 5 (3.4. Dataset Construction), p. 5 (3.4. Dataset 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Standardized, data, interfaces, ensure, compatibility, input, layers, diverse, VLA, models, Tailored, aerial, perspectives, sensor, configuration, comprises, UAV, front-down, RGB-D, camera.
 - **Relevant PDF headings:** 2.2. Vision-Language-Action Models (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -103,20 +98,10 @@ PDF body method statement (p. 5 (3.4. Dataset Construction), p. 5 (3.4. Dataset 
 - **p. 7 / 4.2.2. RESULTS AND ANALYSIS - extractive body cue:** In summary, VLMs hold immense potential for high-level planning in aerial manipulation, particularly in mitigating the long-horizon reasoning limitations of VLA models.
 - **p. 8 / 5. Conclusion - extractive body cue:** Our findings reveal that while transferring pre-trained VLA models to aerial platforms is feasible, existing models still face severe challenges in handling floating-base dynamic coupling, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Dataset Construction), p. 5 (3.4. Dataset Construction), objective 본문 anchor 없음, temporal p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (4) Long-horizon), p. 4 (3.2. Evaluation Framework), p. 5 (4.1.1. EXPERIMENTAL SETUP), p. 6 (4.1.1. EXPERIMENTAL SETUP), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

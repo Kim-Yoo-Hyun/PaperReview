@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 - **p. 8 / 6 Results - extractive body cue:** 6.2 Physical Results Figure 4 shows real-world examples of VoxAct-B.
 - **p. 8 / 6 Results - extractive body cue:** It succeeds in 5 out of 10 trials, demonstrating its ability to learn from multi-modal, real-world data.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: VoxAct-B uses voxel representations and language to perform bimanual manipulation with 6-DoF manipulation from both arms. We test four language-conditioned bimanual tasks in ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 | We adapt the Mobile ALOHA repository for ACT and a CNN-based Diffusion Policy, and we tune their parameters (e.g., chunk size and action horizon) ... | definition/direction/unit from same section | p. 6 (5 Experiments) |
 | We generate 10 and 100 demonstrations of training data. | definition/direction/unit from same section | p. 7 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 | ACT is a state-of-the-art method for bimanual manipulation. | comparison identity and matched condition | p. 6 (5 Experiments) |
 | The baselines also struggle with correctly assigning the roles of each arm. | comparison identity and matched condition | p. 7 (6 Results) |
 | Moreover, VoxAct-B w/o acting and stabilizing and VoxAct-B w/o arm ID perform worse than VoxAct-B, and they struggle with the same issues as the ... | comparison identity and matched condition | p. 8 (6 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 | body limitation/failure cue | Note that the real-world jar and drawer cannot be opened without the use of a second arm. | p. 6 (5 Experiments) |
 | body limitation/failure cue | We also test the following ablations of VoxAct-B: • VoxAct-B w/o VLMs: does not use the VLMs to detect the object of interest and ... | p. 6 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 | We generate 25 episodes of validation and test data using different random seeds. | p. 7 (5 Experiments) |
 | We carefully tune the baselines and include the hyperparameters used in Table 4. | p. 16 (C Additional Implementation Details for the Baselines) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6 Results - extractive body cue:** 6.3 Limitations and Failure Cases VoxAct-B implicitly assumes the object of interest does not encompass most of the workspace.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 16 (C Additional Implementation Details for t
 - **p. 6 / 5 Experiments - extractive body cue:** We also test the following ablations of VoxAct-B: • VoxAct-B w/o VLMs: does not use the VLMs to detect the object of interest and crop ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 14 (A.1 Additional Implementation Details), p. 7 (6 Results), p. 14 (A.1 Additional Implementation Details), metrics p. 14 (A.1 Additional Implementation Details), p. 16 (C Additional Implementation Details for the Baselines), p. 7 (6 Results), p. 8 (6 Results), p. 8 (6 Results), p. 6 (5 Experiments), baselines p. 7 (6 Results), p. 6 (5 Experiments), p. 17 (Figure/Table caption), p. 6 (5 Experiments), p. 7 (6 Results), p. 8 (6 Results), results p. 16 (C Additional Implementation Details for the Baselines), p. 6 (5 Experiments), p. 7 (6 Results), p. 17 (Figure/Table caption), p. 7 (6 Results), p. 16 (C Additional Implementation Details for the Baselines).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

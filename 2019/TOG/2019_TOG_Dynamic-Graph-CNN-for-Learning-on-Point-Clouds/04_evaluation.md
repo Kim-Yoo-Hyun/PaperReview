@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 - **p. 9 / 4 EVALUATION - extractive body cue:** This dataset includes 3D scan point clouds for 6 indoor areas including 272 rooms in total.
 - **p. 9 / 4 EVALUATION - extractive body cue:** We evaluate our model on Stanford Large-Scale 3D Indoor Spaces Dataset (S3DIS) [Armeni et al.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Point cloud segmentation using the proposed neural network. Bottom: schematic neural network architecture. Top: Structure of the feature spaces produced at different layers ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 | Left: The mean IoU (%) improves when the ratio of kept points increases. | definition/direction/unit from same section | p. 10 (4 EVALUATION) |
 | Fig. 3. Model architectures: The model architectures used for classification (top branch) and segmentation (bottom branch). The classification model takes as input n points, ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 | 2017b] and PointNet baseline, where additional point features (local point density, local curvature and normal) are used to construct handcrafted features and then fed ... | comparison identity and matched condition | p. 9 (4 EVALUATION) |
 | Mean overall IoU accuracy PointNet (baseline) [Qi et al. | comparison identity and matched condition | p. 10 (4 EVALUATION) |
 | Table 1. Comparison to existing methods. The per-point weight wi in [Atzmon et al. 2018] effectively is computed in the first layer and could ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 | body limitation/failure cue | We further evaluate the robustness of our model (trained on 1,024 points with k = 20) to point cloud density. | p. 8 (4 EVALUATION) |
 | body limitation/failure cue | Our model is robust to partial data. | p. 9 (4 EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 | Point clouds provide a flexible geometric representation suitable for countless applications in computer graphics; they also comprise the raw output of most 3D data ... | p. 1 (Body text (section not recovered)) |
 | We summarize the key contributions of our work as follows: • We present a novel operation for learning from point clouds, EdgeConv, to better ... | p. 2 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4 EVALUATION - extractive body cue:** This confirms our hypothesis that for certain density, with large k the Euclidean distance fails to approximate geodesic distance, destroying the geometry of each patch.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (
 - **p. 9 / 4 EVALUATION - extractive body cue:** Our model is robust to partial data.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 9 (4 EVALUATION), p. 9 (4 EVALUATION), metrics p. 10 (4 EVALUATION), p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 9 (4 EVALUATION), baselines p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 9 (4 EVALUATION), p. 10 (4 EVALUATION), p. 6 (Figure/Table caption), results p. 7 (4 EVALUATION), p. 7 (4 EVALUATION), p. 8 (4 EVALUATION), p. 8 (4 EVALUATION), p. 10 (4 EVALUATION), p. 10 (4 EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Meanwhile, the agent uses the pre-trained VLM model as a surrogate reward for updating the policy.
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 3 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 1 (Body text (section boundary not confidently recovered)), p. 4 (IV. ROBOFUME), p. 4 (IV. ROBOFUME).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 - **p. 1 / Abstract - extractive body cue:** Our insights are to utilize calibrated offline reinforcement learning techniques to ensure efficient online finetuning of a pre-trained policy in the presence of distribution shifts ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Pretraining a policy with offline reinforcement learning and then fine-tuning it with online reinforcement learning is a natural way to implement this paradigm in robotics.
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Meanwhile, the agent uses the pre-trained VLM model as a surrogate reward for updating the policy.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** Our method significantly improves over both offline-only and BC performance after 30k steps of online interaction (2-4 hours).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** policy, then, takes, inputs, concatenation, encoded, image, observation, simg, task, representation, proprioceptive, information, processes, concatenated, vector, through, MLP, produces, output.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose a system that enables autonomous and efficient real-world robot learning. First, we pre-train a multi-task policy and fine-tune a pre-trained Vision-Language ...
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** All tasks use 50 forward and 50 backward demos for the target task, and fewer than 20 combined trajectories of failures.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 4 (IV. ROBOFUME), p. 4 (IV. ROBOFUME), p. 1 (I. INTRODUCTION), p. 3 (IV. ROBOFUME), objective p. 4 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 3 (IV. ROBOFUME), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 2 (II. RELATED WORK), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

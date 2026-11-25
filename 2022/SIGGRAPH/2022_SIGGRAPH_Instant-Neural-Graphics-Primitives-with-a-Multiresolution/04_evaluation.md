@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Tabl
 - **원문 대조:** Neural radiance caching의 MLP는 feature buffer에서 각 픽셀의 색을 예측한다. 인코딩 대상에는 world-space position이 포함되며, 렌더링 중 온라인으로 학습한다. ([PDF p. 8](https://arxiv.org/pdf/2201.05989#page=8), Figure 8).
 - **p. 8 / 24.2 M - extractive body cue:** Our hash encoding exhibits similar numeric quality in terms of intersection over union (IoU) and can be evaluated anywhere in the scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. We demonstrate instant training of neural graphics primitives on a single GPU for multiple tasks. In Gigapixel image we represent a gigapixel image ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Tabl
 | For photorealistic rendering, the neural radiance cache is typically queried only for indirect path contributions, which masks its reconstruction error behind the first reflection. | definition/direction/unit from same section | p. 9 (24.2 M) |
 | For each scene, we mark the methods with least error using gold , silver , and bronze medals. | definition/direction/unit from same section | p. 10 (24.2 M) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Tabl
 | On the other hand, mip-NeRF and NSVF outperform our method on scenes with complex, view-dependent reflections, such as Materials; we attribute this to the ... | comparison identity and matched condition | p. 10 (24.2 M) |
 | Figure 4. This is explained by the 6 MB L2 cache of our NVIDIA RTX 3090 GPU, which becomes too small for individual levels ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | We experimentally verified that this does not lead to reduced quality, compared to looking up the entire hierarchy. | comparison identity and matched condition | p. 13 (B IMPLEMENTATION DETAILS OF NGLOD) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -143,8 +132,6 @@ PDF body evaluation/result cue (p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Tabl
 | body limitation/failure cue | While the linear layer is capable of reproducing view-dependent effects, the quality is significantly compromised as compared to the MLP, which is better able ... | p. 10 (24.2 M) |
 | body limitation/failure cue | Microstructure due to hash collisions. | p. 11 (24.2 M) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -158,14 +145,6 @@ PDF body evaluation/result cue (p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Tabl
 | The feature buffers contain, among other variables, the world-space position x, which we propose to encode with our method. | p. 8 (24.2 M) |
 | This amounts to 50 k steps after 5 min at which point the model is well converged. | p. 10 (24.2 M) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 24.2 M - extractive body cue:** The MLP allows for resolving specular details and reduces the amount of background noise caused by hash collisions.
@@ -176,6 +155,5 @@ PDF body evaluation/result cue (p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Tabl
 - **p. 11 / 24.2 M - extractive body cue:** Microstructure due to hash collisions.
 
 - **Evidence anchors reviewed:** datasets p. 9 (24.2 M), p. 7 (5 EXPERIMENTS), p. 9 (24.2 M), p. 10 (24.2 M), p. 10 (24.2 M), p. 7 (5 EXPERIMENTS), metrics p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (24.2 M), baselines p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 10 (24.2 M), p. 10 (24.2 M), p. 6 (Figure/Table caption), p. 13 (B IMPLEMENTATION DETAILS OF NGLOD), results p. 10 (24.2 M), p. 9 (24.2 M), p. 3 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 8 (24.2 M), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

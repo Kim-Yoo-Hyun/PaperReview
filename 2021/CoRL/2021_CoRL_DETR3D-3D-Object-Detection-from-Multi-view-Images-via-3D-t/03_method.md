@@ -50,7 +50,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 - **p. 2 / 1 Introduction - extractive body cue:** After a series of self-attention layers, we read off bounding box parameters from every layer and use a set-to-set loss inspired by DETR [10] to ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 - **p. 1 / 1 Introduction - extractive body cue:** As an alternative to these 2D-based methods, some methods incorporate more 3D computations into our object detection pipeline by applying a 3D reconstruction method like ...
 - **p. 2 / 1 Introduction - extractive body cue:** Our architecture does not perform point cloud reconstruction or explicit depth prediction from images, making it robust to errors in depth estimation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 - **p. 5 / 4 Experiments - extractive body cue:** The model is trained for 12 epochs in total on 8 RTX 3090 GPUs and the per-GPU batch size is 1.
 - **p. 6 / 4 Experiments - extractive body cue:** Our method is robust to the usage of NMS. ∗: CenterNet uses a customized backbone DLA [38]. ‡: this model is trained with depth weight ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** best, knowledge, first, attempt, cast, multi-camera, detection, set-to-set, prediction, introduce, module, connects, feature, extraction, bounding, backward, geometric, projection, more, graceful.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (A
 - **p. 9 / 5 Conclusion - extractive body cue:** Some failure cases include the far ahead car in CAM FRONT, that was not detected.
 - **p. 6 / 4 Experiments - extractive body cue:** To further demonstrate the advantages of fused inference, we calculate the metrics for boxes falling into the camera overlaps.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), objective p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 5 (4 Experiments), p. 5 (4 Experiments), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

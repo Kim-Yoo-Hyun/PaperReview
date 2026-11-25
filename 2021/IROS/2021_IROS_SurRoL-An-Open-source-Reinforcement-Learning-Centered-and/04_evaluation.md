@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** The success rates are reported based on 50 episodes for each method, as shown in Table.
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** In this section, we focus on the proposed learning-based tasks and want to answer the following questions: 1) Do the tasks in our simulation platform ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Our SurRoL is able to support more surgical opera- tion scenarios by incorporating more single-handed/bimanual PSM(s) and ECM control tasks. Further, the designed ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Fig. 1. Our SurRoL is able to support more surgical opera- tion scenarios by incorporating more single-handed/bimanual PSM(s) and ECM control tasks. Further, the ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 3. Examples of the demonstration. To demonstrate the proposed tasks and overcome the sample complexity, we provide the scripted policy for each and ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | We also observe that in StaticTrack, the learned policy can smoothly center the target object without the jittering effect, which is non-trivial for the ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | The physical evaluation environments are set the same with only successful episodes for both policies in simulation to ensure fair comparisons. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | Fig. 1. System design of SurRoL. SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | body limitation/failure cue | However, in PSM settings, HER alone cannot solve all tasks within the given time horizon, mainly due to the tiny object and physically rich ... | p. 5 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Surprisingly, even with the correct grasping points, HER+DEMO fails to learn the picking action, which shows the extreme exploration difficulties during learning (Fig. | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | 2) Profiling Analysis: Our SurRoL can run at a real-time rate, at about 150Hz simulation in the reaching tasks with position control and random ... | p. 5 (IV. EXPERIMENTS) |
 | The average success rates for goal-based tasks and episode returns for the reward-based task (ActiveTrack) are shown over three random seeds, with one epoch ... | p. 6 (IV. EXPERIMENTS) |
 | After combining HER and demonstration (HER+DEMO) with Q-filtered behavior cloning [35], the agents manage to solve many challenging tasks with physicsrich simulation within 50 ... | p. 6 (IV. EXPERIMENTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Surprisingly, even with the correct grasping points, HER+DEMO fails to learn the picking action, which shows the extreme exploration difficulties during learning (Fig.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (Figure/Table caption), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), results p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

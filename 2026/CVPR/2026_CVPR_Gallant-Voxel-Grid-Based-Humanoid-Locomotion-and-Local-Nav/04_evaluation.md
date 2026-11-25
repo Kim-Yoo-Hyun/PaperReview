@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 - **p. 6 / 4.2.3. Result - extractive body cue:** 5 (a), when the robot ducks under the ceiling, the voxel grids with dynamics (Fig.
 - **p. 7 / 4.3.1. Deployment - extractive body cue:** Despite the diverse and complex constraints, the robot consistently traverses these terrains with high success rates (see Fig.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. Gallant enables a single policy with voxel grids to traverse diverse 3D constrained terrains in real: (a) ascend and descend stairs, (b) ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 | We present a success rate comparison between Gallant and baselines on the eight representative terrains. | definition/direction/unit from same section | p. 6 (4.2.3. Result) |
 | Gallant success rate in simulation and real world. | definition/direction/unit from same section | p. 8 (4.4. Further Analyses) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 | This is compared to Gallant, which models scans over both static terrain and moving links. • Perceptual network. | comparison identity and matched condition | p. 5 (4.2.2. Baselines) |
 | The HeightMap baseline fails on overheading (e.g., Ceiling) and lateral (e.g., Door) obstacles due to its limited 2.5D representation, and performs worse than Gallant ... | comparison identity and matched condition | p. 8 (4.3.2. Ablation) |
 | For each ablation setting, the best-performing value per metric on each terrain is highlighted in bold. | comparison identity and matched condition | p. 6 (4.2.3. Result) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 | body limitation/failure cue | Figure 2. Method Overview. (a) Curriculum-based training over 8 representative terrains enhances generalization, and realistic voxel path alignment achieved via efficient LiDAR simulation with ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | 5 (b)) correctly include the robot's legs, which occupy voxels and induce occlusion "holes" along LiDAR rays to the distant floor. | p. 6 (4.2.3. Result) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 | To mitigate this, we precompute a BVH for each mesh in its local (body) frame. | p. 3 (3.2. Efficient LiDAR Simulation) |
 | Most GPU-based simulators, such as IsaacGym and IsaacSim, either lack native support for efficient LiDAR simulation or are limited to scanning a single static ... | p. 3 (3.2. Efficient LiDAR Simulation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.2.1. Metrics - extractive body cue:** 4.1), and the policy performance is measured by two distinct metrics: • Success rate E_{\mathrm {succ}}: fraction of episodes that reach the target within a ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8
 - **p. 6 / 4.2.3. Result - extractive body cue:** 5 (b)) correctly include the robot's legs, which occupy voxels and induce occlusion "holes" along LiDAR rays to the distant floor.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.2.1. Metrics), p. 8 (4.4. Further Analyses), p. 7 (4.2.3. Result), p. 5 (4.1. Experimental Configuration), p. 6 (4.2.3. Result), p. 8 (4.3.2. Ablation), metrics p. 5 (4.2.1. Metrics), p. 7 (4.3.2. Ablation), p. 7 (4.2.3. Result), p. 8 (4.4. Further Analyses), p. 5 (4.2.3. Result), p. 6 (4.2.3. Result), baselines p. 8 (4.3.2. Ablation), p. 5 (4.1. Experimental Configuration), p. 6 (4.2.3. Result), p. 5 (4.2.2. Baselines), p. 8 (4.3.2. Ablation), p. 6 (4.2.3. Result), results p. 6 (4.2.3. Result), p. 7 (4.2.3. Result), p. 8 (4.4. Further Analyses), p. 5 (4.2.1. Metrics), p. 7 (4.3.2. Ablation), p. 8 (4.4. Further Analyses).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

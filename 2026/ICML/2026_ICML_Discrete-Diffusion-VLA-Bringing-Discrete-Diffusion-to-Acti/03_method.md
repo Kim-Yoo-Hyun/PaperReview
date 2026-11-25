@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 - **PDF p. 5, §3.5 / Eq. (9) (DOC-QA2 원문 대조):** Confidence ranking으로 선택한 K_t 위치에서 Gumbel noise와 temperature를 포함한 categorical token update를 수행하고 나머지는 MASK로 둔다. 이 식의 exploration은 action-decoding 과정이며 environment RL 탐색으로 해석하지 않는다.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.4. Algorithmic Pipeline), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 - **p. 3 / 3.1. Overview - extractive body cue:** This formulation eliminates the competing gradients introduced by a separate diffusion loss, preserving VLM priors while unifying perception, instruction grounding, and action denoising within a ...
 - **p. 4 / 3.3. Architecture of Discrete Diffusion VLA - extractive body cue:** All tokens pass through the unified transformer, with hidden states at action positions projected to a 256-way vocabulary via a shared classification head.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 - **p. 4 / 3.4. Algorithmic Pipeline - extractive body cue:** No additional loss terms, auxiliary objectives, or special training procedures are involved.
 - **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** A complete per-table breakdown of sources, hardware, and training steps is provided in Appendix C.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** illustrated, above, inference, pipeline, starts, fully, masked, action, chunk, mask, ratio, then, performs, refinement, steps, monotone, schedule, Given, image, observations.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 2); 2.2. Discrete Diffusion Models (p. 2); 3. Discrete Diffusion VLA Model (p. 3); 3.3. Architecture of Discrete Diffusion VLA (p. 4); 3.4. Algorithmic Pipeline (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** (ii) Right y-axis: Ablation on denoising steps.
 - **p. 5 / 4.1. Simulation Benchmarks and Baselines - extractive body cue:** We fine-tune Discrete Diffusion VLA from OpenVLA backbone (Prismatic-7B) with images resized to 224 × 224.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.4. Algorithmic Pipeline), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), objective p. 4 (3.2. Formulation of Discrete Diffusion over Actions), p. 4 (3.4. Algorithmic Pipeline), p. 3 (3.1. Overview), p. 3 (3.2. Formulation of Discrete Diffusion over Actions), p. 5 (3.5. Adaptive Decoding and Secondary Re-Masking), temporal p. 7 (4.4. Ablation Study), p. 8 (4.5. Inference Efficiency), p. 6 (4.1. Simulation Benchmarks and Baselines), p. 8 (4.5. Inference Efficiency), p. 4 (3.3. Architecture of Discrete Diffusion VLA), p. 2 (2.1. Vision-Language-Action Models).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

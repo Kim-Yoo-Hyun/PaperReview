@@ -53,7 +53,6 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 - **p. 7 / III. MODELING - extractive body cue:** MuJoCo has several predefined types of constraints: 3D position constraint forcing two points on two bodies to coincide (effectively creating another ball joint), joint angle ...
 - **Formal bridge:** sim state s_t and parameters δ -> sim action/rollout -> physics/model/planning objective -> fidelity, throughput and downstream task utility.
 - **Equation/algorithm anchors:** p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 7 (III. MODELING), p. 7 (III. MODELING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 - **p. 1 / I. INTRODUCTION - extractive body cue:** ODE as well as other game-oriented engines (such as NVIDIA PhysX and Bullet Physics) represent the system state in over
 - **p. 6 / III. MODELING - extractive body cue:** DOFs have damping, maximum velocity, armature inertia.
 - **Normalized interface:** observation=simulated state, geometry, contact와 control input; state=dynamics/contact state 또는 learned simulator representation; output/action=simulation step, trajectory 또는 environment query.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,8 +87,6 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 
 - 한 스텝에서 일반화 속도를 먼저 갱신하고 그 속도로 위치를 적분한다. [§II-A 식 2 · PDF 3쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=3)
 - **p. 4 / 5) Integrate numerically to obtain the next state - extractive body cue:** Convex solver A favorable trade-off between speed and accuracy is obtained by replacing the nonlinear complementarity constraints (4, 5) with a convex optimization problem, whose ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
@@ -115,23 +111,13 @@ PDF body method statement (p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIO
 - $\operatorname{diag}(A)\mathbf f_C=\mathbf v_C^\ast-\mathbf v_0$를 근사적으로 풀고 각 접촉의 충격량을 마찰원뿔에 투영한다. 이 근사에서는 접촉점 사이의 결합을 생략한다. [§II-E 대각 해법 · PDF 5쪽](https://roboti.us/lab/papers/TodorovIROS12.pdf#page=5)
 - **p. 3 / II. ALGORITHMIC FOUNDATIONS - extractive body cue:** 1) Compute the Cartesian positions and orientations of all rigid bodies (i.e. the forward kinematics), detect potential collisions (with some safety margin), and construct the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (III. MODELING), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 6 (III. MODELING), p. 6 (III. MODELING), p. 7 (III. MODELING), objective p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 7 (III. MODELING), p. 7 (III. MODELING), temporal p. 2 (I. INTRODUCTION), p. 2 (II. ALGORITHMIC FOUNDATIONS), p. 3 (5) Integrate numerically to obtain the next state), p. 3 (5) Integrate numerically to obtain the next state), p. 6 (5) Integrate numerically to obtain the next state), p. 7 (IV. TIMING TESTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -46,7 +46,6 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 - **p. 17 / A.1 Dataset Details - extractive body cue:** Since the human datasets do not contain proprioception and action information, we use hand poses and 2D positions in the image space as surrogates for ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 17 (A.1 Dataset Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 - **p. 8 / 1 Introduction - extractive body cue:** For the human datasets that lack proprioception and action information, we use poses and 2D positions as surrogates for the supervised policy learning objectives.
 - **p. 2 / 1 Introduction - extractive body cue:** In this work, we consider robots equipped with a distinct set of sensors and actuators with the associated observation and action space to be a ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 - **p. 17 / A Implementation Details - extractive body cue:** When training with 80k iterations, the approximate training epochs with fixed batch size 512 range from 200 epochs to 2 epochs.
 - **p. 17 / A Implementation Details - extractive body cue:** Specifically, the default training setup is to train 80000 iterations with a batch size 256, which is around 0.65B tokens in the latent space that ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Different, previous, minimal, amounts, processing, cleaning, observation, actions, trajectories, Since, human, datasets, contain, proprioception, action, information, hand, poses, positions, image.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,23 +104,13 @@ PDF body method statement (p. 17 (A Implementation Details), p. 17 (A.1 Dataset 
 - **p. 23 / Figure/Table caption - extractive body cue:** Figure 18: Ablation Study on HPT Stem. We ablate the pre-training performance for (a) proprioception, (b) vision stems, and (c) vision encoders. Setting: HPT-S, batch ...
 - **p. 23 / Figure/Table caption - extractive body cue:** Figure 19: (a) Initial Condition Overlay. We visualize different rollout initial conditions during test times. (b) Failure Cases of the Learned Policy in the Real ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 17 (A Implementation Details), p. 17 (A.1 Dataset Details), objective p. 17 (A.1 Dataset Details), temporal p. 9 (1 Introduction), p. 17 (A.1 Dataset Details), p. 17 (A Implementation Details), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

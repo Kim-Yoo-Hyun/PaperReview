@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3
 - **p. 5 / 3.3. Training Objectives - extractive body cue:** To ensure that rendered images match the input views, we combines a pixel-wise L1 loss and the LPIPS metric [44]: \m a t h cal
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.3. Training Objectives), p. 3 (3. Method), p. 3 (3. Method), p. 5 (3.3. Training Objectives), p. 5 (3.3. Training Objectives), p. 6 (3.3. Training Objectives).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3
 - **p. 2 / 1. Introduction - extractive body cue:** However, these methods are built upon DUSt3R [37], which is inherently designed for two-view inputs.
 - **p. 6 / 3.3. Training Objectives - extractive body cue:** Given the masked aligned point clouds X(i) U = µ(i) ⊙M (i) and X(i) V = ˆµ(i) ⊙M (i), where ⊙denotes the element-wise product, a ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3
 - **p. 3 / 3. Method - extractive body cue:** 3.2, and conclude with the specifics of the training losses in Sec.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** All experiments are conducted on 8 × A100 GPUs, taking approximately 22 hours for the training of 2 views, with a batch size of 2.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Cross-View, Transformer, Encoder, consists, series, blocks, alternate, between, intra-frame, cross-frame, attention, Uni3R, employs, following, VGGT, extract, fuse, features, input, images.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,12 @@ PDF body method statement (p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Quantitative Comparison on ScanNet. We evaluate performance on novel view synthesis, depth estimation, and open-vocabulary semantic segmentation. (*) Unlike LSM, Uni3R is trained ...
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** We initialize the encoder and decoder with the weights from the pretrained VGGT [36], while the remaining intrinsic layer and Gaussian head are randomly initialized.
 - **p. 6 / 4.2. Experiment Results - extractive body cue:** Thus, Uni3R not only mimics LSeg, but also leverages 3D consistency to produce a denoised, robust semantic prediction.
-- **p. 8 / 4.3. Analysis and Ablations - extractive body cue:** When the geometric loss is removed, the model exhibits degraded 3D consistency (higher depth error and lower τ), validating its effectiveness in improving point cloud ...
 - **p. 8 / 4.3. Analysis and Ablations - extractive body cue:** The scale-invariant constraint contributes to rendering stability across scenes with varying depth ranges, while the intrinsic embedding improves robustness by aligning scenes of varying scales ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 5 (3.3. Training Objectives), p. 6 (3.3. Training Objectives), p. 6 (3.3. Training Objectives), p. 3 (3. Method), objective p. 6 (3.3. Training Objectives), p. 5 (3.3. Training Objectives), p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.2. Rendering with Open-Vocabulary Semantics), p. 5 (3.3. Training Objectives), temporal p. 4 (3.1.2. Cross-View Transformer Encoder), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 8 (5. Conclusion), p. 1 (Abstract), p. 2 (2.1. Differentiable Neural Representations), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

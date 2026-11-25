@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 - **p. 5 / 6. Experiments Centered on ANY3D-VLA - extractive body cue:** We conduct a series of experiments around ANY3D-VLA to evaluate its performance (1) in real-world and simulation settings, (2) under different point-cloud sources, and (3) ...
 - **p. 7 / 6.1.3. REAL-WORLD POST-TRAINING - extractive body cue:** To adapt to more diverse real-world tasks, we employ a two-stage training paradigm: imitation learning pre-training on large-scale synthetic data, followed by fine-tuning on a ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose ANY3D-VLA. It unifies simulator, sensor, and model-estimated point clouds in the training pipeline (a), enabling diverse inputs and learning domain-agnostic 3D ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 | Table 8. Evaluation of ANY3D-VLA (trained purely on simulator point cloud) in the simulator using the same RGB input with point clouds from different ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 | We jointly consider prediction accuracy and inference latency, and conduct a qualitative comparison via point-cloud visualizations, ultimately selecting Depth Anything 3 (Lin et al., ... | definition/direction/unit from same section | p. 6 (6.1.1. REAL-WORLD SETUP) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 | Furthermore, compared to higher-frequency policies, our model executes a larger motion per step (roughly 2-3× longer). | comparison identity and matched condition | p. 8 (0.3 FPS) |
 | While estimating point clouds inherently introduces computational overhead compared to purely 2D approaches, we employ action chunking with a chunk size of 4, which ... | comparison identity and matched condition | p. 8 (0.3 FPS) |
 | Method Single-Trial Test Grasp SR (%) SR (%) SR (%) 2D-only 45.3 72.6 80.0 Implicit-depth RGB 55.8 78.9 85.3 Implicit-3D RGB 46.3 78.9 87.4 ... | comparison identity and matched condition | p. 4 (3. Dataset and Benchmark) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 | body limitation/failure cue | To isolate the impact of observation space design and visual representation construction on VLA performance, we adopt the following controlled settings: (1) We use ... | p. 3 (3. Dataset and Benchmark) |
 | body limitation/failure cue | 2D backbones struggle to effectively infer occlusion relationships and absolute scales from flattened depth maps. | p. 4 (3. Dataset and Benchmark) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 | To verify the necessity of our 2D-3D fusion design, we conduct an ablation study on the key components of the visual encoder under a ... | p. 8 (6.4. Ablation Study) |
 | (2) We uniformly freeze the image encoder and only fine-tune the last four layers of the other branch (if present). | p. 3 (3. Dataset and Benchmark) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Limitations and Future Work - extractive body cue:** Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL W
 - **p. 4 / 3. Dataset and Benchmark - extractive body cue:** 2D backbones struggle to effectively infer occlusion relationships and absolute scales from flattened depth maps.
 
 - **Evidence anchors reviewed:** datasets p. 3 (3. Dataset and Benchmark), p. 3 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation), p. 6 (6.1.1. REAL-WORLD SETUP), p. 6 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), metrics p. 6 (6.1.1. REAL-WORLD SETUP), p. 7 (6.1.3. REAL-WORLD POST-TRAINING), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation), p. 8 (6.4. Ablation Study), p. 21 (Figure/Table caption), baselines p. 7 (6.1.3. REAL-WORLD POST-TRAINING), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 6 (6.1.1. REAL-WORLD SETUP), p. 8 (0.3 FPS), p. 8 (0.3 FPS), p. 4 (3. Dataset and Benchmark), results p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 8 (6.5. LIBERO and CALVIN Benchmarks), p. 7 (6.1.2. ZERO-SHOT COMPARISONS IN THE REAL WORLD), p. 21 (Figure/Table caption), p. 4 (3. Dataset and Benchmark), p. 8 (6.3. Diverse Point-Cloud Inputs as Data Augmentation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

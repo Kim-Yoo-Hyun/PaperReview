@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 - **p. 8 / C Progress Level - extractive body cue:** Among open-source models, Qwen2.5-VL-7B performs best (45.26%, 21.77%), approaching GPT-4o-mini (46.42%, 27.99%) and demonstrating potential for deployment in real-world robotics.
 - **p. 9 / 5.3 Discussion - extractive body cue:** Effect of Map Information on Action Decisions Although our benchmark evaluations assume no access to map information, reflecting real-world constraints, we investigate whether providing map ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: NavBench evaluates MLLMs across three comprehension tasks and a step-by-step execution task, assessing their ability to understand navigation behavior, track progress, reason about ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 | To systematically assess the difficulty of each case, we define a composite complexity score across three orthogonal dimensions: spatial, cognitive, and execution complexity. | definition/direction/unit from same section | p. 6 (C Progress Level) |
 | The spatial complexity score is defined as: Φspatial " α1 ¨ logp1 ` dq ` α2 ¨ logp1 ` θq ` α3 ¨ Ipz ... | definition/direction/unit from same section | p. 6 (C Progress Level) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 | As shown in Figure 7, models show consistent performance across both, with GPT-4o clearly outperforming all others, consistent with its strong results in Navigation ... | comparison identity and matched condition | p. 9 (5.3 Discussion) |
 | Table 1: Performance comparison on Navigation Comprehension and Execution. | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Using GPT-4o, we compare performance with and without map input across different difficulty levels. | comparison identity and matched condition | p. 9 (5.3 Discussion) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 - **p. 6 / C Progress Level - extractive body cue:** The score is computed as: Φexecution " γ1 ¨ logp1 ` Nq ` γ2 ¨ logp1 ` Tq ` γ3 ¨ F ` γ4 ¨ ...
 - **p. 1 / Abstract - extractive body cue:** NavBench consists of two components: (1) navigation comprehension, assessed through three cognitively grounded tasks including global instruction alignment, temporal progress estimation, and local observation-action reasoning, ...
 - **p. 2 / 1 Introduction - extractive body cue:** The benchmark includes 432 navigation cases across 72 scenes.
-- **p. 4 / C Progress Level - extractive body cue:** 3 Benchmark Design 3.1 Task Formulation We evaluate the navigation capabilities of MLLMs by decomposing the task into two core components: Navigation Comprehension, which assesses ...
 
 ## Generalization and Failure Cases
 
@@ -133,8 +121,6 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 | body limitation/failure cue | Error Analysis We manually analyze 100 failed cases to understand model failures. | p. 9 (5.3 Discussion) |
 | body limitation/failure cue | The models' failure in this setting highlights their limited ability to reason about temporal order within complex instructions. | p. 9 (5.3 Discussion) |
 | body limitation/failure cue | All physical experiments are conducted in a controlled indoor lab to assess robustness and feasibility. | p. 7 (C Progress Level) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -149,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 | These features are computed from agent poses and scene connectivity data. | p. 6 (C Progress Level) |
 | We consider: (1) number of steps N, (2) number of turns T, (3) floor change indicator F, and (4) number of decision points D. | p. 6 (C Progress Level) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5.3 Discussion - extractive body cue:** Error Analysis We manually analyze 100 failed cases to understand model failures.
@@ -164,6 +142,5 @@ PDF body evaluation/result cue (p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p.
 - **p. 7 / C Progress Level - extractive body cue:** All physical experiments are conducted in a controlled indoor lab to assess robustness and feasibility.
 
 - **Evidence anchors reviewed:** datasets p. 5 (C Progress Level), p. 5 (C Progress Level), p. 6 (C Progress Level), p. 8 (C Progress Level), p. 7 (C Progress Level), p. 7 (C Progress Level), metrics p. 8 (C Progress Level), p. 9 (5.3 Discussion), p. 9 (C Progress Level), p. 7 (C Progress Level), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 9 (5.3 Discussion), p. 8 (Figure/Table caption), p. 9 (5.3 Discussion), results p. 9 (5.3 Discussion), p. 9 (5.3 Discussion), p. 8 (C Progress Level), p. 7 (C Progress Level), p. 8 (C Progress Level), p. 4 (C Progress Level).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

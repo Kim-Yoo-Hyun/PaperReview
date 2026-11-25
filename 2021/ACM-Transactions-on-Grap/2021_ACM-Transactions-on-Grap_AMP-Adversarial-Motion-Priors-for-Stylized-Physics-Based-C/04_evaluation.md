@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 - **p. 11 / 8 RESULTS - extractive body cue:** But as shown in the previous sections, this lack of synchronization is precisely what allows AMP to easily leverage large datasets of diverse motion clips ...
 - **p. 11 / 8 RESULTS - extractive body cue:** 8.4 Single-Clip Imitation Although our goal is to train characters with large motion datasets, to evaluate the effectiveness of our framework for imitating behaviors from ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Our framework enables physically simulated character to solve challenging tasks while adopting stylistic behaviors specified by unstructured motion data. Left: A character learns ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 | The pose error is averaged across 3 models initialized with different random seeds, with 32 episodes recorded per model. | definition/direction/unit from same section | p. 12 (8 RESULTS) |
 | Performance is recorded as the average normalized task return, with 0 being the minimum possible return per episode and 1 being the maximum possible ... | definition/direction/unit from same section | p. 9 (8 RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 | Right: Comparison of the target speed with the average speed achieved by the different policies. | comparison identity and matched condition | p. 9 (8 RESULTS) |
 | These intricate behaviors arise naturally from the motion prior, without requiring a motion planner to explicitly select which motion the character should execute in ... | comparison identity and matched condition | p. 9 (8 RESULTS) |
 | A qualitative comparison of the behaviors learned using AMP and the latent space model is available in the supplementary video. | comparison identity and matched condition | p. 10 (8 RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 | body limitation/failure cue | 9 DISCUSSION AND LIMITATIONS In this work, we presented an adversarial learning system for physicsbased character animation that enables characters to imitate diverse behaviors ... | p. 12 (8 RESULTS) |
 | body limitation/failure cue | Unlike previous motion tracking methods, our approach does not require a manually designed tracking objective or a phase-based synchronization of the reference motion and ... | p. 11 (8 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 | Code for our system will be released upon publication of this paper. | p. 8 (8 RESULTS) |
 | But when the target is further away, the character automatically transitions into a run. | p. 9 (8 RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 8 RESULTS - extractive body cue:** These additional motion clips then enable our character to recover from a fall and continue to perform a given task (Figure 3(c)).
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 - **p. 11 / 8 RESULTS - extractive body cue:** Unlike previous motion tracking methods, our approach does not require a manually designed tracking objective or a phase-based synchronization of the reference motion and the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (8 RESULTS), p. 9 (8 RESULTS), p. 9 (8 RESULTS), p. 12 (8 RESULTS), p. 7 (8 RESULTS), p. 8 (8 RESULTS), metrics p. 11 (8 RESULTS), p. 11 (8 RESULTS), p. 18 (Figure/Table caption), p. 8 (8 RESULTS), p. 10 (8 RESULTS), p. 12 (8 RESULTS), baselines p. 12 (8 RESULTS), p. 10 (8 RESULTS), p. 7 (8 RESULTS), p. 9 (8 RESULTS), p. 9 (8 RESULTS), p. 10 (8 RESULTS), results p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RESULTS), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 18 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

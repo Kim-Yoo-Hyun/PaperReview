@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 - **p. 10 / 4 Experiments - extractive body cue:** We also present RefSpatial, a large-scale, well-designed dataset for SFT and RFT training, with RefSpatial-Bench, a benchmark tailored to evaluate spatial referring.
 - **p. 45 / C Implementation Details and Samples of RefSpatial-Bench - extractive body cue:** The RefSpatial-Bench benchmark evaluates spatial referring with reasoning in complex 3D indoor scenes through two tasks: Location Prediction and Placement Prediction, each comprising 100 samples.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Spatial referring in complex 3D environments demands not only precise single-step spatial understanding but also multi-step spatial reasoning to resolve intricate references step-by-step, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 | Below are examples to illustrate the expected format: • [Position] [the second largest cup]: [(0.245, 0.147)] • [Orientation] [the handle of the second largest ... | definition/direction/unit from same section | p. 50 (C Implementation Details and Samples of RefSpatial-Bench) |
 | Figure 33: Map Visualization (RViz). E.4 Simulation Evaluation We use the same evaluation protocol of Open6DOR V2 introduced in SoFar [7], following the official ... | definition/direction/unit from same section | p. 52 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 | 3, our method surpasses baselines, indicating that our dataset not only supports 3D spatial referring but also enhances 2D referring performance. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | 4, we assess how spatial and depth information influences overall VQA performance by comparing RoboRefer-2B-SFT with the baseline NVILA-2B [38], trained on standard VQA ... | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Figure 7: Object detection comparison: Florence-2 (above), GroundingDINO+RAM (below) 3D-aware information Extraction. To further extract 3D-aware information from 2D images, we adopt UniDepth V2 ... | comparison identity and matched condition | p. 26 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 | body limitation/failure cue | Thus, a failed match implies that the model cannot accurately refer to the object linguistically, and no reward is assigned. | p. 50 (C Implementation Details and Samples of RefSpatial-Bench) |
 | body limitation/failure cue | B.2): This section outlines the 3D data selection process from CA1M [136], discusses its limitations and mitigation strategies, and presents methods for enriched scene ... | p. 22 (B Implementation Details and Samples of RefSpatial Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 | We employ a maximum learning rate of 1e-4, a weight decay of 0, and a warm-up ratio of 0.03. | p. 48 (C Implementation Details and Samples of RefSpatial-Bench) |
 | We also show the advantage of dedicated depth encoder (E. = Encoder). | p. 8 (4 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 52 / C Implementation Details and Samples of RefSpatial-Bench - extractive body cue:** Notably, we find that our model achieves nearly 100% success in the perception stage (i.e., determining location and placement), with failures primarily attributed to motion ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (Figure/Table caption
 - **p. 22 / B Implementation Details and Samples of RefSpatial Dataset - extractive body cue:** B.2): This section outlines the 3D data selection process from CA1M [136], discusses its limitations and mitigation strategies, and presents methods for enriched scene graph ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), metrics p. 23 (B.1.1 Multi-Stage Image Filtering), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 23 (Figure/Table caption), p. 10 (4 Experiments), baselines p. 8 (4 Experiments), p. 10 (4 Experiments), p. 8 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 26 (Figure/Table caption), results p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 23 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

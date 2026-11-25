@@ -47,7 +47,6 @@ PDF body method statement (p. 3 (2.3. Navigation Task), p. 3 (2.1. Physics-Groun
 - **p. 3 / 2.3. Navigation Task - extractive body cue:** Intuitively, the core objective is to optimize the policy against the synthesized experiences: Jϕ(θ) = E o∼O, at∼πθ(·/st,o), st+1∼P(·/st,at) "X t=0 γtrϕ(st, at, o) # ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (2.3. Navigation Task), p. 3 (2. Problem Formulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 3 (2.3. Navigation Task), p. 3 (2.1. Physics-Groun
 - **p. 1 / 1. Introduction - extractive body cue:** Although the research community has turned to Reinforcement Learning (RL) to facilitate policy adaptation (Zeng et al., 2024; Choi et al., 2024; Wang & Huang, ...
 - **p. 1 / 1. Introduction - extractive body cue:** The first is goal-based navigation (Chang et al., 2023; Ziliotto et al., 2025; Yin et al., 2025), which requires the embodied agent to navigate to ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 3 (2.3. Navigation Task), p. 3 (2.1. Physics-Groun
 - **p. 7 / 4.2. Main Navigation Results - extractive body cue:** Plan in Sandbox, Navigate in Open Worlds: Learning Physics-Grounded Abstracted Experience for Embodied Navigation 0 50 100 150 200 Training Steps 42 44 46 48 ...
 - **p. 8 / 4.4. Analysis on Evolution - extractive body cue:** An optimally relaxed bound (ϵexp = 1.0) balances this, enabling rapid experience absorption without policy collapse, achieving a peak SR† of 53.21% and SPL† of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, approximating, optimal, behavior, maximizing, surrogate, objective, within, sandbox, task, distribution, denotes, state, transition, dynamics, abstracted, agent, progressively, acquires, robust.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +104,10 @@ PDF body method statement (p. 3 (2.3. Navigation Task), p. 3 (2.1. Physics-Groun
 - **p. 17 / Figure/Table caption - extractive body cue:** Figure 7. Visualization of the word cloud. rules using regular expressions. The entire trajectory is discarded if the generated output fails to match the required ...
 - **p. 23 / Figure/Table caption - extractive body cue:** Table 14. Computational Cost per Navigation Step (Real-World) Component Hardware / Spec Metric Value VLM Inference NVIDIA RTX 4090 (24GB) Latency
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.3. Navigation Task), p. 3 (2.1. Physics-Grounded Interaction Sandbox), objective p. 3 (2.3. Navigation Task), p. 3 (2.3. Navigation Task), temporal p. 8 (4.5. Analysis and Ablation), p. 5 (3.3. Navigation), p. 6 (3.3. Navigation), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Main Navigation Results), p. 8 (4.4. Analysis on Evolution).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

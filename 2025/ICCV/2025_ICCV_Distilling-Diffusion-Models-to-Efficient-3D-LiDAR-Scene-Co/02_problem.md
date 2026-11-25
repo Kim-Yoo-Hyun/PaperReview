@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. Brief introduction of diffusion models), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models), p. 5 (4.2. Structural loss). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 2 (1. Introduction), interface p. 3 (3.1. Brief introduction of diffusion models), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models), p. 5 (4.2. Structural loss), objective p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 3 (3.1. Brief introduction of diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models), p. 5 (4.2. Structural loss).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

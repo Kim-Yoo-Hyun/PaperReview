@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 - **p. 8 / 5.3. More Experiments - extractive body cue:** CoAVLA can avoid obstacles and operate safely. robot is presented with a plate on which three distinct objects are already placed, and it is instructed ...
 - **p. 8 / 5.3. More Experiments - extractive body cue:** In the second task, we introduced a series of obstacles on a table, rearranging them in different configurations to assess the robot's adaptability in maneuvering ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. This figure illustrates the overall framework of our CoA-VLA model, which empowers vision-language-action models with chain-of-thought reasoning capabilities for generalizable visuomotor policy learning. ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 | Figure 1. This figure illustrates the overall framework of our CoA-VLA model, which empowers vision-language-action models with chain-of-thought reasoning capabilities for generalizable visuomotor policy ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Table 1. Experimental results for multi-task learning. Our method achieved the best performance in both the in-distribution test setup and under visual changes. Seven ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 | Compared to our baseline model, which employs vanilla reasoning, our method achieves a 14.29% increase in accuracy. | comparison identity and matched condition | p. 7 (5.1. Evaluation on Real Robot) |
 | 4) How important is our proposed visual-textual affordance approach, compared to the vanilla VLA? | comparison identity and matched condition | p. 7 (5. Experiments) |
 | Our method successfully identifies open areas on the plate, allowing it to accurately position the bread without interference, thereby enabling CoA-VLA to complete all ... | comparison identity and matched condition | p. 8 (5.3. More Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,8 +109,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 | body limitation/failure cue | Our approach successfully completed all three scenarios, demonstrating robust collision avoidance and spatial adaptability. | p. 8 (5.3. More Experiments) |
 | body limitation/failure cue | Collision avoidance is essential for safe and effective physical interactions, as improper maneuvers can lead to significant damage or even catastrophic outcomes. | p. 8 (5.3. More Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -131,20 +118,11 @@ PDF body evaluation/result cue (p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2.
 | The encoder's output embeddings are projected into the diffusion model using FiLM conditioning layers, inspired by MT-ACT [4]. | p. 5 (4.1. Definition of Chain-of-Affordance) |
 | This approach encodes affordances by overlaying coordinate markers (e.g., bounding boxes, interaction points) or motion trajectories onto the robot's historical observation frames (Figure 2, ... | p. 5 (4.1. Definition of Chain-of-Affordance) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5.3. More Experiments - extractive body cue:** Our approach successfully completed all three scenarios, demonstrating robust collision avoidance and spatial adaptability.
 - **p. 8 / 5.3. More Experiments - extractive body cue:** Collision avoidance is essential for safe and effective physical interactions, as improper maneuvers can lead to significant damage or even catastrophic outcomes.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.2. Evaluation on Simulation), p. 7 (5. Experiments), p. 8 (5.3. More Experiments), p. 8 (5.3. More Experiments), metrics p. 8 (5.3. More Experiments), p. 7 (5.2. Evaluation on Simulation), p. 8 (5.3. More Experiments), p. 7 (5.1. Evaluation on Real Robot), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 7 (5.1. Evaluation on Real Robot), p. 7 (5. Experiments), p. 8 (5.3. More Experiments), results p. 7 (5.2. Evaluation on Simulation), p. 7 (5.2. Evaluation on Simulation), p. 6 (Figure/Table caption), p. 8 (5.3. More Experiments), p. 8 (5.3. More Experiments), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

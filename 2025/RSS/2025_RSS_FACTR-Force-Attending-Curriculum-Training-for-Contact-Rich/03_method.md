@@ -45,7 +45,6 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -63,7 +62,6 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 - **p. 5 / A. Problem Statement and Base Model - extractive body cue:** Visual observations and force readings are converted into tokens, fed to the encoder, then decoded into action tokens through cross attention.
 - **p. 4 / A. Problem Statement and Base Model - extractive body cue:** Where ques are the expert's future joint position targets and dut+k are the policy's predictions.
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 - **p. 9 / C. Policy Evaluation - extractive body cue:** the force oF vision tokens of the first decoder layer during policy rollout.
 - **p. 9 / C. Policy Evaluation - extractive body cue:** We evaluate only on the five test objects for five trials each, since they are more indicative of policy performance than train objects.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Visual, observations, force, readings, converted, tokens, encoder, then, decoded, action, through, cross, attention, tokenized, vision, before, transformer, regress, joint, position.
 - **Relevant PDF headings:** A. Problem Statement and Base Model (p. 4); C. Policy Evaluation (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,23 +101,13 @@ PDF body method statement (p. 5 (A. Problem Statement and Base Model), p. 5 (A. 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 4: FACTR allows our policy to beter integrate force information without overfittng to visual information, resulting in better generalization
 - **p. 9 / VI. CONCLUSION AND LIMITATIONS - extractive body cue:** Developing. adaptive or self-tuning curriculum strategies could help mitigate this issue by dynamically adjusting hyperparameters based on task-specific requirements, Addressing these limitations could further enhance ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (A. Problem Statement and Base Model), p. 5 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), p. 4 (A. Problem Statement and Base Model), objective 본문 anchor 없음, temporal p. 4 (A. Problem Statement and Base Model), p. 7 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 9 (C. Policy Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4, a single Embodied-R1 model masters this diverse skill set, demonstrating high accuracy even with small objects and complex spatial relationships in cluttered scenes.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** We also included two key ablations: Embodied-R1 w/o CS, which excludes the ViRL common-sense dataset, and Embodied-SFT, a variant trained only with SFT.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of the Embodied-R1 framework and its zero-shot manipulation performance. Embodied-R1 performs explicit reasoning to generate "pointing" commands, enabling robust execution across a ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 | Figure 8: The process of Embodied-R1 performing real-world tasks. F ADDITIONAL EXPERIMENTS The Phenomenon of Reward Hacking in VTG Tasks We carefully designed the ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 | Bold indicates the highest value among open-source models, and underlined values show the second-highest scores. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 | 5, Embodied-R1 achieves an 87.5% zero-shot success rate, an improvement of over 60% compared to the RoboPoint and FSD baselines. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Notably, while recent end-to-end methods such as π0-fast (48.3%) and OpenVLA-OFT (41.8%) show improved robustness compared to the base OpenVLA (5.2%), Embodied-R1 still outperforms ... | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Table 12: Performance on the full LIBERO benchmark suite. Integration with Embodied-R1 yields significant improvements across all task categories compared to the DP baseline. ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,7 +117,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** The first phase was trained for 2 epochs, and the second phase for 1 epoch, with each phase taking approximately 48 hours.
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** As for Embodied-SFT, we used exactly the same data but trained with a supervised learning loss, kept the batch size at 128, and trained for ...
 - **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** Second, for the VTG task, we introduced an additional constraint on the format: the generated visual trace must consist of exactly 8 points.
-- **p. 18 / B IMPLEMENTATION DETAILS OF EMBODIED-R1 - extractive body cue:** The first phase was trained for 2 epochs, and the second phase for 1 epoch, with each phase taking approximately 48 hours.
 
 ## Generalization and Failure Cases
 
@@ -141,8 +129,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 | body limitation/failure cue | Empirically, Embodied-R1 achieves state-of-the-art results across multiple benchmark tests and demonstrates robust zero-shot generalization in robotic manipulation tasks, offering a promising pathway toward more ... | p. 10 (5 CONCLUSION) |
 | body limitation/failure cue | Middle: Demonstration of the robustness under significant visual disturbances, such as background and lighting changes. | p. 9 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +138,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 | The optimizer selected is AdamW, with a learning rate of 1e-6 and a weight decay coefficient of 1e-2. | p. 18 (B IMPLEMENTATION DETAILS OF EMBODIED-R1) |
 | (2025a), while the results for the remaining models are reproduced in accordance with the official code. | p. 8 (4 EXPERIMENTS) |
 | [x]: The instruction for each trial is a randomly selected color. | p. 9 (4 EXPERIMENTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -171,6 +149,5 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Middle: Demonstration of the robustness under significant visual disturbances, such as background and lighting changes.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 22 (Figure/Table caption), p. 22 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 24 (Figure/Table caption), results p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

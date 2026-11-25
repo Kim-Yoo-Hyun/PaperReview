@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Our method achieves a strong generalization ability to novel tasks and object variations, trained with only 10 demonstrations per task.
 - **p. 18 / A.6 REAL-WORLD EXPERIMENTS - extractive body cue:** We evaluate the all these eight tasks acroos different variations and record the success rate.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Intuition of CLAP. Our method achieves strong generalization ability by decomposing tasks into step-wise language instructions, each aligned with a 3D keypoint. reasoning, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 | Table 7: Per-task Success Rate on GemBench Level 1. | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 | Success ↑ L1 L2 L3 L4 HiveFormer (Guhur et al., 2023) 30.4 60.3 ± 1.5 26.1 ± 1.4 35.1 ± 1.7 0.0 ± 0.0 ... | definition/direction/unit from same section | p. 8 (5 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 | CLAP achieves 54.8% higher average success rates compared to RVT2 on the evaluation tasks. | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | Number of Demos L1 L2 L3 L4 Average 10 84.5 ± 0.8 81.5 ± 0.6 43.3 ± 1.9 30.5 ± 2.1 60.0 ± 0.1 ... | comparison identity and matched condition | p. 19 (A.6 REAL-WORLD EXPERIMENTS) |
 | Table 12: Ablation on inputs to Fine-grained Action Predictor. We compare the results of re- moving some inputs to our fine-grained action predictor. The ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 | body limitation/failure cue | Further increasing the number of robot trajectory improves on the in-domain performance (L1) while does not help in the average success rate. | p. 16 (A.5 ADDITIONAL ABLATION STUDY) |
 | body limitation/failure cue | Furthermore, our design leads to substantial performance gain on the most challenging Level-4 tasks, where several baselines methods fail consistently. | p. 8 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,20 +138,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS
 | The results are recorded with three runs of different random seeds. | p. 19 (A.6 REAL-WORLD EXPERIMENTS) |
 | Considering the significant domain shift between the images focused around predicted ptk from those used to pretrain standard VLMs, we decide to employ instead ... | p. 6 (4 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / A.5 ADDITIONAL ABLATION STUDY - extractive body cue:** Further increasing the number of robot trajectory improves on the in-domain performance (L1) while does not help in the average success rate.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Furthermore, our design leads to substantial performance gain on the most challenging Level-4 tasks, where several baselines methods fail consistently.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 17 (A.6 REAL-WORLD EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (A.6 REAL-WORLD EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 19 (A.6 REAL-WORLD EXPERIMENTS), p. 19 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

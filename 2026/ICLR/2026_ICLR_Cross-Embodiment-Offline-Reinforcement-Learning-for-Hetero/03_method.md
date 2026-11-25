@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To mitigate these conflicts, we propose a simple, static grouping strategy that represents each robot as a morphology graph and clusters robots by graph-based distances; ...
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 7 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** To facilitate offline RL, we further extend URMA by introducing a state-action value function (Q-function).
 - **p. 6 / 1 INTRODUCTION - extractive body cue:** (1) in which Q(s, a) denotes the learned state-action value function and V (s) denotes the learned state value function.
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** This trend has also begun to influence robotics, where scaling transformer-based architectures and training them on large, heterogeneous robot datasets have produced "robot foundation models" ...
 - **p. 10 / 1 INTRODUCTION - extractive body cue:** 5, the wall-clock training time grows substantially with M.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, encode, action, encoder, obtain, latent, vector, then, concatenate, representation, URMA, example, implicit, Q-learning, IQL, Kostrikov, first, fits, state, value.
 - **Relevant PDF headings:** A USE OF LARGE LANGUAGE MODELS (LLMS) (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1
 - **p. 9 / 1 INTRODUCTION - extractive body cue:** The variant that combines IQL with Embodiment Grouping achieves the best average performance.
 - **p. 9 / 1 INTRODUCTION - extractive body cue:** 6.2 ABLATIONS & COMPUTE-NORMALIZED ANALYSIS This section disentangles design choices in Embodiment Grouping (EG) and the impact of compute.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), objective p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), temporal p. 3 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 8 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

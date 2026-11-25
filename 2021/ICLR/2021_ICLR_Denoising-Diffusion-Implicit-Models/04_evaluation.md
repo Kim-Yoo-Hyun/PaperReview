@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** For the DDPM, the sample quality deteriorates rapidly when the sampling trajectory has 10 steps.
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** In Figure 4, we show that the amount of time needed to produce a sample scales linearly with the length of the sample trajectory.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Graphical models for diffusion (left) and non-Markovian (right) inference models. In Section 3, we generalize the forward diffusion process used by DDPMs, which ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6
 | We consider different sub-sequences τ of [1, . . . , T] and different variance hyperparameters σ indexed by elements of τ. | definition/direction/unit from same section | p. 6 (5 EXPERIMENTS) |
 | Figure 2: Graphical model for accelerated generation, where τ = [1, 3]. 4.1 DENOISING DIFFUSION IMPLICIT MODELS From pθ(x1:T ) in Eq. (10), one ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6
 | Notably, DDIM is able to produce samples with quality comparable to 1000 step models within 20 to 100 steps, which is a 10× to ... | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | We observe that DDIM (η = 0) achieves the best sample quality when dim(τ) is small, and DDPM (η = 1 and ˆσ) typically ... | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | To simplify comparisons, we consider σ with the form: στi(η) = η q (1 -ατi-1)/(1 -ατi) q 1 -ατi/ατi-1, (16) where η ∈R≥0 is ... | comparison identity and matched condition | p. 6 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6
 | body limitation/failure cue | This allows DDIM to control the generated images on a high level directly through the latent variables, which DDPMs cannot. | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | We also consider DDPM where the random noise has a larger standard deviation than σ(1), which we denote as ˆσ: ˆστi = p 1 ... | p. 6 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6
 | 5.4 RECONSTRUCTION FROM LATENT SPACE As DDIM is the Euler integration for a particular ODE, it would be interesting to see whether it can ... | p. 9 (5 EXPERIMENTS) |
 | We consider encoding and decoding on the CIFAR-10 test set with the CIFAR-10 model with S steps for both encoding and decoding; we report ... | p. 9 (5 EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** DDIMs can also be used to encode samples that reconstruct them from the latent code, which DDPMs cannot do due to the stochastic sampling process.
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** We also consider DDPM where the random noise has a larger standard deviation than σ(1), which we denote as ˆσ: ˆστi = p 1 -ατi/ατi-1 ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), metrics p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), baselines p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), results p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

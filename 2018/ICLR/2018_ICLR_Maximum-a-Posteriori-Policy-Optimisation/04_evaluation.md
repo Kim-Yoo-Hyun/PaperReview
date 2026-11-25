@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** This, however, required task specific tuning (c.f.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Overall, MPO is able to solve all environments using surprisingly moderate amounts of data.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 1: Control Suite domains used for benchmarking. Top: Acrobot, Ball-in-cup, Cart-pole, Cheetah, Finger, Fish, Hopper. Bottom: Humanoid, Manipulator, Pendulum, Point-mass, Reacher, Swimmers (6 and ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 | Figure 4: Complete comparison of results for the control suite. We plot the median performance over 10 random seeds together with 5 and 95 ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 | Table 3: Parameters for parametric variational distribution D DERIVATION OF UPDATE RULES FOR A GAUSSIAN POLICY For continuous control we assume that the policy ... | definition/direction/unit from same section | p. 19 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 | While we include plots depicting the performance of our algorithm on all tasks below; comparing it against the state-of-the-art algorithms in terms of data-efficiency. | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | From the plot a few trends are readily apparent: i) We can clearly observe the advantage in terms of data-efficiency that methods relying on ... | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | Table 1: Results on a subset of the ALE environments in comparison to baselines taken from (Belle- mare et al., 2017) Game/Agent Human DQN ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 |---|---|---|
 | body limitation/failure cue | 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + ... | p. 9 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,22 +130,13 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8
 | All experiments used the same optimisation hyperparameters 1. | p. 2 (1 INTRODUCTION) |
 | By using this estimation objective we have more control over the policy change in both E and M steps, yielding robust learning. | p. 2 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** 0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 training_steps 1e7 0 200 400 600 800 1000 mean_return task_name=run, domain_name=humanoid agent=DDPG agent=EPG + retrace + entropy ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 18 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

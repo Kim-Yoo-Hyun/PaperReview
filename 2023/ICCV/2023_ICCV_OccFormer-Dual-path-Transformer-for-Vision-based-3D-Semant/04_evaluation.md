@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 - **p. 7 / 4.4. Main Results - extractive body cue:** Method Layer params GFLOPs IoU↑mIoU↑ MsDeAttn3D 3 2.74M 329.3 35.74 13.22 MsDeAttn3D 6 4.07M 379.2 36.50 13.46 FPN-3D [32] - 4.35M 307.0 36.12 12.89 performs ...
 - **p. 8 / 4.6. Qualitative Results - extractive body cue:** 3, we visualize the predicted results of semantic scene completion on SemanticKITTI validation set from MonoScene [4] and our proposed OccFormer.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: The framework of the proposed OccFormer for camera-based 3D semantic occupancy prediction. The pipeline consists of the image encoder for extracting multi-scale 2D ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | Image augmentation only: IoU/mIoU 36.37/12.72; 3D augmentation only: 35.73/12.94; both: 36.50/13.46. 체크 표시의 열 위치를 원문 표와 대조했다. | Augmentation ablation; IoU와 mIoU는 높을수록 좋음 | PDF p. 10 Table 10 |
 | OccFormer is evaluated by its task of semantic scene completion, but with the monocular left camera as input following MonoScene [4]. | definition/direction/unit from same section | p. 5 (4.1. Datasets) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | Compared with MonoScene, our method can better understand the scene-level semantic layout and hallucinate the invisible regions. | comparison identity and matched condition | p. 8 (4.6. Qualitative Results) |
 | Compared with the tri-linear interpolation, we employ the max-pooling to preserve the fine-grained 3D predictions during downsampling, which achieves a boost of about 0.5 ... | comparison identity and matched condition | p. 8 (4.5. Ablation Studies) |
 | Table 1: Semantic scene completion results on SemanticKITTI test set. * represents these methods are adapted for the RGB inputs, which are implemented and ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | body limitation/failure cue | Note that our method requires only one model to perform both the LiDAR segmentation and the semantic occupancy prediction, while the TPVFormer [21] model ... | p. 7 (4.4. Main Results) |
 | body limitation/failure cue | Second, we remove the windowed attention in the global path, whose weights are shared with the local path, and observe a degradation of around ... | p. 9 (5. Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 | Finally, the transformer occupancy decoder (Sec. | p. 2 (3.1. Overview) |
 | The 3D feature is further processed by the dual-path transformer encoder (Sec. | p. 2 (3.1. Overview) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5. Conclusion - extractive body cue:** It indicates that the predicted semantic occupancy from TPVFormer, despite reasonable visualizations, fails to contain accurate 3D positions.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), 
 - **p. 9 / 5. Conclusion - extractive body cue:** Second, we remove the windowed attention in the global path, whose weights are shared with the local path, and observe a degradation of around 0.5 ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 6 (4.1. Datasets), p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 5 (4.1. Datasets), metrics p. 7 (4.4. Main Results), p. 6 (4.3. Metrics), p. 7 (4.4. Main Results), p. 6 (4.2. Implementation Details), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 7 (4.4. Main Results), p. 6 (4.2. Implementation Details), p. 7 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 8 (4.5. Ablation Studies), p. 5 (Figure/Table caption), results p. 6 (4.1. Datasets), p. 7 (4.4. Main Results), p. 8 (4.5. Ablation Studies), p. 8 (4.6. Qualitative Results), p. 7 (4.5. Ablation Studies), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -53,7 +53,6 @@ PDF body method statement (p. 2 (1. IyrRopUCTION), p. 6 (B. Indirect Assignment 
 - **p. 6 / B. Indirect Assignment - Variational Approach - extractive body cue:** To address this, (25) ‘ensures we find h © C°(Q) whose gradient best approximates ¥V by using the divergence, V - ¥, as the forcing ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 4 (IV. FORCING FUNCTION CONSTRUCTION), p. 5 (B. Indirect Assignment - Variational Approach), p. 5 (B. Indirect Assignment - Variational Approach), p. 6 (B. Indirect Assignment - Variational Approach), p. 6 (B. Indirect Assignment - Variational Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 2 (1. IyrRopUCTION), p. 6 (B. Indirect Assignment 
 - **p. 2 / 1. IyrRopUCTION - extractive body cue:** ‘The key observation of this paper is that safety functions ‘obtained from Poisson's equation can be used 10 synthesize CBES and, therefore, safety filters.
 - **p. 3 / B. Ouputs and Relative Degree - extractive body cue:** Given an output y with relative degree r, we define a new set of partial coordinates:
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 2 (1. IyrRopUCTION), p. 6 (B. Indirect Assignment 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** main, contributions, threefold, present, constructive, generating, safe, sets, complex, environments, perception, data, Poisson, equation, illustrate, prove, resulting, safety, functions, synthesize.
 - **Relevant PDF headings:** B. Indirect Assignment - Variational Approach (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,12 @@ PDF body method statement (p. 2 (1. IyrRopUCTION), p. 6 (B. Indirect Assignment 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Smooth guidance field generation via Laplace' equation (26) [left] Boundary conditions ¥ = bi encoding the desired negative ux fon obstacle surfaces: and ...
 - **p. 9 / 2 Nomina (Orange) & Safe (Bie) Inputs - extractive body cue:** ‘A fundamental limitation of the proposed algorithm (and a limitation of all non-predictive safety filters) is that such safety-critical controllers may introduce undesired equilibria, These ...
 - **p. 7 / VI. DEMONSTRATIONS - extractive body cue:** Simulations: Double Integrator We define a 2D occupancy map defined by an open, bounded and connected domain © where J® characterizes obstacle surfaces. and consider ...
-- **p. 8 / B. Hardware Experiments - extractive body cue:** From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective.
 - **p. 8 / B. Hardware Experiments - extractive body cue:** ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several collision avoidance scenarios using Unitree's Go2 quadruped ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. IyrRopUCTION), p. 6 (B. Indirect Assignment - Variational Approach), p. 6 (B. Indirect Assignment - Variational Approach), p. 2 (1. IyrRopUCTION), p. 4 (IV. FORCING FUNCTION CONSTRUCTION), objective p. 5 (B. Indirect Assignment - Variational Approach), p. 5 (B. Indirect Assignment - Variational Approach), p. 4 (IV. FORCING FUNCTION CONSTRUCTION), p. 6 (B. Indirect Assignment - Variational Approach), p. 6 (B. Indirect Assignment - Variational Approach), temporal p. 8 (B. Hardware Experiments), p. 9 (2 Nomina (Orange) & Safe (Bie) Inputs), p. 2 (1. IyrRopUCTION), p. 8 (B. Hardware Experiments), p. 1 (1. IyrRopUCTION), p. 1 (1. IyrRopUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

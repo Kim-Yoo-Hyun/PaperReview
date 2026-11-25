@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract)
 | body cue at p. 7 | Although DP3 accomplishes the dexterity task, the diffusion policy generated based on DP3 fails to ensure consistency with ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | Due to the complexity of the target distribution solution, Consistency-FM does not regress directly on the ground truth ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Abstract), p. 3 (Abstract), p. 5 (Abstract), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), interface p. 1 (Abstract), p. 3 (Abstract), p. 5 (Abstract), p. 2 (Abstract), objective p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

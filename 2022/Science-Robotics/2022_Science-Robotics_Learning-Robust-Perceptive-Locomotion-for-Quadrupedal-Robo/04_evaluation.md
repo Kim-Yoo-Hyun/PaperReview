@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 - **p. 6 / 2. RESULTS - extractive body cue:** Our locomotion controller perceives the environment through height samples (red dots) from an elevation map (A).
 - **p. 6 / 2. RESULTS - extractive body cue:** Research Article ETH Zurich and Intel 6 B Reflective ground D Overhanging objects E Non rigid obstacles F Pose estimation drift C Deep snow G ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Robust locomotion in the wild. The presented locomotion controller was extensively tested in a variety of complex environments over multiple seasons. The controller ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 | Further quantitative performance evaluation is provided in the supplementary section S2. | definition/direction/unit from same section | p. 8 (2. RESULTS) |
 | Fig. 4. Internal belief state inspection during perceptive failure using a learned belief decoder. Red dots indicate height samples given as input to the ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 | Baseline Time to complete 75 sec. with help 29 sec. | comparison identity and matched condition | p. 7 (2. RESULTS) |
 | D B 20 cm step command command 20 cm step command command H command command ours baseline 27cm 22cm E F ours baseline | comparison identity and matched condition | p. 7 (2. RESULTS) |
 | Research Article ETH Zurich and Intel 8 the baseline policy and ours. | comparison identity and matched condition | p. 8 (2. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 | body limitation/failure cue | As shown in Figure 3 B-G, the estimated elevation map can unreliable due to sensing failures, limitations of the 2.5D height map representation, or ... | p. 5 (2. RESULTS) |
 | body limitation/failure cue | The controller is robust to many perception challenges commonly encountered in the field: missing map information due to sensing failure (B, C, G) and ... | p. 6 (2. RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 | Wooden steps of various height (from 12 cm to 36.5 cm) were placed ahead of the robot, which performed 10 trials to overcome each ... | p. 5 (2. RESULTS) |
 | In contrast, our controller reliably traversed steps of up to 30.5 cm in height. | p. 5 (2. RESULTS) |
 | The robot was commanded to walk up and down two steps of stairs. | p. 8 (2. RESULTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,9 +139,8 @@ PDF body evaluation/result cue (p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. R
 - **p. 6 / 2. RESULTS - extractive body cue:** The controller is robust to many perception challenges commonly encountered in the field: missing map information due to sensing failure (B, C, G) and misleading ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 3 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS), p. 8 (2. RESULTS), metrics p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 8 (2. RESULTS), p. 3 (2. RESULTS), p. 6 (2. RESULTS), p. 6 (2. RESULTS), baselines p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 7 (2. RESULTS), p. 7 (2. RESULTS), p. 8 (2. RESULTS), results p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 8 (2. RESULTS), p. 3 (2. RESULTS), p. 8 (2. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

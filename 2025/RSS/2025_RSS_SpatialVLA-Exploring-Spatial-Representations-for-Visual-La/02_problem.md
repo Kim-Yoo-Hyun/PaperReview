@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 5 | To assess the robustness of Spatial VLA in diverse environmental variations, we employ the SimplerEnv simulation benchmark [35] ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | Qualitatively, we find that SpatialVLA exhibits greater generalizability and robustness across diverse robotic manipulation tasks and environmental | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (A. The SpatialVLA Model Architecture), p. 3 (A. The SpatialVLA Model Architecture). The downstream handoff is claimed only when the body describes it.
@@ -72,10 +70,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (A. The SpatialVLA Model Architecture), p. 3 (A. The SpatialVLA Model Architecture), objective p. 3 (A. The SpatialVLA Model Architecture), p. 5 (B. The Pre-training and Post-training Scheme).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

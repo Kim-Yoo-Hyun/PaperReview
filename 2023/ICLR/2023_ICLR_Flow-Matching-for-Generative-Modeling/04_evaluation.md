@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** We follow the evaluation procedure in (Saharia et al., 2022) and compute the FID of the upsampled validation images; baselines include reference (FID of original ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** 6.3 CONDITIONAL SAMPLING FROM LOW-RESOLUTION IMAGES Model FID↓ IS↑PSNR↑ SSIM↑ Reference 1.9 240.8 - - Regression 15.2 121.1 27.9 0.801 SR3 (Saharia et al., 2022) ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Unconditional ImageNet-128 sam- ples of a CNF trained using Flow Matching with Optimal Transport probability paths. and are in particular known to encompass ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | Figure 1: Unconditional ImageNet-128 sam- ples of a CNF trained using Flow Matching with Optimal Transport probability paths. and are in particular known to ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 8: VP Diffusion path's conditional vector field. Compare to Figure 2. ScoreFlow DDPM | definition/direction/unit from same section | p. 19 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | All models are trained using the same architecture, hyperparameter values and number of training iterations, where baselines are allowed more iterations for better convergence. | comparison identity and matched condition | p. 8 (6 EXPERIMENTS) |
 | We follow the evaluation procedure in (Saharia et al., 2022) and compute the FID of the upsampled validation images; baselines include reference (FID of ... | comparison identity and matched condition | p. 9 (6 EXPERIMENTS) |
 | Figure 2: Compared to the diffusion path's conditional score function, the OT path's conditional vector field has constant direction in time and is arguably ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | body limitation/failure cue | In Figure 7 (left), we compare the per-pixel MSE of low NFE solutions compared with 1000 NFE solutions (we use 256 random noise seeds), ... | p. 9 (6 EXPERIMENTS) |
 | body limitation/failure cue | Figure 16: Generated samples from the same initial noise, but with varying number of function evaluations (NFE). Flow matching with OT path trained on ... | p. 27 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | Importantly, FM breaks the barriers for scalable CNF training beyond diffusion, and sidesteps the need to reason about diffusion processes to directly work with ... | p. 1 (1 INTRODUCTION) |
 | We recap more information on CNFs, in particular how to compute the probability p1(x) at an arbitrary point x ∈Rd in Appendix C. | p. 2 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** The OT path reduces noise roughly linearly, while diffusion paths visibly remove noise only towards the end of the path.
@@ -163,9 +142,8 @@ PDF body evaluation/result cue (p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 27 / Figure/Table caption - extractive body cue:** Figure 16: Generated samples from the same initial noise, but with varying number of function evaluations (NFE). Flow matching with OT path trained on ImageNet-128. ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (6 EXPERIMENTS), p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), metrics p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 19 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), baselines p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), results p. 7 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

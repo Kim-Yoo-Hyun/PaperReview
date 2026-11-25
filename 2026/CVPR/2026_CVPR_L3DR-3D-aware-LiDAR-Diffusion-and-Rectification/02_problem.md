@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 5 (4.3. Residual Regre
 | body cue at p. 7 | Figure 6. Visualization of conditional generation on SemanticKITTI. Cyan regions highlight the improved RV artifacts from the diffusion-generated ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | While L3DR does not top the MMD metric, our method still provides a average 7.3% improvement, and is ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (4.2. LiDAR Diffusion Training), p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 5 (4.3. Residual Regre
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), interface p. 4 (4.2. LiDAR Diffusion Training), p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training), objective p. 4 (4.1. Range View Projection), p. 4 (4. Method), p. 5 (4.3. Residual Regression Training), p. 5 (4.3. Residual Regression Training).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

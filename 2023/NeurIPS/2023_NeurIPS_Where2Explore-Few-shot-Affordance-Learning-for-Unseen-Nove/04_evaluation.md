@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 - **p. 9 / 5 Experiments - extractive body cue:** In this visualization, for objects in the simulator, the action directions are set to the normal direction of each point.
 - **p. 8 / 5 Experiments - extractive body cue:** 5.4 Qualitative Results and Analysis Affordance Similarity Where2Act strategy Affordance Similarity AdaAfford strategy Affordance Similarity AdaAfford strategy Affordance Similarity Pushing Pulling Where2Act strategy Figure 4: ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Where2Explore framework. Our model, solely trained on training categories (Top Left) and having never seen mugs, utilizes the underlying similarity in local geometries ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 | We also conduct few-shot affordance learning on representative categories separately to match the real-world scenario. | definition/direction/unit from same section | p. 8 (5 Experiments) |
 | Affordance on novel object Similarity on novel object Exploration on novel object Affordance after exploration Affordance on novel object Similarity on novel object Exploration ... | definition/direction/unit from same section | p. 9 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 | 5.2 Baselines, Ablations, and Metrics Baselines and Ablations. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | For baselines, we train the models using all training objects in training categories, whereas we divide the training categories into two parts to train ... | comparison identity and matched condition | p. 6 (5 Experiments) |
 | Our framework also achieves comparable performance compared with Full-data, which is trained on all categories with abundant data. | comparison identity and matched condition | p. 8 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 | body limitation/failure cue | Compared to the AdaAfford, our results suggest that instance-level exploration strategies which focus on dynamic information for a single object fail to generalize well ... | p. 7 (5 Experiments) |
 | body limitation/failure cue | Compared with other exploration strategies Explore-random and Explore-noSim that fail to discover important local areas, our strategy is dramatically more effective and efficient. | p. 8 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 | The Accu is computed using the accuracy in predicting the affordance score of an action during training. | p. 5 (4 Method) |
 | The encoder will output a per-point feature of 128 dimensions. | p. 6 (4 Method) |
 | We employ Multilayer Perceptrons (MLP) with one hidden layer of size 128 to implement both decoders. | p. 6 (4 Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7
 - **p. 8 / 5 Experiments - extractive body cue:** Compared with other exploration strategies Explore-random and Explore-noSim that fail to discover important local areas, our strategy is dramatically more effective and efficient.
 
 - **Evidence anchors reviewed:** datasets p. 9 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), baselines p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), results p. 7 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 9 (5 Experiments), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 - **p. 8 / A. Tasks & Dataset - extractive body cue:** We evaluate on four task suites of the LIBERO benchmark: LIBERO-Spatial, LIBERO-Object, LIBERO-Goal, and LIBERO-Long.
 - **p. 8 / B. Adapting CLIP-RT to the LIBERO Benchmark - extractive body cue:** Before describing how we adapt CLIP-RT to the LIBERO simulation benchmark, we acknowledge the inherent dificulty of directly representing the fine-grained, continuous humanteleoperated actions in ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of language-guided teleoperation,
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 | Before describing how we adapt CLIP-RT to the LIBERO simulation benchmark, we acknowledge the inherent dificulty of directly representing the fine-grained, continuous humanteleoperated actions ... | definition/direction/unit from same section | p. 8 (B. Adapting CLIP-RT to the LIBERO Benchmark) |
 | Fig. 3: A simplified 2D example of stochastic trajectory augmentation (STA). (a): a demonstration trajectory from the starts to the endpoint ¢, passing through ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 | As shown in Table I, the recent state-of-the-art VLA model, OpenVLA-OFT [30], achieves the highest average success rate of 95.3%. | comparison identity and matched condition | p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark) |
 | When compared to OpenVLA-OFT using the same action chunk size of 8, CLIP-RT+ improves both throughput and latency by approximately 49%. | comparison identity and matched condition | p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark) |
 | Fig. 5: A comparison of multi-task and single-task policies ‘on Novel tasks. The performance of each task is in Figure 12 ‘of Appendix. | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 | body limitation/failure cue | Fig. 9: Example failure cases of CLIP-RT. (a) CLIP-RT | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 3: A simplified 2D example of stochastic trajectory augmentation (STA). (a): a demonstration trajectory from the starts to the endpoint ¢, passing through ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 | CLIP-RT achieves strong results, an average success rate of 92.8%, with an improved inference throughput of 163Hz. | p. 2 (Abstract) |
 | Using the contrastive objective, CLIP trains an image encoder f(:) and a text encoder q(-) on 400M image-text pairs. | p. 3 (A. Preliminaries) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / B. Limitations and Future Work - extractive body cue:** Inherent Limitations in Human Language Supervision.
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmar
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: A simplified 2D example of stochastic trajectory augmentation (STA). (a): a demonstration trajectory from the starts to the endpoint ¢, passing through a ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (A. Tasks & Dataset), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 8 (A. Tasks & Dataset), p. 8 (B. Adapting CLIP-RT to the LIBERO Benchmark), metrics p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 5 (C. Experiments on Common and Novel Tasks), p. 5 (C. Experiments on Common and Novel Tasks), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 6 (Figure/Table caption), results p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (C. Experiments on Common and Novel Tasks).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

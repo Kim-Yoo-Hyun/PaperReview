@@ -57,7 +57,6 @@ PDF body method statement (p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 
 - **p. 6 / 3.4. Unified Task Formulation - extractive body cue:** SpatioLM frames diverse spatial tasks as conditional language modeling, using prompt design to specify tasks and next-token prediction in the vocabulary space.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 6 (3.4. Unified Task Formulation), p. 6 (3.3. Loss Design).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 
 - **p. 4 / 3.2. Spatio-Vision Module - extractive body cue:** Training incorporates auxiliary pseudo depth and camera supervision, while inference requires no additional 3D priors and is conducted through a unified text generation interface. et ...
 - **p. 6 / 3.4. Unified Task Formulation - extractive body cue:** Visual markers are overlaid on the input image, and the prompt asks for the distance at the marked location.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -98,13 +96,10 @@ PDF body method statement (p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 
 - **p. 6 / 3.3. Loss Design - extractive body cue:** During training, only SV-Module and projection layers are updated, with the VLM backbone frozen.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** All models are trained on 64 NVIDIA H200 GPUs using AdamW (β1 = 0.9, β2 = 0.95, weight decay = 0.1), with a cosine learning ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** overall, training, objective, weighted, language, modeling, loss, mixed, geometric, losses, align, SV-Block, features, robust, representations, apply, Vision, Token, Supervision, VTS.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -124,20 +119,10 @@ PDF body method statement (p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 6. Sensitivity analysis on loss weights. α β γ VSI-Bench ScanQA(C) SQA3D(ER1) 0.4
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 7. Ablation on attention mechanism. Mechanism VSI-Bench ScanQA(C) SQA3D(ER1) Self-Attention 70.4 98.7 56.8 Alt.-Attention (Ours)
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Loss Design), p. 5 (3.3. Loss Design), p. 3 (3. Method), p. 3 (3.1. Problem definition and notation), p. 4 (3.2. Spatio-Vision Module), p. 4 (3.2. Spatio-Vision Module), objective p. 5 (3.3. Loss Design), p. 3 (3.2. Spatio-Vision Module), p. 5 (3.3. Loss Design), p. 6 (3.4. Unified Task Formulation), p. 6 (3.4. Unified Task Formulation), temporal p. 3 (3. Method), p. 3 (3.1. Problem definition and notation), p. 4 (3.2. Spatio-Vision Module), p. 4 (3.2. Spatio-Vision Module), p. 6 (3.4. Unified Task Formulation), p. 1 (0.00 0.20 0.92 0.00 0.07 -0.02 1.00 …).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

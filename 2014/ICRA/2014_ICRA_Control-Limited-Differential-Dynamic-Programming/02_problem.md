@@ -58,8 +58,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): 
 |---|---|---|
 | no explicit assumption/failure cue | domain stress test only | not a paper claim |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 3 (C. Line Search). The downstream handoff is claimed only when the body describes it.
@@ -67,10 +65,8 @@ control writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 3 (C. Line Search), objective p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 3 (III. CONTROL LIMITS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

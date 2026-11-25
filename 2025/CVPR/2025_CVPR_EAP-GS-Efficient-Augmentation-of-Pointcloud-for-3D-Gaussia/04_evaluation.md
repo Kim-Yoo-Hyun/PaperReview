@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** We evalute the effect of each component of EAP-GS on the LLFF dataset.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** 4, each component of our method improves the reconstruction metrics for the LLFF dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of the FSGS [41] and our proposed EAP-GS with 12 training views. With Attentional Pointcloud Augmenta- tion technique, our method generates significantly ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 | For baseline methods, we maintained their original training strategies and reported both the time cost and the number of Gaussian kernels generated in reconstruction. | definition/direction/unit from same section | p. 6 (4.1. Dataset and Implementation Details) |
 | Figure 1. Comparison of the FSGS [41] and our proposed EAP-GS with 12 training views. With Attentional Pointcloud Augmenta- tion technique, our method generates ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 | The reconstruction results of various methods with and without APA in Tab. | comparison identity and matched condition | p. 7 (4.2. Experimental Results) |
 | Ablation study on proposed components. | comparison identity and matched condition | p. 8 (4.3. Ablation Studies) |
 | Ablation study on different initialization. | comparison identity and matched condition | p. 8 (4.3. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 | body limitation/failure cue | This issue is primarily due to data incompleteness, and a potential approach to further enhance performance would be to incorporate prior knowledge or generative ... | p. 8 (5. Discussion) |
 | body limitation/failure cue | Similar results are obtained for unknown camera-poses though we did not report here because of space limitation. | p. 7 (4.2. Experimental Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 | In comparison, our augmented pointcloud inherently encodes depth information, providing a good guidance for Gaussian generation. | p. 7 (4.2. Experimental Results) |
 | For each image rendering, the loss function relative to the ground truth (GT) can be computed directly as: \m a th c al {L}_ ... | p. 4 (3.1. Preliminary) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Discussion - extractive body cue:** Lacking a method to limit the error may be a limitation Figure 7.
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table
 - **p. 7 / 4.2. Experimental Results - extractive body cue:** Similar results are obtained for unknown camera-poses though we did not report here because of space limitation.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 6 (4.2. Experimental Results), baselines p. 6 (4.1. Dataset and Implementation Details), p. 6 (4.1. Dataset and Implementation Details), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Experimental Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), results p. 7 (4.3. Ablation Studies), p. 2 (Figure/Table caption), p. 7 (4.2. Experimental Results), p. 1 (Figure/Table caption), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

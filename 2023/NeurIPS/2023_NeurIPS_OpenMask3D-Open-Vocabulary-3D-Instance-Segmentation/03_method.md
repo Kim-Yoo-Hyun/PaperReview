@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3 Method), p. 7 (Model), p. 4 (3 Method), p. 8 
 - **p. 9 / Model - extractive body cue:** For this experiment, we perform Hungarian matching between the predicted masks and oracle masks discarding all class-losses, and we only match based on the masks.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 9 (Model), p. 6 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3 Method), p. 7 (Model), p. 4 (3 Method), p. 8 
 - **p. 5 / 3 Method - extractive body cue:** The output of SAM at a given iteration r is a 2D mask (m2D r ) and a mask confidence score (scorer).
 - **p. 4 / 3 Method - extractive body cue:** 3.2.1 Frame selection Obtaining representative images of the proposed object instances is crucial for extracting accurate CLIP features.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,16 +86,12 @@ PDF body method statement (p. 4 (3 Method), p. 7 (Model), p. 4 (3 Method), p. 8 
 - **p. 7 / Model - extractive body cue:** In order to compute image features on the mask-crops, we use CLIP [55] visual encoder from the ViT-L/14 model pre-trained at a 336 pixel resolution, ...
 - **p. 8 / Model - extractive body cue:** First, we analyze the performance of our model when we use class-agnostic masks from a mask-predictor trained on the 20 original ScanNet classes [10], and ...
 - **p. 8 / Model - extractive body cue:** To assess how well our model generalizes to other datasets, we use instance masks from the mask proposal module trained on ScanNet200, and test it ...
-- **p. 7 / Model - extractive body cue:** In order to compute image features on the mask-crops, we use CLIP [55] visual encoder from the ViT-L/14 model pre-trained at a 336 pixel resolution, ...
 - **p. 3 / 3 Method - extractive body cue:** The mask-feature computation module leverages pre-trained CLIP [55] vision-language model in order to compute meaningful and flexible features for each mask.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** architecture, consists, sparse, convolutional, backbone, MinkowskiUNet, transformer, decoder, order, compute, image, features, mask-crops, CLIP, visual, encoder, ViT-L/14, model, pre-trained, pixel.
 - **Relevant PDF headings:** 3 Method (p. 3); Model (p. 7); Model (p. 20).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 4 (3 Method), p. 7 (Model), p. 4 (3 Method), p. 8 
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 12: Visualization of the Replica RGB images. Original RGB images from the Replica dataset (left), and RGB images rendered from the scene point cloud ...
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 9: Output of SAM, using only 5 randomly sampled points (visualized as green dots) of the projected 3D mask as input. A.2.4 Why do ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Method), p. 7 (Model), p. 4 (3 Method), p. 8 (Model), p. 5 (3 Method), p. 8 (Model), objective p. 9 (Model), temporal p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

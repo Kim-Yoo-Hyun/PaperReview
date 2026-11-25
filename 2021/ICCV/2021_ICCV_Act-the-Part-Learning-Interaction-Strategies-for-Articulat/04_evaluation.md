@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 - **p. 5 / 4. Evaluation - extractive body cue:** The multilink objects have three links in a chain similar to eyeglasses.
 - **p. 6 / 4.2. Benchmark Results - extractive body cue:** While it is only trained on objects with two part, it also learns to reason about three part objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Interaction for Part Discovery. Passive part segmenta- tion algorithms require detailed annotation and cannot generalize to new categories. While motion can help discover ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 | Our interaction network takes the current belief of the part segmentation as input and obtains reward for new part discovery. | definition/direction/unit from same section | p. 6 (4.2. Benchmark Results) |
 | (compared to upper bounds using ground truth state), they are informative for discovering new parts of the object and self-correct errors over time. | definition/direction/unit from same section | p. 6 (4.2. Benchmark Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 | 2, we see that [Ours-Touch] outperforms [Ours-NoTouch] in most categories. | comparison identity and matched condition | p. 7 (4.2. Benchmark Results) |
 | We compare the AtP framework trained with and without touch reward, [Ours-Touch] and [Ours-NoTouch] respectively, with the following alternative approaches to study the efficacy ... | comparison identity and matched condition | p. 5 (4.1. Metrics and Points of Comparison) |
 | Without any fine-tuning, the algorithm shows promising results on inferring interaction strategies and reasoning about the observed motion for part discovery. | comparison identity and matched condition | p. 8 (4.3. Real World Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 | body limitation/failure cue | We see broad scope for future work including extensions to 3D part segmentation and singular frameworks for rigid, articulated, and deformable object understanding. | p. 8 (5. Conclusion and Future Work) |
 | body limitation/failure cue | Due to space limitation, only three interaction steps are shown in this figure. | p. 6 (4.2. Benchmark Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 | We compute the L2-norm of the flow field and normalize by the max value. | p. 4 (3.5. Reward) |
 | The network is comprised of a shared encoder with two decoder heads to predict Mt and Mt+1. | p. 4 (3.3. Learning to Discover Parts from Action) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.1. Metrics and Points of Comparison - extractive body cue:** The metric penalizes both errors in mask prediction and failure to discover masks (e.g. if one of two parts is discovered, maximum IoU is 50%).
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchm
 - **p. 6 / 4.2. Benchmark Results - extractive body cue:** Due to space limitation, only three interaction steps are shown in this figure.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Evaluation), p. 8 (4.3. Real World Results), p. 6 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), metrics p. 5 (4.1. Metrics and Points of Comparison), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 8 (4.3. Real World Results), p. 5 (4.1. Metrics and Points of Comparison), baselines p. 7 (4.2. Benchmark Results), p. 5 (4.1. Metrics and Points of Comparison), p. 6 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results), results p. 5 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Real World Results), p. 5 (4.2. Benchmark Results), p. 6 (4.2. Benchmark Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

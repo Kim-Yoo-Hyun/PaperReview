@@ -52,7 +52,6 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 - **p. 5 / 3.2.3. Question-Answer Generation - extractive body cue:** To ensure that models learn from visual grounding rather than linguistic priors, we use deterministic templates that avoid ambiguity and minimize reliance on commonsense.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.2. Dataset Generation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 - **p. 1 / 1. Introduction - extractive body cue:** The rise of vision-language models (VLMs) has opened new opportunities for agents to interpret and act upon the visual world using natural language.
 - **p. 6 / Model - extractive body cue:** Results of existing 2D/3D VLMs on a held-out validation split (ROBOSPATIAL-Val) of images and scans.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 - **p. 5 / 3.2.3. Question-Answer Generation - extractive body cue:** This supervision helps models more accurately resolve references during spatial reasoning and is included during training.
 - **p. 3 / Dataset - extractive body cue:** We make the data and code for generating the dataset from 3D annotated scenes publicly available1. • VLMs trained on ROBOSPATIAL demonstrate superior spatial reasoning, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ensure, models, learn, visual, grounding, rather, linguistic, priors, deterministic, templates, avoid, ambiguity, minimize, reliance, commonsense, Stage, Spatial, Relation, Extraction, first.
 - **Relevant PDF headings:** 3. Approach (p. 4); Model (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. 
 - **p. 7 / 4.1.4. Out-of-Domain Evaluation - extractive body cue:** Two models shown: SL (SpaceLLaVA [5]) and RP (RoboPoint [62]); the -FT suffix indicates fine-tuning on ROBOSPATIAL.
 - **p. 3 / Dataset - extractive body cue:** tages for 3D models, differences in pretraining data and base LLM architectures among models render the comparison inconclusive.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation), p. 4 (3.1. Spatial Relationships), p. 6 (Model), p. 6 (Model), objective p. 4 (3.2. Dataset Generation), p. 5 (3.2. Dataset Generation), p. 5 (3.2.3. Question-Answer Generation), temporal p. 7 (4.1.4. Out-of-Domain Evaluation), p. 7 (4.1.4. Out-of-Domain Evaluation), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (Dataset), p. 2 (Dataset).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

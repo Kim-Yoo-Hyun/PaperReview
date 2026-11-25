@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 10 | The learned policies are robust to significant external perturbation and generate plausible recovery behaviors. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 1 | Fig. 1. Highly dynamic skills learned by imitating reference motion capture clips using our method, executed by physically ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 3 (4 BACKGROUND), p. 4 (4 BACKGROUND). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), interface p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 3 (4 BACKGROUND), p. 4 (4 BACKGROUND), objective p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | Due to Completion Semantic Scene (IoU) Completion (mIoU) SSCNet [49] 29.83 9.53 TS3D [18] 29.81 9.54 TS3D [18] ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 15 | Figure 7: Qualitative results for the semantic scene completion approach TS3D + DarkNet53Seg + SATNet. Left: Input volume. ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 1 (1. Introduction), p. 7 (Approach), p. 6 (Approach). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 2 (1. Introduction), p. 1 (1. Introduction), p. 7 (Approach), p. 6 (Approach), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

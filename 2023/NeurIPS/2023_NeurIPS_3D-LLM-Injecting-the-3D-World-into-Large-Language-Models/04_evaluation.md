@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 - **p. 9 / 5 Experiments - extractive body cue:** Describe the scene Black and white table with stairs in it.
 - **p. 9 / 5 Experiments - extractive body cue:** Describe the scene A 3D model of a small, old, and ruined castle with a doorway and stairs Can you help me find my shoes?
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Examples from our generated 3D-language data, which covers multiple 3D-related tasks. relationships, affordances, physics and interaction so on. Therefore, such LLMs pale in ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 | Figure 1: Examples from our generated 3D-language data, which covers multiple 3D-related tasks. relationships, affordances, physics and interaction so on. Therefore, such LLMs pale ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Figure 2: 3D-language data generation pipelines. obstacles like how to handle the problem of data sparsity, how to align the 3D world with 2D ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 | Table 1: Experimental results on ScanQA validation set. * Means the models use explicit object representations. B-1, B-2, B-3, B-4 denote BLEU-1, BLEU-2, BLEU-3, ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 8: Visualization of an object navigation episode. B.3 Held-In Evaluation B.3.1 3D Dense Captioning In Table 6, we show the results of 3D ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
 | In addition to these baselines, we also design several LLMbased baselines. | comparison identity and matched condition | p. 7 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 | body limitation/failure cue | A limitation is that the 3D feature extractor relies on 2D multi-view images, and thus all 3D scenes need to be rendered so that ... | p. 9 (6 Conclusion) |
 | body limitation/failure cue | We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching. | p. 7 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,20 +132,11 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 14 (Figure/Table captio
 | Specifically, we append 3D position embeddings to the extracted 3D features to better encode spatial information. | p. 3 (5. Facing the mirror and dress) |
 | Furthermore, for 3D scenes, there are no available pretrained encoders like those for 2D images (e.g., CLIP ViT encoders). | p. 5 (5. Facing the mirror and dress) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Conclusion - extractive body cue:** A limitation is that the 3D feature extractor relies on 2D multi-view images, and thus all 3D scenes need to be rendered so that they ...
 - **p. 7 / 5 Experiments - extractive body cue:** We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 13 (B.1 Implementation Details), p. 14 (B.1 Implementation Details), baselines p. 7 (Figure/Table caption), p. 8 (5 Experiments), p. 14 (Figure/Table caption), p. 8 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (5 Experiments), results p. 8 (5 Experiments), p. 14 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 16 (Figure/Table caption), p. 7 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

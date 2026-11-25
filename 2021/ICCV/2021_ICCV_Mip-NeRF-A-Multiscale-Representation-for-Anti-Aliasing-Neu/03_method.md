@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1
 - **p. 6 / 3.2. Architecture - extractive body cue:** Rendering in mip-NeRF follows Equation 3.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.1. Cone Tracing and Positional Encoding), p. 6 (3.2. Architecture), p. 6 (3.2. Architecture).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1
 - **p. 4 / 3.1. Cone Tracing and Positional Encoding - extractive body cue:** The apex of that cone lies at o, and the radius of the cone at the image plane o + d is parameterized as ˙r.
 - **p. 4 / 3.1. Cone Tracing and Positional Encoding - extractive body cue:** As in NeRF, images in mipNeRF are rendered one pixel at a time, so we can describe our procedure in terms of an individual pixel ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1
 - **p. 8 / 4. Results - extractive body cue:** Training times taken from prior work (when available) are indicated in gray, as they are not directly comparable. put due to its changing tensor sizes ...
 - **p. 8 / 4. Results - extractive body cue:** We report times for rendering the test set, normalized to seconds-permegapixel (training times are the same as Tables 1 and 2). versions of full-resolution images, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** conical, frustums, IPE, features, allows, reduce, NeRF, separate, coarse, fine, MLPs, single, multiscale, MLP, increases, training, evaluation, speed, reduces, model.
 - **Relevant PDF headings:** 3. Method (p. 4); 3.2. Architecture (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1
 - **p. 6 / 4. Results - extractive body cue:** We evaluate mip-NeRF on the Blender dataset presented in the original NeRF paper [30] and also on a simple multiscale variant of that dataset designed ...
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 7: PSNRs for NeRF and mip-NeRF on the test set of the lego scene, as we vary the positional encoding degree L. In NeRF, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 4 (3.1. Cone Tracing and Positional Encoding), p. 6 (3.2. Architecture), objective p. 6 (3.2. Architecture), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 6 (3.2. Architecture), temporal p. 5 (3.1. Cone Tracing and Positional Encoding), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 6 (3.2. Architecture), p. 6 (3.2. Architecture), p. 2 (1. Introduction), p. 2 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

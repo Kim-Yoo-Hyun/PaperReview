@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 - **p. 11 / V. BENCHMARKS - extractive body cue:** ‘The REASSEMBLE dataset presents new opportunities for advancing temporal action segmentation (TAS) in robotics. ‘One underexplored area is the proper fusion of multimodal data in ...
 - **p. 8 / dataset - extractive body cue:** The higher failure rate for inserting objects like the Ethemet cable or USB cable arises for two reasons: first, both plugs are directional and ‘must ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of the REASSEMBLE dataset, In REASSEMBLE, we focus on cteating a dataset for contact-rich manipulation tasks. We leverage the well-established NIST Assembly ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 | Fig. 1: Overview of the REASSEMBLE dataset, In REASSEMBLE, we focus on cteating a dataset for contact-rich manipulation tasks. We leverage the well-established NIST ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | ‘and disassembly, which require stringent tolerances, demand accurate and high-resolution contact information, including force-torque data, that visual sensing alone cannot reliably ‘capture. | definition/direction/unit from same section | p. 3 (2) A dataset with multi-task labels to support algorithm) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 | For benchmarking purposes, we evaluate the performance of a state-of-the-art visual TAS model, DiffAct [37]. | comparison identity and matched condition | p. 10 (V. BENCHMARKS) |
 | Additionally, the REASSEMBLE dataset has almost twice the median number of actions per video (36 compared 10 19 in SOSalads). | comparison identity and matched condition | p. 11 (V. BENCHMARKS) |
 | We hypothesize that the lower performance of DiffAct on the REASSEMBLE dataset is due to the increased challenges it presents, Firstly, the REASSEMBLE dataset ... | comparison identity and matched condition | p. 11 (V. BENCHMARKS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,7 +111,6 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 - **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** (1S) 601k 14 4-RGB Cameras / Dep Widow VR tcleoperation MPL Camera, Robot" Proprio= ception RoboSet 98Sk 1s STRGHD Comers, Robot Franks Emika Pands Kinestheic, ...
 - **p. 10 / V. BENCHMARKS - extractive body cue:** The video is downsampled from 30 to 10 frames per second to reduce computational time.
 - **p. 10 / V. BENCHMARKS - extractive body cue:** We extract the visual features in windows of 21 frames, and with 4 stride of 1, resulting in one feature for each corresponding frame in ...
-- **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** (1S) 601k 14 4-RGB Cameras / Dep Widow VR tcleoperation MPL Camera, Robot" Proprio= ception RoboSet 98Sk 1s STRGHD Comers, Robot Franks Emika Pands Kinestheic, ...
 - **p. 8 / B. Action difficulty and failure modes - extractive body cue:** 6: Number of demonstrations of each action-object pair. n REASSEMBLE, we have 4 actions: pick, insert, remove, and place, and 17 objects, resulting in 68 ...
 - **p. 12 / B. Motion Policy Learning - extractive body cue:** The pick action was successfully executed in 8 out of 10 trials, with failures occurring due to the gear slipping from the gripper.
 
@@ -137,8 +125,6 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 | body limitation/failure cue | ‘and disassembly, which require stringent tolerances, demand accurate and high-resolution contact information, including force-torque data, that visual sensing alone cannot reliably ‘capture. | p. 3 (2) A dataset with multi-task labels to support algorithm) |
 | body limitation/failure cue | To address these limitations, REASSEMBLE introduces a novel dataset incorporating high-resolution force-torque sensing specifically tailored for tight-tolerance, high-precision, and ong-horizon tasks. | p. 3 (2) A dataset with multi-task labels to support algorithm) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +136,6 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 | The place motion was successful in all trials. | p. 12 (B. Motion Policy Learning) |
 | The pick action was successfully executed in 8 out of 10 trials, with failures occurring due to the gear slipping from the gripper. | p. 12 (B. Motion Policy Learning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / dataset - extractive body cue:** ‘The majority of failures in the ition (Figure 7, top left) occur because the gripper either misses the object or the ‘object slips out of ...
@@ -168,9 +146,8 @@ PDF body evaluation/result cue (p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p.
 - **p. 3 / 2) A dataset with multi-task labels to support algorithm - extractive body cue:** To address these limitations, REASSEMBLE introduces a novel dataset incorporating high-resolution force-torque sensing specifically tailored for tight-tolerance, high-precision, and ong-horizon tasks.
 
 - **Evidence anchors reviewed:** datasets p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 10 (V. BENCHMARKS), metrics p. 10 (V. BENCHMARKS), p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (Figure/Table caption), baselines p. 10 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), results p. 11 (V. BENCHMARKS), p. 11 (V. BENCHMARKS), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 9 (Figure/Table caption), p. 10 (V. BENCHMARKS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

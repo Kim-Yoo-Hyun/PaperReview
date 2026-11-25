@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** We conduct ablation experiments on the LIBERO-LONG benchmark to evaluate the effectiveness of our skill-aware routing mechanism.
 - **p. 8 / 4.3. Results on Real-world Robot - extractive body cue:** The top two rows illustrate skill interference in long-horizon tasks: the first shows successful single-skill executions, while the second shows failures after mixed training.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of AtomicVLA. Unlike previous VLA mod- els with a single action head, which suffer from limited scalabil- ity and severe interference among ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 | For the LIBERO benchmark, we assess model performance across all four task suites. | definition/direction/unit from same section | p. 5 (4.1. Experiments Setup) |
 | Figure 1. Overview of AtomicVLA. Unlike previous VLA mod- els with a single action head, which suffer from limited scalabil- ity and severe interference ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 | 5, AtomicVLA achieves a success rate of 95.2%, outperforming the MoE baseline by 6.6% and the timestep-conditioned MoDE variant by 5.7%. | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
 | Red and green boxes highlight the key differences. number of training steps, AtomicVLA* acquires new skills more efficiently and achieves an overall improvement of ... | comparison identity and matched condition | p. 8 (4.3. Results on Real-world Robot) |
 | Comparison of Different Methods on LIBERO Benchmark(%). | comparison identity and matched condition | p. 6 (4.1. Experiments Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 | body limitation/failure cue | AtomicVLA* reliably completes the experimental configurations that π0.5 fails to accomplish, and this advantage becomes more evident in tasks involving door-closing operations. | p. 7 (4.3. Results on Real-world Robot) |
 | body limitation/failure cue | Notably, it effectively mitigates skill interference arising from joint training and alleviates knowledge forgetting and performance degradation during continual skill acquisition, highlighting its significant ... | p. 8 (5. Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 | The router computes a probability distribution over experts as: w _{k} = \tex t {Ro ut e r } ( Z_\sigma ), \quad k ... | p. 4 (3.3. Skill-guided Mixture of Experts Architecture) |
 | By aligning these refined labels with the full trajectory, we construct a structured reasoning chain comprising the sequence of executed atomic actions and the ... | p. 5 (3.5. Task Planning Embodied Data Generation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Error Recovery Capability Demonstration. When encountering a skill execution failure, AtomicVLA automatically assesses the progress and re-executes the current skill. suites, outperforming the ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation Study), p. 6 (Figure/Table c
 - **p. 8 / 5. Conclusion - extractive body cue:** Notably, it effectively mitigates skill interference arising from joint training and alleviates knowledge forgetting and performance degradation during continual skill acquisition, highlighting its significant potential ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiments Setup), p. 6 (4.1. Experiments Setup), p. 7 (4.3. Results on Real-world Robot), p. 5 (4.1. Experiments Setup), p. 5 (4.1. Experiments Setup), p. 7 (4.2. Results on Simulation), metrics p. 6 (Figure/Table caption), p. 6 (4.2. Results on Simulation), p. 7 (4.3. Results on Real-world Robot), p. 8 (4.4. Ablation Study), p. 7 (4.2. Results on Simulation), p. 8 (4.3. Results on Real-world Robot), baselines p. 6 (4.2. Results on Simulation), p. 7 (4.3. Results on Real-world Robot), p. 7 (4.2. Results on Simulation), p. 8 (4.4. Ablation Study), p. 8 (4.3. Results on Real-world Robot), p. 6 (4.1. Experiments Setup), results p. 8 (4.4. Ablation Study), p. 6 (Figure/Table caption), p. 6 (4.2. Results on Simulation), p. 7 (4.2. Results on Simulation), p. 8 (4.3. Results on Real-world Robot), p. 7 (4.3. Results on Real-world Robot).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

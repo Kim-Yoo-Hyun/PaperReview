@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 - **p. 7 / A. Experimental Setup - extractive body cue:** We compare to InfoNCE as CLIP is ‘commonly used to curate datasets in vision and language [6+] MINE (MI.
 - **p. 19 / C. Implementation Derails - extractive body cue:** Method Parameter ___RoboMimic State _Robotimic Image Franka ReboCrowd
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3. Visualization of the tasks represented in the datasets we use inthis work, including the Can MH, Lift MH, and Square MH datasets from ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 | Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic. | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Fig. 16. The effect of diferent lateat dimension sizes for 5 and =, 0a RoboMimic Image. we fad that performance is relatively sobust to ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 | 2) Baselines: We compare against a number of different data quality estimators from prior work in addition to a number of alternative mutual information ... | comparison identity and matched condition | p. 6 (A. Experimental Setup) |
 | For each dataset we use the same architecture forall methods, where the latent = dimension is set to be consistent across both Demlnf and ... | comparison identity and matched condition | p. 7 (A. Experimental Setup) |
 | Following prior works in active learning for imitation learning [18,31], we select data based on the uncertainty of an ensemble of 5 policies. | comparison identity and matched condition | p. 6 (A. Experimental Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 | body limitation/failure cue | DemInf's performance is generally robust to this parameter, with no substantial change in performance in both HersheyKiss and Square MH. | p. 9 (C. Mutual Information Estimators) |
 | body limitation/failure cue | Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic. | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 | For VAEs we use a symmetric decoder. | p. 18 (C. Implementation Derails) |
 | For all methods using a state encoder, we use this architecture. | p. 18 (C. Implementation Derails) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / C. Mutual Information Estimators - extractive body cue:** variance across seeds, while the parametric estimators were more unstable and had one or two runs that performed far worse than the others.
@@ -156,6 +135,5 @@ PDF body evaluation/result cue (p. 6 (A. Experimental Setup), p. 6 (A. Experimen
 - **p. 16 / Figure/Table caption - extractive body cue:** Fig. 17. The effect of difereat values of VAE on RoboMimic Image. We find that performance is relatively robust to this parameter for RoboMimic.
 
 - **Evidence anchors reviewed:** datasets p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 19 (C. Implementation Derails), metrics p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 15 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), results p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 15 (Figure/Table caption), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

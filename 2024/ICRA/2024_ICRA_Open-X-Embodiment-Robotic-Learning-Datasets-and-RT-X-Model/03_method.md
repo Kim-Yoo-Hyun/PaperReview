@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 - **p. 4 / IV. RT-X DESIGN - extractive body cue:** Training and inference details Both models use a standard categorical cross-entropy objective over their output space (discrete buckets for RT1 and all possible language tokens ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (IV. RT-X DESIGN), p. 1 (Body text (section boundary not confidently recovered)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, these lessons are difficult to apply in robotics: any single robotic domain might be too narrow, and while computer vision and NLP can leverage ...
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,15 +88,11 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our aim is not to innovate in terms of the particular architectures and algorithms, but rather to provide the model that we trained together with ...
 - **p. 5 / IV. RT-X DESIGN - extractive body cue:** At inference time, each model is run at the rate required for the robot (3-10 Hz), with RT-1 run locally and RT-2 hosted on a ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Inspired by the generalization made possible by pretraining large vision or language models on diverse data, we take the perspective that the goal of training ...
-- **p. 5 / IV. RT-X DESIGN - extractive body cue:** At inference time, each model is run at the rate required for the robot (3-10 Hz), with RT-1 run locally and RT-2 hosted on a ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Policy, architectures, consider, model, experiments, RT-1, efficient, Transformer-based, architecture, designed, robotic, control, RT-2, large, visionlanguage, co-fine-tuned, output, robot, actions, natural.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +112,13 @@ PDF body method statement (p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only the embodiment-specific dataset, which indicates underfitting for that model ...
 - **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** DISCUSSION, FUTURE WORK, AND OPEN PROBLEMS We presented a consolidated dataset that combines data from 22 robotic embodiments collected through a collaboration between 21 institutions, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 2 (I. INTRODUCTION), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 5 (IV. RT-X DESIGN), objective p. 4 (IV. RT-X DESIGN), temporal p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY), p. 4 (IV. RT-X DESIGN), p. 4 (IV. RT-X DESIGN).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

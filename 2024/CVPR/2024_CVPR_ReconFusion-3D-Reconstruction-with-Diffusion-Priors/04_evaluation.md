@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 8 / 4.4. Scaling to More Views - extractive body cue:** Though most results in this paper focus on the challenging case of 3-9 input views, achieving a high-quality reconstruction of a real-world scene often requires ...
 - **p. 6 / 4.2. Comparison Results - extractive body cue:** Both the appearance and geometry of our method are of higher quality than the baselines in these examples-typical failure modes exhibited by the baselines include ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Methods for reconstructing a 3D scene from images, such as Neural Radiance Fields (NeRF), often exhibit artifacts when trained with few input views. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Therefore, we set the weighting factor for our diffusion loss (Lsample) to be inversely proportional to the number of input views in this case. | definition/direction/unit from same section | p. 8 (4.4. Scaling to More Views) |
 | Figure 1. Methods for reconstructing a 3D scene from images, such as Neural Radiance Fields (NeRF), often exhibit artifacts when trained with few input ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Please refer to the supplement for more details about baselines. | comparison identity and matched condition | p. 5 (4.1. Experiment Setup) |
 | Both the appearance and geometry of our method are of higher quality than the baselines in these examples-typical failure modes exhibited by the baselines ... | comparison identity and matched condition | p. 6 (4.2. Comparison Results) |
 | Our learned diffusion prior improves performance over the Zip-NeRF baseline up to as many as 81 input views on the kitchenlego scene from the ... | comparison identity and matched condition | p. 8 (4.4. Scaling to More Views) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | Table 1. Quantitative evaluation of few-view 3D reconstruction methods. Datasets are ordered in terms of sparsity from easier (novel views are close to observed ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2. (a) We optimize a NeRF to minimize a reconstruction loss Lrecon between renderings and a limited set of input images, alongside a ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Specifically, we render an image x(ψ, π) from a sampled novel viewpoint π, and encode and perturb it to a noisy latent zt with ... | p. 4 (3.2. 3D Reconstruction with Diffusion Priors) |
 | The trained diffusion model produces plausible single images for novel camera poses, but generated images are often inconsistent for different poses or random seeds. | p. 4 (3.2. 3D Reconstruction with Diffusion Priors) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Methods for reconstructing a 3D scene from images, such as Neural Radiance Fields (NeRF), often exhibit artifacts when trained with few input views. ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. (a) We optimize a NeRF to minimize a reconstruction loss Lrecon between renderings and a limited set of input images, alongside a sample ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experiment Setup), p. 5 (4.1. Experiment Setup), p. 6 (4.2. Comparison Results), p. 7 (4.2. Comparison Results), p. 7 (4.2. Comparison Results), p. 8 (4.4. Scaling to More Views), metrics p. 5 (4. Experiments), p. 3 (Figure/Table caption), p. 5 (4. Experiments), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Comparison Results), p. 8 (4.3. Ablation Studies), baselines p. 7 (4.2. Comparison Results), p. 5 (4.1. Experiment Setup), p. 7 (4.2. Comparison Results), p. 5 (4.1. Experiment Setup), p. 6 (4.2. Comparison Results), p. 8 (4.4. Scaling to More Views), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Comparison Results), p. 5 (4. Experiments), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

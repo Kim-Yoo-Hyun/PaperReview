@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 - **p. 1 / Abstract - extractive body cue:** Simulations using the Replica dataset highlight the efficacy of our methods compared to state of-the-art techniques.
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** With these improvements, robots have been deployed in increasingly complex environments, relying heavily on Visual Inertial Odometry (VIOYSLAM pose estimates and obstacle ‘maps to navigate ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Overview of notation and objectives. (a) depicts the operating favioament, where the world W is the union of the fe space and the ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 | Fig. 4. Visualization ofthe maps generated using the baseline and certified ESDF methods on the of fice3 eavironment In (a) we see the ground.ruth ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Fig. 6. Rover Experimental Results. (,b) shows snapshots of the reconstructed obstacle map and de estimated rover pose with (a) the baseline method and ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 | + We prove the correctness and applicability ofthis frame~ \work on two popular and state-of-the-art mapping frameworks: the polytopic SFCs of [8] and the ... | comparison identity and matched condition | p. 2 (1. INTRODUCTION) |
 | Fig. 4. Visualization ofthe maps generated using the baseline and certified ESDF methods on the of fice3 eavironment In (a) we see the ground.ruth ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Fig. 6. Rover Experimental Results. (,b) shows snapshots of the reconstructed obstacle map and de estimated rover pose with (a) the baseline method and ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,22 +113,12 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 | body limitation/failure cue | Unlike baseline methods which result in collisions, our approach prevents crashes by deflating the safe regions appropriately. | p. 2 (1. INTRODUCTION) |
 | body limitation/failure cue | Fig. 6. Rover Experimental Results. (,b) shows snapshots of the reconstructed obstacle map and de estimated rover pose with (a) the baseline method and ... | p. 12 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Code: haps.//gihubs coms abcerifahly-comrect- mapping 2 Video: htps://yout beg MIDKTlouss | p. 1 (1. INTRODUCTION) |
 | In these systems, raw measurements are typically processed by a frontend into a more compact representation, while a backend uses nonlinear optimization methods to ... | p. 2 (1. INTRODUCTION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -150,9 +129,8 @@ PDF body evaluation/result cue (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), 
 - **p. 12 / Figure/Table caption - extractive body cue:** Fig. 6. Rover Experimental Results. (,b) shows snapshots of the reconstructed obstacle map and de estimated rover pose with (a) the baseline method and (©) ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 1 (Abstract), p. 2 (1. INTRODUCTION), metrics p. 1 (1. INTRODUCTION), p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 5 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 9 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

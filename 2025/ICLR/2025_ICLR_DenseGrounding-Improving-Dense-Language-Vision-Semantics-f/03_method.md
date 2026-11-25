@@ -53,7 +53,6 @@ PDF body method statement (p. 6 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p.
 - **p. 7 / 4 METHOD - extractive body cue:** By instructing the LLM to utilize positional relationships among objects in the scene, the prompt ensures sufficient and reliable anchors, encouraging the description of the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4 METHOD), p. 5 (4 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 6 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** By addressing the ambiguities in annotated text and enhancing the model's capacity to capture scenelevel global visual semantics from ego-centric multi-view inputs, DenseGrounding, advances the ...
 - **p. 5 / 4 METHOD - extractive body cue:** Then, it fuses these aggregated view semantics with language semantics, facilitating scene-level multi-view semantic interaction and cross-modal feature fusion.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 6 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p.
 
 - **p. 6 / 4 METHOD - extractive body cue:** To address this, we propose a Language Semantic Enhancement (LSE) pipeline based on Large Language Models (LLMs) to enhance the training data.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, apply, self, attention, layer, further, refine, features, model, intra-view, relationships, SelfAttn, Scene-Level, Semantic, Interaction, HIERARCHICAL, SCENE, ENHANCER, mitigate, loss.
 - **Relevant PDF headings:** 4 METHOD (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 6 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p.
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** Lscene Easy Hard Overall 1 40.15 35.44 39.77 2 40.76 32.70 40.11 3 41.95 34.38 41.34 4 41.06 33.96 40.49 6 40.66 33.23 40.06 Table ...
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** Due to resource limitations, we reserve the full training dataset for baseline comparisons on the test set and leaderboard submissions to ensure a fair and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4 METHOD), p. 5 (4 METHOD), p. 6 (4 METHOD), p. 5 (4 METHOD), p. 7 (4 METHOD), p. 7 (4 METHOD), objective p. 5 (4 METHOD), p. 5 (4 METHOD), p. 7 (4 METHOD), temporal p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (3 PRELIMINARIES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

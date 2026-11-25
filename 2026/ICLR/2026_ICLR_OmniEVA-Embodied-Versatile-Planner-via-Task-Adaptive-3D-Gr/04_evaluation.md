@@ -49,8 +49,6 @@
 - **p. 28 / C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING - extractive body cue:** We train on the Scan2Cap dataset (Chen et al., 2021), which comprises 37K annotated samples across diverse indoor scenes.
 - **p. 28 / C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING - extractive body cue:** Video-based Spatial Reasoning Despite the emergence of benchmarks such as OpenEQA (Majumdar et al., 2024) and VSI-Bench (Yang et al., 2025b), large-scale training datasets for ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Performance Comparison across 2D and 3D Embodied Reasoning Benchmarks. Despite recent progress, two core challenges remain. First, the geometric adaptability gap: mod- els ...
@@ -84,8 +82,6 @@
 | Figure 8: OmniEVA's Performance with Dynamic Obstructions. (Top) Sequence showing successful detec- tion of a table after an occluding pedestrian moves away. (Bottom) Accurate ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 | Given a reward for the i-th response: ri,t(q, oi) = rformat i (oi) + racc i,t (q, oi) (11) 18 | definition/direction/unit from same section | p. 18 (A.3 IMPLEMENTATION DETAIL OF EMBODIMENT-AWARE REASONING) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@
 | Compared to simulator-based online evaluation, this VQA-style approach substantially reduces evaluation overhead. | comparison identity and matched condition | p. 29 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
 | Table 1: Results of Different 3D-Integration Methods. To ensure a fair comparison and isolate the impact of 3D integration, models were trained exclusively on ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | We categorize the benchmark into three progressive evaluation stages: • Large-Space Object Seeking: It is also referred as object navigation in prior work. | comparison identity and matched condition | p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@
 | body limitation/failure cue | In addition, it incorporates critical physical constraints, including object dimensions, fit within the available space, and collision avoidance with other objects. | p. 32 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
 | body limitation/failure cue | The entire benchmark consists of 464 samples, including 200 generation tasks that require the model to output corresponding points, and 264 judgment tasks where ... | p. 32 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@
 | Using the A* algorithm, we compute the shortest path while merging trajectory points of adjacent objects belonging to the same entity. | p. 28 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
 | The evaluation code is consistent with Where2Place. | p. 29 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Performance Comparison across 2D and 3D Embodied Reasoning Benchmarks. Despite recent progress, two core challenges remain. First, the geometric adaptability gap: mod- els ...
@@ -174,6 +153,5 @@
 - **p. 32 / C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING - extractive body cue:** The entire benchmark consists of 464 samples, including 200 generation tasks that require the model to output corresponding points, and 264 judgment tasks where the ...
 
 - **Evidence anchors reviewed:** datasets p. 27 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 27 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 35 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 25 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), metrics p. 9 (Figure/Table caption), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 36 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 10 (Figure/Table caption), p. 36 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), baselines p. 23 (Figure/Table caption), p. 24 (C.1 IMPLEMENTATION OF CROSS-ATTENTION BASED 3D FUSION), p. 24 (Figure/Table caption), p. 29 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 7 (Figure/Table caption), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), results p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 36 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 30 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING), p. 36 (C.2 GATE ACTIVATION ANALYSIS BY SEMANTIC CLUSTERING).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

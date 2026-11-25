@@ -46,7 +46,6 @@ PDF body method statement (p. 4 (3.4. Self-supervised Pre-training), p. 4 (3.4. 
 - **p. 4 / 3.4. Self-supervised Pre-training - extractive body cue:** Our final pre-training objective is obtained by simply adding the losses of the proxy tasks above: Lpre-train = LMLM + LMOM + LSTM (5) Notably, ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.4. Self-supervised Pre-training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 4 (3.4. Self-supervised Pre-training), p. 4 (3.4. 
 - **p. 4 / 3.4. Self-supervised Pre-training - extractive body cue:** (4) In practice, 30% of the samples in a training batch are negative pairs, created by replacing the scene point cloud or text with a ...
 - **p. 1 / 1. Introduction - extractive body cue:** The lack of a simple and unified approach creates a significant gap in developing a general-purpose 3D-VL model.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 4 (3.4. Self-supervised Pre-training), p. 4 (3.4. 
 - **p. 4 / 3.4. Self-supervised Pre-training - extractive body cue:** Our final pre-training objective is obtained by simply adding the losses of the proxy tasks above: Lpre-train = LMLM + LMOM + LSTM (5) Notably, ...
 - **p. 5 / 5.1. Experimental Settings - extractive body cue:** The pre-training runs for 30 epochs with a batch size of 128.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** final, pre-training, objective, obtained, simply, adding, losses, proxy, tasks, above, Lpre-train, LMLM, LMOM, LSTM, Notably, scheme, self-supervised, task-agnostic, unlike, supervised.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,20 +103,10 @@ PDF body method statement (p. 4 (3.4. Self-supervised Pre-training), p. 4 (3.4. 
 - **p. 7 / 5.2. Downstream Task Results - extractive body cue:** Pretraining improves the results of most question types.
 - **p. 8 / 5.4. Qualitative Studies and Additional Results - extractive body cue:** 4, pretraining improves the spatial understanding of 3D-VisTA for visual grounding, so it can better align with human prior viewpoint and reason over spatial relations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.4. Self-supervised Pre-training), p. 4 (3.4. Self-supervised Pre-training), objective p. 4 (3.4. Self-supervised Pre-training), temporal p. 5 (5.1. Experimental Settings), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Text Encoding), p. 3 (3.2. Scene Encoding).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -58,7 +58,6 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 - **p. 8 / 3 Method - extractive body cue:** Our loss function mainly consists of two parts, depth loss and registration loss.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 7 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** Under the selected cameras, the image sets IA and IB are rendered from GaussianA and GaussianB to be fed into the next feature extraction stage.
 - **p. 2 / 1 Introduction - extractive body cue:** The mainstream methods typically involve extracting features from point clouds and locating matching points to calculate the transformation between the two input scenes.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -98,13 +96,10 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 - **p. 11 / 4 Experiment - extractive body cue:** Both networks are trained separately for 40 epochs with a batch size of 1.
 - **p. 10 / 4 Experiment - extractive body cue:** Implementation Details Our GaussReg is merely trained on the ScanNetGSReg training set and evaluated on the ScanNet-GSReg test set, Objaverse test set, and GSReg dataset.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** idea, first, locate, overlapping, region, between, scene, render, some, training, images, covering, support, more, precise, geometric, features, fine, alignment, Without.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -124,20 +119,10 @@ PDF body method statement (p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p.
 - **p. 11 / 4 Experiment - extractive body cue:** For indoor scenes in ScanNetGSReg, SuperPoint [10] sometimes fails to extract effective keypoints, leading to registration failures.
 - **p. 13 / 5 Discussion - extractive body cue:** Future work can further explore to address this issue.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), objective p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), temporal p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 - **p. 3 / 2 PRELIMINARIES - extractive body cue:** For instance if C is the 0-1 loss with respect to the expert, then u ≤1.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 2 (2 PRELIMINARIES), p. 2 (2 PRELIMINARIES), p. 5 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 - **p. 3 / 2 PRELIMINARIES - extractive body cue:** Initially SMILe starts with a policy π0 which always queries and executes the expert's action choice.
 - **p. 3 / 2 PRELIMINARIES - extractive body cue:** By doing so, πt is trained on the actual distribution of states it will encounter during execution of the learned policy.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** For SMILe and DAGGER, we used 1 lap of training per iteration (∼1000 data points) and run both methods for 20 iterations.
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** Our goal is to train the computer to steer the kart moving at fixed speed on a particular race track, based on the current game ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** interaction, between, policy, resulting, distribution, makes, optimization, difficult, non-convex, objective, even, loss, convex, states, meta-algorithm, imitation, learning, learns, stationary, deterministic.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** D0 D0.5 D0.9 Se1 Se0.4 Sm0.1 Sup Figure 4: Average distance/stage as a function of data. approach, performance stagnates as we collect more data from ...
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** 6 FUTURE WORK We show that by batching over iterations of interaction with a system, no-regret methods, including the presented DAGGER approach can provide a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 5 (2 PRELIMINARIES), objective p. 2 (2 PRELIMINARIES), p. 2 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), temporal p. 1 (1 INTRODUCTION), p. 2 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

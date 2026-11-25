@@ -49,8 +49,6 @@ AIR-VLA는 공중 조작 실행을 VLA로 시험하고, 별도 고수준 계획 
 - **p. 7 / 4.2.1. EXPERIMENTAL SETUP - extractive body cue:** Molmo7B-D-0924 (Deitke et al., 2024) employs a data-centric strategy via the PixMo dataset for efficient alignment.
 - **p. 4 / 3.2. Evaluation Framework - extractive body cue:** For VLA models, we conduct closed-loop evaluations based on an online simulation environment, focusing on UAV-Arm Coordination capabilities under real-time inference.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of AIR-VLA model framework and dataset of aerial manipulation tasks.
@@ -86,8 +84,6 @@ AIR-VLA는 공중 조작 실행을 VLA로 시험하고, 별도 고수준 계획 
 | Nevertheless, there remains substantial room for improvement in overall task completion rates. | definition/direction/unit from same section | p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS) |
 | Specifically, we quantify the feasibility of UAV spatial navigation, the manipulation precision of the end-effector, and dynamic safety during longhorizon task execution. | definition/direction/unit from same section | p. 4 (3.2. Evaluation Framework) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -97,13 +93,6 @@ AIR-VLA는 공중 조작 실행을 VLA로 시험하고, 별도 고수준 계획 
 | Compared to traditional ground robot tasks, aerial mobile manipulation introduces unique challenges such as dynamic coupling of the floating base, volumetric workspaces, and temporal ... | comparison identity and matched condition | p. 4 (3.2. Evaluation Framework) |
 | In this section, we report the quantitative performance of baseline models on the four task suites of AIR-VLA. | comparison identity and matched condition | p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS) |
 | The table shows absolute scores for each metric, with values in parentheses indicating the performance drop (↓∆) compared to the Standard condition. | comparison identity and matched condition | p. 7 (4.2. VLM Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,22 +123,12 @@ AIR-VLA는 공중 조작 실행을 VLA로 시험하고, 별도 고수준 계획 
 | body limitation/failure cue | Robustness evaluation of π0.5 under disturbance and perception-deprived conditions. | p. 7 (4.2. VLM Experiments) |
 | body limitation/failure cue | Q2: Can VLA models cope with external disturbances in AMS and complete tasks under random base jitter? | p. 5 (4.1. VLA Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | InternVL3 5-8B (Wang et al., 2025b) adopts a "strong vision encoder + strong language decoder" design, targeting geometric perception. | p. 7 (4.2.1. EXPERIMENTAL SETUP) |
 | To enhance generalization, we constructed diverse environments (residential, industrial, outdoor) with varying lighting conditions. | p. 5 (3.4. Dataset Construction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -161,6 +140,5 @@ AIR-VLA는 공중 조작 실행을 VLA로 시험하고, 별도 고수준 계획 
 - **p. 5 / 4.1. VLA Experiments - extractive body cue:** Q2: Can VLA models cope with external disturbances in AMS and complete tasks under random base jitter?
 
 - **Evidence anchors reviewed:** datasets p. 4 (3.2. Evaluation Framework), p. 5 (4.1. VLA Experiments), p. 5 (4.1.1. EXPERIMENTAL SETUP), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.1. EXPERIMENTAL SETUP), metrics p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2. VLM Experiments), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 5 (4.1. VLA Experiments), baselines p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2. VLM Experiments), results p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 8 (4.2.2. RESULTS AND ANALYSIS), p. 6 (4.1.2. MAIN RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 7 (4.2.2. RESULTS AND ANALYSIS), p. 4 (3.2. Evaluation Framework).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

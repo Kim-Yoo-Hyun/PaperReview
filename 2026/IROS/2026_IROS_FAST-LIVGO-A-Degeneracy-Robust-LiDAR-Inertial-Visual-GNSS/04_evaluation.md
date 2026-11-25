@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 - **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our platform with hardware synchronization for data acquisition.
 - **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** We benchmarked our method against SOTA open-source systems, including LIO-SAM [8], FAST-LIVO2 [3], and LIGO [21].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 1. System overview of our proposed framework. the GNSS antenna is modeled as a rigid transformation. To enable tightly-coupled fusion with raw GNSS measurements, ...
@@ -74,8 +72,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 | Fig. 7. Mapping results generated in complex LIDAR, Camera, and GNSS degenerated scenes. were severely occluded. Traditional schemes diverge easily here, but our strict ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -85,13 +81,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 | Evaluation on Benchmark Dataset (M3DGR) We conducted standardized quantitative comparisons on the public M3DGR dataset [10], which provides RTK ground | comparison identity and matched condition | p. 5 (V. EXPERIMENTAL RESULTS) |
 | We benchmarked our method against SOTA open-source systems, including LIO-SAM [8], FAST-LIVO2 [3], and LIGO [21]. | comparison identity and matched condition | p. 6 (V. EXPERIMENTAL RESULTS) |
 | Fig. 5. Qualitative comparison of global point cloud maps. (a1, b1) Our method; (a2, b2) FAST-LIVO2. To further validate this improvement, Fig. 6 evaluates ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 | body limitation/failure cue | 2) Outdoor LIVO Degraded Scenario: In regions (a)-(c) of View 1 (Fig. | p. 7 (2) High-Precision Mapping in Large-Scale Highly Dy) |
 | body limitation/failure cue | 1) Indoor GNSS Degraded Scenario: In the long indoor corridor (see region (d) in Fig. | p. 7 (2) High-Precision Mapping in Large-Scale Highly Dy) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -131,14 +118,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 | 3, integrating a Livox Avia solid-state LiDAR, an industrialgrade global shutter RGB camera, and a Ublox ZED-F9P GNSS receiver. | p. 6 (V. EXPERIMENTAL RESULTS) |
 | Since the GNSS receiver and LIVO system run on independent clocks, a time offset δtrI remains between the two data streams. | p. 3 (III. METHODOLOGY) |
 | Preprocess 1) Temporal Calibration via DTW: Before GNSS alignment, the LIV subsystem is initialized independently: LiDAR, camera, and IMU timestamps are hardwaresynchronized, while the ... | p. 3 (III. METHODOLOGY) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -150,6 +129,5 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIM
 - **p. 7 / 2) High-Precision Mapping in Large-Scale Highly Dy - extractive body cue:** 1) Indoor GNSS Degraded Scenario: In the long indoor corridor (see region (d) in Fig.
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), metrics p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), results p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

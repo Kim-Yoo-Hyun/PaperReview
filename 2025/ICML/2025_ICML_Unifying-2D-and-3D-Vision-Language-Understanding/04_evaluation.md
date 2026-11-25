@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (1. Lifting 2D datasets to 3D improves 3D p
 - **p. 8 / 4.4. Evaluation on 2D Referential Grounding - extractive body cue:** We also evaluate UniVLG on the 2D Referential Grounding benchmarks (Kazemzadeh et al., 2014) (Table 4).
 - **p. 8 / 4.4. Evaluation on 2D Referential Grounding - extractive body cue:** We train two versions of our model: UniVLG (2D only), which is trained exclusively on 2D datasets, and UniVLG (2D-3D), which is trained on both ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (A) UniVLG achieves state-of-the-art performance performance across a range of referential grounding, question answering, and instance segmentation benchmarks. (B) UniVLG is a unified ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (1. Lifting 2D datasets to 3D improves 3D p
 | Our results show that co-training with 3D data does not degrade the performance of the version trained solely on 2D data. | definition/direction/unit from same section | p. 8 (4.4. Evaluation on 2D Referential Grounding) |
 | Figure 1. (A) UniVLG achieves state-of-the-art performance performance across a range of referential grounding, question answering, and instance segmentation benchmarks. (B) UniVLG is a ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (1. Lifting 2D datasets to 3D improves 3D p
 | Baselines: We compare our model against the state-of-theart two-stage methods of 3D-VisTA (Zhu et al., 2023b), PQ3D (Zhu et al., 2024b) and concurrent work ... | comparison identity and matched condition | p. 6 (4.1. Evaluation on 3D Referential Grounding) |
 | Figure 1. (A) UniVLG achieves state-of-the-art performance performance across a range of referential grounding, question answering, and instance segmentation benchmarks. (B) UniVLG is a ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | In this work, due to our focus on improving 3D vision-language grounding and resource constraints, we did not train our model on additional 2D ... | comparison identity and matched condition | p. 8 (4.4. Evaluation on 2D Referential Grounding) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (1. Lifting 2D datasets to 3D improves 3D p
 | body limitation/failure cue | We found that using sensor point clouds vs mesh point clouds does not result in a significant difference in performance in these benchmarks, likely ... | p. 7 (4.3. Evaluation on 3D Question Answering) |
 | body limitation/failure cue | L3DD allows us to assess the robustness of our model on new scenes, camera capture systems, and language instructions. | p. 7 (4.2. Evaluation on Out-of-Domain 3D Referential) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (1. Lifting 2D datasets to 3D improves 3D p
 | Language Encoder: We embed the natural language query using JinaCLIP (Koukounas et al., 2024), generating tokens of shape M × F where M is ... | p. 3 (3. Method) |
 | Masks are decoded through a dot-product between 3D feature tokens and learnable queries. | p. 4 (3. Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4.7. Common failure modes of UniVLG - extractive body cue:** We identify three systematic failure modes in our model, illustrated in Figure-5 (see Appendix).
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 8 (1. Lifting 2D datasets to 3D improves 3D p
 - **p. 7 / 4.2. Evaluation on Out-of-Domain 3D Referential - extractive body cue:** L3DD allows us to assess the robustness of our model on new scenes, camera capture systems, and language instructions.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Evaluation on 3D Referential Grounding), p. 6 (4.1. Evaluation on 3D Referential Grounding), p. 7 (4.3. Evaluation on 3D Question Answering), p. 7 (4.3. Evaluation on 3D Question Answering), p. 8 (4.4. Evaluation on 2D Referential Grounding), p. 8 (4.4. Evaluation on 2D Referential Grounding), metrics p. 7 (4.1. Evaluation on 3D Referential Grounding), p. 6 (4.1. Evaluation on 3D Referential Grounding), p. 6 (4. Experiments), p. 7 (4.1. Evaluation on 3D Referential Grounding), p. 21 (Figure/Table caption), p. 8 (4.4. Evaluation on 2D Referential Grounding), baselines p. 7 (4.3. Evaluation on 3D Question Answering), p. 7 (4.1. Evaluation on 3D Referential Grounding), p. 6 (4.1. Evaluation on 3D Referential Grounding), p. 6 (4.1. Evaluation on 3D Referential Grounding), p. 2 (Figure/Table caption), p. 8 (4.4. Evaluation on 2D Referential Grounding), results p. 8 (1. Lifting 2D datasets to 3D improves 3D performance), p. 7 (4.1. Evaluation on 3D Referential Grounding), p. 2 (Figure/Table caption), p. 7 (4.1. Evaluation on 3D Referential Grounding), p. 8 (4.4. Evaluation on 2D Referential Grounding), p. 6 (4.1. Evaluation on 3D Referential Grounding).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (2) Student Model (Consistency Policy)), p. 4 (2
 - **p. 3 / III. CONSISTENCY POLICY - extractive body cue:** The gradient of the noised probability distribution, ∇log pt (xt/o), is known as the score.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 3 (1) Teacher Model (EDM)), p. 4 (2) Student Model (Consistency Policy)), p. 4 (2) Student Model (Consistency Policy)), p. 3 (III. CONSISTENCY POLICY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (2) Student Model (Consistency Policy)), p. 4 (2
 - **p. 5 / 2) Student Model (Consistency Policy) - extractive body cue:** This architecture conditions on observations and the diffusion timestep t using FiLM blocks, and diffuses through the action domain using 1D convolutional blocks.
 - **p. 4 / 2) Student Model (Consistency Policy) - extractive body cue:** [14] propose a training objective to distill a teacher model sϕ(xt, t; o) into a student model gθ(xt, t, s; o) and achieve state of ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (2) Student Model (Consistency Policy)), p. 4 (2
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Policy NFE Inference Time (ms) DDPM 100 110 DDiM 15 11 CP (ours) 1 1 CP (ours) 3 2 Table III: Simulation Inference Speeds - ...
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** We also report inference time on the 3070 Ti GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Single-step, inference, trained, Consistency, Policy, works, follows, sample, initial, position, compute, where, timestep, during, training, current, observation, deploy, action, environment.
 - **Relevant PDF headings:** III. CONSISTENCY POLICY (p. 3); 1) Teacher Model (EDM) (p. 3); 2) Student Model (Consistency Policy) (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 4 (2) Student Model (Consistency Policy)), p. 4 (2
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** As in other ablations, we think the benefit of this choice is most apparent on harder tasks such as Tool Hang where there is more ...
 - **p. 9 / IV. EXPERIMENTS - extractive body cue:** As an initial step towards exploring this hypothesis, we removed dropout from only the two generations from s →0 at training time while retaining it ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (2) Student Model (Consistency Policy)), p. 4 (2) Student Model (Consistency Policy)), p. 3 (1) Teacher Model (EDM)), p. 5 (2) Student Model (Consistency Policy)), p. 3 (III. CONSISTENCY POLICY), p. 5 (2) Student Model (Consistency Policy)), objective p. 3 (1) Teacher Model (EDM)), p. 4 (2) Student Model (Consistency Policy)), p. 4 (2) Student Model (Consistency Policy)), p. 3 (III. CONSISTENCY POLICY), temporal p. 4 (2) Student Model (Consistency Policy)), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 9 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

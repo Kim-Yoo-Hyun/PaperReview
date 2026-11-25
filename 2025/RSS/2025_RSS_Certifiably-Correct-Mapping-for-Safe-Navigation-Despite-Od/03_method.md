@@ -51,7 +51,6 @@ PDF body method statement (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** These methods reduce odometry drift by optimizing each submap within its own coordinate frame.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** + We prove the correctness and applicability ofthis frame~ \work on two popular and state-of-the-art mapping frameworks: the polytopic SFCs of [8] and the ESDFs ...
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** + Beyond providing the theoretical analysis and proofs of correctness, we validate and compare our approach with state-of the-art baseline methods through extensive simulations on ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 
 
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** In these systems, raw measurements are typically processed by a frontend into a more compact representation, while a backend uses nonlinear optimization methods to compute ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Accurate, state, estimation, mapping, essential, safe, robotic, navigation, planners, controllers, rely, perception, outputs, ensure, safety, planned, trajectories, control, actions, Section.
 - **Relevant PDF headings:** B. Proposed Approach (p. 5); B. Proposed Approach (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,23 +105,13 @@ PDF body method statement (p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** The rover uses an onboard safety filter to prevent collisions.
 - **p. 2 / 1. INTRODUCTION - extractive body cue:** Unlike baseline methods which result in collisions, our approach prevents crashes by deflating the safe regions appropriately.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 1 (Abstract), objective p. 1 (1. INTRODUCTION), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), temporal p. 1 (Abstract), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

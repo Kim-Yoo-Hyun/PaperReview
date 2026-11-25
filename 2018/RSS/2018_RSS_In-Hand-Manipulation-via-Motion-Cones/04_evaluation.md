@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 - **p. 7 / VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS - extractive body cue:** We evaluate the performance of our planner with examples of a parallel-jaw gripper manipulating a variety of objects.
 - **p. 8 / VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS - extractive body cue:** 2 3) Manipulating a non-convex object: In this example, the goal is to regrasp a T-shaped object.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: (top) Example friction cone and motion cone of an object moving in the vertical plane. The pusher can move the object along any ...
@@ -76,20 +74,11 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 | Fig. 1: (top) Example friction cone and motion cone of an object moving in the vertical plane. The pusher can move the object along ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: Manipulating a T-shaped object in a parallel-jaw grasp by pushing it against features in the environment. The manipulation is shown from a ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | While there are no comparable available algorithms that can solve the type of regrasps we are interested in, we provide comparisons with our own ... | comparison identity and matched condition | p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,8 +106,6 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 | body limitation/failure cue | These include sampling with rejection by a feasibility check for stable pushing [3], and a complementarity formulation (MNCP) that allows both sticking and slipping ... | p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
 | body limitation/failure cue | We believe that the extension and application of motion cones to more general settings provides new opportunities for fast and robust manipulation through contact. | p. 8 (VIII. DISCUSSION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -128,14 +115,6 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 | Snapshots of the experimental run are is shown in Fig. | p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
 | 9: Simulation and experimental run for a pushing strategy to regrasp the aluminum object with low friction pushers. | p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: To make a push inside the gravity-free motion cone stable in the gravity plane, the unit grasp wrench can be scaled such that ...
@@ -144,9 +123,8 @@ PDF body evaluation/result cue (p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RES
 - **p. 8 / VIII. DISCUSSION - extractive body cue:** We believe that the extension and application of motion cones to more general settings provides new opportunities for fast and robust manipulation through contact.
 
 - **Evidence anchors reviewed:** datasets p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), metrics p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), results p. 8 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS), p. 7 (VII. REGRASP EXAMPLES AND EXPERIMENTAL RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

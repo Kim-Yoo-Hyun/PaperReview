@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4.
 - **p. 7 / 5.3. Experiment Settings - extractive body cue:** Qualitative comparisons on both synthetic (1st-2nd rows) and real-world (3rd-4th rows) datasets.
 - **p. 7 / 5.4. Quantitative Comparisons - extractive body cue:** Our DiETGS largely outperforms all baselines in PSNR, SSIM, and LPIPS on both synthetic and real-world datasets, showing the effectiveness of our framework to leverage ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Given a set of blurry images and corresponding event streams, we propose a novel framework to construct deblurring 3DGS by jointly leveraging the ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4.
 | Figure 2. Overall framework of our DiET-GS. Stage 1 (DiET-GS) optimizes the deblurring 3DGS with the event streams and diffusion prior. To preserve accurate ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Table 2. Ablation study on DiET-GS and DiET-GS++ 3DGS. 2) We find that our DiET-GS is capable of restor- ing cleaner textures and clearer ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4.
 | Our baselines are divided into three categories. | comparison identity and matched condition | p. 6 (5.3. Experiment Settings) |
 | Specifically, an image deblurring method MPRNet [63], and event-based deblurring methods EDI [33] and EFNet [48] are adopted as baselines. | comparison identity and matched condition | p. 6 (5.3. Experiment Settings) |
 | Figure 6. Ablation on Ledi simul (1st row) and Lrsd (S1) (2nd row). adding EDI simulation Ledi simul further aids fine-grained deblurring as shown ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4.
 | body limitation/failure cue | Finally, given ˆC as conditional input, the UNet backbone of pretrained diffusion model predicts the noise residual of z′t to derive the denoised latent ... | p. 6 (Dataset) |
 | body limitation/failure cue | We employ three standard metrics: Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), and VGG-based Learned Perceptual Image Patch Similarity (LPIPS) [65] to ... | p. 7 (5.3. Experiment Settings) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4.
 | 3, and encode it to a latent z0 = E( ˆCB) via a pretrained VAE encoder E. | p. 5 (4. Our Method) |
 | Subsequently, we apply the forward process of the diffusion model by introducing noise at timesteps t and t -1 based on a predetermined noising ... | p. 5 (4. Our Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Dataset - extractive body cue:** Gaussian noise samples at timesteps t and t -1 are then introduced to z′0 to get noised latents z′t and z′t-1.
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4.
 - **p. 7 / 5.3. Experiment Settings - extractive body cue:** We employ three standard metrics: Peak Signal-to-Noise Ratio (PSNR), Structural Similarity Index Measure (SSIM), and VGG-based Learned Perceptual Image Patch Similarity (LPIPS) [65] to evaluate ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.2. Datasets), p. 6 (5.2. Datasets), p. 7 (5.3. Experiment Settings), p. 7 (5.4. Quantitative Comparisons), metrics p. 6 (Figure/Table caption), p. 6 (5.1. Implementation Details), p. 7 (5.3. Experiment Settings), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (5.4. Quantitative Comparisons), p. 7 (5.3. Experiment Settings), p. 8 (Figure/Table caption), p. 6 (5.3. Experiment Settings), p. 6 (5.3. Experiment Settings), p. 8 (Figure/Table caption), results p. 7 (5.4. Quantitative Comparisons), p. 7 (5.4. Quantitative Comparisons), p. 8 (Figure/Table caption), p. 6 (Dataset), p. 6 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

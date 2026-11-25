@@ -41,8 +41,6 @@ PDF body evaluation/result cue (p. 1 (Abstract), p. 9 (Figure/Table caption)): T
 - **p. 2 / Abstract - extractive body cue:** Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of rotation ...
 - **p. 2 / Abstract - extractive body cue:** In this paper, we explain the mathematical conditions that such a 3D rotation- and translationequivariant network must satisfy, provide several examples of equivariant-compatible network components, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 1: Example of V (l) acm representing two point masses with velocities and accelerations. Colored brackets indicate the a (point), c (channel), and m ...
@@ -72,20 +70,11 @@ PDF body evaluation/result cue (p. 1 (Abstract), p. 9 (Figure/Table caption)): T
 | Equivariance confers three main benefits: First, this is more efficient than data augmentation to obtain 3D rotation-invariant output, making computation and training less expensive. | definition/direction/unit from same section | p. 2 (Abstract) |
 | Figure 3: Network diagrams for shape classification task showing how information flows between tensors of different order. Clebsch-Gordan tensors are implied in the arrows ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | This is significantly more important in 3D than in 2D: Without equivariant filters like those in our design, achieving an angular resolution of δ ... | comparison identity and matched condition | p. 2 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,27 +102,16 @@ PDF body evaluation/result cue (p. 1 (Abstract), p. 9 (Figure/Table caption)): T
 |---|---|---|
 | body limitation/failure cue | Any network that relies solely upon distances (such as SchNet [2]) or angles between points (such as ANI-1 [15]) cannot distinguish these shapes, but ... | p. 7 (2 Related work) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Finally, the network naturally encodes geometric tensors (such as scalars, vectors, and higher-rank geometric objects), mathematical objects that transform predictably under geometric transformations of ... | p. 2 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 2 Related work - extractive body cue:** Any network that relies solely upon distances (such as SchNet [2]) or angles between points (such as ANI-1 [15]) cannot distinguish these shapes, but ours ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), metrics p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), baselines p. 2 (Abstract), results p. 1 (Abstract), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

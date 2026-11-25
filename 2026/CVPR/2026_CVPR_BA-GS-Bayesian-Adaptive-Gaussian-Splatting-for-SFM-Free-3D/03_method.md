@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 - **p. 6 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** The Kalman filter fuses priors with measurements, where the noise covariance is adjusted by gradient and density.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.3. Kalman Filtering for Position Denoising), p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 - **p. 5 / 4.3. Kalman Filtering for Position Denoising - extractive body cue:** The state update equation can be written as: xi,t = Ftxi,t-1 + wt (9) where Ft is the state transition matrix, and wt represents 26128
 - **p. 4 / 4.1. Variational Bayesian Initialization - extractive body cue:** Each point is projected into valid image regions, checked for depth consistency, and assigned fused color and depth gradients.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Since, exact, posterior, distribution, intractable, most, mixture, models, introduce, variational, optimized, close, possible, true, Where, denotes, latent, variables, indicating, cluster.
 - **Relevant PDF headings:** 2.3. Probabilistic Approaches in Neural Rendering (p. 3); 4. Methods (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (4.1. Variational Bayesian Initialization), p. 4
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
 - **p. 8 / 6. Conclusion - extractive body cue:** Future works will explore richer priors, extending the Bayesian formulation to color and opacity estimation.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Variational Bayesian Initialization), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.2. Prior-Guided Adaptive Density Control), p. 5 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), objective p. 4 (4.1. Variational Bayesian Initialization), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 5 (4.3. Kalman Filtering for Position Denoising), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 4 (4.1. Variational Bayesian Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), temporal p. 2 (2. Global Initialization), p. 6 (4.3. Kalman Filtering for Position Denoising), p. 6 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 1 (Abstract), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

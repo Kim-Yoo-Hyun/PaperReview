@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (7.4. Results and Analysis), p. 7 (7.4. Res
 - **p. 8 / 7.4. Results and Analysis - extractive body cue:** We use the Synthia datasets with and without noise for 3D and 4D analysis and results are presented in Tab.
 - **p. 8 / 7.4. Results and Analysis - extractive body cue:** Specifically, when we simulate noise in sensory inputs on the 4D Synthia dataset, we can observe that the 4D networks are more robust to noise.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: An example of 3D video: 3D scenes at different time steps. Best viewed on display. 1D: Line 2D: Square 3D: Cube 4D: Tesseract
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 7 (7.4. Results and Analysis), p. 7 (7.4. Res
 | Table 3: Segmentation results on the noisy Synthia 4D dataset IoU Building Road Sidewalk Fence Vegetation Pole | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | However, the results quickly saturate. | definition/direction/unit from same section | p. 8 (7.4. Results and Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 7 (7.4. Results and Analysis), p. 7 (7.4. Res
 | It allows us to gauge the performance of the high-dimensional networks with the same architecture with other state-of-the-art methods. | comparison identity and matched condition | p. 7 (7. Experiments) |
 | Note that the number of parameters added to the 4D network compared with the 3D network is less than 6.4 % and 6e-3 % ... | comparison identity and matched condition | p. 8 (7.4. Results and Analysis) |
 | We use various 3D and 4D networks with and without TS-CRF. | comparison identity and matched condition | p. 8 (7.4. Results and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 7 (7.4. Results and Analysis), p. 7 (7.4. Res
 | body limitation/failure cue | Since the dataset is purely synthetic, we added various noise to the input point clouds to simulate noisy observations. | p. 7 (7.3. Datasets) |
 | body limitation/failure cue | As the input pointcloud coordinates are noisy, averaging along the temporal dimension introduces noise. | p. 8 (7.4. Results and Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 7 (7.4. Results and Analysis), p. 7 (7.4. Res
 | Algorithm 4 GPU Sparse Tensor AvgPooling Input: mapping M = (I, O), features F, one vector 1 SM = coo2csr(row=O, col=I, val=1) F ′ ... | p. 5 (4.5. Non-spatial Functions) |
 | 4 is equivalent to a generalized sparse convolution in the 7D space since φp is stationary and each edge between xi, xj can be ... | p. 6 (6.3. Learning with 7D Sparse Convolution) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7.4. Results and Analysis - extractive body cue:** Specifically, when we simulate noise in sensory inputs on the 4D Synthia dataset, we can observe that the 4D networks are more robust to noise.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 7 (7.4. Results and Analysis), p. 7 (7.4. Res
 - **p. 8 / 7.4. Results and Analysis - extractive body cue:** As the input pointcloud coordinates are noisy, averaging along the temporal dimension introduces noise.
 
 - **Evidence anchors reviewed:** datasets p. 7 (7.3. Datasets), p. 7 (7.3. Datasets), p. 8 (7.4. Results and Analysis), p. 8 (7.4. Results and Analysis), metrics p. 7 (7.3. Datasets), p. 7 (7.2. Training and Evaluation), p. 8 (Figure/Table caption), p. 8 (7.4. Results and Analysis), baselines p. 7 (7.4. Results and Analysis), p. 7 (7. Experiments), p. 8 (7.4. Results and Analysis), p. 8 (7.4. Results and Analysis), results p. 7 (7.4. Results and Analysis), p. 7 (7.4. Results and Analysis), p. 8 (7.4. Results and Analysis), p. 8 (7.4. Results and Analysis), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

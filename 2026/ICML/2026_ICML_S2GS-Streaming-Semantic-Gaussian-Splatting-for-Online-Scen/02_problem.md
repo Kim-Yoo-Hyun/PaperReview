@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 5 (3.4. Language-drive
 | body cue at p. 6 | This is expected, since offline baselines can exploit non-causal cross-view aggregation over the full input set to better ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 5 (3.4. Language-drive
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 2 (1. Introduction), objective p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 4 (3.3. Online Instance Tracking and Semantic), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 4 (3.2. Causal Transformer for 3D Gaussian Regression), p. 5 (3.4. Language-driven Open-vocabulary Segmentation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

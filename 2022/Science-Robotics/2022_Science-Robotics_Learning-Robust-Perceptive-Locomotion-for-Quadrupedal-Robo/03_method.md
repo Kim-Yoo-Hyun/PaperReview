@@ -46,7 +46,6 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 - **p. 8 / 4. MATERIALS AND METHODS - extractive body cue:** Overview We train a neural network policy in simulation and then perform zeroshot sim-to-real transfer.
 - **p. 1 / 1. INTRODUCTION - extractive body cue:** An elevation map is commonly used to represent geometric terrain information extracted from depth sensor measurements [14-17].
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 - **p. 8 / 4. MATERIALS AND METHODS - extractive body cue:** Overview We train a neural network policy in simulation and then perform zeroshot sim-to-real transfer.
 - **p. 8 / 4. MATERIALS AND METHODS - extractive body cue:** First, a teacher policy is trained with RL to follow a random target velocity over randomly generated terrain with random disturbances.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Overview, train, neural, network, policy, simulation, then, perform, zeroshot, sim-to-real, transfer, First, teacher, trained, follow, random, target, velocity, over, randomly.
 - **Relevant PDF headings:** 4. MATERIALS AND METHODS (p. 8); 1. Teacher policy training (p. 10); 2. Student policy training (p. 10).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,25 +102,14 @@ PDF body method statement (p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS A
 - **p. 13 / Figure/Table caption - extractive body cue:** Fig. 6. Details of robust terrain perception components. (A) During student training, random noise is added to the height samples. The noise is sampled from ...
 - **p. 9 / Figure/Table caption - extractive body cue:** Fig. 4. Internal belief state inspection during perceptive failure using a learned belief decoder. Red dots indicate height samples given as input to the policy. ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Robust locomotion in the wild. The presented locomotion controller was extensively tested in a variety of complex environments over multiple seasons. The controller ...
-- **p. 13 / Figure/Table caption - extractive body cue:** Fig. 6. Details of robust terrain perception components. (A) During student training, random noise is added to the height samples. The noise is sampled from ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (4. MATERIALS AND METHODS), p. 8 (4. MATERIALS AND METHODS), p. 10 (1. Teacher policy training), objective 본문 anchor 없음, temporal p. 13 (2. Perturbing the height values), p. 11 (3. Deployment), p. 12 (2. Perturbing the height values), p. 11 (3. Deployment), p. 12 (3. Deployment), p. 1 (1. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

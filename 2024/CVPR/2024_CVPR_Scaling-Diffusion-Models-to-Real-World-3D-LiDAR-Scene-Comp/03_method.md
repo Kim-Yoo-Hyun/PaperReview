@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. 
 - **p. 6 / 4.1. Scene reconstruction - extractive body cue:** Even though our method is not optimized over a voxel representation, we still achieve the best performance, showing that our scene completion is at the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Denoising diffusion probabilistic models), p. 4 (3.4. Noise prediction regularization), p. 4 (3.4. Noise prediction regularization), p. 5 (3.4. Noise prediction regularization), p. 6 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. 
 - **p. 4 / 3.3. Local point denoising - extractive body cue:** Besides, to complete the LiDAR scan, we need more points than the input scan.
 - **p. 5 / 3.6. Noise predictor architecture - extractive body cue:** Then, we compute F′ l = W′ l ⊙Fl as an element-wise multiplication, which is then feed as the input to layer l, as depicted ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. 
 - **p. 5 / 4. Experiments - extractive body cue:** We train our model for 20 epochs, using only the training set from SemanticKITTI.
 - **p. 6 / Method - extractive body cue:** For all baselines, we used their official code and the provided weights also trained on SemanticKITTI.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** refinement, network, same, MinkUNet, architecture, noise, predictor, without, conditioning, encoder, Then, model, predict, conditioned, LiDAR, scan, null, token, given, probability.
 - **Relevant PDF headings:** 3. Approach (p. 3); 3.1. Denoising diffusion probabilistic models (p. 3); 3.6. Noise predictor architecture (p. 5); Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. 
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 4. Completion metric where the IoU is computed against the ground truth and prediction grids with different resolutions. Tab. 3 shows the IoU of ...
 - **p. 8 / 5. Conclusion - extractive body cue:** We define each point as the origin of the sampled Gaussian noise, learning an iterative denoising process to gradually predict offsets to reconstruct the scene ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.6. Noise predictor architecture), p. 4 (3.2. Diffusion scene completion), p. 5 (3.6. Noise predictor architecture), p. 3 (3.1. Denoising diffusion probabilistic models), p. 3 (3.1. Denoising diffusion probabilistic models), p. 6 (4.1. Scene reconstruction), objective p. 4 (3.4. Noise prediction regularization), p. 4 (3.4. Noise prediction regularization), p. 3 (3.1. Denoising diffusion probabilistic models), p. 5 (3.4. Noise prediction regularization), p. 6 (4.1. Scene reconstruction), p. 6 (4.1. Scene reconstruction), temporal p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (Method), p. 6 (4.1. Scene reconstruction), p. 8 (4.3. Noise regularization), p. 8 (4.3. Noise regularization).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** Prior work (Brandfonbrener et al., 2021; Peng et al., 2019) has proposed directly using this objective to learn Qπβ, and then train the policy πψ ...
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (3 PRELIMINARIES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** This approach does not require explicit constraints or explicit regularization of out-ofdistribution actions during value function training, though our policy extraction step does implicitly enforce ...
 - **p. 3 / 3 PRELIMINARIES - extractive body cue:** This is important because out-of-distribution actions a′ can produce erroneous values for Qˆθ(s′, a′) in the above objective, often leading to overestimation as the policy ...
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 - **p. 9 / 3 PRELIMINARIES - extractive body cue:** To evaluate the finetuning capability of various RL algorithms, we first run offline RL on each dataset, then run 1M steps of online RL, and ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We alternate between fitting this value function with expectile regression, and then using it to compute Bellman backups for training the Q-function.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** main, insight, instead, evaluating, unseen, actions, latest, policy, approximate, improvement, step, implicitly, treating, state, value, function, random, variable, randomness, determined.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PREL
 - **p. 7 / 3 PRELIMINARIES - extractive body cue:** Since IQL (d) performs iterative dynamic programming, it correctly propagates the signal, and the values are no longer dominated by noise.
 - **p. 7 / 3 PRELIMINARIES - extractive body cue:** When the static dataset is heavily corrupted by suboptimal actions, one-step policy evaluation results in a value function that degrades to zero far from the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (ABSTRACT), p. 3 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 7 (3 PRELIMINARIES), objective p. 3 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), temporal p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (2 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 - **p. 3 / I. INrRopucTION - extractive body cue:** In the real-world, such constraints are difficult to acquire in novel environments, much less in the presence of human teachers.
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 3 (I. INrRopucTION), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 4 (B. Safe and Autonomous Real-World Adaptation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 - **p. 4 / B. Safe and Autonomous Real-World Adaptation - extractive body cue:** We adopt the standard MDP formalism and represent each segment by the tuple M = (S,A, R,T,7). where S is the state space, A is ...
 - **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** The architecture for the action prediction policy network is composed by a PointNet [66] encoder for the visual information, and a SentenceTransformer [67] for the ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 - **p. 6 / C. Learning from Previous Successful Exploration - extractive body cue:** We also evaluate if the data generated to train our safety Qfunctions would suffice for training task policies: we include Imitation Learning (1L) baselines based ...
 - **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** To that end, we then train an action prediction policy network that maps point clouds, P" and language description of the task, {to actions, e.g. ...
 - **p. 2 / I. INrRopucTION - extractive body cue:** Other works have explored human video modeling as a pretraining objective [19, 20].
-- **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** The architecture for the action prediction policy network is composed by a PointNet [66] encoder for the visual information, and a SentenceTransformer [67] for the ...
 - **p. 3 / I. INrRopucTION - extractive body cue:** Constrained RL methods (48, 49, 50, 51] similarly allow for policy learning while obeying constraints, though typically require closed-form constraints available at runtime.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** architecture, action, prediction, policy, network, composed, PointNet, encoder, visual, information, SentenceTransformer, task, description, combined, MLP, head, trained, geometric, augmentations, rotations.
 - **Relevant PDF headings:** A. Model Details (p. 13).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +117,13 @@ PDF body method statement (p. 5 (C. Learning from Previous Successful Exploratio
 - **p. 8 / V. LIMITATIONS AND FUTURE WORK - extractive body cue:** Scaling to other types of safety violations or task failures presents an opportunity for future work.
 - **p. 5 / C. Learning from Previous Successful Exploration - extractive body cue:** We evaluate SaFEMIMIC in 7 challenging multi-step mobile ‘manipulation tasks demonstrated by humans. ‘The tasks all consist of multiple stages and require navigation, rigid-body pick-and-place, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 6 (C. Learning from Previous Successful Exploration), p. 1 (Abstract), p. 5 (C. Learning from Previous Successful Exploration), p. 4 (B. Safe and Autonomous Real-World Adaptation), objective p. 4 (B. Safe and Autonomous Real-World Adaptation), p. 2 (I. INrRopucTION), p. 1 (Abstract), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 3 (I. INrRopucTION), temporal p. 1 (Abstract), p. 1 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 2 (I. INrRopucTION), p. 4 (I. INrRopucTION), p. 4 (B. Safe and Autonomous Real-World Adaptation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

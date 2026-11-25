@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 6 / 3 Preliminaries - extractive body cue:** This approach has the advantage of explicitly learning on signals from the Q-function, while still making the policy stay close to the behavior dataset.
 - **p. 9 / 6 Discussion - extractive body cue:** We believe solving these questions will result in significantly better and more capable self-improving robotic models.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview. We consider the batch online RL problem setting, in which a policy is trained on an initial dataset, used to collect batches ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | Figure 12: Normalized returns of value-based RL for Robomimic Square and MimicGen Stack. Value-based RL with more rollouts per iteration. We also report runs ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 | Figure 1: Overview. We consider the batch online RL problem setting, in which a policy is trained on an initial dataset, used to collect ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | Implicit policy extraction significantly outperforms explicit policy extraction in batch online RL. | comparison identity and matched condition | p. 6 (3 Preliminaries) |
 | Given the advantages of value-based RL compared to IL and filtered-IL methods in the batch online RL setting from Section 4.1, the second axis ... | comparison identity and matched condition | p. 6 (3 Preliminaries) |
 | We find that across all tasks and environments, the former significantly outperforms the latter. | comparison identity and matched condition | p. 7 (3 Preliminaries) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | One takeaway from this section is that for batch online RL, we cannot get away with just doing IL or filtered-IL as many prior ... | p. 6 (3 Preliminaries) |
 | body limitation/failure cue | The policy extracted from explicit policy extraction cannot adjust to this shift as well as implicit policy extraction, resulting in subpar performance. | p. 7 (3 Preliminaries) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | To control for the advantages of the implicit policy extraction method in batch online RL that we observed in Section 4.2, we additionally run ... | p. 7 (3 Preliminaries) |
 | We will open source the code for the final recipe. | p. 9 (6 Discussion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Discussion - extractive body cue:** Our work presents a general recipe on batch online RL, though it does have a number of limitations.
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 7 / 3 Preliminaries - extractive body cue:** The policy extracted from explicit policy extraction cannot adjust to this shift as well as implicit policy extraction, resulting in subpar performance.
 
 - **Evidence anchors reviewed:** datasets p. 5 (3 Preliminaries), p. 8 (3 Preliminaries), p. 7 (3 Preliminaries), p. 7 (3 Preliminaries), p. 8 (3 Preliminaries), p. 9 (6 Discussion), metrics p. 9 (6 Discussion), p. 15 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), p. 7 (Figure/Table caption), baselines p. 13 (Figure/Table caption), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), results p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

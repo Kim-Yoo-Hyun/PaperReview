@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4.2. 3D object localization), p. 8 (4.4. A
 - **p. 8 / 4.2. 3D object localization - extractive body cue:** We report the 3D localization performance on the Scannet dataset in Table 2a.
 - **p. 8 / 4.4. Ablation study - extractive body cue:** We conduct an ablation study using the ScanNet dataset on different hyper-parameters of Dr.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of 2D (left) vs. our direct 3D search (right) for open-vocabulary 3D scene understanding. The 2D approach relies on multiview rendering, incurring ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4.2. 3D object localization), p. 8 (4.4. A
 | Table 2. Quantitative comparison in the ScanNet dataset [4]. Left: Localization prediction is defined as 3D regions with a text similarity score above threshold. ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Figure 2. Visualization of discrepancy in rendered 2D features and 3D features. Color indicates a cosine similarity score between query features from a text ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.2. 3D object localization), p. 8 (4.4. A
 | Ablation study on (a) PQ and (b) Top-k Gaussians. | comparison identity and matched condition | p. 8 (4.4. Ablation study) |
 | Figure 1. Comparison of 2D (left) vs. our direct 3D search (right) for open-vocabulary 3D scene understanding. The 2D approach relies on multiview rendering, ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Table 2. Quantitative comparison in the ScanNet dataset [4]. Left: Localization prediction is defined as 3D regions with a text similarity score above threshold. ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (4.2. 3D object localization), p. 8 (4.4. A
 | body limitation/failure cue | Table 1. 3D object selection results on the LeRF-OVS dataset [17]. To measure 3D object selection performance, we calculate 2D segmentation accuracy on rendering ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | Figure 7. Qualitative results of 3D object localization. We visualize 3D localization activations (yellow) for "chair" and "desk" in the ScanNet dataset, comparing our ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (4.2. 3D object localization), p. 8 (4.4. A
 | These centroids are learned via clustering, creating a codebook for each subspace. | p. 5 (3.2. Product-Quantized CLIP embeddings) |
 | Once the centroids are established, each sub-vector is replaced by the index of the nearest centroid in its respective codebook. | p. 5 (3.2. Product-Quantized CLIP embeddings) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.1. 3D object selection - extractive body cue:** For LangSplat-m, the activations often shows random 3D Gaussians or fail to localize entirely (e.g., see "coffee mug"), highlighting the limitations of rasterization-based methods and ...
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 8 (4.2. 3D object localization), p. 8 (4.4. A
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 7. Qualitative results of 3D object localization. We visualize 3D localization activations (yellow) for "chair" and "desk" in the ScanNet dataset, comparing our method ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. 3D object selection), p. 8 (4.2. 3D object localization), p. 8 (4.4. Ablation study), metrics p. 5 (Figure/Table caption), p. 7 (4.2. 3D object localization), p. 7 (4.2. 3D object localization), p. 8 (4.2. 3D object localization), p. 8 (4.2. 3D object localization), p. 5 (Figure/Table caption), baselines p. 7 (4.1. 3D object selection), p. 7 (4. Experiments), p. 8 (4.3. 3D semantic segmentation), p. 8 (4.4. Ablation study), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 8 (4.2. 3D object localization), p. 8 (4.4. Ablation study), p. 7 (4. Experiments), p. 7 (4.1. 3D object selection), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

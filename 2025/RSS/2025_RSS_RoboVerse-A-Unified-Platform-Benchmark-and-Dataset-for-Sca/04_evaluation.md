@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 - **p. 4 / Dataset - extractive body cue:** Powered by METASIM, the simulation platform facilitates dataset creation and benchmark construction.
 - **p. 4 / Dataset - extractive body cue:** 2: ROBOVERSE consists of a simulation platform, a largescale, high-quality dataset, and unified benchmarks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: ROBOVERSE comprises a scalable simulation platform, a large-scale synthetic dataset, and unified benchmarks. The simulation platform supports seamless integration of new tasks and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 | Specifically, we integrate the PPO [83] algorithm from both Stable-Baselines3 [76] and rsl_sl [80] into our METASIM interface, enabling straightforward task definition, seamless environment ... | definition/direction/unit from same section | p. 9 (C. Reinforcement Learning Benchmark) |
 | We successfully migrate the HumanoidBench [84] from MwoCo to RoBOVERSE, enabling training across multiple simulators (Isaac Sim and MuloCo) with consistent interfaces. | definition/direction/unit from same section | p. 10 (C. Results on the Reinforcement Learning Benchmark) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 | stable policy convergence across simulators, achieving comparable performance to native MuJoCo baselines. | comparison identity and matched condition | p. 11 (C. Results on the Reinforcement Learning Benchmark) |
 | Compared to super vised learning tasks, it is relatively difficult to evaluate the performance of a robotics model. | comparison identity and matched condition | p. 3 (C. Benchmarking in Robotics) |
 | We define a unified training and evaluation protocol within the ROBOVERSE platform and implement standardized baselines and learning frameworks for benchmarking. | comparison identity and matched condition | p. 8 (A. Benchmark Overview) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 | body limitation/failure cue | Fig. 1: ROBOVERSE comprises a scalable simulation platform, a large-scale synthetic dataset, and unified benchmarks. The simulation platform supports seamless integration of new tasks ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | RoBOVERSE provides a unified solution for large-scale, high-quality, and diverse synthetic data, It enables agents to train on a large set of environments and ... | p. 3 (B. Large-Scale Roboties Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 | Advancements in computer graphics have contributed to the development of high-fidelity simulators, which are widely used in robotics research and development. | p. 3 (A. Robotics Simulators) |
 | The usage of the APIs is illustrated in Code 1. | p. 4 (Dataset) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / B. Large-Scale Roboties Dataset - extractive body cue:** Moreover, simulation-based data often fails to capture complex physics and diverse task variations found in the real world (52, 22), potentially causing coverfitting to specific ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 11 (C. Results on the Reinforcement Learning 
 - **p. 3 / B. Large-Scale Roboties Dataset - extractive body cue:** RoBOVERSE provides a unified solution for large-scale, high-quality, and diverse synthetic data, It enables agents to train on a large set of environments and simulators ...
 
 - **Evidence anchors reviewed:** datasets p. 11 (dataset), p. 7 (IV. ROBOVERSE DATASET), p. 9 (C. Reinforcement Learning Benchmark), p. 5 (IV. ROBOVERSE DATASET), p. 3 (B. Large-Scale Roboties Dataset), p. 3 (B. Large-Scale Roboties Dataset), metrics p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 12 (dataset), p. 3 (C. Benchmarking in Robotics), p. 4 (Dataset), baselines p. 9 (B. Results on the Imitation Learning Benchmark), p. 10 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 3 (C. Benchmarking in Robotics), p. 8 (A. Benchmark Overview), results p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 11 (C. Results on the Reinforcement Learning Benchmark), p. 10 (B. Results on the Imitation Learning Benchmark), p. 12 (dataset), p. 6 (IV. ROBOVERSE DATASET).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 - **p. 8 / 4.5. Ablation Studies - extractive body cue:** Qualitative Results of Real-World Multi-View Diffusion. the Libero 10 benchmark.
 - **p. 7 / 4.4. Real World Experiments - extractive body cue:** The real-world results validate that incorporating 3Dconsistent visual representations provides substantial benefits for manipulation, making the proposed method highly effective across diverse environments and task ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of visual representation learning paradigms for robotic manipulation. (a) MAE based methods learn visual representations by reconstructing masked regions from observa- tions. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 | 3, the pretrained module enables the policy to maintain stable manipulation performance under large viewpoint shifts, whereas the baseline 23606 | definition/direction/unit from same section | p. 6 (4.3. View Generalization Experiments) |
 | Following [59], we also render multi-view data in the LIBERO Spatial environment to evaluate the robustness of our method under viewpoint variations. | definition/direction/unit from same section | p. 6 (4.3. View Generalization Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 | 4 offers a qualitative comparison of our pretrained model's capability of view transformation. | comparison identity and matched condition | p. 7 (4.3. View Generalization Experiments) |
 | 5, when the model is trained without robot centric data, the performance drops sharply, highlighting the importance of pretraining on robot centric datasets. | comparison identity and matched condition | p. 8 (4.5. Ablation Studies) |
 | Figure 1. Comparison of visual representation learning paradigms for robotic manipulation. (a) MAE based methods learn visual representations by reconstructing masked regions from observa- ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 | body limitation/failure cue | Figure 2. (Left) Stage 1: Multi-view diffusion pretraining reconstructs target views from source observations using Pl¨ucker rays, depth, and warped RGB depth pairs to ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | For the noise-level conditioning module, we employ a MoE design within each transformer Table 3. | p. 6 (4.2. Simulation Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 | Given a source input Oi = {Ii, Di} captured at pose Pi with intrinsic Ki, we first compute 3D point coordinates. | p. 4 (3.1. Multi-View Diffusion Pretraining) |
 | To perform the denoising process, we utilize the DDIM-solver, a numerical ODEbased sampler designed for diffusion models, and apply 10 denoising steps during inference. | p. 6 (4.2. Simulation Experiments) |
 | This design enables the policy to maintain temporal consistency in sequential action generation, preventing information leakage from future steps and improving smoothness and physical ... | p. 5 (3.2. Policy Learning) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 - **p. 6 / 4.2. Simulation Experiments - extractive body cue:** For the noise-level conditioning module, we employ a MoE design within each transformer Table 3.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Pretraining Setups), p. 5 (4.1. Pretraining Setups), p. 6 (4.2. Simulation Experiments), p. 7 (4.4. Real World Experiments), p. 6 (4.3. View Generalization Experiments), p. 8 (4.5. Ablation Studies), metrics p. 7 (4.4. Real World Experiments), p. 7 (4.3. View Generalization Experiments), p. 8 (4.5. Ablation Studies), p. 8 (4.5. Ablation Studies), p. 5 (4.1. Pretraining Setups), p. 5 (4.1. Pretraining Setups), baselines p. 6 (4.3. View Generalization Experiments), p. 7 (4.4. Real World Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.3. View Generalization Experiments), p. 8 (4.5. Ablation Studies), p. 1 (Figure/Table caption), results p. 7 (4.4. Real World Experiments), p. 7 (4.3. View Generalization Experiments), p. 8 (4.5. Ablation Studies), p. 5 (4.1. Pretraining Setups), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Simulation Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

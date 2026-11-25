@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.2. Sem
 - **p. 5 / 3.2.3. Gaussian Optimization - extractive body cue:** The SPARS3R constructed X can be directly used as the initialization for any Gaussian Splatting-based optimization method.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.2. Semantic Outlier Alignment), p. 4 (3.2.2. Semantic Outlier Alignment).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.2. Sem
 - **p. 2 / 1. Introduction - extractive body cue:** To address sparse point cloud initialization and pose inaccuracy in sparse-view NVS, we propose SPARS3R.
 - **p. 1 / 1. Introduction - extractive body cue:** Depth regularization [30], Gaussian floater pruning [55], and proximitybased Gaussian densification strategy [65] have been proposed to constrain and guide the scene structures.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.2. Sem
 
 - **p. 5 / 3.2.3. Gaussian Optimization - extractive body cue:** Here we use Splatfacto, developed under the NeRFStudio framework [49]; the Gaussian optimization loss is: \la be l {E q :training _lo ss} \begin {gathered} ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Here, Splatfacto, developed, under, NeRFStudio, framework, Gaussian, optimization, loss, training, begin, gathered, mathcal, lambda, tilde, textrm, D-SSIM, where, denote, rendered.
 - **Relevant PDF headings:** 2.1. 3D Models for Synthesizing Novel Views (p. 2); 3. Methods (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.2. Sem
 - **p. 5 / 4. Experiments - extractive body cue:** Since sparse-view registration can be unstable due to limited pairs, we perform multiple SfMs and pick the outcome that maximizes successful triangulation per image.
 - **p. 6 / 4.2. Ablation Studies - extractive body cue:** While it brings down the errors in some cases, such training pose optimization strategy does not work as well in more challenging datasets like Mip-NeRF ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.2. Semantic Outlier Alignment), p. 3 (3.2. SPARS3R), p. 3 (3.1. Preliminary), p. 5 (3.2.3. Gaussian Optimization), objective p. 5 (3.2.3. Gaussian Optimization), p. 4 (3.2.1. Global Fusion Alignment), p. 3 (3.1. Preliminary), p. 3 (3.2.1. Global Fusion Alignment), p. 4 (3.2.2. Semantic Outlier Alignment), p. 5 (3.2.3. Gaussian Optimization), temporal p. 4 (3.2.1. Global Fusion Alignment), p. 5 (3.2.3. Gaussian Optimization), p. 6 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 1 (Abstract), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

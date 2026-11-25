@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Ivrropuction), p. 6 (B. Training), p. 1 
 | body cue at p. 9 | Meanwhile, Table I! records the sensitivity scores for each of our mid-level experts as well as the robustness ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | This suggests that the benefits of more targeted feature utilization outweigh the slight decrease in robustness. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ robot_data writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (1. Ivrropuction), p. 1 (1. Ivrropuction), p. 2 (1. Ivrropuction), interface p. 6 (B. Training), p. 4 (V. ARCHITECTURE), p. 3 (1. Ivrropuction), p. 4 (1. Ivrropuction), objective p. 6 (B. Training), p. 5 (B. Training), p. 6 (B. Training).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 7 / 5.1. Results and Benchmark Evaluation - extractive body cue:** Performance on ScanQA benchmark validation set.
 - **p. 7 / 5.1. Results and Benchmark Evaluation - extractive body cue:** Scene-LLM performs the best among most metrics.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. An interactive 3D indoor scene example from an example iThor [1] scene. Scene-LLM is a 3D-visual-language model that can process both ego-centric and ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | Performance on ScanQA benchmark validation set. | definition/direction/unit from same section | p. 7 (5.1. Results and Benchmark Evaluation) |
 | Figure 2. Overview of the data generation process and Scene-LLM's architecture. The data generation comprises two stages: a 3D frame-language generation stage, which uses ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | We conducted ablation studies by replacing visual representation and extractor with those from other methods to demonstrate the effectiveness of our 3D visual representation, ... | comparison identity and matched condition | p. 5 (5. Experiments) |
 | We present results both with and without task-specific finetuning for a comprehensive anal2200 | comparison identity and matched condition | p. 6 (5.1. Results and Benchmark Evaluation) |
 | Table 4. Ablation Studies comparing different input modalities, 3D representation, pertaining strategy, and data augmentation on ScanQA and SQA3D benchmarks. #Param reports the number ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | While Q-Former is a robust downsampling technique, it exhibits slightly lower performance compared to direct spatial down-sampling in our benchmarks, aligning with findings from ... | p. 8 (5.2. Ablation Studies and Discussions) |
 | body limitation/failure cue | It measures the ability to create precise and robust plans from a high-level goal in 3D interactive environments from iTHOR [1]. | p. 6 (5.1. Results and Benchmark Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | We finetune Scene-LLM with only 2k steps to align its output with Alfred's highlevel command format. | p. 7 (C VoteNet+MCAN [78]) |
 | These features are reduced to three dimensions via Principal Component Analysis (PCA) and color-coded based on their PCA components for clarity. | p. 7 (C VoteNet+MCAN [78]) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** Scene-LLM faces limitations such as LLM input token length, challenges in processing dynamic scenes without a state detector, lacking geometry feature, and language hallucinations.
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 6 / 5.1. Results and Benchmark Evaluation - extractive body cue:** It measures the ability to create precise and robust plans from a high-level goal in 3D interactive environments from iTHOR [1].
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Results and Benchmark Evaluation), p. 5 (5.1. Results and Benchmark Evaluation), p. 6 (5.1. Results and Benchmark Evaluation), p. 6 (5.1. Results and Benchmark Evaluation), p. 7 (5.1. Results and Benchmark Evaluation), p. 7 (5.1. Results and Benchmark Evaluation), metrics p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.1. Results and Benchmark Evaluation), p. 6 (5.1. Results and Benchmark Evaluation), baselines p. 6 (5.1. Results and Benchmark Evaluation), p. 8 (Figure/Table caption), p. 5 (5. Experiments), p. 6 (5.1. Results and Benchmark Evaluation), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.1. Results and Benchmark Evaluation), p. 6 (5.1. Results and Benchmark Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

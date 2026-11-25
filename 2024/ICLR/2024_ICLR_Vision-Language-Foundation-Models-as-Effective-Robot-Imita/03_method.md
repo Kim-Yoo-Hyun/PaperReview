@@ -48,7 +48,6 @@ PDF body method statement (p. 8 (2) Does vision-language (VL) pre-training impro
 - **p. 9 / 2) Does vision-language (VL) pre-training improve downstream robotic tasks? - extractive body cue:** To our delight, recent progress on large-scale real robotics data (Padalkar et al., 2023) has shown the potential of fine-tuning large VLMs for real robots, ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 8 (2) Does vision-language (VL) pre-training impro
 - **p. 3 / 3 BACKGROUND - extractive body cue:** For instance, in the testbed of CALVIN (Mees et al., 2022b), the observations consist of simulated camera captures from two different views, and the action ...
 - **p. 5 / 3 BACKGROUND - extractive body cue:** Formally, if we denote xi ∈Rd the i -th embedded token of the instruction, M the instruction length, and X ∈RM×d is the embedded matrix ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 8 (2) Does vision-language (VL) pre-training impro
 - **p. 9 / 2) Does vision-language (VL) pre-training improve downstream robotic tasks? - extractive body cue:** Instead of taking only the next action to execute and performing VLM inference every time for new observations to predict future actions, open-loop control can ...
 - **p. 9 / 2) Does vision-language (VL) pre-training improve downstream robotic tasks? - extractive body cue:** All variants are trained and evaluated for the same training epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** MLP, hist, takes, history, frames, vision, encoder, position, embedding, encodes, information, through, cross-attention, layers, feature, fusion, decoder, verify, necessity, pre-training.
 - **Relevant PDF headings:** B.2 COMPARISON WITH PRE-TRAINED ROBOTICS REPRESENTATION MODELS (p. 14); B.3 FINE-TUNE THE FULL MODEL (p. 15); C.1 ILLUSTRATION OF POLICY HEADS/FORMULATION (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,23 +108,13 @@ PDF body method statement (p. 8 (2) Does vision-language (VL) pre-training impro
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 9: Success rates by task of variants of RoboFlamingo. Each task is evaluated 100 times. Task Name M-3B M-3B-IFT G-4B G-4B-IFT L-9B M-9B
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** Appendix B.1 also reveals how the original VL abilities change after fine-tuning.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), p. 8 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), objective p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?), temporal p. 4 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 6 (3 BACKGROUND), p. 4 (3 BACKGROUND), p. 5 (3 BACKGROUND), p. 1 (ABSTRACT).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

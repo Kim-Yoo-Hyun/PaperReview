@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 - **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
 - **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** For primitives and data partitioning, as well as parallel tuning, we follow the default parameter setting of CityGaussian (Liu et al., 2024) on both aerial ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the superiority of CityGaussianV2. (a) Our method reconstructs large-scale complex scenes with accurate geometry from multi-view RGB images, restoring intricate structures ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | Figure 3: Illustration of the motivation and effectiveness of our Elongation Filter. We take the tuning of one block of Rubble (Turki et al., ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 5: Illustration of the evaluation process. ever, there is still no universally accepted protocol for assessing geometric accuracy in large-scale scene reconstruction. Recently, ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | For MatrixCity-Aerial, our method achieves the best surface quality among all algorithms, with the F1 score being twice that of 2DGS and outperforming CityGaussian ... | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | Here we take 2DGS ((Huang et al., 2024)) as our baseline. | comparison identity and matched condition | p. 10 (5 EXPERIMENTS) |
 | Table 4: Detailed comparison among SOTA among parallel training methods. 2DGS* here means applying CityGS's training strategy to 2DGS without our proposed optimization mechanism. ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,7 +115,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Besides, these methods generally take over 10 hours for training.
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** Additionally, by using the result from 7,000 iterations as a pre-train, the total training time decreases from 3 hours to 2 hours, with the model ...
 - **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
-- **p. 17 / C MORE IMPLEMENTATION DETAILS - extractive body cue:** The Residence scene of GauU-Scene is divided into 4×2 blocks, while Russian Building and Modern Building scenes are divided into 3×3 blocks.
 
 ## Generalization and Failure Cases
 
@@ -138,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | body limitation/failure cue | Table 1: Comparison with SOTA reconstruction methods. "NaN" means no results due to NaN error. "FAIL" means the method fails to extract meaningful mesh ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | LightGaussian's (Fan et al., 2023) pruning strategy, however, falls short in preserving rendering quality. | p. 10 (5 EXPERIMENTS) |
 | body limitation/failure cue | Table 5: Detailed geometry metrics on GauU-Scene datasets ((Xiong et al., 2024)). * means that the method fails to finish 60,000 iterations training and ... | p. 16 (Figure/Table caption) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -153,14 +139,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | When fine-tuning on GauU-Scene, the learning rate of position is reduced by 60%, while that of scaling is empirically reduced by 20%, as suggested ... | p. 17 (C MORE IMPLEMENTATION DETAILS) |
 | To be specific, it applies lower learning rates during tuning compared to pertaining, and the street view is trained with a significantly lower learning ... | p. 17 (C MORE IMPLEMENTATION DETAILS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** As shown, NeRF-based methods are more prone to failure due to the NaN outputs of the MLP or poor convergence under sparse supervision in large-scale ...
@@ -171,6 +149,5 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 - **p. 16 / Figure/Table caption - extractive body cue:** Table 5: Detailed geometry metrics on GauU-Scene datasets ((Xiong et al., 2024)). * means that the method fails to finish 60,000 iterations training and therefore ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 1 (Figure/Table caption), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 16 (Figure/Table caption), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

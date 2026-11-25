@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 16 (Figure/Tabl
 - **p. 12 / 4.1. Pretraining - extractive body cue:** For unseen tasks, we evaluate 10 tasks absent from training-such as ironing, painting, pulling carts, cube stacking, removing a hat from a mannequin, and untying ...
 - **p. 13 / 5.1. Main Results - extractive body cue:** We attribute this gap to the joint video-action formulation: while VLAs require massive robot data to learn direct observation-to-a ction mappings, WAMs leverage video generation ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Overview. By jointly predicting video and action, World Action Models (WAMs) inherit world physics priors that enable 1) effective learning from diverse, non-repetitive ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 16 (Figure/Tabl
 | Table 3: DreamZero-Flash Evaluation. Task progress on table bussing with varying denoising steps (± standard error). DreamZero-Flash recovers most of the 4-step performance using ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | Table 4: Model and Data Ablations. Task progress on PnP Easy tasks (± standard error). AR = autoregressive, BD = bidirectional. All models trained ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 16 (Figure/Tabl
 | For each baseline, we evaluate two initialization strategies: (1) from-scratch, using pretrained VLM weights without prior robot data training for a fair apple-to-apple comparison ... | comparison identity and matched condition | p. 10 (4. Experimental Setup) |
 | Figure 10: Posttraining Results. WAMs enable stronger post-training results across three tasks, indicating that environment generalization of DreamZero is retained after post-training. Q3. Do ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
 | We compare against two state-of-the-art Vision-Language-Action models (VLAs): GR00T N1.6 (Bjorck et al., 2025) and 𝜋0.5 (Physical Intelligence, 2025). | comparison identity and matched condition | p. 10 (4. Experimental Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 16 (Figure/Tabl
 | body limitation/failure cue | Figure 13: Bidirectional vs. Autoregressive WAMs. When the sampling point falls mid-task (T=20), bidirec- tional WAMs must subsample video to align with the language ... | p. 20 (Figure/Table caption) |
 | body limitation/failure cue | However, naively reducing steps degrades action quality because residual visual noise propagates into action predictions. | p. 9 (3.2.4. Implementation-level Optimizations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 16 (Figure/Tabl
 | Moreover, because video and action are jointly trained for strong cross-modal alignment, naively reducing action denoising steps degrades quality. | p. 8 (3.2.4. Implementation-level Optimizations) |
 | 3One might expect that generating only actions (not video) would accelerate inference, but at 14B scale we empirically found out that the speed gain ... | p. 8 (3.2.4. Implementation-level Optimizations) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 19 / 6. Discussion and Future Work - extractive body cue:** While DreamZero generalizes broadly across tasks and environments, it inherits limitations common to behavior cloning on tasks requiring sub-centimeter precision, such as key insertion or ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 16 (Figure/Tabl
 - **p. 9 / 3.2.4. Implementation-level Optimizations - extractive body cue:** However, naively reducing steps degrades action quality because residual visual noise propagates into action predictions.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4.1. Pretraining), p. 11 (4.1. Pretraining), p. 12 (4.1. Pretraining), p. 11 (4.1. Pretraining), p. 13 (5.1. Main Results), p. 10 (4.1. Pretraining), metrics p. 16 (Figure/Table caption), p. 13 (5.1. Main Results), p. 12 (4.1. Pretraining), p. 14 (Figure/Table caption), p. 13 (5.1. Main Results), p. 6 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (5.1. Main Results), p. 10 (4. Experimental Setup), p. 15 (Figure/Table caption), p. 10 (4. Experimental Setup), results p. 15 (Figure/Table caption), p. 16 (Figure/Table caption), p. 3 (Figure/Table caption), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), p. 12 (4.2. Post-training).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

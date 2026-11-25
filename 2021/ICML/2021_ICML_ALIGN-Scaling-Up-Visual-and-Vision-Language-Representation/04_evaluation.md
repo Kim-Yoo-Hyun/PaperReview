@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 - **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Multimodal retrieval performance on Crisscrossed Captions (CxC) dataset.
 - **p. 5 / 5.1. Image-Text Matching & Retrieval - extractive body cue:** Spearman's R Bootstrap Correlation (×100) on Crisscrossed Captions (CxC) dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. A summary of our method, ALIGN. Visual and language representations are jointly learned from noisy image alt-text data. The representations can be used ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 | The learning rate is warmed up linearly to 1e-3 from zero in 10k steps, and then linearly decay to zero in 1.2M steps (∼12 ... | definition/direction/unit from same section | p. 4 (5. Experiments and Results) |
 | Table 11. Multimodal retrieval performance on Multi30K dataset. The metric is the mean Recall (mR). | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 | With fine-tuning, ALIGN outperforms all existing methods by a large margin, including those that employ more complex cross-modal attention layers such as ImageBERT (Qi ... | comparison identity and matched condition | p. 4 (5.1. Image-Text Matching & Retrieval) |
 | ALIGN is compared with VSE++ (Faghri et al., 2018), VSRN (Li et al., 2019), DEI2T (Parekh et al., 2021), and DET2T+I2T (Parekh et al., ... | comparison identity and matched condition | p. 5 (5.1. Image-Text Matching & Retrieval) |
 | For instance, the improvements on text-to-text and image-to-image retrieval tasks (in particular the former) are less significant compared to those on image-to-text and text-to-image ... | comparison identity and matched condition | p. 5 (5.1. Image-Text Matching & Retrieval) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 | body limitation/failure cue | We show that linear relationships between + "red" + "forest" + "desert" + "orange" + "blue" + "purple" + "from distance" + "beige" + ... | p. 8 (7. Analysis of Learned Embeddings) |
 | body limitation/failure cue | Similar to CLIP, ALIGN shows great robustness on classification tasks with different image distributions. | p. 5 (5.2. Zero-shot Visual Classification) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,20 +139,11 @@ PDF body evaluation/result cue (p. 6 (5.2. Zero-shot Visual Classification), p. 
 | The class embedding is computed by averaging the embeddings of all templates followed by an L2-normalization. | p. 5 (5.2. Zero-shot Visual Classification) |
 | If we directly feed the texts of classnames into the text encoder, ALIGN is able to classify images into candidate classes via image-text retrieval. | p. 5 (5.2. Zero-shot Visual Classification) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Analysis of Learned Embeddings - extractive body cue:** We show that linear relationships between + "red" + "forest" + "desert" + "orange" + "blue" + "purple" + "from distance" + "beige" + "red" ...
 - **p. 5 / 5.2. Zero-shot Visual Classification - extractive body cue:** Similar to CLIP, ALIGN shows great robustness on classification tasks with different image distributions.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 3 (3. A Large-Scale Noisy Image-Text Dataset), p. 3 (3. A Large-Scale Noisy Image-Text Dataset), p. 4 (5.1. Image-Text Matching & Retrieval), metrics p. 5 (5.2. Zero-shot Visual Classification), p. 5 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 8 (Figure/Table caption), p. 4 (5.1. Image-Text Matching & Retrieval), baselines p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval), results p. 6 (5.2. Zero-shot Visual Classification), p. 5 (5.2. Zero-shot Visual Classification), p. 6 (5.2. Zero-shot Visual Classification), p. 4 (5.1. Image-Text Matching & Retrieval), p. 4 (5.1. Image-Text Matching & Retrieval), p. 5 (5.1. Image-Text Matching & Retrieval).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

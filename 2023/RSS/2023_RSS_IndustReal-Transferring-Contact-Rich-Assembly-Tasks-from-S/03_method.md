@@ -58,7 +58,6 @@ PDF body method statement (p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. P
 - **p. 5 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** Thus, SDF Query Distance was by far the most effective reward formulation for policy learning.
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. POLICY LEARNING IN SIMULATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. P
 - **p. 5 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** When training and testing with moderate state randomization (plug/hole randomization of ±10 mm/±10 cm, respectively) and observation noise (±1 mm), the Pegs and Holes assembly ...
 - **p. 6 / V. POLICY DEPLOYMENT IN REAL WORLD - extractive body cue:** In summary, we developed the IndustRealLib library, which accepts trained policy checkpoints from Isaac Gym as input, and outputs targets for a Franka robot controlled ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. P
 
 - **p. 7 / V. POLICY DEPLOYMENT IN REAL WORLD - extractive body cue:** Policy-Level Action Integrator Method: Robotics simulations can exhibit marked discrepancies with the real world due to incomplete models, inaccurate parameters, and numerical artifacts [14]; although ...
 - **p. 4 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** After training policies with each strategy, we tested each policy in simulation over 5 seeds, with 1000 trials per seed; quantified dmax ip for each ...
-- **p. 7 / V. POLICY DEPLOYMENT IN REAL WORLD - extractive body cue:** Policy-Level Action Integrator Method: Robotics simulations can exhibit marked discrepancies with the real world due to incomplete models, inaccurate parameters, and numerical artifacts [14]; although ...
 - **p. 3 / IV. POLICY LEARNING IN SIMULATION - extractive body cue:** Training Environments We developed our code within the Factory simulation framework [48].
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** proximal, policy, optimization, PPO, learn, stochastic, actor, mapping, observations, actions, parameterized, network, weights, well, approximation, on-policy, value, function, critic, states.
 - **Relevant PDF headings:** IV. POLICY LEARNING IN SIMULATION (p. 3); V. POLICY DEPLOYMENT IN REAL WORLD (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +117,13 @@ PDF body method statement (p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. P
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview. Top: Simulation-based policy learning for one of our tasks, gear assembly. Middle: Proposed algorithms to facilitate sim-based learning and real-world deployment. Bottom: ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Joint evaluation of Simulation-Based Policy Update, SDF-Based Dense Reward, and Sampling-Based Curriculum. (A) Pegs and Holes assembly Insert policy. (B) Gears and Gearshafts ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. POLICY LEARNING IN SIMULATION), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 6 (V. POLICY DEPLOYMENT IN REAL WORLD), objective p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. POLICY LEARNING IN SIMULATION), temporal p. 6 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 5 (IV. POLICY LEARNING IN SIMULATION), p. 6 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 5 / 1 Introduction - extractive body cue:** We train implicit (EBM) and explicit (MSE) policies from 50 teleoperated human demonstrations, and test on episodes with unseen particle configurations.
 - **p. 1 / Abstract - extractive body cue:** We find these policies provide competitive results or outperform state-of-the-art offline reinforcement learning methods on the challenging human-expert tasks from the D4RL benchmark suite, despite ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) In contrast to explicit policies, implicit policies leverage parameterized energy functions that take both observations (e.g. images) and actions as inputs, and ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 | On robotic policy learning tasks we show that implicit behavioral cloning policies with energy-based models (EBM) often outperform common explicit (Mean Square Error, or ... | definition/direction/unit from same section | p. 1 (Abstract) |
 | Explicit "MSE" models are trained with Mean Square Error (MSE), explicit "MDN" models are Mixture Density Networks (MDN) [21], and implicit "EBM" models are ... | definition/direction/unit from same section | p. 2 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 | Across all four tasks, we observe significantly higher performance for the implicit policies compared to the explicit baseline. | comparison identity and matched condition | p. 6 (1 Introduction) |
 | Comparisons between implicit and explicit policies across 6 various simulated and real domains (Table 1), including author-reported baselines on the human-expert D4RL tasks. | comparison identity and matched condition | p. 4 (1 Introduction) |
 | Figure 6. Comparison of policy performance on the N-D particle environment, 2,000 demonstrations each. N-D Particle Integrator is a simple environment with linear dynamics ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -143,8 +132,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | Once the training data is uncorrelated (i.e. random noise) and without regularization (Fig. | p. 3 (1 Introduction) |
 | body limitation/failure cue | (a,d) Single discontinuity between constant values; (b,e) piecewise continuous sections with differing dy dx, (c,f) random Gaussian noise, for unregularized models. | p. 3 (1 Introduction) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -157,14 +144,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 | For the image-based inputs, we also test two types of encoders with different forms of dimensionality reduction: spatial soft(arg)max and average pooling over dense ... | p. 5 (1 Introduction) |
 | EBM and MSE policies on the task use the best corresponding image encoder from the planar sweeping task. | p. 6 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7 Conclusion - extractive body cue:** In terms of limitations, a primary comparison with explicit models is that they typically require more compute, both in training and inference (see Appendix for ...
@@ -175,9 +154,8 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 3 / 1 Introduction - extractive body cue:** (a,d) Single discontinuity between constant values; (b,e) piecewise continuous sections with differing dy dx, (c,f) random Gaussian noise, for unregularized models.
 
 - **Evidence anchors reviewed:** datasets p. 6 (1 Introduction), p. 7 (1 Introduction), p. 4 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (1 Introduction), metrics p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 1 (Abstract), baselines p. 5 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (1 Introduction), p. 4 (1 Introduction), p. 5 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (1 Introduction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

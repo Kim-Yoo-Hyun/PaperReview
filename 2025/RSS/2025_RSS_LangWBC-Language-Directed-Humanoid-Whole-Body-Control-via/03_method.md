@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (B. Language-Directed Student Policy), p. 3 (B. 
 - **p. 5 / B. Language-Directed Student Policy - extractive body cue:** The training objective follows the variational lower bound
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (B. Language-Directed Student Policy), p. 3 (B. 
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** Then, a student policy based on a Conditional Variational Autoencoder (CVAE) [36] is trained via behavior cloning to learn the ‘mapping from natural language commands ...
 - **p. 3 / III. MerHops - extractive body cue:** In this section, we present LangWBC, an end-to-end framework that jointly models high-level linguistic instructions and low-level physical actions, enabling robots to execute complex whole-body ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 5 (B. Language-Directed Student Policy), p. 3 (B. 
 - **p. 3 / B. Generative Action Modeling - extractive body cue:** Retargeted Teacher Training Physics Simulator Mocap Dataset (© Tracking keypoint Student Training ‘Cloning + "Aperson waits _ CUP [rnse forward" Encoder ‘Mocap Dataset qatudent rm ...
 - **p. 2 / B. Generative Action Modeling - extractive body cue:** For example, OmniH12O [10] uses a pre-trained fixed-length MDM model [40] for text-conditioned motion generation, followed by a tracking controller.
 - **p. 3 / A. Motion-Tracking Teacher Policy - extractive body cue:** The optimization is solved using the LM algorithm with joint limit constraints, yielding kinematically feasible motions that closely match the original MoCap data, The detailed ...
-- **p. 3 / B. Generative Action Modeling - extractive body cue:** Retargeted Teacher Training Physics Simulator Mocap Dataset (© Tracking keypoint Student Training ‘Cloning + "Aperson waits _ CUP [rnse forward" Encoder ‘Mocap Dataset qatudent rm ...
 - **p. 5 / B. Language-Directed Student Policy - extractive body cue:** ‘The training process consists of five steps
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** decoder, then, takes, sampled, latent, vector, along, latest, state, observation, output, action, MLP, layer, sizes, units, encoder, stdent, policy, leveraging.
 - **Relevant PDF headings:** B. Generative Action Modeling (p. 2); A. Motion-Tracking Teacher Policy (p. 3); B. Language-Directed Student Policy (p. 4); A. Teacher Policy Input State (p. 13).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,28 +112,17 @@ PDF body method statement (p. 5 (B. Language-Directed Student Policy), p. 3 (B. 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks (top ...
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** We then analyze the learned latent space and its contribution to the policy's generalization to unseen commands, highlight key features such as smooth transitions and ...
 - **p. 14 / Figure/Table caption - extractive body cue:** Fig. 12. Lower-body Motion Examples. The framework also enables various lowercbady movements soch as stepping, squating and balancing. These motions are also sucessfully transfered tothe ...
-- **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3. Robustness to External Disturbances. The humanoid robot demonstrates robust stability while executing a hand-waving motion under exteal perturbations. When subjected to kicks (top ...
 - **p. 9 / C. Generalization to Unseen Texts - extractive body cue:** ietepolating between walking (Command 1) and side stepping (Command 2) predoces walking the side, a whole-body masion that does not exist i the
 - **p. 7 / C. Generalization to Unseen Texts - extractive body cue:** We find the poticy performs forward motion in a consistent speed and style despite phrasing differences like "move" vs. "walk." demonstrating robustness to linguistic variation
 - **p. 7 / C. Generalization to Unseen Texts - extractive body cue:** CLIP encoder handles minor linguistic variations well, it produces significantly different encodings for out-of-distribution commands, which the MLP policy struggles to generalize from.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 3 (B. Generative Action Modeling), p. 4 (A. Motion-Tracking Teacher Policy), objective p. 4 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 3 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), p. 4 (A. Motion-Tracking Teacher Policy), p. 5 (B. Language-Directed Student Policy), temporal p. 5 (B. Language-Directed Student Policy), p. 4 (B. Language-Directed Student Policy), p. 5 (IV. EXPERIMENTS), p. 3 (A. Motion-Tracking Teacher Policy), p. 1 (1. Iyrropucrion), p. 1 (Body text (section boundary not confidently recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

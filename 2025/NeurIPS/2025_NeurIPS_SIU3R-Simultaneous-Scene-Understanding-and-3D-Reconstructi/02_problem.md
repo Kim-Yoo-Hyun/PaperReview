@@ -60,8 +60,6 @@ PDF body contribution framing (p. 4 (3 Methodology), p. 2 (1 Introduction), p. 6
 |---|---|---|
 | no explicit assumption/failure cue | domain stress test only | not a paper claim |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology). The downstream handoff is claimed only when the body describes it.
@@ -69,7 +67,5 @@ PDF body contribution framing (p. 4 (3 Methodology), p. 2 (1 Introduction), p. 6
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 6 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology), objective p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 7 (3 Methodology), p. 5 (3 Methodology).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

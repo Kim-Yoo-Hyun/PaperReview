@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 - **p. 2 / Abstract - extractive body cue:** 2022) aligned 2D visual-language features, allowing the robot to generalize to new target tasks.
 - **p. 4 / Abstract - extractive body cue:** 2024)) on Adroit Hammer and real-world Hammer tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: The proposed method outperforms SOTA methods (DP3 (Ze et al. 2024) and FlowPolicy (Zhang et al. 2024)) on the Adroit and Meta-World tasks, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 | In the Meta-World tasks, it can be observed that the MP1 achieves a higher success rate on "Very Hard" tasks compared to its performance ... | definition/direction/unit from same section | p. 5 (Abstract) |
 | Figure 1: The proposed method outperforms SOTA methods (DP3 (Ze et al. 2024) and FlowPolicy (Zhang et al. 2024)) on the Adroit and Meta-World ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 | Conditioning on 3D point-cloud features, it learns effectively from a handful of demonstrations, yet delivers one-step sampling with SOTA success rates and millisecond-level inference ... | comparison identity and matched condition | p. 2 (Abstract) |
 | Baselines In our comparison with existing SOTA methods, we include DP (Chi et al. | comparison identity and matched condition | p. 5 (Abstract) |
 | 4, performance declines when it reverts to Flow Matching (ratio = 0), compared to the case where r̸ = t. | comparison identity and matched condition | p. 6 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 | body limitation/failure cue | Conclusion In this paper, we address the limitations of existing Diffusion-based and Flow-based approaches by introducing MeanFlow into robot learning. | p. 7 (Abstract) |
 | body limitation/failure cue | Unlike Diffusion-based methods, our approach does not require multi-step denoising; distinct from existing Flowbased approaches, the MP1 does not rely on ODE solvers, consistency ... | p. 3 (Abstract) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 | On an NVIDIA 4090, our method attains an average inference time of 6.8 ms. | p. 6 (Abstract) |
 | Because Dispersive Loss is computed once per forward pass and vanishes at inference, MP1 preserves its hallmark 1-NFE speed. | p. 2 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Abstract - extractive body cue:** MP1 FlowPolicy Adroit: Hammer (FlowPolicy: 15.3ms/ MP1:7.1ms) Real-world: Hammer (FlowPolicy: 22.3s/ MP1:18.6s) failure success Figure 3: Qualitative comparison of the proposed MP1 and the previous ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 6 (Abstract), p.
 - **p. 3 / Abstract - extractive body cue:** Unlike Diffusion-based methods, our approach does not require multi-step denoising; distinct from existing Flowbased approaches, the MP1 does not rely on ODE solvers, consistency constraints, ...
 
 - **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 7 (Abstract), p. 7 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), metrics p. 6 (Figure/Table caption), p. 7 (Abstract), p. 7 (Abstract), p. 5 (Abstract), p. 6 (Abstract), p. 2 (Abstract), baselines p. 2 (Abstract), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Abstract), p. 5 (Abstract), p. 6 (Abstract), results p. 5 (Figure/Table caption), p. 6 (Abstract), p. 6 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 7 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

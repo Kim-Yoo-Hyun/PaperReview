@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 - **p. 4 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** Under these assumptions, training our policy to predict action ai would allow us to learn from Dem,1 ∪Dem,2 ∪. . . ∪Den,1 ∪Den,2 with a ...
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 - **p. 5 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** At a high level, we want our model to process its observations using some encoder, feed its embeddings into a transformer, and then output both ...
 - **p. 7 / VI. ANALYSIS - extractive body cue:** These scenarios involve spatial reasoning in novel environments (e.g., in Shelf Manipulation, the policy must learn which actions don't collide with the shelf), requiring the ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 - **p. 3 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** While we could simply train a single policy across all of the navigation and manipulation datasets to output action labels that match each specific dataset ...
 - **p. 4 / IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING - extractive body cue:** Under these assumptions, training our policy to predict action ai would allow us to learn from Dem,1 ∪Dem,2 ∪. . . ∪Den,1 ∪Den,2 with a ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** heterogeneous, cross-embodiment, model, consists, five, different, components, observation, encoders, transformer, diffusion, policy, action, head, MLP, distance, prediction, navigation, topological, graphs.
 - **Relevant PDF headings:** 1) Can a single goal-conditioned policy successfully control (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p
 - **p. 7 / VI. ANALYSIS - extractive body cue:** This requires the robot to avoid colliding with the shelf as well as gauge its distance to the object, which is fundamentally similar to the ...
 - **p. 8 / VI. ANALYSIS - extractive body cue:** While we qualitatively observed that these policies had better estimates for the closest node and had less collision with the environment, we acknowledge that the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 2 (I. INTRODUCTION), p. 3 (III. PRELIMINARIES), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), objective p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 3 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), temporal p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 5 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING), p. 6 (4) Toy Kitchen. A more semantically meaningful environ), p. 3 (III. PRELIMINARIES), p. 3 (III. PRELIMINARIES), p. 4 (IV. HETEROGENEOUS CROSS-EMBODIMENT LEARNING).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

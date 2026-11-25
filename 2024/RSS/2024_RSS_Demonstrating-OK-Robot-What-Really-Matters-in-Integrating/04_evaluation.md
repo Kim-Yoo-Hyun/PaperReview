@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 - **p. 6 / III. EXPERIMENTS - extractive body cue:** In Appendix Figure 12, we show the robot performing pick-and-drop in these two environments.
 - **p. 7 / III. EXPERIMENTS - extractive body cue:** Generally, this has been the case for scenes where there are multiple visually or semantically similar objects, as shown in the figure.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: OK-Robot is an Open Knowledge robotic system, which integrates a variety of learned models trained on publicly available data, to pick and drop ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 | Grasping models that generates a grasp trajectory as well as a pose may solve such issues. | definition/direction/unit from same section | p. 8 (III. EXPERIMENTS) |
 | Fig. 2: Open-vocabulary, open knowledge object localization and navigation in the real-world. We use the VoxelMap [25] for localizing objects with natural language queries, ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 | Both were larger compared to the average NY homes, requiring more robot motion to navigate to different goals. | comparison identity and matched condition | p. 6 (III. EXPERIMENTS) |
 | II-A, outperforms other semantic memory modules by a small margin. | comparison identity and matched condition | p. 7 (III. EXPERIMENTS) |
 | These homes were larger and more complex: a cluttered, actively-used home kitchen environment, and a large, controlled test apartment used in prior work [22, ... | comparison identity and matched condition | p. 6 (III. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 | body limitation/failure cue | However, at a closer look, we notice a long tail of failure causes presented in Figure 4. | p. 7 (III. EXPERIMENTS) |
 | body limitation/failure cue | 8: Samples of failures of our manipulation module. | p. 8 (IV. RELATED WORKS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 | Then, we execute pick-and-drop on remaining objects sequentially without resets between trials. | p. 5 (II. TECHNICAL COMPONENTS AND METHOD) |
 | Protocol for home experiments: To run our experiment in a novel home, we move the robot to a previously unobserved room. | p. 5 (II. TECHNICAL COMPONENTS AND METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / III. EXPERIMENTS - extractive body cue:** Grasping module limitations: One failure mode of our manipulation module comes from executing grasps from a pre-trained manipulation model's output based on a single RGB-D ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table capt
 - **p. 8 / IV. RELATED WORKS - extractive body cue:** 8: Samples of failures of our manipulation module.
 
 - **Evidence anchors reviewed:** datasets p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), metrics p. 7 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (III. EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), results p. 6 (III. EXPERIMENTS), p. 1 (Figure/Table caption), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

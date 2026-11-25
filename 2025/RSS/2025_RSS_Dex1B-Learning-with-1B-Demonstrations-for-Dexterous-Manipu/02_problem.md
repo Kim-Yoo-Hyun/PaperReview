@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt),
 | body cue at p. 7 | dataset, including retargeting human demonstrations to robot trajectories and adding noise to generate a larger number of physically ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Notably, we observe that performance degradation is more pronounced for the lifting task than for the articulation task ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ il writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 2 (7 S65 69K- Graplt), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), interface p. 3 (7 S65 69K- Graplt), p. 5 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), objective p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -45,8 +45,6 @@
 - **p. 5 / 4.4. Semantic Fusion - extractive body cue:** This is a better simulation of the behaviour of real single-view CNNs because a whole object can easily be labelled as a similar but incorrect ...
 - **p. 3 / 3.4. Implementation - extractive body cue:** In addition, since we have no depth information, we set the bounds of ray sampling to 0.1m and 10m respectively across experiments without careful tuning ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Neural radiance fields (NeRF) jointly encoding appearance and geometry contain strong priors for segmen- tation and clustering. We build upon this to create ...
@@ -80,8 +78,6 @@
 | Table 2: Quantitative evaluation of label super-resolution, with good performance with either sampled or interpolated low-resolution labels. The mIoU metric shows that sparse but ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Three standard metrics are used to evaluate semantic segmentation performance on test poses (higher is better). | definition/direction/unit from same section | p. 5 (4.4. Semantic Fusion) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@
 | Two baseline techniques are: Bayesian fusion, where multiclass label probabilities are multiplied together and then renormalised (e.g. | comparison identity and matched condition | p. 7 (4.4. Semantic Fusion) |
 | We report the average performance across all testing scenes in Table 4, in which ground truth depth maps are used for the two baseline ... | comparison identity and matched condition | p. 8 (4.4. Semantic Fusion) |
 | We check the influence of semantics on appearance and geometry by quantitatively computing the quality of rendered RGB images and depth maps on Replica ... | comparison identity and matched condition | p. 4 (4.2. Semantic Neural Radiance Fields) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@
 | body limitation/failure cue | Even when 90% of all training labels are randomly corrupted, we can recover an accurate denoised semantic map. | p. 6 (4.4. Semantic Fusion) |
 | body limitation/failure cue | From left to right are noisy training labels, denoised labels rendered from the same poses after training, and information entropy. | p. 6 (4.4. Semantic Fusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@
 | It is important to note that both baseline fusion techniques require depth information to compute the dense correspondences between frames while ours only requires ... | p. 8 (4.4. Semantic Fusion) |
 | To compute the colour of a single pixel, NeRF [16] approximates volume rendering by numerical quadrature with hierarchical stratified sampling. | p. 2 (3.1. Preliminaries) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / 3.4. Implementation - extractive body cue:** batch size of rays is set to 1024 due to memory limitations.
@@ -169,6 +148,5 @@
 - **p. 6 / 4.4. Semantic Fusion - extractive body cue:** From left to right are noisy training labels, denoised labels rendered from the same poses after training, and information entropy.
 
 - **Evidence anchors reviewed:** datasets p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 8 (4.4. Semantic Fusion), p. 7 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion), metrics p. 5 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 4 (4.4. Semantic Fusion), p. 4 (4.3. Semantic View Synthesis with Sparse Labels), p. 6 (4.4. Semantic Fusion), p. 7 (4.4. Semantic Fusion), baselines p. 8 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion), p. 7 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields), results p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields), p. 7 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

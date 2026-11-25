@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 16 | Further increasing the number of robot trajectory improves on the in-domain performance (L1) while does not help in ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Furthermore, our design leads to substantial performance gain on the most challenging Level-4 tasks, where several baselines methods ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1 INTRODUCTION), p. 5 (4 METHOD), p. 6 (4 METHOD), p. 4 (3 BACKGROUND). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (3 BACKGROUND), interface p. 2 (1 INTRODUCTION), p. 5 (4 METHOD), p. 6 (4 METHOD), p. 4 (3 BACKGROUND), objective p. 6 (4 METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 4 (B. Humanoid Whole-body Control), p. 2 (Abst
 | body cue at p. 8 | Infact, het ultimately does not achieve faster ‘convergence in height tracking compared to ours. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 1 | Fig. 1: HOMIE empowers the humanoid robot to execute various loco-manipulation tasks in the real world. (2): Squatting ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (B. Humanoid Whole-body Control), p. 4 (B. Humanoid Whole-body Control), p. 2 (Abstract), p. 5 (C. Hardware System Design). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (A. Teleoperation Systems), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (B. Whole-body Loco-Manipulation), interface p. 4 (B. Humanoid Whole-body Control), p. 4 (B. Humanoid Whole-body Control), p. 2 (Abstract), p. 5 (C. Hardware System Design), objective p. 7 (A. Humanoid Whole-body Control), p. 4 (B. Humanoid Whole-body Control), p. 5 (1 2001p), p. 5 (1 2001p), p. 6 (C. Hardware System Design), p. 7 (A. Humanoid Whole-body Control).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

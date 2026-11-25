@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3.
 - **p. 4 / 3.1. Diffusion as a Pose Estimator - extractive body cue:** This adjustment aligns with diffusion models' coarse-to-fine progressive optimization and has been empirically observed to lead to more stable optimization.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Diffusion as a Pose Estimator), p. 3 (3.1. Diffusion as a Pose Estimator), p. 4 (3.1. Diffusion as a Pose Estimator), p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3. From Sparse Views to 3D Reconstruction), p. 5 (3.3. From Sparse Views to 3D Reconstruction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3.
 - **p. 1 / 1. Introduction - extractive body cue:** Furthermore, multiple potential 3D structures could correspond to the same input image.
 - **p. 2 / 1. Introduction - extractive body cue:** We propose a novel camera pose estimator that significantly outperforms existing methods in terms of both accuracy and required number of input views, while being ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3.
 - **p. 4 / 3.1. Diffusion as a Pose Estimator - extractive body cue:** (a) Pose Optimization + noise Pre-trained Diffusion Reconstruction Loss (b) Sparse-view Fine-tuning + noise Pre-trained Diffusion LoRA Reconstruction Loss (c) 3D Reconstruction Reconstruction Module Pre-trained ...
 - **p. 5 / 3.3. From Sparse Views to 3D Reconstruction - extractive body cue:** 3.2, and then feed them as the training data to the differentiable renderer, e.g., NeRF [38] and NeuS [69].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Pose, Optimization, noise, Pre-trained, Diffusion, Reconstruction, Loss, Sparse-view, Fine-tuning, LoRA, Module, back, propagation, Figure, iFusion, framework, then, feed, them, training.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3.
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Demonstration on real-world 3D reconstruction. With only two casually taken photos without camera poses, iFusion can reconstruct plausible 3D assets. The top row ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Qualitative results on pose estimation. We visualize the predicted poses (thin) alongside the ground truth (bold), using the same color, while the reference ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3. From Sparse Views to 3D Reconstruction), p. 4 (3.1. Diffusion as a Pose Estimator), p. 3 (3.1. Diffusion as a Pose Estimator), p. 3 (3. Method), p. 5 (3.3. From Sparse Views to 3D Reconstruction), objective p. 3 (3.1. Diffusion as a Pose Estimator), p. 4 (3.1. Diffusion as a Pose Estimator), p. 3 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3. From Sparse Views to 3D Reconstruction), p. 5 (3.3. From Sparse Views to 3D Reconstruction), p. 4 (3.1. Diffusion as a Pose Estimator), temporal p. 4 (3.2. From Single-View to Multi-View), p. 4 (3.1. Diffusion as a Pose Estimator), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 3 (3. Method), p. 5 (3.3. From Sparse Views to 3D Reconstruction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

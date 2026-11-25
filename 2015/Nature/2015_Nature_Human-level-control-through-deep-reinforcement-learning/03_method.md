@@ -58,7 +58,6 @@ PDF body method statement (p. 6 (84 3 84.The functionw fromalgorithm1 described 
 - **p. 9 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This reflects the fact that pressing ‘down' would lead to the agent losing the ball and incurring a reward of 21.
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 8 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 6 (84 3 84.The functionw fromalgorithm1 described 
 - **PDF p. 1, Introduction / optimal action value (DOC-QA2 원문 대조):** Deep convolutional network가 Q*(s,a), 즉 주어진 state/action 이후 policy들 중 최대의 expected discounted reward sum을 근사한다. 이 정의와 Atari에서의 실험 결과를 구분한다.
 - **p. 3 / V O L - extractive body cue:** 2 provides an additional illustrationof how the representations learned by DQN allow it to accurately predict state and action values.
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (84 3 84.The functionw fromalgorithm1 described 
 
 - **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Extended Data Table 3 / The effects of replay and separating the target Q-network DQN agents were trained for 10 million frames using standard hyperparameters ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** main, advantageof, type, architecture, ability, tocompute, Q-valuesforall, instead, usean, there, separate, output, unit, possible, action, only, state, representation, input, neural.
 - **Relevant PDF headings:** 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 6 (84 3 84.The functionw fromalgorithm1 described 
 - **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** At the same time, it could affect the performance of our agent since it cannot differentiate between rewards of different magnitude.
 - **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Thevaluesofallthehyperparametersandoptimizationparameterswereselected by performing an informal search on the games Pong, Breakout, Seaquest, Space Invaders and Beam Rider.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 8 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 8 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), objective p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 9 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 9 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), temporal p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 1 (Body text (section not recovered)), p. 2 (2 6 F E B R U A R Y).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

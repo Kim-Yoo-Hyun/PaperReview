@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODU
 - **p. 3 / 2 BACKGROUND - extractive body cue:** NFQCA (Hafner & Riedmiller, 2011), which uses the same update rules as DPG but with neural network function approximators, uses batch learning for stability, which ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 3 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 4 (2 BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODU
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** However, while DQN solves problems with high-dimensional observation spaces, it can only handle discrete and low-dimensional action spaces.
 - **p. 3 / 2 BACKGROUND - extractive body cue:** 2In practice, as in commonly done in policy gradient implementations, we ignored the discount in the statevisitation distribution ρβ.
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODU
 - **p. 3 / 2 BACKGROUND - extractive body cue:** 3 ALGORITHM It is not possible to straightforwardly apply Q-learning to continuous action spaces, because in continuous spaces finding the greedy policy requires an optimization ...
 - **p. 4 / 2 BACKGROUND - extractive body cue:** Additionally, to make efficient use of hardware optimizations, it is essential to learn in minibatches, rather than online.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** low-dimensional, case, batch, normalization, state, input, layers, network, prior, action, details, networks, given, supplementary, material, present, actor-critic, model-free, algorithm, deterministic.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,26 +113,15 @@ PDF body method statement (p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODU
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: Performance curves for a selection of domains using variants of DPG: original DPG algorithm (minibatch NFQCA) with batch normalization (light grey), with target ...
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 2: Dimensionality of the MuJoCo tasks: the dimensionality of the underlying physics model dim(s), number of action dimensions dim(a) and observation dimensions dim(o). task ...
 - **p. 8 / 6 CONCLUSION - extractive body cue:** The work combines insights from recent advances in deep learning and reinforcement learning, resulting in an algorithm that robustly solves challenging problems across a variety ...
-- **p. 5 / 4 RESULTS - extractive body cue:** We evaluated the policy periodically during training by testing it without exploration noise.
 - **p. 6 / 4 RESULTS - extractive body cue:** We used an identical network architecture and learning algorithm hyper-parameters to the physics tasks but altered the noise process for exploration because of the very ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (2 BACKGROUND), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (2 BACKGROUND), p. 2 (1 INTRODUCTION), p. 3 (2 BACKGROUND), objective p. 3 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (2 BACKGROUND), p. 4 (2 BACKGROUND), p. 3 (2 BACKGROUND), temporal p. 2 (2 BACKGROUND), p. 2 (2 BACKGROUND), p. 3 (2 BACKGROUND), p. 4 (2 BACKGROUND), p. 5 (4 RESULTS), p. 1 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

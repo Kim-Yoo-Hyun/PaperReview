@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 - **p. 4 / 3.2. Scene-Action-Conditioned Video Diffusion - extractive body cue:** This approximation grounds the dynamics in embodied perception, enforcing a causal relation where manipulation modifies the visual state of the scene, while the camera trajectory ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 5 (3.2. Scene-Action-Conditioned Video Diffusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 - **p. 4 / 3.2. Scene-Action-Conditioned Video Diffusion - extractive body cue:** The model then simulates the resulting environment states induced by the hand action inputs under the same camera views, V1:F = Π(S0 + ∆S1:F ; ...
 - **p. 4 / 3.1. Formulation of Dexterous World Models - extractive body cue:** We instantiate it as a video diffusion model conditioned on the egocentric projections of the static scene and hand trajectories. where S0 remains fixed and ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 - **p. 5 / 3.2. Scene-Action-Conditioned Video Diffusion - extractive body cue:** During inference, the model iteratively denoises zt to obtain ˆz0, which is decoded by VAE into a realistic interaction video.
 - **p. 5 / 3.2. Scene-Action-Conditioned Video Diffusion - extractive body cue:** The model operates in the latent space of a pretrained video variational autoencoder (VAE) [22, 52], which encodes an input video into latent tensors z0 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Here, dynamics, model, samples, scene, action-induced, changes, given, actions, while, observation, maps, latent, world, states, visual, frames, Importantly, instantiate, generative.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. Formulation of Dexterous World Models (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 3 (3.1. Formulation of Dexterous World Models), p.
 - **p. 8 / 4.2. Qualitative Results - extractive body cue:** Ablation on training data composition.
 - **p. 5 / 3.3. Paired Interaction Video Dataset Construction - extractive body cue:** Under this setup, the egocentric static scene video is time-invariant: Π(S0; Ct) = Π(S0; C0) = V0, ∀t ∈{1, . . . , F}.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 5 (3.3. Paired Interaction Video Dataset Construction), p. 3 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), objective p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), p. 3 (3.1. Formulation of Dexterous World Models), p. 4 (3.1. Formulation of Dexterous World Models), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), temporal p. 8 (4.3. Ablation Study), p. 4 (3.2. Scene-Action-Conditioned Video Diffusion), p. 4 (3.1. Formulation of Dexterous World Models), p. 5 (3.2. Scene-Action-Conditioned Video Diffusion), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

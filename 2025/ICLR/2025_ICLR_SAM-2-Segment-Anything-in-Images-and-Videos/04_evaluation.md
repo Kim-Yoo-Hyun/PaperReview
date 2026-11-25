@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 - **p. 32 / dataset - extractive body cue:** SAM 2 was evaluated on the same suite of image benchmarks as Kirillov et al.
 - **p. 33 / 3. Who funded the creation of the dataset? - extractive body cue:** The dataset was funded by Meta FAIR.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption cue 없음
@@ -71,21 +69,12 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 | Risks and harms In Section E.1.1 of the main text we analyze SAM 2 performance on people across demographic groups. | definition/direction/unit from same section | p. 32 (dataset) |
 | G: We use G for evaluation on YTVOS 2019 for the semi-supervised VOS task. mIoU: We evaluate performance using mIoU for the promptable image ... | definition/direction/unit from same section | p. 32 (dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | We report the performance of prior works as evaluated by the LVOSv2 authors. | comparison identity and matched condition | p. 31 (dataset) |
 | We evaluated prior works on SA-V using their open-sourced code and checkpoints. | comparison identity and matched condition | p. 31 (dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,8 +106,6 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 | body limitation/failure cue | 3We note that this estimation does not account for the model's tracking FPS. | p. 23 (C Limitations) |
 | body limitation/failure cue | If a dataset does not follow the standard VOS format, we preprocess it into a format similar to MOSE (Ding et al., 2023). | p. 24 (C Limitations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -128,14 +115,6 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 | We include results from SAM 2 trained only on SA-1B, SA-V and Internal data, for different encoder sizes. | p. 28 (Method) |
 | 15, where the per-dataset delta in 1-click mIoU relative to SAM is color-coded to indicate the data type (image or video). | p. 28 (Method) |
 | Cost and impact of compute The released SAM 2 was trained on 256 A100 GPUs for 108 hours. | p. 32 (dataset) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -147,6 +126,5 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 - **p. 24 / C Limitations - extractive body cue:** If a dataset does not follow the standard VOS format, we preprocess it into a format similar to MOSE (Ding et al., 2023).
 
 - **Evidence anchors reviewed:** datasets p. 30 (dataset), p. 32 (dataset), p. 30 (dataset), p. 33 (dataset), p. 31 (dataset), p. 31 (dataset), metrics p. 30 (dataset), p. 31 (dataset), p. 32 (dataset), p. 32 (dataset), baselines p. 31 (dataset), p. 31 (dataset), results p. 31 (dataset), p. 32 (dataset), p. 32 (dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

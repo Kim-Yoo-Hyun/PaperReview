@@ -62,8 +62,6 @@ PDF body contribution framing (p. 4 (2. Methodology), p. 2 (1. Introduction), p.
 | body cue at p. 7 | Besides, we analyze that failure cases of UniAD are mainly under some long-tail scenarios such as large trucks ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | In Exp.1012, only when the two tasks are introduced simultaneously (Exp.12), both metrics of the planning L2 and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (2. Methodology), p. 3 (2. Methodology), p. 4 (2. Methodology), p. 2 (2. Methodology). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 4 (2. Methodology), p. 2 (1. Introduction), p.
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (2. Methodology), p. 3 (2. Methodology), p. 4 (2. Methodology), p. 2 (2. Methodology), objective p. 4 (2. Methodology), p. 5 (2.4. Planning), p. 4 (2. Methodology), p. 5 (2.5. Learning), p. 3 (2. Methodology).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

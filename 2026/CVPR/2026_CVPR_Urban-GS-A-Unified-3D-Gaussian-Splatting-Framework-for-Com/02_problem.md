@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | This limitation is evident in its struggles in the unified aerial-street setting. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | However, this approach fundamentally fails to account for the contribution variations caused by drastic changes in projection areas. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 5 (4.2. Contribution-based Anchor Pruning), p. 5 (4.2. Contribution-based Anchor Pruning). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 5 (4.2. Contribution-based Anchor Pruning), p. 5 (4.2. Contribution-based Anchor Pruning), objective p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 6 (4.3. Global-to-Local Optimization), p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 5 (4.2. Contribution-based Anchor Pruning), p. 5 (4.1. Aerial-Street Joint Adaptive Densification), p. 6 (4.4. Loss Function).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

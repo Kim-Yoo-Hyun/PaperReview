@@ -56,7 +56,6 @@ Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Tran
 - **p. 4 / III. THE OCTO MODEL - extractive body cue:** The attention pattern of the Octo transformer is block-wise masked: observation tokens can only attend causally to tokens from the same or earlier time steps ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Tran
 - **p. 4 / III. THE OCTO MODEL - extractive body cue:** Task and observation tokenizers: We convert task definitions (e.g., language instructions ℓand goal images g) and observations o (e.g., wrist and third-person camera streams) into ...
 - **p. 5 / III. THE OCTO MODEL - extractive body cue:** We apply common image data augmentations during training, and randomly zero out the language instruction or goal image per training example to enable Octo to ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Tran
 - **p. 5 / III. THE OCTO MODEL - extractive body cue:** The ViT-B was trained for 300k steps with a batch size of 2048 using a TPU v4-128 pod, which took 14 hours.
 - **p. 6 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** A ViT-B visual encoder is initialized to the VC-1 weights [57], a state-of-the-art visual representation pretrained on 4,000 hours of ego-centric videos and ImageNet, and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** t5-base, model, Image, observations, goals, passed, through, shallow, convolution, stack, then, split, sequence, flattened, patches, Training, objective, conditional, diffusion, decoding.
 - **Relevant PDF headings:** III. THE OCTO MODEL (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ Octo는 Open X-Embodiment의 로봇 궤적 약 80만 개로 사전학습한 Tran
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce Octo, an open-source, generalist policy for robotic manipulation. Octo is a transformer-based policy pretrained on 800k diverse robot episodes from the ...
 - **p. 6 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** Out-of-the-box, Octo can control multiple robots in environments from the pretraining data.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), objective p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), p. 3 (III. THE OCTO MODEL), p. 4 (III. THE OCTO MODEL), temporal p. 4 (III. THE OCTO MODEL), p. 3 (II. RELATED WORK), p. 5 (III. THE OCTO MODEL), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), p. 3 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

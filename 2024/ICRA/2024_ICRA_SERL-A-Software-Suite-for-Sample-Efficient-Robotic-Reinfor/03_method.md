@@ -53,7 +53,6 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 - **p. 7 / 4.6. Relative Observation and Action Frame - extractive body cue:** The green box indicates a state where the robot receives a high reward for completing the task.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 5 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 - **p. 3 / 3. Preliminaries and Problem Statement - extractive body cue:** An optimal policy 𝜋is one that maximizes the cumulative expected value of the reward, i.e., 𝐸[∑∞ 𝑡=0 𝛾𝑡𝑟(𝐬𝑡, 𝐚𝑡)], where the expectation is taken with ...
 - **p. 5 / 4.5. Impedance Controller for Contact-Rich - extractive body cue:** A typical setup for robotic RL employs a two-layered control hierarchy, where an RL policy produces setpoint actions at a much lower frequency than the ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,9 +90,6 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 - **p. 8 / 5. Experiments - extractive body cue:** Comparison to prior systems: While it's difficult to directly compare our results to those of prior systems due to numerous differences in the setup, lack ...
 - **p. 9 / 5. Experiments - extractive body cue:** SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington these prior works generally have either lower ...
 - **p. 8 / 5. Experiments - extractive body cue:** SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Task # of Demos Image Input Random Reset Reward Specification Bin Size Training Time PCB Component ...
-- **p. 7 / 4.6. Relative Observation and Action Frame - extractive body cue:** Package Task Training time Success rate Demos Shaping?
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 6 (4.5. Impedance Controller for Contact-Rich), p.
 - **p. 9 / 5. Experiments - extractive body cue:** Although the components of our system are all based on (recent) prior work, the stateof-the-art performance of this combination illustrates our main thesis: the details ...
 - **p. 9 / 6. Discussion - extractive body cue:** Our framework does have a number of limitations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 7 (4.6. Relative Observation and Action Frame), p. 7 (4.6. Relative Observation and Action Frame), objective p. 5 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 6 (4.6. Relative Observation and Action Frame), p. 7 (4.6. Relative Observation and Action Frame), temporal p. 9 (7.1. Details on Relative Observation and Ac), p. 6 (4.5. Impedance Controller for Contact-Rich), p. 8 (5. Experiments), p. 5 (4.5. Impedance Controller for Contact-Rich), p. 10 (7.1. Details on Relative Observation and Ac), p. 4 (4. Sample Efficient Robotic Reinforce).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

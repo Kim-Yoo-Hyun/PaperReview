@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Ov
 - **p. 4 / 3.2. Pre-training Coarse Semantic Alignment - extractive body cue:** Thus, tracking the progress critically relies on extracting semantic information from the generated subgoal xi.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.3. Fine-grained Diffusion Training), p. 5 (3.3. Fine-grained Diffusion Training), p. 6 (3.4. Goal-conditioned Policy Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Ov
 - **p. 2 / 1. Introduction - extractive body cue:** The subgoal images act as a unified interface bridging the high-level visual planning and low-level action planning, decoupling the instruction understanding and action execution.
 - **p. 1 / 1. Introduction - extractive body cue:** The subgoal images are worth a thousand words, inspiring us to propose a novel framework CoTDiffusion to generate goal images step-by-step before act. vances in ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Ov
 - **p. 6 / 3.4. Goal-conditioned Policy Model - extractive body cue:** Initial Observation Generated Subgoal Images Visual Reasoning Visual Rearrange Visual Constraints Rearrange objects to this setup and then restore.
 - **p. 8 / 4.4. Further Analysis - extractive body cue:** As the initial observation and prompt remain fixed across different generation steps, the align tokens at various stage tend to so similar that may confuse ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Under, Markovian, assumption, overall, framework, formulated, xi/P, visual, planning, t/xi, action, module, consists, multi-modal, encoder, understand, complex, task, instructions, conditioned.
 - **Relevant PDF headings:** 2.1. Diffusion Models for Text-to-Image Generation (p. 2); 3. Method (p. 3); 3.4. Goal-conditioned Policy Model (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Ov
 - **p. 8 / 5. Conclusion - extractive body cue:** Incorporating commonsense knowledge from pre-trained MLLM like GPT-4V provides an avenue for more generalizable and promising reasoning in CoTDiffusion, which leaves as our future work.
 - **p. 7 / 4.4. Further Analysis - extractive body cue:** Additionally, ablating coarse pretraining and bi-directional generation degrades performance, validating their benefits.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Overview), p. 4 (3.2. Pre-training Coarse Semantic Alignment), p. 5 (3.4. Goal-conditioned Policy Model), p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3. Method), objective p. 5 (3.3. Fine-grained Diffusion Training), p. 5 (3.3. Fine-grained Diffusion Training), p. 6 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview), p. 3 (3. Method), p. 4 (3.2. Pre-training Coarse Semantic Alignment), temporal p. 4 (3.1. Pipeline Overview), p. 3 (3. Method), p. 3 (3.1. Pipeline Overview), p. 4 (3.2. Pre-training Coarse Semantic Alignment), p. 5 (3.4. Goal-conditioned Policy Model), p. 5 (3.2. Pre-training Coarse Semantic Alignment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

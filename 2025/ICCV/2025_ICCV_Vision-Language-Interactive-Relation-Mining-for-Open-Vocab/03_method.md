@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (3.2. Generative Relation Recognition), p. 5 (3.
 - **p. 6 / Method - extractive body cue:** The optimizer is AdamW [27] with a weight decay of 0.05.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.4. Training Objectives), p. 5 (3.3. Hierarchical Relation Extension).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (3.2. Generative Relation Recognition), p. 5 (3.
 - **p. 3 / 3.1. OV-SGG Architecture - extractive body cue:** We first utilize a transformer-based interaction classifier to encode the scene graphs in I.
 - **p. 6 / 4.2. Compared with State-of-the-arts - extractive body cue:** This result suggests that by enhancing the interaction 16760
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.2. Generative Relation Recognition), p. 5 (3.
 - **p. 6 / Method - extractive body cue:** We use pre-trained GLIP [19] models to initialize our model and keep the visual backbone and text encoder frozen.
 - **p. 5 / 3.3. Hierarchical Relation Extension - extractive body cue:** Then, the NWGM approximation for the model F(x) can be formulate as: \mathbb { E}(\op er at o rname { sigm oid}\l eft (F\left (\boldsymbol ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** decoder, cross-attention, layers, make, text, embedding, interface, relation, encoder, Specifically, cross-entropy, loss, word, generated, language, modeling, t/V_, goal, minimize, negative.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. OV-SGG Architecture (p. 3); Method (p. 6); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3.2. Generative Relation Recognition), p. 5 (3.
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 5. Effect of the learning weight of the generative relation language model. of text-image modalities, VLM can directly generate open- vocabulary relations for OV-SGG ...
 - **p. 8 / 4.4. Qualitative Results - extractive body cue:** Specifically, without the full supervision of novel categories, our model can provide novel relationship predictions (e.g., "from" and ‘part of').
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Generative Relation Recognition), p. 5 (3.4. Training Objectives), p. 3 (3.1. OV-SGG Architecture), p. 4 (3.2. Generative Relation Recognition), p. 6 (Method), p. 3 (3.1. OV-SGG Architecture), objective p. 5 (3.4. Training Objectives), p. 5 (3.4. Training Objectives), p. 4 (3.2. Generative Relation Recognition), p. 6 (Method), temporal p. 4 (3.2. Generative Relation Recognition), p. 2 (2. Related Work), p. 4 (3.2. Generative Relation Recognition), p. 5 (3.3. Hierarchical Relation Extension), p. 8 (4.4. Qualitative Results), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

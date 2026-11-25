@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 11 / 4 Experiments - extractive body cue:** Ablation of 3D Regularization Loss We perform ablation of K in our 3D Regularization Loss on the Kitchen dataset of Mip-NeRF 360 [1] to select ...
 - **p. 12 / 4 Experiments - extractive body cue:** In Table 3, the advantage of our Gaussian Grouping is significant, doubling the performance of LERF and SA3D on both the "figurines" and "ramen" scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our Gaussian Grouping jointly reconstructs (column a) and segments (column b) anything in full open-world 3D scenes, with fine-grained instance and stuff level ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | For 3D regularization loss, we choose k = 5 and m = 1000. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 | Gaussian Grouping outperforms Panoptic Lifting in both performance and speed. | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Gaussian Grouping outperforms Panoptic Lifting in both performance and speed. | comparison identity and matched condition | p. 12 (4 Experiments) |
 | In Figure 10, compared to SPIn-NeRF [33], the inpainting result of our Gaussian Grouping better preserves spatial detail and multi-view coherence. | comparison identity and matched condition | p. 13 (4 Experiments) |
 | Compared to DFFs [18], our Gaussian Grouping can remove the large-scale objects, such as truck, from the 3D scene with greatly reduced artifacts w/o ... | comparison identity and matched condition | p. 13 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | body limitation/failure cue | Doubling the dimension to 32 does not bring a better reconstruction quality compared to 16 but make training 1.3 times slower. | p. 11 (4 Experiments) |
 | body limitation/failure cue | Since SAM does not support language prompts, both SA3D and our method adopt Grounding DINO [25] to identify the mask ID in a 2D ... | p. 12 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | To optimize the introduced Identity Encoding of each Gaussian, in Figure 2(c), we render these encoded identity vectors into 2D images in a differentiable ... | p. 7 (3 Method) |
 | Refer to [60], we compute α′ i by measuring a 2D Gaussian with covariance Σ2D multiplied with a learned per-point opacity αi, and \ ... | p. 7 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 5: Robustness to input masks errors on Mip-NeRF 360 [1]. In the 2nd and 3rd columns (middle two views), SAM + DEVA fails to ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 12 / 4 Experiments - extractive body cue:** Since SAM does not support language prompts, both SA3D and our method adopt Grounding DINO [25] to identify the mask ID in a 2D image, ...
 
 - **Evidence anchors reviewed:** datasets p. 12 (4 Experiments), p. 9 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

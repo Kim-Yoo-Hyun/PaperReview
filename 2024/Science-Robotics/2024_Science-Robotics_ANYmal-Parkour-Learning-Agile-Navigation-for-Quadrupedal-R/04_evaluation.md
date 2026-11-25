@@ -40,8 +40,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 - **p. 5 / II. RESULTS - extractive body cue:** The three learning-based modules operate together without expert demonstration, offline computation, or a priori knowledge of the environment and enable the robot to reliably reach ...
 - **p. 5 / II. RESULTS - extractive body cue:** In trajectory B, the policy saturates the motor during the climb to propel the robot onto the 0.9 m high platform (Fig.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Deployment of the pipeline on the quadrupedal robot ANYmal D. The robot performs highly dynamic maneuvers and makes contacts with its limbs where ...
@@ -72,8 +70,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 | Fig. 6: Terrain reconstructions for different scenarios (real-world data). The first column shows the point cloud measurements, the second the baseline elevation map [37] ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 | Fig. 7: Types of environments used for training. The dimensions of the individual obstacles and the arrangements are randomized. for a broader view of ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 | The skill learns to turn on the spot in tight spaces and is more capable in such scenarios compared to other skills. | comparison identity and matched condition | p. 5 (II. RESULTS) |
 | Fig. 6: Terrain reconstructions for different scenarios (real-world data). The first column shows the point cloud measurements, the second the baseline elevation map [37] ... | comparison identity and matched condition | p. 11 (Figure/Table caption) |
 | The three learning-based modules operate together without expert demonstration, offline computation, or a priori knowledge of the environment and enable the robot to reliably ... | comparison identity and matched condition | p. 5 (II. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,8 +106,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 | body limitation/failure cue | 3 (A2)), which is necessary for the leg to reach the other side of the gap and catch the fall of the robot during ... | p. 5 (II. RESULTS) |
 | body limitation/failure cue | At this location, it has to perform precise foothold placement to pass the last step and prepare for the jump, despite the out-of-distribution scenario ... | p. 5 (II. RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -132,14 +119,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 | To overcome these challenges, we opt for a data-driven method with an encoder-decoder architecture inspired by [3]. | p. 12 (IV. MATERIALS AND METHODS) |
 | Supplementary sections S1 and S2 define the observations, actions, and rewards of the locomotion and navigation policies and provide further implementation details. | p. 12 (IV. MATERIALS AND METHODS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / A. Current Limitations - extractive body cue:** Finally, since the navigation module must make a series of correct decisions to reach the goal with many possibilities leading to failure, the algorithm requires ...
@@ -148,9 +127,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (Figure/Table 
 - **p. 5 / II. RESULTS - extractive body cue:** At this location, it has to perform precise foothold placement to pass the last step and prepare for the jump, despite the out-of-distribution scenario for ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (II. RESULTS), p. 5 (II. RESULTS), metrics p. 8 (Figure/Table caption), p. 5 (II. RESULTS), p. 5 (II. RESULTS), p. 4 (Figure/Table caption), p. 11 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 5 (II. RESULTS), p. 11 (Figure/Table caption), p. 5 (II. RESULTS), results p. 8 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 2 | Figure 1: Overview of FSD. FSD unlocks visual aids reasoning and generation through Spatial Relationship- Focused CoT, demonstrating ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | We acknowledge limitations, such as the reliance on 2D trajectory generation and constraints from training data quality. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 6 (4. How to avoid collisions?), p. 4 (4. How to avoid collisions?). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), interface p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 6 (4. How to avoid collisions?), p. 4 (4. How to avoid collisions?), objective p. 6 (4. How to avoid collisions?).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

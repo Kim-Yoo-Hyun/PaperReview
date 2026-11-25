@@ -46,7 +46,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 1 / Abstract - extractive body cue:** We make concrete recommendations about prompt structure and generation constraints through ablation experiments, demonstrate state of the art success rates in VirtualHome household tasks, and ...
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 1 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -64,7 +63,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** PROMPT for State Feedback represents example assertion checks.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** 2: Our PROGPROMPTs include import statement, object list, and example tasks (PROMPT for Planning).
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** PROGPROMPT utilizes programming language structures, leveraging the fact that LLMs are trained on vast web corpora that includes many programming tutorials and code documentation (Fig.
 - **p. 5 / V. RESULTS - extractive body cue:** Additionally, CODEX exceeds GPT3 performance on every metric (row 1 versus row 3), likely because CODEX is explicitly trained on programming language data.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** PROGPROMPT, leverages, LLMs, strengths, world, knowledge, programming, language, understanding, generate, situated, task, plans, directly, executed, words, then, need, mapped, actions.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: PROGPROMPT leverages LLMs' strengths in both world knowledge and programming language understanding to generate situated task plans that can be directly executed. words, ...
 - **p. 5 / V. RESULTS - extractive body cue:** Qualitative Analysis and Limitations We manually inspect generated programs and their execution traces from PROGPROMPT and characterize common failure modes.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective p. 1 (Abstract), temporal p. 4 (IV. EXPERIMENTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (II. BACKGROUND AND RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

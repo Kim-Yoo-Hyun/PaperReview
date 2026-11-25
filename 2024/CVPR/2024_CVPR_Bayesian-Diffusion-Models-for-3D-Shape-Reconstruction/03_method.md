@@ -53,7 +53,6 @@
 - **p. 4 / 3.2. Denoising Diffusion Probabilistic Models - extractive body cue:** Bayesian Prediction Bayesian Diffusion Model Process Top-down (prior) Bottom-up (data-driven) … Fusion Fusion Stochastic Gradient Langevin … Prior Data-driven Figure 3.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 4 (3.3. Bayesian Diffusion Model), p. 4 (3.2. Denoising Diffusion Probabilistic Models).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@
 - **p. 3 / 3.1. Bayesian Inference with Stochastic Gradient - extractive body cue:** For the 3D shape reconstruction task, the output y consists of a set of 3D points.
 - **p. 1 / 1. Introduction - extractive body cue:** Although still being an active subject [22] in study, the top-down/prior information has not been widely adopted in the big-data/deep-learning era, where an immediate improvement ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@
 - **p. 7 / 4.3. Efficiency and Fairness Analysis - extractive body cue:** 3, we present BDM's parameters, runtime and GPU memory when doing inference with batch size of 1.
 - **p. 5 / 4. Experiment - extractive body cue:** Training of generative models was conducted on 4 NVIDIA A5000 GPUs, while we trained reconstruction models utilizing a single NVIDIA A5000 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Therefore, inference, optimal, prediction, then, carried, Markov, Chain, Monte, Carlo, MCMC, stochastic, gradient, Langevin, dynamics, yt/x, data-driven, prior, where, denotes.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. Denoising Diffusion Probabilistic Models (p. 3); 3.3. Bayesian Diffusion Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@
 - **p. 8 / 5. Conclusion and Limitations - extractive body cue:** BDM overcomes the limitations in the traditional MCMC-based Bayesian inference that requires having the explicit distributions in performing stochastic gradient Langevin dynamics by tightly coupling ...
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** contrasts with the middle stage integration, which even degrades the performance of the baseline on F1.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 3 (3. Method), p. 4 (3.3. Bayesian Diffusion Model), p. 4 (3.4. Point Cloud Prior Integration), objective p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 4 (3.3. Bayesian Diffusion Model), p. 4 (3.2. Denoising Diffusion Probabilistic Models), temporal p. 4 (3.4. Point Cloud Prior Integration), p. 3 (3.2. Denoising Diffusion Probabilistic Models), p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 4 (3.3. Bayesian Diffusion Model), p. 5 (4. Experiment), p. 5 (4. Experiment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

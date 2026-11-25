@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 3 (3
 - **p. 5 / 3.4. Texture-Geometry Guided SDS Loss - extractive body cue:** It is important to note that we only backpropagate the gradient for the masked pixels.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview), p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 5 (3.4. Texture-Geometry Guided SDS Loss), p. 5 (3.4. Texture-Geometry Guided SDS Loss).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 3 (3
 - **p. 4 / 3.4. Texture-Geometry Guided SDS Loss - extractive body cue:** We first employ the depth image-based rendering (DIBR) method [10] to warp images from the reference views to other views.
 - **p. 2 / 3.1. Preliminary - extractive body cue:** The covariance matrix Σ can be decomposed into a rotation matrix R and a scaling matrix S for differentiable optimization: Σ = RSST RT .
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 3 (3
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Our method is trained on a single NVIDIA 48GB A6000 GPU.
 - **p. 4 / 3.3. Multi-view Consistent Image Inpainting - extractive body cue:** Next, we decode inpainted latents to produce coarsely consistent inpainted results for training the 3D Gaussians.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Therefore, texture-geometry, guided, SDS, TG-SDS, loss, within, latent, space, ControlNet, coarse, stage, employ, DDIM, Inversion, generate, deterministic, latents, then, produce.
 - **Relevant PDF headings:** 3. Method (p. 2); 4.2. Methods for Comparison (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 3 (3
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Quantitative results of object re-texturing and replacement.
 - **p. 6 / 4.2. Methods for Comparison - extractive body cue:** For object re-texturing and replacement, we evaluate our method against InstructNeRF2NeRF (IN2N) [12], GaussianEditor [8], and GaussCtrl [39].
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 3 (3.1. Preliminary), p. 4 (3.3. Multi-view Consistent Image Inpainting), p. 3 (3.2. Problem formulation and overview), p. 5 (3.4. Texture-Geometry Guided SDS Loss), p. 2 (3.1. Preliminary), objective p. 5 (3.5. Optimization), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview), p. 5 (3.4. Texture-Geometry Guided SDS Loss), temporal p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.3. Multi-view Consistent Image Inpainting), p. 7 (4.3. Results), p. 8 (4.4. Ablation Study), p. 8 (4.3.3. Object Replacement).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

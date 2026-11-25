@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 4 (3 M
 - **p. 4 / 3 Methodology - extractive body cue:** The model is progressively trained through three stages, as illustrated in Fig.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3 Methodology), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 4 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** This sequence explicitly provides four components: (1) the high-level goal (language), (2) robot-centric visual observations (front and wrist views), (3) the current robot state, and ...
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** The input sequence is now structured as: [language, visual tokenst, state embeddingt, <ACTION_PLACEHOLDER>, ...], where <ACTION_PLACEHOLDER> is the signal to generate continuous action embeddings.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 4 (3 M
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Benefiting from the pretrained T2I checkpoint, the RynnVLA-001-Chameleon model achieves reasonable results on simple grasping.
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** All models are trained with reduced epochs for efficiency; scores are for relative comparison.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Stage1, language, Encoder, Decoder, Action, chunks, decoded, Representation, Learning, ActionVAE, Transformer, Stage2, Human-Centric, Trajectory-Aware, Video, Modeling, Ego-Centric, Generative, Pretraining, Head.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 4); 3 Methodology (p. 4); 3 METHODOLOGY (p. 5); 3 METHODOLOGY (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 4 (3 M
 - **p. 11 / 5 EXPERIMENTS - extractive body cue:** 5.4 Ablation Study on Model Designs
 - **p. 12 / 5 EXPERIMENTS - extractive body cue:** To validate this hypothesis, we perform an ablation study.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 4 (3 Methodology), p. 6 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), objective p. 6 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 4 (3 Methodology), p. 5 (3 METHODOLOGY), p. 4 (3 Methodology), temporal p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 7 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

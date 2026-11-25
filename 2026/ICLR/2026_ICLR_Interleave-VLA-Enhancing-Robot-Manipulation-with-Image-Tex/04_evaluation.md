@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 27 (Figure/Table caption), p. 10 (4 EXPERIMEN
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** Performances are tested on SimplerEnv-Bridge setup, which uses a WidowX robot configuration compatible with the BridgeData V2 (Walke et al., 2023b).
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** We evaluate on a FANUC LRMate 200iD/7L robotic arm equipped with an SMC gripper.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: (a) Our Interleaved X-Embodiment Dataset features diverse, high-quality object-centric images automatically generated from real-world robot demonstrations. (b) Interleave-VLA achieves 2× stronger out-of-domain generalization ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 27 (Figure/Table caption), p. 10 (4 EXPERIMEN
 | To qualitatively illustrate this, we compute the attention scores of target object tokens relative to the tokenized observation in out-of-domain settings. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | Overall, our results underscore the importance of the curated large-scale Interleaved X-Embodiment Dataset (Section 3.3) in fostering robust and generalizable Interleave-VLA. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 27 (Figure/Table caption), p. 10 (4 EXPERIMEN
 | Each baseline is finetuned on 20 teleoperated demonstrations per object, collected using a space mouse. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | InterleaveVLA outperforms Text-VLA by 2× across all difficulty levels, further highlighting its superior generalization capabilities with evidence from new task sets and a different ... | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Figure 10: Red: QwenVL+SAM and Yellow: Owlv2. Individual error rates are 22.1% and 17.4%, respectively. The combined error rate is reduced to 4.4%. and ... | comparison identity and matched condition | p. 23 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,22 +127,12 @@ PDF body evaluation/result cue (p. 27 (Figure/Table caption), p. 10 (4 EXPERIMEN
 | body limitation/failure cue | For more styles of sketches and potential failure modes, please refer to Table 8 and 9 in Apppendix C. | p. 9 (4 EXPERIMENTS) |
 | body limitation/failure cue | Table 9: Example sketches for each style. Yellow-cube and green-cube sketches representing each drawing style. The examples are sourced from multiple individuals and are ... | p. 19 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | To qualitatively illustrate this, we compute the attention scores of target object tokens relative to the tokenized observation in out-of-domain settings. | p. 7 (4 EXPERIMENTS) |
 | As illustrated in Figure 2, Interleave-VLA consists of three key components: (1) a lightweight adaptation module that introduces special separator tokens into the tokenizer, ... | p. 2 (1 INTRODUCTION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 27 (Figure/Table caption), p. 10 (4 EXPERIMEN
 - **p. 19 / Figure/Table caption - extractive body cue:** Table 9: Example sketches for each style. Yellow-cube and green-cube sketches representing each drawing style. The examples are sourced from multiple individuals and are designed ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), metrics p. 18 (Figure/Table caption), p. 18 (Figure/Table caption), p. 24 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 27 (Figure/Table caption), baselines p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 23 (Figure/Table caption), results p. 27 (Figure/Table caption), p. 10 (4 EXPERIMENTS), p. 24 (Figure/Table caption), p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 28 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -58,7 +58,6 @@ PDF body method statement (p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1.
 - **p. 4 / 3.1. Generalized Flow Equivariance - extractive body cue:** In detail, given the action variable at, denoting the action of the agent between times t and t+1, we transform the hidden state of the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.1. Generalized Flow Equivariance), p. 5 (3.1. Generalized Flow Equivariance), p. 3 (3.1. Generalized Flow Equivariance), p. 3 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1.
 - **p. 5 / 3.1. Generalized Flow Equivariance - extractive body cue:** The latent map ht is fully learned, visualized as a map here for clarity. b) The update writes to the memory tokens at the correct ...
 - **p. 5 / 3.1. Generalized Flow Equivariance - extractive body cue:** In particular, the hidden state is windowed at each timestep, pixel-wise max-pooled over ‘velocity channels' and passed through a decoder gθ to predict the next ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1.
 - **p. 7 / 4.2. 2D MNIST World Benchmark - extractive body cue:** We further find that models combining SME and VC require orders of magnitude less training steps to converge compared with those without these priors, shown ...
 - **p. 7 / 4.2. 2D MNIST World Benchmark - extractive body cue:** Predictions from FloWM remain consistent with ground truth for 150 timesteps past the observation window, well beyond its training prediction horizon of 20 timesteps, while ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** latent, fully, learned, visualized, here, clarity, update, writes, memory, tokens, correct, FoV, locations, then, transforms, according, known, action, internal, flow.
 - **Relevant PDF headings:** 3. Flow Equivariant World Models (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1.
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 5. FloWM generalizes further and trains faster. a) Timesteps 0 to 49 are given as observations. Models are trained to predict up to t ...
 - **p. 24 / Figure/Table caption - extractive body cue:** Table 7. MNIST world data subsets demonstrating scaling difficulty in self-motion, dynamics, and partial observability. Here, we describe dataset generation and parameter settings for our ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance), p. 2 (3.1. Generalized Flow Equivariance), p. 3 (3.1. Generalized Flow Equivariance), p. 3 (3.1. Generalized Flow Equivariance), p. 5 (3.1. Generalized Flow Equivariance), objective p. 5 (3.1. Generalized Flow Equivariance), p. 5 (3.1. Generalized Flow Equivariance), p. 3 (3.1. Generalized Flow Equivariance), p. 3 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance), p. 4 (3.1. Generalized Flow Equivariance), temporal p. 7 (4.3. 3D Dynamic Block World Benchmark), p. 7 (4.2. 2D MNIST World Benchmark), p. 8 (4.3. 3D Dynamic Block World Benchmark), p. 1 (Abstract), p. 2 (3.1. Generalized Flow Equivariance), p. 2 (2. Background).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -46,8 +46,6 @@
 - **p. 6 / VI. EXPERIMENTS - source paraphrase:** We then compare π₀ models trained with FAST tokenization to the state-of-the-art π₀ flow-matching (diffusion) VLA, and test the scaling of autoregressive VLA training with ...
 - **p. 7 / A. Experimental Setup - extractive body cue:** + Zero-shot DROID tabletop manipulation [9] (15 Hz): wwe test a policy trained on the full DROID dataset across various table-top manipulation tasks like picking ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - source paraphrase:** FAST encodes continuous action chunks as discrete tokens using time-series compression.
@@ -81,8 +79,6 @@
 | Fig. 2: Left: FAST tokenization enables training of autoregres- sive Transformers for dexterous robot control via simple next token prediction. Right: FAST outperforms popular ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Fig. 8: Universal tokenizer, We test the compression rate | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@
 | We fine-tune the VLA models for robot action prediction, without weight freezing. | comparison identity and matched condition | p. 6 (A. Experimental Setup) |
 | To our knowledge, this is the first "zero-shot" evaluation of DROID policies, in a completely unseen environment, without co-training or fine-tuning, simply by prompting ... | comparison identity and matched condition | p. 7 (A. Experimental Setup) |
 | This tokenization strategy has been previously used to tokenize high-dimensional image data (50, 69], and can be viewed as an ablation of our compression-based ... | comparison identity and matched condition | p. 7 (A. Experimental Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@
 | body limitation/failure cue | While far from perfect, the level of generality and robustness of this policy substantially exceeds that of prior DROID policies. | p. 8 (B. Comparing Action Tokenizers for VLA Training) |
 | body limitation/failure cue | ‘To summarize, we have demonstrated that FAST tokenization allows us to train autoregressive VLA on complex, dexterous robot tasks that prior tokenization schemes completely ... | p. 10 (C. Universal Action Tokenizer) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@
 | We detail the steps from raw robot actions to action tokens in Figure 4. | p. 4 (B. The FAST Tokenization Algorithm) |
 | After the data is normalized, we apply the discrete cosine transform to each action dimension separately. ‘To compress the DCT-converted signal we can simply ... | p. 4 (B. The FAST Tokenization Algorithm) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / B. Comparing Action Tokenizers for VLA Training - extractive body cue:** Even unsuccessful trials show sensible behavior, like approaching the handles of microwave and dish washer doors, even if ultimately failing to open them, We show ...
@@ -167,9 +146,8 @@
 - **p. 10 / C. Universal Action Tokenizer - extractive body cue:** ‘To summarize, we have demonstrated that FAST tokenization allows us to train autoregressive VLA on complex, dexterous robot tasks that prior tokenization schemes completely fail ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (VI. EXPERIMENTS), p. 7 (A. Experimental Setup), metrics p. 7 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (VI. EXPERIMENTS), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), results p. 7 (A. Experimental Setup), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

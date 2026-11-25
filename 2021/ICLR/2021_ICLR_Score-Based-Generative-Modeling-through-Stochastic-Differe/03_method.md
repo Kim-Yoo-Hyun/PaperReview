@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** For continuous state spaces, the DDPM training objective implicitly computes scores at each noise scale.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1
 - **p. 7 / 2 BACKGROUND - extractive body cue:** Uniquely identifiable encoding Unlike most current invertible models, our encoding is uniquely identifiable, meaning that with sufficient training data, model capacity, and optimization accuracy, the ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In addition, we propose a new SDE under our framework that achieves a likelihood value of 2.99 bits/dim on uniformly dequantized CIFAR-10 images, setting a ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1
 - **p. 6 / 2 BACKGROUND - extractive body cue:** We test PC samplers on SMLD and DDPM models (see Algorithms 2 and 3 in Appendix G) trained with original discrete objectives given by Eqs.
 - **p. 7 / 2 BACKGROUND - extractive body cue:** (2020), we obtain better bits/dim than ELBO, since our likelihoods are exact; (ii) Using the same architecture, we trained another DDPM model with the continuous ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Although, DDPM, recently, reported, achieve, higher, sample, quality, SMLD, Song, Ermon, better, architectures, sampling, algorithms, allowed, framework, latter, catch, up-it.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1
 - **p. 8 / 2 BACKGROUND - extractive body cue:** With a larger error tolerance, the number of function evaluations can be reduced by over 90% without affecting the visual quality of samples (Fig.
 - **p. 9 / 2 BACKGROUND - extractive body cue:** In Appendix I.4, we provide a broadly applicable method for obtaining such an estimate without the need of training auxiliary models.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 6 (2 BACKGROUND), objective p. 3 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (2 BACKGROUND), p. 8 (2 BACKGROUND), p. 1 (1 INTRODUCTION), temporal p. 2 (1 INTRODUCTION), p. 5 (2 BACKGROUND), p. 6 (2 BACKGROUND), p. 9 (2 BACKGROUND), p. 1 (1 INTRODUCTION), p. 4 (2 BACKGROUND).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

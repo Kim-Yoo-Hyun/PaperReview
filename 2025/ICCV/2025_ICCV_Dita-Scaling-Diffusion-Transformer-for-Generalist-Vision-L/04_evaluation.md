@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.
 - **p. 5 / 4.2. SimplerEnv - extractive body cue:** SimplerEnv [37] is a Real-to-Sim platform designed to evaluate policies learned from real robot data within a simulation environment.
 - **p. 6 / 4.6. Ablation Study - extractive body cue:** We argue that 2-frame observations strike an optimal balance, providing sufficient visual distinction between objects in the workspace and the robot states.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce Dita, an open-source, simple yet effective policy for generalist robotic learning. Pretrained on large-scale cross- embodiment datasets, Dita enables 10-shot adaptation ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.
 | In each stacked bar, the light-colored region represents the model's success rate in the first stage, while the dark-colored region indicates the contribution of ... | definition/direction/unit from same section | p. 8 (5.1. Real-Robot Task Finetuning) |
 | Figure 1. We introduce Dita, an open-source, simple yet effective policy for generalist robotic learning. Pretrained on large-scale cross- embodiment datasets, Dita enables 10-shot ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.
 | According to the visualized comparison, those baseline methods usually fail to grasp the correct position under the 10-shot setting, e.g., "fail to insert the ... | comparison identity and matched condition | p. 8 (5.2. Qualitative Comparison) |
 | This approach introduces additional parameters (the extra MLP) compared to Dita. | comparison identity and matched condition | p. 5 (4.1. Baselines) |
 | Dita does not utilize the play data which provides external trajectory data compared to the labeled data, while GR-MG uses it for training the ... | comparison identity and matched condition | p. 5 (4.4. CALVIN) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.
 | body limitation/failure cue | Figure 2. Illustrations of different generalist robot policy architec- tures. Left head: the common robot Transformer architecture with discretization actions, e.g., Robot Transformer [8, ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | We strive to develop a robust foundational VLA model that is both scalable across diverse simulation benchmarks and adaptive to new complex tasks in ... | p. 4 (4. Simulation Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.
 | Each task is manually divided into two sequential steps, except for the last two single-step tasks. | p. 8 (5.1. Real-Robot Task Finetuning) |
 | Finally, we present the data and implementation specifics for the pretraining of our model. | p. 3 (3. Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5.1. Real-Robot Task Finetuning - extractive body cue:** Failures are highlighted with red circles.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.
 - **p. 4 / 4. Simulation Experiments - extractive body cue:** We strive to develop a robust foundational VLA model that is both scalable across diverse simulation benchmarks and adaptive to new complex tasks in unseen ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.4. CALVIN), p. 4 (4. Simulation Experiments), p. 4 (4. Simulation Experiments), p. 5 (4.3. LIBERO), p. 7 (5.1. Real-Robot Task Finetuning), p. 7 (5. Real-Robot Experiments), metrics p. 5 (4.1. Baselines), p. 5 (4.3. LIBERO), p. 6 (4.6. Ablation Study), p. 6 (4.4. CALVIN), p. 7 (5.1. Real-Robot Task Finetuning), p. 8 (5.1. Real-Robot Task Finetuning), baselines p. 6 (4.4. CALVIN), p. 6 (4.4. CALVIN), p. 7 (5.1. Real-Robot Task Finetuning), p. 8 (5.2. Qualitative Comparison), p. 5 (4.1. Baselines), p. 5 (4.4. CALVIN), results p. 7 (5.1. Real-Robot Task Finetuning), p. 5 (4.1. Baselines), p. 5 (4.4. CALVIN), p. 6 (4.6. Ablation Study), p. 6 (4.4. CALVIN), p. 8 (5.1. Real-Robot Task Finetuning).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

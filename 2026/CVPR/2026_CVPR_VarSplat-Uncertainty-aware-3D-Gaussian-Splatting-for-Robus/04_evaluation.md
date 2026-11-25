@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 - **p. 8 / 4.3. Ablation studies - extractive body cue:** Uncertainty ablation on ScanNet (scene0181).
 - **p. 8 / 4.3. Ablation studies - extractive body cue:** Visualization of challenging conditions (scene0169 ScanNet).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is optimized ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 | Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Rendering performance on 3 datasets. | definition/direction/unit from same section | p. 7 (4.2. Quantitative Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 | Without it, pose estimation on noisy regions can cause jitter and long-range drifts. | comparison identity and matched condition | p. 7 (4.3. Ablation studies) |
 | Uncertainty ablation on ScanNet (scene0181). | comparison identity and matched condition | p. 8 (4.3. Ablation studies) |
 | Per-pixel uncertainty with vs. without depth on TUMRGBD (fr1/desk2). | comparison identity and matched condition | p. 8 (4.3. Ablation studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 | body limitation/failure cue | Figure 1. VarSplat. Given RGB-D inputs, each 3D Gaussian jointly learns position, orientation, scale, color, opacity, and appearance variance σ2. During mapping, σ2 is ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | VarSplat achieves the highest accuracy with robustness on large motion camera. | p. 6 (4.2. Quantitative Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 | 원문 대조: 혼합 splat의 conditional-mean 분산은 weighted color second moment에서 weighted color mean의 제곱을 빼 계산한다. 여기에 각 splat의 학습 variance를 반영하여 pixel uncertainty V를 얻는다. 원문의 X와 Z는 확률변수 표기이며 좌표 X/Z로 읽지 않는다. ([PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=4), Eqs. (7)–(9)) | [PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf#page=4), Eqs. (7)–(9) |
 | The first keyframe seeds Gaussians by backprojecting depth points, and subsequent frames expand coverage by adding Gaussians in unobserved regions or merging overlapping ones. | p. 4 (3.2. Mapping) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future works are provided in Supplementary Material.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. 
 - **p. 6 / 4.2. Quantitative Evaluation - extractive body cue:** VarSplat achieves the highest accuracy with robustness on large motion camera.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), metrics p. 6 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation studies), p. 7 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), results p. 6 (4.2. Quantitative Evaluation), p. 6 (4.2. Quantitative Evaluation), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies), p. 7 (4.2. Quantitative Evaluation), p. 8 (4.3. Ablation studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

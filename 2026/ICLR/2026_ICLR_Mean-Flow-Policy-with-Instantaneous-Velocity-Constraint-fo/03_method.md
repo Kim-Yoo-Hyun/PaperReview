@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 3 / 3 METHOD - extractive body cue:** We then present the instantaneous velocity constraint (IVC) and theoretically justify its role in improving the learning accuracy.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 5 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 6 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 4 / 3 METHOD - extractive body cue:** The resulting action, a⋆, then serves three purposes: (1) interacting with the environment, (2) acting as the target action for policy training, and (3) calculating ...
 - **p. 6 / 3 METHOD - extractive body cue:** Algorithm 1 Mean Flow RL Input: mean velocity policy πθ, where θ is the parameters of uθ, Critic Qϕ, offline dataset Doffline Initialize replay buffer ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** (3) Training and inference time analysis.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** The results are listed in Table 3. our MVP and FQL exhibit very similar inference times, with both approaches being significantly faster than BFN and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, introduce, mean, velocity, policy, MVP, showing, integration, generateand-select, mechanism, enables, direct, mapping, noise, optimal, actions, Inspired, instantaneous, constraint, IVC.
 - **Relevant PDF headings:** 3 METHOD (p. 3); A THEORETICAL ANALYSIS ON THE MEAN VELOCITY POLICY IMPROVEMENT (p. 14); A.1 IMPLEMENTATION PROCEDURES OF POLICY UPDATE (p. 14); A.3 PROOF OF THE MEAN VELOCITY POLICY IMPROVEMENT THEOREM (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Velocity field: blue arrows de- note the mean velocity over a time in- terval, with red arrows representing the instantaneous velocity at a ...
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** The poor performance of BFN and QC is primarily because they rely on a 10-step flow policy, which requires iterative computation to transform noise into ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), objective p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), temporal p. 6 (3 METHOD), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 1 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5.
 - **p. 7 / 4.2. Quantitative Evaluation - extractive body cue:** The enhanced reasoning ability of ThinkAct enables better generalization and scene comprehension, resulting in strong performance on this benchmark.
 - **p. 9 / 4.3. Qualitative Results - extractive body cue:** That seems clear now.</think> <answer>The carpet on the floor is rectangular.</answer> (a) RoboVQA (b) OpenEQA ThinkAct w/o RL ThinkAct ThinkAct Figure 4: Qualitative comparison of ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: We introduce ThinkAct, a reasoning VLA framework capable of thinking before acting. Through reasoning reinforced by our action-aligned visual feedback, ThinkAct enables capabilities ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5.
 | The robot then successfully completes the task, demonstrating ThinkAct's ability to reflect on errors and self-correct through structured reasoning. | definition/direction/unit from same section | p. 11 (4.5. Analysis of ThinkAct) |
 | Figure 1: We introduce ThinkAct, a reasoning VLA framework capable of thinking before acting. Through reasoning reinforced by our action-aligned visual feedback, ThinkAct enables ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5.
 | When both 𝑟traj and 𝑟goal are removed, leaving only QA-style reward from QA datasets, the model shows only marginal improvements over the SFT baseline, ... | comparison identity and matched condition | p. 9 (4.4. Ablation Study) |
 | That seems clear now.</think> <answer>The carpet on the floor is rectangular.</answer> (a) RoboVQA (b) OpenEQA ThinkAct w/o RL ThinkAct ThinkAct Figure 4: Qualitative comparison ... | comparison identity and matched condition | p. 9 (4.3. Qualitative Results) |
 | ThinkAct: Vision-Language-Action Reasoning via Reinforced Visual Latent Planning Table 2: Quantitative comparisons of embodied reasoning tasks on EgoPlan-Bench2, RoboVQA, and OpenEQA benchmarks. | comparison identity and matched condition | p. 8 (4.2. Quantitative Evaluation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5.
 | body limitation/failure cue | Reasoning Elicit Self-Correction Failure detection and self-correction are critical for robust robot manipulation Liu et al. | p. 11 (4.5. Analysis of ThinkAct) |
 | body limitation/failure cue | A8(a), the robot fails to grasp a mug. | p. 15 (5. Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5.
 | 2(a), given an observation 𝑜𝑡at timestep 𝑡and a task instruction 𝑙, the MLLM ℱ𝜃autoregressively generates a sequence of latent embeddings for reasoning 𝑣𝑡∈R/𝑣𝑡/×𝑑and visual ... | p. 4 (3.2. Reinforced Visual Latent Planning for Embodied Reasoning) |
 | Thus, we solely update the state encoder, latent projector, and action 5 | p. 5 (3.3. Reasoning-Enhanced Action Adaptation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / 5. Conclusion - extractive body cue:** Through extensive experiments across embodied reasoning and robot manipulation benchmarks, we demonstrated strong long-horizon planning, few-shot adaptation, and emergent behaviors such as failure detection and ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5.
 - **p. 15 / 5. Conclusion - extractive body cue:** A8(a), the robot fails to grasp a mug.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.2. Quantitative Evaluation), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 10 (4.5. Analysis of ThinkAct), p. 8 (4.2. Quantitative Evaluation), p. 7 (4.2. Quantitative Evaluation), metrics p. 6 (4.1. Experimental Setup), p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5. Analysis of ThinkAct), p. 10 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), baselines p. 7 (4.2. Quantitative Evaluation), p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5. Analysis of ThinkAct), p. 9 (4.4. Ablation Study), p. 9 (4.3. Qualitative Results), p. 8 (4.2. Quantitative Evaluation), results p. 7 (4.2. Quantitative Evaluation), p. 10 (4.5. Analysis of ThinkAct), p. 10 (4.4. Ablation Study), p. 7 (4.2. Quantitative Evaluation), p. 9 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

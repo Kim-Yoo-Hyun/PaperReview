@@ -59,8 +59,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 |---|---|---|
 | no explicit assumption/failure cue | domain stress test only | not a paper claim |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation), p. 6 (3.5. Implementation Details). The downstream handoff is claimed only when the body describes it.
@@ -68,10 +66,8 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 1 (1. Introduction), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation), p. 6 (3.5. Implementation Details), objective p. 4 (3.1. Environment Encoder), p. 4 (3.1. Environment Encoder), p. 6 (3.5. Implementation Details), p. 6 (3.5. Implementation Details), p. 5 (3.3. Action Prediction), p. 5 (3.3. Action Prediction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

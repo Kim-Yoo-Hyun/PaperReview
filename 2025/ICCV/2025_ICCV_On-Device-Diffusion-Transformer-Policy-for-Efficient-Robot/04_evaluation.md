@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (5.3. Evaluation on DiffusionPolicy Transfo
 - **p. 3 / 4.2. Latency Analysis of Diffusion Policies - extractive body cue:** Since the diffusion policy is designed for real-time robot manipulation, it is crucial to assess the on-device latency of the policy models.
 - **p. 4 / 4.2. Latency Analysis of Diffusion Policies - extractive body cue:** IE: Image Encoder, DT: Diffusion Transformer, GLE: Goal Language Encoder, NFE is short for the number of score function evaluations, i.e., inference steps., M: Million, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The network architecture of MDT-V model. The model consists of three main components: the observation encoder E, the goal encoder G, and the ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (5.3. Evaluation on DiffusionPolicy Transfo
 | Figure 2. The training pipeline of our proposed LightDP. In the left figure, we present the consistency distillation pipeline adopted in our method. The ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | IE: Image Encoder, DT: Diffusion Transformer, GLE: Goal Language Encoder, NFE is short for the number of score function evaluations, i.e., inference steps., M: ... | definition/direction/unit from same section | p. 4 (4.2. Latency Analysis of Diffusion Policies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (5.3. Evaluation on DiffusionPolicy Transfo
 | We also implement MoDE, which is an MoE-based policy network that achieves the state-of-the-art performance on the CALVIN and LIBERO benchmarks. | comparison identity and matched condition | p. 6 (5.2. Implementation Details) |
 | Compared with the original model, the 6-layer model achieves comparable performance, while the 4-layer model has a significant performance drop and the 2-layer model ... | comparison identity and matched condition | p. 7 (5.4. Evaluation on MDT-V) |
 | The similar observation can be found in the MDT-V model, where the Voltron network costs relatively less time (7.56ms) compared to the diffusion transformer ... | comparison identity and matched condition | p. 4 (4.2. Latency Analysis of Diffusion Policies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (5.3. Evaluation on DiffusionPolicy Transfo
 | body limitation/failure cue | Figure 2. The training pipeline of our proposed LightDP. In the left figure, we present the consistency distillation pipeline adopted in our method. The ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | Our consistency distillation is applied to the model's x0 prediction (predicting the denoised action), following common practice, and we start the EMA decay rate ... | p. 6 (5.2. Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 6 (5.3. Evaluation on DiffusionPolicy Transfo
 | Since the diffusion transformer requires multiple denoising steps to generate the action prediction, which leads to a high latency of the model. | p. 4 (4.2. Latency Analysis of Diffusion Policies) |
 | All models are trained on the same Push-T dataset for 3K epochs. | p. 7 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.6. Qualitative Results - extractive body cue:** In the Push-T task, the pruned model successfully pushed the T-shaped block into the goal zone, without any failure in the manipu14079
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 6 (5.3. Evaluation on DiffusionPolicy Transfo
 - **p. 6 / 5.2. Implementation Details - extractive body cue:** Our consistency distillation is applied to the model's x0 prediction (predicting the denoised action), following common practice, and we start the EMA decay rate at ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Benchmarks and Evaluation Metrics), p. 8 (5.6. Qualitative Results), p. 6 (5.1. Benchmarks and Evaluation Metrics), p. 7 (5.4. Evaluation on MDT-V), p. 5 (5. Experiments), p. 5 (5.1. Benchmarks and Evaluation Metrics), metrics p. 6 (5.1. Benchmarks and Evaluation Metrics), p. 7 (5.4. Evaluation on MDT-V), p. 6 (5.3. Evaluation on DiffusionPolicy Transformer), p. 8 (5.6. Qualitative Results), p. 8 (Figure/Table caption), p. 7 (5.4. Evaluation on MDT-V), baselines p. 7 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.2. Implementation Details), p. 7 (5.4. Evaluation on MDT-V), p. 4 (4.2. Latency Analysis of Diffusion Policies), results p. 6 (5.3. Evaluation on DiffusionPolicy Transformer), p. 6 (5.3. Evaluation on DiffusionPolicy Transformer), p. 7 (5.4. Evaluation on MDT-V), p. 7 (5.4. Evaluation on MDT-V), p. 8 (5.6. Qualitative Results), p. 8 (5.6. Qualitative Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

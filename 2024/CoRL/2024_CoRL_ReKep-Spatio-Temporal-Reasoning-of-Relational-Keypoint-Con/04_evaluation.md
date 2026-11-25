@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 27 / A.12 Simulation Experiments - extractive body cue:** Seen Poses Unseen Poses Unseen Objects Monolithic Policy 0.93 0.31 0.14 ReKep (Zero-Shot) 0.75 0.68 0.72
 - **p. 27 / A.12 Simulation Experiments - extractive body cue:** The baseline is trained via imitation learning on 100 expert demonstrations, where demonstrations are from scripted policies using privileged simulation information.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Relational Keypoint Constraints (ReKep) specify diverse manipulation behaviors as an opti- mizable spatio-temporal series of constraint functions operating on semantic keypoints. In the ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | (Dual-Arm only) Self-Collision Avoidance: To avoid two arms collide with each other, we compute the pairwise distance between the two point sets, each including ... | definition/direction/unit from same section | p. 25 (A.8 Implementation Details of Sub-Goal Solver) |
 | Figure 2: Overview of ReKep. DINOv2 [5] first proposes keypoints in the scene, which are overlaid on the original RGB image. The image and ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | Other modules, such as segmentation, 3D reconstruction, and low-level controller, also contribute to some failure cases, but they are relatively insignificant compared to other ... | comparison identity and matched condition | p. 8 (4 Experiments) |
 | The baseline is trained via imitation learning on 100 expert demonstrations, where demonstrations are from scripted policies using privileged simulation information. | comparison identity and matched condition | p. 27 (A.12 Simulation Experiments) |
 | A.10 Comparisons with Prior Works on Visual Prompting for Manipulation There has been several concurrent works investigating the application of visual prompting of VLMs ... | comparison identity and matched condition | p. 26 (A.9 Implementation Details of Path Solver) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | body limitation/failure cue | (3) How do the individual components contribute to the failure cases of the system (Sec. | p. 7 (4 Experiments) |
 | body limitation/failure cue | In this section, we perform an empirical investigation by manually inspecting the failure cases of the experiments reported in Tab. | p. 8 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | (Dual-Arm only) Self-Collision Avoidance: To avoid two arms collide with each other, we compute the pairwise distance between the two point sets, each including ... | p. 25 (A.8 Implementation Details of Sub-Goal Solver) |
 | (Dual-Arm only) Self-Collision Avoidance: We similarly compute self-collision avoidance for the dual-arm platform as in the sub-goal problem. | p. 26 (A.9 Implementation Details of Path Solver) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4 Experiments - extractive body cue:** The optimization module, on the other hand, does not contribute as much to the failures despite given limited time budget, since there often exist many ...
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 8 / 4 Experiments - extractive body cue:** In this section, we perform an empirical investigation by manually inspecting the failure cases of the experiments reported in Tab.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 25 (A.8 Implementation Details of Sub-Goal Solver), p. 26 (A.9 Implementation Details of Path Solver), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 8 (Figure/Table caption), p. 24 (A.8 Implementation Details of Sub-Goal Solver), baselines p. 7 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 26 (A.9 Implementation Details of Path Solver), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 27 (A.12 Simulation Experiments), p. 8 (Figure/Table caption), p. 22 (A.5 Implementation Details of Keypoint Proposal).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

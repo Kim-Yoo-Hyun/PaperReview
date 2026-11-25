@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. IyrRopUCTION), p. 6 (B. Indirect Assignm
 | body cue at p. 8 | From these results, itis clear thatthe Poisson safety funetion enabled collision avoidance without hindering the nominal objective. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | ‘To demonstrate the practical performance of our proposed algorithm in synthesizing safe sets, we applied it to several ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (B. Indirect Assignment - Variational Approach), p. 1 (1. IyrRopUCTION), p. 2 (1. IyrRopUCTION), p. 3 (B. Ouputs and Relative Degree). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. IyrRopUCTION), p. 3 (B. Ouputs and Relative Degree), p. 4 (A. Direct Assignment), p. 4 (A. Direct Assignment), p. 1 (Abstract), interface p. 6 (B. Indirect Assignment - Variational Approach), p. 1 (1. IyrRopUCTION), p. 2 (1. IyrRopUCTION), p. 3 (B. Ouputs and Relative Degree), objective p. 4 (IV. FORCING FUNCTION CONSTRUCTION), p. 5 (B. Indirect Assignment - Variational Approach), p. 5 (B. Indirect Assignment - Variational Approach), p. 6 (B. Indirect Assignment - Variational Approach), p. 6 (B. Indirect Assignment - Variational Approach).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -45,7 +45,6 @@ PDF body method statement (p. 4 (3.5. Sampling Raylets for Training and Test), p
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 4 (3.5. Sampling Raylets for Training and Test), p
 - **p. 4 / 3.5. Sampling Raylets for Training and Test - extractive body cue:** If the input 3D scene P is a set of 3D Gaussians recovered by 3DGS [30] from RGBs, we follow the technique [31, 74] to ...
 - **p. 1 / 1. Introduction - extractive body cue:** Recently, the point-based method 3D Gaussian Splatting (3DGS) [30] has emerged as an appealing alternative to those coordinate-based methods, thanks to its impressive real-time performance ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,16 +78,12 @@ PDF body method statement (p. 4 (3.5. Sampling Raylets for Training and Test), p
 
 - **p. 4 / 3.5. Sampling Raylets for Training and Test - extractive body cue:** Note that, if there is no ball intersected, meaning that the ray shoots outside the target 3D surface, the ray is discarded in both training ...
 - **p. 4 / 3.5. Sampling Raylets for Training and Test - extractive body cue:** Given a specific 3D scene P as input, if it is a raw point cloud, for a specific query ray r, we sample multiple raylets ...
-- **p. 4 / 3.5. Sampling Raylets for Training and Test - extractive body cue:** Given a specific 3D scene P as input, if it is a raw point cloud, for a specific query ray r, we sample multiple raylets ...
 - **p. 6 / 4.3. Evaluation on Raylet Sampling in Testing - extractive body cue:** Regarding our designed multi-raylet blender in Section 3.4, the single hyperparameter T of this module can be different in training and test phase, allowing flexibility ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Note, there, ball, intersected, meaning, shoots, outside, target, surface, discarded, training, test, Given, specific, scene, input, point, cloud, query, sample.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,20 +101,10 @@ PDF body method statement (p. 4 (3.5. Sampling Raylets for Training and Test), p
 - **p. 7 / 5. Conclusion - extractive body cue:** Remarkably, thanks to the learned local raylet features, it exhibits excellent generalizability to new and unseen scenes in testing, while all baselines fail to do ...
 - **p. 7 / 4.3. Evaluation on Raylet Sampling in Testing - extractive body cue:** This validates the generalizability and robustness of our simple design.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.5. Sampling Raylets for Training and Test), p. 4 (3.5. Sampling Raylets for Training and Test), objective 본문 anchor 없음, temporal p. 1 (1. Introduction), p. 2 (2. Related Works), p. 2 (2. Related Works), p. 3 (3.2. Raylet Feature Extractor), p. 4 (3.5. Sampling Raylets for Training and Test), p. 4 (3.5. Sampling Raylets for Training and Test).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

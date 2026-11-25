@@ -46,7 +46,6 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 - **p. 16 / A.1 Normalization - extractive body cue:** Scaling the min and max of each action dimension independently to [-1,1] works well for most tasks.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 16 (A.1 Normalization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 - **p. 6 / 1 Introduction - extractive body cue:** 0 500 1000 Epoch 0.0 0.001 0.002 0.003 0.004 Train Action Pred MSE Real PushT Img 0 500 1000 Epoch 0.0 0.2 0.4 0.6 0.8 ...
 - **p. 16 / A.4 Hyperparameters - extractive body cue:** State-based Diffusion Policy is not sensitive to observation horizon.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 - **p. 8 / 5 Evaluation - extractive body cue:** For each architecture, we evaluated 3 different training strategies: training end-to-end from scratch, using frozen pre-trained vision encoder, and finetuning pre-trained vision encoders (with 10x ...
 - **p. 7 / 5 Evaluation - extractive body cue:** Behavior Cloning Benchmark (State Policy) We present success rates with different checkpoint selection methods in the format of (max performance) / (average of last 10 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** simulation, benchmarks, iDDPM, algorithm, Nichol, Dhariwal, same, denoising, diffusion, iterations, training, inference, CNN-based, Policy, found, FiLM, conditioning, pass-in, observations, better.
 - **Relevant PDF headings:** A Diffusion Policy Implementation Details (p. 16); C.2.2 Evaluation Both Diffusion Policy and LSTM-GMM (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,13 @@ PDF body method statement (p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparamete
 - **p. 9 / 5 Evaluation - extractive body cue:** On all tasks, Diffusion Policy variants with both CNN backbones and end-to-end-trained visual encoders yielded the best performance.
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Diffusion Policy Ablation Study. Change (difference) in success rate relative to the maximum for each task is shown on the Y-axis. Left: trade-off ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.4 Hyperparameters), p. 16 (A.4 Hyperparameters), objective p. 16 (A.1 Normalization), temporal p. 8 (5 Evaluation), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 7 (5 Evaluation), p. 8 (5 Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

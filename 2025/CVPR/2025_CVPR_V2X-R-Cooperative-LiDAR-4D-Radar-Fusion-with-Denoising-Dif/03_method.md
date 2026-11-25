@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (3) Modal fusion. The we
 - **p. 1 / 1. Introduction - extractive body cue:** Benefiting from the information shared between agents, in complex outdoor scenarios, cooperative 3D object detection has natural advantages, such as long detection distance and multi-view ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (A Finit ←FL), p. 5 (A Finit ←FL), p. 6 (4.4. Loss Function), p. 6 (A Finit ←FL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (3) Modal fusion. The we
 - **p. 2 / 1. Introduction - extractive body cue:** The error-prone operations (view-transformation or depth-estimation) [1, 44, 45] are not involved in the process of 4D radar and LiDAR point cloud fusing.
 - **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** The input noisy LiDAR features are first subjected to a diffusion process, followed by T step denoising process with weather-robust 4D radar features as conditions ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (3) Modal fusion. The we
 - **p. 6 / A Finit ←FL - extractive body cue:** It decreases nonlinearly with epoch so that the model pays full attention to the feature denoising task in the early period and the object detection ...
 - **p. 8 / 5.4. Multi-modal Diffusion Denoising Analysis - extractive body cue:** Although MDD inevitably introduces an additional inference time of 32 ms, it significantly improves weather robustness and still maintains real-time (about 20 FPS).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, challenge, agent-fused, LiDAR, features, becoming, noisy, adverse, weather, novel, Multi-modal, Diffusion, Denoising, MDD, module, modal, fusion, stage, pipeline, Specifically.
 - **Relevant PDF headings:** 5.2. Benchmark Models (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (3) Modal fusion. The we
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The advantages of the dense 4D radar point cloud in multi-agent view. Including weather robustness, fewer spatial er- rors, Doppler information, and geometric ...
 - **p. 8 / 6. Conclusion and Discussion - extractive body cue:** Moreover, we propose the MDD module to tackle dense noise in collaborative conditions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 5 (3) Modal fusion. The weather-induced noisy LiDAR fea), p. 5 (4.3. Multi-modal Denoising Diffusion (MDD)), p. 4 (3) Modal fusion. The weather-induced noisy LiDAR fea), p. 3 (3.1. Simulator Selection), p. 4 (3) Modal fusion. The weather-induced noisy LiDAR fea), objective p. 6 (4.4. Loss Function), p. 5 (A Finit ←FL), p. 5 (A Finit ←FL), p. 6 (A Finit ←FL), p. 1 (1. Introduction), p. 1 (1. Introduction), temporal p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 3 (3.2. Sensor configuration), p. 6 (5.1. Experimental Details and Metrics), p. 6 (5.1. Experimental Details and Metrics), p. 7 (5.4. Multi-modal Diffusion Denoising Analysis), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

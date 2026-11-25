@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 - **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** Results on the MM-GCoT benchmark. "AF" and "GF" correspond to answer-first and grounding-first prompting settings.
 - **p. 8 / 3.5. Analysis and Ablation Study - extractive body cue:** ATTRIBUTE JUDGEMENT OBJECT AVERAGE AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ↑ Cons. ↑ AccA ↑ AccG ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GR3D overview. Top-Left: Spatial CoT enabled by 2D implicit grounding. Top-Middle: Region-prompted 3D grounding predicts camera-relative 3D boxes. Top-Right: Grounded 3D detection performs ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 | Table 2. 2D detection results on the Omni3D benchmark. We report the mean Average Precision (mAP) for each dataset domain. yond sparse 3D-box labels. ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 1. Comparison on the Omni3D [32] benchmark between GR3D, vision specialists, and recent VLMs. We report AP15 and mAP for each dataset domain. ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 | Table 1. Comparison on the Omni3D [32] benchmark between GR3D, vision specialists, and recent VLMs. We report AP15 and mAP for each dataset domain. ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Without this normalization, the model may lead to small but noticeable localization offsets in the predicted 3D boxes. | comparison identity and matched condition | p. 7 (3.5. Analysis and Ablation Study) |
 | Ablation study on the key components of GR3D-8B. "PT" denotes pretraining, "2D→3D" denotes 2D grounding followed by 3D prediction, and "Cam" denotes using normalized ... | comparison identity and matched condition | p. 8 (3.5. Analysis and Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 | body limitation/failure cue | This makes its 3D predictions unstable under changes in image size. | p. 6 (3.2. 3D Object Detection) |
 | body limitation/failure cue | In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general ... | p. 6 (3.3. Visual Question Answering) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,20 +130,11 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 | The region's visual features are pooled and encoded into a region token, which is fused into the text stream to guide 3D box prediction. | p. 4 (2.3. Monocular 3D Grounding via Region Prompt) |
 | The model first predicts coordinates, then encodes the predicted region to obtain its embedding, which is inserted back into the ongoing sequence before the ... | p. 4 (2.2.2. Implicit 2D Grounding) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3.2. 3D Object Detection - extractive body cue:** This makes its 3D predictions unstable under changes in image size.
 - **p. 6 / 3.3. Visual Question Answering - extractive body cue:** In contrast, Stage 2 finetuning focuses on learning the structure of CoT reasoning, and the results indicate that it does not significantly reduce general VQA ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study), p. 6 (3. Experiments), p. 8 (3.5. Analysis and Ablation Study), p. 8 (3.5. Analysis and Ablation Study), metrics p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), baselines p. 6 (3.2. 3D Object Detection), p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study), p. 5 (Figure/Table caption), p. 7 (3.5. Analysis and Ablation Study), p. 8 (3.5. Analysis and Ablation Study), results p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visual Question Answering), p. 7 (3.4. Implicit Grounding CoT), p. 7 (3.4. Implicit Grounding CoT), p. 8 (3.5. Analysis and Ablation Study), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

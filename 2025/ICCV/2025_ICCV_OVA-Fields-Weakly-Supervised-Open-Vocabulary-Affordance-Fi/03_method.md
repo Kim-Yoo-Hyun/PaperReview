@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (3.2. Spatial Feature Extraction and Feature Fus
 - **p. 3 / 3.1. Multi-Modal Affordance Perception - extractive body cue:** These heatmaps show the likelihood of specific affordances associated with the object, producing heatmaps Hi for each affordance type aj (e.g., "open" or "hold").
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3.1. Multi-Modal Affordance Perception), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 5 (3.2. Spatial Feature Extraction and Feature Fusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (3.2. Spatial Feature Extraction and Feature Fus
 - **p. 3 / 3.1. Multi-Modal Affordance Perception - extractive body cue:** (1) These high-response regions indicate potential actionable areas on the image plane.
 - **p. 4 / 3.2. Spatial Feature Extraction and Feature Fusion - extractive body cue:** Negative samples contain mismatched pairs, such as "handle" points with unrelated actions ("grab the cup") or visual contexts, like refrigerator handles paired with distant image ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3.2. Spatial Feature Extraction and Feature Fus
 - **p. 3 / 3.1. Multi-Modal Affordance Perception - extractive body cue:** Using a pre-trained CLIP model [28], visual embeddings are computed for each bounding box, embedding both object and spatial information into the 3D scene.
 - **p. 4 / 3.2. Spatial Feature Extraction and Feature Fusion - extractive body cue:** OVA-Fields integrates feature fusion and training in three key steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Through, series, processing, steps, OVA-Fields, then, produces, high-dimensional, feature, representation, coordinate, point, incorporates, rich, visual, information, affordance, First, Multi-modal, Perception.
 - **Relevant PDF headings:** 3. Methods (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (3.2. Spatial Feature Extraction and Feature Fus
 - **p. 5 / 4.1. Experiment Settings - extractive body cue:** For Open-Vocabulary Affordance Detection Models (OpenAD [36], OpenMask3D [35], CLIP-Fields [32], OpenScene [26], CLIP-FO3D [45]), we maintain OpenMask3D's and CLIP-Fields's original architectures but unify text-conditional ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and affordance ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Spatial Feature Extraction and Feature Fusion), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 3 (3.1. Multi-Modal Affordance Perception), p. 5 (3.3. Query Mapping), p. 5 (3.2. Spatial Feature Extraction and Feature Fusion), objective p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 5 (3.2. Spatial Feature Extraction and Feature Fusion), p. 3 (3.1. Multi-Modal Affordance Perception), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 3 (3.1. Multi-Modal Affordance Perception), temporal p. 3 (3.1. Multi-Modal Affordance Perception), p. 3 (3. Methods), p. 4 (3.2. Spatial Feature Extraction and Feature Fusion), p. 5 (4. Experiments), p. 5 (3.3. Query Mapping), p. 8 (5. Real Robot Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 - **p. 3 / 2 Approach - extractive body cue:** In our experiments, the robot has to discover task rewards by interacting with the real world, which the reward network learns to predict.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 - **p. 2 / 1 Introduction - extractive body cue:** World models also learn representations that fuse multiple sensor modalities and integrate them into latent states, removing the need for manual state estimation.
 - **p. 2 / 1 Introduction - extractive body cue:** The tasks cover a range of challenges, including different action spaces, sensory modalities, and reward structures. • Walking in 1 Hour We teach a quadruped ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 - **p. 3 / 2 Approach - extractive body cue:** In our implementation, a learner thread continuously trains the world model and actor critic behavior, while an actor thread in parallel computes actions for environment ...
 - **p. 3 / 2 Approach - extractive body cue:** This reduces accumulating errors and enables massively parallel training with a large batch size.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** world, model, Recurrent, State-Space, RSSM, Hafner, consists, four, components, Encoder, Network, st-1, at-1, Decoder, Dynamics, Reward, Physical, robots, often, equipped.
 - **Relevant PDF headings:** 2 Approach (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approac
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: To study the applicability of Dreamer for sample-efficient robot learning, we apply the algorithm to learn robot locomotion, manipulation, and navigation tasks from ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Dreamer follows a simple pipeline for online learning on robot hardware without simulators. The cur- rent learned policy collects experience on the robot. ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach), p. 4 (2 Approach), objective p. 4 (2 Approach), p. 4 (2 Approach), p. 3 (2 Approach), p. 3 (2 Approach), temporal p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (3 Experiments), p. 2 (1 Introduction), p. 5 (3 Experiments), p. 6 (3 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

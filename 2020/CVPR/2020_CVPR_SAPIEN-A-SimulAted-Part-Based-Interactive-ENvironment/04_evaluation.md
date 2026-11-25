@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 - **p. 7 / 4.1. Robotic Perception - extractive body cue:** We study two robotic interaction tasks: door-opening and drawer-pulling. architectures, loss designs, and training protocols.
 - **p. 8 / 4.2. Robotic Interaction - extractive body cue:** To demonstrate our simulator in manipulation tasks, we first use manually designed heuristic pipelines to solve the tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Robot-object Interaction in SAPIEN. We show the ray-traced scene (top) and robot camera views (bottom): RGB image, surface normals, depth and semantic segmen- ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 | Figure 1: Robot-object Interaction in SAPIEN. We show the ray-traced scene (top) and robot camera views (bottom): RGB image, surface normals, depth and semantic ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Table 1: Comparison to other Simulation Environments. Habitat [44] is a representative for navigation environments, which include Gibson [58, 57], Minos [43] and others; ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 | Table 1: Comparison to other Simulation Environments. Habitat [44] is a representative for navigation environments, which include Gibson [58, 57], Minos [43] and others; ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Table 2: Comparison of Articulated Part Datasets. *RBO is collected in real-world with long video sequences. Finally, there are environments that integrate full- featured ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | We adopt Soft ActorCritic(SAC) [15], which is one of the SOTA reinforcement learning algorithms, trained on 2, 4, 8, 16 doors or drawers, and ... | comparison identity and matched condition | p. 8 (4.2. Robotic Interaction) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,7 +112,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 - **p. 5 / 3.4. Profiling Analysis - extractive body cue:** Tests were performed on a laptop with Ubuntu 18.04, on 2.2 GHz Intel i7-8750 CPU and an Nvidia GeForce RTX 2070 GPU.
 - **p. 6 / 4.1. Robotic Perception - extractive body cue:** We use all 2,346 objects over 46 categories from the PartNetMobility dataset for this task.
 - **p. 8 / 4.2. Robotic Interaction - extractive body cue:** After 1M interaction steps, we evaluate the performance on the unseen objects, each for 20 episodes.
-- **p. 8 / 4.2. Robotic Interaction - extractive body cue:** After 1M interaction steps, we evaluate the performance on the unseen objects, each for 20 episodes.
 
 ## Generalization and Failure Cases
 
@@ -132,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 | body limitation/failure cue | If the agent cannot move the joint to the given threshold or move 11103 | p. 7 (4.2. Robotic Interaction) |
 | body limitation/failure cue | in the opposite direction, then it fails. | p. 8 (4.2. Robotic Interaction) |
 | body limitation/failure cue | During training, agents receive positive rewards when the target part approaches the joint limit with the opening door/drawer, while obtaining negative rewards when the ... | p. 8 (4.2. Robotic Interaction) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -145,14 +131,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 | After 1M interaction steps, we evaluate the performance on the unseen objects, each for 20 episodes. | p. 8 (4.2. Robotic Interaction) |
 | First, we need proper vision methods to encode the geometric information of the scene, which may change during interaction procedures. | p. 8 (4.2. Robotic Interaction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Robotic Interaction - extractive body cue:** If the agent cannot move the joint to the given threshold or move 11103
@@ -160,6 +138,5 @@ PDF body evaluation/result cue (p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robo
 - **p. 8 / 4.2. Robotic Interaction - extractive body cue:** During training, agents receive positive rewards when the target part approaches the joint limit with the opening door/drawer, while obtaining negative rewards when the gripper ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Robotic Perception), p. 7 (4.2. Robotic Interaction), p. 5 (4. Tasks and Benchmarks), p. 6 (4.1. Robotic Perception), p. 8 (4.2. Robotic Interaction), p. 6 (4.1. Robotic Perception), metrics p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robotic Interaction), p. 7 (4.1. Robotic Perception), p. 6 (4.1. Robotic Perception), p. 7 (4.1. Robotic Perception), p. 5 (4. Tasks and Benchmarks), baselines p. 6 (4.1. Robotic Perception), p. 6 (4.1. Robotic Perception), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (4.2. Robotic Interaction), results p. 8 (4.2. Robotic Interaction), p. 8 (4.2. Robotic Interaction), p. 7 (Figure/Table caption), p. 7 (4.1. Robotic Perception), p. 6 (4.1. Robotic Perception), p. 6 (4.1. Robotic Perception).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

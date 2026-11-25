@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 - **p. 3 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** Without loss of accuracy, we choose to omit a rigorous screw-theoretic treatment of articulated objects in favor of an explanation that requires only basic knowledge ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 - **p. 2 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** At this point, the policy can apply a 3D force F, with constant magnitude //F// = C to the object at that point.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** The system first observes the initial configuration of the object of interest, estimates the per-point articulation flow of the point cloud (3DAF), then executes the ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 - **p. 5 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** During each step of training, we select an object in the dataset, randomize the state S of the object, and compute a new supervised pair ...
 - **p. 4 / III. METHOD - FROM THEORY TO PRACTICE - extractive body cue:** While contact selection for suction-based grasping is a well-studied problem [3, 23, 24], we find that a simple heuristic performs acceptably; we choose the point ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** General, Policy, Articulation, Flow, Algorithm, FlowBot3D, manipulation, Require, parameters, trained, prediction, network, Initial, observation, Predict, SelectContact, Select, contact, pose, False.
 - **Relevant PDF headings:** 2) A novel 3D vision neural network architecture (which (p. 1); III. METHOD - FROM THEORY TO PRACTICE (p. 2); Method (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (I
 - **p. 7 / IV. RESULTS - extractive body cue:** UMPNet Pybullet Environment: The simulation environment used in the original UMPNet evaluations [39] is a PyBullet-based environment with different physical and collision parameters.
 - **p. 8 / IV. RESULTS - extractive body cue:** Each object falls into one of either the training or test classes we selected from the PartNet-Mobility.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), objective p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE), temporal p. 3 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 5 (III. METHOD - FROM THEORY TO PRACTICE), p. 4 (III. METHOD - FROM THEORY TO PRACTICE), p. 2 (III. METHOD - FROM THEORY TO PRACTICE), p. 3 (III. METHOD - FROM THEORY TO PRACTICE).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

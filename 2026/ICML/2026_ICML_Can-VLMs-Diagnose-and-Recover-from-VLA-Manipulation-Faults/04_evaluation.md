@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablat
 - **p. 3 / 2.2. Benchmark and Failure Evaluation of VLM - extractive body cue:** In contrast to prior work, we focus on task-level, interpretable, and recoverable failures in robotic manipulation.
 - **p. 7 / 5.1. Experimental Setup - extractive body cue:** The resulting dataset is curated with fine-grained annotations (failure type, subtask, and severity).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of VLA-FixBench, Center: Hierarchical failure types in Perception, Planning, and Control. Left: Severity definitions ranging from redundant motions (Level-1) to catastrophic failures ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablat
 | Figure 3. Left: Static diagnostic accuracy across different task domains and severity levels. Right: Dynamic diagnostic performance, including Geometric Correction Accuracy (GCA) and Temporal ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | While existing benchmarks like LIBERO (Liu et al., 2023)provide rigorous environments to assess task success rates , they largely overlook the underlying failure behaviors. | definition/direction/unit from same section | p. 3 (2.2. Benchmark and Failure Evaluation of VLM) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablat
 | In contrast to prior work, we focus on task-level, interpretable, and recoverable failures in robotic manipulation. | comparison identity and matched condition | p. 3 (2.2. Benchmark and Failure Evaluation of VLM) |
 | Together, these complementary tracks balance efficiency and accuracy, enabling systematic model comparison and diagnosis for VLA systems. | comparison identity and matched condition | p. 4 (4. FaultEval Evaluation Framework) |
 | This design follows three principles: (1) clarity and simplicity, allowing general black-box VLMs to integrate without model-specific output heads or adapters; (2) direct mapping ... | comparison identity and matched condition | p. 5 (4.2. Dynamic Evaluation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablat
 | body limitation/failure cue | Error severity level 7s Roll back time Accuracy Failure onset timestamp Convenience | p. 3 (2.1. Robotic Failure Diagnosis and Recovery) |
 | body limitation/failure cue | For each failure scenario i, the model generates a dynamic recovery tuple ˆdi = ⟨ˆtstop, ˆtrb, vi⟩, consisting of the Stop Time ˆtstop ∈R≥0 ... | p. 4 (4.2. Dynamic Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablat
 | Level-1 Level-2 Level-3 FIH SG AOCI P&P MLT 0 50.3 57.1 26.8 28.4 26.5 22.6 27.4 0 12.1 37.8 71.7 60.9 57.0 54.0 61.4 ... | p. 4 (3. Construction of VLA-FixBench) |
 | Impact of Rollback Step Selection We further analyze recovery strategies by comparing naive task-level rollback with rollback to intermediate execution steps. | p. 9 (5.6. Ablation Study) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5.4. Real-Time Evaluation Results - extractive body cue:** The real-robot setup is therefore a sparse diagnostic-and-recovery loop that trades limited inspection latency for recovery from failures that the VLA alone cannot escape.
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablat
 - **p. 4 / 4.2. Dynamic Evaluation - extractive body cue:** For each failure scenario i, the model generates a dynamic recovery tuple ˆdi = ⟨ˆtstop, ˆtrb, vi⟩, consisting of the Stop Time ˆtstop ∈R≥0 representing ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.3. Real-Time Evaluation), p. 9 (5.4. Real-Time Evaluation Results), p. 3 (2.2. Benchmark and Failure Evaluation of VLM), p. 4 (4.2. Dynamic Evaluation), p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablation Study), metrics p. 8 (5.2. Static Evaluation Results), p. 16 (Figure/Table caption), p. 4 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablation Study), p. 8 (5.3. Dynamic Evaluation Results), p. 6 (Figure/Table caption), baselines p. 5 (4.2. Dynamic Evaluation), p. 8 (5.4. Real-Time Evaluation Results), p. 8 (5.3. Dynamic Evaluation Results), p. 3 (2.2. Benchmark and Failure Evaluation of VLM), p. 4 (4. FaultEval Evaluation Framework), p. 5 (4.2. Dynamic Evaluation), results p. 5 (4.2. Dynamic Evaluation), p. 9 (5.6. Ablation Study), p. 6 (4.2. Dynamic Evaluation), p. 8 (5.2. Static Evaluation Results), p. 8 (5.2. Static Evaluation Results), p. 9 (5.5. Alignment Between Static and Dynamic Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

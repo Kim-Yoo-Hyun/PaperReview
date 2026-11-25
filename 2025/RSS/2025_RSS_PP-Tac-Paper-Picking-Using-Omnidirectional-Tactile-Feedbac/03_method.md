@@ -54,7 +54,6 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** However, this advantage diminishes for stiffer flat objects, such as kraft paper bags.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 7 (B. Depth Reconstruction of VBTS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 - **p. 6 / B. PP-Tac Policy - extractive body cue:** Once the dataset is prepared, we employ a diffusion policy to jointly control the hand and arm, enabling adaptation to varying terrain shapes and contact ...
 - **p. 7 / B. Depth Reconstruction of VBTS - extractive body cue:** The ‘qualitative results of the sensor output are shown in Fig.
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 - **p. 9 / B. Depth Reconstruction of VBTS - extractive body cue:** trajectory with compliant finger control via tactile feedback; (3) Model based force tracking": combines the PP-Tac-lerived hand trajectory with compliant finger control via tactile feedback; ...
 - **p. 6 / A. Implementation Details - extractive body cue:** Thus, the entire inference process consists of 10 steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** diffusion, policy, implemented, fourlayer, Transformer, encoder, latent, dimension, four, attention, heads, overparameterized, input, allows, network, extract, more, robust, expressive, features.
 - **Relevant PDF headings:** V. POLICY LEARNING FOR PAPER-PICKING (p. 5); B. PP-Tac Policy (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Pol
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** Slip) and the final success rate (Suce.
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** The average number of slip events detected (No.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (A. Implementation Details), p. 6 (B. PP-Tac Policy), p. 9 (B. Depth Reconstruction of VBTS), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 7 (A. Implementation Details), objective p. 7 (B. Depth Reconstruction of VBTS), p. 5 (V. POLICY LEARNING FOR PAPER-PICKING), p. 8 (B. Depth Reconstruction of VBTS), p. 8 (B. Depth Reconstruction of VBTS), temporal p. 6 (A. Implementation Details), p. 4 (A. Fingertip-shaped Tactile Sensing), p. 6 (1) A latent vector of D-dimensional features representing), p. 3 (B. Dexterous Robotic Hand with Tactile Sensing), p. 5 (A. Grasp Motion Dataset Synthesis), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

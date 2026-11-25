@@ -51,7 +51,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** As CFM is able to model arbitrary probability paths, it also allows formulating the regression on the R3 × SO(3) manifold.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 1 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Intro
 - **p. 1 / Abstract - extractive body cue:** We show that CFM gives the best performance when combined with point cloud input observations.
 - **p. 2 / 1 Introduction - extractive body cue:** PointFlowMatch uses point cloud observations that prove to be more effective than images [9, 10] and builds upon a CFM formulation to learn the distribution ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** In turn, in the cases where no closed-form solution for the forward diffusion process is available, training time will increase [11].
 - **p. 1 / 1 Introduction - extractive body cue:** The denoising process reverts these steps and it is used as a training signal for the model.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Inspired, recent, flow-based, generative, models, PointFlowMatch, novel, imitation, learning, algorithm, robotic, manipulation, However, algorithms, require, number, design, choices, ranging, input.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** To overcome these limitations, Conditional Flow Matching (CFM) has been proposed as an efficient generalization of diffusion models [12, 13, 11].
 - **p. 1 / 1 Introduction - extractive body cue:** The forward diffusion process starts with expert robot trajectories and gradually adds Gaussian noise until the signal approximates pure noise.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), objective p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), temporal p. 3 (2 Related Work), p. 7 (2 Related Work), p. 7 (2 Related Work), p. 5 (2 Related Work), p. 1 (1 Introduction), p. 1 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

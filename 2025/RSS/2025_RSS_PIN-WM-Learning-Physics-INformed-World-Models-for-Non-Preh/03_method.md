@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (B. Physics-INformed World Model), p. 3 (B. Worl
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** DINOWM [84] leverages spatial patch features pre-trained with DINOv2 to learn a world model and achieve task-agnostic behavior planning by treating goal features as prediction ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 5 (B. Physics-INformed World Model), p. 6 (B. Physics-INformed World Model), p. 5 (B. Physics-INformed World Model), p. 3 (B. World Models for Policy Learning), p. 3 (B. World Models for Policy Learning), p. 4 (B. Physics-INformed World Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (B. Physics-INformed World Model), p. 3 (B. Worl
 - **p. 5 / B. Physics-INformed World Model - extractive body cue:** next object pose x1 based on current state x+ and action ay.
 - **p. 6 / B. Physics-INformed World Model - extractive body cue:** Moreover, in robot manipulation, the action time horizon 11 is usually inequivalent to simulation step size h, while the latter is set small ‘enough to ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (B. Physics-INformed World Model), p. 3 (B. Worl
 - **p. 3 / B. World Models for Policy Learning - extractive body cue:** In contrast, PIN-WM enables end-to-end identification of 3D rigid-body dynamics from visual observations using few-shot, task-agnostic interaction data, which facilitates the training of vision-based manipulation ...
 - **p. 14 / A. Implementation Details for Baselines - extractive body cue:** All RL-based policies are trained using PPO [66], with the same model architecture, reward function, hyperparameters, and stopping criterion based on the success rate.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** formulate, system, identification, process, velocity-based, Linear, Complementarity, Problem, LCP, solves, equations, motion, under, global, constraints, Here, first, estimate, then, further.
 - **Relevant PDF headings:** B. World Models for Policy Learning (p. 2); B. Physics-INformed World Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 5 (B. Physics-INformed World Model), p. 3 (B. Worl
 - **p. 8 / A. Evaluations in Simulation - extractive body cue:** The purely data-driven world model Dreamer V2 [27], albeit having access to more task-agnostic data, fails to accurately approximate the dynamics of the target domain, ...
 - **p. 14 / Figure/Table caption - extractive body cue:** Fig. 10: Push cube object on a slippery plane.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (B. Physics-INformed World Model), p. 3 (B. World Models for Policy Learning), p. 5 (B. Physics-INformed World Model), p. 2 (B. World Models for Policy Learning), p. 2 (B. World Models for Policy Learning), p. 6 (B. Physics-INformed World Model), objective p. 5 (B. Physics-INformed World Model), p. 5 (B. Physics-INformed World Model), p. 6 (B. Physics-INformed World Model), p. 3 (B. World Models for Policy Learning), p. 6 (B. Physics-INformed World Model), p. 3 (B. World Models for Policy Learning), temporal p. 3 (C. Domain Randomization), p. 6 (B. Physics-INformed World Model), p. 6 (IV. RESULTS AND EVALUATIONS), p. 7 (A. Evaluations in Simulation), p. 7 (A. Evaluations in Simulation), p. 8 (B. Evaluations in Real-World).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

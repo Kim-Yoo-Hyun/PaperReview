@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 - **p. 10 / 7.2 Evaluation - extractive body cue:** Performing new tasks often requires generalization to new and unseen scenarios.
 - **p. 11 / 8 RESULTS - extractive body cue:** This multi-task, multienvironment training approach appears to foster a more robust and adaptable model, enabling it to perform well on unseen data and scenarios.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. We present MaskedMimic, a versatile control model that enables physically simulated characters to generate diverse behaviors from flexible user- specified constraints. MaskedMimic can ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 | We observed a tradeoff between user control and success rate. | definition/direction/unit from same section | p. 13 (8 RESULTS) |
 | While MaskedMimic demonstrates high success rates in generating diverse motions, there are three notable areas for improvement in terms of motion quality. | definition/direction/unit from same section | p. 15 (8 RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 | Specifically, foot tracking presents a greater challenge compared to hand tracking. | comparison identity and matched condition | p. 12 (8 RESULTS) |
 | Despite not being explicitly trained on this task, MaskedMimic outperforms other models by a significant margin when evaluated on tracking target trajectories extracted from ... | comparison identity and matched condition | p. 12 (8 RESULTS) |
 | The superior performance of our model suggests that, in the context of full-body tracking, a welldesigned unified network can effectively capture the diversity of ... | comparison identity and matched condition | p. 11 (8 RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 | body limitation/failure cue | We hypothesize that this limitation stems from the naive mapping of motions from flat to irregular terrains based on the root-to-floor distance normalization. | p. 15 (8 RESULTS) |
 | body limitation/failure cue | Notably, MaskedMimic does not produce a single solution. | p. 14 (8 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 | We consider a trial "failed" if at any frame the average joint deviation is larger than 0.5m [Luo et al. | p. 10 (8 RESULTS) |
 | MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting • 11 (a) Full-body tracking: punching (b) Full-body tracking: dancing (c) VR tracking: cartwheel (d) ... | p. 11 (8 RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 15 / 8 RESULTS - extractive body cue:** 9 LIMITATIONS AND FUTURE WORK Although MaskedMimic presents a unified model for controlling physically simulated humanoids, there remains a number of limitations with our model.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 - **p. 14 / 8 RESULTS - extractive body cue:** Notably, MaskedMimic does not produce a single solution.
 
 - **Evidence anchors reviewed:** datasets p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 12 (8 RESULTS), p. 14 (8 RESULTS), metrics p. 14 (8 RESULTS), p. 9 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 13 (8 RESULTS), p. 10 (7.2 Evaluation), baselines p. 10 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS), p. 12 (8 RESULTS), p. 11 (8 RESULTS), results p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 11 (8 RESULTS), p. 12 (8 RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

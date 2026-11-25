@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPER
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** The robot should interpret the human's query and search for the room and object location in the pre-built 3D scene graph hierarchically and navigate to ...
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** Since our environment has more than one classroom and our 3D scene graph does not consider further identification for rooms with the same type, it ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison of our proposed Point2Graph algorithm and the existing 3D scene graph generation algorithm. Compared with existing methods [8], [9], our proposed Point2Graph ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPER
 | Fig. 3: Generation of border-enhanced density map: The process begins by segmenting the point cloud into N layers, each of which is projected into ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 5. 1) Object-Level Detection: The room point cloud data is sampled from the segmented room-level geometry informa- tion of the scene. To identify ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPER
 | Results are compared on base/novel (B/N) category splits, with an indication of whether methods use RGB-D images ("use RGB-D") "Sofa" "Somewhere to study" Fig. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTAL RESULTS) |
 | 0.08 × OpenIns3D [12] -/7 0.28 0.43 × Ours -/7 0.38 0.44 × Mask3D-P-CLIP [44] -/17 0.04 0.14 × OpenIns3D [12] -/17 0.29 0.39 ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTAL RESULTS) |
 | Fig. 5: Overview of the 3D open-vocabulary detection pipeline: It consists of two stages: (1) detection and localization using class-agnostic bounding boxes and DBSCAN ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,22 +115,12 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPER
 | body limitation/failure cue | In conclusion, this work presents the Point2Graph framework, which addresses the limitations of current openvocabulary 3D scene graph generation methods by eliminating the need ... | p. 6 (V. CONCLUSION) |
 | body limitation/failure cue | Our proposed "Snap-Lookup" pipeline, which incorporates room visual features into type inference, can differentiate between various types of rooms that contain the same objects-something ... | p. 5 (IV. EXPERIMENTAL RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | To obtain open-vocabulary features for each room, inspired by the approach in [8], we use the CLIP visual encoder to extract embeddings from the ... | p. 4 (III. METHODOLOGY) |
 | Object-Level Detection and Classification After getting the segmentation result for each room, our approach mainly consists of two steps, where the first step deals ... | p. 4 (III. METHODOLOGY) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -150,6 +129,5 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPER
 - **p. 5 / IV. EXPERIMENTAL RESULTS - extractive body cue:** Our proposed "Snap-Lookup" pipeline, which incorporates room visual features into type inference, can differentiate between various types of rooms that contain the same objects-something text-only ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), metrics p. 6 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 4 (Figure/Table caption), results p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

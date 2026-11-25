@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusio
 - **p. 3 / 2.2. Diffusion Models - extractive body cue:** To obtain the training objective, we follow the practice of DDPM (Ho et al., 2020) and discard the weighting in (11).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models), p. 3 (2.2. Diffusion Models), p. 4 (3. Method), p. 5 (3.2. Non-Equivariant Latent Diffusion Model), p. 5 (3.1. Aligned Latent Space).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusio
 - **p. 5 / 3.1. Aligned Latent Space - extractive body cue:** Note that both the input to the encoder E and the target of the reconstruction are the rotated molecule (Rθx, h).
 - **p. 2 / 1. Introduction - extractive body cue:** Autoencoders have been widely used to reduce input dimensions and improve efficiency for latent diffusion models (Rombach et al., 2022).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusio
 - **p. 7 / 4.5. Efficiency Comparison - extractive body cue:** We add the number of parameters of the autoencoder but exclude its training time, since training the 7
 - **p. 7 / 4.5. Efficiency Comparison - extractive body cue:** We list the parameter counts, average training time per epoch and sampling speed in Table 3.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Inputs, atomic, coordinates, atom, features, Learnable, parameters, rotation, network, encoder, decoder, while, converged, Subtract, center, gravity, Calculate, reconstruction, loss, Update.
 - **Relevant PDF headings:** 2.2. Diffusion Models (p. 2); 3. Method (p. 4); 3.2. Non-Equivariant Latent Diffusion Model (p. 5); 5.1. Diffusion Models (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusio
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Similarly, we compare with GeoLDM's non-equivariant versions GraphLDM and GraphLDM-aug.
 - **p. 8 / 4.5. Efficiency Comparison - extractive body cue:** From the table we can see that in general our nonequivariant model RADM is significantly more efficient than EDM and GeoLDM.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models), p. 5 (3.1. Aligned Latent Space), p. 5 (3.1. Aligned Latent Space), p. 4 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models), objective p. 4 (3.1. Aligned Latent Space), p. 4 (3.1. Aligned Latent Space), p. 5 (3.2. Non-Equivariant Latent Diffusion Model), p. 5 (3.1. Aligned Latent Space), p. 3 (2.2. Diffusion Models), p. 3 (2.2. Diffusion Models), temporal p. 5 (3.2. Non-Equivariant Latent Diffusion Model), p. 6 (4.1. Experimental Setup), p. 3 (2.3. Equivariance), p. 5 (2. If E and D were), p. 8 (4.5. Efficiency Comparison), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -45,8 +45,6 @@
 - **p. 9 / 4 Experiments - extractive body cue:** On the sparse unbounded-drone dataset, our approach significantly outperforms the SoTA methods with improvements of 2.54 dB in PSNR, 0.089 in SSIM, and cuts LPIPS ...
 - **p. 15 / A.1 Sparse unbounded drone dataset - extractive body cue:** (a) Sunny (b) Snowy (c) Cloudy (d) Low-light Figure 6: Dataset visualizations
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: With 20 input views, DNGS and FSGS produce overly smooth rendering in regions lacking support from sparse point cloud initialization. For scenes with ...
@@ -80,8 +78,6 @@
 | Figure 9: Error maps after alignment. Brighter means higher error. A.2.2 Edge cases (a) GT (b) Render (c) GT (d) Render | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | Figure 12: Illustration of Coordinate Alignment. We first compute the transformation M ˚ between train cameras in two coordinate systems Cref train and Cinput ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@
 | Figure 8: Visualizations of rendering with different point cloud initializations. dense point cloud, usually millions of points. To utilize DUSt3R points, we align them ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
 | Table 7: Experiments in 12-view setting, where each appearance has 3 images. MS-GS continues to outperform other methods. The metrics are reported as the ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
 | 4.1 Datasets We evaluate the performance of MS-GS and current SoTA methods on three real-world scenes with sparse inputs-one with single appearance and two ... | comparison identity and matched condition | p. 7 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,7 +109,6 @@
 
 - Numeric sentences retained from the body:
 - **p. 17 / A.3 Implementation details - extractive body cue:** The appearance MLP consists of 3 layers of 64 hidden units.
-- **p. 17 / A.3 Implementation details - extractive body cue:** The appearance MLP consists of 3 layers of 64 hidden units.
 
 ## Generalization and Failure Cases
 
@@ -132,8 +120,6 @@
 | body limitation/failure cue | Jointly, MS-GS offers a robust solution under challenges of limited viewpoints and varying appearances that naturally arise in real-world data. | p. 10 (6 Conclusion) |
 | body limitation/failure cue | A previous approach [11] has tried to perform re-triangulation based on known train poses, but does not account for pose inaccuracy. | p. 19 (A.6 In-the-wild evaluation) |
 | body limitation/failure cue | This analysis indicates that DSIM is an appropriate metric for in-the-wild evaluations: it avoids over-penalising inevitable alignment errors while still capturing real perceptual degradation. | p. 21 (A.6.2 Evaluation metrics) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -148,14 +134,6 @@
 | (2) While this formulation can be efficiently computed to construct a very dense point cloud, such a point cloud will be very noisy. | p. 5 (3 Method) |
 | A feature fusion network MLPθ takes these two appearance components to decode the RGB colors of 3D Gaussians c P RNˆ3 : c " ... | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 Experiments - extractive body cue:** Specific techniques have to be developed to solve these limitations, which we leave as future work.
@@ -166,6 +144,5 @@
 - **p. 21 / A.6.2 Evaluation metrics - extractive body cue:** This analysis indicates that DSIM is an appropriate metric for in-the-wild evaluations: it avoids over-penalising inevitable alignment errors while still capturing real perceptual degradation.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 15 (A.1.2 Comparison with prior benchmark), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), metrics p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 19 (A.6 In-the-wild evaluation), p. 21 (A.6.2 Evaluation metrics), baselines p. 9 (4 Experiments), p. 8 (4 Experiments), p. 17 (A.3 Implementation details), p. 16 (Figure/Table caption), p. 18 (Figure/Table caption), p. 7 (4 Experiments), results p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 16 (Figure/Table caption), p. 18 (Figure/Table caption), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

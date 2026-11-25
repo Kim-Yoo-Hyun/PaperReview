@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 - **p. 19 / A.3 APIs for VoxPoser - extractive body cue:** Besides exposing NumPy [16] and the Transforms3d library to the LLM, we provide the following environment APIs that LLMs can choose to invoke: detect(obj name): ...
 - **p. 8 / 3 Method - extractive body cue:** This observation aligns with our real-world experiment, where most errors are from perception.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: VOXPOSER extracts language-conditioned affordances and constraints from LLMs and grounds them to the perceptual space using VLMs, using a code interface and without ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 | Note that in MPC settings, "movable" and the input value maps are functions that can be re-evaluated to reflect the latest environment observation. cm2index(cm,direction): ... | definition/direction/unit from same section | p. 19 (A.3 APIs for VoxPoser) |
 | Besides exposing NumPy [16] and the Transforms3d library to the LLM, we provide the following environment APIs that LLMs can choose to invoke: detect(obj ... | definition/direction/unit from same section | p. 19 (A.3 APIs for VoxPoser) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 | In comparison, exploring without prior all exceed the maximum 12-hour limit. | comparison identity and matched condition | p. 8 (3 Method) |
 | Figure 1: VOXPOSER extracts language-conditioned affordances and constraints from LLMs and grounds them to the perceptual space using VLMs, using a code interface and ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | For each task, we evaluate each method on two settings: without and with disturbances. | comparison identity and matched condition | p. 20 (A.4 Real-World Environment Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 | body limitation/failure cue | Due to fast replanning capabilities, it is also robust to external disturbances, such as moving targets/obstacles and pulling the drawer open after it has ... | p. 7 (3 Method) |
 | body limitation/failure cue | Figure 2: Overview of VOXPOSER. Given the RGB-D observation of the environment and a language in- struction, LLMs generate code, which interacts with VLMs, ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 | Results are reported over 3 runs different seeds. | p. 8 (3 Method) |
 | We provide an open-sourced implementation of VoxPoser at github.com/huangwl18/VoxPoser based on RLBench [134], as its diversity of tasks and scenes best resembles our real-world ... | p. 18 (A.1 Code Release) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 3 Method - extractive body cue:** 5 Conclusion, Limitations, & Future Works In this work, we present VOXPOSER, a general framework for extracting affordances and constraints, grounded in 3D perceptual space, ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 7 (3 Method), p. 22 (A.5.2 Full Results on Si
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of VOXPOSER. Given the RGB-D observation of the environment and a language in- struction, LLMs generate code, which interacts with VLMs, to ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (3 Method), p. 18 (A.1 Code Release), p. 20 (A.4 Real-World Environment Setup), p. 18 (A.2 Emergent Behavioral Capabilities), p. 7 (3 Method), p. 21 (A.5 Simulated Environment Setup), metrics p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 5 (Figure/Table caption), baselines p. 7 (3 Method), p. 7 (3 Method), p. 20 (A.4 Real-World Environment Setup), p. 8 (3 Method), p. 1 (Figure/Table caption), p. 20 (A.4 Real-World Environment Setup), results p. 7 (3 Method), p. 22 (A.5.2 Full Results on Simulated Environments), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

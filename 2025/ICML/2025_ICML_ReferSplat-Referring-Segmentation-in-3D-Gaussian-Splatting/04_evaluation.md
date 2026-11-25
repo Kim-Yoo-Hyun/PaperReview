@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Analysis of Computation Costs), p. 7 
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** R3DGS result on the Ref-LERF dataset.
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** 4, removing components fp,i and fp,w,i from Eq.7 results in performance dropping below the baseline, indicating that vanilla cross-attention alone is ineffective for our task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Referring 3D Gaussian Splatting Segmentation (R3DGS) aims at segmenting the target objects described by a given natural language descriptions within a 3D Gaussian ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Analysis of Computation Costs), p. 7 
 | Although this improves performance, it remains less effective than our attention-based position modeling. | definition/direction/unit from same section | p. 8 (4.3. Ablation Study) |
 | Figure 3. Overview of the proposed approach ReferSplat. Firstly, to infuse language-awareness into the 3D Gaussians, we introduce a new property called referring features, ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Analysis of Computation Costs), p. 7 
 | Results show that BERT consistently outperforms CLIP. | comparison identity and matched condition | p. 8 (4.7. Choice of Language Encoder) |
 | Despite not being specifically designed for 3DOVS tasks, our approach achieves state-of-the-art performance. | comparison identity and matched condition | p. 8 (4.5. 3D Open-Vocabulary Segmentation Result) |
 | Figure 2. Comparison of (a) existing open-vocabulary 3DGS seg- mentation pipeline and (b) the proposed ReferSplat for R3DGS. 3D scene representation learning. During inference, ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Analysis of Computation Costs), p. 7 
 | body limitation/failure cue | Our 3D Gaussian Referring Fields enable the model to recognize occluded or non-visible objects by leveraging multi-view 3D scene knowledge-an inherent limitation of 2D-based ... | p. 8 (4.4. Results on the Ref-LERF Dataset) |
 | body limitation/failure cue | Smaller dimensions (e.g., 1 or 4) lack the capacity to store discriminative features, while larger dimensions (e.g., 32) introduce redundancy and noise, degrading performance. | p. 8 (4.8. Impact of Referring Feature Dimension) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (4.6. Analysis of Computation Costs), p. 7 
 | The color at a given pixel v, denoted as C(v), is computed by blending the contributions of all Gaussians according to their opacity. | p. 3 (3.1. Preliminaries) |
 | The response on the 2D image plane at pixel v, denoted as M(v), serves as both the projected text response and the rendered segmentation ... | p. 4 (3.3. 3D Gaussian Referring Fields) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Comparison of (a) existing open-vocabulary 3DGS seg- mentation pipeline and (b) the proposed ReferSplat for R3DGS. 3D scene representation learning. During inference, output ...
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 8 (4.6. Analysis of Computation Costs), p. 7 
 - **p. 8 / 4.8. Impact of Referring Feature Dimension - extractive body cue:** Smaller dimensions (e.g., 1 or 4) lack the capacity to store discriminative features, while larger dimensions (e.g., 32) introduce redundancy and noise, degrading performance.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Ref-LERF Dataset and Evaluation Metrics), p. 7 (4.3. Ablation Study), p. 6 (4.1. Ref-LERF Dataset and Evaluation Metrics), p. 8 (4.6. Analysis of Computation Costs), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), metrics p. 7 (4.3. Ablation Study), p. 6 (4.1. Ref-LERF Dataset and Evaluation Metrics), p. 7 (4.3. Ablation Study), p. 6 (4.1. Ref-LERF Dataset and Evaluation Metrics), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), baselines p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 6 (4.1. Ref-LERF Dataset and Evaluation Metrics), p. 8 (4.7. Choice of Language Encoder), p. 8 (4.5. 3D Open-Vocabulary Segmentation Result), p. 2 (Figure/Table caption), results p. 8 (4.6. Analysis of Computation Costs), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (4.7. Choice of Language Encoder).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

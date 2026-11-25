@@ -52,7 +52,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** (2023b), have demonstrated the feasibility and efficiency of reconstructing omnidirectional radiance fields in large scenes using sparse and wide-baseline 360-degree image inputs.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We thus obtain undistorted omnidirectional images by re-sampling input images based on the learned omnidirectional camera model.
 - **p. 1 / ABSTRACT - extractive body cue:** Rather than converting 360-degree images to cube maps and performing perspective image calibration, we treat 360-degree images as a whole sphere and derive a mathematical ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** To further assess the robustness of our method against varying levels of camera perturbation, we conducted experiments using the same learning rate with increasing scales ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summarize, main, contributions, include, first, system, self-calibrating, omnidirectional, radiance, fields, jointly, optimizes, Gaussians, camera, poses, models, provided, derivation, pose, gradients.
 - **Relevant PDF headings:** C.1 PSEUDO-CODE OF DIFFERENTIABLE OMNIDIRECTIONAL CAMERA MODEL (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** When the input camera poses are estimated by SfM without perturbation, we can slightly increase the quality of radiance field reconstruction by camera pose refinement, ...
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** 2) Following 360Roam (Huang et al., 2022), we replaced the ray sampling functions of NeRF-based methods (BARF, L2G-NeRF, CamP) with omnidirectional ray sampling to support ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT), objective p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), temporal p. 7 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

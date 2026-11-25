@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 - **p. 7 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We compare LangSplat with other 2D and 3D state-of-the-art methods on the 3D-OVS dataset in Table 5.
 - **p. 8 / 4.3. Results on the 3D-OVS dataset - extractive body cue:** We visualize the segmentation results in 2 scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Visualization of learned 3D language features of the previous SOTA method LERF and our LangSplat. While LERF generates imprecise and vague 3D features, ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 | We observe that our method gives the most accurate segmentation maps. | definition/direction/unit from same section | p. 8 (4.3. Results on the 3D-OVS dataset) |
 | Figure 1. Visualization of learned 3D language features of the previous SOTA method LERF and our LangSplat. While LERF generates imprecise and vague 3D ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 | The image resolution is 1440 × 1080. our baseline equals LERF, which has a speed of 30.93 seconds per text query at the resolution ... | comparison identity and matched condition | p. 7 (4.2. Results on the LERF dataset) |
 | Among all state-of-the-art methods, our methods give the most accurate segmentation maps, which further demonstrates the effectiveness of our LangSplat. | comparison identity and matched condition | p. 8 (4.3. Results on the 3D-OVS dataset) |
 | Qualitative comparisons of different methods on the 3D-OVS dataset. | comparison identity and matched condition | p. 8 (4.3. Results on the 3D-OVS dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 | body limitation/failure cue | As LERF suffers from the patchy issue and learns over-smoothed features, it fails to find accurate object boundaries. | p. 8 (4.3. Results on the 3D-OVS dataset) |
 | body limitation/failure cue | We see that the LERF learned features fail to generate clear boundaries between objects while our method gives precise object shapes solely using CLIP ... | p. 6 (4.2. Results on the LERF dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 | Then segment masks are sent to the CLIP image encoder to extract the corresponding CLIP embeddings. | p. 4 (3.1. Revisiting the Challenges of Language Fields) |
 | To reduce memory cost and improve efficiency, we introduce a scenewise language autoencoder. | p. 5 (3.3. 3D Gaussian Splatting for Language Fields) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The framework of our LangSplat. Our LangSplat leverages SAM to learn hierarchical semantics to address the point ambiguity issue. Then segment masks are ...
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on the LERF dataset), p. 7 (4
 - **p. 6 / 4.2. Results on the LERF dataset - extractive body cue:** We see that the LERF learned features fail to generate clear boundaries between objects while our method gives precise object shapes solely using CLIP features.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Settings), p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), metrics p. 6 (4.1. Settings), p. 6 (4.1. Settings), p. 7 (4.2. Results on the LERF dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), baselines p. 6 (4.2. Results on the LERF dataset), p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 8 (4.3. Results on the 3D-OVS dataset), results p. 6 (4.2. Results on the LERF dataset), p. 7 (4.3. Results on the 3D-OVS dataset), p. 7 (4.2. Results on the LERF dataset), p. 8 (4.3. Results on the 3D-OVS dataset), p. 6 (4.1. Settings), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

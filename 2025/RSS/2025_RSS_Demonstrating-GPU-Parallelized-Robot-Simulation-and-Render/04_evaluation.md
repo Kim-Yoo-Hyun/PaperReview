@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 3 / 5) Scalable Dataset Generation Pipeline from Few - extractive body cue:** Concretely we categorize the 12 distinct categories as follows: Table top manipulation, mobile manipulation, room-scale scenes for manipulation, quadruped/humanoid locomotion, humanoid/bi-manual ‘manipulation, multi-agent robotics, draw ...
 - **p. 7 / IV. BASELINES AND RESULTS - extractive body cue:** ManiSkill3 provides several popular robot learning. baselines as well as simple reproducible setups for end-to-end trainable vision-based sim2real policies.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Multiple distinct task categories are displayed, ranging from room-scale tasks to humanoid interactions and drawing tasks, Majority of tasks shown are GPU-parallelized, simulating ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 | For more complex tasks without easily defined motion planning scripts or reward functions, ManiSkill3 relies on ‘online learning from demonstrations algorithms like RLPD [2] ... | definition/direction/unit from same section | p. 3 (5) Scalable Dataset Generation Pipeline from Few) |
 | Fig. 2: GPU Simulation+Rendering of RGB speeds of the Cartpole environment with different camera setups ManiSkill3 and Isaac Lab. Annotated numbers indicate GPU memory ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 | Fig. 1: Multiple distinct task categories are displayed, ranging from room-scale tasks to humanoid interactions and drawing tasks, Majority of tasks shown are GPU-parallelized, ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | ManiSkill3 is the most feature-rich GPU simulation frame- ‘work compared to popular alternatives as shown in Table I. | comparison identity and matched condition | p. 3 (5) Scalable Dataset Generation Pipeline from Few) |
 | Fig. 10: Code comparison for manipulating batched poses | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 | body limitation/failure cue | We also support evaluating (but not training) several vision-language action (VLA) models, namely Octo [40], RT-X [14], and RDT-IB [32 We leave to future ... | p. 7 (A. Reinforcement Learning) |
 | body limitation/failure cue | During simulation training and real-world evaluation, observations are restricted to RGB inputs and robot joint positions; ‘no demonstrations or privileged state information such as ... | p. 8 (A. Reinforcement Learning) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 | GPU parallelized simulation makes data incredibly cheap to generate. | p. 1 (1. INTRODUCTION) |
 | Simulation has enabled unprecedented compute ‘approaches to robot learning. | p. 1 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / C. Heterogeneous GPU Simulation - extractive body cue:** This enables flexibility in trajectory replay as data collected on one machine with more GPU memory can be replayed on other machines with less GPU ...
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 18 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 8 / A. Reinforcement Learning - extractive body cue:** During simulation training and real-world evaluation, observations are restricted to RGB inputs and robot joint positions; ‘no demonstrations or privileged state information such as cube ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 7 (IV. BASELINES AND RESULTS), metrics p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 22 (Figure/Table caption), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), baselines p. 7 (IV. BASELINES AND RESULTS), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (5) Scalable Dataset Generation Pipeline from Few), p. 2 (Figure/Table caption), p. 3 (5) Scalable Dataset Generation Pipeline from Few), p. 7 (Figure/Table caption), results p. 18 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 22 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

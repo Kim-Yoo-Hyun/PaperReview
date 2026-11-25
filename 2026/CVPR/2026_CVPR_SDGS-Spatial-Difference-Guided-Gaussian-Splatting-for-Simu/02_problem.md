@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 2 | Figure 2. Our approach follows a "sketch-then-paint" paradigm. Similar to drawing the outline before adding colors, we first ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | We evaluate our method on three datasets to verify both the robustness and generalization ability: SD-Replica Datasets. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 4 (3.1.2. Edge-aligned 3D Gaussian Representation), p. 2 (1. Introduction), p. 5 (3.2.2. Tracking). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 4 (3.1.2. Edge-aligned 3D Gaussian Representation), p. 2 (1. Introduction), p. 5 (3.2.2. Tracking), objective p. 3 (3.1.1. Sparse Edge Descriptor), p. 4 (3.2.2. Tracking), p. 4 (3.2.2. Tracking), p. 5 (3.4.2. SD-guided Mutually Exclusive RGB Supervision), p. 5 (3.4.2. SD-guided Mutually Exclusive RGB Supervision), p. 6 (3.4.2. SD-guided Mutually Exclusive RGB Supervision).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

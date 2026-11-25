@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We present a scalable and extensible benchmarking protocol for robotics, by coupling physics engines, real-to-sim translation and human preference feedback.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Both our benchmark environments and evaluation code will be publicly released and centrally maintained for continual support.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: RobotArena ∞provides a scalable and extensible robot benchmarking framework by automating environment construction and evaluation. It automatically generates simulated environment seeded from real ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | Figure 5: Simulation environments in RobotArena ∞seeded from videos demonstrations in the datasets of Bridge, RH20T and DROID. in the estimated rankings, we compute ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | BEHAVIOR boasts an impressive manual effort of asset and environment creation, while SIMPLER reconstructs four real-world Bridge scenes and includes hand-designed reward functions. | definition/direction/unit from same section | p. 2 (1 INTRODUCTION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | Our benchmark is not without limitations. | comparison identity and matched condition | p. 3 (1 INTRODUCTION) |
 | Figure 6: Human preference ranking of VLAs in BridgeSim environments from 8,749 pairwise comparisons. We show the VLA rankings derived from human pairwise preferences ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 8: Comparison of Simulation- Based Against Real-World-based Robot Evaluations using Ma et al. (2024) | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | 6 LIMITATIONS AND FUTURE DIRECTIONS By leveraging recent advances in reality-to-simulation translation and crowdsourced evaluation, RobotArena ∞provides a scalable and extensible robot benchmark. | p. 9 (2 RELATED WORK) |
 | body limitation/failure cue | Second, even within the same environment, performance degrades under perturbations, showing that robustness to distribution shifts remains an open challenge. | p. 2 (1 INTRODUCTION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | We measure both in-distribution performance by testing on simulation environments seeded from training videos in established datasets such as Bridge Walke et al. | p. 2 (1 INTRODUCTION) |
 | It automatically generates simulated environment seeded from real videos, deploys robot policies, and evaluates them using VLMs and crowdsourced workers that cast preferences between ... | p. 2 (1 INTRODUCTION) |
 | Both our benchmark environments and evaluation code will be publicly released and centrally maintained for continual support. | p. 3 (1 INTRODUCTION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Second, even within the same environment, performance degrades under perturbations, showing that robustness to distribution shifts remains an open challenge.
 
 - **Evidence anchors reviewed:** datasets p. 1 (ABSTRACT), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), metrics p. 24 (Figure/Table caption), p. 22 (Figure/Table caption), p. 24 (Figure/Table caption), p. 2 (1 INTRODUCTION), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), baselines p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 6 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

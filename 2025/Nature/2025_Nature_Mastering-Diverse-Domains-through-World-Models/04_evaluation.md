@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 - **p. 10 / Abstract - extractive body cue:** • BSuite This benchmark includes 23 environments with a total of 468 configurations that are specifically designed to test credit assignment, robustness to reward scale ...
 - **p. 4 / Abstract - extractive body cue:** True Context Input Open Loop Prediction Model True T = 0 Model 5 10 15 20 25 30 35 40 45 50 Figure 4: Multi-step ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Benchmark summary. a, Using fixed hyperparameters across all domains, Dreamer outperforms tuned expert algorithms across a wide range of benchmarks and data budgets. ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 | To estimate returns that consider rewards beyond the prediction horizon, we compute bootstrapped λ-returns29 that integrate the predicted rewards and the values. | definition/direction/unit from same section | p. 5 (Abstract) |
 | To consider rewards beyond the prediction horizon T = 16, the critic learns to approximate the distribution of returns28 for each state under the ... | definition/direction/unit from same section | p. 5 (Abstract) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 | Figure 9: Item success rates as a percentage of episodes. Dreamer obtains items at substantially higher rates than the baselines and continues to improve ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
 | While several strong baselines progress to advanced items such as the iron pickaxe, none of them discovers a diamond. | comparison identity and matched condition | p. 10 (Abstract) |
 | We note that these baselines were not designed for data-efficiency but serve as a valuable comparison point for the performance previously achievable at scale. | comparison identity and matched condition | p. 8 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -143,8 +132,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 | body limitation/failure cue | Robustness techniques based on normalization, balancing, and transformations enable stable learning across domains. | p. 1 (Abstract) |
 | body limitation/failure cue | Dreamer overcomes this challenge through a range of robustness techniques based on normalization, balancing, and transformations. | p. 2 (Abstract) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -158,14 +145,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 | Introduction Reinforcement learning has enabled computers to solve tasks through interaction, such as surpassing humans in the games of Go and Dota1,2. | p. 2 (Abstract) |
 | We present Dreamer, a general algorithm that outperforms specialized expert algorithms across a wide range of domains while using fixed hyperparameters, making reinforcement learning ... | p. 2 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Abstract - extractive body cue:** Importantly, the network can output any continuous value in the interval because the weighted average can fall between the buckets: ˆy .= softmax(f(x))TB B .= ...
@@ -176,9 +155,8 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 2 (Abstract), p
 - **p. 2 / Abstract - extractive body cue:** Dreamer overcomes this challenge through a range of robustness techniques based on normalization, balancing, and transformations.
 
 - **Evidence anchors reviewed:** datasets p. 9 (Abstract), p. 9 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 6 (Abstract), metrics p. 37 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Abstract), p. 10 (Abstract), p. 24 (Figure/Table caption), p. 6 (Abstract), baselines p. 9 (Abstract), p. 9 (Abstract), p. 10 (Abstract), p. 24 (Figure/Table caption), p. 10 (Abstract), p. 8 (Abstract), results p. 24 (Figure/Table caption), p. 2 (Abstract), p. 2 (Abstract), p. 9 (Abstract), p. 32 (Figure/Table caption), p. 39 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

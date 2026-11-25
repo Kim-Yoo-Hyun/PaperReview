@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 5 / III. S3E DATASET - extractive body cue:** The dataset covers a range of challenging environments that C-SLAM algorithms may encounter, including dynamic objects, long operation times, perceptual aliasing, indoor settings, and significant ...
 - **p. 3 / III. S3E DATASET - extractive body cue:** Ground Truth To create accurate ground truth tracks for our dataset, we use a three-pronged approach: For outdoor environments with good GNSS signal reception, a ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Mobile Platform Sensor Layout and Coordinate Systems. The left part details the sensor locations and the coordinate frames that define their spatial orientation ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Ground Truth Format: The ground truth data, which is essential for evaluating the accuracy of C-SLAM algorithms, is provided as TXT files. | definition/direction/unit from same section | p. 6 (III. S3E DATASET) |
 | Additionally, we have incorporated five collaborative SLAM (C-SLAM) systems into our study, which include COVINS [1], DiSCo-SLAM [2], Swarm-SLAM [19], DCL-SLAM [3], and CoLRIO ... | definition/direction/unit from same section | p. 6 (IV. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Baselines We have implemented four single-agent SLAM systems, namely ORB-SLAM3 [15], VINS-Fusion [16], LIO-SAM [17], and LVI-SAM [18]. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | The results, summarized in Table V and Table VI , reveal the absolute trajectory error (ATE) for both single-agent and collaborative SLAM (C-SLAM) systems ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | In indoor environments without GNSS signals, like laboratories, a motion capture system with 17 high-frequency cameras is used to record track start and endpoints ... | comparison identity and matched condition | p. 3 (III. S3E DATASET) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Each paradigm is meticulously crafted to offer a robust framework for assessing C-SLAM algorithms across a multitude of real-world collaborative robotic applications. | p. 4 (III. S3E DATASET) |
 | body limitation/failure cue | This diversity is crucial for evaluating C-SLAM performance, adaptability, and robustness, which are key for advancing collaborative robotic navigation and mapping technologies. | p. 5 (III. S3E DATASET) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | The abbreviations used within the table are as follows: "Sw" denotes Software Synchronization, indicating that synchronization across sensors or systems is achieved through software ... | p. 2 (C OLLABORATIVE Simultaneous Localization and Map) |
 | Our synchronization system is built around an Altera EP4CE10 FPGA board acting as the primary trigger device, with an Intel NUC11TNKv7 serving as the ... | p. 3 (III. S3E DATASET) |
 | Considering transmission delays, all sensor readings are forwarded to the host computer, where they are timestamped upon arrival, organized, and packaged to ensure accurate ... | p. 3 (III. S3E DATASET) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 5 / III. S3E DATASET - extractive body cue:** This diversity is crucial for evaluating C-SLAM performance, adaptability, and robustness, which are key for advancing collaborative robotic navigation and mapping technologies.
 
 - **Evidence anchors reviewed:** datasets p. 3 (III. S3E DATASET), p. 4 (III. S3E DATASET), p. 4 (III. S3E DATASET), p. 7 (IV. EXPERIMENTS), p. 6 (III. S3E DATASET), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 3 (III. S3E DATASET), p. 3 (III. S3E DATASET), p. 4 (III. S3E DATASET), p. 4 (III. S3E DATASET), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 3 (III. S3E DATASET), results p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 3 (III. S3E DATASET), p. 4 (III. S3E DATASET), p. 3 (III. S3E DATASET), p. 4 (III. S3E DATASET).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

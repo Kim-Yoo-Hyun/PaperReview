@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 - **p. 7 / 5.2. Multi-modal Goal Generation - extractive body cue:** We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process.
 - **p. 3 / 3. 3D Embodied Instruction Tuning Dataset - extractive body cue:** Recently, benefiting from billion-scale datasets on the internet, VLMs have demonstrated exceptional proficiency in various tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Examples from our 3D Embodied Instruction Tuning Dataset. added tokens enable our model to perform a wider range of embodied tasks and support ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 | Optical flow aids in refining the data we generate. | definition/direction/unit from same section | p. 4 (3.2. Visual Annotations) |
 | Figure 3. Visualization of generated RGB-D goal images. The results in the first row are sampled from the test set of held-in training data ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 | In Table 2, 3D-VLA demonstrates a marked superiority over the 2D baseline methods in terms of localization performance. | comparison identity and matched condition | p. 7 (5.1. 3D Reasoning and Localization) |
 | Table 5. Evaluation of action planning on RLBench dataset. we evaluate our model under the long-horizon multi-task language control setting, where the agent is ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 6. Evaluation of action planning on CALVIN dataset. matches the baseline performance in most tasks within the RLBench action prediction, showing its planning ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 | body limitation/failure cue | We randomly sample 4000 episodes from the Open-X test set which 3D-VLA does not see in the training process. | p. 7 (5.2. Multi-modal Goal Generation) |
 | body limitation/failure cue | In these diverse and uncontrolled environments, our 3D-VLA model consistently and robustly demonstrated its efficacy. | p. 7 (3) LLMs with image generation ability NeXT-GPT (Wu) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 | Based on this, we can apply a transformer-based projector, which is capable of mapping the decoder features and embeddings from the Large Language Model ... | p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION) |
 | For CALVIN, we compare with MCIL (Lynch & Sermanet, 2020), which is a conditional sequence-to-sequence variational autoencoder. | p. 8 (5.3. Embodied Action Planning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.3.1. PRETRAINING EMBODIED DIFFUSION MODELS - extractive body cue:** FOR GOAL GENERATION To address the limitations of current diffusion models for goal generation in an embodied environment, we train RGBD to RGB-D and point-cloud ...
@@ -163,9 +142,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reaso
 - **p. 7 / 3) LLMs with image generation ability NeXT-GPT (Wu - extractive body cue:** In these diverse and uncontrolled environments, our 3D-VLA model consistently and robustly demonstrated its efficacy.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. 3D Reasoning and Localization), p. 4 (3.1. Dataset Collection), p. 6 (5.1. 3D Reasoning and Localization), p. 7 (5.1. 3D Reasoning and Localization), p. 3 (3. 3D Embodied Instruction Tuning Dataset), p. 4 (3.2. Visual Annotations), metrics p. 7 (5.1. 3D Reasoning and Localization), p. 6 (5. Experiments), p. 7 (5.1. 3D Reasoning and Localization), p. 3 (3. 3D Embodied Instruction Tuning Dataset), p. 3 (Figure/Table caption), p. 4 (3.1. Dataset Collection), baselines p. 3 (Figure/Table caption), p. 6 (5.1. 3D Reasoning and Localization), p. 7 (5.1. 3D Reasoning and Localization), p. 7 (5.1. 3D Reasoning and Localization), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (5.1. 3D Reasoning and Localization), p. 3 (Figure/Table caption), p. 6 (5.1. 3D Reasoning and Localization), p. 7 (5.1. 3D Reasoning and Localization), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

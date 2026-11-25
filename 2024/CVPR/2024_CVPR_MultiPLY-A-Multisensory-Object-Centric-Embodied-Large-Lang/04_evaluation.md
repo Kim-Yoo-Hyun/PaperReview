@@ -46,8 +46,6 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 - **p. 8 / 5.4. Task Decomposition - extractive body cue:** In our setting, we place several possible choice combinations in the environment, we also place object combinations unseen from the Multisensory Universe.
 - **p. 4 / 3.3. Embodied Agents for Data Collection - extractive body cue:** Inspired by [58], we utilize LLM-powered embodied agents to collect the data in the constructed scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose MultiPLY, a multisensory embodied LLM that encodes object-centric multisensory representations (e.g., visual, audio, tactile, and thermal), by deploying an embodied agent ...
@@ -81,8 +79,6 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 | You need to generate a task in the scene. | definition/direction/unit from same section | p. 3 (3.1. Inputting Interactive Objects into 3D Scenes) |
 | Demonstration: For Room 1: [Few shot example] Generate similar responses for Room 2. | definition/direction/unit from same section | p. 3 (3.1. Inputting Interactive Objects into 3D Scenes) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 | Third, LLMs outperform similarity-based retrieval models. | comparison identity and matched condition | p. 7 (5.1. Object Retrieval) |
 | Therefore, we finetune all models as baselines. | comparison identity and matched condition | p. 8 (5.4. Task Decomposition) |
 | Baselines We include LLaVA, a minimal 2D image version of our model. | comparison identity and matched condition | p. 8 (5.4. Task Decomposition) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 | body limitation/failure cue | Second, 3Dbased models surpass 2D models, mainly because singleview images sometimes fail to provide enough information to reason about the objects due to view ... | p. 7 (5.1. Object Retrieval) |
 | body limitation/failure cue | LLaVA and 3D-LLM take the holistic representation as inputs, and thus fail to compete with models that could interact with the models to switch ... | p. 7 (5.3. Multisensory Captioning) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 | From one interaction, we could incrementally construct several input-output data, denoting the interaction at different steps, as shown in Figure 2. | p. 4 (3.3. Embodied Agents for Data Collection) |
 | We first encode the scene as an abstracted object-centric representation, while multisensory details of objects can only be unveiled when the agent executes an ... | p. 5 (4.2. Action Tokens) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** One limitation of our model is that currently MultiPLY does not involve detailed navigation and control policy, but utilizes pre-defined policies for carrying out the ...
@@ -157,6 +136,5 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 - **p. 7 / 5.3. Multisensory Captioning - extractive body cue:** LLaVA and 3D-LLM take the holistic representation as inputs, and thus fail to compete with models that could interact with the models to switch between ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (3. The Multisensory-Universe Dataset), p. 3 (3.1. Inputting Interactive Objects into 3D Scenes), p. 6 (5. Experiments), p. 6 (5.1. Object Retrieval), p. 4 (3.3. Embodied Agents for Data Collection), p. 7 (5.2. Tool Use), metrics p. 8 (5.4. Task Decomposition), p. 8 (5.4. Task Decomposition), p. 6 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval), p. 7 (5.1. Object Retrieval), p. 7 (5.2. Tool Use), baselines p. 7 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval), p. 7 (5.1. Object Retrieval), p. 8 (5.4. Task Decomposition), p. 8 (5.4. Task Decomposition), results p. 6 (5.1. Object Retrieval), p. 8 (5.4. Task Decomposition), p. 8 (5.4. Task Decomposition), p. 7 (5.1. Object Retrieval), p. 7 (5.1. Object Retrieval), p. 6 (5.1. Object Retrieval).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

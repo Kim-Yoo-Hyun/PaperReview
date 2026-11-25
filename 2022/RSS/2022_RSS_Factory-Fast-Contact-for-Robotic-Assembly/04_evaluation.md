@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 - **p. 7 / IV. ROBOT LEARNING TOOLS - extractive body cue:** On the other hand, classical PD- or PID-style robot controllers have been used to solve contact-rich tasks in robotic assembly for several decades [69, 101].
 - **p. 11 / VII. LIMITATIONS - extractive body cue:** Furthermore, given that camera observations will be occluded during contact, we anticipate that integrating tactile sensing into our real-world system will be exceptionally critical for ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Rendering of Franka robots interacting with nut-and-bolt assemblies in Isaac Gym using methods from Factory. The simulation contains 128 parallel environments and is ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 | With this strategy, we achieved an end-to-end Pick, Place, and Screw success rate of 74.2%. | definition/direction/unit from same section | p. 10 (V. REINFORCEMENT LEARNING) |
 | Moreover, it is a common experience of simulation developers that model-free RL agents reveal and exploit any inaccuracies or instabilities in the simulator to ... | definition/direction/unit from same section | p. 8 (V. REINFORCEMENT LEARNING) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 | The highest performing agents consistently used an OSC motion controller with low proportional gains, an observation space consisting of pose and velocity of the ... | comparison identity and matched condition | p. 10 (V. REINFORCEMENT LEARNING) |
 | Furthermore, the contact force norms at the fingertips were compared to analogous real-world forces from the Daily Interactive Manipulation dataset [34], in which human ... | comparison identity and matched condition | p. 10 (V. REINFORCEMENT LEARNING) |
 | However, we encourage the broader RL community to test and develop state-of-the-art RL algorithms around these complex tasks. | comparison identity and matched condition | p. 11 (VII. LIMITATIONS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 | body limitation/failure cue | MM initially developed SDF collisions for FleX. | p. 11 (VIII. CONCLUSION) |
 | body limitation/failure cue | For a small number of subpolicies, this strategy may be effective; however, the approach does not scale to long sequences, as Policy N must ... | p. 10 (V. REINFORCEMENT LEARNING) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 | The preceding contact reduction process is performed exclusively in GPU shared memory. | p. 5 (III. CONTACT-RICH SIMULATION METHODS) |
 | Timestepping Simulation Stats Scene Substeps Pos Iterations Vel Iterations Time Real-time Peg-in-hole 1 4 1 3 ms 5689x Nut-and-bolt 1 20 1 14 ms ... | p. 7 (IV. ROBOT LEARNING TOOLS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / V. REINFORCEMENT LEARNING - extractive body cue:** A common initial failure case during training was collision between the gripper and the bolt, dislodging the nut.
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REIN
 - **p. 10 / V. REINFORCEMENT LEARNING - extractive body cue:** For a small number of subpolicies, this strategy may be effective; however, the approach does not scale to long sequences, as Policy N must be ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING), p. 8 (IV. ROBOT LEARNING TOOLS), p. 10 (VI. DISCUSSION), p. 7 (IV. ROBOT LEARNING TOOLS), p. 11 (VII. LIMITATIONS), metrics p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 9 (V. REINFORCEMENT LEARNING), p. 9 (V. REINFORCEMENT LEARNING), baselines p. 7 (IV. ROBOT LEARNING TOOLS), p. 9 (V. REINFORCEMENT LEARNING), p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VII. LIMITATIONS), results p. 9 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 10 (V. REINFORCEMENT LEARNING), p. 11 (VI. DISCUSSION), p. 11 (VI. DISCUSSION), p. 8 (V. REINFORCEMENT LEARNING).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,7 +49,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (body section not recover
 - **p. 2 / 1 Introduction - extractive body cue:** To do so, we cover four important ingredients: 1) Selecting a large dataset to be used at pre-training; 2) identifying a backbone architecture that can ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (body section not recover
 - **p. 1 / body section not recovered - extractive body cue:** The finding that pre-training a network on a rich source set (e.g., ImageNet) can help boost performance once fine-tuned on a usually much smaller target ...
 - **p. 1 / body section not recovered - extractive body cue:** Yet, very little is known about its usefulness in 3D point cloud understanding.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (body section not recover
 - **p. 2 / 1 Introduction - extractive body cue:** To do so, we cover four important ingredients: 1) Selecting a large dataset to be used at pre-training; 2) identifying a backbone architecture that can ...
 - **p. 1 / 1 Introduction - extractive body cue:** In 2D vision, the finding that pre-training a network on a rich source set (e.g.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contributions, summarized, follows, evaluate, first, time, transferability, learned, representation, point, clouds, high-level, scene, understanding, indicate, unsupervised, pre-training, improves, performance, across.
 - **Relevant PDF headings:** A Visualization of the SR-UNet Architecture (p. 19); 23 Method (p. 23).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (body section not recover
 - **p. 2 / 1 Introduction - extractive body cue:** Specifically, we choose ScanNet [11] as our source set on which the pretraining takes place, and utilize a sparse residual U-Net [51, 9] as the ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1: Training from scratch vs. fine-tuning with ShapeNet pre-trained weights. understand the limitations of existing practice (pre-training on ShapeNet) in 3D deep learning (Section ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction), temporal p. 12 (2 Related work), p. 4 (2 Related work), p. 6 (2 Related work), p. 6 (2 Related work), p. 7 (2 Related work), p. 7 (2 Related work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

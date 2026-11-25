@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 - **p. 8 / 6 RESULTS - extractive body cue:** Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects.
 - **p. 9 / 6 RESULTS - extractive body cue:** 6.3 GENERALIZABILITY EVALUATION Applicability to other robots.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Visualization of GRN predictions on two manipulation problems, Access (Panda arm) and Clutter (PR2 Robot, predictions shown for its right arm). A single ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 | We conduct a series of experiments in order to evaluate the performance of our proposed method compared to existing approaches, and showcase the generalization ... | definition/direction/unit from same section | p. 6 (5 EXPERIMENTS) |
 | We generate a number of datasets following the method described in Appendix B. | definition/direction/unit from same section | p. 7 (5 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 | We conduct a series of experiments in order to evaluate the performance of our proposed method compared to existing approaches, and showcase the generalization ... | comparison identity and matched condition | p. 6 (5 EXPERIMENTS) |
 | Feasibility-GAT (F-GAT): This baseline is an adapted version of the methods proposed by Silver et al. | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | CNN-based methods, DVH and AGFP-Net, fall short compared to our approach, with a difference in F1 score on the Panda-3D-4 of 10% (resp. | comparison identity and matched condition | p. 8 (6 RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 | body limitation/failure cue | 7 DISCUSSION AND FUTURE WORK In this work, we propose a framework for action and grasp feasibility prediction in 3D environments. | p. 10 (6 RESULTS) |
 | body limitation/failure cue | Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects. | p. 8 (6 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 | Alternatively, embeddings from off-the-shelf shape encoders (e.g., meshes or point clouds) could enhance node features, though computational efficiency remains a challenge. | p. 10 (6 RESULTS) |
 | The proposed model is able to accurately predict action and grasp feasibility, as well as reasons of infeasibility, from estimated objects' poses in both ... | p. 10 (6 RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 5: Annotations statistics for the Panda-3D-4 training set. (a) Number of feasible and infeasi- ble actions (b) Number of feasible and infeasi- ble cases ...
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESU
 - **p. 8 / 6 RESULTS - extractive body cue:** Indeed, image-based scene representation suffers from occlusions due to the 3D nature of the environment, resulting in inaccurate predictions for occluded objects.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 8 (5 EXPERIMENTS), p. 10 (6 RESULTS), metrics p. 8 (6 RESULTS), p. 8 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 10 (6 RESULTS), baselines p. 8 (6 RESULTS), p. 7 (5 EXPERIMENTS), p. 9 (6 RESULTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (6 RESULTS), results p. 9 (6 RESULTS), p. 8 (6 RESULTS), p. 9 (6 RESULTS), p. 10 (6 RESULTS), p. 8 (6 RESULTS), p. 10 (6 RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

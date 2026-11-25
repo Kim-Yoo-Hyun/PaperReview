@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** We evaluate our approach on long-horizon manipulation tasks that require retrieving diverse information types-spatial,
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** The sparsification methods relying on fixed access patterns may miss task-relevant events occurring at unpredictable times.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Memory retrieval in visuomotor policy learning. Long-horizon household tasks require robots to act on information no longer present in the current sensory input. ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Fig. 1. Memory retrieval in visuomotor policy learning. Long-horizon household tasks require robots to act on information no longer present in the current sensory ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 3. Overview. HALO learns a visuomotor policy that retrieves information from the past observations and actions to predict low-level robot actions (middle), guided ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | We compare HALO's stage-wise pipeline against a single-prompt baseline that generates QA pairs directly from long videos. | comparison identity and matched condition | p. 8 (IV. EXPERIMENTS) |
 | Hand-designed Features uses human-designed rules to select which task-relevant features to store or discard, similar to prior work MemER [23]. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | With the goal of reducing memory size or introducing inductive priors about what should be stored, prior work proposes several alternatives: SAM2Act++ [5] uses ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Method Retrieve Object Return to Container LSTM 0.14 0.12 Mamba 0.20 0.18 TransformerXL 0.12 0.20 Window Attention 0.13 0.16 Strided Attention 0.20 0.28 Hierarchical ... | p. 8 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Developing adaptive strategies that retrieve only the necessary amount of information at each step is a promising direction for future work. | p. 8 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Distilling Vision-Language Model Priors via Video Question-Answering Vision-language models encode rich priors about scenes, objects, activities, and semantics to understand task instructions, making them ... | p. 4 (III. HALO) |
 | Text Answers Text Instructions What activity occurred between timesteps t1 and t2 ? | p. 5 (III. HALO) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2. HALO learns to retrieve diverse forms of task-relevant information from history, guided by priors distilled from vision-language foundation models. observations can amplify this ...
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 8 / IV. EXPERIMENTS - extractive body cue:** Developing adaptive strategies that retrieve only the necessary amount of information at each step is a promising direction for future work.
 
 - **Evidence anchors reviewed:** datasets p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), baselines p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 8 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

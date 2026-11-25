@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 - **p. 6 / 5.1. Experiment Settings - extractive body cue:** We follow their official implementations to generate SRenhanced images and train corresponding 3DGS models on the refined datasets.
 - **p. 5 / 5.1. Experiment Settings - extractive body cue:** For the 4× super-resolution task, the original MipNeRF360 images (approximately 3000×4000) are downsampled to 1/8 resolution as low-resolution (LR) inputs and 1/2 resolution as high-resolution ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GaussianZoom progressively magnifies 3D scenes from low-resolution inputs, reconstructing them into multi-view consistent and detail-rich representations. The expandable continuous Level-of-Detail hierarchy organizes primitive ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 | Table 3. Fr´echet Video Distance (↓) of super-resolved images on Mip-NeRF360 and Tanks&Temples datasets. The best, second best, and third best entries are marked ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | Fig. 6. Without prompt guidance, the reconstructed region exhibits semantic and material inconsistencies with the low- resolution inputs, producing mismatched textures or over- simplified ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 | Qualitative comparison of 4× super-resolution results. | comparison identity and matched condition | p. 6 (5.1. Experiment Settings) |
 | Figure 2. Comparison between flow-based and depth-based warp- ing. The proposed depth-guided alignment achieves geometri- cally consistent correspondences across views and effectively sup- presses ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Figure 6. Effectiveness of VLM guidance in detail synthsis. With- out prompt guidance, the region becomes visually sharper but se- mantically inconsistent with the ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 | body limitation/failure cue | The super-resolution involved methods including SRGS [6] and Sequence Matters [14] are chosen for comparsion, while SuperGaussian [24] fails to produce meaningful results under ... | p. 7 (5.1. Experiment Settings) |
 | body limitation/failure cue | Fig. 6. Without prompt guidance, the reconstructed region exhibits semantic and material inconsistencies with the low- resolution inputs, producing mismatched textures or over- simplified ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 | 64, we compute the intersection of camera frustums as region of interest and perform zoom-in generation within this region, which simplifies the setup without ... | p. 6 (5.1. Experiment Settings) |
 | All experiments are conducted on a single NVIDIA RTX 4090 GPU. | p. 7 (5.1. Experiment Settings) |
 | Depth-based Feature Warping SR Model 𝝐𝜽 ❄ Training For 𝑳𝑵 GS x N steps Full View Pairs Rendering with Zoomed Focal Traverse Image Pairs ... | p. 4 (4.1. Multi-View Consistent SR Module) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (5.1. Experiment Settings), p. 7 (5.1. Expe
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 6. Without prompt guidance, the reconstructed region exhibits semantic and material inconsistencies with the low- resolution inputs, producing mismatched textures or over- simplified surfaces. ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 5 (5.1. Experiment Settings), metrics p. 7 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 4 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 6 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (5.1. Experiment Settings), p. 7 (5.1. Experiment Settings), p. 3 (Figure/Table caption), p. 6 (5.1. Experiment Settings), p. 6 (5.1. Experiment Settings).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. R
 - **p. 7 / 4. Results - extractive body cue:** 32.610 34.333 35.497 35.638 0.9577 0.9703 0.9787 0.9834 0.0470 0.0259 0.0167 0.0120 0.0114 2.82 ± 0.03 612K Mip-NeRF w/o Single MLP 32.401 34.131 35.462 35.967 ...
 - **p. 8 / 4. Results - extractive body cue:** Because our multiscale dataset consists of downsampled PSNR ↑ Avg.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: NeRF (a) samples points x along rays that are traced from the camera center of projection through each pixel, then encodes those points ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. R
 | Figure 1: NeRF (a) samples points x along rays that are traced from the camera center of projection through each pixel, then encodes those ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2: (a, top) A NeRF trained on full-resolution im- ages is capable of producing photorealistic renderings at new view locations, but only at ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. R
 | We evaluate against the baselines used by NeRF, NSVF [24], and the same variants and ablations that were used previously (excluding "Area Loss", which ... | comparison identity and matched condition | p. 8 (4. Results) |
 | Mip-NeRF reduces average error by 60% on this task and outperforms NeRF by a large margin on all metrics and all scales. "Centering" pixels ... | comparison identity and matched condition | p. 7 (4. Results) |
 | Figure 10: Additional visualizations of the output renderings from mip-NeRF compared to the ground truth, NeRF, and an improved version of NeRF presented in ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. R
 | body limitation/failure cue | Removing IPE features causes mip-NeRF's performance to degrade to the performance of "Centered" NeRF, thereby demonstrating that cone-casting and IPE features are the primary ... | p. 7 (4. Results) |
 | body limitation/failure cue | This baseline has an unfair advantage: we manually remove the low-resolution images in the multiscale dataset, which would otherwise degrade NeRF's performance as previously ... | p. 8 (4. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. R
 | To approximate a conical frustum with a multivariate Gaussian, we must compute the mean and covariance of F(x, ·). | p. 5 (3.1. Cone Tracing and Positional Encoding) |
 | Because NeRF samples points along each ray and encodes all frequencies equally, the highfrequency PE features are aliased, which results in rendering artifacts. | p. 6 (3.2. Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4. Results - extractive body cue:** The limitation of this dataset is complemented by the limitations of NeRF: despite NeRF's tendency to produce aliased renderings, it is able to produce excellent ...
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. R
 - **p. 8 / 4. Results - extractive body cue:** This baseline has an unfair advantage: we manually remove the low-resolution images in the multiscale dataset, which would otherwise degrade NeRF's performance as previously demonstrated.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4. Results), p. 6 (4. Results), p. 6 (4. Results), p. 8 (4. Results), p. 7 (4. Results), p. 8 (4. Results), metrics p. 7 (4. Results), p. 6 (4. Results), p. 6 (4. Results), p. 7 (4. Results), p. 8 (4. Results), p. 8 (4. Results), baselines p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 8 (4. Results), p. 7 (4. Results), p. 18 (Figure/Table caption), results p. 8 (4. Results), p. 7 (4. Results), p. 7 (4. Results), p. 8 (4. Results), p. 4 (Figure/Table caption), p. 14 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 - **p. 2 / 1 Introduction - extractive body cue:** However, the progressive optimization frameworks leveraged by these methods struggle to inpaint substantial missing areas, especially when targeting 360◦scenes under unconstrained conditions, resulting in notably ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (360 Panorama), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 5 (1 Introduction), p. 7 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 - **p. 6 / 1 Introduction - extractive body cue:** 3.2 Lifting in-the-wild Panorama to 360 Scene Transforming a single image, specifically an in-the-wild 360◦panoramic image, into a 3D model poses significant challenges due to ...
 - **p. 7 / 1 Introduction - extractive body cue:** This absence of parallax - critical for depth perception through binocular disparity - along with the lack of multiple observational cues typically provided by a ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 
 - **p. 5 / 1 Introduction - extractive body cue:** We use StitchDiffusion [62] as the pretrained 2D diffusion model, where a stitch method is employed in the generation process for synthesizing seamless 360◦panoramic images.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Since, then, several, works, have, emerged, enabling, sparse, view, compressed, Gaussian, representations, well, representation, multidimensional, feature, fields, text, scene, generation.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1
 - **p. 11 / 4 Experiments - extractive body cue:** QAlign [65] is the state-of-the-art method in quality assessment benchmarks, which adopts a large multi-modal model fine-tuned on available image quality assessment datasets.
 - **p. 12 / 4 Experiments - extractive body cue:** In the case of the Yosemite text prompt, LucidDreamer merely replicates the waterfall seen in the initial view throughout.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), p. 2 (1 Introduction), p. 6 (1 Introduction), objective p. 2 (360 Panorama), p. 5 (1 Introduction), p. 7 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), temporal p. 2 (1 Introduction), p. 11 (4 Experiments), p. 2 (360 Panorama), p. 3 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

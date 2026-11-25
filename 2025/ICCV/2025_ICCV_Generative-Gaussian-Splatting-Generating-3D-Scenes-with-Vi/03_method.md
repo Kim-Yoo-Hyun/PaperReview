@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Po
 - **p. 4 / 3.3. Decoding Latent Gaussian Splats - extractive body cue:** The decoder is trained in a second stage, using the same losses as in Eq.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.2. Integrating 3D Constraints), p. 4 (3.3. Decoding Latent Gaussian Splats), p. 4 (3.2. Integrating 3D Constraints).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Po
 - **p. 4 / 3.2. Integrating 3D Constraints - extractive body cue:** We render both feature maps {f m} and low-resolution images {Im LR} for the input views, as well as low-resolution images for J novel views ...
 - **p. 5 / 3.4. Splat Conditional Model - extractive body cue:** The resulting 3D representation is rendered from the target views, and the outputs are concatenated channelwise with the noisy image latents.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Po
 - **p. 6 / 4. Experiments - extractive body cue:** Our models were trained on 8 Nvidia A100 80GB GPUs with a batch size of 1 per GPU, using the AdamW optimizer [31] with a ...
 - **p. 6 / 4. Experiments - extractive body cue:** Inference is performed with a discrete Euler scheduler using 30 steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Similarly, PixelSplat, epipolar, transformer, correlate, features, along, lines, attention, camera, encoder, processes, ucker, embeddings, poses, outputs, multi-scale, then, condition, diffusion.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. Pose-Conditional Image-To-Video Architecture (p. 3); 3.4. Splat Conditional Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Po
 - **p. 7 / 4.3. Autoregressive Scene Synthesis - extractive body cue:** To extend our model from two to an arbitrary number of input views, we train a conditional variant to autoregressively generate a full scene ( ...
 - **p. 7 / 4.2. Scene Synthesis From Two Images - extractive body cue:** Baseline Comparison Given One Reference Image: We show results for the strongest baselines CameraCtrl [15] and ViewCrafter[76] together with our approach without (Ours-No3D) and with ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.1. Pose-Conditional Image-To-Video Architecture), p. 4 (3.2. Integrating 3D Constraints), p. 5 (3.4. Splat Conditional Model), p. 4 (3.3. Decoding Latent Gaussian Splats), p. 5 (3.4. Splat Conditional Model), objective p. 4 (3.2. Integrating 3D Constraints), p. 3 (3.2. Integrating 3D Constraints), p. 3 (3.2. Integrating 3D Constraints), p. 4 (3.3. Decoding Latent Gaussian Splats), temporal p. 4 (3.3. Decoding Latent Gaussian Splats), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 3 (3.1. Pose-Conditional Image-To-Video Architecture), p. 3 (3.2. Integrating 3D Constraints), p. 4 (3.3. Decoding Latent Gaussian Splats).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

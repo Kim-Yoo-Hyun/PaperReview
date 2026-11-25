@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RES
 - **p. 23 / A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION - extractive body cue:** Semantic Indicator? non-translucent and non-reflective object categories translucent/reflective objects bear cookie bag sheep apple napkin bear nose cookies coffee hooves brand pouf coffee mug plate ...
 - **p. 23 / A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION - extractive body cue:** Semantic Indicator? non-translucent and non-reflective object categories object categories with translucent/reflective parts chopsticks egg nori napkin noodles kamaboko onion segments corn bowl sake cup plate ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of prior semantic 3DGS work and our novel method. We apply cross-modal rasterization and camera-view-based regularization for better explo- ration of semantic ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RES
 | 8, clearly demonstrate the effectiveness of our proposed method, highlighting its ability to improve overall performance on this dataset. | definition/direction/unit from same section | p. 14 (A.2.1 QUANTITATIVE RESULTS) |
 | Our proposed method demonstrates superior performance compared to other approaches, showing greater alignment with the ground truth. | definition/direction/unit from same section | p. 18 (A.4.2 RESULTS ON 3D-OVS DATA) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RES
 | The results demonstrate that our proposed method significantly outperforms the competing approaches. | comparison identity and matched condition | p. 14 (A.2.2 QUALITATIVE RESULTS) |
 | Our proposed method demonstrates superior performance compared to other approaches, showing greater alignment with the ground truth. | comparison identity and matched condition | p. 18 (A.4.2 RESULTS ON 3D-OVS DATA) |
 | Our proposed method clearly outperforms other approaches, particularly in reflective and translucent areas, where it more closely aligns with the ground truth. | comparison identity and matched condition | p. 18 (A.4.1 RESULTS ON LERF DATA) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RES
 | body limitation/failure cue | The goal is to verify that, while this work focuses on semantic accuracy, our solution does not sacrifice visual precision too much. | p. 21 (A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION) |
 | body limitation/failure cue | Moreover, comparing to the results from color-only 3DGS (same as LangSplat as this method fixes all 3DGS parameters after its pre-training), we observe that ... | p. 21 (A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RES
 | Method Training Time ↓ FPS ↑ Gaussians # ↓ Storage Size ↓ PSNR ↑ LangSplat 105min 43 142k 406MB 32.4 GS-Grouping 141min 77 177k ... | p. 22 (A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION) |
 | The implementation of semantic opacity is done in CUDA and C++, while the other components are in PyTorch. | p. 7 (4 EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.2 RESULTS - extractive body cue:** However, this new attribute cannot be naively fixed, e.g., to 1 or 0.5 for all Gaussians.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RES
 - **p. 21 / A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION - extractive body cue:** Moreover, comparing to the results from color-only 3DGS (same as LangSplat as this method fixes all 3DGS parameters after its pre-training), we observe that semantic ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4.2 RESULTS), p. 20 (A.5.1 EXTENDED RESULTS ON 3D-OVS SCENES), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS), metrics p. 21 (A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION), p. 7 (4 EXPERIMENTS), p. 8 (4.2 RESULTS), p. 21 (A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION), p. 17 (Figure/Table caption), p. 10 (4.2 RESULTS), baselines p. 8 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RESULTS), p. 18 (A.4.2 RESULTS ON 3D-OVS DATA), p. 18 (A.4.1 RESULTS ON LERF DATA), results p. 8 (4.2 RESULTS), p. 14 (A.2.2 QUALITATIVE RESULTS), p. 8 (4.2 RESULTS), p. 14 (A.2.1 QUANTITATIVE RESULTS), p. 23 (A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION), p. 23 (A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

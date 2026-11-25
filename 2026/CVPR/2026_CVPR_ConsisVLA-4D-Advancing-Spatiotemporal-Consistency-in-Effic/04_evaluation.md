@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 - **p. 8 / 5.4. Qualitative Analysis - extractive body cue:** 6 illustrates the model's ability to execute manipulation tasks smoothly and accurately across four long-horizon real-world scenarios.
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** Visualization of ConsisVLA-4D performing four long-horizon real-world manipulation tasks on the Galaxea R1 Lite platform, illustrating key execution-stage observations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison with Existing Paradigms. Beyond con- ventional 2D visual inputs, Para. A employs explicit 3D/4D in- puts (e.g., point clouds, depth maps, historical ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 | In real-world, we reproduce three representative models, including OpenVLA (base model), and OpenVLAOFT (the best 7B baseline in performance and efficiency), with training and ... | definition/direction/unit from same section | p. 6 (5.1. Experimental Setup) |
 | Figure 2. Efficient 3D-Perception ensures spatial consistency through the Cross-View Aligner (red) and Cross-Object Fuser (or- ange). The former employs an Explicit Semantic Object ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 | 1, ConsisVLA-4D outperforms all methods across the four LIBERO suites. | comparison identity and matched condition | p. 7 (5.2. Overall Performance & Efficiency) |
 | Furthermore, compared to other general sparsification methods, such as FastV [11] and Table 7. | comparison identity and matched condition | p. 8 (5.3. Ablation Studies) |
 | Based on this correlation, ConsisVLA-4D achieves state-of-the-art performance with only 1/8 of the visual tokens (see Tab. | comparison identity and matched condition | p. 8 (5.4. Qualitative Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 | body limitation/failure cue | Notably, its realworld results are nearly consistent with those on RoboTwin 2.0 (ALOHA manipulator), demonstrating robust sim-toreal transfer capability. | p. 7 (5.2. Overall Performance & Efficiency) |
 | body limitation/failure cue | Moreover, all modules are adaptively designed, and swapping them with counterparts in SigLIP and DINOv2 degrades performance. | p. 8 (5.3. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 | (5) On the other hand, we use the aggregated geometric relation zagg-3D L′ to infer the depth representations of future multiview perspectives as actions ... | p. 4 (4.1. Proposed Framework) |
 | We achieve concise spatial geometric relation aggregation through in-depth feature fusion within the encoder of DINOv2 and VGGT, performed block by block. | p. 5 (4.3. Cross-Object Spatial Geometric Consistency) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.3. Ablation Studies - extractive body cue:** 5, for both simulation and real-world results: 1) Removing ES-Sel. and S-Fus. from CV-Aligner prevents the filtering of redundant visual inputs and fails to align ...
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** Moreover, all modules are adaptively designed, and swapping them with counterparts in SigLIP and DINOv2 degrades performance.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 7 (5.3. Ablation Studies), p. 6 (5.1. Experimental Setup), p. 8 (5.4. Qualitative Analysis), p. 8 (5.3. Ablation Studies), metrics p. 7 (5.1. Experimental Setup), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.3. Ablation Studies), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), baselines p. 7 (5.2. Overall Performance & Efficiency), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.4. Qualitative Analysis), results p. 7 (5.2. Overall Performance & Efficiency), p. 7 (5.2. Overall Performance & Efficiency), p. 8 (5.3. Ablation Studies), p. 8 (5.4. Qualitative Analysis), p. 3 (Figure/Table caption), p. 6 (5.1. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

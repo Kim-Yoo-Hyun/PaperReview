@@ -34,8 +34,6 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 
 - **p. 7 / A. Experiment Design - extractive body cue:** These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig.3. Encounter geometry and information required for visionenabled ‘and heading with iy. The intruer's
@@ -59,20 +57,11 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 | Fig. 4. These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. Table I shows the various agents, collision geometries, commanded ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 6. Horizontal rate of closure comparisons across diferent weather conditions in the digital twin: Higher values ind apart, showcasing diverging & safe wajectories. ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Fig. 6. Horizontal rate of closure comparisons across diferent weather conditions in the digital twin: Higher values ind apart, showcasing diverging & safe wajectories. ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -98,8 +87,6 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 | body limitation/failure cue | The ViSafeenabled ego agent is tested against an airborne intruder in various collision geometries. | p. 7 (A. Experiment Design) |
 | body limitation/failure cue | Fig. 4. These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. Table I shows the various agents, collision geometries, commanded ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -109,14 +96,6 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 | A is another hyperparameter that controls the rate of change of the barrier function. | p. 6 (C. Supervisory Safety Controller) |
 | (13), which can be solved to compute the desired safe control tjafe. | p. 7 (C. Supervisory Safety Controller) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / VI. LEARNED CHALLENGES AND LIMITATIONS - extractive body cue:** 3) Inaecuracies in vision-based inference: Vision-based state estimation is not perfect; therefore, false positives can often throw the safety module off, We had to use ...
@@ -124,9 +103,8 @@ PDF body evaluation/result cue (Evaluation/Results): evaluation statement was no
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. These experiments are performed in both a high-fidelity digital-twin simulation and real-world settings. Table I shows the various agents, collision geometries, commanded ground ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (A. Experiment Design), metrics p. 7 (A. Experiment Design), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 10 (Figure/Table caption), results 본문 anchor 없음.
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

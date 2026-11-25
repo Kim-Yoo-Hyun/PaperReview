@@ -50,7 +50,6 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 - **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Action prediction with attention mechanism To predict a distribution over actions at step t, we first use an attention mechanism to identify the most relevant ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 7 (5.2. Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 - **p. 1 / 1. Introduction - extractive body cue:** Although interpreting natural-language navigation instructions has received significant attention previously [12, 13, 20, 38, 41, 52], it is the recent success of recurrent neural network ...
 - **p. 2 / 1. Introduction - extractive body cue:** As illustrated in Figure 1, the associated task requires an agent to follow natural-language instructions to navigate to a goal location in a previously unseen ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 - **p. 6 / 5.1. Sequence-to-Sequence Model - extractive body cue:** Image and action embedding For each image observation ot, we use a ResNet-152 [22] CNN pretrained on ImageNet [46] to extract a mean-pooled feature vector.
 - **p. 7 / 5.2. Training - extractive body cue:** We train in PyTorch using the Adam optimizer [28] with weight decay and a batch size of 100.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** step, decoder, observes, representations, current, image, previous, action, at-1, input, applies, attention, mechanism, hidden, states, language, encoder, predicts, distribution, over.
 - **Relevant PDF headings:** 5.1. Sequence-to-Sequence Model (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,20 +103,10 @@ PDF body method statement (p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Se
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Example navigation graph for a partial floor of one building-scale scene in the Matterport3D Simulator. Navigable paths between panoramic viewpoints are illustrated in ...
 - **p. 7 / 6. Results - extractive body cue:** Nevertheless, people are not infallible when it comes to navigation.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (5.1. Sequence-to-Sequence Model), p. 6 (5.1. Sequence-to-Sequence Model), p. 7 (5.1. Sequence-to-Sequence Model), p. 7 (5.2. Training), objective p. 7 (5.2. Training), p. 7 (5.2. Training), p. 6 (5.1. Sequence-to-Sequence Model), temporal p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 7 (5.2. Training), p. 7 (5.2. Training), p. 1 (Abstract), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

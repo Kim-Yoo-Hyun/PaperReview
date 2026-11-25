@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-
 - **p. 4 / 3.2. Constraints with a Self-Constrained Prior - extractive body cue:** With the interpolated signed distance sj and the gradient ∇f t(µj), we update the position by µj ←µj -sj ∗∇f t(µj).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Learning Self-Constrained Priors), p. 4 (3.2. Constraints with a Self-Constrained Prior), p. 3 (3.1. Learning Self-Constrained Priors), p. 4 (3.2. Constraints with a Self-Constrained Prior).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-
 - **p. 4 / 3.3. Loss Functions - extractive body cue:** 3, we also use loss terms to evaluate the RGB rendering errors and multi-view consistency on depth maps.
 - **p. 1 / 1. Introduction - extractive body cue:** To resolve this issue, we propose a self-constrained prior to impose constraints on 3D Gaussians in a geometry-aware manner.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-
 - **p. 3 / 3.1. Learning Self-Constrained Priors - extractive body cue:** Moreover, we also progressively reduce the width of the narrow band to strengthen the constraints along with stabilizing the optimization.
 - **p. 4 / 3.2. Constraints with a Self-Constrained Prior - extractive body cue:** Although the field f t remains an estimation, it is adequate to present a coarse surface inference.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** planar, Gaussians, DGS, better, geometry, representation, Moreover, progressively, reduce, width, narrow, band, strengthen, constraints, along, stabilizing, optimization, learned, render, depth.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,22 +106,11 @@ PDF body method statement (p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-
 - **p. 5 / 4.2. Results and Evaluation - extractive body cue:** Compared with implicit methods, our method does not need to learn SDF or priors, which balances both accuracy and efficiency.
 - **p. 6 / 4.2. Results and Evaluation - extractive body cue:** We evaluate the robustness of our method on large-scale scenes in Tanks and Temples (TNT) dataset.
 - **p. 7 / 4.2. Results and Evaluation - extractive body cue:** Visual comparison of reconstruction on Mip-NerF 360 dataset, the color indicates the normal direction. rate surface alignment, while GS-Pull loses local details and exhibits normal ...
-- **p. 8 / Figure/Table caption - extractive body cue:** Figure 12. Effect of Gaussian Removal and Projection. ity arrangement term LSCP , we remove it (denoted as w/o LSCP ) and optimize the Gaussian ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-Constrained Priors), p. 3 (3. Method), p. 4 (3.2. Constraints with a Self-Constrained Prior), objective p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-Constrained Priors), p. 3 (3. Method), p. 4 (3.2. Constraints with a Self-Constrained Prior), temporal p. 2 (2. Related Work), p. 2 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

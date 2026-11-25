@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 Experiments
 - **p. 9 / 4 Experiments - extractive body cue:** To simulate distracting environments, we introduce visually cluttered scenes containing irrelevant objects such as mugs, hamburgers, and bottles.
 - **p. 7 / 4 Experiments - extractive body cue:** 4.1 Simulation Experiment Simulation benchmark.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of FiS-VLA. (a) Unlike previous dual-system VLA methods [1, 2] that attach a separate policy head as System 1, FiS-VLA (b) repurposes ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 Experiments
 | On the Agilex Robot, FiS-VLA achieves a mean success rate of 68%, compared to 59% for π0. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 | Figure 12: Failure case visualization. We visualize the failure cases observed in four real-world experiments, with key error frames during execution highlighted using red ... | definition/direction/unit from same section | p. 35 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 Experiments
 | FiS-VLA achieves a 73% average success rate with plan-based co-training, outperforming the 69% obtained using discrete actions. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | FiS-VLA demonstrates a smaller performance drop compared to π0 across both platforms. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | More ablation experiments can be found in Appendix B. | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 Experiments
 | body limitation/failure cue | We hypothesize that enabling dynamic adaptation of these factors based on task demands and environmental complexity could lead to a more robust and generalizable ... | p. 10 (A B) |
 | body limitation/failure cue | In particular, FiS-VLA achieves superior performance on 8 out of 10 tasks, highlighting the robustness of its action generation capabilities. | p. 7 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 Experiments
 | Notably, since 3D geometric information is critical for precise manipulation [26, 27], we utilize a fast 3D embedding strategy that tokenizes point clouds [28] ... | p. 2 (1 Introduction) |
 | With a 1:4 operating frequency ratio between System 2 and System 1, FiS-VLA achieves a 117.7 Hz control frequency on an NVIDIA 4090 GPU ... | p. 3 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 Experiments - extractive body cue:** Additional visualizations and failure cases are provided in Appendix C and D, respectively.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 8 (4 Experiments
 - **p. 7 / 4 Experiments - extractive body cue:** In particular, FiS-VLA achieves superior performance on 8 out of 10 tasks, highlighting the robustness of its action generation capabilities.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 29 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), baselines p. 9 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), results p. 9 (Figure/Table caption), p. 8 (4 Experiments), p. 29 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

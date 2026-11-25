@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.4. How Do Actions Interact with Vision-Langua
 - **p. 4 / 3.5. Action Refinement Module - extractive body cue:** This design preserves the efficiency benefits of parallel action prediction while improving the precision and smoothness of the resulting action trajectories.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.7. Reward Functions), p. 5 (3.7. Reward Functions).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.4. How Do Actions Interact with Vision-Langua
 - **p. 3 / 3. Method - extractive body cue:** 1, the Reasoning-VLA framework comprises three main components: (1) a reasoningenhanced vision-language model (VLM) backbone, (2) an action module that interacts with the VLM and ...
 - **p. 1 / 1. Introduction - extractive body cue:** To address these challenges, we propose ReasoningVLA, an efficient and generalist VLA framework that establishes a new state-of-the-art for autonomous driving.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3.4. How Do Actions Interact with Vision-Langua
 - **p. 7 / 5.1. Experiment Setups - extractive body cue:** Training is performed for 4 epochs for SFT and 1 epoch for RL, using a total batch size of 8 distributed across 8 H200 GPUs.
 - **p. 6 / 3.7. Reward Functions - extractive body cue:** Reasoning-VLA-7B+ is fine-tuned with an additional RL process using the corresponding nuScenes training clips from the unified dataset. *: Official checkpoints re-validated with corrected metrics, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Since, action, queries, tied, VLM, token, representations, they, first, perform, self-attention, then, interact, through, cross-attention, illustrated, Fig, Qwen2, incorporates, several.
 - **Relevant PDF headings:** 2.2. Vision-Language-Action Models (p. 2); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (3.4. How Do Actions Interact with Vision-Langua
 - **p. 8 / 5.2.2. Closed-loop Evaluation - extractive body cue:** We trained two models using the unified dataset: Reasoning-VLA-7B + SFT: This model is fine-tuned using only supervised fine-tuning (SFT).
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Statistical distribution of the unified dataset. However, these constraints exert a non-negligible influence on the vehicle's behavior and overall driving safety. To ad- ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.4. How Do Actions Interact with Vision-Language), p. 3 (3. Method), p. 4 (3.5. Action Refinement Module), p. 3 (3.2. The Structure of Reasoning-VLA), p. 5 (3.7. Reward Functions), p. 5 (3.7. Reward Functions), objective p. 5 (3.7. Reward Functions), p. 5 (3.7. Reward Functions), p. 3 (3.2. The Structure of Reasoning-VLA), p. 6 (3.7. Reward Functions), p. 4 (3.2. The Structure of Reasoning-VLA), p. 4 (3.5. Action Refinement Module), temporal p. 1 (1. Introduction), p. 3 (3.2. The Structure of Reasoning-VLA), p. 4 (3.3.1. Learnable Action Queries), p. 5 (3.7. Reward Functions), p. 5 (3.7. Reward Functions), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

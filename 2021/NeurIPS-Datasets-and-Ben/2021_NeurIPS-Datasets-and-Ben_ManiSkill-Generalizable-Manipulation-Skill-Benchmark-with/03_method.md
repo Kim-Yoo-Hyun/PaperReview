@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p.
 - **p. 5 / Abstract - extractive body cue:** There are no constraints on the motions of the bucket.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 4 (Abstract), p. 5 (Abstract), p. 5 (Abstract), p. 8 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p.
 - **p. 3 / Abstract - extractive body cue:** For example, imitation learning [53, 54, 4] and offline RL [55, 56, 57] can learn a policy purely from demonstrations datasets [58, 59], but online ...
 - **p. 6 / Abstract - extractive body cue:** As mentioned in Sec 2.1, ManiSkill supports three observation modes: state, pointcloud, and rgbd, where the latter two modes are suitable for studying object-level generalizability.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p.
 
 - **p. 9 / Abstract - extractive body cue:** We train each model for 150k gradient steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Here, environment, state, consists, robot, states, joint, angles, object, pose, action, applied, target, velocity, controller, physical, dynamics, binary, variable, indicates.
 - **Relevant PDF headings:** B.7 Controller Design (p. 16); B.7 Controller Design (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p.
 - **p. 8 / Abstract - extractive body cue:** For example, certain cabinet drawers may be stuck due to inaccurate overlapping between collision shapes.
 - **p. 9 / Abstract - extractive body cue:** 4 Conclusion and Limitations In this work, we propose ManiSkill, an articulated benchmark for generalizable physical object manipulation from 3D visual inputs with diverse object ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p. 3 (Abstract), p. 8 (Abstract), p. 1 (Abstract), objective p. 7 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 5 (Abstract), p. 5 (Abstract), temporal p. 1 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 5 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

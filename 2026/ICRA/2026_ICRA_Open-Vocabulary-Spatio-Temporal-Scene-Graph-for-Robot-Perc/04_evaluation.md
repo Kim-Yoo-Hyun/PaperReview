@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** These tags enable the planner to align grounding with the scene state that existed when the operator issued the instruction, rather than the delayed state ...
 - **p. 2 / 3) Extensive experiments demonstrate that ST-OVSG ef - extractive body cue:** fectively models temporal variations and strengthens delay awareness in robotic planning, while achieving performance comparable to state-of-the-art methods in other aspects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. System overview. Based on the tn-1+∆t moment scene feedback, the local operator issues natural-language commands. These commands are sent over the data network ...
@@ -74,8 +72,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | fectively models temporal variations and strengthens delay awareness in robotic planning, while achieving performance comparable to state-of-the-art methods in other aspects. | definition/direction/unit from same section | p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef) |
 | Fig. 3. Execution process of the proposed method in a task. Left: users provide a natural-language grasp-and-place instruction at the local side (issue at ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Our method achieved a node accuracy of 74%, outperforming ConceptGraphs [7], while edge accuracy reached 67%, slightly lower than 1Edge precision corresponds to spatial ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | Compared with static scenes (Subsection. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Fig. 3. Execution process of the proposed method in a task. Left: users provide a natural-language grasp-and-place instruction at the local side (issue at ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Because our representation is designed for openvocabulary settings, automated evaluation of nodes and edges is unreliable: object categories and relational boundaries under open vocabulary ... | p. 5 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Motion blur, viewpoint shifts, and occlusions destabilize open-vocabulary detections. | p. 5 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | An image encoder Φv and a text encoder Φt (e.g., CLIP [27]) are adopted to extract masked visual features f img i = Φv(Irgb ... | p. 3 (III. METHODOLOGY) |
 | The command is embedded with the CLIP text encoder, gu = Φt(u), and object nodes are scored by si,t = cos(gu, f txt i ... | p. 4 (III. METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Failure cases were dominated by residual identity switches under long occlusions, missed detections of small or subtle objects, and unstable temporal associations caused by motion ...
@@ -157,9 +136,8 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Motion blur, viewpoint shifts, and occlusions destabilize open-vocabulary detections.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), metrics p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 7 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), results p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (3) Extensive experiments demonstrate that ST-OVSG ef), p. 5 (IV. EXPERIMENTS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

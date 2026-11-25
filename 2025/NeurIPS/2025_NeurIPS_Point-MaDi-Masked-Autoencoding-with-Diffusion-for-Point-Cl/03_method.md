@@ -51,7 +51,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 - **p. 3 / 1 Introduction - extractive body cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 - **p. 1 / Abstract - extractive body cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
 - **p. 3 / 1 Introduction - extractive body cue:** This reconstruction is optimized using Chamfer Distance, ensuring high-fidelity recovery of local structures, particularly in sparse point clouds.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 
 - **p. 1 / Abstract - extractive body cue:** In this work, we propose Point-MaDi, a novel Point cloud Masked autoencoding Diffusion framework for pre-training that integrates a dual-diffusion pretext task into an MAE ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Recent, studies, have, begun, address, challenges, integrating, diffusion, frameworks, MAEs, structure, naturally, complements, models, encoder, operate, partially, observed, data, while.
 - **Relevant PDF headings:** B Model Efficiency Comparison (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstrac
 - **p. 7 / 4 Experiments - extractive body cue:** Furthermore, the performance is competitive with recent cross-modal methods (e.g., ReCon [36], I2P-MAE [67]), without requiring additional modalities or complex pre-training pipelines.
 - **p. 7 / 4 Experiments - extractive body cue:** While diffusion-based methods like PointDif may not consistently dominate on the relatively clean and less diverse ModelNet40 dataset, our Point-MaDi still achieves 93.8% accuracy, demonstrating ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 6 (2 Related Work), p. 5 (2 Related Work), p. 6 (2 Related Work), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

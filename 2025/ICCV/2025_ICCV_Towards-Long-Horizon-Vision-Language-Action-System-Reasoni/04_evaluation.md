@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Perform
 - **p. 7 / 5.2.1. Performance on Real World Tasks - extractive body cue:** (%) GPT-4o-latest 33.02 47.00 37.54 50.00 41.59 61.00 29.17 21.00 Gemini-2.0-Flash 29.52 43.00 33.69 49.00 43.53 55.00 24.36 18.00 InternVL2.5-8B 14.71 33.00 17.45 40.00 19.37 ...
 - **p. 7 / 5.2.1. Performance on Real World Tasks - extractive body cue:** The robot must generalize over different objects (branches, bottles, and stones), recognize and manipulate objects despite variations in texture, shape, and weight, and adjust to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of MindExplore System: A hierarchical embodied intelligence system including reasoning, acting, and memory, offering state-of-the-art generalizability in highly dynamic scenes. Unlike conventional ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Perform
 | Based on SandGo-1k, we generate a reasoningacting embodied instruction dataset SandThink-21k. | definition/direction/unit from same section | p. 3 (3. The System Dataset) |
 | Additionally, we incorporate 5,700 public complex surface images to leverage their similarity to sand terrain. | definition/direction/unit from same section | p. 3 (3. The System Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Perform
 | Compared to DeepSeek-VL2 and InternVL2.5, although they are on par with Qwen2-VL in some benchmark indicators, they lack scalability for real-world tasks in embodied ... | comparison identity and matched condition | p. 8 (5.3. Ablation Study) |
 | Figure 1. Overview of MindExplore System: A hierarchical embodied intelligence system including reasoning, acting, and memory, offering state-of-the-art generalizability in highly dynamic scenes. Unlike ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | The tests are conducted with varying scene configurations and ensures that all comparison models are tested under the same conditions. | comparison identity and matched condition | p. 6 (5.1. Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Perform
 | body limitation/failure cue | Enhancing generalization in unstructured environments remains a key challenge, and our experiments show that a system robust in sandy conditions can more easily generalize ... | p. 3 (3. The System Dataset) |
 | body limitation/failure cue | Similarly, the point-cloud-based BE also shows lower success rates, as point cloud data failed to align effectively with the semantic content of instructions. | p. 8 (5.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Perform
 | We employ the robot manipulation visual encoder R3M, proposed in [25], to encode the RGB images. | p. 5 (4.2.1. Multimodal Diffusion Policy) |
 | Additionally, we propose a fusion adapters for both the sensor data and text, consisting of two linear layers, to map encoder outputs into an ... | p. 5 (4.2.1. Multimodal Diffusion Policy) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / 3. The System Dataset - extractive body cue:** The high dynamic fluidity of sand demands adaptive adjustments, while its visual noise complicates perception and calibration.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Perform
 - **p. 8 / 5.3. Ablation Study - extractive body cue:** Similarly, the point-cloud-based BE also shows lower success rates, as point cloud data failed to align effectively with the semantic content of instructions.
 
 - **Evidence anchors reviewed:** datasets p. 8 (5.3. Ablation Study), p. 3 (3. The System Dataset), p. 3 (3. The System Dataset), p. 6 (5.2.1. Performance on Real World Tasks), p. 8 (5.2.2. Performance of Different Components), p. 6 (5.2.1. Performance on Real World Tasks), metrics p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), p. 6 (5.1. Implementation Details), p. 7 (5.2.1. Performance on Real World Tasks), p. 7 (5.2.1. Performance on Real World Tasks), p. 6 (Figure/Table caption), baselines p. 7 (5.2.1. Performance on Real World Tasks), p. 7 (5.2.1. Performance on Real World Tasks), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), p. 1 (Figure/Table caption), p. 6 (5.1. Implementation Details), results p. 8 (5.3. Ablation Study), p. 7 (5.2.1. Performance on Real World Tasks), p. 8 (5.2.2. Performance of Different Components), p. 7 (5.2.1. Performance on Real World Tasks), p. 6 (5.1. Implementation Details), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

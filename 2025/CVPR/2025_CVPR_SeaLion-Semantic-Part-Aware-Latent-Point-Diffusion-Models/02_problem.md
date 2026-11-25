@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 6 | As discussed in [32], 1-NNA measures both generation quality and diversity by computing the distribution similarity between R ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | Additionally, we report the results of 1-NNA-P, COV-P, and MMD-P [23] for the airplane and chair categories in ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion), p. 1 (1. Introduction), objective p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.2. Model Architecture of SeaLion).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

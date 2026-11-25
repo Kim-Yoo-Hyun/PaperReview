@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4.1. Experime
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** We use the same hidden dimension and number of layers for the autoencoder as GeoLDM, and the number of layers of the rotation network is ...
 - **p. 7 / 4.3. GEOM-Drugs - extractive body cue:** From the table we observe that RADM exhibits very strong performance on this much larger dataset with more complex molecules.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Results of atom stability, molecule stability, validity and validity × uniqueness. Higher numbers are better. We use distinct colors to indicate the best ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4.1. Experime
 | These results demonstrate that our non-equivariant model has better scalability and great potential for further improvement. | definition/direction/unit from same section | p. 8 (4.5. Efficiency Comparison) |
 | The sampling speed is measured by the average time used to generate 100 samples as one mini-batch, and we use 1000 sampling steps for ... | definition/direction/unit from same section | p. 8 (4.5. Efficiency Comparison) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4.1. Experime
 | Baseline results are copied from respective papers. | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | RADMDiT-S is already highly competitive compared with the best equivariant model GeoLDM. | comparison identity and matched condition | p. 7 (4.3. GEOM-Drugs) |
 | In Section 4.4, we show the results of ablation studies. | comparison identity and matched condition | p. 5 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4.1. Experime
 | body limitation/failure cue | Specifically, we use a basic non-equivariant GNN (17) as the noise prediction network and train the diffusion model based on the same trained autoencoder ... | p. 7 (4.4. Ablation Study) |
 | body limitation/failure cue | The nonequivariant baselines GraphLDM and GraphLDM-aug used the same GNN architecture as the noise prediction network, but were trained in a latent space without ... | p. 7 (4.4. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4.1. Experime
 | Scalable Non-Equivariant 3D Molecule Generation via Rotational Alignment autoencoder takes only a small portion of the time required to train the latent diffusion model. | p. 8 (4.5. Efficiency Comparison) |
 | Given the distributions above and using Bayes' rule, we can derive the true posterior distribution of the forward transition (4), conditioned on x: q(zs/zt, ... | p. 2 (2.2. Diffusion Models) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** As for the diffusion model, we use the same noise schedule and number of time steps as EDM/GeoLDM.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (4.1. Experime
 - **p. 7 / 4.4. Ablation Study - extractive body cue:** The nonequivariant baselines GraphLDM and GraphLDM-aug used the same GNN architecture as the noise prediction network, but were trained in a latent space without learned ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3. GEOM-Drugs), metrics p. 6 (4.1. Experimental Setup), p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 7 (4.4. Ablation Study), p. 8 (4.5. Efficiency Comparison), baselines p. 6 (4.1. Experimental Setup), p. 7 (4.4. Ablation Study), p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 7 (4.3. GEOM-Drugs), p. 5 (4. Experiments), results p. 7 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 8 (4.5. Efficiency Comparison), p. 8 (4.5. Efficiency Comparison).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

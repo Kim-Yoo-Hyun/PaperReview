@@ -55,7 +55,6 @@ PDF body method statement (p. 7 (Method), p. 5 (4.1. Modeling RNN Dynamics via G
 - **p. 8 / 5.4. Wall-Clock Time - extractive body cue:** Moreover, our custom matrix multiplication method for backpropagation outperforms PyTorch's built-in AutoGrad, achieving 32% and 22% efficiency gains in scene-level and motion fusion, respectively, demonstrating ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 5 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 4 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 5 (4.1. Modeling RNN Dynamics via Gradient Descent).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 7 (Method), p. 5 (4.1. Modeling RNN Dynamics via G
 - **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** They are dynamically updated with temporal inputs to enable continuous scene adaptation.
 - **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 7 (Method), p. 5 (4.1. Modeling RNN Dynamics via G
 - **p. 7 / 5.1. Memory Consumption - extractive body cue:** GDFusion reduces inference memory by storing all historical information in a single-frame-sized hidden state.
 - **p. 8 / 5.4. Wall-Clock Time - extractive body cue:** Each temporal fusion component consumes less than 6% of the total inference time (146.6ms), demonstrating the efficiency of GDFusion.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Following, prior, ResNet-50, backbone, image, size, most, experiments, scaling, Swin, Transformer, Base, images, larger-scale, tests, Historical, Residual, Fused, Feature, Backward.
 - **Relevant PDF headings:** 4.1. Modeling RNN Dynamics via Gradient Descent (p. 4); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 7 (Method), p. 5 (4.1. Modeling RNN Dynamics via G
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Runtime analysis of key components, vs. SOLOFusion (16 frames). AutoGrad refers to PyTorch's automatic differentia- tion; Custom Matmul is our custom matrix multiplication. ...
 - **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Thus, we propose temporal geometry fusion to yield a more robust geometric prior, detailed in Sec.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (Method), p. 5 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 5 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 7 (5.1. Memory Consumption), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (4.1. Modeling RNN Dynamics via Gradient Descent), objective p. 4 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 4 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 5 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 5 (4.1. Modeling RNN Dynamics via Gradient Descent), p. 8 (5.4. Wall-Clock Time), temporal p. 7 (5.1. Memory Consumption), p. 7 (5.1. Memory Consumption), p. 3 (3.1. VisionOcc Pipeline), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), p. 6 (4.5. Memory-Efficient Voxel-Level Temporal Fusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

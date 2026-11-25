@@ -63,8 +63,6 @@ PDF body contribution framing (p. 4 (2 METHOD), p. 1 (1 INTRODUCTION), p. 4 (2 M
 | body cue at p. 9 | This conclusion is as same as the results in 3.2, which demonstrates great robustness of our method. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 27 | Carrot on the plate Put eggplant in basket InternVL3-2B Fail Vlaser Success Vlaser-QA Success Spoon on the towel ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (2 METHOD), p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 4 (2 METHOD), p. 5 (2 METHOD), p. 5 (2 METHOD), p. 4 (2 METHOD), objective p. 18 (A.1 TRAINING DETAILS), p. 4 (2 METHOD), p. 5 (2 METHOD), p. 5 (2 METHOD), p. 6 (2 METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

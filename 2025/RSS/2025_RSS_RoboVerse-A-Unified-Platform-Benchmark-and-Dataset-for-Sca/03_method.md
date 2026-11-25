@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 - **p. 6 / IV. ROBOVERSE DATASET - extractive body cue:** These devices' integrated sensors capture motion data, allowing natural, gesture-based control along with real-time, high-frequency communication for precise, low-cost remote operation.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 2 (1. IyrRopucTION), p. 6 (IV. ROBOVERSE DATASET).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 - **p. 7 / IV. ROBOVERSE DATASET - extractive body cue:** (in our case: variations in the initial and goal state distributions
 - **p. 7 / IV. ROBOVERSE DATASET - extractive body cue:** We use a mobile device to capture ‘multi-view images, reconstruct a high-quality mesh, build a URDF using VLM, and then perform actions in both ROBOVERSE ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 
 - **p. 5 / IV. ROBOVERSE DATASET - extractive body cue:** Notably, ROBOVERSE streamlines this migration process by first aligning formats in the original simulator and automatically ensuring compatibility across all simulators. + Motion Planning and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Notably, ROBOVERSE, streamlines, migration, process, first, aligning, formats, original, simulator, automatically, ensuring, compatibility, across, simulators, Motion, Planning, Rollout, When, benchmarks.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DAT
 - **p. 11 / dataset - extractive body cue:** 11: Ablation Study of Action-conditioned World Model Learning.
 - **p. 12 / dataset - extractive body cue:** We fine-tune two baseline models using demonstrations adapted from GraspNet [23] to validate the effectiveness of the RoboVerse dataset.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION), objective p. 2 (1. IyrRopucTION), p. 2 (1. IyrRopucTION), p. 3 (B. Large-Scale Roboties Dataset), p. 3 (B. Large-Scale Roboties Dataset), p. 4 (Dataset), p. 6 (IV. ROBOVERSE DATASET), temporal p. 5 (IV. ROBOVERSE DATASET), p. 6 (IV. ROBOVERSE DATASET), p. 7 (IV. ROBOVERSE DATASET), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. IyrRopucTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

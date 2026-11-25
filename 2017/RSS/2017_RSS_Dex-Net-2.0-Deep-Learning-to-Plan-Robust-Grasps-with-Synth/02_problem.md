@@ -63,8 +63,6 @@ PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 4 | Fig. 3: Dex-Net 2.0 pipeline for training dataset generation. (Left) The database contains 1,500 3D object mesh models. ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Fig. 4: (Left) Architecture of the Grasp Quality Convolutional Neural Network (GQ-CNN). Planar grasp candidates u = (i, ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), p. 1 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (III. PROBLEM STATEMENT), p. 2 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), interface p. 2 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), p. 3 (III. PROBLEM STATEMENT), p. 1 (I. INTRODUCTION), objective p. 5 (V. GRASP PLANNING), p. 5 (V. GRASP PLANNING).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

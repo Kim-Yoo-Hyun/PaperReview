@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (3.3. Training Objective), p. 5 (3.3. Training O
 - **p. 5 / 3.3. Training Objective - extractive body cue:** In addition to the loss of token predictions when pre-trained on other datasets, an extra cross-entropy loss is incorporated to fine-tune the model on SG3D ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Training Objective), p. 5 (3.3. Training Objective).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 5 (3.3. Training Objective), p. 5 (3.3. Training O
 - **p. 1 / 1. Introduction - extractive body cue:** 3D Visual Grounding (3DVG) [13, 42, 48, 49, 53] is a widely Previous Ours (GroundFlow) T : Task Description P : 3D Point Cloud St ...
 - **p. 5 / 3.3. Training Objective - extractive body cue:** For the 3D LLM LEO [24], which is state-ofthe-art method in SG3D benchmark, we follow the original approach.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 5 (3.3. Training Objective), p. 5 (3.3. Training O
 - **p. 5 / 4.2. Implementation Details - extractive body cue:** Due to GPU memory constraints, the batch size for LEO is reduced to 16.
 - **p. 5 / 4.2. Implementation Details - extractive body cue:** The models are trained for 50 epochs with batch size of 32 and evaluated on the last epoch using evaluation split of the SG3D benchmark.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Following, SG3D, benchmark, same, cross-entropy, loss, optimize, dual-stream, model, query-based, addition, token, predictions, when, pre-trained, other, datasets, extra, incorporated, fine-tune.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +104,10 @@ PDF body method statement (p. 5 (3.3. Training Objective), p. 5 (3.3. Training O
 - **p. 8 / 4.5. Qualitative Visualization - extractive body cue:** These results highlight that the memory component in GroundFlow enables the model to retain important context over time, allowing it to accurately retrieve and apply ...
 - **p. 6 / 4.3. Comparison on SG3D Benchmark - extractive body cue:** Their degraded performance is particularly reflected in their overall task accuracy, with three of the models are falling below 30%.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Training Objective), p. 5 (3.3. Training Objective), objective p. 5 (3.3. Training Objective), p. 5 (3.3. Training Objective), temporal p. 2 (1. Introduction), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.3. Comparison on SG3D Benchmark), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 8 (4.5. Qualitative Visualization).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

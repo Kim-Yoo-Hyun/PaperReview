@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation)
 - **p. 6 / 4.2.1 Evaluation - extractive body cue:** SC SSC Method Input IoU ■ceiling (1.37%) ■floor (17.58%) ■wall (15.26%) ■window (1.99%) ■chair (3.01%) ■bed (7.08%) ■sofa (4.70%) ■table (4.31%) ■tvs (0.47%) ■furniture (30.04%) ...
 - **p. 6 / 4.2.1 Evaluation - extractive body cue:** 2b), the baselines clearly surpass us in all metrics which relates both to the lidar-originated 3D input having a much wider horizontal FOV than the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. RGB Semantic Scene Completion with MonoScene. Our framework infers dense semantic scenes, hallucinating scenery outside the field of view of the image (dark ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation)
 | As ℓ×ℓincreases, all metrics increase accordingly, showing the loss benefit, especially NYUv2 SemanticKITTI ℓ×ℓ IoU ↑ mIoU ↑ IoU ↑ mIoU ↑ 8 × ... | definition/direction/unit from same section | p. 8 (4.3. Ablation studies) |
 | 3.2) contributes equally to IoU (in [+0.77,+1.12]) and mIoU (in [+0.54, +1.33]). | definition/direction/unit from same section | p. 7 (4.3. Ablation studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation)
 | For fair comparison, we adapt main baselines to infer their 3D inputs directly from the 2D image (xrgb) - relying on the best found ... | comparison identity and matched condition | p. 5 (4.1. Baselines) |
 | Outputs of MonoScene when trained on Sem.KITTI having horizontal FOV of 82◦, and tested on datasets with decreasing (left) or increasing (right) FOV. when ... | comparison identity and matched condition | p. 8 (4.3. Ablation studies) |
 | Table 6. Performance on SemanticKITTI [3] (validation set). We report the performance on semantic scene completion (SSC - mIoU) and scene completion (SC - ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation)
 | body limitation/failure cue | Figure 2. MonoScene framework. We infer 3D SSC from a single RGB image, leveraging 2D and 3D UNets, bridged by our Features Line of ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Figure 6. Frustum Proportion Loss. Considering an image di- vided into same-size 2D patches (here, 2×2), each corresponds to a 3D frustum in the ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation)
 | The 3D UNet is a custom shallow encoderdecoder with 2 layers. | p. 2 (3. Method) |
 | sample sample sample 2D decoder 1x1 conv 1x1 conv 1x1 conv Figure 3. | p. 3 (3.1. Features Line of Sight Projection (FLoSP)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5. Discussion - extractive body cue:** Compared to the Whole Scene, the in-FOV performance is higher since it considers visible surfaces, whereas the out-FOV performance is significantly lower since the image ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation)
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 6. Frustum Proportion Loss. Considering an image di- vided into same-size 2D patches (here, 2×2), each corresponds to a 3D frustum in the scene, ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (4. Experiments), p. 5 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation), p. 7 (4.2.1 Evaluation), p. 7 (4.2.1 Evaluation), p. 8 (4.3. Ablation studies), metrics p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation), p. 5 (4. Experiments), p. 6 (4.2.1 Evaluation), p. 7 (4.3. Ablation studies), p. 8 (4.3. Ablation studies), baselines p. 5 (4.2.1 Evaluation), p. 6 (4.2.1 Evaluation), p. 6 (4.2.1 Evaluation), p. 5 (4.1. Baselines), p. 8 (4.3. Ablation studies), p. 10 (Figure/Table caption), results p. 6 (4.2.1 Evaluation), p. 5 (4.2.1 Evaluation), p. 5 (4. Experiments), p. 6 (4.2.1 Evaluation), p. 7 (4.3. Ablation studies), p. 7 (4.3. Ablation studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

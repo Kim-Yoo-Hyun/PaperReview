@@ -56,7 +56,6 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 - **p. 9 / 5. Episodic REINFORCE algorithms - extractive body cue:** GRADIENT ALGORITHMS 237 k Awij = °~ij(r - bij) ~a eij(t) t=l (~) where all notation is the same as that defined earlier, with eij(t ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 6 (4. REINFORCE algorithms).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 - **p. 6 / 4. REINFORCE algorithms - extractive body cue:** Consider first a Bernoulli unit having no (nonreinforcement) input and suppose that the parameter to be adapted is Pi = Pr {Yi =-- 1}.
 - **p. 7 / 4. REINFORCE algorithms - extractive body cue:** The special case of this algorithm when the reinforcement signal is limited to 0 and 1 coincides with the 2-action version of the linear reward-inaction ...
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 ## Training vs Inference
 
 - **p. 8 / 5. Episodic REINFORCE algorithms - extractive body cue:** In particular, assume a net N is trained on an episode-by-episode basis, where each episode consists of k time steps, during which the units may ...
-- **p. 8 / 5. Episodic REINFORCE algorithms - extractive body cue:** In particular, assume a net N is trained on an episode-by-episode basis, where each episode consists of k time steps, during which the units may ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** example, network, consists, Bernoulli-logistic, units, episodic, REINFORCE, algorithm, would, prescribe, weight, changes, according, rule, Awij, following, result, proved, Appendix, Theorem.
 - **Relevant PDF headings:** 4. REINFORCE algorithms (p. 5); 5. Episodic REINFORCE algorithms (p. 8); 8. Algorithm performance and other issues (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +113,13 @@ PDF body method statement (p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Epi
 - **p. 19 / 8.5. Use of other local gradient estimates - extractive body cue:** But perhaps most significant of all is the fact that, in the sense given by Theorems 1 and 2, they climb an appropriate gradient without ...
 - **p. 23 / 1 Og i - extractive body cue:** For any REINFORCE algorithm, E{zXwej I W} = ~j OE{r I W} Owij Proof E{Awij I W} = ~ E{Awijl W, X i = X} ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (5. Episodic REINFORCE algorithms), p. 8 (5. Episodic REINFORCE algorithms), p. 8 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), objective p. 7 (4. REINFORCE algorithms), p. 6 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 6 (4. REINFORCE algorithms), p. 7 (4. REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), temporal p. 5 (3. The expected reinforcement performance criterion), p. 8 (5. Episodic REINFORCE algorithms), p. 9 (5. Episodic REINFORCE algorithms), p. 3 (2. Reinforcement-learning connectionist networks), p. 3 (2. Reinforcement-learning connectionist networks), p. 8 (5. Episodic REINFORCE algorithms).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

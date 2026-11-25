@@ -44,7 +44,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -61,7 +60,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 - **p. 2 / 1. Introduction - extractive body cue:** However, intuitive and efficient interaction with these detailed 3D city models using natural language remains largely unexplored.
 - **p. 6 / 4.3. Dataset construction and statistics - extractive body cue:** GeoEval3D is composed of unique 952 queries.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -76,13 +74,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, contributions, threefold, GeoProg3D, framework, compositional, reasoning, over, city-scale, language, fields, where, visual, programming, perform, various, geographic, vision, tasks, image.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -101,20 +96,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 
 - **p. 7 / 5.1. Evaluation metrics - extractive body cue:** Note that MES-H and CMP are not evaluated in UrbanScene3D because Ground Truth for height cannot be obtained.
 - **p. 7 / 5.2. Experimental results - extractive body cue:** These results demonstrate the limitations of localization using 3D language fields alone in 3D urban scenes and the effectiveness of GV-APIs and visual programming in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Task Definition), objective 본문 anchor 없음, temporal p. 7 (5.2. Experimental results), p. 7 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 3 (3.1. Overview of GeoProg3D), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

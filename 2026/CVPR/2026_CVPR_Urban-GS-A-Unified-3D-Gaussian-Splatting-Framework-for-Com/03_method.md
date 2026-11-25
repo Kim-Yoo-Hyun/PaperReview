@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (4. Methods), p. 5 (4.3. Global-to-Local Optimiz
 - **p. 6 / 4.4. Loss Function - extractive body cue:** 11), the overall objective function is formulated as: L = L1+λssimLssim+λvolLvol+λdLd+λoLo+λmLm.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 6 (4.3. Global-to-Local Optimization), p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 5 (4.2. Contribution-based Anchor Pruning), p. 5 (4.1. Aerial-Street Joint Adaptive Densification), p. 6 (4.4. Loss Function).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (4. Methods), p. 5 (4.3. Global-to-Local Optimiz
 - **p. 2 / 1. Introduction - extractive body cue:** Specifically, we start with investigating the counterintuitive phenomenon where rendering quality degrades despite using rich aerial-to-street view inputs.
 - **p. 2 / 1. Introduction - extractive body cue:** This method resolves densification conflicts, enabling joint contributions and enhancing overall reconstruction fidelity. • A Contribution-based Anchor Pruning method that enables reliable and efficient removal ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (4. Methods), p. 5 (4.3. Global-to-Local Optimiz
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** For the global training stage, we set the learning rate of the mask scores to 0.01 and λm to 0.003, while retaining other parameter settings ...
 - **p. 5 / 4.2. Contribution-based Anchor Pruning - extractive body cue:** 6, the aggregated contribution wi across the training views can be formulated as: wi = P v∈V /Pv i / · wv i · γscale ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** section, first, analyze, conflicts, during, gradient, accumulation, unified, aerial-street, modeling, Sec, global, training, stage, entire, view, scene, methods, described, achieve.
 - **Relevant PDF headings:** 4. Methods (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (4. Methods), p. 5 (4.3. Global-to-Local Optimiz
 - **p. 8 / 5.3. Ablations Study and Analysis - extractive body cue:** However, this approach fundamentally fails to account for the contribution variations caused by drastic changes in projection areas.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Average position gradient (a) and average projection radius (b) for two sets of neural Gaussians over the densification process. Left plots: Analysis of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Methods), p. 5 (4.3. Global-to-Local Optimization), p. 5 (4.2. Contribution-based Anchor Pruning), p. 4 (4. Methods), p. 6 (4.3. Global-to-Local Optimization), p. 6 (4.4. Loss Function), objective p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 6 (4.3. Global-to-Local Optimization), p. 4 (4.1. Aerial-Street Joint Adaptive Densification), p. 5 (4.2. Contribution-based Anchor Pruning), p. 5 (4.1. Aerial-Street Joint Adaptive Densification), p. 6 (4.4. Loss Function), temporal p. 6 (5.1. Experimental Setup), p. 6 (4.3. Global-to-Local Optimization), p. 1 (body section not recovered), p. 2 (1. Introduction), p. 4 (4. Methods), p. 5 (4.2. Contribution-based Anchor Pruning).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

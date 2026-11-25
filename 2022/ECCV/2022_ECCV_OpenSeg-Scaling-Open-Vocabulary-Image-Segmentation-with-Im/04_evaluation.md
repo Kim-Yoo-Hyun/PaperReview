@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 10 / 4 Experiments - extractive body cue:** We fine-tune the pre-trained image encoder and FPN layers on COCO dataset using a per-pixel cross-entropy loss to align pixel embeddings with text embeddings.
 - **p. 11 / 4 Experiments - extractive body cue:** OpenSeg significantly outperforms pre-trained ALIGN [23]: OpenSeg trained on COCO outperforms ALIGN baseline on all of the benchmarks significantly.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Examples of image segmentation with arbitrary text queries. We propose a model, called OpenSeg, that can organize pixels into meaningful regions indicated by ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Unless otherwise stated, for each core we compute the loss over the local batch of examples (See Appendix F for the comparison between sync ... | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | OpenSeg shows significantly superior performances. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | OpenSeg eff-b7 + prompt engineering: A-847/PC-459/A-150/PC-59/PAS-20 mIoU=8.8/12.2/28.6/48.2/72.2; COCO+Localized Narratives training. | Table 2 마지막 결과 행; target-dataset training 표시는 × | PDF p. 13 Table 2 |
 | For example, on PC-459 OpenSeg outperforms ALIGN and ALIGN w/proposals by +5.4 and +4.2 mIoU, respectively. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | This model significantly outperforms the strongest LSeg model with ViT-L backbone (+19.9 mIoU on PASCAL-20). | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | body limitation/failure cue | We find that predictions in the mIoU and Grounding mIoU settings can look quite differently and sometimes mIoU does not correctly reflect the prediction ... | p. 11 (4 Experiments) |
 | body limitation/failure cue | Table 7. OpenSeg is robust to the batch size. We present performance of OpenSeg trained on COCO+Loc. Narr. and different batch sizes. Numbers inside ... | p. 20 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | For the strongest OpenSeg (last two rows), we initialize EfficientNet-b7 backbone with ALIGN pre-trained image encoder [23]. | p. 12 (4 Experiments) |
 | We feed each word to a pre-trained text encoder to compute the word feature w. | p. 7 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 5 Conclusion - extractive body cue:** We hope to encourage future works to learn a generalist segmentation model that can transfer across datasets using language as the interface.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 20 / Figure/Table caption - extractive body cue:** Table 7. OpenSeg is robust to the batch size. We present performance of OpenSeg trained on COCO+Loc. Narr. and different batch sizes. Numbers inside the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 12 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), metrics p. 9 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments), p. 19 (Figure/Table caption), p. 8 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -1,6 +1,6 @@
 # 운영 규칙
 
-- Updated: 2026-11-20 KST
+- Updated: 2026-11-25 KST
 
 이 파일은 자신이 위치한 저장소 루트와 모든 하위 디렉토리에 적용된다. 이 저장소에서 논문을 조사·추가·분류·요약·합성하는 에이전트는 아래 규칙을 기본 계약으로 따른다.
 
@@ -25,10 +25,7 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 
 ## 2. 기본 규칙
 
-- PDF 보유 여부는 중요도, tier, 읽기 순서, 완료 여부의 기준이 아니다.
-- PDF가 없다는 이유로 논문을 제외하거나 낮은 tier로 내리지 않는다.
-- PDF 확보를 작업의 blocker나 품질 문제로 보고하지 않는다. 사용자가 필요할 때 직접 확보한다.
-- `paper.pdf`는 선택적 local cache다. 사용자 요청 없이 다운로드하거나 삭제하지 않는다.
+- 로컬 `paper.pdf`는 선택적 캐시다. PDF 보유 여부는 포함·등급·읽기 순서·완료·품질·작업 진행의 판정에 쓰지 않는다. 다운로드와 삭제는 사용자 요청이 있을 때만 한다.
 - 논문 수와 venue quota를 채우기 위해 약한 논문을 추가하지 않는다.
 - 오래된 foundation과 최근 trend를 분리해 평가하되, 최근 논문이라는 이유만으로 승격하지 않는다.
 - 3D Vision 논문은 downstream robot behavior와의 연결을 명시할 수 있을 때만 CORE/NEXT 우선순위를 높인다.
@@ -40,7 +37,7 @@ Humanoid는 별도 taxonomy로 만들지 않는다. Locomotion, whole-body contr
 
 - **연구 주제 파일 구성 — 2026-11-03 사용자 지시:** 현재 진행·대기·탐색 주제는 [work/research_topics](./work/research_topics/README.md)에서 주제별 `내용/`과 `재현 방법/` 두 폴더로 관리한다. `내용/README.md`에 질문·문헌·결과·한계·추가 buildup을 통합하고, `재현 방법/README.md`에 환경·명령·실제 실행/미구현 범위를 통합한다. Source는 주제별 단일 JSON 또는 기존 공통 원장을 참조하고, 실행에 필요한 코드·계약·원시 결과는 재현 폴더에 보존한다. 유사 brief·날짜별 주제 보고서를 별도로 늘리지 않는다. 반복되는 작업 일지와 종료 가설은 Git 이력에 두고, 실제 결과와 한계는 공통 문서에 합친다.
 - 새 논문은 실제 paper folder와 5개 표준 note file로 등록한다. `paper.pdf`는 선택 사항이다.
-- `PAPER.md`는 전체 registry와 topic navigation에 집중한다.
+- `PAPER.md`에는 논문을 분야별로 한 번씩 싣고, 검색용 CSV에는 각 논문의 전체 태그와 별칭을 보존한다. 논문마다 반복되는 검토 질문은 [공통 검토 기준](./research/READING_STATUS.md#note-checks)에 모은다. 개별 원문 위치·측정 조건·수동 교정은 해당 노트와 원장에 유지한다.
 - 읽기 우선순위, tier, 장기 순서, 연구 관점은 `READING_PLAN.md` 하나에 통합한다.
 - `README.md`의 snapshot, 문서 링크, workflow는 registry와 생성 결과가 바뀔 때 함께 갱신한다.
 - 향후 추가는 dataset/benchmark, canonical task formulation, field-shaping foundation, 최신 핵심 trend-flow를 incremental method보다 우선한다.
@@ -485,55 +482,18 @@ git diff --check
 
 ## 15. Task-Specific Operating Modes
 
-### “논문을 더 찾아라”
-
-1. 현재 registry와 gap을 먼저 감사한다.
-2. GitHub curated lists와 survey를 discovery source로 사용한다.
-3. 공식 proceedings/project/arXiv로 metadata와 contribution을 확인한다.
-4. 중복을 제거하고 신규 가치가 있는 논문만 제안한다.
-5. primary track, provisional tier, 기존 계보와의 관계를 정한다.
-6. Registry, notes, roadmap/priority, tiers를 필요한 범위만 갱신한다.
-
-### “우선순위를 바꿔라”
-
-1. PDF와 현재 note 상태를 보지 않는다.
-2. CORE/NEXT 기준으로 importance audit를 한다.
-3. 제한을 맞추기 위해 중요한 논문을 기계적으로 강등하지 않는다.
-4. Generator source를 수정하고 모든 derived artifact를 재생성한다.
-5. 승격/강등 이유를 연구 dependency 관점에서 보고한다.
-
-### “논문을 정리해라”
-
-1. 실제 source 범위를 먼저 밝힌다.
-2. 5개 note schema를 따른다.
-3. Tracker를 `SKIMMED` 또는 `READ`로 올릴 충분한 근거가 있는지 판단한다.
-4. 해당 synthesis matrix와 research gap을 갱신한다.
-5. 단일 논문 요약으로 끝내지 않고 선행/후속 차이를 남긴다.
-
-### “현황을 알려라”
-
-질문의 기준을 먼저 분리한다.
-
-- 전체 논문 분포는 [현재 통계](./research/REGISTRY_STATS.md)의 원장 편수를 분모로 사용한다.
-- Intensive reading: CORE+NEXT 기준 (현재 500편)
-- Reading progress: `READING_STATUS.csv` 기준
-- Priority, reading order, detailed robotics coverage: `READING_PLAN.md` 기준
-
-서로 다른 분모를 섞어 비율을 보고하지 않는다.
+| 요청 | 절차와 판단 기준 |
+|---|---|
+| 논문 탐색 | 원장과 공백을 점검하고 서베이·큐레이션에서 후보를 얻는다. 공식 게재본·저자 자료에서 서지와 기여를 대조하고 중복을 확인한다. 등록 이유, 트랙·잠정 등급, 기존 계보를 정한 뒤 해당 노트와 목록을 갱신한다. |
+| 우선순위 변경 | CORE/NEXT의 연구 의존성으로 승격·강등 이유를 설명한다. PDF·노트 보유 여부와 수량 할당을 배제하고 생성 규칙에서 등급을 변경한 뒤 파생 파일을 재생성한다. |
+| 논문 분석 | 확인한 원문 범위를 밝히고 5개 노트 기준을 따른다. 정독 상태의 전환 근거를 확인하고, 비교표와 연구 질문에 직접 선행·후속 차이를 남긴다. |
+| 현황 보고 | 전체 분포의 분모는 [레지스트리 통계](./research/REGISTRY_STATS.md), 집중 읽기의 분모는 CORE+NEXT다. 진행도는 [사용자 기록](./research/READING_STATUS.csv), 우선순위와 분야별 순서는 [읽기 계획](./research/READING_PLAN.md)을 사용한다. |
 
 ## 16. Patterns Adopted from Public Curation Repositories
 
-이 운영 방식은 공개 paper curation 저장소의 장점을 참고하되 이 repository에 맞게 더 엄격하게 적용한다.
+공개 목록은 탐색과 분류에 활용한다. 로봇 행동을 중심으로 분류하고, 기반 연구와 최신 연구를 나눠 선행 관계와 선정 이유를 적는다. [Physical AI](https://github.com/keon/awesome-physical-ai) · [Learning for Manipulation](https://github.com/Noietch/Awesome-Learning-for-Manipulation) · [VLA Study](https://github.com/MilkClouds/awesome-vla-study)
 
-- [Awesome Physical AI](https://github.com/keon/awesome-physical-ai): foundation, architecture, action representation, world model, learning, deployment, safety처럼 pipeline과 research question 중심으로 taxonomy를 구성한다.
-- [Awesome Learning for Manipulation](https://github.com/Noietch/Awesome-Learning-for-Manipulation): seminal/foundational과 연도별 최신 논문을 분리하고, venue/year/link와 짧은 TL;DR을 함께 둔다.
-- [Awesome VLA Study](https://github.com/MilkClouds/awesome-vla-study): foundation→frontier 읽기 순서, prerequisite, phase, cross-paper key points를 제공한다.
-- [bipedal-robot-learning-collection](https://github.com/zita-ch/bipedal-robot-learning-collection): 논문 폭증 시 active curated list와 historical archive를 분리하고, real-robot relevance와 명확한 subproblem을 우선한다.
-- [Awesome RL for Legged Locomotion](https://github.com/apexrl/awesome-rl-for-legged-locomotion): 논문 제목뿐 아니라 sim-to-real, state estimation, controller structure, real-world deployment의 핵심 차이를 설명한다.
-- [Papers We Love contribution guide](https://github.com/papers-we-love/papers-we-love/blob/main/.github/CONTRIBUTING.md): 논문을 추가할 때 단순 링크가 아니라 왜 중요한지 짧은 정당화를 요구하고, PDF 재배포 권리를 별도로 확인한다.
-- [Awesome 3D Reconstruction](https://github.com/openMVG/awesome_3DReconstruction_list): 목록이 exhaustive하지 않음을 인정하고 reproducible research, datasets, libraries를 논문 목록과 함께 관리한다.
-
-이 저장소는 위 패턴에서 **taxonomy, reading order, importance justification, archive separation, reproducibility**를 채택한다. 반면 star 수, hype, venue quota, PDF availability는 채택하지 않는다.
+현재 읽을 목록과 아카이브를 구분하고, 상태 추정·제어·실기 전이의 차이 및 재현용 데이터·구현을 연결한다. PDF 재배포 권리는 별도로 확인한다. 인기 지표·학회별 할당량은 선정 기준에서 제외한다. [이족 로봇 학습](https://github.com/zita-ch/bipedal-robot-learning-collection) · [다리 로봇 RL](https://github.com/apexrl/awesome-rl-for-legged-locomotion) · [3D 재구성](https://github.com/openMVG/awesome_3DReconstruction_list) · [Papers We Love 기여 안내](https://github.com/papers-we-love/papers-we-love/blob/main/.github/CONTRIBUTING.md)
 
 ## 17. Completion Report
 

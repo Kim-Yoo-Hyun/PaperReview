@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 - **p. 8 / 4.3. Real-World Results - extractive body cue:** Performance comparison on real-world tasks.
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** It serves as a strong yet costly baseline, as it requires p rollouts per task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the average success rates on the LIBERO benchmark using π0.5. Varying the execution horizon leads to substantial success rate fluctuations, and ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 | An enhanced version of Static Oracle that performs brute-force search over the prediction horizon, thereby achieving optimal performance under fixed horizon settings. | definition/direction/unit from same section | p. 6 (4.1. Experimental Settings) |
 | Performance comparison using GR00T N1.5 on the LIBERO benchmark. | definition/direction/unit from same section | p. 7 (4.1. Experimental Settings) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 | The enhanced Static Oracle+ consistently achieves strong results, and the specific horizon values used for this baseline are listed in Sec. | comparison identity and matched condition | p. 7 (4.2. Simulation Results) |
 | It serves as a strong yet costly baseline, as it requires p rollouts per task. | comparison identity and matched condition | p. 6 (4.1. Experimental Settings) |
 | We further compare with a variation of Static Oracle using fixed horizons closest to AutoHorizon's mean estimated values (e.g., e = 14 and e ... | comparison identity and matched condition | p. 8 (4.2. Simulation Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 | body limitation/failure cue | Object positions and orientations are randomized across trials to ensure robustness and generalization. | p. 8 (4.3. Real-World Results) |
 | body limitation/failure cue | Compared with the strong Static Oracle+ baseline, it always achieves comparable or even superior results, demonstrating robustness to hyperparameter choices. | p. 8 (4.2. Simulation Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 | We also observe an unusually high concentration of attention on the first language token, a phenomenon that persists across all transformer blocks and sampling ... | p. 5 (3.3. VLA Knows Its Limits) |
 | However, unlike in LLMs, where sink tokens often encode structural or positional information, the language attention sink in VLAs appears largely redundant and carries ... | p. 5 (3.3. VLA Knows Its Limits) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Simulation Results - extractive body cue:** Most estimated horizons fall within moderately low values-favoring reactivity-while occasional larger horizons facilitate faster task 7
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (4.2. Simulation Results), p. 13 (Figure/Ta
 - **p. 8 / 4.2. Simulation Results - extractive body cue:** Compared with the strong Static Oracle+ baseline, it always achieves comparable or even superior results, demonstrating robustness to hyperparameter choices.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.3. Real-World Results), p. 8 (4.3. Real-World Results), p. 6 (4.1. Experimental Settings), metrics p. 8 (4.2. Simulation Results), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), p. 8 (4.3. Real-World Results), p. 7 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), baselines p. 8 (4.2. Simulation Results), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 6 (4.1. Experimental Settings), p. 8 (4.2. Simulation Results), results p. 8 (4.2. Simulation Results), p. 13 (Figure/Table caption), p. 7 (4.2. Simulation Results), p. 7 (4.2. Simulation Results), p. 8 (4.2. Simulation Results), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -45,8 +45,6 @@
 - **p. 6 / 4.1. Category Annotation - extractive body cue:** We manually verify these detections and mark scenes for future analysis. • Billboards: planes with a painted texture.
 - **p. 7 / 5.1. ShapeNetCore - extractive body cue:** ShapeNetCore is a subset of the full ShapeNet dataset with single clean 3D models and manually verified category and alignment annotations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Table 1. Source datasets from SHREC 2014: Princeton Shape Benchmark (PSB) [27], SHREC 2012 generic Shape Benchmark (SHREC12GTB) [16], Toyohashi Shape Benchmark (TSB) [29], Konstanz ...
@@ -77,20 +75,11 @@
 | More specifically, we generate all combinations of pairs of vertices from the mesh. | definition/direction/unit from same section | p. 7 (4.4. Symmetry Estimation) |
 | More details about the acquisition of these physical attribute annotations are available separately [26]. | definition/direction/unit from same section | p. 7 (4.5. Physical Property Estimation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | We estimate the absolute dimensions of models using prior work in size estimation [25], followed by manual verification. | comparison identity and matched condition | p. 7 (4.5. Physical Property Estimation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,8 +104,6 @@
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -127,19 +114,10 @@
 | With the given absolute dimensions, we now compute the total solid volume of each model through filled-in voxelization. | p. 7 (4.5. Physical Property Estimation) |
 | The 12 object categories of PASCAL 3D+[35], a popular computer vision 3D benchmark dataset, are all covered by ShapeNetCore. | p. 7 (5.1. ShapeNetCore) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.1. ShapeNetCore), p. 6 (4.1. Category Annotation), p. 6 (4.1. Category Annotation), p. 7 (5.1. ShapeNetCore), metrics p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.1. Category Annotation), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 7 (4.4. Symmetry Estimation), p. 7 (4.5. Physical Property Estimation), baselines p. 7 (4.5. Physical Property Estimation), results p. 9 (Figure/Table caption), p. 5 (4. Annotation Acquisition and Validation), p. 6 (4.2. Hierarchical Rigid Alignment), p. 6 (4.1. Category Annotation), p. 7 (4.3. Parts and Keypoints).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

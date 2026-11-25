@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 - **p. 8 / VII. EXPERIMENTS - extractive body cue:** 5) consists of 5400 episodes collected for that task (i.e.
 - **p. 8 / VII. EXPERIMENTS - extractive body cue:** The single-task policy learned from the 16600 episodes yields performance of 3%.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: A) Multi-task data collection. B) Training objects. C) Sample of tasks that the system is trained on. D) Sample of behaviorally and visually ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 | The deformable cloth is laid over the object. demonstrates the value of both successful and unsuccessful data collected by other tasks for learning new ... | definition/direction/unit from same section | p. 8 (VII. EXPERIMENTS) |
 | Without any additional data-sharing and re-balancing, this data imbalance causes the baseline strategy fIorig to attain good performance for the easier, overrepresented tasks, but ... | definition/direction/unit from same section | p. 8 (VII. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 | MT-Opt (ours) provides a significant improvement over the baselines, especially for the harder tasks with less data. | comparison identity and matched condition | p. 8 (VII. EXPERIMENTS) |
 | Fig. 1: A) Multi-task data collection. B) Training objects. C) Sample of tasks that the system is trained on. D) Sample of behaviorally and ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Fig. 6: Top: 12 tasks trained for ablations, giving rise to Object Acquisition and Object Manipulation skills. Bottom: examples of additional tasks that a ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 | body limitation/failure cue | Fig. 11: System overview: Task episodes from disk are continuously loaded by LogReplay job into task replay buffers. LogReplay process assigns binary reward signal ... | p. 14 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 14: Counts of labelled SD training data by task and outcome. This data was generated either from human video demonstration, or by labelling ... | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 | Similarly to [36], we use the cross-entropy method (CEM) to perform the stochastic optimization to compute the target value function. | p. 4 (III. SYSTEM OVERVIEW) |
 | where QT (s, a, s′) = r(s, a) + γV (s′) is a target Q-value and D is a divergence metric, such as cross-entropy, ... | p. 4 (III. SYSTEM OVERVIEW) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VII. EXPERIMENTS - extractive body cue:** These include the exact same set of successful lift-sausage episodes as MT-Opt, but does not include the failures from other tasks.
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS)
 - **p. 16 / Figure/Table caption - extractive body cue:** Fig. 14: Counts of labelled SD training data by task and outcome. This data was generated either from human video demonstration, or by labelling terminal ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), metrics p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 17 (Figure/Table caption), p. 5 (Figure/Table caption), p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 7 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

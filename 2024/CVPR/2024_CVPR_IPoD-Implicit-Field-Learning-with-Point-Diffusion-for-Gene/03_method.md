@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (3.2. Implicit Field Learning with Point Diffusi
 - **p. 5 / 3.3. Self-conditioning - extractive body cue:** At the inference stage, the self-condition is initialized with a vector with all negative values (e.g., -1) and updated with ν′ at each time step.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 5 (3.3. Self-conditioning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (3.2. Implicit Field Learning with Point Diffusi
 - **p. 2 / 1. Introduction - extractive body cue:** We conduct experiments on the CO3D-v2 [46] dataset and demonstrate the superiority of the proposed approach, which surpasses the state-of-the-art results by ∼7.8% of F-score ...
 - **p. 1 / 1. Introduction - extractive body cue:** To tackle this problem, the state-of-the-art methods MCC [61] and NU-MCC [28] develop Transformer-based networks to learn an implicit field for reconstruction.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.2. Implicit Field Learning with Point Diffusi
 - **p. 3 / 3.1. Preliminary - extractive body cue:** The objective function for training is usually to minimize an L1 distance: \m a thcal { L} _\ m a th rm {imp} = \big ...
 - **p. 6 / 4. Experiments - extractive body cue:** Our model is trained with a batch size of 64 for 100 epochs (taking around 48 hours on NVIDIA V100 GPUs), and an Adam [24] ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** condition, image, first, Vision-Transformer, ViT, encoder, well, pretrained, frozen, where, patch, embedding, adopted, down-sample, serialize, input, several, Transformer, layers, then.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (3.2. Implicit Field Learning with Point Diffusi
 - **p. 6 / 4.2. Results on MVImgNet - extractive body cue:** We further use the cleaned MVImgNet point clouds to fine-tune the network and found that the generations are endowed with higher accuracy, which indicates that ...
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations We have not validated the effectiveness of our method on 3D human and scene reconstruction.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 3 (3.1. Preliminary), p. 5 (3.3. Self-conditioning), p. 3 (3.1. Preliminary), p. 5 (3.3. Self-conditioning), objective p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 5 (3.3. Self-conditioning), temporal p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 4 (3.2. Implicit Field Learning with Point Diffusion), p. 5 (3.3. Self-conditioning), p. 5 (3.3. Self-conditioning).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

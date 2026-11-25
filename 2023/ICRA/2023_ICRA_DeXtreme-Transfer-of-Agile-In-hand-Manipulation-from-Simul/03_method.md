@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p
 - **p. 7 / 2 Method - extractive body cue:** Isaac Gym gives the advantage of being able to simulate thousands of robots in parallel on a single GPU, mitigating the need for large amounts ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 8 (2 Method), p. 6 (2 Method), p. 9 (2 Method), p. 10 (2 Method), p. 16 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p
 - **p. 4 / 2 Method - extractive body cue:** [10], the critic does not take in the same observations as the actor, but receives additional observations including states s ∈S in the POMDP.
 - **p. 11 / 2 Method - extractive body cue:** Actions from the RNA network are blended with those from the policy by a = α · aRNA + (1 -α) · apolicy, where α ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p
 - **p. 13 / Experiment - extractive body cue:** However, because the policy was trained with a control frequency of 30Hz in simulation, the pose estimator was locked to run at 15Hz to ensure ...
 - **p. 16 / Method - extractive body cue:** DR type Pose estimation type Training time Cons.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Proximal, Policy, Optimisation, PPO, learn, parametric, stochastic, actor, mapping, observations, actions, account, unmodelled, dynamics, Random, Network, Adversary, RNA, below, Input.
 - **Relevant PDF headings:** 2 Method (p. 2); 2 Method (p. 3); Method (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p
 - **p. 18 / 4 Related work - extractive body cue:** However, these often fail to reproduce the agile dexterity present in human hands, as the limitations of such a sequential approach to control place corresponding ...
 - **p. 17 / 4 Related work - extractive body cue:** These approaches work well while an object maintains no-slip 10While extrinsics change with different camera configurations, the intrinsics remain the same.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (2 Method), p. 10 (2 Method), p. 6 (2 Method), p. 17 (Method), p. 6 (2 Method), p. 7 (2 Method), objective p. 4 (2 Method), p. 6 (2 Method), p. 16 (Method), p. 6 (2 Method), p. 4 (2 Method), p. 7 (2 Method), temporal p. 10 (2 Method), p. 10 (2 Method), p. 7 (2 Method), p. 11 (2 Method), p. 13 (Experiment), p. 17 (Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

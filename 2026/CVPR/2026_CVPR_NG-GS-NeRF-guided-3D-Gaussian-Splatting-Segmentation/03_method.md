@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method
 - **p. 4 / 4.1. Edge Gaussian Continuity - extractive body cue:** through a multi-view consistency process [37], where mij ∈[0, 1] represents the foreground probability derived from segmentation models (e.g., SAM) applied to multiview images.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2. NeRF-GS Joint Optimization), p. 6 (4.2. NeRF-GS Joint Optimization), p. 3 (4. Method), p. 5 (4.2. NeRF-GS Joint Optimization), p. 4 (4.1. Edge Gaussian Continuity), p. 4 (4.1. Edge Gaussian Continuity).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method
 - **p. 4 / 4.1. Edge Gaussian Continuity - extractive body cue:** This module takes the trained 3DGS model G = {gi}Ng i=1 as input and produces spatially continuous features for the future NeRF process.
 - **p. 5 / 4.2. NeRF-GS Joint Optimization - extractive body cue:** The interpolated feature f inter is input as a condition vector c of the NeRF network.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method
 
 - **p. 5 / 4.2. NeRF-GS Joint Optimization - extractive body cue:** The boundary alignment loss function is a key constraint to ensure the coordinated operation of NeRF and 3DGS in the boundary region, which enforces consistency ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Through, RBF, interpolation, discrete, Gaussian, features, fused, continuous, inter, then, NeRF, module, reinforce, spatial, coherence, across, representation, efficiently, encode, multi-scale.
 - **Relevant PDF headings:** 4. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method
 - **p. 8 / 6. Conclusion - extractive body cue:** Addressing current limitations, our future directions include extending the framework to dynamic scenes and real-time interactive applications, further bridging the gap between representation learning and ...
 - **p. 8 / 5.6. Hyper-parameter Analysis - extractive body cue:** It is shown that τ=0.6 achieves the best balance between maintaining structural integrity and controlling background noise, resulting in excellent visual coherence and detail preservation.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method), p. 3 (4. Method), p. 4 (4.1. Edge Gaussian Continuity), p. 5 (4.1. Edge Gaussian Continuity), p. 5 (4.2. NeRF-GS Joint Optimization), objective p. 6 (4.2. NeRF-GS Joint Optimization), p. 5 (4.2. NeRF-GS Joint Optimization), p. 3 (4. Method), p. 5 (4.2. NeRF-GS Joint Optimization), p. 3 (4. Method), p. 4 (4.1. Edge Gaussian Continuity), temporal p. 3 (4. Method), p. 3 (4. Method), p. 8 (6. Conclusion), p. 1 (Abstract), p. 1 (1. Introduction), p. 2 (2.1. 3DGS Reconstruction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

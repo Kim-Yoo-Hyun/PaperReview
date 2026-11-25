@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 - **p. 15 / 3 Results - extractive body cue:** Additionally, we also benchmark our results beyond the basic experiment of goal reaching by making the policy hold the cube at a target orientation N ...
 - **p. 15 / 3 Results - extractive body cue:** Successes 0 38.4 5 35.3 10 33.3 20 27.3 Table 8: Performance in simulation with ADR policies with respect to N.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: The DeXtreme system using an Allegro Hand in action in the real world.
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 | We then follow it up with tests of policy robustness in reality and simulation. | definition/direction/unit from same section | p. 13 (3 Results) |
 | Table 1: Observations of the policy and value networks. The input vector is 50D in size for policy and 265D for the value function. ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 | In the basic experiment of goal reaching without the hold, the cube may shoot past the target, making it difficult to tell if the ... | comparison identity and matched condition | p. 15 (3 Results) |
 | Table 9: We compare our block reorientation results against the previous work of OpenAI et al. [1] and OpenAI et al. [8]. It is ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
 | Table 10: Compute budget comparisons for block reorientation task of our work against the previous work. The costs are estimated from the AWS EC2 ... | comparison identity and matched condition | p. 25 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 | body limitation/failure cue | We suspect that this is because, despite the extreme levels of randomisation we do, there is a "null space" of possible policies which perform ... | p. 17 (Method) |
 | body limitation/failure cue | Figure 2: The hardware setup used in this work, unlike [1], is not housed in a cage, and our system is robust enough to ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 | While in some experiments the learning rate was updated adaptively based on a fixed KL threshold 0.016, our best result was obtained using linear ... | p. 6 (2 Method) |
 | DR type Pose estimation type Training time Cons. | p. 16 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Parameter range adjustments, pi_lo and pi_hi, with ADR based on the performance of policy at the boundaries Qi_lo and Qi_hi with respect to ...
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 R
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: The hardware setup used in this work, unlike [1], is not housed in a cage, and our system is robust enough to perform ...
 
 - **Evidence anchors reviewed:** datasets p. 14 (3 Results), p. 13 (Experiment), p. 13 (Experiment), p. 14 (3 Results), p. 15 (3 Results), p. 15 (3 Results), metrics p. 15 (3 Results), p. 13 (Figure/Table caption), p. 15 (3 Results), p. 7 (Figure/Table caption), p. 14 (3 Results), p. 14 (3 Results), baselines p. 25 (Figure/Table caption), p. 13 (Experiment), p. 15 (3 Results), p. 16 (Figure/Table caption), p. 25 (Figure/Table caption), results p. 14 (3 Results), p. 14 (3 Results), p. 13 (3 Results), p. 15 (3 Results), p. 15 (3 Results), p. 26 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

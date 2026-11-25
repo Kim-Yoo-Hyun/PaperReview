@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 - **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** Such visual question-answer pairs can be easily mixed together with other captioning or question answering datasets and use the same training objectives.
 - **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** Thanks to the diversity of object captions and distance units, our synthetic dataset features significant diversity in terms of object description, question type and phrasing.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption cue 없음
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 | SinceSpatialVLMisabletoquantitativelyestimatedistancesorsizesfromimage, it'suniquelysuitedasadenserewardannotator. | definition/direction/unit from same section | p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications) |
 | Our model achieves 8.4% accuracy for predicting a value 0.9× to 1.1× range of human annotation. | definition/direction/unit from same section | p. 10 (4.2. Effect of Spatial VQA Data to General VQA) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 | We compared our model with the vanilla PaLM 2-E trained without the spatial VQA dataset on general VQA benchmarks, and as summarized in Table. | comparison identity and matched condition | p. 9 (4.2. Effect of Spatial VQA Data to General VQA) |
 | A PaLM 2-E model trained with SpatialVLM data improves VQA v2 performance by 2.4% compared to a model with the same number of parameters, ... | comparison identity and matched condition | p. 10 (4.2. Effect of Spatial VQA Data to General VQA) |
 | GPT-4V1 GPT-4V is a version of GPT-4 [51] that supports multimodal input, it achieves state-of-the-art performance in many vision-language tasks. | comparison identity and matched condition | p. 7 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,7 +110,6 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 - **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** In fact, human sometimes tend to give noisy estimations, as they prefer to round an estimation of 0.8 meter to 1 meter.
 - **p. 10 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** Since the objects in the manipulation VQA datasets are within 1 meter range, we added the mean squared error (MSE) as a 10
 - **p. 11 / 4.5. Spatial Reasoning Unlocks Novel Applications - extractive body cue:** A large language model, in this case GPT-4, when equipped with SpatialVLM as a spatial reasoning submodule, can perform complex spatial reasoning tasks, such as ...
-- **p. 6 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** 20 centimeters Figure 3 / Example data entries from the synthetic dataset.
 
 ## Generalization and Failure Cases
 
@@ -133,8 +121,6 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 | body limitation/failure cue | We train both models for 70k steps, and evaluate percentages of answers from both models that fall into various ranges of the ground truth ... | p. 10 (4.2. Effect of Spatial VQA Data to General VQA) |
 | body limitation/failure cue | 5 compares how different Gaussian noise standard deviations affect the overall VLM performance on quantitative spatial VQA. | p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers) |
 | body limitation/failure cue | It is shown that VLMs trained on datasets of different noise levels achieve similar spatial reasoning accuracy. | p. 11 (4.4. Effect of Noisy Quantitative Spatial Answers) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -148,14 +134,6 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 | Concretely, we design a comprehensive data generation framework which first leverages off-the-shelf computer vision models including open-vocabulary detection, metric depth estimation, semantic segmentation and ... | p. 4 (3. SpatialVLM) |
 | Chain-of-Thought Spatial Reasoning Many real-world tasks require multiple steps of spatial reasoning. | p. 6 (3.3. Learning Spatial Reasoning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4.1. Spatial VQA performance - extractive body cue:** Additionally, we find that state-of-the-art VLM GPT-4V often refrain from generating answers about distance in SI units with a disclaimer text "I'm sorry, but I ...
@@ -166,6 +144,5 @@ PDF body evaluation/result cue (p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. 
 - **p. 11 / 4.4. Effect of Noisy Quantitative Spatial Answers - extractive body cue:** It is shown that VLMs trained on datasets of different noise levels achieve similar spatial reasoning accuracy.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), p. 7 (4. Experiments), metrics p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance), p. 9 (4.1. Spatial VQA performance), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), baselines p. 7 (4. Experiments), p. 8 (4. Experiments), p. 8 (4.1. Spatial VQA performance), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.2. Effect of Spatial VQA Data to General VQA), p. 7 (4. Experiments), results p. 9 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 8 (4.1. Spatial VQA performance), p. 7 (4. Experiments), p. 9 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.2. Effect of Spatial VQA Data to General VQA).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

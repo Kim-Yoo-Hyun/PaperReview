@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (1 Introductio
 - **p. 2 / 1 Introduction - extractive body cue:** To this end, we present a benchmark of simulated manipulation tasks with everyday objects, all of which are contained in a shared, table-top environment with ...
 - **p. 2 / 1 Introduction - extractive body cue:** By providing a large set of distinct tasks that share common environment and control structure, we believe that this benchmark will allow researchers to test ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Meta-World contains 50 manipulation tasks, designed to be diverse yet carry shared structure that can be leveraged for efficient multi-task RL and transfer ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (1 Introductio
 | We provide an evaluation protocol with evaluation modes of varying difficulty, and observe that current methods only show success in the easiest modes. | definition/direction/unit from same section | p. 2 (1 Introduction) |
 | Our empirical evaluation of existing methods on this benchmark reveals that, despite some impressive progress in multi-task and meta-reinforcement learning over the past few ... | definition/direction/unit from same section | p. 2 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (1 Introductio
 | Figure 2. Introducing this parametric variability not only creates a substantially larger (infinite) variety of tasks, but also makes it substantially more practical to ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Figure 4: Comparison on our simplest meta-RL evaluation, ML1. We show results of the simplest meta-learning evaluation mode, ML1, in Figure 7. We find ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 7: Comparison of PEARL, MAML, and RL2 learning curves on the simplest evaluation, ML1, where the methods need to adapt quickly to new ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,21 +116,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (1 Introductio
 | body limitation/failure cue | This suggests a number of directions for future work, which we describe below. | p. 7 (2 Related Work) |
 | body limitation/failure cue | We leave these directions for future work, either to be done by ourselves or in the form of open-source contributions. | p. 8 (2 Related Work) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (1 Introductio
 - **p. 8 / 2 Related Work - extractive body cue:** We leave these directions for future work, either to be done by ourselves or in the form of open-source contributions.
 
 - **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), metrics p. 13 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), baselines p. 1 (Abstract), p. 1 (1 Introduction), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 13 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 1 (1 Introduction), p. 13 (Figure/Table caption), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -56,7 +56,6 @@ PDF body method statement (p. 8 (A. Humanoid Whole-body Control), p. 3 (B. Whole
 - **p. 3 / A. Teleoperation Systems - extractive body cue:** Another possible solution is an exoskeleton-based teleoperation system, which does not require an additional identical robot, thus the overall cost is relatively low.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 7 (A. Humanoid Whole-body Control), p. 4 (B. Humanoid Whole-body Control), p. 5 (1 2001p), p. 5 (1 2001p), p. 6 (C. Hardware System Design), p. 7 (A. Humanoid Whole-body Control).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 8 (A. Humanoid Whole-body Control), p. 3 (B. Whole
 - **p. 3 / B. Whole-body Loco-Manipulation - extractive body cue:** Reinforcement Learning (RL)-based algorithms, especially those based on Proximal Policy Optimization (PPO) [32], offer a more powerful altemative.
 - **p. 5 / B. Humanoid Whole-body Control - extractive body cue:** Each time the policy drives the robot to track the linear velocity with a rewand function that reaches the threshold, increases by 0.05, eventually reaching ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 8 (A. Humanoid Whole-body Control), p. 3 (B. Whole
 - **p. 2 / Abstract - extractive body cue:** Our RL-based training framework features three core techrniques: upper-body pose curriculum for dynamic balance adaptation, height-tracking reward for precise squatting, and symmetry utilization for action ...
 - **p. 5 / 1 2001p - extractive body cue:** 4) Symmetry Urilization: We introduce the same trick as 50] to our training framework.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Symmetry, Utilization, introduce, three, algorithmic, variants, comparison, ours, terms, tion, uses, only, symmetrical, data, augmentation, loss, none, does, employ, stigmentation.
 - **Relevant PDF headings:** A. Network Architecture (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 8 (A. Humanoid Whole-body Control), p. 3 (B. Whole
 - **p. 9 / C. Teleoperation System - extractive body cue:** In all these tasks, each robot is controlled by a single operator, and the communication between the robot and operator is facilitated via Wi-Fi, without ...
 - **p. 10 / 20 Bet - extractive body cue:** Multi-view images are processed through a MAE-pretrained ViT encoder, and the features of robot proprioceptive states are extracted using an MLP.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (A. Humanoid Whole-body Control), p. 3 (B. Whole-body Loco-Manipulation), p. 2 (Abstract), p. 2 (Abstract), p. 4 (B. Humanoid Whole-body Control), p. 4 (A. System Overview), objective p. 7 (A. Humanoid Whole-body Control), p. 2 (Abstract), p. 5 (1 2001p), p. 2 (A. Teleoperation Systems), p. 3 (A. Teleoperation Systems), p. 3 (A. Teleoperation Systems), temporal p. 4 (B. Humanoid Whole-body Control), p. 9 (C. Teleoperation System), p. 2 (Abstract), p. 2 (Abstract), p. 3 (A. Teleoperation Systems), p. 3 (B. Whole-body Loco-Manipulation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

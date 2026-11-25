@@ -43,8 +43,6 @@
 - **p. 4 / IV. EXPERIMENTAL SETUP - extractive body cue:** We begin by describing our setup for evaluating omnimodal navigation on our real-world robot platforms.
 - **p. 4 / IV. EXPERIMENTAL SETUP - extractive body cue:** We also selected 17 environments where obstacles were placed between the robot's start and the target, making the tasks more challenging and testing the core ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We train a highly generalizable vision-based navigation policy with flexible conditioning, leveraging over 9,500 hours of data collected across 10 different platforms. Our ...
@@ -74,8 +72,6 @@
 | While large datasets enable generalization, large-scale data collection efforts can result in more noise and therefore, be less accurate. | definition/direction/unit from same section | p. 3 (Dataset) |
 | The other training settings, such as learning rate, language tokenization, normalization, and so on, are the same as the default setting in the original ... | definition/direction/unit from same section | p. 4 (Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -83,13 +79,6 @@
 | We conduct extensive real-world evaluations and compare against state-of-the-art specialist and generalist baselines. | comparison identity and matched condition | p. 4 (IV. EXPERIMENTAL SETUP) |
 | Below, we describe two baselines that differ slightly from their original implementations. | comparison identity and matched condition | p. 4 (IV. EXPERIMENTAL SETUP) |
 | Following prior work for manipulation VLAs [23], we use a form of random dropout to train on all available modalities, resulting in a more ... | comparison identity and matched condition | p. 3 (Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@
 | body limitation/failure cue | While large datasets enable generalization, large-scale data collection efforts can result in more noise and therefore, be less accurate. | p. 3 (Dataset) |
 | body limitation/failure cue | To assess the benefit of large pre-trained models, we introduced out-of-distribution (OOD) language prompts that go beyond the instructions present in the training data. | p. 4 (IV. EXPERIMENTAL SETUP) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -134,14 +121,6 @@
 | For LeLaN, CounterfactualVLA, ViNT, MBRA-pose, and MBRA-image, we use the authors' original implementation and checkpoints for evaluation. | p. 4 (IV. EXPERIMENTAL SETUP) |
 | We process the robot's current visual observations using a visual encoder. | p. 3 (Dataset) |
 | We modify this to add multiple goal encoders and perform modality dropout in the same way as our base model (see Appendix A). | p. 3 (Dataset) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -153,6 +132,5 @@
 - **p. 4 / IV. EXPERIMENTAL SETUP - extractive body cue:** To assess the benefit of large pre-trained models, we introduced out-of-distribution (OOD) language prompts that go beyond the instructions present in the training data.
 
 - **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 3 (Dataset), p. 4 (IV. EXPERIMENTAL SETUP), p. 4 (IV. EXPERIMENTAL SETUP), metrics p. 7 (Figure/Table caption), p. 4 (IV. EXPERIMENTAL SETUP), p. 2 (Figure/Table caption), p. 3 (Dataset), p. 3 (Dataset), p. 4 (Dataset), baselines p. 4 (IV. EXPERIMENTAL SETUP), p. 4 (IV. EXPERIMENTAL SETUP), p. 3 (Dataset), results p. 7 (Figure/Table caption), p. 3 (Dataset), p. 3 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

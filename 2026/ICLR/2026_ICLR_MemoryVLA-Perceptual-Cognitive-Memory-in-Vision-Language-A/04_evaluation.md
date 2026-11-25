@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.4 SIMULATED EVALUATION ON MIKASA-ROBO Training and Evaluation Setup We evaluate on the Mikasa-Robo (Cherepanov et al., 2025) benchmark.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Evaluation Results on Real-world As shown in Tab.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) In Push Buttons tasks, pre- and post-push states look nearly identical, calling for temporal modeling. (b) Humans handle manipulation tasks via a ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7
 | We report average success rates (%) on SimplerEnv-Bridge tasks. | definition/direction/unit from same section | p. 10 (4 EXPERIMENTS) |
 | Table 4: Performance comparison on Mikasa-Robo (Cherepanov et al., 2025) with Franka robot. Success rates (%) are reported. CronusVLA results are reproduced by us. | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7
 | Table 17: Comparison with temporal-context VLA methods across diverse benchmarks. Mem- oryVLA outperforms temporal-context VLA baselines across both memory-focused benchmarks and general manipulation benchmarks, ... | comparison identity and matched condition | p. 28 (Figure/Table caption) |
 | To comprehensively evaluate MemoryVLA, we organize experiments around six core questions: (1) How does MemoryVLA compare with state-of-the-art methods on SimplerEnv benchmark? | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | CogACT-Large is our re-evaluated baseline using official weight, and MemoryVLA achieves a +14.6 gain in average success. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7
 | body limitation/failure cue | 4.6) (6) How robust and generalizable is it under diverse environmental conditions? | p. 6 (4 EXPERIMENTS) |
 | body limitation/failure cue | Bottom: real-world evaluation (General and Longhorizon Temporal), real-world robustness and generalization evaluation. | p. 7 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7
 | Pick Diverse Fruits comprises five variants with 5 trials per variant (25 total); all other General tasks use 15 trials. | p. 9 (4 EXPERIMENTS) |
 | The current RGB observation and language instruction are first encoded by a VLM into perceptual and cognitive tokens, forming a working memory, analogous to ... | p. 4 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 5: Robustness and generalization under out-of-distribution (OOD) conditions in real- world. (a,b) Examples of OOD variants for two representative tasks (Pick Place Order and ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Bottom: real-world evaluation (General and Longhorizon Temporal), real-world robustness and generalization evaluation.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 19 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 2 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 27 (Figure/Table caption), p. 28 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), results p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 9 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

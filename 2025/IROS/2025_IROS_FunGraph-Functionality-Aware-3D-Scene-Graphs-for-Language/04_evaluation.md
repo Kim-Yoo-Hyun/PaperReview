@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Next, we fine-tune YOLOv11 [44] and RT-DETR [45] on the standard dataset.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Instead, it returns whole object point clouds, which results in low IoU with the ground truth.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. An example of a generated 3D scene graph and its application. The model represents both object and functional element nodes linked through intra-object ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Therefore, we first compare the 2D detection performance of our trained models and, in the following section, place this into context with existing 3D ... | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | Fig. 1. An example of a generated 3D scene graph and its application. The model represents both object and functional element nodes linked through ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | In Table IV, we report per-scene results and compare them to the SOTA ConceptGraphs [3] that can answer unconstrained language queries on the map. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Note that we retain all functional element detections, even without object associations, to avoid penalizing scores when parent objects are undetected. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Label Refinement Ablation Study As described in Section III-B, the first detection of functional elements only associates them with their affordance label. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | body limitation/failure cue | As is evident from the numbers, ConceptGraphs does not account for the | p. 6 (IV. EXPERIMENTS) |
 | body limitation/failure cue | We note that the exact numerical results are difficult to compare, as [5] does not release either the model checkpoints or the full train/test ... | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | We note that the exact numerical results are difficult to compare, as [5] does not release either the model checkpoints or the full train/test ... | p. 6 (IV. EXPERIMENTS) |
 | Implementation of our approach on a mobile manipulator using RGB-D sensing (3D LiDAR not used). | p. 3 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / VI. CONCLUSIONS - extractive body cue:** It does not rely on segmenting a pre-existing highquality point cloud, which makes it also suitable for robotics applications with affordable RGB-D sensing.
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We note that the exact numerical results are difficult to compare, as [5] does not release either the model checkpoints or the full train/test split.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

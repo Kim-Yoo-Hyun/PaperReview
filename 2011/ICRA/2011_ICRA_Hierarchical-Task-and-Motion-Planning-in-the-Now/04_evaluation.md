@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 - **p. 6 / C C - extractive body cue:** To guarantee that the robot can move to the object at that location and pick it up, we find a path from the robot's home ...
 - **p. 6 / C C - extractive body cue:** Note that the taboo regions are only taboos for placing objects: they must be kept free, but the robot may take paths that move through ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 1. Washing domain, in which the robot must move object A to the washing area, wash it, and put it in the storage area. ...
@@ -78,20 +76,11 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 | In the examples in this paper, it was constrained to do translation only and to return a single path. | definition/direction/unit from same section | p. 7 (V. ALGORITHMS) |
 | The implementation generates poses in the region and discard those that fail that grasping accessibility tests. | definition/direction/unit from same section | p. 7 (V. ALGORITHMS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | First, it may not be possible to make pn true without undoing p1, . . . , pn-1. | comparison identity and matched condition | p. 6 (C C) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 | body limitation/failure cue | SuggestPoses(O, R, Taboos): finds a set of poses for O where it is completely inside region R, there is no collision with taboo regions, ... | p. 7 (V. ALGORITHMS) |
 | body limitation/failure cue | SuggestParking(O, Taboos, start): find an "out of the way" location for O that does not overlap any of the regions in Taboos. | p. 7 (V. ALGORITHMS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 | Our implementation uses an RRT-based planner. | p. 7 (V. ALGORITHMS) |
 | In our implementation, absLevel is a dictionary, mapping ground fluents to numeric abstraction levels. | p. 7 (V. ALGORITHMS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / C C - extractive body cue:** Because these variables both have infinite domains in our setting, we cannot enumerate them.
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CO
 - **p. 7 / V. ALGORITHMS - extractive body cue:** SuggestParking(O, Taboos, start): find an "out of the way" location for O that does not overlap any of the regions in Taboos.
 
 - **Evidence anchors reviewed:** datasets p. 2 (III. EXAMPLE), p. 2 (III. EXAMPLE), p. 3 (B C), p. 3 (IV. REPRESENTATION), p. 5 (C C), p. 5 (C C), metrics p. 5 (C C), p. 2 (III. EXAMPLE), p. 5 (C C), p. 6 (C C), p. 6 (C C), p. 7 (V. ALGORITHMS), baselines p. 6 (C C), results p. 3 (B C), p. 6 (C C), p. 6 (C C), p. 7 (VI. CORRECTNESS), p. 2 (III. EXAMPLE), p. 5 (C C).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

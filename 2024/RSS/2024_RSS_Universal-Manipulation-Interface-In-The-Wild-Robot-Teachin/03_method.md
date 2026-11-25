@@ -44,7 +44,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -64,7 +63,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 - **p. 3 / III. METHOD - extractive body cue:** Universal Manipulation Interface (UMI) is hand-held data collection and policy learning framework that allows direct transfer from in-the-wild human demonstrations to deployable robot policies.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** What prevents action transfer in previous work?
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 - **p. 10 / V. CAPABILITY EXPERIMENTS - extractive body cue:** We test the policy robustness with different inference time perturbations such as moving robot base, novel objects, different lighting conditions, and adding different and more ...
 - **p. 9 / V. CAPABILITY EXPERIMENTS - extractive body cue:** No CLIP-pretrained ViT vision encoder.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** following, sections, describe, enable, above, goals, through, hardware, policy, interface, design, Universal, Manipulation, UMI, hand-held, data, collection, learning, framework, allows.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,23 +102,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD)): The followin
 - **p. 9 / V. CAPABILITY EXPERIMENTS - extractive body cue:** Dish Washing Task The robot needs to execute 7 steps of sequentially dependent actions (turn on faucet, grasp plate, pick up sponge, wash and wipe ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Relative Trajectory as Action Representation. Relative trajectory, used by UMI, is a sequence of end-effector (EE) poses relative to the same current EE ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), objective 본문 anchor 없음, temporal p. 9 (V. CAPABILITY EXPERIMENTS), p. 6 (125 Hz), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 3 (III. METHOD), p. 6 (V. CAPABILITY EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

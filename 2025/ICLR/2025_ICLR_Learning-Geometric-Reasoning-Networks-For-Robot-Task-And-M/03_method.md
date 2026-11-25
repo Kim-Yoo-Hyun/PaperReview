@@ -49,7 +49,6 @@ PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTA
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** The IK feasibility and GO modules take each a computation time of 0.5 ms.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTA
 - **p. 5 / 1 INTRODUCTION - extractive body cue:** It takes as input the feature vector xu of each node u ∈V corresponding to a movable object, and simultaneously outputs the predicted inverse kinematics ...
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** Finally, the AGF module takes 1.5 ms to output the action and grasp feasibility prediction modules.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTA
 - **p. 8 / 6 RESULTS - extractive body cue:** The inference time incorporates the complete prediction process from the model's input construction to the output, for each movable object in the environment.
 - **p. 9 / 6 RESULTS - extractive body cue:** Furthermore, GRN has a 99.6% lower inference time than traditional geometric planning.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Exceptionally, when, training, PR2-3D-4, dataset, hidden, size, module, yields, better, During, pre-training, stage, trained, epochs, total, inference, time, GRN, average.
 - **Relevant PDF headings:** B DATA GENERATION AND ANNOTATION METHOD (p. 15); C.1 GRN PLANNING ALGORITHM (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTA
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 5: Annotations statistics for the Panda-3D-4 training set. (a) Number of feasible and infeasi- ble actions (b) Number of feasible and infeasi- ble cases ...
 - **p. 8 / 6 RESULTS - extractive body cue:** CNN-based methods, DVH and AGFP-Net, fall short compared to our approach, with a difference in F1 score on the Panda-3D-4 of 10% (resp.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTATION DETAILS), objective p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTATION DETAILS), temporal p. 7 (5 EXPERIMENTS), p. 14 (A IMPLEMENTATION DETAILS), p. 14 (A IMPLEMENTATION DETAILS), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

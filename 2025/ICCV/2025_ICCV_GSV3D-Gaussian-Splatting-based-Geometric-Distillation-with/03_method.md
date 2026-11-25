@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3.2. Multi-view Diffusion Model for 3D Generati
 - **p. 6 / 3.4.2. Geometric Distillation Process for GSV3D - extractive body cue:** Ldistill = L2D + λ3DL3D, (7) where λ3D is a hyperparameter that controls the relative weighting of the 2D and 3D losses.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.3. Gaussian Splatting Decoder), p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 6 (3.4.2. Geometric Distillation Process for GSV3D).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3.2. Multi-view Diffusion Model for 3D Generati
 - **p. 4 / 3.2. Multi-view Diffusion Model for 3D Generation - extractive body cue:** In order to train the Gaussian Splatting Decoder, the latents ˆzt are substituted with the latents zinput encoded from the input multi-view images Iinput using ...
 - **p. 3 / 3.2. Multi-view Diffusion Model for 3D Generation - extractive body cue:** SV3D is a multi-view diffusion model proposed in prior work which is built upon the Stable Video Diffusion [3] (SVD) framework.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -98,13 +96,10 @@ PDF body method statement (p. 4 (3.2. Multi-view Diffusion Model for 3D Generati
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** This stage is trained for 80,000 steps with a batch size of 128. • Stage Two: We integrate the Gaussian Splatting Decoder into the multi-view ...
 - **p. 5 / 3.4.1. Training Gaussian Splatting Decoder - extractive body cue:** In order to train the Gaussian Splatting Decoder, we render Q images for each of the P objects in the training set, with these images ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** During, geometric, distillation, GSV3D, inference, conditioning, image, first, processed, pre-trained, DINO, encoder, extract, features, then, integrated, ViT, cross-attention, Finally, Gaussian.
 - **Relevant PDF headings:** 2.1. Native 3D Generative Models (p. 2); 2.2. 2D Generative Models for 3D Generation (p. 2); 3. Method (p. 3); 3.2. Multi-view Diffusion Model for 3D Generation (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -124,20 +119,10 @@ PDF body method statement (p. 4 (3.2. Multi-view Diffusion Model for 3D Generati
 - **p. 7 / 4.2. Evalutaion on 3D Generation - extractive body cue:** This limitation stems from the restricted diversity of the training data, which hinders the model's ability to generalize well to unseen or complex scenarios.
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overview of GSV3D Training and Inference Pipeline. During inference, given an initialized noise latent zT , an input image R and its corresponding ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Multi-view Diffusion Model for 3D Generation), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 4 (3.2. Multi-view Diffusion Model for 3D Generation), objective p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.3. Gaussian Splatting Decoder), p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 6 (3.4.2. Geometric Distillation Process for GSV3D), temporal p. 5 (3.4.2. Geometric Distillation Process for GSV3D), p. 3 (3.2. Multi-view Diffusion Model for 3D Generation), p. 3 (3.1. Overview), p. 4 (3.2. Multi-view Diffusion Model for 3D Generation), p. 4 (3.2. Multi-view Diffusion Model for 3D Generation), p. 5 (3.4.2. Geometric Distillation Process for GSV3D).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 17 (5 Experiments), p. 13 (5 Experiments), p.
 - **p. 14 / 5 Experiments - extractive body cue:** RoboCat-lim can be effectively fine-tuned, given a limited number of demonstrations, to tasks that are novel in terms of objects or task variants, and even ...
 - **p. 12 / 5 Experiments - extractive body cue:** In the real world, where we have limited data compared to simulation, RoboCat can take advantage of multi-task joint training on robotics data to perform ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: The self-improvement process. RoboCat is a multi-task, multi-embodiment visual goal-conditioned agent that can iteratively self-improve. A diverse training set is used to train ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 17 (5 Experiments), p. 13 (5 Experiments), p.
 | Table 15: Per-task RoboCat performance on training and fine-tuning tasks. This table expands Table 1 by providing the success rate for each task variant ... | definition/direction/unit from same section | p. 52 (Figure/Table caption) |
 | Figure 20: RoboCat vs experts performance: Panda 7-DoF structure-building training tasks (sim). RoboCat performance compared to the success rate of the training data for ... | definition/direction/unit from same section | p. 53 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 17 (5 Experiments), p. 13 (5 Experiments), p.
 | The results in Figure 10 show that the self-improved agent outperforms the baseline agent in all four of these tasks. | comparison identity and matched condition | p. 17 (5 Experiments) |
 | These include ablating the choices for VQ-GAN tokeniser and observation prediction (Appendix D.3), a comparison of different RoboCat model sizes (Appendix G.2), evaluations over ... | comparison identity and matched condition | p. 18 (5 Experiments) |
 | Figure 8: RoboCat-lim 0-shot and k-shot fine-tuning compared to VFM baselines. RoboCat-lim performs better than the baselines given the same number of episodes on ... | comparison identity and matched condition | p. 16 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 17 (5 Experiments), p. 13 (5 Experiments), p.
 | body limitation/failure cue | In simulation, RoboCat-lim generalises 0-shot to a held-out object set on the Sawyer (third plot from the left) and the blue-on-green stacking task variant ... | p. 15 (5 Experiments) |
 | body limitation/failure cue | As we are primarily concerned with goal images as task specification in a behaviour cloning setting, this work does not address the question of ... | p. 19 (6 Related Work) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 17 (5 Experiments), p. 13 (5 Experiments), p.
 | Specifically, we predict image tokens k = 5 time steps into the future as images one step apart can look very similar. | p. 5 (1 Introduction) |
 | While Gato only predicted actions, we find that, when a VQ-GAN is used, performance is improved by additionally training for predicting future image tokens ... | p. 5 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 20 / 6 Related Work - extractive body cue:** While visual goal specification already allows the agent to learn from failures and sub-optimal data, incorporating RL would enable both learning with rewards and learning ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 17 (5 Experiments), p. 13 (5 Experiments), p.
 - **p. 19 / 6 Related Work - extractive body cue:** As we are primarily concerned with goal images as task specification in a behaviour cloning setting, this work does not address the question of goal ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (5 Experiments), p. 15 (5 Experiments), p. 15 (5 Experiments), p. 11 (4.3 Evaluation), p. 11 (4.3 Evaluation), p. 12 (5 Experiments), metrics p. 12 (5 Experiments), p. 13 (5 Experiments), p. 55 (Figure/Table caption), p. 14 (5 Experiments), p. 10 (Figure/Table caption), p. 45 (Figure/Table caption), baselines p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (5 Experiments), p. 17 (5 Experiments), p. 18 (5 Experiments), p. 16 (Figure/Table caption), results p. 17 (5 Experiments), p. 13 (5 Experiments), p. 10 (Figure/Table caption), p. 55 (Figure/Table caption), p. 13 (5 Experiments), p. 45 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

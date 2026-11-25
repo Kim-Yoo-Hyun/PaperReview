@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 - **p. 18 / A.3.3 INFERENCE RUNTIME ANALYSIS - extractive body cue:** Overall, computing correspondences between a pair of meshes with our algorithm consumes between 8.4 and 12.4 seconds on a single A100 GPU, allowing time-sensitive applications ...
 - **p. 10 / 6.1.2 RESULTS - extractive body cue:** (2023) shows that dense correspondences can be used to transfer object appeareances in 2D images.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: (a) Zero-shot color transfer between 3D assets. (b) In real-world robotic experi- ments, we use DenseMatcher to transfer a manipulation sequence to the ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 | After obtaining the template mesh and keypoints, we calculate the dense descriptors for both the template mesh and the target mesh using DenseMatcher, and ... | definition/direction/unit from same section | p. 8 (6.1.2 RESULTS) |
 | Task Peel a Banana Flower Arrangement Place Shoes Decorate Chrismas Tree Pull Out the Carrot Point Object Parts with Pen Overall Robo-ABC† 2/5 1/5 ... | definition/direction/unit from same section | p. 8 (6.1.2 RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 | Figure 9: Color transfer results between (i) banana and eggplant, (ii) tomato and kabocha squash, and (iii) wine bottles (iii) gloves. 6.2.2 BASELINE Robo-ABC ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | We compare functional map with two baselines in Fig. | comparison identity and matched condition | p. 10 (6.1.2 RESULTS) |
 | Table 5: Runtime of functional map and baselines. All units are in seconds. | comparison identity and matched condition | p. 19 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 | body limitation/failure cue | We study the performance of our model under occlusion in two cases. | p. 21 (A.5 PERFORMANCE UNDER OCCLUSION) |
 | body limitation/failure cue | Figure 11: Robot experiments visualization under occlusion conditions. A.5.2 PARTIAL SOURCE AND FULL TARGET In the second case, the source mesh is a partial ... | p. 22 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 | We also derive theoretical runtime from SpiderMatch (Roetzer & Bernard, 2024) and compare them below in Tab. | p. 19 (A.3.3 INFERENCE RUNTIME ANALYSIS) |
 | Method 500-vertex 2000-vertex Functional Map (our implementation) 0.8 2.2 SpiderMatch (Roetzer & Bernard, 2024) ~10 >200 Hungarian Matching (no spatial consistency) 0.01-0.4 0.5-2.5 | p. 19 (A.3.3 INFERENCE RUNTIME ANALYSIS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 6.1.2 RESULTS - extractive body cue:** Additionally, due to the generalization capability of pre-trained 2D backbones, we achieve much higher accuracy on out-of-distribution test categories listed in Tab.
@@ -171,9 +150,8 @@ PDF body evaluation/result cue (p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 11: Robot experiments visualization under occlusion conditions. A.5.2 PARTIAL SOURCE AND FULL TARGET In the second case, the source mesh is a partial mesh, ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), metrics p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), baselines p. 7 (6.1.2 RESULTS), p. 10 (6.1.2 RESULTS), p. 7 (6 EXPERIMENTS), p. 9 (Figure/Table caption), p. 10 (6.1.2 RESULTS), p. 19 (Figure/Table caption), results p. 10 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 9 (6.1.2 RESULTS), p. 7 (6.1.2 RESULTS), p. 8 (6.1.2 RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

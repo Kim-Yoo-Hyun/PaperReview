@@ -62,8 +62,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (A LONG-STANDING goal for r
 |---|---|---|
 | no explicit assumption/failure cue | domain stress test only | not a paper claim |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (IV. BASELINE MODELS), p. 3 (III. CALVIN), p. 3 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 1 (A LONG-STANDING goal for robotics and embodied), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. CALVIN includes ∼24 hours teleoperated unstructured play), p. 3 (3) CALVIN Challenge), interface p. 6 (IV. BASELINE MODELS), p. 3 (III. CALVIN), p. 3 (3) CALVIN Challenge), p. 6 (IV. BASELINE MODELS), objective p. 6 (IV. BASELINE MODELS), p. 6 (IV. BASELINE MODELS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

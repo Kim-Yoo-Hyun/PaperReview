@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 - **p. 2 / I. INTRODUCTION - extractive body cue:** First, the inherent objective conflict between exploring to learn new tasks and limiting exploration to avoid constraint violations can lead to suboptimalities in policy optimization.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. PROBLEM STATEMENT), p. 4 (IV. RECOVERY RL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 - **p. 4 / IV. RECOVERY RL - extractive body cue:** Then π selects actions as follows: at = ( aπtask t (st,aπtask t ) ∈T π safe aπrec t (st,aπtask t ) ∈T π rec ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Instead of modifying the policy optimization procedure to encourage constraint satisfaction, which can introduce suboptimality in the learned task policy [26], the recovery policy can ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 - **p. 3 / III. PROBLEM STATEMENT - extractive body cue:** We present an algorithm to optimize equation (III.1) by utilizing a pair of policies, a task policy πtask, which is trained to maximize Rπ over ...
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Figure 5: Sensitivity Experiments: We report the final number of task ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** plan, over, learned, stochastic, dynamics, model, while, tasks, visual, observations, VAE, latent, Recovery, algorithm, navigates, tradeoff, leveraging, offline, data, learn.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INT
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** In Navigation 1 and 2, the goal is to navigate from the start set to the goal set without colliding into the obstacles (red) while ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** In all navigation tasks, we find that Recovery RL significantly outperforms prior methods with both model-free and model-based recovery policies, while for the object extraction ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (IV. RECOVERY RL), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 4 (IV. RECOVERY RL), p. 4 (IV. RECOVERY RL), p. 3 (III. PROBLEM STATEMENT), objective p. 4 (IV. RECOVERY RL), p. 3 (III. PROBLEM STATEMENT), p. 4 (IV. RECOVERY RL), p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), temporal p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 3 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

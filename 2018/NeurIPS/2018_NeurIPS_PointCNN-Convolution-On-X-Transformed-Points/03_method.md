@@ -46,7 +46,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Intro
 
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -64,7 +63,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Intro
 - **p. 1 / 1 Introduction - extractive body cue:** Suppose the unordered set of the C-dimensional input features is the same F = {fa, fb, fc, fd} ∗Part of the work was done during ...
 - **p. 2 / 1 Introduction - extractive body cue:** In this paper, we propose to learn a K × K X-transformation for the coordinates of K input points (p1, p2, ..., pK), with a ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -79,13 +77,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Intro
 
 - **p. 8 / 4 Experiments - extractive body cue:** We implemented PointCNN in tensorflow [1], and use ADAM optimizer [21] with an initial learning rate 0.01 for the training of our models.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, problems, learn, X-transformation, input, points, simultaneously, promote, causes, first, weighting, features, associated, second, permutation, latent, potentially, canonical, order, Nevertheless.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -102,20 +97,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Intro
 - **p. 8 / 4 Experiments - extractive body cue:** PointCNN w/o X w/o X-W w/o X-D Core Layers X-Conv×4 Conv×4 Conv×4 Conv×5 # Parameter 0.6M 0.54M 0.63M 0.61M Accuracy (%) 92.2 90.7 90.8 90.7 ...
 - **p. 7 / 4 Experiments - extractive body cue:** Together with the lack of "shape" information, PointNet++ fails completely on this task.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), objective p. 1 (1 Introduction), temporal p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 1 (Abstract), p. 2 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

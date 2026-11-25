@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** It can be applied on non-watertight datasets like ABO and pix3d even if the model is trained on watertight datasets.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** From the metrics, we can see that LaGeM-Objaverse is able to represent different kinds of objects with highly detailed geometry and sharp features.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Autoencoders. We show different autoencoder architectures here, including AE (AutoEn- coder), U-Net, VAE (Kingma, 2013), NVAE (Vahdat & Kautz, 2020), VecSet (Zhang et ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Table 2: Regularization in the Bottleneck. We compare the proposed regularization (NBAE) and VAE. We do not need an explicit loss to regularize the ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 7: Results on different regularizers. Loss 16 epochs 32 epochs 48 epochs 60 epochs 72 epochs KL | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | Again, we use VecSet's model as the baseline. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Figure 15: Our generated results. Compared to Fig. 14, we can generate clean, sharp, and detailed shapes. | comparison identity and matched condition | p. 18 (Figure/Table caption) |
 | Table 6: Generative result comparison. chair 3DILG VecSet Ours table 3DILG VecSet | comparison identity and matched condition | p. 17 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | body limitation/failure cue | Our method does not solve the high training cost problem of diffusion itself. | p. 10 (5 CONCLUSION) |
 | body limitation/failure cue | Figure 13: Latent with red color Z means it is replaced by Gaussian noise. Latent with blue color Z means it is generated with ... | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | (7) Thus we name it Normalized Bottleneck Autoencoder (NBAE). | p. 5 (3 METHODOLOGY) |
 | 3), we interpret the cross attention in the encoder part as a down-sampling operator. | p. 5 (3 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Due to failures of modeling loading and conversion, we obtained around 600k watertight models for training.
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 13: Latent with red color Z means it is replaced by Gaussian noise. Latent with blue color Z means it is generated with the ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 18 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

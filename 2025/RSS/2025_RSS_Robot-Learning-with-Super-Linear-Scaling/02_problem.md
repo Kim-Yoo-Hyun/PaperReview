@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (1. Iyrropucrion), p. 2 (1.
 | body cue at p. 4 | T can be used to obtain a single robust, statecovering optimal multi-environment policy xs3(as/s¢) for all Ex :1,-++»€2x ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | This model-generated data can then be used to train a robust, high-coverage statebased policy 4(a/s+) using demonstration-bootstrapped re | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 12 (IX. IMPLEMENTATION DETAILS), p. 12 (IX. IMPLEMENTATION DETAILS), p. 4 (B. Amortized Data Collection), p. 4 (B. Amortized Data Collection). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ il writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 1 (1. Iyrropucrion), interface p. 12 (IX. IMPLEMENTATION DETAILS), p. 12 (IX. IMPLEMENTATION DETAILS), p. 4 (B. Amortized Data Collection), p. 4 (B. Amortized Data Collection), objective p. 12 (IX. IMPLEMENTATION DETAILS), p. 12 (IX. IMPLEMENTATION DETAILS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

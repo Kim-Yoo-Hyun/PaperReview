@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 6 | (iii) Unlike previous methods [13, 44] that show notable performance variations across settings, our VGMamba maintains consistently high ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | 46.7%, surpassing the second-best competitor by 3.1%, which highlights its robustness in managing complex scenes with multiple potential ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (3. Overview of State Space Models), p. 2 (3. Overview of State Space Models), p. 3 (3. Overview of State Space Models), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 2 (3. Overview of State Space Models), p. 2 (3. Overview of State Space Models), p. 3 (3. Overview of State Space Models), p. 1 (1. Introduction), objective p. 2 (3. Overview of State Space Models), p. 5 (4.4. Training Objectives).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

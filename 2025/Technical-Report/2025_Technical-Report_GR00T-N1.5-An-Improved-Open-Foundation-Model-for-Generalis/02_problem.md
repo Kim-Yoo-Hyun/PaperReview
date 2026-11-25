@@ -62,8 +62,6 @@ PDF body contribution framing (p. 1 (Introduction), p. 2 (Learning to manipulate
 | body cue at p. 3 | Although these new verbs can be considered "zero-shot" in the sense that we never collected teleoperation data for ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 1 | The vision-language embeddings from the VLM are then cross-attended to by the DiT which processes the state and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Architecture), p. 1 (Architecture), p. 2 (Real GR-1 language following), p. 2 (Learning to manipulate novel objects from human ego videos). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Introduction), p. 1 (Architecture), p. 2 (Generalization to novel behaviors using Neural Trajectories), p. 2 (Learning to manipulate novel objects from human ego videos), p. 3 (Post-training on Unitree G1), interface p. 1 (Architecture), p. 1 (Architecture), p. 2 (Real GR-1 language following), p. 2 (Learning to manipulate novel objects from human ego videos), objective p. 1 (Architecture), p. 1 (Architecture).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

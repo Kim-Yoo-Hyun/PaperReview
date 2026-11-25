@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. 3D Unsupervised Semantic Segmentation
 - **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** This parameter needs to be adjusted according to different scenes.
 - **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** 6 favors surround (49.3% mIoU) over tiled (45.9%), as the circular path ensures uniform scene encapsulation, reducing blind spots in indoor scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. In the conference room scene, the upper part of the figure shows that the sparse point cloud causes the foreground points and background ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (4.2. 3D Unsupervised Semantic Segmentation
 | Impact of varying angular intervals on S3DIS Area 5. ∆elev (◦) ∆azim (◦) S3DIS (mIoU%) 0.1 5.5 48.6 0.3 6.5 49.1 0.5 7.5 49.3 ... | definition/direction/unit from same section | p. 7 (4.3. Ablation Experiment) |
 | It can be seen that the segmentation performance reaches its optimum when the Scale Gate is 0.4. | definition/direction/unit from same section | p. 8 (4.4. Parameter Sensitivity Experiment) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (4.2. 3D Unsupervised Semantic Segmentation
 | 3.3, (2) adding 3D-GS to the baseline without alignment. | comparison identity and matched condition | p. 7 (4.3. Ablation Experiment) |
 | 1, We compare our approach with prior unsupervised 3D point cloud segmentation methods, including PC-HC [13], PointDC [6], U3DS3 [20], and LogoSP [46], as ... | comparison identity and matched condition | p. 6 (4.2. 3D Unsupervised Semantic Segmentation) |
 | Comparison of projection distribution types on S3DIS Area 5. | comparison identity and matched condition | p. 8 (4.4. Parameter Sensitivity Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (4.2. 3D Unsupervised Semantic Segmentation
 | body limitation/failure cue | This alignment enables a robust measurement of semantic consistency between the inferred partitions and the reference annotations, while mitigating the impact of label permutations ... | p. 6 (4.1. Experiment Details) |
 | body limitation/failure cue | Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for ... | p. 8 (4.4. Parameter Sensitivity Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,20 +131,11 @@ PDF body evaluation/result cue (p. 6 (4.2. 3D Unsupervised Semantic Segmentation
 | It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and ... | p. 3 (3.2. Preliminary) |
 | For supervision, we compute pixel correspondences from sorted masks based on their 3D scales sM (v) j . | p. 5 (3.4. Semantic Information Distillation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.1. Experiment Details - extractive body cue:** This alignment enables a robust measurement of semantic consistency between the inferred partitions and the reference annotations, while mitigating the impact of label permutations in ...
 - **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiment Details), p. 6 (4.1. Experiment Details), p. 7 (4.2. 3D Unsupervised Semantic Segmentation), p. 7 (4.3. Ablation Experiment), p. 8 (4.4. Parameter Sensitivity Experiment), p. 8 (4.4. Parameter Sensitivity Experiment), metrics p. 6 (4.1. Experiment Details), p. 8 (4.4. Parameter Sensitivity Experiment), p. 4 (Figure/Table caption), p. 6 (4.1. Experiment Details), p. 7 (4.3. Ablation Experiment), p. 7 (4.3. Ablation Experiment), baselines p. 6 (4.2. 3D Unsupervised Semantic Segmentation), p. 7 (4.3. Ablation Experiment), p. 7 (4.3. Ablation Experiment), p. 6 (4.2. 3D Unsupervised Semantic Segmentation), p. 8 (4.4. Parameter Sensitivity Experiment), results p. 6 (4.2. 3D Unsupervised Semantic Segmentation), p. 8 (4.4. Parameter Sensitivity Experiment), p. 6 (4.2. 3D Unsupervised Semantic Segmentation), p. 7 (4.2. 3D Unsupervised Semantic Segmentation), p. 7 (4.3. Ablation Experiment), p. 8 (4.4. Parameter Sensitivity Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

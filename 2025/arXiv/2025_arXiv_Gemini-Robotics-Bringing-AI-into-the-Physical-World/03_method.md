@@ -56,7 +56,6 @@ PDF body method statement (p. 14 (3. Robot Actions with Gemini Robotics), p. 13 
 - **p. 19 / 3.3. Gemini Robotics can closely follow language instructions - extractive body cue:** Gemini Robotics: Bringing AI into the Physical World 0.0 0.2 0.4 0.6 0.8 1.0 Progress In-distribution avg.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 14 (3. Robot Actions with Gemini Robotics), p. 13 
 - **p. 14 / 3. Robot Actions with Gemini Robotics - extractive body cue:** The model ingests a multimodal prompt consisting of a set of images of the current status of the scene and a text instruction of the ...
 - **p. 11 / 2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control - extractive body cue:** Abbreviated example: class RobotApi: def get_grasp_pose(object_name, gripper): ... def detect_object(object_name, gripper): ... def open_gripper(): ... def close_gripper(): ... def move_gripper(gripper, position, orientation): ... termi ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 14 (3. Robot Actions with Gemini Robotics), p. 13 
 - **p. 17 / 3.3. Gemini Robotics can closely follow language instructions - extractive body cue:** This benchmark consists of 85 tasks in total, of which 20% are within the training distribution, 28% evaluate visual generalization, 28% evaluate instruction generalization, and ...
 - **p. 19 / 3.3. Gemini Robotics can closely follow language instructions - extractive body cue:** We speculate that these improvements result from the larger and more powerful VLM backbone, including the state-of-the-art vision encoder used in Gemini 2.0, combined with ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** backbone, Local, action, decoder, computer, Robot, images, state, image, Figure, Overview, architecture, input, output, Gemini, Robotics, model, first, study, after.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 14 (3. Robot Actions with Gemini Robotics), p. 13 
 - **p. 28 / 6. Discussion - extractive body cue:** Robust human-level embodied reasoning is critical for robots and other physically grounded agents.
 - **p. 29 / 6. Discussion - extractive body cue:** This involves developing techniques to seamlessly integrate abstract reasoning with precise execution, leading to more robust and generalizable performance.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (3. Robot Actions with Gemini Robotics), p. 13 (3. Robot Actions with Gemini Robotics), p. 14 (3. Robot Actions with Gemini Robotics), p. 17 (3.3. Gemini Robotics can closely follow language instructions), p. 16 (3. Robot Actions with Gemini Robotics), p. 22 (4.1. Long-horizon dexterity), objective p. 22 (4.2. Enhanced reasoning and generalization), p. 23 (4.2. Enhanced reasoning and generalization), p. 14 (3. Robot Actions with Gemini Robotics), p. 17 (3.3. Gemini Robotics can closely follow language instructions), p. 17 (3.3. Gemini Robotics can closely follow language instructions), p. 19 (3.3. Gemini Robotics can closely follow language instructions), temporal p. 12 (2.3. Gemini 2.0 Enables Zero and Few-Shot Robot Control), p. 14 (3. Robot Actions with Gemini Robotics), p. 14 (3. Robot Actions with Gemini Robotics), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

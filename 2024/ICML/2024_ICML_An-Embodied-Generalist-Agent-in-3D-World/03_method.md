@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 - **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** Test Loss (104) #Data 1.5 2.0 3 6 12 1.6 1.2 0.8 Aligned OPT-1.3B Scratch Vicuna-7B Aligned Vicuna-7B Aligned Vicuna-13B ditionally, we test generalization to ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (2. Model), p. 3 (2.3. Training & Inference), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 - **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** In particular, LEO directly produces motor commands without inductive bias (e.g., heatmap) that benefit previous methods, showcasing LEO's considerable capacity for learning embodied actions.
 - **p. 7 / 4.3. Embodied Action in 3D World - extractive body cue:** 2) In ObjNav, LEO achieves a success rate that is comparable to the baselines and has a better SPL on MP3D-val, suggesting that LEO can ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 - **p. 3 / 2. Model - extractive body cue:** Next, we will detail the tokenization of multimodal data, model architecture, training loss, and inference settings.
 - **p. 3 / 2.3. Training & Inference - extractive body cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
 - **p. 4 / 2.3. Training & Inference - extractive body cue:** More details on the model and training can be found in Appendix D.
-- **p. 3 / 2.3. Training & Inference - extractive body cue:** During training, we freeze the pretrained 3D point cloud encoder and the LLM and finetune the 2D image encoder, the Spatial Transformer, and the LoRA ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Next, will, detail, tokenization, multimodal, data, model, architecture, training, loss, inference, settings, During, freeze, pretrained, point, cloud, encoder, LLM, finetune.
 - **Relevant PDF headings:** 2. Model (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 3 (2. Model), p. 3 (2.3. Training & Inference), p.
 - **p. 4 / 3. Datasets - extractive body cue:** Due to the space limit, we defer details including data source and components to Appendix B.1.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts as input and formulates comprehensive 3D tasks ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2. Model), p. 3 (2.3. Training & Inference), p. 4 (2.3. Training & Inference), p. 4 (2.3. Training & Inference), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World), objective p. 3 (2.3. Training & Inference), p. 3 (2. Model), p. 7 (4.3. Embodied Action in 3D World), p. 7 (4.3. Embodied Action in 3D World), temporal p. 2 (3. Fold and organize …), p. 2 (3. Fold and organize …), p. 3 (2. Model), p. 3 (2.2. Token Embedding & LLM), p. 7 (4.3. Embodied Action in 3D World).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 8 / 3 Method - extractive body cue:** 3, we denote F as softmax operation combined after linear layer f (shared in computing the 2D Identity loss).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** 1 as input, we first add a linear layer f to recover its feature dimension back to K and then take softmax(f(Eid)) for identity classification, ...
 - **p. 2 / 1 Introduction - extractive body cue:** Given a set of posed RGB images, our goal is to learn an effective 3D representation that jointly reconstructs and segments anything in the 3D ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 10 / 4 Experiments - extractive body cue:** GT Image Rendered Image Rendered Mask Cost-based Linear Assignment (2K Iterations, training time: > 1 hour) Our Zero-shot Mask Association (2K Iterations, training time: 1 ...
 - **p. 9 / 4 Experiments - extractive body cue:** All datasets are trained for 30K iterations on one A100 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** input, first, linear, layer, recover, feature, dimension, back, then, take, softmax, Eid, identity, classification, where, total, number, masks, scene, obtain.
 - **Relevant PDF headings:** 3 Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 10 / 4 Experiments - extractive body cue:** 4: Ablation on the Identity Consistency across views, where we treat multi-view images as a video and associate the mask labels to generate coherent segmentation ...
 - **p. 10 / 4 Experiments - extractive body cue:** Model Scene Seg Scene Edit PSNR↑SSIM↑LPIPS↓FPS Baseline: Gaussian Splatting [14] - - 28.69 0.870 0.182 ∼200 Gaussian Grouping ✓ ✓ 28.43 0.863 0.189 ∼170 Table ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 9 (3 Method), p. 4 (3 Method), p. 5 (3 Method), objective p. 6 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 8 (3 Method), temporal p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 10 (4 Experiments), p. 10 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -43,7 +43,6 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -61,7 +60,6 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 - **p. 2 / I. INTRODUCTION - extractive body cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Moreover, the physical interactions supported by the current learning-based simulators are simplified.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -77,13 +75,10 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Most of the training and testing experiments are performed on a desktop with Ubuntu 18.04, Inter 3.6GHz CPU with 32GB RAM, and an Nvidia TITAN ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** After combining HER and demonstration (HER+DEMO) with Q-filtered behavior cloning [35], the agents manage to solve many challenging tasks with physicsrich simulation within 50 epochs ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Finally, surgical, learning-based, tasks, built, algorithm, development, evaluation, SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption, machine, learning.
 - **Relevant PDF headings:** III. METHODS (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -103,20 +98,10 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Meanwhile, the needle picking point is restricted to the jaw tip to avoid unsafe jaw collisions with the holding surface.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Besides, we find some failure cases resulting from dynamics discrepancies between the simulation and the real world, also observed in [14].
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (III. METHODS), p. 2 (III. METHODS), objective 본문 anchor 없음, temporal p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 3 (A. SurRoL RL Library), p. 6 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

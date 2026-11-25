@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** To encourage each image patch to attend more to geometrically relevant 3D points, we propose a focus loss that guides the attention distribution in cross ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 6 / 3 METHOD - extractive body cue:** Finally, two lightweight MLP heads take vpose as input and predict the rotation R and translation t, respectively.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Image-to-point cloud registration refers to the process of estimating the 6-degree-of-freedom (6DoF) camera pose of a given 2D image relative to a pre-constructed 3D point ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** As a result, our method achieves much faster inference time, making it more efficient without compromising performance.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** We train the whole network with the total loss Ltotal for 20 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, apply, transformer-based, fusion, module, Vaswani, consisting, multiple, self, cross, attention, layers, executed, alternate, fashion, iterations, encourage, image, patch, attend.
 - **Relevant PDF headings:** 3 METHOD (p. 4); A.7 THE USE OF LARGE LANGUAGE MODELS (LLMS) (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 16 / A.5.2 FAILURE CASES UNDER COMPLETELY INCORRECT OVERLAP PREDICTION - extractive body cue:** This failure mode, although observed only in rare extreme cases, reveals a fundamental limitation of the current framework: when the predicted overlap region is entirely ...
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Visual comparison between classical pose solver and our proposed ray-guided pose re- gression module. Classical pose solver suffers from unstable predictions under noisy ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), objective p. 6 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), temporal p. 4 (3 METHOD), p. 5 (3 METHOD), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

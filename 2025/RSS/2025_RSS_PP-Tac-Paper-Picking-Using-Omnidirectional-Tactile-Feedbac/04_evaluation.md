@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 - **p. 5 / A. Grasp Motion Dataset Synthesis - extractive body cue:** Upon contact, the fingers close gradually to pinch the object, each following an independently optimized trajectory while applying a target normal force (Figs.
 - **p. 6 / A. Implementation Details - extractive body cue:** Control points are placed at intervals of 25 along the trajectory, resulting in a total of 5 control points.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of PP-Tac. The system secre tactile feedback from the proposed hemispherical sensor (R-Tac), integrated into a <exterous robotic hand, to grasp thin, ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 | After filtering out collision-prone sequences, we obtained a dataset of 500,000 grasp samples, ‘each consisting of Naxa ~ 100 frames. | definition/direction/unit from same section | p. 6 (A. Grasp Motion Dataset Synthesis) |
 | Fig. 8: Gallery of Grasping Different Objects in Real-World Evaluations. This figure demonstrates | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 | Fig. 9: Experiment results. Evaluations were conducted to quantify the success rate of grasping four different flat objects (paper. plastic bag, ‘loth, and paper ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Then, we per form systematic comparisons of our system on different flat ‘materials and supporting terrains (Section VI-C). | comparison identity and matched condition | p. 6 (VI. EXPERIMENTS) |
 | Last, ablation studies are conducted to examine the influence of parameters, and the necessary training steps (Section VI-E). | comparison identity and matched condition | p. 6 (VI. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,7 +102,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 - Numeric sentences retained from the body:
 - **p. 6 / A. Grasp Motion Dataset Synthesis - extractive body cue:** After filtering out collision-prone sequences, we obtained a dataset of 500,000 grasp samples, ‘each consisting of Naxa ~ 100 frames.
 - **p. 6 / A. Implementation Details - extractive body cue:** Thus, the entire inference process consists of 10 steps.
-- **p. 6 / A. Implementation Details - extractive body cue:** Thus, the entire inference process consists of 10 steps.
 - **p. 7 / B. Depth Reconstruction of VBTS - extractive body cue:** In terms of computational speed, the depth mapping process takes less than 10 ms, ensuring real-time performance for robotic applications,
 - **p. 7 / B. Depth Reconstruction of VBTS - extractive body cue:** To assess the system's robustness, we also varied the terrain beneath the objects. ‘The four types of terrain used include: a flat plane, a slope ...
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** ‘TABLE : Experimental results for varying paper quantities: The system's performance was evaluated on paper materials with different buckling strengths, achieved by bonding 1, 3, ...
@@ -129,8 +117,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 | body limitation/failure cue | Slip) and the final success rate (Suce. | p. 8 (B. Depth Reconstruction of VBTS) |
 | body limitation/failure cue | The average number of slip events detected (No. | p. 8 (B. Depth Reconstruction of VBTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +130,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 | trial allowed only one grasp attempt. | p. 8 (B. Depth Reconstruction of VBTS) |
 | This baseline ‘can demonstrate the effectiveness of our hardware design. | p. 8 (B. Depth Reconstruction of VBTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / B. Depth Reconstruction of VBTS - extractive body cue:** As shown in the "Non-disturbance" baseline in Section VI-C, removing data disturbance led to a notable performance drop across all experiments, often resulting in complete ...
@@ -162,9 +140,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMEN
 - **p. 8 / B. Depth Reconstruction of VBTS - extractive body cue:** The average number of slip events detected (No.
 
 - **Evidence anchors reviewed:** datasets p. 2 (4) We provide a full implementation and systematic evaluation), p. 6 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis), p. 5 (A. Grasp Motion Dataset Synthesis), p. 6 (A. Implementation Details), metrics p. 9 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (A. Grasp Motion Dataset Synthesis), baselines p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), results p. 9 (Figure/Table caption), p. 6 (VI. EXPERIMENTS), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

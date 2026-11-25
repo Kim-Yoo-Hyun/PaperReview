@@ -43,8 +43,6 @@ NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제�
 - **p. 8 / 4.3. Results - extractive body cue:** Qualitative comparison with 4DGS [36] on the Neu3D [13] dataset.
 - **p. 6 / 4.3. Results - extractive body cue:** Qualitative comparison of baseline methods [10, 24, 31] for distractor-free scene reconstruction on the Aria and EPIC-Field sequences.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. With self-supervised foreground-background gaussian splats modeling and accurate decomposition, DeGauss simultaneously enables (a): SOTA distractor-free static scene reconstruction for casual captures (no dynamic ...
@@ -78,8 +76,6 @@ NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제�
 | Figure 1. With self-supervised foreground-background gaussian splats modeling and accurate decomposition, DeGauss simultaneously enables (a): SOTA distractor-free static scene reconstruction for casual captures (no ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Our method simultaneously reconstructs the 3D scene and learns an unsupervised decomposition into decoupled static background and dynamic foreground branches, where the ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제�
 | We take one sequence from ADT [20], AEA [16], Hot3D [2], and Epic-Field [32] dataset, respectively, ranging from 28005000 frames, to evaluate our method ... | comparison identity and matched condition | p. 5 (4.2. Datasets) |
 | Our methods generalize to image collections and achieve state-of-the-art results. | comparison identity and matched condition | p. 7 (4.3. Results) |
 | Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,22 +116,12 @@ NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제�
 | body limitation/failure cue | Our method robustly handles various challenges, preserving clean and high quality static background. dataset Nerf-on-the-go[22] with clean reference test views, we report detailed per-scene ... | p. 7 (4.3. Results) |
 | body limitation/failure cue | Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | The decoder D comprises: D = {ϕx, ϕr, ϕs ϕσ, ϕc, ϕmf , ϕmb, ϕb}. | p. 3 (3.2. Foreground deformable gaussian) |
 | The final color \protect \mathbf {C} at each pixel is then computed by blending the contribution of all Gaussians, sorted by their depth: | p. 3 (3.1. 3D Gaussian Splatting) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -152,6 +131,5 @@ NeRF-on-the-go와 일인칭 상호작용 영상 등에서 방해 물체를 제�
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Compared to SpotlessSplats [24], which is constrained by initialization and overfit to floaters. Our method offers signifi- cantly greater robustness in handling local ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 8 (4.3. Results), metrics p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.2. Datasets), p. 5 (4.1. Implementation Details), p. 6 (4.3. Results), p. 6 (4.3. Results), baselines p. 6 (4.3. Results), p. 7 (4.3. Results), p. 6 (4.3. Results), p. 5 (4.2. Datasets), p. 7 (4.3. Results), p. 5 (Figure/Table caption), results p. 7 (4.3. Results), p. 7 (4.3. Results), p. 5 (4.3. Results), p. 6 (4.3. Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

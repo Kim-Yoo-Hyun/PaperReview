@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 - **p. 8 / 4 Experiments - extractive body cue:** We validate our model on the indoor S3DIS [2] dataset to demonstrate the ability of the models to comprehend contextual semantics and intricate local geometric ...
 - **p. 8 / 4 Experiments - extractive body cue:** We report ScanObjectNN results without voting.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between different pretext tasks. (a) Masked autoencoders reconstruct masked point patches. (b) PointDif uses a conditional point generator to guide the point-to-point ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 | Mean accuracy (mAcc) and mIoU are reported for Semantic Segmentation. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | Table 6: Classification accuracy (%) of different component configurations on three variants of ScanObjectNN. Center (Vis) Center (Mask) Patch Time Embedding OBJ-BG OBJ-ONLY | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 | Following MaskPoint, we utilize 3DETR [26] as the baseline and replace the encoder with our Point-MaDi backbone. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Furthermore, the performance is competitive with recent cross-modal methods (e.g., ReCon [36], I2P-MAE [67]), without requiring additional modalities or complex pre-training pipelines. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | We report ScanObjectNN results without voting. | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 | body limitation/failure cue | It introduces more spatial diversity in corrupted regions, which encourages the model to learn more robust and generalized representations. | p. 9 (4 Experiments) |
 | body limitation/failure cue | The Cross decoder takes T v as queries and Xm as keys and values in cross-attention, mapping noise tokens to reconstructed patches within visible ... | p. 9 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 | This process, implemented via iterative sampling, forces the encoder to model global spatial relationships by inferring center positions from partial observations. | p. 2 (1 Introduction) |
 | By integrating center diffusion for global modeling and patch diffusion for local reconstruction, Point-MaDi encourages the encoder to learn robust, context-aware representations while enabling ... | p. 3 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between different pretext tasks. (a) Masked autoencoders reconstruct masked point patches. (b) PointDif uses a conditional point generator to guide the point-to-point ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4 Experiments
 - **p. 9 / 4 Experiments - extractive body cue:** The Cross decoder takes T v as queries and Xm as keys and values in cross-attention, mapping noise tokens to reconstructed patches within visible context.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 23 (Figure/Table caption), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 7 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 8 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

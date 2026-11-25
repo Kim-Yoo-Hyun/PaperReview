@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** Our track-guided policy is trained with MSE loss.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 5 (IV. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHO
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, the lack of action labels makes utilization of video data in policy learning difficult.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Previous works have addressed this by using self-supervised objectives for video pre-training to learn a feature representation of the observation for policy learning [43, 33, ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** Given the current observation and the predicted tracks from the frozen pre-trained track transformer, we train a track-guided policy from a limited demonstration dataset.
 - **p. 4 / IV. METHOD - extractive body cue:** For the language instruction, we use a pre-trained BERT [9] encoder.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, tracks, track, transformer, illustrate, architecture, Figure, Self-supervised, Annotation, Initially, generate, point, trajectories, action-free, videos, trajectory, modeling, pre-training, illustrated, ATM.
 - **Relevant PDF headings:** IV. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHO
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of our framework. (a) In the first stage, given an action-free video dataset, we first sample 2D points on one video frame ...
 - **p. 7 / 1) BC denotes the vanilla behavioral cloning which trains - extractive body cue:** Please see our video for failure cases of a video prediction model.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD), objective p. 5 (IV. METHOD), temporal p. 3 (IV. METHOD), p. 3 (III. PRELIMINARY), p. 2 (I. INTRODUCTION), p. 7 (1) BC denotes the vanilla behavioral cloning which trains), p. 2 (I. INTRODUCTION), p. 4 (IV. METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

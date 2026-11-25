@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D 
 - **p. 4 / 3.3. OOR Diffusion - extractive body cue:** According to Denoising Score Matching(DSM) [60], by optimizing the following 8421
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Formulating Object-Object Relationship), p. 3 (3.2. 3D OOR Samples Generation), p. 5 (3.3. OOR Diffusion), p. 5 (3.3. OOR Diffusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D 
 - **p. 2 / 3. Method - extractive body cue:** We model OOR based on relative poses and scales of a pair of objects in canonical space.
 - **p. 5 / 3.3. OOR Diffusion - extractive body cue:** Pose and Scale T5 Encoder Text Prompt Base Category Target Category MLP MLP MLP MLP MLP MLP Figure 4.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D 
 - **p. 2 / 3. Method - extractive body cue:** 3.3, we present our OOR diffusion model trained on the generated 3D OOR dataset to learn the distribution of object-object relationships.
 - **p. 4 / 3.3. OOR Diffusion - extractive body cue:** Specifically, we take c, B, and T as text input and encode them with the pre-trained T5 text encoder [46].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** offthe-shelf, text-to-image, model, generate, images, aligned, OOR, context, text, prompt, account, shape, deviations, several, template, meshes, candidates, select, best, DINO.
 - **Relevant PDF headings:** 3. Method (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,25 +108,14 @@ PDF body method statement (p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D 
 ## Failure and Ablation Link
 
 - **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** However, due to the inherent limitation of estimating 3D information without direct 3D data, it lacks fine-grained control.
-- **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** However, due to the inherent limitation of estimating 3D information without direct 3D data, it lacks fine-grained control.
 - **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** 7, GraphDreamer often fails to capture OOR (e.g., "A knife cuts an apple.").
 - **p. 7 / 4.2. Multi-object OOR Generation - extractive body cue:** Since SMC and SceneTeller cannot be directly extended to multi-object OOR using only pairwise OOR data, we compare our model to another baseline GraphDreamer [13], ...
 - **p. 8 / 4.3. Applications of OOR - extractive body cue:** (a) adding random noise to the original scene and then rearranging it.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. 3D OOR Samples Generation), p. 4 (3.2. 3D OOR Samples Generation), p. 5 (3.3. OOR Diffusion), p. 4 (3.2. 3D OOR Samples Generation), p. 5 (3.3. OOR Diffusion), p. 2 (3. Method), objective p. 5 (3.3. OOR Diffusion), p. 3 (3.1. Formulating Object-Object Relationship), p. 3 (3.2. 3D OOR Samples Generation), p. 5 (3.3. OOR Diffusion), p. 4 (3.3. OOR Diffusion), temporal p. 4 (3.3. OOR Diffusion), p. 8 (4.3. Applications of OOR), p. 3 (3.2. 3D OOR Samples Generation), p. 3 (3.2. 3D OOR Samples Generation), p. 7 (4.3. Applications of OOR), p. 8 (4.3. Applications of OOR).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

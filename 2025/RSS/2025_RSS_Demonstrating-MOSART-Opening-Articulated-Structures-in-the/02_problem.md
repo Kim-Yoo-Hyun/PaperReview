@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. Iyrropucrion), p. 4 (B. Generating Motio
 | body cue at p. 9 | Figure 8. 59% of failures (ie. 7 failures) are due to perception, including various kinds of failures, such ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | Grasping failures accounted for approximately 25% of all observed failures, underscoring the inherent difficulty of achieving precise, last-centimeter ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (A. Predicting Articulation Parameters), p. 3 (A. Predicting Articulation Parameters), p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 1 (Abstract), interface p. 4 (A. Predicting Articulation Parameters), p. 3 (A. Predicting Articulation Parameters), p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

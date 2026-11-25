@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3. A small number (50) of the coarsest-scale fe
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Section 5 will describe how this map is tracked, and Section 6 will describe how the map is built and updated.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 1 (1 INTRODUCTION), p. 4 (3. A small number (50) of the coarsest-scale features are), p. 2 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3. A small number (50) of the coarsest-scale fe
 - **p. 1 / ABSTRACT - extractive body cue:** We propose to split tracking and mapping into two separate tasks, processed in parallel threads on a dual-core computer: one thread deals with the task ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Map points are projected into the image according to the frame's prior pose estimate.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3. A small number (50) of the coarsest-scale fe
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** fraction, falls, below, even, lower, threshold, more, frames, during, motion, model, might, successfully, bridge, untrackable, then, tracking, considered, lost, recovery.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3. A small number (50) of the coarsest-scale fe
 - **p. 6 / 7 RESULTS - extractive body cue:** As the map grows beyond 100 keyframes, global bundle adjustment cannot keep up with exploration and is almost always aborted, converging only when the camera ...
 - **p. 6 / 7 RESULTS - extractive body cue:** Timings of individual mapping steps are difficult to obtain, they vary wildly not only with map size but also scene structure (both global and local); ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3. A small number (50) of the coarsest-scale features are), p. 1 (ABSTRACT), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 3 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), objective p. 4 (3. A small number (50) of the coarsest-scale features are), p. 1 (1 INTRODUCTION), p. 4 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 2 (1 INTRODUCTION), temporal p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 3 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 6 (7 RESULTS), p. 6 (7 RESULTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

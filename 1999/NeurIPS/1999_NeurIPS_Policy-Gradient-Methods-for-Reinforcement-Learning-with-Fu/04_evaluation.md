@@ -45,8 +45,6 @@
 - **p. 3 / Abstract - extractive body cue:** Policy Gradient Methods for RL with Function Approximation 1059 With function approximation, two ways of formulating the agent's objective are useful.
 - **p. 3 / Abstract - extractive body cue:** We will give our results only once, but they will apply to this formulation as well under the definitions p(1I") = E{t. "(t-lrt I 80 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -72,8 +70,6 @@
 | 8 2 7r(s a) ....£..£....- The bounds on 89;89j and on the MDP's rewards together assure us that 89i89j | definition/direction/unit from same section | p. 5 (Abstract) |
 | Then, for any MDP with bounded rewards, the sequence {p(1rk)}r=o, defined by any 00, 1rk = 1r(.,., Ok), and '"' '"' [ ]ofw(s,a) Wk ... | definition/direction/unit from same section | p. 5 (Abstract) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@
 | The issues here are entirely analogous to those in the use of reinforcement baselines in earlier work (e.g., Williams, 1992; Dayan, 1991; Sutton, 1984). | comparison identity and matched condition | p. 5 (Abstract) |
 | Williams's (1988, 1992) REINFORCE algorithm also finds an unbiased estimate of the gradient, but without the assistance of a learned value function. | comparison identity and matched condition | p. 2 (Abstract) |
 | Our results establish that that approximation process can proceed without affecting the expected evolution of fw and 1r. | comparison identity and matched condition | p. 5 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -116,21 +105,11 @@
 | body limitation/failure cue | In any event, the key aspect of both expressions for the gradient is that their are no terms of the form adiJII): the effect ... | p. 3 (Abstract) |
 | body limitation/failure cue | (This follows immediately because l:a 87r~~a) = 0, Vs E S.) The choice of v does not affect any of our theorems, but can ... | p. 5 (Abstract) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Mansour Rather than approximating a value function and using that to compute a deterministic policy, we approximate a stochastic policy directly using an independent ... | p. 2 (Abstract) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -140,9 +119,8 @@
 - **p. 5 / Abstract - extractive body cue:** (This follows immediately because l:a 87r~~a) = 0, Vs E S.) The choice of v does not affect any of our theorems, but can substantially ...
 
 - **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), metrics p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), baselines p. 5 (Abstract), p. 2 (Abstract), p. 5 (Abstract), results p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

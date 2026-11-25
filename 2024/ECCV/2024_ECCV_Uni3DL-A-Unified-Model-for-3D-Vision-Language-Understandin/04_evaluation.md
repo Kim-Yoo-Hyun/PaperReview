@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 - **p. 10 / 4.1 Dataset - extractive body cue:** S3DIS dataset contains 6 large-scale areas with 271 scenes, and 13 semantic categories are annotated.
 - **p. 10 / 4.1 Dataset - extractive body cue:** Following previous works, we use 68 scenes in Area 5 for validation and the others for model training.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: With a unified architecture, Uni3DL supports diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, grounded segmentation, captioning, text-3D cross-modal ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 | Figure 1: With a unified architecture, Uni3DL supports diverse 3D vision-language understanding tasks, including semantic segmentation, object detection, instance segmentation, grounded segmentation, captioning, text-3D ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Table 2: Head compositions of different tasks. Obj-Cls denotes object classification head, Text-Gen denotes text generation head, and Matching denotes text-3D matching. where CE ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 | It should be noted we report grounded segmentation performance rather than grounded localization to ensure a fair comparison with TGNN. | comparison identity and matched condition | p. 10 (4.1 Dataset) |
 | Table 4: Ablation of pertaining. Effect of different pertaining tasks. We further investigate the effect of each pertaining task, including instance/grounded segmentation, 3D captioning, ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | Table 1: Comparison of various vision-language models in 3D, highlighting their ca- pabilities across diverse tasks. It specifically indicates the utilization of Multi-View (MV) ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,19 +127,10 @@ PDF body evaluation/result cue (p. 10 (4.1 Dataset), p. 11 (Figure/Table caption
 | 4.2 Implementation Details In this work, we employ 150 latent queries and one additional latent query for scene-level tasks. | p. 10 (4.1 Dataset) |
 | The training process spans 50 epochs using the AdamW optimizer [39], taking approximately 20 hours on four NVIDIA A100 GPUs. | p. 10 (4.1 Dataset) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 9 (4.1 Dataset), p. 9 (4.1 Dataset), p. 10 (4.1 Dataset), p. 10 (4.1 Dataset), metrics p. 10 (4.1 Dataset), p. 10 (4.1 Dataset), p. 11 (Figure/Table caption), p. 9 (4.1 Dataset), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 9 (4.1 Dataset), p. 10 (4.1 Dataset), p. 13 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 10 (4.1 Dataset), p. 11 (Figure/Table caption), p. 10 (4.1 Dataset), p. 12 (Figure/Table caption), p. 9 (4.1 Dataset), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

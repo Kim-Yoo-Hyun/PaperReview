@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3.2. Hierarchical Neural Radiance Representatio
 - **p. 6 / 3.3. Architecture of the Lookahead VLN model - extractive body cue:** The goal scores Spath (in Equation 15) of candidate nodes are calculated by max pooling all scores of the corresponding path branch shown in Figure ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 6 (3.3. Architecture of the Lookahead VLN model), p. 6 (3.3. Architecture of the Lookahead VLN model), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3.2. Hierarchical Neural Radiance Representatio
 - **p. 5 / 3.3. Architecture of the Lookahead VLN model - extractive body cue:** 3.3.2 Cross-Modal Graph Encoding To encode the environmental topological map and evaluate future path branches in it, all node representations in Section 3.3.1 are fed ...
 - **p. 4 / 3.2. Hierarchical Neural Radiance Representation - extractive body cue:** Although the goal of region-level encoding is to generate regional semantic features, for image reconstruction and depth estimation, we also trained an MLPrgbd network to ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (3.2. Hierarchical Neural Radiance Representatio
 
 - **p. 5 / 3.2. Hierarchical Neural Radiance Representation - extractive body cue:** During training, we randomly sample some region features and then minimize the loss between predicted features and actual CLIP embeddings, by maximizing cosine similarity as ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** During, training, randomly, sample, some, region, features, then, minimize, loss, between, predicted, actual, CLIP, embeddings, maximizing, cosine, similarity, follows, Lregion.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.3. Architecture of the Lookahead VLN model (p. 5); 4.2. Comparison to State-of-the-Art Methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 5 (3.2. Hierarchical Neural Radiance Representatio
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of different methods to represent the naviga- ble candidate locations. (a) uses the single-view observation (yel- low sector area). (b) uses the ...
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Hierarchical encoding and multi-level semantic alignment help HNR integrate surrounding contexts and predict features of empty regions caused by visual occlusions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 3 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), objective p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 6 (3.3. Architecture of the Lookahead VLN model), temporal p. 3 (3.1. Navigation Setups), p. 5 (3.2. Hierarchical Neural Radiance Representation), p. 2 (2. Related Work), p. 3 (3.2. Hierarchical Neural Radiance Representation), p. 4 (3.2. Hierarchical Neural Radiance Representation), p. 5 (3.3. Architecture of the Lookahead VLN model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

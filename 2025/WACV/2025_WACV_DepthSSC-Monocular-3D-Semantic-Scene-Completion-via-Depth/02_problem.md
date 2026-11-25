@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (44.89 IoU on the SemanticKITTI benchmark (h
 | body cue at p. 1 | Figure 1. Goal of Our Approach. Demonstrates DepthSSC's su- periority in handling complex 3D environments for semantic scene ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | To evaluate the robustness of the ST-GF module under depth input errors, we simulate errors in depth measurements ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 1 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (44.89 IoU on the SemanticKITTI benchmark (h
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 1 (1. Introduction), p. 2 (1. Introduction), objective p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 4 (3.2. Spatially-Transformed Graph Fusion), p. 3 (3.1. Preliminary).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

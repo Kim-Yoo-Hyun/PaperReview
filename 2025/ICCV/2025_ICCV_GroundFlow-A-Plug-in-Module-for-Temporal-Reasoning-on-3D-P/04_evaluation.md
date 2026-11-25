@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (
 - **p. 8 / 4.5. Qualitative Visualization - extractive body cue:** T represents the task description, St and Ot denote the step instruction and corresponding referred target object in step t.
 - **p. 8 / 4.5. Qualitative Visualization - extractive body cue:** In the second example, there are multiple chairs in the scene and the last step instruction, "Walk back to your chair", refers to the chair ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. An example of SG3D task (above) and a comparison be- tween previous visual grounding framework (bottom left) and our recurrent framework (bottom right) ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (
 | Unlike PQ3D, which incorrectly selects another chair, PQ3D integrated GroundFlow consistently identifies the correct chair referenced in the first step. | definition/direction/unit from same section | p. 8 (4.5. Qualitative Visualization) |
 | These results highlight that the memory component in GroundFlow enables the model to retain important context over time, allowing it to accurately retrieve and ... | definition/direction/unit from same section | p. 8 (4.5. Qualitative Visualization) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (
 | The ∆improvement in the last two columns is relative to the original 3DVG baselines. methods. | comparison identity and matched condition | p. 7 (4.4. Ablation Study) |
 | As shown in Figure 4, the introduction of GroundFlow improves the performance of all subsets with different step counts, with the query-based method PQ3D ... | comparison identity and matched condition | p. 7 (4.4. Ablation Study) |
 | Figure 2. The overview of two 3DVG baseline models (blue background) integrated with our proposed plug-in temporal fusion module - GroundFlow (orange background). Unlike ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (
 | body limitation/failure cue | Since previous step embeddings do not attend to this lost information, it cannot be carried forward to subsequent steps, even if it is essential ... | p. 7 (4.4. Ablation Study) |
 | body limitation/failure cue | It is shown that PQ3D fails to correctly choose the target "Telephone", while PQ3D+GroundFlow makes the correct predictions of "Telephone" for both steps. | p. 8 (4.5. Qualitative Visualization) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (
 | It is shown that PQ3D fails to correctly choose the target "Telephone", while PQ3D+GroundFlow makes the correct predictions of "Telephone" for both steps. | p. 8 (4.5. Qualitative Visualization) |
 | These results highlight that the memory component in GroundFlow enables the model to retain important context over time, allowing it to accurately retrieve and ... | p. 8 (4.5. Qualitative Visualization) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.3. Comparison on SG3D Benchmark - extractive body cue:** Their degraded performance is particularly reflected in their overall task accuracy, with three of the models are falling below 30%.
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (
 - **p. 8 / 4.5. Qualitative Visualization - extractive body cue:** It is shown that PQ3D fails to correctly choose the target "Telephone", while PQ3D+GroundFlow makes the correct predictions of "Telephone" for both steps.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.2. Implementation Details), p. 6 (4.3. Comparison on SG3D Benchmark), p. 5 (4.2. Implementation Details), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), metrics p. 7 (4.4. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (4.3. Comparison on SG3D Benchmark), p. 7 (4.4. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), baselines p. 6 (4.3. Comparison on SG3D Benchmark), p. 5 (4.2. Implementation Details), p. 6 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 3 (Figure/Table caption), results p. 6 (4.3. Comparison on SG3D Benchmark), p. 6 (4.3. Comparison on SG3D Benchmark), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

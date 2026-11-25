@@ -47,8 +47,6 @@
 - **p. 8 / B. Results - extractive body cue:** Although the hands of the ‘humanoid robot are barely used for most locomotion tasks, the RL algorithms fail to ignore this information, which makes policy ...
 - **p. 9 / B. Results - extractive body cue:** In the highbay task, the Unitree HI robot conservatively learns to maintain contact,
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Example egocentric visual (top-left) and whole-body tactile (right) observations when the humanoid interacts with, a package in the truck environment. In the right ...
@@ -80,8 +78,6 @@
 | On the other hand, we note a less pronounced performance improvement in the more challenging package task. | definition/direction/unit from same section | p. 9 (B. Results) |
 | Fig. 3: HumanoidBench manipulation task suite. We devise 15 benchmarking whole-body manipulation tasks that cover a wide variety of interactions and difficulties. This figure ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | The results in Figure 7 show that the presence of hands, with their additional joints and actuators, leads to a large decrease in performance ... | comparison identity and matched condition | p. 8 (B. Results) |
 | All the baseline algorithms perform below the success threshold on most tasks, particularly struggling on tasks that require long-horizon planning and intricate whole-body coordination ... | comparison identity and matched condition | p. 8 (B. Results) |
 | Ona separate note, while our experiments above confirm that the on-policy PPO exhibits poor sample efficiency compared to the other off-policy algorithms, it is ... | comparison identity and matched condition | p. 9 (B. Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@
 | body limitation/failure cue | training with a lange action space (ie., additional 42 dimensions with two dexterous Shadow Hands) on walk that does not necessarily require to control ... | p. 8 (B. Results) |
 | body limitation/failure cue | Although the hands of the ‘humanoid robot are barely used for most locomotion tasks, the RL algorithms fail to ignore this information, which makes ... | p. 8 (B. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@
 | + run: Run forward (in the global x-direction) at a speed of 5m/s. | p. 5 (IV. HuMANOIDBENcH) |
 | The curves are averaged over three random seeds and the shaded | p. 6 (IV. HuMANOIDBENcH) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / B. Results - extractive body cue:** In this subsection, we remark on notable challenges and com- ‘mon failures for some representative tasks in our benchmark, which denote the challenge in learning ...
@@ -166,9 +145,8 @@
 - **p. 8 / B. Results - extractive body cue:** Although the hands of the ‘humanoid robot are barely used for most locomotion tasks, the RL algorithms fail to ignore this information, which makes policy ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (V. BENCHMARKING RESULTS), p. 8 (B. Results), p. 7 (V. BENCHMARKING RESULTS), p. 9 (B. Results), p. 8 (B. Results), p. 9 (B. Results), metrics p. 8 (B. Results), p. 9 (B. Results), p. 7 (Figure/Table caption), p. 8 (B. Results), p. 9 (B. Results), p. 4 (Figure/Table caption), baselines p. 9 (B. Results), p. 8 (B. Results), p. 8 (B. Results), p. 9 (B. Results), results p. 9 (B. Results), p. 9 (B. Results), p. 8 (B. Results), p. 8 (B. Results), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

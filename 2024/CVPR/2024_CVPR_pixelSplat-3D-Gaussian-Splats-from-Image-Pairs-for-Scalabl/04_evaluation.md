@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 8 (5.3. Ablations and An
 - **p. 7 / 5.2. Results - extractive body cue:** Qualitative comparison of novel views on the RealEstate10k (top) and ACID (bottom) test sets.
 - **p. 8 / 5.3. Ablations and Analysis - extractive body cue:** This highlights that beyond simply detecting correspondence, our encoder uses the scene-scale encoded depths it triangulates to resolve scale ambiguity.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. Given a pair of input images, pixelSplat recon- structs a 3D radiance field parameterized via 3D Gaussian primi- tives. This yields an ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 8 (5.3. Ablations and An
 | Figure 2. Scale ambiguity. SfM does not reconstruct camera poses in real-world, metric scale-poses are scaled by an arbitrary scale factor that is different ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 3. Proposed probabilistic prediction of pixel-aligned Gaussians. For every pixel feature F[u] in the input feature map, a neural network f predicts Gaussian ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 8 (5.3. Ablations and An
 | Figure 2. Scale ambiguity. SfM does not reconstruct camera poses in real-world, metric scale-poses are scaled by an arbitrary scale factor that is different ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Qualitative comparison of novel views on the RealEstate10k (top) and ACID (bottom) test sets. | comparison identity and matched condition | p. 7 (5.2. Results) |
 | To investigate whether predicting the depth of a Gaussian probabilistically is necessary, we perform an ablation (No Probabilistic Prediction) which directly regresses the depth, ... | comparison identity and matched condition | p. 8 (5.3. Ablations and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 8 (5.3. Ablations and An
 | body limitation/failure cue | To evaluate visual fidelity, we compare each method's rendered images to the corresponding ground-truth frames by computing a peak signal-to-noise ratio (PSNR), structural similarity ... | p. 6 (5.1. Experimental Setup) |
 | body limitation/failure cue | Specifically, reflective surfaces are often transparent, and Gaussians appear billboard-like when viewed from out-of-distribution views. | p. 7 (5.2. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 8 (5.3. Ablations and An
 | Our model features real-time and memory-efficient rendering for scalable training as well as fast 3D reconstruction at inference time. | p. 1 (Abstract) |
 | In each forward pass, we sample This CVPR paper is the Open Access version, provided by the Computer Vision Foundation. | p. 1 (1. Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** Without our sampling approach, our model falls into local minima that manifest themselves as speckling artifacts.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 6 (5.2. Results), p. 8 (5.3. Ablations and An
 - **p. 7 / 5.2. Results - extractive body cue:** Specifically, reflective surfaces are often transparent, and Gaussians appear billboard-like when viewed from out-of-distribution views.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Results), p. 8 (5.3. Ablations and Analysis), metrics p. 8 (5.3. Ablations and Analysis), p. 6 (5.1. Experimental Setup), p. 6 (5.2. Results), p. 7 (5.2. Results), p. 8 (5.3. Ablations and Analysis), p. 3 (Figure/Table caption), baselines p. 6 (5.1. Experimental Setup), p. 6 (5.2. Results), p. 7 (5.2. Results), p. 3 (Figure/Table caption), p. 7 (5.2. Results), p. 8 (5.3. Ablations and Analysis), results p. 6 (5.2. Results), p. 8 (5.3. Ablations and Analysis), p. 6 (Figure/Table caption), p. 8 (5.3. Ablations and Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method
 - **p. 9 / 3 Method - extractive body cue:** However, this improvement is less significant than the gain from incorporating spatial semantics at different hierarchical levels in Table 5, as object names already show ...
 - **p. 9 / 3 Method - extractive body cue:** Semantics SR↑ SPL↑ Random Walking 21.5 10.8 Scene 59.0 30.4 Scene + Region 61.5 32.0 Scene + Region + Object 62.5 31.6 Effectiveness of different ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The search process: BeliefMapNav plans frontier paths by minimizing the expected search distance based on the 3D voxel-based belief map, ensuring efficient and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method
 | Figure 5: (a) is the input depth image. (b) shows the confidence computed from the depth image. Bluer regions indicate higher confidence, meaning the ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | To extract these landmarks, we prompt an LLM (GPT-4 [35]) with the target object description, asking it to generate two outputs: (1) a set ... | definition/direction/unit from same section | p. 6 (3 Method) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method
 | 4 Experimental Results In this section, we outline datasets and key implementation details, then compare BeliefMapNav's performance against SOTA baselines on HM3D [17], MP3D ... | comparison identity and matched condition | p. 7 (3 Method) |
 | Baseline summaries and HM3D failure analyses appear in Appendix A.6 and A.7, respectively. | comparison identity and matched condition | p. 7 (3 Method) |
 | Prior work [48] similarly shows that BLIP-2 slightly surpasses CLIP in zero-shot text-to-image retrieval accuracy, while both are significantly better than BLIP. | comparison identity and matched condition | p. 9 (3 Method) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method
 | body limitation/failure cue | Figure 1: The search process: BeliefMapNav plans frontier paths by minimizing the expected search distance based on the 3D voxel-based belief map, ensuring efficient ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | For each semantic level, if the voxel does not contain an existing feature, we directly store the current feature and its associated confidence score. | p. 14 (A.2 Adaptive hierarchical feature selection) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method
 | Finally, landmarks encoded by text CLIP and the semantic map are combined via the belief map construction to update the 3D voxel-based belief map. ... | p. 5 (3 Method) |
 | The final belief score at voxel u is computed as: bu = P lt∈Lt Pnlt i=1 αlt i ·plt u,i +pu,target. | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 3 Method - extractive body cue:** Baseline summaries and HM3D failure analyses appear in Appendix A.6 and A.7, respectively.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method
 - **p. 14 / A.2 Adaptive hierarchical feature selection - extractive body cue:** For each semantic level, if the voxel does not contain an existing feature, we directly store the current feature and its associated confidence score.
 
 - **Evidence anchors reviewed:** datasets p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 15 (A.3 Prompting), p. 8 (3 Method), p. 15 (A.3 Prompting), metrics p. 7 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 2 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (3 Method), baselines p. 8 (3 Method), p. 8 (3 Method), p. 18 (Figure/Table caption), p. 7 (3 Method), p. 7 (3 Method), p. 9 (3 Method), results p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method), p. 14 (A.2 Adaptive hierarchical feature selection), p. 7 (3 Method).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

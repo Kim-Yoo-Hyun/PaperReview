@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 - **p. 5 / 4. Experiments - extractive body cue:** In Section 4.3, we evaluate DiVLA in the challenging factory sorting task, showcasing its remarkable performance and illustrating how reasoning enables the model to analyze ...
 - **p. 5 / 4. Experiments - extractive body cue:** In Section 4.5, we showcase DiVLA's impressive generalization abilities in a zero-shot bin-picking task involving over 102 unseen objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our proposed DiffusionVLA model unifies autoregressive and diffusion modeling to enable self-reasoning and robot policy learning. This approach generalizes effectively to visual changes, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 | Figure 3: Experimental Results for Factory Sorting. We compared our DiVLA with Diffusion Policy, Octo, TinyVLA, and OpenVLA. DiVLA achieves the highest average success ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 6: Experimental results for view shifting generalization. We conduct view shifting generalization on factory sorting task. The experimental setup is shown in Figure ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 | Deep learning has demonstrated superior performance and generalization capabilities compared to traditional methods. | comparison identity and matched condition | p. 7 (4.4. Behavior Analysis of Robot Foundation Model) |
 | Our method significantly outperforms both Diffusion Policy and OpenVLA by a large margin. | comparison identity and matched condition | p. 8 (4.6. Adapt to Real-World Bimanual Robot) |
 | For tasks involving both seen and unseen objects, DiVLA achieves up to a 70.8% success rate, a slight decrease in success rate compared to ... | comparison identity and matched condition | p. 8 (4.6. Adapt to Real-World Bimanual Robot) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 | body limitation/failure cue | DiVLA is robust to visual changes in different scenarios. | p. 6 (4. Experiments) |
 | body limitation/failure cue | We further evaluate our method in a multi-task setting with visual changes to assess its robustness and adaptability in diverse, dynamic environments. | p. 6 (4.2. Real-World Multi-Task Learning) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 | We initialized the VLM backbone with the publicly released checkpoint. | p. 4 (3.1. Architecture) |
 | An MLP layer is attached to the last layer at the bottom of the action decoder to predict the robot's joint space. | p. 4 (3.1. Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.4. Behavior Analysis of Robot Foundation Model - extractive body cue:** Failure case analysis via self-generated reasoning.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to
 - **p. 6 / 4.2. Real-World Multi-Task Learning - extractive body cue:** We further evaluate our method in a multi-task setting with visual changes to assess its robustness and adaptability in diverse, dynamic environments.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 7 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 8 (4.5. Zero-Shot Bin Picking of Unseen Objects), p. 6 (4.3. End-to-End Sorting on Real Robot), p. 6 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot), metrics p. 6 (4.2. Real-World Multi-Task Learning), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 4 (Figure/Table caption), baselines p. 6 (4. Experiments), p. 5 (Figure/Table caption), p. 5 (4. Experiments), p. 7 (4.4. Behavior Analysis of Robot Foundation Model), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), results p. 5 (Figure/Table caption), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 8 (4.6. Adapt to Real-World Bimanual Robot), p. 6 (4.2. Real-World Multi-Task Learning), p. 7 (4.3. End-to-End Sorting on Real Robot), p. 7 (4.3. End-to-End Sorting on Real Robot).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

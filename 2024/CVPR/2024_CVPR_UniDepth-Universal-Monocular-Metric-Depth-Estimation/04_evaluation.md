@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with the State of the Art)
 - **p. 7 / 4.2. Comparison with the State of the Art - extractive body cue:** (†): KITTI and NYU in the training set.
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** This limitation is underscored by the marked variability observed for test sets strongly out-of-distribution, such as KITTI, when comparing the utilization or absence of camera ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce UniDepth, a novel approach that di- rectly predicts 3D points in a scene with only one image as input. UniDepth incorporates ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with the State of the Art)
 | The last column represents the specific colormap ranges for depth and error. | definition/direction/unit from same section | p. 7 (4.2. Comparison with the State of the Art) |
 | Each odd row shows the input RGB image and the predicted pointcloud color-coded with coolwarm based on the absolute relative error. | definition/direction/unit from same section | p. 7 (4.2. Comparison with the State of the Art) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with the State of the Art)
 | Importantly, the KITTI Depth Prediction Benchmark, which provides a perfectly fair evaluation, underscores the excellent zero-shot performance of our method and its robustness compared ... | comparison identity and matched condition | p. 6 (4.2. Comparison with the State of the Art) |
 | The Baseline model illustrates an approach to the problem without utilizing external information and lacking a proper design for both internal and output space. | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
 | We evaluate the generalizability of the compared models by testing them on ten datasets not seen during training. | comparison identity and matched condition | p. 5 (4.1. Experimental Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with the State of the Art)
 | body limitation/failure cue | Figure 3. Impact of noise in camera intrinsics. The amount of relative distortion (εCAM(%)) of the intrinsics is shown on the x- axis, while ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | The Oracle model demonstrates more robust scale-dependent performance during zero-shot testing compared to the Full model, highlighting how the proposed task is inherently more ... | p. 7 (4.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with the State of the Art)
 | Furthermore, stopping the gradient from propagating from the Camera Module to the Encoder (row 7), as described in Sec. | p. 8 (4.3. Ablation Study) |
 | More specifically, the decoder of Baseline is not conditioned on inaccurate prior camera and scale information as in row 4. | p. 8 (4.3. Ablation Study) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** This limitation is underscored by the marked variability observed for test sets strongly out-of-distribution, such as KITTI, when comparing the utilization or absence of camera ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with the State of the Art)
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** The Oracle model demonstrates more robust scale-dependent performance during zero-shot testing compared to the Full model, highlighting how the proposed task is inherently more demanding.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Comparison with the State of the Art), p. 8 (4.3. Ablation Study), p. 6 (4.2. Comparison with the State of the Art), p. 7 (4.3. Ablation Study), metrics p. 6 (4.2. Comparison with the State of the Art), p. 5 (4.1. Experimental Setup), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 1 (Figure/Table caption), p. 5 (4.1. Experimental Setup), baselines p. 7 (4.3. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.2. Comparison with the State of the Art), p. 6 (4.2. Comparison with the State of the Art), p. 7 (4.3. Ablation Study), p. 5 (4.1. Experimental Setup), results p. 6 (4.2. Comparison with the State of the Art), p. 6 (4.2. Comparison with the State of the Art), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 5 (4.1. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

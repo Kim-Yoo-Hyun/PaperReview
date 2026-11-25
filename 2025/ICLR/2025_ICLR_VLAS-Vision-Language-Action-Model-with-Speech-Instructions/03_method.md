@@ -45,7 +45,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD)): 3.1 ARCHITECTURE O
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD)): 3.1 ARCHITECTURE O
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Finally, we further fine-tune VLAS-Base through behavior cloning (Ross et al., 2011) on our curated CSI dataset, which encompasses image observations, speech instructions, and robot ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Given these practical needs and existing technologies, a key question arises: How can we integrate visionlanguage-action models with speech modality to produce a simpler and ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD)): 3.1 ARCHITECTURE O
 
 - **p. 6 / 1. I have a blue - extractive body cue:** Throughout this phase, all network components are updated, with the exception of the pre-trained image and speech encoders.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ARCHITECTURE, VLAS, Overall, Framework, takes, human, speech, instructions, visual, observations, input, directly, generate, robot, actions, illustrated, Figure, first, provide, overview.
 - **Relevant PDF headings:** 3 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD)): 3.1 ARCHITECTURE O
 - **p. 6 / 1. I have a blue - extractive body cue:** Stage I: Speech Alignment, where the model aligns speech with text through MLP fine-tuning.
 - **p. 6 / 1. I have a blue - extractive body cue:** Throughout this phase, all network components are updated, with the exception of the pre-trained image and speech encoders.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHOD), p. 3 (3 METHOD), objective 본문 anchor 없음, temporal p. 7 (1. I have a blue), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 7 (1. I have a blue), p. 1 (ABSTRACT), p. 4 (1. I have a blue).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

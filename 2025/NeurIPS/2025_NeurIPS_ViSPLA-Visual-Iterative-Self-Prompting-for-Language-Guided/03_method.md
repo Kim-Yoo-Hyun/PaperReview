@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (A
 - **p. 3 / 1 Introduction - extractive body cue:** In summary, our contributions are: • We introduce Visual Iterative Self-Prompting for 3D Affordance Learning (ViSPLA), which leverages geometric features from predicted masks as visual ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (A
 - **p. 3 / 1 Introduction - extractive body cue:** accuracy, especially in complex or ambiguous settings; (3) the disconnect between high-level language semantics and low-level geometric features, hindering precise and context-aware affordance prediction across ...
 - **p. 3 / 1 Introduction - extractive body cue:** This approach enables more accurate affordance localization by incorporating intrinsic geometric cues rather than relying solely on language. • We develop a Multi-Stage Refinement Decoder ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (A
 
 - **p. 2 / 1 Introduction - extractive body cue:** This approach addresses several critical challenges in the field: (1) Existing single-pass inference methods lack the ability to iteratively refine predictions, often leading to suboptimal ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** injecting, LLM, reasoning, dense, point, features, bridges, high-level, semantic, understanding, low-level, geometric, representation, introduce, Implicit, Neural, Affordance, Field, technique, learns.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (A
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative visualization of ablation
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 3: Performance analysis (aIoU on "seen" setting) with varying T and K values. Following 3D-AffordanceLLM [6], we utilize Phi-3.5-mini-instruct [27] as our base LLM ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 4 (2 Related Work), p. 5 (2 Related Work), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

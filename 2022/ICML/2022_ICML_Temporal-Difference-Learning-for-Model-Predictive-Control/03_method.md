@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (
 - **p. 3 / 3. TD-Learning for Model Predictive Control - extractive body cue:** (2015)) control for planning (denoted Πθ), learned models dθ, Rθ of the (latent) dynamics and reward signal, respectively, a terminal state-action value function Qθ, and ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 3 (3. TD-Learning for Model Predictive Control), p. 3 (3. TD-Learning for Model Predictive Control), p. 4 (4. Task-Oriented Latent Dynamics Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (
 - **p. 4 / 4. Task-Oriented Latent Dynamics Model - extractive body cue:** Our proposed TOLD consists of five learned components hθ, dθ, Rθ, Qθ, πθ that predict the following quantities: Representation: zt = hθ(st) Latent dynamics: zt+1 ...
 - **p. 5 / 4. Task-Oriented Latent Dynamics Model - extractive body cue:** This is in contrast to prior work on model-based learning that learn a model by state or video prediction, entirely decoupled from policy and/or value ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (
 - **p. 5 / 5. Experiments - extractive body cue:** (2018)) and Algorithm 2 TOLD (training) Require: θ, θ-: randomly initialized network parameters η, τ, λ, B: learning rate, coefficients, buffer 1: while not tired ...
 - **p. 9 / 5. Experiments - extractive body cue:** We provide additional experiments on inference times in Appendix H.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** TOLD, consists, five, learned, components, predict, following, quantities, Representation, Latent, dynamics, Reward, Value, Policy, Given, observation, observed, time, network, encodes.
 - **Relevant PDF headings:** 3. TD-Learning for Model Predictive Control (p. 3); 4. Task-Oriented Latent Dynamics Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (
 - **p. 5 / 5. Experiments - extractive body cue:** All components are deterministic and implemented using MLPs.
 - **p. 13 / Figure/Table caption - extractive body cue:** Table 3. Comparison to prior work. We compare key components of TD-MPC to prior model-based and model-free approaches. Model objective describes which objective is used ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 4 (4. Task-Oriented Latent Dynamics Model), p. 3 (3. TD-Learning for Model Predictive Control), p. 3 (3. TD-Learning for Model Predictive Control), p. 5 (4. Task-Oriented Latent Dynamics Model), objective p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 3 (3. TD-Learning for Model Predictive Control), p. 4 (4. Task-Oriented Latent Dynamics Model), p. 3 (3. TD-Learning for Model Predictive Control), temporal p. 2 (1. Introduction), p. 5 (5. Experiments), p. 6 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 3 (3. TD-Learning for Model Predictive Control).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

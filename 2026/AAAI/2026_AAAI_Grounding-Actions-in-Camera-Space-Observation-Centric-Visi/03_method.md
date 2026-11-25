@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** In contrast, observationcentric action prediction inherently avoids these issues, offering a more consistent mapping between observation and action.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD), p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 1 / I. INTRODUCTION - extractive body cue:** By anchoring the action target in the same space as the observation (i.e., the image plane), this formulation alleviates the misalignment between perception and action ...
 - **p. 4 / III. METHOD - extractive body cue:** In contrast, observationcentric action prediction inherently avoids these issues, offering a more consistent mapping between observation and action.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Consequently, it is difficult for the model to achieve a reasonable projection from image observation to corresponding actions, and thus the model generalization is limited, ...
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Training is conducted with a batch size of 2048 across 8 NVIDIA A100 GPUs, with 256 samples per GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** While, representations, widely, supervision, signals, Vision-Language-Action, VLA, models, they, tightly, coupled, specific, robot, embodiment, configurations, rather, being, derived, observation, space.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** For this purpose, we choose the Droid dataset [9] for pretraining.
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** Pretraining Data To ensure a comprehensive and fair evaluation of our proposed approach, we incorporate a pretraining stage in selected experiments.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 18 (A.5 Additional Experiments), p. 8 (4 Expe
 - **p. 18 / A.5 Additional Experiments - extractive body cue:** 6 shows the training loss curves for both the standard model (without LoRA) and the model with LoRA applied on the Color3DMatch dataset.
 - **p. 19 / A.7 Qualitative Results - extractive body cue:** In the ColorKitti dataset shown in Fig.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: In scenarios with minimal overlap, incomplete geomet- ric features, and subtle color variations, methods that simply add color features perform moderately, whereas GeGS-PCR ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 18 (A.5 Additional Experiments), p. 8 (4 Expe
 | Notably, in areas with similar geometric features such as floors and walls or appliances and furniture, GeGS-PCR maintains high accuracy. | definition/direction/unit from same section | p. 20 (A.7 Qualitative Results) |
 | Compared to other methods, 3DGS Selfattention significantly improves PIR (Precision), IR (Inlier Ratio), and RR (Registration Recall). | definition/direction/unit from same section | p. 17 (A.5 Additional Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 18 (A.5 Additional Experiments), p. 8 (4 Expe
 | Model Estimator C3DM C3DLM RRE(°) RTE(m) RRE(°) RTE(m) Predator [28] RANSAC-50k 2.029 0.064 3.048 0.093 CoFiNet [44] RANSAC-50k 2.002 0.064 3.271 0.090 GeoTransformer [15] ... | comparison identity and matched condition | p. 19 (A.5 Additional Experiments) |
 | Figure 6: Comparison of Training Loss with and without LoRA Optimization (Color3DMatch Dataset). Additional baselines. Table 6 is a continuation of Table 1, present- ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
 | As shown in Table 2, GeGS-PCR outperforms both RANSAC and RANSACfree methods. | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 18 (A.5 Additional Experiments), p. 8 (4 Expe
 | body limitation/failure cue | Specifically, compared to Vanilla Self-attention, 3DGS Self-attention shows stronger robustness across the entire overlap range, with its advantages becoming more pronounced in complex environments. | p. 17 (A.5 Additional Experiments) |
 | body limitation/failure cue | As the overlap decreases, GeGS-PCR maintains strong performance even in the 0.5-0.6 overlap range, with a PIR of 0.938, an IR of 0.872, and ... | p. 17 (A.5 Additional Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 18 (A.5 Additional Experiments), p. 8 (4 Expe
 | The image gradient is: ∂∥f(G1) -f(G2)∥2 ∂∆I = 2 · (f(G1) -f(G2)), (15) We also calculate the rendering Jacobian and Lie Algebra Jacobian as: ... | p. 14 (A.1 Proof of photometric optimization) |
 | The encoder first inputs the three-channel color vector Fc ∈R3 into a multi-layer perceptron (MLP). | p. 4 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 Conclusion - extractive body cue:** Through local Gaussian feature extraction, GeGS-PCR effectively suppresses noise interference and robustly fuses geometric and color features.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 18 (A.5 Additional Experiments), p. 8 (4 Expe
 - **p. 17 / A.5 Additional Experiments - extractive body cue:** As the overlap decreases, GeGS-PCR maintains strong performance even in the 0.5-0.6 overlap range, with a PIR of 0.938, an IR of 0.872, and an ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 17 (A.5 Additional Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 17 (A.5 Additional Experiments), metrics p. 9 (4 Experiments), p. 18 (A.5 Additional Experiments), p. 9 (4 Experiments), p. 19 (A.7 Qualitative Results), p. 20 (A.7 Qualitative Results), p. 19 (A.7 Qualitative Results), baselines p. 7 (4 Experiments), p. 9 (4 Experiments), p. 19 (A.5 Additional Experiments), p. 19 (A.5 Additional Experiments), p. 17 (Figure/Table caption), p. 8 (4 Experiments), results p. 18 (A.5 Additional Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 18 (A.5 Additional Experiments), p. 17 (A.5 Additional Experiments), p. 17 (A.5 Additional Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

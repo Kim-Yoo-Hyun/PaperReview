@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 8 (4. Experiments), p. 8 (4. Experiments), p.
 - **p. 8 / 4. Experiments - extractive body cue:** Finally, due to the explicit nature of the dynamic 3D Gaussians, AYG's 4D representation, multiple animated 4D objects can be easily composed into larger scenes, ...
 - **p. 8 / 4. Experiments - extractive body cue:** Ablation study by user study on synthesized 4D scenes with 30 text prompts.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Text-to-4D synthesis with Align Your Gaussians (AYG). Top: Different dynamic 4D sequences. Dotted lines represent dynamics of deformation field. Bottom: Multiple dynamic 4D ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 8 (4. Experiments), p. 8 (4. Experiments), p.
 | Figure 6. Text-to-4D synthesis with AYG. Various samples shown in two views each. Dotted lines denote deformation field dynamics. not explicitly incorporate the encoding ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 7. Autoregressively extended text-to-4D synthesis. AYG is able to autoregressively extend dynamic 4D sequences, combine sequences with different text-guidance, and create looping anima- ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 8 (4. Experiments), p. 8 (4. Experiments), p.
 | AYG outperforms MAV3D on all metrics, achieving state-of-the-art text-to-4D performance (we also evaluated R-Precision [32, 58] on a larger prompt set used by MAV3D ... | comparison identity and matched condition | p. 8 (4. Experiments) |
 | To compare AYG to MAV3D [79], we performed a comprehensive user study where we took the 28 rendered videos from MAV3D's project page2 and ... | comparison identity and matched condition | p. 8 (4. Experiments) |
 | Table 1. Comparison to MAV3D [79] by user study on synthe- sized 4D scenes with 28 text prompts. Numbers are percentages. | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,8 +109,6 @@ PDF body evaluation/result cue (p. 8 (4. Experiments), p. 8 (4. Experiments), p.
 | body limitation/failure cue | Overcoming this limitation would be an exciting avenue for future work. | p. 8 (5. Conclusions) |
 | body limitation/failure cue | AYG currently cannot easily produce topological changes of the dynamic objects. | p. 8 (5. Conclusions) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -133,20 +120,11 @@ PDF body evaluation/result cue (p. 8 (4. Experiments), p. 8 (4. Experiments), p.
 | All DMs leverage the SD 2.1 backbone and share the same encoder. | p. 4 (3.2. Text-to-4D as Compositional Generation) |
 | All used DMs are latent DMs [70, 86], which means that in practice we first encode renderings of our 4D scenes into the models' ... | p. 4 (3.2. Text-to-4D as Compositional Generation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusions - extractive body cue:** Overcoming this limitation would be an exciting avenue for future work.
 - **p. 8 / 5. Conclusions - extractive body cue:** AYG currently cannot easily produce topological changes of the dynamic objects.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4. Experiments), p. 8 (4. Experiments), metrics p. 2 (Figure/Table caption), p. 8 (4. Experiments), p. 8 (4. Experiments), p. 4 (Figure/Table caption), p. 7 (4. Experiments), p. 4 (Figure/Table caption), baselines p. 8 (4. Experiments), p. 8 (4. Experiments), p. 7 (Figure/Table caption), results p. 8 (4. Experiments), p. 8 (4. Experiments), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

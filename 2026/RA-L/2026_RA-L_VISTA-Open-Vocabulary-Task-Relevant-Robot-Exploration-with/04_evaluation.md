@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 - **p. 6 / V. RESULTS - extractive body cue:** Spot Quadruped Hardware Experiments For our second hardware platform, we use a Boston Dynamics Spot quadruped robot fitted with RGB-D cameras and onboard odometry.
 - **p. 6 / V. RESULTS - extractive body cue:** Six real scenes were used in this comparison, three from the Nerfstudio dataset {Plane, Kitchen, Poster} and three additional datasets {Flight, Clutter, Adirondacks}. and Adirondacks ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. System overview of VISTA. Real-time sensor data is gathered from a robot hardware platform to train a semantic 3DGS map. The semantic and ...
@@ -73,8 +71,6 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 | Fig. 4. The top row shows our three environments and two robots, with the search object in a green circle. The second row shows ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 1. System overview of VISTA. Real-time sensor data is gathered from a robot hardware platform to train a semantic 3DGS map. The semantic ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -84,13 +80,6 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 | In our baseline comparisons, we train a radiance field using a predetermined set of training views for a fixed number of iterations (1000). | comparison identity and matched condition | p. 5 (V. RESULTS) |
 | Next Best View Selection Baseline Comparisons To evaluate our geometric information gain metric, we compare against baseline approaches FisherRF [17] and Bayes' Rays [33]. | comparison identity and matched condition | p. 5 (V. RESULTS) |
 | Fig. 4. The top row shows our three environments and two robots, with the search object in a green circle. The second row shows ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,8 +106,6 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 | body limitation/failure cue | Through these experiments, we find that all methods have some successes on the easy low-occlusion map domain. | p. 6 (V. RESULTS) |
 | body limitation/failure cue | Fig. 4. The top row shows our three environments and two robots, with the search object in a green circle. The second row shows ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -128,14 +115,6 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 | We then incorporate semantic information and our proposed planning approach to implement the full pipeline in hardware on a quadrotor platform. | p. 5 (V. RESULTS) |
 | Lastly, we demonstrate our full pipeline in hardware on a Boston Dynamics Spot quadruped robot to show the versatility of our method to different ... | p. 5 (V. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / V. RESULTS - extractive body cue:** We evaluate each method using the standard metrics: Peak-Signal-Noise-Ratio (PSNR), Learned Perceptuation Image Patch Similarity (LPIPS), and Structural Similarity Index Measure (SSIM).
@@ -143,9 +122,8 @@ PDF body evaluation/result cue (p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. R
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 4. The top row shows our three environments and two robots, with the search object in a green circle. The second row shows an ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 6 (V. RESULTS), p. 6 (V. RESULTS), metrics p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 7 (Figure/Table caption), results p. 6 (V. RESULTS), p. 6 (V. RESULTS), p. 5 (V. RESULTS), p. 5 (V. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

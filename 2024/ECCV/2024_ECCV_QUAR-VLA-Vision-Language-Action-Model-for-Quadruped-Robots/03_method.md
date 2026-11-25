@@ -55,7 +55,6 @@ PDF body method statement (p. 8 (3 Method), p. 9 (3 Method), p. 5 (3 Method), p.
 - **p. 9 / 3 Method - extractive body cue:** To directly convert models' output to valid robot actions for downstream control, we need detokenize the discrete action token ad into continuous representation ac (except ...
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 5 (3 Method), p. 7 (3 Method), p. 9 (3 Method), p. 9 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 8 (3 Method), p. 9 (3 Method), p. 5 (3 Method), p.
 - **p. 8 / 3 Method - extractive body cue:** Notably, QUART model takes a single image s and a natural language instruction w as input, which are first converted into corresponding tokens t through ...
 - **p. 2 / 1 Introduction - extractive body cue:** To enable quadruped robots to autonomously navigate and manipulate various tasks, in this paper, we propose a new paradigm: Vision-Language-Action tasks for QUAdruped Robots (QUAR-VLA), ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 8 (3 Method), p. 9 (3 Method), p. 5 (3 Method), p.
 - **p. 9 / 3 Method - extractive body cue:** For QUART, the inference time could get 2Hz.
 - **p. 9 / 3 Method - extractive body cue:** In contrast to many applications of large models, such as natural language or image generation, one of the unique requirements for a model that needs ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Notably, QUART, model, takes, single, image, natural, language, instruction, input, first, converted, corresponding, tokens, through, tokenizer, decoder-only, transformer, module, obtain.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 8 (3 Method), p. 9 (3 Method), p. 5 (3 Method), p.
 - **p. 11 / 1. Comparison within VLM baselines. The experiment results reveal - extractive body cue:** This observation suggests that while visual language models (VLMs) can grasp abstract principles of the world, directly applying VLMs does not readily translate to the ...
 - **p. 14 / 1. Comparison within VLM baselines. The experiment results reveal - extractive body cue:** 5 Conclusion & Future Work This paper emphasizes the significance of deploying Vision-Language-Action models on quadruped robots.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (3 Method), p. 9 (3 Method), p. 5 (3 Method), p. 9 (3 Method), p. 5 (3 Method), p. 6 (3 Method), objective p. 9 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 9 (3 Method), temporal p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

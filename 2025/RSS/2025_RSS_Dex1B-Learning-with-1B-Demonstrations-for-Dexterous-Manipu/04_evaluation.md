@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** Then, we provide details on the synthesized Dex 1B demonstration dataset and compare it with human-annotated demonstration datasets on both lifting and articulation tasks.
 - **p. 8 / B. Dataset Analysis - extractive body cue:** In contrast, the articulation task, which emphasizes trajectory execution, shows greater resilience to data reduction as it can adapt to unseen objects through a more ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: The Dex1B benchmark consists of 1B generated high-quality demonstrations for grasping and articulation tasks. In the bottom row, we show the deployment results ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 | Fig. 2: DexIB demonstration collection. ‘The engine takes object assets and hand pose initialization as input, using a control- based optimization algorithm to generate ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Finally, we collect a dataset with 950 million (around 1 billion) successful trajectories. | definition/direction/unit from same section | p. 7 (B. Dataset Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 | When comparing models trained on Dex1B to those trained on DexYCB/ARCTIC, we ‘consistently find that the former outperforms the latter across tasks, baselines and ... | comparison identity and matched condition | p. 8 (B. Dataset Analysis) |
 | Compared to DexGraspNet [45], our implementation of pure optimization-based grasp generation is 30 times faster, requiring only 2 minutes to generate 2000 grasps for ... | comparison identity and matched condition | p. 7 (B. Dataset Analysis) |
 | III also demonstrates that the proposed generative method, DexSimple, achieves better performance than the regression-based BC baselines on both the relatively small DexYCB/ARCTIC dataset ... | comparison identity and matched condition | p. 8 (B. Dataset Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 | body limitation/failure cue | dataset, including retargeting human demonstrations to robot trajectories and adding noise to generate a larger number of physically plausible demonstrations. | p. 7 (B. Dataset Analysis) |
 | body limitation/failure cue | Notably, we observe that performance degradation is more pronounced for the lifting task than for the articulation task as training data decreases. | p. 8 (B. Dataset Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 | The ‘optimized hand poses are evaluated using the simulator, and the successful ones are retained as a seed dataset Generative Models for Scaling-up Demonstrations. | p. 4 (0 4 © _ sminge) |
 | A. sample is drawn from this distribution and passed to the MLP decoder to reconstruct the original hand pose. | p. 5 (IV. DEXSIMPLE MopEL) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / B. Dataset Analysis - extractive body cue:** Without Lea, the model lacks precise spatial awareness, leading to significant failures in grasp execution On the other hand, the distance loss £0 is responsible ...
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Sy
 - **p. 8 / B. Dataset Analysis - extractive body cue:** Notably, we observe that performance degradation is more pronounced for the lifting task than for the articulation task as training data decreases.
 
 - **Evidence anchors reviewed:** datasets p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 6 (V. EXPERIMENTS), p. 8 (B. Dataset Analysis), metrics p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 7 (B. Dataset Analysis), p. 1 (Figure/Table caption), baselines p. 6 (A. Grasping Synthesis Evaluation), p. 6 (A. Grasping Synthesis Evaluation), p. 7 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 8 (B. Dataset Analysis), results p. 8 (B. Dataset Analysis), p. 6 (A. Grasping Synthesis Evaluation), p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 7 (B. Dataset Analysis), p. 7 (B. Dataset Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -48,7 +48,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 INT
 - **p. 1 / Body text (section not recovered) - extractive body cue:** Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 INT
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Point clouds, or scattered collections of points in 2D or 3D, are arguably the simplest shape representation; they also comprise the output of 3D sensing ...
 - **p. 1 / Body text (section not recovered) - extractive body cue:** While hand-designed features on point clouds have long been proposed in graphics and vision, however, the recent overwhelming success of convolutional neural networks (CNNs) for ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 INT
 
 - **p. 8 / 4 EVALUATION - extractive body cue:** A distributed training scheme is further implemented on two NVIDIA TITAN X GPUs to maintain the training batch size.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** neural, network, module, dubbed, EdgeConv, suitable, CNN-based, high-level, tasks, point, clouds, including, classification, segmentation, One, common, process, cloud, data, deep.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (1 INT
 - **p. 8 / 4 EVALUATION - extractive body cue:** We further evaluate the robustness of our model (trained on 1,024 points with k = 20) to point cloud density.
 - **p. 9 / 4 EVALUATION - extractive body cue:** Our model is robust to partial data.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Body text (section not recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (Body text (section not recovered)), objective p. 1 (Body text (section not recovered)), temporal p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK), p. 4 (2 RELATED WORK), p. 5 (2 RELATED WORK), p. 11 (5 DISCUSSION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

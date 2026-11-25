@@ -45,8 +45,6 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 - **p. 17 / A IMPLEMENTATION DETAILS - extractive body cue:** B 3D VISUAL GROUNDING To further verify the effectiveness of SOLE on various language instructions, we conduct experiments on 3D visual grounding benchmark ScanRefer (Chen ...
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Given the free-form language instruction, "I wanna see outside.", SOLE trained only with f MEA captures the wrong object ((a)), whereas it segments the related ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Qualitative results of SOLE with various language instructions. SOLE is highly gen- eralizable and can segment corresponding instances with various language instructions, including ...
@@ -80,8 +78,6 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 | Figure 3: Overall framework of SOLE. SOLE is built on transformer-based instance segmentation model with multimodal adaptations. For model architecture, backbone features are integrated ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Table 11: Analysis of compatibility with previous works on ScanNet200 (Rozenberszki et al., 2022). SOLE shows high compatibility with previous mask training methods, achieving ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 | Table 1: The comparison of closed-set 3D instance segmentation setting on ScanNetv2. SOLE is compared with mask-training methods and the fully-supervised counterpart (upper bound). ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 6: K-means clustering of different backbone features. Different colors denote different clusters. OCRand and VoteRand where training is not required, the other four ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
 | Tab. 3. Our SOLE outperforms OpenMask3D (Takmaz et al., 2023) and Open3DIS (Nguyen et al., 2024) by a large margin on both base and ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,7 +112,6 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** The feature backbone extracts point features in 5 scales, while 4 layers of transformer decoder iteratively refine the instance queries.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Our model is trained for 600 epochs with AdamW (Loshchilov & Hutter, 2017) optimizer.
 - **p. 17 / A IMPLEMENTATION DETAILS - extractive body cue:** For each 3D point cloud scene, we use farthest point sampling (Qi et al., 2017) to get 150 points as object queries.
-- **p. 17 / A IMPLEMENTATION DETAILS - extractive body cue:** For each 3D point cloud scene, we use farthest point sampling (Qi et al., 2017) to get 150 points as object queries.
 
 ## Generalization and Failure Cases
 
@@ -134,8 +122,6 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 | body limitation/failure cue | Given a free-form language instruction instead of category name, e.g., "I wanna see outside", the model only using mask-entity association cannot segment the correct ... | p. 10 (4 EXPERIMENTS) |
 | body limitation/failure cue | 4, our method further shows superior robustness on more out-of-distribution data from Replica, achieving +9.8% improvement in AP score compared to Open3DIS. | p. 9 (4 EXPERIMENTS) |
 | body limitation/failure cue | Both in-distribution ("base") and out-of-distribution ("novel") classes are reported in Tab. | p. 9 (4 EXPERIMENTS) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -150,14 +136,6 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 | Finally, incorporated point-wise features with multiple resolutions are fed into cross modality decoder. | p. 5 (3 METHOD) |
 | 3.2 CROSS MODALITY DECODER (CMD) Projected 2D CLIP features provide generalizable visual information but the language information is not explicitly integrated, limiting the responsive ... | p. 5 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Left (a) : Previous works train class-agnostic mask proposal module with only using mask annotations. In the inference time, generated 3D masks are ...
@@ -167,6 +145,5 @@ ScanNetv2, ScanNet200, Replica에서 범주 주석 없는 학습 조건의 분�
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Both in-distribution ("base") and out-of-distribution ("novel") classes are reported in Tab.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 19 (Figure/Table caption), p. 8 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -39,8 +39,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 - **p. 3 / 3) Extensive experiments in both simulation and real-world - extractive body cue:** This process ensures accurate motion retargeting and produces the cleuned robot trajectory dataset DG as shown in Figure 3 ().
 - **p. 3 / 3) Extensive experiments in both simulation and real-world - extractive body cue:** ) Retargeting SMPL Motions to Robot Motions: With the cleaned dataset D&at in SMPL format, we retarget the motions into robot motions following the shape-and-motion ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. The humanoid robot (Unite G1) demonstrates diver signature celebration ivolving a jump with & ISD-degree mid-air Kobe Bryan' famous fadeaway jump shot involving ...
@@ -65,20 +63,11 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 | Fig. 1. The humanoid robot (Unite G1) demonstrates diver signature celebration ivolving a jump with & ISD-degree mid-air Kobe Bryan' famous fadeaway jump shot ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Fig. 10. Analysis of dataset size, waning horizon, and scion aorm on the performance of x. (a) Dataset Size: Mean Per Joint Position Eror ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -112,8 +101,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 | body limitation/failure cue | However, this trend ‘does not consistently extend to closed-loop performance. | p. 10 (A. Key Factors in Training Delta Action Models) |
 | body limitation/failure cue | b) Simulation-based Data Cleaning: Since the reconstruction process can introduce noise and errors [25], some estimated motions may not be physically feasible, making them ... | p. 3 (3) Extensive experiments in both simulation and real-world) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -121,14 +108,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 | 4) To facilitate smooth transfer between simulators, we develop and open-source a multi-simulstor training and evaluation codebase for help accelerate further research. | p. 3 (3) Extensive experiments in both simulation and real-world) |
 | 2) A reward signal is computed to minimize the diserepancy between the simulated state s,.1 and the recorded real-world state sf, with an additional ... | p. 5 (B. Training Delta Action Model) |
 | 13, Visualization of saacGym-to-saacSim 7° ouput magnitde, We compute the average absolute value of each joit over the 4300-<pisode dataset. | p. 11 (0.038 Hip piten) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -140,9 +119,8 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption)): Fig. 10. Analysis
 - **p. 3 / 3) Extensive experiments in both simulation and real-world - extractive body cue:** b) Simulation-based Data Cleaning: Since the reconstruction process can introduce noise and errors [25], some estimated motions may not be physically feasible, making them unsuitable ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), metrics p. 3 (3) Extensive experiments in both simulation and real-world), p. 3 (3) Extensive experiments in both simulation and real-world), p. 1 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 10 (Figure/Table caption), results p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

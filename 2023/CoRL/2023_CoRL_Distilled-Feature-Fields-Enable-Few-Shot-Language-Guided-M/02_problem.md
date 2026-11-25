@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (3. Language-Guided Manipulation), p. 1 (Abs
 | body cue at p. 7 | This is a typical failure case - six out of 19 failures stem from these poor grasp predictions ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Figure 3: Pipeline for Language-Guided Manipulation. (a) Encode the language query with CLIP, and compare its similarity to ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ PDF body contribution framing (p. 3 (3. Language-Guided Manipulation), p. 1 (Abs
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), interface p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), objective p. 6 (6 DOF Gripper Pose), p. 3 (3. Language-Guided Manipulation), p. 3 (3. Language-Guided Manipulation), p. 5 (6 DOF Gripper Pose).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

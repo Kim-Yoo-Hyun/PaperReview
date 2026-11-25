@@ -65,8 +65,6 @@ PDF body contribution framing (p. 3 (1. Introduction), p. 3 (1. Introduction), p
 | body cue at p. 8 | Trained entirely in photorealistic simulation, the resulting policy achieves robust zero-shot performance on articulated-object interaction tasks, including diverse ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Qualitatively, teleoperators often fail to gauge the spring-loaded force of the door handle and the door hinge, or ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (2.1. Visual RL and Teacher-Student Distillation), p. 3 (2.1. Visual RL and Teacher-Student Distillation), p. 3 (2.1. Visual RL and Teacher-Student Distillation), p. 1 (Body text (section not recovered)). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 4 (2.2. Multi-Stage Whole-Body Loco-Manipulation), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), interface p. 4 (2.1. Visual RL and Teacher-Student Distillation), p. 3 (2.1. Visual RL and Teacher-Student Distillation), p. 3 (2.1. Visual RL and Teacher-Student Distillation), p. 1 (Body text (section not recovered)), objective p. 4 (2.2. Multi-Stage Whole-Body Loco-Manipulation), p. 4 (2.3. RL Finetuning for Partial Observability), p. 5 (2.3. RL Finetuning for Partial Observability).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

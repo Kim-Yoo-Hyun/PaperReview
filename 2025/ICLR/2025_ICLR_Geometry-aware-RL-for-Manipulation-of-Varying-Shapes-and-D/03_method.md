@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** These tasks require precise control under complex geometric constraints, coordination between multiple actuators, and handling of intricate interactions between objects and actuators.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** These node features may differ from those used in the policy network to capture task-specific observations.
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** Value Function We employ DeepSets (Zaheer et al., 2017) with the same input structure as the policy to preserve permutation invariance of the node features, ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Adding attention significantly increases the training time but does not improve performance, as shown on the right.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Additionally, adding attention significantly increases training time without improving performance, e.g., for HEPi it almost doubled.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** handle, complexities, robotic, manipulation, where, actuators, objects, play, distinct, roles, Heterogeneous, Equivariant, Policy, HEPi, comprises, three, components, MPN, backbone, efficient.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** Next, Rigid-Pushing removes the physical connection between the actuator and the object, allowing the actuator to move freely in the x-y plane to push the ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For final performance on rigid tasks, firstly in rigid-slding-2D and rigid-insertion-2D+z tasks, HEPi and Transformer policies perform comparably, suggesting that the limited task complexity does ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), objective p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), temporal p. 4 (3 METHODOLOGY), p. 9 (4 EXPERIMENTS), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

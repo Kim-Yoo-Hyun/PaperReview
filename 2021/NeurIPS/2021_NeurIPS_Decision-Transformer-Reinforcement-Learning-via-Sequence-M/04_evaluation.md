@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 - **p. 11 / Dataset - extractive body cue:** Offline RL and the ability to model behaviors has the potential to enable sample-efficient online RL for downstream tasks.
 - **p. 11 / Dataset - extractive body cue:** Since Decision Transformer does not require explicit optimization using learned functions as objectives, it avoids the need for regularization or conservatism.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Decision Transformer architecture1. States, actions, and returns are fed into modality- specific linear embeddings and a positional episodic timestep encoding is added. Tokens ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 | Figure 4: Sampled (evaluation) returns accumulated by Decision Transformer when conditioned on the specified target (desired) returns. Top: Atari. Bottom: D4RL medium-replay datasets. 5.3 ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Figure 6: Histogram of steps to reach the goal node for random walks on the graph, shortest possible paths to the goal, and attempted ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 | Figure 6: Histogram of steps to reach the goal node for random walks on the graph, shortest possible paths to the goal, and attempted ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
 | Table 4: %BC scores for Atari. We report the mean and variance across 3 seeds. Decision Transformer (DT) outperforms all versions of %BC in ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 11: Atari baseline scores used for normalization. 20 | comparison identity and matched condition | p. 20 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 | body limitation/failure cue | To evaluate this, we consider a delayed return version of the D4RL benchmarks where the agent does not receive any rewards along the trajectory, ... | p. 10 (Dataset) |
 | body limitation/failure cue | Since Decision Transformer does not require explicit optimization using learned functions as objectives, it avoids the need for regularization or conservatism. | p. 11 (Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 | Right: Transformer attention weights from all timesteps superimposed for a particular successful episode. | p. 10 (Dataset) |
 | The model attends to steps near pivotal events in the episode, such as picking up the key and reaching the door. | p. 10 (Dataset) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 Discussion - extractive body cue:** TD learning (CQL) cannot effectively propagate Q-values over the long horizons involved and gets poor performance.
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 21 (Figure/Table
 - **p. 11 / Dataset - extractive body cue:** Since Decision Transformer does not require explicit optimization using learned functions as objectives, it avoids the need for regularization or conservatism.
 
 - **Evidence anchors reviewed:** datasets p. 10 (Dataset), p. 10 (Dataset), p. 11 (Dataset), p. 11 (Dataset), metrics p. 10 (Figure/Table caption), p. 10 (Dataset), p. 21 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 21 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Dataset), p. 10 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

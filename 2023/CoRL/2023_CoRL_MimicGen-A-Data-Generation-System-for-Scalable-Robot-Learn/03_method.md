@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p.
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p.
 - **p. 1 / 1 Introduction - extractive body cue:** For example, [3] showed that a dataset of over 20,000 trajectories enables generalization to tasks with modest changes in objects and goals.
 - **p. 2 / 1 Introduction - extractive body cue:** In fact, several recent works build on this intuition and propose imitation learning methods that replay previous human demonstrations [8-11].
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p.
 - **p. 5 / 4 Method - extractive body cue:** All policy learning results are shown on image-based agents trained with RGB observations (see Appendix Q for low-dim agent results).
 - **p. 5 / 4 Method - extractive body cue:** [7] for reporting policy performance - the maximum success rate across all policy evaluations, across 3 different seeds (full training details in Appendix O).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, generate, demonstration, scene, MimicGen, generates, executes, trajectory, sequence, end-effector, control, poses, subtask, choosing, reference, segment, source, demonstrations, transforming, according.
 - **Relevant PDF headings:** 4 Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,23 +106,13 @@ PDF body method statement (p. 3 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p.
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: (left) Reset Distributions. Each task has a default reset distribution for the objects (D0), a broader one (D1), and some had a more ...
 - **p. 8 / 8 Conclusion - extractive body cue:** We hope that MimicGen motivates and enables exploring a more data-centric perspective on imitation learning in future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p. 4 (4 Method), p. 5 (4 Method), p. 3 (4 Method), objective 본문 anchor 없음, temporal p. 4 (4 Method), p. 4 (4 Method), p. 3 (4 Method), p. 3 (4 Method), p. 5 (4 Method), p. 5 (4 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

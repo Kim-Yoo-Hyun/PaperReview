@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 8 / 4 Results - extractive body cue:** But overall, we are excited about scaling up robot learning with Transformers by focusing on diverse rather than narrow multi-task data for robotic manipulation.
 - **p. 7 / 4 Results - extractive body cue:** For a number of tasks, C2FARM-BC actually performs worse with more demonstrations, likely due to insufficient capacity.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Language-Conditioned Manipulation Tasks: PERACT is a language-conditioned multi-task agent capable of imitating a wide range of 6-DoF manipulation tasks. We conduct experiments on ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 | With insufficient demonstrations, Image-BC has near zero performance on most tasks. | definition/direction/unit from same section | p. 6 (4 Results) |
 | See the supplementary video for qualitative results that showcase the diversity of tasks and robustness to scene changes. | definition/direction/unit from same section | p. 8 (4 Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 | Success rates of PERACT against various C2FARM-BC [14] baselines To further investigate our Transformer agent's global receptive field, we conduct additional experiments on the ... | comparison identity and matched condition | p. 7 (4 Results) |
 | Other issues included the agent exploiting biases in the dataset like in prior work [16]. | comparison identity and matched condition | p. 8 (4 Results) |
 | And [64] indicates a single level of a 643 voxel grid without the coarse-to-fine-grain scheme. | comparison identity and matched condition | p. 8 (4 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 | body limitation/failure cue | Figure 2. PERACT Overview. PERACT is a language-conditioned behavior-cloning agent trained with supervised learning to detect actions. PERACT takes as input a language goal ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | See Appendix L for an extended discussion on PERACT's limitations. | p. 8 (4 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 | 0 10000 20000 30000 40000 Training Steps 0 20 40 60 80 100 Success Rate PerAct PerAct w/o skip PerAct w/o Perceiver PerAct w/ ... | p. 7 (4 Results) |
 | Local Receptive Fields 0 10000 20000 30000 40000 Training Steps 0 20 40 60 80 100 Success Rate PerAct C2FARM-BC [16,16] C2FARM-BC [32,32] C2FARM-BC ... | p. 7 (4 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4 Results - extractive body cue:** Evaluations are scored either 0 for failures or 100 for complete successes.
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 8 / 4 Results - extractive body cue:** See Appendix L for an extended discussion on PERACT's limitations.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 7 (4 Results), metrics p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 7 (4 Results), p. 8 (4 Results), p. 23 (Figure/Table caption), p. 6 (4 Results), baselines p. 7 (4 Results), p. 6 (4 Results), p. 6 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), results p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 8 (4 Results), p. 27 (Figure/Table caption), p. 6 (4 Results), p. 7 (4 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

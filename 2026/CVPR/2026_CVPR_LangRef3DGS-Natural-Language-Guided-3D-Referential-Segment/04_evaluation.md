@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 - **p. 7 / 5.2.2. Qualitative Results - extractive body cue:** Performance comparison on the LERF-OVS dataset under the dense-view setting, where all RGB-D frames are available.
 - **p. 8 / 5.3. Ablation and Analysis - extractive body cue:** 10% 60.5 81.2 20% 57.3 78.6 30% 54.0 75.5 40% 50.8 72.3 ness of our framework under partial observations, we analyze model performance on the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our proposed LangRef3D3S enables robust language- guided 3D segmentation from partial RGB-D observations. De- spite significant missing data (e.g., the stuffed bear, plate, ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 | Figure 1. Our proposed LangRef3D3S enables robust language- guided 3D segmentation from partial RGB-D observations. De- spite significant missing data (e.g., the stuffed bear, ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Overview of the proposed framework. Our method leverages 3D Gaussian Splatting (3DGS) to construct a semantically continu- ous and differentiable embedding from ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 | Compared with prior methods, our results exhibit cleaner boundaries, fewer fragmented regions, and improved alignment with textual prompts. | comparison identity and matched condition | p. 6 (5.2.2. Qualitative Results) |
 | Our method consistently outperforms existing approaches across both benchmarks. | comparison identity and matched condition | p. 7 (5.3. Ablation and Analysis) |
 | Additionally, we will include detailed analyses and experiments, such as generalization performance, runtime efficiency, dense-view ablation studies, visual comparisons, and failure case analysis in ... | comparison identity and matched condition | p. 7 (5.2.2. Qualitative Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 | body limitation/failure cue | All visualizations use the partialview setting, where RGB-D observations are randomly removed to simulate occlusion or missing viewpoints. | p. 6 (5.2.2. Qualitative Results) |
 | body limitation/failure cue | Concretely, we achieve an mIoU of 79.6 and mBIoU of 74.9 on LERF-Mask, and an mIoU of 57.3 and mAcc of 78.6 on LERF-OVS, ... | p. 6 (5.2.1. Quantitative Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 | The terms λ1 < λ2 are the two smallest distinct eigenvalues of S, and η denotes the learning rate. | p. 5 (4.3. Gradient Low-Rank Mechanism for Semantic) |
 | (11), compute its approximate ELBO gain. | p. 4 (4.2. Triggering Novel Candidates via the Dirichlet) |
 | The final semantic update rule is thus expressed as: Ft+1 = Ft -η ˜∇FL, (18) where ˜∇FL is periodically recomputed through a truncated singular ... | p. 5 (4.3. Gradient Low-Rank Mechanism for Semantic) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2.
 - **p. 6 / 5.2.1. Quantitative Results - extractive body cue:** Concretely, we achieve an mIoU of 79.6 and mBIoU of 74.9 on LERF-Mask, and an mIoU of 57.3 and mAcc of 78.6 on LERF-OVS, demonstrating ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings), p. 7 (5.3. Ablation and Analysis), p. 7 (5.2.2. Qualitative Results), p. 8 (5.3. Ablation and Analysis), metrics p. 7 (5.3. Ablation and Analysis), p. 7 (5.3. Ablation and Analysis), p. 6 (5.1. Experiment settings), p. 6 (5.1. Experiment settings), p. 8 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis), baselines p. 6 (5.1. Experiment settings), p. 8 (5.3. Ablation and Analysis), p. 8 (Figure/Table caption), p. 6 (5.2.2. Qualitative Results), p. 7 (5.3. Ablation and Analysis), p. 7 (5.2.2. Qualitative Results), results p. 6 (5.2.1. Quantitative Results), p. 6 (5.2.2. Qualitative Results), p. 7 (5.3. Ablation and Analysis), p. 7 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis), p. 8 (5.3. Ablation and Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2
 - **p. 6 / 5.4. Labyrinth - extractive body cue:** This task is much more challenging than the TORCS driving domain because the agent is faced with a new maze in each episode and must ...
 - **p. 5 / 5. Experiments - extractive body cue:** Labyrinth is a new 3D environment where the agent must learn to find rewards in randomly generated mazes from a visual input.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 1. Learning speed comparison for DQN and the new asynchronous algorithms on five Atari 2600 games. DQN was trained on a single Nvidia K40 ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2
 | Supplementary Table S3 shows the scores on all games. | definition/direction/unit from same section | p. 5 (5.1. Atari 2600 Games) |
 | Figure 4. Training speed comparison of different numbers of actor-learners on five Atari games. The x-axis shows training time in hours while the y-axis ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2
 | We performed further comparisons using the TORCS 3D car racing simulator (Wymann et al., 2013). | comparison identity and matched condition | p. 4 (5. Experiments) |
 | We performed experiments using four different settings - the agent controlling a slow car with and without opponent bots, and the agent controlling a ... | comparison identity and matched condition | p. 6 (5.2. TORCS Car Racing Simulator) |
 | Figure 4. Training speed comparison of different numbers of actor-learners on five Atari games. The x-axis shows training time in hours while the y-axis ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2
 | body limitation/failure cue | Somewhat surprisingly, asynchronous one-step Q-learning and Sarsa algorithms exhibit superlinear speedups that cannot be explained by purely computational gains. | p. 6 (5.5. Scalability and Data Efficiency) |
 | body limitation/failure cue | Finally, we analyzed the stability and robustness of the four proposed asynchronous algorithms. | p. 7 (5.6. Robustness and Stability) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2
 | The best performing method, an asynchronous variant of actor-critic, surpasses the current state-of-the-art on the Atari domain while training for half the time on ... | p. 1 (Abstract) |
 | To compute the training speed-up on a single game we measured the time to required reach a fixed reference score using each method and ... | p. 6 (5.4. Labyrinth) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 6. Conclusions and Discussion - extractive body cue:** While this shows that stable online Q-learning is possible without experience replay, which was used for this purpose in DQN, it does not mean that ...
@@ -154,6 +133,5 @@ PDF body evaluation/result cue (p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2
 - **p. 7 / 5.6. Robustness and Stability - extractive body cue:** Finally, we analyzed the stability and robustness of the four proposed asynchronous algorithms.
 
 - **Evidence anchors reviewed:** datasets p. 4 (5. Experiments), p. 4 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.3. Continuous Action Control Using the MuJoCo), p. 6 (5.4. Labyrinth), p. 5 (5. Experiments), metrics p. 5 (5. Experiments), p. 6 (5.4. Labyrinth), p. 6 (5.4. Labyrinth), p. 7 (5.5. Scalability and Data Efficiency), p. 7 (5.6. Robustness and Stability), p. 5 (5.1. Atari 2600 Games), baselines p. 5 (5.2. TORCS Car Racing Simulator), p. 5 (5.1. Atari 2600 Games), p. 4 (5. Experiments), p. 6 (5.2. TORCS Car Racing Simulator), p. 8 (Figure/Table caption), results p. 5 (5.1. Atari 2600 Games), p. 5 (5.1. Atari 2600 Games), p. 6 (5.5. Scalability and Data Efficiency), p. 6 (5.5. Scalability and Data Efficiency), p. 4 (5. Experiments), p. 7 (5.5. Scalability and Data Efficiency).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

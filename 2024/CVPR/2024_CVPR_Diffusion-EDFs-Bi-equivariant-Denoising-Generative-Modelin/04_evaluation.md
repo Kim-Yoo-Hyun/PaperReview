@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 - **p. 5 / 4.1. Diffusion Origin Selection Mechanism - extractive body cue:** For most manipulation tasks, specific local sub-geometries are more significant than the global geometry of the target object in determining its pose.
 - **p. 5 / 4.2. Architecture of Equivariant Descriptor Fields - extractive body cue:** For denoising, the receptive field of our model should cover the whole scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of Diffusion-EDFs. (a) The target end-effector pose g0 is bi-equivariantly diffused for the training of Diffusion-EDFs. (b) The end-effector pose is sampled ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 | For faster sampling, we separate our implementation of EDFs into the feature extractor and the field model (see Fig. | definition/direction/unit from same section | p. 5 (4.2. Architecture of Equivariant Descriptor Fields) |
 | We find that this strategy enables our models to pay more attention to such contact-rich and relevant sub-geometries without explicit supervision. | definition/direction/unit from same section | p. 5 (4.1. Diffusion Origin Selection Mechanism) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 | Scenario Method Without Pretraining Without Obj. | comparison identity and matched condition | p. 7 (5. Experiments and Results) |
 | We find that this strategy enables our models to pay more attention to such contact-rich and relevant sub-geometries without explicit supervision. | comparison identity and matched condition | p. 5 (4.1. Diffusion Origin Selection Mechanism) |
 | We address this issue with our U-Net-like multiscale architecture, which maintains a wide receptive field without losing local high-frequency details. | comparison identity and matched condition | p. 5 (4.2. Architecture of Equivariant Descriptor Fields) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,7 +109,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 - Numeric sentences retained from the body:
 - **p. 5 / 4.3. Score Model - extractive body cue:** [61] for ρ(x/O) ρ(x/Oe) = X q∈Q(Oe) w(x/Oe)δ(3)(x -q) (31) where Q(·) : Oe 7→{qn}Nq n=1 is the query points function which outputs the set ...
 - **p. 6 / 5. Experiments and Results - extractive body cue:** It took 20∼45 minutes to train Diffusion-EDFs for single pick or place task with RTX 3090 GPU and i9-12900k CPU.
-- **p. 5 / 4.3. Score Model - extractive body cue:** [61] for ρ(x/O) ρ(x/Oe) = X q∈Q(Oe) w(x/Oe)δ(3)(x -q) (31) where Q(·) : Oe 7→{qn}Nq n=1 is the query points function which outputs the set ...
 
 ## Generalization and Failure Cases
 
@@ -132,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 | body limitation/failure cue | E.2 for more details. on object segmentation are also unable to solve this task, as they cannot differentiate between bottles that are already placed ... | p. 7 (5. Experiments and Results) |
 | body limitation/failure cue | In particular, the baseline models completely fail with unsegmented observations. | p. 6 (5. Experiments and Results) |
 | body limitation/failure cue | Pick-and-place success rates in various out-of-distribution settings in simulated environment. | p. 7 (5. Experiments and Results) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -147,14 +133,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 | Real Hardware Experiment Pipeline 1) The scene point cloud is observed via 3D SLAM algorithm with the wrist-mounted RGB-D Camera. | p. 7 (5. Experiments and Results) |
 | In these models, we compute the translational and rotational score using two different types of equivariant fields: 1) the equivariant density field ρ□;t(·/Oe) : ... | p. 4 (3.5. Bi-equivariant Score Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Conclusion - extractive body cue:** One limitation of Diffusion-EDFs is the inability of control-level or trajectory-level inference.
@@ -165,9 +143,8 @@ PDF body evaluation/result cue (p. 6 (5. Experiments and Results), p. 6 (5. Expe
 - **p. 7 / 5. Experiments and Results - extractive body cue:** Pick-and-place success rates in various out-of-distribution settings in simulated environment.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 5 (4.1. Diffusion Origin Selection Mechanism), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), metrics p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 2 (Figure/Table caption), p. 7 (5. Experiments and Results), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), baselines p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 5 (4.1. Diffusion Origin Selection Mechanism), p. 5 (4.2. Architecture of Equivariant Descriptor Fields), results p. 6 (5. Experiments and Results), p. 6 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 7 (5. Experiments and Results), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

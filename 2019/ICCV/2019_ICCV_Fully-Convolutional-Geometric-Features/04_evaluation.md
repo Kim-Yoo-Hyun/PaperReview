@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 - **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** For the outdoor dataset, we use the Relative Translation Error and the Relative Rotation Error.
 - **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** Thus, they are indirect measures, but we follow Yew and Lee [34] for outdoor dataset evaluation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Feature-match recall [6, 7] and speed in log scale on the 3DMatch benchmark [36]. Our approach is the most accurate and the fastest. ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 | Figure 1: Feature-match recall [6, 7] and speed in log scale on the 3DMatch benchmark [36]. Our approach is the most accurate and the ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | FCGF features from downsampled LIDAR scans are mapped to a scalar space using t-SNE [31] and colorized with the Spectral color map. | definition/direction/unit from same section | p. 6 (6.3. 3D Match Benchmark) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 | Note that FCGF is 32-dimensional while most state-of-the-art methods have higher dimensionality. | comparison identity and matched condition | p. 5 (6.3. 3D Match Benchmark) |
 | FCGF outperforms all hand-crafted features and PointNet-based methods by a large margin and marginally outperforms a recent 3Dconvolution-based method [11]. | comparison identity and matched condition | p. 5 (6.3. 3D Match Benchmark) |
 | Table 3: Feature match recall of the hardest-triplet loss with various hardest-negative and random triplet ratios (Hardest- Negative triplets (HN) and Random Triplets (RT) ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 | body limitation/failure cue | If ICP fails or the number of overlapping voxels is less than 1k, we removed the pair from the dataset. | p. 5 (6.1. Datasets and Training) |
 | body limitation/failure cue | However, it does not measure the quality of feature when used within a reconstruction system. | p. 5 (6.2. Evaluation Metrics) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 | Pair 1 Pair 2 Pair 3 Pair 4 Figure 6: Color-coded FCGF features for pairs of KITTI LIDAR scans that are 10m apart. | p. 6 (6.3. 3D Match Benchmark) |
 | The hardest-contrastive loss outperforms random triplets, hardest-triplet, and contrastive loss. "norm." denotes the normalized feature. easily, we varied the number of hardest-negatives and random ... | p. 7 (6.4. Hardest-contrastive and Hardest-triplet Losses) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Conclusion - extractive body cue:** An interesting avenue for future work is to extend the FCGF methodology to end-to-end registration.
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 4 (6. Experiments), p. 8 (Figure/Table captio
 - **p. 5 / 6.2. Evaluation Metrics - extractive body cue:** However, it does not measure the quality of feature when used within a reconstruction system.
 
 - **Evidence anchors reviewed:** datasets p. 4 (6.1. Datasets and Training), p. 4 (6.1. Datasets and Training), p. 5 (6.2. Evaluation Metrics), p. 5 (6.2. Evaluation Metrics), metrics p. 8 (Figure/Table caption), p. 4 (6. Experiments), p. 5 (6.2. Evaluation Metrics), p. 6 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 7 (Figure/Table caption), baselines p. 4 (6. Experiments), p. 5 (6.3. 3D Match Benchmark), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), results p. 4 (6. Experiments), p. 8 (Figure/Table caption), p. 5 (6.2. Evaluation Metrics), p. 5 (6.3. 3D Match Benchmark), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -51,7 +51,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (3 Backg
 - **p. 2 / 1 Introduction - extractive body cue:** Our contributions are listed below: • We propose the BoT architecture, which augments the transformer architecture with a novel masking that leverages the morphology of ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (3 Backg
 - **p. 2 / 1 Introduction - extractive body cue:** Our contributions are listed below: • We propose the BoT architecture, which augments the transformer architecture with a novel masking that leverages the morphology of ...
 - **p. 3 / 3 Background - extractive body cue:** While message-passing GNNs are suitable inductive biases for this formulation, they tend to suffer from oversmoothing and oversquashing of representations, preventing effective long-range interactions and ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (3 Backg
 - **p. 5 / 5 Experiments - extractive body cue:** We run the evaluations both on the training and the (unseen) validation clips.
 - **p. 7 / 5 Experiments - extractive body cue:** To verify that our architecture is suitable for real-world applications, e.g., running in real time, we deploy one of the BoT policies trained above to ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contributions, listed, below, BoT, architecture, augments, transformer, novel, masking, leverages, morphology, robot, body, incorporate, imitation, learning, setting, showing, inductive, bias.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (3 Backg
 - **p. 6 / 5 Experiments - extractive body cue:** Humanoid-Mod features the classical running task on flat ground, while in Humanoid-Hill we replaced the flat ground with an irregular hilly terrain.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Formulation of Embodiment Mask. The mask M is constructed by adding a diagonal of 1s to the embodiment graph's adjacency matrices. Here, we ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 4 (3 Background), p. 2 (1 Introduction), p. 4 (3 Background), p. 1 (Abstract), objective p. 2 (1 Introduction), temporal p. 7 (5 Experiments), p. 8 (6 Conclusion), p. 5 (5 Experiments), p. 5 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

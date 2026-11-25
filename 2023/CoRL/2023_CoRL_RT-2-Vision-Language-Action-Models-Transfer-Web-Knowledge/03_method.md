@@ -50,7 +50,6 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 - **p. 6 / 3.2. Robot-Action Fine-tuning - extractive body cue:** Thus, to ensure that RT-2 outputs valid action tokens during decoding, we constrain its output vocabulary via only sampling valid action tokens when the model ...
 - **p. 4 / 3. Vision-Language-Action Models - extractive body cue:** Then, we introduce the recipe and challenges of fine-tuning large VLMs that are pre-trained on web-scale data to directly output robot actions, becoming VLA models.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 - **p. 8 / 4. Experiments - extractive body cue:** Due to its reduced size, the resulting model can run inference at a similar rate (5 Hz) as the other baselines.
 - **p. 10 / 4. Experiments - extractive body cue:** Inspired by the chain-of-thought prompting method in LLMs (Wei et al., 2022), we fine-tune a variant of RT-2 with PaLM-E for just a few hundred ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, introduce, recipe, challenges, fine-tuning, large, VLMs, pre-trained, web-scale, data, directly, output, robot, actions, becoming, VLA, models, action, space, consists.
 - **Relevant PDF headings:** 3. Vision-Language-Action Models (p. 4); 3.1. Pre-Trained Vision-Language Models (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. R
 - **p. 9 / 4. Experiments - extractive body cue:** We refer to such capabilities as emergent, in the sense that they emerge by transferring Internet-scale pretraining.
 - **p. 9 / 4. Experiments - extractive body cue:** The first we term symbol understanding, which explicitly tests whether the RT-2 policy transfers semantic knowledge from vision-language pretraining that was not present in any ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3. Vision-Language-Action Models), p. 5 (3.2. Robot-Action Fine-tuning), p. 4 (3. Vision-Language-Action Models), p. 6 (3.2. Robot-Action Fine-tuning), p. 6 (3.2. Robot-Action Fine-tuning), p. 5 (3.1. Pre-Trained Vision-Language Models), objective 본문 anchor 없음, temporal p. 8 (4. Experiments), p. 9 (4. Experiments), p. 10 (4. Experiments), p. 10 (4. Experiments), p. 6 (3.3. Real-Time Inference), p. 6 (3.3. Real-Time Inference).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -68,7 +68,6 @@ PDF body method statement (p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. L
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Its online optimization process becomes less efficient when this voxel map becomes dense in a feature-rich environment.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. LIDAR INERTIAL ODOMETRY VIA), p. 4 (III. LIDAR INERTIAL ODOMETRY VIA), p. 4 (III. LIDAR INERTIAL ODOMETRY VIA).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -89,7 +88,6 @@ PDF body method statement (p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. L
 - **p. 3 / III. LIDAR INERTIAL ODOMETRY VIA - extractive body cue:** A new robot state node x is added to the graph when the change in robot pose exceeds a user-defined threshold.
 - **p. 4 / III. LIDAR INERTIAL ODOMETRY VIA - extractive body cue:** Throughout this paper, we choose the index m to be 12, and the search distance for loop closures is set to be 15m from a ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -104,13 +102,10 @@ PDF body method statement (p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. L
 
 - **p. 2 / III. LIDAR INERTIAL ODOMETRY VIA - extractive body cue:** We use a factor graph to model this problem, as it is better suited to perform inference when compared with Bayes nets.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** factor, graph, model, problem, better, suited, perform, inference, when, compared, Bayes, nets, Since, extract, types, features, previous, feature, extraction, step.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -130,20 +125,10 @@ PDF body method statement (p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. L
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Results of various methods using the Campus dataset that is gathered on the MIT campus. The red dot indicates the start and end ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** The results of LIOM are not shown due to its failure to initialize properly and produce meaningful results.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. LIDAR INERTIAL ODOMETRY VIA), p. 1 (Abstract), p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 4 (III. LIDAR INERTIAL ODOMETRY VIA), objective p. 2 (III. LIDAR INERTIAL ODOMETRY VIA), p. 3 (III. LIDAR INERTIAL ODOMETRY VIA), p. 4 (III. LIDAR INERTIAL ODOMETRY VIA), p. 4 (III. LIDAR INERTIAL ODOMETRY VIA), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), temporal p. 3 (III. LIDAR INERTIAL ODOMETRY VIA), p. 1 (Abstract), p. 1 (Abstract), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

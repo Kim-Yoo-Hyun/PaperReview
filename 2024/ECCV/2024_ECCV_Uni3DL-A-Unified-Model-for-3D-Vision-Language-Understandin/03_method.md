@@ -51,7 +51,6 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 - **p. 3 / 1 Introduction - extractive body cue:** A task router with multiple highly shared functional heads is designed to selectively produce task-specific outputs for diverse 3D vision-only and vision-language tasks.
 - **p. 2 / 1 Introduction - extractive body cue:** Point-LLM [63] and 3D-LLM [23] directly operate on raw point clouds and explore Large Language Models (LLMs) for 3D visual understanding tasks, including 3D object ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 - **p. 13 / 11 Method - extractive body cue:** We show results of the baseline method trained from scratch and our finetuned model.
 - **p. 13 / 11 Method - extractive body cue:** In Table 5, we keep grounded segmentation while evaluating the significance of remaining pretraining tasks.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Ablation, experiments, conducted, training, separate, models, scratch, various, tasks, including, ScanNet, semantic, segmentation, S3DIS, Ours, means, model, alternative, Captioning, Table.
 - **Relevant PDF headings:** 11 Method (p. 11).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Metho
 - **p. 10 / 4.1 Dataset - extractive body cue:** During pretraining, we employ datasets including ScanNet (v2) instance segmentation, ScanRefer, and Cap3D Objaverse.
 - **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Comparison of various vision-language models in 3D, highlighting their ca- pabilities across diverse tasks. It specifically indicates the utilization of Multi-View (MV) images ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 12 (11 Method), p. 14 (11 Method), p. 11 (11 Method), p. 11 (11 Method), p. 12 (11 Method), p. 13 (11 Method), objective 본문 anchor 없음, temporal p. 14 (11 Method), p. 2 (Body text (section not recovered)), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 5 (2 Related Work), p. 6 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

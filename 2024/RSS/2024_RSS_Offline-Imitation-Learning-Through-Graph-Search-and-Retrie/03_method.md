@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 - **p. 5 / IV. POLICY LEARNING - extractive body cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The desired learning algorithm should be able to pick up those good segments and recover this desired policy, which is also known as trajectory stitching ...
 - **p. 5 / IV. POLICY LEARNING - extractive body cue:** With this function, we bias the action toward the better ones for each v.
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 - **p. 5 / IV. POLICY LEARNING - extractive body cue:** Implementation and Time Complexity We use R3M [33] as pretrained feature since it is pretrained with a contrastive objective, which we find can represent fine-grained ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** 3) Evaluation Metric: To evaluate the performance of a trained policy, we use the following metrics. • Success rate (SR) is defined as the number ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** identify, similar, states, off-shelf, pretrained, vision, models, compute, features, similarity, computation, Algorithm, GSR, Optional, Finetune, Build, graph, procedure, Section, IV-B.
 - **Relevant PDF headings:** IV. POLICY LEARNING (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** The robot is required to push a blue cylinder toward a green cube on the table. • Spoon Scooping In this task, the robot is ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** This task highlights the challenge of robust perception against partial occlusion and fine-grained manipulation. • Tweezer Manipulation In this task, the robot needs to first ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), objective p. 4 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 3 (IV. POLICY LEARNING), p. 4 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), p. 5 (IV. POLICY LEARNING), temporal p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 4 (IV. POLICY LEARNING).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

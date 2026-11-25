@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 7 | Some common failure modes include difficulty with fine-grained manipulation and difficulty effectively transitioning to the next stage of ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | The choice of policy architecture, learning algorithm, and finetuning strategy may play a critical role in performance, and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (III. ROBOCASA SIMULATION), p. 4 (III. ROBOCASA SIMULATION), p. 5 (8) Navigation. These skills do not constitute an exhaustive), p. 6 (3) Can large-scale simulation datasets facilitate knowledge). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 4 (III. ROBOCASA SIMULATION), p. 4 (III. ROBOCASA SIMULATION), p. 5 (8) Navigation. These skills do not constitute an exhaustive), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

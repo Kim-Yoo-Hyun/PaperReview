@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 - **p. 5 / 4.3. Main results - extractive body cue:** In stage 1, GaussianOcc ‡ achieves top performance on the nuScenes dataset and delivers competitive results on the DDAD.
 - **p. 5 / 4.2. Implementation details - extractive body cue:** We train the models for 12 epochs on both the nuScenes and DDAD.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Problem setting of GaussianOcc. Given a surround image sequence, the spatial camera extrinsic and its correspond- ing 2D semantic annotation, GaussianOcc is able ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 | Figure 2. GaussianOcc is a two-stage method. In Stage 1, we train a scale-aware 6D pose network, using a U-Net architecture to predict Gaussian ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 4. Visualization of the render depth map and 3D occupancy prediction on the nuScenes and DDAD datasets. 28985 | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 | Table 7. Comparison of rendering efficiency between volume ren- dering (VR) [53] and splatting rendering (SR, Ours) on 3D occu- pancy estimation task [3]. ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 2. Comparisons for self-supervised multi-camera depth estimation on the nuScenes [3] and DDAD datasets [13]. The results are averaged over all views without ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 5. Comparison of the render result between the volume ren- dering (VR) [53] and splatting rendering (SR, Ours) on depth es- timation task ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -119,7 +108,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 - **p. 5 / 4.2. Implementation details - extractive body cue:** In stage 1, we jointly train the depth estimation network and the 6D pose net, where we train the models for 8 epochs on the ...
 - **p. 5 / 4.2. Implementation details - extractive body cue:** We train the models for 12 epochs on both the nuScenes and DDAD.
 - **p. 5 / 4.3. Main results - extractive body cue:** This discrepancy might be attributed to differences in perception range-80 meters in nuScenes versus 200 meters in DDAD.
-- **p. 5 / 4.2. Implementation details - extractive body cue:** In the depth estimation benchmark, we use the network proposed by SimpleOcc, where the final output size is 256×256×16.
 
 ## Generalization and Failure Cases
 
@@ -129,8 +117,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 | body limitation/failure cue | As highlighted by the red rectangle, the sky region has a short-range depth value, but this does not appear in the rendered 3D occupancy ... | p. 5 (4.3. Main results) |
 | body limitation/failure cue | Note that RenderOcc [36] does not require the 3D occupancy label, but it is not a self-supervised method since it uses the ground truth ... | p. 5 (4.3. Main results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +125,6 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 | We train the models for 12 epochs on both the nuScenes and DDAD. | p. 5 (4.2. Implementation details) |
 | Erode means the erode process to the binary overlap mask and Refine is the refinement of depth estimation network with 2 epochs by fixing ... | p. 7 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 6. The comparison for the depth map in the different set- ting, corresponding to the training strategy in Table 4 and render- ing type ...
@@ -154,6 +132,5 @@ PDF body evaluation/result cue (p. 5 (4.3. Main results), p. 5 (4.3. Main result
 - **p. 5 / 4.3. Main results - extractive body cue:** Note that RenderOcc [36] does not require the 3D occupancy label, but it is not a self-supervised method since it uses the ground truth depth ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (4. Experiment), p. 5 (4.3. Main results), p. 5 (4.2. Implementation details), metrics p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4.3. Main results), p. 5 (4.3. Main results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 5 (4.3. Main results), p. 5 (4.3. Main results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (4.3. Main results), p. 5 (4.3. Main results), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

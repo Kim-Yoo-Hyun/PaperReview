@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Training Objectives DIFFSPLAT can perform well with merely the regular diffusion loss by setting λrender = 0 given high-quality splat latents.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Gaussian splat property grids are analogous to natural images, reflecting the hue and edge properties of 3D objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison with Previous 3D Diffusion Generative Models. (1) Native 3D methods and (2) rendering-based methods encounter challenges in training 3D diffusion models from ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 | Figure 1: Comparison with Previous 3D Diffusion Generative Models. (1) Native 3D methods and (2) rendering-based methods encounter challenges in training 3D diffusion models ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Results and Comparisions As demonstrated in Table 1 and Figure 3, DIFFSPLAT exhibits the best prompt alignment and visual quality among cutting-edge text-conditioned 3D ... | definition/direction/unit from same section | p. 6 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 | Ablation studies are conducted based on Stable Diffusion V1.5 (SD1.5) (Rombach et al., 2022) unless otherwise specified. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | Gaussian Splatting-based large reconstruction model LGM (Tang et al., 2024) and GRM (Xu et al., 2024c) are also evaluated with sparse-view RGB images for ... | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | 29.87 0.961 0.028 42M Ours 30.09 0.963 0.027 42M Table 4: Ablation study for Gaussian splat property auto-encoding strategies. ↑PSNR ↑SSIM ↓LPIPS Frozen VAE ... | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,7 +114,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 - Numeric sentences retained from the body:
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** For both reconstruction and image-conditioned generation task, 300 objects from the unseen GSO (Downs et al., 2022) dataset are randomly selected and rendered to serve ...
 - **p. 17 / A IMPLEMENTATION DETAILS - extractive body cue:** The flowbased model, i.e., SD3 (Esser et al., 2024) uses the original flow matching Euler ODE solver (Lipman et al., 2023) with 28 steps, consistent ...
-- **p. 17 / A IMPLEMENTATION DETAILS - extractive body cue:** The flowbased model, i.e., SD3 (Esser et al., 2024) uses the original flow matching Euler ODE solver (Lipman et al., 2023) with 28 steps, consistent ...
 
 ## Generalization and Failure Cases
 
@@ -136,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 | body limitation/failure cue | Moreover, while most previous reconstruction methods cannot incorporate text understanding, the flexible conditioning design allows DIFFSPLAT to perform text-guided reconstruction from single-view ambiguous images, ... | p. 7 (4 EXPERIMENTS) |
 | body limitation/failure cue | However, the training process becomes unstable and slow to converge, and gets over-saturated results. | p. 9 (4 EXPERIMENTS) |
 | body limitation/failure cue | Base Text-to-image Diffusion Models Various popular open-source large text-to-image diffusion models are investigated in this work, including SD1.5 (Rombach et al., 2022), SDXL (Podell ... | p. 9 (4 EXPERIMENTS) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -152,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 | Splat latents encoded by a fine-tuned VAE are decoded by the original image VAE. | p. 9 (4 EXPERIMENTS) |
 | As shown in Figure 7, auto-encoded Gaussian splat properties are presented as RGB or grayscale images. | p. 9 (4 EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 CONCLUSION - extractive body cue:** Limitations and Future Work Although DIFFSPLAT delivers decent results, the conversion of its 3DGS representation to high-quality mesh remains an unsolved problem.
@@ -169,6 +147,5 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Base Text-to-image Diffusion Models Various popular open-source large text-to-image diffusion models are investigated in this work, including SD1.5 (Rombach et al., 2022), SDXL (Podell et ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 4 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (Figure/Table caption), baselines p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

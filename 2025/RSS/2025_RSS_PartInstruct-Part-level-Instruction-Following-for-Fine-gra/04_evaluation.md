@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 - **p. 5 / C. Dataset - extractive body cue:** Partinsiruct includes 10,000 demonstrations for training and over 1,800 annotated episodes for evaluation.
 - **p. 6 / C. Dataset - extractive body cue:** For instance, "Push the object toward [direction] while touching [part] lift the object by holding {part}, then rotate [part] to face [direction]." Another focus is ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: An example fine-grained robot manipulation task in Partlnstruet, To successfully perform the task described in the instruction
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 | For example, there are 7 types of part compositions for bottles, including "(body, closure, neck)", "(body, handle, lid, neck)", "(body, handle, mouth)", Leveraging the ... | definition/direction/unit from same section | p. 5 (C. Dataset) |
 | For each base skill, we follow the template in Table X to generate skill instructions. | definition/direction/unit from same section | p. 6 (C. Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 | 3) Demonstration Generation: Each demonstration is. a sequential execution of oracle high-level plans of base skills defined in Table X, To generate the trajectories ... | comparison identity and matched condition | p. 6 (C. Dataset) |
 | Figure 8: Success Rates of all baselines. The left group represents end-to-end learning policies, while the right group corresponds to bi-level planning models. Error ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Early benchmarks in robot manipulation primarily concentrated on object-level and object-scene interactions without delving into the manipulation of specific object parts. | comparison identity and matched condition | p. 2 (A. Instruction Following Benchmarks for Table-Top Robot) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 | body limitation/failure cue | For instance, CALVIN incorporates spatial semantics but lacks explicit partlevel semantics, treating components like a "door handle as standalone objects rather than parts of ... | p. 2 (A. Instruction Following Benchmarks for Table-Top Robot) |
 | body limitation/failure cue | However, VLM-based planners can still fail during task planning, particularly in tasks that require a long chain of, skill instructions (e.., tasks in Test ... | p. 10 (V. Discussion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 | updates the skill instruction once every n steps, while the low-level action policy updates the action at every step. | p. 7 (1 Actions .ow-Level Action) |
 | CaP leverages an LLM to compose API calls to generate robot policy code. | p. 8 (B. Bi-level Planning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / V. Discussion - extractive body cue:** Our experimental results demonstrate that the part-level instruction following tasks in our Partinstruct benchmark remains extremely difficult for state-of-the-art end-to-end vision-language policy learning ‘methods. ‘There ...
@@ -155,9 +134,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (C. Dataset), 
 - **p. 10 / V. Discussion - extractive body cue:** However, VLM-based planners can still fail during task planning, particularly in tasks that require a long chain of, skill instructions (e.., tasks in Test 4).
 
 - **Evidence anchors reviewed:** datasets p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 5 (C. Dataset), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 6 (C. Dataset), p. 5 (C. Dataset), p. 6 (C. Dataset), metrics p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), p. 6 (C. Dataset), p. 1 (Figure/Table caption), p. 5 (C. Dataset), baselines p. 6 (C. Dataset), p. 7 (Figure/Table caption), p. 2 (A. Instruction Following Benchmarks for Table-Top Robot), results p. 7 (Figure/Table caption), p. 6 (C. Dataset), p. 6 (C. Dataset), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

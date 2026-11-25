@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 - **p. 8 / 4.4. Ablation study - extractive body cue:** Excessive edge emphasis under-represents smooth surfaces, leading to incorrect trajectory estimation.
 - **p. 8 / 4.4. Ablation study - extractive body cue:** Without edge initialization, the system experiences trajectory drift, leading to loss of details in 3D reconstruction.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided losses ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 | We find that redge ∈[0.1, 0.3] provides sufficient edge constraints, resulting in clear features in 3D reconstruction and low trajectory errors. | definition/direction/unit from same section | p. 8 (4.4. Ablation study) |
 | While edges provide strong geometric constraints, the lack of information about smooth surfaces makes the difference between the rendered image and the input event ... | definition/direction/unit from same section | p. 8 (4.4. Ablation study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 | We compare our E2EGS with baselines to validate the effectiveness of our approach for both 3D reconstruction and trajectory estimation. | comparison identity and matched condition | p. 5 (4.1. Experiment settings) |
 | Meanwhile, the baseline methods suffer from noisy photometric consistency that accumulates into geometric distortions. | comparison identity and matched condition | p. 6 (4.3. Qualitative evaluations) |
 | Baseline (top) vs. ours with edge loss but random initialization (bottom) at early and final training stages. | comparison identity and matched condition | p. 8 (4.4. Ablation study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 | body limitation/failure cue | IncEventGS shows failures including wave-like artifacts, missing details, and indistinct boundaries. | p. 7 (4.3. Qualitative evaluations) |
 | body limitation/failure cue | Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 | All experiments are conducted on a server with an AMD Ryzen Threadripper PRO 3955WX processor and NVIDIA RTX A5000 GPU. | p. 5 (4.1. Experiment settings) |
 | For each tile, we compute the standard deviation of the edge normal orientations. | p. 4 (3.3. Edge-guided Gaussian initialization) |
 | The resulting edge map M ∈[0, 1]H×W encodes normalized edge confidence values at each pixel. | p. 4 (3.2. Robust edge detection with patch-based tem) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (4.2. Quantita
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Edge-guided reconstruction framework. Our pipeline extracts robust edges from consecutive event maps (Sec. 3.2), initializes edge-aware Gaussians (Sec. 3.3), and applies edge-guided losses ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.3. Qualitative evaluations), p. 5 (4.1. Experiment settings), p. 5 (4.2. Quantitative evaluations), p. 6 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), metrics p. 7 (4.4. Ablation study), p. 6 (4.3. Qualitative evaluations), p. 5 (4.2. Quantitative evaluations), p. 5 (4.1. Experiment settings), p. 6 (4.3. Qualitative evaluations), p. 7 (4.3. Qualitative evaluations), baselines p. 7 (4.3. Qualitative evaluations), p. 6 (4.2. Quantitative evaluations), p. 5 (4.2. Quantitative evaluations), p. 5 (4.1. Experiment settings), p. 6 (4.3. Qualitative evaluations), p. 8 (4.4. Ablation study), results p. 8 (Figure/Table caption), p. 6 (4.2. Quantitative evaluations), p. 6 (4.2. Quantitative evaluations), p. 7 (4.4. Ablation study), p. 7 (4.3. Qualitative evaluations), p. 5 (4.2. Quantitative evaluations).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

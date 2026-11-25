@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 - **p. 5 / 2.1. Motion Tracking - extractive body cue:** The real-world policy achieved 99.2% success rate compared to 100% in simulation, with an overall MPJPE-L of 25.7 mm (vs.
 - **p. 6 / 2.2. Interactive Motion Control - extractive body cue:** SONIC enabled much more fluid, responsive, and natural motion generation, retaining the robot's full freedom of movement throughout the task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: SONIC enables diverse humanoid tasks through a universal control policy that handles diverse input modalities and control interfaces. [17], and CALM [18] provide ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 | All success rates are strict binary outcomes over 10-20 trials per task (Tab. | definition/direction/unit from same section | p. 9 (2.5. Foundation-Model-Driven Loco-manipulation) |
 | (A) VLA task success rates (universal motion token action space) Task Interface Training Data Trials Success Apple to plate 3-point 300 trajs (single-obj) 20 ... | definition/direction/unit from same section | p. 11 (2.5. Foundation-Model-Driven Loco-manipulation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 | (D to G) Comparison with baselines on test-content, test-repetition, and PHUMA [43] (𝑁=7,016, 9,395, and 68,326 motions): (D) success rate (SONIC vs. each baseline, ... | comparison identity and matched condition | p. 4 (2.1. Motion Tracking) |
 | (m/s) (H) Commanded vs Achieved Ideal OpenHomie SONIC 0 1 2 3 4 5 Commanded Velocity (m/s) 0 20 40 60 80 100 Survival ... | comparison identity and matched condition | p. 4 (2.1. Motion Tracking) |
 | Unpaired comparisons used Welch's two-sided 𝑡-test (unequal variances): scaling effects were assessed between the smallest and largest configuration on each axis, and success and ... | comparison identity and matched condition | p. 19 (3.7. Statistical Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 | body limitation/failure cue | Visualizations of out-of-distribution test motions, including successful and failed tracking cases, are provided in the Supplementary Materials (Fig. | p. 5 (2.1. Motion Tracking) |
 | body limitation/failure cue | The second, testrepetition (9,395 clips, 12 hours), evaluated robustness to new performances and repetitions of known motion types. | p. 3 (2.1. Motion Tracking) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 | We further reported the local (root-relative) mean per-joint position error (MPJPE-L) 𝐸mpjpe (in millimeters, mm), computed over 14 body links (pelvis, knees, ankles, torso, ... | p. 3 (2.1. Motion Tracking) |
 | (A to C) Effect of scaling data size, model size, and compute on test-content (unseen motion content, OOD) and test-repetition (held-out takes of seen ... | p. 4 (2.1. Motion Tracking) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 2.1. Motion Tracking - extractive body cue:** Our metric, similar to [29], captured the physically meaningful failure modes such as falling.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 - **p. 3 / 2.1. Motion Tracking - extractive body cue:** The second, testrepetition (9,395 clips, 12 hours), evaluated robustness to new performances and repetitions of known motion types.
 
 - **Evidence anchors reviewed:** datasets p. 13 (3.1. Humanoid Motion Dataset), p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 3 (2.1. Motion Tracking), p. 12 (2.6. Discussion), p. 13 (3.1. Humanoid Motion Dataset), metrics p. 4 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 11 (2.5. Foundation-Model-Driven Loco-manipulation), p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), baselines p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 3 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 4 (2.1. Motion Tracking), p. 19 (3.7. Statistical Analysis), results p. 19 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking), p. 9 (2.5. Foundation-Model-Driven Loco-manipulation), p. 11 (2.5. Foundation-Model-Driven Loco-manipulation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

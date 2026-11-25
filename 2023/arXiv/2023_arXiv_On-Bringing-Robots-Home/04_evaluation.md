@@ -49,8 +49,6 @@
 - **p. 12 / 3 Experiments - extractive body cue:** Note that none of our experiments overlapped with the environments on which our HoNY dataset was collected to ensure that the experimental environments are novel.
 - **p. 15 / 3 Experiments - extractive body cue:** Turning on light switch Figure 10: A small subset of 8 robot rollouts from the 109 tasks that we tried in homes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We present Dobb·E, a simple framework to train robots, which is then field tested in homes across New York City. In under 30 ...
@@ -84,8 +82,6 @@
 | We find that the type of movement affects the success rate of the tasks. | definition/direction/unit from same section | p. 17 (3 Experiments) |
 | (b) Correlation analysis between time taken to demonstrate a task and the success rate of the associated robot policy. | definition/direction/unit from same section | p. 17 (3 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@
 | As we can see, while VC1 is closer in performance to our model compared to IN-1K, R3M and MVP, it under-performs our model in ... | comparison identity and matched condition | p. 21 (3 Experiments) |
 | In most settings, using depth outperforms not using depth. | comparison identity and matched condition | p. 22 (3 Experiments) |
 | Rollout With Shadows Demo Without Shadows Figure 15: First person view from the iPhone from the (top row) Stick during demonstration collection and (bottom ... | comparison identity and matched condition | p. 18 (3 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@
 | body limitation/failure cue | The failure modes for tasks without depth are generally concentrated around cases where the robot end-effector (and thus the camera) is very close to ... | p. 21 (3 Experiments) |
 | body limitation/failure cue | This failure mode points to the need of better designed, less bare-boned robot grippers for household tasks. | p. 23 (3 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@
 | 3.4 Ablations We created a benchmark set of tasks in our lab, with a setup that closely resembles a home, to be able to ... | p. 21 (3 Experiments) |
 | The hardware odometry from the iPhone is much more robust, and thus the actions extracted from it are also reliable regardless of the camera ... | p. 23 (3 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 20: First-person POV rollouts of Home 3 Pick and Place comparing (top) a policy trained on demos where the object is picked and placed ...
@@ -174,6 +153,5 @@
 - **p. 23 / 3 Experiments - extractive body cue:** This failure mode points to the need of better designed, less bare-boned robot grippers for household tasks.
 
 - **Evidence anchors reviewed:** datasets p. 3 (3 Experiments), p. 20 (3 Experiments), p. 17 (3 Experiments), p. 18 (3 Experiments), p. 21 (3 Experiments), p. 12 (3 Experiments), metrics p. 16 (3 Experiments), p. 23 (3 Experiments), p. 21 (Figure/Table caption), p. 12 (3 Experiments), p. 12 (3 Experiments), p. 16 (3 Experiments), baselines p. 12 (3 Experiments), p. 17 (3 Experiments), p. 17 (3 Experiments), p. 21 (3 Experiments), p. 22 (3 Experiments), p. 18 (3 Experiments), results p. 1 (Figure/Table caption), p. 22 (Figure/Table caption), p. 21 (3 Experiments), p. 21 (3 Experiments), p. 12 (3 Experiments), p. 12 (3 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

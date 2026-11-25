@@ -54,7 +54,6 @@ PDF body method statement (p. 16 (A.1 Training Details), p. 17 (A.1 Training Det
 - **p. 17 / A.1 Training Details - extractive body cue:** Parameter Value General PPO Settings Gamma (γ) 0.99 GAE Lambda (λ) 0.95 Value Loss Coef 1.0 Entropy Coef 0.01 Actor Learning Rate 1 × 10-3 ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 17 (A.1 Training Details), p. 16 (A.1 Training Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 16 (A.1 Training Details), p. 17 (A.1 Training Det
 - **p. 16 / A.1 Training Details - extractive body cue:** Notice that the termination is a shared reward component Also, we introduce several penalties and energy regularization in order to achieve robust sim-to-real performance like ...
 - **p. 16 / A.1 Training Details - extractive body cue:** After obtaining a stable policy, we introduce push disturbances to further improve robustness under external disturbance.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,15 +87,11 @@ PDF body method statement (p. 16 (A.1 Training Details), p. 17 (A.1 Training Det
 ## Training vs Inference
 
 - **p. 17 / A.1 Training Details - extractive body cue:** Parameter Value General PPO Settings Gamma (γ) 0.99 GAE Lambda (λ) 0.95 Value Loss Coef 1.0 Entropy Coef 0.01 Actor Learning Rate 1 × 10-3 ...
-- **p. 17 / A.1 Training Details - extractive body cue:** Parameter Value General PPO Settings Gamma (γ) 0.99 GAE Lambda (λ) 0.95 Value Loss Coef 1.0 Entropy Coef 0.01 Actor Learning Rate 1 × 10-3 ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Notice, termination, shared, reward, component, introduce, several, penalties, energy, regularization, order, achieve, robust, sim-to-real, performance, like, limit, stand, symmetry, contact.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 16 (A.1 Training Details), p. 17 (A.1 Training Det
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 8: PPO Multi-Actor-Critic Training Configuration A.2 More Analysis on Frequency Ablation Methods Response Time (s) ↓ Max Acc (m/s2) ↓ Max Vel (m/s) ↓ ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Table 5: Command ranges used during training. Domain Randomization To enhance the robustness and generalization of SoFTA, we apply do- main randomization techniques, as detailed ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.1 Training Details), p. 17 (A.1 Training Details), p. 17 (A.1 Training Details), p. 16 (A.1 Training Details), p. 15 (A.1 Training Details), p. 15 (A.1 Training Details), objective p. 16 (A.1 Training Details), p. 15 (A.1 Training Details), p. 16 (A.1 Training Details), p. 17 (A.1 Training Details), p. 17 (A.1 Training Details), temporal p. 2 (1 Introduction), p. 15 (A.1 Training Details), p. 3 (2 Related Work), p. 5 (13 DoFs), p. 5 (13 DoFs), p. 8 (33.3 Hz).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

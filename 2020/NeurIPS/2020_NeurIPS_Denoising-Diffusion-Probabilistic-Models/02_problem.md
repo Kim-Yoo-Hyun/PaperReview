@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 8 | We can therefore interpret the Gaussian diffusion model (2) as a kind of autoregressive model with a generalized ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | (It would be straightforward to instead incorporate a more powerful decoder like a conditional autoregressive model, but we ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 후속 로봇 정책에서는 역확산의 생성 대상을 이미지에서 행동 청크로 바꿀 수 있다. 원 DDPM이 학습하고 평가한 대상은 이미지 분포다. [원문](https://arxiv.org/html/2006.11239)
@@ -74,10 +72,8 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (2 Background), p. 5 (2 Background), p. 2 (1 Introduction), p. 4 (2 Background), interface p. 1 (Abstract), p. 4 (2 Background), p. 4 (2 Background), p. 1 (Abstract), objective p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. 
 - **p. 1 / Abstract - extractive body cue:** Recent progress in one-shot imitation learning and robotic foundation models have shown promise in transferring trained policies to new tasks based on demonstrations.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 3 (III. RH20T DATASET), p. 3 (III. RH20T DATASET).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. 
 - **p. 4 / 200 Hz - extractive body cue:** The coordinate frame of all robots and force-torque sensors are aligned.
 - **p. 5 / 200 Hz - extractive body cue:** RGBD cameras : robot arm force sensor microphone gripper - haptic device pedal 2 Fig.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Epochs Reach Pick Place 500 35 10 0 v 500 70 15 15 v 500 65 20 15 75 730 55 5 0 v 750 ...
 - **p. 4 / 200 Hz - extractive body cue:** We make our tele-operation pretty intuitive and the average training time is less than 1 hour.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ensure, applicability, across, different, robot, configurations, popular, arms, robotic, grippers, types, force-torque, sensors, resulting, sequence, dataset, includes, visual, force, audio.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. 
 - **p. 6 / V. DISCUSSION AND CONCLUSION - extractive body cue:** The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models is ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** These results demonstrate that leveraging the diverse training data from our dataset enhances the adaptability and robustness of the robotic manipulation model.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 3 (Dataset), p. 4 (200 Hz), p. 4 (200 Hz), objective p. 3 (III. RH20T DATASET), p. 3 (III. RH20T DATASET), p. 1 (Abstract), temporal p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORKS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

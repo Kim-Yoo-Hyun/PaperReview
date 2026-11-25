@@ -61,8 +61,6 @@ PDF body contribution framing (p. 3 (C H can be followed)): Proof: Proposition 5
 | body cue at p. 5 | If V k ;i \ V f ;i = ;, contact mode i cannot occur; otherwise, contact mode ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | If the contact is frictionless, however, the object cannot be rotated. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (X. The Lie algebra), p. 3 (X. The Lie algebra), p. 4 (C H can be followed), p. 5 (C H can be followed). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), interface p. 3 (X. The Lie algebra), p. 3 (X. The Lie algebra), p. 4 (C H can be followed), p. 5 (C H can be followed), objective p. 1 (1 Introduction), p. 1 (1 Introduction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

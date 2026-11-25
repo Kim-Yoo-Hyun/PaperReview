@@ -56,7 +56,6 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 - **p. 5 / 3 Approach - extractive body cue:** Existing methods leverage powerful visual representations to learn informative latent features for optimal action prediction.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (3 Approach), p. 9 (3 Approach), p. 6 (3 Approach), p. 8 (3 Approach), p. 9 (3 Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 - **p. 2 / 1 Introduction - extractive body cue:** For the first regard, semantic features extracted by perceptive models are directly leveraged to predict the robot actions according to the visual input such as ...
 - **p. 9 / 3 Approach - extractive body cue:** Specifically, the training objective aligns the predicted future scenes based on different observations and actions with the realistic ones, which can be formulated as follows: ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 - **p. 12 / 4 Experiments - extractive body cue:** We first implement a vanilla baseline without any proposed technique, where we directly train the representation model and the action decoder to predict the robot ...
 - **p. 13 / 4 Experiments - extractive body cue:** Both the compared methods get convergence within 100k training steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** More, specifically, Gaussian, world, model, contains, representation, network, learns, high-level, visual, features, rich, semantics, input, observation, regressor, predicts, parameters, different.
 - **Relevant PDF headings:** 3 Approach (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approa
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Consider the human instruction "stack two rose blocks", where the task is con- sidered successful if two rose blocks are stacked upon the ...
 - **p. 14 / 4 Experiments - extractive body cue:** First, based on the front view observation where the gripper shape cannot be seen, our ManiGaussian offers superior detail in modeling cubes in novel views.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (3 Approach), p. 6 (3 Approach), p. 10 (3 Approach), p. 8 (3 Approach), p. 5 (3 Approach), p. 9 (3 Approach), objective p. 9 (3 Approach), p. 8 (3 Approach), p. 9 (3 Approach), p. 6 (3 Approach), p. 8 (3 Approach), p. 5 (3 Approach), temporal p. 14 (4 Experiments), p. 6 (3 Approach), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

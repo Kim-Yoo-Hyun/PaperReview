@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 3 / 1 Introduction - extractive body cue:** P[ri] is the subgraph of P induced by room annotation ri and C returns a graph's connected components.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 1 (1 Introduction), p. 5 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 2 / 1 Introduction - extractive body cue:** To enable multilingual progress on VLN, RxR includes instructions for three typologically diverse languages: English (en), Hindi (hi), and Telugu (te).
 - **p. 3 / 1 Introduction - extractive body cue:** These matter both for generalization to new environments and fidelity to the descriptions given in the instruction-otherwise, strong performance might be achieved by agents that ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 8 / 5 Experiments - extractive body cue:** 7) is trained without data augmentation from model-generated instructions (Fried et al., 2018; Tan et al., 2019) and with hyperparameters tuned for RxR.
 - **p. 6 / 3. Given correct first step then go straight - extractive body cue:** Each simple baseline requires a stopping criteria; we choose to stop after N steps where N is the average number of steps in the train ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Guide, Follower, pose, traces, provide, dense, spatiotemporal, alignments, between, instructions, visual, percepts, actions, perspectives, useful, agent, training, monolingual, multilingual, baseline.
 - **Relevant PDF headings:** A method (p. 10).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 8 / 5 Experiments - extractive body cue:** Although RxR and R2R share the same underlying environments, we note that RxR →R2R cannot exploit R2R's
 - **p. 8 / 5 Experiments - extractive body cue:** This is consistent with results in multilingual machine translation (MT) and automatic speech recognition (ASR) where adding more languages can also lead to degradation for ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), objective p. 1 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), temporal p. 7 (5 Experiments), p. 7 (5 Experiments), p. 2 (1 Introduction), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 6 (29. US English instructions are the longest on av).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

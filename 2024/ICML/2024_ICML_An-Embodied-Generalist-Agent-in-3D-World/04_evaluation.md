@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.5. Scaling 
 - **p. 5 / 3.3. LLM-assisted 3D-language Data Generation - extractive body cue:** Thought:wardrobe2, desk-7, chair-11, bed-15 Answer: bedroom Object Scene Caption: The showcase is supported by the wall and positioned behind, close to, and to the left ...
 - **p. 8 / 4.5. Scaling Law Analysis - extractive body cue:** We study the scaling effect (Kaplan et al., 2020; Reed et al., 2022) of data and model in LEO by tracking the instruction-tuning loss on ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts as input and formulates comprehensive 3D tasks ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.5. Scaling 
 | Aligned Vicuna-7B shows significantly lower losses than Aligned OPT-1.3B. | definition/direction/unit from same section | p. 8 (4.5. Scaling Law Analysis) |
 | In addition to the default Vicuna-7B, we incorporate two LLMs at different scales: OPT-1.3B (Zhang et al., 2022) and Vicuna-13B (Chiang et al., 2023). | definition/direction/unit from same section | p. 8 (4.5. Scaling Law Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.5. Scaling 
 | Compared to counterparts that utilize object boxes (Yin et al., 2023; Hong et al., 2023; Wang et al., 2023e), it offers both rich object ... | comparison identity and matched condition | p. 4 (3.3. LLM-assisted 3D-language Data Generation) |
 | Table 4: Quantitative comparison with state-of-the-art models on 3D VL under- standing and embodied reasoning tasks. "C" stands for "CIDEr", "B-4" for "BLEU- 4", ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 7: Quantitative results of LEO trained with differ- ent data configurations. w/o Align: without alignment stage. ScanNet: tuned on ScanNet scenes only. w/o ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.5. Scaling 
 |---|---|---|
 | body limitation/failure cue | Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts as input and formulates comprehensive 3D ... | p. 2 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -134,19 +121,10 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (4.5. Scaling 
 | Details for designing the seed tasks can be found in Appendix B.3. | p. 4 (3.3. LLM-assisted 3D-language Data Generation) |
 | Next, we manually design some examples as seed tasks (Liu et al., 2023b), including scene and object captioning, QA, dialogue, and planning, and ask ... | p. 4 (3.3. LLM-assisted 3D-language Data Generation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The proposed embodied generalist agent LEO. It takes egocentric 2D images, 3D point clouds, and texts as input and formulates comprehensive 3D tasks ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (3.3. LLM-assisted 3D-language Data Generation), p. 4 (3. Datasets), p. 5 (3.3. LLM-assisted 3D-language Data Generation), p. 5 (3.3. LLM-assisted 3D-language Data Generation), p. 8 (4.5. Scaling Law Analysis), metrics p. 6 (Figure/Table caption), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 4 (3. Datasets), baselines p. 4 (3.3. LLM-assisted 3D-language Data Generation), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 8 (4.5. Scaling Law Analysis), p. 8 (4.5. Scaling Law Analysis), p. 6 (Figure/Table caption), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

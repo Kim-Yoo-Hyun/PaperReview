@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 - **p. 6 / 4.2. Experimental Results - extractive body cue:** Quantitative results of NVS on RE10K with varying reference views (left) and cross-dataset generalization to ScanNet (right).
 - **p. 8 / 4.2. Experimental Results - extractive body cue:** Scene-level visualizations and multiple novel viewpoints renderings.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of TokenSplat. TokenSplat performs feed-forward 3D Gaussian reconstruction and camera pose estimation from unposed images. A shared ViT encoder extracts image tokens, ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 | Overall, these results demonstrate the effectiveness of our model designs for accurate multi-view reconstruction and camera pose estimation. | definition/direction/unit from same section | p. 8 (4.3. Ablation Analysis) |
 | Figure 1. Overview of TokenSplat. TokenSplat performs feed-forward 3D Gaussian reconstruction and camera pose estimation from unposed images. A shared ViT encoder extracts image ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 | Compared to FreeSplat, TokenSplat achieves up to 0.92/0.51 dB higher PSNR, and reduces ATE by 0.013/0.033 over SPFSplat. | comparison identity and matched condition | p. 6 (4.2. Experimental Results) |
 | Both settings ensure a direct and consistent comparison with prior work. | comparison identity and matched condition | p. 5 (4.1. Experimental Settings) |
 | Qualitative comparison on RE10K and ScanNet under varying numbers of reference views. | comparison identity and matched condition | p. 7 (4.2. Experimental Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 | body limitation/failure cue | On ScanNet, the model maintains accurate pose estimation under the 28-view setting, reducing ATE by 0.018 over AnySplat, confirming both robustness and scalability of ... | p. 6 (4.2. Experimental Results) |
 | body limitation/failure cue | Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with ... | p. 8 (4.3. Ablation Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 | The ADF-Decoder consists of 12 decoder blocks. | p. 4 (3.3. Asymmetric Dual-Flow Decoder) |
 | Intra-view image self-attention과 camera-to-image attention의 완전한 update는 Eqs. (3)–(4); 성능 수치가 아님 | PDF p. 4 §3.3 |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** It yields consistent accuracy improvements and robust zero-shot generalization across diverse datasets.
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Experimental Results), p. 5 (4.2. Exp
 - **p. 8 / 4.3. Ablation Analysis - extractive body cue:** Compared to our full model (a), (b) replacing the Token-aligned Gaussian Prediction with a pixelaligned Gaussian head degrades both reconstruction and pose estimation, with SSIM ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiment), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 8 (4.2. Experimental Results), metrics p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 3 (Figure/Table caption), baselines p. 5 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 6 (4.2. Experimental Results), p. 5 (4.1. Experimental Settings), p. 7 (4.2. Experimental Results), results p. 6 (4.2. Experimental Results), p. 5 (4.2. Experimental Results), p. 5 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 8 (4.3. Ablation Analysis), p. 7 (4.2. Experimental Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

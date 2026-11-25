@@ -46,8 +46,6 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 - **p. 7 / 5.2. Depth Fidelity Evaluation - extractive body cue:** By leveraging generic VFM priors rather than fitting specific dataset statistics, PRISM effectively reasons about noise generation through materialcorrelated visual patterns rather than superficial domain ...
 - **p. 6 / 5.1. Experimental Settings - extractive body cue:** We utilize the provided models to construct aligned sim-real pairs and define the ground-truth invalidation mask by identifying native sensor failures (zeros or NaNs) in ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The Anatomy of Depth Perception and Modeling. (a) The Reality Gap: Unlike pristine simulation, real-world physical sensing exhibits a bimodal noise distribution: black ...
@@ -81,8 +79,6 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 | We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation (detection of sensor failures), and Measurement Inaccuracy (precision in valid regions). | definition/direction/unit from same section | p. 7 (5.1. Experimental Settings) |
 | Figure 9. Hardware Requirement of Downstream Evaluation. The real-world setup consists of two platforms: Franka Research 3 for precision tasks, and Realman RM75 for ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 | Figure 4. Qualitative evaluation of physics-grounded depth synthesis. (a) Disentangled Generation: PRISM decomposes noise into Sensing Invalidation (binary masks) and Measurement Inaccuracy (continuous residuals) ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Note: Baselines marked with ‘-' do not support separate invalidation masks from continuous noise. | comparison identity and matched condition | p. 7 (5.1. Experimental Settings) |
 | Table 17. Progressive Ablation of H-PPS. We add components sequentially to the standard BCE baseline. Boundary-IoU evaluates the precision of artifact edges (within 5px). ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 | body limitation/failure cue | Figure 4. Qualitative evaluation of physics-grounded depth synthesis. (a) Disentangled Generation: PRISM decomposes noise into Sensing Invalidation (binary masks) and Measurement Inaccuracy (continuous residuals) ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Articulated tasks on a Realman RM75 arm test robustness against translucent refraction, transparent obstacles, and severe occlusions during long-horizon behaviors like interacting with a ... | p. 8 (5.3. Downstream Application Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 | The training objective is masked to compute gradients strictly within valid sensor regions: LNRG = Ez0,t,ϵ h ∥ϵ -ϵθ(zt, t, cctl)∥2 2 ⊙(1 -ˆ ... | p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ) |
 | (c) Depth-Aware Policy Learning: A modified robotic policy, equipped with a dedicated depth encoder, is trained on the enhanced dataset to learn robustness against ... | p. 5 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 1. Quantitative comparison of depth synthesis fidelity on ByteCameraDepth (In-Domain of Realsense D435). We evaluate three aspects: Overall Metrics (global reconstruction quality), Sensing Invalidation ...
@@ -171,6 +150,5 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 - **p. 8 / 5.3. Downstream Application Evaluation - extractive body cue:** Articulated tasks on a Realman RM75 arm test robustness against translucent refraction, transparent obstacles, and severe occlusions during long-horizon behaviors like interacting with a drawer ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5.3. Downstream Application Evaluation), p. 6 (5.1. Experimental Settings), p. 8 (5.3. Downstream Application Evaluation), p. 7 (5.2. Depth Fidelity Evaluation), p. 7 (5.2. Depth Fidelity Evaluation), p. 6 (5.1. Experimental Settings), metrics p. 8 (5.3. Downstream Application Evaluation), p. 24 (Figure/Table caption), p. 7 (5.1. Experimental Settings), p. 8 (5.2. Depth Fidelity Evaluation), p. 9 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 7 (5.2. Depth Fidelity Evaluation), p. 8 (5.2. Depth Fidelity Evaluation), p. 8 (5.3. Downstream Application Evaluation), p. 6 (Figure/Table caption), p. 7 (5.1. Experimental Settings), p. 24 (Figure/Table caption), results p. 8 (5.3. Downstream Application Evaluation), p. 8 (Figure/Table caption), p. 7 (5.2. Depth Fidelity Evaluation), p. 9 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

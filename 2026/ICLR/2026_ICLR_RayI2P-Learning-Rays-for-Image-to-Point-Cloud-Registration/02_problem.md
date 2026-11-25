@@ -65,8 +65,6 @@ PDF body contribution framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 9 | In this paper, we present a novel ray-based framework for image-to-point cloud registration that overcomes key limitations of ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 15 | While our method achieves competitive performance on challenging outdoor datasets, it still exhibits certain limitation primarily associated with ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 16 (A.6 MORE IMPLEMENTATION DETAILS), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 1 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ PDF body contribution framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), interface p. 16 (A.6 MORE IMPLEMENTATION DETAILS), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 1 (1 INTRODUCTION), objective p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

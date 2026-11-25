@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 - **p. 12 / 4 Experiments - extractive body cue:** However, as a non-MLP scene representation, the 3D Gaussian field inevitably requires much memory consumption to store different properties.
 - **p. 13 / 56.50 MB - extractive body cue:** Alignment and variance losses push primitives closer to object surfaces, facilitating novel view syn
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: CG-SLAM, which adopts a well-designed 3D Gaussian field, can simultaneously achieve state-of-the-art performance in localization, reconstruction and rendering. Ben- efiting from 3D Gaussian ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 | It can be observed that our method outperforms all baselines on mapping accuracy. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 | For tracking, this lightweight version can work twice as fast as the original one, at the cost of a slight decrease in accuracy, as ... | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 | For a fair comparison, we reproduced all results from these baselines and reported their reconstruction performance with the same evaluation mechanism. | comparison identity and matched condition | p. 10 (4 Experiments) |
 | We achieve state-of-the-art reconstruction in observed areas. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | In terms of mapping accuracy, our method can outperform all existing methods. | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 | body limitation/failure cue | This reason results in a considerable memory footprint in the Gaussian-based SLAM system, which is a common limitation in other Gaussian-based research topics. | p. 12 (4 Experiments) |
 | body limitation/failure cue | Fig. 3: Uncertainty of the Gaussian Primitives. Uncertainty of a Gaussian prim- itive is derived from its dominated pixels and corresponding depth biases, reflecting ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 | Fast Gaussian splatting rasterizer enables efficient pixel-by-pixel parallel rendering, and is fully differentiable, which provides a useful GPU-accelerated framework. | p. 6 (3 Method) |
 | In terms of color rendering, the Gaussian splatting rasterizer adopts an α-blending solution, which accumulates radiance c and opacity values σ on a given ... | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 5 Conclusion - extractive body cue:** Considerable memory usage is one limitation of the Gaussianbased system.
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 11 (4 Experiments), p. 
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Uncertainty of the Gaussian Primitives. Uncertainty of a Gaussian prim- itive is derived from its dominated pixels and corresponding depth biases, reflecting the ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), metrics p. 14 (56.50 MB), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (Figure/Table caption), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

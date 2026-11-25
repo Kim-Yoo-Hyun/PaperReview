@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (2.2. State Space Models and Visual Applications
 - **p. 5 / 3.4. Output Heads and Losses - extractive body cue:** The model is optimized through multi-task learning with combined losses.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Output Heads and Losses), p. 5 (3.4. Output Heads and Losses).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (2.2. State Space Models and Visual Applications
 - **p. 4 / 3.2. Multi-Modal Mamba Mixer Block - extractive body cue:** The spatial scanning exhibits channel independence, failing to capture multi-modal interactions.
 - **p. 5 / 3.4. Output Heads and Losses - extractive body cue:** 3, our Mamba-3VL utilizes three output heads to support 3D-VL tasks.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 3 (2.2. State Space Models and Visual Applications
 
 - **p. 3 / 3.1. Overall Framework - extractive body cue:** For the point cloud, we use the pre-trained PointNet++ [47] to obtain point features P={p0, p1, ..., pS} of the segments.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Vim, presents, first, pure, SSM-based, model, efficiently, compress, vision, representation, intensive, prediction, tasks, establish, correspondence, between, task, prompts, construct, hybrid.
 - **Relevant PDF headings:** 2.2. State Space Models and Visual Applications (p. 3); 3. Methods (p. 3); Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,22 +106,11 @@ PDF body method statement (p. 3 (2.2. State Space Models and Visual Applications
 - **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** A), more framework ablations of Mamba-3VL (Tab.
 - **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** Removing either component (i.e., w/o.
 - **p. 6 / 4.1. Implementation Details - extractive body cue:** For embodied AI tasks, we replace the T5-small [49] model of generation head with Vicuna-7B [13] using the instructionfollowing dataset [21].
-- **p. 6 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Our method exhibits view-invariant robustness with 3.9% and 6.2% improvements over PQ3D on VD subsets of Nr3D/Sr3D benchmarks.
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.2. State Space Models and Visual Applications), p. 4 (3.2. Multi-Modal Mamba Mixer Block), p. 3 (3.1. Overall Framework), p. 4 (3.2. Multi-Modal Mamba Mixer Block), p. 5 (3.4. Output Heads and Losses), p. 5 (Method), objective p. 5 (3.4. Output Heads and Losses), p. 5 (3.4. Output Heads and Losses), temporal p. 4 (3.2. Multi-Modal Mamba Mixer Block), p. 4 (3.2. Multi-Modal Mamba Mixer Block), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

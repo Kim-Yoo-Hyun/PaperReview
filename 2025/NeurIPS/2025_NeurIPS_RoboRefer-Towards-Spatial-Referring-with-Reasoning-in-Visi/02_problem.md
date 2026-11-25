@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 54 | G More Discussion on Limitations and Future Work Despite achieving promising results, our model still has limitations. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 20 | 33 B.2.3 Addressing Limitations: Object Annotation and Bounding Box Filtering . . | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 4 (3 Method), p. 4 (3 Method), p. 7 (3 Method). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), interface p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 4 (3 Method), p. 4 (3 Method), p. 7 (3 Method), objective p. 4 (3 Method), p. 5 (3 Method), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 54 (C Implementation Details and Samples of RefSpatial-Bench), p. 57 (C Implementation Details and Samples of RefSpatial-Bench), p. 57 (C Implementation Details and Samples of RefSpatial-Bench).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 - **p. 5 / 3 Method - extractive body cue:** The Sub-Goal Problem: We first solve the sub-goal problem to obtain egi for the current stage i: arg min egi λ(i) sub-goal(egi) s.t. f(kgi) ≤0, ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3 Method), p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 6 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 - **p. 4 / 3 Method - extractive body cue:** The image and an instruction are fed into GPT-4o [6] to generate a series of ReKep constraints as python programs that specify desired relations between ...
 - **p. 5 / 3 Method - extractive body cue:** 3.4 Keypoint Proposal and ReKep Generation To enable the system to perform tasks in-the-wild given a free-form task instruction, we devise a pipeline using large ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 
 - **p. 4 / 3 Method - extractive body cue:** Constrained Optimization Solver RGB-D Observation Optimized Actions def subgoal_stage1_f1(k): dist = norm(k[0]-k[1]) return dist def path_stage2_f1(k): z_diff = k[1][2]-k[2][2] return abs(z_diff) def subgoal_stage2_f1(k): k[3][2] += ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Keypoint, Proposal, ReKep, Generation, enable, system, perform, tasks, in-the-wild, given, free-form, task, instruction, devise, pipeline, large, vision, models, vision-language, respectively.
 - **Relevant PDF headings:** 3 Method (p. 3); A.4.2 Details on Baseline Methods (p. 21); A.6 Querying Vision-Language Model (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 5 (3 Method), p. 24 (A.8 Implementation Details of
 - **p. 8 / 4 Experiments - extractive body cue:** The optimization module, on the other hand, does not contribute as much to the failures despite given limited time budget, since there often exist many ...
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 7: Stationary Dual-Arm Platform. A.2 Wheeled Single-Arm Platform One of our investigated platform is a Franka arm mounted on a wheeled base built with ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 22 (A.6 Querying Vision-Language Model), p. 4 (3 Method), p. 5 (3 Method), p. 22 (A.6 Querying Vision-Language Model), objective p. 4 (3 Method), p. 24 (A.8 Implementation Details of Sub-Goal Solver), p. 4 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 5 (3 Method), temporal p. 8 (4 Experiments), p. 24 (A.7 Implementation Details of Point Tracker), p. 1 (Abstract), p. 2 (1 Introduction), p. 5 (3 Method), p. 8 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

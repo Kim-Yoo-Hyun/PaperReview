@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 4 / III. APPROACH - extractive body cue:** This causes conflicting supervision, as the computed action does not make progress toward completing the task.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (III. APPROACH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 3 / III. APPROACH - extractive body cue:** The design of the conditional diffusion model is described in Section III-B, and the procedure for sampling augmenting images and computing action labels is detailed ...
 - **p. 4 / III. APPROACH - extractive body cue:** The action label for ˜It is simply the action that conveys the agent from the pose depicted in ˜It to the pose in It+k.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** The policy is trained by L1 regression to the (unit length) actions using the Adam optimizer with a learning rate of 1e-4.
 - **p. 4 / III. APPROACH - extractive body cue:** The pre-trained VQ-GAN codebooks is kept fixed.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** DMD, Architecture, introduced, U-Net, diffusion, model, blocks, composed, convolution, self-attention, cross, attention, layers, action, labels, trajectory, compute, label, perturbed, view.
 - **Relevant PDF headings:** III. APPROACH (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Eye-in-hand Imitation learning with DMD: A common failure mode in an imitation learning setting is the problem of poor generalization due to compounding ...
 - **p. 8 / 24 Demo - extractive body cue:** See videos on project website for failure modes.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH), p. 2 (III. APPROACH), p. 2 (III. APPROACH), objective p. 3 (III. APPROACH), p. 4 (III. APPROACH), temporal p. 1 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

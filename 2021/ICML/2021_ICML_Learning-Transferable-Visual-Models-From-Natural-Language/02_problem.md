@@ -66,8 +66,6 @@ PDF body contribution framing (p. 3 (2.1. Natural Language Supervision), p. 3 (2
 | body cue at p. 18 | There are still many limitations to CLIP. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 20 | Our methodology has several significant limitations. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 후속 로봇 시스템에서는 이미지와 지시의 의미를 비교하는 지각 단계에 CLIP 표현을 활용할 수 있다. 원 논문의 출력은 이미지–텍스트 유사도이며 직접 측정한 성능은 시각 인식 지표다. [원문](https://proceedings.mlr.press/v139/radford21a.html)
@@ -75,10 +73,8 @@ PDF body contribution framing (p. 3 (2.1. Natural Language Supervision), p. 3 (2
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (1. Introduction and Motivating Work), p. 6 (3.1.1. MOTIVATION), p. 6 (3.1.1. MOTIVATION), interface p. 1 (1. Introduction and Motivating Work), p. 2 (1. Introduction and Motivating Work), p. 3 (2.1. Natural Language Supervision), p. 4 (2.3. Selecting an Efficient Pre-Training Method), objective p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.4. Choosing and Scaling a Model).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

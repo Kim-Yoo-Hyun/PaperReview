@@ -47,7 +47,6 @@ PDF body method statement (p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem F
 - **p. 4 / 3.1. Problem Formulation - extractive body cue:** We formulate this not merely as prompting, but as searching for a visual intervention that maximizes policy success.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem Formulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem F
 - **p. 2 / 1. Introduction - extractive body cue:** We propose Visual Attentive Prompting (VAP), a training-free framework that injects instance-awareness into frozen VLAs by intervening only on their inputs.
 - **p. 3 / 1. Introduction - extractive body cue:** Personalizing Vision-Language-Action Models with Visual Attentive Prompting signed to rigorously test instance-level identification among distractors (Figure 2, Top).
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem F
 - **p. 4 / 3.1. Problem Formulation - extractive body cue:** We consider a pre-trained VLA policy πVLA(a / x, ℓ) mapping observation x = (I, s) and instruction ℓto action a, where I = {I(v)}V ...
 - **p. 7 / 5.1. Experimental Setup - extractive body cue:** We fine-tune the base checkpoint π0.5 solely for environment adaptation, using generic data that explicitly excludes personal objects and personalized instructions.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** consider, pre-trained, VLA, policy, mapping, observation, instruction, action, where, denotes, multi-view, RGB, images, cameras, represents, proprioceptive, state, While, exact, gradientbased.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem F
 - **p. 8 / 5.2. Baselines - extractive body cue:** Personalizing Vision-Language-Action Models with Visual Attentive Prompting These three baselines isolate distinct hypotheses about whether personalization can be achieved without retraining: whether VLAs already handle ...
 - **p. 9 / 5.6. Efficiency of VAP - extractive body cue:** This confirms that VAP enhances performance without compromising the real-time responsiveness of the robotic system.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem Formulation), objective p. 4 (3.1. Problem Formulation), p. 4 (3.1. Problem Formulation), temporal p. 8 (5.3. Results on Simulation Benchmarks), p. 9 (5.6. Efficiency of VAP), p. 9 (5.7. Comparison to Visual Prompting Alternatives), p. 4 (3. Visual Attentive Prompting), p. 5 (3.3. Grounding and Prompting Details), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

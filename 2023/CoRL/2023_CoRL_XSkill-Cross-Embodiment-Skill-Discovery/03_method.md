@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 - **p. 4 / 3 Approach - extractive body cue:** • Regularizing the training process using Sinkhorn-Knopp clustering [63, 1] within singleembodiment batches.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 4 (3 Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 - **p. 4 / 3 Approach - extractive body cue:** The probability pij of skills being executed in the given video clip vij is predicted by applying the Softmax function.
 - **p. 1 / 1 Introduction - extractive body cue:** 3) Compose, performing novel compositions of the learned skills to accomplish new tasks.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 - **p. 4 / 3 Approach - extractive body cue:** • Regularizing the training process using Sinkhorn-Knopp clustering [63, 1] within singleembodiment batches.
 - **p. 6 / 4 Evaluation - extractive body cue:** TCN: Same as the GCD Policy above but replacing the video encoder with pre-trained Time-Contrastive Network (TCN)[67]. • XSkill w.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** video, prompt, algorithm, first, identifies, order, skills, then, composes, learned, policy, extract, skill, representation, ftemporal, clip, temporal, encoder, consisting, vision.
 - **Relevant PDF headings:** 3 Approach (p. 3); A.4.1 Sinkhorn-Knopp Algorithm (p. 16); A.4.4 Diffusion Policy (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,26 +102,15 @@ PDF body method statement (p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approac
 - **p. 6 / 4 Evaluation - extractive body cue:** The ablation study on K, time contrastive loss, and more implementation details can be found in the supplementary material.
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: XSkill Discover: At each training iteration, a batch of video are sampled from the same embodiment dataset. Each video vt i is augmented ...
 - **p. 6 / 4 Evaluation - extractive body cue:** NN-composition: XSkill removing skill alignment transformer.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: XSkill Discover: At each training iteration, a batch of video are sampled from the same embodiment dataset. Each video vt i is augmented ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 6: Execution on a novel task and robustness to perturbation. (a) XSkill analyzes a human video of a novel task, identifying skills for each ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 Approach), p. 4 (3 Approach), p. 3 (3 Approach), p. 4 (3 Approach), objective p. 4 (3 Approach), p. 4 (3 Approach), temporal p. 6 (4 Evaluation), p. 6 (4 Evaluation), p. 7 (4 Evaluation), p. 4 (3 Approach), p. 5 (B P), p. 8 (4 Subtasks Avg).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

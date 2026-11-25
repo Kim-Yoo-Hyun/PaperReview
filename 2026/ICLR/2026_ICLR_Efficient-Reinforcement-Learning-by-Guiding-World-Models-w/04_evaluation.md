@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENT
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** We use the Quadruped Walk task as a representative task for the investigation.
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Fine-tuning the full world model yields the best performance on the tested task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of NCRL (Non-curated offline data for efficient RL). NCRL leverages non- curated offline data-reward-free, mixed-quality, and multi-embodiment-to enable efficient RL. It uses ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENT
 | UDS shows only slightly better performance on Walker Run compared to R3M and JSRL-BC, demonstrating the ineffectiveness of zero-reward labeling. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 | 4.1 NCRL IMPROVES SAMPLE EFFICIENCY ACROSS DIVERSE TASKS Comparison with Methods that Leverage Offline Data We compare NCRL against several state-of-the-art methods that leverage ... | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENT
 | Figure 3: Left: Quantitative comparison across 72 diverse tasks from Meta-World (Yu et al., 2020) and DMControl (Tassa et al., 2018) with the same ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 7: Comparison of execution guidance versus uncertainty-based reward labeling. NCRL demonstrates the effectiveness of using execution guidance over uncertainty-based reward label- ing on ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | NCRL outperforms stateof-the-art model-based methods without relying on techniques used in iVideoGPT, such as reward shaping and demonstration-based replay buffer initialization. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENT
 | body limitation/failure cue | Figure 9: Comparison with Diffusion Policy. NCRL can effectively handle non-curated offline data while the imitation learning baseline fails. A.2 COMPARISON WITH IVIDEOGPT Comparison ... | p. 18 (Figure/Table caption) |
 | body limitation/failure cue | Figure 11: Comparison with model-based approaches for leveraging offline data. 500 retrieved trajectories. Our method achieves consistently high precision. For the Door Open task, ... | p. 19 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENT
 | 8, the encoder, decoder, and latent dynamics play important roles during fine-tuning. | p. 10 (4 EXPERIMENTS) |
 | While pre-training visual encoders (Schwarzer et al., 2021; Nair et al., 2022; Parisi et al., 2022; Xiao et al., 2022; Yang & Nachum, 2021; ... | p. 1 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 CONCLUSION - extractive body cue:** We show that naive fine-tuning of world models fails to accelerate RL training due to distributional shift and propose two techniques - experience rehearsal and ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENT
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 11: Comparison with model-based approaches for leveraging offline data. 500 retrieved trajectories. Our method achieves consistently high precision. For the Door Open task, some ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 21 (Figure/Table caption), p. 28 (Figure/Table caption), baselines p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS), results p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 21 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffu
 - **p. 3 / 3.1. Preliminaries - extractive body cue:** In this process, Gaussian noise is progressively added to the data in a Markovian manner, and the model is trained to recover the original data ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.2. Model Overview), p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffusion-based Adaption Method), p. 5 (3.3. Denoising Diffusion-based Adaption Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffu
 - **p. 2 / 1. Introduction - extractive body cue:** (4) We conduct extensive experiments validating the approach on ShapeNet [3] ModelNet40 [52], and ScanObjectNN [44] achieving new state-of-the-art results.
 - **p. 1 / 1. Introduction - extractive body cue:** Reconstruction of corrupted point clouds using the proposed 3DD-TTA method. between training and testing samples is minimal.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffu
 - **p. 4 / 3.1. Preliminaries - extractive body cue:** In the first stage, the encoders and the decoder are simultaneously trained to maximize the variational lower bound over the data log-likelihood: LELBO = Ep(x),qz(z0/x),qh(h0/x,z0) ...
 - **p. 3 / 3. Method - extractive body cue:** We have a classifier pc and a diffusion model ϵθ, both trained on original point clouds x ∈Rn×3 from a source domain Qs, where a ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, stage, encoders, decoder, simultaneously, trained, maximize, variational, lower, bound, over, data, log-likelihood, LELBO, z0/x, h0/x, zDKL, hDKL, Here, denote.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. Model Overview (p. 4); 3.3. Denoising Diffusion-based Adaption Method (p. 4); 4.1. Datasets and Corruption Methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,22 +110,11 @@ PDF body method statement (p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffu
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. In the TTA setting, the source model encounters corrupted 3D point clouds with an unknown distribution shift, requiring adaptation without prior knowledge of ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Reconstruction of corrupted point clouds using the pro- posed 3DD-TTA method. between training and testing samples is minimal. However, real-world scenarios often feature ...
 - **p. 6 / 4.3. Results - extractive body cue:** However, the model faces limitations in addressing the transformation-based deformations like shear and rotation.
-- **p. 6 / 4.3. Results - extractive body cue:** This limitation is due to the trainingfree nature of the model, making it challenging to reverse transformations to their original shape without additional training.
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffusion-based Adaption Method), p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffusion-based Adaption Method), p. 3 (3.1. Preliminaries), p. 3 (3. Method), objective p. 4 (3.1. Preliminaries), p. 4 (3.2. Model Overview), p. 5 (3.3. Denoising Diffusion-based Adaption Method), p. 5 (3.3. Denoising Diffusion-based Adaption Method), p. 3 (3.1. Preliminaries), temporal p. 4 (3.2. Model Overview), p. 4 (3.3. Denoising Diffusion-based Adaption Method), p. 5 (3.3. Denoising Diffusion-based Adaption Method), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.4. Ablation Study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

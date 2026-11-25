@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 - **p. 3 / 3.1. Preliminaries - extractive body cue:** The covariance Σi is decomposed into a rotation matrix R and a scaling matrix S as Σi = RSS⊤R⊤, which improves numerical stability during optimization.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.2. Identity-aware Semantic Consistency Learning), p. 4 (3.2. Identity-aware Semantic Consistency Learning), p. 4 (3.2. Identity-aware Semantic Consistency Learning), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 - **p. 1 / 1. Introduction - extractive body cue:** This technique is able to handle open-ended language queries and segment corresponding regions in the 3D space, thus provides natural and flexible interactions for editing ...
 - **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** The overall framework of the proposed method is shown in Fig.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,8 +89,6 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 
 - **p. 3 / 3.2. Identity-aware Semantic Consistency Learning - extractive body cue:** During training, we randomly select a subset of Gaussians and compute the identity-aware semantic consistency loss Lcons, which is defined as follows: Lcons = Lsame ...
 - **p. 5 / 4.1. Training - extractive body cue:** Our model is trained on an AMD EPYC 7352 24-Core Processor CPU and a single NVIDIA A100 GPU.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
@@ -116,20 +112,10 @@ PDF body method statement (p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function),
 - **p. 5 / 4.3. Performance Evaluation - extractive body cue:** Furthermore, we also evaluate the performance of the proposed method with photometric metrics, such as peak signal-to-noise ratio (PSNR), structural similarity index (SSIM) [27], and ...
 - **p. 6 / 4.3. Performance Evaluation - extractive body cue:** In addition, previous methods often fail to extract boundaries accurately due to the use of fixed threshold values in generating semantic segmentation masks(see Fig.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Loss Function), p. 4 (3.4. Loss Function), p. 4 (3.3. Progressive Mask Expanding), p. 3 (3.2. Identity-aware Semantic Consistency Learning), p. 5 (3.4. Loss Function), p. 3 (3.1. Preliminaries), objective p. 4 (3.2. Identity-aware Semantic Consistency Learning), p. 3 (3.2. Identity-aware Semantic Consistency Learning), p. 4 (3.2. Identity-aware Semantic Consistency Learning), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function), p. 3 (3.1. Preliminaries), temporal p. 3 (3.2. Identity-aware Semantic Consistency Learning), p. 3 (3.2. Identity-aware Semantic Consistency Learning), p. 5 (4.1. Training), p. 2 (2.1. 3D Scene Representations), p. 2 (2.2. Open-Vocabulary 3D Semantic Segmentation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

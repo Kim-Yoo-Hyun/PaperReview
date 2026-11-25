@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Addition
 - **p. 17 / C Additional Implementation Details for the Baselines - extractive body cue:** As shown in Table 5, the performance of ACT and Diffusion Policy progressively improves as more environment variations are removed.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (4 Method), p. 5 (4 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Addition
 - **p. 5 / 4 Method - extractive body cue:** Therefore, given a voxel grid observational input v of size (L×W ×H) that spans x3 meters of the workspace, we keep the number of voxels ...
 - **p. 16 / C Additional Implementation Details for the Baselines - extractive body cue:** For Diffusion Policy, lower values (e.g., 16) of the action prediction horizon were inadequate, leading to agents getting stuck at certain poses and failing to ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Addition
 - **p. 17 / C Additional Implementation Details for the Baselines - extractive body cue:** Hyperparameter ACT Value Diffusion Policy Value learning rate 3e-5 1e-4 weight decay (for transformer only) - 1e-3 # encoder layers 4 - # decoder layers ...
 - **p. 4 / 4 Method - extractive body cue:** During training, the language goal is given in the data, but during evaluation, we use VLMs to determine which language goal, ℓas or ℓsa, to ...
 - **p. 4 / 4 Method - extractive body cue:** This allows our method to learn to map the appropriate acting or stabilizing actions to a given arm during training.
-- **p. 17 / C Additional Implementation Details for the Baselines - extractive body cue:** Hyperparameter ACT Value Diffusion Policy Value learning rate 3e-5 1e-4 weight decay (for transformer only) - 1e-3 # encoder layers 4 - # decoder layers ...
 - **p. 14 / A.1 Additional Implementation Details - extractive body cue:** The policy is trained with a batch size of 1 on an Nvidia 3080 GPU for two days.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** overall, training, loss, VoxAct-B, Ltotal, Lacting, Lstabilizing, where, values, acting, stabilizing, have, Larm, trans, Varm, open, collide, consists, cross-entropy, classifier-style.
 - **Relevant PDF headings:** 4 Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +117,13 @@ PDF body method statement (p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Addition
 - **p. 7 / 6 Results - extractive body cue:** Open Method Drawer VoxAct-B w/o VLMs 19.2 VoxAct-B w/o Segment Anything 67.2 VoxAct-B w/o acting and stabilizing 64.8 VoxAct-B w/o arm ID 68.0 VoxAct-B (ours) ...
 - **p. 8 / 6 Results - extractive body cue:** If it does, it will be difficult to crop the voxel grid without losing relevant information.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4 Method), p. 5 (4 Method), p. 14 (A.1 Additional Implementation Details), p. 17 (C Additional Implementation Details for the Baselines), p. 4 (4 Method), p. 16 (C Additional Implementation Details for the Baselines), objective p. 5 (4 Method), p. 5 (4 Method), p. 16 (C Additional Implementation Details for the Baselines), p. 14 (A.1 Additional Implementation Details), p. 14 (A.1 Additional Implementation Details), p. 17 (C Additional Implementation Details for the Baselines), temporal p. 4 (4 Method), p. 4 (2 Related Work), p. 6 (5 Experiments), p. 14 (A.1 Additional Implementation Details), p. 17 (C Additional Implementation Details for the Baselines), p. 3 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 21 (Figure/Table caption), p. 13 (4 Experimen
 - **p. 8 / 4 Experiments - extractive body cue:** We conduct extensive experiments on three settings: a closed-set setting on the COCO detection benchmark (Sec.
 - **p. 9 / 4 Experiments - extractive body cue:** COCO Benchmark We compare Grounding DINO with GLIP and DINO in Table 2.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: (a) Closed-set object detection requires models to detect objects of pre-defined categories. (b) We evaluate models on novel objects and standard Referring expression ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 21 (Figure/Table caption), p. 13 (4 Experimen
 | GLIPv2 incorporates advanced techniques like masked text training and cross-instance contrastive learning, making it | definition/direction/unit from same section | p. 11 (4 Experiments) |
 | We evaluate the model performance on RefCOCO/+/g directly.5 The results are shown in Table 5. | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 21 (Figure/Table caption), p. 13 (4 Experimen
 | Impressively, Grounding DINO with a Swin-T backbone outperforms DINO with Swin-L on the full-shot setting. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | With only O365 and GoldG for pre-train, Grounding DINO T outperforms DINO on few-shot and full-shot settings. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | We leverage GLIP [25] as our baseline. | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 21 (Figure/Table caption), p. 13 (4 Experimen
 | body limitation/failure cue | In our future work, we will perform more studies, including varying the semantic concept coverage of the training data and increasing the scale of ... | p. 11 (4 Experiments) |
 | body limitation/failure cue | Table 9: Transfer pre-trained DINO to Grounding DINO. We freeze shared modules between DINO and Grounding DINO during grounded fine-tuning. All models are trained ... | p. 21 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 21 (Figure/Table caption), p. 13 (4 Experimen
 | Text cross-attention, while introducing fewer parameters than encoder fusion, showed less performance improvement compared to encoder fusion (+0.6 vs. +0.8). | p. 13 (4 Experiments) |
 | Input Text Input Image Model Outputs Keys& Values Cross-Modality Queries Text Features Image Features Vanilla Text Features A Cross-Modality Decoder Layer Cross-Modality Query Self-Attention ... | p. 5 (1. Model Overall) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 7: Ablations for our model. All models are trained on the O365 dataset with a Swin Transformer Tiny backbone. fusion approach. Moreover, we extend ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 21 (Figure/Table caption), p. 13 (4 Experimen
 - **p. 21 / Figure/Table caption - extractive body cue:** Table 9: Transfer pre-trained DINO to Grounding DINO. We freeze shared modules between DINO and Grounding DINO during grounded fine-tuning. All models are trained with ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), metrics p. 11 (4 Experiments), p. 12 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), baselines p. 9 (Figure/Table caption), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 21 (Figure/Table caption), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 22 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

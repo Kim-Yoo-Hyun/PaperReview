@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 
 - **p. 2 / 1. Introduction - extractive body cue:** The center-based representation has several key advantages: First, unlike bounding boxes, points have no intrinsic orientation.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4. CenterPoint), p. 3 (3. Preliminaries), p. 4 (4. CenterPoint), p. 5 (4.1. Two-Stage CenterPoint), p. 3 (4. CenterPoint).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 
 - **p. 1 / 1. Introduction - extractive body cue:** Second, the resulting output is a threedimensional box that is often not well aligned with any global coordinate frame.
 - **p. 2 / 1. Introduction - extractive body cue:** For 3D tracking, our model performs at 63.8 AMOTA outperforming the prior state-of-the-art by 8.8 AMOTA on nuScenes.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 
 - **p. 5 / 5. Experiments - extractive body cue:** The inference times are measured on an Intel Core i7 CPU and a Titan RTX GPU.
 - **p. 5 / 5. Experiments - extractive body cue:** During inference, we run the second stage on the top 500 predictions after Non-Maxima Suppression (NMS).
 - **p. 4 / 4. CenterPoint - extractive body cue:** At training time, only ground truth centers are supervised using an L1 regression loss.
-- **p. 4 / 4. CenterPoint - extractive body cue:** At inference time, we use this offset to associate current detections to past ones in a greedy fashion.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** encoder, then, pools, features, primary, feature, representation, point-based, network, extracts, points, inside, CNN, architecture, detection, head, finds, object, centers, regress.
 - **Relevant PDF headings:** 4.2. Architecture (p. 5); A. Tracking algorithm (p. 11); Method (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 14: Ablation studies for 3D detection on nuScenes validation. entries in the NeurIPS 2020 nuScenes detection challenge. In this section, we describe the details ...
 - **p. 6 / 5.1. Main Results - extractive body cue:** Notably, our tracking does not require a separate motion model and runs in a negligible time, 1ms on top of detection.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 4 (4. CenterPoint), p. 5 (4.1. Two-Stage CenterPoint), p. 2 (1. Introduction), p. 4 (4. CenterPoint), objective p. 4 (4. CenterPoint), p. 4 (4.1. Two-Stage CenterPoint), p. 2 (1. Introduction), p. 3 (3. Preliminaries), p. 5 (4.1. Two-Stage CenterPoint), p. 2 (1. Introduction), temporal p. 5 (5. Experiments), p. 2 (1. Introduction), p. 5 (5. Experiments), p. 6 (5.1. Main Results), p. 6 (5.1. Main Results), p. 7 (5.2. Ablation studies).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

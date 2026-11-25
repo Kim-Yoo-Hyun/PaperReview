@@ -51,7 +51,6 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 - **p. 13 / B. More Implementation Details - extractive body cue:** Reward functions within the same group are independently normalized, Whose assovited advantaged functions are eaimated via disinet criti.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 13 (B. More Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 - **p. 2 / I. INTRODUCTION - extractive body cue:** + Real-world posture-adaptive motions are well achieved through our proposed RL-based method, without relying on predefined trajectories or sim-to-real adaptation techniques.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Reinforcement learning (RL) offers an alternative effective framework for humanoid locomotion and whole-body control [36, 13, 4 54], benefiting from minimal modeling assumptions.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** PPO, implementation, follows, framework, outlined, actor, network, consists, layer, MLP, hidden, dimensions, while, critic, postures, controllers, observation, action, spaces, lower.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 12 (B. More Implementation Details), p. 13 (B. Mor
 - **p. 12 / B. More Implementation Details - extractive body cue:** HOST-Bound0.25 uses a fixed action bound of $ ~ 0.25 without a curriculum, HOST-wip-r*"* eliminates all style-telated reward functions.
 - **p. 13 / B. More Implementation Details - extractive body cue:** Observation noises are without curriculum, set as below:
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), objective p. 13 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 13 (B. More Implementation Details), temporal p. 5 (C. Force Curriculum as Exploration Strategy), p. 12 (B. More Implementation Details), p. 12 (B. More Implementation Details), p. 3 (C. Learning Quadrupedal Robot Standing-up Control), p. 3 (C. Learning Quadrupedal Robot Standing-up Control), p. 5 (C. Force Curriculum as Exploration Strategy).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

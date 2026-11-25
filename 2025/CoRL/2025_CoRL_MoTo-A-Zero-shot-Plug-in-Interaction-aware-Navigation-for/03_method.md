@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (4 Approach), p. 5 (4 Approach), p. 5 (4 Approac
 - **p. 6 / 4 Approach - extractive body cue:** Otherwise, the collision cost will not influence the control of the robot.
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 5 (4 Approach), p. 6 (4 Approach), p. 6 (4 Approach), p. 7 (4 Approach), p. 7 (4 Approach), p. 13 (A.3 Training Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (4 Approach), p. 5 (4 Approach), p. 5 (4 Approac
 - **p. 5 / 4 Approach - extractive body cue:** Without any language information, we aim to find out all representative actionable points in an image as proposals.
 - **p. 4 / 4 Approach - extractive body cue:** To accurately ground instruction T to objects in the scene, we first let the robot scan the whole scene and reconstruct a 3D point cloud ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 6 (4 Approach), p. 5 (4 Approach), p. 5 (4 Approac
 
 - **p. 13 / A.3 Training Details - extractive body cue:** We fine-tuned the model for 150,000 gradient steps on 8 NVIDIA RTX 4090 GPUs (total batch size 128) using the AdamW optimizer (learning rate 1×10-4, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Firstly, extracting, wrist, keypoint, RGB-D, observation, then, projecting, space, VLM, generates, target, proposals, different, images, aggregated, voting, module, Current, segmentation.
 - **Relevant PDF headings:** 4 Approach (p. 4); C Optimization Algorithm (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 6 (4 Approach), p. 5 (4 Approach), p. 5 (4 Approac
 - **p. 13 / A.3 Training Details - extractive body cue:** To better fine-tune OpenVLA [11] to mitigate cross-robot ontology differences, we collected a total of 20k data and fine-tuned 10k epoch on 8 RTX 3090 ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 6: Visualization results for keypoint generation. MoTo selects keypoint proposals (red points) from multi-views, projects them into 3D space and votes to generate keypoints ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4 Approach), p. 5 (4 Approach), p. 5 (4 Approach), p. 7 (4 Approach), p. 4 (4 Approach), p. 4 (4 Approach), objective p. 5 (4 Approach), p. 7 (4 Approach), p. 7 (4 Approach), p. 13 (A.3 Training Details), p. 6 (4 Approach), p. 6 (4 Approach), temporal p. 3 (1 Introduction), p. 7 (4 Approach), p. 8 (5 Experiment), p. 13 (A.2 Real World Experiment), p. 13 (A.3 Training Details), p. 1 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

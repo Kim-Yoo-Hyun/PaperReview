@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 - **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Object Category Identification(OCI.): Subsequently, in the second row of Table 2, we introduce the task of object category identiTrain Test AVG FT.
 - **p. 7 / 4.3. Ablation and Analysis - extractive body cue:** Effectiveness of tasks in the training paradigm.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The prediction of ManipLLM. Given the text prompt, RGB image, and depth map inputs, we obtain 3D contact point (x, y, z). Here, ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 | In the last row of Table 2 w/o AIA., we employ a straightforward control policy, which operates by moving directly to the desired position ... | definition/direction/unit from same section | p. 8 (4.3. Ablation and Analysis) |
 | Figure 2. Training details of ManipLLM. This paradigm contains four training tasks, enabling the model to recognize the current object (category-level), understand which regions ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 | We compare ManipLLM against four representative baselines, including Where2Act [23], UMPNet [33], Flowbot3D [6], and Implicit3D [39]. | comparison identity and matched condition | p. 6 (4.2. Quantitative Comparison) |
 | For fair comparison, we alter the used parallel gripper to suction gripper. | comparison identity and matched condition | p. 6 (4.2. Quantitative Comparison) |
 | Ablation analysis of each training task in the training paradigm and strategies in inference. fication, the first prompt in Fig. | comparison identity and matched condition | p. 7 (4.3. Ablation and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 |---|---|---|
 | body limitation/failure cue | Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle. | p. 8 (4.4. Real-world Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,19 +127,10 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 | Since we only have a language decoder (LLaMa) instead of a visual decoder, the model is not able to generate an affordance map directly. | p. 4 (3.1. Fine-tuning Strategy) |
 | 4, the reasoning process follows the three steps that are consistent with the training tasks. | p. 5 (3.1. Fine-tuning Strategy) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details), p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details), p. 7 (4.3. Ablation and Analysis), p. 7 (4.3. Ablation and Analysis), metrics p. 6 (4.1. Training Details), p. 7 (4.2. Quantitative Comparison), p. 7 (4.3. Ablation and Analysis), p. 6 (4.2. Quantitative Comparison), p. 1 (Figure/Table caption), p. 8 (4.4. Real-world Evaluation), baselines p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Quantitative Comparison), p. 6 (4.2. Quantitative Comparison), p. 7 (4.3. Ablation and Analysis), results p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Training Details), p. 6 (4.1. Training Details), p. 7 (4.2. Quantitative Comparison), p. 8 (4.4. Real-world Evaluation), p. 8 (4.4. Real-world Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

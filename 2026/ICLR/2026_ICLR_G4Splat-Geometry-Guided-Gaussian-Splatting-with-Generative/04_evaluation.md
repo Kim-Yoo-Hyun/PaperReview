@@ -47,8 +47,6 @@ Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기�
 - **p. 10 / 4.2 RESULTS - extractive body cue:** Experiments on the Mip-NeRF 360 dataset validate these advantages.
 - **p. 10 / 4.2 RESULTS - extractive body cue:** Furthermore, our method maintains robust performance in non-planar or less structured scenes because it is a strict enhancement of the base model.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose G4SPLAT, which integrates accurate geometry guidance with generative prior to enhance 3D scene reconstruction. Our method significantly improves geometry and appearance ...
@@ -82,8 +80,6 @@ Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기�
 | Notably, all baselines are augmented with MASt3R-SfM (Duisterhof et al., 2025) to provide robust geometric initialization and improve performance in sparse-view scenarios. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 | Any-View Scene Reconstruction As demonstrated in Figs. | definition/direction/unit from same section | p. 9 (4.2 RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기�
 | Our accelerated variant, Ours (DS), which downsamples the initial Gaussians, substantially reduces runtime while still outperforming all baselines. | comparison identity and matched condition | p. 10 (4.2 RESULTS) |
 | G4Splat outperforms baselines in both visible and unobserved regions, producing superior geometry with improved smoothness and minimal Gaussian artifacts. | comparison identity and matched condition | p. 25 (C.7 IMPLEMENTATION DETAILS) |
 | Baselines We compare our method with several representative baselines. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기�
 | body limitation/failure cue | This indicates that directly introducing generative prior fails to perform as expected and leads to shape-appearance ambiguities. | p. 10 (4.2 RESULTS) |
 | body limitation/failure cue | This stems from our design that applies tailored supervision on regions according to their geometric characteristics: for planar regions, reconstruction is improved by leveraging ... | p. 10 (4.2 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기�
 | The final per-pixel visibility V v(u) is computed as V v(u) = Q Y q=1 vq, (6) indicating that a pixel is considered visible ... | p. 6 (3.1 BACKGROUND) |
 | Subsequently, global 3D planes and plane-aware depths are recomputed, and the Gaussians are fine-tuned with updated supervision. | p. 7 (3.1 BACKGROUND) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Additionally, we present more experimental results in Appendix A, failure cases and discuss the method's limitations in Appendix D.
@@ -171,6 +150,5 @@ Replica와 ScanNet++를 포함한 장면에서 관측·미관측 영역의 기�
 - **p. 10 / 4.2 RESULTS - extractive body cue:** This stems from our design that applies tailored supervision on regions according to their geometric characteristics: for planar regions, reconstruction is improved by leveraging accurate ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 26 (C.7 IMPLEMENTATION DETAILS), p. 9 (4.2 RESULTS), metrics p. 27 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 5 (Figure/Table caption), baselines p. 8 (4 EXPERIMENTS), p. 9 (4.2 RESULTS), p. 9 (4.2 RESULTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 25 (C.7 IMPLEMENTATION DETAILS), p. 8 (4 EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (4.2 RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

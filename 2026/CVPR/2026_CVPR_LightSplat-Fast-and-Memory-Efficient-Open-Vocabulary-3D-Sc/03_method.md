@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.1. Overview), p. 3 (3.1. Overview), p. 3 (3.1
 - **p. 4 / 3.2. Index-Feature Mapping - extractive body cue:** To overcome the inefficiency of iterative per-Gaussian optimization, we replace mask-level semantic features with compact 2-byte indices.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.3. Indexed Feature Injection).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.1. Overview), p. 3 (3.1. Overview), p. 3 (3.1
 - **p. 4 / 3.2. Index-Feature Mapping - extractive body cue:** Each mask index acts as a key to its language feature in the index-feature mapping tensor.
 - **p. 1 / 1. Introduction - extractive body cue:** A main challenge in this task is bridging the gap between language and 3D representations.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.1. Overview), p. 3 (3.1. Overview), p. 3 (3.1
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** Since Dr.Splat does not provide inference code, we adopt the reported inference results from its paper and measure all other results ourselves.
 - **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** In addition, our approach reduces feature distillation to only 4.1 seconds and improves memory efficiency by up to 64×, while supporting fast inference at 500 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, assign, cluster, representative, language, feature, enabling, compact, interpretable, object-level, inference, illustrated, Fig, manage, semantics, efficiently, index-feature, mapping, associates, byte.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.1. Overview), p. 3 (3.1. Overview), p. 3 (3.1
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** For robustness evaluation beyond limited indoor environments, we introduce the DL3DV-OVS dataset.
 - **p. 6 / 4.2. 3D Object Selection - extractive body cue:** Such results highlight the flexibility and robustness of our method across diverse object scales and scene complexities.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Overview), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.3. Indexed Feature Injection), p. 5 (3.4. Context-Aware 3D Clustering), p. 5 (3.4. Context-Aware 3D Clustering), objective p. 4 (3.3. Indexed Feature Injection), p. 4 (3.2. Index-Feature Mapping), temporal p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Abstract), p. 2 (1. Introduction), p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.3. Indexed Feature Injection).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

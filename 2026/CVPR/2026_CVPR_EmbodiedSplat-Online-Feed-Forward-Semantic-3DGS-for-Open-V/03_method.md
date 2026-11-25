@@ -57,7 +57,6 @@ PDF body method statement (p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat),
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** However, it still requires heavy per-scene optimization, failing to achieve real-time semantic reconstruction (< 2FPS).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (1) They require per-scene optimization that cannot be gen), p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat), p. 5 (4.1. EmbodiedSplat), p. 6 (Method), p. 6 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat),
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** Nonetheless, it does not support online settings or full-scene reconstruction as it operates with only two or a few input views.
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** LSM [12] and SIU3R [49] propose language-embedded feed-forward 3DGS that can be easily generalized to the new scene.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat),
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** In contrast to existing memory-compression methods such as Auto-encoder [35], Product Quantization (PQ) Index [18] and per-scene optimized codebook [28, 48], our approach requires no ...
 - **p. 6 / Method - extractive body cue:** Since K ≪M and L is small, this is substantially cheaper than O(MD) which leads to much faster inference (cf.
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** To this end, we propose a novel Online Sparse Coefficient Field with CLIP Global Codebook which stores per-Gaussian semantics in a memory-efficient manner.
-- **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** In contrast to existing memory-compression methods such as Auto-encoder [35], Product Quantization (PQ) Index [18] and per-scene optimized codebook [28, 48], our approach requires no ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Prior, works, compress, CLIP, encoder-decoder, networks, Product, Quantization, Local, then, fused, paired, global, feature, st-1, following, confidenceweighted, average, Algorithm, Online.
 - **Relevant PDF headings:** 4. Our Methods (p. 3); Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat),
 - **p. 8 / 5.2. Ablation Studies - extractive body cue:** Splat [18] shares the same limitations.
 - **p. 7 / 5.1. Experimental Results - extractive body cue:** Our model shows strong semantics generalizability in ScanNet++ →ScanNet transfer with performance degradation remaining below 1 mIoU compared to ScanNet →ScanNet setting in Tab.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat), p. 5 (4.1. EmbodiedSplat), p. 2 (1) They require per-scene optimization that cannot be gen), p. 2 (1) They require per-scene optimization that cannot be gen), p. 6 (Method), objective p. 6 (Method), p. 6 (Method), p. 2 (1) They require per-scene optimization that cannot be gen), p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat), p. 2 (1) They require per-scene optimization that cannot be gen), temporal p. 6 (5. Experiments), p. 3 (3. Preliminaries), p. 4 (4.1. EmbodiedSplat), p. 7 (5.1. Experimental Results), p. 2 (1) They require per-scene optimization that cannot be gen), p. 4 (4.1. EmbodiedSplat).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

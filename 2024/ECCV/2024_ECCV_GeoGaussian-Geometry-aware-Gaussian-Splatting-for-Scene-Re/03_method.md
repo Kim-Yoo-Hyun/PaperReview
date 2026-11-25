@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 1 / Body text (section not recovered) - extractive body cue:** During the Gaussian Splatting optimization process, the scene geometry can gradually deteriorate if its structure is not deliberately preserved, especially in non-textured regions such as ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 2 / 1 Introduction - extractive body cue:** While these methods enable the rendering of new views in texture and depth based on 3D surface models, achieving photo-realistic rendering quality remains challenging.
 - **p. 3 / 1 Introduction - extractive body cue:** Through the learning rate and direction, the Gaussian map undergoes densification for continuous training.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 3 / 1 Introduction - extractive body cue:** Through the learning rate and direction, the Gaussian map undergoes densification for continuous training.
 - **p. 3 / 1 Introduction - extractive body cue:** GeoGaussian 3 spite a significant reduction in training time with these methods, improving rendering efficiency is still a pressing requirement for applications such as SLAM.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** optimization, module, geometrically, consistent, constraint, thin, ellipsoids, lying, smooth, areas, encouraging, nearest, neighbors, co-planar, jointly, optimized, widely, photometric, residuals, iterative.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 2 / 1 Introduction - extractive body cue:** However, in the Gaussian Splatting optimization process, the geometry of 3D Gaussian models lacks sufficient constraints especially in low-textured regions, leading to significant degradation in ...
 - **p. 12 / Figure/Table caption - extractive body cue:** Fig. 4: Statistics of the number of Gaussians in sequences of Replica. To make the comparison compact, more values are illustrated in Appendix. evident in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (Body text (section not recovered)), p. 3 (1 Introduction), objective p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (Body text (section not recovered)), temporal p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (2 Related Work), p. 4 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

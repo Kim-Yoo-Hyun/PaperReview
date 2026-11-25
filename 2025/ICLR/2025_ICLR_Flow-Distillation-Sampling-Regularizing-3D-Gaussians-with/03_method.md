@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD)): O
 - **p. 3 / 3 METHOD - extractive body cue:** Our FDS regulates the optimization of Gaussian radiance field by incorporating matching priors from the pretrained deep model.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3 METHOD), p. 4 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD)): O
 - **p. 3 / 3 METHOD - extractive body cue:** The generation of Radiance Flow and our proposed FDS loss, along with the equipped camera sampling scheme, are detailed in Sec.
 - **p. 4 / 3 METHOD - extractive body cue:** Similarly, the depth of pixel x is rendered using alpha blending.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD)): O
 - **p. 3 / 3 METHOD - extractive body cue:** Our FDS regulates the optimization of Gaussian radiance field by incorporating matching priors from the pretrained deep model.
 - **p. 8 / 4.2 RESULTS - extractive body cue:** On the Mushroom dataset, adding the FDS loss increases the training time by half an hour, which maintains the same level as baseline.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** FDS, regulates, optimization, Gaussian, radiance, field, incorporating, matching, priors, pretrained, deep, model, FLOW, DISTILLATION, SAMPLING, Given, collection, images, typically, employs.
 - **Relevant PDF headings:** 3 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD)): O
 - **p. 10 / 4.2 RESULTS - extractive body cue:** For example, in the third row, we use the next training input view as the sampling view, and replace the render result of next training ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Explanation of depth-adaptive translation radius. A fixed-radius camera sampling scheme may result in significantly different flow values (Flow 1 and Flow 2) in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), objective p. 4 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), temporal p. 10 (4.2 RESULTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 10 (4.2 RESULTS), p. 1 (1 INTRODUCTION), p. 3 (2 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

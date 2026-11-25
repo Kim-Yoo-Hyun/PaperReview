@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 5 / 4 Experiments - extractive body cue:** 4.6 we show the results of the experiments on the physical robot.
 - **p. 7 / 4 Experiments - extractive body cue:** 5The successful deployment on a physical robot (Sec.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Bit-flipping experi- ment. 0 10 20 30 40 50
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 | Figure 3: Learning curves for multi-goal setup. An episode is considered successful if the distance between the object and the goal at the end ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | 4.4 we analyze the effects of using shaped reward functions. | definition/direction/unit from same section | p. 5 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 | We have later discovered that training is possible without this trick if only the goal position is sometimes on the table and sometimes in ... | comparison identity and matched condition | p. 6 (4 Experiments) |
 | 7We also evaluated DQN (without HER) on our tasks and it was not able to solve any of them. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | 4.5 we perform ablation studies of different strategies S for choosing goals for replay, here we include the best version from Sec. | comparison identity and matched condition | p. 7 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 | body limitation/failure cue | Figure 5: Learning curves for the shaped reward r(s, a, g) = -/g -s′ object/2 (it performed best among the shaped rewards we have ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | After retraining the policy with gaussian noise (std=1cm) added to observations10 the success rate increased to 5/5. | p. 10 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 | All of these strategies have a hyperparameter k which controls the ratio of HER data to data coming from normal experience replay in the ... | p. 9 (4 Experiments) |
 | The top row shows the highest (across the training epochs) test performance and the bottom row shows the average test performance across all training ... | p. 9 (4 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4 Experiments - extractive body cue:** In this task a puck is placed on a long slippery table and the target position is outside of the robot's reach so that it ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 10 / 4 Experiments - extractive body cue:** After retraining the policy with gaussian noise (std=1cm) added to observations10 the success rate increased to 5/5.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 10 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), baselines p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), results p. 5 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

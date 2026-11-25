@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMEN
 - **p. 9 / 8.83 AP while avoiding its expensive mesh gen - extractive body cue:** 10 show that our method can reconstruct scenes and produce 3D-consistent instance clustering on these unseen domains, demonstrating strong generalization ability.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Following recent 3D instance segmentation works (Yin et al., 2024; Yang et al., 2024; Huang et al., 2024c), we provide a class-agnostic instance segmentation evaluation ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: IGGT: building upon our curated large-scale dataset InsScene-15K, we propose a novel end-to-end framework that enables geometric reconstruction and contextual understanding in a ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMEN
 | In contrast, feed-forward methods such as LSM (Multi-View) achieve faster processing but suffer from limited reconstruction accuracy and are unable to support tasks like ... | definition/direction/unit from same section | p. 9 (8.83 AP while avoiding its expensive mesh gen) |
 | As shown in the table, LSeg and OpenSeg, with better global context representation, achieve higher accuracy on background classes (e.g., cabinet), while CLIP, with ... | definition/direction/unit from same section | p. 9 (8.83 AP while avoiding its expensive mesh gen) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMEN
 | 2), where our method outperforms previous approaches by 4.31% and 4.97% in terms of 3D mIoU. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | The results show that our method is on par with VGGT on ScanNet, and outperforms VGGT on ScanNet++ by 0.14 in Abs. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | Compared with NeRF/3D-GS or other per-scene optimization methods, our approach substantially reduces reconstruction time. | comparison identity and matched condition | p. 9 (8.83 AP while avoiding its expensive mesh gen) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMEN
 | body limitation/failure cue | Future work may integrate stronger DETR-based (Cheng et al., 2022) instance heads and larger annotated datasets to improve segmentation accuracy. | p. 24 (A.13 LIMITATION) |
 | body limitation/failure cue | In contrast, baseline methods fail at this crucial task, yielding a T-mIoU below 30%, whereas our approach surpasses 60%. | p. 7 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMEN
 | We employ two downstream branches-Geometry Head and Instance Head-to decode the unified tokens Ti} into geometric and instance features, respectively. | p. 4 (3 METHODOLOGY) |
 | We follow VGGT to construct a 1B parameter large unified Transformer, designed to encode the multi-view images {Ii}N i=1 into a set of powerful ... | p. 4 (3 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 24 / A.13 LIMITATION - extractive body cue:** As a result, the accuracy of object boundaries in the clustered masks cannot yet rival that of state-of-the-art segmentation models (e.g., SAM2 (Ravi et al., ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMEN
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** In contrast, baseline methods fail at this crucial task, yielding a T-mIoU below 30%, whereas our approach surpasses 60%.
 
 - **Evidence anchors reviewed:** datasets p. 9 (8.83 AP while avoiding its expensive mesh gen), p. 7 (4 EXPERIMENTS), p. 17 (A.6 ADDITION INFORMATION OF OUR INSSCENE-15K DATASET), p. 17 (A.6 ADDITION INFORMATION OF OUR INSSCENE-15K DATASET), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 7 (4 EXPERIMENTS), p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 23 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (8.83 AP while avoiding its expensive mesh gen), results p. 20 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMENTS), p. 9 (8.83 AP while avoiding its expensive mesh gen), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 6 (Figure/Table caption
 - **p. 5 / 4 Experiments - extractive body cue:** We use five fold cross validation to acquire classification accuracy on this dataset. • ScanNet: 1513 scanned and reconstructed indoor scenes.
 - **p. 5 / 4 Experiments - extractive body cue:** Datasets We evaluate on four datasets ranging from 2D objects (MNIST [11]), 3D objects (ModelNet40 [31] rigid object, SHREC15 [12] non-rigid object) to real 3D ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Visualization of a scan captured from a Structure Sensor (left: RGB; right: point cloud). One issue that still remains is how to generate ...
@@ -78,21 +76,12 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 6 (Figure/Table caption
 | Figure 2: Illustration of our hierarchical feature learning architecture and its application for set segmentation and classification using points in 2D Euclidean space as ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 6: Scannet labeling results. [20] cap- tures the overall layout of the room correctly but fails to discover the furniture. Our ap- proach, ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Figure 5: Scannet labeling accuracy. To validate that our approach is suitable for large scale point cloud analysis, we also evaluate on semantic scene ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 6: Effects of randomness in FPS (using ModelNet40). C.4 Time and Space Complexity. Table 7 summarizes comparisons of time and space cost between ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 6 (Figure/Table caption
 | body limitation/failure cue | Figure 6: Scannet labeling results. [20] cap- tures the overall layout of the room correctly but fails to discover the furniture. Our ap- proach, ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Note that PointNet (vanilla) in Table 2 is the the version in [20] that does not use transformation networks, which is equivalent to our ... | p. 5 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -136,20 +123,11 @@ PDF body evaluation/result cue (p. 5 (4 Experiments), p. 6 (Figure/Table caption
 | Each local region in the output is abstracted by its centroid and local feature that encodes the centroid's neighborhood. | p. 4 (3 Method) |
 | [14] extracts geodesic moments as shape features and use a stacked sparse autoencoder to digest these features to predict shape category. | p. 7 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: Scannet labeling results. [20] cap- tures the overall layout of the room correctly but fails to discover the furniture. Our ap- proach, in ...
 - **p. 5 / 4 Experiments - extractive body cue:** Note that PointNet (vanilla) in Table 2 is the the version in [20] that does not use transformation networks, which is equivalent to our hierarchical ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 5 (4 Experiments), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 6 (Figure/Table caption), p. 13 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 5 (4 Experiments), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 14 (Figure/Table caption), p. 5 (4 Experiments), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

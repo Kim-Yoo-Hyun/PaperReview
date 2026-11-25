@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** 2.65 ± 0.18 4.11 ± 0.17 4.57 ± 0.16 Dense RoboPack 0.070 ± 0.005 1.12 ± 0.036 2.01 ± 0.050 Packing RoboPack (no tactile) 0.088 ...
 - **p. 10 / V. EXPERIMENTS - extractive body cue:** 9: Real-world planning performance on the box pushing task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Tactile sensing for dense packing. Tactile feedback is critical in tasks with heavy occlusion and rich contact, such as dense packing. (a) Humans ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 | Our method has stable performance even for hard ones: its 75-percentile error is lower than the mean error of all other methods. | definition/direction/unit from same section | p. 10 (V. EXPERIMENTS) |
 | Does integrating tactile sensing information from prior interactions improve future prediction accuracy? ii. | definition/direction/unit from same section | p. 7 (V. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 | All compared methods use the dynamics models to perform model-predictive control via sampling-based planning. | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
 | For the Dense Packing task, we would ideally compare our method against the baseline with the best results on nonprehensile box pushing: the physics-based ... | comparison identity and matched condition | p. 9 (V. EXPERIMENTS) |
 | While the physics-based simulator achieves the strongest performance of the baselines, it is not able to achieve as precise control as our method, taking ... | comparison identity and matched condition | p. 9 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 | body limitation/failure cue | Mathematically, the loss function is J (ˆot, og, at) = X x∈ˆot min y∈og //x -y//2 - X y∈og min x∈ˆot //x -y//2 + ... | p. 7 (IV. EXPERIMENTAL SETUP) |
 | body limitation/failure cue | Fig. 1: Tactile sensing for dense packing. Tactile feedback is critical in tasks with heavy occlusion and rich contact, such as dense packing. (a) ... | p. 1 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 | In particular, the state estimator can extract considerable information in the first 20 steps, which is approximately the average number of steps it takes ... | p. 8 (V. EXPERIMENTS) |
 | PCA visualizations at four distinct timesteps show that the physics parameters gradually form clusters by box type. | p. 9 (V. EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. EXPERIMENTAL SETUP - extractive body cue:** The test objects are more complex than the training set visually, geometrically, and physically, to showcase the generalizability of our model. yet the same visual ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p.
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Tactile sensing for dense packing. Tactile feedback is critical in tasks with heavy occlusion and rich contact, such as dense packing. (a) Humans ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), metrics p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), results p. 7 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 6 (IV. EXPERIMENTAL SETUP), p. 8 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -52,7 +52,6 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 - **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** In addition, we have explained and demonstrated the importance and advantages of object-centric point cloud input in our main paper.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 4 (A. Problem Formulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 - **p. 5 / B. Hand Motion Extraction and Injection - extractive body cue:** (73}) to extract segmented manipulated objects from the left initial image as our disturbance-free visual observations O, which will be further lifted to 3D point ...
 - **p. 5 / B. Hand Motion Extraction and Injection - extractive body cue:** Specifically, we inherit the abstraction of a consequent demonstration into discrete keyframes (a.k.a. keyposes) as in C2FARM [38] and PerAct (80).
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,16 +86,12 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 - **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** For the noise prediction network, we inherits hyperparameters from the ‘original Diffusion Policy [15], Specifically, to optimize for inference speed in all experiments, we use ...
 - **p. 5 / B. Hand Motion Extraction and Injection - extractive body cue:** Accordingly, we can just learn to predict the next best keyframe, and use a sampling-based motion planner to reach it during inference We thus simplify ...
 - **p. 8 / A. Experiment Setups - extractive body cue:** 4) Metries: We train all methods for 500 or 1,000 epochs and only save the last checkpoint for testing.
-- **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** For the noise prediction network, we inherits hyperparameters from the ‘original Diffusion Policy [15], Specifically, to optimize for inference speed in all experiments, we use ...
 - **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** At inference time, we also need to preprocess the binocular RGB observations to obtain the point cloud of manipulated objects.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Network, architecture, tasks, SIM, equivariant, PointNet, layers, hidden, dimensionality, feature, encoder, noise, prediction, inherits, hyperparameters, original, Diffusion, Policy, Specifically, optimize.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +111,13 @@ PDF body method statement (p. 17 (A. Implementation Details of Our BiDP), p. 17 
 - **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** Therefore, reducing the number of points to 1024 ‘can make training faster without hurting performance.
 - **p. 17 / A. Implementation Details of Our BiDP - extractive body cue:** 2) Network architecture: In all tasks, we use a SIM(3)- equivariant PointNet++ (96, 95] with 4 layers and hidden dimensionality 128 as the ‘feature encoder.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), p. 4 (B. Hand Motion Extraction and Injection), p. 4 (B. Hand Motion Extraction and Injection), p. 5 (B. Hand Motion Extraction and Injection), p. 5 (B. Hand Motion Extraction and Injection), objective p. 4 (A. Problem Formulation), p. 17 (A. Implementation Details of Our BiDP), p. 17 (A. Implementation Details of Our BiDP), temporal p. 8 (A. Experiment Setups), p. 17 (A. Implementation Details of Our BiDP), p. 7 (A. Experiment Setups), p. 7 (A. Experiment Setups), p. 8 (A. Experiment Setups), p. 17 (A. Implementation Details of Our BiDP).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

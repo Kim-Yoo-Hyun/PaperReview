@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 - **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD), p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 - **p. 1 / I. INTRODUCTION - extractive body cue:** (𝑠𝑡) Critic Net 512×256×128 Policy grad. 𝑎𝑡 Training in Simulator 3D-GS Model Current obs.
 - **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** By rolling training across these different environments, we finally trained a policy that can adapt to different gate positions and achieve generalizable navigation.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 - **p. 5 / 4) Curriculum training for generalizable navigation pol - extractive body cue:** We trained the policy in each environment for 5 times, 100 epochs per time; we return the learning rate to the initial value during every ...
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** We train each policy with the same reward function as in Table II and the same hyperparameters setting as Table VI for 600 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** differentiable, drone, dynamics, model, implemented, PyTorch, enables, efficient, Jacobian, computation, through, autograd, training, policy, GRaD-Nav, algorithm, Hybrid, simulation, DGS, pre-trained.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curr
 - **p. 7 / V. CONCLUSIONS - extractive body cue:** Limitations: Our method relies on hand-crafted reward shaping (e.g., trajectory waypoints), limiting it to singletask execution like gate traversal.
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** All of the failure cases without CENet on two trajectories "crash" due to unsuccessful obstacle avoidance.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol), p. 5 (4) Curriculum training for generalizable navigation pol), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (4) Curriculum training for generalizable navigation pol), temporal p. 5 (IV. EXPERIMENTAL RESULTS), p. 3 (III. METHOD), p. 4 (1) Perception), p. 6 (IV. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (II. BACKGROUND).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

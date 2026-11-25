@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VIS
 - **p. 3 / IV. VISUAL NAVIGATION WITH 3DGS - extractive body cue:** A* search considers collisions between the robot and the 3DGS as well as the loss function (2).
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 1 (I. INTRODUCTION), p. 2 (III. 3DGS AS ENVIRONMENT REPRESENTATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VIS
 - **p. 3 / IV. VISUAL NAVIGATION WITH 3DGS - extractive body cue:** During navigation, NoMaD generates spatial waypoints from the observation images and the synthesized target point-of-view images, and the robot follows these waypoints using Model Predictive ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** We leverage these capabilities of 3DGS to localize the start and goal poses from a given pair of images and connect them by synthesizing a ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VIS
 
 - **p. 2 / III. 3DGS AS ENVIRONMENT REPRESENTATION - extractive body cue:** By training the parameters of 3DGS to minimize a reprojection error across multiple views, we obtain a compact and renderable representation of the environment.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** NoMaD, consists, three, networks, subgoal, image-conditioned, vision, encoder, fenc, Oobs, Itarget, extracts, context, features, observation, target, image, diffusion, model, policy.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VIS
 - **p. 5 / 2) Pre-Collection - extractive body cue:** In contrast, NoMaD w/ ITG shows significant degradation in SPL as the image DB size decreases-especially in the Ribera and skokloster-castle environments-due to a reduced ...
 - **p. 6 / 2) Pre-Collection - extractive body cue:** In this case, while the baseline methods failed, GSplatVNM succeeded by synthesizing the missing point-of-view images for areas that were observed but not visited.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 4 (IV. VISUAL NAVIGATION WITH 3DGS), p. 2 (III. 3DGS AS ENVIRONMENT REPRESENTATION), p. 5 (2) Pre-Collection), objective p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (III. 3DGS AS ENVIRONMENT REPRESENTATION), p. 2 (A. ITG-based Visual Navigation), p. 3 (IV. VISUAL NAVIGATION WITH 3DGS), temporal p. 4 (V. EXPERIMENTS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (A. ITG-based Visual Navigation), p. 2 (A. ITG-based Visual Navigation), p. 3 (IV. VISUAL NAVIGATION WITH 3DGS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

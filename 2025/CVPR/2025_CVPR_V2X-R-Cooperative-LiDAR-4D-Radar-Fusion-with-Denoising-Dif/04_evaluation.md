@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 - **p. 7 / 5.3. Benchmark Analysis - extractive body cue:** We also pioneered the exploration of cooperative 4D radarbased methods on the V2X dataset.
 - **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** The pipeline of constructed cooperative LiDAR-4D radar fusion for weather-robust 3D object detection.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The advantages of the dense 4D radar point cloud in multi-agent view. Including weather robustness, fewer spatial er- rors, Doppler information, and geometric ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 | Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | As shown in Table 3, the performance of 4D radar-based models is generally lower than that of LiDAR-based models in Table 2. | definition/direction/unit from same section | p. 7 (5.3. Benchmark Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 | Figure 2. The performance of different methods in our V2X-R dataset. (a) Performance comparison of different modalities (L and 4DR represent LiDAR and 4D ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | The 3D mAP performance comparison under different weather conditions on the V2X-R dataset. 'L' and '4DR' represent LiDAR and 4D radar, respectively. '-' indicates ... | comparison identity and matched condition | p. 7 (5.3. Benchmark Analysis) |
 | Table 6. The 3D mAP performance comparison on K-Radar [30] dataset. Adverse represents average results under various adverse weather, including overcast, fog, rain, sleet, ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 | body limitation/failure cue | A compelling research direction is the full utilization of multi-agent and multi-modal information for robust 3D object detection. | p. 8 (6. Conclusion and Discussion) |
 | body limitation/failure cue | The input noisy LiDAR features are first subjected to a diffusion process, followed by T step denoising process with weather-robust 4D radar features as ... | p. 4 (3.4. Adverse Weather Simulation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 | We explored two implementations that extend the existing mature fusion to cooperative LiDAR-4D radar fusion: (a) Single-Agent Multi-Modal to Multi-Agent MultiModal (SA2MA). | p. 5 (3) Modal fusion. The weather-induced noisy LiDAR fea) |
 | All hyperparameters are detailed in the supplementary material. | p. 6 (4.4. Loss Function) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.3. Benchmark Analysis - extractive body cue:** This can be attributed to the significantly lower resolution of 4D radar than LiDAR, which is a limitation hindering the independent use of 4D radar ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 2 (Figure/Table 
 - **p. 4 / 3.4. Adverse Weather Simulation - extractive body cue:** The input noisy LiDAR features are first subjected to a diffusion process, followed by T step denoising process with weather-robust 4D radar features as conditions ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models), p. 3 (3.4. Adverse Weather Simulation), p. 3 (3.1. Simulator Selection), p. 6 (5.2. Benchmark Models), metrics p. 8 (Figure/Table caption), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 6 (5.2. Benchmark Models), p. 6 (5.2. Benchmark Models), p. 7 (5.3. Benchmark Analysis), p. 1 (Figure/Table caption), baselines p. 6 (5.2. Benchmark Models), p. 7 (5.3. Benchmark Analysis), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5.3. Benchmark Analysis), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (5.4. Multi-modal Diffusion Denoising Analysis), p. 7 (5.3. Benchmark Analysis), p. 7 (5.3. Benchmark Analysis), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

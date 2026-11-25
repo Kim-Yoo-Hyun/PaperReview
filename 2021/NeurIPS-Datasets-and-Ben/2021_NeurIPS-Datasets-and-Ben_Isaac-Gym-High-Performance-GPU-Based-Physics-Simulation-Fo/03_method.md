@@ -45,7 +45,6 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 - **p. 30 / A.3 Hyperparameters for Training PPO - extractive body cue:** The SH OpenAI LSTM experiment uses an LSTM layer of 1024 hidden dims followed by MLP of 512 dims, and a fixed learning rate of ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 - **p. 9 / 2 Background - extractive body cue:** Python users do not need to write custom CUDA or C++ kernels to compute observations, rewards, or actions.
 - **p. 11 / 2 Background - extractive body cue:** This implementation vectorizes observations and actions on GPU allowing us to take advantage of the parallelization provided by the simulator.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,18 +78,14 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 ## Training vs Inference
 
 - **p. 30 / A.3 Hyperparameters for Training PPO - extractive body cue:** Environment # Environments KL Threshold Mini-batch Size Horizon Length # PPO Epochs Hidden Units Training Steps Ant 4096 8e-3 32768 16 4 256, 128, 64 ...
-- **p. 30 / A.3 Hyperparameters for Training PPO - extractive body cue:** Environment # Environments KL Threshold Mini-batch Size Horizon Length # PPO Epochs Hidden Units Training Steps Ant 4096 8e-3 32768 16 4 256, 128, 64 ...
 - **p. 12 / 4. Robotic Hands - extractive body cue:** Key Experimental Details • Unless stated otherwise, all experiments are done on a system with a single NVIDIA A100 GPU and a single 3.7GHz Intel ...
 - **p. 11 / 2 Background - extractive body cue:** All environments are trained using the Proximal Policy Optimization algorithm [19], using rl_games, a highly-optimized GPU end-to-end implementation from [20].
 - **p. 20 / 4. Robotic Hands - extractive body cue:** 7 Summary We show that Isaac Gym is a high performance and high-fidelity framework that allows blistering fast training on many challenging simulated robotic environments ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Environment, Environments, Threshold, Mini-batch, Size, Horizon, Length, PPO, Epochs, Hidden, Units, Training, Steps, Ant, Humanoid, Ingenuity, ANYmal, Terrain, AMP, Franka.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,23 +105,13 @@ PDF body method statement (p. 30 (A.3 Hyperparameters for Training PPO)): Enviro
 - **p. 18 / 4. Robotic Hands - extractive body cue:** Also note that this variant does not use any randomisations.
 - **p. 18 / 4. Robotic Hands - extractive body cue:** This variant should make it possible to transfer the policy to the real world, mimicking the setup in [5].
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 30 (A.3 Hyperparameters for Training PPO), objective p. 30 (A.3 Hyperparameters for Training PPO), temporal p. 27 (A.2.2 Locomotion environments), p. 5 (1 GPU), p. 13 (4. Robotic Hands), p. 13 (4. Robotic Hands), p. 15 (4. Robotic Hands), p. 18 (4. Robotic Hands).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

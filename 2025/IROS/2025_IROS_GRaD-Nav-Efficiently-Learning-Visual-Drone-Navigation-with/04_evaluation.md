@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPER
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** 3: Example success trajectories in hybrid simulation environments achieved by the proposed method.
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** Without any prior environmentalrelated information like the map's name, gate position, or reference trajectory, the policy can only access the first person perspective RGB information ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Sample efficiency and wall-clock time comparison benchmark of different algorithms on drone's vision-based end-to-end navigation policy training.
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPER
 | Methods Success rate (sim. / real) Left gate Middle gate Right gate w/o RGB; w/ depth 4/10 / 1/10 7/10 / 1/10 5/10 / ... | definition/direction/unit from same section | p. 7 (IV. EXPERIMENTAL RESULTS) |
 | 0 1 2 3 4 5 6 7 Simulation Steps (106) 1e6 0 1000 2000 3000 4000 Reward 3.5 hours 22 hours 15 hours ... | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTAL RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPER
 | Our ablation test metrics include: (i) training reward, (ii) test reward, and (iii) test success rate. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTAL RESULTS) |
 | In real-world experiments, the drone was initialized under the same conditions for each test, and success was determined by whether it flew through the ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTAL RESULTS) |
 | 5: Comparison on drone's first person perspective image rendered with 3DGS in simulator (left) and captured with Intel Realsense D435 camera in real robot ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTAL RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPER
 | body limitation/failure cue | Future work includes (i) multi-task training with language input, (ii) improving generalization via stronger backbones and diverse environments, and (iii) extending to contact-rich tasks ... | p. 7 (V. CONCLUSIONS) |
 | body limitation/failure cue | As visual perception is our navigation policy's major sensor input, it is not surprising that the policy without visual observation cannot conduct successful navigation. | p. 6 (IV. EXPERIMENTAL RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPER
 | 3) Implementation datails: We used a standard opensource codebase, Nerfstudio [34] as our 3DGS training and inference platform. | p. 3 (III. METHOD) |
 | When parallel simulating 128 drones flying in a highly unstructured and cluttered area (room size ≈100 m2, 3DGS model size ≈ 1.5GB), setting the ... | p. 3 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. CONCLUSIONS - extractive body cue:** Limitations: Our method relies on hand-crafted reward shaping (e.g., trajectory waypoints), limiting it to singletask execution like gate traversal.
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPER
 - **p. 6 / IV. EXPERIMENTAL RESULTS - extractive body cue:** As visual perception is our navigation policy's major sensor input, it is not surprising that the policy without visual observation cannot conduct successful navigation.
 
 - **Evidence anchors reviewed:** datasets p. 7 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), metrics p. 6 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), baselines p. 6 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS), results p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS), p. 5 (IV. EXPERIMENTAL RESULTS), p. 6 (IV. EXPERIMENTAL RESULTS), p. 7 (IV. EXPERIMENTAL RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

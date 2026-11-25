@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 - **p. 5 / 6 Experiments - extractive body cue:** Here, we compare the surrogate objective LCLIP to several natural variations and ablated versions.
 - **p. 5 / 6 Experiments - extractive body cue:** 6.1 Comparison of Surrogate Objectives First, we compare several different surrogate objectives under different hyperparameters.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Plots showing one term (i.e., a single timestep) of the surrogate function LCLIP as a function of the probability ratio r, for positive ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 | 6.3 Showcase in the Continuous Domain: Humanoid Running and Steering To showcase the performance of PPO on high-dimensional continuous control problems, we train on ... | definition/direction/unit from same section | p. 7 (6 Experiments) |
 | Table 5: PPO hyperparameters used in Atari experiments. α is linearly annealed from 1 to 0 over the course of learning. B Performance on ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 | 6.1 Comparison of Surrogate Objectives First, we compare several different surrogate objectives under different hyperparameters. | comparison identity and matched condition | p. 5 (6 Experiments) |
 | 6.2 Comparison to Other Algorithms in the Continuous Domain Next, we compare PPO (with the "clipped" surrogate objective from Section 3) to several other ... | comparison identity and matched condition | p. 6 (6 Experiments) |
 | 0 1000000 500 0 500 1000 1500 2000 HalfCheetah-v1 0 1000000 0 500 1000 1500 2000 2500 Hopper-v1 0 1000000 0 2000 4000 6000 ... | comparison identity and matched condition | p. 7 (6 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,22 +132,13 @@ PDF body evaluation/result cue (p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6
 | Hyperparameters are provided in Table 4. | p. 7 (6 Experiments) |
 | For PPO, we used the hyperparameters from the previous section, with ϵ = 0.2. | p. 7 (6 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
 - **Evidence anchors reviewed:** datasets p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), metrics p. 6 (Figure/Table caption), p. 8 (6 Experiments), p. 6 (6 Experiments), p. 8 (6 Experiments), p. 12 (Figure/Table caption), p. 7 (6 Experiments), baselines p. 8 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 5 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), results p. 7 (6 Experiments), p. 6 (6 Experiments), p. 6 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

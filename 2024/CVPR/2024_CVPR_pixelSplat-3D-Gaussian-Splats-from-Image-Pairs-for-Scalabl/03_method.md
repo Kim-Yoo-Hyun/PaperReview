@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussi
 - **p. 2 / 1. Introduction - extractive body cue:** We significantly outperform previous black-box based light field transformers on the real-world ACID and RealEstate10k datasets while drastically reducing both training and rendering cost and ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2. Gaussian Parameter Prediction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (4.1. Resolving Scale Ambiguity), p. 4 (4.1. Resolving Scale Ambiguity).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussi
 - **p. 4 / 4.1. Resolving Scale Ambiguity - extractive body cue:** Note that this mechanism can be extended to more than two input views.
 - **p. 6 / 4.2. Gaussian Parameter Prediction - extractive body cue:** We outperform all baseline methods in terms PSNR, LPIPS, and SSIM for novel view synthesis on the real-world RealEstate10k and ACID datasets.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,11 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussi
 - **p. 2 / 1. Introduction - extractive body cue:** We significantly outperform previous black-box based light field transformers on the real-world ACID and RealEstate10k datasets while drastically reducing both training and rendering cost and ...
 - **p. 6 / 4.2. Gaussian Parameter Prediction - extractive body cue:** ACID RealEstate10k Inference Time (s) Memory (GB) PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ Encode ↓ Render ↓ Training ↓ ...
 - **p. 6 / 5.2. Results - extractive body cue:** Our method also uses significantly less memory per ray at training time.
-- **p. 6 / 4.2. Gaussian Parameter Prediction - extractive body cue:** ACID RealEstate10k Inference Time (s) Memory (GB) PSNR ↑ SSIM ↑ LPIPS ↓ PSNR ↑ SSIM ↑ LPIPS ↓ Encode ↓ Render ↓ Training ↓ ...
-- **p. 1 / Abstract - extractive body cue:** Our model features real-time and memory-efficient rendering for scalable training as well as fast 3D reconstruction at inference time.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, features, real-time, memory-efficient, rendering, scalable, training, well, fast, reconstruction, inference, time, consists, two-view, image, encoder, pixel-aligned, Gaussian, prediction, module.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +116,10 @@ PDF body method statement (p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussi
 - **p. 7 / 5.2. Results - extractive body cue:** We visualize point clouds using the version of our model that has been fine-tuned with a depth regularizer.
 - **p. 8 / 6. Conclusion - extractive body cue:** Without our sampling approach, our model falls into local minima that manifest themselves as speckling artifacts.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 3 (4. Image-conditioned 3D Gaussian Inference), p. 4 (4.1. Resolving Scale Ambiguity), p. 3 (4.1. Resolving Scale Ambiguity), p. 1 (Abstract), p. 2 (1. Introduction), objective p. 5 (4.2. Gaussian Parameter Prediction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (4.2. Gaussian Parameter Prediction), p. 1 (1. Introduction), p. 2 (1. Introduction), temporal p. 1 (Abstract), p. 1 (1. Introduction), p. 6 (5.2. Results), p. 6 (5.1. Experimental Setup), p. 8 (5.3. Ablations and Analysis), p. 2 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

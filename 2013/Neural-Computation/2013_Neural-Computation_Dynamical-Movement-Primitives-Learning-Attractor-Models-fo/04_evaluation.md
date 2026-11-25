@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 29 (3 Evaluations), p. 30 (3 Evaluations), p.
 - **p. 29 / 3 Evaluations - extractive body cue:** In the beginning, the robots started from immobility (ω = 0).
 - **p. 29 / 3 Evaluations - extractive body cue:** Dynamical Movement Primitives 355 to which the slow drumbeat of the robot was to synchronize.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 1: Exemplary time evolution of the discrete dynamical system. The pa- rameters wi have been adjusted to fit a fifth-order polynomial trajectory between start ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 29 (3 Evaluations), p. 30 (3 Evaluations), p.
 | The evaluations are intended to demonstrate the properties of our methodology, but also the domain-specific choices that need to be made. | definition/direction/unit from same section | p. 22 (3 Evaluations) |
 | The parameters wi are fitted to a demonstrated trajectory using locally weighted learning. | definition/direction/unit from same section | p. 23 (3 Evaluations) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 29 (3 Evaluations), p. 30 (3 Evaluations), p.
 | Those online modulations are among the most important properties offered by a dynamical systems approach, and these properties cannot easily be replicated without the ... | comparison identity and matched condition | p. 24 (3 Evaluations) |
 | By modulating the canonical system, one can influence the temporal evolution of our dynamical systems without affecting | comparison identity and matched condition | p. 26 (3 Evaluations) |
 | Without coupling terms, the dynamical system would just continue its time evolution, regardless of what happens to the point mass. | comparison identity and matched condition | p. 29 (3 Evaluations) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 29 (3 Evaluations), p. 30 (3 Evaluations), p.
 | body limitation/failure cue | In this section, we illustrate how both temporal and spatial coupling can be used together to model disturbance rejection, a property that is inherent ... | p. 29 (3 Evaluations) |
 | body limitation/failure cue | Thus, for instance, a variation at the end of a movement will not affect the parameter values at the beginning of a movement, which ... | p. 31 (3 Evaluations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 29 (3 Evaluations), p. 30 (3 Evaluations), p.
 | We evaluate our approach in the domain of motor control for robotics, where desired kinematic motor behaviors will be coded in attractor landscapes and ... | p. 4 (1 Introduction) |
 | Matlab code is provided as supplemental material to allow readers to explore properties of the system.2 Early versions of the dynamical system presented in ... | p. 4 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 24 / 3 Evaluations - extractive body cue:** Those online modulations are among the most important properties offered by a dynamical systems approach, and these properties cannot easily be replicated without the attractor ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 29 (3 Evaluations), p. 30 (3 Evaluations), p.
 - **p. 31 / 3 Evaluations - extractive body cue:** Thus, for instance, a variation at the end of a movement will not affect the parameter values at the beginning of a movement, which creates ...
 
 - **Evidence anchors reviewed:** datasets p. 22 (3 Evaluations), p. 22 (3 Evaluations), p. 24 (3 Evaluations), p. 26 (3 Evaluations), p. 26 (3 Evaluations), p. 27 (3 Evaluations), metrics p. 22 (3 Evaluations), p. 29 (3 Evaluations), p. 29 (3 Evaluations), p. 30 (3 Evaluations), p. 30 (3 Evaluations), p. 33 (Figure/Table caption), baselines p. 23 (3 Evaluations), p. 33 (Figure/Table caption), p. 9 (Figure/Table caption), p. 24 (3 Evaluations), p. 26 (3 Evaluations), p. 29 (3 Evaluations), results p. 29 (3 Evaluations), p. 30 (3 Evaluations), p. 22 (3 Evaluations), p. 9 (Figure/Table caption), p. 33 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

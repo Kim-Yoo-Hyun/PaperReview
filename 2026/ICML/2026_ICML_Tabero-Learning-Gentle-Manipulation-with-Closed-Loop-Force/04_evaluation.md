@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 - **p. 8 / 4.4. Ablation and Comparison of VTLA - extractive body cue:** To compare and conduct ablation experiments on different tactile injection methods and force control strategies, we evaluate tasks from Dataset B.
 - **p. 8 / 4.3. Effectiveness of Hybrid Controller - extractive body cue:** In Tabero Object task 1, the predicted force is shown in blue and the measured force in red: (a) 100% force, (b) 25% force, (c) ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of the proposed framework. Motivation: Current vision-language-action (VLA) systems and robotic arm-gripper setups based on synthetic data lack force feedback mechanisms, causing ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 | Table 12. Task completion performance and force data of the tactile gripper at 100% tactile force TASK n RATIO (%) MAX STEPS AG AA ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 | Figure 1. Overview of the proposed framework. Motivation: Current vision-language-action (VLA) systems and robotic arm-gripper setups based on synthetic data lack force feedback mechanisms, ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 | Therefore, in subsequent ablation tests, we constructed a Tabero subset to analyze the policy's performance under extreme conditions. | comparison identity and matched condition | p. 7 (4.2. Tactile Data Diversity Analysis) |
 | Ablation study on tactile modalities. | comparison identity and matched condition | p. 8 (4.4. Ablation and Comparison of VTLA) |
 | To compare and conduct ablation experiments on different tactile injection methods and force control strategies, we evaluate tasks from Dataset B. | comparison identity and matched condition | p. 8 (4.4. Ablation and Comparison of VTLA) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 | body limitation/failure cue | Dataset B also employs continuous control but reduces the force to 10%, representing an extreme low-force regime where slippage is likely. | p. 7 (4.2. Tactile Data Diversity Analysis) |
 | body limitation/failure cue | This degradation is especially pronounced in tasks requiring delicate manipulation, where lower grip forces strongly correlate with reduced success. | p. 6 (4.1. Cross-Platform Data Validation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 | The final joint velocity command ˙q is then computed via differential inverse kinematics. | p. 5 (3.5. Decoupled Force-Position Hybrid Controller) |
 | VTLA system: tactile inputs are encoded by specialized modules and fused with vision and language. | p. 5 (3.5. Decoupled Force-Position Hybrid Controller) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Tactile Data Diversity Analysis - extractive body cue:** 2, removing tactile feedback leads to complete failure in force modulation, highlighting its critical role in gentle manipulation.
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 8 (4.4. Ablation and Comparison of VTLA), p. 
 - **p. 6 / 4.1. Cross-Platform Data Validation - extractive body cue:** This degradation is especially pronounced in tasks requiring delicate manipulation, where lower grip forces strongly correlate with reduced success.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.3. Effectiveness of Hybrid Controller), metrics p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.5. Semantic Force Generalization), p. 8 (4.4. Ablation and Comparison of VTLA), p. 7 (4.2. Tactile Data Diversity Analysis), baselines p. 6 (4.2. Tactile Data Diversity Analysis), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.3. Effectiveness of Hybrid Controller), p. 7 (4.2. Tactile Data Diversity Analysis), p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), results p. 8 (4.4. Ablation and Comparison of VTLA), p. 8 (4.4. Ablation and Comparison of VTLA), p. 6 (4.1. Cross-Platform Data Validation), p. 6 (4.1. Cross-Platform Data Validation), p. 7 (4.2. Tactile Data Diversity Analysis), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

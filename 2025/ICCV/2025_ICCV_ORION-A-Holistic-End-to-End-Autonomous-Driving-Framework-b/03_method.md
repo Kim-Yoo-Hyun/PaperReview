@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 - **p. 4 / 3.1. QT-Former - extractive body cue:** Finally, we leverage two-layer MLP to convert the updated history queries ˆQh and current scene features Qs to corresponding history tokens xh and scene tokens ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Training Objectives), p. 5 (3.4. Training Objectives), p. 4 (3.1. QT-Former), p. 4 (3.1. QT-Former).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 - **p. 5 / 3.3. Generative Planner - extractive body cue:** Benefiting from the proposed method that bridges the gap between the reasoning and action space through distribution learning in latent space, our framework still demonstrates ...
 - **p. 3 / 3. Method - extractive body cue:** 3.2) subsequently combines the vision features with user instructions to generate a planning token.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** compress, extract, multi-view, image, features, derived, vision, encoder, while, achieving, long-term, information, modeling, introduce, QT-Former, querybased, temporal, module, Fig, there.
 - **Relevant PDF headings:** 2.2. Vision-Language Models (VLMs) (p. 2); 3. Method (p. 3); 3.2. Large Language Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner)
 - **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** For open-loop evaluation, we use the L2 distance error and the collision rate.
 - **p. 6 / 25.00 71.11 78.33 30.00 69.15 54.72(+16.12) - extractive body cue:** On the other hand, our model falls behind DriveAdapter in Merging and Give Way, which shows that ORION is not good at making lane-changing decisions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. QT-Former), p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former), p. 5 (3.3. Generative Planner), p. 5 (3.3. Generative Planner), p. 3 (3. Method), objective p. 5 (3.4. Training Objectives), p. 5 (3.4. Training Objectives), p. 4 (3.3. Generative Planner), p. 4 (3.1. QT-Former), temporal p. 4 (3.1. QT-Former), p. 4 (3.1. QT-Former), p. 2 (1. Introduction), p. 8 (4.5. Ablation Study), p. 3 (2.3. VLM for End-to-End Autonomous Driving), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

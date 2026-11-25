@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 - **p. 4 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Compared to existing benchmarks, ours features a unique combination of hand-designed tasks, dense rewards, and complex robots (e.g., multi-finger hands).
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 - **p. 3 / 2.1. Masked Visual Pre-training - extractive body cue:** Notice that the images are representative of everyday interactions making them well suited for our needs.
 - **p. 1 / 1. Introduction - extractive body cue:** The required movement types vary from simple reaching to object interactions.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 - **p. 5 / 3.6. Distributed Training - extractive body cue:** The result shows that self-supervised pre-training markedly improves representation quality for motor control tasks.
 - **p. 7 / 5.3. Ablations - extractive body cue:** For each model, we train 15 instances of the model with 3 learning rates and 5 seeds.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, proximal, policy, optimization, PPO, algorithm, Schulman, adopt, masked, modeling, self-supervision, objective-specifically, autoencoder, MAE, believe, promising, step, direction, release, benchmark.
 - **Relevant PDF headings:** 2) Our self-supervised approach consistently outperforms (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 - **p. 7 / 5.3. Ablations - extractive body cue:** The random model fails on 6 out of 8 PixMC tasks (0 success rate).
 - **p. 7 / 5.3. Ablations - extractive body cue:** We observed unstable training (the loss goes to NaN), and we decreased the learning rate until training successfully completed.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training), p. 2 (2) Our self-supervised approach consistently outperforms), p. 2 (2) Our self-supervised approach consistently outperforms), p. 4 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), objective p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), p. 4 (2.2. Learning Motor Control from Pixels), temporal p. 4 (3.4. Observations and Actions), p. 5 (4. Experimental Setup), p. 5 (4. Experimental Setup), p. 6 (5.2. Generalization), p. 6 (5.2. Generalization), p. 7 (5.3. Ablations).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

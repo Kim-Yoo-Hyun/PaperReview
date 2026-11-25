@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 - **p. 6 / III. EXPERIMENT - extractive body cue:** 5: Real-World Evaluations on different control modes.
 - **p. 6 / III. EXPERIMENT - extractive body cue:** The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios (e.g., when there are occlusions in the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: HOVER enables versatile humanoid control with a unified multi-mode command space. The versatile multi-mode command space supports kinematic position tracking (blue), local joint ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 | The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios (e.g., when there are occlusions in ... | definition/direction/unit from same section | p. 6 (III. EXPERIMENT) |
 | Fig. 6: HOVER shows robustness under control mode switches during locomotion and real-time teleoperation tests. serves for locomotion ability, and is used for navigation ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 | To address Q2, we compare with another multi-mode RL policy, which follows the same masking process on the goal commands, but trains the baseline ... | comparison identity and matched condition | p. 4 (III. EXPERIMENT) |
 | Fig. 2: Overview of HOVER distillation process. The HOVER policy is distilled from the Oracle policy through proprioception and command masking. The task commands ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Fig. 3: Comparison between prior work specialists (blue) and our generalist policy (green) under corresponding modes. The metrics used are: upper/lower joint error (rad), ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 | body limitation/failure cue | Future work will explore further developing an automated mode-switching module for real-world applications. | p. 6 (V. CONCLUSIONS) |
 | body limitation/failure cue | The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios (e.g., when there are occlusions in ... | p. 6 (III. EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,23 +125,14 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 | The retargeting procedure from human motion dataset [17] to humanoid motion dataset has three steps: Step-1: We first compute the keypoints positions of the ... | p. 3 (II. METHOD) |
 | Following [9], we stack these terms over the last 25 steps to represent the student's proprioceptive input. | p. 3 (II. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. CONCLUSIONS - extractive body cue:** Future work will explore further developing an automated mode-switching module for real-world applications.
 - **p. 6 / III. EXPERIMENT - extractive body cue:** The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios (e.g., when there are occlusions in the ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), metrics p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENT), p. 2 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), baselines p. 5 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 4 (III. EXPERIMENT), p. 2 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 6 (III. EXPERIMENT), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

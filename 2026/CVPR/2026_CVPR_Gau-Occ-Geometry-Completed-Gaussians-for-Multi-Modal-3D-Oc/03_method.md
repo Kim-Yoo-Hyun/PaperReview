@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 
 - **원문 대조:** Point-cloud feature와 image feature를 concatenate한 뒤 2-layer FFN이 Gaussian의 position offset, scale, rotation, semantic attribute를 갱신한다. Position은 기존 μ_i에 예측 offset을 더하고, refined Gaussian을 splat해 occupancy를 예측한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=5), §3.4 Gaussian Anchor Fusion, Eq. (17)).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (3. Proposed Approach), p. 5 (3.4. Gaussian Anchor Fusion (GAF)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 
 - **p. 1 / 1. Introduction - extractive body cue:** Recent advances in 3D Gaussian [24, 25] primitives demonstrate that such representations can model scene geometry and semantics with high expressiveness from multi-view observations [6, ...
 - **p. 3 / 3.2. LiDAR Completion Diffuser (LCD) - extractive body cue:** Given a raw LiDAR scan P = {Pi ∈R3}NP i=1, the completion objective is to generate a densified point cloud P′ = {P ′ i}NP ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** unify, precise, LiDAR, geometry, rich, image, semantics, Gaussian, Anchor, Fusion, GAF, geometry-conditioned, multi-modal, module, extracts, samples, aggregates, features, then, anchors.
 - **Relevant PDF headings:** 3. Proposed Approach (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of Gau-Occ. Sparse LiDAR scans are first completed by a pretrained LiDAR Completion Diffuser (LCD) to recover occluded geometry. The completed points ...
 - **p. 5 / 4.2. Quantitative Results - extractive body cue:** Gau-Occ also achieves clear gains on safety-critical classes such as bus, car, bicycle, and motorcycle, benefiting from precise Geo-VLAD resampling and geometry-aware FiLM modulation that ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 2 (3. Proposed Approach), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (3. Proposed Approach), p. 5 (3.4. Gaussian Anchor Fusion (GAF)), objective p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (3. Proposed Approach), p. 5 (3.4. Gaussian Anchor Fusion (GAF)), temporal p. 1 (1. Introduction), p. 8 (4.4. Ablation Study), p. 4 (3.2. LiDAR Completion Diffuser (LCD)), p. 1 (1. Introduction), p. 2 (2.1. Semantic Occupancy Prediction), p. 2 (2.2. LiDAR-Camera Fusion in 3D Perception).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

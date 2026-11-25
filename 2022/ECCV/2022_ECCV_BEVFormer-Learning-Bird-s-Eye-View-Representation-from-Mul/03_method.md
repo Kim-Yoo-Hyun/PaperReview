@@ -47,7 +47,6 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 - **p. 16 / A.4 Spatial Cross-Attention - extractive body cue:** However, the computational cost of this straightforward way is unaffordable.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 16 (A.3 Task Heads).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 - **p. 16 / A Implementation Details - extractive body cue:** In this section, we provide more implementation details of the proposed method and experiments.
 - **p. 16 / A.3 Task Heads - extractive body cue:** Map Query BEV Feature 𝐵𝑡 Mask Result Multi-Head Attention Add & Norm Feed Forward Refined Query Add & Norm Query Next Layer Attention Maps Figure ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 - **p. 16 / A.3 Task Heads - extractive body cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
 - **p. 16 / A.1 Traning Strategy - extractive body cue:** Following previous methods [47, 56], we train all models with 24 epochs, a batch size of 1 (containing 6 view images) per GPU, a learning ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Following, object, queries, keep, predicted, boxes, highest, confidence, scores, during, inference, Map, Query, BEV, Feature, Mask, Result, Multi-Head, Attention, Add.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +104,10 @@ PDF body method statement (p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads)): Foll
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 1: 3D detection results on nuScenes test set. ∗notes that VoVNet-99 (V2-99) [21] was pre-trained on the depth estimation task with extra data [31]. ...
 - **p. 9 / C R101 - extractive body cue:** However, the jointly trained model does not perform as well as individually trained models for road and lane segmentation, which is a common phenomenon called ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.3 Task Heads), p. 16 (A.3 Task Heads), objective p. 16 (A.3 Task Heads), p. 16 (A.4 Spatial Cross-Attention), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 4 (2 Related Work), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

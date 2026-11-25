@@ -42,8 +42,6 @@
 - **p. 7 / VI. EXPERIMENTAL EVALUATION - source paraphrase:** We study this question by directly evaluating π₀, with comparisons to other robot foundation models.
 - **p. 7 / VI. EXPERIMENTAL EVALUATION - extractive body cue:** These tasks take between 5 and 20 minutes to complete.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our generalist robot policy uses a pre-trained vision-language model (VLM) backbone, as well as a diverse cross- ‘embodiment dataset with a variety of ...
@@ -73,8 +71,6 @@
 | Fig. 1: Our generalist robot policy uses a pre-trained vision-language model (VLM) backbone, as well as a diverse cross- ‘embodiment dataset with a variety ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 4: Overview of our dataset: The pre-training mixture consists of a subset of OXE [10] and the 7 dataset. We use a subset ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -82,13 +78,6 @@
 | Fig. 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | We study this question by directly evaluating π₀, with comparisons to other robot foundation models. | comparison identity and matched condition | p. 7 (VI. EXPERIMENTAL EVALUATION) |
 | How well does xo follow language commands? ‘These experiments compare xo to xo-Small, a smaller version of our ‘model without VLM initialization, to evaluate ... | comparison identity and matched condition | p. 7 (VI. EXPERIMENTAL EVALUATION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@
 | body limitation/failure cue | DISCUSSION, LIMITATIONS, AND FUTURE WORK | p. 11 (C. Learning new dexterous tasks) |
 | body limitation/failure cue | This presents challenges due to the egg shape, slipperiness, and the need for careful placement. | p. 10 (C. Learning new dexterous tasks) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -135,23 +122,14 @@
 | Following the standard late fusion VLM recipe [3, 11, 30], image encoders embed the robot's image observations into the same embedding space as language ... | p. 4 (IV. THE x MODEL) |
 | 7: Out-of-box evaluation results: We evaluate π₀ trained for the full 700k steps, a version trained for 160k steps that ‘matches the number of ... | p. 8 (A. Evaluating the base model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / C. Learning new dexterous tasks - extractive body cue:** DISCUSSION, LIMITATIONS, AND FUTURE WORK
 - **p. 10 / C. Learning new dexterous tasks - extractive body cue:** This presents challenges due to the egg shape, slipperiness, and the need for careful placement.
 
 - **Evidence anchors reviewed:** datasets p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION), metrics p. 9 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION), p. 7 (VI. EXPERIMENTAL EVALUATION), results p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (VI. EXPERIMENTAL EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -54,7 +54,6 @@ PDF body method statement (p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-
 - **p. 4 / 3.2. Annotation - extractive body cue:** Given updated 3D bounding boxes annotated with orientations, we derive the language prompts that describe the spatial relationships among objects following SR3D [1].
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 6 (4.2. Sparse & Dense Decoder), p. 5 (4. Embodied Perceptron), p. 5 (4.1. Multi-Modal 3D Encoder), p. 6 (4.2. Sparse & Dense Decoder), p. 4 (3.2. Annotation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-
 - **p. 2 / Dataset - extractive body cue:** We establish two series of benchmarks on EmbodiedScan: 1) fundamental 3D perception benchmarks focusing on traditional tasks, including 3D detection and semantic occupancy prediction under ...
 - **p. 5 / 4.1. Multi-Modal 3D Encoder - extractive body cue:** Formally, the input aggregated points P ∈RNp×3 (first voxelized) and Ni images as I ∈RNi×H×W are processed via a Minkowski ResNet and a shared 2D ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-
 - **p. 6 / 4.2. Sparse & Dense Decoder - extractive body cue:** We use cross-entropy loss and sceneclass affinity loss [55] for training.
 - **p. 3 / 3.1. Data Collection & Processing - extractive body cue:** We first unified the format into a general multi-view case to fit Matterport3D by adding randomness when loading images but maintaining sequential continuity for ScanNet ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, multi-level, sparse, visual, features, text, encoder, multi-modal, fusion, transformer, model, vision-language, information, interactions, Next, first, present, aggregate, multi-view, inputs.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-
 - **p. 8 / 5.2. Language-Grounded Benchmark - extractive body cue:** As an initial step, this setup takes multi-view RGB-D images as input without considering differing prompt timestamps.
 - **p. 2 / Dataset - extractive body cue:** On the other hand, since we cannot trivially obtain the reconstruction of a new environment, models trained with scene-level input are not directly applicable in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.1. Multi-Modal 3D Encoder), p. 5 (4.1. Multi-Modal 3D Encoder), p. 6 (4.2. Sparse & Dense Decoder), p. 1 (Abstract), p. 4 (3.2. Annotation), p. 5 (4.1. Multi-Modal 3D Encoder), objective p. 6 (4.2. Sparse & Dense Decoder), p. 6 (4.2. Sparse & Dense Decoder), p. 5 (4. Embodied Perceptron), p. 5 (4.1. Multi-Modal 3D Encoder), p. 4 (3.2. Annotation), temporal p. 1 (Abstract), p. 2 (Dataset), p. 2 (Dataset), p. 3 (3.1. Data Collection & Processing), p. 3 (2. Related Work), p. 4 (3.1. Data Collection & Processing).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

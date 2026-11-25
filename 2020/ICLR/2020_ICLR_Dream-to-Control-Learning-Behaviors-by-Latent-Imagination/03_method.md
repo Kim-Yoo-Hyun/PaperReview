@@ -58,7 +58,6 @@ PDF body method statement (p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5
 - **원문 대조:** 실제 환경의 visual-control 문제를 continuous-action POMDP로 정의하고 episode의 expected reward 합을 최대화하는 agent를 목표로 한다. §3의 learned-model imagination objective와 구분한다. ([PDF p. 2](https://arxiv.org/pdf/1912.01603#page=2), §2 Control with World Models, Reinforcement learning).
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5 (B Sequence length), p. 1 (1 INTRODUCTION), p. 1 (Abstract), p. 2 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5
 - **p. 6 / B Sequence length - extractive body cue:** We can also encourage mutual information between model states and observations by instead predicting the states from the images (Guo et al., 2018).
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** For this, we predict state values and actions in the learned latent space as summarized in Figure 1.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** The training time for our Dreamer implementation is about 3 hours per 106 environment steps on the control suite, compared to 11 hours for online ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** We use a single Nvidia V100 GPU and 10 CPU cores for each training run.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** apply, representation, model, first, images, hold-out, trajectories, predict, forward, steps, latent, dynamics, given, only, actions, outlined, Figure, detailed, Algorithm, Dreamer.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 6: Performance comparison to existing methods. Dreamer inherits the data-efficiency of PlaNet while exceeding the asymptotic performance of the best model-free agents. After 5 ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Image observations for 5 of the 20 visual control tasks used in our experiments. The tasks pose a variety of challenges including contact ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 5 (B Sequence length), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 4 (B Sequence length), objective p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 3 (1 INTRODUCTION), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 2 (1 INTRODUCTION), p. 5 (B Sequence length), p. 9 (6 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

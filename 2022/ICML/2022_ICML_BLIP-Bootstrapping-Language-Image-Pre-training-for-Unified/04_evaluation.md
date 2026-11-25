@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 - **p. 4 / 4.1. Pre-training Details - extractive body cue:** We use the same pre-training dataset as Li et al.
 - **p. 5 / 4.2. Effect of CapFilt - extractive body cue:** BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation Pre-train dataset Bootstrap Vision backbone Retrieval-FT (COCO) Retrieval-ZS (Flickr) Caption-FT (COCO) Caption-ZS (NoCaps)
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We use a Captioner (Cap) to generate synthetic captions for web images, and a Filter (Filt) to remove noisy captions. collected from the ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 | Table 1. Evaluation of the effect of the captioner (C) and filter (F) for dataset bootstrapping. Downstream tasks include image-text retrieval and image captioning ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 3. Comparison between different parameter sharing strategies for the text encoder and decoder during pre-training. In Figure 4, we show some example captions ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 | Table 8. Comparison with state-of-the-art methods on VQA and NLVR2. ALBEF performs an extra pre-training step for NLVR2. SimVLM† uses 13× more training data ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 7. Comparison with state-of-the-art image captioning methods on NoCaps and COCO Caption. All methods optimize the cross- entropy loss during finetuning. C: CIDEr, ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 9. Comparison with state-of-the-art methods on VisDial v1.0 validation set. VD-ViLBERT† (Murahari et al., 2020) pre-trains ViLBERT (Lu et al., 2019) with additional ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 | body limitation/failure cue | Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | Table 6. Zero-shot image-text retrieval results on Flickr30K. layers except for SA leads to better performance compared to not sharing, while also reducing the ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,20 +125,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 4 (4.2. Effect o
 | Image-Text Contrastive Loss (ITC) activates the unimodal encoder. | p. 3 (3.2. Pre-training Objectives) |
 | Image-Text Matching Loss (ITM) activates the imagegrounded text encoder. | p. 3 (3.2. Pre-training Objectives) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 13. Continue training the pre-trained model offers less gain compared to training a new model with the bootstrapped dataset. from the previous pre-trained model, ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 6. Zero-shot image-text retrieval results on Flickr30K. layers except for SA leads to better performance compared to not sharing, while also reducing the model ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (4.2. Effect of CapFilt), p. 4 (4.1. Pre-training Details), p. 5 (4.2. Effect of CapFilt), metrics p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (4.1. Pre-training Details), p. 4 (4.2. Effect of CapFilt), p. 7 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 4 (4.2. Effect of CapFilt), p. 4 (4.2. Effect of CapFilt), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

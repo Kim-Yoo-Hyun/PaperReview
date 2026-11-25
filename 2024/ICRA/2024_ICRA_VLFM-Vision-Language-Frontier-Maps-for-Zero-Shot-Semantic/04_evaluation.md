@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 - **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** We evaluate our approach using the Habitat [5] simulator on the validation splits of three different datasets of 3D scans of real-world environments; Gibson [6], ...
 - **p. 5 / V. EXPERIMENTAL SETUP - extractive body cue:** HM3D's validation split contains 2000 episodes across 20 scenes and 6 object categories.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: VLFM achieves state-of-the-art semantic Object Goal Navigation performance in unfamiliar environments, without task-specific training, pre-built maps, or prior knowledge of the surroundings. It ...
@@ -72,8 +70,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 | Fig. 1: VLFM achieves state-of-the-art semantic Object Goal Navigation performance in unfamiliar environments, without task-specific training, pre-built maps, or prior knowledge of the surroundings. ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: VLFM constructs an occupancy map of the scene identifying frontiers of explored space as well as a value map of the likelihood ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 | We evaluate VLFM by comparing it to several state-of-the-art (SOTA) techniques for zero-shot object navigation: CLIP on Wheels (CoW) [1], ESC [2], SemUtil [3], ... | comparison identity and matched condition | p. 5 (V. EXPERIMENTAL SETUP) |
 | Fig. 1: VLFM achieves state-of-the-art semantic Object Goal Navigation performance in unfamiliar environments, without task-specific training, pre-built maps, or prior knowledge of the surroundings. ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Our method outperforms previous zero-shot methods and performs competitively against methods directly trained on the Object Navigation task. | comparison identity and matched condition | p. 5 (V. EXPERIMENTAL SETUP) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,21 +104,11 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 | body limitation/failure cue | VLFM has a number of limitations that could be addressed by future work. | p. 6 (VII. CONCLUSION) |
 | body limitation/failure cue | So, we cannot leverage this map in sequentially executed semantic navigation tasks to different objects or in executing other navigation tasks requiring targets specified ... | p. 6 (VII. CONCLUSION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | An episode is defined as successfully completed if STOP is called within 1 m of any instance of the target object in 500 or ... | p. 2 (III. PROBLEM FORMULATION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -137,9 +116,8 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table
 - **p. 6 / VII. CONCLUSION - extractive body cue:** So, we cannot leverage this map in sequentially executed semantic navigation tasks to different objects or in executing other navigation tasks requiring targets specified by ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), metrics p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), results p. 5 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

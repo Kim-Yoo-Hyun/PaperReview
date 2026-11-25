@@ -46,8 +46,6 @@
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** When training the network with 75 demonstrations, we observe that pretraining the model with selected data from our dataset, despite differences in camera viewpoints, robot ...
 - **p. 3 / III. RH20T DATASET - extractive body cue:** Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our RH20T dataset. We adopt multiple robots and setup diverse environments for the data collection. The robot manipulation episodes include multi-modal ...
@@ -78,8 +76,6 @@
 | Fig. 1: Overview of our RH20T dataset. We adopt multiple robots and setup diverse environments for the data collection. The robot manipulation episodes include ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Fig. 3: Statistics on the execution time of different robotic manip- ulations in our dataset. largest in our community at present. da) Data Hierarchy: ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | Consequently, this paper primarily focuses on demonstrating the dataset's effectiveness in enhancing the transferability of a baseline model within a few-shot learning framework. | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | This comparison highlights the comprehensiveness of our dataset, which is the most extensive dataset for robotic manipulation to date. | comparison identity and matched condition | p. 3 (Dataset) |
 | []] provides a comparison between our dataset and previous representative publicly available datasets. a) Diversity: The diversity of RH20T encompasses multiple aspects. | comparison identity and matched condition | p. 3 (III. RH20T DATASET) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@
 | body limitation/failure cue | The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models ... | p. 6 (V. DISCUSSION AND CONCLUSION) |
 | body limitation/failure cue | These results demonstrate that leveraging the diverse training data from our dataset enhances the adaptability and robustness of the robotic manipulation model. | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 - 표 IV의 같은 환경 비교는 설정별 시행 20회, 표 V의 물체·배경 일반화 비교는 설정별 시행 10회다. [PDF 6쪽](https://arxiv.org/pdf/2307.00595v2#page=6)
@@ -145,20 +132,11 @@
 | We make our tele-operation pretty intuitive and the average training time is less than 1 hour. | p. 4 (200 Hz) |
 | Robot Gripper 6DoF F/T Sensor Tactile Cfg 1 Flexiv Dahuan AG95 OptoForce N/A Cfg 2 Flexiv Dahuan AG95 ATI Axia80-M20 N/A URS ATI Axia80-M20 ... | p. 3 (III. RH20T DATASET) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. DISCUSSION AND CONCLUSION - extractive body cue:** The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models is ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** These results demonstrate that leveraging the diverse training data from our dataset enhances the adaptability and robustness of the robotic manipulation model.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET), metrics p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Dataset), p. 3 (III. RH20T DATASET), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

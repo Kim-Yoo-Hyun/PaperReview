@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1
 - **p. 5 / 3.4. Loss Functions - extractive body cue:** With the optimal matching computed by the Hungarian algorithm [23], the mask classification loss Lmask-cls is computed following the matching cost.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Loss Functions), p. 5 (3.4. Loss Functions), p. 4 (3.3. Transformer Occupancy Decoder).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1
 - **p. 3 / 3.2. Dual-path Transformer Encoder - extractive body cue:** Next, the dual-path outputs are fused through the sigmoid-weighted summation.
 - **p. 4 / 3.3. Transformer Occupancy Decoder - extractive body cue:** With the above interactions, each processed feature volume is enhanced by the multi-scale semantic information, which facilitates the following transformer decoder.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1
 
 - **p. 5 / 3.3. Transformer Occupancy Decoder - extractive body cue:** More specifically, we first compute the class frequencies nc ∈RNc from the training set, where Nc is the number of classes.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** pipeline, consists, image, encoder, extracting, multi-scale, features, image-to-3D, transformation, lifting, volumes, transformer-based, encoder-decoder, obtaining, semantic, predicting, occupancy, backbone, network, neck.
 - **Relevant PDF headings:** 3. Approach (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1
 - **p. 9 / 5. Conclusion - extractive body cue:** It indicates that the predicted semantic occupancy from TPVFormer, despite reasonable visualizations, fails to contain accurate 3D positions.
 - **p. 7 / 4.4. Main Results - extractive body cue:** Note that our method requires only one model to perform both the LiDAR segmentation and the semantic occupancy prediction, while the TPVFormer [21] model trained ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Overview), p. 2 (3.1. Overview), p. 2 (3.1. Overview), p. 3 (3.2. Dual-path Transformer Encoder), p. 4 (3.3. Transformer Occupancy Decoder), p. 4 (3.3. Transformer Occupancy Decoder), objective p. 5 (3.4. Loss Functions), p. 5 (3.4. Loss Functions), temporal p. 6 (4.1. Datasets), p. 6 (4.2. Implementation Details), p. 1 (1. Introduction), p. 1 (Abstract), p. 3 (3.2. Dual-path Transformer Encoder), p. 3 (3.2. Dual-path Transformer Encoder).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** Beyond co-training with spatial grounding data, where the VLM backbone is updated via next-token prediction on image-prompt pairs, we further introduce spatial prompting for action ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Given a task instruction, the VLM planner produces latent plans through explicit spatial prompting, which then effectively guides the action expert to generate control signals. ...
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** For action sequences, we augment the standard task instruction with a spatial prompt that elicits the VLM's internal reasoning about scene geometry; for example, the ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** By reformatting all robotic data into a unified QA structure consistent with web-scale pre-training, we enable the VLM to develop a spatially-aware representation space under ...
 - **p. 1 / ABSTRACT - extractive body cue:** We introduce ST4VLA, a dual-system Vision-Language-Action framework that leverages Spatial Guided Training to align action learning with spatial priors in VLMs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** dual-system, end-to-end, VLA, framework, Qwen2, foster, alignment, between, optimization, dynamics, spatial, grounding, objective, action, policy, contrast, simple, prompting, effectively, mitigates.
 - **Relevant PDF headings:** C.3 Backbone-Agnostic Generalization and Training Method Contribution (p. 18); C.3 BACKBONE-AGNOSTIC GENERALIZATION AND TRAINING METHOD CONTRIBUTION (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 32 / Figure/Table caption - extractive body cue:** Figure 17: Showcases for real-world large scale pick-and-place manipulation w/wo co-training. We further evaluate our framework in real-world cluttered tabletop environments. As shown in Figure ...
 - **p. 7 / 3 EXPERIMENTS - extractive body cue:** (2025), underwent extensive pretraining on large corpora of action data, we ensured a fair comparison by post-training our model on a large-scale dataset of 244K ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), objective p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), temporal p. 8 (3 EXPERIMENTS), p. 4 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

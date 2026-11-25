@@ -61,7 +61,6 @@
 - **원문 대조:** c(s,s′)는 s에서 successor s′로 이동하는 양의 edge cost이며 infinity를 허용한다. LPA*는 현재 graph topology와 edge cost를 알고 start–goal shortest path를 계산하는 설정이다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Lifelong Planning A*, graph notation).
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -82,7 +81,6 @@
 - **원문 대조:** LPA*의 h(s,s_goal)은 goal distance를 근사하며 nonnegative이고 consistent해야 한다. 본문은 goal에서 0인 조건과 edge를 따른 triangle inequality를 명시한다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Lifelong Planning A*, heuristic assumptions).
 - **p. 4 / Abstract - extractive body cue:** D* Lite searches from the goal vertex to the start vertex and thus its g-values are estimates
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Lifelong, Planning, Algorithm, main, function, LPA, first, calls, Initialize, search, problem, resulting, Lite, easy, understand, analyze, implements, same, behavior, Stentz.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@
 - **원문 대조:** Old queue key가 새 CalculateKey보다 작으면 제거한 vertex를 새 priority로 재삽입한다. 이는 start가 이동해 heuristic 값이 바뀌어도 queue 전체를 매번 재정렬하지 않기 위한 처리다. ([PDF p. 5](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=5), Heap Reordering, Figure 3 lines 13′–14′).
 - **p. 6 / Abstract - extractive body cue:** We decided not to include D* Lite without both heuristic and incremental search in the comparison because it performs so poorly that graphing its performance ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (Abstract), p. 1 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), objective p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), p. 1 (Abstract), p. 2 (Abstract), temporal p. 2 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

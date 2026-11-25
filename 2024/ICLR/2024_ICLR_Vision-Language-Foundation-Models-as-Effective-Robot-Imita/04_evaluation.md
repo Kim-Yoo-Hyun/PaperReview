@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Pre-train denotes the original performance of VLM on the pre-training VL dataset, Best Avg.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Note that the success rate of RoboFlamingo on subsequent tasks dropped more than HULC does.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison among RoboFlamingo and existing vision-language manipulation solutions. co-fine-tuning on extensive vision-language data to fully showcase its effectiveness. Consequently, there is an urgent ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption
 | In each experiment, the robot is required to successfully complete sequences of up to five language instructions consecutively. | definition/direction/unit from same section | p. 6 (5 EXPERIMENTS) |
 | Figure 8: The performance of VLMs at each epoch on ABC →D split. B.5 QUALITATIVE EXAMPLES We visualize the task frames and analyze how ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption
 | This may be due to our approach directly using word tokens as input during training, which can result in larger variations for synonymous sentences ... | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
 | Tab. 4. We can see that the enriched instructions do have the same meaning as the original one, yet they are organized with different ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | 5.4 ABLATION STUDIES In this section, we conduct ablation studies for RoboFlamingo to answer the following questions: 1) How does RoboFlamingo perform with different ... | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption
 | body limitation/failure cue | Due to the lack of real-robot data, this paper does not deploy on real-world robotics. | p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?) |
 | body limitation/failure cue | 6 CONCLUSION AND FUTURE WORK This paper explores the potential of pre-trained vision-language models in advancing languageconditioned robotic manipulation. | p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption
 | Len. denotes the best performance of the average success length of VLMs within 5 epochs, and Mean Avg. | p. 8 (5 EXPERIMENTS) |
 | All variants are trained and evaluated for the same training epochs. | p. 9 (2) Does vision-language (VL) pre-training improve downstream robotic tasks?) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 2) Does vision-language (VL) pre-training improve downstream robotic tasks? - extractive body cue:** We hypothesize that this may stem from the fact that the VLM (OpenFlamingo) has only seen image-text pairs during pre-training and cannot process consequent frames ...
@@ -163,9 +142,8 @@ PDF body evaluation/result cue (p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption
 - **p. 9 / 2) Does vision-language (VL) pre-training improve downstream robotic tasks? - extractive body cue:** 6 CONCLUSION AND FUTURE WORK This paper explores the potential of pre-trained vision-language models in advancing languageconditioned robotic manipulation.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), metrics p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 17 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), baselines p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 14 (Figure/Table caption), p. 8 (5 EXPERIMENTS), results p. 7 (5 EXPERIMENTS), p. 8 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 16 (Figure/Table caption), p. 14 (Figure/Table caption), p. 8 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

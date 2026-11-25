@@ -50,7 +50,6 @@ PDF body method statement (p. 4 (3.2. The Base Vision-Language Model), p. 4 (3.2
 - **p. 5 / 10. For complete dataset specifications and training hyper - extractive body cue:** During this phase, we optimize the LLM backbone, projector, and depth transformer while keeping the vision tower frozen, maintaining the same training setup as the ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.3. Training Procedures), p. 4 (3.3. Training Procedures).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 4 (3.2. The Base Vision-Language Model), p. 4 (3.2
 - **p. 1 / 1. Introduction - extractive body cue:** Unlike vanilla VLAs, CoT-VLA (bottom) can also leverage action-less datasets like EPIC-KITCHEN-100 [27] to enhance subgoal image generation ability, unlocking the potential of using abundant ...
 - **p. 4 / 3.3. Training Procedures - extractive body cue:** Our training objective has two key components: subgoal image generation with causal attention (2) and action generation with full attention (3).
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.2. The Base Vision-Language Model), p. 4 (3.2
 - **p. 5 / 10. For complete dataset specifications and training hyper - extractive body cue:** During this phase, we optimize the LLM backbone, projector, and depth transformer while keeping the vision tower frozen, maintaining the same training setup as the ...
 - **p. 8 / 4.4. Better Visual Reasoning Helps - extractive body cue:** Recent advancement in fast image generation or fast LLM inference techniques could potentially improve the throughput of the model [7, 31, 33, 57, 73] and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** VILA-U, model, trained, resolution, images, where, image, encoded, tokens, residual, depth, utilizes, quantization, improve, representational, capacity, discrete, visual, features, incorporating.
 - **Relevant PDF headings:** 3.2. The Base Vision-Language Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 4 (3.2. The Base Vision-Language Model), p. 4 (3.2
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** While the dataset was incorporated into the pretraining phase alongside OpenX, we performed additional task-specific fine-tuning exclusively on Bridge-V2 until achieving a training action prediction ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between vanilla VLA and CoT-VLA frameworks. Prior VLA models (top) directly predict robot ac- tions from task inputs without explicit reasoning steps ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. The Base Vision-Language Model), p. 4 (3.2. The Base Vision-Language Model), p. 5 (10. For complete dataset specifications and training hyper), p. 5 (10. For complete dataset specifications and training hyper), objective p. 4 (3.3. Training Procedures), p. 4 (3.3. Training Procedures), p. 5 (10. For complete dataset specifications and training hyper), temporal p. 2 (1. Introduction), p. 7 (4.3. Ablation Study), p. 8 (4.4. Better Visual Reasoning Helps), p. 8 (4.4. Better Visual Reasoning Helps), p. 4 (3.3. Training Procedures), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

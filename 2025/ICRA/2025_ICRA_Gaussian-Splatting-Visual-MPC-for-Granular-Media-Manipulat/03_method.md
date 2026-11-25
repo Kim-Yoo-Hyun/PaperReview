@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 - **p. 4 / IV. OUR APPROACH - extractive body cue:** The cost function used in the planning algorithm is the following: c(Zt,Ztarget) = 1 /P/ ∑ x∈P /dt(x)-dtarget(x)/2 (16) where P is a pre-defined set ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 - **p. 4 / IV. OUR APPROACH - extractive body cue:** 1) and we execute the optimized action sequence in a closed-loop fashion.
 - **p. 4 / IV. OUR APPROACH - extractive body cue:** After the first action in the sequence is executed by the robot, we re-run the planning algorithm to generate a new action sequence.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 - **p. 4 / IV. OUR APPROACH - extractive body cue:** In the end, we obtain a set of Gaussians that represents the next image: ˆZt+1 = {(ci t,αi t , ˆR i t+1, ˆgi t+1,si ...
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** Both of the rollout results show that the dynamics model prediction is accurate for a few steps. • NFD[29] uses a fully convolutional neural network ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** form, node, features, GNN, consists, encoder, fenc, representation, Then, have, message-passing, fmsg, allows, multi-step, message, passing, mean, Niqj, where, nodes.
 - **Relevant PDF headings:** IV. OUR APPROACH (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,23 +106,13 @@ PDF body method statement (p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 
 - **p. 6 / VI. LIMITATIONS - extractive body cue:** This limitation stems from the difficulty in accurately reconstructing such tiny particles using Gaussian splatting, which struggles to maintain precision at smaller scales.
 - **p. 6 / VII. CONCLUSION - extractive body cue:** Future work could extend this framework to other non-rigid materials, further enhancing the capabilities of robotic systems in dynamic tasks.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), objective p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), p. 3 (IV. OUR APPROACH), p. 4 (IV. OUR APPROACH), temporal p. 4 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 4 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

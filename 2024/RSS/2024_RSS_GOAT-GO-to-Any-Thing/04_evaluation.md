@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figu
 - **p. 5 / V. RESULTS - extractive body cue:** We evaluate the ability of the GOAT agent to tackle the GOAT task, i.e., reach a sequence of unseen multimodal object instances in unseen environments.
 - **p. 5 / V. RESULTS - extractive body cue:** To generate an episode within a home, we sampled a random sequence of 5-10 goals split equally among language, image, and category goals among all ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. GOAT (GO to Any Thing) task. The GOAT task requires lifelong learning, meaning taking advantage of past experience in the same environment, for ...
@@ -74,8 +72,6 @@ PDF body evaluation/result cue (p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figu
 | Fig. 3. Perception and memory update. The perception system processes RGB-D input to infill depth, segment object instances, project them into a top-down semantic ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Fig. 4. (A) Object Instance Memory. We cluster object detections, along with image views in which they were observed, into instances using their location ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -84,13 +80,6 @@ PDF body evaluation/result cue (p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figu
 | We report evaluation metrics per goal within an episode with two standard deviation error bars. b) Baselines: We compare GOAT to three baselines: 1. | comparison identity and matched condition | p. 5 (V. RESULTS) |
 | Fig. 6. Navigation performance based on sequential goal count. GOAT performance improves with experience in the environment: from a 60% success rate (0.2 SPL) ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Fig. 7. Online evaluation qualitative trajectories. We compare methods on the same sequence of 5 goals (top) in the same environment. GOAT localizes all ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -119,22 +108,12 @@ PDF body evaluation/result cue (p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figu
 | body limitation/failure cue | The most common failure is a language goal being matched against the an object of the correct class, but the wrong instance (i.e. | p. 10 (VII. DISCUSSION) |
 | body limitation/failure cue | a) Modularity allows GOAT to Achieve Robust GeneralPurpose Navigation in the Real World: The GOAT system as a whole is a robust navigation platform, ... | p. 8 (VII. DISCUSSION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | A local policy finally computes actions towards the long-term goal. b) Perception: Figure 3 shows the perception system. | p. 3 (IV. GOAT METHOD) |
 | We project the first-person semantic segmentation into a point cloud, bin the point cloud into a 3D semantic voxel map, and finally sum over ... | p. 3 (IV. GOAT METHOD) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -143,9 +122,8 @@ PDF body evaluation/result cue (p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figu
 - **p. 8 / VII. DISCUSSION - extractive body cue:** a) Modularity allows GOAT to Achieve Robust GeneralPurpose Navigation in the Real World: The GOAT system as a whole is a robust navigation platform, achieving ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. RESULTS), p. 5 (V. RESULTS), metrics p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 5 (V. RESULTS), p. 5 (V. RESULTS), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

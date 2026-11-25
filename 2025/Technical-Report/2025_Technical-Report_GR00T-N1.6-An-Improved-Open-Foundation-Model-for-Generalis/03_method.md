@@ -41,7 +41,6 @@ PDF body method statement (p. 1 (Model and Data Improvements), p. 1 (Model and D
 - **p. 1 / Model and Data Improvements - extractive body cue:** The VLM is trained on both general vision-language tasks and embodied reasoning tasks like next action prediction.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -59,7 +58,6 @@ PDF body method statement (p. 1 (Model and Data Improvements), p. 1 (Model and D
 - **p. 2 / Discussion - extractive body cue:** More fine-grained subtask annotation can improve language following, but not yet reaching robust generalization.
 - **p. 2 / Discussion - extractive body cue:** Multi-task language following and out-of-distribution task generalization continue to be challenging for current VLA models.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -74,13 +72,10 @@ PDF body method statement (p. 1 (Model and Data Improvements), p. 1 (Model and D
 
 - **p. 1 / Experiments - extractive body cue:** In the following robot experiments, we further post-train on small task-specific datasets; typically 10K-30K steps with global batch size 1K or less.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Predicts, state-relative, action, chunks, most, embodiments, rather, absolute, joint, angles, EEF, positions, Removes, post-VLM, layer, transformer, adapter, VLM, trained, general.
 - **Relevant PDF headings:** Model and Data Improvements (p. 1).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -97,20 +92,10 @@ PDF body method statement (p. 1 (Model and Data Improvements), p. 1 (Model and D
 - **p. 2 / Discussion - extractive body cue:** More fine-grained subtask annotation can improve language following, but not yet reaching robust generalization.
 - **p. 2 / Discussion - extractive body cue:** Test-time and train-time RTC provide performance boosts to motion smoothness and robustness during asynchronous rollouts.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Model and Data Improvements), p. 1 (Model and Data Improvements), objective p. 1 (Model and Data Improvements), temporal p. 1 (Experiments), p. 1 (Model and Data Improvements), p. 2 (Discussion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

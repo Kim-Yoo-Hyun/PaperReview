@@ -65,8 +65,6 @@ PDF body contribution framing (p. 8 (B. Policy Steering for Open-World Alignment
 | body cue at p. 8 | (4) Classfier-Dyn-Latent, which is similar to VLM-DynLat-Category, but instead of relying ‘on a VLM, it directly takes the ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | B2 revealed that our system's primary failures stem from the world model's imprecise "imagination", exacerbated by our limited ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (1. InTRopucTION), p. 1 (1. InTRopucTION), p. 3 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), interface p. 3 (1. InTRopucTION), p. 4 (1. InTRopucTION), p. 2 (1. InTRopucTION), p. 2 (1. InTRopucTION), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

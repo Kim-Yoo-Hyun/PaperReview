@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 - **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** We compare per-dataset results in Fig.
 - **p. 9 / 7.1. Zero-Shot Single Point Valid Mask Evaluation - extractive body cue:** SAM yields higher results on 16 of the 23 datasets, by as much as ∼47 IoU.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We aim to build a foundation model for segmentation by introducing three interconnected components: a prompt- able segmentation task, a segmentation model (SAM) ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 | We computed IoU between each pair and found that 94% of pairs have greater than 90% IoU (and 97% of pairs have greater than ... | definition/direction/unit from same section | p. 6 (5. Segment Anything Dataset) |
 | Ground truth masks in most datasets do not enumerate all possible masks, which can make automatic metrics unreliable. | definition/direction/unit from same section | p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 | We compare to a strong baseline implemented as a ViTDet [62] detector (with cascade Mask R-CNN [48, 11] ViT-H). | comparison identity and matched condition | p. 10 (7.3. Zero-Shot Object Proposals) |
 | Table 3: recall at 50% precision (R50) is high, at the cost of precision. SAM naturally lags behind state-of-the-art meth- ods that learn the ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
 | manual + semi automatic + automatic automatic only Training data stages 50 60 70 mIoU (23 datasets) 1 point (oracle) 1 point 0.1M 1M ... | comparison identity and matched condition | p. 12 (7.6. Ablations) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 | body limitation/failure cue | Our foray into the text-to-mask task is exploratory and not entirely robust, although we believe it can be improved with more effort. | p. 12 (8. Discussion) |
 | body limitation/failure cue | As MIAP does not contain perceived skin tone annotations, we use a proprietary dataset that contains annotations for the perceived Fitzpatrick skin type [36], ... | p. 8 (6. Segment Anything RAI Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 | We compute the standard average recall (AR) metric on LVIS v1 [44]. | p. 10 (7.3. Zero-Shot Object Proposals) |
 | Further image encoder scaling does not appear fruitful at this time. | p. 12 (7.6. Ablations) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 8. Discussion - extractive body cue:** It can miss fine structures, hallucinates small disconnected components at times, and does not produce boundaries as crisply as more computationally intensive methods that "zoom-in", ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 9 (7.1. Zero-Shot Single Point Valid Mask Eva
 - **p. 8 / 6. Segment Anything RAI Analysis - extractive body cue:** As MIAP does not contain perceived skin tone annotations, we use a proprietary dataset that contains annotations for the perceived Fitzpatrick skin type [36], which ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5. Segment Anything Dataset), p. 8 (7. Zero-Shot Transfer Experiments), p. 6 (5. Segment Anything Dataset), p. 6 (5. Segment Anything Dataset), p. 7 (5. Segment Anything Dataset), p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), metrics p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 5 (Figure/Table caption), p. 24 (Figure/Table caption), p. 10 (7.2. Zero-Shot Edge Detection), p. 6 (5. Segment Anything Dataset), baselines p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (Figure/Table caption), p. 10 (7.3. Zero-Shot Object Proposals), p. 10 (Figure/Table caption), p. 12 (7.6. Ablations), results p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 9 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 12 (7.6. Ablations), p. 8 (7.1. Zero-Shot Single Point Valid Mask Evaluation), p. 10 (7.4. Zero-Shot Instance Segmentation), p. 10 (7.3. Zero-Shot Object Proposals).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

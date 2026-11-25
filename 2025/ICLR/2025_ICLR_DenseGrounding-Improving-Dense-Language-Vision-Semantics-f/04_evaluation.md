@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 - **p. 15 / A.4 ROBUSTNESS ANALYSIS - extractive body cue:** This process is particularly challenging due to differences in camera settings, scene layouts, and object characteristics in visual data across various datasets, which can significantly ...
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** Future research should explore integrating human-agent interaction, allowing the model to query users for clarification, and improving adaptability and robustness in real-world scenarios.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) illustrates how limited context due to arbitrary descriptions leads to insufficient lan- guage semantics. (b) highlights the issue of losing fine-grained semantics ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 | Figure 1: (a) illustrates how limited context due to arbitrary descriptions leads to insufficient lan- guage semantics. (b) highlights the issue of losing fine-grained ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Figure 4: Performance of our method on each class in validation set of EmbodiedScan 14 | definition/direction/unit from same section | p. 14 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 | For inference, our model processes descriptions directly, without any enhancement, aligning with our baseline methods for fair comparison. | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
 | The results clearly demonstrate that our method consistently outperforms the baseline, especially in scenarios with limited data availability. | comparison identity and matched condition | p. 15 (A.3 ANALYSIS ON LIMITED DATA SCENARIO) |
 | As shown in Table 6, our method significantly outperforms the baseline in this zero-shot setting, demonstrating superior robustness and the ability to generalize effectively ... | comparison identity and matched condition | p. 15 (A.4 ROBUSTNESS ANALYSIS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 | body limitation/failure cue | In cases where the baseline model struggles to disambiguate between multiple similar objects, DenseGrounding successfully detects the correct target by leveraging its enriched textual ... | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | Figure 5: Comparison of DenseGrounding and EmbodiedScan on limited data scenario. A.4 ROBUSTNESS ANALYSIS | p. 15 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 | With the encoded 2D features from each view, HSSE performs view-level semantic aggregation to capture view-level global semantics within each view. | p. 6 (4 METHOD) |
 | F v Q = Pool(F v Ref) ∈Rhs×ws×Cs (2) Subsequently, we compute the cross-attention between the pooled queries and the reference feature to aggregate ... | p. 6 (4 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** Due to resource limitations, we reserve the full training dataset for baseline comparisons on the test set and leaderboard submissions to ensure a fair and ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 1
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 5: Comparison of DenseGrounding and EmbodiedScan on limited data scenario. A.4 ROBUSTNESS ANALYSIS
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 15 (A.4 ROBUSTNESS ANALYSIS), metrics p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 15 (A.3 ANALYSIS ON LIMITED DATA SCENARIO), p. 15 (A.4 ROBUSTNESS ANALYSIS), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 15 (A.4 ROBUSTNESS ANALYSIS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

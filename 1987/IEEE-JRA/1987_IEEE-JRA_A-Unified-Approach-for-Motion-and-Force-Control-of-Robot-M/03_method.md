@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 - **p. 3 / I. Inrropucrion - extractive body cue:** Control systems using specifications based only on the matrices 3, and 5, will require costly geometric, kinematic, and dynamic transformations between the reference frame and ...
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 2 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 - **p. 6 / V. Constnainep Motion Operarions - extractive body cue:** The unified operational command vector for end-effector dynamic decoupling, motion, and active force control can be
 - **p. 2 / I. Inrropucrion - extractive body cue:** The directions of force control are described by the force specification matrix 3, associated with 3 and defined by
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** real-time, computation, coefficients, then, paced, rate, configuration, changes, much, lower, mechanism, dynamics, leads, following, architecture, control, system, However, task, specification.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrr
 - **p. 6 / V. Constnainep Motion Operarions - extractive body cue:** where Ag(q) and 6,(g, 4) are defined similarly to A(q) and (q, 4) with J(g) being replaced by Jo(q).
 - **p. 7 / V. Constnainep Motion Operarions - extractive body cue:** Force rate feedback has also been used in F. ‘A more detailed description of the components involved in this control system, real-time implementation issues, and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 6 (V. Constnainep Motion Operarions), p. 2 (I. Inrropucrion), objective p. 2 (I. Inrropucrion), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 3 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion), temporal p. 5 (IV. Exp-Errecror Morton Controt), p. 1 (I. Inrropucrion), p. 1 (Abstract), p. 2 (I. Inrropucrion), p. 2 (I. Inrropucrion), p. 3 (I. Inrropucrion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

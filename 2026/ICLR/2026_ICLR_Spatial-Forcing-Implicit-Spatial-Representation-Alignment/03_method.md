@@ -58,7 +58,6 @@
 - **p. 7 / 2.1 PRELIMINARIES - extractive body cue:** Our VLM backbone (Karamcheti et al., 2024) contains 32 causal attention layers.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@
 - **p. 3 / 2.1 PRELIMINARIES - extractive body cue:** VGGT (Wang et al., 2025b) is a feedforward model that directly outputs various 3D attributes of a scene, including camera parameters, point maps, depth maps, ...
 - **p. 4 / 2.1 PRELIMINARIES - extractive body cue:** 3, the probing results show that visual embeddings learned solely from 2D images do not produce meaningful spatial structures, suggesting a limited capacity of the ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@
 - **p. 7 / 2.1 PRELIMINARIES - extractive body cue:** In contrast, constraining shallow features may cause the already aligned representations to gradually lose spatial information in subsequent layers.
 - **p. 3 / 2.1 PRELIMINARIES - extractive body cue:** The vision modality consists of multi-view images captured by robots, which are transformed into N visual tokens {xV t }N t=1 through pretrained visual encoders ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, VLA, models, generate, action, tokens, conditioned, preceding, visual, linguistic, Laction, Agt, where, denotes, training, loss, provide, signals, rich, spatial.
 - **Relevant PDF headings:** 2 METHOD (p. 3); A THE USE OF LARGE LANGUAGE MODELS (LLMS) (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@
 - **p. 19 / Figure/Table caption - extractive body cue:** Table 4: The Ablation of Supervising Different Transformer Layers of VLA. Aligned Layerth Spatial Object Goal Long Average 1
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 9: Additional ablation experiments for more complex spatial tasks. Then, the visual tokens of VLA are fed into the trainable VLA downstream heads to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2.1 PRELIMINARIES), p. 4 (2.1 PRELIMINARIES), p. 5 (2.1 PRELIMINARIES), p. 4 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES), p. 8 (2.1 PRELIMINARIES), objective p. 5 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES), p. 4 (2.1 PRELIMINARIES), p. 4 (2.1 PRELIMINARIES), p. 7 (2.1 PRELIMINARIES), temporal p. 3 (2.1 PRELIMINARIES), p. 3 (2.1 PRELIMINARIES), p. 5 (2.1 PRELIMINARIES), p. 6 (2.1 PRELIMINARIES), p. 6 (2.1 PRELIMINARIES), p. 8 (2.1 PRELIMINARIES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

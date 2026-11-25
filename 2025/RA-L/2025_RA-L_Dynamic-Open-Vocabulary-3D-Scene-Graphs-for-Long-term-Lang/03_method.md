@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** The refined poses Ipose k are then updated using the transformation Ipose k ←T icpIpose k .
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 2 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 6 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 - **p. 6 / III. METHOD - extractive body cue:** In the first row, we cropped the point cloud input into anyGrasp within a certain range around the target object, allowing anyGrasp to focus more ...
 - **p. 6 / III. METHOD - extractive body cue:** This heuristic strategy is only activated when AnyGrasp can't provide a suitable grasp, ensuring optimal interaction with the object's geometry 2) Place: We first obtain ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** efficient, leverages, RGB-D, observations, update, volumetric, representation, accordingly, Then, apply, advanced, Open-Vocal, segmentation, model, segment, regions, RGB, images, extract, semantic.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,25 +111,14 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. ME
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4. Two proposed grasp strategies in DovSG. In the first row, we cropped the point cloud input into anyGrasp within a certain range around ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Overview of Our DovSG System. DovSG is a mobile robotic system designed to perform long-term tasks in real-world environments. It can detect changes ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. To address the challenge of scene perception, our per- ception module integrates advanced tools such as Recognize- Anything [6], Grounding DINO [7], Segment ...
-- **p. 7 / IV. EXPERIMENTS - extractive body cue:** In the "Positional Shift" scenario, the residual effect of CLIP features can occasionally mislead the robot into navigating toward the object's historical location, ultimately causing ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 4 (III. METHOD), p. 6 (III. METHOD), p. 6 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 2 (I. INTRODUCTION), p. 2 (II. RELATED WORKS), p. 3 (III. METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

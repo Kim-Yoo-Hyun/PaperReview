@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 5 / IV. HuMANOIDBENcH - extractive body cue:** Further details about each of the tasks, including task initialization and reward functions, are provided in Appendix, Section B-E.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 2 (I. INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 4 / I. INTRODUCTION - extractive body cue:** For both position and torque control, the action space is 6-dimensional including the two hands, and controlled at 50 Hz.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** horizon task with a large action space.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** present, extensive, benchmarking, state-of-the-art, reinforcement, leaning, algorithms, require, domain, knowledge, hierarchical, aecelerate, algorithmic, research, humanoid, robots, high-dimensional, simulated, robot, learning.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 10: Failure Scenarios. This figure presents a selection of common failures that occur while training our benchmark tasks.
 - **p. 9 / B. Results - extractive body cue:** For low-level reaching policy training, we employ a simplified Hi model that only considers collisions between feet and ground in the MuJoCo MIX environments, as ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), objective p. 6 (IV. HuMANOIDBENcH), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (I. INTRODUCTION), p. 5 (IV. HuMANOIDBENcH), temporal p. 6 (IV. HuMANOIDBENcH), p. 1 (I. INTRODUCTION), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

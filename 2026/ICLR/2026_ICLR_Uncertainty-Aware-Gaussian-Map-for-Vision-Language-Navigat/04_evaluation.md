@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** 4.4 DIAGNOSTIC EXPERIMENT For thorough examination, we conduct a series of ablative studies on the val unseen split of R2R [1] and REVERIE [28].
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** In contrast, row #3 leverages only the uncertainty information (i.e., Table 4: Ablation studies on val unseen split of R2R [1] and REVERIE [28].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Motivation. Previous VLN agents typically ignore perceptual uncertainty when making decisions. As a result, they often confuse visually similar structures (e.g., multiple doors) ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (
 | Table 13: Effectiveness of Uncertainty Information on R2R val unseen split. The uncertainty infor- mation encoded in our 3D Value Map is rendered into ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 | These improvements of 3.94% in RGS and 3.31% in RGSPL clearly demonstrate the effectiveness of our 3D Value Map for accurate navigation and precise ... | definition/direction/unit from same section | p. 7 (4 EXPERIMENT) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (
 | On the val unseen split, it achieves an SR of 78% compared to 76% from VER [17] and improves SPL from 65% to 66%, ... | comparison identity and matched condition | p. 8 (4 EXPERIMENT) |
 | Row #4 reports the scores of our full framework. i) Row #1 vs #2: SGM leads to notable performance improvements against the baseline (e.g., ... | comparison identity and matched condition | p. 9 (4 EXPERIMENT) |
 | This demonstrates that the agent benefits from the geometric structure and semantic cues within SGM, achieving stronger navigation performance. ii) Row #1 vs #3: ... | comparison identity and matched condition | p. 9 (4 EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (
 | body limitation/failure cue | Table 12: Robustness to observation noise on R2R val unseen split. We evaluate an epistemic only variant (geometric + semantic), an aleatoric only variant ... | p. 21 (Figure/Table caption) |
 | body limitation/failure cue | To control SGM scale, we apply pruning thresholds τe and τα to filter out Gaussians with small scale (∥ei∥2 < τe) or low opacity ... | p. 9 (4 EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (
 | (See details in Appendix.) 3.5 IMPLEMENTATION DETAILS Topological Memory. | p. 6 (3 METHOD) |
 | (See details in Appendix.) Runtime Analysis. | p. 7 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 7: Failure Cases. (a) Our agent stops once "the sofa" comes into view, as the current observation already provides sufficient evidence of the target, ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** To control SGM scale, we apply pruning thresholds τe and τα to filter out Gaussians with small scale (∥ei∥2 < τe) or low opacity (αi ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), metrics p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 20 (Figure/Table caption), baselines p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), results p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

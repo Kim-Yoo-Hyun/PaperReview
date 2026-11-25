@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** (2025b) ✓ 4.98 64.2 56.9 51.9 „ 26330K JanusVLN (Ours) ✓ 4.78 65.2 60.5 56.8 10692K Table 2: Comparison with SOTA methods on VLN-CE RxR ...
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Furthermore, as the memory size increases, the inference overhead of VGGT grows exponentially, rendering it impractical for real-world applications.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: JanusVLN, using RGB-only video, decouples visual semantics and spatial geometry to construct novel, fixed-size dual implicit memory. This memory is incrementally updated during ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | Depth S.RGB NEÓ OSÒ SRÒ SPLÒ External Data HPN+DN [ICCV21] (Krantz et al., 2021) ✓ ✓ ✓ 6.31 40.0 36.0 34.0 - CMA [CVPR22] ... | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 | Finally, the simultaneous removal of both memory modules leads to a near-collapse in model performance. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | (2025b) ✓ 4.98 64.2 56.9 51.9 „ 26330K JanusVLN (Ours) ✓ 4.78 65.2 60.5 56.8 10692K Table 2: Comparison with SOTA methods on VLN-CE ... | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | Ablation of the dual implicit memory. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | For more ablation studies, please refer to the supplementary material. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | body limitation/failure cue | Figure 8: Performance on various instruction lengths/complexity. larger-scale external datasets, akin to the approaches of StreamVLN and NaVILA, is reserved for future work to ... | p. 20 (Figure/Table caption) |
 | body limitation/failure cue | Finally, when we omit the preservation of the initial window's KV, a slight performance degradation is observed, indicating that the first few frames of ... | p. 10 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 | As our focus is on feature extraction, which embeds 3D geometry prior information, rather than directly outputting 3D attributes, we leverage the encoder and ... | p. 4 (3 METHOD) |
 | Gt " DecoderpCrossAttnpEncoderpxtq, tMinitial, Mslidinguqq. | p. 5 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 9: Visualization and presentation of the types of failure cases. on relatively simple instructions (1-150 words). However, their performance declines on moderately complex instructions ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Finally, when we omit the preservation of the initial window's KV, a slight performance degradation is observed, indicating that the first few frames of memory ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), baselines p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

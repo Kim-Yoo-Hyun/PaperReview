@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Casual inputs: Our video-based approach excels with casually captured inputs in cluttered environments while baselines require extensive manual curation (more details in Appendix A.4 Fig.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** We conduct this ablation study on the Faucet object category for link placement and StorageFurniture for joint prediction.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Given text, images, or videos showing an object's motion, ARTICULATE-ANYTHING auto- matically generates its 3D interactable digital twin, handling a wide variety of ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS
 | GPT-4o Gemini Flash-1.5 Claude-3.5 Sonnet 0 20 40 60 80 100 Success Rate (%) 70.4 77.7 85.7 Figure 11: Base VLMs. | definition/direction/unit from same section | p. 10 (5 EXPERIMENTS) |
 | Figure 21: ARTICULATE-ANYTHING's link placement success rate by object categories. 21 | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS
 | We also provide an ablation where our method is given the same impoverished input modality as the baselines in Appendix A.5. | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | Table 2: Mesh reconstruction quality. Chamfer distance is included (lower is better) for different models for in-the-wild results. Best results are bolded, second best ... | comparison identity and matched condition | p. 23 (Figure/Table caption) |
 | Baseline limitations: URDFormer consistently predicts drawer-like structures and is sensitive to minor misalignments (e.g., slightly tilted drawers). | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS
 | body limitation/failure cue | Prior works are also limited to simplified inputs as they cannot handle videos. | p. 7 (5 EXPERIMENTS) |
 | body limitation/failure cue | Baseline limitations: URDFormer consistently predicts drawer-like structures and is sensitive to minor misalignments (e.g., slightly tilted drawers). | p. 8 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS
 | Real2Code, which uses multi-view images for mesh reconstruction and text-oriented bounding boxes (OBBs) for joint prediction, achieves good global alignment from DUSt3R but produces ... | p. 8 (5 EXPERIMENTS) |
 | We run an actor-only system for one iteration without the critic to isolate the effect of input modalities. | p. 9 (5 EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** 8 breaks down the failure reasons for each method.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Baseline limitations: URDFormer consistently predicts drawer-like structures and is sensitive to minor misalignments (e.g., slightly tilted drawers).
 
 - **Evidence anchors reviewed:** datasets p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), metrics p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 23 (Figure/Table caption), p. 8 (5 EXPERIMENTS), results p. 9 (Figure/Table caption), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

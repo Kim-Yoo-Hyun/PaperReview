@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | Addressing these issues remains a promising direction for future work. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | Figure 3. Qualitative results on object selection from the LERF dataset. OpenGaussian fails to separate nearby objects or ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. Overall Architecture), p. 5 (3.3. Object-level Grouping), p. 3 (3.1. Overall Architecture), p. 4 (3.2. Data Preparation). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (3.1. Overall Architecture), p. 5 (3.3. Object-level Grouping), p. 3 (3.1. Overall Architecture), p. 4 (3.2. Data Preparation), objective p. 7 (4.2. Open-Vocabulary 3D Semantic Segmentation), p. 5 (3.5. Extrinsic Semantic Index Layer).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

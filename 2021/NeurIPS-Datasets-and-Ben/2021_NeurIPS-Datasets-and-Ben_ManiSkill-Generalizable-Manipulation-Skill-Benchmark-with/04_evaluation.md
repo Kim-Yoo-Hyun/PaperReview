@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 - **p. 8 / Abstract - extractive body cue:** We designed and benchmarked this architecture since it allows the model to capture the relation between different objects and possibly provides better performance.
 - **p. 8 / Abstract - extractive body cue:** For learning-from-demonstrations algorithms on top of point cloud architectures, we benchmark two approaches - Imitation Learning (IL) and Offline/Batch Reinforcement Learning (Offline/Batch RL).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: A subset of environments in ManiSkill. We currently support 4 different manipulation tasks: OpenCabinetDoor, OpenCabinetDrawer, PushChair, and MoveBucket; each features a large variety ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 | Table 9: The success rates of TD3+BC trained with different values of α on one environment of OpenCabinetDrawer and 300 demonstration trajectories. The algorithm ... | definition/direction/unit from same section | p. 24 (Figure/Table caption) |
 | Figure 6: When decomposing a bucket (a), standard VHACD [74] algorithm (b, 2340 faces) misses details, and tends to produce artifacts, such as bumps ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 | Table 4: Mean and standard deviation of FPS (frame per second) of the environments in ManiSkill. In state mode, most computations are used on ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
 | Figure 5: Overall illustration of ManiSkill. We manually re-model and postprocess objects from the PartNet-Mobility dataset, split them into training and test sets, and ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
 | Table 6: The hyperparameters of SAC for demonstration generation. D Implementation Details of Baseline Architectures, Algorithms, and | comparison identity and matched condition | p. 22 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 | body limitation/failure cue | 4 Conclusion and Limitations In this work, we propose ManiSkill, an articulated benchmark for generalizable physical object manipulation from 3D visual inputs with diverse ... | p. 9 (Abstract) |
 | body limitation/failure cue | Table 4: Mean and standard deviation of FPS (frame per second) of the environments in ManiSkill. In state mode, most computations are used on ... | p. 17 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 | Details of the algorithm implementations are presented in Sec D of the supplementary material. | p. 8 (Abstract) |
 | We train each model for 150k gradient steps. | p. 9 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / Abstract - extractive body cue:** It is worth noting that our experiment results should not discourage benchmark users to include failure trajectories and find better usage of offline RL methods, ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 4: Mean and standard deviation of FPS (frame per second) of the environments in ManiSkill. In state mode, most computations are used on physical ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (Abstract), p. 9 (Abstract), p. 8 (Abstract), p. 8 (Abstract), metrics p. 21 (Figure/Table caption), p. 9 (Abstract), p. 8 (Figure/Table caption), p. 8 (Abstract), p. 9 (Abstract), p. 17 (Figure/Table caption), baselines p. 8 (Abstract), p. 8 (Abstract), p. 9 (Abstract), p. 17 (Figure/Table caption), p. 17 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/Table caption), p. 9 (Abstract), p. 21 (Figure/Table caption), p. 17 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

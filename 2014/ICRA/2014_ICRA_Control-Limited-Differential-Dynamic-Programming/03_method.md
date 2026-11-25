@@ -55,7 +55,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 4 / III. CONTROL LIMITS - extractive body cue:** The problem is written: minimize δu Q(δx,δu) (11) subject to ¯b ⩽u + δu ⩽¯b The QP is a well understood problem with many methods ...
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 3 (III. CONTROL LIMITS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 3 / III. CONTROL LIMITS - extractive body cue:** Clamping can also be introduced to the control modification k in (5): k ←⟦k + u⟧b -u, and it might also seem sensible that the ...
 - **p. 4 / III. CONTROL LIMITS - extractive body cue:** This decomposition is used to compute the optimal feedback gain Kf = -Quu,fQux.
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 - **p. 1 / Abstract - extractive body cue:** Differential Dynamic Programming (DDP) is an indirect method which optimizes only over the unconstrained control-space and is therefore fast enough to allow real-time control of ...
 - **p. 2 / II. DIFFERENTIAL DYNAMIC PROGRAMMING - extractive body cue:** Quadratic Approximation DDP involves iterating a forward pass (or rollout) which integrates (1) for a given U, followed by a backward pass which compute a ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Trajectory, optimization, process, finding, statecontrol, sequence, locally, minimizes, given, cost, function, Because, dynamics, folded, state-control, trajectories, always, strictly, feasible, dynamic.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,23 +109,13 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 
 
 - ablation/failure PDF body cue not selected; no claim inferred
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 3 (C. Line Search), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), objective p. 1 (I. INTRODUCTION), p. 4 (III. CONTROL LIMITS), p. 1 (I. INTRODUCTION), p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (III. CONTROL LIMITS), p. 4 (III. CONTROL LIMITS), temporal p. 2 (II. DIFFERENTIAL DYNAMIC PROGRAMMING), p. 3 (C. Line Search), p. 4 (III. CONTROL LIMITS), p. 6 (IV. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

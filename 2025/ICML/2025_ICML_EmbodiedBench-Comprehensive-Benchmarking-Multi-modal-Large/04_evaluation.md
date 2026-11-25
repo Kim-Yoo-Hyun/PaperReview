@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 - **p. 7 / 5.4. Visual-centric Ablation - extractive body cue:** Visual information is critical for the performance of lowlevel tasks.
 - **p. 8 / 5.4. Visual-centric Ablation - extractive body cue:** Previous work has primarily relied on text-based ICL demonstrations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of EMBODIEDBENCH. Two key features of our benchmark: various action levels and capability-oriented evaluation. Habitat focus on high-level task decomposition and planning ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 | 22% spatial understanding 8% spatial reasoning 10% reflection error 13% inaccurate action 42% invalid action 1% (b) EB-Manipulation Figure 6. | definition/direction/unit from same section | p. 9 (5.4. Visual-centric Ablation) |
 | For EB-Manipulation, planning errors remain the primary cause of failure (44%), due to inaccurate actions, indicating difficulties in estimating precise gripper poses. | definition/direction/unit from same section | p. 9 (5.5. Error Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 | When compared with results in Table 2, where removing vision can even lead to performance gains, these findings highlight that high-level tasks rely more ... | comparison identity and matched condition | p. 7 (5.3. Language-centric Ablation) |
 | Our results, shown in Figure 5 (a), indicate that mid-range resolutions (500 × 500) achieve better results compared to both lower (300 × 300) ... | comparison identity and matched condition | p. 8 (5.4. Visual-centric Ablation) |
 | Figure 15. Visual in-context learning examples for EB-Navigation & EB-Manipulation F.7. Visual In-context Learning (ICL) Previous research has mainly focused on text-based in-context learning ... | comparison identity and matched condition | p. 29 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 | body limitation/failure cue | These results highlight the importance of fine-grained evaluations to uncover nuanced limitations in current models. | p. 6 (5.2. Benchmark Results) |
 | body limitation/failure cue | In EB-Manipulation, for example, Claude-3.5-Sonnet scores 14.6 and 5.6 points higher than GPT-4o on the complex instruction and visual appearance subsets, respectively, but falls ... | p. 6 (5.2. Benchmark Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 | For EB-Manipulation, we include observations from the past two steps in addition to the current step. | p. 8 (5.4. Visual-centric Ablation) |
 | Among planning errors, missing steps (23%) and invalid actions (22%) are the most common issues, highlighting challenges in generating complete and valid plans. | p. 9 (5.5. Error Analysis) |
 | For instance, a robotic arm's action is often parameterized as a 7-dimensional vector: a = [X, Y, Z, Roll, Pitch, Yaw, Gripper], where (X, ... | p. 3 (3. Problem Formulation) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 9 (5.4. Visual-centric Ablation), p. 30 (Figu
 - **p. 6 / 5.2. Benchmark Results - extractive body cue:** In EB-Manipulation, for example, Claude-3.5-Sonnet scores 14.6 and 5.6 points higher than GPT-4o on the complex instruction and visual appearance subsets, respectively, but falls significantly ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.2. Benchmark Results), p. 9 (5.5. Error Analysis), p. 6 (5.1. Experimental Setups), p. 7 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 9 (5.5. Error Analysis), metrics p. 6 (5.1. Experimental Setups), p. 7 (5.3. Language-centric Ablation), p. 7 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 26 (Figure/Table caption), p. 6 (5.2. Benchmark Results), baselines p. 9 (Figure/Table caption), p. 6 (5.2. Benchmark Results), p. 6 (5.2. Benchmark Results), p. 7 (5.3. Language-centric Ablation), p. 8 (5.4. Visual-centric Ablation), p. 29 (Figure/Table caption), results p. 9 (5.4. Visual-centric Ablation), p. 30 (Figure/Table caption), p. 26 (Figure/Table caption), p. 6 (5.2. Benchmark Results), p. 8 (5.4. Visual-centric Ablation), p. 9 (5.4. Visual-centric Ablation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

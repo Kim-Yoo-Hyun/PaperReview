@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (4) We assume that the background and lighting c
 - **p. 1 / Abstract - extractive body cue:** Focusing on common robot arms with similar workspaces and 2-jaw grippers, we investigate the feasibility of zero-shot transfer.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (4) We assume that the background and lighting c
 - **p. 7 / 2) Can Mirage successfully zero-shot transfer trained vision - extractive body cue:** For each task, the top row shows the actual observations of the target robot during the trajectory rollout, and the bottom row shows the cross-painted ...
 - **p. 1 / Abstract - extractive body cue:** Mirage applies to both first-person and third-person camera views and policies that take in both states and images as inputs or only images as inputs.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,15 +85,11 @@ PDF body method statement (p. 4 (4) We assume that the background and lighting c
 
 - **p. 4 / 4) We assume that the background and lighting conditions - extractive body cue:** We consider the setting where there is a policy πS trained on a dataset of the source robot D = {(sS 1 , oS 1 ...
 - **p. 6 / 2) Can Mirage successfully zero-shot transfer trained vision - extractive body cue:** IV, we first train the source robot policies with behavior cloning (BC-RNN) on the provided demonstration data for each task (200 demos for Lift and ...
-- **p. 6 / 2) Can Mirage successfully zero-shot transfer trained vision - extractive body cue:** IV, we first train the source robot policies with behavior cloning (BC-RNN) on the provided demonstration data for each task (200 demos for Lift and ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, source, policy, action, would, like, transform, target, takes, inputs, states, observations, robot, without, demonstration, finetuning, trajectory, data, consider, setting.
 - **Relevant PDF headings:** VI. VISION-BASED POLICY TRANSFER EXPERIMENTS (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +109,13 @@ PDF body method statement (p. 4 (4) We assume that the background and lighting c
 - **p. 9 / 2) Can Mirage successfully zero-shot transfer trained vision - extractive body cue:** This is not surprising as the policy is trained with matching proprioceptive values and image observations, and large offsets in the proprioceptive values correspond to ...
 - **p. 2 / 3) Physical experiments with Franka and UR5 demonstrating - extractive body cue:** that Mirage successfully transfers between robots and grippers on 4 manipulation tasks, suffering only minimal performance degradation from the source policy and significantly outperforming a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4) We assume that the background and lighting conditions), p. 4 (4) We assume that the background and lighting conditions), p. 2 (I. INTRODUCTION), p. 1 (2 Google DeepMind), p. 8 (2) Can Mirage successfully zero-shot transfer trained vision), p. 6 (2) Can Mirage successfully zero-shot transfer trained vision), objective p. 1 (Abstract), temporal p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 4 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 1 (2 Google DeepMind), p. 5 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 6 (IV. STATE-BASED TRANSFER EXPERIMENTS), p. 6 (IV. STATE-BASED TRANSFER EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

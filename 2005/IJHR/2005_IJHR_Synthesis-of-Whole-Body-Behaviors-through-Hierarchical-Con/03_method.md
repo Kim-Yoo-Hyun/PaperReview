@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 4 (3. In
 - **p. 1 / Body text (section not recovered) - extractive body cue:** Constraints should always be guaranteed, while operational tasks should be accomplished without violating the acting constraints, and the posture should control the residual movement redundancy.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 6 (3. Integration of constraints), p. 7 (4. Multi-level hierarchy), p. 7 (4. Multi-level hierarchy), p. 1 (1. Introduction), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 4 (3. In
 - **p. 8 / 4.1. Recursive null-spaces - extractive body cue:** December 19, 2005 17:13 WSPC/INSTRUCTION FILE ijhr-II-v4 8 This mathematical constraint leads to the following unique solution Nprec(k) = I - k-1 X i=1 Ji/prec(i)Ji/prec(i), ...
 - **p. 5 / 3. Integration of constraints - extractive body cue:** Based on the operational space formulation for redundant robots, further represented by the torque decomposition Γ = J T F + N T Γnull, (9) ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 4 (3. In
 - **p. 5 / 3. Integration of constraints - extractive body cue:** Based on the operational space formulation for redundant robots, further represented by the torque decomposition Γ = J T F + N T Γnull, (9) ...
 - **p. 13 / 6. Summary and discussion - extractive body cue:** While today the interactive control of humanoids is limited to the online selection of a few preplanned motions, with this new controller, we construct complex ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** will, present, multi-level, hierarchical, control, structure, allows, establishment, general, priorities, among, behavioral, primitives, describe, compliant, strategies, efficient, under, contact, interactions.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 4 (3. In
 - **p. 11 / X Direction - extractive body cue:** However, the center of gravity horizontal position cannot be maintained (a), because its control is directly affected by the hand control. i.e. Γ = ΓJLC ...
 - **p. 12 / X Direction - extractive body cue:** Because the hierarchy assigns higher priority to the center of gravity task, it maintains its desired goal position (above the robot's feet) at all times, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Body text (section not recovered)), p. 4 (3. Integration of constraints), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (3. Integration of constraints), objective p. 6 (3. Integration of constraints), p. 7 (4. Multi-level hierarchy), p. 7 (4. Multi-level hierarchy), p. 6 (4. Multi-level hierarchy), p. 1 (1. Introduction), p. 1 (Body text (section not recovered)), temporal p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Related work), p. 4 (2. Related work), p. 5 (3. Integration of constraints), p. 6 (4. Multi-level hierarchy).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

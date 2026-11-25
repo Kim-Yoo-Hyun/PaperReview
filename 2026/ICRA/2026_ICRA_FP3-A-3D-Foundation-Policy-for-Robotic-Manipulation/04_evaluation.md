@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 - **p. 8 / V. LIMITATIONS - extractive body cue:** One possible reason is that the pre-training dataset DROID is still not large enough compared to other 2D robotics datasets like OXE.
 - **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** We fine-tune FP3 and baseline methods on 80 demonstrations from 8 environments and evaluate them on four in-domain environments with seen objects and four in-the-wild ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of 3D Foundation Policy (FP3), a 1.3B 3D point cloud-based language-visuomotor policy pre-trained on 60k episodes from the DROID dataset [35]. FP3 ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 | We then fine-tune the base model on this data using the parameter-efficient fine-tuning strategy LoRA [23]. | definition/direction/unit from same section | p. 4 (III. METHOD) |
 | However, it is still limited by in-domain performance. | definition/direction/unit from same section | p. 6 (4) Can FP3 correctly execute the corresponding tasks fol) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 | With the benefits of pre-training initialization and 3D geometry understanding, FP3 surpasses the baselines. | comparison identity and matched condition | p. 6 (4) Can FP3 correctly execute the corresponding tasks fol) |
 | We evaluate FP3 and baseline policies on a diverse set of tasks, covering different axes of generalization, including lighting, camera view, distractor, object and ... | comparison identity and matched condition | p. 7 (8 Training Scenes) |
 | We evaluate FP3 and baseline policies in the same initial state with different language instructions. | comparison identity and matched condition | p. 8 (8 Training Scenes) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 | body limitation/failure cue | Another interesting issue is the policy's response after an initial failure attempt. | p. 6 (4) Can FP3 correctly execute the corresponding tasks fol) |
 | body limitation/failure cue | FP3 generalize well to all unseen environments and new objects, while Diffusion Policy often fails to recognize the target object or misses the target ... | p. 7 (8 Training Scenes) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 | Results in Table I are averaged over 20 evaluation trials. | p. 5 (4) Can FP3 correctly execute the corresponding tasks fol) |
 | In order to comprehensively evaluate FP3, we carefully select three baselines: • Diffusion Policy (DP) [12]: a classic diffusion-based imitation learning policy with 2D ... | p. 5 (4) Can FP3 correctly execute the corresponding tasks fol) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4) Can FP3 correctly execute the corresponding tasks fol - extractive body cue:** This phenomenon happens probably because the fine-tuning data is limited, thus the policies without pre-training can fall into an out-of-distribution state after the first failure, ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 5 (4) Can FP3 correctly execute the correspon
 - **p. 7 / 8 Training Scenes - extractive body cue:** FP3 generalize well to all unseen environments and new objects, while Diffusion Policy often fails to recognize the target object or misses the target position.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 4 (III. METHOD), p. 8 (V. LIMITATIONS), metrics p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 8 (8 Training Scenes), p. 1 (Figure/Table caption), p. 4 (III. METHOD), baselines p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 7 (8 Training Scenes), p. 8 (8 Training Scenes), results p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 5 (4) Can FP3 correctly execute the corresponding tasks fol), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 7 (8 Training Scenes), p. 8 (8 Training Scenes), p. 4 (III. METHOD).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

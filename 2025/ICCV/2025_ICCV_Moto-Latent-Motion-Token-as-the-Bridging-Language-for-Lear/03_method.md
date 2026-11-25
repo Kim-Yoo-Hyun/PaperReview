@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.4. Co-fine-tuning for R
 - **p. 4 / 3.3. Motion Token Autoregressive Pre-training - extractive body cue:** The pre-training objective maximizes the likelihood of the ground-truth latent motion token sequence given the language instruction and the initial video frame: \math c a ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.2. Latent Motion Tokenizer), p. 4 (3.4. Co-fine-tuning for Robot Manipulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.4. Co-fine-tuning for R
 - **p. 3 / 3.1. Overview - extractive body cue:** Moto utilizes autoregressive generative pre-training on latent motion token sequences to learn motion priors from videos, followed by co-fine-tuning on action-labeled data for robot control.
 - **p. 2 / 1. Introduction - extractive body cue:** Given the abundance of interaction-rich video data [1, 57], we ask: Can we leverage autoregressive pre-training on video data to improve robot learning?
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.4. Co-fine-tuning for R
 - **p. 4 / 3.4. Co-fine-tuning for Robot Manipulation - extractive body cue:** The total action loss Laction is defined as: \math c al {L } _{act i on} = \mathcal {L} (\Delta x) + \mathcal {L} (\Delta ...
 - **p. 4 / 3.4. Co-fine-tuning for Robot Manipulation - extractive body cue:** Illustration of real-world evaluation tasks. bles the policy inference of real robots if we take the codebook of latent motion tokens as an abstract action ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Moto, consists, three, stages, unsupervised, training, Latent, Motion, Tokenizer, pre-training, generative, model, MotoGPT, co-fine-tuning, robot, action, policy, total, loss, Laction.
 - **Relevant PDF headings:** 3. Methodology (p. 3); 5.3. Moto-GPT as an Effective Robot Policy (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 3 (3.1. Overview), p. 4 (3.4. Co-fine-tuning for R
 - **p. 7 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** Method Pick Coke Can Move Near Open / Close Drawer Overall Horizontal Vertical Standing Average Average Open Close Average Average RT-1-X [4] 0.820 0.330 0.550 ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The overview of Moto, which utilizes Latent Motion Tokens as a bridging "language" for autoregressive pretraining on video data. The Moto-GPT pre-trained through ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Overview), p. 4 (3.4. Co-fine-tuning for Robot Manipulation), p. 4 (3.2. Latent Motion Tokenizer), p. 3 (3.2. Latent Motion Tokenizer), objective p. 4 (3.4. Co-fine-tuning for Robot Manipulation), p. 4 (3.3. Motion Token Autoregressive Pre-training), temporal p. 4 (3.4. Co-fine-tuning for Robot Manipulation), p. 4 (3.3. Motion Token Autoregressive Pre-training), p. 2 (1. Introduction), p. 3 (3.2. Latent Motion Tokenizer), p. 6 (5.2. Moto-GPT as a Useful Motion Prior Learner), p. 6 (5.2. Moto-GPT as a Useful Motion Prior Learner).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

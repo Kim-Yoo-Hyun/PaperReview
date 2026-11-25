@@ -45,8 +45,6 @@
 - **p. 5 / IV. EVALUATION - extractive body cue:** 5: Examples of Robotic Manipulation Task Completion over Time.
 - **p. 5 / IV. EVALUATION - extractive body cue:** We evaluate OmniVLA with a real-world prototype across several sensor-related manipulation tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Instead of relying solely on RGB cameras, OmniVLA equips robots with multi-sensor perception. We use beam- forming heatmaps as acoustic and mmWave sensor ...
@@ -77,8 +75,6 @@
 | Fig. 7: Success rates when adapting to unseen tasks. We compare the pretrained OmniVLA model with two base- lines, OmniVLA-Base (no pretraining), Pretrained VLA- ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | 5: Examples of Robotic Manipulation Task Completion over Time. | definition/direction/unit from same section | p. 5 (IV. EVALUATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@
 | OmniVLA consistently outperforms all baseline configurations across the three tasks, demonstrating the effectiveness of our unified multi-sensory perception approach. | comparison identity and matched condition | p. 6 (IV. EVALUATION) |
 | OmniVLA significantly outperforms RGB-only VLA models and VLA models trained with unprocessed sensor images. | comparison identity and matched condition | p. 5 (IV. EVALUATION) |
 | Fig. 7: Success rates when adapting to unseen tasks. We compare the pretrained OmniVLA model with two base- lines, OmniVLA-Base (no pretraining), Pretrained VLA- ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@
 | body limitation/failure cue | As the SmolVLA pretraining dataset does not include any non-RGB sensor, we consider the number of episodes reasonable and showing high learning efficiency of ... | p. 6 (IV. EVALUATION) |
 | body limitation/failure cue | This allows the model to generate a full action chunk step by step from random noise. | p. 4 (III. SYSTEM DESIGN) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@
 | We utilize the existing frozen vision encoders to encode sensor-masked images. | p. 3 (III. SYSTEM DESIGN) |
 | Similar to the principle of RGB camera, the azimuth-elevation heatmap reveals the environmental information in a direct way for human understanding and acts as ... | p. 3 (III. SYSTEM DESIGN) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Sensor Data Processing Illustration. We propose a general sensor data processing pipeline applicable to various sensors, including (a) thermal camera, (b) mmWave radar, ...
@@ -160,6 +139,5 @@
 - **p. 4 / III. SYSTEM DESIGN - extractive body cue:** This allows the model to generate a full action chunk step by step from random noise.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), metrics p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (IV. EVALUATION), baselines p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (Figure/Table caption), results p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

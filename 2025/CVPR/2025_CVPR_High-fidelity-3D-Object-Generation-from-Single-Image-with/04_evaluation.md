@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 - **p. 7 / 4.5. Ablation study - extractive body cue:** It means that all additional loss functions significantly enhance the overall quality of the reconstructed 3D object.
 - **p. 8 / 4.5. Ablation study - extractive body cue:** Our full model achieves the best 3D object reconstruction with consistent details.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GS-RGBN is an RGBN-volume Gaussian reconstruction model that generates high-quality 2D Gaussians (middle) using a single image (left). The textured meshes can be ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 | For example, LGM [54] and TriplaneGaussian [70] may generate the flattened laptop (first row) and thick castle (second row). | definition/direction/unit from same section | p. 6 (4.2. Novel View Synthesis) |
 | We observe a very significant performance drop, indicating that the CVF module offers an effective way of fusing RGB and normal information. | definition/direction/unit from same section | p. 8 (4.5. Ablation study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 | The PSNR, SSIM, and LPIPS metrics for novel view synthesis on the GSO dataset are improved by 5.59dB, 0.063, and 0.064, respectively, compared to ... | comparison identity and matched condition | p. 6 (4.2. Novel View Synthesis) |
 | Given the superior performance achieved, it is deemed acceptable for our method to allocate additional time towards establishing a structured 3D voxel grid and ... | comparison identity and matched condition | p. 7 (4.4. Runtime Efficiency) |
 | 1, Gaussianbased feed-forward methods (TriplaneGaussian [70], LGM [54] and GS-RGBN) exhibit significantly reduced rendering time compared to traditional approaches (Wonder3D [31] and One-2-3-45 [27]) ... | comparison identity and matched condition | p. 7 (4.4. Runtime Efficiency) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 | body limitation/failure cue | These inconsistencies once again underscore the importance of effectively integrating RGB and normal images for the recovery of both geometric and semantic details. | p. 6 (4.2. Novel View Synthesis) |
 | body limitation/failure cue | Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment ... | p. 7 (4.3. Single View Reconstruction) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 | The model performance demonstrates a decline when reducing the number of VRBs from 3 to 1 or substituting them with 3D CNNs, owing to ... | p. 8 (4.5. Ablation study) |
 | Next, we describe how to decode the RGBN volume to generate high-quality 2D Gaussians for novel view rendering and high-quality shape reconstruction (Sec. | p. 3 (3. Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion and Limitations - extractive body cue:** Besides, voxels cannot be directly used for representing large-scale scenes.
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/T
 - **p. 7 / 4.3. Single View Reconstruction - extractive body cue:** Ablation study on the different loss functions and normal fusion strategies on the GSO dataset. planeGaussian [70] can generate shapes that exhibit rough alignment with ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.3. Single View Reconstruction), p. 7 (4.5. Ablation study), metrics p. 7 (4.5. Ablation study), p. 6 (4.2. Novel View Synthesis), p. 7 (4.4. Runtime Efficiency), p. 8 (4.5. Ablation study), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), baselines p. 5 (4.2. Novel View Synthesis), p. 5 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.4. Runtime Efficiency), p. 7 (4.4. Runtime Efficiency), results p. 5 (4.2. Novel View Synthesis), p. 8 (Figure/Table caption), p. 7 (4.4. Runtime Efficiency), p. 6 (4.2. Novel View Synthesis), p. 6 (4.2. Novel View Synthesis), p. 7 (4.5. Ablation study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

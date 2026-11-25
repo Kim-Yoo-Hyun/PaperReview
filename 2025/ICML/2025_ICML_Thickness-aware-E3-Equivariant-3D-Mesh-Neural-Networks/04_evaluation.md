@@ -43,8 +43,6 @@
 - **p. 7 / 5.4.1. MAIN RESULTS - extractive body cue:** Spatial information plays a critical role in capturing localized patterns, which are essential for accurate interpretation in downstream tasks.
 - **p. 8 / 5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK - extractive body cue:** This result validates the importance of the thickness in 3D objects, and its effective integration can improve the models' capability in static analysis.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The left figures show a mesh, with two different target nodes (•), their thickness paired nodes (•), thickness distance (-), and nearby nodes ...
@@ -78,8 +76,6 @@
 | MGN (Pfaff et al., 2020) models physical interactions using graph-based message passing but lacks E(3)- equivariance. | definition/direction/unit from same section | p. 6 (5.2. Baselines) |
 | Building upon EGNN, EMNN (Trang et al., 2024) optimizes this framework for mesh data by generating E(3)-invariant messages that incorporate geometric information from mesh ... | definition/direction/unit from same section | p. 6 (5.2. Baselines) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | To address the missing spatial information in baseline methods, we incorporate an additional spatial encoder, as defined in Eq. | comparison identity and matched condition | p. 7 (5.4.1. MAIN RESULTS) |
 | Moreover, for baselines that do not explicitly leverage latent spatial embeddings (e.g., (c) MGN, (f) EGNN, and (i) EMNN in Tab. | comparison identity and matched condition | p. 7 (5.4.1. MAIN RESULTS) |
 | Table 4. Comparison of training speed (iteration/sec) and GPU memory usage (MB) across different models. Our model is based on MGN, with an additional ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@
 | body limitation/failure cue | This underscores the critical role of E(3)-equivariance in ensuring the robustness of the coordinate system. | p. 7 (5.4.1. MAIN RESULTS) |
 | body limitation/failure cue | Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses). | p. 7 (5.3. Evaluation Settings) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@
 | This transformation is achieved through the following steps: Step 1: Adjust Coordinates to Center of Mass. | p. 4 (4. Methodology) |
 | For every node vi ∈V and edge eij ∈E within the surface mesh M = (V, E), we encode their features using respective MLP ... | p. 4 (4.2.1. ENCODER) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / Figure/Table caption - extractive body cue:** Figure 14. Comparisons between volume mesh and surface mesh. The methods used for comparison are based on the MGN framework with coordinate embeddings from our ...
@@ -162,6 +141,5 @@
 - **p. 7 / 5.3. Evaluation Settings - extractive body cue:** Model Performance in In-Distribution and Out-of-Distribution Settings, averaged over 3 seeds with standard deviation (in parentheses).
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Dataset Description), p. 6 (5.1. Dataset Description), p. 7 (5.3. Evaluation Settings), p. 8 (5.4.3. EVALUATION UNDER DYNAMIC SETTING), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), metrics p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.1. MAIN RESULTS), p. 14 (Figure/Table caption), p. 8 (5.4.1. MAIN RESULTS), p. 12 (Figure/Table caption), baselines p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 8 (5.4.1. MAIN RESULTS), p. 6 (5.2. Baselines), p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 13 (Figure/Table caption), results p. 7 (5.4.1. MAIN RESULTS), p. 7 (5.4.1. MAIN RESULTS), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK), p. 14 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (5.4.2. IMPACT OF THICKNESS-AWARE FRAMEWORK).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

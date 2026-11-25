@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 - **p. 7 / Abstract - extractive body cue:** This further demonstrates that our proposed FlowPolicy has a more delicate understanding and generative ability in robot manipulation tasks.
 - **p. 7 / Abstract - extractive body cue:** FlowPolicy accelerates the transfer of data from the noise to the action space by defining straightline flows, thereby improving the inference efficiency of robotic manipulation ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of FlowPolicy with 2D-based method DP (Chi et al. 2023) and 3D-based methods DP3 (Ze et al. 2024) and Simple DP3 in ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 | Quantitative Comparisons on Success Rate Further, Table 2 shows the average success rate of each model on 37 tasks in Adroit and Metaworld. | definition/direction/unit from same section | p. 6 (Abstract) |
 | In the training phase, we regress the consistency vector field and learn the straight-line flow through velocity consistency loss, which directly generates the robot ... | definition/direction/unit from same section | p. 4 (Abstract) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 | Table 1: Quantitative comparison of runtime between state-of-the-art policy models (Chi et al. 2023; Ze et al. 2024) and the proposed FlowPolicy. We evaluate ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | DP3 is the state-of-the-art 3D vision-based conditional diffusion policy model. | comparison identity and matched condition | p. 4 (Abstract) |
 | For non-hard tasks (i.e., ‘Reach Wall', ‘Hammer'), FlowPolicy can outperform DP3 with a limited number of presentations. | comparison identity and matched condition | p. 7 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 | body limitation/failure cue | Expert demonstrations Policy FlowPolicy State Noise a1 a0 Action Flow Network Execute Single-view Images Robot state Encoder Sparse 3D Encoder Compact 3D Repr. | p. 3 (Abstract) |
 | body limitation/failure cue | The top section visualizes FlowPolicy, where a straight-line flow enables the fastest data transition from the noise distribution to the action distribution (Adroit: Open ... | p. 3 (Abstract) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 | 0 30 60 90 120 150 0 20 40 60 80 Inference time (ms) Success rate (%) FlowPolicy(ours) (one-step) Simple DP3 DP3 Metaworld DP ... | p. 1 (Abstract) |
 | 1, our approach achieves a 7× reduction in average inference time while maintaining a competitive average success rate compared to state-of-the-art methods based on ... | p. 2 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Abstract - extractive body cue:** Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/T
 - **p. 3 / Abstract - extractive body cue:** The top section visualizes FlowPolicy, where a straight-line flow enables the fastest data transition from the noise distribution to the action distribution (Adroit: Open the ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (Abstract), p. 5 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 6 (Abstract), metrics p. 7 (Abstract), p. 5 (Abstract), p. 7 (Abstract), p. 1 (Figure/Table caption), p. 5 (Abstract), p. 6 (Abstract), baselines p. 5 (Abstract), p. 6 (Abstract), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (Abstract), p. 7 (Abstract), results p. 7 (Abstract), p. 7 (Abstract), p. 6 (Figure/Table caption), p. 6 (Abstract), p. 1 (Figure/Table caption), p. 5 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

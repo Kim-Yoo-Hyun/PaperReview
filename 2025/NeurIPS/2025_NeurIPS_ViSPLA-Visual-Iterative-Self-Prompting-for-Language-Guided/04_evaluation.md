@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 - **p. 3 / 1 Introduction - extractive body cue:** Unlike existing single-pass methods, our approach establishes a self-improving cycle that enhances precision across multiple object geometries. • We propose a novel Differential Geometric Self-Prompting ...
 - **p. 3 / 1 Introduction - extractive body cue:** By injecting LLM reasoning into dense point features, our approach bridges high-level semantic understanding with low-level geometric representation. • We introduce an Implicit Neural Affordance ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Traditional vision-based methods [3, 4] rely on trainable network fθ to predict a fixed set of affordances fθ : P 7→A; A ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 | Figure 3: Performance analysis (aIoU on "seen" setting) with varying T and K values. Following 3D-AffordanceLLM [6], we utilize Phi-3.5-mini-instruct [27] as our base ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 | accuracy, especially in complex or ambiguous settings; (3) the disconnect between high-level language semantics and low-level geometric features, hindering precise and context-aware affordance prediction ... | comparison identity and matched condition | p. 3 (1 Introduction) |
 | Table 1: Qualitative comparison of our proposed method on the PIAD (left) and LASO (right) datasets. The best and second-best results are highlighted in ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 4: Qualitative comparison of our affor- dance segmentation results with GEAL [5]. Our proposed framework achieves consistent and sub- stantial performance improvements across ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 | body limitation/failure cue | This design enables evaluation of our model's robustness in both instruction-conditioned and shape-driven generalization scenarios. | p. 7 (2 Related Work) |
 | body limitation/failure cue | Earlier fusion-based approaches like [33-38] exhibit significantly inferior performance due to their generic multimodal architectures that fail to model the specialized nature of affordance ... | p. 8 (2 Related Work) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 | This feedback is encoded into visual prompts that drive a multi-stage refinement decoder, enabling the model to self-correct and adapt to complex spatial structures. | p. 1 (Abstract) |
 | 원문 대조: 초기 affordance mask는 M_0=f_θ(P,L)이며, 이후 M_t=f_θ(P,G(M_{t−1}),L)로 갱신한다. G는 이전 mask에서 곡률·normal derivative 등의 기하 prompt를 추출한다. 이는 방법 정의이며 평가 수치는 아니다. ([PDF p. 2](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=2), §1 Introduction, iterative formulation) | [PDF p. 2](https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf#page=2), §1 Introduction, iterative formulation |
 | This approach enables more accurate affordance localization by incorporating intrinsic geometric cues rather than relying solely on language. • We develop a Multi-Stage Refinement ... | p. 3 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 1 (Abstract), p.
 - **p. 8 / 2 Related Work - extractive body cue:** Earlier fusion-based approaches like [33-38] exhibit significantly inferior performance due to their generic multimodal architectures that fail to model the specialized nature of affordance relationships.
 
 - **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), metrics p. 3 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), baselines p. 1 (Abstract), p. 1 (Abstract), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 1 (Abstract), p. 9 (Figure/Table caption), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

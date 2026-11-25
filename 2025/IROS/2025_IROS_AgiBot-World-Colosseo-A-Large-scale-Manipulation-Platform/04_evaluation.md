@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 6 / V. EXPERIMENT AND ANALYSIS - extractive body cue:** We evaluate the real-world performance of policies pretrained on different data sources including the AgiBot World dataset, demonstrating the effectiveness credited from the GO-1 model ...
 - **p. 6 / 1) Evaluation Tasks - extractive body cue:** Here we choose a comprehensive set of tasks that span various dimensions of policy capabilities from AgiBot World for evaluation, including tool-usage (Wipe Table), deformable ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Introducing AgiBot World Colosseo, an open-sourced large-scale manipulation platform comprising data, models, benchmarks and ecosystem. AgiBot World stands out for its unparalleled scale ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 | Notably, to expand data applicability and potential, we include imperfect data (i.e., failure recovery data with annotated error states) and tasks with dexterous hands. | definition/direction/unit from same section | p. 3 (Dataset) |
 | We embrace a human-inthe-loop framework to ensure high quality, enriched with detailed annotations and error recovery behaviors. | definition/direction/unit from same section | p. 4 (Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 | Compared to Vision-Language-Action (VLA) model where action is vision-language conditioned, the ViLLA model predicts latent action tokens, conditioned on the generation of subsequent robot ... | comparison identity and matched condition | p. 5 (Dataset) |
 | Hand Failure Recovery Human-inthe-loop Collection RoboNet [11] 162k n/a 10 ✗ ✗ Single ✗ ✗ ✗ scripted BridgeData [12] 7.2k 4 12 ✗ ✗ ... | comparison identity and matched condition | p. 3 (Dataset) |
 | However, they are often able to recover from these errors and successfully complete the task without requiring a full reconfiguration of the setup. | comparison identity and matched condition | p. 4 (Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | 7(b), being larger in quantity does not necessarily translate to improved performance, while a smaller set of human-verified data yields a 0.18 boost in ... | p. 8 (2) Implementation Details) |
 | body limitation/failure cue | This ensures that our dataset adequately represents a broad spectrum of skills, providing sufficient data for each to support robust policy learning. | p. 5 (Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 | AgiBot World provides extensive coverage across five key domains: domestic, retail, industrial, restaurant, and office environments. | p. 4 (Dataset) |
 | The latent action tokens are quantized using a VQ-VAE objective [32], with a codebook of size /C/. | p. 5 (Dataset) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Dataset - extractive body cue:** Notably, to expand data applicability and potential, we include imperfect data (i.e., failure recovery data with annotated error states) and tasks with dexterous hands.
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 5 / Dataset - extractive body cue:** This ensures that our dataset adequately represents a broad spectrum of skills, providing sufficient data for each to support robust policy learning.
 
 - **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 5 (Dataset), p. 3 (Dataset), p. 4 (Dataset), p. 4 (Dataset), p. 5 (Dataset), metrics p. 7 (Figure/Table caption), p. 6 (1) Evaluation Tasks), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details), p. 6 (1) Evaluation Tasks), p. 4 (Dataset), baselines p. 7 (1) Evaluation Tasks), p. 7 (1) Evaluation Tasks), p. 1 (Figure/Table caption), p. 5 (Dataset), p. 3 (Dataset), p. 4 (Dataset), results p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (2) Implementation Details), p. 6 (1) Evaluation Tasks), p. 3 (Dataset), p. 4 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 6 | We note that this can only be achieved with both cross-attention and object token sequence representations - altering ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | In contrast, the baselines can degrade as much as 20%, particularly in more difficult generalization scenarios. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (4. Novel task generalization. New tasks with novel), p. 2 (1. Introduction), p. 6 (5.1. Baselines), p. 1 (1. Introduction), objective p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

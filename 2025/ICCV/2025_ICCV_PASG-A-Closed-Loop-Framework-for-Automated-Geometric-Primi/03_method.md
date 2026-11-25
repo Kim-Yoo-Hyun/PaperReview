@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3.
 - **p. 4 / 3.1. Semantic Primitives in Robotic Manipulation - extractive body cue:** (e.g. the spout tip over a cup for pouring) • Grasp Point ( p_g ): A location on the object optimized for a secure hold ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (2.2. Spatial Reasoning for Manipulation), p. 3 (3.1. Semantic Primitives in Robotic Manipulation), p. 4 (3.1. Semantic Primitives in Robotic Manipulation), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 5 (3.3. Task-Oriented Semantic Annotation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3.
 - **p. 6 / 3.3. Task-Oriented Semantic Annotation - extractive body cue:** Keypoints and Axes Annotated Output.
 - **p. 6 / 3.4. Semantic-guide Reasoning in Manipulation - extractive body cue:** Specifically, through our manipulation experiments (in Section 4.2), we validate that the PASG pipeline can reliably identify interaction primitives across diverse object categories.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3.
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** enable, first, acquire, multi-view, RGB, images, math, I_1, I_n, object, mesh, data, then, resized, segmentation, model, Specifically, VLMs, analyze, geometric.
 - **Relevant PDF headings:** Method (p. 3); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3.
 - **p. 8 / 5. Conclusion - extractive body cue:** PASG's ability to generate diverse interaction primitives enhances task flexibility and robustness, making it suitable for real-world applications.
 - **p. 7 / 4.2. Manipulation Task Evaluation - extractive body cue:** Each task is executed 100 times using randomly initialized seeds to ensure robustness of the evaluation.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 3 (Method), p. 3 (2.2. Spatial Reasoning for Manipulation), p. 4 (3.2. Geometry Primitive Extraction), p. 5 (3.2. Geometry Primitive Extraction), objective p. 3 (Method), p. 3 (2.2. Spatial Reasoning for Manipulation), p. 4 (3.1. Semantic Primitives in Robotic Manipulation), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 4 (3.1. Semantic Primitives in Robotic Manipulation), temporal p. 3 (Method), p. 3 (Method), p. 5 (3.3. Task-Oriented Semantic Annotation), p. 6 (3.3. Task-Oriented Semantic Annotation), p. 6 (3.4. Semantic-guide Reasoning in Manipulation), p. 7 (4.2. Manipulation Task Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

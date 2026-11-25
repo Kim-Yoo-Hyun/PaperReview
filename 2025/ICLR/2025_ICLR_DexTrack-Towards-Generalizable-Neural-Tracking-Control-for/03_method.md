@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Our contributions are threefold: • We present a generalizable neural tracking controller that progressively improves its performance through iterative mining and incorporating high-quality tracking demonstrations. ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Based upon the previous observations, we propose DexTrack, a novel neural tracking controller for dexterous manipulation, guided by human references.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Robotic dexterous manipulation refers to the ability of a robot hand skillfully handling and manipulating objects for various target states with precision and adaptability.
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 1 / ABSTRACT - extractive body cue:** We introduce an approach that curates large-scale successful robot tracking demonstrations, comprising pairs of human references and robot actions, to train a neural controller.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** In simulation, we use the Allegro hand, with URDF adapted from IsaacGymEnvs (Makoviychuk et al., 2021), and in real-world experiments, the LEAP hand (Shaw et ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contributions, threefold, present, generalizable, neural, tracking, controller, progressively, improves, performance, through, iterative, mining, incorporating, high-quality, demonstrations, introduce, training, synergistically, combines.
 - **Relevant PDF headings:** 3 METHOD (p. 3); A.2 TRACKING CONTROLLER TRAINING (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 15 / Figure/Table caption - extractive body cue:** Table 3: Weights of different reward components. wo,p wo,q wwrist · wtrans wwrist · wornt wfinger Weight 1.0
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 10: Failure cases in real-world experiments. Please refer to our website for animated
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 3 (3 METHOD), objective p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), temporal p. 3 (3 METHOD), p. 8 (4 EXPERIMENTS), p. 18 (B.2 REAL-WORLD EVALUATIONS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 22 (C ADDITIONAL EXPERIMENTAL DETAILS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

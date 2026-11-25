@@ -55,7 +55,6 @@ CLIP은 웹에서 수집한 이미지·텍스트 4억 쌍으로 두 인코더를
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** Learning from natural language also has an important advantage over most unsupervised or self-supervised learning approaches in that it doesn't "just" learn a representation but ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.4. Choosing and Scaling a Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ CLIP은 웹에서 수집한 이미지·텍스트 4억 쌍으로 두 인코더를
 - **p. 4 / 2.2. Creating a Sufficiently Large Dataset - extractive body cue:** Learning Transferable Visual Models From Natural Language Supervision 4 balance the results by including up to 20,000 (image, text) pairs per query.
 - **p. 5 / 2.4. Choosing and Scaling a Model - extractive body cue:** While previous computer vision research has often scaled models by increasing the width (Mahajan et al., 2018) or depth (He et al., 2016a) in isolation, ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=이미지–텍스트 유사도와 클래스별 예측.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ CLIP은 웹에서 수집한 이미지·텍스트 4억 쌍으로 두 인코더를
 
 - **p. 3 / 2.1. Natural Language Supervision - extractive body cue:** Learning from natural language has several potential strengths over other training methods.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Learning, Transferable, Visual, Models, Natural, Language, Supervision, image_encoder, ResNet, Vision, Transformer, text_encoder, CBOW, Text, minibatch, aligned, images, texts, W_i, learned.
 - **Relevant PDF headings:** 2. Approach (p. 3); 2.3. Selecting an Efficient Pre-Training Method (p. 4); 2.4. Choosing and Scaling a Model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ CLIP은 웹에서 수집한 이미지·텍스트 4억 쌍으로 두 인코더를
 - **p. 11 / 3.2. Representation Learning - extractive body cue:** An alternative is measuring the performance of end-to-end fine-tuning of the model.
 - **p. 11 / 3.2. Representation Learning - extractive body cue:** Our best overall model is a ViT-L/14 that is fine-tuned at a higher resolution of 336 pixels on our dataset for 1 additional epoch.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (2.4. Choosing and Scaling a Model), p. 4 (2.4. Choosing and Scaling a Model), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.4. Choosing and Scaling a Model), p. 3 (2.1. Natural Language Supervision), p. 3 (2.1. Natural Language Supervision), objective p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 4 (2.3. Selecting an Efficient Pre-Training Method), p. 5 (2.5. Training), p. 5 (2.5. Training), p. 3 (2.1. Natural Language Supervision), temporal p. 6 (3.1.2. USING CLIP FOR ZERO-SHOT TRANSFER), p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 15 (3.3. Robustness to Natural Distribution Shift), p. 5 (2.4. Choosing and Scaling a Model), p. 5 (2.5. Training), p. 17 (4. Comparison to Human Performance).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 - **p. 7 / 4.3. Real World Results - extractive body cue:** In Figure 4, SOMA achieves the highest success rates across all five real-world out-of-vision (OOV) manipulation tasks.
 - **p. 8 / 4.3. Real World Results - extractive body cue:** SimplerEnv evaluation across different SOTAs on Google Robot tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of the Out-of-Vision (OOV) limitation in existing VLA models. Most VLAs rely on purely reactive percep- tion-actions are driven only by what ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 | Table 9. Performance comparison via success rate (%) across task categories on the Robocasa Tabletop GR-1 benchmark with varying numbers of demonstrations per task. ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | All experiments evaluated over 50 episodes for accuracy. | definition/direction/unit from same section | p. 8 (4.5. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 | We adopt GR00T N1.5 (Bjorck et al., 2025) as the real-world baseline. | comparison identity and matched condition | p. 6 (4.2. Implementation) |
 | Ablation study on scan-based exploration and spatial memory for real-world OOV manipulation. | comparison identity and matched condition | p. 6 (4.1. Benchmarks) |
 | Scan+GR00T, which performs head scanning without maintaining a persistent spatial memory, yields the lowest performance, indicating that scan-based exploration alone is insufficient for reliable ... | comparison identity and matched condition | p. 7 (4.3. Real World Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 | body limitation/failure cue | If the target cannot be localized, SOMA initiates an active head-scanning procedure along a predefined trajectory to construct the spatial memory. | p. 7 (4.2. Implementation) |
 | body limitation/failure cue | Scan-only SOMA further improves success rates by leveraging multi-view scanning to construct a more complete initial memory, but still falls short of the full ... | p. 7 (4.3. Real World Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 | Given the previous memory vector mt-1 k and the new observation mt j, we compute the semantic similarity st kj and a dynamic fusion ... | p. 5 (3.2. Dynamic Memory Refinement) |
 | The current observation ot h is processed by the same embedding pipeline described in Section 3.1 at time t, producing the current memory tokens ... | p. 5 (3.2. Dynamic Memory Refinement) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 20 / Figure/Table caption - extractive body cue:** Table 15. Failure mode analysis on the fully observable RoboCasa Tabletop GR1 simulation (50 sampled failures, 10 per category). Under full observability, failures reflect limitations ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (4.3. Real World Results), p. 7 (4.3. Real 
 - **p. 7 / 4.3. Real World Results - extractive body cue:** Scan-only SOMA further improves success rates by leveraging multi-view scanning to construct a more complete initial memory, but still falls short of the full model.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks), p. 8 (4.3. Real World Results), p. 7 (4.2. Implementation), p. 7 (4.3. Real World Results), p. 8 (4.3. Real World Results), metrics p. 18 (Figure/Table caption), p. 7 (4.3. Real World Results), p. 6 (4.1. Benchmarks), p. 7 (4.3. Real World Results), p. 8 (4.4. Simulation Results), p. 5 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 8 (4.4. Simulation Results), p. 7 (4.3. Real World Results), p. 6 (4.2. Implementation), p. 6 (4.1. Benchmarks), p. 7 (4.3. Real World Results), results p. 7 (4.3. Real World Results), p. 7 (4.3. Real World Results), p. 8 (4.4. Simulation Results), p. 8 (4.4. Simulation Results), p. 6 (4.1. Benchmarks), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

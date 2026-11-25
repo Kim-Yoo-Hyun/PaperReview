@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (Dataset), p. 1 (Figure/Table caption), p.
 - **p. 12 / B.2 Transferring performance of each labeled dataset - extractive body cue:** Overall, each dataset has its own good properties to benefit the combined performance.
 - **p. 13 / B.4 Are such large-scale unlabeled images really necessary? - extractive body cue:** To validate this, we solely use the SA-1B [33] dataset as our unlabeled source and train a model on it for the same iterations we ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Depth Anything V2 significantly outperforms V1 [89] in robustness and fine-grained details. Compared with SD-based models [31, 25], it enjoys faster inference speed, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (Dataset), p. 1 (Figure/Table caption), p.
 | Figure 4: Depth labels of real images (a) and synthetic images (b), and the corresponding model predictions (c). The labels of synthetic images are ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Table 2: Zero-shot relative depth estimation. Better: AbsRel ↓, δ1 ↑. Solely from the metrics, Depth Anything V2 is better than MiDaS, but merely ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (Dataset), p. 1 (Figure/Table caption), p.
 | Table 4: Fine-tuning our Depth Anything V2 pre-trained encoder to in-domain metric depth estimation, i.e., training and test images share the same domain. All ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Compared with the DINOv2 [50] encoder, our pre-trained model acts as a much stronger initialization (0.758 vs. | comparison identity and matched condition | p. 13 (B.5 Performance on transparent or reflective surfaces) |
 | 15 B.11 Qualitative comparison between Marigold and Depth Anything V2 . . . . . . . . . | comparison identity and matched condition | p. 11 (B.9 Harm of real labeled images to fine-grained predictions) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 12 (Dataset), p. 1 (Figure/Table caption), p.
 | body limitation/failure cue | Improvement in these dimensions cannot be correctly reflected in current benchmarks. | p. 8 (7 Experiment) |
 | body limitation/failure cue | As shown in Table 11, data diversity (i.e., more datasets) is still highly important, which cannot be bridged by simply iterating a single dataset ... | p. 13 (B.4 Are such large-scale unlabeled images really necessary?) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 12 (Dataset), p. 1 (Figure/Table caption), p.
 | Method Encoder mIoU DDP [30] Swin-S [45] 82.4 Depth Anything V2 Small 82.9 DDP [30] Swin-B [45] 82.5 Depth Anything V2 Base 83.9 Segmenter ... | p. 12 (Dataset) |
 | What if we only use part of unlabeled sets and iterate the model for more epochs on it? | p. 13 (B.4 Are such large-scale unlabeled images really necessary?) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 13: Comparison among various pre-trained encoders when purely trained on synthetic images. B.7 Benefit of gradient matching loss to fine-grained predictions MiDaS [56] proposes ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 12 (Dataset), p. 1 (Figure/Table caption), p.
 - **p. 13 / B.4 Are such large-scale unlabeled images really necessary? - extractive body cue:** As shown in Table 11, data diversity (i.e., more datasets) is still highly important, which cannot be bridged by simply iterating a single dataset for ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (7 Experiment), p. 8 (7 Experiment), p. 16 (C.1 Per-scenario accuracy), p. 22 (C.4 Visualization), p. 11 (B.9 Harm of real labeled images to fine-grained predictions), p. 12 (B.2 Transferring performance of each labeled dataset), metrics p. 1 (Figure/Table caption), p. 16 (C.1 Per-scenario accuracy), p. 16 (C.1 Per-scenario accuracy), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 12 (Dataset), p. 16 (C.2 Comparison with the DIW dataset), p. 9 (Figure/Table caption), p. 13 (B.5 Performance on transparent or reflective surfaces), p. 11 (B.9 Harm of real labeled images to fine-grained predictions), results p. 12 (Dataset), p. 1 (Figure/Table caption), p. 9 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (7 Experiment), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 - **p. 13 / A Implementation Details - extractive body cue:** We define the agent's role, details pertaining to the scene graph environment, the desired output structure and a set of input-output examples which together form ...
 - **p. 6 / 5 Results - extractive body cue:** 5.1 Semantic Search Office Home Subtask Human SayPlan (GPT-3.5) SayPlan (GPT-4) Human SayPlan (GPT-3.5) SayPlan (GPT-4) Simple Search 100% 6.6% 86.7% 100% 0.0% 86.7% Complex ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: SayPlan Overview (top). SayPlan operates across two stages to ensure scalability: (left) Given a collapsed 3D scene graph and a task instruction, semantic ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 | Figure 7: Evaluating the performance of the underlying LLMs semantic search capabilities as the scale of the environment increases. For the office environment used ... | definition/direction/unit from same section | p. 46 (Figure/Table caption) |
 | Figure 9: Real World Execution of a Generated Long Horizon Plan. Execution of a generated and validated task plan on a real-world mobile manipulator ... | definition/direction/unit from same section | p. 47 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 | Figure 3: Scene Graph Token Progression Dur- ing Semantic Search. This graph illustrates the scalability of our approach to large-scale 3D scene graphs. Note ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 18: Correctness, Executability and Number of Replanning Iterations for Long-Horizon Planning Instructions. Evaluating the performance of SayPlan on each long-horizon planning instruction. Values ... | comparison identity and matched condition | p. 32 (Figure/Table caption) |
 | Figure 5: 3D Scene Graph - Fully Expanded Office Environment. Full 3D scene graph exposing all the rooms, assets and objects available in the ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,7 +102,6 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 
 - Numeric sentences retained from the body:
 - **p. 13 / A Implementation Details - extractive body cue:** This static prompt is both task- and environment-agnostic and takes up ≈3900 tokens of the LLM's input.
-- **p. 13 / A Implementation Details - extractive body cue:** This static prompt is both task- and environment-agnostic and takes up ≈3900 tokens of the LLM's input.
 
 ## Generalization and Failure Cases
 
@@ -123,21 +111,11 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 | body limitation/failure cue | Figure 8: Evaluating the performance of SayPlan's causal planning capabilities as the scale of the environment increases. For the office environment used in this ... | p. 46 (Figure/Table caption) |
 | body limitation/failure cue | Table 18: Correctness, Executability and Number of Replanning Iterations for Long-Horizon Planning Instructions. Evaluating the performance of SayPlan on each long-horizon planning instruction. Values ... | p. 32 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -146,9 +124,8 @@ PDF body evaluation/result cue (p. 6 (5 Results), p. 7 (Figure/Table caption), p
 - **p. 32 / Figure/Table caption - extractive body cue:** Table 18: Correctness, Executability and Number of Replanning Iterations for Long-Horizon Planning Instructions. Evaluating the performance of SayPlan on each long-horizon planning instruction. Values indicated ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (A Implementation Details), p. 13 (A Implementation Details), p. 6 (5 Results), metrics p. 6 (5 Results), p. 7 (Figure/Table caption), p. 32 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 45 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 32 (Figure/Table caption), p. 20 (Figure/Table caption), results p. 6 (5 Results), p. 7 (Figure/Table caption), p. 46 (Figure/Table caption), p. 6 (5 Results), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

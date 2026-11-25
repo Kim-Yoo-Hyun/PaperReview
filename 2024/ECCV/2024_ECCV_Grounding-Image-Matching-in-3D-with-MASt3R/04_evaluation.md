@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Map-free localization), p. 7 (4.2. Ma
 - **p. 8 / 4.2. Map-free localization - extractive body cue:** Grounding Image Matching in 3D with MASt3R Table 1: Results on the validation set of the Map-free dataset.
 - **p. 9 / 4.5. Multiview 3D reconstruction - extractive body cue:** We evaluate our predictions on the DTU [3] dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Dense Correspondences. MASt3R extends DUSt3R as it predicts dense correspondences, even in regions where camera motion significantly degrades the visual similarity. Focal length ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Map-free localization), p. 7 (4.2. Ma
 | To generate ground-truth correspondences necessary for the matching loss (eq. | definition/direction/unit from same section | p. 6 (4.1. Training) |
 | Among the methods that operate in a zero-shot setting (e), MASt3R is the only one attaining reasonable performance. | definition/direction/unit from same section | p. 10 (4.5. Multiview 3D reconstruction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Map-free localization), p. 7 (4.2. Ma
 | This because images usually observe a small object, combined with the fact that many pairs have a wide baseline, sometimes up to 180◦. | comparison identity and matched condition | p. 8 (4.3. Relative pose estimation) |
 | Data-driven approaches trained on this domain significantly outperform handcrafted ones, cutting the Chamfer error by half. | comparison identity and matched condition | p. 9 (4.5. Multiview 3D reconstruction) |
 | Figure 2: Overview of the proposed approach. Given two input images to match, our network regresses for each image and each input pixel a ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Map-free localization), p. 7 (4.2. Ma
 | body limitation/failure cue | If we cannot find enough correspondences, we pad with random false correspondences so that the likelihood of finding a true match remains constant. | p. 7 (4.1. Training) |
 | body limitation/failure cue | We successfully improved DUSt3R with matching, getting the best of both worlds: enhanced robustness, while attaining and even surpassing what could be done with ... | p. 10 (5. Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Map-free localization), p. 7 (4.2. Ma
 | Both images are first encoded in a Siamese manner with a ViT [23], yielding two representations 𝐻1 and 𝐻2: 𝐻1 = Encoder(𝐼1), (1) 𝐻2 ... | p. 4 (3.1. The DUSt3R framework) |
 | Larger images would require significantly more compute power to train, and ViTs do not generalize yet to larger test-time resolutions [62,65]. | p. 5 (3.4. Coarse-to-fine matching) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 5. Conclusion - extractive body cue:** A second cycle (or more) thus cannot exist in G𝑖. □ Lemma B.2.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 7 (4.2. Map-free localization), p. 7 (4.2. Ma
 - **p. 10 / 5. Conclusion - extractive body cue:** We successfully improved DUSt3R with matching, getting the best of both worlds: enhanced robustness, while attaining and even surpassing what could be done with pixel ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Training), p. 6 (4. Experimental results), p. 7 (4.2. Map-free localization), p. 9 (4.4. Visual localization), p. 7 (4.2. Map-free localization), p. 8 (4.2. Map-free localization), metrics p. 9 (4.5. Multiview 3D reconstruction), p. 7 (4.2. Map-free localization), p. 7 (4.2. Map-free localization), p. 8 (4.3. Relative pose estimation), p. 9 (4.4. Visual localization), p. 8 (4.2. Map-free localization), baselines p. 9 (4.5. Multiview 3D reconstruction), p. 7 (4.2. Map-free localization), p. 7 (4.2. Map-free localization), p. 8 (4.3. Relative pose estimation), p. 9 (4.5. Multiview 3D reconstruction), p. 4 (Figure/Table caption), results p. 7 (4.2. Map-free localization), p. 7 (4.2. Map-free localization), p. 9 (4.4. Visual localization), p. 9 (4.5. Multiview 3D reconstruction), p. 8 (4.3. Relative pose estimation), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (5 Experiments), p. 12 (5 Experiments), p.
 - **p. 11 / 5 Experiments - extractive body cue:** We report standard metrics for visual navigation tasks defined in [2,4,18] - trajectory length in meters (TL), navigation error in meters from goal at termination ...
 - **p. 15 / 5 Experiments - extractive body cue:** Val-Seen (VLN) Val-Unseen (VLN) Test (VLN) Model TL ↓ NE ↓ OS ↑ SR ↑ SPL ↑ TL ↓ NE ↓ OS ↑ SR ↑ ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. The VLN setting (a) operates on a fixed topology of panoramic images (shown in blue) - assuming perfect navigation between nodes (often meters ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (5 Experiments), p. 12 (5 Experiments), p.
 | Despite having similar cross-modal attention architectures, RCM [29] achieves an SPL of 0.38 in test environments while our model yields 5 Note that the ... | definition/direction/unit from same section | p. 14 (5 Experiments) |
 | 4 shows these effects account for a drop of approximately 10 SPL. | definition/direction/unit from same section | p. 15 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (5 Experiments), p. 12 (5 Experiments), p.
 | 5.3 Examining the Impact of the Nav-Graph in VLN To draw a direct comparison between the VLN and VLN-CE settings, we convert trajectories taken ... | comparison identity and matched condition | p. 14 (5 Experiments) |
 | 5.1 Establishing Baseline Performance for VLN-CE No-Learning Baselines. | comparison identity and matched condition | p. 11 (5 Experiments) |
 | For DAgger [24], we collect the nth set by taking the oracle action with probability β=0.75n and the current policy action otherwise. | comparison identity and matched condition | p. 11 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 12 (5 Experiments), p. 12 (5 Experiments), p.
 | body limitation/failure cue | By default, our models cannot succeed on these. | p. 15 (5 Experiments) |
 | body limitation/failure cue | Fig. 2. We transfer nav-graph trajectories over panoramas (blue dots) from the Room-to- Room (R2R) dataset to locations in reconstructed Matterport3D (MP3D) environments. Some ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 12 (5 Experiments), p. 12 (5 Experiments), p.
 | We train on all ground-truth paths until convergence on val-unseen (at most 30 epochs). | p. 11 (5 Experiments) |
 | Most works use this data to encode precise geometry between nodes in the nav-graph as part of the decision making process, e.g. moving 30°W ... | p. 2 (1 Introduction) |
 | In this work, we focus in on the Vision-and-Language Navigation (VLN) [4] task and lift these implicit assumptions by instantiating it in continuous 3D ... | p. 3 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 12 (5 Experiments), p. 12 (5 Experiments), p.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 2. We transfer nav-graph trajectories over panoramas (blue dots) from the Room-to- Room (R2R) dataset to locations in reconstructed Matterport3D (MP3D) environments. Some map ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), p. 14 (5 Experiments), p. 15 (5 Experiments), metrics p. 11 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 13 (5 Experiments), p. 13 (5 Experiments), baselines p. 12 (5 Experiments), p. 13 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), results p. 12 (5 Experiments), p. 12 (5 Experiments), p. 11 (5 Experiments), p. 15 (5 Experiments), p. 13 (5 Experiments), p. 13 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

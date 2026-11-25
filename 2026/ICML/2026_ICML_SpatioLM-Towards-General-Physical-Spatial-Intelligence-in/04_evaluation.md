@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIA
 - **p. 7 / 4.3. Evaluation on General Capabilities - extractive body cue:** In contrast, SpatialMLLM exhibits a substantial decline in general benchmarks, with reductions ranging from 23% to 67%.
 - **p. 7 / 4.3. Evaluation on General Capabilities - extractive body cue:** Its overall performance remains on par with the baseline and even improves on certain benchmarks (e.g., +12% on VideoMMMU).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SpatioLM, a parameter-efficient framework that improves spatial intelligence in VLMs without extra 3D prior inputs or external spatial encoders. SpatioLM achieves ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIA
 | Figure 1. We propose SpatioLM, a parameter-efficient framework that improves spatial intelligence in VLMs without extra 3D prior inputs or external spatial encoders. SpatioLM ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 3. Overview of SpatioLM. SpatioLM augments a frozen VLM with a plug-and-play Spatio-Vision Module. The Spatio-Vision Module elicits geometry-aware features from visual tokens ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIA
 | Figure 1. We propose SpatioLM, a parameter-efficient framework that improves spatial intelligence in VLMs without extra 3D prior inputs or external spatial encoders. SpatioLM ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 2. (a) Methods that explicitly leverage 3D priors, such as depth maps, point clouds, or camera parameters. (b) Methods that introduce an additional ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Table 5. Ablation study on the SV-Module, VTS, and DGS. SV-Module VTS DGS MD-S DA-2K VSI-Bench ✗ ✗ ✗ 52.6 71.8 68.7 | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIA
 | body limitation/failure cue | Results indicate that, despite large-scale training targeted at spatial intelligence, the performance degradation of SpatioLM on general tasks is considerably smaller than that of ... | p. 7 (4.3. Evaluation on General Capabilities) |
 | body limitation/failure cue | Figure 8. Visualization samples of our spatial perception benchmarks. The first row shows ground-truth single-image metric depth (MD-S), and the second row shows multi-image ... | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIA
 | Importantly, this alternating attention is applied exclusively inside the SV-Block and does not modify the causal self-attention mechanism of the frozen LLM decoder. | p. 5 (3.2. Spatio-Vision Module) |
 | By supervising these dense geometric predictions, the injected features are encouraged to encode camera-aware 3D priors that are crucial for downstream spatial tasks. | p. 5 (3.2. Spatio-Vision Module) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5. Conclusion - extractive body cue:** Despite the effectiveness of SpatioLM, several limitations remain.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIA
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 8. Visualization samples of our spatial perception benchmarks. The first row shows ground-truth single-image metric depth (MD-S), and the second row shows multi-image metric ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Evaluation on General Capabilities), p. 7 (4.3. Evaluation on General Capabilities), metrics p. 7 (4.2.2. SPATIAL UNDERSTANDING), p. 7 (4.2.1. SPATIAL PERCEPTION), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 22 (Figure/Table caption), p. 6 (4.1. Experimental Setup), baselines p. 7 (4.2.1. SPATIAL PERCEPTION), p. 7 (4.2.1. SPATIAL PERCEPTION), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 7 (4.2.1. SPATIAL PERCEPTION), p. 7 (4.3. Evaluation on General Capabilities), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 22 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

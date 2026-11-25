@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p
 | body cue at p. 6 | Meanwhile, the FPS does not experience a significant decline and consistently ranks as either the best or second-best, ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | However, increasing B to beyond a certain threshold does not necessarily improve quality, because B only imposes an ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.2.1. Point-based Visibility), p. 4 (3.4. Controllable Level-of-detail), p. 4 (3.5. Quality Enhancements), p. 5 (3.5.1. Appearance Transform Module). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (3.2.1. Point-based Visibility), p. 4 (3.4. Controllable Level-of-detail), p. 4 (3.5. Quality Enhancements), p. 5 (3.5.1. Appearance Transform Module), objective p. 6 (3.6. Loss of Individual Partition Training), p. 5 (3.5.2. Scale Regularization), p. 3 (3.3. In-Partition Prioritized Densification), p. 3 (3.4. Controllable Level-of-detail), p. 4 (3.4. Controllable Level-of-detail), p. 5 (3.5.1. Appearance Transform Module).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

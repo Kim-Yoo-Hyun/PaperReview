@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** Each evaluation consists of 20 trials per task per method.
 - **p. 7 / 5.2. Metrics and Evaluation Protocol - extractive body cue:** This score measures how well the high-level policy's predicted instruction aligns with human intent, requiring multi-modal understanding of the current environment and prompt.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Open-ended instruction following. Hi Robot enables robots to follow multi-stage instructions, adapt to real-time corrections and constraints, complete unseen long-horizon tasks, and respond ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 | Figure 2: Overview of hierarchical VLA. The policy consists of a high-level and a low-level policy. The high-level policy pro- cesses open-ended instructions and ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 3: Data collection and generation for training the high- level policy. We first collect teleoperated robot demonstrations and segment them into short skills ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 | Figure 8: Hierarchical policy vs. flat policy. The hierarchical approach outperforms the flat variant trained on the same data, as it effectively integrates user ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Figure 1: Open-ended instruction following. Hi Robot enables robots to follow multi-stage instructions, adapt to real-time corrections and constraints, complete unseen long-horizon tasks, and ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Figure 7: Ablation on synthetic data. Synthetic data is essential for handling open-ended instructions, as the model trained with- out it struggle with user-driven ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 | body limitation/failure cue | Coupling these two layers more directly, e.g. by allowing the high-level policy to be more aware of how successfully the low-level policy completes each ... | p. 9 (6. Discussion and Future Work) |
 | body limitation/failure cue | GPT-4o, however, often fails to maintain a coherent internal state, leading to commands like picking up new objects when the gripper is still occupied ... | p. 8 (5.3. Core Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 | Task progress quantifies how closely the robot matches the intended goal and is computed by the proportion of objects that are successfully placed in ... | p. 8 (5.2. Metrics and Evaluation Protocol) |
 | When the system receives a user intervention, the high-level inference is triggered immediately to recompute ˆℓt. | p. 4 (4.2. Incorporating User Interaction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6. Discussion and Future Work - extractive body cue:** Our system also has a number of limitations that could be studied in future work.
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 8 / 5.3. Core Results - extractive body cue:** GPT-4o, however, often fails to maintain a coherent internal state, leading to commands like picking up new objects when the gripper is still occupied or ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5.2. Metrics and Evaluation Protocol), p. 8 (5.2. Metrics and Evaluation Protocol), p. 5 (5. Experiments), p. 7 (5.2. Metrics and Evaluation Protocol), p. 7 (5.2. Metrics and Evaluation Protocol), metrics p. 7 (5.2. Metrics and Evaluation Protocol), p. 8 (5.3. Core Results), p. 8 (5.2. Metrics and Evaluation Protocol), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 8 (5.3. Core Results), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (5.2. Metrics and Evaluation Protocol), p. 8 (5.3. Core Results), p. 8 (5.3. Core Results), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

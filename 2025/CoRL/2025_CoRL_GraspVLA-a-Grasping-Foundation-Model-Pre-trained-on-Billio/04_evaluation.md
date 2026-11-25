@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 - **p. 6 / 5 Experiments - extractive body cue:** For generalists, we use π0 [7], OpenVLA [6], and Octo [26], three transformer-based policies pre-trained on large-scale real-world datasets.
 - **p. 7 / 5 Experiments - extractive body cue:** that cross-embodiment pre-training may not be optimal for this specific grasping task on the given robotic arm.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: GraspVLA is a grasping foundation model pre-trained exclusively on billion-scale syn- thetic action data and co-trained with Internet semantics data. It exhibits direct ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 | Table 13: Impact of instruction format. Fine-tuned baselines exhibit performance drops when the original instructions are simplified. H Details about Comparison with AnyGrasp Setup. ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 | (3) How much do our design choices contribute to GraspVLA's performance? | definition/direction/unit from same section | p. 5 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 | The zero-shot performance of GraspVLA surpasses the fine-tuned performance of strong baselines π0 and OpenVLA. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | 5.2 Zero-Shot Comparison with VLAs in LIBERO Benchmark Long Goal Object OpenVLA (fine-tuned) 33.7 56.6 65.4 π0 (fine-tuned) 62.7 79.4 93.8 Ours (zero-shot) 82.0 ... | comparison identity and matched condition | p. 7 (5 Experiments) |
 | Table 4: Efficient post-training. GraspVLA shows superior adaptability to novel tasks, surpassing the model without pre- training and all baselines. As shown in Table ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 | body limitation/failure cue | We evaluate on three LIBERO suites (Long, Goal, Object), excluding Spatial, as its focus on spatial reasoning falls outside our scope. | p. 7 (5 Experiments) |
 | body limitation/failure cue | Figure 11: Examples of LIBERO Benchmark. We visualize both front and side views side by side. is considered a success. Similarly, if the target ... | p. 22 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 | Introducing 2D bounding boxes as intermediate action steps (PAG-2D) yields significant improvements for web categories. | p. 8 (5 Hz) |
 | We conduct 10 trials per task and report the overall success rate (task completion) and the grasping success rate (grasping any object). | p. 8 (5 Hz) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Conclusion - extractive body cue:** 7 Limitations and Future Work Currently, our data generation and evaluation are conducted exclusively on the Franka Panda arm with front and side views.
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 24 (Figure/Table caption), p. 6 (5 Experiment
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 11: Examples of LIBERO Benchmark. We visualize both front and side views side by side. is considered a success. Similarly, if the target is ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 6 (5 Experiments), p. 19 (Figure/Table caption), p. 7 (5 Experiments), baselines p. 6 (5 Experiments), p. 6 (5 Experiments), p. 24 (Figure/Table caption), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), results p. 24 (Figure/Table caption), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

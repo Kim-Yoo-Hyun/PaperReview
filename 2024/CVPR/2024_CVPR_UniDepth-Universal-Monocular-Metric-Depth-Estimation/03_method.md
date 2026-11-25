@@ -47,7 +47,6 @@ PDF body method statement (p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geo
 - **p. 4 / 3.3. Geometric Invariance Loss - extractive body cue:** Therefore, the geometric invariance loss can be expressed as \begin {s plit} & \mat h c al
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geometric Invariance Loss).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geo
 - **p. 4 / 3.3. Geometric Invariance Loss - extractive body cue:** To this end, we propose a geometric invariance loss to enforce the consistency of camera-prompted depth features of the same scene from different acquisition sensors.
 - **p. 4 / 3.3. Geometric Invariance Loss - extractive body cue:** Relying on external input inherently leads to being subject to its noise.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geo
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** The required training time amounts to roughly 12 days on 8 NVIDIA A100.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Ablations are conducted with three different seeds and for 100k training iterations, using a randomly sampled subset with a size equal to 20% of the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** geometric, invariance, loss, enforce, consistency, camera-prompted, depth, features, same, scene, different, acquisition, sensors, Otherwise, would, across, inherently, carry, distinct, camera.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geo
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** All ablations exploit the predicted camera representation, if not stated otherwise.
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** All ablations employ the same loss LλMSE, but across different output spaces.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geometric Invariance Loss), objective p. 4 (3.3. Geometric Invariance Loss), p. 4 (3.3. Geometric Invariance Loss), temporal p. 6 (4.2. Comparison with the State of the Art), p. 4 (3.2. Self-Promptable Camera).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

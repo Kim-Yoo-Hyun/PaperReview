@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 9 (Figure/Table
 - **p. 17 / A.1 Dataset Details - extractive body cue:** For the additional 7 simulation dataset, we use the simulator benchmarks across all popular simulators Drake [81], Mujoco [89, 49], Isaac Sim [20], and PyBullet ...
 - **p. 17 / A.1 Dataset Details - extractive body cue:** This dataset is composed of deployed mobile robots in the wild.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The Heterogeneous Pre-training concept. It maps different embodiments, each with its own proprioception and vision sensors, onto a shared la- tent space by ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 9 (Figure/Table
 | Figure 3: Stem Architecture in HPT. In the HPT stem, the proprioceptive tokenizer uses an MLP to map proprioceptive information to a feature which ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Table 2: Dataset Details of Pre-train Settings. The default setup is trained with 27 datasets from RT-X with 16k trajectories (maximum 1000 trajectories each) ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 9 (Figure/Table
 | Figure 16: Transfer Learning Objective. We run transfer learning across several simulator benchmarks [81, 49, 89]. We compare the validation loss curves of several ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
 | Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to HPT-XL on tasks across 4 different ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Figure 3: Stem Architecture in HPT. In the HPT stem, the proprioceptive tokenizer uses an MLP to map proprioceptive information to a feature which ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 9 (Figure/Table
 - **p. 17 / A Implementation Details - extractive body cue:** When training with 80k iterations, the approximate training epochs with fixed batch size 512 range from 200 epochs to 2 epochs.
 - **p. 17 / A.1 Dataset Details - extractive body cue:** We use in total of 2000 trajectories of video clips from EPIC kitchen with a maximum trajectory length of 500.
 - **p. 17 / A.1 Dataset Details - extractive body cue:** We use a total of 150 trajectories and each trajectory contains more than 500 steps.
-- **p. 17 / A Implementation Details - extractive body cue:** We use maximum episode counts per dataset ranging from 10 trajectories to 100000 trajectories, and the total trajectories range from around 300 trajectories and 6000 ...
-- **p. 17 / A Implementation Details - extractive body cue:** When training with 80k iterations, the approximate training epochs with fixed batch size 512 range from 200 epochs to 2 epochs.
 
 ## Generalization and Failure Cases
 
@@ -135,22 +122,12 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 9 (Figure/Table
 | body limitation/failure cue | Figure 10: Success Rates in Simulation Experiments. (a) We evaluate transfer learning performance of models from HPT-B to HPT-XL on tasks across 4 different ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | Figure 13: Large-scale Dataset Heterogeneity in Robotics. We show different dataset mixtures at increasing scales (top row) across trajectory counts, dataset sample counts, and ... | p. 18 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | When training with 80k iterations, the approximate training epochs with fixed batch size 512 range from 200 epochs to 2 epochs. | p. 17 (A Implementation Details) |
 | Specifically, the default training setup is to train 80000 iterations with a batch size 256, which is around 0.65B tokens in the latent space ... | p. 17 (A Implementation Details) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -162,9 +139,8 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 9 (Figure/Table
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 13: Large-scale Dataset Heterogeneity in Robotics. We show different dataset mixtures at increasing scales (top row) across trajectory counts, dataset sample counts, and sampling ...
 
 - **Evidence anchors reviewed:** datasets p. 17 (A.1 Dataset Details), p. 17 (A.1 Dataset Details), metrics p. 10 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 21 (Figure/Table caption), p. 22 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 8 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 9 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 22 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

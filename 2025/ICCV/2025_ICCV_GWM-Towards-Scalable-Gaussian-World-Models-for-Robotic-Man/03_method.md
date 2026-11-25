@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for 
 - **p. 8 / 4.3. GWM-based Reinforcement Learning - extractive body cue:** FRANKA-PNP Diffusion Policy GWM (Ours) Cup distractor 6/10 7/10 Plate distractor 1/5 3/5 Table distractor 0/5 3/5 Total 7/20 13/20 explicit 3D representation offers substantial ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 4 (3.1. World State Encoding), p. 5 (3.2. Diffusion-based Dynamics Modeling).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for 
 - **p. 4 / 3.2. Diffusion-based Dynamics Modeling - extractive body cue:** Specifically, we leverage a diffusion-based dynamics model where we convert dynamics learning into a conditional generation problem, generating future state xt+1 from noise with history ...
 - **p. 5 / 3.3. GWM for Policy Learning - extractive body cue:** S and A are the state and action spaces, γ is the discount factor, and r(s, a) is the reward function.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for 
 
 - **p. 7 / 4.3. GWM-based Reinforcement Learning - extractive body cue:** For fair comparisons, all compared methods use the same context length, horizon, and are trained to a maximum of 1 × 105 steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** variational, encoder, embeds, Gaussian, Splats, estimated, foundational, reconstruction, model, compact, latent, space, diffusion, transformer, operates, patches, interactively, imagine, future, conditioned.
 - **Relevant PDF headings:** 3. Gaussian World Model (p. 3); 3.2. Diffusion-based Dynamics Modeling (p. 4); 3.3. GWM for Policy Learning (p. 5); 2. Does Gaussian world model benefits downstream imita (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for 
 - **p. 8 / 5. Conclusion - extractive body cue:** In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust geometric ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for Policy Learning), p. 3 (3.1. World State Encoding), p. 4 (3.1. World State Encoding), p. 5 (3.3. GWM for Policy Learning), p. 3 (3. Gaussian World Model), objective p. 5 (3.3. GWM for Policy Learning), p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 5 (3.2. Diffusion-based Dynamics Modeling), p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 3 (3.1. World State Encoding), p. 8 (4.3. GWM-based Reinforcement Learning), temporal p. 4 (3.1. World State Encoding), p. 8 (4.5. Ablation Analysis), p. 5 (3.2. Diffusion-based Dynamics Modeling), p. 7 (4.3. GWM-based Reinforcement Learning), p. 2 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), 
 - **p. 7 / VI. EXPERIMENTS - extractive body cue:** The overall success rate of the policy insimulation is also comparable to the results in hardware.
 - **p. 7 / VI. EXPERIMENTS - extractive body cue:** The most challenging semantic query tested in hardware was the clock, which SINGER performed the worst on in simulation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. SINGER: pipeline for training and deploying open-vocabulary language conditioned guidance policies in the open world with inference entirely onboard drone hardware. Scene-spanning trajectories ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), 
 | Fig. 1. SINGER: pipeline for training and deploying open-vocabulary language conditioned guidance policies in the open world with inference entirely onboard drone hardware. Scene-spanning ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 3. Training architecture. SINGER is trained on images consisting of the output logits from CLIPSeg, a pixel-dense semantic segmentation network built on CLIP. ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), 
 | We include SINGER's results under the same conditions as a testament to its ability to outperform the baseline. | comparison identity and matched condition | p. 7 (VI. EXPERIMENTS) |
 | The baseline was completely unable to perform without an externally provided true north heading, as the velocity set point requires a reliable heading in ... | comparison identity and matched condition | p. 7 (VI. EXPERIMENTS) |
 | The baseline is most similar to [27] in implementation and [28] in deployment. | comparison identity and matched condition | p. 6 (VI. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), 
 | body limitation/failure cue | The policy is evaluated on successful flight towards the queried object without collisions. | p. 6 (VI. EXPERIMENTS) |
 | body limitation/failure cue | We evaluate the performance of the SINGER in drone experiments to evaluate its generalization and robustness capabilities in simulation within a 3DGS environment and ... | p. 5 (VI. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), 
 | All trials are depicted, with successful trials above unsuccessful ones. | p. 7 (VI. EXPERIMENTS) |
 | The overall success rate of the policy insimulation is also comparable to the results in hardware. | p. 7 (VI. EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / VI. EXPERIMENTS - extractive body cue:** SINGER performs the best at this experiment difficulty, reaching the goal region 73% of the time, and reaching sub-meter proximity 92.7% of the time with ...
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), 
 - **p. 5 / VI. EXPERIMENTS - extractive body cue:** We evaluate the performance of the SINGER in drone experiments to evaluate its generalization and robustness capabilities in simulation within a 3DGS environment and in ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (VI. EXPERIMENTS), p. 5 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), metrics p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 5 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 1 (Figure/Table caption), baselines p. 6 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), results p. 7 (VI. EXPERIMENTS), p. 7 (VI. EXPERIMENTS), p. 5 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

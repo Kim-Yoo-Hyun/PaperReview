@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. SIMULATIO
 - **p. 5 / IV. SIMULATION EXPERIMENTS - extractive body cue:** Following recent zero-shot works [3], [4], we report results on a standard 100-episode subset from the validation unseen split.
 - **p. 6 / V. REAL-WORLD EXPERIMENTS - extractive body cue:** These qualitative results confirm that LaViRA's hierarchical reasoning generalizes effectively from simulation to physical hardware without any training.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Prior methods rely on pre-trained waypoint prediction or value mapping with limited online planning. Our LaViRA framework instead decomposes navigation into language- level ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. SIMULATIO
 | Fig. 2: The LaViRA Pipeline. Our framework decomposes navigation into three sequential stages. (1) Language Action: A large MLLM processes the instruction, history, and ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 5: Real-world experiment examples. LaViRA guides a Unitree Go1 quadruped (top) and an Agilex Cobot Magic wheeled robot (bottom) in an office. The ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. SIMULATIO
 | Our baseline for these studies is LaViRA (GPT-4o + Qwen2.5-VL-32B). | comparison identity and matched condition | p. 5 (IV. SIMULATION EXPERIMENTS) |
 | An end-to-end baseline ("w/o LA+VA") fails with 0% SPL. | comparison identity and matched condition | p. 6 (IV. SIMULATION EXPERIMENTS) |
 | Our full framework outperforms the latter by 14.4 points, confirming the effectiveness of coarse-to-fine decomposition. | comparison identity and matched condition | p. 6 (IV. SIMULATION EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. SIMULATIO
 | body limitation/failure cue | Fig. 2: The LaViRA Pipeline. Our framework decomposes navigation into three sequential stages. (1) Language Action: A large MLLM processes the instruction, history, and ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | Low standard deviations across runs highlight the framework's robustness and stability, a key advantage for real-world applications. | p. 5 (IV. SIMULATION EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. SIMULATIO
 | Qualitative Analysis To offer qualitative insights into LaViRA's decisionmaking, Figure 4 shows a successful navigation run and common failures. | p. 6 (IV. SIMULATION EXPERIMENTS) |
 | These qualitative results confirm that LaViRA's hierarchical reasoning generalizes effectively from simulation to physical hardware without any training. | p. 6 (V. REAL-WORLD EXPERIMENTS) |
 | Given the target position pworld, the agent computes a short-term path using the Fast Marching Method (FMM). | p. 5 (III. PROPOSED METHOD) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (IV. SIMULATIO
 - **p. 5 / IV. SIMULATION EXPERIMENTS - extractive body cue:** Low standard deviations across runs highlight the framework's robustness and stability, a key advantage for real-world applications.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. SIMULATION EXPERIMENTS), p. 6 (V. REAL-WORLD EXPERIMENTS), p. 5 (IV. SIMULATION EXPERIMENTS), p. 6 (V. REAL-WORLD EXPERIMENTS), metrics p. 5 (IV. SIMULATION EXPERIMENTS), p. 6 (IV. SIMULATION EXPERIMENTS), p. 6 (IV. SIMULATION EXPERIMENTS), p. 5 (IV. SIMULATION EXPERIMENTS), p. 7 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 5 (IV. SIMULATION EXPERIMENTS), p. 5 (IV. SIMULATION EXPERIMENTS), p. 6 (IV. SIMULATION EXPERIMENTS), p. 6 (IV. SIMULATION EXPERIMENTS), results p. 7 (Figure/Table caption), p. 5 (IV. SIMULATION EXPERIMENTS), p. 5 (IV. SIMULATION EXPERIMENTS), p. 6 (IV. SIMULATION EXPERIMENTS), p. 6 (IV. SIMULATION EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

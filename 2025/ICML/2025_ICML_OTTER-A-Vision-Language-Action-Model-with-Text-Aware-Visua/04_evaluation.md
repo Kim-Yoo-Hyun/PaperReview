@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Baselines), p. 7 (Figure/Table captio
 - **p. 6 / 5.1. Real-world Experiments - extractive body cue:** Single Primitive We first evaluate all models on both the training and unseen tasks of the pick and place primitive in the real robot environment, ...
 - **p. 7 / 5.2. Simulation Experiments - extractive body cue:** From Table 3, we found all the models perform similarly on training tasks in LIBERO due to the limited variations of the tasks and sufficient ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: (Top) Different feature extraction approaches in VLA models. (a) Direct Feature Passing: existing approaches, exem- plified by Octo and OpenVLA, extract and pass ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Baselines), p. 7 (Figure/Table captio
 | Table 6: The 10 in-distribution tasks and 7 unseen tasks we used in our real-world setting. For each experiment trial of poking and pouring, ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 | We consider a task with unseen target objects for task completion as an unseen task. | definition/direction/unit from same section | p. 5 (4.1. Environment Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Baselines), p. 7 (Figure/Table captio
 | Despite the inherent difficulty of zero-shot generalization across multiple primitives, OTTER achieves significantly higher success rates compared to baselines across all primitives. | comparison identity and matched condition | p. 7 (5.1. Real-world Experiments) |
 | In unseen tasks, OTTER can outperform other baselines by a large margin, demonstrating its generalization capabilities to novel scenarios, which is consistent with the ... | comparison identity and matched condition | p. 7 (5.2. Simulation Experiments) |
 | We introduce our experimental setup to evaluate the instruction-following and text-aware visual features extraction generalization of OTTER in Section 4.1 and the baselines considered ... | comparison identity and matched condition | p. 5 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Baselines), p. 7 (Figure/Table captio
 | body limitation/failure cue | Table 6: The 10 in-distribution tasks and 7 unseen tasks we used in our real-world setting. For each experiment trial of poking and pouring, ... | p. 12 (Figure/Table caption) |
 | body limitation/failure cue | This suggests that pretrained VLM provides more robust and transferable visual representations. | p. 8 (2. OTTER w.o. f ′) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Baselines), p. 7 (Figure/Table captio
 | on unseen tasks scales along multiple axes: through larger pre-trained vision-language encoders, increased policy network capacity, and pre-training on larger robot datasets. | p. 2 (3. Empirical results suggest that OTTER's performance) |
 | In OTTER, we extract text per-token features from CLIP's language encoder fl (m tokens). | p. 3 (3.1. Text-Aware Visual Feature Extraction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 5.1. Real-world Experiments - extractive body cue:** As OpenVLA has many tokens per timestep, its context length cannot be extended and we use its default context length.
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Baselines), p. 7 (Figure/Table captio
 - **p. 8 / 2. OTTER w.o. f ′ - extractive body cue:** This suggests that pretrained VLM provides more robust and transferable visual representations.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Environment Setup), p. 6 (5.1. Real-world Experiments), p. 7 (5.1. Real-world Experiments), p. 2 (3. Empirical results suggest that OTTER's performance), p. 5 (4.1. Environment Setup), p. 6 (5.1. Real-world Experiments), metrics p. 5 (4.1. Environment Setup), p. 7 (5.1. Real-world Experiments), p. 6 (5.1. Real-world Experiments), p. 6 (5.1. Real-world Experiments), p. 7 (5.1. Real-world Experiments), p. 1 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 5 (4.2. Baselines), p. 6 (4.2. Baselines), p. 7 (5.1. Real-world Experiments), p. 7 (5.2. Simulation Experiments), p. 5 (4. Experiments), results p. 6 (4.2. Baselines), p. 7 (Figure/Table caption), p. 6 (5.1. Real-world Experiments), p. 7 (5.1. Real-world Experiments), p. 5 (4.1. Environment Setup), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

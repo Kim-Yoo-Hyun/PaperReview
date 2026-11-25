@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3. Methodology), p. 4 (3. Methodology), p. 3 (3
 - **p. 6 / 3. Methodology - extractive body cue:** Spatiotemporal Sampling and Fusion The sparse feature Fχ with the box embedding Gχ will be updated by the spatial and temporal sampling after being fed ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3. Methodology), p. 4 (3. Methodology), p. 5 (3. Methodology), p. 6 (3. Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3. Methodology), p. 4 (3. Methodology), p. 3 (3
 - **p. 2 / 1. Introduction - extractive body cue:** Specifically, it outperforms BEVDet by 5.0%, BEVDepth by 2.2%, BEVStereo by 2.6%, and surpasses the state-ofthe-art LSS-based method SOLOFusion by 1.6%.
 - **p. 5 / 3. Methodology - extractive body cue:** With it combined with the sparse instance features, there will be more geometric priors and implicit compensation in subsequent attention interactions.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3. Methodology), p. 4 (3. Methodology), p. 3 (3
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Backbone, Multi-frame, Multi-view, Features, Images, Previous, Frames, Depth, Distribution, Map, BEV, Feature, Temporal, Encoder, Branch, Temporally-shared, View, Transformation, Sequence, Extraction.
 - **Relevant PDF headings:** 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,22 +110,11 @@ PDF body method statement (p. 4 (3. Methodology), p. 4 (3. Methodology), p. 3 (3
 - **p. 7 / 4.5. Multiplicate Queries Ablations - extractive body cue:** We can observe that on the one hand, relying solely on the potential queries cannot play a major role, and even utilizing all 900 queries ...
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 13. Point Ablation Points mAP↑ NDS↑ 1 0.365 0.477 2
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 14. Weight Ablation Weight mAP↑ NDS↑ 1 0.365 0.477 2
-- **p. 7 / 4.5. Multiplicate Queries Ablations - extractive body cue:** We can observe that on the one hand, relying solely on the potential queries cannot play a major role, and even utilizing all 900 queries ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3. Methodology), p. 4 (3. Methodology), p. 3 (3. Methodology), p. 5 (3. Methodology), p. 5 (3. Methodology), p. 6 (3. Methodology), objective p. 4 (3. Methodology), p. 4 (3. Methodology), p. 5 (3. Methodology), p. 5 (3. Methodology), p. 6 (3. Methodology), temporal p. 4 (3. Methodology), p. 4 (3. Methodology), p. 6 (3. Methodology), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 5 (3. Methodology).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

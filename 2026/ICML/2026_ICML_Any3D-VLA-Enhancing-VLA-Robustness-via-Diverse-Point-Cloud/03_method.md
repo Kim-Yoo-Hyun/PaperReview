@@ -49,7 +49,6 @@ PDF body method statement (p. 4 (5.1. Overall Architecture), p. 4 (5.1. Overall 
 - **p. 4 / 5.1. Overall Architecture - extractive body cue:** ANY3D-VLA integrates a Vision-Language Model (VLM) with an action expert (Black et al., 2025b), and connects them via a Progressive Action Generation (PAG) mechanism (Deng ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (5.3. Training Strategy), p. 5 (5.3. Training Strategy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 4 (5.1. Overall Architecture), p. 4 (5.1. Overall 
 - **p. 4 / 5.1. Overall Architecture - extractive body cue:** ANY3D-VLA integrates a Vision-Language Model (VLM) with an action expert (Black et al., 2025b), and connects them via a Progressive Action Generation (PAG) mechanism (Deng ...
 - **p. 4 / 5.1. Overall Architecture - extractive body cue:** The VLM comprises a trainable large language model InternLM2 1.8B (Cai et al., 2024), a visual observation module (§5.2), and a trainable projector that maps ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 4 (5.1. Overall Architecture), p. 4 (5.1. Overall 
 - **p. 7 / 6.2. Inference Efficiency and Latency - extractive body cue:** Inference speeds are measured on a single NVIDIA RTX 3090 GPU.
 - **p. 8 / 6.4. Ablation Study - extractive body cue:** To verify the necessity of our 2D-3D fusion design, we conduct an ablation study on the key components of the visual encoder under a setting ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** VLM, comprises, trainable, large, language, model, InternLM2, Cai, visual, observation, module, projector, maps, representations, space, conditional, flow-matching, action, expert, Lipman.
 - **Relevant PDF headings:** 5.1. Overall Architecture (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 4 (5.1. Overall Architecture), p. 4 (5.1. Overall 
 - **p. 4 / 3. Dataset and Benchmark - extractive body cue:** Point cloud-2D patch fusion opc t : {[I(v) t , D(v) t ]}v → Pt √ √ Lift RGBD to point cloud Pt = {(xi, ...
 - **p. 8 / 7. Limitations and Future Work - extractive body cue:** Although we have evaluated this work in both simulation and real-world manipulation settings, several limitations remain: (1) Our real-world experiments currently cover only a single ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (5.1. Overall Architecture), p. 4 (5.1. Overall Architecture), p. 5 (5.3. Training Strategy), p. 5 (5.3. Training Strategy), objective p. 5 (5.3. Training Strategy), p. 5 (5.3. Training Strategy), p. 4 (5.1. Overall Architecture), temporal p. 8 (0.3 FPS), p. 8 (0.3 FPS), p. 3 (3. Dataset and Benchmark), p. 6 (6.1.1. REAL-WORLD SETUP), p. 6 (6.1.1. REAL-WORLD SETUP), p. 7 (0.5 FPS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

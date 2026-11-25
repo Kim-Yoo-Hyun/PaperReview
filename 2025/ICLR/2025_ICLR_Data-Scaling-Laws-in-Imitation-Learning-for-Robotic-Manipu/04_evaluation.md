@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTR
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We begin by focusing on two tasks as case studies-Pour Water and Mouse Arrangement-to thoroughly analyze how policy generalization changes with the number of environments, ...
 - **p. 3 / 3 APPROACH - extractive body cue:** This generalization issue manifests across two dimensions: (1) Environment-generalization to previously unseen environments, which may involve variations in lighting conditions, distractor objects, background changes, and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Illustrations of all tasks. We derive the data scaling laws through extensive experiments on Pour Water and Mouse Arrangement, and further validate these ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTR
 | Unlike the commonly used success rate-which is an overly sparse signal lacking the granularity to distinguish between policies-our scoring mechanism captures more nuanced behaviors. | definition/direction/unit from same section | p. 4 (3 APPROACH) |
 | Table 12: Success rate across all tasks. For each task, we report the success rate in each evaluation environment. 34 | definition/direction/unit from same section | p. 34 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTR
 | For instance, special lighting setups might be used to change only the color of illumination, or 3D-printed objects might be designed to vary only ... | comparison identity and matched condition | p. 3 (3 APPROACH) |
 | Finally, to minimize the tester's subjective bias, we simultaneously evaluate multiple policies trained on datasets of different sizes; each rollout is randomly selected from ... | comparison identity and matched condition | p. 5 (3 APPROACH) |
 | The main question we seek to answer is: for a given manipulation task, how can we optimally select M, N, and K to ensure ... | comparison identity and matched condition | p. 8 (3 APPROACH) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTR
 | body limitation/failure cue | Based on all the results, we summarize the following data scaling laws: 1Although we recognize the irreducible errors Y∞associated with scaling the data alone, ... | p. 7 (3 APPROACH) |
 | body limitation/failure cue | We leave the verification of this prediction for future work. | p. 8 (3 APPROACH) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTR
 | Each policy is evaluated in 8 unseen environments, using two unseen objects per environment, with 5 trials per environment. | p. 6 (3 APPROACH) |
 | Scaling visual encoder yields a consistent performance boost. | p. 10 (32 Env-Object Pairs) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 32 Env-Object Pairs - extractive body cue:** 7 DISCUSSION, LIMITATIONS, & FUTURE WORKS Data scaling is an exciting and ongoing event in robotics.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTR
 - **p. 8 / 3 APPROACH - extractive body cue:** We leave the verification of this prediction for future work.
 
 - **Evidence anchors reviewed:** datasets p. 4 (3 APPROACH), p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 5 (3 APPROACH), p. 1 (ABSTRACT), p. 10 (32 Env-Object Pairs), metrics p. 9 (32 Env-Object Pairs), p. 9 (32 Env-Object Pairs), p. 30 (Figure/Table caption), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), baselines p. 4 (3 APPROACH), p. 6 (3 APPROACH), p. 6 (3 APPROACH), p. 3 (3 APPROACH), p. 5 (3 APPROACH), p. 8 (3 APPROACH), results p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 9 (32 Env-Object Pairs), p. 8 (Figure/Table caption), p. 9 (32 Env-Object Pairs).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

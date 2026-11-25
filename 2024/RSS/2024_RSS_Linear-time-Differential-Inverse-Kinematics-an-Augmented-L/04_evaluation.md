@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS
 - **p. 10 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** First, LOIK does not support robot topologies with internal closed loops, as its recursive derivation relies on a tree topology.
 - **p. 10 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** Supporting closed-loops is a relevant future research direction since several recent robots include them to improve some mechanical properties.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Computation times for each method, on average over the 10 seconds of motion of each scenario (x-axis) with confidence intervals of ± one ...
@@ -75,8 +73,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS
 | We check in particular that the ADMM penalty parameter µ remains within a reasonable range even on the infeasible problems at the beginning of ... | definition/direction/unit from same section | p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
 | Bottom: number of iterations each solver took to converge at each time step. roughly a factor of two. b) Residuals: We take a closer ... | definition/direction/unit from same section | p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -84,13 +80,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS
 | Comparison to QP-based inverse kinematics With the parameters we have described, the benchmark produces 92,000 IK problems. | comparison identity and matched condition | p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
 | These comparisons are depicted in Fig. | comparison identity and matched condition | p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
 | 0 250 500 750 1000 1250 1500 1750 2000 10 2 10 1 Primal residual [m/s] Solvers LOIK OSQP ProxQP 0 250 500 750 ... | comparison identity and matched condition | p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS
 | body limitation/failure cue | LOIK scales essentially like the "QP lower bound" of frame Jacobian computations (another linear-time algorithm), with 3This means in particular that, for "OSQP (Drake)", ... | p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
 | body limitation/failure cue | First, LOIK does not support robot topologies with internal closed loops, as its recursive derivation relies on a tree topology. | p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -136,14 +123,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS
 | For one, solving a differential IK quadratic program is still a resource-constrained operation, with computation times on the same scale of order as the ... | p. 1 (I. INTRODUCTION) |
 | The ADMM iterates for solving problem (5) are given as: (vk+1, νk+1) = arg min v,ν LA IK(v, ν, zk, yk, wk) (6a) s.t. ... | p. 4 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / Figure/Table caption - extractive body cue:** Figure 9: Additional solver information from LOIK for the 67-DOF Romeo humanoid scenario. Top: number of active inequality constraints at termination for each time step. ...
@@ -151,9 +130,8 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS
 - **p. 10 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** First, LOIK does not support robot topologies with internal closed loops, as its recursive derivation relies on a tree topology.
 
 - **Evidence anchors reviewed:** datasets p. 8 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 8 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), metrics p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 8 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), baselines p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), results p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 8 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

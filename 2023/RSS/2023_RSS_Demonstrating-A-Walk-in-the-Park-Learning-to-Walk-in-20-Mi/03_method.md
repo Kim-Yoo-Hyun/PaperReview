@@ -47,7 +47,6 @@ PDF body method statement (p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient
 - **p. 4 / B. Efficient Model-Free RL - extractive body cue:** What all of these works have in common is that they add some sort of regularization or normalization method (or both) to mitigate the tendency ...
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient Model-Free RL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient
 - **p. 4 / B. Efficient Model-Free RL - extractive body cue:** What all of these works have in common is that they add some sort of regularization or normalization method (or both) to mitigate the tendency ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Although large-scale robotic reinforcement learning experiments in the real world have been described in a number of prior works [1]-[5], many other researchers have sought ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient
 - **p. 5 / V. SIMULATION ANALYSIS - extractive body cue:** Since our goal is to run training on a real robot, we aim for design decisions and algorithms that lead to improved stability and sample ...
 - **p. 6 / V. SIMULATION ANALYSIS - extractive body cue:** In order to facilitate this kind of training synchronously, the updates must be inexpensive enough to be able to perform them between time-steps (of which ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** choice, algorithm, implementation, aimed, enabling, real-time, synchronous, training, expand, Section, Actor-critic, methods, have, recently, become, significantly, more, sample-efficient, improving, critic.
 - **Relevant PDF headings:** B. Efficient Model-Free RL (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient
 - **p. 4 / IV. SYSTEM DESIGN - extractive body cue:** As such, such policies cannot trivially be further trained in the real world.
 - **p. 5 / IV. SYSTEM DESIGN - extractive body cue:** During early experiments with the real robot, we found that using the forward velocity in the robot's local frame caused it to dive forward as ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient Model-Free RL), objective p. 4 (B. Efficient Model-Free RL), p. 4 (B. Efficient Model-Free RL), temporal p. 5 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 3 (III. FAST AND SIMPLE RL FOR REAL-WORLD ROBOTS), p. 6 (VI. LEARNING IN THE REAL WORLD), p. 6 (VI. LEARNING IN THE REAL WORLD), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

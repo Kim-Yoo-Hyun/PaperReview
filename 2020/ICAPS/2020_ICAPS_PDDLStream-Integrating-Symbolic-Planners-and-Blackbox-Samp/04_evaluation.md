@@ -39,8 +39,6 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 - **p. 8 / 9 Experiments - extractive body cue:** 9.1 Real-World Validation We applied PDDLStream to four real-world task and motion planning problems.
 - **p. 8 / 9 Experiments - extractive body cue:** For each task, a PR2 robot observes the initial state, solves for a plan, and executes it in an open-loop fashion.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Left: Domain 1 (with 5 blocks). Right: A real- world robot planning to "serve a meal" on the brown tray. pling procedures in ...
@@ -65,8 +63,6 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 | We experimented using the Incremental, Focused, Binding, and Adaptive algorithms on 100 randomly-generated problems within 3 domains in section 4. | definition/direction/unit from same section | p. 7 (9 Experiments) |
 | Adaptive is able to quickly identify a collision-free pair of placements supporting a solution. | definition/direction/unit from same section | p. 8 (9 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -74,13 +70,6 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 | The Incremental and Focused algorithms serve as baselines that are representative of prior work (Garrett, Lozano-P´erez, and Kaelbling 2018). | comparison identity and matched condition | p. 7 (9 Experiments) |
 | Adaptive outperforms Incremental, Focused, and Binding due to its ability to aggressively search over many bindings of a single stream plan. | comparison identity and matched condition | p. 8 (9 Experiments) |
 | Focused, Binding, and Adaptive all outperform Incremental and perform about equivalently due to the less geometrically constrained nature of the domain. | comparison identity and matched condition | p. 8 (9 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -104,8 +93,6 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 |---|---|---|
 | body limitation/failure cue | Adaptive is able to quickly identify a collision-free pair of placements supporting a solution. | p. 8 (9 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -114,22 +101,13 @@ PDF body evaluation/result cue (p. 8 (9 Experiments), p. 8 (9 Experiments)): Ada
 | We extend PDDL to support a generic, declarative specification for these procedures that treats their implementation as black boxes. | p. 1 (Abstract) |
 | Streams allow a planner to reason about conditions on the inputs and outputs of a conditional generator while treating its implementation as a black ... | p. 1 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 9 Experiments - extractive body cue:** Adaptive is able to quickly identify a collision-free pair of placements supporting a solution.
 
 - **Evidence anchors reviewed:** datasets p. 8 (9 Experiments), p. 8 (9 Experiments), metrics p. 8 (Figure/Table caption), p. 7 (9 Experiments), p. 8 (9 Experiments), baselines p. 7 (9 Experiments), p. 8 (9 Experiments), p. 8 (9 Experiments), results p. 8 (9 Experiments), p. 8 (9 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

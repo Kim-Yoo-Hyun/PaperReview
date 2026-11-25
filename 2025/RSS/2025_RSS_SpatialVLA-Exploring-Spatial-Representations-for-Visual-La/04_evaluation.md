@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 - **p. 6 / 10 Ablations on Design - extractive body cue:** 5, we design seven task suites for the Widow robot, encompassing, language grounding, semantic understanding (unseen background and poses), and motion distractors (manually move the ...
 - **p. 6 / 10 Ablations on Design - extractive body cue:** For a more comprehensive evaluation, we conduct expernts on a real-world WidowX robot platform from the BridgeData V2 evaluation [64].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We present Spatial VLA, a spatial-enhanced
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 | On average, SpatialVLA achieves the highest overall visual matching and variant aggregation performance with a significant margin, Our SpatialVLA model yields 71.9% and 75.1% ... | definition/direction/unit from same section | p. 6 (10 Ablations on Design) |
 | 7) into polar coordinates (¢,0,r) to disentangle movement direction (6, 0) and distance r. | definition/direction/unit from same section | p. 4 (A. The SpatialVLA Model Architecture) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 | We compare ‘our model with the latest state-of-the-art generalist manipulation policies, including RT-1 [6], RT-1-X [13], RE2-X [13], Octo [48], OpenVLA [30], HPT [65], ... | comparison identity and matched condition | p. 6 (10 Ablations on Design) |
 | Compared to existing policies, SpaIVLA shows superior spatial understanding, achieving 73% accuracy in Franka task #1, which involves spatial prompts, and significantly improving manipulation ... | comparison identity and matched condition | p. 8 (B. Adapting to New Robot Setups) |
 | Compared to 1026-resolution action grids (#ly.s:#4), where Maes = Muss = 512, Myip = 2, Spatial VLA with 8194resolution action grids (Mines = Mrans ... | comparison identity and matched condition | p. 9 (B. Adapting to New Robot Setups) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 | body limitation/failure cue | 1), including depth or point cloud, into the VLA framework to improve the model's adaptability and robustness in spatial layout variations. | p. 8 (B. Adapting to New Robot Setups) |
 | body limitation/failure cue | Compared to existing policies, SpaIVLA shows superior spatial understanding, achieving 73% accuracy in Franka task #1, which involves spatial prompts, and significantly improving manipulation ... | p. 8 (B. Adapting to New Robot Setups) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 | 2, we first employ SigLIP [68] visual encoder to extract 2D semantic visual features X ¢ R4**" to inherit the alignment between vision and ... | p. 4 (A. The SpatialVLA Model Architecture) |
 | All generalist manipulation policies, including Octo, RT-1-X, OpenVLA, and RoboVLM, are evaluated across 7 task suites with 11 trials each, resulting in a total ... | p. 6 (10 Ablations on Design) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 10 Ablations on Design - extractive body cue:** However, in moderately complex tasks (#3-7), ‘most policies, such as RT-1-X, Octo, and RoboVLM struggle with manipulation, frequently encountering issues like object nisidentfication and grasp ...
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 7 (10 Ablations on Design), p. 9 (B. Adapting
 - **p. 8 / B. Adapting to New Robot Setups - extractive body cue:** Compared to existing policies, SpaIVLA shows superior spatial understanding, achieving 73% accuracy in Franka task #1, which involves spatial prompts, and significantly improving manipulation capabilities ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (B. The Pre-training and Post-training Scheme), p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 5 (3) How well does SpatialVLA perform in scenarios that), p. 7 (B. Adapting to New Robot Setups), p. 4 (B. The Pre-training and Post-training Scheme), p. 9 (B. Adapting to New Robot Setups), metrics p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), p. 7 (10 Ablations on Design), p. 7 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), baselines p. 7 (10 Ablations on Design), p. 5 (B. The Pre-training and Post-training Scheme), p. 7 (B. Adapting to New Robot Setups), p. 6 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 9 (B. Adapting to New Robot Setups), results p. 7 (10 Ablations on Design), p. 9 (B. Adapting to New Robot Setups), p. 7 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups), p. 6 (10 Ablations on Design), p. 8 (B. Adapting to New Robot Setups).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

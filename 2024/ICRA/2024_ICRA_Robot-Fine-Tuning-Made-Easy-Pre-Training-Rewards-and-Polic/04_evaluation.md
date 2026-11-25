@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** Task FP FN Accuracy Precision Cloth Covering 6.3% 80.9% 89.4% 15.3% Cloth Folding 1.2% 59.8% 84.1% 92.0% Pot PNP 6.1% 81.3% 86.9% 24.3% TABLE II: ...
 - **p. 4 / V. EXPERIMENTS - extractive body cue:** We use a WidowX 250 robotic arm with a single third-person camera (Logitech C920, resizing images to 100x100 pixels).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose a system that enables autonomous and efficient real-world robot learning. First, we pre-train a multi-task policy and fine-tune a pre-trained Vision-Language ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | How does our proposed VLM reward function mechanism compare to existing alternatives? | definition/direction/unit from same section | p. 4 (V. EXPERIMENTS) |
 | And, how does each component of ROBOFUME or data affect the performance of our method? | definition/direction/unit from same section | p. 4 (V. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | ROBOFUME policies retained 68% of its original performance, compared to BC which retained only 10% of its original performance. | comparison identity and matched condition | p. 5 (V. EXPERIMENTS) |
 | Our method ROBOFUME outperforms BC, ARIEL+VLM [7], and MEDAL++ [13] consistently on all three domains. | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
 | Our method uses a fine-tuned VLM reward function and outperforms VICE rewards, whereas CNN and VIP rewards fail to improve online. goal image can ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | body limitation/failure cue | We find that in the Vase simulated task, VIP fails to obtain good behaviors. | p. 6 (V. EXPERIMENTS) |
 | body limitation/failure cue | Integrating this work with new VLM models that can exhibit robust zero-shot performance on unseen manipulation tasks and improving the reset efficiency of this ... | p. 6 (VI. CONCLUSION AND FUTURE WORK) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | The encoder ϕ is a 4-layer CNN, and is optimized exclusively against the critic loss. | p. 3 (IV. ROBOFUME) |
 | To best utilize the multi-task data, we encode task descriptions l using pre-trained CLIP embeddings, resulting in an embedding z = CLIP(l) which is ... | p. 3 (IV. ROBOFUME) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** All tasks use 50 forward and 50 backward demos for the target task, and fewer than 20 combined trajectories of failures.
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 6 / VI. CONCLUSION AND FUTURE WORK - extractive body cue:** Integrating this work with new VLM models that can exhibit robust zero-shot performance on unseen manipulation tasks and improving the reset efficiency of this framework ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 4 (V. EXPERIMENTS), baselines p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

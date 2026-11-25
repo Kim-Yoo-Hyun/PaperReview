@@ -46,7 +46,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Actor Critic Low-Level Exteroception Proprioception Previous Action Position Command Heading Command Corrupted Map Navigation Action Latent Features Feature Mixing LSTM Memory Values Observations with Privileged ...
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 2 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. ME
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Most of them construct an explicit map for path planning based on traversability [1], [8] or geometry information [10], [11] of the surroundings, and some ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** (C) Our proposed policy can react to perception failures and reach the target.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. ME
 
 - **p. 2 / III. METHOD - extractive body cue:** Given a preestablished low-level locomotion policy [6], we train a navigation policy that generates velocity commands to be tracked in a hierarchical RL structure.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Actor, Critic, Low-Level, Exteroception, Proprioception, Previous, Action, Position, Command, Heading, Corrupted, Map, Navigation, Latent, Features, Feature, Mixing, LSTM, Memory, Values.
 - **Relevant PDF headings:** 1) The methodology to learn local navigation strategies (p. 2); 3) Experimental validation of our method both in simula (p. 2); III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. ME
 - **p. 5 / V. RESULTS AND ANALYSES - extractive body cue:** These results indicate that the navigation policy cannot learn to react to perception failures without being exposed to them, and the locomotion policy cannot overcome ...
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2. Besides reaching the target in time, the robot should also reduce base collisions and avoid falls. An overview of our system is in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 2 (III. METHOD), p. 2 (III. METHOD), objective p. 2 (III. METHOD), p. 3 (III. METHOD), temporal p. 3 (III. METHOD), p. 4 (IV. EXPERIMENTAL SETUP), p. 4 (IV. EXPERIMENTAL SETUP), p. 3 (10 Hz), p. 1 (Abstract), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

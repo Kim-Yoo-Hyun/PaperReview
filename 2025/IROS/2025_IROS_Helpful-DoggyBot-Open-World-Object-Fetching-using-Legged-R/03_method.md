@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), 
 - **p. 3 / IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER - extractive body cue:** These include increased exploration burden and the potential for sub-optimal behaviors when optimizing for multiple objectives simultaneously [43].
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The key contributions of our system include (1) a simple yet effective 1-DoF gripper design that enables object grasping for quadrupeds, (2) a general-purpose low-level ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To increase the traversability and reachability of quadrupeds compared to prior work [4], [5], we use reinforcement learning and simulation to train a general-purpose low-level ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), 
 - **p. 3 / IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER - extractive body cue:** Our online estimator architecture consists of a convolutional neural network (CNN) followed by a gated recurrent unit (GRU) to process the temporal sequence of depth ...
 - **p. 4 / IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER - extractive body cue:** We use a two-phase framework to train a depth-based policy as the low-evel whole-body controller.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Phase, Training, Privileged, Information, develop, agile, visual, whole-body, control, policy, through, two-phase, process, first, train, PPO, optimize, locomotion, objectives, online.
 - **Relevant PDF headings:** IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), 
 - **p. 6 / VI. EXPERIMENTS - extractive body cue:** While our approach demonstrates progress, limitations include the gripper's restricted dexterity, reliance on ceiling-mounted cameras for navigation, and potential occlusion to the perception system.
 - **p. 6 / VI. EXPERIMENTS - extractive body cue:** Go2 default controller fails to climb up high obstacles like beds and sofas, whereas No Tracking only generates an open-loop trajectory of commands and fails ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 4 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 4 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), objective p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), temporal p. 5 (VI. EXPERIMENTS), p. 5 (VI. EXPERIMENTS), p. 6 (VI. EXPERIMENTS), p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 3 (IV. LEARNING A GENERAL WHOLE-BODY CONTROLLER), p. 4 (V. ZERO-SHOT DEPLOYMENT USING VLMS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

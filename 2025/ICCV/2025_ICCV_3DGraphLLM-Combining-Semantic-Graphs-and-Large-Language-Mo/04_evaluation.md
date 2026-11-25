@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 - **p. 8 / 4.2. Ablation Studies - extractive body cue:** 6 shows that the object-centric graph representation using triplets improves the performance of the visual grounding task.
 - **p. 8 / 4.2. Ablation Studies - extractive body cue:** We include additional experimental results from ablation studies on scene captioning and visual question answering tasks in the Supplementary Materials.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The proposed 3DGraphLLM approach leverages 3D semantic scene graph learnable representation supplied as input to an LLM to perform various 3D vision-language tasks. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 | The additional minimum distance filter further enhances visual grounding quality. | definition/direction/unit from same section | p. 8 (4.2. Ablation Studies) |
 | Figure 2. The overall architecture of our approach. We introduce trainable layers to map the extracted graph node and edge features into the token ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 | Therefore, in subsequent experiments, we use the Mask3D method to maintain consistency with the baseline Chat-Scene approach. | comparison identity and matched condition | p. 8 (4.2. Ablation Studies) |
 | Ablation study on semantic edges role and training pipeline. | comparison identity and matched condition | p. 7 (4.1. Experimental Results) |
 | Ablation study on subgraph representation. | comparison identity and matched condition | p. 8 (4.2. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 | body limitation/failure cue | Another important aspect for further work is the creation of methods for generating semantic relations between objects that are robust to imperfections in the ... | p. 8 (5. Conclusion) |
 | body limitation/failure cue | It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality ... | p. 7 (4.2. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 | The model architecture includes pre-trained encoders for 2D images, 3D point clouds, and point clouds semantic relationships, alongside a pre-trained LLM. | p. 3 (3.1. Model Architecture) |
 | We extract vertex features using a pre-trained Uni3D [63] encoder, which generates point cloud features aligned with their textual descriptions. | p. 4 (3.1. Model Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** A limitation of the method is a significant increase in resource consumption with an increase in the edge number for each graph node.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experim
 - **p. 7 / 4.2. Ablation Studies - extractive body cue:** It is worth noting that the n-gram-based evaluation metrics used in scene captioning and question answering benchmarks are not adequate for assessing the quality of ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Experimental Results), p. 6 (4. Experiments), p. 7 (4.2. Ablation Studies), p. 7 (4.2. Ablation Studies), metrics p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 5 (4. Experiments), p. 7 (4.1. Experimental Results), baselines p. 6 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 7 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Studies), results p. 7 (4.2. Ablation Studies), p. 6 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 8 (4.2. Ablation Studies), p. 8 (4.2. Ablation Studies), p. 7 (4.2. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

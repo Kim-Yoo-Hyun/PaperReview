@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p.
 - **p. 5 / 3 Method - extractive body cue:** Note that this operation can be made fast if implemented with highly optimized matrix multiplication (where the crop is 5
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 3 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** 3.3 Training: Learning from Demonstrations We assume access to a dataset D = {ζ1,ζ2,...,ζn} of n expert demonstrations, where each trajectory ζi = {(o0,a0),(o1,a1),...} is ...
 - **p. 6 / 3 Method - extractive body cue:** During training, we uniformly sample observation-action pairs from the dataset D, from which each action at can be unpacked into two training labels: Tpick and ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** Validation performance generally converges after a few hours of training on a single commodity GPU.
 - **p. 8 / 4 Results - extractive body cue:** Despite COVID-19 lockdowns preventing physical access, we were still able to perform real experiments using our Unitybased [46] UI that enables people to remotely teleoperate ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Placing, model, two-stream, feed-forward, FCN, takes, input, visual, observation, outputs, dense, feature, maps, query, features, where, dimensionality, Picking, single, pixel-wise.
 - **Relevant PDF headings:** 3 Method (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p.
 - **p. 8 / 4 Results - extractive body cue:** Since it learns pick-conditioned placing, it can also stack plates with varying initial predicted pick locations from only 10 demonstrations on a real robot (bottom ...
 - **p. 13 / Figure/Table caption - extractive body cue:** Figure 7. In Towers of Hanoi (a), the task is to sequentially pick-and-place 3 disks from the first peg to the third peg without placing ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), objective p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 3 (3 Method), p. 4 (3 Method), p. 5 (3 Method), temporal p. 3 (3 Method), p. 3 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 7 (4 Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

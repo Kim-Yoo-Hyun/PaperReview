@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 - **p. 5 / 6.1. Approximately Solving the CPO Update - extractive body cue:** However, for small step sizes δ, the objective and cost constraints are well-approximated by linearizing around πk, and the KLdivergence constraint is well-approximated by second ...
 - **p. 5 / 6.1. Approximately Solving the CPO Update - extractive body cue:** Denoting the gradient of the objective as g, the gradient of constraint i as bi, the Hessian of the KL-divergence as H, and defining ci ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 1. Average performance for CPO, PDO, and TRPO over several seeds (5 in the Point environments, 10 in all others); the x-axis is training ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 | To address the issue of approximation and sampling errors that arise in practice, as well as the potential violations described by Proposition 2, we ... | definition/direction/unit from same section | p. 5 (6. Practical Implementation) |
 | Figure 5. In the Circle task, reward is maximized by moving along the green circle. The agent is not allowed to enter the blue ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 | For our comparison, we implement PDO with (16) as the update rule for the dual variables, using a constant learning rate α; details are ... | comparison identity and matched condition | p. 7 (8.1. Evaluating CPO and Comparison Analysis) |
 | Our metric for comparison is the C-return, the ‘true' constraint. | comparison identity and matched condition | p. 8 (8.2. Ablation on Cost Shaping) |
 | This is a convex program in m+1 variables; when the number of constraints is small by comparison to the dimension of θ, this is ... | comparison identity and matched condition | p. 5 (6.1. Approximately Solving the CPO Update) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 | body limitation/failure cue | Sometimes (11) will still be feasible and CPO can automatically recover from its bad step, but for the infeasible case, a recovery method is ... | p. 6 (6.2. Feasibility) |
 | body limitation/failure cue | We choose ∆to be the probability of entering an unsafe state within a fixed time horizon, according to a learned model that is updated ... | p. 6 (6.3. Tightening Constraints via Cost Shaping) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,23 +125,14 @@ PDF body evaluation/result cue (p. 8 (8.1. Evaluating CPO and Comparison Analysi
 | When using sampling to compute policy updates, as is typically done in high-dimensional control (Duan et al., 2016), this requires off-policy evaluation, which is ... | p. 3 (5. Constrained Policy Optimization) |
 | Our theoretical analysis shows that for our choices of surrogates, we can bound our update's worstcase performance and worst-case constraint violation with values that ... | p. 3 (5. Constrained Policy Optimization) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 6.2. Feasibility - extractive body cue:** Sometimes (11) will still be feasible and CPO can automatically recover from its bad step, but for the infeasible case, a recovery method is necessary.
 - **p. 6 / 6.3. Tightening Constraints via Cost Shaping - extractive body cue:** We choose ∆to be the probability of entering an unsafe state within a fixed time horizon, according to a learned model that is updated at ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 5 (6.1. Approximately Solving the CPO Update), metrics p. 7 (Figure/Table caption), p. 6 (8. Experiments), p. 7 (8. Experiments), p. 8 (8.2. Ablation on Cost Shaping), p. 8 (8.3. Constraint vs. Fixed Penalty), p. 6 (6.2. Feasibility), baselines p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 6 (8. Experiments), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.2. Ablation on Cost Shaping), p. 5 (6.1. Approximately Solving the CPO Update), results p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 8 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8.1. Evaluating CPO and Comparison Analysis), p. 7 (8. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

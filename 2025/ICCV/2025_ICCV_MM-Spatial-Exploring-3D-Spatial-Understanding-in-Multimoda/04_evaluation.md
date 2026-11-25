@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (5.2. Overview
 - **p. 7 / 5.4. CV-Bench Results - extractive body cue:** Notably, MM-Spatial (Blind eval) 13 achieves the best accuracy among all models on the 2D Object Count task, revealing a substantial bias in this benchmark.
 - **p. 5 / 5.1. Model Variants - extractive body cue:** Model Benchmark Category Averages Spatial General Knowl.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (Left) We generate the Cubify Anything VQA (CA-VQA) dataset and benchmark, covering various 1) input signals: single image, metric depth (sensor-based and estimated), ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (5.2. Overview
 | Table 3. CA-VQA Results. MM-Spatial-3B significantly outperforms (much larger) top open-source and commercial models across all tasks, demonstrating its strong spatial understanding ability. Model ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Figure 1. (Left) We generate the Cubify Anything VQA (CA-VQA) dataset and benchmark, covering various 1) input signals: single image, metric depth (sensor-based and ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (5.2. Overview
 | MM-Spatial-3B 8 substantially outperforms various (much larger) top opensource and commercial models 1 - 6 , incl. the SOTA GPT-4o model 3 , demonstrating ... | comparison identity and matched condition | p. 5 (5.3. Results on our CA-VQA Benchmark) |
 | 4 demonstrate that MMSpatial-3B 10 significantly outperforms the much larger SOTA Cambrian-1-34B 8 , highlighting the effectiveness of SFT on similar data. | comparison identity and matched condition | p. 7 (5.4. CV-Bench Results) |
 | Compared to existing benchmarks, ours 1) includes diverse tasks (incl. relative and metric distance / size estimation and 3D grounding), 2) provides rich input ... | comparison identity and matched condition | p. 2 (2. We release a new spatial understanding benchmark de) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (5.2. Overview
 | body limitation/failure cue | Table 6. SpatialRGPT-Bench Results. MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, out- performing SpatialRGPT-VILA-1.5-8B (which fully encodes depth). Training on ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | Strong commercial (2a&b) and research models (2c&d) fail. | p. 5 (5.1. Model Variants) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (5.2. Overview
 | We report the ω1 (accuracy at 25% relative error) and AbsRel (absolute relative error) metrics [57] commonly used in the depth estimation literature [12], ... | p. 7 (Model) |
 | MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, outperforming SpatialRGPT-VILA-1.5-8B (which fully encodes depth). | p. 8 (Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Dataset - extractive body cue:** CA-VQA is the first dataset that is based on high-quality 3D ground truth, includes depth maps (both from sensors and monocular) and multi-view images, covers ...
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 5 (5.2. Overview
 - **p. 5 / 5.1. Model Variants - extractive body cue:** Strong commercial (2a&b) and research models (2c&d) fail.
 
 - **Evidence anchors reviewed:** datasets p. 2 (Dataset), p. 2 (Dataset), p. 7 (5.5. SpatialRGPT-Bench Results), p. 5 (5.1. Model Variants), p. 7 (5.4. CV-Bench Results), p. 5 (5.1. Model Variants), metrics p. 7 (Figure/Table caption), p. 5 (5.1. Model Variants), p. 7 (5.4. CV-Bench Results), p. 2 (2. We release a new spatial understanding benchmark de), p. 2 (3. We run extensive experiments illustrating the benefits), p. 5 (5.2. Overview of Benchmark Category Results), baselines p. 7 (5.4. CV-Bench Results), p. 6 (Figure/Table caption), p. 5 (5.2. Overview of Benchmark Category Results), p. 5 (5.3. Results on our CA-VQA Benchmark), p. 7 (5.4. CV-Bench Results), p. 2 (2. We release a new spatial understanding benchmark de), results p. 6 (Figure/Table caption), p. 5 (5.2. Overview of Benchmark Category Results), p. 7 (5.4. CV-Bench Results), p. 2 (3. We run extensive experiments illustrating the benefits), p. 5 (5.1. Model Variants), p. 7 (5.4. CV-Bench Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

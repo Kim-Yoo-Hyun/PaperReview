@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 - **p. 8 / 5.2. Language-Grounded Benchmark - extractive body cue:** Data sample splits align with previous benchmarks' 3D scan splits.
 - **p. 3 / 3.1. Data Collection & Processing - extractive body cue:** Considering there have been readily available 3D indoor scene scans from existing datasets, we start with integrating those providing ego-centric RGB-D captures with the corresponding ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. EmbodiedScan provides a multi-modal, ego-centric 3D perception dataset with massive real-scanned data and rich annotations for indoor scenes. It benchmarks language-grounded holistic 3D ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 | 4), observing a larger AP-AR gap for top methods because of difficulties predicting accurate 3D boxes from partial views. | definition/direction/unit from same section | p. 8 (5.1. Fundamental 3D Perception Benchmarks) |
 | Semantic occupancy necessitates accurate boundaries across semantic regions without considering object pose or recalling all the objects, so the original point cloud segmentation annotations ... | definition/direction/unit from same section | p. 4 (3.2. Annotation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 | Experimental results validate the effectiveness of our baseline model on EmbodiedScan and demonstrate its generalization ability in the wild. | comparison identity and matched condition | p. 2 (Dataset) |
 | Due to the space limitation, please refer to the appendix for implementation details of different baselines, and more quantitative and qualitative results including an ... | comparison identity and matched condition | p. 6 (5. Benchmark) |
 | Their performance slightly lags behind our camera-only baseline. | comparison identity and matched condition | p. 7 (5.1. Fundamental 3D Perception Benchmarks) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,7 +115,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 - **p. 4 / 3.1. Data Collection & Processing - extractive body cue:** As for different sampling rates of images in ScanNet and 3RScan videos, we sample one keyframe per 10 frames for ScanNet and keep all the ...
 - **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Here, N = 10 during training with random view sampling, while in evaluation, N = 50 with fixed views.
 - **p. 8 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Train Val Overall Head Common Tail Render Render 22.11 33.01 16.44 6.74 Render Real 18.72 27.02 14.85 6.25 Real Real 21.98 32.91 17.18 5.05 frame ...
-- **p. 4 / 3.1. Data Collection & Processing - extractive body cue:** As for different sampling rates of images in ScanNet and 3RScan videos, we sample one keyframe per 10 frames for ScanNet and keep all the ...
 
 ## Generalization and Failure Cases
 
@@ -138,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 | body limitation/failure cue | Generated language prompts following SR3D fall into five types of spatial object-to-object relations: Horizontal Proximity, Vertical Proximity, Support, Allocentric, and Between. | p. 4 (3.3. Statistics) |
 | body limitation/failure cue | Due to the space limitation, please refer to the appendix for implementation details of different baselines, and more quantitative and qualitative results including an ... | p. 6 (5. Benchmark) |
 | body limitation/failure cue | Unlike continuous settings, multi-view 3D perception does not predefine the order of views but provides all views to the model for scene-level results. | p. 7 (5.1. Fundamental 3D Perception Benchmarks) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -154,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 | In practice, these two ResNets produce 4 levels of features, for both point clouds and images, denoted as isomorphic multi-modality encoders. | p. 5 (4.1. Multi-Modal 3D Encoder) |
 | Sparse Decoder for 3D Boxes Prediction. | p. 6 (4.2. Sparse & Dense Decoder) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Dataset - extractive body cue:** On the other hand, since we cannot trivially obtain the reconstruction of a new environment, models trained with scene-level input are not directly applicable in ...
@@ -172,6 +150,5 @@ PDF body evaluation/result cue (p. 7 (5.1. Fundamental 3D Perception Benchmarks)
 - **p. 7 / 5.1. Fundamental 3D Perception Benchmarks - extractive body cue:** Unlike continuous settings, multi-view 3D perception does not predefine the order of views but provides all views to the model for scene-level results.
 
 - **Evidence anchors reviewed:** datasets p. 2 (Dataset), p. 2 (Dataset), p. 4 (3.3. Statistics), p. 6 (5. Benchmark), p. 6 (5. Benchmark), p. 7 (5. Benchmark), metrics p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset), p. 8 (5.3. Analysis), p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), baselines p. 8 (5.2. Language-Grounded Benchmark), p. 8 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset), p. 2 (Dataset), p. 6 (5. Benchmark), p. 7 (5.1. Fundamental 3D Perception Benchmarks), results p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 3 (Figure/Table caption), p. 7 (5.1. Fundamental 3D Perception Benchmarks), p. 8 (5.2. Language-Grounded Benchmark), p. 8 (5.1. Fundamental 3D Perception Benchmarks), p. 2 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

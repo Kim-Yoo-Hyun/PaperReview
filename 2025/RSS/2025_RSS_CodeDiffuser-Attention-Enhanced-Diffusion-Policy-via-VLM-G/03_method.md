@@ -51,7 +51,6 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 - **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** While the performance of ACT and DP initially improves, they generally show diminishing returns while success rate is still low, and in some cases plateaus ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 - **p. 4 / A. Problem Statement - extractive body cue:** We first generate intermediate code from the instruction {and multiView RGBD observations 0, € RA*!W 4, where AC is the number of camera views, and ...
 - **p. 6 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** note that here we do not consider language inputs and focus oon studying the low-level policy capabilities.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,15 +87,11 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 - **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** These results confirm that the 3D attention map is a robust representation for downstream isuomotor policy learning in ambiguous task scenarios. ‘Additionally, we stress-test our ...
 - **p. 3 / B. Foundational Vision Model for Roboties - extractive body cue:** In contrast, our approach uses VLM-generated code to compute 3D attention map, which highlights task-relevant regions and possesses much lower dimension compared to 3D Diffuser ...
 - **p. 7 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** Second, while training on a 1x1 scenario dloes not generalize to scenarios with multiple placing options, the generalization of CodeDiffuser quickly improves. after seeing more ...
-- **p. 3 / B. Foundational Vision Model for Roboties - extractive body cue:** In contrast, our approach uses VLM-generated code to compute 3D attention map, which highlights task-relevant regions and possesses much lower dimension compared to 3D Diffuser ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** training, testing, scenarios, coasist, mixture, picking, optioas, placing, option, success, rate, curve, indicates, given, sufficient, number, demonstrations, attention-conditioned, policy, converges.
 - **Relevant PDF headings:** B. Foundational Vision Model for Roboties (p. 3); B. Analysis of Existing Imitation Learning Algorithm (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +111,13 @@ PDF body method statement (p. 9 (B. Analysis of Existing Imitation Learning Algo
 - **p. 9 / B. Analysis of Existing Imitation Learning Algorithm - extractive body cue:** (4) ‘Our ablation study demonstrates that incorporating the residual ‘connection into PointNet++ improves performance from 61% to 86.5%.
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Method Overview. CodeDitfuser consists of three primary components: code generation, 3D attention map computation, and low level policy. (a) CodeDitfuser first leverages the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (B. Analysis of Existing Imitation Learning Algorithm), p. 6 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 7 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), p. 8 (B. Analysis of Existing Imitation Learning Algorithm), objective p. 7 (B. Analysis of Existing Imitation Learning Algorithm), temporal p. 6 (IV. EXPERIMENTS), p. 1 (Abstract), p. 1 (Abstract), p. 2 (1. Ivrropuction), p. 2 (1. Ivrropuction), p. 3 (A. Problem Statement).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

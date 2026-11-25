@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 2 (Figure/Table caption
 - **p. 8 / 4 Experiments - extractive body cue:** 4.3 Hardware: Mobile Manipulator in a Kitchen Method Model 1-ϵ Plan Succ Task Succ Set Size Help KNOWNO PaLM-2L 0.85 0.87 0.76 2.22 0.67 Simple ...
 - **p. 7 / 4 Experiments - extractive body cue:** Then we run 50 trials for both methods in hardware.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: KNOWNO uses Conformal Prediction (CP) to align the uncertainty of LLM planners. Given a language instruction, an LLM generates possible next steps and ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 2 (Figure/Table caption
 | Figure 1: KNOWNO uses Conformal Prediction (CP) to align the uncertainty of LLM planners. Given a language instruction, an LLM generates possible next steps ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Figure 2: KNOWNO formulates LLM planning as MCQA by first prompting an LLM to generate plausible options, and then asking it to predict the ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 2 (Figure/Table caption
 | Second, it requires 20× inference time compared to other methods. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | Also, as the scenarios get increasingly ambiguous (least in Attribute and most in Spatial), the baselines show larger deviations. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | Compared to Simple Set which uses a much higher ϵ, KNOWNO achieves the specified trial-level task success rate precisely by leveraging the Multi-Step Uncertainty ... | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 2 (Figure/Table caption
 | body limitation/failure cue | Simple Set and Ensemble Set cannot achieve coverage consistently. | p. 7 (4 Experiments) |
 | body limitation/failure cue | Target success guarantee from KnowNo is robust to varying LLM choice. | p. 8 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 2 (Figure/Table caption
 | 1), or robot code executed by an interpreter [5]. | p. 2 (1 Introduction) |
 | Possible next steps: 0.44 - Put plastic bowl in microwave. | p. 2 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Discussion - extractive body cue:** Limitations and future work: The primary limitation of our work is that the task completion guarantee assumes environments (objects) are fully grounded in the text ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 2 (Figure/Table caption
 - **p. 8 / 4 Experiments - extractive body cue:** Target success guarantee from KnowNo is robust to varying LLM choice.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), baselines p. 2 (Figure/Table caption), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 8 (4 Experiments), p. 2 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

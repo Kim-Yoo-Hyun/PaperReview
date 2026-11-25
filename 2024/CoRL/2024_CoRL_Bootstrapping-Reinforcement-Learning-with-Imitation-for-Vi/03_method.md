@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 7 (3 M
 - **p. 7 / 3 Methodology - extractive body cue:** It is evident that at 60%, the collected rewards achieve a peak (>100) in the curve representing the best performance.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 8 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 7 (3 M
 - **p. 12 / A.3 Training Configurations - extractive body cue:** For state-based teacher training, we employ a policy network consisting of a two-layer MLP, each layer containing 256 neurons, with a final layer outputting a ...
 - **p. 2 / 1 Introduction - extractive body cue:** The RL policy for state-of-the-art autonomous drone racing [7], which outperformed worldchampion pilots, still relies on explicit state estimates, including position, velocity, and orientation.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 7 (3 M
 - **p. 13 / A.3 Training Configurations - extractive body cue:** We incorporate a linear decay in the learning rate, starting at 1e-3 and decreasing to 1e-5 at 50 epochs, remaining unchanged for the remainder of ...
 - **p. 12 / A.2 Reward Formulations for RL Trainings - extractive body cue:** In our experiments, we employ identical hyperparameters for both state-based teacher training and vision-based RL fine-tuning to ensure a fair comparison.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** consists, three, phases, initial, training, teacher, policy, state, information, distillation, student, transfer, knowledge, create, efficient, baseline, model, III, fine-tuning, through.
 - **Relevant PDF headings:** 3 Methodology (p. 3); A.1 Quadrotor Dynamics for Policy Training (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 7 (3 M
 - **p. 15 / A.8 Unobservable States Illustration - extractive body cue:** Approach Slow IL policy Our Finetuned Policy Champion-level Policy LT [s] SR [%] LT [s] SR [%] LT [s] SR [%] Nominal Simulation 9.53 39 ...
 - **p. 13 / A.5 Ablation study on Asymmetric Critic Formulation - extractive body cue:** In stage III of our approach, the visuomotor policy undergoes fine-tuning using an asymmetric critic setup.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Methodology), p. 4 (3 Methodology), p. 7 (3 Methodology), p. 7 (3 Methodology), p. 3 (3 Methodology), p. 8 (3 Methodology), objective p. 3 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 13 (A.3 Training Configurations), p. 4 (3 Methodology), p. 7 (3 Methodology), temporal p. 4 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 7 (3 Methodology), p. 7 (3 Methodology), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

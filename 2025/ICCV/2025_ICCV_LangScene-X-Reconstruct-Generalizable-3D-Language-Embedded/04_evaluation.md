@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.1. Experiment 
 - **p. 8 / 4.2. Main Results - extractive body cue:** On the ScanNet dataset, the improvement upon the best existing method comes to 14.92% in terms of mIoU.
 - **p. 8 / 4.2. Main Results - extractive body cue:** Training Curve comparison between our LQC and regular autoencoder technique. curacy in both mIoU and mAcc metrics with a large margin, i.e., a 10.58\ % ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. LangScene-X: Given sparse views as input (e.g., as few as two images), we design a generative paradigm to build the 3D generalizable language-embedded ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.1. Experiment 
 | Figure 3. The illustration of Language Quantized Compressor (LQC). By leveraging learnable embedding and vector quantisa- tion strategy, it compresses high-dimensional language features into ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 2. Pipeline of LangScene-X. Given two sparse-view images as input, we first generate a sequence of 3D consistent RGB images, normal maps, and ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.1. Experiment 
 | By comparing with existing state-of-the-art 3D language field techniques (e.g., LangSplat, LangSurf), unified 3D representation method (i.e., LSM), and open-vocabulary methods like LSeg, our ... | comparison identity and matched condition | p. 6 (4.2. Main Results) |
 | Qualitative Comparison on LERF-OVS [17]. | comparison identity and matched condition | p. 8 (4.3. Ablations) |
 | Ablations of proposed module and losses. | comparison identity and matched condition | p. 8 (4.3. Ablations) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.1. Experiment 
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,19 +129,10 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 6 (4.1. Experiment 
 | Then, we encode the condition video with a causal VAE [49] encoder to get a latent vector concatenated with a Gaussian noise of the ... | p. 4 (3.2. Building the TriMap Video Diffusion) |
 | After that, z_q(x ) passes through the decoder and obtains the reconstructed feature \protect \hat {x}. | p. 5 (3.3. Language Quantized Compressor) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 7 (4.2. Main Results), p. 8 (4.2. Main Results), p. 8 (4.2. Main Results), metrics p. 6 (Figure/Table caption), p. 8 (4.3. Ablations), p. 6 (4.1. Experiment Setup), p. 8 (4.3. Ablations), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (4.1. Experiment Setup), p. 6 (4.2. Main Results), p. 8 (4.3. Ablations), p. 8 (4.3. Ablations), results p. 6 (4.2. Main Results), p. 6 (4.1. Experiment Setup), p. 8 (4.3. Ablations), p. 8 (4.2. Main Results), p. 7 (4.2. Main Results), p. 7 (4.2. Main Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

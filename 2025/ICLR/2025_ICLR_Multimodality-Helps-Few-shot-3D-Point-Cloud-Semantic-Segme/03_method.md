@@ -58,7 +58,6 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 M
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** This design offers two key advantages: i) Our model uses 2D modality in an implicit manner and does not require it as input during meta-learning ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS), p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS), p. 7 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 M
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** Subsequently, these features are processed by the IF head (HIF) and the UF head (HUF) to generate intermodal and unimodal features for both support and ...
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** MSF integrates semantic information from text embeddings to refine the correlation output of MCF.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 M
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** For optimization, we use the AdamW optimizer, setting a weight decay of 0.01 and a learning rate of 0.006 during pretraining.
 - **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** The 2D features F2D ∈RH×W ×Dt aligned with text modality can be extracted using the pretrained image encoder in LSeg (Li et al., 2022) or ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** utilize, potentially, available, modality, visual, encoder, LSeg, generate, features, exhibit, excellent, generalizability, since, model, pretrained, large-scale, datasets, Then, MSF, module.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 M
 - **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** For datasets without 2D images, such as S3DIS (Armeni et al., 2016), we can directly use the pretrained IF head and backbone from ScanNet.
 - **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** The pretraining step is to align with the VLMs embedding space without using any semantic labels, making the pretrained weights class-agnostic, generic, and transferable.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), objective p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS), p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS), p. 7 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), temporal p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 7 (3 METHODOLOGY).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

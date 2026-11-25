@@ -44,8 +44,6 @@
 - **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** We evaluate SR3R through 4× 3DSR experiments on the large-scale RE10K and ACID datasets, and compare it against the SOTA feed-forward 3DGS reconstruction models NoPoSplat ...
 - **p. 8 / 4.3. Zero-Shot Generalization - extractive body cue:** SRGS and FSGS+SRGS use per-scene optimization.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We reformulate 3DGS-based 3DSR as a feed-forward mapping problem from sparse LR views to HR 3DGS representation. (a) Unlike existing methods that rely ...
@@ -79,8 +77,6 @@
 | Figure 2. Overview of the SR3R framework. Given two LR input views, a feed-forward 3DGS backbone produces an LR 3DGS, which is then densified ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 3. Qualitative comparison with SOTA feed-forward 3DGS reconstruction methods on Re10k (top three) and ACID (bottom three) datasets. SR3R delivers significantly sharper details ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@
 | To assess the contribution of each component in SR3R, we perform a component-wise ablation using NoPoSplat as the baseline and evaluate 4× 3DSR performance ... | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
 | We compare SR3R with two state-of-the-art feed-forward 3DGS reconstruction models, NoPoSplat [37] and DepthSplat [33], as well as the perscene optimization methods SRGS [9] ... | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | Modules are added cumulatively to the NoPoSplat baseline. | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@
 | body limitation/failure cue | Notably, even Bilinear interpolation already surpasses all feed-forward baselines (Table 1), indicating that SR3R does not depend on a particular upsampling design. | p. 8 (4.4. Ablation Study) |
 | body limitation/failure cue | These results highlight the advantage of learning Gaussian offsets over direct parameter regression, enabling more accurate high-frequency recovery under sparse LR inputs. | p. 7 (4.2. Comparison with State-of-the-Art) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@
 | This produces the decoded features tde ∈RN×C, which integrate multi-view geometry and reduce inconsistencies caused by pose inaccuracy or limited view overlap. | p. 5 (3.4. LR Image to HR 3DGS Mapping) |
 | The decoded features are then provided to the Gaussian offset learning module (Section 3.5) to estimate residual corrections from the densified representation GDense to ... | p. 5 (3.4. LR Image to HR 3DGS Mapping) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** These improvements hold for both 3DGS backbones, confirming that our offsetbased refinement and cross-view fusion effectively restore 3D-specific high-frequency structures that 2D upsampling and direct ...
@@ -164,6 +143,5 @@
 - **p. 7 / 4.2. Comparison with State-of-the-Art - extractive body cue:** These results highlight the advantage of learning Gaussian offsets over direct parameter regression, enabling more accurate high-frequency recovery under sparse LR inputs.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Zero-Shot Generalization), p. 7 (4.2. Comparison with State-of-the-Art), p. 8 (4.3. Zero-Shot Generalization), metrics p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 1 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.3. Zero-Shot Generalization), p. 8 (4.4. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), results p. 8 (Figure/Table caption), p. 8 (4.4. Ablation Study), p. 7 (4.3. Zero-Shot Generalization), p. 7 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 6 (4.1. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

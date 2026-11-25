@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** We used the simulator from a recent Mario Bros.
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** The kth output binary variable ˆyk = I(wT k x + bk > 0), where wk, bk optimizes the SVM objective with regularizer λ = ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 1: Image from Super Tux Kart's Star Track. controller as the base learner which updates the steering at 5Hz based on the vector of ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 | We compare performance on a race track called Star Track. | definition/direction/unit from same section | p. 6 (5 EXPERIMENTS) |
 | We measure performance in terms of the average number of falls per lap. | definition/direction/unit from same section | p. 6 (5 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 | We first observe that with the baseline 0 0.5 1 1.5 2 2.5 x 10 4 0 0.5 1 1.5 2 2.5 3 3.5 ... | comparison identity and matched condition | p. 6 (5 EXPERIMENTS) |
 | Again in this experiment, DAGGER outperforms SMILe, and also outperforms SEARN for all choice of α we considered. | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | Similar techniques can be applied to multi-pass or beam-search decoding leading to results that are competitive with the state-of-the-art. | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 | body limitation/failure cue | D0 D0.5 D0.9 Se1 Se0.4 Sm0.1 Sup Figure 4: Average distance/stage as a function of data. approach, performance stagnates as we collect more data ... | p. 7 (5 EXPERIMENTS) |
 | body limitation/failure cue | 6 FUTURE WORK We show that by batching over iterations of interaction with a system, no-regret methods, including the presented DAGGER approach can provide ... | p. 8 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 | Furthermore, we denote dπ = 1 T PT t=1 dt π the average distribution of states if we follow policy π for T steps. | p. 2 (2 PRELIMINARIES) |
 | The total cost of executing policy π for T-steps (i.e., the cost-to-go) is denoted J(π) = PT t=1 Es∼dtπ[Cπ(s)] = TEs∼dπ[Cπ(s)]. | p. 2 (2 PRELIMINARIES) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** DAgger (βi = I(i=1)) SMILe (α = 0.1) Supervised Figure 2: Average falls/lap as a function of training data. supervised approach where training always occurs ...
@@ -159,9 +138,8 @@ PDF body evaluation/result cue (p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** 6 FUTURE WORK We show that by batching over iterations of interaction with a system, no-regret methods, including the presented DAGGER approach can provide a ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), metrics p. 7 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), baselines p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

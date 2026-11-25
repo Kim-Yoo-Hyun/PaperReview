@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 - **p. 7 / 4.2. Method Evaluation - extractive body cue:** Rotation and translation accuracy (% of pairs within RRE/RTE thresholds in deg and cm respectively) and mean/median error on the ScanNet Hard and ScanNet SuperGlue ...
 - **p. 2 / 4. We achieve SOTA zero-shot results across indoor RGB-D - extractive body cue:** benchmarks (3DMatch, ScanNet) and, for the first time, demonstrate a generative registration framework that successfully operates on real outdoor LiDAR data (Waymo).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. C-GenReg: A training-free point cloud registration frame- work. The pipeline operates in two parallel branches: (1) Generated- RGB Branch - a World Foundation ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 | benchmarks (3DMatch, ScanNet) and, for the first time, demonstrate a generative registration framework that successfully operates on real outdoor LiDAR data (Waymo). | definition/direction/unit from same section | p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D) |
 | Despite this, C-GenReg achieves the best overall performance across most rotation and translation metrics. | definition/direction/unit from same section | p. 6 (4.2. Method Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 | It reduces the mean RTE by nearly half compared to GeoTransformer and consistently 3009 | comparison identity and matched condition | p. 6 (4.2. Method Evaluation) |
 | In particular, it ranks first or second on most of the metrics, with GPCR slightly outperforming in median RRE and mean RTE. | comparison identity and matched condition | p. 7 (4.2. Method Evaluation) |
 | Table 4. Ablation Study on the 3DMatch Benchmark. Top: impact of different Vision Foundation Models (no geometric features or fusion). Bottom: impact of geometric ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 |---|---|---|
 | body limitation/failure cue | Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,19 +128,10 @@ PDF body evaluation/result cue (p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method
 | MASt3R operates on pairs of source and target images through a cross-attention-based decoder, where the extracted features for each image are conditioned on the ... | p. 5 (3.3. Generated-RGB Branch) |
 | To approximate the modality-specific correspondence posterior Pr(Mij/Sm ij ), where m∈{geo,img}, we first compute the source-target feature similarity matrices for each modality and then ... | p. 5 (3.5. Match-then-Fuse Probabilistic Fusion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D), metrics p. 6 (4.1. Experimental Settings), p. 7 (4.2. Method Evaluation), p. 8 (4.3. Ablation Studies), p. 7 (4.2. Method Evaluation), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 6 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 6 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 8 (Figure/Table caption), results p. 7 (4.2. Method Evaluation), p. 7 (4.2. Method Evaluation), p. 6 (4.2. Method Evaluation), p. 8 (Figure/Table caption), p. 2 (4. We achieve SOTA zero-shot results across indoor RGB-D), p. 6 (4.1. Experimental Settings).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

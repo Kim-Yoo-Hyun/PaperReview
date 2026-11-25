@@ -50,7 +50,6 @@ PDF body method statement (p. 4 (3.2. Network architecture), p. 4 (3.2. Network 
 - **p. 4 / 3.2. Network architecture - extractive body cue:** Several shortcut connections are added for better gradient propagation.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.2. Network architecture), p. 4 (3.2. Network architecture), p. 4 (3.2. Network architecture).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 4 (3.2. Network architecture), p. 4 (3.2. Network 
 - **p. 5 / 4. Synthesizing training data - extractive body cue:** Existing RGB-D datasets with surface reconstructions are subject to occlusions or partial observations, and cannot provide the volumetric occupancy and semantic labels for the entire ...
 - **p. 2 / 1. Introduction - extractive body cue:** Most critically, this prediction extends beyond the projected surface implied by the depth map, thus providing occupancy information for the entire scene.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (3.2. Network architecture), p. 4 (3.2. Network 
 - **p. 5 / 3.2. Network architecture - extractive body cue:** During training, each mini-batch contains one 3D view volume, requiring 11 GB of GPU memory.
 - **p. 5 / 3.2. Network architecture - extractive body cue:** Pre-training SSCNet on the SUNCG training set takes around a week on a Tesla K40 GPU, and fine-tuning on the NYU dataset takes 30 hours.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, dilation-based, context, module, capture, higher-level, inter-object, contextual, information, Taking, high-resolution, volume, input, network, first, uses, several, convolution, layers, learn.
 - **Relevant PDF headings:** 3.2. Network architecture (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3.2. Network architecture), p. 4 (3.2. Network 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Semantic scene completion. (a) Input single-view depth map (b) Visible surface from the depth map; color is for visualiza- tion only. (c) Semantic ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate TSDF ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Network architecture), p. 4 (3.2. Network architecture), p. 5 (3.2. Network architecture), p. 5 (3.2. Network architecture), objective p. 4 (3.2. Network architecture), p. 5 (3.2. Network architecture), p. 4 (3.2. Network architecture), temporal p. 6 (5.1. Experimental results), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

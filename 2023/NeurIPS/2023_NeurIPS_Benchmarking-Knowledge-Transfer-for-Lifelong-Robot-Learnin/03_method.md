@@ -55,7 +55,6 @@ PDF body method statement (p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Backgro
 - **p. 5 / 2 Background - extractive body cue:** We pick ER, EWC, and PACKNET because they correspond to the memory-based, regularization-based, and dynamic-architecture-based methods for lifelong learning.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 3 (2 Background), p. 3 (2 Background).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Backgro
 - **p. 5 / 2 Background - extractive body cue:** Initial State Distribution (µ0) To specify µ0, we first sample a scene layout that matches the objects/behaviors in a provided instruction.
 - **p. 6 / 2 Background - extractive body cue:** We compute the multi-modal distribution over manipulation actions using a Gaussian-Mixture-Model (GMM) based output head [8, 42, 68].
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Backgro
 - **p. 9 / 5 Experiments - extractive body cue:** We save a checkpoint every 5 epochs of training and then pick the checkpoint for each architecture that has the best performance as the pretrained ...
 - **p. 9 / 5 Experiments - extractive body cue:** For pretraining, we apply behavioral cloning on the 90 tasks using the three policy architectures for 50 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, LIBERO, highlights, five, research, topics, LLDM, efficiently, transfer, declarative, knowledge, procedural, mixture, design, effective, policy, architectures, algorithms, robustness, lifelong.
 - **Relevant PDF headings:** A Implemented Neural Architectures and Lifelong Learning Algorithms (p. 17); A.1 Neural Architectures (p. 17); B.1 Lifelong Learning Algorithms (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Backgro
 - **p. 9 / 5 Experiments - extractive body cue:** For pretraining, we apply behavioral cloning on the 90 tasks using the three policy architectures for 50 epochs.
 - **p. 6 / 5 Experiments - extractive body cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 6 (2 Background), p. 6 (2 Background), p. 3 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), objective p. 3 (2 Background), p. 3 (2 Background), p. 5 (2 Background), temporal p. 5 (2 Background), p. 3 (2 Background), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 6 (2 Background), p. 6 (2 Background).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

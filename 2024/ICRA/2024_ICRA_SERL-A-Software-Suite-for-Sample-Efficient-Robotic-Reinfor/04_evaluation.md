@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 - **p. 9 / 5. Experiments - extractive body cue:** Researchers at the University of Washington set up a Peg Insertion task using 3D printed parts from the Functional Manipulation Benchmark (Luo et al., 2024) ...
 - **p. 9 / 5. Experiments - extractive body cue:** SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington these prior works generally have either lower ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Depiction of various tasks solved using SERL in the real world. These include PCB board insertion (left), cable routing (middle), and object relocation ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 | Figure 1: Depiction of various tasks solved using SERL in the real world. These include PCB board insertion (left), cable routing (middle), and object ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2: Software architecture and real-world robot training example code. SERL runs three parallel processes, consisting of the actor, which chooses actions, and the ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 | SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning Figure 8: Peg Insertion Task at University of Washington these prior works generally have either ... | comparison identity and matched condition | p. 9 (5. Experiments) |
 | Table 1: Comparison to results reported on similar tasks in prior work. The overall success rates for our method are generally higher, and the ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Although the components of our system are all based on (recent) prior work, the stateof-the-art performance of this combination illustrates our main thesis: the ... | comparison identity and matched condition | p. 9 (5. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 |---|---|---|
 | body limitation/failure cue | Our framework does have a number of limitations. | p. 9 (6. Discussion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,22 +131,13 @@ PDF body evaluation/result cue (p. 8 (5. Experiments), p. 9 (5. Experiments), p.
 | 4, where a high-level RL controller 𝜋(𝐚/𝐬) sends control targets at 10HZ for the low-level impedance controller to track at 1K HZ, so one ... | p. 5 (4.5. Impedance Controller for Contact-Rich) |
 | A typical impedance control objective for this controller is 𝐹= 𝑘𝑝⋅𝑒+ 𝑘𝑑⋅̇ 𝑒+ 𝐹𝑓𝑓+ 𝐹𝑐𝑜𝑟, where 𝑒= 𝑝-𝑝𝑟𝑒𝑓, 𝑝is the measured pose, and 𝑝𝑟𝑒𝑓is ... | p. 5 (4.5. Impedance Controller for Contact-Rich) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6. Discussion - extractive body cue:** Our framework does have a number of limitations.
 
 - **Evidence anchors reviewed:** datasets p. 8 (5. Experiments), p. 7 (5. Experiments), p. 8 (5. Experiments), p. 7 (5. Experiments), p. 9 (5. Experiments), p. 9 (5. Experiments), metrics p. 7 (Figure/Table caption), p. 9 (5. Experiments), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 9 (5. Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5. Experiments), p. 8 (5. Experiments), p. 9 (5. Experiments), p. 7 (Figure/Table caption), p. 9 (5. Experiments), results p. 8 (5. Experiments), p. 9 (5. Experiments), p. 8 (5. Experiments), p. 7 (Figure/Table caption), p. 9 (5. Experiments), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

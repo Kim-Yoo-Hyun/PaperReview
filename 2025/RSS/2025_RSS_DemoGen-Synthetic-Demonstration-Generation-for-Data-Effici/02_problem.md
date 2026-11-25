@@ -59,8 +59,6 @@ PDF body contribution framing (p. 4 (A. Problem Formulation)): The action a, con
 | body cue at p. 11 | When the scene becomes even more complex, e.g. clutter, DemoGen does not necessarily work well. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | We vary the number of demonstrations from 25 to 400, The object configurations are randomly sampled from a ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details). The downstream handoff is claimed only when the body describes it.
@@ -68,10 +66,8 @@ il writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 5 (A. Problem Formulation), interface p. 5 (A. Problem Formulation), p. 4 (A. Problem Formulation), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

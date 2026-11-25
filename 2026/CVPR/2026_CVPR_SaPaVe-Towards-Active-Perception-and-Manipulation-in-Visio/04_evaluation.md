@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 - **p. 7 / 4.1. Experimental Setup - extractive body cue:** Performance on active manipulation in real-world settings.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** 3.4), which comprises 6 task types: Unoccluded/Occluded/Out-of-View Pick-andPlace, as well as Unoccluded/Occluded/Out-of-View Articulated Manipulation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose SaPaVe, an end-to-end active manipulation framework that jointly integrates semantic active perception and active- view execution; the former selectively shifting viewpoints ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 | (5) What role do each of the system components play in enhancing its overall performance (Sec. | definition/direction/unit from same section | p. 6 (4. Experiments) |
 | Figure 2. Overview of SaPaVe. SaPaVe can process RGB images and task instructions and output camera movement and manipulation actions in a decoupled action ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 | We report the success rate (%) compared to the existing VLA models. | comparison identity and matched condition | p. 7 (4.1. Experimental Setup) |
 | 75 75 65 60 68.75 a unified single action decoder for simultaneously learning camera movement and other actions, compared to using a decoupled approach, ... | comparison identity and matched condition | p. 8 (4.6. Ablation Studies) |
 | 3, our bottom-up approach significantly outperforms direct VLA fine-tuning, demonstrating that first establishing robust semantic active perception priors and then learning active manipulation tasks ... | comparison identity and matched condition | p. 8 (4.4. Comparison with existing VLA models) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 | body limitation/failure cue | (4) How well does our model generalize to out-of-distribution (OOD) scenarios (Sec. | p. 6 (4. Experiments) |
 | body limitation/failure cue | Universal Spatial Knowledge Injection greatly enhances the model's robustness for basic operations under active views. | p. 8 (4.6. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 | 2, we adopt a Universal Spatial Encoder inherited from a powerful feedforward 3D geometry model [17]. | p. 4 (Model) |
 | First, place it on the desk to the right of the computer; then, place it to the right side of the computer. | p. 6 (3.4. ActiveViewPose-200K and ActiveManip-Bench) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.4. Comparison with existing VLA models - extractive body cue:** Two main factors account for this shortfall: (1) Direct VLA fine-tuning does not provide sufficient active perception priors.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 1 (Figure/Table 
 - **p. 8 / 4.6. Ablation Studies - extractive body cue:** Universal Spatial Knowledge Injection greatly enhances the model's robustness for basic operations under active views.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Comparison with existing VLA models), p. 8 (4.6. Ablation Studies), p. 7 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), metrics p. 7 (4.1. Experimental Setup), p. 7 (4.3. Fixed and Dynamic Cameras Evaluation), p. 8 (4.6. Ablation Studies), p. 8 (4.6. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Setup), baselines p. 1 (Figure/Table caption), p. 7 (4.1. Experimental Setup), p. 6 (4. Experiments), p. 7 (4.1. Experimental Setup), p. 8 (4.6. Ablation Studies), p. 8 (4.4. Comparison with existing VLA models), results p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.2. Semantic Active Perception Evaluation), p. 8 (4.4. Comparison with existing VLA models), p. 8 (4.6. Ablation Studies), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

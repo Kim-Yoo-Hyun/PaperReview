@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 - **p. 10 / 1 INTRODUCTION - extractive body cue:** We observe that with the 70% Suboptimal Forward dataset, the advantage of EG persists even after normalization.
 - **p. 10 / 1 INTRODUCTION - extractive body cue:** 5; performance peaks at small to moderate M, whereas excessive partitioning leads to a slight degradation (e.g., on the 70% Forward dataset the best score ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Table 1: BC vs. IQL performance across datasets (mean ± standard error over 5 seeds).
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 | Table 6: Reward terms composing the reward function. Coefficients for each robot are listed in | definition/direction/unit from same section | p. 14 (Figure/Table caption) |
 | Taken together, these results suggest that relatively small values, M=2 ∼4, already yield strong gains; a practical strategy is to start with a small ... | definition/direction/unit from same section | p. 10 (1 INTRODUCTION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 | EG yields consistent benefits across a range of offline learning baselines. | comparison identity and matched condition | p. 9 (1 INTRODUCTION) |
 | Figure 1: Comparison of learning curves between cross-embodiment pre-trained networks and net- works trained without cross-embodiment pre-training for Badger, Unitree G1, and Cassie. "leave-one-out" ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Second, we conduct ablation studies to isolate the contributions of (i) grouping strategy, comparing random grouping, an intuitive biped / quadruped split and our ... | comparison identity and matched condition | p. 8 (1 INTRODUCTION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,7 +117,6 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 - **p. 10 / 1 INTRODUCTION - extractive body cue:** Method (mean ± SEM) Normalized IQL 44.20 ± 2.22 IQL + EG 51.98 ± 1.70 ∆R +7.78 (iii) Compute- and data-normalized comparison EG performs M ...
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** IQL performance across datasets (mean ± standard error over 5 seeds).
 - **p. 4 / 1 INTRODUCTION - extractive body cue:** Dataset BC IQL Expert Forward 63.31 ± 0.10 63.39 ± 0.05 Expert Backward 67.17 ± 0.01 67.10 ± 0.01 Expert Replay Forward 49.71 ± 1.06 ...
-- **p. 7 / 1 INTRODUCTION - extractive body cue:** Preprint (a) Embodiment-based similarity matrix (b) Average gradient cosine similarity matrix (c) Embodiment-based similarity vs. mean gradient cosine similarity Figure 3: (a) Embodiment-based similarity matrix ...
 
 ## Generalization and Failure Cases
 
@@ -139,8 +127,6 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 | body limitation/failure cue | Table 2: Expert vs. 70% Suboptimal IQL performance across robots and avg. gradient cosine similarity C on the 70% subop- timal dataset. Cells shaded ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | A likely reason is that coarse categories such as leg count cannot capture gradient-relevant factors like actuator placement, link lengths, mass distribution, and joint ... | p. 9 (1 INTRODUCTION) |
 | body limitation/failure cue | In contrast, Random yields only a small gain (+1.16, +3.08%), and the intuitive fourway split Heuristic actually degrades performance (-3.14, -8.31%). | p. 9 (1 INTRODUCTION) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -155,14 +141,6 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 | IQL performance across datasets (mean ± standard error over 5 seeds). | p. 4 (1 INTRODUCTION) |
 | Specifically, we encode each action with an action encoder to obtain a latent action vector, which we then concatenate with the latent representation of ... | p. 4 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 7 CONCLUSION - extractive body cue:** We also identified a core failure mode, inter-robot gradient conflicts, whose incidence grows with both the proportion of suboptimal data and the number of embodiments.
@@ -172,6 +150,5 @@ PDF body evaluation/result cue (p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p.
 - **p. 9 / 1 INTRODUCTION - extractive body cue:** In contrast, Random yields only a small gain (+1.16, +3.08%), and the intuitive fourway split Heuristic actually degrades performance (-3.14, -8.31%).
 
 - **Evidence anchors reviewed:** datasets p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 7 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), metrics p. 14 (Figure/Table caption), p. 10 (1 INTRODUCTION), p. 15 (Figure/Table caption), p. 4 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (1 INTRODUCTION), baselines p. 9 (1 INTRODUCTION), p. 10 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 5 (Figure/Table caption), p. 8 (1 INTRODUCTION), results p. 9 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 14 (Figure/Table caption), p. 10 (1 INTRODUCTION), p. 10 (1 INTRODUCTION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

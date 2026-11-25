@@ -42,8 +42,6 @@
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Qualitative evaluation on the Mip-NeRF 360 dataset.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Qualitative evaluation on the forward-facing datasets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded scenes. SparseGS significantly improves novel view synthesis ...
@@ -77,8 +75,6 @@
 | Our method is able to reconstruct high-frequency geometry more accurately than state-of-the-art [49]. | definition/direction/unit from same section | p. 8 (4.3. Ablation Studies) |
 | Figure 4. Illustration of benefits from the SDS loss. While the scene structure is well preserved, the high-frequency noise in both geometry and texture ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@
 | 3, our softmax-scaling depth rendering method performs better, improving PSNR by 1.37dB compared to 3DGS and significantly enhance the quality of the rendered depth ... | comparison identity and matched condition | p. 7 (4.3. Ablation Studies) |
 | Our method is able to reconstruct high-frequency geometry more accurately than state-of-the-art [49]. | comparison identity and matched condition | p. 8 (4.3. Ablation Studies) |
 | Figure 7. Ablation studies. The reference depth map is produced by a monocular depth estimation model. Our complete model outputs a cleaner and more ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@
 | body limitation/failure cue | Figure 4. Illustration of benefits from the SDS loss. While the scene structure is well preserved, the high-frequency noise in both geometry and texture ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | We also provide evaluations on the forward-facing datasets (LLFF and DTU) to demonstrate robustness of our pipeline. | p. 7 (4.2. Comparison) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@
 | Instead, we adopt Pearson correlation across image patches to compute a similarity metric between depth maps. | p. 4 (3.2. Patch-based Depth Correlation Loss) |
 | At each iteration, we randomly sample N non-overlapping patches to compute the depth correlation loss as: Ldepth = 1 N N X i 1 ... | p. 5 (3.2. Patch-based Depth Correlation Loss) |
 | Then, the renderings at the sampled viewpoints are encoded and decoded by the diffusion model, where the predicted noise is then supervised with our ... | p. 5 (3.3. Unseen Viewpoints Regularization (UVR)) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -156,6 +135,5 @@
 - **p. 7 / 4.2. Comparison - extractive body cue:** We also provide evaluations on the forward-facing datasets (LLFF and DTU) to demonstrate robustness of our pipeline.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), metrics p. 3 (Figure/Table caption), p. 7 (4.2. Comparison), p. 7 (4.2. Comparison), p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), baselines p. 7 (4.2. Comparison), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 8 (Figure/Table caption), results p. 7 (4.2. Comparison), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

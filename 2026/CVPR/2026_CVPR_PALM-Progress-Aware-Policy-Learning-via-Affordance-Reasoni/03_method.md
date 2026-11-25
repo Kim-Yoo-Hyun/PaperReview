@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 - **p. 5 / 3.4. Progress-aware Policy via Inverse Dynamics - extractive body cue:** We extend this to predict an n-step action-progress sequence conditioned on the current inputs and a single-step affordance latent.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.4. Progress-aware Policy via Inverse Dynamics).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 - **p. 5 / 3.4. Progress-aware Policy via Inverse Dynamics - extractive body cue:** We append this scalar to the action output so the policy jointly predicts (at, pt) under a shared multimodal context.
 - **p. 4 / 3.2. PALM Architecture - extractive body cue:** Affordance Queries Action-progress Queries Multi-Modal Encoders Affordance prediction Frozen Trainable Unidirectional Attention Action-progress <Global> <Local> <Spatial> <Dynamic> T S V G
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,16 +89,12 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 - **p. 6 / 4.1. Simulation Experiments - extractive body cue:** We group the baselines into four types and report the average success rate of the top three checkpoints, computed over 1,000 rollouts per task, as ...
 - **p. 5 / 4. Experiments - extractive body cue:** For pre-training, we utilize a mixed dataset from the DROID [54] and BridgeData V2 [113] datasets, which together provide large-scale, in-the-wild robotic arm demonstrations to ...
 - **p. 8 / 4.3. Real-World Experiments - extractive body cue:** To ensure fairness, all models are fine-tuned on our training dataset, trained for an equal number of iterations, and evaluated with the final checkpoint.
-- **p. 4 / 3.2. PALM Architecture - extractive body cue:** Affordance Queries Action-progress Queries Multi-Modal Encoders Affordance prediction Frozen Trainable Unidirectional Attention Action-progress <Global> <Local> <Spatial> <Dynamic> T S V G
 - **p. 5 / 3.4. Progress-aware Policy via Inverse Dynamics - extractive body cue:** Training follows the standard diffusion objective: ˜yt⇥t+n-1,td = ‘ ¯↵td yt⇥t+n-1 + ‘ 1 -¯↵td ✏ (9) LDiT = Etd, ✏æ✏-✏✓(˜yt⇥t+n-1,td ∑l, ot, st, ˆFt+n, ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** time, given, observations, task, specification, conditioned, predicted, affordance, latent, policy, jointly, decodes, action, alongside, scalar, encodes, progress, within, current, subtask.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. PALM Architecture (p. 3); 3.4. Progress-aware Policy via Inverse Dynamics (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +114,13 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Arch
 - **p. 5 / 4. Experiments - extractive body cue:** For fine-tuning, we select 942 trajectories from robot data and annotate them with affordance data and continuous progress labels using a semi-automated method.
 - **p. 6 / 4.2. Ablation Studies - extractive body cue:** How do the components of the fine-grained affordance module affect performance?
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), p. 4 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), objective p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 4 (3.2. PALM Architecture), p. 5 (3.4. Progress-aware Policy via Inverse Dynamics), temporal p. 2 (1. Introduction), p. 3 (3.2. PALM Architecture), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (3.1. Problem Formulation), p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

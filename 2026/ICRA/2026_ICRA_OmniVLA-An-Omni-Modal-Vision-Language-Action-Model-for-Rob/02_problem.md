@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p
 | body cue at p. 5 | However, NaVILA fails, scoring 0.0 on all metrics, due to a domain gap in prompt style: it requires | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | The smaller OmniVLA variant fails to handle the language instructions due to limited modal capacity. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (Method), p. 2 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 5 (Method), p. 2 (I. INTRODUCTION), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

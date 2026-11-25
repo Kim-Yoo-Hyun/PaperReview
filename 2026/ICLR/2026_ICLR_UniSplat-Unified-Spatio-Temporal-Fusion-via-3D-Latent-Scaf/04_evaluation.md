@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** 4.1 EXPERIMENTAL SETTINGS Datasets and Metrics.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.3 ABLATION STUDY In this section, we conduct ablation studies on the Waymo Open Dataset (Sun et al., 2020) to investigate the individual components of ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: Overview of UniSplat. Given multi-camera images from vehicle-mounted cameras, UniSplat leverages foundation models to construct geometry-semantic aware 3D latent scaffolds, where unified spatio-temporal ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | The third row illustrates a failure case in which a moving pedestrian is misclassified as static. | definition/direction/unit from same section | p. 16 (A.3 MORE QUALITATIVE RESULTS) |
 | Our method demonstrates superior spatial coherence, as evidenced in challenging cases such as the thin pole (first row), and produces fewer artifacts like the ... | definition/direction/unit from same section | p. 16 (A.3 MORE QUALITATIVE RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | We compare UniSplat against state-of-the-art sparse-view reconstruction methods, including MVSplat (Chen et al., 2024), DepthSplat (Xu et al., 2025), EvolSplat (Miao et al., 2025), ... | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | For a fair comparison, evaluation is performed by resizing our model's outputs to 224 × 400, aligning with the baseline's resolution before metric computation. | comparison identity and matched condition | p. 16 (A.1 IMPLEMENTATION DETAILS) |
 | We benchmark the efficiency of our method against Omni-Scene, a state-of-the-art open-source driving-specific reconstruction model, on the nuScenes dataset (Caesar et al., 2020). | comparison identity and matched condition | p. 16 (A.2 EFFICIENCY ANALYSIS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | body limitation/failure cue | Training is conducted with a batch size of 16 on 8 H20 GPUs for 40,000 iterations, as further training empirically degrades performance. | p. 16 (A.1 IMPLEMENTATION DETAILS) |
 | body limitation/failure cue | The final dual-branch decoder effectively combines these complementary strengths, recovering sharp details while maintaining robust structural integrity in novel views. | p. 17 (A.3 MORE QUALITATIVE RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 | We validate our dual-branch decoder design in Table 5. | p. 9 (4 EXPERIMENTS) |
 | Implementation details of UniSplat counterparts. | p. 16 (A.1 IMPLEMENTATION DETAILS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / A.3 MORE QUALITATIVE RESULTS - extractive body cue:** The third row illustrates a failure case in which a moving pedestrian is misclassified as static.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8
 - **p. 17 / A.3 MORE QUALITATIVE RESULTS - extractive body cue:** The final dual-branch decoder effectively combines these complementary strengths, recovering sharp details while maintaining robust structural integrity in novel views.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 EXPERIMENTS), p. 16 (A.2 EFFICIENCY ANALYSIS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 16 (A.3 MORE QUALITATIVE RESULTS), metrics p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.2 EFFICIENCY ANALYSIS), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

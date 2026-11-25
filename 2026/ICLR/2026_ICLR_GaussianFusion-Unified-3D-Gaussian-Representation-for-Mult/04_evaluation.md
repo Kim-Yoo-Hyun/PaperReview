@@ -44,8 +44,6 @@ nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별�
 - **p. 10 / 4.1 DATASET - extractive body cue:** Furthermore, UniTR exhibits significant object yaw errors (yellow marks).
 - **p. 10 / 4.1 DATASET - extractive body cue:** For Occ, GaussianFusion-C produces sharper object boundaries (red marks) and better class separation (yellow marks) compared to GaussianFormer.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Table 1: Impact of BEV size on model performance
@@ -79,8 +77,6 @@ nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별�
 | Benefiting from the unified architecture, it achieves an excellent performance of 71.7 mAP while maintaining lower inference latency (132 ms) and memory consumption (4271 ... | definition/direction/unit from same section | p. 8 (4.1 DATASET) |
 | The forward projection and Lidar projection strategies show comparable performance (74.0 NDS v.s 73.6 NDS), both outperforming the backward projection method (72.4 NDS). | definition/direction/unit from same section | p. 9 (4.1 DATASET) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별�
 | GaussianFusion outperforms the multi-modal SOTA method OccFusion (Ming et al., 2024), which is based on multi-scale voxel fusion, by +1.11 mIoU and significantly surpasses ... | comparison identity and matched condition | p. 9 (4.1 DATASET) |
 | 4, in BEV object detection, compared to previous BEV-based SOTA methods like UniTR (Wang et al., 2023a) and BEVFusion(Liu et al., 2023b), GaussianFusion achieve ... | comparison identity and matched condition | p. 10 (4.1 DATASET) |
 | Experimental results show that, compared to BEVFusion4D (Liu et al., 2023b), our temporal variant GaussianFusion-T achieves significant improvements. | comparison identity and matched condition | p. 8 (4.1 DATASET) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별�
 | body limitation/failure cue | 4.7 LIMITATIONS Several approaches-covering both detection (Wang et al., 2023b) and Occ (Zhang et al., 2024b)-employ carefully designed temporal fusion modules to enhance performance. | p. 10 (4.1 DATASET) |
 | body limitation/failure cue | A promising direction for future work is to explore motion-aware Gaussian updates, for instance by predicting velocity-guided offsets, enabling more coherent 4D scene modeling ... | p. 10 (4.1 DATASET) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,20 +133,11 @@ nuScenes와 Waymo에서 3D 물체 검출을 비교하고, 검출 지표와 별�
 | For a Gaussian (GL ↓QL) associated with LiDAR feature QL ↔R3, the feature response at a 3D point p = (x, y, z) within ... | p. 5 (6 Cameras) |
 | To achieve this, we design a novel forward-projection-based multi-modal Gaussian initialization module and a shared cross-modal Gaussian encoder that iteratively updates Gaussian properties based ... | p. 1 (ABSTRACT) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 4.1 DATASET - extractive body cue:** 4.7 LIMITATIONS Several approaches-covering both detection (Wang et al., 2023b) and Occ (Zhang et al., 2024b)-employ carefully designed temporal fusion modules to enhance performance.
 - **p. 10 / 4.1 DATASET - extractive body cue:** A promising direction for future work is to explore motion-aware Gaussian updates, for instance by predicting velocity-guided offsets, enabling more coherent 4D scene modeling over ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.1 DATASET), p. 7 (4.1 DATASET), p. 9 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), metrics p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 10 (4.1 DATASET), p. 7 (4.1 DATASET), baselines p. 7 (4.1 DATASET), p. 8 (4.1 DATASET), p. 7 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 8 (4.1 DATASET), results p. 8 (4.1 DATASET), p. 9 (4.1 DATASET), p. 10 (4.1 DATASET), p. 9 (4.1 DATASET), p. 7 (4.1 DATASET), p. 7 (4.1 DATASET).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

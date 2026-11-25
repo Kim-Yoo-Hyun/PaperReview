@@ -53,7 +53,6 @@ PDF body method statement (p. 14 (A.3 Control Architecture), p. 14 (A.3 Control 
 - **p. 14 / A.2 Reward Function and Termination Condition - extractive body cue:** The reward at each time step is a weighted sum of these terms.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 13 (A.2 Reward Function and Termination Condition), p. 14 (A.2 Reward Function and Termination Condition), p. 13 (A.1 Observation and Action Spaces).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 14 (A.3 Control Architecture), p. 14 (A.3 Control 
 - **p. 4 / 1 Introduction - extractive body cue:** First, we let τt = G(st, at) denote a zeroorder hold estimate for the low-level motor torques applied to the robot; here, G is a ...
 - **p. 3 / 1 Introduction - extractive body cue:** The space of observations Ωconsists of the states that can be measured, and the observation distribution O(·/st, at, et) provides (noisy) estimates of the states ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 14 (A.3 Control Architecture), p. 14 (A.3 Control 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** desired, joint, angles, sent, level, controllers, where, torque, outputs, qdes, proportional, gain, rad-1, derivative, Referring, action, space, definition, Table, policy.
 - **Relevant PDF headings:** A.3 Control Architecture (p. 14); B.2 Model Rollout Accuracy (p. 15); B.4 Modeling Uncertainty (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 14 (A.3 Control Architecture), p. 14 (A.3 Control 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: The SSRL framework. A deterministic policy is used to collect data from the real world while a stochastic policy is utilized in conjunction ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 7: Prediction error for 20-step synthetic rollouts using our semi-structured dynamics models and the black-box models where the best results from the 1- or ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (A.3 Control Architecture), p. 14 (A.3 Control Architecture), p. 13 (A.1 Observation and Action Spaces), p. 13 (A Implementation Details), objective p. 14 (A.2 Reward Function and Termination Condition), p. 13 (A.2 Reward Function and Termination Condition), p. 13 (A Implementation Details), p. 14 (A.2 Reward Function and Termination Condition), temporal p. 6 (1 Introduction), p. 13 (A.2 Reward Function and Termination Condition), p. 14 (A.2 Reward Function and Termination Condition), p. 4 (1 Introduction), p. 6 (1 Introduction), p. 3 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

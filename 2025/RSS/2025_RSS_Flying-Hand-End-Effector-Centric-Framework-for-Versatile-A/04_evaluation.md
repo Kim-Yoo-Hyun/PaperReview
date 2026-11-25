@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 - **p. 7 / A. Experimental Setup - extractive body cue:** 1) Trajectory Tracking Task Setup: To show the effectiveness of our proposed method in end-effector trajectory tracking tasks, we perform a comparison between our control ...
 - **p. 8 / A. Experimental Setup - extractive body cue:** + Aerial Writing: Drawing a target shape (the digit 2025") on a vertical wall, with an overall size of approxirately 3m%0.Sm, This task required precise ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. UAM hardware system design, ilustaing the key components: () faly-scusted hexaroor as the base sructre, (2) 4 Dof manialator, (3) Intel RealSease cameras ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 | Fig. 7. Comparison of Figue-8 aad Ellipse tnjecory tracking performance across three methods. Our approach achieves the lowest tacking error in <ynamic trajectory tacking ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Researchers mostly developed a point-contact arm, such as a rigid rod, and proposed the hybrid motion-force control framework, although achieving high-precision tracking performance, struggled ... | definition/direction/unit from same section | p. 2 (4) Rich real-world experiments demonstrated the versatility) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 | 6¢) compared to the MPC with flexible arm (Fig. | comparison identity and matched condition | p. 8 (B. Implementation Details) |
 | End-effector tacking eror distribution for de types of tajectores using our methods and two baselines. | comparison identity and matched condition | p. 9 (B. Implementation Details) |
 | Endeffector wacking performance of aerial manipulator in Ellipse teaectory, Tracking resis ndicale thatthe wo, MPC. baseline exhiis Significant racking lag, while the wo. | comparison identity and matched condition | p. 9 (B. Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 | body limitation/failure cue | 8 shows disturbances along the base x (red), = (blue) and Open (green), respectively. ‘The disturbances and model uncertainties primarily arise from arm motions, ... | p. 8 (B. Implementation Details) |
 | body limitation/failure cue | 7 reveals that tracking error increases at lower altitudes (around Im), likely due to unmodeled ground and wall effect disturbances. | p. 9 (B. Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 | After training, wwe choose the policy with the least validation loss to perform 50 evaluation trials. | p. 10 (B. Implementation Details) |
 | After training through 100,000 epochs, the policy with the least validation loss is selected. | p. 11 (B. Implementation Details) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / IX. LIMITATIONS - extractive body cue:** Although we have demonstrated the proposed framework through various real-world experiments, there are still several limitations due to time constraints and methodological limitations.
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 - **p. 9 / B. Implementation Details - extractive body cue:** 7 reveals that tracking error increases at lower altitudes (around Im), likely due to unmodeled ground and wall effect disturbances.
 
 - **Evidence anchors reviewed:** datasets p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 9 (B. Implementation Details), p. 11 (B. Implementation Details), metrics p. 10 (B. Implementation Details), p. 11 (B. Implementation Details), p. 10 (B. Implementation Details), p. 8 (A. Experimental Setup), p. 9 (B. Implementation Details), p. 8 (A. Experimental Setup), baselines p. 8 (B. Implementation Details), p. 7 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 8 (B. Implementation Details), p. 9 (B. Implementation Details), p. 9 (B. Implementation Details), results p. 9 (B. Implementation Details), p. 10 (B. Implementation Details), p. 10 (B. Implementation Details), p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 8 (B. Implementation Details), p. 8 (B. Implementation Details).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

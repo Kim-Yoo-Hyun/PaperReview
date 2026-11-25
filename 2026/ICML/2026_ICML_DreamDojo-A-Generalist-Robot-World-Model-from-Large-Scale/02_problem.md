@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 15 | Future work should explore how to cover broader action distribution, e.g., using policy rollouts (Ho et al., 2025; ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | To address this limitation, one might consider increasing the scale of real robot data. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3.3.1. Model Architecture), p. 2 (1. Introduction), p. 3 (2. Preliminary), p. 3 (2. Preliminary). The downstream handoff is claimed only when the body describes it.
@@ -72,10 +70,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), interface p. 5 (3.3.1. Model Architecture), p. 2 (1. Introduction), p. 3 (2. Preliminary), p. 3 (2. Preliminary), objective p. 8 (3.3.4. Distillation), p. 8 (3.3.4. Distillation), p. 7 (3.3.2. Pretraining from Human Videos), p. 7 (3.3.2. Pretraining from Human Videos).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

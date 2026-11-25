@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 - **p. 9 / 6.1. Co-training Improves Performance - extractive body cue:** VINN trains a visual representation model, BYOL [37] and uses it to retrieve actions from the demonstration dataset with nearest neighbors.
 - **p. 10 / 6.1. Co-training Improves Performance - extractive body cue:** New users can quickly approach expert speed on an unseen tasks teleoperating Mobile ALOHA .
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Mobile ALOHA . We introduce a low-cost mobile manipulation system that is bimanual and supports whole-body teleoperation. The system costs $32k including onboard ...
@@ -81,21 +79,12 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 | Co-train Pre-train No Co-train No Pre-train Success (%) 95 40 50 Table 4: Co-train vs. | definition/direction/unit from same section | p. 9 (6.1. Co-training Improves Performance) |
 | Figure 1: Mobile ALOHA . We introduce a low-cost mobile manipulation system that is bimanual and supports whole-body teleoperation. The system costs $32k including ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Co-train outperforms pre-train on the Wipe Wine task. | comparison identity and matched condition | p. 9 (6.1. Co-training Improves Performance) |
 | We start with ACT [104], the method introduced with ALOHA, and train it on all 7 tasks with and without co-training. | comparison identity and matched condition | p. 8 (6.1. Co-training Improves Performance) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 | body limitation/failure cue | The only task that falls below 80% success is Cook Shrimp (40%), which is a 75-second long-horizon task for which we only collected 20 ... | p. 8 (6.1. Co-training Improves Performance) |
 | body limitation/failure cue | Conclusion, Limitations and Future Directions In summary, our paper tackles both the hardware and the software aspects of bimanual mobile manipulation. | p. 10 (8. User Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 | (1) We lack accessible, plug-and-play hardware for whole-body teleoperation. | p. 2 (1. Introduction) |
 | Additional hardware and calibration are also necessary to enable teleoperation on these platforms. | p. 2 (1. Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 8. User Studies - extractive body cue:** Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 8 (6.1. Co-training Improves Performance), p.
 - **p. 10 / 8. User Studies - extractive body cue:** Conclusion, Limitations and Future Directions In summary, our paper tackles both the hardware and the software aspects of bimanual mobile manipulation.
 
 - **Evidence anchors reviewed:** datasets p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 10 (6.1. Co-training Improves Performance), metrics p. 7 (Figure/Table caption), p. 8 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 3 (Figure/Table caption), p. 20 (Figure/Table caption), baselines p. 9 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance), results p. 8 (6.1. Co-training Improves Performance), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (6.1. Co-training Improves Performance), p. 8 (6.1. Co-training Improves Performance).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

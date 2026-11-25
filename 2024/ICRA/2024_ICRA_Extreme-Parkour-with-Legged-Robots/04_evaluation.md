@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 - **p. 8 / 4 Results - extractive body cue:** Our robot learns to make these adjustments and is even able to do a handstand walk on soft deformable grass with gentle slopes (Fig.
 - **p. 9 / 4 Results - extractive body cue:** Robot Height Robot Height Robot Length Figure 7: For each terrain, we run 5 trials and record the number of successes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Extreme Parkour: Low-cost robot with imprecise actuation can perform precise athletic behaviors directly from a high-dimensional image without any explicit mapping and planning. ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 | We illustrate three such examples in Fig. | definition/direction/unit from same section | p. 7 (4 Results) |
 | Figure 2: Training overview. In phase 1, we use RL to learn a locomotion policy with access to privileged information like environment parameters and ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 | 4.3 Comparison to Baselines We propose two sets of baselines to experimentally verify different parts of our system. | comparison identity and matched condition | p. 8 (4 Results) |
 | Figure 1: Extreme Parkour: Low-cost robot with imprecise actuation can perform precise athletic behaviors directly from a high-dimensional image without any explicit mapping and ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Table 1: Comparison of parkour setups. Starred papers in 2nd and 3rd row are concurrent works (recently released). The numbers in Climb and Gap ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 | body limitation/failure cue | These sudden adjustments are out-ofdistribution for the policy and it cannot adapt fast enough, causing it to fail. | p. 9 (4 Results) |
 | body limitation/failure cue | NoClear achieves slightly higher performance but it places feet close to the obstacle edges which is unstable in the real world. | p. 8 (4 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 | We run both depth backbone (10Hz) and the base policy (50Hz) on the Jetson NX and communicate via UDP. | p. 7 (4 Results) |
 | 4.3.1 Simulation results For each terrain-tilted ramps, steps, gaps and hurdles we create an obstacle course consisting of each arranged in increasing difficulty in ... | p. 8 (4 Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: For each terrain, we run 5 trials and record the number of successes. We find that ours has 20-80% higher success rate on ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Resu
 - **p. 8 / 4 Results - extractive body cue:** NoClear achieves slightly higher performance but it places feet close to the obstacle edges which is unstable in the real world.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Results), p. 7 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Results), metrics p. 9 (4 Results), p. 9 (4 Results), p. 8 (4 Results), p. 7 (4 Results), p. 8 (4 Results), p. 7 (4 Results), baselines p. 8 (4 Results), p. 9 (4 Results), p. 9 (Figure/Table caption), p. 8 (4 Results), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 8 (4 Results), p. 8 (4 Results), p. 9 (4 Results), p. 9 (4 Results), p. 7 (4 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

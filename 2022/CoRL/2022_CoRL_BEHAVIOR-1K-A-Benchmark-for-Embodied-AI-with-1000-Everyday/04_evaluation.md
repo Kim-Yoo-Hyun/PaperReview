@@ -49,8 +49,6 @@
 - **p. 4 / C C - extractive body cue:** Our benchmark comprises two elements: BEHAVIOR-1K DATASET and OMNIGIBSON.
 - **p. 1 / Abstract - extractive body cue:** To calibrate the simulation-to-reality gap of BEHAVIOR-1K, we provide an initial study on transferring solutions learned with a mobile manipulator in a simulated apartment to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Developing a Human-Centered Benchmark for Embodied AI. Left: human preference score over 2,090 activities, ranked based on a survey on 1,461 participants. The ...
@@ -84,8 +82,6 @@
 | 1 (left), in which we rank the activities based on their human preference score. | definition/direction/unit from same section | p. 3 (6. Clean a shower) |
 | To calibrate the simulation-to-reality gap of BEHAVIOR-1K, we provide an initial study on transferring solutions learned with a mobile manipulator in a simulated apartment ... | definition/direction/unit from same section | p. 1 (Abstract) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@
 | We evaluate state-of-the-art reinforcement learning algorithms [47, 48] in several activities of BEHAVIOR-1K, both with visuomotor control in the original action space, and with ... | comparison identity and matched condition | p. 2 (1 Introduction) |
 | This is unprecedented compared to other benchmarks (see Table 1). | comparison identity and matched condition | p. 5 (C C) |
 | These features significantly boost the realism of BEHAVIOR-1K compared to other benchmarks. | comparison identity and matched condition | p. 6 (C C) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@
 | body limitation/failure cue | RL-VMC with end-to-end visuomotor control completely fails to solve any of the activities, whereas RL-Prim. and RL-Prim.Hist. with action primitives are able achieve decent ... | p. 7 (Method) |
 | body limitation/failure cue | Furthermore, to accelerate training, the action primitives check only the feasibility (e.g., reachability, collisions) of the final configuration, e.g. the grasping pose for pick ... | p. 7 (Method) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 - CollectTrash의 학습 정책은 시뮬레이션 시행 50회와 실물 시행 26회로 평가했다. 사람 입력으로 정한 최적 정책의 실물 평가는 시행 27회다. [PDF 8쪽](https://proceedings.mlr.press/v205/li23a/li23a.pdf#page=8)
@@ -151,14 +138,6 @@
 | We observe that longer-horizon activities are more challenging: while CleanTable can be accomplished by executing the optimal sequence of 6 primitive steps, CollectTrash requires ... | p. 7 (Method) |
 | The policy outputs a discrete selection of a primitive applied on an object; • RL-Prim.Hist., a variant of RL-Prim. that takes in the history ... | p. 7 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Method - extractive body cue:** The failure cases are depicted in Fig.
@@ -167,6 +146,5 @@
 - **p. 7 / Method - extractive body cue:** Furthermore, to accelerate training, the action primitives check only the feasibility (e.g., reachability, collisions) of the final configuration, e.g. the grasping pose for pick or ...
 
 - **Evidence anchors reviewed:** datasets p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 3 (6. Clean a shower), p. 4 (C C), p. 3 (6. Clean a shower), metrics p. 7 (Method), p. 7 (Figure/Table caption), p. 8 (Method), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 7 (Method), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (C C), p. 6 (C C), results p. 7 (Figure/Table caption), p. 8 (Method), p. 8 (Figure/Table caption), p. 7 (Method), p. 4 (C C), p. 6 (C C).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

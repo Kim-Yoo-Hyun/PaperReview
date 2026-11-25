@@ -44,8 +44,6 @@
 - **p. 7 / 5.3. Zero-Shot Metric Depth Estimation - extractive body cue:** N/A indicates methods trained on the target dataset.
 - **p. 8 / 5.6. Ablation Study - extractive body cue:** Similarly, in (B) we show that removing global conditioning also significantly degrades performance, due to the lack of scene-level context for consistent local predictions.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GRIN sets a new state of the art in zero-shot metric monocular depth estimation, via efficient pixel-level diffusion and the proper handling of ...
@@ -79,8 +77,6 @@
 | Figure 3. Diagram of GRIN for monocular depth estimation. An input image I with intrinsics K is used to condition the diffusion process both ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 6. Zero-shot GRIN qualitative results, including input image (top), predicted depth map (middle), and uncertainty map (bottom). | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@
 | Results are shown in Table 3, indicating that GRIN also outperforms other metric depth estimation methods that use in-domain training data. | comparison identity and matched condition | p. 8 (5.5. Fine-Tuning Experiments) |
 | GRIN FT NI indicates our model (Table 1) fine-tuned without intrinsics. | comparison identity and matched condition | p. 8 (5.4. Zero-Shot Relative Depth Estimation) |
 | Figure 1. GRIN sets a new state of the art in zero-shot metric monocular depth estimation, via efficient pixel-level diffusion and the proper handling ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@
 | body limitation/failure cue | We believe GRIN could be modified to operate in a similar setting, which would potentially further improve performance, however this is left for future ... | p. 7 (5.3. Zero-Shot Metric Depth Estimation) |
 | body limitation/failure cue | In this setting, camera intrinsics are not required, since the model does not need to reason over physical 3D properties of the environment, focusing ... | p. 7 (5.4. Zero-Shot Relative Depth Estimation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@
 | At training time we discard pixels with missing depth information (i.e., djk = 0), resulting in a ˆV loc matrix with varying length N. | p. 5 (4.4. Training Procedure) |
 | The second stage used this same training strategy for an additional 80k steps, with | p. 6 (5.2. Implementation Details) |
 | Inference for a 640 × 384 image can be done in 0.8 seconds on a single similar GPU (faster than Marigold). | p. 7 (5.2. Implementation Details) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -162,6 +141,5 @@
 - **p. 7 / 5.4. Zero-Shot Relative Depth Estimation - extractive body cue:** In this setting, camera intrinsics are not required, since the model does not need to reason over physical 3D properties of the environment, focusing instead ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Training Datasets), p. 6 (5.1. Training Datasets), p. 6 (5.2. Implementation Details), p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 7 (5.3. Zero-Shot Metric Depth Estimation), metrics p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 6 (5.2. Implementation Details), p. 7 (5.2. Implementation Details), p. 3 (Figure/Table caption), baselines p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 6 (5.1. Training Datasets), p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.4. Zero-Shot Relative Depth Estimation), p. 1 (Figure/Table caption), results p. 7 (5.3. Zero-Shot Metric Depth Estimation), p. 7 (5.4. Zero-Shot Relative Depth Estimation), p. 8 (5.5. Fine-Tuning Experiments), p. 8 (5.5. Fine-Tuning Experiments), p. 6 (5.1. Training Datasets), p. 6 (5.1. Training Datasets).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

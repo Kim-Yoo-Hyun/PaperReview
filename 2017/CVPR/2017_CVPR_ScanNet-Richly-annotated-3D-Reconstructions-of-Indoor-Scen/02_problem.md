@@ -61,8 +61,6 @@ PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p
 | body cue at p. 3 | This feature was critical for providing intuition to users who are not familiar with the constraints and limitations ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | The main limitation of this interface is due to the mismatch between the corpus of available CAD models ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surface Reconstruction), p. 1 (1. Introduction), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 4 (3.2. Surface Reconstruction), p. 4 (3.2. Surface Reconstruction), p. 1 (1. Introduction), p. 1 (1. Introduction), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

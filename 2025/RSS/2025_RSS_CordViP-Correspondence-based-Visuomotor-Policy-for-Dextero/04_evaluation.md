@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 - **p. 14 / B. Implementation Details - extractive body cue:** The state features of the robotic arm and the dexterous hand are each passed through a linear layer, mapped to 16 dimensions.
 - **p. 15 / B. Implementation Details - extractive body cue:** All data collection i managed through ROS and data recording begins once both the camera feed and robot teleoperation inputs are received.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: We present the interaction-aware point clouds, which ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 | Fig. 2: Overview Framework (a) We first employ TripoSR to generate the initial object point cloud and FoundationPose | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | For the FlipCup task, we focus on accurately estimating the 6D pose of the cup. | definition/direction/unit from same section | p. 15 (B. Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 | Fig. 3: Point Clouds Comparison, We present point clouds of two methods under three different viewpoints. Notably, for better visualization, we have applied color ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Network Architecture, For point cloud encoding, we first use PointNetl41] to process point cloud data without RGB information, outputting a set of point feature ... | comparison identity and matched condition | p. 14 (B. Implementation Details) |
 | Fig. 11: Comparison of Motion Patterns. DP3 Uses Axis Wise Actions. | comparison identity and matched condition | p. 16 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 | body limitation/failure cue | Fig. 1: We propose CordViP, a correspondence-based visuomotor policy for dexterous manipulation in the real world. (a) Left: We present the interaction-aware point clouds, ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | We utilize FoundationPose (60] to perform robust 6D pose estimation for various objects across tasks. | p. 15 (B. Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 | Similarly, we also predict the action sequence of the hand using point clouds and the arm state, We use MSE loss to compute the ... | p. 5 (C. Comact and Coordination-Enhanced Feature Extraction) |
 | Furthermore, leveraging these observations, we compute contact maps between the robotic hhand and the manipulated objects, as well as capture col laborative interaction information ... | p. 3 (A. Problem Formulation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / V. CONCLUSIONS AND LimiTATIONS - extractive body cue:** Despite the exceptional performance demonstrated by CordViP, there are still certain limitations that could be explored in future work.
@@ -161,9 +140,8 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMEN
 - **p. 15 / B. Implementation Details - extractive body cue:** We utilize FoundationPose (60] to perform robust 6D pose estimation for various objects across tasks.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (A. Experiment Setup), p. 6 (A. Experiment Setup), p. 15 (B. Implementation Details), p. 14 (B. Implementation Details), metrics p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 15 (B. Implementation Details), p. 4 (Figure/Table caption), p. 15 (B. Implementation Details), baselines p. 15 (B. Implementation Details), p. 15 (B. Implementation Details), p. 4 (Figure/Table caption), p. 14 (B. Implementation Details), p. 16 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 8 (Figure/Table caption), p. 15 (B. Implementation Details), p. 15 (B. Implementation Details).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

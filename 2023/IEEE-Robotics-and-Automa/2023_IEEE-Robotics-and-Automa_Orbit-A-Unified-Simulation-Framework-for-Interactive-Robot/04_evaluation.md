@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 - **p. 6 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** After confirming the grasp pose, the robot executes the motion and lifts the object.
 - **p. 6 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** 9: Using the simulator as a digital twin to compute and apply the same commands on the simulated and real robot via ZMQ connection.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: ORBIT framework provides a large set of robots, sensors, rigid and deformable objects, motion generators, and teleoperation interfaces. Through these, we aim to ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 | Fig. 6: Demonstration of the designed tasks using hand-crafted state machines and task-space controllers. Leveraging recent advances in physics engines, we support high-fidelity simulation ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | We demonstrate this paradigm for several tasks in Fig. | definition/direction/unit from same section | p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 | 0.5 1.0 1.5 Steps ×107 7 8 9 10 Average Return PPO on Franka-Reach Stable Baselines3 RL Games RSL RL 0.5 1.0 1.5 2.0 ... | comparison identity and matched condition | p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 | CPU-based vectorization is limited to the available memory and scales poorly compared to GPU-accelerated simulation. | comparison identity and matched condition | p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 | ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the ... | comparison identity and matched condition | p. 7 (VI. DISCUSSION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 | body limitation/failure cue | ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the ... | p. 7 (VI. DISCUSSION) |
 | body limitation/failure cue | To make the policy robust, we randomize the base mass (22 ± 5 kg) and add simulated random pushes. | p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,20 +132,11 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 | Compared to existing frameworks, we show that ORBIT is able to obtain up to ∼10x and ∼3x the throughput for rigid and deformable body ... | p. 2 (2) It provides a batteries-included experience for roboti) |
 | Since RSL-rl and rl-games are optimized for GPU, we observe a training speed of 50,00075,000 frames per second (FPS) with 2048 environments, while with ... | p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / VI. DISCUSSION - extractive body cue:** ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, ...
 - **p. 6 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** To make the policy robust, we randomize the base mass (22 ± 5 kg) and add simulated random pushes.
 
 - **Evidence anchors reviewed:** datasets p. 7 (VI. DISCUSSION), p. 7 (VI. DISCUSSION), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), metrics p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 3 (Figure/Table caption), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 4 (Figure/Table caption), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), baselines p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (VI. DISCUSSION), results p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

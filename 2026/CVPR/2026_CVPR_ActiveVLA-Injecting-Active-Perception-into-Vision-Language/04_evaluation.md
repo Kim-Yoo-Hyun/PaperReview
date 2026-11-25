@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 - **p. 7 / 4.1. Experimental Results - extractive body cue:** Results on the COLOSSEUM Benchmark.
 - **p. 8 / 4.1. Experimental Results - extractive body cue:** To evaluate the real-world performance of ActiveVLA, we conduct a series of real-world manipulation experiments under complex and highly occluded scenarios.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between previous VLA methods and ActiveVLA. Traditional VLA systems often fail in tasks like "bring the apples on the table" because their ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 | Figure 1. Comparison between previous VLA methods and ActiveVLA. Traditional VLA systems often fail in tasks like "bring the apples on the table" because ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. The pipeline of ActiveVLA. ActiveVLA is a 3D vision-language-action framework that adopts a two-stage, coarse-to-fine strategy. In the coarse stage, three orthographic ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 | It actively perceives and precisely completes tasks despite severe occlusions and complex spatial structures. baselines such as 3D-LOTUS++ and BridgeVLA. | comparison identity and matched condition | p. 8 (4.1. Experimental Results) |
 | Results are reported as mean success rates without confidence intervals. | comparison identity and matched condition | p. 7 (4.1. Experimental Results) |
 | Figure 1. Comparison between previous VLA methods and ActiveVLA. Traditional VLA systems often fail in tasks like "bring the apples on the table" because ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 | body limitation/failure cue | Adding A-VS dynamically selects informative views, raising performance to 89.4% at 0.45 s by improving scene coverage and reducing occlusion. | p. 8 (4.2. Ablation Study) |
 | body limitation/failure cue | It actively perceives and precisely completes tasks despite severe occlusions and complex spatial structures. baselines such as 3D-LOTUS++ and BridgeVLA. | p. 8 (4.1. Experimental Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 | We evaluate ActiveVLA over five trials for statistical reliability, with results shown in Table 1. | p. 6 (4.1. Experimental Results) |
 | The fixed-view baseline achieves 87.6% success in 0.26 s per trial. | p. 8 (4.2. Ablation Study) |
 | A hierarchical feature fusion module then integrates global and local context to predict rotation, gripper state, and a binary collision flag. • Global Context ... | p. 5 (3.3. 3D Action Prediction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 7 (4.1. Experimental Results), p. 7 (4.1. Exp
 - **p. 8 / 4.1. Experimental Results - extractive body cue:** It actively perceives and precisely completes tasks despite severe occlusions and complex spatial structures. baselines such as 3D-LOTUS++ and BridgeVLA.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4.1. Experimental Results), p. 6 (4. Experiments), p. 8 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.1. Experimental Results), metrics p. 8 (4.2. Ablation Study), p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 6 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 6 (4. Experiments), baselines p. 6 (4. Experiments), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 8 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 1 (Figure/Table caption), results p. 7 (4.1. Experimental Results), p. 7 (4.1. Experimental Results), p. 8 (4.2. Ablation Study), p. 8 (4.2. Ablation Study), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

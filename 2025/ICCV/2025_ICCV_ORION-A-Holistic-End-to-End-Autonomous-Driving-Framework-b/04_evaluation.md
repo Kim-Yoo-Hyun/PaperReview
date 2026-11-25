@@ -49,8 +49,6 @@ Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.6
 - **p. 6 / 4.4. Qualitative Results - extractive body cue:** We observe that ORION can capture the correct causal relationship in the scenario and make correct driving decisions, then predict the planning trajectory following the ...
 - **p. 7 / 4.5. Ablation Study - extractive body cue:** Note that VAE-based trajectory generTable 2.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The comparison of different E2E paradigms. Our ORION framework establishes the differentiable connection be- tween reasoning and action space via the generative planner. ...
@@ -84,8 +82,6 @@ Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.6
 | Then, we combine the motion prediction module in the QT-Former's perception head, which gains a slight improvement of +0.4% SR and further reduces the ... | definition/direction/unit from same section | p. 8 (4.5. Ablation Study) |
 | Specifically, the multi-task training leads to improvements of +3.64 DS and +9.66% SR in the planning task, as well as a performance gain of ... | definition/direction/unit from same section | p. 8 (4.5. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.6
 | Compared with the plain text paradigm, the dual-system paradigm only obtains a slight performance improvement. | comparison identity and matched condition | p. 6 (4.5. Ablation Study) |
 | ORION achieves +16.12% and +12.64% performance improvements compared with DriveTransformer [25] and DriveAdapter [22] in the average ability, respectively. | comparison identity and matched condition | p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)) |
 | We argue the main reasons are as follows: 1) Compared with the conditional denoising process of diffusion, the latent space of VAE more directly ... | comparison identity and matched condition | p. 7 (4.5. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.6
 | body limitation/failure cue | The model cannot obtain both reasoning and planning capabilities with single-task training. | p. 8 (4.5. Ablation Study) |
 | body limitation/failure cue | Then, we combine the motion prediction module in the QT-Former's perception head, which gains a slight improvement of +0.4% SR and further reduces the ... | p. 8 (4.5. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.6
 | To construct p(a / s), there are many excellent methods in the generation field (e.g., variational autoencoders (VAE) [29] and diffusion model [49]). | p. 4 (3.3. Generative Planner) |
 | 2, the user instruction Xq, including scene description, history information review, scene analysis, and action reasoning, is first encoded into language tokens xq ∈RL×C ... | p. 4 (3.2. Large Language Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.1. Dataset and Evaluation Metrics - extractive body cue:** For open-loop evaluation, we use the L2 distance error and the collision rate.
@@ -168,6 +147,5 @@ Bench2Drive 폐루프에서 ORION이 기록한 77.74는 주행 점수이고 54.6
 - **p. 8 / 4.5. Ablation Study - extractive body cue:** Then, we combine the motion prediction module in the QT-Former's perception head, which gains a slight improvement of +0.4% SR and further reduces the collision ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 7 (4.5. Ablation Study), p. 6 (4.4. Qualitative Results), metrics p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.3. Main Results), p. 7 (4.5. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 7 (4.5. Ablation Study), baselines p. 7 (4.5. Ablation Study), p. 5 (4.1. Dataset and Evaluation Metrics), p. 5 (4.1. Dataset and Evaluation Metrics), p. 6 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 7 (4.5. Ablation Study), results p. 7 (4.5. Ablation Study), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 6 (25.00 71.11 78.33 30.00 69.15 54.72(+16.12)), p. 8 (4.5. Ablation Study), p. 7 (Figure/Table caption), p. 5 (4.1. Dataset and Evaluation Metrics).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

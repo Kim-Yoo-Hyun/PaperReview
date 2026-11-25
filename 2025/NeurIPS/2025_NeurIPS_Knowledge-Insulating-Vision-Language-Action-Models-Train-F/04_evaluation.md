@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (6 Experiments), p. 10 (Figure/Table captio
 - **p. 8 / 6 Experiments - extractive body cue:** We also evaluate our generalist on the open source benchmark DROID [23] for the same set of tabletop manipulation tasks as in [37].
 - **p. 8 / 6 Experiments - extractive body cue:** Freezing the backbone is not a viable option for knowledge insulation, since the representations in the pre-trained model are not sufficient for robotics, leading to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The key idea of our approach is to train the VLM backbone with a next-token prediction loss on discretized actions and general VLM ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (6 Experiments), p. 10 (Figure/Table captio
 | 7 under "OOD Follow Rate", co-training on VLM data is particularly important for this generalization. | definition/direction/unit from same section | p. 9 (6 Experiments) |
 | Figure 1: The key idea of our approach is to train the VLM backbone with a next-token prediction loss on discretized actions and general ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (6 Experiments), p. 10 (Figure/Table captio
 | 4b, stopping the gradient flow from the action expert is an effective way of improving language following compared to π0 and joint-training without stop-gradient ... | comparison identity and matched condition | p. 9 (6 Experiments) |
 | Finally, our approach achieves a new state-of-the-art in LIBERO-90 and LIBERO-Spatial [30] as shown in Tab. | comparison identity and matched condition | p. 8 (6 Experiments) |
 | One motivation for FAST is that it provides a better learning signal compared to naive tokenization, and can help with faster 9 | comparison identity and matched condition | p. 9 (6 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 8 (6 Experiments), p. 10 (Figure/Table captio
 | body limitation/failure cue | Figure 2: Problems with standard VLA recipes. The robot is instructed to bus the spoon into the bin. π0 [7] (left) ignores the command ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | In comparison joint-training degrades in task completion. | p. 8 (6 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (6 Experiments), p. 10 (Figure/Table captio
 | At inference time, generating continuous actions with the smaller action expert is desirable for fast and precise control, while representation learning with discrete actions ... | p. 2 (1 Introduction) |
 | LLMs can be prompted to solve all sorts of tasks, from writing poems and code to solving competition-level math problems, and can further be ... | p. 1 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 6 Experiments - extractive body cue:** 4a) with a common failure mode of being unable to open the drawer.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 8 (6 Experiments), p. 10 (Figure/Table captio
 - **p. 8 / 6 Experiments - extractive body cue:** In comparison joint-training degrades in task completion.
 
 - **Evidence anchors reviewed:** datasets p. 9 (6 Experiments), p. 9 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 8 (6 Experiments), metrics p. 10 (Figure/Table caption), p. 8 (6 Experiments), p. 9 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 8 (6 Experiments), baselines p. 8 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 9 (6 Experiments), p. 8 (6 Experiments), p. 9 (6 Experiments), results p. 8 (6 Experiments), p. 10 (Figure/Table caption), p. 7 (6 Experiments), p. 8 (6 Experiments), p. 7 (6 Experiments), p. 9 (6 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

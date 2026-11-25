@@ -48,7 +48,6 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 - **p. 6 / 4. MATERIALS AND METHODS - extractive body cue:** Overview The main objective of the presented controller is to locomote over rough terrain following a command.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 - **p. 1 / 1. INTRODUCTION - extractive body cue:** They can choose safe footholds within their kinematic reach and rapidly change their kinematic state in response to the environment.
 - **p. 3 / 1. INTRODUCTION - extractive body cue:** The first is a different policy architecture.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, computes, latent, embedding, represents, current, state, action, student, temporal, convolutional, network, TCN, receives, sequence, proprioceptive, observations, input, Research, Article.
 - **Relevant PDF headings:** 4. MATERIALS AND METHODS (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,23 +105,13 @@ PDF body method statement (p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS A
 - **p. 6 / 2. RESULTS - extractive body cue:** The heading error of the presented controller is consistently smaller than the baseline, both with and without the payload.
 - **p. 6 / 3. DISCUSSION - extractive body cue:** We see a number of limitations and opportunities for future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), p. 7 (4. MATERIALS AND METHODS), objective p. 6 (4. MATERIALS AND METHODS), p. 6 (4. MATERIALS AND METHODS), temporal p. 6 (3. DISCUSSION), p. 8 (50 Hz), p. 10 (50 N external force), p. 6 (4. MATERIALS AND METHODS), p. 3 (1. INTRODUCTION), p. 9 (50 Hz).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

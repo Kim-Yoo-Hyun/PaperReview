@@ -56,7 +56,6 @@ PDF body method statement (p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method), p
 - **p. 12 / 11 Method - extractive body cue:** 5.2 Graph Constraints In this part, we evaluate the layout generation performance with respect to scene graph constraints.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 10 (4 Method), p. 7 (4 Method), p. 8 (4 Method), p. 8 (4 Method), p. 9 (4 Method), p. 12 (11 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method), p
 - **p. 8 / 4 Method - extractive body cue:** 1, with input (β(0) vi , β(0) ei!j, β(0) vj ) = (vdt i , ei!j, vdt j ), where vdt i and vdt j ...
 - **p. 9 / 4 Method - extractive body cue:** We solve the problem by introducing shape observation of other processes for each process, which is achieved by shape echoes.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method), p
 - **p. 7 / 4 Method - extractive body cue:** As each generation proceeds individually, there is no awareness of scene content during the denoising steps, which makes the generation inconsistent with global constraints in ...
 - **p. 8 / 4 Method - extractive body cue:** We follow a normal DDPM training routine, in which we set 1000 time steps for all diffusion processes with weight-shared γ✓.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** form, sending, receiving, step, constitute, information, echo, Note, Langevin, dynamics, here, different, ones, normal, diffusion, model, where, introduce, relationship, group.
 - **Relevant PDF headings:** 4 Method (p. 5); 11 Method (p. 11); 13 Method (p. 13).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,22 +114,11 @@ PDF body method statement (p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method), p
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 3: Inter-object Consistency. The consistent object shapes within a scene are indicated by low CD values (⇥0.001). Ablation FID FIDCLIP KID mSG Ours w/o ...
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches ...
 - **p. 9 / Figure/Table caption - extractive body cue:** Fig. 3: One Step of Dual-Branch Information Echo. For each time step, we encourage the layout (left) and shape (right) branches to exchange information within ...
-- **p. 14 / Figure/Table caption - extractive body cue:** Table 4: Ablations under three cir- cumstances. mSG means average graph constraints. observe a marginal decrease, indicating even without ⇡(t), the model still learns temporal ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method), p. 6 (4 Method), p. 7 (4 Method), p. 7 (4 Method), objective p. 10 (4 Method), p. 9 (4 Method), p. 7 (4 Method), p. 8 (4 Method), p. 8 (4 Method), p. 12 (11 Method), temporal p. 8 (4 Method), p. 8 (4 Method), p. 9 (4 Method), p. 10 (4 Method), p. 10 (4 Method), p. 14 (13 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

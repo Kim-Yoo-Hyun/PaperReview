@@ -43,8 +43,6 @@
 - **p. 5 / 4.1. Evaluation on 3D Gaussians - extractive body cue:** After that, we evaluate the trained model on the test sets of ScanNet/ScanNet++, ARKitScenes, and MultiScan. • Group 2: We train our method from scratch ...
 - **p. 7 / 4.3. Evaluation on Raylet Sampling in Testing - extractive body cue:** the trained model is evaluated on unseen datasets as shown in Tables 5&6.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We train all methods on the large-scale ARKitScene dataset and then directly test them on the unseen ScanNet++ dataset. Our RayletDF shows superior ...
@@ -78,8 +76,6 @@
 | Figure 3. Overview of our proposed pipeline. The leftmost block shows the raylet feature extractor module, the middle block shows the raylet distance field ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 2. An illustration of raylets and raylet distances. and its starting point is sampled (or located) near the sur- face of a shape. ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | For a fair comparison, the four feed-forward generalizable baselines MVSGaussian [35], Pointersect [8], RayDF [36], and PFGS [59] are all trained with the same ... | comparison identity and matched condition | p. 5 (4.1. Evaluation on 3D Gaussians) |
 | For example, when trained on ARKitScenes or ScanNet/ScanNet++, our method achieves {0.067, 0.130} meters in ADE on the novel MultiScan dataset respectively, while the ... | comparison identity and matched condition | p. 6 (4.2. Evaluation on Point Clouds) |
 | Figure 6. Qualitative results of our method and baselines for 3D surface reconstruction on multiple datasets. All methods are trained on point clouds. 25623 | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@
 | body limitation/failure cue | Remarkably, thanks to the learned local raylet features, it exhibits excellent generalizability to new and unseen scenes in testing, while all baselines fail to ... | p. 7 (5. Conclusion) |
 | body limitation/failure cue | This validates the generalizability and robustness of our simple design. | p. 7 (4.3. Evaluation on Raylet Sampling in Testing) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@
 | In this ablation, the hyperparameter T is chosen as {1, 5, 10, 20}. | p. 7 (4.4. Ablations) |
 | For the raylet feature extractor, in Equation 3, the hyperparameter K is chosen as {1, 5, 10, 20}. | p. 7 (4.4. Ablations) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Overview of our proposed pipeline. The leftmost block shows the raylet feature extractor module, the middle block shows the raylet distance field module, ...
@@ -152,6 +131,5 @@
 - **p. 7 / 4.3. Evaluation on Raylet Sampling in Testing - extractive body cue:** This validates the generalizability and robustness of our simple design.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 6 (4.3. Evaluation on Raylet Sampling in Testing), p. 6 (4.2. Evaluation on Point Clouds), p. 7 (4.3. Evaluation on Raylet Sampling in Testing), p. 5 (4.1. Evaluation on 3D Gaussians), p. 7 (4.3. Evaluation on Raylet Sampling in Testing), metrics p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.1. Evaluation on 3D Gaussians), p. 7 (4.4. Ablations), p. 6 (4.2. Evaluation on Point Clouds), p. 7 (4.4. Ablations), baselines p. 5 (4. Experiments), p. 1 (Figure/Table caption), p. 6 (4.2. Evaluation on Point Clouds), p. 5 (4.1. Evaluation on 3D Gaussians), p. 6 (4.2. Evaluation on Point Clouds), p. 8 (Figure/Table caption), results p. 6 (4.1. Evaluation on 3D Gaussians), p. 6 (4.1. Evaluation on 3D Gaussians), p. 5 (4. Experiments), p. 5 (4.1. Evaluation on 3D Gaussians), p. 7 (4.4. Ablations), p. 7 (4.4. Ablations).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

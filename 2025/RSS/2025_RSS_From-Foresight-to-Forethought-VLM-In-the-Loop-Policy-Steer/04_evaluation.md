@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** In this task, the robot must pick up a fork from the table and place it inside a bowl.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** For each step trajectory snippet {(0},a3}£27 from the dataset, the encoder £4 processes the initial observation o} at timestep f, and the forward dynamies model ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We present FOREWARN, an VLM-in-the-loop policy steering algorithm for multi-modal generative robot policies.
@@ -72,20 +70,11 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 | Fig. 3: Examples of Behavior Narrations Predicted by Each Approach. The top row displays the ground-truth robot ‘observations and the prompt used for querying ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 4: Policy Steering: Fork Task. We visualize the steering process for the Fork task including two phases (Pick and Place). For each phase, ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Fig. 3: Examples of Behavior Narrations Predicted by Each Approach. The top row displays the ground-truth robot ‘observations and the prompt used for querying ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -118,8 +107,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 | body limitation/failure cue | Our experiments across diverse manipulation tasks confirm that FOREWARN not only provides interpretable and reliable failure detection, but also significantly enhances policy success rates ... | p. 9 (VI. Limrrations) |
 | body limitation/failure cue | In contrast, the baselines either fail to interpret action outcomes effectively, resulting in unsafe behaviors, or experience severe performance degradation in novel task specifications. | p. 8 (B. Policy Steering for Open-World Alignment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -133,14 +120,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 | For each method, we conduct 20 trials with | p. 8 (B. Policy Steering for Open-World Alignment) |
 | randomly initialized task configurations and report the average success rate across these trials. | p. 8 (B. Policy Steering for Open-World Alignment) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** We consider three real-world robot manipulation tasks that exhibit underlying multi-modal behavio hhard-to-model outcomes, and nuanced failures.
@@ -151,9 +130,8 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS)): V
 - **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** In contrast, the baselines either fail to interpret action outcomes effectively, resulting in unsafe behaviors, or experience severe performance degradation in novel task specifications.
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 7 (Figure/Table caption), results p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table cap
 - **p. 9 / 2.1 PRELIMINARIES - extractive body cue:** In the grasp right-side vegetable task, different target objects require distinct gripper poses and clamping widths.
 - **p. 7 / 2.1 PRELIMINARIES - extractive body cue:** We report the task success rates vs. training iterations before and after representation (b) Data efficiency (c) t-SNE visualization (a) Training efficiency Training iterations 3.8x ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Our proposed method, Spatial Forcing (SF), implicitly forces VLA models to acquire spatial-aware knowledge. (a) SF aligns intermediate visual embeddings of VLAs with ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table cap
 | Figure 7: The MOE gating score distribution histograms on the LIBERO benchmark of adaptive layer selection strategy. | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | Table 1: Comparisons with state-of-the-art methods on LIBERO benchmark. Please note that methods in gray font incorporate extra depth or point cloud information from ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table cap
 | Figure 3: Depth probing of the visual embeddings of VLAs. Embeddings learned solely from 2D images without alignment do not produce meaningful spatial structures. ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Table 4: The Ablation of Supervising Different Transformer Layers of VLA. Aligned Layerth Spatial Object Goal Long Average 1 | comparison identity and matched condition | p. 19 (Figure/Table caption) |
 | Figure 9: Additional ablation experiments for more complex spatial tasks. Then, the visual tokens of VLA are fed into the trainable VLA downstream heads ... | comparison identity and matched condition | p. 21 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table cap
 | body limitation/failure cue | However, the reconstruction supervision may not be suitable for VLAs to learn effective representations, as it fails to filter out redundant details (LeCun, 2022; ... | p. 9 (5 RELATED WORK) |
 | body limitation/failure cue | SigLIP excels at semantic understanding through robust imagetext alignment, whereas DINOv2 offers stronger visual grounding owing to its fine-grained spatial representations. | p. 6 (2.1 PRELIMINARIES) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table cap
 | Base Models and Implementation Details. | p. 5 (2.1 PRELIMINARIES) |
 | For evaluation, we test 10 trials per variation (40 trials in total) for each single-arm task, and 20 trials for the dual-arm task. | p. 9 (2.1 PRELIMINARIES) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 2.1 PRELIMINARIES - extractive body cue:** We take OpenVLA-OFT (Kim et al., 2025) as the base model and conduct experiments on the LIBERO benchmark with a single H100 because of limitations ...
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table cap
 - **p. 6 / 2.1 PRELIMINARIES - extractive body cue:** SigLIP excels at semantic understanding through robust imagetext alignment, whereas DINOv2 offers stronger visual grounding owing to its fine-grained spatial representations.
 
 - **Evidence anchors reviewed:** datasets p. 8 (2.1 PRELIMINARIES), p. 8 (2.1 PRELIMINARIES), p. 9 (2.1 PRELIMINARIES), p. 9 (2.1 PRELIMINARIES), p. 7 (2.1 PRELIMINARIES), metrics p. 7 (2.1 PRELIMINARIES), p. 8 (2.1 PRELIMINARIES), p. 8 (2.1 PRELIMINARIES), p. 9 (2.1 PRELIMINARIES), p. 9 (2.1 PRELIMINARIES), p. 2 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), p. 19 (Figure/Table caption), p. 21 (Figure/Table caption), results p. 9 (2.1 PRELIMINARIES), p. 6 (Figure/Table caption), p. 8 (2.1 PRELIMINARIES), p. 8 (2.1 PRELIMINARIES), p. 9 (2.1 PRELIMINARIES), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

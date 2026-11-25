@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 - **p. 6 / 4. Results and Analysis - extractive body cue:** (a) While our simulation lacks dynamic obstacles, the robot can still evade them because the policy continuously adjusts its plan.
 - **p. 8 / 4.3. Simulation results - extractive body cue:** Active vision is needed necessary for the robot to move effectively through a cluttered environment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Learning to SPIN: Our robot learns to simultaneously perceive, manipulate, and navigate cluttered unstructured environments in a whole-body fashion. The robot has an ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 | We illustrate three such scenarios in Figure 6. | definition/direction/unit from same section | p. 6 (4.1. Emergent Behavior) |
 | As highlighted in several frames, Figure 6a depicts robustness to adversarially placed dynamic obstacles that constantly block the path of the robot. | definition/direction/unit from same section | p. 6 (4.1. Emergent Behavior) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 | Overall, our method is able to succeed 20-40% more than the classical baseline. | comparison identity and matched condition | p. 7 (4.2. Real-world results) |
 | Ours achieves ≈ 68% higher success rate than the FixCam baseline with the 18139 | comparison identity and matched condition | p. 7 (4.3. Simulation results) |
 | For the classical baseline, we teleoperate the robot for 2-3 min. camera pointing straight ahead. | comparison identity and matched condition | p. 8 (4.3. Simulation results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 | body limitation/failure cue | It has the emergent ability to avoid a new obstacle in space, whereas the classical baseline relies on the pre-built map and fails entirely. | p. 7 (4.2. Real-world results) |
 | body limitation/failure cue | Static Obstacles Dynamic Obstacles Scenario 1 Ours Classical Ours Classical Average Success 0.8 0.6 0.6 0.0 Average # Collisions 1.0 0.4 1.6 1.2 Scenario ... | p. 8 (4.3. Simulation results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 | We run the planner to only plan the base motion. | p. 7 (4.2. Real-world results) |
 | The evaluation metrics are reported as an average of 10 episodes with random agent and obstacle initialization across 3 seeds. | p. 7 (4.3. Simulation results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. We illustrate one scenario of the simulation benchmark here with many obstacles in a narrow passage. The agent learns to develop whole-body coordination ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (4.3. Simulation results), p. 7 (4.3. Simul
 - **p. 8 / 4.3. Simulation results - extractive body cue:** Static Obstacles Dynamic Obstacles Scenario 1 Ours Classical Ours Classical Average Success 0.8 0.6 0.6 0.0 Average # Collisions 1.0 0.4 1.6 1.2 Scenario 2 ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Results and Analysis), p. 7 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 7 (4.2. Real-world results), p. 6 (4.1. Emergent Behavior), p. 8 (4.3. Simulation results), metrics p. 7 (4.2. Real-world results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 5 (3. Experimental Setup), p. 8 (4.3. Simulation results), p. 5 (3. Experimental Setup), baselines p. 8 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis), p. 7 (4.2. Real-world results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), results p. 7 (4.3. Simulation results), p. 7 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 8 (4.3. Simulation results), p. 5 (4. Results and Analysis), p. 5 (4. Results and Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

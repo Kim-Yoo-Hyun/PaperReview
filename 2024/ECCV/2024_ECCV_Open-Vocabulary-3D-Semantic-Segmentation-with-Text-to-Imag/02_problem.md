@@ -63,8 +63,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 
 | body cue at p. 9 | As Replica does not provide the training data, we perform training on ScanNet and perform evaluation on Replica, ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 14 | Fig. 5: Qualitative results from our model and OpenScene on zero-shot vi- sual grounding. Our open-vocabulary semantic understanding ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (X. Zhu et al), p. 8 (X. Zhu et al), p. 3 (1 Introduction), p. 5 (X. Zhu et al). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), interface p. 5 (X. Zhu et al), p. 8 (X. Zhu et al), p. 3 (1 Introduction), p. 5 (X. Zhu et al), objective p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 4 (X. Zhu et al), p. 5 (X. Zhu et al), p. 8 (X. Zhu et al), p. 8 (X. Zhu et al).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

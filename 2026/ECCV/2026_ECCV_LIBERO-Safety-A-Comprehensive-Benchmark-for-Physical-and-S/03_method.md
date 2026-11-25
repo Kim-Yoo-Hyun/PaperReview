@@ -56,7 +56,6 @@ PDF body method statement (p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object P
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** In summary, we establish this evaluation framework through four core technical and empirical contributions: - Parametric Safety Benchmark and Taxonomy: We introduce the Unified Behavior ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 1 (462 Hand-Object Pairs), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (462 Hand-Object Pairs).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object P
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Vision-Language-Action models (VLAs) have become a key direction for building general-purpose robotic intelligence [30].
 - **p. 6 / 462 Hand-Object Pairs - extractive body cue:** Specifically, Csafety is instantiated as state-dependent Boolean predicates that enforce continuous physical bounds, such as maintaining a strict collision-free margin between the robot and the ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object P
 - **p. 37 / C.2 Training Configurations - extractive body cue:** Training Setting Value Total Optimization Steps 20, 000 Global Batch Size 640 Initial Learning Rate 1.0 × 10-4 Warmup Ratio 5% State Dropout (p) 0.8 ...
 - **p. 37 / C.2 Training Configurations - extractive body cue:** Training Setting Value Total Optimization Steps 60, 000 Global Batch Size 1, 024 Initial Learning Rate 1.0 × 10-4 Warmup Ratio 5% GR00T N1.5 For ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Metric, Human, Teleoperation, Ours, Effort, min/task, Data, Scalability, Collision, Guarantee, Human-dependent, Planner-enforced, Spatial, Representation, World-centric, Object-centric, Trajectory, Consistency, High, variance.
 - **Relevant PDF headings:** C.1 Model Details (p. 30).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object P
 - **p. 39 / C.3 Additional Experimental Results - extractive body cue:** Method SR (%) ↑LDLJ ↑Time (s) ↓CR (%) ↓ OpenVLA-OFT, 50 demos/task 35.3 -17.94 380.5 20.0 OpenVLA-OFT, 500 demos/task 42.7 -17.67 372.0 11.7 The embodied ...
 - **p. 10 / 4 Experiment - extractive body cue:** Consequently, we use the Success Rate (SR) as our primary metric, which strictly requires goal completion without any constraint violations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object Pairs), p. 1 (462 Hand-Object Pairs), p. 2 (1 INTRODUCTION), p. 5 (462 Hand-Object Pairs), p. 2 (462 Hand-Object Pairs), objective p. 8 (462 Hand-Object Pairs), p. 1 (462 Hand-Object Pairs), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), temporal p. 33 (C.1 Model Details), p. 40 (C.3 Additional Experimental Results), p. 42 (C.3 Additional Experimental Results), p. 13 (4 Experiment), p. 13 (4 Experiment), p. 32 (C.1 Model Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

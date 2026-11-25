@@ -218,7 +218,7 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
         return 0
     required = {
         "paper_id", "title", "year", "venue", "category", "tier", "roles",
-        "facets", "evidence_level", "reading_status", "primary_source",
+        "facets", "tags", "aliases", "evidence_level", "reading_status", "primary_source",
         "identifier_status", "primary_source_scope",
         "overview_path", "outgoing_relations", "incoming_relation_count",
         "evaluation_type", "evaluation_settings", "evaluation_protocol",
@@ -243,6 +243,9 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
             continue
         if row.get("title") != item.get("title") or row.get("year") != str(item.get("year")):
             errors.append(f"generated registry index identity mismatch: {row.get('paper_id')}")
+        for field in ("tags", "aliases"):
+            if row.get(field) != ";".join(item.get(field, [])):
+                errors.append(f"generated registry index {field} mismatch: {row.get('paper_id')}")
         expected_identifier = "identified" if any(item.get("identifiers", {}).values()) else "source_only"
         if row.get("identifier_status") != expected_identifier:
             errors.append(f"generated registry index identifier status mismatch: {row.get('paper_id')}")

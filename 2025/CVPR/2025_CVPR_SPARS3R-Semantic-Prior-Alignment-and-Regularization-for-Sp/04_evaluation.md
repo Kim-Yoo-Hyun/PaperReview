@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 - **p. 6 / 4.2. Ablation Studies - extractive body cue:** For scenes that do not have significant depth discrepancies, Global Fusion Alignment works well.
 - **p. 6 / 4.2. Ablation Studies - extractive body cue:** Quantitative evaluation of pose accuracy across three datasets, Relative Translation Error (RPEt) and Relative Rotation Error (RPEr) [62] are calculated based on the normalized poses.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A visualization of SPARS3R in comparison to cur- rent SoTA. Without additional prior, sparse NVS leads to incor- rect geometry by Instant-NGP [36]. ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 | Incorporating rotation points further minimizes the overall error. | definition/direction/unit from same section | p. 5 (4.1. Sparse NVS Evaluation) |
 | Figure 4. Visual comparisons of different NVS methods on 12 views on Mip-NeRF 360 [2] dataset. Zooming in on the visualizations is recommended to ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 | All baselines are run until convergence. | comparison identity and matched condition | p. 6 (4.1. Sparse NVS Evaluation) |
 | Figure 1. A visualization of SPARS3R in comparison to cur- rent SoTA. Without additional prior, sparse NVS leads to incor- rect geometry by Instant-NGP ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 2. SPARS3R combines a prior dense point cloud χ and a sparse SfM point cloud sX. The prior χ often has inferior depth ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 | body limitation/failure cue | Table 5. Quantitative comparison of 3 and 6 views on Tanks & Temples and MVImgNet datasets. implicit and explicit scene representations. Specifically, 3DGS leverages ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Notably, it provides a robust assessment of rendering image quality under moderate pose shift, which frequently occurs in the realistic sparse-view 26814 | p. 5 (4.1. Sparse NVS Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 | For fair implementation and comparison, we employ test pose optimization for all baselines and SPARS3R for 500 steps to maximally remove the effect of ... | p. 6 (4.1. Sparse NVS Evaluation) |
 | All baselines are run until convergence. | p. 6 (4.1. Sparse NVS Evaluation) |
 | All methods are run on the same registrations and updated with test pose optimization. | p. 7 (4.3. Quantitative and Visual Evaluation) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ab
 - **p. 5 / 4.1. Sparse NVS Evaluation - extractive body cue:** Notably, it provides a robust assessment of rendering image quality under moderate pose shift, which frequently occurs in the realistic sparse-view 26814
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.3. Quantitative and Visual Evaluation), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2. Ablation Studies), p. 6 (4.2. Ablation Studies), metrics p. 6 (4.2. Ablation Studies), p. 3 (Figure/Table caption), p. 6 (4.2. Ablation Studies), p. 5 (4.1. Sparse NVS Evaluation), p. 5 (4.1. Sparse NVS Evaluation), p. 8 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 6 (4.1. Sparse NVS Evaluation), p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.1. Sparse NVS Evaluation), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), results p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 5 (4.1. Sparse NVS Evaluation), p. 6 (4.2. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

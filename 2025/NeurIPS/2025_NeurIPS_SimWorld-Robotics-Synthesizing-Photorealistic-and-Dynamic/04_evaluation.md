@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 3 (1 Introduction), p. 3 (1 Introduction), p.
 - **p. 1 / Abstract - extractive body cue:** With these key features, we build two challenging robot benchmarks: (1) a multimodal instruction-following task, where a robot must follow vision-language navigation instructions to reach ...
 - **p. 1 / Abstract - extractive body cue:** Unlike existing benchmarks, these two new benchmarks comprehensively evaluate a wide range of critical robot capacities in realistic scenarios, including (1) multimodal instructions grounding, (2) ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of SimWorld Robotics (SWR). Built upon Unreal Engine 5, SWR is a simulation platform for large-scale, photorealistic, and dynamic urban environments. It ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 3 (1 Introduction), p. 3 (1 Introduction), p.
 | Our experimental results demonstrate that stateof-the-art models, including vision-language models (VLMs), struggle with our tasks, lacking robust perception, reasoning, and planning abilities necessary for ... | definition/direction/unit from same section | p. 1 (Abstract) |
 | Training these models requires a large amount of data, much of which can be generated in high-fidelity embodied simulators, such as Habitat 3 [40], ... | definition/direction/unit from same section | p. 1 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 3 (1 Introduction), p. 3 (1 Introduction), p.
 | Figure 1: Overview of SimWorld Robotics (SWR). Built upon Unreal Engine 5, SWR is a simulation platform for large-scale, photorealistic, and dynamic urban environments. ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Our experimental results demonstrate that existing models, including state-of-the-art vision-language models (VLMs), fail to achieve meaningful success on our benchmarks. | comparison identity and matched condition | p. 3 (1 Introduction) |
 | Table 1: Comparison of outdoor simulation platforms across key features. The Scenes section includessupport for Procedural Generation (✓: supported, ×: not supported), and level ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,8 +109,6 @@ PDF body evaluation/result cue (p. 3 (1 Introduction), p. 3 (1 Introduction), p.
 - Numeric sentences retained from the body:
 - **p. 3 / 1 Introduction - extractive body cue:** The dataset contains 20K training steps sampled from 200 episodes, each averaging 500 m in length, across 100 procedurally generated city environments with an average ...
 - **p. 3 / 1 Introduction - extractive body cue:** Compared to MetaUrban [56], the most recent urban simulator supporting procedural city generation, SWR offers environments that are 100× larger in area and episodes that ...
-- **p. 3 / 1 Introduction - extractive body cue:** The dataset contains 20K training steps sampled from 200 episodes, each averaging 500 m in length, across 100 procedurally generated city environments with an average ...
-- **p. 3 / 1 Introduction - extractive body cue:** Compared to MetaUrban [56], the most recent urban simulator supporting procedural city generation, SWR offers environments that are 100× larger in area and episodes that ...
 
 ## Generalization and Failure Cases
 
@@ -134,21 +121,11 @@ PDF body evaluation/result cue (p. 3 (1 Introduction), p. 3 (1 Introduction), p.
 | body limitation/failure cue | Figure 14: Qualitative result - lack of embodied reasoning Given a working memory, an embodied agent would robustly infer that it has aligned accordingly. ... | p. 33 (Figure/Table caption) |
 | body limitation/failure cue | Figure 16: Qualitative result key-step VLM outputs from the finetuned model successfully completing the task However, finetuning also exhibits certain limitations. First, when the ... | p. 34 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | The dataset contains 20K training steps sampled from 200 episodes, each averaging 500 m in length, across 100 procedurally generated city environments with an ... | p. 3 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,6 +137,5 @@ PDF body evaluation/result cue (p. 3 (1 Introduction), p. 3 (1 Introduction), p.
 - **p. 34 / Figure/Table caption - extractive body cue:** Figure 16: Qualitative result key-step VLM outputs from the finetuned model successfully completing the task However, finetuning also exhibits certain limitations. First, when the target ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Abstract), metrics p. 3 (1 Introduction), p. 34 (Figure/Table caption), p. 3 (1 Introduction), p. 5 (Figure/Table caption), p. 28 (Figure/Table caption), p. 32 (Figure/Table caption), baselines p. 30 (Figure/Table caption), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (Figure/Table caption), p. 3 (1 Introduction), p. 4 (Figure/Table caption), results p. 3 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

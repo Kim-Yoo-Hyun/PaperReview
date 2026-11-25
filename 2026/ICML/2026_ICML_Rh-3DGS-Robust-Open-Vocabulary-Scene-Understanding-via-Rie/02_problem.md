@@ -60,8 +60,6 @@ PDF body contribution framing (p. 4 (4.3. Visibility-Calibrated Distillation (VC
 | body cue at p. 8 | 9, activating LIC from the beginning is less effective because pseudoinstances are unstable in the early stage. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | We present Rh-3DGS for robust open-vocabulary 3D semantics in 3D Gaussian Splatting. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.3. Visibility-Calibrated Distillation (VCD)), p. 3 (4.1. Problem Formulation and Notation). The downstream handoff is claimed only when the body describes it.
@@ -69,7 +67,5 @@ PDF body contribution framing (p. 4 (4.3. Visibility-Calibrated Distillation (VC
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), interface p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.3. Visibility-Calibrated Distillation (VCD)), p. 3 (4.1. Problem Formulation and Notation), objective p. 4 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.3. Visibility-Calibrated Distillation (VCD)), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD)).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

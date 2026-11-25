@@ -47,7 +47,6 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 3 / 3.2. Efficient LiDAR Simulation - extractive body cue:** Traditional raycasting builds a Bounding Volume Hierarchy (BVH) over scene geometry, which becomes costly if updated at every simulation step due to dynamics.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (3.1. Problem Formulation), p. 3 (3.2. Efficient LiDAR Simulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 3 / 3. Method - extractive body cue:** Together, these components form a fullstack pipeline-from data generation to perception to control-that trains a single policy to robustly traverse all-space obstacles and deploy zero-shot ...
 - **p. 2 / 1. Introduction - extractive body cue:** Experiments also highlight the importance of our high-fidelity LiDAR simulation, which dynamically generates realistic observations essential for scalable, LiDAR-based training.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 5 / 4.2.1. Metrics - extractive body cue:** We train every policy for 4{,} 000 iterations, then run 5 independent evaluations (each run evaluates over 1{,} 000 complete episodes), reporting mean \pm standard ...
 - **p. 7 / 4.3.1. Deployment - extractive body cue:** These results highlight Gallant's ability to encode spatial constraints from perception and translate them into robust, real-time whole-body behaviors.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Episodes, fall, harsh, collision, contact, torso, knee, links, force, exceeding, timeout, formulate, humanoid, perceptive, locomotion, partially, observable, Markov, decision, process.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,20 +103,10 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 6 / 4.2.3. Result - extractive body cue:** For each ablation setting, the best-performing value per metric on each terrain is highlighted in bold.
 - **p. 6 / 4.2.3. Result - extractive body cue:** With all other settings fixed, Gallant achieves much higher success rates than the variant that ignores dynamic objects (w/o-Self-Scan) across all tasks.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), objective p. 3 (3.1. Problem Formulation), p. 3 (3.2. Efficient LiDAR Simulation), temporal p. 3 (3.1. Problem Formulation), p. 4 (C Voxel Grid), p. 3 (3.1. Problem Formulation), p. 5 (4.2.1. Metrics), p. 7 (4.3.1. Deployment), p. 8 (4.4. Further Analyses).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

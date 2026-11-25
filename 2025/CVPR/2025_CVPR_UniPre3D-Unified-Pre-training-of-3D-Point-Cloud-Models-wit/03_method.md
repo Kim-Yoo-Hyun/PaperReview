@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 4 (
 - **p. 4 / 3.3. Scale-Adaptive Cross-Modal Fusion - extractive body cue:** Appropriately supplementing pretrained image features can facilitate a smoother optimization process, assisting the backbone in gradually mastering the task and preventing premature convergence.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Optimization Objectives).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 4 (
 - **p. 5 / 3.3. Scale-Adaptive Cross-Modal Fusion - extractive body cue:** We then treat the back-projected pixels as a pseudo point cloud P2D and merge it with P3D, the output from the first encoding layer of ...
 - **p. 5 / 3.4. Optimization Objectives - extractive body cue:** However, in the context of scene pre-training, we impose a restriction on the perspective gap between the reference and rendered images, maintaining it within a ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 4 (
 - **p. 5 / 4.1. Pre-training - extractive body cue:** Object models are pre-trained for 50 epochs with the Adam optimizer [21] and a StepLR learning rate scheduler, set to an initial learning rate of ...
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Furthermore, point fusion proves to be more effective for scene pre-training than feature fusion, with optimal fine-tuning results across all datasets achieved when fusing 2D ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** modulate, difficulty, pretraining, task, enhance, point, cloud, model, focus, geometry, extraction, integration, pretrained, image, features, intermediate, derived, backbone, then, encoded.
 - **Relevant PDF headings:** 3. Approach (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 4 (
 - **p. 7 / 4.3. Ablation Studies - extractive body cue:** For object-level pre-training, we ablate on the integration layer with classification fine-tuning on ScanObjectNN (PB T50 RS), shown in Table 5.
 - **p. 7 / 4.2.2. Scene-level Fine-tuning - extractive body cue:** Model Pre-train mIoUC mIoUI PointNet [34] ✗ 80.4 83.7 PointNet++ [35] ✗ 81.9 85.1 DGCNN [55] ✗ 82.3 85.2 KPConv [45] ✗ 85.1 86.4 Standard ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 4 (3.2. Overall Pipeline), p. 5 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 5 (3.3. Scale-Adaptive Cross-Modal Fusion), p. 3 (3.2. Overall Pipeline), p. 3 (3.2. Overall Pipeline), objective p. 5 (3.4. Optimization Objectives), p. 3 (3. Approach), p. 3 (3.2. Overall Pipeline), p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion), temporal p. 5 (4.1. Pre-training), p. 7 (4.2.2. Scene-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), p. 2 (2. Related Work), p. 2 (2. Related Work), p. 3 (3.2. Overall Pipeline).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 - **p. 12 / 4 Experiments - extractive body cue:** Original DETR ("None") directly employs a set of learnable parameters as object queries without anchor points.
 - **p. 12 / 4 Experiments - extractive body cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison of DETR, DETR3D, and our proposed PETR. (a) In DETR, the object queries interact with 2D features to perform 2D detection. (b) ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | PE Networks NDS↑mAP↑mATE↓ None 0.311 0.256 1.00 1×1 ReLU 1×1 0.359 0.309 0.839 3×3 ReLU 3×3 0.017 0.000 1.054 (a) The network to generate ... | definition/direction/unit from same section | p. 12 (4 Experiments) |
 | Fig. 7: Visualization of attention maps, generated from an object query (corre- sponding to the truck) on multi-view images. Both front-left and back-left views ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | 1, we first compare the performance with state-of-the-art methods on nuScenes val set. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | For the same image size (e.g., 1056×384), our PETR infers with 10.7 FPS compared to the BEVDet [18] with 4.2 FPS. | comparison identity and matched condition | p. 10 (4 Experiments) |
 | The Uniform discretization (UD) shows similar performance compared to the linear-increasing discretization (LID). | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | body limitation/failure cue | We mark the failure cases by red and green circles. | p. 14 (4 Experiments) |
 | body limitation/failure cue | The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of ... | p. 12 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | The 3D features are further input to the transformer decoder and interact with the object queries, generated from query generator. | p. 4 (3 Method) |
 | The 3D coordinates together with the 2D multiview features are input to the 3D position encoder, producing the 3D positionaware features F 3d = ... | p. 4 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 4 Experiments - extractive body cue:** Finally, we provide some failure cases (see Fig.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 - **p. 12 / 4 Experiments - extractive body cue:** The global feature of object query fail to make the model converge. "Fix-BEV" is the fixed anchor points are generated with the number of 39×39 ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), metrics p. 8 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 14 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), results p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

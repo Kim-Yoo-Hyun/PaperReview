@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 - **p. 9 / VIII. EXPERIMENTS - extractive body cue:** Our method also guarantees that the trajectory stays collision-free between contacts, while the baseline can be seen to clip the corners of the slider.
 - **p. 9 / VIII. EXPERIMENTS - extractive body cue:** Our method picks the shortest path around the object, while the baseline goes the longer way around twice, highlighting the fact that our method is ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: The experimental planar pushing setup. A cylindrical finger is attached to a robotic arm that is pushing a T-shaped object on the table ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 | We start by pointing out that the performance of the contactimplicit method in table III required significant tuning of the cost function and problem ... | definition/direction/unit from same section | p. 10 (VIII. EXPERIMENTS) |
 | Fig. 3: a) An example of a configuration-space partitioning Q1, . . . , Q4 and the linear approximations ϕ1, . . . , ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 | As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared ... | comparison identity and matched condition | p. 9 (VIII. EXPERIMENTS) |
 | The T-shaped slider has a significantly higher number of possible mode sequences and a more complex SDF compared to the box-shaped geometry, making it ... | comparison identity and matched condition | p. 10 (VIII. EXPERIMENTS) |
 | Our method also provides a good metric for evaluating solution quality through the obtained upper bound on the optimality gap, unlike the baseline, where ... | comparison identity and matched condition | p. 10 (VIII. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 | body limitation/failure cue | This limitation is not surprising, as the baseline is a local method that relies heavily on its initial guess. | p. 10 (VIII. EXPERIMENTS) |
 | body limitation/failure cue | As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared ... | p. 9 (VIII. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 | Since the denominator is always positive, this function is a maximum over convex functions and is thus readily encoded through NF Rotated Second-Order Cone ... | p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING) |
 | The vertices and edges of Gij are added to G, as well as a bi-directional edge connecting the vertices corresponding to contact modes Ci ... | p. 7 (VII. MOTION PLANNING FOR PLANAR PUSHING) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / IX. CONCLUSION AND FUTURE WORK - extractive body cue:** Future work will explore the ability of these reduction methods to accelerate the planning.
@@ -157,9 +136,8 @@ PDF body evaluation/result cue (p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENT
 - **p. 9 / VIII. EXPERIMENTS - extractive body cue:** As our method is capable of global reasoning and does not rely on an initial guess, it has a much higher success rate compared to ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), metrics p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), baselines p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS), results p. 9 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 8 (VIII. EXPERIMENTS), p. 10 (VIII. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

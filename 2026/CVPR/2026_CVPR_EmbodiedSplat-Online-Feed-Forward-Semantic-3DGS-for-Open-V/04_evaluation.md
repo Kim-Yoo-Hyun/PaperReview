@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 - **p. 8 / 5.2. Ablation Studies - extractive body cue:** The experiment is conducted on scene0000 01 of the ScanNet dataset, where our EmbodiedSplat produces M = 3.2M number of Gaussians while the global codebook ...
 - **p. 8 / 5.2. Ablation Studies - extractive body cue:** The experiment is conducted on scene0000 01 of ScanNet dataset and the total memory consumption is estimated by summing the sizes of the compressor components ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Build and understand at Once. By taking over 300 streaming images, our EmbodiedSplat reconstructs whole-scene open- vocabulary 3DGS in online manner at up ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 | Following [18], we modify their inference strategy to support direct 3D referring operation without rendering 2D feature maps. | definition/direction/unit from same section | p. 6 (5. Experiments) |
 | Aggregating the multiple instance features from multi-view images leads to performance improvement (L = 2 vs L = 4, 6, 11). | definition/direction/unit from same section | p. 8 (5.2. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 | We name this baseline as 2D methods where LangSplat [35], LEGaussians [40] and Online-LangSplat [19] are chosen for this category. | comparison identity and matched condition | p. 6 (5. Experiments) |
 | Nevertheless, our model achieves performance comparable to clustering-based baselines [28, 48]. | comparison identity and matched condition | p. 7 (5.1. Experimental Results) |
 | 4, our codebook-based cosine similarity (2nd row) significantly improves efficiency, achieving nearly 14× faster processing speed compared to the naive per-Gaussian cosine similarity computation ... | comparison identity and matched condition | p. 8 (5.2. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 | body limitation/failure cue | Splat [18] shares the same limitations. | p. 8 (5.2. Ablation Studies) |
 | body limitation/failure cue | Our model shows strong semantics generalizability in ScanNet++ →ScanNet transfer with performance degradation remaining below 1 mIoU compared to ScanNet →ScanNet setting in Tab. | p. 7 (5.1. Experimental Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 | In contrast to existing memory-compression methods such as Auto-encoder [35], Product Quantization (PQ) Index [18] and per-scene optimized codebook [28, 48], our approach requires ... | p. 2 (1) They require per-scene optimization that cannot be gen) |
 | Further implementation details of Algorithm. | p. 4 (4.1. EmbodiedSplat) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.1. Experimental Results - extractive body cue:** Due to the huge domain gap between the real-world and synthetic dataset, our EmbodiedSplat fails to achieve the best results compared to the per-scene optimization ...
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 - **p. 7 / 5.1. Experimental Results - extractive body cue:** Our model shows strong semantics generalizability in ScanNet++ →ScanNet transfer with performance degradation remaining below 1 mIoU compared to ScanNet →ScanNet setting in Tab.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.1. Experimental Results), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.1. Experimental Results), p. 8 (5.2. Ablation Studies), p. 8 (5.2. Ablation Studies), metrics p. 8 (5.2. Ablation Studies), p. 6 (Figure/Table caption), p. 7 (5.2. Ablation Studies), p. 7 (5.1. Experimental Results), p. 6 (5. Experiments), p. 8 (5.2. Ablation Studies), baselines p. 7 (5.1. Experimental Results), p. 3 (Figure/Table caption), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.1. Experimental Results), p. 8 (5.2. Ablation Studies), results p. 6 (Figure/Table caption), p. 8 (5.2. Ablation Studies), p. 7 (5.1. Experimental Results), p. 7 (5.2. Ablation Studies), p. 8 (5.2. Ablation Studies), p. 6 (5. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

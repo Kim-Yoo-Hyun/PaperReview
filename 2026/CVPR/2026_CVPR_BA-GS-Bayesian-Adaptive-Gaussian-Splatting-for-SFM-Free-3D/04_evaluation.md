@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 - **p. 8 / 5.3. Ablation Study - extractive body cue:** Convergence analysis on the MVImgNet dataset (12 views).
 - **p. 8 / 5.3. Ablation Study - extractive body cue:** Shaded regions represent the variance across different scenes. strates notable improvements in both performance optimum and optimization dynamics.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 | The results consistently outperform baselines in both numerical and perceptual metrics across most settings, indicating that the performance gain is attributable to the method ... | definition/direction/unit from same section | p. 6 (5.2. Experiment Results) |
 | The baseline suffers from performance degradation and jittering in later stages. | definition/direction/unit from same section | p. 8 (5.3. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 | While the fluctuation around 500 iterations is a transient effect of adaptive density control, BA-GS consistently maintains better metrics compared to the baseline. | comparison identity and matched condition | p. 8 (5.3. Ablation Study) |
 | Table 2. Comparison of rendering time, PSNR, SSIM, and LPIPS on the Tanks and Temples dataset. Compared to MVImgNet, the overall rendering performance on ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | In contrast, VGGT+BAGS demonstrates remarkable robustness, outperforming VGGT+InstantSplat by a large margin (e.g., 2-3 dB in PSNR on Tanks and Temples). | comparison identity and matched condition | p. 7 (5.2. Experiment Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 | body limitation/failure cue | Removing it causes a severe drop in PSNR and degrades perceptual metrics, confirming that modeling the latent probabilistic distribution of primitives is essential for ... | p. 7 (5.3. Ablation Study) |
 | body limitation/failure cue | Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian ... | p. 2 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 | 2, and the detailed pseudocode is provided in the supplementary material. | p. 4 (4.1. Variational Bayesian Initialization) |
 | This allows the control mechanism to adapt to local geometric complexity rather than relying on a uniform hyperparameter. | p. 5 (4.2. Prior-Guided Adaptive Density Control) |
 | Unlike the original ADC strategy in 3DGS [12], which applies a global, fixed threshold, our strategy computes a perprimitive threshold conditioned on local priors. | p. 5 (4.2. Prior-Guided Adaptive Density Control) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (5.2. Experime
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of BA-GS. Our method follows the classical Gaussian Splatting pipeline but introduces a Bayesian optimization stage that adaptively refines the Gaussian primitives ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experiment Setup), p. 6 (5.1. Experiment Setup), p. 7 (5.2. Experiment Results), p. 7 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), metrics p. 8 (5.3. Ablation Study), p. 7 (5.3. Ablation Study), p. 7 (5.2. Experiment Results), p. 2 (Figure/Table caption), p. 6 (5.1. Experiment Setup), p. 6 (5.2. Experiment Results), baselines p. 6 (5.2. Experiment Results), p. 6 (5.2. Experiment Results), p. 8 (5.3. Ablation Study), p. 8 (5.3. Ablation Study), p. 7 (Figure/Table caption), p. 7 (5.2. Experiment Results), results p. 8 (Figure/Table caption), p. 6 (5.2. Experiment Results), p. 6 (5.2. Experiment Results), p. 7 (5.3. Ablation Study), p. 7 (5.2. Experiment Results), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

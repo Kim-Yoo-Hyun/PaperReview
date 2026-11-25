@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 - **p. 8 / 5.5. Robustness - extractive body cue:** Generalisation from the training set SURREAL to the test set SHREC19.
 - **p. 6 / 5.2. Near-isometric Shape Matching - extractive body cue:** The SCAPE dataset comprises 71 shapes of a single person in different poses.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose a novel way to learn coupled embeddings of non-rigidly deformable shapes that are geometry-aware, robust and can be directly applied to ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 | Figure 17. Robustness against additive noise. Ours produces stable correspondences under this noise compared to the baselines (errors highlighted in red). | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 10. Illustration of mean geodesic error under different spec- tral resolutions. Our method is robust for different choice of spec- tral resolution. We ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 | Figure 17. Robustness against additive noise. Ours produces stable correspondences under this noise compared to the baselines (errors highlighted in red). | comparison identity and matched condition | p. 16 (Figure/Table caption) |
 | We start this section by introducing the most relevant baselines in Sec. | comparison identity and matched condition | p. 6 (5. Experiments) |
 | Compared to the noise-free case, we also have the least overall performance degradation. | comparison identity and matched condition | p. 8 (5.5. Robustness) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 | body limitation/failure cue | Figure 10. Illustration of mean geodesic error under different spec- tral resolutions. Our method is robust for different choice of spec- tral resolution. We ... | p. 13 (Figure/Table caption) |
 | body limitation/failure cue | We evaluate robustness from two perspectives: (1) random additive Gaussian noise to point clouds, (2) changes and inconsistency in shape topology. | p. 7 (5.5. Robustness) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 | It captures the local geometric information of different scales on the manifold by modelling a heat diffusion process with different timesteps and constrains the ... | p. 5 (4.1. Network Architecture) |
 | The core concept of cross attention is that it computes a similarity matrix between the key and query (transformed version of ˆΨS, ˆΨT ), ... | p. 5 (4.1. Network Architecture) |
 | Please see supplementary for implementation details. | p. 6 (4.2. Unsupervised Loss) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-i
 - **p. 7 / 5.5. Robustness - extractive body cue:** We evaluate robustness from two perspectives: (1) random additive Gaussian noise to point clouds, (2) changes and inconsistency in shape topology.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching), p. 6 (5.2. Near-isometric Shape Matching), p. 8 (5.5. Robustness), p. 8 (5.5. Robustness), p. 6 (5.2. Near-isometric Shape Matching), metrics p. 7 (5.2. Near-isometric Shape Matching), p. 7 (5.2. Near-isometric Shape Matching), p. 8 (5.5. Robustness), p. 8 (5.6. Partial Shape Matching), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.4. Generalisation), p. 8 (5.5. Robustness), p. 16 (Figure/Table caption), p. 6 (5. Experiments), p. 8 (5.5. Robustness), results p. 8 (5.7. Shape Segmentation), p. 7 (5.3. Non-isometric Shape Matching), p. 7 (5.4. Generalisation), p. 8 (5.5. Robustness), p. 6 (5. Experiments), p. 6 (5.1. Baselines).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

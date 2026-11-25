@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 - **p. 8 / 5.4. Real-world Data - extractive body cue:** We directly applied our networks trained on synthetic data to real-world data.
 - **p. 7 / 5.3. Results and Analysis - extractive body cue:** Our networks also learn representations that generalize successfully to unseen novel object categories.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The Proposed Where2Act Task. Given as input an ar- ticulated 3D object, we learn to propose the actionable information for different robotic manipulation ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 | We show the top-4 rated proposals. are equally highlighted and the pixels around handles are reasonably predicted to be not pushable due to object-gripper ... | definition/direction/unit from same section | p. 8 (5.3. Results and Analysis) |
 | Figure 7. Failure Cases. We visualize some interesting failure cases, which demonstrate the difficulty of the task and some am- biguous cases that are ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 | The baseline methods are not sensitive to the input kinds. | comparison identity and matched condition | p. 7 (5.2. Metrics and Baselines) |
 | Quantitative Evaluations and Comparisons. | comparison identity and matched condition | p. 7 (5.2. Metrics and Baselines) |
 | 5 presents comparisons among the four directional interaction types. | comparison identity and matched condition | p. 8 (5.3. Results and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 | body limitation/failure cue | Figure 2. Network Architecture. Our network takes an 2D image or a 3D partial scan as input and extract per-pixel feature fp using (a) ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | With random interactions, there are many more failed interaction trials than the successful ones. | p. 6 (5.2. Metrics and Baselines) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 | For the 3D experiments, we use PointNet++ segmentation network [34] and implementation [47] with 4 set abstraction layers with single-scale grouping for the encoder ... | p. 3 (4.1. Network Modules) |
 | To decode the per-pixel actionable information, we propose three decoding heads: (c) an actionability scoring module Da that predicts a score ap ∈[0,1]; (d) ... | p. 3 (4.1. Network Modules) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 7. Failure Cases. We visualize some interesting failure cases, which demonstrate the difficulty of the task and some am- biguous cases that are hard ...
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Me
 - **p. 6 / 5.2. Metrics and Baselines - extractive body cue:** With random interactions, there are many more failed interaction trials than the successful ones.
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Framework and Settings), p. 5 (5.1. Framework and Settings), p. 8 (5.4. Real-world Data), p. 6 (5.1. Framework and Settings), p. 6 (5.2. Metrics and Baselines), p. 8 (5.4. Real-world Data), metrics p. 1 (Figure/Table caption), p. 6 (5.2. Metrics and Baselines), p. 8 (5.3. Results and Analysis), p. 6 (5.2. Metrics and Baselines), p. 7 (5.3. Results and Analysis), p. 7 (5.3. Results and Analysis), baselines p. 6 (5.2. Metrics and Baselines), p. 6 (5.2. Metrics and Baselines), p. 5 (5.1. Framework and Settings), p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 8 (5.3. Results and Analysis), results p. 7 (5.2. Metrics and Baselines), p. 7 (5.2. Metrics and Baselines), p. 1 (Figure/Table caption), p. 5 (5. Experiments), p. 5 (5. Experiments), p. 6 (5.2. Metrics and Baselines).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

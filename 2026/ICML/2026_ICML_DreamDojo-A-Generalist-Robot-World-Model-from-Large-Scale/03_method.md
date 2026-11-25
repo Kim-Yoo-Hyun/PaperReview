@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretra
 - **p. 6 / 3.3.2. Pretraining from Human Videos - extractive body cue:** Nevertheless, since world models must learn the consequences of actions, relying solely on actionless videos may lead to an inadequate understanding of the causality, ultimately ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 8 (3.3.4. Distillation), p. 8 (3.3.4. Distillation), p. 7 (3.3.2. Pretraining from Human Videos), p. 7 (3.3.2. Pretraining from Human Videos).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretra
 - **p. 7 / 3.3.2. Pretraining from Human Videos - extractive body cue:** The last layer of the action MLP is initialized with zeros to avoid perturbing the pretrained model state at the beginning of training (Zhang et ...
 - **p. 7 / 3.3.3. Post-Training on Target Robots - extractive body cue:** Although learning from human videos exposes the model to a wide range of physics interactions, we still require a post-training stage on the target robot ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretra
 - **p. 9 / 4.1. Experimental Setup - extractive body cue:** Both models are pretrained for 140k steps with an effective batch size of 1024 using 256 NVIDIA H100 GPUs.
 - **p. 13 / 4.7. Downstream Applications - extractive body cue:** We ensemble 5 model checkpoints from training to generate action proposals that exhibit sufficient variance at inference time.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** DreamDojo, Generalist, Robot, World, Model, Large-Scale, Human, Videos, Latent, Action, Encoder, Decoder, Figure, establish, VAE, Kingma, Welling, spatiotemporal, Transformer, architecture.
 - **Relevant PDF headings:** 3. Approach (p. 3); 3.3. DreamDojo Foundation World Model (p. 5); 3.3.1. Model Architecture (p. 5); 0.219 Method (p. 10).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretra
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 5: Ablations of architecture and loss designs. Our design choices can effectively enhance the simulation quality of both expert and counterfactual trajectories.
 - **p. 8 / 4. Experiments - extractive body cue:** Specifically, we aim to answer the following questions: (1) Compared to actionless pretraining, can latent actions enable more effective transfer from human videos?
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretraining from Human Videos), p. 5 (3.3.1. Model Architecture), p. 6 (3.3.1. Model Architecture), p. 7 (3.3.2. Pretraining from Human Videos), p. 8 (3.3.4. Distillation), objective p. 8 (3.3.4. Distillation), p. 8 (3.3.4. Distillation), p. 7 (3.3.2. Pretraining from Human Videos), p. 7 (3.3.2. Pretraining from Human Videos), p. 4 (3.2. DreamDojo-HV Dataset), p. 6 (3.3.2. Pretraining from Human Videos), temporal p. 13 (4.6. Benefits of Distillation), p. 20 (5. Conclusion), p. 2 (1. Introduction), p. 9 (4.1. Experimental Setup), p. 9 (4.1. Experimental Setup), p. 10 (0.219 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

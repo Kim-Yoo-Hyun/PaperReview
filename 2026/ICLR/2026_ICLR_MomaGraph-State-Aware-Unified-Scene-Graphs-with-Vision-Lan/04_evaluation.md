@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** 6.1 BENCHMARK EVALUATION FOR EMBODIED TASK PLANNING We compare the performance of our MomaGraph-R1 with other models across all task tiers in MomaGraph-Bench to rigorously ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** 6.2 BENCHMARK EVALUATION FOR VISUAL CORRESPONDENCE As the model learns scene representations from multi-view observations, it exhibits an emergent ability of cross-view consistency , which ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Overview of the MomaGraph. Given a task instruction, MomaGraph constructs a task- specific scene graph that highlights relevant objects and parts along with ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 | This combination underscores the strength of our model and its practicality for real-world deployment. | definition/direction/unit from same section | p. 10 (6 EXPERIMENTS) |
 | Figure 14: Validation reward curves during MomaGraph-R1 training. B ADDITIONAL ABLATION STUDIES B.1 COMPARISON WITH SFT AND ICL BASELINES To validate our choice of ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 | Figure 14: Validation reward curves during MomaGraph-R1 training. B ADDITIONAL ABLATION STUDIES B.1 COMPARISON WITH SFT AND ICL BASELINES To validate our choice of ... | comparison identity and matched condition | p. 21 (Figure/Table caption) |
 | 6.1 BENCHMARK EVALUATION FOR EMBODIED TASK PLANNING We compare the performance of our MomaGraph-R1 with other models across all task tiers in MomaGraph-Bench to ... | comparison identity and matched condition | p. 8 (6 EXPERIMENTS) |
 | As task complexity increases from Tier 1 to Tier 4, the performance of most open-source baselines drops sharply, reflecting their limited ability to generalize ... | comparison identity and matched condition | p. 9 (6 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -142,8 +131,6 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 | body limitation/failure cue | In contrast, MomaGraph-R1 exhibits a much smaller degradation, preserving strong performance in Tier 3 and Tier 4. | p. 9 (6 EXPERIMENTS) |
 | body limitation/failure cue | Our real-world evaluations show that MomaGraph-R1 delivers robust scene understanding and task planning even in unseen scenarios, while remaining directly compatible with standard mobile ... | p. 10 (6 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -157,14 +144,6 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 | MomaGraph-Scenes jointly encodes spatial relationships and functional relationships, covering 9 spatial relationship types and 6 functional relationship 6 | p. 6 (4 METHOD) |
 | 원문 대조: 시각 t의 task-oriented graph는 task-relevant candidate object node, spatial edge, hypothesized functional edge로 구성된다. 초기 functional relation은 one-to-many일 수 있다. 현재 공개본의 해당 시간 인덱스 식은 PDF p. 6이다. ([PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3 State-Aware Dynamic Scene Graph Update, Eq. (3)) | [PDF p. 6](https://arxiv.org/pdf/2512.16909#page=6), §4.3 State-Aware Dynamic Scene Graph Update, Eq. (3) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / Figure/Table caption - extractive body cue:** Figure 6: Quantitative real-robot evaluation. (a) Environment setup of the real-robot experiment. (b) Failure analysis illustrating success/failure rates across different reasoning stages. Task Setup. We ...
@@ -175,9 +154,8 @@ PDF body evaluation/result cue (p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table capti
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** Our real-world evaluations show that MomaGraph-R1 delivers robust scene understanding and task planning even in unseen scenarios, while remaining directly compatible with standard mobile humanoid ...
 
 - **Evidence anchors reviewed:** datasets p. 19 (A.4.1 BENCHMARK DESIGN), p. 17 (A.1.1 REAL-WORLD DATASET SOURCE AND COLLECTION), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET), p. 10 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 18 (A.1.4 MULTI-ASPECT STATISTICS OF THE TRAINING DATASET), metrics p. 11 (6 EXPERIMENTS), p. 20 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 9 (6 EXPERIMENTS), baselines p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), results p. 11 (6 EXPERIMENTS), p. 22 (Figure/Table caption), p. 11 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Evaluation on KITTI Validation Set), 
 - **p. 8 / 4.2. Evaluation on KITTI Test Set - extractive body cue:** The inference time for the VoxelNet is 225ms where the voxel input feature computation takes 5ms, feature learning net takes 20ms, convolutional middle layers take ...
 - **p. 7 / 4.1. Evaluation on KITTI Validation Set - extractive body cue:** Evaluation in 3D Compared to the bird's eye view detection, which requires only accurate localization of objects in the 2D plane, 3D detection is a ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VoxelNet directly operates on the raw point cloud (no need for feature engineering) and produces the 3D detection re- sults using a single ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Evaluation on KITTI Validation Set), 
 | Figure 1. VoxelNet directly operates on the raw point cloud (no need for feature engineering) and produces the 3D detection re- sults using a ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. VoxelNet architecture. The feature learning network takes a raw point cloud as input, partitions the space into voxels, and transforms points within ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Evaluation on KITTI Validation Set), 
 | VoxelNet, significantly outperforms the previously published state-of-the-art [5] in all the tasks (bird's eye view and 3D detection) and all difficulties. | comparison identity and matched condition | p. 8 (4.2. Evaluation on KITTI Test Set) |
 | Figure 6. Qualitative results. For better visualization 3D boxes detected using LiDAR are projected on to the RGB images. state-of-the-art method MV (BV+FV+RGB) [5] ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Specifically, using only LiDAR, VoxelNet significantly outperforms the | comparison identity and matched condition | p. 7 (4.1. Evaluation on KITTI Validation Set) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (4.1. Evaluation on KITTI Validation Set), 
 | body limitation/failure cue | Future work includes extending VoxelNet for joint LiDAR and image based end-to-end 3D detection to further improve detection and localization accuracy. | p. 8 (5. Conclusion) |
 | body limitation/failure cue | For each class, detection outcomes are evaluated based on three difficulty levels: easy, moderate, and hard, which are determined according to the object size, ... | p. 6 (4. Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,20 +129,11 @@ PDF body evaluation/result cue (p. 7 (4.1. Evaluation on KITTI Validation Set), 
 | Next, each ˆpi is transformed through the fully connected network (FCN) into a feature space, where we can aggregate information from the point features ... | p. 3 (2.1. VoxelNet Architecture) |
 | All non-empty voxels are encoded in the same way and they share the same set of parameters in FCN. | p. 4 (2.1. VoxelNet Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Future work includes extending VoxelNet for joint LiDAR and image based end-to-end 3D detection to further improve detection and localization accuracy.
 - **p. 6 / 4. Experiments - extractive body cue:** For each class, detection outcomes are evaluated based on three difficulty levels: easy, moderate, and hard, which are determined according to the object size, occlusion ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Evaluation on KITTI Validation Set), p. 8 (4.2. Evaluation on KITTI Test Set), p. 8 (4.2. Evaluation on KITTI Test Set), p. 7 (4.1. Evaluation on KITTI Validation Set), metrics p. 7 (4.1. Evaluation on KITTI Validation Set), p. 7 (4.1. Evaluation on KITTI Validation Set), p. 8 (4.1. Evaluation on KITTI Validation Set), p. 6 (4. Experiments), p. 8 (4.2. Evaluation on KITTI Test Set), p. 1 (Figure/Table caption), baselines p. 7 (4.1. Evaluation on KITTI Validation Set), p. 8 (4.2. Evaluation on KITTI Test Set), p. 8 (Figure/Table caption), p. 7 (4.1. Evaluation on KITTI Validation Set), results p. 7 (4.1. Evaluation on KITTI Validation Set), p. 7 (4.1. Evaluation on KITTI Validation Set), p. 8 (4.2. Evaluation on KITTI Test Set), p. 8 (4.1. Evaluation on KITTI Validation Set), p. 5 (2.3. Efficient Implementation), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

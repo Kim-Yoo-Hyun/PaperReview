@@ -51,7 +51,6 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 - **p. 6 / 5.2. Target Networks and Delayed Policy Updates - extractive body cue:** By sufficiently delaying the policy updates we limit the likelihood of repeating updates with respect to an unchanged critic.
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 - **p. 2 / 3. Background - extractive body cue:** (1) Qπ(s, a) = Esi∼pπ,ai∼π [Rt/s, a], the expected return when performing action a in state s and following π after, is known as the ...
 - **p. 5 / 5.2. Target Networks and Delayed Policy Updates - extractive body cue:** Average estimated value of a randomly selected state on Hopper-v1 without target networks, (τ = 1), and with slowupdating target networks, (τ = 0.1, 0.01), ...
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 - **p. 5 / 5.2. Target Networks and Delayed Policy Updates - extractive body cue:** Average estimated value of a randomly selected state on Hopper-v1 without target networks, (τ = 1), and with slowupdating target networks, (τ = 0.1, 0.01), ...
 - **p. 8 / 6.2. Ablation Studies - extractive body cue:** Although the actor is trained for only half the number of iterations, the inclusion of delayed policy update generally improves performance, while reducing training time.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Algorithm, TD3, Initialize, critic, networks, actor, network, random, parameters, target, replay, buffer, Select, action, exploration, noise, observe, reward, state, Store.
 - **Relevant PDF headings:** 5.2. Target Networks and Delayed Policy Updates (p. 5); 5.3. Target Policy Smoothing Regularization (p. 6); C. Convergence results for single-step on-policy (p. 10).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,23 +109,13 @@ PDF body method statement (p. 6 (5.3. Target Policy Smoothing Regularization), p
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 8. Comparison of TD3 and the Double Q-learning (DQ-AC) and Double DQN (DDQN-AC) actor-critic variants, which also leverage delayed policy updates and target policy ...
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 7. Ablation over the varying modifications to our DDPG (AHE), comparing the addition of delayed policy updates (AHE + DP), target policy smoothing (AHE ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), objective p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.3. Target Policy Smoothing Regularization), p. 5 (5.2. Target Networks and Delayed Policy Updates), p. 6 (5.2. Target Networks and Delayed Policy Updates), temporal p. 7 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 2 (2. Related Work), p. 6 (6. Experiments), p. 7 (6.1. Evaluation), p. 4 (4.1. Overestimation Bias in Actor-Critic).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

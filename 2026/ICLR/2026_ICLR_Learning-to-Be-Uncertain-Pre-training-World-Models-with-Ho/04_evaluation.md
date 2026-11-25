@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** This led to significant performance degradation, particularly on the DMC benchmark, confirming that explicitly modeling structured temporal uncertainty is critical for learning robust dynamics representations.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Furthermore, HAUWM shows strong performance in the offline RL, where learning from a fixed dataset without online interaction is required.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Prevailing pre-training methods erroneously compel a world model to predict a single deterministic outcome from action-free video, ignoring the multiple futures that ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 | The results, presented in table 2, demonstrate the broad applicability of our approach. | definition/direction/unit from same section | p. 9 (5 EXPERIMENTS) |
 | Table 6: Ablation on ensemble size M. Performance peaks at M = 7, confirming that moderate ensemble diversity yields the best downstream control performance. ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 | We compare our method, which we denote as HAUWM, against several strong baselines to provide a comprehensive evaluation: • APV (Seo et al., 2022): ... | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
 | Conversely, on the Push Green task, HAUWM is outperformed by ContextWM. | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
 | It significantly surpasses the baselines on almost all 9 | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 | body limitation/failure cue | This suggests that the structured uncertainty learned during pre-training provides a robust foundation for mimicking experts, where understanding plausible future states is crucial. | p. 9 (5 EXPERIMENTS) |
 | body limitation/failure cue | Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov ... | p. 9 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 | Specifically, we initialize the visual encoder and ensemble dynamics heads from pretraining, freezing their parameters to retain general visual and temporal representations, while introducing ... | p. 6 (4 METHODOLOGY) |
 | Solid curves represent the mean evaluation return across four random seeds, and shaded regions denote the 95% confidence interval. exploiting task-specific action knowledge from ... | p. 7 (4 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4 METHODOLOGY - extractive body cue:** To maintain compatibility with this stream's original design, we condition it on relative temporal embeddings ∆te k=1 (as defined in Section 4.2), injecting a Gaussian ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Therefore, we fine-tune our pre-trained model using established algorithms for imitation learning (IL) and offline RL on several benchmark tasks, with standard VMAIL (Rafailov et ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), metrics p. 10 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (Figure/Table caption), p. 7 (5 EXPERIMENTS), baselines p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (Figure/Table caption), p. 8 (5 EXPERIMENTS), p. 21 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 - **p. 4 / 3.2. Overall Framework - extractive body cue:** For better quality, we utilize the 2D diffusion model F2D to further optimize the initialized 3D Gaussians θb via SDS [52] with prompts y, resulting ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 5 (3.4. Optimization with the 2D Diffusion Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 - **p. 5 / 3.4. Optimization with the 2D Diffusion Model - extractive body cue:** First, we use the method of 3D Gaussian Splatting [25] to obtain the rendered image x = g(θi).
 - **p. 1 / 1. Introduction - extractive body cue:** Recently, diffusion models [58] have achieved great success in creating high-quality and realistic 2D images.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 
 - **p. 3 / 3.1. Preliminaries - extractive body cue:** DreamFusion [52] is one of the most representative methods to lift 2D diffusion models to 3D, which proposes to optimize the 3D representation with the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, diffusion, model, F3D, generate, assets, prompts, overall, framework, consists, parts, initialization, priors, optimization, Fig, section, review, models, representation, Gaussian.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.4. Optimization with the 2D Diffusion Model (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.3. Gaussian Initialization with 3D Diffusion)
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 8. Ablation studies of the initialization of the 3D Gaussians. The Shap-E [24] rendering resolution here is 256x256. GaussianDreamer (Ours) Sniper rifle, asset, scifi, ...
 - **p. 5 / 4. Experiments - extractive body cue:** Finally, we discuss the limitations of our method.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 3 (3. Method), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 5 (3.4. Optimization with the 2D Diffusion Model), objective p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 3 (3.1. Preliminaries), p. 5 (3.4. Optimization with the 2D Diffusion Model), p. 4 (3.2. Overall Framework), p. 4 (3.2. Overall Framework), temporal p. 3 (3. Method), p. 3 (3.1. Preliminaries), p. 4 (3.3. Gaussian Initialization with 3D Diffusion), p. 4 (3.2. Overall Framework), p. 5 (3.3. Gaussian Initialization with 3D Diffusion), p. 5 (3.3. Gaussian Initialization with 3D Diffusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

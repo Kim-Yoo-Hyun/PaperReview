@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 13 (Figure/Tabl
 - **p. 11 / 4 Experiments - extractive body cue:** Evaluation on Waymo Open Dataset: We evaluated the proposed method by comparing it with the baseline on the Waymo Open dataset.
 - **p. 12 / 4 Experiments - extractive body cue:** We can see that TCLC-GS renders more clear and accurate RGB images than the 3D-GS, especially on roadside objects and in distant areas viewed from ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Left: Original 3D-GS [11] based methods directly initialize 3D Gaussians by 3D LiDAR points; Right: Our TCLC-GS enriches the geometry and appearance attributes ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 13 (Figure/Tabl
 | Table 7: Ablation study of the proposed method on the Waymo dataset. the primary baseline 3D-GS, are detailed in Table 3 and Table 4 ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 | Fig. 3: Visualization of our colorized 3D mesh and dense depths. Row 1: rendered dense surrounding depth images given the camera pose within the ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 13 (Figure/Tabl
 | Baselines: We selected 3D-GS [11], which utilizes LiDAR points to directly initialize 3D Gaussians, as our primary baseline for comparison. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | To comprehensively evaluate and compare the detail synthesis capabilities, we train and assess our methods and all baselines using full-resolution images, i.e., 1920×1280 for ... | comparison identity and matched condition | p. 10 (4 Experiments) |
 | Here, TCLC-GS is observed to render denser and sharper depths compared to 3D-GS, especially in areas further away in the front, front-left, and front-right ... | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 13 (Figure/Tabl
 | body limitation/failure cue | Metrics: Following the previous research [5,15,20,28,31], our image synthesis evaluation employs three widely-used benchmark metrics, i.e., peak signal-tonoise ratio (PSNR), structural similarity index measure ... | p. 10 (4 Experiments) |
 | body limitation/failure cue | The significant improvement in depth synthesis performance can be attributed to the robust supervision provided by the rendered dense depths derived from the generated ... | p. 12 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 13 (Figure/Tabl
 | Additionally, to enhance training robustness, we use very shallow MLPs to encode the c and Fi(v) before their integration into the 3D Gaussians. | p. 8 (3 Methodology) |
 | The covariance matrix Σ′ in camera coordinates is computed by, \ Sigma ' = JE \Sigma E^TJ^T, \label {eq:9} (8) where E refers to ... | p. 8 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 3: Visualization of our colorized 3D mesh and dense depths. Row 1: rendered dense surrounding depth images given the camera pose within the 3D ...
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 13 (Figure/Tabl
 - **p. 12 / 4 Experiments - extractive body cue:** The significant improvement in depth synthesis performance can be attributed to the robust supervision provided by the rendered dense depths derived from the generated accurate ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), metrics p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 13 (Figure/Table caption), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), results p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 12 (4 Experiments), p. 9 (Figure/Table caption), p. 11 (4 Experiments), p. 11 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

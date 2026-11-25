@@ -43,8 +43,6 @@
 - **p. 7 / 4.1. Datasets and evaluation metrics - extractive body cue:** Since GT mesh is unavailable for real-world data, only visual comparisons are provided.
 - **p. 8 / 4.2. Results - extractive body cue:** Instance-level Normal Consistency results of SR on DTU dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view images ...
@@ -78,8 +76,6 @@
 | Figure 2. MGSR is a 2D/3D mutual-boosted framework with two branches: 2DGS branch (upper) for SR and 3DGS branch (bottom) for NVS. Each branch ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 5. Visual comparisons on the Shiny Blender dataset [21]. other hand, a depth loss between 2DGS and 3DGS branches is introduced to improve ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | In Table 1 and Table 2, we additionally present the optimization time for all compared methods. | comparison identity and matched condition | p. 8 (4.2. Results) |
 | By eliminating the dependence on BRDF, MGSR is faster than all illumination decomposition baselines. | comparison identity and matched condition | p. 8 (4.2. Results) |
 | Figure 1. MGSR achieves strong NVS and SR results compared with methods based on 2DGS [6] and 3DGS [24]. The input consists of multi-view ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@
 | body limitation/failure cue | Due to the limitation of CD, we mainly focus on NC metric, which aligns better 27300 | p. 6 (4.1. Datasets and evaluation metrics) |
 | body limitation/failure cue | Previous GS-based methods fail to effectively reconstruct glass or mirror surfaces, resulting in damaged and inaccurate surfaces. | p. 7 (4.2. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@
 | The normals of the 2D splats are encouraged to be aligned with the gradients of the depth maps, as shown in: Ln = X ... | p. 5 (3.3. Surface reconstruction with 2DGS) |
 | The depth loss LZ is computed by: LZ = γL2(Z2D, Z3D), (14) where L2 denotes the L2 loss, and Z2D is the estimated depth ... | p. 6 (3.4. Alternating optimization of 2D & 3D Gaussians) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Results - extractive body cue:** To address this issue, NC is introduced as an evaluation metric for reconstruction, overcoming the limitations of CDs, which fail to capture surface holes or ...
@@ -154,6 +133,5 @@
 - **p. 7 / 4.2. Results - extractive body cue:** Previous GS-based methods fail to effectively reconstruct glass or mirror surfaces, resulting in damaged and inaccurate surfaces.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), metrics p. 6 (4.1. Datasets and evaluation metrics), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 2 (Figure/Table caption), baselines p. 7 (4.2. Results), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), p. 2 (Figure/Table caption), results p. 2 (Figure/Table caption), p. 8 (4.2. Results), p. 7 (4.2. Results), p. 6 (Figure/Table caption), p. 6 (4.1. Datasets and evaluation metrics), p. 7 (4.1. Datasets and evaluation metrics).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -52,8 +52,6 @@ ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 �
 - **p. 8 / 3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE - extractive body cue:** On "general" object classification datasets such as ImageNet, CIFAR10/100, STL10, and PascalVOC2007 performance is relatively similar with a slight advantage for zero-shot CLIP in all ...
 - **p. 10 / 3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE - extractive body cue:** On only 5 datasets does zero-shot performance approach linear probe performance (≤3 point difference). mance, suggesting that CLIP is relatively consistent at connecting underlying representation ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Summary of our approach. While standard image models jointly train an image feature extractor and a linear classifier to predict some label, CLIP ...
@@ -87,8 +85,6 @@ ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 �
 | Relative robustness captures any improvement in out-of-distribution accuracy. | definition/direction/unit from same section | p. 13 (3.3. Robustness to Natural Distribution Shift) |
 | All zero-shot CLIP models improve effective robustness by a large amount and reduce the size of the gap between ImageNet accuracy and accuracy under ... | definition/direction/unit from same section | p. 14 (3.3. Robustness to Natural Distribution Shift) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -99,13 +95,6 @@ ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 �
 | This increases flexibility, and prior work has convincingly demonstrated that fine-tuning outperforms linear classification on most image classification datasets (Kornblith et al., 2019; Zhai ... | comparison identity and matched condition | p. 11 (3.2. Representation Learning) |
 | Table 16. Detailed ImageNet robustness performance. IN is used to abbreviate for ImageNet. a(Xie et al., 2020) b(Touvron et al., 2019) Despite this handicap, ... | comparison identity and matched condition | p. 47 (Figure/Table caption) |
 | Linear probe performance of CLIP models in comparison with state-of-the-art computer vision models, including EfficientNet (Tan & Le, 2019; Xie et al., 2020), MoCo ... | comparison identity and matched condition | p. 12 (3.2. Representation Learning) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -144,8 +133,6 @@ ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 �
 | body limitation/failure cue | In our work, we fall back to fitting linear classifiers on top of CLIP's features. | p. 20 (6. Limitations) |
 | body limitation/failure cue | Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development. | p. 11 (3.2. Representation Learning) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -159,14 +146,6 @@ ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 �
 | We use a very large minibatch size of 32,768. | p. 5 (2.5. Training) |
 | CLIP is a significant step towards flexible and practical zero-shot computer vision classifiers. | p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 25 / 7.3. Future Work - extractive body cue:** This process of characterization can help researchers increase the likelihood models are used beneficially by: • Identifying potentially beneficial downstream uses of models early in ...
@@ -177,9 +156,8 @@ ImageNet을 포함한 이미지 분류 데이터셋에서 zero-shot 전이와 �
 - **p. 11 / 3.2. Representation Learning - extractive body cue:** Linear classifiers, because of their limited flexibility, instead highlight these failures and provide clear feedback during development.
 
 - **Evidence anchors reviewed:** datasets p. 9 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION), p. 11 (3.2. Representation Learning), p. 16 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 6 (3.1.1. MOTIVATION), metrics p. 7 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 10 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), baselines p. 7 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 11 (3.2. Representation Learning), p. 47 (Figure/Table caption), p. 12 (3.2. Representation Learning), results p. 8 (3.1.4. PROMPT ENGINEERING AND ENSEMBLING), p. 6 (3.1.3. INITIAL COMPARISON TO VISUAL N-GRAMS), p. 13 (3.3. Robustness to Natural Distribution Shift), p. 14 (3.3. Robustness to Natural Distribution Shift), p. 8 (3.1.5. ANALYSIS OF ZERO-SHOT CLIP PERFORMANCE), p. 6 (3.1.1. MOTIVATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 9 | Due to the lack of real-robot data, this paper does not deploy on real-world robotics. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | 6 CONCLUSION AND FUTURE WORK This paper explores the potential of pre-trained vision-language models in advancing languageconditioned robotic ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3 BACKGROUND), p. 4 (3 BACKGROUND), p. 4 (3 BACKGROUND), p. 2 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 BACKGROUND), p. 5 (3 BACKGROUND), interface p. 5 (3 BACKGROUND), p. 4 (3 BACKGROUND), p. 4 (3 BACKGROUND), p. 2 (1 INTRODUCTION), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

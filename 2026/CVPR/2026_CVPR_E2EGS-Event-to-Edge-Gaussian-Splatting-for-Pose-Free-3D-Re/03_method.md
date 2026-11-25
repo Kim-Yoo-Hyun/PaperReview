@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.1.
 - **p. 5 / 3.4. Edge-guided 3D reconstruction - extractive body cue:** Edge-weighted loss over pixel domain Ωcan be calculated with given edge map M, synthesized event accumulation ˆE, and ground truth event accumulation E as follows: ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1. Framework overview), p. 5 (3.4. Edge-guided 3D reconstruction), p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.3. Edge-guided Gaussian initialization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.1.
 - **p. 4 / 3.3. Edge-guided Gaussian initialization - extractive body cue:** This distribution is geometrically motivated, as distant points exhibit larger pixel displacements under camera rotation, making them more informative for joint depth-pose optimization.
 - **p. 5 / 3.3. Edge-guided Gaussian initialization - extractive body cue:** Our method achieves superior reconstruction quality solely using event data. † denotes no depth supervision and ∗denotes that the method uses camera poses obtained through ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.1.
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** leverage, detected, edges, during, reconstruction, introduce, edge-guided, loss, spatially, weights, error, edge, confidence, edgeaware, initialization, optimization, jointly, refine, Gaussian, representation.
 - **Relevant PDF headings:** 3. Proposed Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.1.
 - **p. 8 / 4.4. Ablation study - extractive body cue:** Without edge initialization, the system experiences trajectory drift, leading to loss of details in 3D reconstruction.
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on edge components.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.1. Framework overview), p. 4 (3.1. Framework overview), p. 3 (3.1. Framework overview), p. 3 (3.1. Framework overview), p. 5 (3.4. Edge-guided 3D reconstruction), objective p. 4 (3.1. Framework overview), p. 3 (3.1. Framework overview), p. 4 (3.2. Robust edge detection with patch-based tem), p. 5 (3.4. Edge-guided 3D reconstruction), p. 5 (3.4. Edge-guided 3D reconstruction), temporal p. 3 (3.1. Framework overview), p. 4 (3.2. Robust edge detection with patch-based tem), p. 3 (3.1. Framework overview), p. 4 (3.1. Framework overview), p. 5 (4.1. Experiment settings), p. 5 (3.3. Edge-guided Gaussian initialization).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** Finally, the overall knowledge distillation loss Lft kd is the sum of these three types of distillation losses: Lft kd = Ltxt + Lpano + ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHO
 - **p. 2 / III. PRELIMINARIES - extractive body cue:** The goal of the agent is to interpret a given natural language instruction I = {wi}L i=1, where L is the length of the instruction, ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** ScaleVLN [37], leveraging 1200+ environments and synthesizing 4.9 million instruction-trajectory pairs, exhibits significant improvements in generalization and achieves stateof-the-art results.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHO
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** Deployment To simulate deployment, we run the complete inference process of the model on the Intel i9-14900HX CPU of a mobile laptop.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** 3) Training Details: We trained on the R2R dataset for 200,000 iterations with a batch size of 16, and on the REVERIE dataset for 20,000 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** MSE, loss, between, outputs, teacher, student, models, panoramic, observation, computed, Lpano, where, another, learned, weight, matrix, adapts, model, representation, match.
 - **Relevant PDF headings:** IV. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHO
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. The overview of two-stage knowledge distillation process for VLN. In the pre-training phase, fine-grained knowledge is distilled, while navigation-specific knowledge is learned during ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3. Overall framework of MiniVLN. The yellow box represents the teacher model, while the blue box denotes the student model. The orange arrows represent ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD), objective p. 5 (IV. METHOD), p. 3 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), temporal p. 2 (III. PRELIMINARIES), p. 3 (III. PRELIMINARIES), p. 2 (II. RELATED WORK), p. 3 (IV. METHOD), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

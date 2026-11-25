@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 - **p. 14 / VI. SIMULATION RESULTS - extractive body cue:** 14 ZCBFs generate a smoother input trajectory (see Fig.
 - **p. 14 / 0.1 N - extractive body cue:** Simulation results for lane keeping are shown in Fig.6.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Relationships among reciprocal barrier functions (RBFs), zeroing barrier functions (ZBFs), and forward invariance that are developed in the paper. The underlying analysis can ...
@@ -75,8 +73,6 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 | 14 ZCBFs generate a smoother input trajectory (see Fig. | definition/direction/unit from same section | p. 14 (VI. SIMULATION RESULTS) |
 | Fig. 1. Relationships among reciprocal barrier functions (RBFs), zeroing barrier functions (ZBFs), and forward invariance that are developed in the paper. The underlying analysis ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -85,13 +81,6 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 | Comparison of RCBFs and ZCBFs We also consider the ZCBFs for our ACC problem, which are associated with functions ho F and hc F ... | comparison identity and matched condition | p. 13 (VI. SIMULATION RESULTS) |
 | Comparison of the input force generated from QP (ACC-QP2) using ZCBFs and RCBFs. | comparison identity and matched condition | p. 14 (VI. SIMULATION RESULTS) |
 | Fig. 4. Comparison of QP (ACC QP) with QP (ACC-QP2). (top) speed of the lead car and the controlled car based on QP (ACC ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,30 +104,19 @@ PDF body evaluation/result cue (p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMUL
 |---|---|---|
 | body limitation/failure cue | Future work will be devoted to building upon the foundations presented in this paper in the context of safety-critical control of cyber-physical systems, with ... | p. 14 (VII. CONCLUSIONS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Unbounded function values, however, may be undesirable when real-time/embedded implementations are considered. | p. 5 (II. RECIPROCAL AND ZEROING BARRIER FUNCTIONS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / VII. CONCLUSIONS - extractive body cue:** Future work will be devoted to building upon the foundations presented in this paper in the context of safety-critical control of cyber-physical systems, with a ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 14 (0.1 N), metrics p. 14 (0.1 N), p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 2 (Figure/Table caption), baselines p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (VI. SIMULATION RESULTS), p. 14 (Figure/Table caption), results p. 13 (VI. SIMULATION RESULTS), p. 13 (VI. SIMULATION RESULTS), p. 14 (0.1 N), p. 11 (Figure/Table caption), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

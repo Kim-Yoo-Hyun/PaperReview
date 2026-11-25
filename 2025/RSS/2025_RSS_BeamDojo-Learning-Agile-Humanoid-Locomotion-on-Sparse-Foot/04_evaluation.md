@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 - **p. 7 / A. Experimental Setup - extractive body cue:** The foothold error benchmarks of all methods are evaluated in (a) stepping stones and (b) balancing
 - **p. 8 / B. Simulation Experiments - extractive body cue:** 6, Both the two-stage training setup and the double critic improve learning efficiency, with the two-stage setup contributing the ‘most.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Foothold Reward. We sample n points under the foot. Green points indicate contact with the surface within the safe region, while red points ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 | The only addition is the foothold reward. | definition/direction/unit from same section | p. 6 (A. Experimental Setup) |
 | Fig. 2: Foothold Reward. We sample n points under the foot. Green points indicate contact with the surface within the safe region, while red ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 | ‘observations are as follows: «+ Leveraging the efficient two-stage RL framework and the double critic, BEAMDOsO consistently outperforms, | comparison identity and matched condition | p. 7 (B. Simulation Experiments) |
 | Gait Regularization: The combination of small-scale gait regularization rewards with sparse foothold reward can hinder gait performance, as shown in Table Ill, where the ... | comparison identity and matched condition | p. 8 (B. Simulation Experiments) |
 | This terrain is challenging for the robot as it must learn to keep its feet together on the beams without colliding with each other, ... | comparison identity and matched condition | p. 5 (evaluation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 | body limitation/failure cue | This advantage is achieved by leveraging LiDAR to its full potential, whereas a single depth camera, cannot handle such scenarios. | p. 8 (10 3 oss Liss) |
 | body limitation/failure cue | ‘We compare this approach with other binary and coarse reward designs: when p% of the sampled points fall outside the safe area, a full ... | p. 9 (7 Single Leg Support ) Stand Still) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 | In contrast, the naive implementation struggles to reach higher terrain levels in both stages. | p. 8 (B. Simulation Experiments) |
 | The advantage of two-stage learning lies in its ability to allow the agent to continuously attempt foot placements, even in the presence of missteps, ... | p. 8 (B. Simulation Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 7 Single Leg Support ) Stand Still - extractive body cue:** 5) Failure Cases: ‘To investigate the framework's perfor- ‘mance limitations, we evaluate its performance across varying. stone sizes and step distances, as shown in Fig.
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Experiments), p. 7 (A. Exper
 - **p. 9 / 7 Single Leg Support ) Stand Still - extractive body cue:** ‘We compare this approach with other binary and coarse reward designs: when p% of the sampled points fall outside the safe area, a full penalty ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (evaluation), p. 7 (A. Experimental Setup), p. 5 (evaluation), p. 5 (evaluation), p. 6 (evaluation), p. 7 (A. Experimental Setup), metrics p. 7 (B. Simulation Experiments), p. 7 (A. Experimental Setup), p. 10 (Figure/Table caption), p. 6 (A. Experimental Setup), p. 8 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), baselines p. 5 (evaluation), p. 6 (A. Experimental Setup), p. 7 (A. Experimental Setup), p. 7 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), p. 5 (evaluation), results p. 7 (B. Simulation Experiments), p. 7 (A. Experimental Setup), p. 8 (B. Simulation Experiments), p. 8 (B. Simulation Experiments), p. 10 (Figure/Table caption), p. 6 (evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -48,7 +48,6 @@ PDF body method statement (p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPL
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPL
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Moreover, in decentralized multi-agent settings, task completion takes 1.3x more steps than singleagent, due to poor tracking of partner actions, resulting in extraneous actions.
 - **p. 34 / A.9.2 IMPLEMENTATION DETAILS - extractive body cue:** We train the model to predict, for every example, the action taken by the agent, which corresponds to the text after the </reserved_special_token_0>/ token.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,17 +81,13 @@ PDF body method statement (p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPL
 - **p. 34 / A.9.2 IMPLEMENTATION DETAILS - extractive body cue:** We train the model to predict, for every example, the action taken by the agent, which corresponds to the text after the </reserved_special_token_0>/ token.
 - **p. 31 / A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS - extractive body cue:** For all experiments, LLM inferrence is performed on two Nvidia A100 GPUs using the gpt-fast inference engine PyTorch (2023).
 - **p. 34 / A.9.2 IMPLEMENTATION DETAILS - extractive body cue:** We train all models on 4 A100 GPUs, with a batch size of 2 per GPU.
-- **p. 34 / A.9.2 IMPLEMENTATION DETAILS - extractive body cue:** We train all models on 4 A100 GPUs, with a batch size of 2 per GPU.
 - **p. 31 / A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS - extractive body cue:** For those experiments, simulation time and human agent inference time remained unchanged, giving a final wall time of 25.3 minutes per episode.
 - **p. 34 / A.9.2 IMPLEMENTATION DETAILS - extractive body cue:** The models are trained for 40,000 steps, which takes around 24 hours.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** train, model, predict, every, example, action, taken, agent, corresponds, text, after, reserved_special_token_0, token, finetuned, Llama-3, required, average, planning, step, experiments.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +107,10 @@ PDF body method statement (p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPL
 - **p. 24 / Figure/Table caption - extractive body cue:** Table 8: Top three failure modes of 100k-scale task and evaluation generation reported for each task type. Failures of task generation are led by the ...
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Analysis of planner baselines in various settings. We compare performance using simula- tion steps, success rate and percent complete on the tasks, and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 31 (A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS), p. 31 (A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS), p. 34 (A.9.2 IMPLEMENTATION DETAILS), objective 본문 anchor 없음, temporal p. 31 (A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS), p. 31 (A.8 IMPLEMENTATION DETAILS FOR REACT AGENTS), p. 34 (A.9.2 IMPLEMENTATION DETAILS), p. 4 (0 TemporalConstraint(), p. 5 (0 TemporalConstraint(), p. 7 (0 TemporalConstraint().
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

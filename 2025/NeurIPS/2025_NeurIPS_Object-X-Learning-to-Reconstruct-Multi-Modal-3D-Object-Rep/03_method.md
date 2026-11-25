@@ -51,7 +51,6 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 - **p. 10 / Method - extractive body cue:** We compare Object-X to 3DGS [28] optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 10 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 - **p. 2 / 1 Introduction - extractive body cue:** More recently, implicit neural and Gaussian representations, notably Neural Radiance Fields (NeRF) [15] and 3D Gaussian Splatting (3DGS) [10], have achieved state-of-the-art results in synthesising ...
 - **p. 9 / Method - extractive body cue:** Retrieval recall at various thresholds using various methods and input modalities.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 - **p. 10 / Method - extractive body cue:** In constrast to the baselines, Object-X is used without training on this task.
 - **p. 10 / Method - extractive body cue:** We compare Object-X to 3DGS [28] optimized on all unmasked images, and two 12-view baselines: 3DGS (12V) and 2DGS (12V), which optimize scenes using a ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Object-X, then, applied, obtain, object, embedding, input, directly, decoder, contrast, focuses, reconstruction, rather, generation, leveraging, voxel-grounded, latent, representations, maintain, geometric.
 - **Relevant PDF headings:** Method (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (
 - **p. 8 / 4 Experiments - extractive body cue:** Even without training, we achieve the highest novel view synthesis scores compared to the baselines, being the closest to the reference 3DGS reconstruction.
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Object-X learns object-centric embeddings from an input object segmentation of a 3D scene reconstruction. The embeddings learned from multi-modal data (e.g., mesh, images, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (Method), p. 9 (Method), p. 10 (Method), p. 10 (Method), objective p. 10 (Method), p. 9 (Method), p. 9 (Method), p. 10 (Method), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (Method), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

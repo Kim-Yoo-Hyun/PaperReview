@@ -43,7 +43,6 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -62,7 +61,6 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 - **p. 1 / I. INTRODUCTION - extractive body cue:** We maintain both geometric structure and semantic density (see Figure 1c) and naturally support most 3D perception tasks (since their output space can be naturally ...
 - **p. 3 / III. METHOD - extractive body cue:** log scale (a) Camera-to-BEV transformation (b) Efficient BEV pooling (c) Improvement breakdown Depth Grid Association Feat.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -78,13 +76,10 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** We also measure the single-inference #MACs and latency on an RTX3090 GPU for all opensource methods.
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** As in Table I, BEVFusion achieves state-of-the-art results on the nuScenes detection benchmark, with close-to-real-time (8.4 FPS) inference speed on a desktop GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, different, sensory, inputs, first, apply, modality-specific, encoders, extract, features, then, convolution-based, BEV, encoder, unified, alleviate, local, misalignment, between, Map.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -102,20 +97,10 @@ PDF body method statement (p. 2 (III. METHOD), p. 2 (III. METHOD)): Given differ
 - **p. 4 / A C - extractive body cue:** This kernel removes the dependency between outputs (thus does not require multi-level tree reduction) and avoids writing the partial sums to the DRAM, reducing the ...
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** IV: BEVFusion is robust under different lighting and weather conditions, significantly boosting the performance single-modality models under challenging rainy(+10.7) and nighttime(+12.8) scenes.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (III. METHOD), p. 2 (III. METHOD), objective 본문 anchor 없음, temporal p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 1 (Abstract), p. 1 (Abstract), p. 3 (A C).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

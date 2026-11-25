@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 7 / 4 BACKGROUND - extractive body cue:** At each time step 𝑡, the agent receives a task-reward 𝑟𝐺 𝑡= 𝑟𝐺(s𝑡, a𝑡, s𝑡+1, g) from the environment, it then queries the motion prior ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 7 (4 BACKGROUND), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 6 / 4 BACKGROUND - extractive body cue:** 6.1 States and Actions The state s𝑡consists of a set of features that describes the configuration of the character's body.
 - **p. 6 / 4 BACKGROUND - extractive body cue:** Note, the gradient penalty is calculated with respect to the observation features 𝜙= (Φ(s), Φ(s′)), not the full set of state features (s, s′).
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 5 / 4 BACKGROUND - extractive body cue:** However, this loss tends to lead to optimization challenges due to vanishing gradients as the sigmoid function saturates, which can hamper training of the policy ...
 - **p. 5 / 4 BACKGROUND - extractive body cue:** (3) This adversarial training procedure can be interpreted as training a policy to produce states and actions that appear to the discriminator as being indistinguishable ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian, distribution, over, actions, input-dependent, mean, fixed, diagonal, covariance, matrix, States.
 - **Relevant PDF headings:** C LATENT SPACE MODEL (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 11 / 8 RESULTS - extractive body cue:** Nonetheless, our method is able to produce results of comparable quality without the need to manually design or tune reward functions for different motions.
 - **p. 12 / 8 RESULTS - extractive body cue:** AMP is able to closely imitate a diverse repertoire of complex motions, without manual reward engineering.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), objective p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 1 (Body text (section boundary not confidently recovered)), p. 7 (4 BACKGROUND), p. 7 (4 BACKGROUND), temporal p. 2 (1 INTRODUCTION), p. 3 (2 RELATED WORK), p. 4 (4 BACKGROUND), p. 7 (4 BACKGROUND), p. 11 (8 RESULTS), p. 9 (8 RESULTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

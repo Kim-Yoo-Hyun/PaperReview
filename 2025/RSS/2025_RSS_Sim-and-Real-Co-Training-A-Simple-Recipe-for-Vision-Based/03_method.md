@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 - **p. 9 / C. Effectiveness of Co-Training in Data-Rich Settings - extractive body cue:** We recommend utilizing a sufficiently large amount of simulation data (ideally, orders of magnitude more than real-world data) and carefully tuning the co-training ratio to ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 - **p. 2 / 2) We demonstrate empirically how co-training on syn - extractive body cue:** improving policy performance across two domains by an average of 38%;
 - **p. 3 / B. Sim-to-Real and Sim-Real Co-Training - extractive body cue:** IIL PROBLEM STATEMENT AND PRELIMINARIES
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 - **p. 8 / C. Effectiveness of Co-Training in Data-Rich Settings - extractive body cue:** Even with 400 real demonstrations, the co-trained policy consistently outperforms the realonly policy, demonstrating that sim-and-real co-training remains beneficial even in data-rich settings.
 - **p. 9 / C. Effectiveness of Co-Training in Data-Rich Settings - extractive body cue:** A Simple Recipe for Sim-and-Real Co-Training
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** practice, equivalent, formulation, represents, probability, sampling, simulation, data, training, batch, adopt, co-training, following, prior, where, minimize, behavioral, cloning, action, loss.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 3 (A. Co-Training on Real-World and Simulation Dat
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Next, we delve into the systematic experiments that guided further investigate the robustness of this gap by training the the development of our recipe (Section ...
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** The diversimulation data to enhance real-world policy performance. sity in simulation data contributes to improved generalizability Finally, in the last row of Table 1, policies ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 2 (2) We demonstrate empirically how co-training on syn), objective p. 3 (A. Co-Training on Real-World and Simulation Data), p. 3 (A. Co-Training on Real-World and Simulation Data), p. 2 (B. Sim-to-Real and Sim-Real Co-Training), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 8 (C. Effectiveness of Co-Training in Data-Rich Settings), p. 9 (C. Effectiveness of Co-Training in Data-Rich Settings), temporal p. 1 (1. IyrRopucTION), p. 2 (A. Learning Manipulation from Demonstration Data), p. 3 (C. Automated Synthetic Data Generation), p. 6 (4) The same environmental fixture categories (e.g. kitchen), p. 6 (B. Prior Task-Agnostic Simulation Data), p. 9 (VI. Limtrarions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

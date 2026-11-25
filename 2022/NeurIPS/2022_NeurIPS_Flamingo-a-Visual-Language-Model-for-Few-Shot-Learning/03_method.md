@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (2 Approach), p. 4 (2 Approach), p. 5 (2 Approac
 - **p. 6 / 2 Approach - extractive body cue:** We train our models by minimizing a weighted sum of per-dataset expected negative log-likelihoods of text, given the visual inputs: 𝑀 ∑︁ 𝑚=1 𝜆𝑚· E(𝑥,𝑦)∼𝒟𝑚 ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 5 (2 Approach), p. 8 (Method), p. 9 (Method), p. 6 (2 Approach), p. 6 (2 Approach), p. 9 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (2 Approach), p. 4 (2 Approach), p. 5 (2 Approac
 - **p. 6 / 2 Approach - extractive body cue:** 2.3 Multi-visual input support: per-image/video attention masking The image-causal modelling introduced in Equation (1) is obtained by masking the full text-to-image cross-attention matrix, limiting which ...
 - **p. 7 / Method - extractive body cue:** A single Flamingo model reaches the state of the art on a wide array of image (I) and video (V) understanding tasks with few-shot learning, ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 5 (2 Approach), p. 4 (2 Approach), p. 5 (2 Approac
 - **p. 6 / 2 Approach - extractive body cue:** In particular, we use only up to 5 images per sequence when training on our interleaved datasets, yet our model is able to benefit from ...
 - **p. 8 / Method - extractive body cue:** Note that we use smaller batch sizes and a shorter training schedule compared to the final models.
 - **p. 6 / 2 Approach - extractive body cue:** This single-image cross-attention scheme importantly allows the model to seamlessly generalise to any number of visual inputs, regardless of how many are used during training.
-- **p. 8 / Method - extractive body cue:** Note that we use smaller batch sizes and a shorter training schedule compared to the final models.
 - **p. 8 / Method - extractive body cue:** In short, we do so by fine-tuning the model on a short schedule with a small learning rate by additionally unfreezing the vision backbone to ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** takes, input, variable, number, image, video, features, vision, encoder, produces, fixed, visual, outputs, reducing, computational, complexity, vision-text, cross-attention, First, Perceiver.
 - **Relevant PDF headings:** 2 Approach (p. 4); Method (p. 7); Method (p. 8); A Method (p. 23); A.1 Model details (p. 23); A.1.4 Transformer architecture (p. 24); B.1.1 Models (p. 28); B.1.2 Training details for the Flamingo models (p. 29); B.1.3 Contrastive model details (p. 30); Model (p. 33); B.2.2 Fine-tuning Flamingo as a pretrained vision-language model (p. 33); B.2.3 Zero-shot performance of the pretrained contrastive model (p. 34).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 5 (2 Approach), p. 4 (2 Approach), p. 5 (2 Approac
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 3: Ablation studies. Each row should be compared to the baseline Flamingo run (top row). Step time measures the time spent to perform gradient ...
 - **p. 35 / Figure/Table caption - extractive body cue:** Table 10: Additional ablation studies. Each row in this ablation study table should be compared to the baseline Flamingo run reported at the top of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (2 Approach), p. 4 (2 Approach), p. 5 (2 Approach), p. 6 (2 Approach), p. 8 (Method), p. 6 (2 Approach), objective p. 9 (Method), p. 5 (2 Approach), p. 8 (Method), p. 9 (Method), p. 6 (2 Approach), p. 6 (2 Approach), temporal p. 5 (2 Approach), p. 8 (Method), p. 8 (Method), p. 9 (Method), p. 9 (Method), p. 4 (2 Approach).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

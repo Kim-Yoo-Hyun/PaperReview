@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 M
 - **원문 대조:** 텍스트 feature를 query, object query 집합 Q를 key/value로 cross-attention한 뒤 각 q_n과의 내적 점수가 가장 높은 query를 선택한다. 그 query의 logit으로 text-referred mask를 얻는다. ([PDF p. 5](https://arxiv.org/pdf/2507.02705#page=5), §3.2 Unified Query Decoder, Eq. (2)).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 7 (3 Methodology), p. 5 (3 Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 M
 - **p. 5 / 3 Methodology - extractive body cue:** Specifically, we employ L2 cross-attention layers to enable interaction between ftext and Q.
 - **p. 5 / 3 Methodology - extractive body cue:** As shown in Fig.3 (b), to enable text features ftext = {f t text}Nt t=1 as input for open-vocabulary 3D understanding, we further incorporate cross-modal ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 M
 - **p. 7 / 3 Methodology - extractive body cue:** In our training, we leverage both photometric loss and segmentation loss to simultaneously supervise 3D reconstruction and understanding.
 - **p. 7 / 4 Experiments - extractive body cue:** We conduct training on 8 NVIDIA GeForce RTX 4090 GPUs, with our model trained for 100 epochs using a per-GPU batch size of 3 (total ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** consists, Image, Text, Encoders, extracting, multi-view, features, Gaussian, Decoder, decoding, pixel-aligned, Gaussians, Unified, Query, cross-view, masks, Mutual, Benefit, Mechanism, enabling.
 - **Relevant PDF headings:** 3 Methodology (p. 3); A.2 Network Architecture and Hyperparameters (p. 16); B Comparisons with Per-Scene Optimization Methods (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 M
 - **p. 17 / A.3 Implementation Details about Versatile 3D Editing - extractive body cue:** The modified Gaussians G′ are rendered into original context views to obtain images I′, with an off-the-shelf diffusion-based inpainting model [60] applied to fill the ...
 - **p. 16 / A.3 Implementation Details about Versatile 3D Editing - extractive body cue:** As shown in Fig.1 of main manuscript, our simultaneous modeling of scene understanding and 3D reconstruction enables diverse 3D scene manipulations through unified pixel-aligned representations, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), objective p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 7 (3 Methodology), p. 5 (3 Methodology), temporal p. 6 (3 Methodology), p. 6 (3 Methodology), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

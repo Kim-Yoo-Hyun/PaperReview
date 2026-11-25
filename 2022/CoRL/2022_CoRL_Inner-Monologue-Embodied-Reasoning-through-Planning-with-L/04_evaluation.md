@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 18 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** Environment Feedback: Active Scene Description We perform a case study where we allow the LLM agent to ask questions and source Human feedback directly.
 - **p. 18 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** (a) Foresight success detector (b) Hindsight success detector Figure 7: Success Detection architecture used for the Kitchen Environment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Inner Monologue enables grounded closed-loop feedback for robot planning with large language models by leveraging a collection of perception models (e.g., scene descriptors ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | ViLD has strong overall accuracy, but still fails to detect objects 28.0% of the time. | definition/direction/unit from same section | p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
 | Figure 5: Informing LLM with embodied feedback enables many emergent capabilities, all of which are achieved without similar prompted examples. For instance, Inner Monologue ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | Figure 5: Informing LLM with embodied feedback enables many emergent capabilities, all of which are achieved without similar prompted examples. For instance, Inner Monologue ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Environment Feedback: Object Recognition We provide the list of objects present in the scene at the start of each episode for the language model ... | comparison identity and matched condition | p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement) |
 | Table 4: Comparison between different versions of Inner Monologue implemented in three different environments. A.1 Inner Monologue for Simulated Tabletop Rearrangement Large Language Model ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 
 - Numeric sentences retained from the body:
 - **p. 17 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** The learned manipulation policies responsible for counter picking, drawer opening and closing, drawer picking, and countertop object manipulation are Behavior Cloning (BC) policies trained on ...
-- **p. 17 / A.2 Inner Monologue for Real-World Tabletop Rearrangement - extractive body cue:** The learned manipulation policies responsible for counter picking, drawer opening and closing, drawer picking, and countertop object manipulation are Behavior Cloning (BC) policies trained on ...
 
 ## Generalization and Failure Cases
 
@@ -137,8 +125,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | Table 2: Inner Monologue (with object recognition and success detection feedback) on a real pick and place robot exceeds the performance of baseline alternatives, ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Figure 5: Informing LLM with embodied feedback enables many emergent capabilities, all of which are achieved without similar prompted examples. For instance, Inner Monologue ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +136,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | Object Recognition Implementation Object detection is done by MDETR [92], an open-vocabulary object detection model. | p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
 | If the probability is above, then we run the hindsight model and only predict success if the argmax across all skills is indeed the ... | p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 5. As for failure modes, Inner Monologue may fail due to several sources of errors: (1) success detections, (2) LLM planning errors, and (3) ...
@@ -168,9 +146,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 5: Informing LLM with embodied feedback enables many emergent capabilities, all of which are achieved without similar prompted examples. For instance, Inner Monologue can ...
 
 - **Evidence anchors reviewed:** datasets p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 16 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), metrics p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 4 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 15 (A.1 Inner Monologue for Simulated Tabletop Rearrangement), p. 15 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 17 (A.2 Inner Monologue for Real-World Tabletop Rearrangement), p. 18 (A.2 Inner Monologue for Real-World Tabletop Rearrangement).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -45,7 +45,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -63,7 +62,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** We leverage this observation to design a co-training framework for VLAs that can utilize heterogeneous and diverse knowledge sources to enable broad generalization, creating the ...
 - **p. 2 / 1 Introduction - extractive body cue:** Our experiments and comparisons further show that this is enabled by transferring knowledge from other robots, high-level semantic prediction, verbal language instruction from human supervisors, ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,15 +78,11 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 1 / Abstract - extractive body cue:** Our system uses a combination of cotraining and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions.
 - **p. 2 / 1 Introduction - extractive body cue:** Given general tasks (close the cabinets, put the items in the drawer, wipe the spill, and put the dishes in the sink), the model predicts ...
 - **p. 2 / 1 Introduction - extractive body cue:** The heterogeneity of these different sources of data present a major obstacle, but recent advances in vision-language-action (VLA) models provide us with a toolkit that ...
-- **p. 2 / 1 Introduction - extractive body cue:** Our central contribution is a system for training a highly generalizable VLA, π0.5, together with a proof of concept that generalization can emerge from this ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** central, contribution, system, training, highly, generalizable, VLA, together, proof, concept, generalization, emerge, model, when, trained, appropriately, diverse, data, follows, simple.
 - **Relevant PDF headings:** B.1 Model technical details (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,23 +102,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** Our central contribution is a system for training a highly generalizable VLA, π0.5, together with a proof of concept that generalization can emerge from this ...
 - **p. 8 / 2 Related Work - extractive body cue:** Web data (WD) does not make a significant difference, but we will see in Figures 9, 16 that it impacts object generalization and high-level performance.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Abstract), objective 본문 anchor 없음, temporal p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (2 Related Work), p. 1 (Abstract), p. 3 (2 Related Work), p. 3 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

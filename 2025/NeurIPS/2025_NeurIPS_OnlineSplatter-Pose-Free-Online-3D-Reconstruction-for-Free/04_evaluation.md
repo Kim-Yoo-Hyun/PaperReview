@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 - **p. 9 / 4.2 Results - extractive body cue:** 3.2, summarizing results on the GSO dataset in Table 2.
 - **p. 10 / 4.2 Results - extractive body cue:** Lastly, our framework is currently limited to rigid objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Outline of proposed OnlineSplatter. From the incoming stream of pose-free RGB frames, OnlineSplatter "splats" the observations into a canonical cloud of 3D Gaussians ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 | The stage-wise performance is then computed as: Mstage = 1 /Tstage/ P t∈Tstage P v∈Vtarget M( ˆRv,t, Vv) where M represents standard image quality ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | We therefore design a stage-wise evaluation protocol that examines performance across three distinct phases: 1) Early Stage (Tearly := {1 ≤t ≤4}): Tests the ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 | FSOdist4 NPSdist3 GT Ours Early-Stage(t=4) Early-Stage(t=4) (t=16) Late-Stage (t=16) Late-Stage Figure 3: Qualitative results of different baselines and our method on the GSO (left) ... | comparison identity and matched condition | p. 9 (4.2 Results) |
 | To demonstrate our approach's efficacy, we convert our final 3DGS representation into meshes and visually compare it comprehensively with state-of-the-art methods from different paradigms. | comparison identity and matched condition | p. 10 (4.2 Results) |
 | Memory Sparsification: Our sparsification strategy based on usage rate and spatial coverage outperforms random pruning, particularly in later stages, showing the efficacy of our ... | comparison identity and matched condition | p. 10 (4.2 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 | body limitation/failure cue | Second, we assess generalization to real-world monocular videos with occlusions using the HO3D dataset [10], which contains hand-object interaction sequences. | p. 8 (4 Experiments) |
 | body limitation/failure cue | Specifically: Dual-key Design: Removing the latent key severely degrades performance at all stages due to loss of visual-geometrical cues. | p. 9 (4.2 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 | Specifically, k(D) t is computed based on the R3 axis-rotation of the object orientation {θt, ϕt, γt}: k(D) t := (sin ϕt cos θt, ... | p. 5 (3 Method) |
 | This dual-encoder design enables our model to leverage both rich visual priors and geometry-aware features. | p. 3 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 4.2 Results - extractive body cue:** 5 Limitations and Future Work Our current framework has some limitations that warrant attention.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (
 - **p. 9 / 4.2 Results - extractive body cue:** Specifically: Dual-key Design: Removing the latent key severely degrades performance at all stages due to loss of visual-geometrical cues.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 10 (4.2 Results), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4.2 Results), metrics p. 8 (4.2 Results), p. 8 (4.2 Results), p. 9 (4.2 Results), p. 9 (4.2 Results), p. 10 (4.2 Results), p. 10 (4.2 Results), baselines p. 7 (4 Experiments), p. 8 (4.2 Results), p. 8 (4.2 Results), p. 9 (4.2 Results), p. 10 (4.2 Results), p. 10 (4.2 Results), results p. 8 (4.2 Results), p. 7 (4 Experiments), p. 8 (4.2 Results), p. 10 (Figure/Table caption), p. 9 (4.2 Results), p. 10 (4.2 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

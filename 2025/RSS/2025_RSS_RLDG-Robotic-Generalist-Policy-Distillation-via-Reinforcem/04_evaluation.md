@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 - **p. 7 / 4.2. RLDG vs. Conventional Fine-tuning - extractive body cue:** For the VGA connector, OpenVLA with RLDG achieved a 100% success rate with just 45 RL episodes, compared to 300 required from human demonstrations to ...
 - **p. 7 / 4.2. RLDG vs. Conventional Fine-tuning - extractive body cue:** RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning Figure 4: Success rate comparison of OpenVLA and Octo policies fine-tuned with RLDG versus conventional methods using ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: RLDG improves generalist robot policies like OpenVLA and Octo by training with specialist RL policies and using them to generate high-quality fine-tuning datasets. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 | As shown in Figure 7, mixing human states and RL actions yields a better fine-tuning success rate than using fully human data (more than ... | definition/direction/unit from same section | p. 9 (5.1. Is RL data better because of better action) |
 | Figure 1: RLDG improves generalist robot policies like OpenVLA and Octo by training with specialist RL policies and using them to generate high-quality fine-tuning ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 | Compared to directly using the RL policies that generated the data, RLDG also demonstrated much greater generalization capabilities and robustness to unseen test scenarios. | comparison identity and matched condition | p. 8 (4.3. Generalization of RLDG vs. Original RL) |
 | Generalist robot policies trained on RL-generated data using RLDG consistently achieve higher performance across all tasks compared to conventional fine-tuning methods using human demonstrations. | comparison identity and matched condition | p. 8 (4.3. Generalization of RLDG vs. Original RL) |
 | We have shown that fine-tuning generalist policies with RL data yields superior performance compared to training on human data. | comparison identity and matched condition | p. 9 (4.3. Generalization of RLDG vs. Original RL) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,21 +128,11 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 | body limitation/failure cue | 4, the RL policy success rate quickly degraded from 20/20 for the training scenario to 1/20 for the unseen scenario of the Pick and ... | p. 8 (4.3. Generalization of RLDG vs. Original RL) |
 | body limitation/failure cue | Compared to directly using the RL policies that generated the data, RLDG also demonstrated much greater generalization capabilities and robustness to unseen test scenarios. | p. 8 (4.3. Generalization of RLDG vs. Original RL) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p
 - **p. 8 / 4.3. Generalization of RLDG vs. Original RL - extractive body cue:** Compared to directly using the RL policies that generated the data, RLDG also demonstrated much greater generalization capabilities and robustness to unseen test scenarios.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup and Tasks), p. 5 (4.1. Experimental Setup and Tasks), p. 6 (4.1. Experimental Setup and Tasks), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 5 (4.1. Experimental Setup and Tasks), metrics p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), baselines p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 8 (4.3. Generalization of RLDG vs. Original RL), p. 9 (4.3. Generalization of RLDG vs. Original RL), results p. 7 (4.2. RLDG vs. Conventional Fine-tuning), p. 7 (Figure/Table caption), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 6 (4.2. RLDG vs. Conventional Fine-tuning), p. 9 (5.1. Is RL data better because of better action), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

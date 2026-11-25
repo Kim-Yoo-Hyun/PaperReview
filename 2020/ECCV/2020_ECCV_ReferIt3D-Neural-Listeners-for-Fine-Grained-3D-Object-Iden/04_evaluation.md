@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 - **p. 12 / VI SD - extractive body cue:** Vision + Language + Holistic Context (V + L + C): Similar to the above, but also fuses a PointNet++ scene-feature with each object's visual ...
 - **p. 11 / VI SD - extractive body cue:** Given an utterance we use the text-clf to predict the referred object-class.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Examples of natural free-form utterances. Each color-coded utterance distinguishes the corresponding object (marked with same color) against a distracting object in the underlying ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 | Table 1. Statistics of Sr3D. The first row contains the number of distinct commu- nication contexts yielded by each reference-type. The second row contains ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | This demonstrates the contribution of adding a synthetically generated dataset to a human one. | definition/direction/unit from same section | p. 13 (VI SD) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 | Decoupled approach: This is a baseline listener consisting of a text classifier and an (FG) object classifier that are trained separately. | comparison identity and matched condition | p. 11 (VI SD) |
 | This baseline can encode visual properties of an object beyond its FG class enabling rich (context-free) distinctions (e.g.,"very small, or yellow colored chair"). | comparison identity and matched condition | p. 11 (VI SD) |
 | Comparisons for the above models are presented in Table 3. | comparison identity and matched condition | p. 12 (VI SD) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 | body limitation/failure cue | Finally, the last row shows two challenging failure cases of our model. | p. 13 (VI SD) |
 | body limitation/failure cue | This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene ... | p. 13 (VI SD) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -135,14 +122,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 | Referring to this particular trashcan among other similar ones requires both spatial reasoning and 5 In all results mean accuracies and standard errors across ... | p. 12 (VI SD) |
 | We performed this experiment following the implementation in [17]. | p. 13 (VI SD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 6 Conclusion - extractive body cue:** Success cases are in the top four images and Failure in the bottom two.
@@ -150,6 +129,5 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 12 (VI SD), p. 
 - **p. 13 / VI SD - extractive body cue:** This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene w.r.t. ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (VI SD), p. 13 (VI SD), p. 11 (VI SD), p. 12 (VI SD), p. 12 (VI SD), p. 11 (VI SD), metrics p. 11 (VI SD), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 11 (VI SD), p. 11 (VI SD), p. 12 (VI SD), results p. 12 (Figure/Table caption), p. 12 (VI SD), p. 13 (Figure/Table caption), p. 11 (VI SD), p. 14 (Figure/Table caption), p. 11 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

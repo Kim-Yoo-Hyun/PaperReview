@@ -39,8 +39,6 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 - **p. 4 / 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark - extractive body cue:** To capture progress in embodied reasoning for VLMs, we introduce ERQA, short for Embodied Reasoning Question Answering, a benchmark that focuses specifically on capabilities likely ...
 - **p. 4 / 2.1. Embodied Reasoning Question Answering (ERQA) Benchmark - extractive body cue:** Spatial Reasoning 84 Action Reasoning 72 Trajectory Reasoning 66 State Estimation 55 Task Reasoning 38 Multi-view Reasoning 37 Pointing 34 Other 14 Figure 4 / ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -60,20 +58,11 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 |---|---|---|
 | (* ImVoxelNet (Rukhovich et al., 2022) performance measured on an easier set of 10 categories). | definition/direction/unit from same section | p. 10 (2.0 Pro Experimental) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | For each image pair, the left image with the point coordinates and the right image without coordinates are given, and the model predicts which ... | comparison identity and matched condition | p. 10 (2.0 Pro Experimental) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -104,8 +93,6 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 | body limitation/failure cue | Robust human-level embodied reasoning is critical for robots and other physically grounded agents. | p. 28 (6. Discussion) |
 | body limitation/failure cue | This involves developing techniques to seamlessly integrate abstract reasoning with precise execution, leading to more robust and generalizable performance. | p. 29 (6. Discussion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -119,14 +106,6 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 | We speculate that these improvements result from the larger and more powerful VLM backbone, including the state-of-the-art vision encoder used in Gemini 2.0, combined ... | p. 19 (3.3. Gemini Robotics can closely follow language instructions) |
 | We conduct 20 trials per task for each model for all tasks except for the spelling board game, for which 12 trials are conducted. | p. 21 (4.1. Long-horizon dexterity) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 28 / 6. Discussion - extractive body cue:** In addition, while our initial results with Gemini Robotics demonstrate promising generalization capabilities, future work will focus on several key areas.
@@ -134,9 +113,8 @@ PDF body evaluation/result cue (p. 10 (2.0 Pro Experimental)): (* ImVoxelNet (Ru
 - **p. 29 / 6. Discussion - extractive body cue:** This involves developing techniques to seamlessly integrate abstract reasoning with precise execution, leading to more robust and generalizable performance.
 
 - **Evidence anchors reviewed:** datasets p. 5 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), p. 4 (2.1. Embodied Reasoning Question Answering (ERQA) Benchmark), metrics p. 10 (2.0 Pro Experimental), baselines p. 10 (2.0 Pro Experimental), results p. 10 (2.0 Pro Experimental).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

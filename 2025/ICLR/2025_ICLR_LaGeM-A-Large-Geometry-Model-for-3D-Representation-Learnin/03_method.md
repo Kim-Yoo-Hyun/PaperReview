@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** For larger models (2k latent vectors), the advantage is even more significant (0.7x time and 0.58x memory).
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** We also write CA(P, PInput) for short.
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** Specifically, assuming we are training a denoising network for Z2, the input of the network is ˜Z2(t), CA( ˜Z2(t), Z3).
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** This severely affects the training time when M is large.
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** VecSet LaGeM VecSet LaGeM VecSet LaGeM Batch Size 64 8 4 Self Attn Layers 24 8/8/8 24 8/8/8 24 8/8/8 Attn Channels 512 512/512/512 1k ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Motivated, cascaded, latent, diffusion, model, cross, attention, compress, feature, Pi-1, vector, first, converted, back, space, LtoF, short, Then, PInput, unordered.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,22 +110,11 @@ PDF body method statement (p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 M
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 13: Latent with red color Z means it is replaced by Gaussian noise. Latent with blue color Z means it is generated with the ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Due to failures of modeling loading and conversion, we obtained around 600k watertight models for training.
 - **p. 10 / 5 CONCLUSION - extractive body cue:** Our method does not solve the high training cost problem of diffusion itself.
-- **p. 16 / Figure/Table caption - extractive body cue:** Figure 13: Latent with red color Z means it is replaced by Gaussian noise. Latent with blue color Z means it is generated with the ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), objective p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), temporal p. 6 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 7 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

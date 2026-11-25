@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 
 | body cue at p. 36 | A second common failure mode involves incorrect reasoning about depth, occlusion, and 3D layout. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 37 | Overall, these failures indicate that current VLMs still lack robust modeling of robotic affordances and physical constraints, especially ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 19 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 10 (1 INTRODUCTION), p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS), p. 20 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 10 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 10 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), interface p. 19 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 10 (1 INTRODUCTION), p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS), p. 20 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), objective p. 18 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 20 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 22 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 33 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 37 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

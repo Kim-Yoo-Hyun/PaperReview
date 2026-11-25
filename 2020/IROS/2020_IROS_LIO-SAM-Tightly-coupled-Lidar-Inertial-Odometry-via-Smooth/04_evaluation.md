@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** The maximum translational and rotational speed encountered is this dataset is 1.8 m/s and 213.9 ◦/s respectively.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** 5: Results of various methods using the Campus dataset that is gathered on the MIT campus.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: The system structure of LIO-SAM. The system receives input from a 3D lidar, an IMU and optionally a GPS. Four types of factors ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Fig. 2: Datasets are collected on 3 platforms: (a) a custom-built handheld device, (b) an unmanned ground vehicle - Clearpath Jackal, (c) an electric ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Fig. 7: Map of LIO-SAM aligned with Google Earth. as opposed to the runtime in the Park test. | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | As is shown, the trajectory of LOAM drifts significantly when compared with all other methods. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Fig. 4: Mapping results of LOAM, LIOM, and LIO-SAM using the Walking dataset. The map of LOAM in (b) diverges multiple times when aggressive ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | 200 -100 0 100 200 300 400 -500 -400 -300 -200 -100 0 LOAM LIO-odom LIO-GPS LIO-SAM GPS availability -20 -15 -10 -5 0 ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Campus Dataset TABLE II: End-to-end translation error (meters) Dataset LOAM LIOM LIO-odom LIO-GPS LIO-SAM Campus 192.43 Fail 9.44 6.87 0.12 Park 121.74 34.60 36.36 ... | p. 5 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Due to these challenges, LOAM, LIOM, and LIO-odom all fail to produce meaningful results in this test. | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | The preintegrated measurements ∆vij, ∆pij, and ∆Rij between time i and j can be computed using: ∆vij = RT i (vj -vi -g∆tij) (7) ... | p. 3 (III. LIDAR INERTIAL ODOMETRY VIA) |
 | 3) Relative transformation: The distance between a feature and its edge or planar patch correspondence can be computed using the following equations: dek = | p. 4 (III. LIDAR INERTIAL ODOMETRY VIA) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 5: Results of various methods using the Campus dataset that is gathered on the MIT campus. The red dot indicates the start and end ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Due to these challenges, LOAM, LIOM, and LIO-odom all fail to produce meaningful results in this test.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), p. 7 (IV. EXPERIMENTS), results p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

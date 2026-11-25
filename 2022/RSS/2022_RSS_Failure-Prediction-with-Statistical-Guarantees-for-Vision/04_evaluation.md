@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 - **p. 7 / V. EXPERIMENTAL RESULTS - extractive body cue:** We first verify our failure predictors in simulation before testing them on the hardware setup.
 - **p. 8 / V. EXPERIMENTAL RESULTS - extractive body cue:** Camera observation (depth not shown) at the last three steps in a trial in the grasping task on the hardware platform.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. We train a failure predictor which guarantees (with high probability) detection of a failure ahead of time. A policy is tasked with avoiding ...
@@ -81,21 +79,12 @@ PDF body evaluation/result cue (p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 | (Top) A true-positive trial, where the predictor outputs failure at the last step, and then the right finger of the gripper hits the mug ... | definition/direction/unit from same section | p. 8 (V. EXPERIMENTAL RESULTS) |
 | Fig. 2. Continuum of optimal predictors (red) for varying class population ratios (successes and failures). The failure predictor can perform badly (i.e., on the ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Across all three settings, we achieve tight guarantees on failure prediction compared to the true expected failure rate of the policies. | comparison identity and matched condition | p. 8 (V. EXPERIMENTAL RESULTS) |
 | When the failure predictor stops the rollout due to a prediction of failure, we re-run the trial without the failure predictor to determine the ... | comparison identity and matched condition | p. 7 (V. EXPERIMENTAL RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 | body limitation/failure cue | Since the gripper does not reach the mug in the first two out of five steps of the rollout, we only train the failure ... | p. 8 (V. EXPERIMENTAL RESULTS) |
 | body limitation/failure cue | BOUNDS Our approach for learning failure predictors with guaranteed error bounds relies on a reduction to results from the PACBayes generalization theory from supervised ... | p. 3 (IV. FAILURE PREDICTION WITH GUARANTEED ERROR) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 | Let rf : E × Π →X T × YT denote the function that ‘rolls out' the system with the given policy and the ... | p. 3 (III. PROBLEM FORMULATION) |
 | Thus there are four possible outcomes: (1) true positive (1∩1), predicting 1 at least once before failure; (2) true negative (0 ∩0), never predicting ... | p. 3 (III. PROBLEM FORMULATION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / IV. FAILURE PREDICTION WITH GUARANTEED ERROR - extractive body cue:** Bound on Class-Conditional Misclassification Error The example above shows that minimizing the total misclassification error can fail to perform well when the relative importance of ...
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIM
 - **p. 3 / IV. FAILURE PREDICTION WITH GUARANTEED ERROR - extractive body cue:** BOUNDS Our approach for learning failure predictors with guaranteed error bounds relies on a reduction to results from the PACBayes generalization theory from supervised learning; ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 8 (V. EXPERIMENTAL RESULTS), metrics p. 8 (V. EXPERIMENTAL RESULTS), p. 6 (Figure/Table caption), p. 6 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 8 (V. EXPERIMENTAL RESULTS), baselines p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), results p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (V. EXPERIMENTAL RESULTS), p. 8 (V. EXPERIMENTAL RESULTS), p. 7 (Figure/Table caption), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

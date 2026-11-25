@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task_id": "GAP-N3-B-ENV",
   "date": "2026-10-25",
-  "document": "ENVIRONMENT.md",
+  "document": "README.md",
   "status": {
     "environment_documentation": "DONE",
     "parent_GAP_N3": "PARTIAL",

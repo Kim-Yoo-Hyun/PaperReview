@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 21 / B.2 LOW-LEVEL POLICY TRAINING DETAILS - extractive body cue:** In real-world experiments, we simplify the language instruction in the same way as for RVT2 when conditioning on HAMSTER 2D paths to encourage following the ...
 - **p. 21 / B.2 LOW-LEVEL POLICY TRAINING DETAILS - extractive body cue:** The current position of the robot gripper is: {current position}.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of HAMSTER, VLAs and "smaller" imitation learning methods. HAMSTER's hierarchi- cal design results in better generalization with a small amount of in-domain ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 | In fact, we saw a performance drop for HAMSTER+3D-DA when removing language for Colosseum tasks and a small drop in performance when using simplified ... | definition/direction/unit from same section | p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS) |
 | Figure 2: Depiction of HAMSTER's execution. The high-level VLM is called once to generate the 2D path. The low-level policy is conditioned on the ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 | Figure 12: The full text prompt we use for RT-Trajectory with Code-as-Policies on top of GPT4-o. The scene description at the bottom comes from ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
 | Table 5: Ranking-based human evaluation of different VLMs, averaged across various real-world evaluation tasks. Results indicate that HAMSTER including simulation data is most effective ... | comparison identity and matched condition | p. 25 (Figure/Table caption) |
 | Figure 13: Human VLM evaluation example images and instructions along with corresponding trajectories from HAMSTER without any finetuning on (RLBench) simulation data, HAMSTER finetuned ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 - Numeric sentences retained from the body:
 - **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** We use tolerance ϵ = 0.05, resulting in paths that are around 2-5 points for each short horizon task.
 - **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** The training process takes about 30 hours to complete.
-- **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** We use tolerance ϵ = 0.05, resulting in paths that are around 2-5 points for each short horizon task.
-- **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** The training process takes about 30 hours to complete.
 
 ## Generalization and Failure Cases
 
@@ -135,8 +122,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 | body limitation/failure cue | Figure 1: Overview of HAMSTER, VLAs and "smaller" imitation learning methods. HAMSTER's hierarchi- cal design results in better generalization with a small amount of ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: Depiction of HAMSTER's execution. The high-level VLM is called once to generate the 2D path. The low-level policy is conditioned on the ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +129,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 | We use an effective batch size of 256 and a learning rate of 1 × 10-5. | p. 20 (B.1 VLM IMPLEMENTATION DETAILS) |
 | During fine-tuning, the entire model-including the vision encoder-is updated. | p. 20 (B.1 VLM IMPLEMENTATION DETAILS) |
 | In addition, we reduced the embedding dimension of the transformer to 60 from 120, removed proprioception information from past timesteps, and reduced the number ... | p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,6 +140,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Depiction of HAMSTER's execution. The high-level VLM is called once to generate the 2D path. The low-level policy is conditioned on the 2D ...
 
 - **Evidence anchors reviewed:** datasets p. 20 (B IMPLEMENTATION AND ARCHITECTURE DETAILS), p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), metrics p. 9 (Figure/Table caption), p. 28 (Figure/Table caption), p. 9 (Figure/Table caption), p. 20 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 25 (Figure/Table caption), p. 24 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 25 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

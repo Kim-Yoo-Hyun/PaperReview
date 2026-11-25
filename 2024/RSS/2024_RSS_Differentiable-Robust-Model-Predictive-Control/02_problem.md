@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 11 | While the deterministic nominal trajectory reaches the target state during every trial, the ancillary controller cannot keep up ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | Fig. 4: Controlled Dubins vehicle trajectories subject to large noise. NT-MPC trajectories diverge from the nominal trajec- tory ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (II. MATHEMATICAL BACKGROUND), p. 3 (II. MATHEMATICAL BACKGROUND). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ control writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 2 (II. MATHEMATICAL BACKGROUND), p. 3 (II. MATHEMATICAL BACKGROUND), p. 1 (I. INTRODUCTION), p. 3 (II. MATHEMATICAL BACKGROUND), interface p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (II. MATHEMATICAL BACKGROUND), p. 3 (II. MATHEMATICAL BACKGROUND), objective p. 6 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 6 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

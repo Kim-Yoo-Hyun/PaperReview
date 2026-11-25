@@ -64,8 +64,6 @@ PDF body contribution framing (p. 4 (3 Method), p. 2 (1 Introduction), p. 3 (3 M
 | body cue at p. 18 | This serves as a lighthearted example that language models can exhibit limitations similar to human reasoning. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | VoxPoser performs everyday manipulation tasks with high success and is more robust to disturbances than the baseline using ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 3 (3 Method). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), interface p. 6 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 3 (3 Method), objective p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

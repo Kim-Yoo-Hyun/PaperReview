@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 - **p. 5 / IV. DROID DATASET ANALYSIS - extractive body cue:** A key reason is DROID's data collection protocol (see Section III-B): by collecting data with 50 data collectors in 52 buildings across three continents, switching ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** The analysis in the previous section highlighted the diversity of tasks, objects, scenes, and viewpoints in the DROID dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce DROID (Distributed Robot Interaction Dataset), an "in-the-wild" robot manipulation dataset with 76k trajectories or 350 hours of interaction data, collected across ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 | This difference is especially notable 3We use a curated split of OXE based on Octo Model Team et al. | definition/direction/unit from same section | p. 8 (V. EXPERIMENTS) |
 | Across all tasks, we find that DROID substantially improves policy performance compared to the diffusion policy trained on in-domain data only. | definition/direction/unit from same section | p. 8 (V. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 | By comparing Figure 10's individual task performances with the corresponding tasks in Figure 8, we also see that the performance of co-training with the ... | comparison identity and matched condition | p. 9 (V. EXPERIMENTS) |
 | In line with prior work [7], we train the diffusion policy to generate 16-step action sequences, and during rollouts, step 8 actions open loop ... | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
 | As such, we build on existing state-of-the-art 2Fang et al. | comparison identity and matched condition | p. 3 (Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 | body limitation/failure cue | Our policy learning evaluations show that DROID is a valuable data resource for improving policy performance and robustness, even in comparison to existing large ... | p. 9 (VI. DISCUSSION) |
 | body limitation/failure cue | Calibration Public Robot Collection MIME [50] 8.3k 20 1 ✗ ✗ ✓ human teleop RoboTurk [36] 2.1k 2 1 ✗ ✗ ✓ human teleop ... | p. 3 (Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 | In this section, we introduce our hardware setup and the data collection protocol. | p. 3 (III. DROID DATA COLLECTION SETUP) |
 | We provide a thoroughly tested guide to replicate the hardware and software of our setup. | p. 4 (III. DROID DATA COLLECTION SETUP) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** To test how DROID and existing datasets affect policy robustness, we evaluate each task and method in two settings: "in-distribution," which reflects the distribution of ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENT
 - **p. 3 / Dataset - extractive body cue:** Calibration Public Robot Collection MIME [50] 8.3k 20 1 ✗ ✗ ✓ human teleop RoboTurk [36] 2.1k 2 1 ✗ ✗ ✓ human teleop RoboNet ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. DROID DATASET ANALYSIS), p. 3 (Dataset), p. 8 (V. EXPERIMENTS), p. 3 (Dataset), p. 6 (IV. DROID DATASET ANALYSIS), p. 8 (V. EXPERIMENTS), metrics p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 22 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), baselines p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 3 (Dataset), results p. 9 (Figure/Table caption), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 20 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 - **p. 5 / IV. EVALUATIONS - extractive body cue:** Additionally, we conduct latent action analysis to quantify the task-centric property, and perform ablation studies to explore critical design choices.
 - **p. 8 / 2) Navigation Benchmark on Room2Room - extractive body cue:** Method Lightning Variation Visual Distractor Novel Object Average ↑ Succ.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce UniVLA, a unified vision-language-action (VLA) framework that enables policy learning across different environments. By deriving task-centric latent actions in an unsupervised ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 | Our experiments exclusively focus on supervised fine-tuning within the target task suite, evaluating the performance of various policies trained through behavioral cloning on successful ... | definition/direction/unit from same section | p. 6 (1) Manipulation Benchmark on LIBERO) |
 | Fig. 2: Task-centric latent action learning. We propose a two-stage training framework aimed at disentangling task-centric visual dynamics and changes from extraneous factors. In ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 | Fig. 1: We introduce UniVLA, a unified vision-language-action (VLA) framework that enables policy learning across different environments. By deriving task-centric latent actions in an ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Fig. 10: Data efficiency. We present the success rate of UniVLA across varying dataset proportions (10%, 20%, 50%, and the full dataset). Our policy ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
 | Additionally, we conduct latent action analysis to quantify the task-centric property, and perform ablation studies to explore critical design choices. | comparison identity and matched condition | p. 5 (IV. EVALUATIONS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 | body limitation/failure cue | UniVLA demonstrates superior performance across all evaluated tasks, showcasing its exceptional ability to generalize from high-level semantic comprehension to low-level visual robustness. | p. 8 (2) Navigation Benchmark on Room2Room) |
 | body limitation/failure cue | It achieves a 66.7% success rate under varying lighting conditions, surpassing Diffusion Policy (20.0%), OpenVLA (13.3%), and LAPA (26.7%), demonstrating robustness to environmental change. | p. 9 (3) Real-world Robot Deployment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,23 +138,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (2) Navigation
 | It uses a pretrained vision encoder to encode visual observations and a pretrained LLM to predict actions. | p. 7 (2) Navigation Benchmark on Room2Room) |
 | We introduce several special tokens to tokenize navigation actions and finetune the model on the R2R training split. • NaVid [91] is a video-based ... | p. 7 (2) Navigation Benchmark on Room2Room) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 2) Navigation Benchmark on Room2Room - extractive body cue:** UniVLA demonstrates superior performance across all evaluated tasks, showcasing its exceptional ability to generalize from high-level semantic comprehension to low-level visual robustness.
 - **p. 9 / 3) Real-world Robot Deployment - extractive body cue:** It achieves a 66.7% success rate under varying lighting conditions, surpassing Diffusion Policy (20.0%), OpenVLA (13.3%), and LAPA (26.7%), demonstrating robustness to environmental change.
 
 - **Evidence anchors reviewed:** datasets p. 7 (2) Navigation Benchmark on Room2Room), p. 6 (1) Manipulation Benchmark on LIBERO), p. 7 (2) Navigation Benchmark on Room2Room), p. 5 (IV. EVALUATIONS), p. 6 (1) Manipulation Benchmark on LIBERO), p. 8 (2) Navigation Benchmark on Room2Room), metrics p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption), p. 8 (2) Navigation Benchmark on Room2Room), p. 8 (2) Navigation Benchmark on Room2Room), p. 5 (IV. EVALUATIONS), baselines p. 6 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (IV. EVALUATIONS), results p. 7 (Figure/Table caption), p. 7 (2) Navigation Benchmark on Room2Room), p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

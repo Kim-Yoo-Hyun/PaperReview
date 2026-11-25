@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (2 Backg
 - **p. 8 / 2 Background - extractive body cue:** Model BLEU Training Cost (FLOPs) EN-DE EN-FR EN-DE EN-FR ByteNet [18] 23.75 Deep-Att + PosUnk [39] 39.2 1.0 · 1020 GNMT + RL [38] 24.6 ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (2 Background), p. 5 (2 Background), p. 7 (2 Background).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (2 Backg
 - **p. 5 / 2 Background - extractive body cue:** 3.4 Embeddings and Softmax Similarly to other sequence transduction models, we use learned embeddings to convert the input tokens and output tokens to vectors of ...
 - **p. 6 / 2 Background - extractive body cue:** The shorter these paths between any combination of positions in the input and output sequences, the easier it is to learn long-range dependencies [12].
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (2 Backg
 - **p. 7 / 2 Background - extractive body cue:** We varied the learning rate over the course of training, according to the formula: lrate = d-0.5 model · min(step_num-0.5, step_num · warmup_steps-1.5) (3) This ...
 - **p. 8 / 6 Results - extractive body cue:** We estimate the number of floating point operations used to train a model by multiplying the training time, the number of GPUs used, and an ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** simple, network, architecture, Transformer, solely, attention, mechanisms, dispensing, recurrence, convolutions, entirely, model, eschewing, instead, relying, mechanism, draw, global, dependencies, between.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (2 Backg
 - **p. 7 / 2 Background - extractive body cue:** We plan to investigate this approach further in future work.
 - **p. 7 / 2 Background - extractive body cue:** A single convolutional layer with kernel width k < n does not connect all pairs of input and output positions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (2 Background), p. 3 (2 Background), p. 5 (2 Background), p. 1 (Abstract), objective p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (2 Background), p. 5 (2 Background), p. 8 (2 Background), temporal p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 5 (2 Background), p. 5 (2 Background), p. 6 (2 Background).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

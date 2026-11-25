@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p.
 - **p. 15 / 1 Introduction - extractive body cue:** Specifically, we test Soft Actor-Critic (SAC) [4], the stateof-the-art model-free RL algorithm, on a select combination of tasks (all) using a combination of proprioceptive and ...
 - **p. 9 / 1 Introduction - extractive body cue:** The BASIC composite controller directly splits and passes down the high level action vector to the individual body part controllers that operate independently to control ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Procedurally generated robotic environments with robosuite APIs graphics have led to a series of simulated platforms and toolkits [1, 14, 8, 2, 16] ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p.
 | This extension package must be installed separately and it is actively maintained. • Modularized Support: Robots are designed to be plug-and-play-any combinations of robots, ... | definition/direction/unit from same section | p. 6 (1 Introduction) |
 | Kinova3 is Kinova's newest 7-DoF robot, with integrated sensor modules and interfaces designed for research-oriented applications. | definition/direction/unit from same section | p. 8 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p.
 | 3.2 Benchmarking Results We provide a standardized set of benchmarking experiments as baselines for future experiments. | comparison identity and matched condition | p. 15 (1 Introduction) |
 | Because each robot is assigned a unique ID number, multiple instances of identical robots can be instantiated within the simulation without error. • Self-Enclosed ... | comparison identity and matched condition | p. 6 (1 Introduction) |
 | We select two of the easiest environments, Block Lifting and Door Opening, for an ablation study between the operational space controllers (OSC POSE) and ... | comparison identity and matched condition | p. 15 (1 Introduction) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p.
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,19 +133,10 @@ PDF body evaluation/result cue (p. 8 (1 Introduction), p. 9 (1 Introduction), p.
 | 2.1 Environments Environments provide the main APIs for external/user code to interact with the simulator and perform tasks. | p. 5 (1 Introduction) |
 | Initialization ROBOT Runtime RobotModel GripperModel Callables 𝛕 Actions Torques Observations Specifications Proprioception Sensoring Controller RobotBaseModel Figure 3: Overview of the Robot module's structure and ... | p. 6 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 6 (1 Introduction), p. 7 (1 Introduction), p. 7 (1 Introduction), p. 9 (1 Introduction), p. 6 (1 Introduction), p. 13 (1 Introduction), metrics p. 3 (Figure/Table caption), p. 15 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 15 (1 Introduction), p. 2 (Figure/Table caption), baselines p. 15 (1 Introduction), p. 6 (1 Introduction), p. 15 (1 Introduction), results p. 8 (1 Introduction), p. 9 (1 Introduction), p. 11 (1 Introduction), p. 7 (1 Introduction), p. 13 (1 Introduction), p. 15 (1 Introduction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

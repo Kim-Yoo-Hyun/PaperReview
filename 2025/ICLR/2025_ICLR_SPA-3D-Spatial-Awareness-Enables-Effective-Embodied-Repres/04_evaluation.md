@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** It was trained on the ScanNet dataset without semantic supervision, ensuring a fair comparison with the result in the last line of Tab.
 - **p. 22 / C.1 DATASET DETAILS - extractive body cue:** Frames with very small valid depth areas or scene boxes are filtered out.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Performance comparison across representations. Above: (a) Mean rank and (b) mean success rate on benchmarks. Lines represent the performance of SPA, best, and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Table 1: Influence of different datasets. We present the performance results on the VC-1 benchmark. Mean S.R. refers to the mean success rate across ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Table 4: Additional comparisons of ViT-base models. S.R. denotes ‘Success Rate'. Methods DINOV2-B (Oquab et al., 2023) MAE-B (He et al., 2022) | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | (2023) to use DrQ-v2 (Yarats et al., 2021), a state-of-the-art off-policy actor-critic approach for continuous vision-based control. | comparison identity and matched condition | p. 23 (C.2 PRE-TRAINING DETAILS) |
 | We refer to this baseline as MV-MAE. | comparison identity and matched condition | p. 24 (C.2 PRE-TRAINING DETAILS) |
 | It was trained on the ScanNet dataset without semantic supervision, ensuring a fair comparison with the result in the last line of Tab. | comparison identity and matched condition | p. 24 (C.2 PRE-TRAINING DETAILS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | Simple multiview attention-based interaction, as used in MV-MAE, does not perform as effectively in learning 3D spatial awareness. | p. 24 (C.2 PRE-TRAINING DETAILS) |
 | body limitation/failure cue | Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Following MAE, we apply random masking to input images to enhance robustness, but without a ViT decoder and MAE's pixel reconstruction objective. | p. 3 (2 METHODOLOGY) |
 | (2) Unlike prior work (Huang et al., 2023; Zhu et al., 2023b; Yang et al., 2024a), which employs an MLP to compute the attributes ... | p. 3 (2 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 22 / C.1 DATASET DETAILS - extractive body cue:** Since Droid does not provide depth data, we utilize Croco-Stereo Weinzaepfel et al.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 7 / Figure/Table caption - extractive body cue:** Tab. 3. For detailed results on each task and each random seed, please refer to Appendix D. We also have visualized the performance radar chart ...
 
 - **Evidence anchors reviewed:** datasets p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS), p. 21 (C.1 DATASET DETAILS), p. 21 (C.1 DATASET DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), metrics p. 24 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 23 (C.2 PRE-TRAINING DETAILS), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 23 (C.2 PRE-TRAINING DETAILS), p. 23 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

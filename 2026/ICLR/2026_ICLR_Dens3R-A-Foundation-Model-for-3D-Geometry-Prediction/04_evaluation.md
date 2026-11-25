@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 19 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** To train the visual foundation model, we collect and reorganize a large-scale training dataset containing various data types.
 - **p. 20 / A.3 IMPLEMENTATION DETAILS - extractive body cue:** We summarize and present this dataset information in Tab.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Dens3R is a feed-forward visual foundation model that takes unposed images as input and outputs high-quality 3D pointmap with unified geometric dense prediction. ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 | Figure 6: High-quality geometric predictions for high-resolution (2K) inputs. Please zoom in to better observe the fine-grained details. Position-Interpolated Rotary Positional Encoding. Dens3R can ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 | The qualitative comparison is shown in Fig. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
 | Figure 3: Normal comparison. We demonstrate that the normal derived directly from the scale- invariant pointmap and MoGe both are not accurate enough. tasks-particularly ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 | body limitation/failure cue | Figure 6: High-quality geometric predictions for high-resolution (2K) inputs. Please zoom in to better observe the fine-grained details. Position-Interpolated Rotary Positional Encoding. Dens3R can ... | p. 17 (Figure/Table caption) |
 | body limitation/failure cue | Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared ... | p. 18 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 | (2024) by using a shared decoder rather than separate decoders for a main and a reference view. | p. 8 (3 METHOD) |
 | In practice, we first compute matches in a one-versus-all strategy using our model, and then triangulate these matches to obtain multi-view point clouds, following ... | p. 8 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 24 / Figure/Table caption - extractive body cue:** Figure 12: Limitations. Despite that our method outperforms previous methods in geometric pre- dictions, the prediction quality for thin structures still require further improvement. inputs ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 24 (Figure/Table
 - **p. 18 / Figure/Table caption - extractive body cue:** Table 4: Ablation on shared encoder-decoder structure. We conduct experiments for both of the model on image pairs with 512 resolution. With the shared encoder-decoder ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.3 IMPLEMENTATION DETAILS), p. 20 (A.3 IMPLEMENTATION DETAILS), p. 19 (A.3 IMPLEMENTATION DETAILS), p. 20 (A.3 IMPLEMENTATION DETAILS), metrics p. 9 (4 EXPERIMENTS), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 24 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 23 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 24 (Figure/Table caption), p. 10 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 19 (Figure/Table caption), p. 29 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

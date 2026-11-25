@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 - **p. 8 / 4.4. Real-World Experiments - extractive body cue:** This can be attributed to the benefits of goal-oriented flow plan guidance for the action policy, which provides more efficient and accurate trajectories that mitigate ...
 - **p. 7 / 4.4. Real-World Experiments - extractive body cue:** We validate the generalization of our approach on 4 representative real-world tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Top left: System-level comparison of various flow-based planning. (a) 2D flow-based planning (Vecerik et al., 2024; Xu et al., 2024) predicts pixel-level flow ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 | Figure 8. Real-world Visualization. Diffusion Loss. It computes a visibility-weighted mean-squared error: Ldiff = Et,ϵ " 1 P k,n wk,n K | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 2. Overview of robotic manipulation. Top left (Sec. 3.2): Given an RGB image sequence, optional gripper query points, and a task instruction, the ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 | Similar results from DiT can also be observed, such as 43.8% SR, 38.3 s in Avg., notably surpassing the state-of-the-art approach π0's 41.3% and ... | comparison identity and matched condition | p. 8 (4.4. Real-World Experiments) |
 | Generally, both DP and DiT equipped with RoboFlow4D achieve better or competitive success rates and less task completion time compared to other approaches. | comparison identity and matched condition | p. 8 (4.4. Real-World Experiments) |
 | Method ℓ2 Error ↓ RoboFlow4D 0.0142 w/o Context Token 0.0152 w/o Query Points 0.0158 w/o 3D Alignment 0.0160 Dual-System Frequency Ablation. | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 | body limitation/failure cue | We evaluate the robustness of our dual-system on LIBERO-10 and report the average success rate (%). | p. 7 (4.3. Ablation Study) |
 | body limitation/failure cue | As shown in the table, the success rate remains steady across different r ∈{4, 2, 1} for both DP and DiT controllers, indicating that ... | p. 7 (4.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 | The task instruction is encoded by the Text Encoder (i.e., the text encoder of SigLip) into the text token Ttext ∈R1×C. | p. 4 (3.2. RoboFlow4D) |
 | The multimodal condition is augmented with timestep information encoded by MLP. | p. 5 (3.2. RoboFlow4D) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.4. Real-World Experiments - extractive body cue:** Bottom: In the observation-planning-execution closed loop, when errors occur (e.g., grasp failure), RoboFlow4D correctively re-plans flows to re-align the policy (recovery), such that the robot ...
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Main Results), p. 8 (Figure/Table cap
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** As shown in the table, the success rate remains steady across different r ∈{4, 2, 1} for both DP and DiT controllers, indicating that our ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Main Results), p. 8 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 7 (4.4. Real-World Experiments), metrics p. 8 (4.4. Real-World Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Main Results), p. 6 (4.2. Main Results), p. 7 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 8 (4.4. Real-World Experiments), p. 7 (4.3. Ablation Study), results p. 6 (4.2. Main Results), p. 8 (Figure/Table caption), p. 8 (4.4. Real-World Experiments), p. 6 (4.2. Main Results), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

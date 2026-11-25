@@ -56,7 +56,6 @@ PDF body method statement (p. 37 (6.7. Generalist Foundation Models), p. 37 (6.7
 - **p. 39 / 7.1.2. Architecture and Design Principles - extractive body cue:** This allows different solvers to be applied to the same model, optimizing for various dynamic regimes. • Flat data over Object Oriented Programming (OOP): Simulation ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 37 (6.7. Generalist Foundation Models).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 37 (6.7. Generalist Foundation Models), p. 37 (6.7
 - **p. 37 / 6.7. Generalist Foundation Models - extractive body cue:** GR00T N1 (Bjorck et al., 2025) is an open foundation model for generalist humanoid robots, built as a vision-languageaction model using NVIDIA's Eagle VLM and ...
 - **p. 37 / 6.7. Generalist Foundation Models - extractive body cue:** The upgraded GR00T N1.5 improves language grounding, generalization, and real-world performance using architectural refinements and the FLARE training technique (Zheng et al., 2025), which introduces ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 37 (6.7. Generalist Foundation Models), p. 37 (6.7
 - **p. 37 / 6.7. Generalist Foundation Models - extractive body cue:** The upgraded GR00T N1.5 improves language grounding, generalization, and real-world performance using architectural refinements and the FLARE training technique (Zheng et al., 2025), which introduces ...
 - **p. 26 / 5.2. Population-Based Training - extractive body cue:** Each worker runs an independent RL training process with its own hyperparameters.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** upgraded, GR00T, improves, language, grounding, generalization, real-world, performance, architectural, refinements, FLARE, training, technique, Zheng, introduces, action, prediction, implicit, world, modeling.
 - **Relevant PDF headings:** 3.4. Controllers (p. 14); 6.7. Generalist Foundation Models (p. 37); 7.1.2. Architecture and Design Principles (p. 39); 7.2. Policy Evaluation and Benchmarks (p. 40).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 37 (6.7. Generalist Foundation Models), p. 37 (6.7
 - **p. 26 / Figure/Table caption - extractive body cue:** Figure 20: An overview of the PBT framework for RL in Isaac Lab. Each worker runs an independent RL training process with its own hyperparameters. ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Isaac Lab uses OpenUSD to define rich, complex simulation scenes for robotics. Robots, objects, and sensors are arranged in hierarchical scene graphs, where ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 37 (6.7. Generalist Foundation Models), p. 37 (6.7. Generalist Foundation Models), p. 39 (7.1.2. Architecture and Design Principles), p. 39 (7.1.2. Architecture and Design Principles), p. 14 (3.4. Controllers), p. 14 (3.4. Controllers), objective p. 37 (6.7. Generalist Foundation Models), p. 26 (5.2. Population-Based Training), p. 37 (6.7. Generalist Foundation Models), p. 26 (5.2. Population-Based Training), p. 15 (3.4.3. Motion Planning), p. 39 (7.1.2. Architecture and Design Principles), temporal p. 20 (4.1. Environment Throughput), p. 1 (Abstract), p. 39 (7.1.3. Solver Implementations), p. 40 (7.1.3. Solver Implementations), p. 11 (3.2.2. Explicit Actuators), p. 16 (3.5.2. Extended Reality (XR) Device Teleoperation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

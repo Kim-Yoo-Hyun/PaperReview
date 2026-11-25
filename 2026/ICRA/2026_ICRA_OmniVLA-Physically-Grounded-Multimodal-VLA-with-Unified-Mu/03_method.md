@@ -55,7 +55,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM DESIGN), p.
 - **p. 4 / III. SYSTEM DESIGN - extractive body cue:** We run these updates in the background at a lower frequency than the robot's primary action-generation loop, so that VLM output delay does not affect ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (III. SYSTEM DESIGN), p. 4 (III. SYSTEM DESIGN).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM DESIGN), p.
 - **원문 대조:** 각 sensor-masked image를 공통 image encoder와 sensor별 MLP에 통과시켜 token으로 만들고, task-language token과 이어 붙여 VLA에 입력한다. 식 (4)는 이 multi-sensor token flow를 요약한다. ([PDF p. 4](https://arxiv.org/pdf/2511.01210#page=4), §III-C Model architecture and training, Eq. (4)).
 - **p. 5 / III. SYSTEM DESIGN - extractive body cue:** This design is a general and flexible framework to process beyond-RGB sensor-masked images, compatible with existing Vision-Language-Action models.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM DESIGN), p.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** This brings several benefits that solve the challenges above: (i) making sensor information spatially grounded in RGB pixel coordinates to facilitate robotic manipulation on target ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Second, sensors differ in format, field of view, and resolution, calling for a scalable, uniform representation rather than training sensor fusion models that depend on ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, generate, masks, interested, objects, scene, cloud-based, Vision-Language, Model, VLM, interpret, task, request, prompt, grounded, SAM, provide, semantic-based, segmentation, tokens.
 - **Relevant PDF headings:** 3) We present a lightweight OmniVLA model architec (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM DESIGN), p.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 7: Success rates when adapting to unseen tasks. We compare the pretrained OmniVLA model with two base- lines, OmniVLA-Base (no pretraining), Pretrained VLA- RAW ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Sensor Data Processing Illustration. We propose a general sensor data processing pipeline applicable to various sensors, including (a) thermal camera, (b) mmWave radar, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM DESIGN), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM DESIGN), p. 4 (III. SYSTEM DESIGN), p. 1 (I. INTRODUCTION), objective p. 3 (III. SYSTEM DESIGN), p. 4 (III. SYSTEM DESIGN), p. 4 (III. SYSTEM DESIGN), temporal p. 4 (III. SYSTEM DESIGN), p. 5 (IV. EVALUATION), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 6 (IV. EVALUATION), p. 3 (III. SYSTEM DESIGN).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

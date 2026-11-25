@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 4.5 LEARNING FROM HUMAN MANIPULATION VIDEOS Scratch UniPi VPT LAPA 0 10 20 30 40 50 60 AVG Success Rate (%) 34.4 0.7 45.8 52.1 ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Open-X Pretraining From Figure 3, we see that VLAs pretrained on the Open-X dataset outperforms VLAs pretrained on the Bridgev2 dataset, showing that data scaling ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Problem Formulation. We investigate building a generalist robotic foundation model from human motion videos without action labels. VQ-VAE-based objective (Van Den Oord et ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption
 | 5 ABLATION AND ANALYSIS 5.1 SCALING MODEL, DATA, AND LATENT ACTION SIZE 30 75 150 300 54 55 56 57 AVG Success Rate (%) ... | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 | Figure 15: Additional Ablation Results of LAPA. We further analyze the performance of LAPA by varying the window size for latent action quantization and ... | definition/direction/unit from same section | p. 25 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption
 | As shown in Table 1, LAPA largely outperforms SCRATCH and narrows the gap with ACTIONVLA despite not using action labels during pretraining. | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | Also, as shown in Table 2, LAPA (Open-X) outperforms OpenVLA (Open-X) on all types of generalization settings. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | When comparing LAPA with OPENVLA, we see that LAPA significantly outperforms OPENVLA on 2 out of 3 tasks (Figure 3). | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption
 | body limitation/failure cue | 3We leave parameter efficient fine-tuning approaches as future work for finetuning (Hu et al., 2022). | p. 5 (4 EXPERIMENTS) |
 | body limitation/failure cue | UNIPI (Du et al., 2023) uses a video diffusion model during pretraining to generate video rollouts given a language instruction, which does not require ... | p. 5 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption
 | As with latent pretraining, we freeze the vision encoder and unfreeze all of the parameters of the underlying language model.3 | p. 5 (2. Latent Pretraining) |
 | 2We also tried leaving the latent action head and adding additional head to decode the latent to ground-truth actions following Schmidt & Jiang (2024) ... | p. 5 (4 EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 17: Success and Failure Cases of UNIPI. (Top) Given the instruction of ‘move the green block away from the red cube and red pentagon', ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption
 - **p. 5 / 4 EXPERIMENTS - extractive body cue:** UNIPI (Du et al., 2023) uses a video diffusion model during pretraining to generate video rollouts given a language instruction, which does not require any ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 5 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), results p. 7 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

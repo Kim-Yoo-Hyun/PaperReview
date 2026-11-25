@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 - **p. 9 / A. Initial States for Global Matching - extractive body cue:** Aga, the exact value of a could be computed for any given set of objects and any given level of sensor noise via exhaustive testing ...
 - **p. 10 / A. Initial States for Global Matching - extractive body cue:** The general rule of thumb is the more complicated the ‘object, the more initial states required.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 12 / Figure/Table caption - extractive body cue:** Fig. 9. Noiy point stand srtace patch ferritin
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 | No expensive closest point evaluations are spent ‘on egistration vectors that have worse mean square errors than ‘the current state, Because ofthe ICP convergence ... | definition/direction/unit from same section | p. 8 (B. Convergence Theorem) |
 | By using a sufficiently dense uniform sampling of quater- ‘ions on the unit sphere combined with a sufficiently dense sampling of translation vectors occupying ... | definition/direction/unit from same section | p. 9 (B. Convergence Theorem) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 | In this section, we demonstrate the ability of the ICP algorithm to perform local point set matching without correspondence. | comparison identity and matched condition | p. 10 (A. Point Ser Matching) |
 | The accelerated ICP algorithm converges to a local mini ‘mum quickly in comparison with generic nonlinear optimization methods, It is fast enough that global ... | comparison identity and matched condition | p. 15 (A BN) |
 | This is important for using CAD data in its native form without elaborate user-guided reprocessing. | comparison identity and matched condition | p. 16 (A BN) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 | body limitation/failure cue | The only way to be sure isto find the minimum ofall the local minima. | p. 8 (B. Convergence Theorem) |
 | body limitation/failure cue | This is an interesting accomplishment for a function where derivatives cannot be evaluated. | p. 8 (B. Convergence Theorem) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 | For a parametic space curve C= (7(u)} one can compute a polyline L(C, 6) such thatthe Piecewise-lnear approximation never deviate from the space ture ... | p. 3 (A. Point to Parametric Entity Distance) |
 | Similaty, for a purametic surface S = {Fu}, one can compute a tangle set T(S,8) such thatthe piecewisetriangular approximation never deviates from the surace ... | p. 3 (A. Point to Parametric Entity Distance) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / A BN - extractive body cue:** This is a problem with almost all of the shape ‘matching algorithms in the literature For any given fixed initial set of rotations, the global ...
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 
 - **p. 8 / B. Convergence Theorem - extractive body cue:** This is an interesting accomplishment for a function where derivatives cannot be evaluated.
 
 - **Evidence anchors reviewed:** datasets p. 10 (VI. EXPERIMENTAL RESULTS), p. 14 (A BN), p. 6 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), p. 9 (A. Initial States for Global Matching), metrics p. 6 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 16 (A BN), p. 10 (VI. EXPERIMENTAL RESULTS), p. 6 (B. Convergence Theorem), p. 7 (B. Convergence Theorem), baselines p. 11 (B. Curve Matching), p. 11 (A. Point Ser Matching), p. 7 (B. Convergence Theorem), p. 10 (A. Point Ser Matching), p. 15 (A BN), p. 16 (A BN), results p. 11 (A. Point Ser Matching), p. 14 (A BN), p. 15 (A BN), p. 16 (A BN), p. 16 (A BN), p. 6 (B. Convergence Theorem).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

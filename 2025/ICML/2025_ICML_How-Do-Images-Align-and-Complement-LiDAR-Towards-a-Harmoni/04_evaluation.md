@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 - **p. 8 / 4.2. Benchmark Results - extractive body cue:** In Table 3, IAL also demonstrates superior performance, achieving the highest scores across most metrics on the nuScenes leaderboard.
 - **p. 9 / 4.5. Qualitative Results and Discussion - extractive body cue:** Furthermore, IAL outperforms its LiDAR branch in detecting remote objects (highlighted in the black boxes) and recognizing ambiguous classes (in yellow boxes), leveraging the assistance ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The architecture overview of our Image-Assists-LiDAR (IAL) framework. We first voxelize the point cloud into cylindrical voxels. In PieAug, we synchronize augmentation by ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 | IAL showcases significant performance improvements in: (1) distinguishing multiple objects when they are clustered together (rows 1 and 2); (2) detecting distant objects (row ... | definition/direction/unit from same section | p. 9 (4.5. Qualitative Results and Discussion) |
 | Figure 1. The architecture overview of our Image-Assists-LiDAR (IAL) framework. We first voxelize the point cloud into cylindrical voxels. In PieAug, we synchronize augmentation ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 | 4, our method notably reduces false positives (red points) and false negatives (green points) compared to LCPS. | comparison identity and matched condition | p. 9 (4.5. Qualitative Results and Discussion) |
 | Comparison on the nuScenes test set. | comparison identity and matched condition | p. 7 (4.1. Experimental Setting) |
 | Our method is evaluated without test-time augmentation or ensembling. | comparison identity and matched condition | p. 7 (4.1. Experimental Setting) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 | body limitation/failure cue | Table 1. Preliminary study of positional embedding for objects of thing classes. We conduct the experiment on our LiDAR branch. "GT" denotes using the ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | As shown in Table 4, despite these constraints, our IAL achieves a 4.1% improvement in PQ over the state-of-the-art multi-modal baseline LCPS, demonstrating the ... | p. 8 (4.2. Benchmark Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 | Next, we use F3D and F2D to create tokens and queries for a transformer decoder, enabling cross-modal interaction. | p. 4 (3. Methodology) |
 | All geometric-, texture-, and no-prior queries are concatenated and fed into the transformer decoder for "thing" class prediction, i.e., 3D instance segmentation. | p. 6 (3.3. Prior-Based Query Generation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4.4. Augmentation Methods Comparison - extractive body cue:** Red circles highlight instances where the LiDAR branch fails to segment correctly, but our multi-modal method succeeds.
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchm
 - **p. 8 / 4.2. Benchmark Results - extractive body cue:** As shown in Table 4, despite these constraints, our IAL achieves a 4.1% improvement in PQ over the state-of-the-art multi-modal baseline LCPS, demonstrating the robustness ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setting), p. 6 (4.1. Experimental Setting), p. 7 (4.2. Benchmark Results), p. 8 (4.3. Ablation Studies), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.1. Experimental Setting), metrics p. 8 (4.2. Benchmark Results), p. 9 (4.5. Qualitative Results and Discussion), p. 5 (Figure/Table caption), p. 8 (4.2. Benchmark Results), p. 7 (4.1. Experimental Setting), p. 7 (4.1. Experimental Setting), baselines p. 8 (4.3. Ablation Studies), p. 8 (4.2. Benchmark Results), p. 9 (4.4. Augmentation Methods Comparison), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.1. Experimental Setting), p. 7 (4.1. Experimental Setting), results p. 8 (4.2. Benchmark Results), p. 8 (4.2. Benchmark Results), p. 7 (4.2. Benchmark Results), p. 9 (4.5. Qualitative Results and Discussion), p. 9 (4.5. Qualitative Results and Discussion), p. 7 (4.2. Benchmark Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

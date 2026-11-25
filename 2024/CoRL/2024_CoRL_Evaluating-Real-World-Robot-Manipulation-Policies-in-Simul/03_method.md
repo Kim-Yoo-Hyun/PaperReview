@@ -48,7 +48,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Remarkable progress has been made in recent years towards building generalist real-world robot manipulation policies [6, 50], i.e., policies that can perform a wide range ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 1 / Abstract - extractive body cue:** We then employ these approaches to create SIMPLER, a collection of simulated environments for manipulation policy evaluation on common real robot setups.
 - **p. 3 / I. INTRODUCTION - extractive body cue:** • We open-source our workflow for constructing SIMPLER environments to facilitate research on general-purpose manipulation policies and simulated evaluation frameworks.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 7 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** For evaluations in the Google Robot environments, we additionally use a number of RT-1 [6] checkpoints at various stages of training: RT-1 trained to convergence ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Additionally, we open-source policy inference code for real-to-sim evaluation of common generalist robot policies (RT-1 [6], RT-1-X [11], and Octo [50]), and we provide detailed ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, contributions, follows, introduce, SIMPLER, suite, simulated, evaluation, environments, commonly-used, real, robot, manipulation, setups, address, challenges, inherent, policy, proposing, approaches.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,23 +104,13 @@ PDF body method statement (p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INT
 - **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** Sensitivity to physical property gap.
 - **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** Sensitivity to choice of physics simulator.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (I. INTRODUCTION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), objective p. 1 (I. INTRODUCTION), temporal p. 7 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor), p. 10 (2) Can simulated evaluations not only capture the perfor), p. 6 (II. RELATED WORK), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

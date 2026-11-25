@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** The gait-free baseline is trained by the method above, but excludes all augmented auxiliary rewards (Table 1).
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** We implement an interface based on Lightweight Communications and Marshalling (LCM) [28] to pass sensor data, motor commands, and joystick state between our code and ...
 - **p. 4 / 3 Method - extractive body cue:** To obtain MoB, we train a conditional policy π(·/ct, bt) that achieves tasks specified by the command (ct) in multiple ways that result from different ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** In the real world, there is also always a long tail of environments that are not modeled in training.
 - **p. 6 / 3 Method - extractive body cue:** An onboard Jetson TX2 NX computer runs our trained policy.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** observation, space, consists, joint, positions, velocities, measured, encoders, gravity, vector, body, frame, accelerometer, Experimental, Sim-to-Real, Transfer, Gait, Switching, deploy, controller.
 - **Relevant PDF headings:** 3 Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p.
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Multiplicity of Behavior (MoB) enables a human to tune a single quadruped policy trained on flat ground to diverse unseen environments. Top row: ...
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 5. Forward and Backward Locomotion. During evaluation in the random platforms environment, we found that walking backward leads to fewer failures than walking forward. ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 6 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 6 (3 Method), temporal p. 4 (3 Method), p. 8 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 8 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

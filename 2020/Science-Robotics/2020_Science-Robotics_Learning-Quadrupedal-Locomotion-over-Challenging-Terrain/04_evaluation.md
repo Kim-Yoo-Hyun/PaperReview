@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 - **p. 6 / 2. RESULTS - extractive body cue:** The heading error is the angle between the command velocity and the base velocity of the robot.
 - **p. 6 / 2. RESULTS - extractive body cue:** This payload is 22.7 % of the total weight of the robot, and was never simulated during training.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Deployment of the presented locomotion controller in a variety of challenging environments.
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 | The heading error is the angle between the command velocity and the base velocity of the robot. | definition/direction/unit from same section | p. 6 (2. RESULTS) |
 | Fig. 6. Analysis of the emergent foot-trapping reflex. FT denotes the first contact of the LF foot with the step (foot-trapping event). (A) The ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 | The heading error of the presented controller is consistently smaller than the baseline, both with and without the payload. | comparison identity and matched condition | p. 6 (2. RESULTS) |
 | Research Article ETH Zurich and Intel 4 B A command C command 10 kg payload D Baseline 0.2 m/s Ours w/ payload Baseline 0.6 ... | comparison identity and matched condition | p. 4 (2. RESULTS) |
 | The baseline quickly loses balance, aggressively swings the legs, and falls. | comparison identity and matched condition | p. 6 (2. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 | body limitation/failure cue | Fig. 2. A number of specific deployments. (A-F) Zero-shot gener- alization to slippery and deforming terrain. (G) Steep descent during the DARPA Subterranean Challenge. ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | (A) Locomotion over unstable debris. | p. 4 (2. RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 | The vectors ¯lt and ¯at computed by the teacher policy are used to supervise the student. | p. 6 (4. MATERIALS AND METHODS) |
 | The baseline is incapable of traversing any steps under any command speed with the payload. | p. 6 (2. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3. DISCUSSION - extractive body cue:** We see a number of limitations and opportunities for future work.
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. R
 - **p. 4 / 2. RESULTS - extractive body cue:** (A) Locomotion over unstable debris.
 
 - **Evidence anchors reviewed:** datasets p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 3 (2. RESULTS), p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS), metrics p. 4 (2. RESULTS), p. 4 (Figure/Table caption), p. 10 (Figure/Table caption), p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 6 (2. RESULTS), baselines p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 4 (2. RESULTS), p. 6 (2. RESULTS), p. 4 (2. RESULTS), p. 6 (2. RESULTS), results p. 4 (2. RESULTS), p. 4 (2. RESULTS), p. 5 (2. RESULTS), p. 5 (2. RESULTS), p. 3 (2. RESULTS), p. 6 (2. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

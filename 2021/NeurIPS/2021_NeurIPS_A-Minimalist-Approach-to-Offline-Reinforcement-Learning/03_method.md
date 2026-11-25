@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 - **p. 1 / 1 Introduction - extractive body cue:** The solution class for this problem revolves around the idea that the learned policy should be kept close to the data-generating process (or behavior policy), ...
 - **Formal bridge:** dataset transition (s,a,r,s′) -> dataset-supported policy action -> offline value with OOD control -> offline return and deployment safety.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 4 (3 Background), p. 6 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Background).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 - **p. 3 / 3 Background - extractive body cue:** Consequently, algorithms have taken the approach of constraining or regularizing the policy to stay near to the actions in the dataset [Levine et al., 2020].
 - **p. 4 / 3 Background - extractive body cue:** On top of algorithmic changes, CQL also adds a pre-training phase where the actor is only trained with imitation learning and selects the max action ...
 - **Normalized interface:** observation=dataset state/observation, action, reward와 return-to-go; state=Q/value 또는 sequence-policy state; output/action=dataset-supported action sequence.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 - **p. 1 / Abstract - extractive body cue:** Due to errors in value estimation from out-of-distribution actions, most offline RL algorithms take the approach of constraining or regularizing the policy with the actions ...
 - **p. 3 / 3 Background - extractive body cue:** Consequently, algorithms have taken the approach of constraining or regularizing the policy to stay near to the actions in the dataset [Levine et al., 2020].
 - **p. 5 / 3 Background - extractive body cue:** On top of the architecture changes, for CQL this is largely due to the costs of logsumexp over multiple sampled actions, and for Fisher-BRC, the ...
-- **p. 4 / 3 Background - extractive body cue:** CQL Fisher-BRC TD3+BC [Kumar et al., 2020] [Kostrikov et al., 2021] (Ours) Algorithmic Adjustments Add regularizer to critic† Train a generative model†‡ Add a BC ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Most, offline, algorithms, built, explicitly, existing, off-policy, deep, algorithm, TD3, Fujimoto, SAC, Haarnoja, then, further, modify, underlying, non-algorithmic, implementation, changes.
 - **Relevant PDF headings:** C.2 State Feature Normalization with Other Algorithms (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +117,13 @@ PDF body method statement (p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstr
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 4: Learning curves comparing the performance of TD3+BC against offline RL baselines in the D4RL datasets. Curves are averaged over 5 seeds, with the ...
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 8: Benchmarking wall-clock training time of DT and TD3+BC over 1 million steps. Does not include evaluation costs. We remark that the DT was ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Background), p. 4 (3 Background), p. 1 (Abstract), p. 1 (1 Introduction), p. 6 (3 Background), p. 3 (3 Background), objective p. 3 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 7 (3 Background), p. 3 (3 Background), p. 1 (1 Introduction), temporal p. 7 (6 Experiments), p. 8 (120 HalfCheetah-Medium-Expert), p. 7 (6 Experiments), p. 5 (3 Background), p. 5 (3 Background), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

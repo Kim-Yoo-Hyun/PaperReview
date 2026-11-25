@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. Iyrropuction), p. 5 (IV. GROWTH-BASED TR
 | body cue at p. 7 | 2) Robustness to Single-Leg Failure: In this experiment, we simulate the failure of a single leg by abruptly ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | This dynamic redistribution of effort ensures continuous and stable locomotion even under single leg failures. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Iyrropuction), p. 4 (A. Biomechanical Modet), p. 2 (1. Iyrropuction), p. 3 (1. Iyrropuction). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ locomotion writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (1. Iyrropuction), p. 2 (1. Iyrropuction), p. 2 (1. Iyrropuction), p. 4 (A. Biomechanical Modet), interface p. 2 (1. Iyrropuction), p. 4 (A. Biomechanical Modet), p. 2 (1. Iyrropuction), p. 3 (1. Iyrropuction), objective p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

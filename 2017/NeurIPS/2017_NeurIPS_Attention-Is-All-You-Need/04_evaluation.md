@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Resu
 - **p. 9 / 6 Results - extractive body cue:** This task presents specific challenges: the output is subject to strong structural constraints and is significantly longer than the input.
 - **p. 9 / 6 Results - extractive body cue:** 6.3 English Constituency Parsing To evaluate if the Transformer can generalize to other tasks we performed experiments on English constituency parsing.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: The Transformer - model architecture. The Transformer follows this overall architecture using stacked self-attention and point-wise, fully connected layers for both the encoder ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Resu
 | Table 4: The Transformer generalizes well to English constituency parsing (Results are on Section 23 of WSJ) Parser Training WSJ 23 F1 Vinyals & ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 | Figure 3: An example of the attention mechanism following long-distance dependencies in the encoder self-attention in layer 5 of 6. Many of the attention ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Resu
 | 6.1 Machine Translation On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big) in Table 2) outperforms the best previously reported ... | comparison identity and matched condition | p. 8 (6 Results) |
 | Furthermore, RNN sequence-to-sequence models have not been able to attain state-of-the-art results in small-data regimes [37]. | comparison identity and matched condition | p. 9 (6 Results) |
 | Listed perplexities are per-wordpiece, according to our byte-pair encoding, and should not be compared to per-word perplexities. | comparison identity and matched condition | p. 9 (6 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Resu
 | body limitation/failure cue | We plan to investigate this approach further in future work. | p. 7 (2 Background) |
 | body limitation/failure cue | A single convolutional layer with kernel width k < n does not connect all pairs of input and output positions. | p. 7 (2 Background) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,20 +126,11 @@ PDF body evaluation/result cue (p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Resu
 | 3 Model Architecture Most competitive neural sequence transduction models have an encoder-decoder structure [5, 2, 35]. | p. 2 (2 Background) |
 | The output is computed as a weighted sum 3 | p. 3 (2 Background) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 2 Background - extractive body cue:** We plan to investigate this approach further in future work.
 - **p. 7 / 2 Background - extractive body cue:** A single convolutional layer with kernel width k < n does not connect all pairs of input and output positions.
 
 - **Evidence anchors reviewed:** datasets p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Results), p. 9 (6 Results), metrics p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Results), p. 9 (6 Results), p. 10 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Results), p. 9 (6 Results), results p. 8 (6 Results), p. 8 (6 Results), p. 9 (6 Results), p. 9 (6 Results), p. 10 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

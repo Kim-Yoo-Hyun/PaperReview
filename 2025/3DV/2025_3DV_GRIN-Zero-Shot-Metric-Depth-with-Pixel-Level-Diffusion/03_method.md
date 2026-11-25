@@ -50,7 +50,6 @@ PDF body method statement (p. 4 (4.1. Sparse Unstructured Training), p. 5 (4.4. 
 - **원문 대조:** Log-depth 공간에서 주입 잡음 N_t에 noise schedule γ(t)를 적용한 값과 예측 잡음의 차이에 L2 손실을 적용한다. N_t는 표준 정규분포, t는 U(0,1)에서 샘플링한다. ([PDF p. 5](https://arxiv.org/pdf/2409.09896#page=5), §4.4 Training Procedure).
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (4.4. Training Procedure).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 4 (4.1. Sparse Unstructured Training), p. 5 (4.4. 
 - **p. 4 / 4.1. Sparse Unstructured Training - extractive body cue:** Differently from traditional U-Net architectures, RIN does not assume any spatial structure in its input tokens X.
 - **p. 4 / 4.1. Sparse Unstructured Training - extractive body cue:** In GRIN, spatial structure is defined by geometric embeddings used as conditioning, and once incorporated each token is treated independently, which enables processing only parts ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (4.1. Sparse Unstructured Training), p. 5 (4.4. 
 - **p. 5 / 4.4. Training Procedure - extractive body cue:** At training time we discard pixels with missing depth information (i.e., djk = 0), resulting in a ˆV loc matrix with varying length N.
 - **p. 6 / 5.2. Implementation Details - extractive body cue:** The second stage used this same training strategy for an additional 80k steps, with
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, limitations, combination, local, global, conditioning, promote, training, unstructured, sparse, data, while, still, maintaining, dense, scene-level, information, objective, loss, calculated.
 - **Relevant PDF headings:** 2.3. Diffusion Models for Depth Estimation (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (4.1. Sparse Unstructured Training), p. 5 (4.4. 
 - **p. 9 / 6. Conclusion - extractive body cue:** Interestingly, these uncertainty maps also accurately detect failure cases of our model, such as the mirror on the bottom of the second column, due to ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 1. Zero-shot metric monocular depth estimation results on various indoor and outdoor datasets. Numbers in italics indicate results obtained by evaluating specific methods on ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Sparse Unstructured Training), p. 5 (4.4. Training Procedure), p. 5 (4.4. Training Procedure), p. 4 (4.1. Sparse Unstructured Training), objective p. 5 (4.4. Training Procedure), temporal p. 6 (5.2. Implementation Details), p. 6 (5.2. Implementation Details), p. 3 (3. Diffusion Preliminaries), p. 5 (4.5. Inference Procedure), p. 5 (4.3. GRIN Conditioning), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 8 / 4 Experiments - extractive body cue:** We present the results on the Colosseum benchmark in Fig.
 - **p. 14 / A Implementation Details - extractive body cue:** In both simulation and real-world experiments, we maintain fixed camera setups and viewpoints, with the view augmentation process described above applied consistently.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of representation learning paradigms for robot learning. (a) Learning predictive 2D representations [17] by forecasting future frames from the current observation to ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | 4, we report the average success rates across the five real-world tasks. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 | This leads to a noticeable improvement in downstream success rates, confirming the benefit of view diversity in supervision. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | Table 3: Ablations. Average success rates are reported over RLBench 18 tasks to evaluate the impact of different design choices. Results on COLOSSEUM. We ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | We compare the proposed method against various baselines across both benchmarks. | comparison identity and matched condition | p. 6 (4 Experiments) |
 | The results show that our method consistently outperforms prior method. | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | body limitation/failure cue | Additionally, when compared to the RVT baseline trained from scratch, DynaRend demonstrates significantly greater robustness to various types of environmental variations. | p. 8 (4 Experiments) |
 | body limitation/failure cue | In contrast, our method maintains robust performance, benefiting from the pretrained spatially grounded and semantically coherent representations. | p. 9 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 | The resulting point cloud is then encoded through an MLP to extract per-point features. | p. 4 (3 Methodology) |
 | (c) For finetuning, two networks serve as a triplane encoder and are trained with an action decoder on demonstration data. | p. 4 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 Experiments - extractive body cue:** Notably, on tasks involving distractor objects, RVT-2 struggles to distinguish between different unseen items, leading to frequent failure cases.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 9 / 4 Experiments - extractive body cue:** In contrast, our method maintains robust performance, benefiting from the pretrained spatially grounded and semantically coherent representations.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption), p. 6 (4 Experiments), p. 9 (4 Experiments), results p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

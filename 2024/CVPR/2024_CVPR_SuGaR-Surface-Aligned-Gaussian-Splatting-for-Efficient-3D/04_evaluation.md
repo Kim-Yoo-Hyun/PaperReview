@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 - **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Quantitative evaluation of rendering quality on the Mip-NeRF360 dataset [2].
 - **p. 8 / 5.4. Mesh Rendering Ablation - extractive body cue:** Ablation for different mesh extraction methods on the Mip-NeRF360 dataset [2] after applying our regularization term.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce a method that extracts accurate and editable meshes from 3D Gaussian Splatting representations within minutes on a single GPU. The meshes ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 | Then, we illustrate the benefits of using Gaussians aligned on the surface as a texturing tool for rendering meshes. | definition/direction/unit from same section | p. 8 (5.4. Mesh Rendering Ablation) |
 | Figure 1. We introduce a method that extracts accurate and editable meshes from 3D Gaussian Splatting representations within minutes on a single GPU. The ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 | Qualitative comparisons are provided in the supplementary material. | comparison identity and matched condition | p. 8 (5.4. Mesh Rendering Ablation) |
 | Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 2. Our algorithm can extract a highly detailed mesh from any 3D Gaussian Splatting scene [15] within minutes on a single GPU (top: ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 | body limitation/failure cue | Figure 3. Extracting a mesh from Gaussians. Without regular- ization, the Gaussians have no special arrangement after optimiza- tion, which makes extracting a mesh ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 | Then, we compute the density values di = d(p + tiv) from Eq. | p. 6 (4.2. Efficient Mesh Extraction) |
 | (10), we sample 3D points on a level set of the density computed from the Gaussians. | p. 6 (4.2. Efficient Mesh Extraction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** SuGaR does not come without limitations: Gaussians do tend to "cheat" on the geometry and depth by creating cavities to reproduce specular effects, instead of ...
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Real-Time Rendering of Real Scenes), 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 6. Sampling points on a level set for Poisson reconstruc- tion. Left: We sample points on the depth maps of the Gaussians and refine ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), metrics p. 7 (5.1. Implementation details), p. 8 (5.4. Mesh Rendering Ablation), p. 5 (Figure/Table caption), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 1 (Figure/Table caption), baselines p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 7 (5.2. Real-Time Rendering of Real Scenes), p. 8 (5.4. Mesh Rendering Ablation), p. 8 (5.4. Mesh Rendering Ablation), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

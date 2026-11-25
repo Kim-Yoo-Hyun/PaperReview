@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 - **p. 5 / 3.4. Geometry Diffusion Prior - extractive body cue:** The second column displays the normal map derived from the density field gradient and the corresponding optimized depth map.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3.4. Geometry Diffusion Prior), p. 4 (3.2. Problem formulation and overview), p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.3. Appearance Diffusion Prior), p. 5 (3.4. Geometry Diffusion Prior).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 - **p. 2 / 1. Introduction - extractive body cue:** Besides, they share the common limitation of neglecting the correlation between inpainted RGB images and inpainted depth maps, resulting in less pleasing geometry completion.
 - **p. 2 / 1. Introduction - extractive body cue:** We summarize our contributions as follows: (i) A diffusion prior guided approach for high-quality NeRF inpainting, achieved without the need for explicit supervision of inpainted ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** We implemented our NeRF inpainting model built upon SPIn-NeRF [17] and trained it on 4 NVIDIA V100 GPUs for 10, 000 iterations using the Adam ...
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** In addition, we implement an annealing timestep scheduling strategy [39], which allocates more training steps to lower values of t.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, latent, diffusion, model, employed, appearance, geometry, prior, stablediffusion-inpainting, guidance, Formally, represent, image, rendered, differentiable, generator, parameter, SDS, minimizes, density.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 4 (3.2. Problem formulation and overview), p. 4 (3
 - **p. 7 / 4.2. Results - extractive body cue:** Remove-NeRF SPIn-NeRF Input views GT (two novel views) Ours Masks Remove-NeRF SPIn-NeRF Input views GT (two novel views) Ours Masks Figure 5.
 - **p. 7 / 4.2. Results - extractive body cue:** Columns show the deviation from known ground-truth RGB images or depth maps of the scene (without the target object), based on the peak signal-to-noise ratio ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Problem formulation and overview), p. 4 (3.3. Appearance Diffusion Prior), p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 5 (3.4. Geometry Diffusion Prior), p. 5 (3.5. Multi-view Score Distillation), objective p. 5 (3.4. Geometry Diffusion Prior), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview), p. 5 (3.4. Geometry Diffusion Prior), temporal p. 3 (3.1. Preliminary), p. 4 (3.3. Appearance Diffusion Prior), p. 6 (4.1. Experimental Setup), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

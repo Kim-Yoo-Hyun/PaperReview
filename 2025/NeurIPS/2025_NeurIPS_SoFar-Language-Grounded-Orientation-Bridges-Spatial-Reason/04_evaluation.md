@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 - **p. 9 / 4 Experiments - extractive body cue:** The benchmark includes two tracks: position and orientation, covering tasks such as object counting, spatial relations, and objectfacing direction.
 - **p. 7 / 4 Experiments - extractive body cue:** 4.3 6-DoF Object Rearrangement Evaluation on Open6DOR V2 To evaluate 6-DoF object rearrangement capabilities, we extend the original Open6DOR benchmark [25], which primarily focuses on ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We introduce the concept of Semantic Orientation, which refers to natural language- grounded object orientations, such as the "cutting" direction of a knife ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | Figure 12: Long-horizon object manipulation experiment of our SOFAR. B.4 Long Horizon Object Manipulation Experiment Fig. 12 illustrates the execution performance of our model ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 | Figure 3: Visualization of OrienText300K data construction and validation results. In summary, we propose Semantic Orientation as a new representation that bridges spatial reasoning ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | SOFAR consistently outperforms other methods across both tracks, achieving over 18% improvement. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | We evaluate SOFAR on 6-DoF SpatialBench against several VLMs and comparable methods as baselines, as presented in Table 6. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Table 7: Zeroshot articulate object manipulation evaluation within the SAPIEN [123] simulator using PartNet-Mobility Dataset. Notably, while the baseline methods use distinct training and ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | body limitation/failure cue | To evaluate the robustness of PointSO under such conditions, we introduce three types of input perturbations: random rotations, partial single-sided observations, and Gaussian noise. | p. 7 (4 Experiments) |
 | body limitation/failure cue | Table 3: Semantic Orientation evaluation of robustness. Single-View: randomly select a camera viewpoint within the unit sphere and generate a single FoV viewpoint in ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 | To guide the VLM in generating such transformations from language instructions, we adopt a CoT reasoning process [119] that decomposes the reasoning into three ... | p. 5 (1 Introduction) |
 | Given the initial state ci and Si, the full 6-DoF transformation Pi is computed. | p. 6 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 Experiments - extractive body cue:** 5 Limitations & Conclusions One notable limitation for decoupled systems like SOFAR is that the execution may fail due to a sub-module error, as shown ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 3: Semantic Orientation evaluation of robustness. Single-View: randomly select a camera viewpoint within the unit sphere and generate a single FoV viewpoint in polar ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), metrics p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 22 (Figure/Table caption), results p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 3 (Figure/Table caption), p. 7 (4 Experiments), p. 22 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

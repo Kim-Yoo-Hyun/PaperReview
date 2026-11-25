@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 15 (B.2 COLLECTI
 - **p. 4 / 3 METHOD - extractive body cue:** Given (a) an example robot trajectory, we extract (b) gripper interaction markers, (c) temporal progress along the 2D end-effector waypoints, and (d) end-effector height.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 5 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 15 (B.2 COLLECTI
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** This is often reflected with the type of generalization exhibited in different conditioning mechanisms - for example, if the policy is conditioned on natural language ...
 - **p. 3 / 3 METHOD - extractive body cue:** During inference time, the user or a high-level planner is presented an initial image observation from the robot camera, and creates a rough 2D trajectory ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 15 (B.2 COLLECTI
 - **p. 15 / B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES - extractive body cue:** RT-Trajectory policies used for evaluation are trained with different random seeds and evaluated with the saved trajectory sketches as conditioning.
 - **p. 3 / 3 METHOD - extractive body cue:** During inference time, the user or a high-level planner is presented an initial image observation from the robot camera, and creates a rough 2D trajectory ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, three, basic, elements, constructing, trajectory, representation, format, Trajectories, Color, Grading, Interaction, Markers, then, train, transformer-based, control, policy, conditioned, sketches.
 - **Relevant PDF headings:** 3 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 3 (3 METHOD), p. 3 (3 METHOD), p. 15 (B.2 COLLECTI
 - **p. 8 / 3. What emergent capabilities are enabled by RT-Trajectory? - extractive body cue:** With little to moderate trajectory prompt engineering, we find that RT-Trajectory is able to successfully perform a variety of tasks requiring novel motion generalization and ...
 - **p. 15 / B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES - extractive body cue:** If all attempts fail, we just save the trajectory sketch from the last episode.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 METHOD), p. 3 (3 METHOD), p. 15 (B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), objective p. 5 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), temporal p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 15 (B.4 IMPLEMENTATION DETAILS FOR RT-1-Goal), p. 5 (3 METHOD), p. 15 (B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

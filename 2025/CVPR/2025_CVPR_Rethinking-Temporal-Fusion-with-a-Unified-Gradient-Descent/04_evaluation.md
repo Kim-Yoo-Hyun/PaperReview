@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 3 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Inspired by testtime adaptation [6, 39, 40], we introduce additional sceneadaptive network parameters St (Sec.
 - **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Ideally, this should handle dynamic object motion and camera pose estimation errors.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Motivation behind the proposed temporal fusion. (a): VisionOcc pipeline. (b): Proposed temporal cues, showing historical motion and geometric data enhancing current viewpoints, with ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | Figure 3. Update dynamics of gradient descent-based temporal fusion pipeline. f t denotes the (geometry, motion, voxel-level, scene-level) feature of the current frame. Ht-1 ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 3. Ablations on improving RNN-based voxel-level fusion. epochs using CBGS [34] with a learning rate of 2 × 10-4 and a global batch ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | Figure 4. Comparison of our GDFusion and SOLOFusion w.r.t. memory consumption. SOLOFusion boosts performance with longer sequences but increases inference memory, while GDFu- sion ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 1. Comparison of 3D semantic occupancy prediction performance on the Occ3D dataset, evaluated with mIoUD, mIoU, and IoU metrics. Relative improvements are highlighted ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 3. Ablations on improving RNN-based voxel-level fusion. epochs using CBGS [34] with a learning rate of 2 × 10-4 and a global batch ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -118,7 +107,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 - Numeric sentences retained from the body:
 - **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
 - **p. 6 / 5. Experiment - extractive body cue:** This dataset comprises 1,000 scenes in total, with 700 designated for 1510
-- **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Single-frame-sized historical states Ht-1 v , Ht-1 g , Ht-1 m , and Ht-1 s are stored in memory and updated frame-by-frame. information.
 - **p. 7 / Method - extractive body cue:** It includes 18 semantic categories: 17 object classes plus an empty class for unoccupied regions.
 - **p. 8 / 5.4. Wall-Clock Time - extractive body cue:** Each temporal fusion component consumes less than 6% of the total inference time (146.6ms), demonstrating the efficiency of GDFusion.
 
@@ -127,8 +115,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | Body cue type | Observed cue or missing regime | Anchor |
 |---|---|---|
 | body limitation/failure cue | Thus, we propose temporal geometry fusion to yield a more robust geometric prior, detailed in Sec. | p. 4 (3.2. Temporal Cue Analysis and Formulation) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -142,19 +128,10 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | The image and BEV augmentation strategies are the same as in the original BEVDet codebase [19]. | p. 7 (Method) |
 | We conduct a runtime analysis of key components in GDFusion. | p. 8 (5.4. Wall-Clock Time) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / 3.2. Temporal Cue Analysis and Formulation - extractive body cue:** Thus, we propose temporal geometry fusion to yield a more robust geometric prior, detailed in Sec.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiment), p. 6 (5. Experiment), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 3 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 4 (3.2. Temporal Cue Analysis and Formulation), p. 6 (Figure/Table caption), p. 3 (3.2. Temporal Cue Analysis and Formulation), baselines p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 
 | body cue at p. 10 | Moreover, although VLAS-Base falls behind LLaVA with ground-truth textual instructions on the SGQA benchmark, it still surpasses BLIP-2. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | These results indicate that the introduction of the speech modality does not degrade the performance of the foundation ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3 METHOD), p. 1 (1 INTRODUCTION), p. 3 (3 METHOD), p. 2 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), interface p. 3 (3 METHOD), p. 1 (1 INTRODUCTION), p. 3 (3 METHOD), p. 2 (1 INTRODUCTION), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

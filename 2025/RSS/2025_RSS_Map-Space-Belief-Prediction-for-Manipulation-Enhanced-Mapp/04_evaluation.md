@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 - **p. 13 / B. CNABU Implementation Details - extractive body cue:** Ultimately, we learn om = om (A, RobotOccupancy (04 (t.)), RobotOccupancy (a (te))) ‘We use network architectures Similar to Georgakis et al.
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** We perform four core experiments to evaluate our approach, First, we test in simulation to highlight our pipeline's improvements in map completeness and accuracy compared ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: From a prior map belie ou pipeline predicts « map belie resuling from a se of candidate pushes. I then weighs the information ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 | Fig. 2: From a prior map belie ou pipeline predicts « map belie resuling from a se of candidate pushes. I then weighs the ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Each CNABU implements a preprocessing step to encode actions and observations in a representation aligned to the ‘map grid. | definition/direction/unit from same section | p. 13 (B. CNABU Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 | Metric and semantic mloU compared to the ground truth imap at time ¢ are plotted in Fig. | comparison identity and matched condition | p. 7 (B. Simulation Experiments) |
 | Baseline Name / Use os VPP: Use cin Push Action Selection ‘Ours ar yes yes See IVC | comparison identity and matched condition | p. 14 (B. CNABU Implementation Details) |
 | Consider now a greedy clairvoyant oracle policy, which, at every time step, has access to all possible observations that could be taken and selects ... | comparison identity and matched condition | p. 14 (B. CNABU Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** Random Pash Every 5!" vs ys yes yes Random every 5 steps
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** Random Push Every 5", No Push CNABU / yes yes 0 yes Random every 5 Steps
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** Random View Random Push Every 5!" yes 20 yes Random every 5 steps
-- **p. 14 / B. CNABU Implementation Details - extractive body cue:** Random Pash Every 5!" vs ys yes yes Random every 5 steps
-- **p. 14 / B. CNABU Implementation Details - extractive body cue:** Random Push Every 5", No Push CNABU / yes yes 0 yes Random every 5 Steps
 
 ## Generalization and Failure Cases
 
@@ -138,8 +125,6 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 | body limitation/failure cue | ‘TABLE IE: Summary of features ofall considered base | p. 14 (B. CNABU Implementation Details) |
 | body limitation/failure cue | [11's pipeline does not update its belief after a push, it requires multiple subsequent observations to reconcile inconsistencies between the actual scene and the ... | p. 7 (B. Simulation Experiments) |
 | body limitation/failure cue | For added robustness in real-world scenarios, we augment the simulation <data with sat-and-pepper noise, random rotations and translations and add Gaussian noise to the ... | p. 14 (B. CNABU Implementation Details) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -154,14 +139,6 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 | Random Pash Every 5!" vs ys yes yes Random every 5 steps | p. 14 (B. CNABU Implementation Details) |
 | For the evaluation, most approaches compute an estimated information gain 10 determine the utility of a view. | p. 2 (A. Next Best Viewpoint Planning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / VI. LIMITATIONS - extractive body cue:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, ...
@@ -172,9 +149,8 @@ PDF body evaluation/result cue (p. 14 (B. CNABU Implementation Details), p. 8 (B
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** For added robustness in real-world scenarios, we augment the simulation <data with sat-and-pepper noise, random rotations and translations and add Gaussian noise to the depth ...
 
 - **Evidence anchors reviewed:** datasets p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 7 (A. Experimental Setup), p. 7 (B. Simulation Experiments), p. 13 (B. CNABU Implementation Details), p. 15 (B. CNABU Implementation Details), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), baselines p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (B. Simulation Experiments), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), results p. 14 (B. CNABU Implementation Details), p. 8 (B. Simulation Experiments), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (B. Simulation Experiments), p. 7 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

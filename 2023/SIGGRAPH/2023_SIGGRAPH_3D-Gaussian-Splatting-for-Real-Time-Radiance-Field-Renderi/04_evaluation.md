@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Note that for the NeRF-synthetic dataset, our method achieves high quality even with random initialization.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** The optimization procedure produces a reasonably compact, unstructured, and precise representation of the scene (1-5 million Gaussians for all scenes tested).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Our method achieves real-time rendering of radiance fields with quality that equals the previous method with the best quality [Barron et al. 2022], ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 | We start with the same input as previous NeRF-like methods, i.e., cameras calibrated with Structure-from-Motion (SfM) [Snavely et al. | definition/direction/unit from same section | p. 2 (1 INTRODUCTION) |
 | However, thanks to our 3D Gaussian representation, we can perform anisotropic splatting that respects visibility ordering - thanks to sorting and 𝛼blending - and ... | definition/direction/unit from same section | p. 2 (1 INTRODUCTION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 | Table 1. Quantitative evaluation of our method compared to previous work, computed over three datasets. Results marked with dagger † have been directly adopted ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Fig. 10. We train scenes with Gaussian anisotropy disabled and enabled. The use of anisotropic volumetric splats enables modelling of fine structures and has ... | comparison identity and matched condition | p. 11 (Figure/Table caption) |
 | 2022], but struggle to achieve the visual quality obtained by the current SOTA NeRF methods, i.e., Mip-NeRF360 [Barron et al. | comparison identity and matched condition | p. 2 (1 INTRODUCTION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (≥30 fps) ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** 2022], which requires up to 48 hours of training time.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** The fast - but lower-quality - radiance field methods can achieve interactive rendering times depending on the scene (10-15 frames per second), but fall short ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** 3D Gaussian Splatting for Real-Time Radiance Field Rendering BERNHARD KERBL∗, Inria, Université Côte d'Azur, France GEORGIOS KOPANAS∗, Inria, Université Côte d'Azur, France THOMAS LEIMKÜHLER, Max-Planck-Institut ...
-- **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (≥30 fps) ...
 
 ## Generalization and Failure Cases
 
@@ -137,8 +124,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 | body limitation/failure cue | Also in areas not well covered from training views, the random initialization method appears to have more floaters that cannot be removed by optimization. | p. 9 (2 RELATED WORK) |
 | body limitation/failure cue | 7.4 Limitations Our method is not without limitations. | p. 10 (2 RELATED WORK) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +132,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 | We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (≥30 ... | p. 1 (Body text (section boundary not confidently recovered)) |
 | 2022], which requires up to 48 hours of training time. | p. 2 (1 INTRODUCTION) |
 | The third and final element of our method is our real-time rendering solution that uses fast GPU sorting algorithms and is inspired by tile-based ... | p. 2 (1 INTRODUCTION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,9 +143,8 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTIO
 - **p. 10 / 2 RELATED WORK - extractive body cue:** 7.4 Limitations Our method is not without limitations.
 
 - **Evidence anchors reviewed:** datasets p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), metrics p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 14 (Figure/Table caption), p. 14 (Figure/Table caption), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), baselines p. 1 (1 INTRODUCTION), p. 5 (Figure/Table caption), p. 1 (Body text (section boundary not confidently recovered)), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), p. 2 (1 INTRODUCTION), results p. 1 (Figure/Table caption), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

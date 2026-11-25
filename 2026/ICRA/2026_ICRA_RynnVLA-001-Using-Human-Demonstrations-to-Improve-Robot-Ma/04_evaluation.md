@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** 1 2 3 4 5 256 x 256 Task ABC -> D 92.7 83.7 73.5 62.1 53.2 3.652 Raw Actions Prediction Task ABC -> D ...
 - **p. 12 / 5 EXPERIMENTS - extractive body cue:** Under normal conditions (Figure 5(a)), the robot successfully completes the task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: 1) Ego-Centric Video Generative Pretraining: An ego-centric Image-to-Video (I2V) model is trained on ego-centric human manipulation videos. This stage enables the model to ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 | 5, increasing the depth of action head is surprisingly detrimental to performance, causing the evaluation score to decrease substantially from 4.019 to 3.323. | definition/direction/unit from same section | p. 10 (5 EXPERIMENTS) |
 | Our model, RynnVLA-001, demonstrates substantially higher overall performance, outperforming both GR00T N1.5 and Pi0 across all three tasks. | definition/direction/unit from same section | p. 8 (5 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 | 2) RynnVLA-001-Chameleon: A stronger baseline initialized directly from the pretrained weights of the Chameleon Text-to-Image (T2I) model (Team, 2024), bypassing our video pretraining stage. | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | 5, predicting actions in the VAE's latent space outperforms the direct prediction of raw actions. | comparison identity and matched condition | p. 10 (5 EXPERIMENTS) |
 | Furthermore, our choice of 384 × 384 strikes a balance: 1) it maintains high reconstruction fidelity by using the resolution closer to the VQGAN's ... | comparison identity and matched condition | p. 10 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 | body limitation/failure cue | 2) The model makes more than five consecutive failed attempts to grasp a target object. | p. 8 (5 EXPERIMENTS) |
 | body limitation/failure cue | This degradation is attributed to the resolution mismatch with the VQGAN component, which is pretrained exclusively on 512 × 512 images. | p. 10 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 | All models are trained with reduced epochs for efficiency; scores are for relative comparison. | p. 10 (5 EXPERIMENTS) |
 | In this work, we propose to use a Variational Autoencoder (VAE) to compress action chunks into compact latent embeddings. | p. 10 (5 EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** At a lower resolution of 256 × 256, the VQGAN's reconstruction quality degrades, the VQGAN fails to generate high-fidelity reconstructions, resulting in imprecise visual tokens ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** This degradation is attributed to the resolution mismatch with the VQGAN component, which is pretrained exclusively on 512 × 512 images.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS), p. 7 (5 Experiments), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), metrics p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), baselines p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 12 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 10 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

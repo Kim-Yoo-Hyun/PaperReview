@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 - **p. 8 / 4.2. Experimental results - extractive body cue:** Results show that CRF refinement significantly improves pseudo-label quality in both datasets and settings.
 - **p. 9 / 4.4. CAL model analysis - extractive body cue:** Specifying C = 18 clusters (close to the number of annotated semantic groups in common datasets) yields the highest overall PQ.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Learning to Complete Anything in Lidar. Given a sparse Lidar point cloud, CAL (Complete Anything in Lidar) localizes, reconstructs, and, optionally, recognizes objects ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 | Table 10. Pseudo-label evaluation restricted to the areas in the voxel grid for which we have pseudo-labels. Analysis of the accuracy of pseudo-labels on ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | Figure 8. Qualitative comparison to zero-shot baselines on SemanticKITTI. Given a single Lidar scan (1st col.), we compare our method (CAL, 4th col.) to ... | definition/direction/unit from same section | p. 25 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 | Pseudo-labeling engine ablations, semantic oracle (SO). | comparison identity and matched condition | p. 8 (4.2. Experimental results) |
 | Given a single Lidar scan (1st col.), we compare CAL (4th col.) to zero-shot baselines (2nd and 3rd cols.) combining LiDiff (Nunes et al., ... | comparison identity and matched condition | p. 8 (4.2. Experimental results) |
 | Training Components All Thing Stuff SSC Bpc o Bfc o S Bs PQ†↑PQ↑ SQ RQ PQ SQ RQ PQ SQ RQ mIoU↑ Semantic oracle ... | comparison identity and matched condition | p. 9 (4.3. Pseudo-labeling engine analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 | body limitation/failure cue | Fully supervised baselines have a clear advantage over CAL as they train on closed-set, noise-free annotations with full scene coverage. | p. 7 (4.2. Experimental results) |
 | body limitation/failure cue | We observe no significant improvements between w = {1, 2} and a degradation in performance when increasing to w = 4 (10.97 PQ†) due ... | p. 8 (4.3. Pseudo-labeling engine analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 | The backbone consists of a sparse feature encoder (●) (Choy et al., 2019) followed by a dense 3D convolutional block (●). | p. 4 (3.2. Learning To Complete Objects) |
 | Further implementation details are provided in Appx. | p. 5 (3.2. Learning To Complete Objects) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5. Conclusion - extractive body cue:** We believe these are promising directions for future work.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (4.3. Pseudo-labeling engine analysis), p. 
 - **p. 8 / 4.3. Pseudo-labeling engine analysis - extractive body cue:** We observe no significant improvements between w = {1, 2} and a degradation in performance when increasing to w = 4 (10.97 PQ†) due to ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Experimental results), p. 7 (4.2. Experimental results), p. 8 (4.3. Pseudo-labeling engine analysis), metrics p. 23 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 9 (4.4. CAL model analysis), baselines p. 7 (4.2. Experimental results), p. 7 (4.2. Experimental results), p. 6 (4.1. Experimental Setup), p. 8 (4.2. Experimental results), p. 8 (4.2. Experimental results), p. 9 (4.3. Pseudo-labeling engine analysis), results p. 8 (4.3. Pseudo-labeling engine analysis), p. 7 (4.2. Experimental results), p. 8 (4.2. Experimental results), p. 9 (4.3. Pseudo-labeling engine analysis), p. 9 (4.4. CAL model analysis), p. 7 (4.2. Experimental results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (
 - **p. 6 / 5 Experiment - extractive body cue:** There are 1000 scenarios in the dataset, which are divided into 700, 150, and 150 scenes for training, validation, and testing, respectively.
 - **p. 6 / 5 Experiment - extractive body cue:** 5.1 Experimental Setup Dataset and Metrics nuScenes (Caesar et al.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Depth estimation results in Lift-splat detector and BEVDepth. Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, usually ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (
 | Figure 1: Depth estimation results in Lift-splat detector and BEVDepth. Dashed boxes highlight the regions that Lift-splat detector makes "relatively" accurate depth predictions in, ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Table 2: Evaluation of depth prediction on the nuScenes val set. DL denotes Depth Loss. All foreground points are taken for evaluation. 3.2 Making ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (
 | Figure 3: Compared to the Base Detector (left), the En- hanced Detector (right) retains more structure information during feature unprojection and thus can provide ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Table 3: Classification on the nuScenes val set. We use the classification heatmap for evaluation, th denotes the thresh- old of heatmap. Enhanced Detector ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Table 8: Comparison on the nuScenes test set. L denotes LiDAR and C denotes camera. BEVDepth uses pretrained VovNet as backbone. the resolution of ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (
 | body limitation/failure cue | Such a phenomenon implies that the model without depth loss has a higher risk of over-fitting, and thus it may also be sensitive to ... | p. 4 (2 Related Work) |
 | body limitation/failure cue | Figure 2: Testing detectors' robustness to image sizes. We use 256 × 704 for training. mAP on nuScenes are reported. best-predicted pixel for each ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (
 | We use AdamW (Loshchilov and Hutter 2017) as an optimizer with a learning rate set to 2e-4 and batch size set to 64. | p. 6 (5 Experiment) |
 | When compared to other methods, BEVDepth is trained for 20 epochs with CBGS. | p. 6 (5 Experiment) |
 | Meanwhile, we innovatively propose to encode camera intrinsics and extrinsics into a depth learning module so that the detector is robust to various camera ... | p. 1 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -156,6 +135,5 @@ PDF body evaluation/result cue (p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Testing detectors' robustness to image sizes. We use 256 × 704 for training. mAP on nuScenes are reported. best-predicted pixel for each object. ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 Experiment), p. 6 (5 Experiment), metrics p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (5 Experiment), p. 6 (5 Experiment), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

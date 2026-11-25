@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 - **p. 5 / IV. RESULTS - extractive body cue:** To evaluate the merits of our IK parametrization for constrained planning, we consider a task where the two arms must move an object around a ...
 - **p. 5 / IV. RESULTS - extractive body cue:** Constrained Trajectory Optimization.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
@@ -70,21 +68,12 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 | Paths marked with an asterisk were not collision-free. | definition/direction/unit from same section | p. 5 (IV. RESULTS) |
 | And in Figure 4 (c), we visualize an IRIS region that allows the grasp distance to vary. | definition/direction/unit from same section | p. 6 (IV. RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | We do not compare to any GCS baseline without IK, as the constraint manifold is inherently nonconvex; IK-GCS is the first proposal for extending ... | comparison identity and matched condition | p. 5 (IV. RESULTS) |
 | We compare these parametrized planners with constrained planning baselines. | comparison identity and matched condition | p. 5 (IV. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -112,8 +101,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 | body limitation/failure cue | (c) A region that represents varying grasp distances, in addition to collision-free configurations in the shelf (not shown). | p. 6 (IV. RESULTS) |
 | body limitation/failure cue | Fig. 4: Robot configurations sampled from various IRIS regions. average path length and planning time. We set a maximum planning time of 10 minutes ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -126,14 +113,6 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 | Overall, the PRM methods have the shortest online runtimes. | p. 6 (IV. RESULTS) |
 | IK-BiRRT never timed out; the longest plan took 81.17 seconds to compute. | p. 6 (IV. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Hardware setup for our experiments. The two arms must work together to move an objects between the shelves, avoiding collisions and respecting the ...
@@ -143,6 +122,5 @@ PDF body evaluation/result cue (p. 5 (IV. RESULTS), p. 6 (IV. RESULTS)): AtlasBi
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Robot configurations sampled from various IRIS regions. average path length and planning time. We set a maximum planning time of 10 minutes for ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), metrics p. 6 (IV. RESULTS), p. 1 (Figure/Table caption), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), baselines p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), results p. 5 (IV. RESULTS), p. 6 (IV. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

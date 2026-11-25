@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 4 (3 Methodology), p. 2
 | body cue at p. 8 | One limitation is that our current setup is tested in the controlled lab settings, it will likely fail ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | 4.2 Experiment Results Performance comparison to baseline approaches One inherent limitation of the student-teacher IL framework is to ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Methodology), p. 3 (3 Methodology), p. 8 (3 Methodology), p. 4 (3 Methodology). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), interface p. 4 (3 Methodology), p. 3 (3 Methodology), p. 8 (3 Methodology), p. 4 (3 Methodology), objective p. 3 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 8 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

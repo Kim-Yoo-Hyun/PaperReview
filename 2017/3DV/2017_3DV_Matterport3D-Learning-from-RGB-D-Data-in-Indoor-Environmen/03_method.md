@@ -55,7 +55,6 @@ PDF body method statement (p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Sem
 - **p. 1 / 1. Introduction - extractive body cue:** Although there has been impressive research progress on this topic, a significant limitation is the availability suitable RGB-D datasets from which models can be trained.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 3 (3.3. Properties of the Dataset), p. 5 (4.1. Keypoint Matching), p. 6 (4.2. View Overlap Prediction), p. 6 (4.2. View Overlap Prediction), p. 7 (4.3. Surface Normal Estimation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Sem
 - **p. 2 / 1. Introduction - extractive body cue:** The precise global alignment over building scale allows training for state-of-the-art keypoint descriptors that can robustly match keypoints from drastically varying camera views.
 - **p. 2 / 1. Introduction - extractive body cue:** For each of these tasks, we provide baseline results using variants of existing state-of-the-art algorithms demonstrating the benefits of the Matterport3D data; we hope that ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Sem
 - **p. 8 / 4.4. Region-Type Classification - extractive body cue:** We then train a convolutional neural network (ResNet-50 [18]) to classify each input image to predict the region type.
 - **p. 1 / 1. Introduction - extractive body cue:** As with other computer vision tasks, the performance of data-driven models exceeds that of hand-tuned models and depends directly on the quantity and quality of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, fully, convolutional, neural, network, consisting, encoder, shares, same, architecture, VGG-16, beginning, till, first, connected, layer, purely, symmetric, decoder, object.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Sem
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 11: Examples of surface normal estimation. We show results of images from NYUv2 testing set. The results from the model fine-tuned on Matterport3D (SUNCG-MP) ...
 - **p. 20 / Figure/Table caption - extractive body cue:** Figure 21: Surface Normal Estimation: Comparison of multiple training schema. We compare the model pretrained with different datasets on the NYUv2 testing set. The 1st ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.3. Surface Normal Estimation), p. 8 (4.5. Semantic Voxel Labeling), p. 7 (4.3. Surface Normal Estimation), p. 7 (4.3. Surface Normal Estimation), p. 5 (4.1. Keypoint Matching), p. 6 (4.3. Surface Normal Estimation), objective p. 3 (3.3. Properties of the Dataset), p. 5 (4.1. Keypoint Matching), p. 6 (4.2. View Overlap Prediction), p. 6 (4.2. View Overlap Prediction), p. 1 (1. Introduction), temporal p. 2 (3.1. Data Acquisition Process), p. 3 (3.2. Semantic Annotation), p. 3 (3.3. Properties of the Dataset), p. 4 (3.3. Properties of the Dataset), p. 5 (4.2. View Overlap Prediction), p. 5 (4.2. View Overlap Prediction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

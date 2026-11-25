@@ -58,7 +58,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 6 (3.1 BACKGROUND), p. 2 (1
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We then convert it into a neural operator by treating the state-dependent parameters as input features, and relaxing the state-independent coefficients into optimizable weights.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (3.1 BACKGROUND), p. 3 (1 INTRODUCTION), p. 4 (3.1 BACKGROUND), p. 4 (3.1 BACKGROUND), p. 5 (3.1 BACKGROUND), p. 5 (3.1 BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 6 (3.1 BACKGROUND), p. 2 (1
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Their actions, including poses, motions, or control commands, are usually represented as values associated with all joints.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Additionally, we show our network achieving state-of-the-art results in human hand pose estimation from images, where the articulated actor is no longer a robot, highlighting ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 6 (3.1 BACKGROUND), p. 2 (1
 - **p. 6 / 5 EXPERIMENTS - extractive body cue:** For model hyperparameters and training settings, please refer to Sections C.1 and D.1 of the supplementary material.
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** Refer to Sections C.2 and D.2 of the supplementary for details on training, model parameter count control, and runtime comparisons.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Other, methods, apply, Cartesian-space, loss, functions, after, computing, forward, kinematics, network, outputs, Pavllo, Jiang, Liu, approaches, alter, architecture, thus, orthogonal.
 - **Relevant PDF headings:** B ADDITIONAL DETAILS ON NETWORK ARCHITECTURE (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 3 (1 INTRODUCTION), p. 6 (3.1 BACKGROUND), p. 2 (1
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Our method replaces these with the Rodrigues Network, which takes the current observation, denoising timestep, and a noisy action as inputs and predicts the corresponding ...
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** With this neural operator as a key component, we build the Rodrigues Network with additional layer designs, resulting in a powerful and embodiment-aware network architecture ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 INTRODUCTION), p. 6 (3.1 BACKGROUND), p. 2 (1 INTRODUCTION), p. 6 (3.1 BACKGROUND), p. 1 (ABSTRACT), p. 1 (ABSTRACT), objective p. 3 (3.1 BACKGROUND), p. 3 (1 INTRODUCTION), p. 4 (3.1 BACKGROUND), p. 4 (3.1 BACKGROUND), p. 5 (3.1 BACKGROUND), p. 2 (1 INTRODUCTION), temporal p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

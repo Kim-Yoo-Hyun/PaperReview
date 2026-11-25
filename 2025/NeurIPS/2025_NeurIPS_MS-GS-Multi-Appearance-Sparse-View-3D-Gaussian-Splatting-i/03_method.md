@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** Formally, the feature map of the training view FT is transformed to F ˚ V , which is computed using cosine distance loss with FV ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 5 / 3 Method - extractive body cue:** (4) 3.2 Multi-view geometry-guided supervisions Modeling multi-appearance scenes under sparse-view constraints is especially difficult: view-specific lighting and weather variations demand more observations to disentangle appearance ...
 - **p. 4 / 3 Method - extractive body cue:** Therefore, we seek to densify the initial sparse point cloud based on monocular depth estimation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** Formally, the feature map of the training view FT is transformed to F ˚ V , which is computed using cosine distance loss with FV ...
 - **p. 9 / 4 Experiments - extractive body cue:** Furthermore, our design is lightweight, requiring >3× less GPU time for training over Wild-GS and rendering at 300+ FPS.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** improve, robustness, sparse-view, synthesis, multi-appearance, modeling, MS-GS, consists, parts, Semantic, Depth, Alignment, first, constructs, dense, point, cloud, expanding, SfM, points.
 - **Relevant PDF headings:** 3 Method (p. 4); A.4.2 Dense init. for other in-the-wild methods (p. 18); A.5 Semantic alignment algorithm (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p.
 - **p. 17 / Figure/Table caption - extractive body cue:** Figure 10: As MS-GS favors more accurate local alignment, areas without dense initialization can introduce artifacts in (a) and (b). Specular highlights can be smoothed ...
 - **p. 8 / 4 Experiments - extractive body cue:** All proposed components are complementary, and the best results are achieved when combined.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method), p. 17 (A.3 Implementation details), objective p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), temporal p. 4 (3 Method), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 3 (1 Introduction), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

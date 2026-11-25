@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.3. Quantization of Language Features), p. 3 (
 - **p. 6 / Method - extractive body cue:** Quantitative results of ablation experiments. optimizes the scene's geometry and appearance with the same RGB loss following 3D Gaussian Splatting and enables adaptive density control ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Language Embedded 3D Gaussians), p. 3 (3. Method), p. 4 (3.3. Quantization of Language Features), p. 4 (3.3. Quantization of Language Features), p. 5 (3.4. Language Embedded 3D Gaussians), p. 6 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.3. Quantization of Language Features), p. 3 (
 - **p. 5 / 3.4. Language Embedded 3D Gaussians - extractive body cue:** To optimize the semantic features of the 3D Gaussians and the MLP decoder, we apply the cross-entropy loss: \ m ath c al {L}_{\text {CE}} ...
 - **p. 4 / 3.3. Quantization of Language Features - extractive body cue:** The result for each image after this quantization procedure is a semantic indices map, denoted as M ∈RH×W ×1.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (3.3. Quantization of Language Features), p. 3 (
 - **p. 6 / 5.1. Basic Setups - extractive body cue:** Additionally, model efficiency is evaluated based on CPU and GPU memory usage during training, as well as data storage requirements and training duration.
 - **p. 5 / 3.4. Language Embedded 3D Gaussians - extractive body cue:** During training process, a softmax operation is applied to the decoder's output, yielding the language feature index distribution ˆ M ∈RH×W ×N, where H and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** dedicated, quantization, scheme, effectively, compress, language, features, extracted, multiple, viewpoints, resulting, more, efficient, compact, representation, scene-aware, first, extract, pixel-level, dense.
 - **Relevant PDF headings:** 3. Method (p. 3); Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 3 (3.3. Quantization of Language Features), p. 3 (
 - **p. 8 / 6. Conclusion - extractive body cue:** Although DINO features improve object boundary detection, they fall short in pinpointing fine-grained object geometries at high resolutions when using CLIP-derived semantics.
 - **p. 6 / 5.2. Comparisons - extractive body cue:** Specifically, DFF [22] fails to identify "asphalt ground" in scene "bicycle" and "flower" in scene "garden".
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.3. Quantization of Language Features), p. 3 (3.2. Dense Language Feature Extraction), p. 5 (3.4. Language Embedded 3D Gaussians), p. 4 (3.4. Language Embedded 3D Gaussians), p. 5 (3.4. Language Embedded 3D Gaussians), p. 4 (3.3. Quantization of Language Features), objective p. 4 (3.3. Quantization of Language Features), p. 5 (3.4. Language Embedded 3D Gaussians), p. 5 (3.4. Language Embedded 3D Gaussians), p. 3 (3. Method), p. 4 (3.3. Quantization of Language Features), p. 6 (Method), temporal p. 6 (Method), p. 1 (Abstract), p. 1 (Abstract), p. 3 (3. Method), p. 3 (3.3. Quantization of Language Features), p. 4 (3.4. Language Embedded 3D Gaussians).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

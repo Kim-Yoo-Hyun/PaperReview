@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 - **p. 17 / 8. Algorithm performance and other issues - extractive body cue:** Simulation studies using both deterministic and noisy reinforcement confirm this behavior.
 - **p. 17 / 8. Algorithm performance and other issues - extractive body cue:** Dayan's simulation results seem to suggest that use of such a reinforcement baseline offers 21
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 | All quantities are assumed to satisfy the same conditions required for the REINFORCE algorithm, where, in particular, for each i and j, the reinforcement ... | definition/direction/unit from same section | p. 9 (5. Episodic REINFORCE algorithms) |
 | Then 01n g _ y - # &z 02 where 02 is the variance of the distribution. | definition/direction/unit from same section | p. 11 (6. REINFORCE with multiparameter distributions) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 | For further discussion of the role of the reinforcement baseline, see below. &2. | comparison identity and matched condition | p. 16 (8. Algorithm performance and other issues) |
 | In general, a reasonable conjecture consistent with what is known analytically about simple REINFORCE algorithms like LR-~ and what has been found in simulations ... | comparison identity and matched condition | p. 16 (8. Algorithm performance and other issues) |
 | Dayan's simulation results seem to suggest that use of such a reinforcement baseline offers 21 | comparison identity and matched condition | p. 17 (8. Algorithm performance and other issues) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 | body limitation/failure cue | OWij gi OWij Although this fails to be defined when gi = 0, it will still be the case that Awij is welldefined for ... | p. 22 (1 Og i) |
 | body limitation/failure cue | Then E{Awij I W, x i} = Z E{Awijl W, x i, Yi = ~} Pr{yi = ~ I W, x i} ~Y~ --- ... | p. 22 (1 Og i) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 | What is noteworthy about this algorithm is that it has a plausible on-line implementation using a single accumulator for each parameter w/j in the ... | p. 9 (5. Episodic REINFORCE algorithms) |
 | A unit determining its output according to such a distribution would first compute values of/z and a determinisfically and then draw its output from ... | p. 10 (6. REINFORCE with multiparameter distributions) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 15 / 8. Algorithm performance and other issues - extractive body cue:** 8.L Convergence properties A major limitation of the analysis performed here is that it does not immediately lead to prediction of the asymptotic properties of ...
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 17 (8. Algorithm performance and other issues
 - **p. 22 / 1 Og i - extractive body cue:** Then E{Awij I W, x i} = Z E{Awijl W, x i, Yi = ~} Pr{yi = ~ I W, x i} ~Y~ --- ~i ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 15 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), metrics p. 10 (6. REINFORCE with multiparameter distributions), p. 17 (8. Algorithm performance and other issues), p. 10 (6. REINFORCE with multiparameter distributions), p. 14 (7.2. Backpropagating through random number generators), p. 16 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), baselines p. 15 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 16 (8. Algorithm performance and other issues), p. 16 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), results p. 17 (8. Algorithm performance and other issues), p. 15 (8. Algorithm performance and other issues), p. 18 (8. Algorithm performance and other issues), p. 17 (8. Algorithm performance and other issues), p. 9 (5. Episodic REINFORCE algorithms), p. 11 (7. Compatibility with backpropagation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

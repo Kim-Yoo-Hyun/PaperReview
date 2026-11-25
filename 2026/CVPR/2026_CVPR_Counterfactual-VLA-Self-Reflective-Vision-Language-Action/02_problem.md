@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 3 (3.1. Self-Reflectiv
 | body cue at p. 5 | 2) Safety Characteristics: Collision Rate measures the proportion of predicted trajectories that collide with other road users' trajectories ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | Model ADE↓ Min (Avg) FDE↓ Min (Avg) Corner Dist.↓ Collision↓ Off-road↓ IOU↑ init→edited Output Len. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (3. Method), p. 1 (1. Introduction), p. 4 (3.3. Rollout-Filter-Label Counterfactual Pipeline), p. 2 (1. Introduction), objective p. 5 (3.4. Implementation Details), p. 5 (3.4. Implementation Details), p. 3 (3.1. Self-Reflective Counterfactual Reasoning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

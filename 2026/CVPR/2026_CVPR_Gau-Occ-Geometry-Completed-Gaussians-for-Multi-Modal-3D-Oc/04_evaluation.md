@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** IoU↑ mIoU↑ 1 P DS + RS 41.5 29.6 2 PD(P) DS + RS 43.1 31.9 3 P′ RS 43.9 32.4 4 P′ DS + ...
 - **p. 7 / 4.4. Ablation Study - extractive body cue:** This approach balances structural concentration with broad scene coverage, enabling better reconstruction of far-range and easily overlooked object, such as drivable surfaces and cars.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Overview of Gau-Occ. Sparse LiDAR scans are first completed by a pretrained LiDAR Completion Diffuser (LCD) to recover occluded geometry. The completed points ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 | On KITTI-360, under challenging singlecamera + LiDAR setting, Gau-Occ maps both large layouts and small instances accurately, demonstrating robustness to sparse viewpoints and effective ... | definition/direction/unit from same section | p. 6 (4.3. Qualitative Comparison) |
 | On Point Cloud Completion and Gaussian Initialization. | definition/direction/unit from same section | p. 7 (4.4. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 | Across modalities, LiDARonly approaches generally outperform camera-only methods due to geometric cues, and multi-modal systems further improve performance. | comparison identity and matched condition | p. 5 (4.2. Quantitative Results) |
 | Compared to diffusionbased alternatives such as LiDPM [32] (omitted for brevity), our lightweight pre-trained module provides superior geometric priors. | comparison identity and matched condition | p. 7 (4.4. Ablation Study) |
 | Furthermore, the hybrid initialization strategy combining DS (density-based selection) and RS (random sampling) consistently outperforms the use of vanilla RS alone. | comparison identity and matched condition | p. 7 (4.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 | body limitation/failure cue | The full GAF configuration (Row 4) achieves optimal results, validating the necessity of both geometry-guided sampling and refinement in building a robust multi-modal representation. | p. 8 (4.4. Ablation Study) |
 | body limitation/failure cue | Replacing GGS with geometry-agnostic sampling (Row 2) degrades long-range feature association, underscoring the importance of LiDARconditioned offsets in maintaining spatial and semantic conFigure 8. | p. 8 (4.4. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 | 원문 대조: Point-cloud feature와 image feature를 concatenate한 뒤 2-layer FFN이 Gaussian의 position offset, scale, rotation, semantic attribute를 갱신한다. Position은 기존 μ_i에 예측 offset을 더하고, refined Gaussian을 splat해 occupancy를 예측한다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=5), §3.4 Gaussian Anchor Fusion, Eq. (17)) | [PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=5), §3.4 Gaussian Anchor Fusion, Eq. (17) |
 | 3, instead of applying another attention block, we aggregate them via a geometry-aware VLAD-style [17] resampler using codewords {Cm}M m=1 that act as learnable ... | p. 5 (3.4. Gaussian Anchor Fusion (GAF)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.2. Quantitative Results - extractive body cue:** Gau-Occ also achieves clear gains on safety-critical classes such as bus, car, bicycle, and motorcycle, benefiting from precise Geo-VLAD resampling and geometry-aware FiLM modulation that ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 5 (4.2. Quantitative Results), p. 5 (4.2. Qua
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Replacing GGS with geometry-agnostic sampling (Row 2) degrades long-range feature association, underscoring the importance of LiDARconditioned offsets in maintaining spatial and semantic conFigure 8.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets and Metrics), p. 6 (4.2. Quantitative Results), p. 7 (4.3. Qualitative Comparison), p. 8 (4.4. Ablation Study), p. 5 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), metrics p. 7 (4.4. Ablation Study), p. 5 (4.1. Datasets and Metrics), p. 5 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), baselines p. 6 (4.2. Quantitative Results), p. 6 (4.3. Qualitative Comparison), p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study), p. 7 (4.4. Ablation Study), results p. 5 (4.2. Quantitative Results), p. 5 (4.2. Quantitative Results), p. 8 (4.4. Ablation Study), p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.4. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

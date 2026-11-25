@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 - **p. 9 / 4 Experiments - extractive body cue:** We hypothesize that this decline is due to conflicts in the parameter space between robotic actions and reasoning/understanding.
 - **p. 9 / 4 Experiments - extractive body cue:** When Stage 2 was excluded, the model's robotic control performance in open-world scenarios dropped to 23% under the same number of training steps.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our proposed ChatVLA-2 model enables generalized open-world embodied reasoning and reasoning following abilities. We designed two tasks-a math matching game and a toy ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 | We first examine the in-domain performance. | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | Figure 2: Model architecture. Left: A reasoning-following enhancement module is incorporated to ensure that the VLA model adheres to logical reasoning when performing actions. ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 | Specifically, using the exact same training configuration, we compare the baseline models that do not incorporate MoE. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Ablation study on two-stage training. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Table 6: Ablation study on reasoning-following enhancement module. | comparison identity and matched condition | p. 15 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 | body limitation/failure cue | Similarly, in manipulation tasks, ChatVLA-2 does not significantly outperform models like π0 and DexVLA, which already exhibit near-perfect performance. | p. 8 (4 Experiments) |
 | body limitation/failure cue | Furthermore, we find that increasing the number of parameters to 7B does not alleviate these conflicts. | p. 9 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 | The image encoders project the robot's visual observations into the same embedding space as the language tokens. | p. 4 (3 Methodology) |
 | On the board is 18+16=34… Pick 34 from right 1 Step Math Matching Game Franka Setup Toy Placement Instruction: Pick the [obj] and place ... | p. 7 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 Experiments - extractive body cue:** Upon investigating the cause of the failure, we discovered that for unseen mathematical equations, both dense models fail completely.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9
 - **p. 9 / 4 Experiments - extractive body cue:** Furthermore, we find that increasing the number of parameters to 7B does not alleviate these conflicts.
 
 - **Evidence anchors reviewed:** datasets p. 15 (B.2 Data details), p. 15 (B.2 Data details), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 6 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 15 (Figure/Table caption), results p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

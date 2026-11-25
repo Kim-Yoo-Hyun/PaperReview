@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 - **p. 3 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** The training loss function is: \ma t hcal {L}(\epsilo n _{ \ thet a }) = \mathbb {E}_{t, x_0, \epsilon } [{// \epsilon _{\theta } ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.2. Model Architecture of SeaLion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 - **p. 5 / 3.2. Model Architecture of SeaLion - extractive body cue:** The global encoder ϕz consists of PVConv blocks, set abstraction layers, a max pooling layer, and a multi-layer perceptron.
 - **p. 3 / 3. Methodology - extractive body cue:** Finally, we discuss the limitation of current metrics for evaluating generated labeled point clouds and propose novel metrics based on part-aware Chamfer distance (p-CD).
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 - **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** Compared to the traditional twostep method, which first generates unlabeled point clouds and then assigns pseudo segmentation labels using a pretrained segmentation model, our approach ...
 - **p. 4 / 3.1. Semantic Part-Aware Latent Point Diffusion - extractive body cue:** As illustrated in Figure 2 (b), the inference process consists of three steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Inspired, insight, DDPMs, serve, powerful, representation, learners, discriminative, tasks, like, segmentation, semantic, part-aware, latent, point, diffusion, technique, generating, labeled, cloud.
 - **Relevant PDF headings:** 3. Methodology (p. 3); 3.2. Model Architecture of SeaLion (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion
 - **p. 7 / 4.2. Experimental Results - extractive body cue:** Note that certain data is missing because DiffFacto [23] only provides pretrained models for airplane, car, chair, and lamp categories, while Lion [37] only releases ...
 - **p. 5 / 3.4. Evaluation Metrics - extractive body cue:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion), p. 5 (3.2. Model Architecture of SeaLion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3. Methodology), p. 5 (3.3. Part-aware 3D Shape Edition Tool), objective p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), temporal p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 5 (3.3. Part-aware 3D Shape Edition Tool), p. 6 (4.2. Experimental Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

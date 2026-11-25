@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 7 (3. A bed with a striped 
 - **p. 1 / 1 Introduction - extractive body cue:** Recent progress in Large Language Models (LLMs) [10,11,83] has markedly promoted the alignment between vision and language [3,59,75] utilizing billion-scale vision-language datasets [79,107].
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (1 Introduction), p. 7 (3. A bed with a striped comforter. (0.83)), p. 7 (3. A bed with a striped comforter. (0.83)), p. 8 (3. A bed with a striped comforter. (0.83)), p. 8 (3. A bed with a striped comforter. (0.83)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 7 (3. A bed with a striped 
 - **p. 7 / 3. A bed with a striped comforter. (0.83) - extractive body cue:** 4.1 Object-level Grounding Given a 3D scene point cloud S, we use an off-the-shelf 3D object segmentation model to decompose it into a bag of ...
 - **p. 8 / 3. A bed with a striped comforter. (0.83) - extractive body cue:** We use contrastive alignment at three levels Lobj, Lscene, and Lref and a masked language modeling objective LMLM for model learning. object features tf O ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 7 (3. A bed with a striped 
 - **p. 1 / Body text (section not recovered) - extractive body cue:** We demonstrate that this scaling allows for a unified pre-training framework, Grounded Pretraining for Scenes (GPS), for 3D-VL learning.
 - **p. 14 / 5 Experiments - extractive body cue:** When removing the object-level alignment objective, we learn the object point cloud encoder with the referral-object-level alignment and without pre-training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** GPS, transformer-based, model, trained, multi-level, scenetext, alignment, achieves, state-of-the-art, existing, D-VL, grounding, question-answering, benchmarks, pre-training, SceneVerse, Grounded, Scenes, section, introduce.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 7 (3. A bed with a striped 
 - **p. 12 / 5 Experiments - extractive body cue:** We pre-train GPS on SceneVerse and fine-tune the model on the 3D-QA dataset to compare with state-of-the-art models. ‚ In the OV-Seg task, as GPS ...
 - **p. 13 / 5 Experiments - extractive body cue:** We conduct ablation studies over the amount of data used while pre-training GPS.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 7 (3. A bed with a striped comforter. (0.83)), p. 8 (3. A bed with a striped comforter. (0.83)), p. 8 (3. A bed with a striped comforter. (0.83)), p. 7 (3. A bed with a striped comforter. (0.83)), p. 3 (1 Introduction), objective p. 3 (1 Introduction), p. 7 (3. A bed with a striped comforter. (0.83)), p. 7 (3. A bed with a striped comforter. (0.83)), p. 8 (3. A bed with a striped comforter. (0.83)), p. 1 (1 Introduction), temporal p. 14 (5 Experiments), p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 3 (2 Related Work), p. 3 (1 Introduction), p. 5 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

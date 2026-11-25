@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 - **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** In the end we execute the most confident grasp that is kinematically reachable and where the robot does not collide with the scene [38].
 - **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** Training on a small grasp datasets with 110 objects from 5 categories [11] is not sufficient for out-of-category generalization irrespective of the method.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Contact-GraspNet efficiently predicts diverse and stable grasps in cluttered scenes while avoiding collisions. space of possible grasps to planar grasping, where grasps are ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 | Fig. 1. Contact-GraspNet efficiently predicts diverse and stable grasps in cluttered scenes while avoiding collisions. space of possible grasps to planar grasping, where grasps ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2. Training Data Pipeline. We place object meshes with dense grasp annotations from the ACRONYM dataset [32] at random stable poses in scenes. ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 | Fig. 3. Our grasp representation: c depicts an observed contact point. a and b constitute the 3-DoF rotation, w is the predicted grasp width, ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Ablations Optimization Targets: In Fig. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTAL EVALUATION) |
 | Fig. 5. Loss Ablations: Without weighted binning in the grasp width loss lwidth both, success rate and coverage decrease. The ladd-s loss leads to ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 | body limitation/failure cue | However, grasping in only one or two trials is crucial in cluttered scenes (e.g. in households) with large, densely packed objects where collisions should ... | p. 5 (IV. EXPERIMENTAL EVALUATION) |
 | body limitation/failure cue | In the end we execute the most confident grasp that is kinematically reachable and where the robot does not collide with the scene [38]. | p. 5 (IV. EXPERIMENTAL EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 | Furthermore, our method strongly improves the grasp success at first trial and thereby reduces the number of re-grasps. | p. 6 (IV. EXPERIMENTAL EVALUATION) |
 | Here, successful grasp contacts are still found on the driller despite severe under-segmentation. limit ourselves to a maximum of two grasp trials per object ... | p. 6 (IV. EXPERIMENTAL EVALUATION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. CONCLUSIONS - extractive body cue:** Gripper collisions are effectively avoided by considering them during training and by predicting grasps directly in scenes.
@@ -161,9 +140,8 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EX
 - **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** In the end we execute the most confident grasp that is kinematically reachable and where the robot does not collide with the scene [38].
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), metrics p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 3 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), results p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 3 (Problem Formulation), p. 3 (Problem Formula
 | body cue at p. 3 | If even one skill fails, then the entire action sequence fails. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | For instance, a robot cannot move toward a blue jacket if it cannot identify a 14693 | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 7 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), p. 7 (Problem Formulation), p. 3 (Problem Formulation), interface p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 6 (Problem Formulation), objective p. 3 (Problem Formulation), p. 3 (Problem Formulation), p. 5 (Problem Formulation), p. 5 (Problem Formulation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

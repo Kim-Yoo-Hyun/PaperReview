@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 - **p. 18 / B.2 REAL-WORLD EVALUATIONS - extractive body cue:** As observed in the table, the tracking results achieved by our method can be well transferred to the real-world robot, helping us achieve obviously better ...
 - **p. 24 / C ADDITIONAL EXPERIMENTAL DETAILS - extractive body cue:** For our real-world test on trajectories from the GRAB dataset, we summarize the result in Table 14.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: DexTrack learns a generalizable neural tracking controller for dexterous manipulation from human references. It generates hand action commands from kinematic references, ensuring close ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 | Success rates are measured under three thresholds and compared with the best baseline. | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 | 0.0 0.2 0.4 0.6 0.8 1.0 Proportion of Total Demonstrations Used 60 65 70 75 Success Rate (%) 57.64 59.61 62.07 67.0 72.91 74.38 ... | definition/direction/unit from same section | p. 9 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 | We compare our approach to strong baselines, showing its superiority. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | On average, our method improves the tracking success rate by over 10% compared to the best prior methods. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | We show the real-world effectiveness of our method and the superiority over best-performing baselines (Figure 4,Table 2). | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -143,8 +132,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 | body limitation/failure cue | As shown in Figure 11b, the original per-trajectory tracker fails to find a proper way to grasp the small sphere and lift it up ... | p. 20 (B.3 ANALYSIS ON THE HOMOTOPY OPTIMIZATION SCHEME) |
 | body limitation/failure cue | Figure 1: DexTrack learns a generalizable neural tracking controller for dexterous manipulation from human references. It generates hand action commands from kinematic references, ensuring ... | p. 1 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -158,14 +145,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 | Here we introduce three types of statistics: 1) object movement smoohtness so smooth: it quantifies the motion smoothness by calculating the per-frame average object ... | p. 25 (C ADDITIONAL EXPERIMENTAL DETAILS) |
 | To achieve the challenging goal above, we draw three key observations: 1) learning is crucial for handling heterogeneous reference motion noises and transferring data ... | p. 2 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 10: Failure cases in real-world experiments. Please refer to our website for animated
@@ -176,9 +155,8 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 1
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: DexTrack learns a generalizable neural tracking controller for dexterous manipulation from human references. It generates hand action commands from kinematic references, ensuring close ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 9 (4 EXPERIMENTS), p. 21 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 24 (C ADDITIONAL EXPERIMENTAL DETAILS), metrics p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 7 (4 EXPERIMENTS), p. 24 (C ADDITIONAL EXPERIMENTAL DETAILS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), results p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 17 (B.1 DEXTEROUS MANIPULATION TRACKING CONTROL), p. 18 (B.2 REAL-WORLD EVALUATIONS), p. 9 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

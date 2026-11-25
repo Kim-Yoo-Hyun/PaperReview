@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 - **p. 12 / 4 Experiment - extractive body cue:** Visualizations of our method on the GSReg dataset are presented in the last two rows of Figure 4.
 - **p. 12 / 4 Experiment - extractive body cue:** Evaluation on the GSReg Dataset The ground-truth registration results of our GSReg dataset are obtained when HLoc was successful.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: The purpose of our method is to register scenes A and B with Gaussian Splat- ting [17] models, and then combine A with ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 | Our GS fusion and filtering strategy successfully merges the two GS models. | definition/direction/unit from same section | p. 13 (4 Experiment) |
 | Both networks are trained separately for 40 epochs with a batch size of 1. | definition/direction/unit from same section | p. 11 (4 Experiment) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 | Moreover, our method (ours) significantly outperforms our coarse registration (ours w./o. fine), proving the effectiveness of our fine registration. | comparison identity and matched condition | p. 12 (4 Experiment) |
 | Fig. 5: Quantitative Results on the GSReg dataset. The first two rows are indoor scenes, and the last two rows are outdoor scenes. The ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | For a fair comparison, we follow DReg-NeRF [7] to evaluate GaussReg on the Objaverse dataset with two metrics: 1) Relative Rotational Error (RRE); 2) ... | comparison identity and matched condition | p. 10 (4 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 | body limitation/failure cue | Future work can further explore to address this issue. | p. 13 (5 Discussion) |
 | body limitation/failure cue | Eventually, after excluding cases of failed initial point cloud generation or unsuccessful GS reconstruction, we obtain 1297 training samples and 82 test samples. | p. 10 (4 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 | Building the cost volume requires the minimum and maximum distances, which can be automatically computed from the rendered depth map of the reference image. | p. 7 (3 Method) |
 | The rotation RB→A ∈ R3×3 and scale SB→A ∈R3 of the 3D gaussian can be computed as: \la b el {e q:eq 4 .2} ... | p. 8 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / 5 Discussion - extractive body cue:** Limitations and Future Work We only adopt a simple strategy to fuse and filter two GS models.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 12 (4 Experiment), p. 11 (4 Experiment), p. 1
 - **p. 10 / 4 Experiment - extractive body cue:** Eventually, after excluding cases of failed initial point cloud generation or unsuccessful GS reconstruction, we obtain 1297 training samples and 82 test samples.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiment), p. 10 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 11 (4 Experiment), p. 11 (4 Experiment), metrics p. 10 (4 Experiment), p. 10 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 12 (4 Experiment), p. 13 (4 Experiment), baselines p. 11 (4 Experiment), p. 12 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 14 (Figure/Table caption), p. 10 (4 Experiment), results p. 12 (4 Experiment), p. 11 (4 Experiment), p. 12 (4 Experiment), p. 11 (4 Experiment), p. 13 (4 Experiment), p. 10 (4 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

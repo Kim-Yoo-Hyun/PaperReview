@@ -54,7 +54,6 @@ PDF body method statement (p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 6 / 3 Methodology - extractive body cue:** After obtaining the GT pose token tgt-cam and depth tokens Tdpt, our objective is not only to achieve accurate reconstruction through the reconstruction head under ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 1 / 1 Introduction - extractive body cue:** Recent advances in vision-language-action models (VLAs) have significantly advanced the pursuit of generalist robotics, enabling robots to interpret natural language instructions and execute intricate action ...
 - **p. 7 / 3 Methodology - extractive body cue:** We explore two distinct architectures for this predictor: An MLP-based predictor directly maps the current fused feature vector to an action output: At = π(f ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 5 / 3 Methodology - extractive body cue:** 3.3 Training Objective During the training process of FALCON, the objective for action sequence generation is formulated as the minimization of a composite loss function ...
 - **p. 9 / 4 Experiments - extractive body cue:** Each task is evaluated over 10 different scene layouts with 10 trials, resulting in a total of 90 rollouts.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, concatenated, learnable, camera, token, tcam, RDs, Spatial, Encoder, Espl, consists, cross-attention, self-attention, blocks, Tspl, Tvis, FALCON, end-to-end, VLA, three.
 - **Relevant PDF headings:** 3 Methodology (p. 4); A.2 Embodied Spatial Model Training Paradigm (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 8 / 4 Experiments - extractive body cue:** All models are initially pre-trained on a mixture of the Open X-Embodiment dataset [29] and then fine-tuned with multi-task real-robot data.
 - **p. 9 / 4 Experiments - extractive body cue:** For larger blocks, collisions frequently occur during the placement of the blue block, while smaller blocks are prematurely released before placement, leading to task failure.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), objective p. 5 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), temporal p. 4 (3 Methodology), p. 7 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward G
 - **p. 3 / 3.1.2. KEY FRAME GENERATION - extractive body cue:** We therefore identify a small set of key frames and diffuse their influence locally in time, so learning focuses on causal moments (approach, contact, reversal).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 3 (3.1.2. KEY FRAME GENERATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward G
 - **p. 2 / 1. Introduction - extractive body cue:** As smaller VLMs can hallucinate or drift in free-form text (Guan et al., 2024; Chen et al., 2024b), feedback is structured and aligned with goal ...
 - **p. 1 / 1. Introduction - extractive body cue:** To reduce engineering overhead, a pragmatic trend is to treat VLMs as zero-shot reward models (Rocamonde et al., 2023), scoring progress from natural-language goals and ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward G
 
 - **p. 7 / 4.1.2. RESULTS ON FETCH TASKS - extractive body cue:** 0.0M 0.2M 0.4M 0.6M 0.8M 1.0M Environment Steps 400 200 0 200 400 VLM Reward VLM Reward Signal Over Training 0.0M 0.2M 0.4M 0.6M 0.8M ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, enforces, absolute, calibration, diagonal, cosine, treated, logit, scaled, temperature, supervised, per-step, success, label, successful, steps, pull, image, feedback, together.
 - **Relevant PDF headings:** 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward G
 - **p. 5 / 4. Experiments - extractive body cue:** We evaluate LAGEA on a suite of simulated embodied manipulation tasks, comparing against baseline RL agents and ablated LAGEA variants to measure the contributions of ...
 - **p. 7 / 4.1.2. RESULTS ON FETCH TASKS - extractive body cue:** No, rgoal t No, rfb t No, LaGEA 79% 80% 80% 99% 19% (b) Reward shaping ablation.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.2. Reward Generation), p. 3 (3.1.2. KEY FRAME GENERATION), p. 3 (3. Methodology), p. 5 (3.2. Reward Generation), p. 5 (3.3. Dynamic Reward Shaping), objective p. 4 (3.2. Reward Generation), p. 4 (3.2. Reward Generation), p. 5 (3.2. Reward Generation), p. 5 (3.2. Reward Generation), p. 3 (3.1.1. STRUCTURED FEEDBACK), p. 3 (3.1.2. KEY FRAME GENERATION), temporal p. 3 (3.1.2. KEY FRAME GENERATION), p. 3 (3.1.2. KEY FRAME GENERATION), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 7 (4.1.2. RESULTS ON FETCH TASKS), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

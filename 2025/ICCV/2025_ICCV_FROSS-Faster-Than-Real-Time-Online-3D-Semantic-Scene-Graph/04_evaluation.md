@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 2 (7.3. 2D Scene Graph Generation Performance
 - **p. 1 / 7.1. Object and Predicate Performance per Class - extractive body cue:** Despite retaining only the top seven most frequent relationships, the 3DSSG dataset still exhibits an extreme imbalance, with the top two classes occurring at substantially ...
 - **p. 3 / 8. Statistics of the ReplicaSSG Dataset - extractive body cue:** Object Recall per Class bag bskt. bed bench bike book botl. bowl box cab. chair clock cntr. cup curt. desk door mean 25.0 50.0 0.0 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Table 6. Per-class performance comparison of 3D SSG generation methods on 3DSSG for object recall (%). The best and second-best results are highlighted in red, ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 2 (7.3. 2D Scene Graph Generation Performance
 | Per-class performance comparison of FROSS on the ReplicaSSG dataset for object and predicate recall (%). | definition/direction/unit from same section | p. 3 (8. Statistics of the ReplicaSSG Dataset) |
 | Table 11. Per-class relationship extraction performance in 2D SG generation with RT-DETR+EGTR (Recall@K). | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 2 (7.3. 2D Scene Graph Generation Performance
 | The per-class performance comparison of FROSS and other baselines is presented in Tables 6 and 7. | comparison identity and matched condition | p. 1 (7.1. Object and Predicate Performance per Class) |
 | Per-class performance comparison of 3D SSG generation methods on 3DSSG for object recall (%). | comparison identity and matched condition | p. 1 (7.1. Object and Predicate Performance per Class) |
 | Per-class performance comparison of FROSS on the ReplicaSSG dataset for object and predicate recall (%). | comparison identity and matched condition | p. 3 (8. Statistics of the ReplicaSSG Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,21 +113,11 @@ PDF body evaluation/result cue (p. 2 (7.3. 2D Scene Graph Generation Performance
 | body limitation/failure cue | These results further demonstrate FROSS's robustness in diverse scene conditions. | p. 2 (7.2. Additional Qualitative Results) |
 | body limitation/failure cue | Misclassified objects are likely caused by occlusions from certain viewpoints or unusual viewing angles. | p. 2 (7.2. Additional Qualitative Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Wu [35] also provided results evaluated under this protocol in their publicly released code. | p. 1 (6. Detailed Evaluation Metric) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -148,6 +127,5 @@ PDF body evaluation/result cue (p. 2 (7.3. 2D Scene Graph Generation Performance
 - **p. 2 / 7.2. Additional Qualitative Results - extractive body cue:** Misclassified objects are likely caused by occlusions from certain viewpoints or unusual viewing angles.
 
 - **Evidence anchors reviewed:** datasets p. 2 (7.1. Object and Predicate Performance per Class), p. 5 (8. Statistics of the ReplicaSSG Dataset), p. 2 (7.3. 2D Scene Graph Generation Performance), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (8. Statistics of the ReplicaSSG Dataset), p. 4 (8. Statistics of the ReplicaSSG Dataset), metrics p. 1 (6. Detailed Evaluation Metric), p. 1 (7.1. Object and Predicate Performance per Class), p. 2 (7.2. Additional Qualitative Results), p. 2 (7.3. 2D Scene Graph Generation Performance), p. 3 (8. Statistics of the ReplicaSSG Dataset), p. 3 (Figure/Table caption), baselines p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (8. Statistics of the ReplicaSSG Dataset), results p. 2 (7.3. 2D Scene Graph Generation Performance), p. 2 (Figure/Table caption), p. 1 (7.1. Object and Predicate Performance per Class), p. 1 (7.1. Object and Predicate Performance per Class), p. 3 (Figure/Table caption), p. 3 (8. Statistics of the ReplicaSSG Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 - **p. 3 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** In scenarios where environmental changes or unforeseen obstacles arise during locomotion, it is imperative for robots to dynamically modify their pre-determined trajectories.
 - **p. 6 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** We evaluate 25 episodes per task at the final checkpoint utilizing 3 random seeds across 10 challenging tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the proposed self-correcting policy. was successful. Moreover, since existing policies are typi- cally learned from successful expert trajectories, they may fall ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 | 2023) optimized a generalizable NeRF with a reconstruction loss besides behavior cloning and showed effective improvement in both simulated and real scenarios. | definition/direction/unit from same section | p. 3 (2. By incorporating the proposed self-correction scheme) |
 | These technologies generally necessitate little to no fine-tuning to attain effective performance, predominantly leveraging the inherent inferential capabilities of open-source large models. | definition/direction/unit from same section | p. 3 (2. By incorporating the proposed self-correction scheme) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 | Performance evaluation Quantitative analysis In this section, we compare the proposed model with several state-of-the-art multi-task approaches on Peract's and HiveFormer's datasets. | comparison identity and matched condition | p. 6 (2. By incorporating the proposed self-correction scheme) |
 | Qualitative analysis Figure 4 illustrates the qualitative results obtained from our method and state-of-the-art approaches for novel view synthesis on two tasks, namely stack ... | comparison identity and matched condition | p. 6 (2. By incorporating the proposed self-correction scheme) |
 | Lu et al.'s method uses dynamic Gaussian Splatting to generate semantic features and feeds them into the PercevieIO module, while the proposed method uses ... | comparison identity and matched condition | p. 3 (2. By incorporating the proposed self-correction scheme) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 | body limitation/failure cue | Additionally, Lu et al.'s method is not capable of self-correction, while our proposed method includes failure detection and self-correction, which can be incorporated with ... | p. 3 (2. By incorporating the proposed self-correction scheme) |
 | body limitation/failure cue | Once the observation is not consistent with the predicted scene, it can be viewed as a failure. | p. 4 (2. By incorporating the proposed self-correction scheme) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 | 2022) uses the USE language encoder (Yang et al. | p. 2 (2. By incorporating the proposed self-correction scheme) |
 | 2025) for visual representation, which relates the semantic features with 3D Gaussian and fed them into action decoder. | p. 3 (2. By incorporating the proposed self-correction scheme) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Illustration of the proposed self-correcting policy. was successful. Moreover, since existing policies are typi- cally learned from successful expert trajectories, they may fall ...
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 7 (2. By incorporating the proposed self-corr
 - **p. 4 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** Once the observation is not consistent with the predicted scene, it can be viewed as a failure.
 
 - **Evidence anchors reviewed:** datasets p. 5 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 4 (2. By incorporating the proposed self-correction scheme), p. 5 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), metrics p. 6 (Figure/Table caption), p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 7 (Figure/Table caption), p. 5 (2. By incorporating the proposed self-correction scheme), p. 1 (Figure/Table caption), baselines p. 7 (2. By incorporating the proposed self-correction scheme), p. 7 (Figure/Table caption), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), results p. 7 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 6 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

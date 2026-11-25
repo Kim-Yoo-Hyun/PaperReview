@@ -50,7 +50,6 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 - **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Method FPS↑Mem.(GB)↓Param(M) PSNR↑SSIM↑LPIPS↓ Omin-Scene (Wei et al., 2025) 2.5 8.22 81.7 24.27 0.736 0.237 UniSplat 4.0 8.30 91.0 25.37 0.765 0.246 Gaussian-splatting pipeline, with dynamic ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** These methods typically encode inter-view correlations within the image domain via cross-attention or by constructing a multi-view stereo (MVS) cost volume, and subsequently decode the ...
 - **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** We employ the SpConv (Contributors, 2022) library to implement the sparse 3D U-Net, which comprises convolutional and transposed convolutional layers and achieves a maximum downsampling ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,17 +85,13 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 - **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For MVSplat, we initialize the model using its official weights pre-trained on RealEstate10K (Zhou et al., 2018).
 - **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** All models are trained for 20 epochs with a batch size of 32 on 16 GPUs.
-- **p. 15 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** The model is trained in a streaming manner using clips of 20 frames for 20 epochs, with an initial learning rate of 1.5 × 10-4 ...
 - **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** Training is conducted with a batch size of 16 on 8 H20 GPUs for 40,000 iterations, as further training empirically degrades performance.
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For the general methods MVSplat and DepthSplat, we retrain them on the Waymo Open Dataset using their official codebases.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** supervise, dynamic, attributes, Gaussians, introduce, dynamics, rendering, mechanism, renders, masks, standard, differentiable, fair, comparison, evaluation, performed, resizing, model, outputs, aligning.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEM
 - **p. 16 / A.1 IMPLEMENTATION DETAILS - extractive body cue:** For DepthSplat, we initialize from its official weights pre-trained on dl3dV (Ling et al., 2024) and use the variant equipped with a ViT-B backbone (Dosovitskiy ...
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** For our 3D scaffold reconstruction, we employ a frozen pretrained geometry transformer π3 (Wang et al., 2025f) for initial geometry generation and a pretrained DINOv2 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 15 (A.1 IMPLEMENTATION DETAILS), objective p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), temporal p. 3 (2 RELATED WORK), p. 2 (1 INTRODUCTION), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.1 IMPLEMENTATION DETAILS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

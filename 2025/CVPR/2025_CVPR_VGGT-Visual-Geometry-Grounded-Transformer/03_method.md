@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem defi
 - **p. 5 / 3.3. Prediction heads - extractive body cue:** 3.4, the uncertainty maps are used in the loss and, after training, are proportional to the model's confidence in the predictions.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Prediction heads), p. 6 (3.4. Training), p. 6 (3.4. Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem defi
 - **p. 4 / 3.2. Feature Backbone - extractive body cue:** To this end, each input image I is initially patchified into a set of K tokens1 tI ∈RK×C through DINO [78].
 - **p. 4 / 3.3. Prediction heads - extractive body cue:** First, for each input image Ii, we augment the corresponding image tokens tI i with an additional camera token tg i ∈R1×C′ and four register ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem defi
 - **p. 5 / 3.3. Prediction heads - extractive body cue:** 3.4, the uncertainty maps are used in the loss and, after training, are proportional to the model's confidence in the predictions.
 - **p. 6 / 3.4. Training - extractive body cue:** We train the model by optimizing the training loss (2) with the AdamW optimizer for 160K iterations.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** order, implement, tracking, module, CoTracker2, architecture, takes, dense, features, input, network, designed, permutation, equivariant, first, frame, ingests, query, point, output.
 - **Relevant PDF headings:** 3. Method (p. 3); Method (p. 10).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem defi
 - **p. 10 / Figure/Table caption - extractive body cue:** Table 8. Dynamic Point Tracking Results on the TAP-Vid benchmarks. Although our model was not designed for dynamic scenes, simply fine-tuning CoTracker with our pretrained ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VGGT is a large feed-forward transformer with minimal 3D-inductive biases trained on a trove of 3D-annotated data. It accepts up to hundreds of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Prediction heads), p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation), p. 10 (Method), p. 6 (3.4. Training), p. 5 (3.3. Prediction heads), objective p. 6 (3.4. Training), p. 6 (3.4. Training), p. 5 (3.3. Prediction heads), temporal p. 3 (3.1. Problem definition and notation), p. 3 (3.1. Problem definition and notation), p. 4 (3.1. Problem definition and notation), p. 6 (3.3. Prediction heads), p. 4 (3.2. Feature Backbone), p. 5 (3.3. Prediction heads).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

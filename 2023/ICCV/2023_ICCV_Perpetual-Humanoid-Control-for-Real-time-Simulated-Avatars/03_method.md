@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.1. Goal Conditioned Motion Imitation with Ad)
 - **p. 5 / 3.2. Progressive Multiplicative Control Policy - extractive body cue:** This amounts to setting the non-root joint goals to be identity when computing the goal states: sg-Fail t ≜(ˆθ′ t⊖θt, ˆp′ t-pt, ˆv′ t-vt, ˆω′ ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.1. Goal Conditioned Motion Imitation with Ad)
 - **p. 3 / 3.1. Goal Conditioned Motion Imitation with Ad - extractive body cue:** Based on the simulation state st and reference motion ˆqt, the reward function R computes a reward rt = R(st, ˆqt) as the learning signal ...
 - **p. 2 / 1. Introduction - extractive body cue:** In this work, we consider human poses estimated from video or language input.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.1. Goal Conditioned Motion Imitation with Ad)
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** discriminator, same, observations, loss, formulation, gradient, penalty, AMP, proportional, derivative, controller, DoF, humanoid, action, specifies, target, Thus, progressive, multiplicative, control.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. Progressive Multiplicative Control Policy (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 4 (3.1. Goal Conditioned Motion Imitation with Ad)
 - **p. 8 / 5. Discussions - extractive body cue:** Although we can train single-clip controller to overfit on these sequences (see the supplement), our full controller often fails to learn these sequences.
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: (a) Imitating high-quality MoCap - spin and kick. (b) Recover from fallen state and go back to reference motion (indicated by red dots). ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy), p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.1. Goal Conditioned Motion Imitation with Ad), objective p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy), temporal p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 6 (3.2. Progressive Multiplicative Control Policy), p. 8 (4.2. Fail-state Recovery), p. 5 (3.2. Progressive Multiplicative Control Policy), p. 6 (3.3. Connecting with Motion Estimators), p. 7 (4.1. Motion Imitation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

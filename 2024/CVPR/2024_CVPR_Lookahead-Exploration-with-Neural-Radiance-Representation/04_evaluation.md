@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 - **p. 6 / 4.1. Datasets and Evaluation Metrics - extractive body cue:** We evaluate our model on the R2R-CE [22] and RxRCE [23] datasets in continuous environments.
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Evaluation on the RxR-CE dataset. # Representation Methods NE↓OSR↑SR↑SPL↑ 1 Single View 4.71 64.71 57.21 49.15 2 NeRF Rendering 4.79 65.14 56.55 48.61 3 Image ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of different methods to represent the naviga- ble candidate locations. (a) uses the single-view observation (yel- low sector area). (b) uses the ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 | Figure 1. Illustration of different methods to represent the naviga- ble candidate locations. (a) uses the single-view observation (yel- low sector area). (b) uses ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 4. The framework of the lookahead VLN model. In addi- tion to the stop embedding (black), three types of nodes are used to ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 | Comparisons among different representation methods. | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
 | As shown in Table 3, without the training objective Lregion of region-level semantic alignment (row 6) in Section 3.2.3, the performance of the HNR ... | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
 | Ablation study of the lookahead VLN model. | comparison identity and matched condition | p. 8 (23.1 Hz (42.3 ms)) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 | body limitation/failure cue | Hierarchical encoding and multi-level semantic alignment help HNR integrate surrounding contexts and predict features of empty regions caused by visual occlusions. | p. 7 (4.3. Ablation Study) |
 | body limitation/failure cue | As shown in Table 3, without the training objective Lregion of region-level semantic alignment (row 6) in Section 3.2.3, the performance of the HNR ... | p. 7 (4.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 | The view encoder consists of four-layer transformers. | p. 5 (3.2. Hierarchical Neural Radiance Representation) |
 | The maximum number of action steps per episode is set to 15. | p. 5 (3.2. Hierarchical Neural Radiance Representation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** Without the position and orientation of the k-nearest features relative to the sampled point (row 7) in Table 3, MLPfeature network cannot accurately estimate the ...
@@ -167,9 +146,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Art Method
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** As shown in Table 3, without the training objective Lregion of region-level semantic alignment (row 6) in Section 3.2.3, the performance of the HNR model ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 6 (4.1. Datasets and Evaluation Metrics), p. 7 (4.3. Ablation Study), metrics p. 6 (4.1. Datasets and Evaluation Metrics), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 1 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (23.1 Hz (42.3 ms)), results p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 6 (4.2. Comparison to State-of-the-Art Methods), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

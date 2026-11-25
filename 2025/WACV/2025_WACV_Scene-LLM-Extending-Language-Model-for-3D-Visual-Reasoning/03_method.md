@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Scene-LLM), p. 5 (4.
 - **p. 5 / 4.3. Inference - extractive body cue:** These updates are vital for observation collection, agent grounding, and replanning.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.3. Inference), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.1. 3D Visual Feature), p. 5 (4.3. Inference).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Scene-LLM), p. 5 (4.
 - **p. 2 / 1. Introduction - extractive body cue:** While previous studies have explored using patchy visual features [38] and query tokens [34] for downsampling visual features, 3D point sets pose a unique problem ...
 - **p. 7 / C VoteNet+MCAN [78] - extractive body cue:** Scene-LLM performs the best among methods using goal instruction only.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Scene-LLM), p. 5 (4.
 
 - **p. 4 / 4. Scene-LLM - extractive body cue:** This section outlines the 3D visual feature extraction process, model architecture, 3D visual information alignment, and the inference process.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, primary, contributions, introduce, Scene-LLM, D-VLM, connecting, visual, information, LLM, sets, stateof-the-art, D-VQA, interactive, planning, benchmarks, egocentric, scene-level, represented, unified.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Scene-LLM), p. 5 (4.
 - **p. 7 / 5.1. Results and Benchmark Evaluation - extractive body cue:** The ‘*' symbol indicates task-specific fine-tuning.
 - **p. 8 / 6. Conclusion - extractive body cue:** Scene-LLM faces limitations such as LLM input token length, challenges in processing dynamic scenes without a state detector, lacking geometry feature, and language hallucinations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 4 (4. Scene-LLM), p. 5 (4.1. 3D Visual Feature), p. 1 (Abstract), p. 4 (4.1. 3D Visual Feature), p. 5 (4.1. 3D Visual Feature), objective p. 5 (4.3. Inference), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (4.1. 3D Visual Feature), p. 5 (4.3. Inference), temporal p. 6 (5.1. Results and Benchmark Evaluation), p. 6 (5.1. Results and Benchmark Evaluation), p. 5 (4.3. Inference), p. 5 (5. Experiments), p. 1 (Abstract), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

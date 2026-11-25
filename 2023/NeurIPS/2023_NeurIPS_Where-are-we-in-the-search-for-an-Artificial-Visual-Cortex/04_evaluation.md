@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 - **p. 22 / A.12 Franka Hardware Experiment Setup - extractive body cue:** This results in poor trajectory tracking performance, yet both human teleoperators and learned policy can control the robot to complete the tasks.
 - **p. 4 / Results - extractive body cue:** MetaWorld (MW) [11] is a collection of tasks in which agents command a Sawyer robot arm to manipulate objects in a tabletop environment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: An artificial visual cortex for embodied in- telligence must support a diverse range of sensorimotor skills, environments, and embodiments; we curate COR- TEXBENCH ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 | We strategically select dataset combinations (shown in Table 3) to answer the following questions: - What is the impact of scaling dataset size and ... | definition/direction/unit from same section | p. 6 (Results) |
 | Interestingly, these results demonstrate that including static internet images can significantly boost performance on EAI tasks. | definition/direction/unit from same section | p. 7 (Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 | For instance, when pre-trained on Ego4D+MNI, the ViT-B model outperforms the ViT-L model on MetaWorld and TriFinger. | comparison identity and matched condition | p. 7 (Results) |
 | The gains with Ego4D+N are larger and it outperforms Ego4D by 1.6 points using ViT-B (62.2 →63.8) and by 3.6 points for ViT-L (63.5 ... | comparison identity and matched condition | p. 7 (Results) |
 | Together, these results demonstrate that adaptation of PVRs can be a powerful paradigm for EAI, especially when compared to training representations from scratch. | comparison identity and matched condition | p. 9 (Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 | body limitation/failure cue | Interestingly, while the model pre-trained on the largest dataset (CLIP) performs well on one benchmark (ObjectNav) it does not perform well across all tasks. | p. 5 (Results) |
 | body limitation/failure cue | While larger than Ego4D+M and Ego4D+N, it does not include any new types of data beyond the manipulation and navigation videos in the previous ... | p. 6 (Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 | The episode length for this task is 20 steps. | p. 21 (A.11 TriFinger Hardware Experiment Setup) |
 | For each model, we chose 1 seed and ran it on 12 different start and goal configurations, mostly centered in the arena. | p. 21 (A.11 TriFinger Hardware Experiment Setup) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / A.1 Limitations - extractive body cue:** This study presents a thorough examination of visual foundation models but has several limitations.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 2 (Figure/Table caption), p. 8 (Results), p. 
 - **p. 6 / Results - extractive body cue:** While larger than Ego4D+M and Ego4D+N, it does not include any new types of data beyond the manipulation and navigation videos in the previous subsets.
 
 - **Evidence anchors reviewed:** datasets p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 5 (Results), p. 5 (Results), p. 6 (Results), p. 7 (Results), p. 9 (Results), metrics p. 4 (Results), p. 8 (Results), p. 2 (Figure/Table caption), p. 20 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Results), baselines p. 5 (Results), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Results), p. 7 (Results), p. 9 (Results), results p. 2 (Figure/Table caption), p. 8 (Results), p. 8 (Results), p. 7 (Results), p. 9 (Results), p. 5 (Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

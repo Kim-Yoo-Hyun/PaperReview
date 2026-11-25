@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** 3, when compared with other large-scale scene algorithms, our method requires lower computational costs while achieving better rendering quality and geometric accuracy.
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** The 7k step is applied after the scene has roughly formed and the Gaussian distribution starts to stabilize, consistent with the behavior observed in 3DGS ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose UrbanGS, a scalable framework for high-fidelity large-scale scene reconstruc- tion. Left: It reconstructs complex urban environments from multi-view RGB images, capturing ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 
 | To obtain the final mesh, we employ Open3D's volumetric TSDF fusion method, which integrates rendered depth maps and corresponding camera poses to construct a ... | definition/direction/unit from same section | p. 15 (A IMPLEMENTATION DETAILS) |
 | Figure 1: We propose UrbanGS, a scalable framework for high-fidelity large-scale scene reconstruc- tion. Left: It reconstructs complex urban environments from multi-view RGB images, ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 
 | 3, when compared with other large-scale scene algorithms, our method requires lower computational costs while achieving better rendering quality and geometric accuracy. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | We first establish a Baseline that employs neither our SAGP nor any partitioning strategy. | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
 | Figure 5: Experimental results on the Rubble dataset (Yu et al., 2022) demonstrate that the proposed method outperforms comparative approaches in terms of PSNR ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 
 | body limitation/failure cue | E LIMITATIONS Although UrbanGS demonstrates advantages in large-scale reconstruction, it still exhibits certain limitations. | p. 26 (C SUPPLEMENTATION TO THE PARTITIONING STRATEGY) |
 | body limitation/failure cue | Additionally, the method primarily focuses on static environments and does not explicitly model dynamic objects commonly found in urban scenes. | p. 26 (C SUPPLEMENTATION TO THE PARTITIONING STRATEGY) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 
 | Specifically, we compute per-view scale and shift parameters by robustly fitting the monocular depth maps to the sparse COLMAP depth values at valid 2D-3D ... | p. 6 (3.1 PRELIMINARIES) |
 | The combined score is given by Si = ϕi · τi · wv,i, (15) which eliminates the need for manually tuned weighting hyperparameters-a detailed ... | p. 7 (3.1 PRELIMINARIES) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 2: Detailed geometry evaluation on the GauU-Scene dataset (Xiong et al., 2024). "NaN" indicates that the method produced invalid numerical results, while "FAIL" denotes ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 
 - **p. 26 / C SUPPLEMENTATION TO THE PARTITIONING STRATEGY - extractive body cue:** Additionally, the method primarily focuses on static environments and does not explicitly model dynamic objects commonly found in urban scenes.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 15 (A IMPLEMENTATION DETAILS), p. 10 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (Figure/Table caption), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (Figure/Table caption), results p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (Figure/Table caption), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

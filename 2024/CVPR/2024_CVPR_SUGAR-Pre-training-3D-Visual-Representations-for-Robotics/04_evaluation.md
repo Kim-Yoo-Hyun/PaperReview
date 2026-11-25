@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 5 / 4.1. Zero-shot Object Recognition - extractive body cue:** ScanObjectNN is one of the most challenging 3D datasets, consisting of 15 common categories and 587 real-world 3D scans in the test split.
 - **p. 5 / 4. Evaluation on Robotic-related Tasks - extractive body cue:** To thoroughly evaluate the pre-trained representation, we resort to three robotic-related tasks including zero-shot object recognition, referring expression grounding, and languageguided robotic manipulation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce SUGAR , a pre-training framework for robotic-related tasks, which learns semantic, geometry and affor- dance on both single- and multi-object scenes. ...
@@ -76,21 +74,12 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 | Table 3. Performance of referring expression detection (evaluated by Acc@0.5) and referring expression segmentation (evaluated by mIoU) on the RoboRefit dataset. We use Ne ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Figure 5. Performance of training with 10 demonstrations. (Ens m) significantly boosts the performance of the model trained from scratch with over 30% improvement. ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | The objects are synthetic 3D models without colors. | comparison identity and matched condition | p. 5 (4.1. Zero-shot Object Recognition) |
 | The task aims to classify unseen 3D objects without training on those specific categories. | comparison identity and matched condition | p. 5 (4.1. Zero-shot Object Recognition) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,8 +109,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -131,22 +118,13 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (Figure/Table 
 | SUGAR (multi) deteriorates the performance on ModelNet40 and ObjaverseLVIS datasets where the point clouds are complete, but performs better on the ScanObjectNN dataset with ... | p. 6 (1) OBJ ONLY which only includes ground truth segmented) |
 | For fair comparison with previous work [36], we fix the visual encoder and only finetune the decoder in SUGAR pre-trained on the ensembled multi-object ... | p. 7 (4.2. Referring Expression Grounding) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4. Evaluation on Robotic-related Tasks), metrics p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 5 (4.1. Zero-shot Object Recognition), p. 5 (4.1. Zero-shot Object Recognition), results p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4. Evaluation on Robotic-related Tasks), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

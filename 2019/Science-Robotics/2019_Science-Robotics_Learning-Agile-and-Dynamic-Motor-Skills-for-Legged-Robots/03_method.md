@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (Body text (section not recovered)), p. 1 (Body 
 - **p. 1 / Body text (section not recovered) - extractive body cue:** From the control perspective, these robots are high-dimensional and non-smooth systems with many physical constraints.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 5 (Body text (section not recovered)), p. 6 (Body text (section not recovered)), p. 8 (Body text (section not recovered)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (Body text (section not recovered)), p. 1 (Body 
 - **p. 2 / Body text (section not recovered) - extractive body cue:** This robustness can be achieved by randomizing various aspects of the simulation: employing a stochastic policy [33], randomizing the dynamics [34-37], adding noise to the ...
 - **p. 3 / Body text (section not recovered) - extractive body cue:** Since these mechanisms are nearly impossible to model accurately, we learn the corresponding mapping in an end-to-end manner - from commanded actions to the resulting ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (Body text (section not recovered)), p. 1 (Body 
 - **p. 3 / Body text (section not recovered) - extractive body cue:** Thanks to efficient software implementations, we did not need any special computing hardware, such as multi-CPU or multi-GPU servers, for training.
 - **p. 3 / Body text (section not recovered) - extractive body cue:** All training sessions presented in this paper were done on a personal computer with one CPU and one GPU, and none lasted more than eleven ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** hybrid, simulator, training, controllers, reinforcement, learning, Fig, present, report, neural, network, policy, simulation, transferring, state-of-the-art, legged, system, thereby, leverage, fast.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 3 (Body text (section not recovered)), p. 1 (Body 
 - **p. 8 / Body text (section not recovered) - extractive body cue:** In what follows we describe each component in detail.
 - **p. 11 / Body text (section not recovered) - extractive body cue:** Interestingly, removing velocities from the observation altogether led to a complete failure to train, even though in theory the policy network could infer velocities as ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 2 (Body text (section not recovered)), p. 3 (Body text (section not recovered)), p. 8 (Body text (section not recovered)), objective p. 2 (Body text (section not recovered)), p. 6 (Body text (section not recovered)), p. 7 (Body text (section not recovered)), p. 7 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), temporal p. 3 (Body text (section not recovered)), p. 8 (Body text (section not recovered)), p. 9 (Body text (section not recovered)), p. 8 (Body text (section not recovered)), p. 9 (Body text (section not recovered)), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

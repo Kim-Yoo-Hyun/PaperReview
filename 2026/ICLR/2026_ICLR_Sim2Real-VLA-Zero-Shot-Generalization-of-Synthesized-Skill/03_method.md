@@ -49,7 +49,6 @@ PDF body method statement (p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 1
 - **p. 17 / A.2 CONFIGURING REWARDS IN VLA MODELS - extractive body cue:** In such cases, the reward function can be interpreted as R(s, a) = 1 if the robot successfully completes the task, and R(s, a) = ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 17 (A.3 DETAILS ON REAL2SIM DATA PROJECTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 1
 - **p. 6 / 1 INTRODUCTION - extractive body cue:** The embodied agent, equipped with a vision-language model, decomposes the task into atomic units (Nasiriany et al., 2024), identifies the target object from the input ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** By leveraging observations and language-based task annotations, the control policy can be effectively instantiated as a VLA model (Kim et al., 2024).
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 1
 - **p. 17 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** For the training protocol, we implement a cosine-annealing learning rate schedule with a maximum value of 1e-5 across 40,000 epochs, incorporating exponential moving average (EMA) ...
 - **p. 16 / A.1 MODEL ARCHITECTURE & KEY PARAMETERS - extractive body cue:** Through the implementation of joint training and domain randomization, the module ensures robust generalization across diverse objects and environmental conditions.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Utilizing, tokenize-thenconcatenate, strategy, model, fuses, action, embeddings, predicted, affordance, outputs, architecture, complemented, additional, transformer, blocks, identical, configuration, dedicated, inference, guidance.
 - **Relevant PDF headings:** A.1 MODEL ARCHITECTURE & KEY PARAMETERS (p. 16); A.2 CONFIGURING REWARDS IN VLA MODELS (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 1
 - **p. 8 / 1 INTRODUCTION - extractive body cue:** For unsuccessful trials where the robot fails to complete the task, we report the predefined maximum step limit as an upper bound.
 - **p. 17 / A.3 DETAILS ON REAL2SIM DATA PROJECTION - extractive body cue:** However, in cases where three-view images capture only partial scene information (e.g., occluded object surfaces), or when the retrieved scene fails to semantically align with ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 17 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 17 (A.2 CONFIGURING REWARDS IN VLA MODELS), objective p. 17 (A.2 CONFIGURING REWARDS IN VLA MODELS), p. 17 (A.2 CONFIGURING REWARDS IN VLA MODELS), temporal p. 8 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS), p. 16 (A.1 MODEL ARCHITECTURE & KEY PARAMETERS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

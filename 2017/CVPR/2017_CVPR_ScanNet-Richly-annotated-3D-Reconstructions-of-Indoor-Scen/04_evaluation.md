@@ -46,8 +46,6 @@
 - **p. 2 / Dataset - extractive body cue:** Overall, the contributions of this paper are: • A large 3D dataset containing 1513 RGB-D scans of over 707 unique indoor environments with estimated camera ...
 - **p. 7 / 5.1. 3D Object Classification - extractive body cue:** Synthetic Test Sets Real Test Sets Training Set ShapeNet ShapeNet Partial SceneNN ScanNet ShapeNet 92.5 37.6 68.2 39.5 ShapeNet Partial 88.5 92.1 72.7 45.7 SceneNN ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Example reconstructed spaces in ScanNet annotated with instance-level object category labels through our crowdsourced annotation framework. ciently providing (dense) annotations in 3D is ...
@@ -81,8 +79,6 @@
 | Naturally, training with the corresponding synthetic counterparts of ShapeNet provides the best performance, as data characteristics are shared. | definition/direction/unit from same section | p. 6 (5.1. 3D Object Classification) |
 | To conform with the goal for an automated and scalable framework, we choose methods that favor robustness and processing speed such that uploaded recordings ... | definition/direction/unit from same section | p. 4 (3.2. Surface Reconstruction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@
 | Prior work has focused mostly on controlled lab conditions with more accurate equipment to inform calibration for commodity sensors (e.g., Wang et al. | comparison identity and matched condition | p. 3 (3.1. RGB-D Scanning) |
 | This is in contrast to much prior work that uses 2D polygon annotations on RGB or RGB-D images, or 3D bounding box annotations. | comparison identity and matched condition | p. 4 (3.3. Semantic Annotation) |
 | This task of predicting a semantic class for each visible 3D voxel has been addressed by some prior work, but using handcrafted features to ... | comparison identity and matched condition | p. 7 (5.2. Semantic Voxel Labeling) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@
 | body limitation/failure cue | A promising way to alleviate this limitation is to algorithmically suggest candidate retrieved and aligned CAD models such that workers can perform an easier ... | p. 5 (3.3. Semantic Annotation) |
 | body limitation/failure cue | When training data is synthetic and test is performed on real data, there is also a significant discrepancy of test performance, as data characteristics, ... | p. 6 (5.1. 3D Object Classification) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@
 | RGB data is encoded with the H.264 codec with a high bitrate of 15 Mbps to prevent encoding artifacts. | p. 4 (3.1. RGB-D Scanning) |
 | As a baseline evaluation, we run the 3D CNN approach of Qi et al. | p. 6 (5.1. 3D Object Classification) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Example reconstructed spaces in ScanNet annotated with instance-level object category labels through our crowdsourced annotation framework. ciently providing (dense) annotations in 3D is ...
@@ -168,6 +147,5 @@
 - **p. 6 / 5.1. 3D Object Classification - extractive body cue:** When training data is synthetic and test is performed on real data, there is also a significant discrepancy of test performance, as data characteristics, such ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (3. Dataset Acquisition Framework), p. 5 (4. ScanNet Dataset), p. 6 (5. Tasks and Benchmarks), p. 6 (5.1. 3D Object Classification), p. 7 (5.1. 3D Object Classification), p. 2 (Dataset), metrics p. 7 (5.1. 3D Object Classification), p. 7 (5.1. 3D Object Classification), p. 8 (5.2. Semantic Voxel Labeling), p. 8 (5.2. Semantic Voxel Labeling), p. 6 (5. Tasks and Benchmarks), p. 4 (3.2. Surface Reconstruction), baselines p. 5 (3.3. Semantic Annotation), p. 6 (5.1. 3D Object Classification), p. 7 (5.2. Semantic Voxel Labeling), p. 3 (3.1. RGB-D Scanning), p. 4 (3.3. Semantic Annotation), p. 7 (5.2. Semantic Voxel Labeling), results p. 7 (5.1. 3D Object Classification), p. 20 (Figure/Table caption), p. 2 (Dataset), p. 3 (3.1. RGB-D Scanning), p. 7 (5.1. 3D Object Classification), p. 8 (5.2. Semantic Voxel Labeling).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

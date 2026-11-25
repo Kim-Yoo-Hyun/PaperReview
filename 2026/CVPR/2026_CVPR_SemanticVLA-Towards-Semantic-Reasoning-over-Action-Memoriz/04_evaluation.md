@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Si
 - **p. 8 / 4.5. Latent Tokens Stabilize Trace Execution - extractive body cue:** Real-world generalization evaluations under visual perturbation, instruction rephrasing, and task variation. tent action planning achieves 48% on language rephrasing compared to MolmoAct's 33%, directly validating ...
 - **p. 7 / 4.3. Instruction Variance Robustness - extractive body cue:** Performance on LIBERO and SimplerEnv benchmarks under instruction variations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SemanticVLA Overview. Current VLA models struggle with instruction variations and reasoning-intensive tasks, often mem- orizing patterns rather than understanding semantics. We introduce a ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Si
 | SemanticVLA achieves 65.1% average success rate, outperforming competitive baselines and demonstrating effective transfer of trace-guided spatial understanding across manipulation primitives. | definition/direction/unit from same section | p. 6 (4.1. Simulation Benchmarks) |
 | Success rate evaluation in real robot experiments in long-horizon and reasoning scenarios. | definition/direction/unit from same section | p. 7 (4.2. Real-world Robotics Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Si
 | As shown in Figure 7, SemanticVLA substantially outperforms all baselines across all generalization types. | comparison identity and matched condition | p. 8 (4.5. Latent Tokens Stabilize Trace Execution) |
 | Baselines show substantial brittleness under rephrasing, with OpenVLA degrading by 18.4% and UniVLA by 23.9%. | comparison identity and matched condition | p. 7 (4.3. Instruction Variance Robustness) |
 | We compare against trace-only baselines including TraceVLA with visual overlay, HAMSTER with direct trace conditioning, and MolmoAct with trace reasoning plus raw action tokens. | comparison identity and matched condition | p. 8 (4.5. Latent Tokens Stabilize Trace Execution) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Si
 | body limitation/failure cue | SimplerEnv [32] probes cross-domain robustness through visual appearance shifts on short-horizon WidowX tasks. | p. 6 (4.1. Simulation Benchmarks) |
 | body limitation/failure cue | Reasoningenhanced approaches such as ThinkAct, MolmoAct, and Magma substantially outperform direct action prediction models including OpenVLA and RT-1-X, confirming the importance of structured reasoning ... | p. 6 (4.1. Simulation Benchmarks) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Si
 | Compared to MolmoAct which expands vocabulary with raw action tokens, our latent interface maintains modality separation and enables stable decoding through the flow matching ... | p. 7 (4.2. Real-world Robotics Evaluation) |
 | The geometric scaffolding from trace sequences acts as a strong inductive bias, filtering task-irrelevant variations and forcing the codebook to capture true manipulation semantics. | p. 8 (4.4. Explicit Trace-Guided Latent Action Learning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SemanticVLA Overview. Current VLA models struggle with instruction variations and reasoning-intensive tasks, often mem- orizing patterns rather than understanding semantics. We introduce a ...
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Si
 - **p. 6 / 4.1. Simulation Benchmarks - extractive body cue:** Reasoningenhanced approaches such as ThinkAct, MolmoAct, and Magma substantially outperform direct action prediction models including OpenVLA and RT-1-X, confirming the importance of structured reasoning for ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 6 (4.1. Simulation Benchmarks), p. 6 (4.2. Real-world Robotics Evaluation), p. 7 (4.3. Instruction Variance Robustness), p. 8 (4.5. Latent Tokens Stabilize Trace Execution), p. 8 (4.5. Latent Tokens Stabilize Trace Execution), metrics p. 8 (4.4. Explicit Trace-Guided Latent Action Learning), p. 8 (4.4. Explicit Trace-Guided Latent Action Learning), p. 5 (4. Experiments), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (4.1. Simulation Benchmarks), baselines p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Simulation Benchmarks), p. 7 (4.3. Instruction Variance Robustness), p. 8 (4.5. Latent Tokens Stabilize Trace Execution), p. 7 (4.3. Instruction Variance Robustness), p. 8 (4.5. Latent Tokens Stabilize Trace Execution), results p. 6 (4.1. Simulation Benchmarks), p. 6 (4.1. Simulation Benchmarks), p. 7 (4.3. Instruction Variance Robustness), p. 8 (4.4. Explicit Trace-Guided Latent Action Learning), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

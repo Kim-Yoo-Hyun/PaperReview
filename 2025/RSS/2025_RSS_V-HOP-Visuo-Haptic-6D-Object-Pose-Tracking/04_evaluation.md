@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 - **p. 9 / C. Can-in-Mug Experiment - extractive body cue:** (Right) A human perturbs the object by moving it to a different position while the robot attempts to grasp it.
 - **p. 9 / C. Can-in-Mug Experiment - extractive body cue:** (top) The robot grasps the can and inserts it into the mug.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Network design of Y-HOP. The visual modality, based on FoundationPose [70], uses a visual encoder to process
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 | V) demonstrate robust performance and eliminate the need for costly real-world data collection, | definition/direction/unit from same section | p. 5 (A. Multi-embodied Dataset) |
 | However, aas demonstrated in recent work [70], leveraging a large-scale synthetic dataset enriched with domain randomization can yield superior real-world performance compared to smallSeale ... | definition/direction/unit from same section | p. 5 (A. Multi-embodied Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 | V-HOP has 40% higher success rate on average compared to FoundationPose. | comparison identity and matched condition | p. 8 (B. Bimanual Handover Experiment) |
 | However, aas demonstrated in recent work [70], leveraging a large-scale synthetic dataset enriched with domain randomization can yield superior real-world performance compared to smallSeale ... | comparison identity and matched condition | p. 5 (A. Multi-embodied Dataset) |
 | We selected graspable YCB object [5] and grippers used in prior works [9, 45]. | comparison identity and matched condition | p. 5 (A. Multi-embodied Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,22 +121,12 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 | body limitation/failure cue | While model-free approaches [65, 69, 54] exist, they fall outside the scope of this work. | p. 9 (VI. RELATED Works) |
 | body limitation/failure cue | V) demonstrate robust performance and eliminate the need for costly real-world data collection, | p. 5 (A. Multi-embodied Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | In terms of computational efficiency, V-HOP is appro: mately 10 times faster than NeuralFeels, achieving 32 FPS compared to NeuralFeels' 3 FPS on an ... | p. 7 (experiment) |
 | VI, we show the success rate for each object for five trials. | p. 8 (B. Bimanual Handover Experiment) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -159,9 +138,8 @@ PDF body evaluation/result cue (p. 7 (experiment), p. 7 (experiment), p. 8 (B. B
 - **p. 5 / A. Multi-embodied Dataset - extractive body cue:** V) demonstrate robust performance and eliminate the need for costly real-world data collection,
 
 - **Evidence anchors reviewed:** datasets p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset), p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), metrics p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment), p. 7 (experiment), p. 7 (experiment), p. 9 (C. Can-in-Mug Experiment), baselines p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 5 (A. Multi-embodied Dataset), p. 5 (A. Multi-embodied Dataset), results p. 7 (experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment), p. 8 (B. Bimanual Handover Experiment), p. 9 (C. Can-in-Mug Experiment), p. 5 (A. Multi-embodied Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

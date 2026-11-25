@@ -52,7 +52,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We then deploy VLAs in these environments and evaluate their execution trajectories using two complementary strategies: (1) absolute evaluation, in which prompted VLMs or crowdsourced ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 1 / ABSTRACT - extractive body cue:** To measure robustness, we systematically perturb simulated environments along multiple axes, including textures and object placements, stress-testing policy generalization under controlled variation.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** We present a scalable and extensible benchmarking protocol for robotics, by coupling physics engines, real-to-sim translation and human preference feedback.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** First, vision-language-action (VLA) models are highly sensitive to dataset differences: performance drops when they are tested in environments outside their training distribution, indicating that current ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We measure both in-distribution performance by testing on simulation environments seeded from training videos in established datasets such as Bridge Walke et al.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, vision-language-action, VLA, models, highly, sensitive, dataset, differences, performance, drops, when, they, tested, environments, outside, training, distribution, indicating, current, true.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1
 - **p. 6 / 2 RELATED WORK - extractive body cue:** Intuitively, this focuses evaluation on the terminal phase of execution, where task completion (or failure) is most evident.
 - **p. 24 / Figure/Table caption - extractive body cue:** Figure 19: Example VLM-generated task evaluation curves on perturbed environments. Top: A successful pick-and-place execution-after the object lift the VLM score climbs steadily and correctly ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (ABSTRACT), objective p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 5 (2 RELATED WORK), p. 6 (2 RELATED WORK), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

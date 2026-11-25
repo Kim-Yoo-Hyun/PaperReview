@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 6 (4. Experiments), p.
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Notably, when addressing objects with Table 2.
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** Visualization of reconstructions by different methods on CO3D-v2 unseen categories.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our work focuses on the task of generalizable 3D object reconstruction from a single RGB-D image. The proposed method conducts implicit field learning ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 6 (4. Experiments), p.
 | Among them, F1 holds the dominant since both accuracy and completeness are considered. | definition/direction/unit from same section | p. 5 (4. Experiments) |
 | Using f X0 results in a worse Fscore than using occupancy values, but better than not using. | definition/direction/unit from same section | p. 7 (4.3. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 6 (4. Experiments), p.
 | As shown, the proposed method can produce better generations than the baseline method (Ours1 v.s. | comparison identity and matched condition | p. 6 (4. Experiments) |
 | With PVCNN, our method improves the performance of the baseline PC2-depth by 19.2% on Chamfer distance and 7.8% on F-score. | comparison identity and matched condition | p. 6 (4. Experiments) |
 | Figure 1. Our work focuses on the task of generalizable 3D object reconstruction from a single RGB-D image. The proposed method conducts implicit field ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 6 (4. Experiments), p.
 | body limitation/failure cue | We hire annotators to manually filter the 3D annotations with low quality and remove the background noise caused by COLMAP estimation for the rest ... | p. 5 (4. Experiments) |
 | body limitation/failure cue | 5), the noise in point clouds can not be perfectly diminished. | p. 7 (4.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 6 (4. Experiments), p.
 | In the Transformer-based implementation, we employ the similar anchor prediction operation following NU-MCC [28], which further encode the features of I and P into ... | p. 4 (3.2. Implicit Field Learning with Point Diffusion) |
 | The noising stepsize in the diffusion process is defined by a variance schedule {βt}T t=0: q(X_t/X_ { t-1}) | p. 3 (3.1. Preliminary) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations We have not validated the effectiveness of our method on 3D human and scene reconstruction.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 6 (4. Experiments), p.
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** 5), the noise in point clouds can not be perfectly diminished.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 6 (4.2. Results on MVImgNet), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), metrics p. 5 (4. Experiments), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.3. Ablation Study), p. 5 (4. Experiments), p. 7 (4.3. Ablation Study), baselines p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 1 (Figure/Table caption), results p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.3. Ablation Study), p. 5 (4. Experiments), p. 7 (4.3. Ablation Study), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

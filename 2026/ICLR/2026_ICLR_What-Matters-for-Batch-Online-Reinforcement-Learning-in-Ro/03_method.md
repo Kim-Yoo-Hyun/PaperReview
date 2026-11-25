@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 8 (3 Preliminaries), p. 5 (
 - **p. 6 / 3 Preliminaries - extractive body cue:** In contrast to a separate policy extraction step that explicitly extracts a policy to maximize Q-values, an alternative for policy extraction is to optimize for ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), p. 8 (3 Preliminaries).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 8 (3 Preliminaries), p. 5 (
 - **p. 4 / 3 Preliminaries - extractive body cue:** As in IQL, we consider Advantage-Weighted Regression (AWR) [16] as a canonical example of a policy extraction method.
 - **p. 5 / 3 Preliminaries - extractive body cue:** We examine policy extraction choices individually in more detail in Section 4.2 and policy expressivity in Section 4.3.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 8 (3 Preliminaries), p. 5 (
 - **p. 4 / 3 Preliminaries - extractive body cue:** We run N=10 to 20 iterations of batch online RL with M=200 rollouts per iteration.
 - **p. 7 / 3 Preliminaries - extractive body cue:** To control for the advantages of the implicit policy extraction method in batch online RL that we observed in Section 4.2, we additionally run a ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** observations, general, recipe, effective, batch, online, train, expressive, policy, actor, Q-function, autonomous, data, perform, implicit, extraction, rollouts, contrast, where, leverage.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 8 (3 Preliminaries), p. 5 (
 - **p. 9 / 6 Discussion - extractive body cue:** Our work presents a general recipe on batch online RL, though it does have a number of limitations.
 - **p. 9 / 6 Discussion - extractive body cue:** 7 Limitations In this work, we empirically analyze the key axes that affect performance in batch online RL, demonstrating that the general recipe of value-based ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 8 (3 Preliminaries), p. 5 (3 Preliminaries), p. 7 (3 Preliminaries), p. 7 (3 Preliminaries), p. 8 (3 Preliminaries), objective p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), p. 4 (3 Preliminaries), p. 6 (3 Preliminaries), temporal p. 3 (3 Preliminaries), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (3 Preliminaries), p. 4 (3 Preliminaries), p. 4 (3 Preliminaries).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

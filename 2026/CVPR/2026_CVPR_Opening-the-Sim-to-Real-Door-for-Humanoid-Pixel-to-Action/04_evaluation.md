@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (3.2. Effect o
 - **p. 7 / 3.1. Surpassing Human-Teleop Baseline - extractive body cue:** Qualitatively, teleoperators often fail to gauge the spring-loaded force of the door handle and the door hinge, or whether the robot is leaning with the ...
 - **p. 7 / 3.4. Effect of Staged Reset Exploration - extractive body cue:** A buffer size of 10, for example, stores the ten most recent snapshots of the simulation state when an environment enters a stage.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. DoorMan, a simulation-trained, RGB-only humanoid loco-manipulation policy, opens diverse doors in the real world.
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (3.2. Effect o
 | Figure 3. DoorMan training pipeline. All phases are done inter- actively with IsaacLab. In Phase 1, we train a teacher policy with privileged observations. ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 8. Teacher training progress with different reset buffer sizes of 0, 10 and 100. reset buffer, as the policy finds it difficult to ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (3.2. Effect o
 | In addition, DoorMan shines in terms of task fluency, outperforming experts by 23.8% and non-experts by 31.7%. | comparison identity and matched condition | p. 7 (3.1. Surpassing Human-Teleop Baseline) |
 | We design an ablation study on the visual diversity during training, starting with no visual randomization, where objects are coated in a default gray ... | comparison identity and matched condition | p. 7 (3.2. Effect of Photorealistic Visual Randomization) |
 | Figure 4. Overview of the staged-reset exploration scheme. When entering a new stage, a snapshot of the simulation is cached into the buffer. When ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (3.2. Effect o
 | body limitation/failure cue | Trained entirely in photorealistic simulation, the resulting policy achieves robust zero-shot performance on articulated-object interaction tasks, including diverse door configurations, and exceeds human teleoperation ... | p. 8 (5. Conclusion) |
 | body limitation/failure cue | Qualitatively, teleoperators often fail to gauge the spring-loaded force of the door handle and the door hinge, or whether the robot is leaning with ... | p. 7 (3.1. Surpassing Human-Teleop Baseline) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (3.2. Effect o
 | Next, we distill the teacher into an RGB-based student using DAgger [33], fusing a vision encoder with proprioception under aggressive visual randomization. | p. 3 (1. Introduction) |
 | The vision encoder is jointly fine-tuned with the policy. | p. 4 (2.1. Visual RL and Teacher-Student Distillation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 8. Teacher training progress with different reset buffer sizes of 0, 10 and 100. reset buffer, as the policy finds it difficult to enter ...
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (3.2. Effect o
 - **p. 7 / 3.1. Surpassing Human-Teleop Baseline - extractive body cue:** Qualitatively, teleoperators often fail to gauge the spring-loaded force of the door handle and the door hinge, or whether the robot is leaning with the ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 6 (3. Experiment), p. 7 (3.1. Surpassing Human-Teleop Baseline), p. 7 (3.4. Effect of Staged Reset Exploration), metrics p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 7 (3.3. Performance Boost in GRPO Fine-Tuning), p. 7 (3.3. Performance Boost in GRPO Fine-Tuning), p. 5 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (3. Experiment), p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 7 (3.1. Surpassing Human-Teleop Baseline), p. 7 (3.2. Effect of Photorealistic Visual Randomization), p. 5 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 7 (3.2. Effect of Photorealistic Visual Randomization), p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Qualitative visualization on the ScanRefer [5] and SQA3D [50] datasets.
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** We showcase referring segmentation results on both scenes (a) and (b), and additionally present a question answering example on scene (b). ⑤Geometry-aware fusion facilitates synergistic ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. We propose GenSplat, the first approach to achieve generalizable language-guided understanding in 3DGS. By hierarchically grounding multi-level linguistic concepts in 3D Gaussian representations, ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 | For 3D question answering, instance query features are passed to the captioning head [57] to generate the textual prediction. | definition/direction/unit from same section | p. 7 (4.4. Ablation Study) |
 | Figure 1. We propose GenSplat, the first approach to achieve generalizable language-guided understanding in 3DGS. By hierarchically grounding multi-level linguistic concepts in 3D Gaussian ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 | We showcase referring segmentation results on both scenes (a) and (b), and additionally present a question answering example on scene (b). ⑤Geometry-aware fusion facilitates ... | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
 | Comparison of 3D referring segmentation on five scenes (selected by ReferSplat [22]) from the ScanRefer [5] dataset. | comparison identity and matched condition | p. 6 (4.2. Evaluation Datasets and Metrics) |
 | We report comparison results on the ScanRefer [5] (featuring single referred object) and Multi3DRefer [76] (featuring varying numbers of referred objects) datasets, as shown ... | comparison identity and matched condition | p. 6 (4.3. Comparison with State-of-the-Art Models) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 | body limitation/failure cue | In contrast, 2D-based methods such as Grounded-SAM and per-scene optimization approaches fail under these challenging scenarios. | p. 7 (4.3. Comparison with State-of-the-Art Models) |
 | body limitation/failure cue | Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities. | p. 7 (4.3. Comparison with State-of-the-Art Models) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 | 2, GenSplat consists of three main components: the Gaussian Encoder, the Instance Decoder, and the MLLMguided Referring Decoder. | p. 3 (3. The GenSplat Method) |
 | Within this Transformer-based decoder, the queries Oq interact with the keys and values from the pooled semantic features ˆL through cross-attention. | p. 4 (3.1. Progressive Language Grounding Curriculum) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** An example failure case of our method.
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Comparison with State-of-the-Art Mode
 - **p. 7 / 4.3. Comparison with State-of-the-Art Models - extractive body cue:** Results in Table 2 show that our GenSplat method significantly outperforms other methods without requiring per-scene optimization, showcasing its robust generalization capabilities.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Evaluation Datasets and Metrics), p. 7 (4.4. Ablation Study), p. 6 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), metrics p. 6 (4.2. Evaluation Datasets and Metrics), p. 6 (4.1. Implementation Details), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.4. Ablation Study), p. 2 (Figure/Table caption), baselines p. 7 (4.4. Ablation Study), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 8 (4.4. Ablation Study), p. 6 (4.2. Evaluation Datasets and Metrics), p. 6 (4.3. Comparison with State-of-the-Art Models), results p. 7 (4.3. Comparison with State-of-the-Art Models), p. 7 (4.3. Comparison with State-of-the-Art Models), p. 2 (Figure/Table caption), p. 6 (4.3. Comparison with State-of-the-Art Models), p. 6 (4.2. Evaluation Datasets and Metrics), p. 8 (4.4. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

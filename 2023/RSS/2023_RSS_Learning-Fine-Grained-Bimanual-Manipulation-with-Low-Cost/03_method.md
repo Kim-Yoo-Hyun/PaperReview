@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (I
 - **p. 6 / IV. ACTION CHUNKING WITH TRANSFORMERS - extractive body cue:** We use L1 loss for reconstruction instead of the more common L2 loss: we noted that L1 loss leads to more precise modeling of the ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 4 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (I
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Small errors in the predicted action can incur large differences in the state, exacerbating the "compounding error" problem of imitation learning [47, 64, 29].
 - **p. 4 / IV. ACTION CHUNKING WITH TRANSFORMERS - extractive body cue:** Next, we train ACT to predict the sequence of future actions given the current observations.
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (I
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** For the real-world tasks, we report training with human data, with 1 seed and 25 evaluations.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** For the two simulated tasks, we report [training with scripted data / training with human data], with 3 seeds and 50 policy evaluations each.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** ResNet, image, encoders, transformer, encoder, decoder, implement, CVAE, loss, reconstruction, instead, more, common, noted, leads, precise, modeling, action, sequence, whole.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (I
 - **p. 9 / V. EXPERIMENTS - extractive body cue:** The failure modes we observe are 1) at stage 2, the right arm closes its gripper too early and fails to grasp the tail of ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** Because of the cup's small size, the grippers cannot grasp the body of the cup by just approaching it from the side.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 4 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 4 (IV. ACTION CHUNKING WITH TRANSFORMERS), objective p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 4 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 6 (IV. ACTION CHUNKING WITH TRANSFORMERS), temporal p. 8 (V. EXPERIMENTS), p. 4 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 5 (IV. ACTION CHUNKING WITH TRANSFORMERS), p. 2 (I. INTRODUCTION), p. 2 (II. RELATED WORK), p. 8 (V. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

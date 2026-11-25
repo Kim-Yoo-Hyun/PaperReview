@@ -50,7 +50,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 
 - **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** Since RSL-rl and rl-games are optimized for GPU, we observe a training speed of 50,00075,000 frames per second (FPS) with 2048 environments, while with stable-baselines3, ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 
 - **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** 7, we show the training of Franka-Reach and Franka-Cabinet-Opening with PPO [37] using different RL frameworks and action spaces.
 - **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** Owing to highquality physics, sensor simulation, and rendering, ORBIT is useful for multiple robotics challenges in both perception and decision-making.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 
 - **p. 1 / Abstract - extractive body cue:** ORBIT allows training reinforcement learning policies and collecting large demonstration datasets from hand-crafted or expert solutions in a matter of minutes by leveraging GPU-based parallelization.
 - **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** Since RSL-rl and rl-games are optimized for GPU, we observe a training speed of 50,00075,000 frames per second (FPS) with 2048 environments, while with stable-baselines3, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** design, system, bottom-up, incorporating, user-defined, models, actuator, dynamics, modularizing, task, specifications, learning, different, levels, observations, action, spaces, other, hand, physics.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 
 - **p. 7 / VI. DISCUSSION - extractive body cue:** ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, ...
 - **p. 6 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** To make the policy robust, we randomize the base mass (22 ± 5 kg) and add simulated random pushes.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 2 (2) It provides a batteries-included experience for roboti), p. 2 (I. INTRODUCTION), objective p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), temporal p. 4 (II. RELATED WORK), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 1 (Abstract), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

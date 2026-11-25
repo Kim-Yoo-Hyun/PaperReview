@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Qualitative results of the object re-texturing task.
 - **p. 6 / 4.3. Results - extractive body cue:** We primarily provide quantitative and qualitative comparisons of three inpainting tasks, i.e., object removal, object 16350
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. DiGA3D is a versatile 3D inpainting framework guided by text prompts, supporting multiple inpainting tasks including ob- ject replacement, removal, and re-texturing, etc. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 | Figure 9. Qualitative ablation study for the proposed TG-SDS op- timization loss on the SPIn-NeRF dataset [25]. ence View Selection. When using K-means for ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | To generate 2D masks for inpainting, we utilize Lang SAM [14] based on mask prompts. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 | The results indicate that our methods also exhibit advantages compared to other methods. | comparison identity and matched condition | p. 7 (4.3.2. Object Re-Texturing) |
 | In the baseline, we solely utilize the 2D inpainter [42, 47] and depend on the convergence of 3D representations. | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
 | 3, we gradually assess our baseline (w/o AFP & TGSDS loss), coarse stage (w/o TG-SDS loss), and our fine stage (full model). | comparison identity and matched condition | p. 8 (4.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 |---|---|---|
 | body limitation/failure cue | While our rendering results exhibit some limitations in the masked LPIPS compared to GScream, we achieve a comparable score in this metric and show ... | p. 7 (4.3.1. Object Removal) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,19 +134,10 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablat
 | After acquiring conditional images with both texture and geometry details, i.e., the texture maps and depth maps derived from texture-geometry warping, we employ them ... | p. 5 (3.4. Texture-Geometry Guided SDS Loss) |
 | We then compute a wrapped pixel qRj→i as follows: \lab e l {eq: wa rp} q_ {{R_j} \rightarrow i} = \mathbf {K}\mathbf {P_i}\mathbf {P_{R_j}^{-1}}\mathbf ... | p. 5 (3.4. Texture-Geometry Guided SDS Loss) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.3.1. Object Removal - extractive body cue:** While our rendering results exhibit some limitations in the masked LPIPS compared to GScream, we achieve a comparable score in this metric and show significant ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal), p. 7 (4.3.2. Object Re-Texturing), p. 5 (4.1. Experimental Setup), p. 8 (4.3.3. Object Replacement), p. 8 (4.3.3. Object Replacement), metrics p. 7 (4.3.3. Object Replacement), p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3.2. Object Re-Texturing), p. 8 (4.4. Ablation Study), baselines p. 6 (4.1. Experimental Setup), p. 7 (4.3.1. Object Removal), p. 6 (4.1. Experimental Setup), p. 7 (4.3.2. Object Re-Texturing), p. 8 (4.4. Ablation Study), p. 8 (4.4. Ablation Study), results p. 6 (4.1. Experimental Setup), p. 8 (4.4. Ablation Study), p. 7 (4.3.1. Object Removal), p. 8 (4.4. Ablation Study), p. 7 (4.3.3. Object Replacement), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

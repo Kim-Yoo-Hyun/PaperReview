@@ -62,8 +62,6 @@ PDF body contribution framing (p. 5 (B. Policy Learning with a Hierarchical Poli
 | body cue at p. 12 | Common failure ceases for table-top experiments include: 1, The robot arm runs to joint limits while opening the ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 12 | The major failure case for FlowBot3D is that the predicted flow is in the wrong direction, e.g., it ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 5 (B. Policy Learning with a Hierarchical Policy Representation). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), interface p. 8 (B. Is a Hierarchical Policy Needed?), p. 7 (B. Policy Learning with a Hierarchical Policy Representation), p. 4 (2. Hierarchical Policy Learning -- Low-level Policy Architecture), p. 5 (B. Policy Learning with a Hierarchical Policy Representation), objective p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 5 (B. Policy Learning with a Hierarchical Policy Representation), p. 6 (B. Policy Learning with a Hierarchical Policy Representation), p. 7 (B. Policy Learning with a Hierarchical Policy Representation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

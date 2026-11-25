@@ -54,7 +54,6 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 - **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** Evaluation progress score for Voxposer and CoPA.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 - **p. 6 / 3.4. Dataset Construction - extractive body cue:** Section 8.4 provides more details of the instruction generation.
 - **p. 6 / 3.4. Dataset Construction - extractive body cue:** We use GPT-4o [1] to generate descriptions that incorporate target-specific characteristics and interactive instructions that encompass a variety of contexts and intentions.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 - **p. 8 / 4.2. Zero-shot Ability of Agent - extractive body cue:** The reason why only GLM-4V-9B is evaluated in a zero-shot setting is that it does not support multigraph inference, which is required for the other ...
 - **p. 6 / 3.4. Dataset Construction - extractive body cue:** During the data construction process, we introduced diverse task variants and domain randomization across different episodes of the same task to ensure the diversity of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** discuss, detail, potential, issues, current, VLAs, multimodal, data, co-training, model, architecture, designs, evaluation, foundation, model-based, algorithms, reviewed, state-of-the-art, frameworks, Voxposer.
 - **Relevant PDF headings:** Model (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 - **p. 5 / 3.3. Benchmark - extractive body cue:** The evaluation tasks are replaced with ones that differ from those in the training set, but require similar actions. - Track 6: Long-horizon task learning.
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Overall experiment result of 6 evaluation tracks of fine-tuned VLAs. The detailed result of each task is reported in Table 9. above, we ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent), p. 6 (3.4. Dataset Construction), p. 8 (4.2. Zero-shot Ability of Agent), p. 6 (3.4. Dataset Construction), objective p. 6 (3.4. Dataset Construction), p. 6 (3.4. Dataset Construction), p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent), p. 8 (4.2. Zero-shot Ability of Agent), temporal p. 4 (3.1. Task Description), p. 1 (Abstract), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Generalization Ability of VLAs).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Modelling a dynamical system - N-body
 - **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** Dataset: We sampled 3.000 trajectories for training, 2.000 for validation and 2.000 for testing.
 - **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** This is an equivariant task since rotations and translations on the input set of particles result in the same transformations throughout the entire trajectory.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Example of rotation equivariance on a graph with a graph neural network φ Recently, various forms and methods to achieve E(3) or SE(3) ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Modelling a dynamical system - N-body
 | Figure 1. Example of rotation equivariance on a graph with a graph neural network φ Recently, various forms and methods to achieve E(3) or ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | In this section we analyze the equivariance properties of our model for E(3) symmetries (i.e. properties 1 and 2 stated in section 2.1). | definition/direction/unit from same section | p. 3 (3.1. Analysis on E(n) equivariance) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Modelling a dynamical system - N-body
 | Results As shown in Table 2 our model significantly outperforms the other equivariant and non-equivariant alternatives while still being efficient in terms of running ... | comparison identity and matched condition | p. 5 (5.1. Modelling a dynamical system - N-body system) |
 | Table 4. Analysis of the % of wrong edges and F1 score for different n embedding sizes {2, 4, 8 } for the GNN, ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
 | Table 1. Comparison over different works from the literature under the message passing framework notation. We created this table with the aim to provide ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Modelling a dynamical system - N-body
 | body limitation/failure cue | This method introduces noise sampled from a Gaussian distribution into the input node features of the graph h0 i ∼N(0, σI). | p. 6 (5.2. Graph Autoencoder) |
 | body limitation/failure cue | Table 4. Analysis of the % of wrong edges and F1 score for different n embedding sizes {2, 4, 8 } for the GNN, ... | p. 15 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 5 (5.1. Modelling a dynamical system - N-body
 | In this experiment section we use our EGNN to build an Equivariant Graph Autoencoder. | p. 6 (5.2. Graph Autoencoder) |
 | Further implementation details are reported in Appendix. | p. 8 (5.2. Graph Autoencoder) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** Although we observed that adding noise to the GNN improves the results, it is difficult to exactly measure the impact of the symmetry limitation in ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 5 (5.1. Modelling a dynamical system - N-body
 - **p. 15 / Figure/Table caption - extractive body cue:** Table 4. Analysis of the % of wrong edges and F1 score for different n embedding sizes {2, 4, 8 } for the GNN, Noise-GNN ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Modelling a dynamical system - N-body system), p. 5 (5.1. Modelling a dynamical system - N-body system), metrics p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (5.1. Modelling a dynamical system - N-body system), p. 15 (Figure/Table caption), p. 6 (5.1. Modelling a dynamical system - N-body system), baselines p. 5 (5.1. Modelling a dynamical system - N-body system), p. 5 (5.1. Modelling a dynamical system - N-body system), p. 15 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 5 (5.1. Modelling a dynamical system - N-body system), p. 15 (Figure/Table caption), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (5.1. Modelling a dynamical system - N-body system), p. 6 (5.1. Modelling a dynamical system - N-body system).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

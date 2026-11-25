@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 - **p. 8 / C. Platform-aware Predictions - extractive body cue:** 8, new datasets in similar environments have been used.
 - **p. 9 / C. Platform-aware Predictions - extractive body cue:** Despite real-world, challenges such as sensor noise, terrain inconsistencies, and imperfect state estimation, our FDM successfully interprets the environment's traversability.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Demonstration of the proposed perceptive Forward Dynamics Model for robust navigation in complex environments. The model, trained with real-world and simulation data, predicts ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 | We assess the planner's effectiveness in both 2D and 3.D environments based on success rate, mean path length (MPL), and mean path time (MPT). | definition/direction/unit from same section | p. 9 (C. Platform-aware Predictions) |
 | Trained with a mix of simulated and real-world data, the 'DM captures the complex dynamics of a quadrupedal robot and enables zero-shot adjustments of ... | definition/direction/unit from same section | p. 10 (C. Platform-aware Predictions) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 | Our approach <demonstrates superior performance compared to the baseline method of Kim et al. | comparison identity and matched condition | p. 9 (C. Platform-aware Predictions) |
 | Trained with a mix of simulated and real-world data, the 'DM captures the complex dynamics of a quadrupedal robot and enables zero-shot adjustments of ... | comparison identity and matched condition | p. 10 (C. Platform-aware Predictions) |
 | The baseline achieves a higher recall score, which we hypothesize is due to its limited perception. | comparison identity and matched condition | p. 8 (B. Baseline Comparison) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 - **p. 6 / B. Model Architecture - extractive body cue:** The FDM runs onboard using an NVIDIA Jetson Orin AGX, with the planner running at 7 Hz. using 2048 trajectories and a model inference time ...
 - **p. 7 / B. Model Architecture - extractive body cue:** Across 15 rounds, each collecting 80k samples from 10k parallel environments, updates consist of 8 episodes with a batch sizeof 2048, optimized using the AdamW ...
 - **p. 4 / B. Planning - extractive body cue:** ‘TABLE I: The observation space of the FDM combines proprioceptive information of the robot state m2" and the joint states m?""* with exteroceptive measurements h. ...
-- **p. 6 / B. Model Architecture - extractive body cue:** The FDM runs onboard using an NVIDIA Jetson Orin AGX, with the planner running at 7 Hz. using 2048 trajectories and a model inference time ...
-- **p. 7 / B. Model Architecture - extractive body cue:** Across 15 rounds, each collecting 80k samples from 10k parallel environments, updates consist of 8 episodes with a batch sizeof 2048, optimized using the AdamW ...
 
 ## Generalization and Failure Cases
 
@@ -139,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 | body limitation/failure cue | The proposed FDM accurately predicts failures due to collisions and ealy path terminations caused by unlzaversable stars and ramps. | p. 10 (C. Platform-aware Predictions) |
 | body limitation/failure cue | As a resull, the simple combination of pose reward guiding the robot toward the goal and a failure reward preventing collisions proves sufficient for ... | p. 10 (C. Platform-aware Predictions) |
 | body limitation/failure cue | Fig. 1: Demonstration of the proposed perceptive Forward Dynamics Model for robust navigation in complex environments. The model, trained with real-world and simulation data, ... | p. 1 (Figure/Table caption) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -155,14 +140,6 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 | about the current and past state of the robotic system is encoded and given to a recurrent unit, which generates a latent of the ... | p. 4 (B. Planning) |
 | The pose loss is computed using mean squared error (MSE) between predicted and true poses. | p. 5 (B. Model Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / A. FDM Percepriveness - extractive body cue:** Specifically, the FDM can estimate failure states (eg., collisions) and adjust future poses based on the velocity ‘command tracking performance in rough terrain, To evaluate ...
@@ -173,9 +150,8 @@ PDF body evaluation/result cue (p. 9 (C. Platform-aware Predictions), p. 10 (C. 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Demonstration of the proposed perceptive Forward Dynamics Model for robust navigation in complex environments. The model, trained with real-world and simulation data, predicts ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), p. 6 (B. Model Architecture), p. 6 (B. Model Architecture), p. 7 (B. Model Architecture), metrics p. 10 (C. Platform-aware Predictions), p. 7 (A. FDM Percepriveness), p. 8 (B. Baseline Comparison), p. 8 (C. Platform-aware Predictions), p. 16 (Figure/Table caption), p. 9 (C. Platform-aware Predictions), baselines p. 7 (B. Baseline Comparison), p. 7 (B. Baseline Comparison), p. 8 (B. Baseline Comparison), p. 9 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), results p. 9 (C. Platform-aware Predictions), p. 10 (C. Platform-aware Predictions), p. 6 (B. Model Architecture), p. 8 (C. Platform-aware Predictions), p. 8 (B. Baseline Comparison), p. 9 (C. Platform-aware Predictions).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

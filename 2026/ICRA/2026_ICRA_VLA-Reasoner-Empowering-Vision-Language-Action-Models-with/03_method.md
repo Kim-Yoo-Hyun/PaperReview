@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** The overall value of node oi is Q(oi), which is balanced by combining the cost of the visit count N(ai).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 1 / I. INTRODUCTION - extractive body cue:** This raises a core question: "Can VLAs explore the longhorizon future influence of actions at test time, and decide the optimal action?" To this end, ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The method is plug-and-play, and it can be attached to any VLA-based manipulation policy and consistently improves performance across tasks, environments, and robot embodiments. exploration ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Online Monte Carlo Tree Search The key to VLA-Reasoner lies in leveraging a tree structure consist of possible action trajectories and corresponding states for guided ...
 - **p. 6 / 3) Robustness. Can VLA-Reasoner adapt to varied set - extractive body cue:** Real-world inference is conducted on an NVIDIA RTX 4090 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** whole, process, constructs, independent, Monte, Carlo, Tree, current, robot, states, world, model, dictate, transitions, dataset, actions, KDE, formulated, where, kernel.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 7 / 2 Cups - extractive body cue:** Spatial Goal Object Long α=1.0 α=0.8 α=0.6 α=0.4 α=0.2 82% 78% 86% 54.5% 88% 83.5% 87.5% 58% 91.5% 83.5% 90.5% 60.5% 90.5% 81.5% 88.5% 58.5% ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In real-world deployments, our approach achieves higher success rates compared to popular VLAs fine-tuned with a few demonstrations, indicating stronger generalization and adaptivity at test ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), objective p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), temporal p. 4 (III. METHOD), p. 4 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 3 (III. METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -45,7 +45,6 @@ PDF body method statement (p. 13 (A Implementation Details), p. 13 (A Implementa
 - **p. 13 / A Implementation Details - extractive body cue:** During semantic search, both the 3D Scene Graph and Memory components of the input prompt get updated at each step, while during iterative replanning only ...
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 13 (A Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -65,7 +64,6 @@ PDF body method statement (p. 13 (A Implementation Details), p. 13 (A Implementa
 - **p. 13 / A Implementation Details - extractive body cue:** During semantic search, both the 3D Scene Graph and Memory components of the input prompt get updated at each step, while during iterative replanning only ...
 - **p. 1 / 1 Introduction - extractive body cue:** To address this, recent works have explored the utilization of vision-based value functions [4], object detectors [7, 8], or Planning Domain Definition Language (PDDL) descriptions ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -80,13 +78,10 @@ PDF body method statement (p. 13 (A Implementation Details), p. 13 (A Implementa
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** utilise, GPT-4, underlying, LLM, agent, unless, otherwise, stated, During, semantic, search, Scene, Graph, Memory, components, input, prompt, updated, step, while.
 - **Relevant PDF headings:** 3.3 Approach (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -105,23 +100,13 @@ PDF body method statement (p. 13 (A Implementation Details), p. 13 (A Implementa
 - **p. 46 / Figure/Table caption - extractive body cue:** Figure 8: Evaluating the performance of SayPlan's causal planning capabilities as the scale of the environment increases. For the office environment used in this study, ...
 - **p. 32 / Figure/Table caption - extractive body cue:** Table 18: Correctness, Executability and Number of Replanning Iterations for Long-Horizon Planning Instructions. Evaluating the performance of SayPlan on each long-horizon planning instruction. Values indicated ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 13 (A Implementation Details), p. 13 (A Implementation Details), objective p. 13 (A Implementation Details), temporal p. 13 (A Implementation Details), p. 5 (3.3 Approach), p. 2 (1 Introduction), p. 5 (3.3 Approach), p. 6 (3.3 Approach), p. 8 (1. SayPlan (GPT-3.5) consistently).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

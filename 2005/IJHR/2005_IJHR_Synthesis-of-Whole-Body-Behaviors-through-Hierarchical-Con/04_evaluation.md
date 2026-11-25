@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 10 (4.3. Movement feasibility), p. 12 (X Dire
 - **p. 9 / 4.3. Movement feasibility - extractive body cue:** In the case that an active task becomes ill-conditioned we say that the robot's movement is infeasible.
 - **p. 9 / 4.3. Movement feasibility - extractive body cue:** This complex behavior is complemented with additional tasks to control the robot's center of gravity and to maintain a body symmetry posture.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 1. Task and posture decomposition: In this sequence, we control the robot's hands to grab a box while maintaining body self-balance (based on the ...
@@ -79,20 +77,11 @@ PDF body evaluation/result cue (p. 10 (4.3. Movement feasibility), p. 12 (X Dire
 | Therefore, in the case of a motion conflict, the task would be unable to operate within this projection. | definition/direction/unit from same section | p. 6 (3. Integration of constraints) |
 | We create this hierarchy to integrate constraints and organize additional tasks according to desired priorities, while optimizing the execution of the global task. | definition/direction/unit from same section | p. 6 (4. Multi-level hierarchy) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -114,7 +103,6 @@ PDF body evaluation/result cue (p. 10 (4.3. Movement feasibility), p. 12 (X Dire
 - **p. 9 / 4.3. Movement feasibility - extractive body cue:** For this simulated experiment, we use a humanoid robot model consisting of 24 degrees of freedom: 2×6 for the legs, 2×4 for the arms, 2 ...
 - **p. 12 / X Direction - extractive body cue:** When the hip, elbow, and knee flexion joint limits are reached at t = 0.9 s, 1 s, and 1.2 s respectively, the center of ...
 - **p. 4 / 3. Integration of constraints - extractive body cue:** The control of robots under constraints has been investigated since the mid 1970s.
-- **p. 8 / 4.1. Recursive null-spaces - extractive body cue:** December 19, 2005 17:13 WSPC/INSTRUCTION FILE ijhr-II-v4 8 This mathematical constraint leads to the following unique solution Nprec(k) = I - k-1 X i=1 Ji/prec(i)Ji/prec(i), ...
 
 ## Generalization and Failure Cases
 
@@ -127,21 +115,11 @@ PDF body evaluation/result cue (p. 10 (4.3. Movement feasibility), p. 12 (X Dire
 | body limitation/failure cue | December 19, 2005 17:13 WSPC/INSTRUCTION FILE ijhr-II-v4 13 conflict in their control (cannot be simultaneously accomplished). | p. 13 (X Direction) |
 | body limitation/failure cue | This projection ensures that the operational task does not introduce acceleration components into the constrained directions. | p. 6 (3. Integration of constraints) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | While today the interactive control of humanoids is limited to the online selection of a few preplanned motions, with this new controller, we construct ... | p. 13 (6. Summary and discussion) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -153,6 +131,5 @@ PDF body evaluation/result cue (p. 10 (4.3. Movement feasibility), p. 12 (X Dire
 - **p. 6 / 3. Integration of constraints - extractive body cue:** This projection ensures that the operational task does not introduce acceleration components into the constrained directions.
 
 - **Evidence anchors reviewed:** datasets p. 5 (3. Integration of constraints), p. 5 (3. Integration of constraints), p. 6 (4. Multi-level hierarchy), p. 6 (4. Multi-level hierarchy), p. 7 (4. Multi-level hierarchy), p. 7 (4. Multi-level hierarchy), metrics p. 11 (4.3. Movement feasibility), p. 12 (X Direction), p. 12 (X Direction), p. 13 (X Direction), p. 13 (X Direction), p. 5 (Figure/Table caption), baselines 본문 anchor 없음, results p. 10 (4.3. Movement feasibility), p. 12 (X Direction), p. 13 (6. Summary and discussion).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

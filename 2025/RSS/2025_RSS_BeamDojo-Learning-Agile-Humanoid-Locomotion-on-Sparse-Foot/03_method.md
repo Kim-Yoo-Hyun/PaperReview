@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (A. Locomotion on Sparse Footholds), p. 2 (1. IN
 - **p. 1 / Abstract - extractive body cue:** BEAMDOJO begins by introducing a sampling-based foothold reward tailored for polygonal feet, along with a double critic to balancing the learning process between dense locomotion ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (B. Double Critic for Sparse Reward Learning), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 3 (B. Reinforcement Learning in Locomotion Control), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (A. Locomotion on Sparse Footholds), p. 2 (1. IN
 - **p. 4 / B. Double Critic for Sparse Reward Learning - extractive body cue:** and the foothold reward are decoupled respectively, with the former obtained from flat terrain and the latter from task terain, The double critic modile separately ...
 - **p. 5 / C. Learning Terrain-Aware Locomotion via Two-Stage RL - extractive body cue:** The action of lst timestep a¢-1 € Ris also included to provide temporal context. ‘The action a, € R'? represents the target joint positions for ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 2 (A. Locomotion on Sparse Footholds), p. 2 (1. IN
 - **p. 2 / 1. INrRopucTION - extractive body cue:** BEAMDOJO further incorporates a two-stage approach to encourage fully trial-and-error exploration, In the first stage, terrain dynamics constraints are relaxed, allowing the humanoid robot to ...
 - **p. 7 / B. Simulation Experiments - extractive body cue:** e123 5 7 0 ‘Training Steps (&) "= Naive + Ours wio Sot Dyn + Ours wio Double Critic ->- Ours
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Recent, studies, have, explored, combining, modelbased, controllers, generate, trajectories, then, tracked, model-based, employing, policies, track, generated, planners, begin, defining, samplingbased.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 2 (A. Locomotion on Sparse Footholds), p. 2 (1. IN
 - **p. 7 / B. Simulation Experiments - extractive body cue:** single-stage approaches and ablation designs, achieving, high success rates and low foothold errors across all ‘challenging terrains.
 - **p. 8 / B. Simulation Experiments - extractive body cue:** In contrast, ‘our method and the ablation with double critic demonstrates superior motion smoothness and improved feet clearance.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (A. Locomotion on Sparse Footholds), p. 2 (1. INrRopucTION), p. 1 (Abstract), p. 1 (Abstract), p. 3 (A. Foothold Reward), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), objective p. 3 (B. Reinforcement Learning in Locomotion Control), p. 3 (B. Double Critic for Sparse Reward Learning), p. 4 (B. Double Critic for Sparse Reward Learning), p. 5 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 1 (Abstract), p. 1 (Abstract), temporal p. 6 (evaluation), p. 5 (evaluation), p. 6 (evaluation), p. 5 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 2 (1. INrRopucTION), p. 7 (B. Simulation Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

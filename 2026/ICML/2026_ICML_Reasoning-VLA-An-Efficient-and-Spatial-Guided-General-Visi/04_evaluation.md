@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 - **p. 6 / 5.1. Experiment Setups - extractive body cue:** To fairly compare with existing methods, we retain the original training and testing splits of each dataset.
 - **p. 8 / 5.2.2. Closed-loop Evaluation - extractive body cue:** For evaluation, the dataset splits follow the recommendations provided by each original dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Reasoning-VLA is an efficient Vision-Language-Action (VLA) framework for autonomous driving that employs parallel actions to interact with reasoning-enhanced vision-language models (VLMs), enabling one-step ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 | In our experiments, we mainly evaluate Reasoning-VLA's performance on unified AD datasets, which are constructed from eight autonomous driving datasets. | definition/direction/unit from same section | p. 6 (5.1. Experiment Setups) |
 | Generalized performance on our unifed dataset. | definition/direction/unit from same section | p. 8 (5.2.2. Closed-loop Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 | The generalized model, Reasoning-VLA-7B, substantially outperforms prior methods in terms of NeuroNCAP Score and Collision Rate, achieving an average NeuroNCAP Score of 2.25 and ... | comparison identity and matched condition | p. 7 (5.2.2. Closed-loop Evaluation) |
 | Ablation study of components contributions. | comparison identity and matched condition | p. 8 (5.2.2. Closed-loop Evaluation) |
 | Table 9. The Efficiency Comparisons. Steps: Theoretical num- ber of VLM inference steps required to complete a single predic- tion process. Speed(s): Measured inference ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 | body limitation/failure cue | Table 7. Generalization performance on the Open-loop Metrics. Methods L2 (m) ↓ Collision Rate (%) ↓ 1s 2s 3s Avg. | p. 14 (Figure/Table caption) |
 | body limitation/failure cue | These results indicate that our method maintains robust generalization across different driving scenarios and vehicle configurations. | p. 8 (5.2.3. Generalized Performance) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 | The acceleration reward is defined as: accj = p (xj+1 -xj)2 + (yj+1 -yj)2 T 2 - p (xj -xj-1)2 + (yj -yj-1)2 T ... | p. 5 (3.7. Reward Functions) |
 | Reasoning-VLA-7B+ is fine-tuned with an additional RL process using the corresponding nuScenes training clips from the unified dataset. *: Official checkpoints re-validated with corrected ... | p. 6 (3.7. Reward Functions) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Statistical distribution of the unified dataset. However, these constraints exert a non-negligible influence on the vehicle's behavior and overall driving safety. To ad- ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1.
 - **p. 8 / 5.2.3. Generalized Performance - extractive body cue:** These results indicate that our method maintains robust generalization across different driving scenarios and vehicle configurations.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.2.1. Open-loop Evaluation), p. 6 (4. Unified Datasets), p. 7 (5.2.1. Open-loop Evaluation), p. 8 (5.2.2. Closed-loop Evaluation), p. 6 (5.1. Experiment Setups), p. 8 (5.2.2. Closed-loop Evaluation), metrics p. 7 (5.1. Experiment Setups), p. 7 (5.2.2. Closed-loop Evaluation), p. 8 (5.2.2. Closed-loop Evaluation), p. 14 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.2. Closed-loop Evaluation), p. 8 (5.2.2. Closed-loop Evaluation), p. 14 (Figure/Table caption), results p. 7 (5.2.1. Open-loop Evaluation), p. 7 (5.2.1. Open-loop Evaluation), p. 6 (4. Unified Datasets), p. 6 (5. Experiments), p. 8 (5.2.2. Closed-loop Evaluation), p. 8 (5.2.2. Closed-loop Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

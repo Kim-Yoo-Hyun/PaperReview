@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 - **p. 16 / A.2 Implementation Details - extractive body cue:** The objective is to enable the robot to track goal commands across a variety of terrains.
 - **p. 16 / A.2 Implementation Details - extractive body cue:** We train this high-level policy in the simulation environment mentioned detailed in Section 4.2, focusing on locomotion goals as the primary task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: An example of recovering from a Hard Kick: The humanoid robot withstands external disturbance by automatically detecting hazardous states and adjusting its motion ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 | Table 14: Performance comparison with different history lengths (H) History Length Success Rate ↑ Goal-tracking ↑ Human-like ↓ 1 95.13 ± 0.51 1.07 ± ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | As a result, this reward term serves as a back-tracking reward for the safety recovery mechanism, encouraging it to return to a stable goal-tracking ... | definition/direction/unit from same section | p. 17 (A.2 Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 | To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α ... | comparison identity and matched condition | p. 7 (5 Experiment) |
 | To enable a comprehensive comparison, evaluations are performed under both low-speed and high-speed command conditions. | comparison identity and matched condition | p. 7 (5 Experiment) |
 | Table 14: Performance comparison with different history lengths (H) History Length Success Rate ↑ Goal-tracking ↑ Human-like ↓ 1 95.13 ± 0.51 1.07 ± ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 | body limitation/failure cue | Importantly, the controller does not rely solely on recovery mode but dynamically switches between goal-tracking and recovery policies, thereby adapting the action distribution to ... | p. 9 (5 Experiment) |
 | body limitation/failure cue | 2) Robustness: How well can HWC-Loco stabilize the humanoid robot under varying levels of disturbance? | p. 7 (5 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 | The training terrain consists of various types, including flat planes, rough surfaces, steps, and slopes. | p. 15 (A.2 Implementation Details) |
 | Action Space: The policy outputs continuous actions at ∈Rn, which are utilized as target positions for a PD controller to compute joint torques. | p. 15 (A.2 Implementation Details) |
 | 3) α1 and α2 indicate the hyperparameters that are utilized to adjust the importance of the different velocity terms. | p. 17 (A.2 Implementation Details) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 20 (Figure/Table caption), p. 8 (5 Experiment
 - **p. 7 / 5 Experiment - extractive body cue:** 2) Robustness: How well can HWC-Loco stabilize the humanoid robot under varying levels of disturbance?
 
 - **Evidence anchors reviewed:** datasets p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 9 (5 Experiment), metrics p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 9 (5 Experiment), baselines p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 20 (Figure/Table caption), results p. 20 (Figure/Table caption), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 20 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

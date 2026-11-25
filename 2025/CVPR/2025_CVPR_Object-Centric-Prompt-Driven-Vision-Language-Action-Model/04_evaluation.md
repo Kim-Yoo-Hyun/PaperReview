@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Visualization results in SAPIEN simulator and real world. 푎푝 0 푎푧 0 푎푦 0 푎푚 0 Seen Unseen Ex1 ✓ - - - 0.42 0.37 ...
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Consequently, it becomes challenging to make accurate object-centric manipulation predictions when relying solely on language prompts.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) shows our expression of different color prompts. (b) shows that we utilize a sequence of images with crayon visual prompts to express ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 | Figure 2. We design training pairs that convey varying levels of information to enable the model to comprehend each type of prompt and introduce ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 3. Illustration of model inference with input generated in different ways. GPT-4 [1] is then prompted to select lines from all candidates to ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 | This configuration results in a performance drop compared to inputting prompts from both modalities. | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
 | We conduct experiments involving interaction with various real-world objects without additional sim-to-real finetuning. | comparison identity and matched condition | p. 8 (4.4. Real-world Experiment) |
 | Ablation experiments regarding the effectiveness of each loss and failure case analysis are shown in Appendix.5 and Appendix.6. | comparison identity and matched condition | p. 8 (4.3.2. Tolerance Analysis of Prompt Noise) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 | body limitation/failure cue | However, our results demonstrate the robustness of CrayonRobo in handling such input inaccuracies. | p. 6 (4.2. Comparisons with Baselines) |
 | body limitation/failure cue | This is because the model is trained to manipulate objects, it can, to some extent, correct the noise in the prompts. | p. 6 (4.2. Comparisons with Baselines) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 | This approach aims to preserve the inherent existing pre-trained knowledge, particularly in simto-real transfer, while enhancing the model's ability to comprehend visual prompts and ... | p. 3 (3.3.1. Model Architecture) |
 | Simultaneously, text prompts 푃are encoded into text features using LLaMa's pre-trained tokenizer [51]. | p. 3 (3.3.1. Model Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitation: As for the limitation, though our method can not directly avoid obstacles, we can incorporate collision-free motion planner library like curobo [48] to realize ...
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 - **p. 6 / 4.2. Comparisons with Baselines - extractive body cue:** This is because the model is trained to manipulate objects, it can, to some extent, correct the noise in the prompts.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Comparisons with Baselines), p. 6 (4.1. Setup Details), p. 8 (4.4. Real-world Experiment), p. 8 (4.4. Real-world Experiment), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), metrics p. 6 (4.1. Setup Details), p. 8 (4.3. Ablation Study), p. 8 (4.4. Real-world Experiment), p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), baselines p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 6 (4.2. Comparisons with Baselines), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-world Experiment), p. 8 (4.3.2. Tolerance Analysis of Prompt Noise), results p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Tolerance Analysis of Prompt Noise), p. 6 (4.2. Comparisons with Baselines), p. 7 (Figure/Table caption), p. 8 (4.3. Ablation Study), p. 7 (4.3. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (4.3. Enhancing Action Learning with Joint Predi
 - **p. 3 / 4.2. Bridging Visual Prediction and Multi-modal - extractive body cue:** Instead of using next token prediction, we model the future image tokens at the 3
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (4.2. Bridging Visual Prediction and Multi-modal), p. 4 (4.2. Bridging Visual Prediction and Multi-modal), p. 4 (4.2. Bridging Visual Prediction and Multi-modal), p. 5 (4.4.2. TRAINING OBJECTIVE), p. 5 (4.4.2. TRAINING OBJECTIVE).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (4.3. Enhancing Action Learning with Joint Predi
 - **p. 5 / 4.4.2. TRAINING OBJECTIVE - extractive body cue:** The UP-VLA method involves three modeling targets: language modeling for multi-modal understanding, image modeling for visual prediction, and action modeling for embodied tasks.
 - **p. 1 / 1. Introduction - extractive body cue:** Constructing Vision-Language-Action (VLA) models (Brohan et al., 2023; Li et al., 2023b) capable of solving multiple tasks in open environments has become a central focus ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (4.3. Enhancing Action Learning with Joint Predi
 - **p. 4 / 4.4. Training Strategy - extractive body cue:** During training, we fully fine-tune the parameters of the LLM and freeze all encoders.
 - **p. 6 / 5.1. Experiment Setup and baseline - extractive body cue:** All baselines in our experiment are listed as below: • RT-1 (Brohan et al., 2022): a small robot action transformer using pretrained Efficient-Net (Tan & ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Finally, generate, actions, joint, prediction, small, policy, head, output, low-level, consisting, MAP, module, single-layer, attention, linear, layer, MLP, takes, current.
 - **Relevant PDF headings:** 4. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (4.3. Enhancing Action Learning with Joint Predi
 - **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Our method addresses this limitation by incorporating visual prediction into the original VLA framework.
 - **p. 6 / 5.2. Simulation Evaluation - extractive body cue:** Unlike UP-VLA, UP-VLA-phi-w/o-mmu does not include multi-modal understanding training, nor does it incorporate 6
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.3. Enhancing Action Learning with Joint Prediction), p. 4 (4.2. Bridging Visual Prediction and Multi-modal), p. 5 (4.4.2. TRAINING OBJECTIVE), p. 3 (4.1. Backbone), p. 5 (4.4.2. TRAINING OBJECTIVE), p. 3 (4.2. Bridging Visual Prediction and Multi-modal), objective p. 5 (4.4.2. TRAINING OBJECTIVE), p. 5 (4.4.2. TRAINING OBJECTIVE), p. 3 (4.2. Bridging Visual Prediction and Multi-modal), p. 4 (4.2. Bridging Visual Prediction and Multi-modal), p. 4 (4.2. Bridging Visual Prediction and Multi-modal), p. 3 (4.2. Bridging Visual Prediction and Multi-modal), temporal p. 4 (4.3. Enhancing Action Learning with Joint Prediction), p. 4 (4.3. Enhancing Action Learning with Joint Prediction), p. 3 (4.2. Bridging Visual Prediction and Multi-modal), p. 3 (4.1. Backbone), p. 5 (4.4.1. TRAINING PIPELINE), p. 6 (5.2. Simulation Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

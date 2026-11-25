@@ -46,7 +46,6 @@ PDF body method statement (p. 5 (Method), p. 5 (Method)): A state lattice motion
 - **p. 5 / Method - extractive body cue:** SR and Prog. indicate the success rate and the partial progress towards the goal, respectively. "SRS" averages over simple experiments without obstacles. "SRC" averages over ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 5 (Method), p. 5 (Method)): A state lattice motion
 - **p. 1 / I. INTRODUCTION - extractive body cue:** We train our model with goals specified through three primary modalities: (1) 2D poses, (2) egocentric images, and (3) natural language.
 - **p. 5 / Method - extractive body cue:** Language 2D Pose Image SR Behavior SRS SRC SR Prog.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 5 (Method), p. 5 (Method)): A state lattice motion
 - **p. 5 / Method - extractive body cue:** Other VLA backbones: To further understand the role of VLA architectures and pre-training, we also implement our omni-modal goal-conditioning strategy for the 1B MiniVLA [38] ...
 - **p. 4 / Dataset - extractive body cue:** In training OmniVLA with OpenVLA checkpoints on eight H100 GPUs, we use a per-GPU batch size of 7 and accumulate gradients for 4 steps, yielding ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** state, lattice, motion, planner, then, generate, velocity, commands, Other, VLA, backbones, further, understand, role, architectures, pre-training, implement, omni-modal, goal-conditioning, strategy.
 - **Relevant PDF headings:** Method (p. 5); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,20 +103,10 @@ PDF body method statement (p. 5 (Method), p. 5 (Method)): A state lattice motion
 - **p. 6 / V. EVALUATING OMNI-MODAL NAVIGATION - extractive body cue:** The smaller OmniVLA variant fails to handle the language instructions due to limited modal capacity.
 - **p. 3 / Dataset - extractive body cue:** While large datasets enable generalization, large-scale data collection efforts can result in more noise and therefore, be less accurate.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (Method), p. 5 (Method), objective p. 5 (Method), temporal p. 4 (IV. EXPERIMENTAL SETUP), p. 4 (IV. EXPERIMENTAL SETUP), p. 6 (V. EVALUATING OMNI-MODAL NAVIGATION), p. 1 (Abstract), p. 1 (Body text (section not recovered)), p. 2 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 - **p. 7 / 6. Experiments - extractive body cue:** Learning curves for the OpenAI gym continuous control tasks.
 - **p. 8 / 6.2. Ablation Studies - extractive body cue:** Maximum value for each task is bolded.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Measuring overestimation bias in the value estimates of DDPG and our proposed method, Clipped Double Q-learning (CDQ), on MuJoCo environments over 1 million ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 | Figure 2. Measuring overestimation bias in the value estimates of actor critic variants of Double DQN (DDQN-AC) and Double Q- learning (DQ-AC) on MuJoCo ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Table 3. A complete comparison of hyper-parameter choices between our DDPG and the OpenAI baselines implementation (Dhariwal et al., 2017). Hyper-parameter Ours DDPG Critic ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 | To allow for reproducible comparison, we use the original set of tasks from Brockman et al. | comparison identity and matched condition | p. 7 (6.1. Evaluation) |
 | While a larger d would result in a larger benefit with respect to accumulating errors, for fair comparison, the critics are only trained once ... | comparison identity and matched condition | p. 7 (6.1. Evaluation) |
 | Figure 3. Average estimated value of a randomly selected state on Hopper-v1 without target networks, (τ = 1), and with slow- updating target networks, ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 | body limitation/failure cue | Unlike the original implementation of DDPG, we used uncorrelated noise for exploration as we found noise drawn from the Ornstein-Uhlenbeck (Uhlenbeck & Ornstein, 1930) ... | p. 7 (6.1. Evaluation) |
 | body limitation/failure cue | Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise. | p. 8 (6.1. Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 | Our results are reported over 10 random seeds of the Gym simulator and the network initialization. | p. 8 (6.1. Evaluation) |
 | As deep function approximators require multiple gradient updates to converge, target networks provide a stable objective in the learning 0.0 0.2 0.4 0.6 0.8 ... | p. 5 (5.2. Target Networks and Delayed Policy Updates) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Conclusion - extractive body cue:** Due to the connection between noise and overestimation, we examine the accumulation of errors from temporal difference learning.
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluat
 - **p. 8 / 6.1. Evaluation - extractive body cue:** Addressing Function Approximation Error in Actor-Critic Methods average reward over 10 episodes with no exploration noise.
 
 - **Evidence anchors reviewed:** datasets p. 8 (6.1. Evaluation), p. 7 (6.1. Evaluation), p. 7 (6. Experiments), p. 8 (6.2. Ablation Studies), metrics p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6. Experiments), p. 7 (6.1. Evaluation), p. 5 (Figure/Table caption), p. 8 (6.1. Evaluation), baselines p. 8 (6.1. Evaluation), p. 8 (6.2. Ablation Studies), p. 13 (Figure/Table caption), p. 7 (6.1. Evaluation), p. 7 (6.1. Evaluation), p. 5 (Figure/Table caption), results p. 8 (6.2. Ablation Studies), p. 8 (6.1. Evaluation), p. 6 (6. Experiments), p. 7 (6.1. Evaluation), p. 7 (6.1. Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

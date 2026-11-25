@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 M
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 M
 - **p. 4 / 2 METHODOLOGY - extractive body cue:** From the 3D point cloud P reconstructed from the video V, we apply 3D instance segmentation (e.g., Mask3D) to obtain instance masks M = {M1, ...
 - **p. 4 / 2 METHODOLOGY - extractive body cue:** We then generate a BEV image from the global point cloud: Ib = T (P, Etop) (2) Here, Etop ∈SE(3) represents the camera extrinsic for ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 M
 - **p. 4 / 2 METHODOLOGY - extractive body cue:** In contrast, large-scale models like Qwen2-VL-72B and GPT-4o possess the architectural complexity to inherently grasp these feature associations, allowing them to form a preliminary 3D ...
 - **p. 5 / 3 EXPERIMENTS - extractive body cue:** Training is done for one epoch with a base learning rate of 5e-6 and cosine annealing, completing in about 6 hours on 8×A100 GPUs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Here, introduce, GPT4Scene, architecture, zero-shot, setting, model, must, create, global-local, understanding, scene, fusing, local, frame, features, global, BEV, Bird, s-Eye.
 - **Relevant PDF headings:** 2 METHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 M
 - **p. 7 / 3 EXPERIMENTS - extractive body cue:** Next, we perform module-wise ablation to assess individual components.
 - **p. 8 / 3 EXPERIMENTS - extractive body cue:** This ablation study in Table 9 provides a detailed analysis of GPT4Scene's two core components: the BEV image and STO-Markers.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), objective 본문 anchor 없음, temporal p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 5 (3 EXPERIMENTS), p. 5 (2 METHODOLOGY), p. 9 (3 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 2
 - **p. 9 / 4 Experiments - extractive body cue:** TASK α ∆ε εHOMO εLUMO µ Cν UNITS bohr3 meV meV meV D cal/mol K WaveScatt [11] .160 118 85 76 .340 .049 NMP [10] ...
 - **p. 9 / 4 Experiments - extractive body cue:** We show results on the test set of Anderson et al.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: A) Each layer of the SE(3)-Transformer maps from a point cloud to a point cloud (or graph to graph) while guaranteeing equivariance. For ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 2
 | Figure 1: A) Each layer of the SE(3)-Transformer maps from a point cloud to a point cloud (or graph to graph) while guaranteeing equivariance. ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Figure 5: Spherical harmonics computation of our own implementation compared to the lie-learn library. We found that speeding up the computation of spherical harmonics ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 2
 | We see that while not state-of-the-art, we offer competitive performance, especially against Cormorant and TFN, which transform under irreducible representations of SE(3) (like us), ... | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Figure 5: Spherical harmonics computation of our own implementation compared to the lie-learn library. We found that speeding up the computation of spherical harmonics ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
 | Interestingly, the vast majority of current neural network methods work on scalar coordinates without incorporating vector specific inductive biases. | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 2
 | body limitation/failure cue | Our model outperforms both an attention-based, but not rotation-equivariant approach (Set Transformer) and a equivariant approach which does not levarage attention (Tensor Field). | p. 7 (4 Experiments) |
 | body limitation/failure cue | Specifically, we compare to the Set-Transformer [16], a non-equivariant attention model, and Tensor Field Networks [28], which is similar to SE(3)-Transformer but does not ... | p. 7 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 2
 | The layer can be broken down into a procedure of steps as shown in Fig. | p. 5 (3 Method) |
 | These neighbourhoods are computed either via the nearest-neighbours methods or may already be defined. | p. 5 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 Conclusion - extractive body cue:** This architecture is guaranteed to be robust to rotations and translations of the input, obviating the need for training time data augmentation and ensuring stability ...
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 2
 - **p. 7 / 4 Experiments - extractive body cue:** Specifically, we compare to the Set-Transformer [16], a non-equivariant attention model, and Tensor Field Networks [28], which is similar to SE(3)-Transformer but does not leverage ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 17 (Figure/Table caption), p. 8 (4 Experiments), results p. 8 (4 Experiments), p. 7 (4 Experiments), p. 22 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

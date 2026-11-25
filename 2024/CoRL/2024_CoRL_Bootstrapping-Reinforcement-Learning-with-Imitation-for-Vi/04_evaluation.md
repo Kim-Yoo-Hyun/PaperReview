@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 15 (A.8 Unobservable States Illustration), p.
 - **p. 6 / 3 Methodology - extractive body cue:** To simulate real-world scenarios, we include domain randomization such as gate scales, pixel position noise (10 pixels in both (u, v) in a 1280 × ...
 - **p. 12 / A.2 Reward Formulations for RL Trainings - extractive body cue:** The reward components are formulated as follows: rprog t = λ1(dGate(t -1) -dGate(t)), rperc t = λ2 exp(λ3 · δ4 cam), ract t = -λ3∥at ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Long exposure image of real-world flights shows a blue trajectory for our approach and a red one for the imitation policy. Training on ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 15 (A.8 Unobservable States Illustration), p.
 | Once the policy achieves high-reward action sequences, the policy update rate also increases. | definition/direction/unit from same section | p. 5 (3 Methodology) |
 | Our approach consistently achieved faster lap times and smaller gate errors in the real-world setting, confirming the effective real-world transfer of our vision-based quadrotor ... | definition/direction/unit from same section | p. 8 (3 Methodology) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 15 (A.8 Unobservable States Illustration), p.
 | Despite demonstrating superior robustness compared to existing baselines, we believe the perception module in our framework is to improve to handle more out-of-distribution cases. | comparison identity and matched condition | p. 8 (3 Methodology) |
 | Notably, our approach consistently outperforms baseline methods across all history lengths ger to imitate the slow policy, after which we apply our approach to ... | comparison identity and matched condition | p. 15 (A.8 Unobservable States Illustration) |
 | Figure 5: Left: Reward comparison between our approach and the other RL configurations. Ours is the only approach that is able to learn to ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 15 (A.8 Unobservable States Illustration), p.
 | body limitation/failure cue | Reward Name Symbol Value Progress reward λ1 0.5 Perception-aware reward λ2 0.025 Command smoothness reward λ3 2e-4 Body rate penalty λ4 5e-4 Gate passing ... | p. 13 (A.3 Training Configurations) |
 | body limitation/failure cue | We believe this approach is easily generalizable to other platforms as it does not require task-specific information. | p. 5 (3 Methodology) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 15 (A.8 Unobservable States Illustration), p.
 | We use a Temporal Convolutional Network (TCN) [40] to encode the series of vision embeddings from I or corners C. | p. 4 (3 Methodology) |
 | The vision-based student policy takes a sequence (history length H timesteps) of perceptual observations [ot-H+1, . . . , ot] as input. | p. 4 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3 Methodology - extractive body cue:** To simulate real-world scenarios, we include domain randomization such as gate scales, pixel position noise (10 pixels in both (u, v) in a 1280 × ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 15 (A.8 Unobservable States Illustration), p.
 - **p. 5 / 3 Methodology - extractive body cue:** We believe this approach is easily generalizable to other platforms as it does not require task-specific information.
 
 - **Evidence anchors reviewed:** datasets p. 8 (3 Methodology), p. 8 (3 Methodology), p. 12 (A.2 Reward Formulations for RL Trainings), p. 5 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology), metrics p. 5 (3 Methodology), p. 13 (A.6 Performance w/ Diff. History Length), p. 7 (3 Methodology), p. 13 (A.6 Performance w/ Diff. History Length), p. 7 (3 Methodology), p. 15 (A.8 Unobservable States Illustration), baselines p. 14 (Figure/Table caption), p. 7 (3 Methodology), p. 8 (3 Methodology), p. 8 (3 Methodology), p. 15 (A.8 Unobservable States Illustration), p. 7 (Figure/Table caption), results p. 15 (A.8 Unobservable States Illustration), p. 13 (A.6 Performance w/ Diff. History Length), p. 7 (3 Methodology), p. 13 (A.6 Performance w/ Diff. History Length), p. 14 (Figure/Table caption), p. 15 (A.8 Unobservable States Illustration).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

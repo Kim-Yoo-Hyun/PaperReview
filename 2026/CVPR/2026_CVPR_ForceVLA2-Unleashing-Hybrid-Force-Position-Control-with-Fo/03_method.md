@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 - **p. 4 / 3.1. Long-Horizon Force Awareness via Prompting - extractive body cue:** The cross-scale MoE integrates these modalities to produce hybrid force-position actions and track sub-task progress for adaptive, contact-rich manipulation.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 3 (3. ForceVLA2 Framework), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 3 (3.1. Long-Horizon Force Awareness via Prompting).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Contact-rich manipulation requires force regulation, beyond visual and state observations (left).
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** It builds force awareness into task planning through incoming force signals, and it outputs hybrid force-position actions with dynamic balance (right).
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contributions, summarized, follows, introduce, ForceVLA2, first, end-to-end, hybrid, force-position, control, framework, force, awareness, VLAs, enhancing, contact-rich, manipulation, integrating, force-prompt-driven, VLM.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Forc
 - **p. 8 / 5.2. Main Experiment Results - extractive body cue:** In contrast, other VLAs slowly chase the new EE 6D pose, leading to failure to maintain stable contact.
 - **p. 7 / 5.2. Main Experiment Results - extractive body cue:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 1 (Abstract), p. 2 (1. Introduction), p. 1 (Body text (section boundary not confidently recovered)), objective p. 3 (3. ForceVLA2 Framework), p. 4 (3.2. Short-Horizon Force-to-Control Loop), p. 5 (3.2.2. Adaptive Routing and Decoding), p. 2 (1. Introduction), p. 3 (3.1. Long-Horizon Force Awareness via Prompting), p. 4 (3.1. Long-Horizon Force Awareness via Prompting), temporal p. 5 (3.2.2. Adaptive Routing and Decoding), p. 8 (5.3. Ablation Study), p. 5 (4. ForceVLA2-Dataset), p. 1 (Abstract), p. 1 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

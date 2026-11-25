@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 5 (4.2 Shooting-based p
 | body cue at p. 9 | 4) results in a state that satisfies F G sat within a maximum plan length of dmax; ii) ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 11 | This is expected because shooting does not exhibit planning failures on these tasks (Figure 6) and Text2Motion starts ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 planning writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (4.1 Goal prediction), p. 3 (3.1 LLM and skill library), p. 5 (4.1 Goal prediction), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ planning writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 3 (3.1 LLM and skill library), p. 4 (3.2 The planning objective), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 5 (4.1 Goal prediction), p. 3 (3.1 LLM and skill library), p. 5 (4.1 Goal prediction), p. 2 (1 Introduction), objective p. 4 (4.1 Goal prediction), p. 4 (4 Methods), p. 5 (4.2 Shooting-based planning), p. 6 (4.3 Search-based planning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

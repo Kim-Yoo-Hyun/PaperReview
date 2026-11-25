@@ -49,8 +49,6 @@
 - **p. 4 / Dataset - extractive body cue:** 3 BridgeData V2 Our goal is to design a dataset that facilitates research in large-scale robot learning.
 - **p. 8 / 5 Experiments - extractive body cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 13 / Figure/Table caption - extractive body cue:** Table 5. We provide a breakdown of which portions of the dataset include which sensors in Figure 6. B Learning Method Implementation Details Below we ...
@@ -77,8 +75,6 @@
 | However, it is difficult to replicate the complexity of the real world (e.g., objects, environments, lighting, and physics) in a simulator well enough to ... | definition/direction/unit from same section | p. 3 (Dataset) |
 | 4 Offline Learning Methods To demonstrate that BridgeData V2 is compatible with a variety of learning methods with different assumptions, we evaluated several state-of-the-art ... | definition/direction/unit from same section | p. 5 (Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@
 | Note that these evaluations were performed zero-shot, without any new data collected in Lab 2, and we expect fine-tuning on a small amount of ... | comparison identity and matched condition | p. 7 (5 Experiments) |
 | 4 Offline Learning Methods To demonstrate that BridgeData V2 is compatible with a variety of learning methods with different assumptions, we evaluated several state-of-the-art ... | comparison identity and matched condition | p. 5 (Dataset) |
 | As a baseline, we evaluate a standard goal-conditioned behavior cloning method. | comparison identity and matched condition | p. 6 (Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@
 | body limitation/failure cue | However, it is difficult to replicate the complexity of the real world (e.g., objects, environments, lighting, and physics) in a simulator well enough to ... | p. 3 (Dataset) |
 | body limitation/failure cue | Methods that benefit from suboptimal data, such as offline RL, can leverage this autonomous data to learn more robust behaviors. | p. 4 (Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@
 | Below we list relevant implementation details for each method. | p. 13 (B Learning Method Implementation Details) |
 | During training, the goal associated with an observation is selected by uniformly sampling an observation from the future timesteps in the trajectory. | p. 13 (B Learning Method Implementation Details) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 Experiments - extractive body cue:** 6 Discussion, Limitations, and Future Work We presented BridgeData V2, a dataset with 60,096 trajectories of robotic manipulation behaviors designed to enable research on scalable ...
@@ -164,6 +143,5 @@
 - **p. 4 / Dataset - extractive body cue:** Methods that benefit from suboptimal data, such as offline RL, can leverage this autonomous data to learn more robust behaviors.
 
 - **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 3 (Dataset), p. 4 (Dataset), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 15 (B.4 Contrastive RL), metrics p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), baselines p. 7 (5 Experiments), p. 6 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 5 (Dataset), p. 6 (Dataset), results p. 8 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

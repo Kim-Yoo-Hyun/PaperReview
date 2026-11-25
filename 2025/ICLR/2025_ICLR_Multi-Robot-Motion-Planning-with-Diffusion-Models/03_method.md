@@ -58,7 +58,6 @@ PDF body method statement (p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 M
 - **p. 4 / 3 METHOD - extractive body cue:** This can be done by adding a cost term Jc that repels the robots from the sphere's center point p.
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 5 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 M
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Each robot has an assigned start state si start ∈Si and binary termination (goal) condition T i : Si →{0, 1}.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Let Si be the state space of a single robot and a state be si := [qi, ˙qi]⊺∈ Si where qi and ˙qi are the ...
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 M
 - **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** We note that our code for generating data, training models, and multi-robot motion planning with MMD is publicly available, and we encourage readers to consult ...
 - **p. 20 / A.7 TRAINING AND DATASET GENERATION DETAILS - extractive body cue:** Therefore, during training time, they are not required to reason about other robots.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** While, full-horizon, planners, first, generate, trajectories, robots, then, execute, them, prescribed, windowed, algorithms, instead, robot, plan, short, trajectory, itself, observe.
 - **Relevant PDF headings:** 3 METHOD (p. 3); A.1 ADDITIONAL ALGORITHMIC DISCUSSION (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 M
 - **p. 10 / 6 CONCLUSION - extractive body cue:** Currently, MMD focuses on coordinating robots, seeking to produce collision-free data-driven trajectories.
 - **p. 10 / 6 CONCLUSION - extractive body cue:** In this paper, we present MMD, a multi-robot motion planner that learns to generate smooth collision-free trajectories for dozens of robots in complex environments.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (A.1.1 BEYOND FULL-HORIZON PLANNING), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), objective p. 5 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), temporal p. 2 (1 INTRODUCTION), p. 17 (A.4 IMPLEMENTATION DETAILS), p. 3 (3 METHOD), p. 6 (3 METHOD), p. 8 (3 METHOD), p. 18 (A.5.1 DATA ADHERENCE FUNCTIONS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

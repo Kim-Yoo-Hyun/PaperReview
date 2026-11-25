@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 6 / 4 Experiments - extractive body cue:** 4.1 Direct Evaluations on Multiple Robot Platforms Robot Setups and Tasks.
 - **p. 8 / 7.0 GB - extractive body cue:** We also demonstrated that OpenVLA can be easily adapted to new robot setups via parameter-efficient fine-tuning techniques.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We present OpenVLA, a 7B-parameter open-source vision-language-action model (VLA), trained on 970k robot episodes from the Open X-Embodiment dataset [1]. OpenVLA sets a ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 | Mean success rate ± StdErr computed across 8 representative Bridge V2 tasks [6] and 80 rollouts per approach (see Table 5 for details). | definition/direction/unit from same section | p. 8 (7.0 GB) |
 | Table 7: Detailed data-efficient adaptation experiment results. We report the performance of Diffusion Policy trained from scratch on new robot tasks, as well as ... | definition/direction/unit from same section | p. 29 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 | We compare to Diffusion Policy [3], a state-of-the-art data-efficient imitation learning approach, trained from scratch. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | It clearly outperforms Octo while being trained on the same robot data, attesting to the benefits of Internet-scale pretraining. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | 5 Conclusion and Limitations In this work, we presented OpenVLA, a state-of-the-art, open-source vision-language-action model that obtains strong performance for cross-embodiment robot control out-of-the-box. | comparison identity and matched condition | p. 8 (7.0 GB) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 | body limitation/failure cue | We find that both RT-1-X and Octo struggle on the tested tasks, often failing to manipulate the correct object, especially when distractors are present. | p. 6 (4 Experiments) |
 | body limitation/failure cue | Franka-Tabletop Franka-DROID 66.7 53.5 33.3 93.3 80.0 0.0 83.3 63.3 26.7 Narrow Single-Instruction Tasks 19.4 27.8 30.6 27.8 22.2 66.7 16.7 25.0 91.7 Diverse ... | p. 7 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 | 350k for RT-2-X; we performed more careful cleaning of the training dataset and, e.g., filter out all-zero actions in the Bridge dataset (see Appendix ... | p. 7 (4 Experiments) |
 | OpenVLA builds on a Llama 2 language model combined with a visual encoder that fuses pretrained features from DINOv2 and SigLIP. | p. 1 (Body text (section boundary not confidently recovered)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7.0 GB - extractive body cue:** The current OpenVLA model has several limitations.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 7 / 4 Experiments - extractive body cue:** Franka-Tabletop Franka-DROID 66.7 53.5 33.3 93.3 80.0 0.0 83.3 63.3 26.7 Narrow Single-Instruction Tasks 19.4 27.8 30.6 27.8 22.2 66.7 16.7 25.0 91.7 Diverse Multi-Instruction ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB), p. 6 (4 Experiments), p. 5 (4 Experiments), p. 5 (4 Experiments), metrics p. 33 (Figure/Table caption), p. 25 (Figure/Table caption), p. 35 (Figure/Table caption), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), baselines p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (7.0 GB), results p. 6 (Figure/Table caption), p. 25 (Figure/Table caption), p. 7 (4 Experiments), p. 29 (Figure/Table caption), p. 35 (Figure/Table caption), p. 23 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

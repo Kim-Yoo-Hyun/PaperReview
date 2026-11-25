@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 - **p. 5 / 3.5. Implementation Details - extractive body cue:** Optimal iterations are determined based on peak performance on val unseen splits.
 - **p. 5 / 3.5. Implementation Details - extractive body cue:** In addition, during navigation, constructing the 3D Gaussian Map at each time step takes approximately 0.07 seconds, ensuring compatibility with real-time robotic execution (see more ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dense Features vs 3D Gaussians. Recent VLN meth- ods [1, 47, 49, 78] rely on dense sampling to construct scene maps, which often ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 | Figure 3. 3D Gaussian Map Optimization. Gaussian parameters (position µ, scale s, rotation r, opacity α, color c, and semantic σ) are optimized through ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | The multi-level navigation scores, combined with the traditional 2D action score [13], jointly evaluate and rank these transitions. | definition/direction/unit from same section | p. 5 (3.5. Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 | We first assess the contributions of each component by progressively incorporating ESM (§3.1), OSG (§3.2), and MAP (§3.3) into the baseline model (row #1). | comparison identity and matched condition | p. 8 (4.3. Diagnostic Experiment) |
 | Rows #1 and #5 show that combining all components together results in the largest gain over the baseline (e.g., 72% →77% for SR on ... | comparison identity and matched condition | p. 8 (4.3. Diagnostic Experiment) |
 | Following prior works [13, 49], to support long-time and context-aware navigation, we adopt a topological memory mechanism that dynamically updates as the agent explores ... | comparison identity and matched condition | p. 5 (3.5. Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 - **p. 5 / 3.5. Implementation Details - extractive body cue:** Offline pretraining is conducted on a single NVIDIA RTX 4090 GPU for 15 iterations (see more details in Appendix).
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, 56, ...
 - **p. 3 / 3. Method - extractive body cue:** The action space At comprises Nt neighboring nodes Vt = {Vt,n}Nt n=1, other observed nodes V∗ t (through backtrack [13, 69]), and a [STOP] option.
-- **p. 5 / 3.5. Implementation Details - extractive body cue:** Offline pretraining is conducted on a single NVIDIA RTX 4090 GPU for 15 iterations (see more details in Appendix).
 
 ## Generalization and Failure Cases
 
@@ -133,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 | body limitation/failure cue | (b) Our agent precisely identifies and localizes the "bathroom" and "rug", while BEVBert [1] stops in the wrong place since critical landmarks cannot be ... | p. 7 (4.2. Comparison to State-of-the-Arts) |
 | body limitation/failure cue | Figure 1. Dense Features vs 3D Gaussians. Recent VLN meth- ods [1, 47, 49, 78] rely on dense sampling to construct scene maps, which ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | These results further demonstrate the robustness of our method in main9257 | p. 6 (4.2. Comparison to State-of-the-Arts) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -146,14 +132,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 | Specifically, Σi = RSS⊤R⊤encodes scale and orientation, where the rotation matrix R and the scale matrix S are stored as a 3D vector si ... | p. 4 (3.1. Egocentric Scene Map (ESM)) |
 | Similarly, an analogous differentiable rendering process is applied to compute the depth ˆDt(u, v) at each pixel of the specific camera pose: ˆDt(u, v) ... | p. 4 (3.1. Egocentric Scene Map (ESM)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** (b) Our agent precisely identifies and localizes the "bathroom" and "rug", while BEVBert [1] stops in the wrong place since critical landmarks cannot be identified, ...
@@ -161,6 +139,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 - **p. 6 / 4.2. Comparison to State-of-the-Arts - extractive body cue:** These results further demonstrate the robustness of our method in main9257
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Comparison to State-of-the-Arts), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 8 (4.3. Diagnostic Experiment), metrics p. 6 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), baselines p. 6 (4.2. Comparison to State-of-the-Arts), p. 6 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 8 (4.3. Diagnostic Experiment), p. 5 (3.5. Implementation Details), results p. 6 (4.2. Comparison to State-of-the-Arts), p. 6 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment), p. 7 (4.2. Comparison to State-of-the-Arts), p. 7 (4.2. Comparison to State-of-the-Arts), p. 8 (4.3. Diagnostic Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

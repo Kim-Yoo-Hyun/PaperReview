@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. 
 - **p. 4 / 3.1. Scene Graph Matching Network - extractive body cue:** In the alignment and registration stage (shown in Figure 2b), fused embedding of the source and reference graph is taken by the AIS [13] module ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (3.1. Scene Graph Matching Network), p. 3 (3.1. Scene Graph Matching Network), p. 5 (3.4. Loss Functions), p. 5 (3.4. Loss Functions), p. 4 (3.2. Point to Scene Graph Feature Fusion), p. 4 (3.2. Point to Scene Graph Feature Fusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. 
 - **p. 5 / 3.5. Revisiting the Downstream Tasks - extractive body cue:** Recent point cloud registration methods [31, 51] successfully encode long-range geometric context with Transformer [39].
 - **p. 5 / 3.5. Revisiting the Downstream Tasks - extractive body cue:** In SGAligner, the source and reference point clouds are divided into matched object pairs using the estimated graph alignment.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** explicitly, enable, partial, matching, employ, pipeline, introduced, Soft-topK, algorithm, first, flattens, selects, most, likely, matched, candidates, where, learned, Attention-fused, Aggregation.
 - **Relevant PDF headings:** 3. The Superpoint Matching Rescoring method for guiding (p. 2); 3. Approach (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. 
 - **p. 8 / 4.3. Aligning 3D Scenes with Changes - extractive body cue:** Registration results with and without Superpoint Matching Rescoring of low overlapping scene fragments.
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 5. Long-range cross-object geometric feature is gathered in registration method [31] with transformer. Points in red circles are difficult to match without taking nearby ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Scene Graph Matching Network), p. 3 (3.1. Scene Graph Matching Network), p. 4 (3.3. Super-point Matching Rescoring), p. 3 (3.1. Scene Graph Matching Network), p. 5 (3.5. Revisiting the Downstream Tasks), p. 5 (3.4. Loss Functions), objective p. 3 (3.1. Scene Graph Matching Network), p. 3 (3.1. Scene Graph Matching Network), p. 5 (3.4. Loss Functions), p. 5 (3.4. Loss Functions), p. 4 (3.1. Scene Graph Matching Network), temporal p. 8 (5. Conclusion), p. 1 (Abstract), p. 2 (2. Related Work), p. 2 (2. Related Work), p. 5 (3.5. Revisiting the Downstream Tasks).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

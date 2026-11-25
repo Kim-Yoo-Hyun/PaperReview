@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 - **p. 8 / 5.1. Experimental results - extractive body cue:** The following rows show the evaluation on semantic scene completion task.
 - **p. 8 / 5.1. Experimental results - extractive body cue:** We see a performance gain by using additional synthetic data especially for the semantic scene completion task having an 10.3% improvement in IoU.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Semantic scene completion. (a) Input single-view depth map (b) Visible surface from the depth map; color is for visualiza- tion only. (c) Semantic ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 | To answer this question, we trained a model with a loss only accounting for semantic labels evaluated on the visible surface and compared with ... | definition/direction/unit from same section | p. 7 (5.1. Experimental results) |
 | Figure 1. Semantic scene completion. (a) Input single-view depth map (b) Visible surface from the depth map; color is for visualiza- tion only. (c) ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 | Even when only evaluating on the visible surface, the model trained with the added supervision of the scene completion task outperforms the model trained ... | comparison identity and matched condition | p. 7 (5.1. Experimental results) |
 | To answer this question, we trained a model with a loss only accounting for semantic labels evaluated on the visible surface and compared with ... | comparison identity and matched condition | p. 7 (5.1. Experimental results) |
 | To investigate the effect of using synthetic training data, we compared models trained only with NYU and models pre-trained on SUNCG and then fine-tuned ... | comparison identity and matched condition | p. 8 (5.1. Experimental results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 | body limitation/failure cue | Moreover, since our method does not require the model fitting step it is much faster at 7s compared to 127s per image [4]. | p. 6 (5.1. Experimental results) |
 | body limitation/failure cue | Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 | During training, each mini-batch contains one 3D view volume, requiring 11 GB of GPU memory. | p. 5 (3.2. Network architecture) |
 | Pre-training SSCNet on the SUNCG training set takes around a week on a Tesla K40 GPU, and fine-tuning on the NYU dataset takes 30 ... | p. 5 (3.2. Network architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.1. Experimental results - extractive body cue:** While Firman et al. produces good results for many cases, their approach fails when the scene becomes complex.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (5.1. Experimental results), p. 8 (5.1. Exp
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 5. Different encodings for surface (a). The projective TSDF (b) is computed with respect to the camera and is therefore view-dependent. The accurate TSDF ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Evaluation), p. 6 (5. Evaluation), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 8 (5.1. Experimental results), metrics p. 8 (5.1. Experimental results), p. 6 (5. Evaluation), p. 6 (5. Evaluation), p. 8 (5.1. Experimental results), p. 13 (Figure/Table caption), p. 7 (5.1. Experimental results), baselines p. 4 (Figure/Table caption), p. 6 (5. Evaluation), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 8 (5.1. Experimental results), results p. 8 (5.1. Experimental results), p. 8 (5.1. Experimental results), p. 6 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 7 (5.1. Experimental results), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

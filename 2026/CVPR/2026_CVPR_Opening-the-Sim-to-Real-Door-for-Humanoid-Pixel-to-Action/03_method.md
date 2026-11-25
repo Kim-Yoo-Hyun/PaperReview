@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (1. Introduction), p. 3 (1. Introduction), p. 6 
 - **p. 5 / 2.3. RL Finetuning for Partial Observability - extractive body cue:** We define normalized group-relative advantages ˆAi = Ri -mean(R) std(R) , (4) and update πS using the clipped PPO surrogate: LGRPO(θ) = E i,t h ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 4 (2.2. Multi-Stage Whole-Body Loco-Manipulation), p. 4 (2.3. RL Finetuning for Partial Observability), p. 5 (2.3. RL Finetuning for Partial Observability).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (1. Introduction), p. 3 (1. Introduction), p. 6 
 - **p. 5 / 2.3. RL Finetuning for Partial Observability - extractive body cue:** It is worth mentioning that during fine-tuning, we use mainly a binary task success signal, plus simple shaping reward terms such as joint velocity, joint ...
 - **p. 1 / Body text (section not recovered) - extractive body cue:** DoorMan, a simulation-trained, RGB-only humanoid loco-manipulation policy, opens diverse doors in the real world.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 3 (1. Introduction), p. 3 (1. Introduction), p. 6 
 - **p. 5 / 2.3. RL Finetuning for Partial Observability - extractive body cue:** It is worth mentioning that during fine-tuning, we use mainly a binary task success signal, plus simple shaping reward terms such as joint velocity, joint ...
 - **p. 1 / Abstract - extractive body cue:** Our approach introduces a staged-reset exploration strategy that stabilizes long-horizon privileged-policy training, and a GRPO-based fine-tuning procedure designed to mitigate partial observability and improve closed-loop ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summarize, main, contributions, present, first, end-to-end, humanoid, sim-to-real, policy, capable, diverse, articulated, loco-manipulation, pure, RGB, perception, introduce, teacher-student-bootstrap, pipeline, whole-body.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 3 (1. Introduction), p. 3 (1. Introduction), p. 6 
 - **p. 7 / 3.4. Effect of Staged Reset Exploration - extractive body cue:** The exploration fails when not using the 6648
 - **p. 8 / 5. Conclusion - extractive body cue:** Trained entirely in photorealistic simulation, the resulting policy achieves robust zero-shot performance on articulated-object interaction tasks, including diverse door configurations, and exceeds human teleoperation baselines ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1. Introduction), p. 3 (1. Introduction), p. 6 (2.4. Massive-Scale Simulation Randomization), p. 4 (2.2. Multi-Stage Whole-Body Loco-Manipulation), p. 5 (2.3. RL Finetuning for Partial Observability), p. 4 (2.3. RL Finetuning for Partial Observability), objective p. 4 (2.1. Visual RL and Teacher-Student Distillation), p. 4 (2.2. Multi-Stage Whole-Body Loco-Manipulation), p. 5 (2.3. RL Finetuning for Partial Observability), p. 3 (1. Introduction), p. 3 (1. Introduction), p. 5 (2.3. RL Finetuning for Partial Observability), temporal p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 6 (3.1. Surpassing Human-Teleop Baseline), p. 7 (3.2. Effect of Photorealistic Visual Randomization), p. 1 (Abstract), p. 1 (Abstract), p. 3 (2.1. Visual RL and Teacher-Student Distillation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

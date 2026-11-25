@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 - **p. 9 / 6 Results - extractive body cue:** Distr. methods perform well, achieving the best performance in two simulation benchmarks (π0 and π0-FAST) and are the second best in the real world.
 - **p. 10 / 6 Results - extractive body cue:** This early detection allows early intervention for policy failures before they get stuck in execution or cause harm to the real-world environment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: The internal features of a VLA capture high-level information about task success and failure. When the VLA is failing, the features, even those ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 | Table 1. However, the visualized embeddings of π0-FAST on the real Franka robot (Fig. 8e and f) are different, where embeddings from successful and ... | definition/direction/unit from same section | p. 27 (Figure/Table caption) |
 | Figure 2: The proposed failure detector, SAFE, has three major components: (1) SAFE extracts the latent feature from the last layer of a VLA ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 | This is negligible compared to large VLA models. | comparison identity and matched condition | p. 10 (6 Results) |
 | ROC-AUC values are averaged over five random seeds with different task splits. on par with the best baseline on the other two benchmarks. | comparison identity and matched condition | p. 10 (6 Results) |
 | Figure 3: Illustration of real-world experiment setup (left) and example rollouts collected (right). a total of 532 rollouts on the 8 lifting and pick-and-place ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 | body limitation/failure cue | If the predicted score exceeds the threshold during testing, SAFE confidently detects a failure. timely manner. | p. 5 (3. Calibrate failure detection) |
 | body limitation/failure cue | We use uppert as the failure flag threshold δt, and more details about functional CP can be found in Appendix. | p. 6 (3. Calibrate failure detection) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 | 1(c), we can see that failure rollout initially stays out of the "failure zone" when it progresses normally, and when the robot mistakenly drops ... | p. 4 (4 Method) |
 | Encoder 𝒐𝑡 𝑙𝑡 Decoder 𝒆𝑡 Action: 𝑨𝑡 Observation Instruction VLA Model 𝒆1 SAFE-MLP SAFE-LSTM MLP ǁ𝑠1 𝒆2 MLP ǁ𝑠2 𝒆3 MLP ǁ𝑠3 𝒆𝑇 MLP ... | p. 5 (4 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: The internal features of a VLA capture high-level information about task success and failure. When the VLA is failing, the features, even those ...
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 10 (6 Results), p. 10 (Figure/Table caption),
 - **p. 6 / 3. Calibrate failure detection - extractive body cue:** We use uppert as the failure flag threshold δt, and more details about functional CP can be found in Appendix.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 6 (5 Experiments), p. 9 (6 Results), p. 10 (6 Results), p. 7 (5 Experiments), p. 9 (6 Results), metrics p. 6 (5 Experiments), p. 10 (6 Results), p. 10 (6 Results), p. 8 (Figure/Table caption), p. 9 (6 Results), p. 9 (6 Results), baselines p. 9 (6 Results), p. 27 (Figure/Table caption), p. 9 (6 Results), p. 10 (6 Results), p. 10 (6 Results), p. 7 (Figure/Table caption), results p. 10 (6 Results), p. 10 (Figure/Table caption), p. 9 (6 Results), p. 9 (6 Results), p. 27 (Figure/Table caption), p. 6 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

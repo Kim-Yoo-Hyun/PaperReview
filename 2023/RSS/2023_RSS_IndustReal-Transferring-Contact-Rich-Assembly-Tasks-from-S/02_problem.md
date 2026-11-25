@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p
 | body cue at p. 9 | Our work has limitations, which lend themselves naturally to future research directions. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Failure cases were one missed detection of a peg, as well as one grasp of both a peg ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 1 (I. INTRODUCTION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (III. PROBLEM DESCRIPTION), p. 3 (III. PROBLEM DESCRIPTION), interface p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 1 (I. INTRODUCTION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), objective p. 3 (IV. POLICY LEARNING IN SIMULATION), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 7 (V. POLICY DEPLOYMENT IN REAL WORLD), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 4 (IV. POLICY LEARNING IN SIMULATION), p. 5 (IV. POLICY LEARNING IN SIMULATION).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

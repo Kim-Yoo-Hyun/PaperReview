@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 3 | Figure 2. Data Generation Pipeline. The pipeline is composed of three key stages: (a) First, we extract informative ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | This limitation likely arises from design shortcomings, as these models encode language input as a single, global text ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview), objective p. 5 (4.3. Grounded Policy Network), p. 6 (4.4. Training and Inference), p. 6 (4.4. Training and Inference).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

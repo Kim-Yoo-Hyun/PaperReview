@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 - **p. 7 / 4 Experiments - extractive body cue:** It is interesting to study whether architectural elements from Sketch-a-Net can be adopted and integrated into PointCNN to improve its performance on the sketch datasets.
 - **p. 8 / 4 Experiments - extractive body cue:** To verify this, we show T-SNE visualization of Fo, F∗and FX of 15 randomly picked representative points from the ModelNet40 dataset in Figure 5, each ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Convolution input from regular grids (i) and point clouds (ii-iv). In (i), each grid cell is associated with a feature. In (ii-iv), the ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 | With these comparisons, we conclude that X-Conv is the key to the performance of PointCNN. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | Figure 3: The process for converting point coordinates to features. Neighboring points are transformed to the local coordinate systems of the representative points (a ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 | PointCNN w/o X w/o X-W w/o X-D Core Layers X-Conv×4 Conv×4 Conv×4 Conv×5 # Parameter 0.6M 0.54M 0.63M 0.61M Accuracy (%) 92.2 90.7 90.8 ... | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Table 1: Comparisons of mean per-class accuracy (mA) and overall accuracy (OA) (%) on ModelNet40 [52] and Scan- Net [9]. The reported perfor- mances ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 1: Segmentation result comparisons on ShapeNet Parts [54] in part-averaged IoU (pIoU, %) , mean per-class pIoU (mpIoU, %) and per-class pIoU (%). | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 |---|---|---|
 | body limitation/failure cue | Together with the lack of "shape" information, PointNet++ fails completely on this task. | p. 7 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -136,19 +123,10 @@ PDF body evaluation/result cue (p. 14 (Figure/Table caption), p. 7 (4 Experiment
 | We implemented PointCNN in tensorflow [1], and use ADAM optimizer [21] with an initial learning rate 0.01 for the training of our models. | p. 8 (4 Experiments) |
 | Based on this, if the convolution operator is directly applied, the output features for the three cases could be computed as depicted in Eq. | p. 2 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4 Experiments - extractive body cue:** Together with the lack of "shape" information, PointNet++ fails completely on this task.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), metrics p. 7 (4 Experiments), p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (Figure/Table caption), p. 6 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 14 (Figure/Table caption), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

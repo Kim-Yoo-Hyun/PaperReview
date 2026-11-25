@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (4.2 Shooting-based planning), p. 5 (4.1 Goal pr
 - **p. 6 / 4.3 Search-based planning - extractive body cue:** (8) Each planning iteration of greedy-search is responsible for finding the skill ψt that maximizes the skill score (Eq.
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 4 (4.1 Goal prediction), p. 4 (4 Methods), p. 5 (4.2 Shooting-based planning), p. 6 (4.3 Search-based planning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (4.2 Shooting-based planning), p. 5 (4.1 Goal pr
 - **p. 4 / 3.2 The planning objective - extractive body cue:** 3 represents the probability that skills ψ1:H achieve rewards r1:H when executed from initial state s1 with parameters a1:H; which is independent of the instruction ...
 - **p. 4 / 3.2 The planning objective - extractive body cue:** This objective can be expressed as the joint probability of skill sequence ψ1:H and binary rewards r1:H given the instruction i and initial state s1: ...
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (4.2 Shooting-based planning), p. 5 (4.1 Goal pr
 
 - **p. 8 / 5.2 Large language model - extractive body cue:** We use two pretrained language models, both of which were accessed through the OpenAI API: i) text-davinci-003, a variant of the InstructGPT [61] language model ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, strategy, shooting-based, Algorithm, LLM, planner, globals, SatFunc, STAP, function, Shooting, Goal, checker, Gen, plans, Init, candidate, define, satisfaction, takes.
 - **Relevant PDF headings:** 4 Methods (p. 4); 5.2 Large language model (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 5 (4.2 Shooting-based planning), p. 5 (4.1 Goal pr
 - **p. 12 / 6.2 Search-based reasoning is - extractive body cue:** Plan Length 5.0 7.0 7.0 Table 1 Ablation on hybrid planning method.
 - **p. 12 / 6.4 Plan termination is made - extractive body cue:** We test this hypothesis in an ablation experiment (Figure 7), comparing our plan termination method to that of SayCan and Inner Monologue's, while keeping all ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.2 Shooting-based planning), p. 5 (4.1 Goal prediction), p. 6 (4.3 Search-based planning), p. 7 (4.4 Text2Motion), p. 6 (4.3 Search-based planning), p. 4 (4 Methods), objective p. 5 (4.2 Shooting-based planning), p. 4 (3.3 Geometric feasibility planning), p. 4 (4 Methods), p. 5 (4.2 Shooting-based planning), p. 6 (4.3 Search-based planning), p. 6 (4.3 Search-based planning), temporal p. 5 (4.1 Goal prediction), p. 7 (4.4 Text2Motion), p. 10 (5.5 Evaluation and metrics), p. 2 (2.1 Language for robot planning), p. 2 (2.1 Language for robot planning), p. 5 (4.1 Goal prediction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

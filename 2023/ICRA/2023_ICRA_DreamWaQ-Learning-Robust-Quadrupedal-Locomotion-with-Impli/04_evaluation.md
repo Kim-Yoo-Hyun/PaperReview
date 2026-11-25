@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 - **p. 4 / III. EXPERIMENTS - extractive body cue:** An additional onboard PC with a battery added a payload of approximately 500 g to the robot.
 - **p. 2 / 3) A robustness and durability evaluation of the learned - extractive body cue:** policy in the real world was conducted through walking in diverse outdoor environments.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of DreamWaQ. By learning a locomotion policy in a simulation, the robot can walk through challenging terrains such as stairs with zero-shot ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 | Fig. 7: The outdoor trajectory for testing the performance of the DreamWaQ policy was recorded using an RTK-GPS mounted on the robot. Course A ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Fig. 1: Overview of DreamWaQ. By learning a locomotion policy in a simulation, the robot can walk through challenging terrains such as stairs with ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 | Moreover, despite walking without exteroception, DreamWaQ performs almost as well as the oracle policy that has direct access to the surrounding terrain's height map. | comparison identity and matched condition | p. 4 (III. EXPERIMENTS) |
 | Section III presents the experimental setting, results, and an in-depth comparative analysis of the proposed and baseline methods. | comparison identity and matched condition | p. 2 (3) A robustness and durability evaluation of the learned) |
 | Algorithm Max. push (m/s) Survival rate (%) Baseline 0.511 ± 0.053 20.51 ± 6.44 AdaptationNet 0.714 ± 0.096 82.37 ± 2.49 EstimatorNet 0.871 ± ... | comparison identity and matched condition | p. 5 (III. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 | body limitation/failure cue | Finally, Section IV concludes this work and briefly discusses directions for future work. | p. 2 (3) A robustness and durability evaluation of the learned) |
 | body limitation/failure cue | Fig. 2: The architecture of CENet consists of a body velocity estimation model and an auto-encoder model that shares a unified encoder. The shared ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 | 1) Policy Network: The policy, πφ(at/ot, vt, zt) is a neural network parameterized by φ that infers an action at, given a proprioceptive observation ... | p. 2 (II. DREAMWAQ) |
 | The encoder network encodes oH t into vt and zt. | p. 3 (II. DREAMWAQ) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. CONCLUSION - extractive body cue:** DreamWaQ's limitation lies in its adaptation mechanism, where it must first hit the obstacles with its legs.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (III. EXPERIME
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: The architecture of CENet consists of a body velocity estimation model and an auto-encoder model that shares a unified encoder. The shared encoder ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), metrics p. 4 (Figure/Table caption), p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 6 (Figure/Table caption), baselines p. 4 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 5 (III. EXPERIMENTS), results p. 5 (Figure/Table caption), p. 5 (III. EXPERIMENTS), p. 2 (3) A robustness and durability evaluation of the learned), p. 4 (III. EXPERIMENTS), p. 4 (III. EXPERIMENTS), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

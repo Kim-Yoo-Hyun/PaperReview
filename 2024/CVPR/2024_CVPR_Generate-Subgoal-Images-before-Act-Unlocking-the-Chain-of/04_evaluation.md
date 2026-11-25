@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 - **p. 7 / 4.4. Further Analysis - extractive body cue:** 3 shows, CoTDiffusion still achieves much better fidelity than SuSIE even though SuSIE has got improved after fine-tuning on the same datasets in VIMABENCH.
 - **p. 8 / 4.4. Further Analysis - extractive body cue:** For L3 generalization, taking an example, we complex the prompt such as ‘rearrange ... then rotate/twist/stack ...' to demand extra tasks such as rotating, twisting ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A motivation example of robotics manipulation tasks in multi-modal instructions. The subgoal images are worth a thou- sand words, inspiring us to propose ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 | Figure 1. A motivation example of robotics manipulation tasks in multi-modal instructions. The subgoal images are worth a thou- sand words, inspiring us to ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Method overview: CoTDiffusion consists of a multi-modal encoder and vision encoder V , semantic alignment module S, conditional diffusion model E and ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 | Quantitative comparisons of FID betweeen methods on all three tasks, including visual rearrange, reasoning and constraints. | comparison identity and matched condition | p. 7 (4.4. Further Analysis) |
 | Additionally, we observe that the bi-directional generation may impedes the diffusion model training if without coarse semantic pretraining. | comparison identity and matched condition | p. 8 (4.4. Further Analysis) |
 | Without chain-of-thought reasoning abilities, SuSIE struggles to follow instructions when given general multi-modal prompts, let alone generate subgoal images with smooth progressions. | comparison identity and matched condition | p. 8 (4.4. Further Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 | body limitation/failure cue | Additionally, ablating coarse pretraining and bi-directional generation degrades performance, validating their benefits. | p. 7 (4.4. Further Analysis) |
 | body limitation/failure cue | Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks. | p. 7 (4.4. Further Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 | Under the Markovian assumption, the overall framework can be formulated as: p⇥({⌧i a}N i=1/P, x0) = N Y i=1 pφ(xi/P, x0) ! / {z ... | p. 3 (3.1. Pipeline Overview) |
 | Conditional Diffusion Model ℰ Semantic Alignment Module " Foundation Model Multi-Modal Encoder Vision Encoder Sweep three into Without exceeding Initial Observation #! | p. 4 (3.1. Pipeline Overview) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Incorporating commonsense knowledge from pre-trained MLLM like GPT-4V provides an avenue for more generalizable and promising reasoning in CoTDiffusion, which leaves as our future work.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 - **p. 7 / 4.4. Further Analysis - extractive body cue:** Robustness to Insufficient Perception Rich visual observations from diverse views are crucial for complex robot manipulation tasks.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), metrics p. 7 (4.3. Quantitative Results of Success Rate), p. 6 (4.1. Experiment Setup), p. 6 (4.3. Quantitative Results of Success Rate), p. 7 (4.3. Quantitative Results of Success Rate), p. 8 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), baselines p. 6 (4.3. Quantitative Results of Success Rate), p. 6 (4.2. Baselines), p. 7 (4.4. Further Analysis), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), results p. 6 (4.3. Quantitative Results of Success Rate), p. 7 (4.4. Further Analysis), p. 8 (4.4. Further Analysis), p. 6 (4.1. Experiment Setup), p. 7 (4.3. Quantitative Results of Success Rate), p. 8 (4.4. Further Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

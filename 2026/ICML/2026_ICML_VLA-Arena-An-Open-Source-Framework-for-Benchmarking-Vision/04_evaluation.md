@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 - **p. 6 / 4. Experiments - extractive body cue:** (§ 4.3); (III) Does the structured task design (i.e., L0-L2) provide a richer perspective on model performance?
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** UniVLA (Bu et al., 2025) predicts task-centric latent tokens, moving away from low-level control signals. π0-FAST (Pertsch et al., 2025) advances action tokenization with the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of VLA-Arena Benchmark and Framework. (a) Structured Task Design: Span four key dimensions: Safety, Distractor, Extrapolation, and Long Horizon, covering 11 task ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 | Level Qwen3-VL-8B VLAs (Avg.) Grounding Accuracy Perf. | definition/direction/unit from same section | p. 7 (4.1. Experimental Setup) |
 | Figure 8. Visualization of Typical Failure Modes in Dynamic Distractors Tasks. The failure cases are categorized into three types: 1) Misplaced grasp (Top row): ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 | In contrast, VLA-Arena suffers a 52-64% collapse from a 79% baseline. | comparison identity and matched condition | p. 8 (4.5. Ablation Study) |
 | Figure 6. Attention Visualization for the Token "plate" Comparing OpenVLA and OpenVLA-OFT. The instruction is "pick up the bowl and place it on the ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
 | Second, without explicit safety constraints, models prioritize task completion, often incurring high CC to achieve success. | comparison identity and matched condition | p. 7 (4.2. Analysis of Performance and Failure Modes) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 | body limitation/failure cue | While models appear robust to language command perturbations, their failure in semantic extrapolation tasks exposes a fundamental deficit in language-driven skill generalization. | p. 8 (4.3. Diagnosing Semantic and Visual Grounding) |
 | body limitation/failure cue | Figure 7. Cross-layer Attention Visualization on the "plate" Token and Generalization Analysis across Models. This figure illustrates the 18-layer attention distributions of π0.5, π0, ... | p. 21 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 | Due to limitations in scale and reproducibility caused by hardware variability and operational overhead, simulation has become an effective tool for architecture and algorithm ... | p. 2 (1. Introduction) |
 | This simulates sensor degradation (e.g., electronic noise in lowlight) to assess the integrity of visual concepts against hardware imperfections (Hendrycks & Dietterich, 2019). | p. 4 (2. Structured Task Design) |
 | To facilitate cross-model comparison at the same difficulty, the highest SR and CC values are bolded and color-coded by level: blue for L0, orange ... | p. 5 (3. Task Suites in VLA-Arena) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 7 (4.2. Analysis of Performance and Failure M
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 7. Cross-layer Attention Visualization on the "plate" Token and Generalization Analysis across Models. This figure illustrates the 18-layer attention distributions of π0.5, π0, and ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 6 (4. Experiments), p. 6 (4.1. Experimental Setup), metrics p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption), p. 47 (Figure/Table caption), p. 3 (Figure/Table caption), p. 8 (4.4. Disentangling Memorization from Generalization), baselines p. 7 (4.2. Analysis of Performance and Failure Modes), p. 6 (4.1. Experimental Setup), p. 6 (4. Experiments), p. 8 (4.5. Ablation Study), p. 20 (Figure/Table caption), p. 7 (4.2. Analysis of Performance and Failure Modes), results p. 7 (4.2. Analysis of Performance and Failure Modes), p. 7 (4.1. Experimental Setup), p. 8 (4.3. Diagnosing Semantic and Visual Grounding), p. 5 (Figure/Table caption), p. 47 (Figure/Table caption), p. 8 (4.4. Disentangling Memorization from Generalization).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

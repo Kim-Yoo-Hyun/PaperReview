@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p
 |---|---|---|
 | body cue at p. 7 | While our rendering results exhibit some limitations in the masked LPIPS compared to GScream, we achieve a comparable ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.2. Problem formulation and overview), p. 3 (3.2. Problem formulation and overview), p. 5 (3.4. Texture-Geometry Guided SDS Loss), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Problem formulation and overview), p. 3 (3.1. Preliminary), interface p. 3 (3.2. Problem formulation and overview), p. 3 (3.2. Problem formulation and overview), p. 5 (3.4. Texture-Geometry Guided SDS Loss), p. 2 (1. Introduction), objective p. 3 (3.1. Preliminary), p. 3 (3.1. Preliminary), p. 4 (3.2. Problem formulation and overview), p. 4 (3.4. Texture-Geometry Guided SDS Loss), p. 5 (3.4. Texture-Geometry Guided SDS Loss), p. 5 (3.4. Texture-Geometry Guided SDS Loss).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

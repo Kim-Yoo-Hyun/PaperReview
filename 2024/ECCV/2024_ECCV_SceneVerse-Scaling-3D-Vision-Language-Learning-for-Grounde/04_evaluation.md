@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 - **p. 10 / 5 Experiments - extractive body cue:** 2, GPS trained on SceneVerse achieves state-of-the-art results on all existing 3D-VL grounding benchmarks.
 - **p. 13 / 5 Experiments - extractive body cue:** We assess the performance of models trained using various scene-text sources, specifically focusing on their performance in the ScanRefer dataset without additional fine-tuning.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of SceneVerse. A million-scale 3D vision-language dataset that comprises over 68K various 3D indoor scenes and 2.5M aligned scene-language pairs in the ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 | In the following sections, we describe in detail the model performance regarding these key topics. | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | This contributes significantly to the substantial improvement over the zero-shot performance. | definition/direction/unit from same section | p. 11 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 | For comparisons, we compare with existing baselines by providing the results of pre-trained GPS and dataset-specific fine-tuned GPS. | comparison identity and matched condition | p. 10 (5 Experiments) |
 | In zero-shot transfer scenarios, our model consistently outperforms 3D-VisTA across established benchmarks and SceneVerse-val. | comparison identity and matched condition | p. 11 (5 Experiments) |
 | 4 with the following key observations: ‚ Our GPS model demonstrates superior generalization to unseen scenes compared to the 3D-VisTA model. | comparison identity and matched condition | p. 11 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,19 +133,10 @@ PDF body evaluation/result cue (p. 10 (5 Experiments), p. 12 (5 Experiments), p.
 | 4.2 Scene-level Grounding With aligned object features, we encode the scene by incorporating object spatial locations into the extracted object features. | p. 8 (3. A bed with a striped comforter. (0.83)) |
 | We use contrastive alignment at three levels Lobj, Lscene, and Lref and a masked language modeling objective LMLM for model learning. object features tf ... | p. 8 (3. A bed with a striped comforter. (0.83)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 11 (5 Experiments), p. 11 (5 Experiments), p. 10 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), metrics p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 14 (5 Experiments), p. 12 (Figure/Table caption), baselines p. 12 (5 Experiments), p. 13 (5 Experiments), p. 10 (5 Experiments), p. 10 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), results p. 10 (5 Experiments), p. 12 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), p. 10 (5 Experiments), p. 12 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

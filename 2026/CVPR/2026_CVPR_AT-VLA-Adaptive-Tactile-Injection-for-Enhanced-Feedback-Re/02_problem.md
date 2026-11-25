@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (3.2. Adaptive Tacti
 | body cue at p. 6 | We found that training them on the full sequence often leads to failures during the grasping stage, which ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Figure 4. Visualization. We visualize the execution progress of four typical contact-rich tasks. is crucial for real-world robotic ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. Framework of AT-VLA), p. 4 (3.2. Adaptive Tactile Injection), p. 2 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ tactile writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (3.1. Framework of AT-VLA), p. 4 (3.2. Adaptive Tactile Injection), p. 2 (1. Introduction), p. 2 (1. Introduction), objective p. 5 (3.4. Training Objectives and Inference Pipeline), p. 4 (3.1. Framework of AT-VLA), p. 4 (3.2. Adaptive Tactile Injection), p. 5 (3.3. Effective Tactile Reaction Dual-Stream).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

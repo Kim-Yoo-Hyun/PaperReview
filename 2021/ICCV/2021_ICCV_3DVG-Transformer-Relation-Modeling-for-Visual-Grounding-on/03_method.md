@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 - **p. 5 / 3.4. Loss Function - extractive body cue:** The final loss is a linear combination of these terms, i.e., L = 0.3Lloc + 10Ldet + 0.1Lcls.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3. Methodology), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 - **p. 4 / 3.2. Relation-enhanced Proposal Generation - extractive body cue:** 2 (a), we use the initial cluster center xi, and the initial cluster feature fi as the input of this CCA module.
 - **p. 5 / 3.4. Loss Function - extractive body cue:** In detail, we randomly erase 20% words of the input sentences, and we also have 50% of chances to erase the target object nouns with ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 
 - **p. 6 / 4.1. Datasets and Implementation Details - extractive body cue:** The network is trained for 120, 000 iterations, with a batch size of 8, in which each scene is paired with 8 sentences, thus there ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** network, structure, coordinate-guided, contextual, aggregation, module, consists, transformer, layers, multi-level, feature, fusion, omitted, here, first, self-attention, block, exploits, relations, among.
 - **Relevant PDF headings:** 3. Methodology (p. 3); 4.2. Comparisons with the state-of-the-art methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 4 (3.2. Relation-enhanced Proposal Generation), p.
 - **p. 7 / 4.2. Comparisons with the state-of-the-art methods - extractive body cue:** The failure cases of ScanRefer indicate that this baseline method cannot well model complex relations and distinguish ambiguous objects.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The network structure of our coordinate-guided contex- tual aggregation module (a), which consists of 2 transformer lay- ers (the multi-level feature fusion module ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Relation-enhanced Proposal Generation), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 5 (3.3. Cross-modal Proposal Disambiguation), p. 3 (3. Methodology), p. 3 (3.1. Overview), objective p. 3 (3. Methodology), p. 5 (3.4. Loss Function), p. 5 (3.4. Loss Function), temporal p. 3 (3.1. Overview), p. 5 (4.1. Datasets and Implementation Details), p. 7 (4.2. Comparisons with the state-of-the-art methods), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

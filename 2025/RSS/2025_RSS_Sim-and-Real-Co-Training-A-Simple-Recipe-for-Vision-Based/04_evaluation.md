@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 8 / datasets - extractive body cue:** During evaluation, we place the objects in the center of the sampling region, which are unseen positions in the real demonstrations.
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** We select the Countertosink?n? task on Panda and the CupPaP task on the humanoid and evaluate the policies' performance when the abject is ‘changed and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Sim-and-Real Co-Training We show how co-training policies on real-world and simulation data can attain superior per formance in the real-robot deployment, compared to ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | Specifically, we demonstrate how co-training with simulation data enhances the real-world policy's in-domain performance (Section V-A) and improves its generalization to novel scenarios (Section ... | definition/direction/unit from same section | p. 6 (V. EXPERIMENTS) |
 | We select the Countertosink?n? task on Panda and the CupPaP task on the humanoid and evaluate the policies' performance when the abject is ‘changed ... | definition/direction/unit from same section | p. 8 (V. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | This question is particularly important because generating ‘ond row, compared to policies trained only on Rea, those roal-Coverage data in simulation is relatively easy, ... | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
 | Fig. 1: Sim-and-Real Co-Training We show how co-training policies on real-world and simulation data can attain superior per formance in the real-robot deployment, compared ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | As shown in Tuble Il policies co-trained with DC achieve a twice higher success rate ‘compared with the policies trained solely on Real for ... | comparison identity and matched condition | p. 8 (datasets) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,21 +115,11 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | body limitation/failure cue | This result indicates that diverse simulation data substantially improve policy robustness to spatial variations. | p. 8 (datasets) |
 | body limitation/failure cue | Fig. 12: Examples of the Video2Video model outputs with different noise strength, Left: An example video frame from the simulation | p. 17 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -152,9 +131,8 @@ PDF body evaluation/result cue (p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 17 / Figure/Table caption - extractive body cue:** Fig. 12: Examples of the Video2Video model outputs with different noise strength, Left: An example video frame from the simulation
 
 - **Evidence anchors reviewed:** datasets p. 6 (C. Building Task-Aware Simulation Datasets), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (C. Building Task-Aware Simulation Datasets), p. 8 (datasets), p. 8 (V. EXPERIMENTS), metrics p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets), p. 6 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), baselines p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 8 (datasets), results p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (datasets), p. 6 (V. EXPERIMENTS), p. 8 (datasets).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 - **p. 6 / 6.3. Tightening Constraints via Cost Shaping - extractive body cue:** Because of the various approximations between (3) and our practical algorithm, it is important to build a factor of safety into the algorithm to minimize ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 5 (6.1. Approximately Solving the CPO Update), p. 5 (6.1. Approximately Solving the CPO Update), p. 3 (5. Constrained Policy Optimization), p. 3 (5. Constrained Policy Optimization), p. 6 (6.2. Feasibility), p. 6 (6.1. Approximately Solving the CPO Update).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 - **p. 5 / 5.3. Trust Region Optimization for Constrained MDPs - extractive body cue:** (Observe that the constraint here is on an upper bound for JCi(π) by (6).) The off-policy evaluation issue is alleviated, because both the objective and ...
 - **p. 4 / 5.2. Trust Region Methods - extractive body cue:** Trust region algorithms for reinforcement learning (Schulman et al., 2015; 2016) have policy updates of the form πk+1 = arg max π∈Πθ E s∼dπk a∼π ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 - **p. 7 / 8. Experiments - extractive body cue:** Average performance for CPO, PDO, and TRPO over several seeds (5 in the Point environments, 10 in all others); the x-axis is training iteration.
 - **p. 8 / 8.1. Evaluating CPO and Comparison Analysis - extractive body cue:** Furthermore, we argue that this is not adequate in general: after the dual variable decreases, the agent could learn a new behavior that increases the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Constrained, Policy, Optimization, Algorithm, Input, Initial, tolerance, Sample, trajectories, Form, estimates, approximate, CPO, feasible, then, Solve, dual, problem, Compute, proposal.
 - **Relevant PDF headings:** 5. Constrained Policy Optimization (p. 3); 5.1. Policy Performance Bounds (p. 3); 5.2. Trust Region Methods (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 6 (6.1. Approximately Solving the CPO Update), p. 
 - **p. 6 / 6.2. Feasibility - extractive body cue:** Sometimes (11) will still be feasible and CPO can automatically recover from its bad step, but for the infeasible case, a recovery method is necessary.
 - **p. 6 / 6.3. Tightening Constraints via Cost Shaping - extractive body cue:** We choose ∆to be the probability of entering an unsafe state within a fixed time horizon, according to a learned model that is updated at ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (6.1. Approximately Solving the CPO Update), p. 4 (5.2. Trust Region Methods), p. 3 (5. Constrained Policy Optimization), p. 5 (5.3. Trust Region Optimization for Constrained MDPs), p. 4 (5.2. Trust Region Methods), p. 5 (5.3. Trust Region Optimization for Constrained MDPs), objective p. 5 (6.1. Approximately Solving the CPO Update), p. 5 (6.1. Approximately Solving the CPO Update), p. 3 (5. Constrained Policy Optimization), p. 3 (5. Constrained Policy Optimization), p. 6 (6.3. Tightening Constraints via Cost Shaping), p. 6 (6.3. Tightening Constraints via Cost Shaping), temporal p. 4 (5.2. Trust Region Methods), p. 4 (5.2. Trust Region Methods), p. 5 (6.1. Approximately Solving the CPO Update), p. 6 (6.2. Feasibility), p. 6 (6.2. Feasibility), p. 7 (8.1. Evaluating CPO and Comparison Analysis).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 8 (1. I have a 
 - **p. 9 / 1. I have a blue - extractive body cue:** Ownership Ownership Ownership Preference Preference Preference Figure 5: Demonstration of object ownership tasks (top row) and user preference tasks (bottom row) for customized robot manipulation.
 - **p. 9 / 1. I have a blue - extractive body cue:** For the speech recognition benchmark, we employ the state-ofthe-art Whisper large-v2 model as the baseline.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: For personalization tasks, (a) previous VLAs with text instructions fail, while (b) our VLAS with speech in- structions could successfully address them. To ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 8 (1. I have a 
 | Figure 2: Overall Framework of VLAS. VLAS encodes visual and speech inputs via encoders and MLP layers to obtain respective embeddings. The Voice RAG ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 3: Data collection process for the SQA and CSI datasets. speech tokens may impose a significant computational burden when directly input into the ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 8 (1. I have a 
 | Because the VLA baseline relies solely on text instructions and lacks access to background knowledge, its performance is severely limited, with an average success ... | comparison identity and matched condition | p. 8 (1. I have a blue) |
 | For the speech recognition benchmark, we employ the state-ofthe-art Whisper large-v2 model as the baseline. | comparison identity and matched condition | p. 9 (1. I have a blue) |
 | As can be observed, VLAS-Base obtains nearly the same performance to LLaVA, while significantly outperforming other VLMs. | comparison identity and matched condition | p. 9 (1. I have a blue) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,22 +126,12 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 8 (1. I have a 
 | body limitation/failure cue | Figure 1: For personalization tasks, (a) previous VLAs with text instructions fail, while (b) our VLAS with speech in- structions could successfully address them. ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | It can be seen from Table 2 that when the RAG module is removed, the performance of VLAS significantly degrades on the customized benchmark. | p. 8 (1. I have a blue) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Throughout this phase, all network components are updated, with the exception of the pre-trained image and speech encoders. | p. 6 (1. I have a blue) |
 | During this phase, only the MLP layer between the speech encoder and the LLM backbone is updated to fulfill speech recognition tasks. | p. 6 (1. I have a blue) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 8 (1. I have a 
 - **p. 8 / 1. I have a blue - extractive body cue:** It can be seen from Table 2 that when the RAG module is removed, the performance of VLAS significantly degrades on the customized benchmark.
 
 - **Evidence anchors reviewed:** datasets p. 8 (1. I have a blue), p. 8 (1. I have a blue), p. 6 (1. I have a blue), p. 6 (1. I have a blue), p. 7 (1. I have a blue), p. 7 (1. I have a blue), metrics p. 10 (Figure/Table caption), p. 8 (1. I have a blue), p. 8 (1. I have a blue), p. 16 (Figure/Table caption), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), baselines p. 7 (1. I have a blue), p. 7 (1. I have a blue), p. 10 (Figure/Table caption), p. 8 (1. I have a blue), p. 9 (1. I have a blue), p. 9 (1. I have a blue), results p. 10 (Figure/Table caption), p. 8 (1. I have a blue), p. 9 (1. I have a blue), p. 8 (1. I have a blue), p. 7 (1. I have a blue), p. 7 (1. I have a blue).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 - **p. 9 / 1 INTRODUCTION - extractive body cue:** Task RT-1-X Octo OpenVLA Move Pot Into Drying Rack 3 0 7 Move The Pot To The Counter 0 0 1 Put Plate On Drying ...
 - **p. 9 / 1 INTRODUCTION - extractive body cue:** We use Nano Banana (Google, 2025) to add distractions to every image of the OpenVLA Bridge task suite.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of WorldGym. Given an initial frame and an action sequence predicted by a policy, WorldGym uses a world model to interactively predict ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 | RT-1-X Octo OpenVLA 0 10 20 30 40 50 60 70 Success Rate (%) 15.6% 23.8% 67.4% 7.6% 4.1% 39.4% Effect of OOD Distractors ... | definition/direction/unit from same section | p. 9 (1 INTRODUCTION) |
 | Table 5: Detailed Bridge Evaluation Results comparing RT-1-X (O'Neill et al., 2023), Octo (Octo Model Team et al., 2024), and OpenVLA (Kim et al.) ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 | Table 7: Policy rollout performance comparison in the presence of unrelated distractions. OpenVLA is more robust to distractions over RT-1-X and Octo. However, all ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
 | Table 8: Dataset ablation. Larger training dataset improves all three metrics comparing generated videos and ground-truth validation videos. ↑means higher the better. Subset (Bridge ... | comparison identity and matched condition | p. 25 (Figure/Table caption) |
 | Table 9: Parallelism efficiency comparison. Inference time for generating 40-frame video rollouts on an A100 GPU with different horizon lengths, demonstrating the efficiency gains ... | comparison identity and matched condition | p. 25 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 | body limitation/failure cue | Table 3: Performance of VLM as reward (mean and standard error across 4 runs) on videos from RT-1 (Brohan et al., 2022) using ground ... | p. 17 (Figure/Table caption) |
 | body limitation/failure cue | Table 6: Detailed Bridge OOD Image task results. OpenVLA appears to be more robust across the different OOD settings of object generalization, distractions and ... | p. 24 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 | Key contributions of this paper include: • We propose to use video world model to evaluate robot policies across different robot morphologies, and perform ... | p. 2 (1 INTRODUCTION) |
 | See Appendix A for additional implementation details. | p. 3 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 1 INTRODUCTION - extractive body cue:** Pick Carrot Pick Carrot Pick Carrot Pick Cat Pick Cat Pick Taylor Swift Pick Square Figure 10: OOD: Failure modes.
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 17 (Figure/Table caption), p. 6 (Figure/Table
 - **p. 24 / Figure/Table caption - extractive body cue:** Table 6: Detailed Bridge OOD Image task results. OpenVLA appears to be more robust across the different OOD settings of object generalization, distractions and classification. ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (1 INTRODUCTION), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), metrics p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1 INTRODUCTION), p. 9 (1 INTRODUCTION), baselines p. 8 (1 INTRODUCTION), p. 22 (Figure/Table caption), p. 8 (1 INTRODUCTION), p. 24 (Figure/Table caption), p. 25 (Figure/Table caption), p. 25 (Figure/Table caption), results p. 17 (Figure/Table caption), p. 6 (Figure/Table caption), p. 23 (Figure/Table caption), p. 22 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

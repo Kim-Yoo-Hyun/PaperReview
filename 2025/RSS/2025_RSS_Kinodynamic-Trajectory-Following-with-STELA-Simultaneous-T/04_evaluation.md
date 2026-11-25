@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 - **p. 6 / B. The STELA Factor Graph - extractive body cue:** ‘The observation factor incorporates observations 10 estimate the executed trajectory. ‘This work considers observations of the configuration g! that are generated asynchronously as the robot ...
 - **p. 9 / A. Experimemal setup - extractive body cue:** (Bottom) The robot follows & desied trajectory planned without obstacles, During execution, the envionment has movable obstacles.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 5. is general in nature and can be applied to any dynamical system given access to first or second-order state update equations. It does ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 | The mean error and the standard deviation of these pose estimation were measured given ground-truth. | definition/direction/unit from same section | p. 9 (A. Experimemal setup) |
 | These observations are used by STELA to estimate the executed trajectory and generate ‘controls to be forwarded to the robot ata high frequency, The ... | definition/direction/unit from same section | p. 6 (V. SIMULTANEOUS TRAIECTORY ESTIMATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 | (Bottom) The robot follows & desied trajectory planned without obstacles, During execution, the envionment has movable obstacles. | comparison identity and matched condition | p. 9 (A. Experimemal setup) |
 | Comparison Points: Table V shows the number of problems (start-goal queries) per scene selected to test STELA against the alternatives. | comparison identity and matched condition | p. 9 (A. Experimemal setup) |
 | DE Forest - Comparison of the Time 10 | comparison identity and matched condition | p. 10 (A. Experimemal setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 | body limitation/failure cue | 13 for both STEZA and SCATE. e OPEN-LOOP showeases the effects of noise on the system's as/ 2? dynamics, resulting in collisions as soon ... | p. 11 (A. Experimemal setup) |
 | body limitation/failure cue | Fig. 14: The effects of state-space noise in collision on the Forest environment for the Open-loop baseline (left) and the proposed STELA (middle). The ... | p. 13 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 | Both implementations of SCATE use the same obstacle factor as STELA and also include a factor to ensure that the controls are within the ... | p. 10 (A. Experimemal setup) |
 | The low= cost trajectories returned from the SBMP are likely, however, to be in close proximity to obstacles, which makes following them susceptible to ... | p. 12 (A. Experimemal setup) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / A. Experimemal setup - extractive body cue:** The "multiple obstacles" environment is similar to the setups from simulated experiments, where collisions with obstacles are considered failures.
@@ -171,9 +150,8 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 12 (A. Experime
 - **p. 13 / Figure/Table caption - extractive body cue:** Fig. 14: The effects of state-space noise in collision on the Forest environment for the Open-loop baseline (left) and the proposed STELA (middle). The top ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. SIMULTANEOUS TRAIECTORY ESTIMATION), p. 9 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 8 (A. Experimemal setup), p. 5 (B. Trajectory Optimization as a Motion Planner), p. 6 (B. The STELA Factor Graph), metrics p. 11 (Figure/Table caption), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 12 (A. Experimemal setup), baselines p. 10 (A. Experimemal setup), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 9 (A. Experimemal setup), p. 9 (A. Experimemal setup), p. 10 (A. Experimemal setup), results p. 11 (Figure/Table caption), p. 12 (A. Experimemal setup), p. 11 (A. Experimemal setup), p. 12 (A. Experimemal setup), p. 10 (A. Experimemal setup), p. 10 (A. Experimemal setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

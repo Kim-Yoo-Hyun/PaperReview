@@ -64,8 +64,6 @@ PDF body contribution framing (p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 
 | body cue at p. 6 | Like before, UNIPI is constrained by its diffusion model's planning limitations, while VPT performs strongly, even surpassing ACTIONVLA ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | 6 LIMITATIONS AND CONCLUSION In this paper, we introduce Latent Action Pretraining, a scalable pretraining method for building ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (2. Latent Pretraining), p. 2 (1 INTRODUCTION), p. 4 (2. Latent Pretraining), p. 1 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), interface p. 4 (2. Latent Pretraining), p. 2 (1 INTRODUCTION), p. 4 (2. Latent Pretraining), p. 1 (1 INTRODUCTION), objective p. 3 (2. Latent Pretraining), p. 3 (2. Latent Pretraining), p. 4 (2. Latent Pretraining), p. 4 (2. Latent Pretraining).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

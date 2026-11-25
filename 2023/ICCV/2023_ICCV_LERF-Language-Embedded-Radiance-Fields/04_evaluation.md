@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Localization), p. 8 (4.4. Ablations),
 - **p. 8 / 4.3. Localization - extractive body cue:** To evaluate how well LERF can localize text prompts in a scene we render novel views and label bounding boxes for 72 objects across 5 ...
 - **p. 8 / 4.1. Qualitative Results - extractive body cue:** LSeg performs similarly to LERF on in-distribution labels, but significantly suffers on long-tail labels of wild scenes. three different queries, demonstrating the ability of LERF ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Language Embedded Radiance Fields (LERF). LERF grounds CLIP representations in a dense, multi-scale 3D field. A LERF can be reconstructed from a hand-held ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Localization), p. 8 (4.4. Ablations),
 | Figure 11: LERF Convergence. We visualize rendered relevancy maps at 1k, 2k, 6k, and 30k optimization steps. Relatively speaking, regions with more common semantics ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 | Figure 1: Language Embedded Radiance Fields (LERF). LERF grounds CLIP representations in a dense, multi-scale 3D field. A LERF can be reconstructed from a ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Localization), p. 8 (4.4. Ablations),
 | Visual comparison with LSeg in 3D are presented in Fig 7. | comparison identity and matched condition | p. 7 (4.1. Qualitative Results) |
 | Figure 5: Ablations: We ablate DINO regularization and multi- scale training (Sec. 4.4), and highlight qualitative degradation in relevancy maps here. by a constant ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 15: Geometric separation impacts quality: Queries without much geometric separation can blur between objects and foreground-background. In the toaster case, very few viewing ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Localization), p. 8 (4.4. Ablations),
 | body limitation/failure cue | Figure 15: Geometric separation impacts quality: Queries without much geometric separation can blur between objects and foreground-background. In the toaster case, very few viewing ... | p. 13 (Figure/Table caption) |
 | body limitation/failure cue | Figure 5: Ablations: We ablate DINO regularization and multi- scale training (Sec. 4.4), and highlight qualitative degradation in relevancy maps here. by a constant ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Localization), p. 8 (4.4. Ablations),
 | We use the Adam optimizer for proposal networks and fields with weight decay 10-9, with an exponential learning rate scheduler from 10-2 to 10-3 ... | p. 7 (3.6. Implementation Details) |
 | We use the OpenClip [10] ViTB/16 model trained on the LAION-2B dataset, with an image pyramid varying from smin = .05 to smin = ... | p. 7 (3.6. Implementation Details) |
 | We compare against distilling LSeg features into 3D as in DFF [20], but implemented in our own codebase for an apples-to-apples comparison. | p. 8 (4.2. Existence Determination) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 8 (4.3. Localization), p. 8 (4.4. Ablations),
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: Ablations: We ablate DINO regularization and multi- scale training (Sec. 4.4), and highlight qualitative degradation in relevancy maps here. by a constant λlang ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Localization), p. 8 (4.1. Qualitative Results), metrics p. 8 (4.2. Existence Determination), p. 8 (4.3. Localization), p. 3 (Figure/Table caption), p. 7 (4.1. Qualitative Results), p. 7 (4. Experiments), p. 12 (Figure/Table caption), baselines p. 8 (4.3. Localization), p. 8 (4.3. Localization), p. 7 (4. Experiments), p. 7 (4.1. Qualitative Results), p. 6 (Figure/Table caption), p. 13 (Figure/Table caption), results p. 8 (4.3. Localization), p. 8 (4.4. Ablations), p. 7 (4. Experiments), p. 7 (4.1. Qualitative Results), p. 4 (Figure/Table caption), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 - **p. 8 / 4.3. Applications of OOR - extractive body cue:** First, we begin with the initial scene with two objects and the human interacting with them.
 - **p. 8 / 4.3. Applications of OOR - extractive body cue:** Human Motion Synthesis for Two-Object Interaction.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Object-Object Spatial Relationships (OOR). Given a textual description of the spatial relationship between two objects, our method models OOR, representing their relative poses ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 | We demonstrate this by synthesizing human motion interacting with two objects using generated OORs. | definition/direction/unit from same section | p. 8 (4.3. Applications of OOR) |
 | We assume two objects and a human interacting initially, and synthesize human motion using the generated OOR and contact consistency. | definition/direction/unit from same section | p. 8 (4.3. Applications of OOR) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 | 1 shows that our method outperforms baselines for all metrics. | comparison identity and matched condition | p. 7 (4.1. Pairwise OOR Generation) |
 | Our method models object-object spatial relationships better than LLM-based baselines. | comparison identity and matched condition | p. 6 (4. Experiments) |
 | Our method better captures multi-object OOR compared to the diffusion-based text-to-3D model. | comparison identity and matched condition | p. 7 (4.1. Pairwise OOR Generation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 | body limitation/failure cue | Since SMC and SceneTeller cannot be directly extended to multi-object OOR using only pairwise OOR data, we compare our model to another baseline GraphDreamer ... | p. 7 (4.2. Multi-object OOR Generation) |
 | body limitation/failure cue | (a) adding random noise to the original scene and then rearranging it. | p. 8 (4.3. Applications of OOR) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 | From this registration, we compute their relative spatial transformation Trel, which is parameterized by Eq. | p. 4 (3.2. 3D OOR Samples Generation) |
 | Pose and Scale T5 Encoder Text Prompt Base Category Target Category MLP MLP MLP MLP MLP MLP Figure 4. | p. 5 (3.3. OOR Diffusion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.1. Pairwise OOR Generation - extractive body cue:** However, due to the inherent limitation of estimating 3D information without direct 3D data, it lacks fine-grained control.
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR G
 - **p. 8 / 4.3. Applications of OOR - extractive body cue:** (a) adding random noise to the original scene and then rearranging it.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.3. Applications of OOR), p. 6 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 8 (4.3. Applications of OOR), p. 8 (4.3. Applications of OOR), metrics p. 7 (4.2. Multi-object OOR Generation), p. 7 (4.2. Multi-object OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 5 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 6 (4.1. Pairwise OOR Generation), p. 7 (4.1. Pairwise OOR Generation), p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR Generation), results p. 6 (4. Experiments), p. 7 (4.1. Pairwise OOR Generation), p. 6 (4.1. Pairwise OOR Generation), p. 7 (4.2. Multi-object OOR Generation), p. 8 (4.3. Applications of OOR), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

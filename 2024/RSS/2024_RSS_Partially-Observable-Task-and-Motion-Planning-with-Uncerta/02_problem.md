@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (III. BACKGROUND), p. 5 (IV. PLANNING WITH A
 | body cue at p. 9 | The primary failure modes were (1) failure in perception (due, we believe, to improperly calibrated hard-coded camera poses), ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 3 | Fig. 3: Uncertainty and Risk Aware Task and Motion Planning. (a) The robot's continuous space of probabilistic beliefs ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (III. BACKGROUND), p. 3 (III. BACKGROUND), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ control writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (III. BACKGROUND), p. 1 (I. INTRODUCTION), p. 3 (III. BACKGROUND), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 3 (III. BACKGROUND), p. 3 (III. BACKGROUND), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), objective p. 4 (IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP), p. 4 (IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP), p. 5 (IV. PLANNING WITH AN ABSTRACT BELIEF-STATE MDP), p. 9 (VII. REAL-WORLD IMPLEMENTATION), p. 9 (VII. REAL-WORLD IMPLEMENTATION).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

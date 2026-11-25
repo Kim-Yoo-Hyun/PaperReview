@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Abstract), p.
 - **p. 4 / Abstract - extractive body cue:** Data Association In many real-world problems, landmarks are not identifiable, and the total number of landmarks K cannot be obtained trivially-as was the case above.
 - **p. 5 / Abstract - extractive body cue:** The robot's estimates are indicated by x's, illustrating the high accuracy of the resulting maps.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The SLAM problem: The robot moves from pose s1 through a sequence of controls, u1, u2, . . . , ut. As it ...
@@ -81,21 +79,12 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Abstract), p.
 | First, each particle st,[m] in St-1 is used to generate a probabilistic guess of the robot's pose at time t s[m] t ∼ p(st ... | definition/direction/unit from same section | p. 3 (Abstract) |
 | Suppose FastSLAM incorporates a new control ut and a new measurement zt. | definition/direction/unit from same section | p. 4 (Abstract) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | FastSLAM resulted in an average residual map error of 8.3 centimeters, when compared to the manually generated map. | comparison identity and matched condition | p. 5 (Abstract) |
 | Without loss of generality, we will think of landmarks as points in the plane, so that locations are specified by two numerical values. | comparison identity and matched condition | p. 2 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -116,7 +105,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Abstract), p.
 - **p. 3 / Abstract - extractive body cue:** One significant difference between the FastSLAM algorithm's use of Kalman filters and that of the traditional SLAM algorithm is that the updates in the FastSLAM ...
 - **p. 5 / Abstract - extractive body cue:** The resulting map generated with M = 10 samples is depicted in Figure 4c, with manually determined landmark locations marked by circles.
 - **p. 5 / Abstract - extractive body cue:** FastSLAM resulted in an average residual map error of 8.3 centimeters, when compared to the manually generated map.
-- **p. 3 / Abstract - extractive body cue:** One significant difference between the FastSLAM algorithm's use of Kalman filters and that of the traditional SLAM algorithm is that the updates in the FastSLAM ...
 
 ## Generalization and Failure Cases
 
@@ -126,8 +114,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Abstract), p.
 | body limitation/failure cue | Unfortunately, the physical testbed does not allow for systematic experiments regarding the scaling properties of the approach. | p. 5 (Abstract) |
 | body limitation/failure cue | Many measurement models in the literature assume that the robot can measure range and bearing to landmarks, confounded by measurement noise. | p. 2 (Abstract) |
 | body limitation/failure cue | It has been observed frequently that false data association will make the conventional EKF approach fail catastrophically [2]. | p. 5 (Abstract) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -139,14 +125,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Abstract), p.
 | Efficient Implementation The FastSLAM algorithm, as described thus far, may require time linear in the number of landmarks K for each update iteration if ... | p. 4 (Abstract) |
 | Moreover, accessing a Gaussian also takes time logarithmic in K, since the number of steps required to navigate to a leaf of the tree ... | p. 4 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Abstract - extractive body cue:** Data Association In many real-world problems, landmarks are not identifiable, and the total number of landmarks K cannot be obtained trivially-as was the case above.
@@ -155,6 +133,5 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 2 (Abstract), p.
 - **p. 5 / Abstract - extractive body cue:** It has been observed frequently that false data association will make the conventional EKF approach fail catastrophically [2].
 
 - **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 2 (Abstract), p. 5 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract), metrics p. 6 (Figure/Table caption), p. 5 (Abstract), p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), baselines p. 5 (Abstract), p. 2 (Abstract), results p. 6 (Figure/Table caption), p. 2 (Abstract), p. 5 (Abstract), p. 5 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

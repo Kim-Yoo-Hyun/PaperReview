@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 - **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
 - **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** When comparing (b) and (d), the relation-prioritized spatial scanning brings substantial gains on the SQA3D [42] (2.3%) and Multi3DRefer [67] (1.6%) datasets, underscoring capabilities to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Mamba-3VL serves as an interactive and general-purpose interface for 3D vision-language tasks, including Referring Segmentation, Visual Grounding, Question Answering, Dense Captioning, while generalizing ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 | On Multi3DRefer [67], Mamba3VL attains 69.5%, 45.7%, and 43.5% scores, showing a substantial improvement in different object referencing levels. | definition/direction/unit from same section | p. 6 (4.2. Results on 3D Vision-Language Tasks) |
 | Figure 2. Comparison of grounding accuracy and model efficiency. human commands in real scenarios. Towards this goal, nu- merous datasets and 3D foundation models ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 | The model achieves landmark accuracies of 79.9% (Unique) and 48.9% (Multiple) on the ScanRefer [6], outperforming PQ3D [74] by 1.7% and 2.7%, respectively. | comparison identity and matched condition | p. 6 (4.2. Results on 3D Vision-Language Tasks) |
 | Our findings are as follows: (1) For robotic manipulation, Mamba-3VL consistently outperforms com6279 | comparison identity and matched condition | p. 7 (4.2. Results on 3D Vision-Language Tasks) |
 | Compared with Linear-complexity Methods. | comparison identity and matched condition | p. 8 (4.3. Ablation Study and In-depth Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 | body limitation/failure cue | FIS/NIS) results in performance degradation, suggesting their complementary roles. | p. 8 (4.3. Ablation Study and In-depth Analysis) |
 | body limitation/failure cue | Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes. | p. 8 (4.3. Ablation Study and In-depth Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 | In each decoder layer l, instance queries Ql sequentially retrieve scene-relevant features and prompt-encoded knowledge with two successive Mamba Mixer modules, severally. | p. 4 (3.2. Multi-Modal Mamba Mixer Block) |
 | Following PQ3D [74], a zero-initialized query Q0 centered on 3D object centroids, is inputted into the mambabased decoder, which guides instance queries to incorporate ... | p. 4 (3.2. Multi-Modal Mamba Mixer Block) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Results on 3D Vision-Language Tasks - extractive body cue:** Our method exhibits view-invariant robustness with 3.9% and 6.2% improvements over PQ3D on VD subsets of Nr3D/Sr3D benchmarks.
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Results on 3D Vision-Language Tasks),
 - **p. 8 / 4.3. Ablation Study and In-depth Analysis - extractive body cue:** Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 6 (4.1. Implementation Details), p. 5 (4.1. Implementation Details), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), metrics p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), baselines p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (Figure/Table caption), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (4.3. Ablation Study and In-depth Analysis), results p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 8 (Figure/Table caption), p. 6 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 7 (4.2. Results on 3D Vision-Language Tasks), p. 8 (4.3. Ablation Study and In-depth Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

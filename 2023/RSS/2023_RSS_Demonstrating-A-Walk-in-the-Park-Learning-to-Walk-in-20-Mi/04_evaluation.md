@@ -44,8 +44,6 @@
 - **p. 5 / V. SIMULATION ANALYSIS - extractive body cue:** Since our goal is to run training on a real robot, we aim for design decisions and algorithms that lead to improved stability and sample ...
 - **p. 6 / V. SIMULATION ANALYSIS - extractive body cue:** 4: Examples of learned gaits acquired on a variety of real-world terrains.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We demonstrate that deep reinforcement learning can be used to efficiently train a quadruped robot directly on various real world terrains, e.g., flat ...
@@ -73,8 +71,6 @@
 | From these results, we can conclude that a variety of regularization or normalization methods, if implemented and applied carefully, can all achieve a similar ... | definition/direction/unit from same section | p. 6 (V. SIMULATION ANALYSIS) |
 | Left to right: flat, solid ground covered in dense foam mats; a 5cm memory foam mattress; loose ground comprised of eucalyptus bark; a grassy ... | definition/direction/unit from same section | p. 6 (V. SIMULATION ANALYSIS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -82,13 +78,6 @@
 | Therefore, for the remaining ablations, we used the value of damping set to 10. | comparison identity and matched condition | p. 5 (V. SIMULATION ANALYSIS) |
 | This section presents simulated comparisons of design decisions and SAC variants we considered in this work. | comparison identity and matched condition | p. 5 (V. SIMULATION ANALYSIS) |
 | Left to right: flat, solid ground covered in dense foam mats; a 5cm memory foam mattress; loose ground comprised of eucalyptus bark; a grassy ... | comparison identity and matched condition | p. 6 (V. SIMULATION ANALYSIS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -118,8 +107,6 @@
 | body limitation/failure cue | During early experiments with the real robot, we found that using the forward velocity in the robot's local frame caused it to dive forward ... | p. 5 (IV. SYSTEM DESIGN) |
 | body limitation/failure cue | In particular, we confirm the efficacy of constraining the action space: we observe that the simulated agent cannot make any progress in the unconstrained ... | p. 5 (V. SIMULATION ANALYSIS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -130,14 +117,6 @@
 | Since our goal is to run training on a real robot, we aim for design decisions and algorithms that lead to improved stability and ... | p. 5 (V. SIMULATION ANALYSIS) |
 | In order to facilitate this kind of training synchronously, the updates must be inexpensive enough to be able to perform them between time-steps (of ... | p. 6 (V. SIMULATION ANALYSIS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / IV. SYSTEM DESIGN - extractive body cue:** In the simulator, we used p = [0.05, 0.7, -1.4]; however, during the early experiments in the real world, we found that p = [0.05, ...
@@ -146,6 +125,5 @@
 - **p. 5 / V. SIMULATION ANALYSIS - extractive body cue:** In particular, we confirm the efficacy of constraining the action space: we observe that the simulated agent cannot make any progress in the unconstrained action ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. SIMULATION ANALYSIS), p. 6 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 6 (V. SIMULATION ANALYSIS), metrics p. 5 (V. SIMULATION ANALYSIS), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (V. SIMULATION ANALYSIS), p. 6 (V. SIMULATION ANALYSIS), baselines p. 5 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 6 (V. SIMULATION ANALYSIS), results p. 6 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 5 (V. SIMULATION ANALYSIS), p. 6 (V. SIMULATION ANALYSIS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY)
 - **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** This reward helps prevent fast swing leg motions, which we found could arise during training on difficult terrain.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 2 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY)
 - **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** Parameters Range Unit Simulation Model Joint Damping [0.5, 2.5] % Mass [-0.25, 0.25] % Center of Mass Location [-0.01, 0.01] m Passive Spring Stiffness [-500, ...
 - **p. 4 / IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY - extractive body cue:** The visual inputs are randomized to simulate noise from the heightmap estimator and prevent the policy from overfitting to the exact simulated heightmaps.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY)
 - **p. 5 / VI. SIMULATION RESULTS - extractive body cue:** LSTM has implicit history, Transformer has a fixed window size of 0.6 seconds to allow reasonable inference during runtime, and MLP does not have history.
 - **p. 6 / VI. SIMULATION RESULTS - extractive body cue:** Episodes with foot collision indicates the number of episodes that have one or more foot collision events occurred during rollouts, and such random collision events ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** neural, network, represent, policy, mapping, observation, sequences, actions, Below, describe, space, action, architecture, training, methods, operates, outputs, setpoints, motors, provided.
 - **Relevant PDF headings:** IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY)
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Types of terrain used in training. a real robot. In particular, we use a three component reward function where all components are weighted ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: A. Ablation study on policy with simulation heightmap. B. Ablation study on policy with different heightmap predictor architectures. Each ablation study uses data ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 2 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 2 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), objective p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 2 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), temporal p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 3 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 4 (IV. LEARNING A TERRAIN-AWARE LOCOMOTION POLICY), p. 5 (V. HEIGHTMAP PREDICTION FROM EGOCENTRIC VISION), p. 6 (VI. SIMULATION RESULTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** The user can therefore assign a navigation task (such as finding a backpack) to the robot via voice commands.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** We also manually label the object relations, based on the definition in [20], among the representative objects inside the collected datasets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: 3D scene graphs constructed using Graph2Nav for outdoor (left) and indoor (right) scenes. The graph includes a hierarchy (from top to bottom): a ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Fig. 1: 3D scene graphs constructed using Graph2Nav for outdoor (left) and indoor (right) scenes. The graph includes a hierarchy (from top to bottom): ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: The process flow diagram for Graph2Nav. A pose graph-based SLAM system is utilized to provide real-time pose estimations for received image and ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Clearly, Graph2Nav greatly improves the capability in detecting correct relationships among the objects, compared to 2D-based method. | comparison identity and matched condition | p. 5 (V. EXPERIMENTS) |
 | It means the robot does two trials (one uses the graph without relations, and the other uses the entire graph with object relations from ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
 | Without object-relations, the LLM generates the initial search plan based on (1) the distances to different large objects inside the environment, and (2) the ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | body limitation/failure cue | The plan can also be dynamically changed, updated, or replanned during execution, if any failure happens or any new information is received. | p. 6 (V. EXPERIMENTS) |
 | body limitation/failure cue | Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world. | p. 5 (V. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | It means the robot does two trials (one uses the graph without relations, and the other uses the entire graph with object relations from ... | p. 6 (V. EXPERIMENTS) |
 | It separately models the objects and relations in the form of queries from two Transformer decoders, followed by a prompting-like relation-object matching mechanism. | p. 3 (III. GRAPH2NAV) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / VI. CONCLUSIONS AND DISCUSSION - extractive body cue:** To fulfull this goal, we propose Graph2Nav, a novel real-time 3D object-relation graph generation framework that addresses current limitations to robot navigation.
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** Combining observations from different 2D images shall improve the robustness and accuracy in depicting the actual relationships among 3D objects in the real world.
 
 - **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), metrics p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), baselines p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

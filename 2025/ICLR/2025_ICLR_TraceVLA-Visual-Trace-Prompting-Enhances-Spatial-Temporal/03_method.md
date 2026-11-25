@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (2 PRELIMINARIES), p. 1 (ABSTRACT), p. 4 (2 PREL
 - **p. 4 / 1. We then identify - extractive body cue:** For each training example, with probability α, we replace the visual trace prompt image with the original image and remove the corresponding hint from the ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 5 (1. We then identify).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (2 PRELIMINARIES), p. 1 (ABSTRACT), p. 4 (2 PREL
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** A separator token is then inserted between the visual tokens of these two images, then concatenating with text tokens and feeding into the underlying vision ...
 - **p. 4 / 2 PRELIMINARIES - extractive body cue:** These visual traces are then visually overlaid on the robot's original observations, serving as visual prompts that provide the model with a spatial memory of ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (2 PRELIMINARIES), p. 1 (ABSTRACT), p. 4 (2 PREL
 - **p. 10 / 4 EXPERIMENT - extractive body cue:** (Right): Comparison of inference time across different models.
 - **p. 5 / 1. We then identify - extractive body cue:** Additionally, we pretrained a 4B VLA model with Phi3-Vision as its backbone VLM (Abdin et al., 2024a), on the Open X-Embodiment dataset using a batch ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** learning, architecture, comprises, visual, encoder, mapping, image, observations, features, policy, network, outputting, action, distributions, introduce, trace, prompting, simple, effective, facilitate.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 3 (2 PRELIMINARIES), p. 1 (ABSTRACT), p. 4 (2 PREL
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** As shown in Figure 10 (left), when the batch size is 32, the memory difference between TraceVLA and models without visual trace prompting (for both ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 7: (Left): Comparison of average success rates between the base OpenVLA and OpenVLA-Phi3 models and their finetuned versions, with and without visual trace prompting. ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2 PRELIMINARIES), p. 1 (ABSTRACT), p. 4 (2 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 3 (2 PRELIMINARIES), p. 4 (2 PRELIMINARIES), objective p. 3 (2 PRELIMINARIES), p. 3 (2 PRELIMINARIES), p. 4 (1. We then identify), p. 5 (1. We then identify), p. 1 (ABSTRACT), p. 4 (1. We then identify), temporal p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 3 (2 PRELIMINARIES), p. 4 (1. We then identify), p. 4 (2 PRELIMINARIES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

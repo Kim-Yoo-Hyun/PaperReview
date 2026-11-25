@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 9 / 5.1 Results - extractive body cue:** Though FLAN was fine-tuned on instruction answering, the broader and improved dataset for PaLM may make up for this difference in training.
 - **p. 9 / 5.1 Results - extractive body cue:** This result indicates a potential future where the fields of language processing and robotics can collaboratively improve each other and scale together.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: LLMs have not interacted with their environment and observed the outcome of their responses, and thus are not grounded in the world. SayCan ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 | Figure 10: Network architecture in BC policy sampled proportionally to their priority, defined as 1 + 10 · /p -0.5/, where p is the ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 | Table 7: Plan and execution success rate of drawer tasks E.4 Chain of Thought Reasoning Here we show the chain of thought prompt that ... | definition/direction/unit from same section | p. 29 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 | These tasks require PaLMSayCan to plan many steps without error and for the robot to navigate and interact with a significant portion of the ... | comparison identity and matched condition | p. 7 (5.1 Results) |
 | To study the importance of the LLM, we conduct two ablation experiments using the language-conditioned policy (see Sections 4-4). | comparison identity and matched condition | p. 8 (5.1 Results) |
 | Human: Can you bring a fruit-flavored drink without caffeine? | comparison identity and matched condition | p. 10 (5.1 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 | body limitation/failure cue | The embodiment tasks were planned correctly 64% of the time, generally with failures as a result of affordance function misclassification. | p. 8 (5.1 Results) |
 | body limitation/failure cue | Over 21 queries we found a planning rate of 100% and an execution rate of 33% (due to failures of the chained manipulation policy), ... | p. 10 (5.1 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 | However, this is not enough to fully constrain the output to admissible primitive skills for an embodied agent, and indeed at times it can ... | p. 3 (2 Preliminaries) |
 | The optimal skill according to the language model is computed via ℓπ = arg maxℓπ∈ℓΠ p(ℓπ/i). | p. 4 (2 Preliminaries) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 7 Related Work - extractive body cue:** Future work that extends the repertoire of skills and improves their robustness would mitigate this limitation.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 10 / 5.1 Results - extractive body cue:** Over 21 queries we found a planning rate of 100% and an execution rate of 33% (due to failures of the chained manipulation policy), with ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.1 Results), p. 7 (5.1 Results), p. 8 (5.1 Results), p. 11 (5.1 Results), p. 11 (5.1 Results), p. 8 (5.1 Results), metrics p. 9 (Figure/Table caption), p. 33 (Figure/Table caption), p. 9 (5.1 Results), p. 10 (5.1 Results), p. 7 (5.1 Results), p. 8 (5.1 Results), baselines p. 9 (5.1 Results), p. 9 (5.1 Results), p. 29 (Figure/Table caption), p. 7 (5.1 Results), p. 8 (5.1 Results), p. 10 (5.1 Results), results p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 7 (5.1 Results), p. 10 (5.1 Results), p. 8 (5.1 Results), p. 8 (5.1 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

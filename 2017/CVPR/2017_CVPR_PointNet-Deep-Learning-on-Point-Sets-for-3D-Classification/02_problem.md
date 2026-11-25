@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p
 | body cue at p. 8 | CS and NS reflect the robustness of PointNet, meaning that losing some non-critical points does not change the ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Combined with the continuity of h, this explains the robustness of our model w.r.t point perturbation, corruption and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction), p. 3 (3. Problem Statement), p. 2 (3. Problem Statement), p. 3 (4.2. PointNet Architecture). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), interface p. 1 (1. Introduction), p. 3 (3. Problem Statement), p. 2 (3. Problem Statement), p. 3 (4.2. PointNet Architecture), objective p. 4 (4.2. PointNet Architecture), p. 3 (4.2. PointNet Architecture), p. 4 (4.2. PointNet Architecture).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

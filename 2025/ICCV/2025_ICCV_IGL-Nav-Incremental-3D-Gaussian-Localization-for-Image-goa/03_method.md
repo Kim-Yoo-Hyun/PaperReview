@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 - **p. 4 / 3.3. Coarse-to-fine Localization - extractive body cue:** (c) Fine target localization via differentiable 3DGS rendering and matching-constrained optimization. 𝐿 𝑅 𝜃 𝜙 𝑋 𝑍 𝐴 𝐵 𝑂 𝑌 𝑂ᇱ: (𝑥, 𝑦, 𝑧) ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (3.2. Incremental Scene Representation), p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.1. Coarse Target Localization), p. 5 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 - **p. 1 / 1. Introduction - extractive body cue:** IGL-Nav effectively guides the agent to reach free-view image goal via incremental 3D gaussian localization. agent to precisely understand spatial information, as well as to ...
 - **p. 2 / 1. Introduction - extractive body cue:** Extensive experiments on various datasets in Habitat simulator show our IGL-Nav significantly outperforms previous state-of-the-art imagegoal navigation methods.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 - **p. 4 / 3.3. Coarse-to-fine Localization - extractive body cue:** Initial Pose Target Pose Gaussian Encoder Current RGB-D Current Embedding 𝑬௧ ᇱ Target Image Gaussian Encoder Previous Embedding 𝑬௧ିଵ Update Scene Embedding 𝑬௧ RGB-D Stream ...
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Since some methods [7, 29, 30, 33] only release test code, we perform zeroshot transfer to apply them to the new setting without retraining.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, concatenate, normalized, RGB, depth, images, then, extract, dense, monocular, scene, embedding, UNet-based, encoder, formulate, optimization, loss, Q-1, Xi/2, where.
 - **Relevant PDF headings:** 3. Approach (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 3 (3.2. Incremental Scene Representation), p. 5 (3
 - **p. 8 / 5. Conclusion - extractive body cue:** A limitation of IGL-Nav is that it requires depth and camera intrinsics of goal image.
 - **p. 7 / 4.3. Analysis of IGL-Nav - extractive body cue:** As shown in Table 3, with predicted depth and camera intrinsics, the performance of IGLNav is still robust.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Incremental Scene Representation), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.1. Problem Statement), p. 5 (3.3.1. Coarse Target Localization), p. 6 (3.4. Navigation), p. 4 (3.3. Coarse-to-fine Localization), objective p. 5 (3.3.1. Coarse Target Localization), p. 5 (3.3.2. Fine Target Localization), p. 3 (3.2. Incremental Scene Representation), p. 3 (3.2. Incremental Scene Representation), p. 4 (3.3.1. Coarse Target Localization), p. 4 (3.3. Coarse-to-fine Localization), temporal p. 3 (3.2. Incremental Scene Representation), p. 6 (3.4. Navigation), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Analysis of IGL-Nav).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

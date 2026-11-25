@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** The recurrent critic was also an LSTM network with two layers of 128 units each, with a single output representing the value function.
 - 정책은 속도 지령·주기 신호·추정한 로봇 상태에서 관절 위치 목표를 낸다. 학습 보상에는 전진 속도·자세·관절의 참조 궤적 추종 오차가 들어간다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
 - **Equation/algorithm anchors:** p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Recent work in transferring these trained controllers from simulation onto real robots has also enjoyed encouraging results [1, 2, 3, 4, 5, 6], but many ...
 - **p. 2 / II. BACKGROUND - extractive body cue:** The reward r = R(s, a) is a scalar signal that expresses how good a particular state-action pair is.
 - 정책 입력은 목표 전진 속도, 보행 위상의 사인·코사인, 추정한 몸체 방향·관절 위치·속도다. 순환 정책은 모터 위치 목표를 내고 PD 제어기가 토크를 계산한다. [PDF 3쪽](https://www.roboticsproceedings.org/rss16/p031.pdf#page=3)
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 5 / IV. RESULTS - extractive body cue:** When training the feedforward policies, we used a batch size of 1024 timesteps.
 - **p. 3 / III. METHOD - extractive body cue:** Though we believe that the recurrent policies do not have any theoretical reason for needing a clock input, we were not able to train any ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Optimize, surrogate, klthresh, then, break, During, training, fixed, action, standard, deviation, value, State, Space, policy, input, consists, fvel, desired, forward.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,24 +108,13 @@ PDF body method statement (p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 4 / IV. RESULTS - extractive body cue:** Simulation We trained ten LSTM networks and ten FF networks with dynamics randomization, and ten LSTM networks and ten FF networks without dynamics randomization, each ...
 - **p. 5 / IV. RESULTS - extractive body cue:** 5: Reward curve of LSTM and FF networks during training without dynamics randomization.
 - **p. 5 / IV. RESULTS - extractive body cue:** As can be seen in Figure 5, when trained without dynamics randomization, LSTM networks attain a significantly higher reward than feedforward networks, with surprisingly little ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We use recurrent neural networks and dynamics randomization to greatly improve the sim-to-real transfer rate and demonstrate learned, memory-based control on the bipedal ...
 - **p. 6 / V. CONCLUSION - extractive body cue:** The policies were learned and tested first in simulation, then transferred to the robot, demonstrating the robustness and promise of this approach.
 - **p. 5 / IV. RESULTS - extractive body cue:** We conducted a robustness test in simulation across ten chosen sets of dynamics, taken from the range in Table I.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), objective p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), temporal p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 1 (Abstract), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

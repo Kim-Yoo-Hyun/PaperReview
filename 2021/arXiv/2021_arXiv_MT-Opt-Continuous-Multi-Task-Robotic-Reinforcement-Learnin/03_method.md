@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Prior work indicates that multi-task RL can indeed amortize the cost of single-task learning [20, 56, 60, 80, 30].
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 4 (III. SYSTEM OVERVIEW), p. 4 (III. SYSTEM OVERVIEW).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 - **p. 5 / V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS - extractive body cue:** Such out of distribution images might be caused by various real-world factors such as different lighting conditions, changing in background surroundings and novel states which ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Finally, by enabling the multi-task RL policy to learn shared representations, learning new tasks can become easier over time as the system acquires more skills ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 - **p. 7 / VII. EXPERIMENTS - extractive body cue:** In addition to fIskill task impersonation, we re-balance each training batch between the tasks as well as within each task to keep the relative proportion ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** While existing methods are effective and able to generalize, they require considerable on-robot training time, as well as extensive engineering effort for setting up each ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** fact, supervised, learning, train, similar, neural, network, architecture, model, excluding, inputs, responsible, action, representation, MT-Opt, multi-task, policy, describe, more, detail.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6: Top: 12 tasks trained for ablations, giving rise to Object Acquisition and Object Manipulation skills. Bottom: examples of additional tasks that a skilled ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Fig. 16: Evaluation scene used for ablation experiments. Con- tains one of three different color plates. And nine graspable objects: One of each object from ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION), p. 3 (III. SYSTEM OVERVIEW), p. 4 (III. SYSTEM OVERVIEW), p. 1 (I. INTRODUCTION), objective p. 3 (III. SYSTEM OVERVIEW), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM OVERVIEW), p. 5 (V. REWARDS VIA MULTI-TASK SUCCESS DETECTORS), p. 4 (III. SYSTEM OVERVIEW), p. 1 (I. INTRODUCTION), temporal p. 3 (III. SYSTEM OVERVIEW), p. 3 (III. SYSTEM OVERVIEW), p. 6 (VII. EXPERIMENTS), p. 6 (VII. EXPERIMENTS), p. 7 (VII. EXPERIMENTS), p. 8 (VII. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

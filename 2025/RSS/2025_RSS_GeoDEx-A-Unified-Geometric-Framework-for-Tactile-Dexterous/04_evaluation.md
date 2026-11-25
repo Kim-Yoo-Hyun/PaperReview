@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 - **p. 8 / C. Hardware Results - extractive body cue:** Object / Conwot / Success ate / Mean & su fore eror
 - **p. 8 / C. Hardware Results - extractive body cue:** From ¢ = 27s we lift the object to show a successful grasp, at = 336 we put the object back down and keep stable ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: FE-plane, M-Cone and Constraint convex set
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 | 11, the estimated contact forces converge to the desired value with a mean error of 0.1.V. | definition/direction/unit from same section | p. 7 (C. Hardware Results) |
 | Once the controller converges to the desired forces, the system starts tracking the desired cube's yaw angle with an RMS error under 1°. | definition/direction/unit from same section | p. 7 (B. Simulation Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 | The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for the success and failure cases is ... | comparison identity and matched condition | p. 8 (C. Hardware Results) |
 | 1) without over-pressuring it (following constraint in eq. | comparison identity and matched condition | p. 7 (C. Hardware Results) |
 | We hold the grasp for 20s to show that force ‘equilibrium is achieved and the object pose remains static. ‘Then, the object is lifted ... | comparison identity and matched condition | p. 8 (C. Hardware Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 | body limitation/failure cue | Since the thumb opposes the forces applied by the index and middle finger, thus they have to increase or decrease together, thus the equilibrium ... | p. 6 (B. Simulation Results) |
 | body limitation/failure cue | It can be seen that equilibrium cannot be achieved since while the thumb and middle finger have achieved forces close to desired values within ... | p. 8 (C. Hardware Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 | Dexterous Grasping: We will first introduce the underlying, problem of inaccurate force measurements in hardware by presenting a 2-finger pinch grasp of a sphere. | p. 7 (C. Hardware Results) |
 | Given the object's ‘mass, CoM, contact locations, and friction coefficients at the Contact points, we use our force planner to compute the desired force ... | p. 7 (C. Hardware Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / V. Discussion - extractive body cue:** For these failure cases, the main element at fault was the saturation of the tactile sensors of one or more fingertips.
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 7 (B. Simulation Results), p. 8 (C. Hardware 
 - **p. 8 / C. Hardware Results - extractive body cue:** It can be seen that equilibrium cannot be achieved since while the thumb and middle finger have achieved forces close to desired values within an ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (C. Hardware Results), p. 6 (B. Simulation Results), p. 6 (B. Simulation Results), p. 7 (C. Hardware Results), p. 9 (C. Hardware Results), p. 7 (B. Simulation Results), metrics p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 9 (C. Hardware Results), p. 9 (C. Hardware Results), p. 10 (C. Hardware Results), p. 6 (B. Simulation Results), baselines p. 6 (B. Simulation Results), p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 7 (C. Hardware Results), p. 8 (C. Hardware Results), results p. 7 (B. Simulation Results), p. 8 (C. Hardware Results), p. 8 (C. Hardware Results), p. 9 (C. Hardware Results), p. 6 (B. Simulation Results), p. 7 (C. Hardware Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

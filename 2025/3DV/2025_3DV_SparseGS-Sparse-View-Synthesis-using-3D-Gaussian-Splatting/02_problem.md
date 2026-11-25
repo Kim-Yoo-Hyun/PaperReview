@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (3. Methods), p. 2 (1. Introduction), p. 2 (
 | body cue at p. 8 | In regions with little coverage by input views, we leverage Score Distillation Sampling (SDS) and Depth Warping to ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 1 | Figure 1. The quality of 3DGS [12] degrades as the number of input views decreases, particularly in unbounded ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 6 (3.3. Unseen Viewpoints Regularization (UVR)), p. 1 (1. Introduction), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ PDF body contribution framing (p. 3 (3. Methods), p. 2 (1. Introduction), p. 2 (
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 6 (3.3. Unseen Viewpoints Regularization (UVR)), p. 1 (1. Introduction), p. 2 (1. Introduction), objective p. 6 (3.4. Advanced Floater Pruning), p. 4 (3.1. Mode-selection & Softmax-scaling Depth Ren), p. 3 (3. Methods), p. 3 (3. Methods), p. 4 (3.1. Mode-selection & Softmax-scaling Depth Ren), p. 5 (3.3. Unseen Viewpoints Regularization (UVR)).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

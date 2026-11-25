@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 5 / III. METHODOLOGY - extractive body cue:** We employ null-space projection for kinematic tracking and quadratic programming for dynamic optimization to compute the desired joint positions, velocities, and torques.
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 6 (III. METHODOLOGY), p. 6 (III. METHODOLOGY), p. 7 (III. METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** The in-domain robotic data collected via teleoperation are used to finetune the pretrained model to learn a manipulation policy that predicts the 6D poses of ...
 - **p. 5 / III. METHODOLOGY - extractive body cue:** For image inputs, the features are obtained from a pretrained ResNet encoder that can be finetuned during training; for proprioceptive or state-like inputs, the features ...
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 5 / III. METHODOLOGY - extractive body cue:** For image inputs, the features are obtained from a pretrained ResNet encoder that can be finetuned during training; for proprioceptive or state-like inputs, the features ...
 - **p. 6 / III. METHODOLOGY - extractive body cue:** We use the behavioral cloning objective for both pretraining and finetuning.
 - **p. 7 / III. METHODOLOGY - extractive body cue:** Algorithm 1 Pretraining MXT on human data and finetuning on LocoMan data Input: Human dataset Dhuman, LocoMan dataset DLocoMan Output: Policy π for versatile LocoMan ...
-- **p. 5 / III. METHODOLOGY - extractive body cue:** For image inputs, the features are obtained from a pretrained ResNet encoder that can be finetuned during training; for proprioceptive or state-like inputs, the features ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Similar, design, cross-attention, layer, format, observational, features, fixed, number, tokens, modality, adopt, two-stage, training, process, modularized, cross-embodiment, model, first, pretrained.
 - **Relevant PDF headings:** III. METHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +115,10 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Human2LocoMan framework. Our system uses an XR headset for data collection, capturing egocentric human data and teleoperated robot data, all mapped to a ...
 - **p. 10 / Figure/Table caption - extractive body cue:** Fig. 6: Substep success rate. The success rate for some substep is calcuated as the percentage of trials where the robot success- fully completed the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), p. 6 (III. METHODOLOGY), p. 6 (III. METHODOLOGY), p. 7 (III. METHODOLOGY), objective p. 6 (III. METHODOLOGY), p. 7 (III. METHODOLOGY), p. 6 (III. METHODOLOGY), p. 7 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), temporal p. 5 (III. METHODOLOGY), p. 7 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

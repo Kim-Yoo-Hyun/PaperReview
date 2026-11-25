@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 1 / Abstract - extractive body cue:** A: Chocolate Deploy in new homes out-of-the-box Fold laundry Figure 1: The π0.5 model transfers knowledge from a heterogeneous range of data sources, including other ...
 - **p. 2 / 1 Introduction - extractive body cue:** Given general tasks (close the cabinets, put the items in the drawer, wipe the spill, and put the dishes in the sink), the model predicts ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: The π0.5 model transfers knowledge from a heterogeneous range of data sources, including other robots, high-level subtask prediction, verbal instructions, and data from ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | Figure 8: Training recipe ablations. We ablate parts of the training mixture on four test tasks (10 trials per task). Including cross-embodiment data, both ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | Figure 16: Evaluation of the high-level inference process. While the full π0.5 model with high-level and low-level inference attains the best results, using only ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | Figure 10: Comparing π0.5 with other models. Our full model significantly outperforms both π0 and π0-FAST+Flow in the mock home test environments. We compare ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Our experiments and comparisons further show that this is enabled by transferring knowledge from other robots, high-level semantic prediction, verbal language instruction from human ... | comparison identity and matched condition | p. 2 (1 Introduction) |
 | Figure 4: Evaluation environments. We evaluate π0.5 in entirely new kitchens and bedrooms that were not seen during training, with novel objects, backgrounds, and ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,7 +109,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 
 - Numeric sentences retained from the body:
 - **p. 2 / 1 Introduction - extractive body cue:** We leverage this observation to design a co-training framework for VLAs that can utilize heterogeneous and diverse knowledge sources to enable broad generalization, creating the ...
-- **p. 2 / 1 Introduction - extractive body cue:** We leverage this observation to design a co-training framework for VLAs that can utilize heterogeneous and diverse knowledge sources to enable broad generalization, creating the ...
 
 ## Generalization and Failure Cases
 
@@ -132,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | For both experiments we see in the results that excluding either of the two cross-embodiment data sources significantly degrades performance, indicating that π0.5 benefits ... | p. 8 (2 Related Work) |
 | body limitation/failure cue | Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four representative household tasks: Items in Drawer, ... | p. 23 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +127,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 | Open-world generalization represents one of the biggest open problems in physical intelligence, and scalable learning systems offer a path to enable such generalization, as ... | p. 1 (1 Introduction) |
 | The heterogeneity of these different sources of data present a major obstacle, but recent advances in vision-language-action (VLA) models provide us with a toolkit ... | p. 2 (1 Introduction) |
 | Our central contribution is a system for training a highly generalizable VLA, π0.5, together with a proof of concept that generalization can emerge from ... | p. 2 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -159,9 +137,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 23 / Figure/Table caption - extractive body cue:** Figure 17: Per-task performance breakdown for training recipe ablations. We evaluate each training mix- ture variant on four representative household tasks: Items in Drawer, Dishes ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), metrics p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 1 (Abstract), p. 1 (Abstract), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 24 (Figure/Table caption), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption), p. 2 (1 Introduction), p. 6 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 24 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

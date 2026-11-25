@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 3 (1 Introduction), p. 
 | body cue at p. 13 | Please also note that there are several failure cases from the competitors indicating completely incorrect reconstruction. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | Most of these poses tend to come with a large angular deviation and cannot be rectified through local ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p. 9 (3 Method). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (1 Introduction), p. 3 (1 Introduction), interface p. 5 (3 Method), p. 7 (3 Method), p. 5 (3 Method), p. 9 (3 Method), objective p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 9 (3 Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

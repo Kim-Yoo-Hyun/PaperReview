@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 5 / 4. Experiments - extractive body cue:** For training our DDPM, we used the SemanticKITTI dataset [2, 9], an autonomous driving benchmark with point-wise annotations over sequences of LiDAR scans collected in ...
 - **p. 5 / 4. Experiments - extractive body cue:** To generate the ground truth complete scans, we used the dataset poses to aggregate the scans in the sequence and remove moving objects with the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Starting from a single input scan P, we add Gaussian noise to each point, defining the noisy input PT . Then, we use ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | Figure 3. Mean and standard deviation of the predicted noise ϵθ without the noise regularization. In this experiment we use DPM- Solver [17] to ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 6. Mean and standard deviation of the predicted noise ϵθ over different regularization weights. In this experiment we use DPMSolver [17] to reduce ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | For the ground truth, we randomly sample 180, 000 points without replacement. | comparison identity and matched condition | p. 5 (4. Experiments) |
 | Figure 2. Comparison between Gaussian noise with standard de- viation σ and mean µ over non-normalized and normalized input point cloud and our proposed ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Figure 3. Mean and standard deviation of the predicted noise ϵθ without the noise regularization. In this experiment we use DPM- Solver [17] to ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | Figure 1. Starting from a single input scan P, we add Gaussian noise to each point, defining the noisy input PT . Then, we ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2. Comparison between Gaussian noise with standard de- viation σ and mean µ over non-normalized and normalized input point cloud and our proposed ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 | For all baselines, we used their official code and the provided weights also trained on SemanticKITTI. | p. 6 (Method) |
 | Mean chamfer distance and Jensen-Shannon divergence evaluation on validation set from SemanticKITTI. steps T from 1, 000 to 50. | p. 6 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** For future work, we plan on extending our method to generate unconditional data, creating novel 3D point cloud scenes.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Comparison between Gaussian noise with standard de- viation σ and mean µ over non-normalized and normalized input point cloud and our proposed local ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 5 (4. Experiments), metrics p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 4 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

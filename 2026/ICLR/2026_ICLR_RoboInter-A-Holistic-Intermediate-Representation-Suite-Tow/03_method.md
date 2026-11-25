@@ -47,7 +47,6 @@ PDF body method statement (p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR
 - **p. 27 / A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR - extractive body cue:** The RoboInterVLM(QwenVL2.5 7B) Planner is trained for one epoch with a global batch size of 128 and a per-device batch size of 4, without gradient ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR), p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** RoboInter introduces per-frame dense annotations data across varied intermediate representations to advance both embodied understanding and end-to-end action learning.
 - **p. 27 / A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR - extractive body cue:** Action head, the LLM backbone, and the vision backbone all remain trainable.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR
 - **p. 27 / A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR - extractive body cue:** The RoboInter-IC-E2E Executor is trained with a global batch size of 128 and a per-device batch size of 8.
 - **p. 18 / A.1.1 EXPERIMENTAL SETTING - extractive body cue:** (2) π0 (Black et al., 2024): Fine-tuned from the official JAX checkpoints of the Droid dataset.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Planner, Training, Data, RoboInter-Spatial, RoboInter-Temporal, General, Grounding, Understanding, Simulation, Embodied, Figure, distribution, partially, follow, basic, VLM, recipe, InternVL, Chen, ensure.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR
 - **p. 22 / A.2.1 INFERENCE TIME ANALYSIS - extractive body cue:** For real-world deployment, we apply practical acceleration strategies, including textual caching and chunked execution for EC-E2E, and asynchronous dual-frequency execution for the Modular variant.
 - **p. 25 / A.3.2 CLOSE-LOOP EVALUATION ON SIMPLERENV - extractive body cue:** The GR environment includes two settings, Visual Matching (VM) and Variant Aggregation (VA).
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR), p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR), objective p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR), p. 27 (A.4.1 TRAINING DETAILS OF PLANNER AND EXECUTOR), temporal p. 4 (16 Primitive Skills), p. 2 (1 INTRODUCTION), p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 4 (6 Embodiments), p. 22 (A.2.1 INFERENCE TIME ANALYSIS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

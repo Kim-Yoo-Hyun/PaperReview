@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (4.1. Unified Modeling of Multi-stage Interactio
 - **p. 4 / 4.1. Unified Modeling of Multi-stage Interaction - extractive body cue:** Notably, selecting c⋆ t performs joint planning over multiple stages, which accounts for both long-horizon navigational feasibility and local interaction feasibility.
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 6 (4.3. Joint Planning with 3D-IC), p. 6 (4.3. Joint Planning with 3D-IC), p. 4 (4.2. 3D-IC Construction), p. 5 (4.2. 3D-IC Construction), p. 5 (4.2. 3D-IC Construction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (4.1. Unified Modeling of Multi-stage Interactio
 - **p. 6 / 4.3. Joint Planning with 3D-IC - extractive body cue:** Then we execute actions on sampled waypoints to gather simulator feedback and post-execution RGB images.
 - **p. 4 / 4.2. 3D-IC Construction - extractive body cue:** As the robot moves through the environment, it continuously acquires egocentric RGB-D observations It = (Ir t , Id t ) and the camera pose ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (4.1. Unified Modeling of Multi-stage Interactio
 
 - **p. 6 / 4.3. Joint Planning with 3D-IC - extractive body cue:** For training data collection, we traverse scenes to construct 3D feature maps, from which interaction waypoints, 3D tokens, and valid trajectories are collected.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Formally, given, RGB-D, observations, robot, first, builds, feature, action, side, policy, decomposed, high-level, operating, outputs, sequence, interaction, waypoints, tokens, lowlevel.
 - **Relevant PDF headings:** 4.1. Unified Modeling of Multi-stage Interaction (p. 3); 5.4. Comparison with SOTA Methods (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 3 (4.1. Unified Modeling of Multi-stage Interactio
 - **p. 8 / 5.3. Real-world Evaluation - extractive body cue:** Consequently, the agent navigated back to a nightstand in the initial room to complete the placement, thereby avoiding a potential failure.
 - **p. 9 / 5.4. Comparison with SOTA Methods - extractive body cue:** The consistently high SPL scores indicate that our method achieves efficient trajectory, rather than merely reducing step counts through premature termination or failure cases (i.e., ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (4.1. Unified Modeling of Multi-stage Interaction), p. 3 (4.1. Unified Modeling of Multi-stage Interaction), p. 4 (4.1. Unified Modeling of Multi-stage Interaction), p. 5 (4.2. 3D-IC Construction), p. 6 (4.3. Joint Planning with 3D-IC), p. 4 (4.1. Unified Modeling of Multi-stage Interaction), objective p. 6 (4.3. Joint Planning with 3D-IC), p. 5 (4.3. Joint Planning with 3D-IC), p. 5 (4.3. Joint Planning with 3D-IC), p. 6 (4.3. Joint Planning with 3D-IC), p. 4 (4.2. 3D-IC Construction), p. 4 (4.1. Unified Modeling of Multi-stage Interaction), temporal p. 5 (4.2. 3D-IC Construction), p. 6 (5.1. Experimental Setup), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Evaluation Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

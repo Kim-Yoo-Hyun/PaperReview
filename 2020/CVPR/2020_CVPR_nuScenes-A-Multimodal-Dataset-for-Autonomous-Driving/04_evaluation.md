@@ -46,8 +46,6 @@
 - **p. 8 / 4.2. Analysis - extractive body cue:** Object detection results on the test set of nuScenes.
 - **p. 5 / 2. The nuScenes dataset - extractive body cue:** Our dataset has 23 categories including different vehicles, types of pedestrians, mobility devices and other objects (Figure 8-SM).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. An example from the nuScenes dataset. We see 6 dif- ferent camera views, lidar and radar data, as well as the human annotated ...
@@ -81,8 +79,6 @@
 | Figure 16. PointPillars [51] detection performance vs. semantic prior map location on the val set. For the best lidar network (10 li- dar sweeps ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | This method is very robust and we achieve localization errors of ≤10cm. | definition/direction/unit from same section | p. 4 (2. The nuScenes dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@
 | Compared to the mAP and NDS detection results in Table 4, the ranking is similar. | comparison identity and matched condition | p. 8 (4.2. Analysis) |
 | Using the lidar baseline we examine the importance of pre-training when training a detector on nuScenes. | comparison identity and matched condition | p. 8 (4.2. Analysis) |
 | It provides 200k 3D boxes over 22 scenes which helped advance the state-of-the-art in 3D object detection. | comparison identity and matched condition | p. 3 (1.2. Related datasets) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@
 | body limitation/failure cue | This method is very robust and we achieve localization errors of ≤10cm. | p. 4 (2. The nuScenes dataset) |
 | body limitation/failure cue | As expected, when using IOU matching, small objects like pedestrians and bicycles fail to achieve above 0 AP, making ordering impossible (Figure 7). | p. 7 (4.2. Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@
 | Using expert annotators and multiple validation steps, we achieve highly accurate annotations. | p. 4 (2. The nuScenes dataset) |
 | For each TP metric we compute the mean TP metric (mTP) over all classes: mTP = 1 /C/ X c∈C TPc (2) We omit ... | p. 5 (3.1. Detection) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Future work will add image-level and pointlevel semantic labels and a benchmark for trajectory prediction [63].
@@ -167,6 +146,5 @@
 - **p. 7 / 4.2. Analysis - extractive body cue:** As expected, when using IOU matching, small objects like pedestrians and bicycles fail to achieve above 0 AP, making ordering impossible (Figure 7).
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 3 (1.2. Related datasets), p. 3 (Dataset), p. 5 (2. The nuScenes dataset), p. 7 (4.2. Analysis), p. 7 (4.2. Analysis), metrics p. 15 (Figure/Table caption), p. 8 (4.2. Analysis), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 7 (Figure/Table caption), p. 6 (4.1. Baselines), baselines p. 7 (4.1. Baselines), p. 6 (4.1. Baselines), p. 7 (4.1. Baselines), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 3 (1.2. Related datasets), results p. 7 (4.1. Baselines), p. 7 (4.2. Analysis), p. 8 (4.2. Analysis), p. 8 (4.2. Analysis), p. 4 (2. The nuScenes dataset), p. 4 (2. The nuScenes dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

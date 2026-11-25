@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 - **p. 6 / 5. Experiments - extractive body cue:** The cartpole swingup task requires a long planning horizon and to memorize the cart when it is out of view, reacher has a sparse reward ...
 - **p. 6 / 5. Experiments - extractive body cue:** After 500 episodes, it achieves performance similar to D4PG, trained from images for 100,000 episodes, except for the finger task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Image-based control domains used in our experiments. The images show agent observations before downscaling to 64 × 64 × 3 pixels. (a) The ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 | Figure 3: Unrolling schemes. The labels si/j are short for the state at time i conditioned on observations up to time j. Arrows pointing ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 7: Per-task performance of a single PlaNet agent trained on the six tasks. Plots show test performance over the number of episodes collected ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 | Figure 6: We compare a single PlaNet agent trained on all tasks to individual PlaNet agents. The plot shows test performance over the number ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | Figure 5: Comparison of agent designs. Plots show test performance over the number of collected episodes. We compare PlaNet, a version that collects data ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 4: Comparison of PlaNet to model-free algorithms and other model designs. Plots show test performance over the number of collected episodes. We compare ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 | body limitation/failure cue | Figure 2: Latent dynamics model designs. In this example, the model observes the first two time steps and predicts the third. Circles represent stochastic ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Figure 9: Comparison of hard ReLU (Nair & Hinton, 2010) and smooth ELU (Clevert et al., 2015) activation functions. We find that smooth activations ... | p. 15 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 | This makes it difficult to remember information over multiple time steps. | p. 4 (3. Recurrent State Space Model) |
 | In this example, the model observes the first two time steps and predicts the third. | p. 4 (3. Recurrent State Space Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 7. Discussion - extractive body cue:** Directions for future work include learning temporal abstraction instead of using a fixed action repeat, possibly through hierarchical models.
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 6 (5. Experiments), p. 6 (5. Experiments), p.
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 9: Comparison of hard ReLU (Nair & Hinton, 2010) and smooth ELU (Clevert et al., 2015) activation functions. We find that smooth activations help ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 6 (5. Experiments), metrics p. 6 (5. Experiments), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 6 (5. Experiments), baselines p. 6 (5. Experiments), p. 6 (5. Experiments), p. 2 (Figure/Table caption), p. 13 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (5. Experiments), p. 6 (5. Experiments), p. 20 (Figure/Table caption), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

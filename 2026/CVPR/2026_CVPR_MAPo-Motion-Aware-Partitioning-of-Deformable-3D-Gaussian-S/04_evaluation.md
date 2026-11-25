@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 - **p. 6 / 5.1. Dataset and Metrics - extractive body cue:** Quantitative comparison on the N3DV dataset.
 - **p. 7 / 5.3.1. Quantitative Comparisons - extractive body cue:** 2, our method consistently achieves SOTA rendering quality across both datasets while avoiding prohibitive computational overhead, thus offering a compelling balance between high fidelity and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. (a-b) Deformation-based methods often blur details in regions with complex or rapid motion. (c) Our MAPo significantly improves rendering quality in these ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 | For example, in cases with fast-moving hands or detailed facial expressions, baseline methods exhibit severe motion blur and loss of detail. | definition/direction/unit from same section | p. 7 (5.3.2. Qualitative Comparisons) |
 | Figure 9. Ablation study on the Lcross. We visualize how Lcross improves temporal consistency and rendering quality across a par- tition boundary (frames 74-75). ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 | Figure 5. Qualitative comparisons against existing SOTA methods on the MeetRoom and N3DV dataset. of the current view V , which is captured at ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 4. Ablation study on the partition level parameter. All experiments are conducted on the flame salmon frag3. | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 9. Ablation study on the Lcross. We visualize how Lcross improves temporal consistency and rendering quality across a par- tition boundary (frames 74-75). ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 |---|---|---|
 | body limitation/failure cue | The comparison highlights that baseline methods often produce degraded results in areas with complex or rapid motion. | p. 7 (5.3.2. Qualitative Comparisons) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,19 +125,10 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 7 (5.3.1. Quanti
 | Here, m is a hyperparameter controlling the number of recorded positions per 3DG. | p. 4 (4.1.1. Dynamic Score Calculation) |
 | For the i-th 3DG, its maximum displacement ri and position variance vi are computed as: r _i = \ big l \/ \ max ... | p. 4 (4.1.1. Dynamic Score Calculation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.3.2. Qualitative Comparisons - extractive body cue:** The comparison highlights that baseline methods often produce degraded results in areas with complex or rapid motion.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Dataset and Metrics), p. 6 (5.1. Dataset and Metrics), p. 7 (5.3.1. Quantitative Comparisons), metrics p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (5.3.2. Qualitative Comparisons), p. 8 (Figure/Table caption), baselines p. 7 (5.3.1. Quantitative Comparisons), p. 7 (5.3.2. Qualitative Comparisons), p. 6 (5.1. Dataset and Metrics), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 7 (5.3.1. Quantitative Comparisons), p. 8 (Figure/Table caption), p. 6 (5.1. Dataset and Metrics), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

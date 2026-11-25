@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** (3) This process naturally performs latent "rewiring", effectively handling crossings and transport cost reductions while learned from noisy pairs as in Fig.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 3 / III. METHODOLOGY - extractive body cue:** We use f g i , pg i and f r j , pr j to denote the tactile observation and pose of a single ...
 - **p. 4 / III. METHODOLOGY - extractive body cue:** We retain only pseudo pairs that map contact-to-contact and non-contact-tonon-contact states.
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 5 / IV. EXPERIMENTS AND RESULTS - extractive body cue:** 1) Tactile self-supervised learning: Both human and robot tactile encoders are trained using a combination of play data (≈10 minutes) and an in-domain tactile alignment ...
 - **p. 3 / III. METHODOLOGY - extractive body cue:** 2 left) is based on JEPA [2] with the decoder adapted from the online probe module in [13, 34].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** learnable, length-1, query, between, encoder, decoder, produce, fixed-dimensional, latent, representation, cross-attention, pooling, length, implemented, output, fixeddimensional, representations, after, module, Problem.
 - **Relevant PDF headings:** III. METHODOLOGY (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 5 / IV. EXPERIMENTS AND RESULTS - extractive body cue:** We use Manus glove [25] with OSMO tactile sensors [45] for robust hand pose estimation under visual occlusions from the lamp shade and light bulb.
 - **p. 5 / IV. EXPERIMENTS AND RESULTS - extractive body cue:** We record fingertip poses only, as the Manus glove does not provide wrist pose information.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), temporal p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (IV. EXPERIMENTS AND RESULTS), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

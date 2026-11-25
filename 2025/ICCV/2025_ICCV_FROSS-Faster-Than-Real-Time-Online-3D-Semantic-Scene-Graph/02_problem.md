@@ -58,8 +58,6 @@ PDF body contribution framing (p. 2 (7.3. 2D Scene Graph Generation Performance)
 | body cue at p. 2 | These results further demonstrate FROSS's robustness in diverse scene conditions. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 2 | Misclassified objects are likely caused by occlusions from certain viewpoints or unusual viewing angles. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Body text (section not recovered)), p. 2 (8. Statistics of the ReplicaSSG Dataset). The downstream handoff is claimed only when the body describes it.
@@ -67,7 +65,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Body text (section not recovered)), p. 1 (6. Detailed Evaluation Metric), interface p. 1 (Body text (section not recovered)), p. 2 (8. Statistics of the ReplicaSSG Dataset), objective p. 3 (8. Statistics of the ReplicaSSG Dataset).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

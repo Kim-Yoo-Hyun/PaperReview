@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** In the bimanual robot experiment, we set up three tasks that involved cooperation between two arms: 1) transferring bread to a plate (TransferBread), 2) unzipping ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** 6 IEEE ROBOTICS AND AUTOMATION LETTERS.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Model architecture. The left image illustrates the VLM pretraining pipeline, whereas the right image demon- strates the process of training TinyVLA using robotic ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | In contrast, TinyVLA demonstrates a certain degree of robustness in handling view generalization. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | We use a cross mark to denote the failure of the model and a checkmark to indicate successful task completion. | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Notably, TinyVLA-H attained a 98.3% success rate in flipping a mug, stacking cubes, and a 90% success rate in place tennis, leading a large ... | comparison identity and matched condition | p. 4 (IV. EXPERIMENTS) |
 | Although it occasionally fails, TinyVLA still shows a significantly stronger view generalization compared to Diffusion Policy and OpenVLA, underscoring the benefits of using diffusion-based ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | We did a few modifications to ensure the comparison is fair. | comparison identity and matched condition | p. 4 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | body limitation/failure cue | Secondly, the vanilla DP does not incorporate language instructions. | p. 4 (IV. EXPERIMENTS) |
 | body limitation/failure cue | In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to ... | p. 3 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, ... | p. 2 (III. METHOD) |
 | And the pipeline can be splited into 3 steps. | p. 3 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / VI. CONCLUSION - extractive body cue:** Our approach overcomes the limitations of previous methods by
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 3 / IV. EXPERIMENTS - extractive body cue:** In our experiments, we aim to study the following questions: • Does TinyVLA achieve a higher success rate in multitasking robotic manipulation compared to the ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 4 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), baselines p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), results p. 3 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

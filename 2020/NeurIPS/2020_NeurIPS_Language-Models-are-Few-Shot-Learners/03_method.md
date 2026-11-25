@@ -56,7 +56,6 @@ PDF body method statement (p. 8 (2 Approach), p. 9 (2 Approach), p. 6 (2 Approac
 - **p. 9 / 2 Approach - extractive body cue:** Unfortunately, a bug in the filtering caused us to ignore some overlaps, and due to the cost of training it was not feasible to retrain ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 8 (2 Approach), p. 8 (2 Approach), p. 9 (2 Approach), p. 43 (B Details of Model Training), p. 57 (Model), p. 58 (Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 8 (2 Approach), p. 9 (2 Approach), p. 6 (2 Approac
 - **p. 3 / 1 Introduction - extractive body cue:** First, single-layer representations were learned using word vectors [MCCD13, PSM14] and fed to task-specific architectures, then RNNs with multiple layers of representations and contextual state ...
 - **p. 5 / 1 Introduction - extractive body cue:** For each task, we evaluate GPT-3 under 3 conditions: (a) "few-shot learning", or in-context learning where we allow as many demonstrations as will fit into ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 8 (2 Approach), p. 9 (2 Approach), p. 6 (2 Approac
 - **p. 8 / 2 Approach - extractive body cue:** Previous work [KMH+20] suggests that with enough training data, scaling of validation loss should be approximately a smooth power law as a function of size; ...
 - **p. 8 / 2 Approach - extractive body cue:** Model Name nparams nlayers dmodel nheads dhead Batch Size Learning Rate GPT-3 Small 125M 12 768 12 64 0.5M 6.0 × 10-4 GPT-3 Medium 350M ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Model, Architectures, same, architecture, GPT-2, RWC, including, modified, initialization, pre-normalization, reversible, tokenization, described, therein, exception, alternating, dense, locally, banded, sparse.
 - **Relevant PDF headings:** 2 Approach (p. 2); B Details of Model Training (p. 2); 2 Approach (p. 6); B Details of Model Training (p. 43); Model (p. 47); Model (p. 48).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 8 (2 Approach), p. 9 (2 Approach), p. 6 (2 Approac
 - **p. 31 / 3 Results - extractive body cue:** For each benchmark, we produce a ‘clean' version which removes all potentially leaked examples, defined roughly as examples that have a 13-gram overlap with anything ...
 - **p. 13 / 3 Results - extractive body cue:** [RRS20] recently demonstrated that a large language model can perform surprisingly well directly answering the questions without conditioning on auxilliary information.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 8 (2 Approach), p. 9 (2 Approach), p. 6 (2 Approach), p. 43 (B Details of Model Training), p. 43 (B Details of Model Training), p. 8 (2 Approach), objective p. 43 (B Details of Model Training), p. 43 (B Details of Model Training), p. 8 (2 Approach), p. 8 (2 Approach), p. 9 (2 Approach), p. 9 (2 Approach), temporal p. 10 (2.4 Evaluation), p. 35 (3 Results), p. 40 (7 Related Work), p. 40 (7 Related Work), p. 3 (1 Introduction), p. 3 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -51,8 +51,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 - **p. 8 / 4.4. Analysis - extractive body cue:** Ratio SR (%) SR (%) SR (%) SR (%) SR (%) 0% 97.4 99.4 97.4 97.6 98.0 50% 97.2 99.4 97.2 95.2 97.3 60% 97.6 ...
 - **p. 8 / 4.4. Analysis - extractive body cue:** Pruning Spatial Object Goal Long Avg.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Visualized comparison of the proposed AVA-VLA framework and vanilla VLAs. (b) Qualitative comparison of vi- sual focus from two viewpoints while executing ...
@@ -86,8 +84,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 | Figure 2. Overview of the proposed AVA-VLA framework. At each timestep, the recurrent state is projected from the previous hidden state to preserve historical ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | It allows users to assess model performance across various challenges systemati13457 | definition/direction/unit from same section | p. 5 (4.1. Experimental Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 | Notably, with pruning ratios of 50%, 60%, and 70%, the proposed method continues to outperform the OpenVLAOFT and maintains performance comparable to the stateof-the-art ... | comparison identity and matched condition | p. 8 (4.4. Analysis) |
 | Figure 1. (a) Visualized comparison of the proposed AVA-VLA framework and vanilla VLAs. (b) Qualitative comparison of vi- sual focus from two viewpoints while ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | We selected recently published works' main method as baselines. | comparison identity and matched condition | p. 6 (4.2. Evaluation Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 | body limitation/failure cue | The results demonstrate that the proposed model possesses robust semantic understanding and dexterous action capabilities after training. | p. 7 (4.2. Evaluation Results) |
 | body limitation/failure cue | The results reported in Table 5, demonstrate the robustness of our method: the model suffers only a negligible drop in performance after pruning. | p. 8 (4.4. Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 | (10) Then we compute the final soft weights for visual tokens at time t by ωt = ρtγ, where γ is a 2-dimensional vector. | p. 4 (3.3. Active Visual Attention) |
 | 원문 대조: AVA는 현재 visual query와 이전 recurrent state에서 만든 key/value 사이 cross-attention을 계산한 뒤 self-attention을 적용한다. 이어지는 FFN·softmax가 visual token을 강화하거나 약화하는 weight를 생성한다. ([PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=4), §3.3 Active Visual Attention, Eq. (9)) | [PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/Xiao_AVA-VLA_Improving_Vision-Language-Action_models_with_Active_Visual_Attention_CVPR_2026_paper.pdf#page=4), §3.3 Active Visual Attention, Eq. (9) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.4. Analysis - extractive body cue:** Furthermore, a direct comparison in Figure 1 reveals that while the vanilla OpenVLA-OFT baseline fails to localize the task-relevant region across viewpoints, AVAVLA maintains a ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluat
 - **p. 8 / 4.4. Analysis - extractive body cue:** The results reported in Table 5, demonstrate the robustness of our method: the model suffers only a negligible drop in performance after pruning.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4. Experiments), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), metrics p. 6 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis), baselines p. 7 (4.2. Evaluation Results), p. 7 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis), p. 1 (Figure/Table caption), p. 6 (4.2. Evaluation Results), results p. 7 (4.3. Ablation Studies), p. 7 (4.2. Evaluation Results), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Evaluation Results), p. 8 (4.4. Analysis), p. 8 (4.4. Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

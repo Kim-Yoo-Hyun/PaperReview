@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3.4. Feature Subspace Learning), p. 5 (3.4. Fea
 - **p. 5 / 3.4. Feature Subspace Learning - extractive body cue:** The same loss as in [21] is used to train U. t′ i = tiU //tiU// ˆti = t′ iU T //t′ iU T // ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (3.1. Problem Definition), p. 3 (3.2. Model Architecture), p. 3 (3.3. Volume Rendering Supervision), p. 4 (3.3. Volume Rendering Supervision), p. 4 (3.3. Volume Rendering Supervision), p. 5 (3.4. Feature Subspace Learning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3.4. Feature Subspace Learning), p. 5 (3.4. Fea
 - **p. 5 / 3.5. Inference - extractive body cue:** Given the outputs Vσ and Vψ of our model, we compute the similarity between each voxel feature with each query feature, and assign every voxel ...
 - **p. 2 / 1. Introduction - extractive body cue:** Our model generalizes to estimate geometry and semantics in a zero-shot manner, without per-scene optimization like NeRF-approaches. • Feature subspace learning: In addition we introduce ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 5 (3.4. Feature Subspace Learning), p. 5 (3.4. Fea
 - **p. 6 / 4.2. Implementation Details - extractive body cue:** We train each network with a batch size of 4 for 18 epochs.
 - **p. 7 / 4.5. Ablations - extractive body cue:** 4.4 for all models to train the autoencoder, but modify the target dimension size (with 512 being the full space).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** While, vision-language, features, offer, strong, representational, power, scene, semantics, training, model, high-dimensional, embedding, space, encoders, like, CLIP, imposes, significant, computational.
 - **Relevant PDF headings:** 3. Methodology (p. 2); 3.2. Model Architecture (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 5 (3.4. Feature Subspace Learning), p. 5 (3.4. Fea
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 5. Ablation on the subspace dimensionality L′. L' 16 32 64 128 256 512
 - **p. 7 / 4.4. Zero-shot Semantic Occupancy Estimation - extractive body cue:** As mentioned above, the reducer U finishes training within a second and thus does not impose any notable overhead.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Feature Subspace Learning), p. 5 (3.4. Feature Subspace Learning), p. 3 (3.2. Model Architecture), p. 4 (3.3. Volume Rendering Supervision), p. 3 (3.2. Model Architecture), p. 4 (3.3. Volume Rendering Supervision), objective p. 4 (3.3. Volume Rendering Supervision), p. 4 (3.3. Volume Rendering Supervision), p. 2 (3.1. Problem Definition), p. 3 (3.2. Model Architecture), p. 3 (3.3. Volume Rendering Supervision), p. 5 (3.4. Feature Subspace Learning), temporal p. 4 (3.3. Volume Rendering Supervision), p. 6 (4.2. Implementation Details), p. 5 (3.3. Volume Rendering Supervision), p. 3 (3.2. Model Architecture), p. 7 (4.5. Ablations), p. 7 (4.5. Ablations).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

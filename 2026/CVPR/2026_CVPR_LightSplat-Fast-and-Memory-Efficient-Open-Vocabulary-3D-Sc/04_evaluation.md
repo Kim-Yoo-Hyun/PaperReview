@@ -46,8 +46,6 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 - **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** We visualize model behavior on large and complex scenes in DL3DV-OVS, covering both indoor and outdoor environments.
 - **p. 8 / 4.3. 3D Semantic Segmentation - extractive body cue:** Ablation Study on LERF-OVS dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comprehensive comparison of speed, performance, and memory overhead. We evaluate recent open-vocabulary 3D scene understanding models in terms of distillation time (x-axis), segmentation ...
@@ -81,8 +79,6 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 | We visualize model performance across different scenes and text queries in LERF-OVS. | definition/direction/unit from same section | p. 7 (4.3. 3D Semantic Segmentation) |
 | With context-aware 3D clustering, our method achieves detailed object boundaries while offering significantly faster performance than other methods. | definition/direction/unit from same section | p. 7 (4.3. 3D Semantic Segmentation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 | For fair comparison on ScanNet, we follow the evaluation protocol of OpenGaussian and use the same 10 scenes. | comparison identity and matched condition | p. 5 (4.1. Experimental Setup) |
 | Quantitative comparison for 3D Object Selection on the LERF-OVS dataset. | comparison identity and matched condition | p. 6 (4.2. 3D Object Selection) |
 | 5 present the qualitative comparison on the LERF-OVS and DL3DV-OVS dataset. | comparison identity and matched condition | p. 6 (4.2. 3D Object Selection) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 | body limitation/failure cue | Our method shows robust performance on the road scene with multiple distant cars and the office scene with repeated objects such as chairs and ... | p. 6 (4.2. 3D Object Selection) |
 | body limitation/failure cue | Since these methods use semantics at the level of individual Gaussians, they fail to form mean19818 | p. 7 (4.3. 3D Semantic Segmentation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 | To assign semantics only to Gaussians that significantly contribute to the rendered image, we compute their pixel-wise contributions using alphablending weights from the rendering ... | p. 4 (3.3. Indexed Feature Injection) |
 | It is computed by accumulating the occlusion effects from all preceding Gaussians along the same ray: T (l) n (u, v) = n-1 Y ... | p. 4 (3.3. Indexed Feature Injection) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Removing semantic-aware clustering decreases performance by over 50%, as the model cannot identify semantically corresponding masks across views for merging.
@@ -166,6 +145,5 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 - **p. 7 / 4.3. 3D Semantic Segmentation - extractive body cue:** Since these methods use semantics at the level of individual Gaussians, they fail to form mean19818
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection), p. 6 (4.2. 3D Object Selection), p. 7 (4.3. 3D Semantic Segmentation), metrics p. 1 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection), baselines p. 3 (Figure/Table caption), p. 8 (4.3. 3D Semantic Segmentation), p. 5 (4.2. 3D Object Selection), p. 5 (4.1. Experimental Setup), p. 6 (4.2. 3D Object Selection), p. 6 (4.2. 3D Object Selection), results p. 7 (4.3. 3D Semantic Segmentation), p. 1 (Figure/Table caption), p. 5 (4.2. 3D Object Selection), p. 5 (4.2. 3D Object Selection), p. 6 (4.3. 3D Semantic Segmentation), p. 6 (4.2. 3D Object Selection).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

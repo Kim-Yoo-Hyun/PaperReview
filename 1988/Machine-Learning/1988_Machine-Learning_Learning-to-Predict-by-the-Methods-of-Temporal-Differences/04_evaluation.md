@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 - **p. 21 / 4.2 Optimality and learning rate - extractive body cue:** What might one mean by the %est'" predictions given such a training set'?
 - **p. 21 / 4.2 Optimality and learning rate - extractive body cue:** In the following, we first define what we mean by optimal predictions for finite training sets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 1. ....... t~~0 ~@ A game-playing example showing the inefficiency of supervised-learning methods. Each circle represents a position or class of positions from a ...
@@ -81,21 +79,12 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 | The a value was selected from those shown in Figure 4 to yield the lowest error for that ), value. procedural changes. | definition/direction/unit from same section | p. 14 (3.2 A random-walk example) |
 | The WidrowHoff rule, on the other hand, converges to the estimates that minimize error on | definition/direction/unit from same section | p. 23 (4.2 Optimality and learning rate) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | This procedure may require as much as O(n a) computation per time step as compared to O(n) for the supervised-learning and TD methods. | comparison identity and matched condition | p. 22 (4.2 Optimality and learning rate) |
 | What is still needed is a characterization of the learning rate of TD methods that can be compared with those already available for supervised-learning ... | comparison identity and matched condition | p. 24 (4.2 Optimality and learning rate) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 | body limitation/failure cue | Although this problem involves a sequence of predictions, TD methods cannot be directly applied because each prediction is of a different event and thus ... | p. 27 (5.3 Prediction by a fixed interval) |
 | body limitation/failure cue | The answer is that the Widrow-Hoff procedure only minimizes error on the training set; it does not necessarily minimize error for future experience. | p. 13 (3.2 A random-walk example) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 | The true probabilities of right-side termination the ideal predictions - for each of the nonterminal states can be computed as described in section 4.1. ... | p. 12 (3.2 A random-walk example) |
 | The drawback to this technique is that it loses the implementation advantages of TD methods. | p. 15 (3.2 A random-walk example) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 32 / 7. Conclusion - extractive body cue:** In speech recognition, for example, current learning methods cannot be applied until the correct classification of the word is known.
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 13 (3.2 A random-walk example), p. 29 (6.1 Sa
 - **p. 13 / 3.2 A random-walk example - extractive body cue:** The answer is that the Widrow-Hoff procedure only minimizes error on the training set; it does not necessarily minimize error for future experience.
 
 - **Evidence anchors reviewed:** datasets p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), metrics p. 13 (3.2 A random-walk example), p. 28 (6.1 Samuel's checker-playing program), p. 12 (Figure/Table caption), p. 12 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 14 (3.2 A random-walk example), baselines p. 22 (4.2 Optimality and learning rate), p. 24 (4.2 Optimality and learning rate), results p. 13 (3.2 A random-walk example), p. 29 (6.1 Samuel's checker-playing program), p. 30 (6.3 Holland's bucket brigade), p. 14 (3.2 A random-walk example), p. 12 (3.2 A random-walk example), p. 12 (3.2 A random-walk example).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

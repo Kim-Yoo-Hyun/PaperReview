@@ -64,8 +64,6 @@ PDF body contribution framing (p. 4 (3.1 Footstep planning as a mixed-integer co
 | body cue at p. 22 | 13), require at least 3cm of clearance between links to avoid self-collisions, and constrain the gaze of the ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 19 | In the manipulation experiment, the LIDAR contribution actually degrades performance slightly due to occlusions caused by arm motions. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 10 (4.1 General formulation), p. 11 (4.4 Additional costs and constraints), p. 14 (5.1 Requirements and approach), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 10 (4.1 General formulation), p. 11 (4.4 Additional costs and constraints), p. 14 (5.1 Requirements and approach), p. 2 (1 Introduction), objective p. 3 (3.1 Footstep planning as a mixed-integer convex), p. 7 (3.1.3 Determining the number of footsteps), p. 8 (3.2 Dynamic motion planning), p. 9 (3.2 Dynamic motion planning), p. 12 (4.4 Additional costs and constraints), p. 10 (4.1 General formulation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

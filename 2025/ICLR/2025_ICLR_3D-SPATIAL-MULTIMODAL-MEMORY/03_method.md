@@ -48,7 +48,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 4 / 3 METHOD - extractive body cue:** We introduce optimizable attribute queries (q) to Gaussian primitives, and apply a Gaussian Memory Attention (Agm) mechanism to produce the final rendered features ( ˆR), ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To evaluate M3, we employ a diverse set of foundation models, including vision-language models, LMM/LLMs, and perception models.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Furthermore, we also design a heuristic algorithm to minimize redundancy in the memory bank by reducing the raw features from the video stream.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** 1, where the average training time and the auxiliary low-level metrics are reported.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** While maintaining a very efficient training time, our method has independent results from different foundation models.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, optimizable, attribute, queries, Gaussian, primitives, apply, Memory, Attention, Agm, mechanism, produce, final, rendered, features, linked, back, various, heads, foundation.
 - **Relevant PDF headings:** 3 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -106,20 +101,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: Given a video sequence, we utilize foundation models (F) to extract raw features (R). These features are reduced using Algorithm 1, producing principal ...
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** SEEM and LLaMA3 features extraction failed on FSplat, which we assume was mainly due to the ground truth feature extraction procedure, where duplication was performed ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), objective p. 4 (3 METHOD), temporal p. 4 (3 METHOD), p. 3 (2 RELATED WORK), p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 6 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

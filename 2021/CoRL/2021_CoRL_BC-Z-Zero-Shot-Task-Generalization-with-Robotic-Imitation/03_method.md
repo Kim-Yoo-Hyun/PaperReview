@@ -50,7 +50,6 @@ PDF body method statement (p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 I
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 I
 - **p. 8 / 7 Discussion - extractive body cue:** We presented a multi-task imitation learning system that combines flexible task embeddings with large-scale training on a 100-task demonstration dataset, enabling it to generalize to ...
 - **p. 2 / 1 Introduction - extractive body cue:** We show this system produces a policy that is capable of generalizing zero-shot to new unseen tasks.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 I
 - **p. 2 / 1 Introduction - extractive body cue:** These closedloop visuomotor policies perform asynchronous inference and control at 10Hz, amounting to well over 100 decisions per episode.
 - **p. 8 / 7 Discussion - extractive body cue:** This suggests that an exciting direction for future work is to use our policies as a general-purpose initialization for finetuning of downstream tasks, where additional ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** End-to-end, learning, pixels, flexible, choice, modeling, behavior, generalist, robots, minimal, assumptions, about, state, representation, world, Another, limitation, lower, performance, video-conditioned.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,13 @@ PDF body method statement (p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 I
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: A subset of training tasks (top row), and a subset of held-out tasks (bottom two rows) used for evaluating zero shot task generalization. ...
 - **p. 23 / Figure/Table caption - extractive body cue:** Table 9: Performance comparison between different video embeddings on selected tasks. All tasks are held-out unless otherwise indicated. Numbers in (parentheses) are 1 unit standard ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (1 Introduction), p. 8 (7 Discussion), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 8 (7 Discussion), objective 본문 anchor 없음, temporal p. 2 (2 Related Work), p. 8 (2 Related Work), p. 1 (1 Introduction), p. 2 (2 Related Work), p. 3 (2 Related Work), p. 4 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

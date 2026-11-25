@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 7 | Table 7. Ablation studies on using different text encoders of AIDE on ScanNet (B15/N4). this phenomenon. As generating ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | On the other side, AIDE still maintains a lead over the baseline, demonstrating its robustness to variations in ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 4 (3.1. Problem Definition), p. 4 (3.1. Problem Definition), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Problem Definition), p. 3 (3.1. Problem Definition), interface p. 5 (3.4. Adaptive Segmentation-Text Modeling), p. 4 (3.1. Problem Definition), p. 4 (3.1. Problem Definition), p. 1 (1. Introduction), objective p. 5 (3.5. Training Objective), p. 5 (3.4. Adaptive Segmentation-Text Modeling).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

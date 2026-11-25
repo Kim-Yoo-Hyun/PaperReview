@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (A. Comparing 
 - **p. 6 / A. Comparing System Identification Approaches - extractive body cue:** ‘To further assess these system identification methods in a task context, we trained arm-only throwing policies in simulation augmented with each approach and deployed them ...
 - **p. 7 / B. Finetuning Foundational WBC - extractive body cue:** Our fine-tuning approach requires a task reference trajectory, which may not be available for all robot morphologies or tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Unsupervised Actuator Network (UAN) approach for real-to-sim-to-real. Our training pipeline involves three steps: 1) Train a UAN to close the sim-to-real gap for ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (A. Comparing 
 | task reward with the UAN in loop, and 3) Deploy. | definition/direction/unit from same section | p. 3 (A. Unsupervised Actuator Net) |
 | For a complete list of reward terms, please refer to Appendix A | definition/direction/unit from same section | p. 3 (A. Unsupervised Actuator Net) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (A. Comparing 
 | arm to match the lower joint velocities seen on hardware) Actuator Net can improve over the baseline by capturing lag effects, but it diverged ... | comparison identity and matched condition | p. 6 (A. Comparing System Identification Approaches) |
 | Prior work proposed simulated athletic tasks as a benchmark for learned whole-body control [44, 26], though they left simto-real transfer as future work. | comparison identity and matched condition | p. 7 (B. Overcoming the sim-to-real gap) |
 | Some policy architectures (i.e., CNNs [22] and transformers [35]) have been shown to achieve in-context adaptation without relying on a teacher-student distillation. | comparison identity and matched condition | p. 8 (B. Overcoming the sim-to-real gap) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (A. Comparing 
 | body limitation/failure cue | Since the robot's arm is much weaker than the legs, the policy learns to pitch its base backwards to swing the weight upwards into ... | p. 7 (B. Finetuning Foundational WBC) |
 | body limitation/failure cue | As shown by Figure 6, UAN can even accurately capture the arm's response to Gaussian noise control input, which is commonly used for exploration ... | p. 6 (A. Comparing System Identification Approaches) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (A. Comparing 
 | In contrast, the UAN policy achieved the farthest throws on hardware with the smallest sim-to-real gap. | p. 6 (A. Comparing System Identification Approaches) |
 | Since the robot's arm is much weaker than the legs, the policy learns to pitch its base backwards to swing the weight upwards into ... | p. 7 (B. Finetuning Foundational WBC) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / A. Arm Modifications - extractive body cue:** During development, the Unitree ZI Pro arm experienced structural failures at inks 2 and 4, with minor deformations at Tink 5.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 5 (A. Comparing 
 - **p. 6 / A. Comparing System Identification Approaches - extractive body cue:** As shown by Figure 6, UAN can even accurately capture the arm's response to Gaussian noise control input, which is commonly used for exploration in ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (B. Finetuning Foundational WBC), p. 3 (A. Unsupervised Actuator Net), p. 3 (A. Unsupervised Actuator Net), p. 4 (B. Whole-body Controller Pre-training), p. 7 (B. Finetuning Foundational WBC), p. 8 (B. Overcoming the sim-to-real gap), metrics p. 5 (A. Comparing System Identification Approaches), p. 5 (Figure/Table caption), p. 4 (B. Whole-body Controller Pre-training), p. 7 (A. Whole-Body Control), p. 7 (B. Overcoming the sim-to-real gap), p. 8 (B. Overcoming the sim-to-real gap), baselines p. 5 (Figure/Table caption), p. 5 (A. Comparing System Identification Approaches), p. 6 (A. Comparing System Identification Approaches), p. 6 (A. Comparing System Identification Approaches), p. 7 (B. Overcoming the sim-to-real gap), p. 8 (B. Overcoming the sim-to-real gap), results p. 5 (Figure/Table caption), p. 5 (A. Comparing System Identification Approaches), p. 6 (B. Finetuning Foundational WBC), p. 6 (B. Finetuning Foundational WBC), p. 7 (A. Whole-Body Control), p. 8 (B. Overcoming the sim-to-real gap).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

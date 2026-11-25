@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (6.3. More implementation details and discus
 | body cue at p. 3 | We have a significant amount of data where the principal point does not lie at the image center ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 3 | We demonstrate the robustness of our intrinsic estimation and depth prediction through in-the-wild single-view 3D reconstructions. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction), p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 2 (6.3. More implementation details and discus
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (7.3. Metrologie), p. 1 (6.3. More implementation details and discussions), interface p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction), p. 2 (6.3. More implementation details and discussions), p. 1 (6.2. Metric depth prediction), objective p. 2 (6.3. More implementation details and discussions).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

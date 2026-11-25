@@ -52,7 +52,6 @@ PDF body method statement (p. 31 (B.1 Unsupervised pre-training), p. 31 (B.2 Hig
 - **p. 31 / B.1 Unsupervised pre-training - extractive body cue:** It is updated at the end of every training step.
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 31 (B.1 Unsupervised pre-training), p. 31 (B.1 Unsupervised pre-training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 31 (B.1 Unsupervised pre-training), p. 31 (B.2 Hig
 - **p. 1 / 1 Introduction - extractive body cue:** This success has been fueled by pretraining on large quantities of raw text using pretext objectives, such as language modeling (Radford et al., 2017) or ...
 - **p. 3 / 1 Introduction - extractive body cue:** We validate the quality of DINOv2 on various computer vision benchmarks at both image and pixel levels as we scale them, as summarized in Fig.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 31 (B.1 Unsupervised pre-training), p. 31 (B.2 Hig
 - **p. 30 / B.1 Unsupervised pre-training - extractive body cue:** We chose to include as many datasets as possible in the pretraining data in order to cover as many domains as possible.
 - **p. 31 / B.2 High-Resolution adaptation - extractive body cue:** All the hyperparameters are kept the same as in the first pretraining, except the base learning rate which is reduced.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** MLP, feed-forward, networks, distilled, models, SwiGLU, Shazeer, when, training, scratch, initialise, model, pretrained, weights, then, train, iterations, same, procedure, original.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 31 (B.1 Unsupervised pre-training), p. 31 (B.2 Hig
 - **p. 30 / Figure/Table caption - extractive body cue:** Table 15: Composition of our LVD-142M dataset. We report the list of datasets and associated splits used to build the dataset, how they were included ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Ablation study of the training differences between iBOT and DINOv2. We optimize for k-NN performance, as in our experience, the linear probe performance ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 31 (B.1 Unsupervised pre-training), p. 31 (B.2 High-Resolution adaptation), p. 29 (B.1 Unsupervised pre-training), p. 29 (B.1 Unsupervised pre-training), p. 30 (B.1 Unsupervised pre-training), p. 30 (B.1 Unsupervised pre-training), objective p. 31 (B.1 Unsupervised pre-training), p. 29 (B.1 Unsupervised pre-training), p. 31 (B.1 Unsupervised pre-training), temporal p. 29 (B.1 Unsupervised pre-training), p. 31 (B.1 Unsupervised pre-training), p. 10 (2 Related Work), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

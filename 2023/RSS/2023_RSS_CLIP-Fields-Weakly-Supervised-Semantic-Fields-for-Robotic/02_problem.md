@@ -59,8 +59,6 @@ PDF body contribution framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): 
 | body cue at p. 8 | However, if an object was misidentified during data preparation, CLIP-Fields fails to correctly identify it as well. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | 4) CLIP-Fields's robustness to label errors: In real-world applications, CLIP-Fields relies on labels given by large | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (I. INTRODUCTION), p. 3 (IV. APPROACH), p. 4 (IV. APPROACH), p. 4 (IV. APPROACH). The downstream handoff is claimed only when the body describes it.
@@ -68,7 +66,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 1 (I. INTRODUCTION), p. 3 (IV. APPROACH), p. 4 (IV. APPROACH), p. 4 (IV. APPROACH), objective p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. APPROACH).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

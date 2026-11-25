@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (5 Experiments), p. 12 (5 Experiments), p.
 - **p. 11 / 5 Experiments - extractive body cue:** Setup: We evaluate camera distortion estimation on the MegaDepth dataset [46] with crowd-sourced, distorted images.
 - **p. 12 / 5 Experiments - extractive body cue:** We average the pixel distortion errors over each image and compute the recall of the average distortion error within an image over the entire dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Learning vs. geometry? To estimate the camera calibration from a single image, classical approaches struggle with environments devoid of lines while deep networks ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (5 Experiments), p. 12 (5 Experiments), p.
 | For each image, we evaluate the gravity estimation in terms of angular roll and pitch errors (in degrees), and the focal length in terms ... | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | Training our model on distorted images further boosts the accuracy. | definition/direction/unit from same section | p. 12 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (5 Experiments), p. 12 (5 Experiments), p.
 | GeoCalib-pinhole already improves over all baselines, suggesting that the model can zero-shot generalize to radial distortion through optimization. | comparison identity and matched condition | p. 12 (5 Experiments) |
 | Approach DUC 1 DUC2 Recall at (0.25m,10°) / (0.5m,10°) / (1.0m,10°) ↑ Baseline (SP+SG) 43.4 66.7 78.3 51.9 74.8 78.6 + gravity in refinement ... | comparison identity and matched condition | p. 13 (13 Dataset) |
 | As a baseline, we use the gravity estimated by UVP [58]. | comparison identity and matched condition | p. 14 (13 Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,22 +125,12 @@ PDF body evaluation/result cue (p. 11 (5 Experiments), p. 12 (5 Experiments), p.
 | body limitation/failure cue | GeoCalib is more accurate than approaches based on learning and more robust than those based on lines and vanishing points. | p. 10 (5 Experiments) |
 | body limitation/failure cue | GeoCalib can robustly predict lens distortion from a single image (left), which can be used to rectify images (right) in the wild. | p. 11 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | We average the pixel distortion errors over each image and compute the recall of the average distortion error within an image over the entire ... | p. 12 (5 Experiments) |
 | The code and trained models will be released publicly. | p. 3 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 11 (5 Experiments), p. 12 (5 Experiments), p.
 - **p. 11 / 5 Experiments - extractive body cue:** GeoCalib can robustly predict lens distortion from a single image (left), which can be used to rectify images (right) in the wild.
 
 - **Evidence anchors reviewed:** datasets p. 10 (5 Experiments), p. 9 (5 Experiments), p. 10 (5 Experiments), p. 13 (13 Dataset), p. 9 (5 Experiments), p. 11 (5 Experiments), metrics p. 12 (Figure/Table caption), p. 14 (13 Dataset), p. 9 (5 Experiments), p. 11 (5 Experiments), p. 11 (5 Experiments), p. 13 (13 Dataset), baselines p. 11 (5 Experiments), p. 11 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 13 (13 Dataset), p. 14 (13 Dataset), results p. 11 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 13 (Figure/Table caption), p. 14 (13 Dataset), p. 13 (13 Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

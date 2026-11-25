@@ -50,8 +50,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 - **p. 5 / 1 Introduction - extractive body cue:** 3.4 Pattern generation for multibody model The walking pattern is calculated by solving an inverse kinematics such that the CoM of the robot follows the ...
 - **p. 3 / 1 Introduction - extractive body cue:** Then the inverse FFT returns the resulted CoM trajectory into time domain.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Walking on randomly placed stepping-stones.
@@ -84,20 +82,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 | Then the inverse FFT returns the resulted CoM trajectory into time domain. | definition/direction/unit from same section | p. 3 (1 Introduction) |
 | The system generates the CoM trajectory such that the resulted ZMP follows the given reference. | definition/direction/unit from same section | p. 3 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,22 +117,12 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 | body limitation/failure cue | In this case, the resulted ZMP (bold line) does not 1623 | p. 4 (1 Introduction) |
 | body limitation/failure cue | We see the controller does not need the information of far future because the magnitude of the preview gain Gp becomes very small in ... | p. 4 (1 Introduction) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | The generated walking pattern corresponds to the walking of three steps forward. | p. 4 (1 Introduction) |
 | As the simpler implementation, we can also use the center of the pelvis link since it approximates the motion of the CoM. | p. 5 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -152,9 +131,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 4 (1 Introductio
 - **p. 4 / 1 Introduction - extractive body cue:** We see the controller does not need the information of far future because the magnitude of the preview gain Gp becomes very small in the ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), metrics p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), baselines 본문 anchor 없음, results p. 6 (Figure/Table caption), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

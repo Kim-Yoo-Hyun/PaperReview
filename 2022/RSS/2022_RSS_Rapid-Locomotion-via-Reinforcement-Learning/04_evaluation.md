@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV
 - **p. 6 / IV. RESULTS - extractive body cue:** On the other hand, some aspects of the real-world dynamics are probably not captured under any configuration of the simulator.
 - **p. 7 / IV. RESULTS - extractive body cue:** The privileged teacher πT trained with access to environment parameters attains a strictly larger command area than the policy πDR trained with only the robot ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: An end-to-end learned controller enables the MIT Mini Cheetah to execute: (a) fast sprinting at 3.9 m/s (top); (b) a rough terrain 10-meter ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV
 | 4: Online system identification reduces tracking error, particularly at high speeds. | definition/direction/unit from same section | p. 7 (IV. RESULTS) |
 | Fig. 1: An end-to-end learned controller enables the MIT Mini Cheetah to execute: (a) fast sprinting at 3.9 m/s (top); (b) a rough terrain ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV
 | ANYmal Y 0.5 1.5 50 TABLE III: Measure of Agility: Comparison between the Froude numbers of various prior works. | comparison identity and matched condition | p. 6 (IV. RESULTS) |
 | While prior work demonstrated that sim-to-real gap can be mitigated at low velocities [23, 24], our results show that these findings also hold true ... | comparison identity and matched condition | p. 6 (IV. RESULTS) |
 | The strategy of training on rough terrains has been applied successfully in prior works [23, 24, 37] to enable robust locomotion on diverse terrains. | comparison identity and matched condition | p. 7 (IV. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV
 | body limitation/failure cue | Fig. 3: (a) Forward and angular velocity tracking performance. The Grid Adaptive curriculum tracks a larger range of velocities than the Box Adaptive curriculum ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | We observe that the policy trained without any curriculum fails to learn. | p. 6 (IV. RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV
 | Response to Terrain Changes and Hardware Failures We tested our system in a diverse set of challenging real-world scenarios: (1) ascending a steep incline ... | p. 7 (IV. RESULTS) |
 | We evaluate this hypothesis in the teacher-student setting by quantifying (1) the benefit of access to privileged information when learning to run at high ... | p. 7 (IV. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VI. DISCUSSION - extractive body cue:** Our system also does not use vision, so in general, it cannot perform tasks that require planning ahead of time, like efficiently ascending stairs or ...
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV
 - **p. 6 / IV. RESULTS - extractive body cue:** We observe that the policy trained without any curriculum fails to learn.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), p. 2 (II. EXPERIMENTAL SETUP), p. 2 (II. EXPERIMENTAL SETUP), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), metrics p. 5 (Figure/Table caption), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (Figure/Table caption), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), baselines p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), results p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

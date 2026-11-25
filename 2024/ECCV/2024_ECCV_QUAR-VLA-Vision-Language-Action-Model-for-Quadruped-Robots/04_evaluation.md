@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (1. Comparison with
 - **p. 13 / 1. Comparison within VLM baselines. The experiment results reveal - extractive body cue:** It was further noted that even in the absence of explicit directional information within the dataset, the model reliably interpreted linguistic directives which, in turn, ...
 - **p. 11 / 4 Experiments - extractive body cue:** Seen Unseen Easy Medium Hard Distinguish Go to Go avoid Go through Crawl Unload Object Verbal CLIP [27] 0.44 0.43 0.45 0.19 0 0 0.11 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Comparison of QUAR-VA, QUAR-LA, and QUAR-VLA. QUAR-VA solely utilizes coarse-grained vision information, lacking explicit instructions for han- dling diverse tasks. In contrast, QUAR-LA ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (1. Comparison with
 | 4.2 Overall Performance Multi-task Performance. | definition/direction/unit from same section | p. 10 (4 Experiments) |
 | To examine the adaptability in unanticipated scenarios, we orchestrated two primary examinations: one concentrated on unfamiliar objects, and the other on unprecedented linguistic directives. | definition/direction/unit from same section | p. 12 (1. Comparison within VLM baselines. The experiment results reveal) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (1. Comparison with
 | QUART has achieved success rates far exceeding those of the baselines in tasks of all difficulty levels, especially in the most challenging crawl and ... | comparison identity and matched condition | p. 11 (4 Experiments) |
 | When confronted with unseen instructions, the alighment between the existing language and the integration of vision and action cues within the baselines is compromised, ... | comparison identity and matched condition | p. 12 (1. Comparison within VLM baselines. The experiment results reveal) |
 | 7 is that QUART surpasses other baseline methods, an innate advantage of large-scale multimodal models. | comparison identity and matched condition | p. 13 (1. Comparison within VLM baselines. The experiment results reveal) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (1. Comparison with
 | body limitation/failure cue | 5 Conclusion & Future Work This paper emphasizes the significance of deploying Vision-Language-Action models on quadruped robots. | p. 14 (1. Comparison within VLM baselines. The experiment results reveal) |
 | body limitation/failure cue | Future works will explore hardware acceleration techniques and model compression techniques to enable faster and more efficient execution of the models. | p. 14 (1. Comparison within VLM baselines. The experiment results reveal) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (1. Comparison with
 | Notably, QUART model takes a single image s and a natural language instruction w as input, which are first converted into corresponding tokens t ... | p. 8 (3 Method) |
 | In contrast to many applications of large models, such as natural language or image generation, one of the unique requirements for a model that ... | p. 9 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 1. Comparison within VLM baselines. The experiment results reveal - extractive body cue:** This failure manifests in behaviors such as repetitive motion, misdirection, wrong terminate commands.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (1. Comparison with
 - **p. 14 / 1. Comparison within VLM baselines. The experiment results reveal - extractive body cue:** Future works will explore hardware acceleration techniques and model compression techniques to enable faster and more efficient execution of the models.
 
 - **Evidence anchors reviewed:** datasets p. 14 (1. Comparison within VLM baselines. The experiment results reveal), p. 14 (1. Comparison within VLM baselines. The experiment results reveal), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 12 (1. Comparison within VLM baselines. The experiment results reveal), p. 13 (1. Comparison within VLM baselines. The experiment results reveal), metrics p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (1. Comparison within VLM baselines. The experiment results reveal), p. 11 (1. Comparison within VLM baselines. The experiment results reveal), p. 14 (1. Comparison within VLM baselines. The experiment results reveal), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 10 (4 Experiments), p. 11 (1. Comparison within VLM baselines. The experiment results reveal), p. 11 (4 Experiments), p. 12 (1. Comparison within VLM baselines. The experiment results reveal), p. 13 (1. Comparison within VLM baselines. The experiment results reveal), results p. 11 (4 Experiments), p. 12 (1. Comparison within VLM baselines. The experiment results reveal), p. 10 (4 Experiments), p. 11 (1. Comparison within VLM baselines. The experiment results reveal), p. 12 (1. Comparison within VLM baselines. The experiment results reveal), p. 13 (1. Comparison within VLM baselines. The experiment results reveal).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

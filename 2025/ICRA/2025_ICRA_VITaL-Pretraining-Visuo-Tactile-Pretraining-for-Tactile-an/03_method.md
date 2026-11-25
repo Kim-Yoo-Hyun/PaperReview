@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 2 (1) Ac
 - **p. 4 / III. METHODS - extractive body cue:** The network is queried each timestep, and all action predictions for that timestep are ensembled using a weighted average.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 3 (III. METHODS), p. 2 (1) Action), p. 2 (1) Action), p. 3 (III. METHODS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 2 (1) Ac
 - **p. 3 / III. METHODS - extractive body cue:** Imitation Learning Frameworks We implemented two imitation learning frameworks to study the impact of visuo-tactile pretraining on learning manipulation tasks: Action Chunking Transformer (ACT) [10] ...
 - **p. 5 / III. METHODS - extractive body cue:** GelSight sensor outputs, showing the RGB images from the GelSight's camera and the processed strain data for both the covered and uncovered gelsight.
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,15 +92,11 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 2 (1) Ac
 - **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** We used the same run parameters as the cable plugging task, with 100 demos collected, an 80/20 train/test split, and noise added to the predicted ...
 - **p. 3 / III. METHODS - extractive body cue:** A series of visual observations V1, V2, ..., VN and tactile observations T1, T2, ..., TN are collected, and the vision encoder and tactile encoder ...
 - **p. 2 / 1) Action - extractive body cue:** The use of an auto-encoder for this task helps to reduce the negative effects of multi-modal distributions in the training data, as the latent variable ...
-- **p. 2 / 1) Action - extractive body cue:** Chunking Transformers: Action Chunking Transformers (ACT) [10] train a Conditional Variational Auto Encoder (CVAE) built upon a transformer backbone to predict a series of actions ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** vision, projection, head, tactile, consists, single, layer, MLP, encoders, feature, vectors, shared, latent, space, R512, First, replaced, stock, Resnet, encoder.
 - **Relevant PDF headings:** III. METHODS (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +116,10 @@ PDF body method statement (p. 3 (III. METHODS), p. 3 (III. METHODS), p. 2 (1) Ac
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Diagram of our approach. First, a vision encoder and a tactile encoder are pretrained on the collected demonstrations using a temporally informed multi-modal ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Contrastive loss visualization. A series of visual observations V1, V2, ..., VN and tactile observations T1, T2, ..., TN are collected, and the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHODS), p. 3 (III. METHODS), p. 2 (1) Action), p. 2 (1) Action), p. 4 (III. METHODS), p. 4 (III. METHODS), objective p. 3 (III. METHODS), p. 2 (1) Action), p. 3 (III. METHODS), p. 2 (1) Action), p. 4 (III. METHODS), p. 4 (III. METHODS), temporal p. 3 (III. METHODS), p. 4 (III. METHODS), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 1 (I. INTRODUCTION), p. 2 (1) Action).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

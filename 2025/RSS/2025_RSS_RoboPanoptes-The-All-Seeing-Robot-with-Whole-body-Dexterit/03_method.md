@@ -46,7 +46,6 @@ PDF body method statement (p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 4 (VI. WH
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 4 (VI. WH
 - **p. 1 / Abstract - extractive body cue:** At its core, RoboPanoptes uses whole-body visuomotor policy that learns complex manipulation s tly from human demonstrations, efficiently aggregating information from the distributed cameras while ...
 - **p. 3 / C. Whole-body Sensing - extractive body cue:** [26] further develop a laser-ranging sensor ring design for human-robot interaction, Kim et al.
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 4 (VI. WH
 - **p. 4 / VI. WHOLE-Bopy VisUoMOTOR POLICY - extractive body cue:** Using the collected demonstrations, we can train a wholebody visuomotor policy that infers whole-body actions (i.e., rine joint angle sequences) given whole-body vision (i.e., images ...
 - **p. 9 / B. Sweeping Task - extractive body cue:** + ResNet Encodes: A whole-body visuomotor policy with a ResNet-34 [15] vision encoder trained from seratch instead of using a pretrained vision encoder.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** collected, demonstrations, train, wholebody, visuomotor, policy, infers, whole-body, actions, rine, joint, angle, sequences, given, vision, images, cameras, Compared, common, manipulation.
 - **Relevant PDF headings:** VI. WHOLE-Bopy VisUoMOTOR POLICY (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,23 +104,13 @@ PDF body method statement (p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 4 (VI. WH
 - **p. 9 / C. Stowing Task - extractive body cue:** before, one using only a top-down camera and one without
 - **p. 9 / B. Sweeping Task - extractive body cue:** Occasionally, we observe the robot getting stuck in a pose without interacting with any object.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), objective 본문 anchor 없음, temporal p. 7 (A. Unboxing Task), p. 7 (A. Unboxing Task), p. 4 (V. DATA COLLECTION INTERFACE), p. 5 (21 Whole), p. 5 (21 Whole), p. 6 (21 Whole).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

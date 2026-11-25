@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 - **p. 8 / 5.2. Main Experiment Results - extractive body cue:** 70.0 30.0 60.0 0.0 20.0 36.0 ✓ 85.0 40.0 85.0 0.0 40.0 50.0↑14 ✓ ✓ 80.0 75.0 70.0 35.0 70.0 66.0↑16 In addition to outperforming ...
 - **p. 7 / 5.2. Main Experiment Results - extractive body cue:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. ForceVLA2 concept. Contact-rich manipulation requires force regulation, beyond visual and state observations (left). ForceVLA2 integrates force information across multiple scales, enabling rich modeling ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 | Figure 1. ForceVLA2 concept. Contact-rich manipulation requires force regulation, beyond visual and state observations (left). ForceVLA2 integrates force information across multiple scales, enabling rich ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Framework of ForceVLA2. ForceVLA2 takes multi-view images, task and force prompts, and proprioceptive states (EE pose and force) as input. Force is ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 | Qualitative results on typical manipulation tasks (compared with ForceVLA and π serials). | comparison identity and matched condition | p. 7 (5.2. Main Experiment Results) |
 | Among the compared methods, ForceVLA2 actively adjusts its interaction forces and successfully completes these tasks, whereas other VLAs lack sufficient reactive adjustment capabilities. | comparison identity and matched condition | p. 7 (5.2. Main Experiment Results) |
 | Entries indicate success rate (%). gray : baseline results. | comparison identity and matched condition | p. 8 (5.2. Main Experiment Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 | body limitation/failure cue | In contrast, other VLAs slowly chase the new EE 6D pose, leading to failure to maintain stable contact. | p. 8 (5.2. Main Experiment Results) |
 | body limitation/failure cue | ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on ... | p. 7 (5.2. Main Experiment Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 | The proprioceptive state, represented by the EE 6D pose, is expressed as p ∈R7 and encoded through another linear layer ϕP : EP = ... | p. 4 (3.2. Short-Horizon Force-to-Control Loop) |
 | A dynamic gating network computes token-wise routing weights w = [wV , wS, wF ], and activates the most relevant expert for each token: ... | p. 4 (3.2.2. Adaptive Routing and Decoding) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** The model also consistently reduces failures caused by arm overload and unstable contact, and ablation studies show monotonically improved performance as force prompts, the CrossScale ...
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 6 (5.2. Main Experiment Results), p. 7 (5.2. 
 - **p. 7 / 5.2. Main Experiment Results - extractive body cue:** ForceVLA2 exhibits robust position and orientation following, and in object search tasks, it can still perform successful re-grasps even when visual observations fail. on force-sensitive ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experiment Setting), p. 5 (4. ForceVLA2-Dataset), p. 5 (4. ForceVLA2-Dataset), p. 6 (4. ForceVLA2-Dataset), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), metrics p. 6 (5.2. Main Experiment Results), p. 6 (5.1. Experiment Setting), p. 7 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), baselines p. 6 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 8 (5.2. Main Experiment Results), results p. 6 (5.2. Main Experiment Results), p. 7 (5.2. Main Experiment Results), p. 6 (5. Experiments), p. 8 (5.2. Main Experiment Results), p. 8 (5.3. Ablation Study), p. 7 (5.2. Main Experiment Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

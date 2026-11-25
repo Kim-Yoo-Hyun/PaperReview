@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 - **p. 6 / VII. PRACTICAL Cons - extractive body cue:** In the following, we study RoboPanoptes' ability to perform a wide range of real-world manipulation tasks that require whole-body dexterity.
 - **p. 6 / VII. PRACTICAL Cons - extractive body cue:** It offers a compact design (8 x 25x 4.5 mm) that fits well within the spatial constraints of the robot while providing a reasonable FOV ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Modular Hardware Design including a) a body module consisting of an actuator, two cameras, and wire fixtures, as well sb) a head module ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 | During teleoperation, torque is disabled for the leader robot while being enabled for the follower. ‘To demonstrate task, « human operator uses both hands ... | definition/direction/unit from same section | p. 4 (V. DATA COLLECTION INTERFACE) |
 | To coordinate the moving ‘cameras and make policy learning more efficient, we employ a view-dependent positional encoding strategy. | definition/direction/unit from same section | p. 5 (21 Whole) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 | ) Typical failure cases of the baselines. | comparison identity and matched condition | p. 7 (VII. PRACTICAL Cons) |
 | RoboPanoptes achieves an overall success rate of 83.3%, compared to 27.8% for the w/o Camexa Pose policy and 0% for the Top-down Camera policy ... | comparison identity and matched condition | p. 9 (C. Stowing Task) |
 | With wholebody sweeping. the robot manipulates object piles much more efficiently, leveraging multiple contacts (2 s/block for teleoperation and 3.2s/block for our rollouts). as ... | comparison identity and matched condition | p. 9 (B. Sweeping Task) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 | body limitation/failure cue | To make the system robust to such camera failure at test time, we employ a "blink training" strategy that randomly drops out camera inputs ... | p. 6 (21 Whole) |
 | body limitation/failure cue | This proves that our blink training strategy is critical to the robustness of the policy, especially during unexpected test-time sensor failures. | p. 8 (A. Unboxing Task) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 | Encoder policy often sweeps toward incorrect or empty regions, which we hypothesize is due to Inaccurate semantic understanding in the visual representation, | p. 9 (B. Sweeping Task) |
 | In our current implementation, the robot's fixed base limits it to table-top manipulation tasks. | p. 10 (IX. LIMITATIONS AND FUTURE WORK) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / IX. LIMITATIONS AND FUTURE WORK - extractive body cue:** The Top-down Camere policy fails to locate the hance. ‘odiing policy's actions ae less precise, leading to failures ike missing the shoe or misaligning the ...
@@ -171,9 +150,8 @@ PDF body evaluation/result cue (p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task),
 - **p. 8 / A. Unboxing Task - extractive body cue:** This proves that our blink training strategy is critical to the robustness of the policy, especially during unexpected test-time sensor failures.
 
 - **Evidence anchors reviewed:** datasets p. 7 (A. Unboxing Task), p. 8 (B. Sweeping Task), p. 4 (V. DATA COLLECTION INTERFACE), p. 4 (V. DATA COLLECTION INTERFACE), p. 5 (21 Whole), p. 5 (21 Whole), metrics p. 8 (A. Unboxing Task), p. 8 (B. Sweeping Task), p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task), p. 6 (21 Whole), p. 4 (V. DATA COLLECTION INTERFACE), baselines p. 8 (A. Unboxing Task), p. 4 (VI. WHOLE-Bopy VisUoMOTOR POLICY), p. 6 (VII. PRACTICAL Cons), p. 7 (VII. PRACTICAL Cons), p. 9 (C. Stowing Task), p. 9 (B. Sweeping Task), results p. 9 (B. Sweeping Task), p. 9 (C. Stowing Task), p. 6 (21 Whole), p. 10 (IX. LIMITATIONS AND FUTURE WORK), p. 8 (B. Sweeping Task), p. 8 (B. Sweeping Task).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

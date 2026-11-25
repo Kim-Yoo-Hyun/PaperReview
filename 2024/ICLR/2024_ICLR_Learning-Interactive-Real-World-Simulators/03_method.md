@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 - **p. 8 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** Finetuning only on simulated data has a large advantage over no finetuning and transfers better to other tasks than finetuning on true data.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 7 (1. Put cup 2. Pen 3. Apple).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 - **p. 6 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** We train an image-goal conditioned VLM policy to predict language instructions and the motor controls from the start and goal images using the PALM-E architecture ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** To support long-horizon repeated interactions, we formulate the simulator as an observation 1Note that by "universal", we mean the model can simulate through the unified ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 - **p. 1 / ABSTRACT - extractive body cue:** We use the simulator to train both high-level vision-language policies and low-level reinforcement learning policies, each of which can be deployed in the real world ...
 - **p. 7 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** To acquire reward information, we use the number of steps-to-completion from the training data as a proxy reward to train a model that maps the ...
 - **p. 8 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** REINFORCE algorithm (Williams, 1992) to optimize the VLA policy, treating the rollouts from the simulator as the on-policy rollouts from the real environment and use ...
-- **p. 7 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** To acquire reward information, we use the number of steps-to-completion from the training data as a proxy reward to train a model that maps the ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** main, contributions, summarized, follows, take, first, step, toward, building, universal, simulator, real-world, interaction, combining, diverse, datasets, rich, along, different, dimensions.
 - **Relevant PDF headings:** A.2 ADDITIONAL REAL-ROBOT RESULTS FOR LONG-HORIZON LANGUAGE POLICY (p. 16); A.3 ADDITIONAL RESULTS ON LEARNING RL POLICY IN UNISIM (p. 17); C ARCHITECTURE AND TRAINING (p. 20).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +115,13 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (A
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 6: Simulations of low-data domains using the Habitat object navigation using HM3D dataset (Ra- makrishnan et al., 2021) with only 700 training exam- ples. ...
 - **p. 8 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** We finetune PaLI-X (Chen et al., 2023), a VLM with 55B parameters pretrained on a broad set of image, video, and language tasks, to caption ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), objective p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 8 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 7 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), temporal p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 7 (1. Put cup 2. Pen 3. Apple), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -51,7 +51,6 @@ PDF body method statement (p. 1 (1 INTRODUCTION), p. 1 (Body text (section bound
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Our results on previously published datasets show that we can optimize our 3D Gaussians from multi-view captures and achieve equal or better quality than the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (Body text (section boundary not confidently recovered)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 1 (1 INTRODUCTION), p. 1 (Body text (section bound
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** 2022], we achieve high-quality results with only SfM points as input.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We start with the same input as previous NeRF-like methods, i.e., cameras calibrated with Structure-from-Motion (SfM) [Snavely et al.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 1 (1 INTRODUCTION), p. 1 (Body text (section bound
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (≥30 fps) ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** 2022], which requires up to 48 hours of training time.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, combines, best, worlds, Gaussian, representation, allows, optimization, state-of-the-art, SOTA, visual, quality, competitive, training, times, while, tile-based, splatting, solution, ensures.
 - **Relevant PDF headings:** B OPTIMIZATION AND DENSIFICATION ALGORITHM (p. 13).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 1 (1 INTRODUCTION), p. 1 (Body text (section bound
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Our solution builds on three main components.
 - **p. 9 / 2 RELATED WORK - extractive body cue:** We observe that our method performs relatively well, avoiding complete failure even without the SfM points.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (1 INTRODUCTION), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), objective p. 1 (1 INTRODUCTION), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 4 (2 RELATED WORK), p. 2 (2 RELATED WORK), p. 3 (2 RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

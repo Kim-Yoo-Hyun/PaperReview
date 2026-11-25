@@ -64,8 +64,6 @@ PDF body contribution framing (p. 5 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 
 | body cue at p. 9 | DreamFusion does not require 3D or multi-view training data, and uses only a pre-trained 2D diffusion model (trained ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 6 (1 INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), interface p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 5 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), objective p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

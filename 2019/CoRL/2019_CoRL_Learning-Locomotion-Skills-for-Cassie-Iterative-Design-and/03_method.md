@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 4 (IV. MET
 - **p. 3 / IV. METHODS - extractive body cue:** To achieve this goal, we will add a constraint in the
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 4 (IV. METHODS), p. 5 (VI. POLICY COMPRESSION AND DISTILLATION), p. 4 (IV. METHODS), p. 3 (IV. METHODS), p. 3 (IV. METHODS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 4 (IV. MET
 - **p. 4 / IV. METHODS - extractive body cue:** The benefit of this is that we don't need access to the expert policy for the fine-tuning to happen.
 - **p. 4 / IV. METHODS - extractive body cue:** For example, the expert can be a policy for a robot walking forward while r is rewarding the robot to walk backward.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 4 (IV. MET
 - **p. 6 / VI. POLICY COMPRESSION AND DISTILLATION - extractive body cue:** Policies Distillation After training a network for a skill, we may want the policy to learn additional skills.
 - **p. 5 / VI. POLICY COMPRESSION AND DISTILLATION - extractive body cue:** We stop the training when the training error
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** policies, walking, produce, limit, cycle, trajectory, recording, actions, Algorithm, DASS, Initialize, Reset, some, initial, state, distribution, termination, then, Fig, policy.
 - **Relevant PDF headings:** IV. METHODS (p. 3); VI. POLICY COMPRESSION AND DISTILLATION (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 4 (IV. MET
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Network sizes impact the final result for reinforce- ment learning. We observe that larger network sizes typically learn faster and yield more stable ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: A walking policy produces a limit cycle, represented by the blue closed curve, and the green arrows indicate the required feedback to return ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 6 (VI. POLICY COMPRESSION AND DISTILLATION), p. 6 (VI. POLICY COMPRESSION AND DISTILLATION), objective p. 3 (IV. METHODS), p. 4 (IV. METHODS), p. 4 (IV. METHODS), p. 5 (VI. POLICY COMPRESSION AND DISTILLATION), p. 3 (IV. METHODS), temporal p. 5 (V. EXPERIMENTAL SETUP), p. 3 (IV. METHODS), p. 4 (IV. METHODS), p. 4 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 7 (VII. ITERATIVE DESIGN WITH CHANGING REWARDS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

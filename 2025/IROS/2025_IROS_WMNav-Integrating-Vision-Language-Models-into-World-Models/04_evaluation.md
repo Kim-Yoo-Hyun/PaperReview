@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Datasets and Evaluation Metrics Datasets The HM3D v0.1 [38] is used in the Habitat 2022 ObjectNav challenge, providing 2000 validation episodes on 20 validation environments ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** MP3D [19] contains 11 high-fidelity scenes and 2195 episodes for validation, with 21 categories of object goals.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: World Model Navigation with VLM. In object navigation, our model first estimates the goal's presence likelihood in each scene of the panoramic image ...
@@ -73,21 +71,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | Fig. 4: Plan the Route. Text prompt is configured by the previous step's subtask, the explanation for selecting the highest-scoring image, and the goal. ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Fig. 1: World Model Navigation with VLM. In object navigation, our model first estimates the goal's presence likelihood in each scene of the panoramic ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Memory SD TAP SR(%)↑SPL(%)↑ a No ✗ ✗ 65.8 25.8 b No ✓ ✗ 67.4 33.1 c Text-Image ✓ ✗ 62.0 29.6 d CVM(Ours) ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Compared to all methods, including supervised methods, our approach also achieves the optimal SR on MP3D and the best SPL on HM3D, demonstrating the ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -116,22 +105,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 | body limitation/failure cue | But textual information cannot accurately describe the spatial relationships in the scene, and it is difficult for LLM to make good spatial decisions. | p. 6 (IV. EXPERIMENTS) |
 | body limitation/failure cue | However, since VLM is trained on egocentric image data, it does not take advantage of VLM's powerful egocentric reasoning ability. | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Implementation Details We set 40 as the agent's maximal navigation steps. | p. 6 (IV. EXPERIMENTS) |
 | Similar to the frontier map, our simple and online maintained Curiosity Value Map, without prior information from other detectors, makes full use of the ... | p. 6 (IV. EXPERIMENTS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -141,9 +120,8 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, since VLM is trained on egocentric image data, it does not take advantage of VLM's powerful egocentric reasoning ability.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (C. In-Domain Data Collection), p. 2 (Abstract),
 - **p. 2 / Abstract - extractive body cue:** During deployment, humans provide language feedback to correct robotic behaviors, and policies are updated based on this feedback.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (A. Preliminaries), p. 3 (A. Preliminaries), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (C. In-Domain Data Collection), p. 2 (Abstract),
 - **p. 1 / Abstract - extractive body cue:** One key challenge for intelligent robots is grounding natural language to vision and action, bridging the abstraction gap between natural language instruction and visuomotor control ...
 - **p. 3 / B. CLIP-Based Robotics Transformer (CLIP-RT) - extractive body cue:** Consequently, CLIP-RT learns to measure the likelihood of each motion described in language, given visual observation and language instruction,
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (C. In-Domain Data Collection), p. 2 (Abstract),
 - **p. 2 / Abstract - extractive body cue:** CLIP-RT achieves strong results, an average success rate of 92.8%, with an improved inference throughput of 163Hz.
 - **p. 3 / A. Preliminaries - extractive body cue:** Using the contrastive objective, CLIP trains an image encoder f(:) and a text encoder q(-) on 400M image-text pairs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Stochastic, Trajectory, Augmentation, STA, aims, augment, demonstration, data, collected, language-based, teleoperation, Before, delving, details, fist, define, waypoint, state, demonstrations, satisfies.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 4 (C. In-Domain Data Collection), p. 2 (Abstract),
 - **p. 9 / B. Limitations and Future Work - extractive body cue:** Without incorporating action history into the context, the model cannot make informed
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 9: Example failure cases of CLIP-RT. (a) CLIP-RT
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (C. In-Domain Data Collection), p. 2 (Abstract), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 1 (Abstract), p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), objective p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 3 (A. Preliminaries), p. 2 (A. Preliminaries), p. 7 (256 33%), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 2 (Abstract), temporal p. 9 (B. Limitations and Future Work), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)), p. 4 (C. In-Domain Data Collection), p. 9 (B. Adapting CLIP-RT to the LIBERO Benchmark), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

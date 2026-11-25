@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 - **p. 5 / Dataset - extractive body cue:** Results show that less complex tasks (Lift, Can) be learned with a fraction of the data, while more complex tasks might benefit from even larger ...
 - **p. 3 / Dataset - extractive body cue:** Differences in supervisor proficiency can manifest in many ways, such as large variations in trajectory length and noise in robot movement or mistakes (e.g. missed ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Tasks. We collect datasets across 6 operators of varying proficiency and evaluate offline policy learning methods on 8 challenging manipulation tasks that test ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 | We train BC-RNN and report the final policy checkpoint success rate, over 30 rollouts, due to the time-consuming nature of real world policy evaluation. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from ... | definition/direction/unit from same section | p. 4 (Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 | The performance gap is larger for longer-horizon tasks (e.g. ⇠55% for Transport (PH) compared to ⇠5% for Square (PH)) and for multi-human data compared ... | comparison identity and matched condition | p. 5 (4 Experiments) |
 | However, BC-RNN outperforms BC on all datasets (7%-35% improvement). | comparison identity and matched condition | p. 6 (4 Experiments) |
 | We collected these datasets by first training a state-of-the-art RL algorithm [30] on the Lift and Can task, taking agent checkpoints that are saved ... | comparison identity and matched condition | p. 4 (Dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 | body limitation/failure cue | Differences in supervisor proficiency can manifest in many ways, such as large variations in trajectory length and noise in robot movement or mistakes (e.g. ... | p. 3 (Dataset) |
 | body limitation/failure cue | While recent batch RL algorithms have shown an excellent ability to learn from mixed quality machine-generated datasets [26, 27], we empirically find that they ... | p. 3 (Dataset) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 | In our study, we evaluate each policy checkpoint online in the environment in simulation, and report the best policy success rate per training run. | p. 3 (Dataset) |
 | Each agent is trained for N epochs, where each epoch consists of M gradient steps, and evaluated every E epochs, by running 50 rollouts ... | p. 5 (Dataset) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Dataset - extractive body cue:** We present success rates averaged over 3 seeds for each method across different subsets of the Multi-Human datasets, corresponding to mixtures of demonstrations from "Better", ...
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figu
 - **p. 3 / Dataset - extractive body cue:** While recent batch RL algorithms have shown an excellent ability to learn from mixed quality machine-generated datasets [26, 27], we empirically find that they fail ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 4 (Dataset), p. 6 (4 Experiments), p. 4 (Dataset), p. 6 (4 Experiments), p. 3 (Dataset), metrics p. 5 (Figure/Table caption), p. 3 (Dataset), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 7 (4 Experiments), baselines p. 6 (4 Experiments), p. 4 (Dataset), p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 4 (Dataset), results p. 3 (Dataset), p. 6 (4 Experiments), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 5 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

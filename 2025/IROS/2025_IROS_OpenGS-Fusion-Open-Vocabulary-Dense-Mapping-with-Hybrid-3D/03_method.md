@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 - **p. 2 / III. OPENGS-FUSION - extractive body cue:** Subsequently, the tuple {Ct, Dt, St, Pt} is used to update our hybrid scene representation M (Sec.III-B), following the approach in Sec.IIIC.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 1 (2) Limited 3D Object-Level Understanding. Most exist), p. 1 (Abstract), p. 4 (III. OPENGS-FUSION), p. 4 (III. OPENGS-FUSION), p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 2 (III. OPENGS-FUSION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 - **p. 3 / III. OPENGS-FUSION - extractive body cue:** Open-Vocabulary Dense Scene Mapping Given input {Ct, Dt, St, Pt}, we update the global map M in three stages.
 - **p. 3 / III. OPENGS-FUSION - extractive body cue:** Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and semantic features of our hybrid 3D ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,15 +92,11 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 - **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
 - **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** However, in real-world applications, for example, robotic exploration and embodied interaction, models must support online perception.
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Additionally, compared to our code-based approach GSICPTABLE III QUANTITATIVE TRAIN VIEW RENDERING PERFORMANCE ON REPLICA.
-- **p. 1 / 1) Rigid Offline Pipeline. These methods rely on essen - extractive body cue:** tial preprocessing steps, such as pretraining 3D Gaussian representation or offline compression of high-dimensional semantic features.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, contributions, follows, introduce, OpenGS-Fusion, innovative, openvocabulary, dense, mapping, framework, leverages, hybrid, scene, representation, concurrently, construct, appearance, geometry, semantic, features.
 - **Relevant PDF headings:** 1) Rigid Offline Pipeline. These methods rely on essen (p. 1).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +116,10 @@ PDF body method statement (p. 2 (2) Limited 3D Object-Level Understanding. Most 
 - **p. 7 / V. CONCLUSIONS - extractive body cue:** Future work will explore how to leverage hybrid scene representation for pose estimation and investigate lightweight MLLMs specifically designed for image retrieval tasks to further ...
 - **p. 5 / IV. EXPERIMENT - extractive body cue:** OpenGaussian fails to locate both instances as they are segmented into separate entities, and the model by default only retrieves the instance that best matches ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 4 (III. OPENGS-FUSION), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 4 (III. OPENGS-FUSION), p. 3 (III. OPENGS-FUSION), objective p. 4 (III. OPENGS-FUSION), p. 4 (III. OPENGS-FUSION), p. 1 (2) Limited 3D Object-Level Understanding. Most exist), p. 1 (Abstract), p. 2 (2) Limited 3D Object-Level Understanding. Most exist), p. 2 (III. OPENGS-FUSION), temporal p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 1 (1) Rigid Offline Pipeline. These methods rely on essen), p. 2 (II. RELATED WORKS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

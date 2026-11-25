@@ -56,7 +56,6 @@ PDF body method statement (p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTOR
 - **p. 17 / A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES - extractive body cue:** However, in principle, there is nothing stopping us from extending the current framework to a multi-image setting, taking advantage of a VLM that can handle ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 21 (A.3 INFERENCE).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTOR
 - **p. 19 / A.3 INFERENCE - extractive body cue:** D-inBC Input (current front camera view.) <task>First put <p>rainbow letter T</p> at <b>(0.500, 0.594), {0.102, 0.188}</b> into <p>wooden bowl</p> at <b>(0.457, 0.531), {0.195, 0.328}</b> then ...
 - **p. 21 / A.4 RT-2-STYLE BASELINES - extractive body cue:** The dataset employed is similar to inBC, but it omits the prompt for the output format, and the action is represented by the mapped special ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTOR
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** On VIMA-0.8k, we control the total number of samples from the auxiliary dataset relative to the samples from the converted BC datasets and train all ...
 - **p. 16 / A IMPLEMENTATION DETAILS - extractive body cue:** In this section, we provide more implementation details regarding dataset preparation, model training, inference, and RT-2 style baselines.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** next, state, query, VLM, again, observation, question, only, take, first, action, generated, formulate, dataset, single-image, single-turn, conversation, setting, emulate, policy.
 - **Relevant PDF headings:** B.9 ROBUSTNESS OF THE MODEL IN FAILURE GRASP SCENARIOS (p. 27).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTOR
 - **p. 25 / Figure/Table caption - extractive body cue:** Table 15: Ablation on multiple image inputs (Mul.). All models are trained on VIMA-8k for 2 epochs.
 - **p. 25 / Figure/Table caption - extractive body cue:** Table 14: Ablation on action history and multi-step planning. His. stands for enabling action history and Plan means enabling multi-step planning. All models are trained ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 19 (A.3 INFERENCE), p. 18 (A.3 INFERENCE), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 18 (A.2 TRAINING), objective p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 18 (A.3 INFERENCE), p. 21 (A.3 INFERENCE), p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), temporal p. 16 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 17 (A.1.1 BUILD inBC DATASET FROM EXPERT TRAJECTORIES), p. 21 (A.3 INFERENCE), p. 4 (2 RELATED WORK), p. 6 (2 RELATED WORK), p. 7 (6 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

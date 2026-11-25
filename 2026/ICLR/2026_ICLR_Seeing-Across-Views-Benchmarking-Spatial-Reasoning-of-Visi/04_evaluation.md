@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 34 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** While this result highlights a limitation in zero-shot generalization, we note that in real-world robotic deployment, camera mounting poses are strictly controlled, and input images ...
 - **p. 25 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** We then describe the four robotic subtasks, which extend spatial reasoning to manipulation scenarios: Action Planning, Step Execution, Trajectory Selection, and Affordance Recognition.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Table 1: Comparison of spatial reasoning benchmarks. Prior datasets emphasize single-view rela- tions, abstract reasoning, or non-embodied multi-view perception. The "Partial" in "Multi-View" indicates that ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 | We report the full multi-view accuracy and the performance gap (∆) relative to the single-view baseline. | definition/direction/unit from same section | p. 33 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS) |
 | Table 7: Comparison of Single-View vs. Multi-View performance on selected subtasks. The values represent Multi-View accuracy, and values in parentheses indicate the change (∆) ... | definition/direction/unit from same section | p. 33 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 | Table 3: Accuracy of CoT-style augmentations on MV-RoboBench. ∆s and ∆r indicate changes on spatial and robotic tasks relative to the origin baseline. Variants: ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Compared to generative NVS pipelines, they provided more stable results in cluttered manipulation scenes. | comparison identity and matched condition | p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS) |
 | In our robotic setup (e.g., gripper and head-mounted cameras), interpolated views were severely blurred and inconsistent, particularly under narrow baselines and cluttered tabletops (Appendix ... | comparison identity and matched condition | p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,7 +117,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 24 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** Cross-Checking and Validation (∼400 hours).
 - **p. 30 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** F.6 STEP EXECUTION This subtask belongs to the robotic category and focuses on low-level action execution in manipulation tasks.
 - **p. 32 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** G.1 TASK SELECTION AND EXPERIMENTAL SETUP Our benchmark consists of eight subtasks.
-- **p. 24 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** Collection and Filtering of Image Pairs (∼200 hours).
 
 ## Generalization and Failure Cases
 
@@ -140,8 +128,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 | body limitation/failure cue | Overall, these failures indicate that current VLMs still lack robust modeling of robotic affordances and physical constraints, especially when such reasoning must be carried ... | p. 37 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS) |
 | body limitation/failure cue | This suggests that MV-RoboBench does not merely lower raw accuracy; it exposes non-trivial limitations in current vision-language models' spatial reasoning, and can serve as ... | p. 37 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS) |
 | body limitation/failure cue | Figure 7: Failure of object-centric synthesis (Trellis). Top: original inputs; Bottom: synthesized views that fail to capture the full scene. | p. 19 (Figure/Table caption) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -156,14 +142,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 | We then add distractors from the same episode but different time steps, ensuring a non-trivial temporal gap in the gripper poses so that the ... | p. 27 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS) |
 | Each instance presents five candidate grasps illustrated with color-coded lines (red, yellow, green, blue, and pink). | p. 31 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 36 / C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS - extractive body cue:** GPT-5 often prefers grasp lines or trajectories that look visually neat (e.g., centered on the visible surface) but would be unstable or collision-prone for a ...
@@ -174,6 +152,5 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 7: Failure of object-centric synthesis (Trellis). Top: original inputs; Bottom: synthesized views that fail to capture the full scene.
 
 - **Evidence anchors reviewed:** datasets p. 32 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS), p. 20 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 21 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 31 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 19 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), metrics p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 20 (Figure/Table caption), p. 21 (Figure/Table caption), p. 22 (Figure/Table caption), baselines p. 33 (Figure/Table caption), p. 33 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 32 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 8 (Figure/Table caption), p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS), p. 18 (C.3 VISUAL AUGMENTATION VIA NOVEL VIEW SYNTHESIS), results p. 33 (Figure/Table caption), p. 8 (Figure/Table caption), p. 37 (C.4 STRUCTURAL AUGMENTATION VIA DEPTH PRIORS), p. 20 (Figure/Table caption), p. 21 (Figure/Table caption), p. 22 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

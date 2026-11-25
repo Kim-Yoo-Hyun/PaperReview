@@ -46,8 +46,6 @@ CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 �
 - **p. 8 / 5.4. Dataset Size - extractive body cue:** The AP/APH at LEVEL 2 difficulty on the Validation set of Vehicles and Pedestrians as the dataset size grows.
 - **p. 3 / 3.2. Coordinate Systems - extractive body cue:** Transform among close frames is very accurate in this dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparison of some popular datasets. The Argo Dataset refers to their Tracking dataset only, not the Motion Forecasting dataset. 3D labels projected to ...
@@ -81,8 +79,6 @@ CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 �
 | Camera LiDAR synchronization accuracy in milliseconds. | definition/direction/unit from same section | p. 4 (3.4. Sensor Data) |
 | Training just on SF when evaluating on SF yields a 2.4 APH improvement as compared to training on the larger combined dataset, while training ... | definition/direction/unit from same section | p. 8 (5.3. Domain Gap) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 �
 | 3D Tracking We provide an online 3D multi-object tracking baseline following the common tracking-by-detection paradigm, leaning heavily on the above PointPillars [16] models. | comparison identity and matched condition | p. 7 (5.2. Baselines for Multi-Object Tracking) |
 | For the 3D LiDARbased vehicle object detector, we observed an APH reduction of 8.0 when training on SF and evaluating on SUB compared with ... | comparison identity and matched condition | p. 7 (5.3. Domain Gap) |
 | 3D object detection baseline LEVEL 2 APH results for domain shift on 3D vehicles and pedestrians on the Validation set. | comparison identity and matched condition | p. 8 (5.3. Domain Gap) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 �
 | body limitation/failure cue | Our experiments suggest that a highly elongated low-intensity return is a strong indicator for a spurious object, while low intensity alone is not a ... | p. 4 (3.4. Sensor Data) |
 | body limitation/failure cue | This result does not hold when evaluating on SF. | p. 8 (5.3. Domain Gap) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,20 +133,11 @@ CVPR 2020 논문의 자료는 20초짜리 주행 장면 1,150개다. 표 1은 �
 | It computes precision and recall based on the matching result. | p. 5 (4.1. Object Detection) |
 | The metrics implementation takes a set of predictions with scores normalized to [0, 1], and samples a fixed number of score thresholds uniformly in ... | p. 5 (4.1. Object Detection) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / 3.4. Sensor Data - extractive body cue:** Our experiments suggest that a highly elongated low-intensity return is a strong indicator for a spurious object, while low intensity alone is not a sufficient ...
 - **p. 8 / 5.3. Domain Gap - extractive body cue:** This result does not hold when evaluating on SF.
 
 - **Evidence anchors reviewed:** datasets p. 5 (3.5. Dataset Analysis), p. 5 (3.5. Dataset Analysis), p. 7 (5.3. Domain Gap), p. 7 (5.3. Domain Gap), p. 8 (5.4. Dataset Size), p. 6 (5. Experiments), metrics p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 6 (5. Experiments), p. 8 (5.3. Domain Gap), p. 4 (3.4. Sensor Data), p. 6 (Figure/Table caption), baselines p. 8 (5.3. Domain Gap), p. 6 (5. Experiments), p. 6 (5.1. Baselines for Object Detection), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.3. Domain Gap), p. 8 (5.3. Domain Gap), results p. 8 (5.4. Dataset Size), p. 7 (5.2. Baselines for Multi-Object Tracking), p. 7 (5.1. Baselines for Object Detection), p. 8 (5.3. Domain Gap), p. 3 (3.1. Sensor Specifications), p. 4 (3.4. Sensor Data).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

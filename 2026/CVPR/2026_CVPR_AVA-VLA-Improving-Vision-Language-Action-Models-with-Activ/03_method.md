@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 - **p. 5 / 3.4. Training and Inference Procedure - extractive body cue:** Visual tokens with low importance scores can be pruned to reduce the computational cost of the LLM backbone.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.4. Training and Inference Procedure), p. 5 (3.4. Training and Inference Procedure).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 - **p. 1 / 1. Introduction - extractive body cue:** This implicitly formulates robot manipulation as a Markov Decision Process (MDP) [16, 31], where actions are generated from the current visual observation, assumed to represent ...
 - **p. 1 / 1. Introduction - extractive body cue:** VLA model VLA model Observation T-1 Observation T VLA model VLA model Observation T-1 Observation T Action T-1 Action T-1 Action T Action T Vanilla ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 - **p. 5 / 3.4. Training and Inference Procedure - extractive body cue:** Training such a recurrent model ideally requires backpropagation through time over the entire trajectory to capture long-term dependencies.
 - **p. 5 / 3.4. Training and Inference Procedure - extractive body cue:** Therefore, the total loss of one training batch is the sum of the prediction loss and penalty loss of N truncated sequences: Ltotal = XN ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, AVA, module, combines, recurrent, state, textconditioned, visual, features, current, observation, generate, soft, importance, scores, modulate, attention, matrices, throughout, backbone.
 - **Relevant PDF headings:** 3. Methods (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,23 +109,13 @@ PDF body method statement (p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminari
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Visualized comparison of the proposed AVA-VLA framework and vanilla VLAs. (b) Qualitative comparison of vi- sual focus from two viewpoints while executing ...
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** Due to space limitations, implementation details are provided in Appendix A.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. AVA-VLA Framework), p. 3 (3.1. Preliminaries), p. 3 (3.2. AVA-VLA Framework), p. 5 (3.3. Active Visual Attention), p. 4 (3.2. AVA-VLA Framework), p. 5 (3.4. Training and Inference Procedure), objective p. 5 (3.4. Training and Inference Procedure), p. 5 (3.4. Training and Inference Procedure), temporal p. 5 (3.4. Training and Inference Procedure), p. 4 (3.3. Active Visual Attention), p. 3 (3.2. AVA-VLA Framework), p. 3 (3.2. AVA-VLA Framework), p. 5 (3.4. Training and Inference Procedure), p. 4 (3.2. AVA-VLA Framework).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

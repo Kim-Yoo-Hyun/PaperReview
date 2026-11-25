@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 3 (3.1
 - **p. 5 / 3.2. Instance-aware Loss Functions - extractive body cue:** With assistance from 2D semantic information, our instance-aware Chamfer loss Lic (Eq.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.2. Instance-aware Loss Functions), p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 5 (3.2. Instance-aware Loss Functions).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 3 (3.1
 - **p. 6 / 3.3. Rigid Static Loss - extractive body cue:** In the Category (Cat.) column, existing methods are classified depending on the input modality used in their original work.
 - **p. 2 / 1. Introduction - extractive body cue:** Given the high cost of high-performance LiDAR sensors, we propose a novel setting, weakly supervised cross-modal learning for 4D radar scene flow, that relies only ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 3 (3.1
 - **p. 6 / 4. Experiments - extractive body cue:** IterFlow is implemented in PyTorch (Paszke et al., 2019) and trained for 150 epochs with a batch size of 8.
 - **p. 3 / 3. Method - extractive body cue:** During training, the consecutive radar point clouds Pt and Pt+1 are fed into IterFlow to generate the final scene flow prediction FK ∈RN1×3 after K ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, warped, estimated, scene, flow, then, calculate, chamfer, loss, abstraction, ball, query-based, cross-frame, correlation, feature, computed, MLP, concat, address, limitations.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 3 (3.1
 - **p. 6 / 4. Experiments - extractive body cue:** In addition, for the cross-modal supervised CMFlow (Ding et al., 2023), we generate extra required optical flow labels and pseudo scene flow labels by adopting ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 8. Visualization of failure cases on VoD validation set. Each row displays a driving scenario and regions with large scene flow estimation errors are ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 3 (3.1. IterFlow), p. 5 (3.2. Instance-aware Loss Functions), p. 5 (3.2. Instance-aware Loss Functions), p. 6 (3.3. Rigid Static Loss), objective p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 5 (3.2. Instance-aware Loss Functions), p. 5 (3.2. Instance-aware Loss Functions), temporal p. 7 (4.1. Main Results), p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. IterFlow), p. 4 (3.1. IterFlow), p. 5 (3.2. Instance-aware Loss Functions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

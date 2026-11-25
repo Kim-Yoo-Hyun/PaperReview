@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 - **p. 5 / 2 Preliminaries - extractive body cue:** In large or continuous state spaces, we can construct an estimator of the surrogate objective using importance sampling.
 - **p. 7 / 3. Can TRPO be used to solve challenging large-scale - extractive body cue:** Trust Region Policy Optimization tasks very challenging.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. Left: illustration of single path procedure. Here, we generate a set of trajectories via simulation of the policy and in- corporate all state-action ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 | Figure 1. Left: illustration of single path procedure. Here, we generate a set of trajectories via simulation of the policy and in- corporate all ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Though this difference might seem subtle, our experiments demonstrate that it significantly improves the algorithm's performance on larger problems. | definition/direction/unit from same section | p. 6 (3. Approximately solve this constrained optimization) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 | These results provide empirical evidence that constraining the KL divergence is a more robust way to choose step sizes and make fast, consistent progress, ... | comparison identity and matched condition | p. 7 (3. Can TRPO be used to solve challenging large-scale) |
 | 7 Connections with Prior Work As mentioned in Section 4, our derivation results in a policy update that is related to several prior methods, ... | comparison identity and matched condition | p. 5 (3. Approximately solve this constrained optimization) |
 | Table 1. Performance comparison for vision-based RL algorithms on the Atari domain. Our algorithms (bottom rows) were run once on each task, with the ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,7 +109,6 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 - Numeric sentences retained from the body:
 - **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** That is, we estimate Aij as 1 N PN n=1 ∂2 ∂θi∂θj DKL(πθold(·/sn) ∥πθ(·/sn)), rather than 1 N PN n=1 ∂ ∂θi log πθ(an/sn) ∂ ...
 - **p. 6 / 1. What are the performance characteristics of the single - extractive body cue:** Joint angles and kinematics Control Standard deviations Fully connected layer 30 units Input layer Mean parameters Sampling Screen input 4×4 4×4 4×4 4×4 4×4 4×4 ...
-- **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** That is, we estimate Aij as 1 N PN n=1 ∂2 ∂θi∂θj DKL(πθold(·/sn) ∥πθ(·/sn)), rather than 1 N PN n=1 ∂ ∂θi log πθ(an/sn) ∂ ...
 
 ## Generalization and Failure Cases
 
@@ -130,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 | body limitation/failure cue | Unlike REPS, our approach does not require a costly nonlinear optimization in the inner loop. | p. 6 (3. Approximately solve this constrained optimization) |
 | body limitation/failure cue | We can greatly reduce the variance of the Q-value differences between rollouts by using the same random number sequence for the noise in each ... | p. 5 (2 Preliminaries) |
 | body limitation/failure cue | These results provide empirical evidence that constraining the KL divergence is a more robust way to choose step sizes and make fast, consistent progress, ... | p. 7 (3. Can TRPO be used to solve challenging large-scale) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -143,14 +129,6 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 | For the natural gradient method, we swept through the possible values of the stepsize in factors of three, and took the best value according ... | p. 7 (3. Can TRPO be used to solve challenging large-scale) |
 | This is in contrast with most prior methods for learning locomotion, which typically rely on hand-architected policy classes that explicitly encode notions of balance ... | p. 7 (3. Can TRPO be used to solve challenging large-scale) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 3. Approximately solve this constrained optimization - extractive body cue:** The analytic estimator integrates over the action at each state sn, and does not depend on the action an that was sampled.
@@ -159,9 +137,8 @@ PDF body evaluation/result cue (p. 6 (3. Approximately solve this constrained op
 - **p. 7 / 3. Can TRPO be used to solve challenging large-scale - extractive body cue:** These results provide empirical evidence that constraining the KL divergence is a more robust way to choose step sizes and make fast, consistent progress, compared ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (3. Can TRPO be used to solve challenging large-scale), p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 5 (2 Preliminaries), p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), metrics p. 8 (Figure/Table caption), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 16 (Figure/Table caption), baselines p. 5 (2 Preliminaries), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 5 (3. Approximately solve this constrained optimization), p. 8 (Figure/Table caption), results p. 6 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 5 (3. Approximately solve this constrained optimization), p. 6 (1. What are the performance characteristics of the single), p. 7 (3. Can TRPO be used to solve challenging large-scale), p. 7 (3. Can TRPO be used to solve challenging large-scale).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,8 +56,6 @@ PDF body contribution framing (p. 2 (2.2. Training Strategy Analysis), p. 1 (1.1
 |---|---|---|
 | body cue at p. 3 | Figure 3. Failure case. The limited semantic dataset size reduces text-geometry alignment for more fine-grained generations. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh). The downstream handoff is claimed only when the body describes it.
@@ -65,7 +63,5 @@ PDF body contribution framing (p. 2 (2.2. Training Strategy Analysis), p. 1 (1.1
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1.2. Metric Details), p. 1 (2.1. Shape Novelty Analysis), interface p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh), objective p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.2. Metric Details).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

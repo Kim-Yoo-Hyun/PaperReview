@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (2. The proticted elit map 
 | body cue at p. 15 | In this case, both "shelf" and "black" were used as syn- ‘onymous of the background class, capturing different ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 14 | ‘TABLE IE: Summary of features ofall considered base | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (A. Overview), p. 3 (B. Mechanical Search in Shelves and Piles), p. 4 (B. Neural Map Belief Dynamics), p. 13 (B. CNABU Implementation Details). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (B. Mechanical Search in Shelves and Piles), p. 1 (2. The proticted elit map is visualized), p. 1 (2. The proticted elit map is visualized), p. 2 (2. The proticted elit map is visualized), p. 3 (B. Mechanical Search in Shelves and Piles), interface p. 3 (A. Overview), p. 3 (B. Mechanical Search in Shelves and Piles), p. 4 (B. Neural Map Belief Dynamics), p. 13 (B. CNABU Implementation Details), objective p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

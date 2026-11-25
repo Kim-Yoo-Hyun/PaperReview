@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 3 (Abstract), p. 3 (Abstract)
 | body cue at p. 8 | We fix issues if we cannot learn a policy to achieve the task. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | For example, certain cabinet drawers may be stuck due to inaccurate overlapping between collision shapes. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (Abstract), p. 4 (Abstract), p. 5 (Abstract), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 3 (Abstract), interface p. 5 (Abstract), p. 4 (Abstract), p. 5 (Abstract), p. 1 (Abstract), objective p. 4 (Abstract), p. 5 (Abstract), p. 5 (Abstract), p. 8 (Abstract).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

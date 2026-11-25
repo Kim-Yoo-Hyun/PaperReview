@@ -58,8 +58,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 3 (4. Asynch
 | body cue at p. 6 | Somewhat surprisingly, asynchronous one-step Q-learning and Sarsa algorithms exhibit superlinear speedups that cannot be explained by purely computational ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Finally, we analyzed the stability and robustness of the four proposed asynchronous algorithms. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (3. Reinforcement Learning Background), p. 2 (3. Reinforcement Learning Background), p. 3 (3. Reinforcement Learning Background), p. 3 (4. Asynchronous RL Framework). The downstream handoff is claimed only when the body describes it.
@@ -67,7 +65,5 @@ rl writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), interface p. 2 (3. Reinforcement Learning Background), p. 2 (3. Reinforcement Learning Background), p. 3 (3. Reinforcement Learning Background), p. 3 (4. Asynchronous RL Framework), objective p. 3 (4. Asynchronous RL Framework), p. 4 (4. Asynchronous RL Framework), p. 2 (3. Reinforcement Learning Background), p. 3 (3. Reinforcement Learning Background), p. 4 (4. Asynchronous RL Framework), p. 1 (Abstract).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

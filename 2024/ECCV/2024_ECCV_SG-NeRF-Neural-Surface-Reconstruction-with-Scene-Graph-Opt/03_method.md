@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 5 / 3 Method - extractive body cue:** The training process is essentially a scene-specific joint optimization.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 9 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 3 / 1 Introduction - extractive body cue:** The images are casually captured without being carefully selected, which can lead to failures of state-of-the-art SfM systems. - Accordingly, we propose a novel method ...
 - **p. 3 / 1 Introduction - extractive body cue:** The proposed can reconstruct 3D surface under significant camera pose noise with an adaptive inlier-outlier confidence estimation, an IoU loss that efficiently leverages the confidence ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 8 / 3 Method - extractive body cue:** It consists of several training epochs.
 - **p. 6 / 3 Method - extractive body cue:** In the first step, we apply pre-trained SuperPoint [12] to extract keypoints from images, and exhaustively match every pair of images with keypoints using pre-trained ...
 - **p. 11 / 4 Experiments - extractive body cue:** For each of them, we adopt the official implementation to optimize camera poses, and then apply the optimized poses to train NeuS.
-- **p. 8 / 3 Method - extractive body cue:** It consists of several training epochs.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Below, first, briefly, review, radiance, field, representation, then, introduce, joint, optimization, scheme, present, training, updating, scene, graph, Sec, Given, images.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 10 / 4 Experiments - extractive body cue:** Following hloc [37], we replace the keypoints and the matching module with SuperPoint [12] and SuperGlue [38], respectively.
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: 3D surface reconstruction (meshes) from images with camera poses that present significant noise. Directly training radiance fields with noisy poses can lead to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 6 (3 Method), objective p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 5 (3 Method), temporal p. 6 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 8 (3 Method), p. 9 (3 Method), p. 9 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

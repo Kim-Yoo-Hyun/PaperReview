@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (Figure/Table 
 
 - **p. 17 / A.2 More Analysis on Frequency Ablation - extractive body cue:** Across both simulation and real-world environments, our experiments show that a 50 Hz lower-body control frequency consistently achieves stable locomotion, regardless of the upper-body control ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control with SoFTA: (A) Carrying bottles of drink during a 1m/s large-step walk. (B) Liquid surface ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (Figure/Table 
 | Table 7: Reward terms categorized by body group, including task rewards and penalties with corre- sponding expressions and weights. C means the contact sequence. ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | We observe that increasing the upper-body control frequency reduces recovery time (defined as the time when the error first falls below 1 e of ... | definition/direction/unit from same section | p. 18 (A.2 More Analysis on Frequency Ablation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (Figure/Table 
 | Figure 1: Learning Gentle Humanoid Locomotion and End-Effector Stabilization Control with SoFTA: (A) Carrying bottles of drink during a 1m/s large-step walk. (B) Liquid ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 6: Humanoid as Camera Stabilizer to record videos. Case 2: Humanoid as Camera Stabilizer. Figure 6 shows video footage recorded by the robot ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 4: Comparison of actor and critic observations with scaling factors. Privileged observations used only by the critic are shaded and marked in red. ... | comparison identity and matched condition | p. 15 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (Figure/Table 
 | body limitation/failure cue | Figure 5: Top: Humanoid carring bottle of water without spillage during tepping. Bottom: Hu- manoid disturbance rejection with EE stability. ping are insufficient for ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Figure 4: Emergent Compensation Behavior. 4.2 Real-World Results To answer Q2 (What capabilities does SoFTA enable in real world?), we assess EE stability in ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (Figure/Table 
 | From this gait period, we compute 15 | p. 15 (A.1 Training Details) |
 | Observations are stacked over five timesteps to provide short-term temporal context. | p. 15 (A.1 Training Details) |
 | In implementation, we set λacc = 0.25, λacc = 0.0044. | p. 17 (A.1 Training Details) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (Figure/Table 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Emergent Compensation Behavior. 4.2 Real-World Results To answer Q2 (What capabilities does SoFTA enable in real world?), we assess EE stability in three ...
 
 - **Evidence anchors reviewed:** datasets p. 17 (A.2 More Analysis on Frequency Ablation), metrics p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 15 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 15 (Figure/Table caption), p. 16 (Figure/Table caption), p. 17 (A.2 More Analysis on Frequency Ablation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

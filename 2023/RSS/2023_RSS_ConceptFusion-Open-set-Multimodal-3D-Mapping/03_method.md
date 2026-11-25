@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 - **p. 6 / IV. THE ConceptFusion APPROACH - extractive body cue:** Real-time inference: To optimize the performance and efficiency of the foundation models employed (SAM [57], DINO [7], and CLIP [6]), we use standard quantization and ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We demonstrate that pixel-level foundation features may be fused into 3D maps by leveraging precisely the same surface fusion techniques as for fusing depth or ...
 - **p. 5 / IV. THE ConceptFusion APPROACH - extractive body cue:** 3) Image query: qimage is computed as the image-level CLIP embedding of the query image.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 - **p. 5 / IV. THE ConceptFusion APPROACH - extractive body cue:** Capturing long-tailed concepts: We find that our pixelaligned embeddings capture fine-grained and long-tailed concepts significantly better than approaches like LSeg [24] and OpenSeg [18], which ...
 - **p. 8 / 4) What previously infeasible downstream use-cases can - extractive body cue:** Of the approaches presented here, LSeg requires per-pixel CLIP features as labels, OpenSeg leverages per-image captions for labels, and CLIPSeg trains a shallow decoder atop ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, present, algorithm, compute, pixel-aligned, features, zero-shot, off-the-shelf, foundation, models, CLIP, AudioCLIP, variants, mitigate, introduce, novel, mechanism, construct, combine, global.
 - **Relevant PDF headings:** IV. THE ConceptFusion APPROACH (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE 
 - **p. 11 / VI. OUTLOOK - extractive body cue:** 11: The zero-shot nature of our approach allows integration with newer off-the-shelf foundation models without the need for finetuning.
 - **p. 9 / 4) What previously infeasible downstream use-cases can - extractive body cue:** Other components of the autonomy stack include a shortest-path global planner, a Frenet [71] local planner for obstacle avoidance, and a Stanley-Controller [72] for trajectory ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. THE ConceptFusion APPROACH), p. 4 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 5 (IV. THE ConceptFusion APPROACH), p. 5 (IV. THE ConceptFusion APPROACH), objective p. 5 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), p. 6 (IV. THE ConceptFusion APPROACH), temporal p. 6 (IV. THE ConceptFusion APPROACH), p. 12 (VII. CONCLUSION), p. 12 (VII. CONCLUSION), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (IV. THE ConceptFusion APPROACH), p. 3 (II. RELATED WORK).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

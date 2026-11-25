@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 - **p. 5 / 4.5. Loss - extractive body cue:** The third term denotes Tikhonov regularization of the DCP parameters θ, which serves to reduce the complexity of the network.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.5. Loss).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 - **p. 4 / 3. Problem Statement - extractive body cue:** Our goal is to use learned embeddings to recover a better matching m(·) and use that to compute a rigid transformation, which we will detail ...
 - **p. 5 / 4.5. Loss - extractive body cue:** We employ a fairly straightforward strategy for training, measuring deviation of [RXY, tXY] from ground truth for synthetically-generated pairs of point clouds.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 - **p. 6 / 5. Experiments - extractive body cue:** We divide the learning rate by 10 at epochs 75, 150, and 200, training for a total of 250 epochs.
 - **p. 7 / 5.4. DCP Followed By ICP - extractive body cue:** Inference time (in seconds) Metrics PN+DCP-v1, DGCNN+DCP-v1 PN+DCP-v2 DGCNN+DCP-v2 MSE(R) 17.008427 6.480572 49.863022 1.307329 RMSE(R) 4.124127 2.545697 7.061375 1.143385 MAE(R) 2.800184 1.505548 4.485052 0.770573 MSE(t) ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** initial, feature, module, attention, parameterized, neural, network, weights, must, learned, during, training, phase, following, loss, function, measure, model, agreement, ground-truth.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 5 (4.5. Loss), p. 5 (4.5. Loss)): The initial feat
 - **p. 6 / 5.4. DCP Followed By ICP - extractive body cue:** In large part, this failure is due to the lack of a good initial guess.
 - **p. 6 / 5.4. DCP Followed By ICP - extractive body cue:** Since our experiments involve point clouds whose initial poses are far from aligned, ICP fails nearly every experiment we have presented so far.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.5. Loss), p. 5 (4.5. Loss), objective p. 5 (4.5. Loss), p. 5 (4.5. Loss), temporal p. 7 (5.5. Efficiency), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 3 (2. Related Work), p. 3 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

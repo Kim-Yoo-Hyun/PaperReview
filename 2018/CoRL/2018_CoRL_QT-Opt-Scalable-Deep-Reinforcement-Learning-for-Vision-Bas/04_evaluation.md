@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Method), p. 8
 - **p. 7 / Method - extractive body cue:** Here, a single robot unloads a cluttered bin filled with 28 test objects, using 30 grasp attempts.
 - **p. 7 / Method - extractive body cue:** [27] 400k grasps from our dataset 67% Table 1: Quantitative results in terms of grasp success rate on test objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Seven robots are set up to collect grasping episodes with autonomous self-supervision. We study how off-policy deep reinforcement learning can acquire closed-loop dynamic ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Method), p. 8
 | Table 7: Simulation studies for tuning grasping task parameters The results in Table 7 show that richer state representation results in faster convergence and ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 12: Grasp success is determined by subtracting images before an object is dropped into the bin (left) and after it was dropped (right). ... | definition/direction/unit from same section | p. 19 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Method), p. 8
 | Table 4: Off-policy and on-policy ablation of termination condition. Quantitative experiments The performance of our algorithm is evaluated empirically in a set of grasping ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | To compare our method to prior work, we evaluated the technique proposed by Levine et al. | comparison identity and matched condition | p. 7 (Method) |
 | Table 2: Off-policy ablation over state representation. Discount and Reward Definition To encourage faster grasps, we experimented with decreasing discount and adding a small ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,7 +109,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Method), p. 8
 
 - Numeric sentences retained from the body:
 - **p. 7 / Method - extractive body cue:** On the bin emptying experiment, our method emptied the bin in 30 grasps or less in 2 of the 5 trials, while the prior method ...
-- **p. 7 / Method - extractive body cue:** On the bin emptying experiment, our method emptied the bin in 30 grasps or less in 2 of the 5 trials, while the prior method ...
 
 ## Generalization and Failure Cases
 
@@ -133,22 +121,12 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Method), p. 8
 | body limitation/failure cue | 4 (c), we show examples where the policy repeatedly regrasps a slippery object on the floor, while in Fig. | p. 7 (Method) |
 | body limitation/failure cue | This penalty may in principle result in target values outside of [0, 1], though we found empirically that this does not happen. | p. 6 (2 Related Work) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Effective off-policy training is valuable as it allows for rapid iteration on hyperparameters and architecture design without any data collection. | p. 7 (Method) |
 | On the bin emptying experiment, our method emptied the bin in 30 grasps or less in 2 of the 5 trials, while the prior ... | p. 7 (Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,6 +138,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (Method), p. 8
 - **p. 6 / 2 Related Work - extractive body cue:** This penalty may in principle result in target values outside of [0, 1], though we found empirically that this does not happen.
 
 - **Evidence anchors reviewed:** datasets p. 8 (Method), p. 8 (Method), p. 7 (Method), p. 7 (Method), metrics p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (Method), p. 8 (Method), p. 3 (Figure/Table caption), baselines p. 14 (Figure/Table caption), p. 16 (Figure/Table caption), p. 7 (Figure/Table caption), p. 12 (Figure/Table caption), p. 7 (Method), p. 12 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 7 (Method), p. 8 (Method), p. 12 (Figure/Table caption), p. 17 (Figure/Table caption), p. 14 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

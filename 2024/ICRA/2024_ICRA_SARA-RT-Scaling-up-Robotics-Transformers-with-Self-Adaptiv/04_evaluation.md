@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** 7: The scheme of some of the key elements of the PaLI-X backbone of RT-2 from the computational viewpoint, accompanied with the real robot performing ...
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** These points are hierarchically clustered into objects.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Robotics Transformer policies obtained via Self-Adaptive Robust Attention (SARA) in action for three different modalities: vision, language and point clouds and varying sequence ...
@@ -81,21 +79,12 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 | Both variants have very similar mean accuracy, though SARA variant generalizes better. | definition/direction/unit from same section | p. 6 (IV. EXPERIMENTS) |
 | The latter two techniques provide farther accuracy boost, but are more demanding computationally, and thus challenging for direct on-robot deployment. | definition/direction/unit from same section | p. 6 (IV. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Thus we chose (here and for the RT-2 experiments) the simplest ReLU (that can be thought of as the tamed version of the exp ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | The comparison is conducted on the six regular manipulation task and an additional task measuring generalization level (diverse pick). | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 | body limitation/failure cue | We plan to exercise this feature of SARA by using much higher resolution images (a challenge for regular RT-2 models) in future work. | p. 6 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Fig. 1: Robotics Transformer policies obtained via Self-Adaptive Robust Attention (SARA) in action for three different modalities: vision, language and point clouds and varying ... | p. 1 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 | On the other side of the spectrum are linear attention models with ϕ = ϕf given as: ϕf(z) = (f(z1), ..., f(zdQK))⊤for some f ... | p. 3 (II. SELF-ADAPTIVE ROBUST ATTENTION VIA) |
 | 식 (3)의 선형 어텐션 출력은 $\tilde{\mathbf a}_i=\Psi\phi(\mathbf q_i)/(\Gamma\phi(\mathbf q_i))$다. 키와 값으로 구성한 $\Psi$와 키 특징을 합한 $\Gamma$를 쿼리 사이에서 재사용한다. | [PDF 3쪽](https://arxiv.org/pdf/2312.01990v1#page=3) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** The agent gets a binary reward r ∈{0, 1} for each grasp (success or failure).
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Robotics Transformer policies obtained via Self-Adaptive Robust Attention (SARA) in action for three different modalities: vision, language and point clouds and varying sequence ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), metrics p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

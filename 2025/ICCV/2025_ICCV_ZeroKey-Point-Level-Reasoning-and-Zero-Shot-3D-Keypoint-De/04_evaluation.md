@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (6.3. Quantita
 - **p. 7 / 6.3. Quantitative and Qualitative Analysis - extractive body cue:** Furthermore, our method achieves IoU levels comparable to those of reference-based Few-Shot and fully supervised methods tailored for this dataset, such as B2-3D [49].
 - **p. 8 / 6.3. Quantitative and Qualitative Analysis - extractive body cue:** These findings show the need for an MLLM backbone trained with point-level tasks for precise keypoint detection, underscore the potential of point-level reasoning as a ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Zero-shot 3D Keypoint Detection. Without any ground truth labels or supervised training, our method leverages the point-level reasoning embedded within MLLMs to extract ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (6.3. Quantita
 | Figure 2. ZeroKey Pipeline. Our proposed ZeroKey employs MLLM Molmo for zero-shot keypoint detection on 3D objects by 1) rendering multiple views for a ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | While both baselines identify some prominent regions, they fall in accurately localizing keypoints according to the text prompt. | definition/direction/unit from same section | p. 8 (6.3. Quantitative and Qualitative Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (6.3. Quantita
 | Side-by-side comparisons between ground truth keypoints and our Zero-Shot predictions, a figure of GPT-4o fails to precisely locate the keypoint, and a comparison of ... | comparison identity and matched condition | p. 7 (6.3. Quantitative and Qualitative Analysis) |
 | We compare against baselines CLIP-DINOiser and RedCircle. | comparison identity and matched condition | p. 8 (6.3. Quantitative and Qualitative Analysis) |
 | While both baselines identify some prominent regions, they fall in accurately localizing keypoints according to the text prompt. | comparison identity and matched condition | p. 8 (6.3. Quantitative and Qualitative Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (6.3. Quantita
 | body limitation/failure cue | Figure 1. Zero-shot 3D Keypoint Detection. Without any ground truth labels or supervised training, our method leverages the point-level reasoning embedded within MLLMs to ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Our KeypointNet evaluation shows (see Table.1) that our Zero-Shot method significantly outperforms MLLM-based baselines (PaliGemma 2[45], GPT-4o, CLIP-DINOiser [50]) across all distance thresholds. | p. 7 (6.3. Quantitative and Qualitative Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -136,14 +123,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (6.3. Quantita
 | [55], which computes the Intersection over Union (IoU) between predicted keypoints and ground-truth keypoints from the KeypointNet dataset, using varying distance thresholds. | p. 6 (6.1. Setup and Dataset) |
 | The σ is set to h 3 in our implementation. | p. 5 (4.3. Zero-Shot 3D Keypoint Detection) |
 | A straightforward method is to compute the weighted mean of the points ˆPi = PM j=1 Wi,jPi,j PM j=1 Wij . | p. 5 (4.3. Zero-Shot 3D Keypoint Detection) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -154,6 +133,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (6.3. Quantita
 - **p. 7 / 6.3. Quantitative and Qualitative Analysis - extractive body cue:** Our KeypointNet evaluation shows (see Table.1) that our Zero-Shot method significantly outperforms MLLM-based baselines (PaliGemma 2[45], GPT-4o, CLIP-DINOiser [50]) across all distance thresholds.
 
 - **Evidence anchors reviewed:** datasets p. 6 (6.1. Setup and Dataset), p. 6 (6.1. Setup and Dataset), p. 7 (6.3. Quantitative and Qualitative Analysis), p. 8 (6.3. Quantitative and Qualitative Analysis), metrics p. 6 (6.1. Setup and Dataset), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (6.3. Quantitative and Qualitative Analysis), p. 8 (6.3. Quantitative and Qualitative Analysis), p. 1 (Figure/Table caption), baselines p. 1 (Figure/Table caption), p. 7 (6.3. Quantitative and Qualitative Analysis), p. 7 (6.3. Quantitative and Qualitative Analysis), p. 8 (6.3. Quantitative and Qualitative Analysis), p. 8 (6.3. Quantitative and Qualitative Analysis), results p. 8 (Figure/Table caption), p. 7 (6.3. Quantitative and Qualitative Analysis), p. 1 (Figure/Table caption), p. 7 (6.3. Quantitative and Qualitative Analysis), p. 6 (Figure/Table caption), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** Our model demonstrates superior localization of actionable regions, particularly in real scenes with small or fine-grained objects.
 - **p. 8 / 5. Real Robot Experiments - extractive body cue:** Success rates of the real robot for different objects and semantic complexity levels.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The OVA-Fields Framework. Our framework directly maps the user's open-vocabulary semantic queries to actionable affordance locations in the complex 3D scenes, allowing robots ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 | This shows that the SR module is crucial for improving affordance detection accuracy for detecting smaller items, probably making it better suited for real-world ... | definition/direction/unit from same section | p. 6 (4.3. Ablation Study) |
 | Our model demonstrates superior localization of actionable regions, particularly in real scenes with small or fine-grained objects. | definition/direction/unit from same section | p. 7 (4.3. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 | 1 reveals 3.4× mIoU improvements over the best baseline (52.4% vs. | comparison identity and matched condition | p. 5 (4.2. Numerical and Visual Comparisons) |
 | Comparison of the small object processing procedure in the ablation study. a systematic ablation study on the dynamic weight mechanism by comparing four variants ... | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
 | Comparison results of different affordance detection models. * denotes adjusted models. | comparison identity and matched condition | p. 6 (4.2. Numerical and Visual Comparisons) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 | body limitation/failure cue | The method maintains robustness under ScanNet's realworld noise conditions, achieving 27.6% precision at 13.2% mIoU compared to CLIP-FO3D's 21.2% precision with 15.3% mIoU. | p. 5 (4.2. Numerical and Visual Comparisons) |
 | body limitation/failure cue | Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 | Next, a Multiresolution Hash Encoder [20] and Multi-Head Attention combine spatial coordinates with affordance features into a unified space (Sec. | p. 4 (3.2. Spatial Feature Extraction and Feature Fusion) |
 | User queries are encoded into a vector vq using Sentence-BERT. | p. 5 (3.3. Query Mapping) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** The key limitations emerge in handling articulated objects (e.g., doors/drawers).
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 8 (5. Real Robot Experiments), p. 6 (4.3. Abl
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Method Overview. OVA-Fields integrates feature fusion and training in three key steps. First, the Multi-modal Affordance Perception (MAP) module extracts visual and affordance ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experiment Settings), p. 5 (4.1. Experiment Settings), p. 6 (4.3. Ablation Study), p. 7 (4.3. Ablation Study), p. 8 (5. Real Robot Experiments), p. 6 (4.3. Ablation Study), metrics p. 7 (4.3. Ablation Study), p. 8 (5. Real Robot Experiments), p. 8 (5. Real Robot Experiments), p. 5 (4.2. Numerical and Visual Comparisons), p. 5 (4.2. Numerical and Visual Comparisons), p. 6 (4.3. Ablation Study), baselines p. 5 (4.2. Numerical and Visual Comparisons), p. 6 (4.2. Numerical and Visual Comparisons), p. 8 (5. Real Robot Experiments), p. 5 (4.2. Numerical and Visual Comparisons), p. 7 (4.3. Ablation Study), p. 6 (4.2. Numerical and Visual Comparisons), results p. 8 (5. Real Robot Experiments), p. 6 (4.3. Ablation Study), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 5 (4.2. Numerical and Visual Comparisons).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (3.3. Qualitative Results), p. 6 (Figure/Ta
 - **p. 7 / 3.3. Qualitative Results - extractive body cue:** In the Supplementary, we show more visualizations of challenging scenarios and one promising case for the planning-oriented design, that inaccurate results occur in prior modules ...
 - **p. 7 / 3.3. Qualitative Results - extractive body cue:** 3 visualizes the results of all tasks for one complex scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison on the various designs of autonomous driving framework. (a) Most industrial solutions deploy separate models for different tasks. (b) The multi-task learning ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (3.3. Qualitative Results), p. 6 (Figure/Ta
 | Figure 12. Visualization for planning recovering from perception failures. We show an interesting case where inaccurate results occur in prior modules while the later ... | definition/direction/unit from same section | p. 24 (Figure/Table caption) |
 | Figure 8. Effectiveness of navigation command and attention mask visualization. Here we demonstrate how attention is paid in accordance with the navigation command. We ... | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (3.3. Qualitative Results), p. 6 (Figure/Ta
 | Table 3. Multi-object tracking. UniAD outperforms previ- ous end-to-end MOT techniques (with image inputs only) on all metrics. †: Tracking-by-detection method with post-association, reimplemented ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 1. Comparison on the various designs of autonomous driving framework. (a) Most industrial solutions deploy separate models for different tasks. (b) The multi-task ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Table 1. Tasks comparison and taxonomy. "Design" column is classified as in Fig. 1. "Det." denotes 3D object detection, "Map" stands for online mapping, ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 7 (3.3. Qualitative Results), p. 6 (Figure/Ta
 | body limitation/failure cue | UniAD achieves the lowest L2 error and collision rate in all time intervals and even outperforms LiDAR-based methods (†) in most cases, verifying the ... | p. 7 (3.3. Qualitative Results) |
 | body limitation/failure cue | Table 10. Ablation for designs in the planning module. Results demonstrate the necessity of each preceding task. "BEV Att." in- dicates attending to BEV ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 7 (3.3. Qualitative Results), p. 6 (Figure/Ta
 | (11) Here λcoord, λobs, and σ are hyperparameters, and t indexes a timestep of future horizons. | p. 5 (2.4. Planning) |
 | We attend plan query to BEV features B to make it aware of surroundings, and then decode it to future waypoints ˆτ. | p. 5 (2.4. Planning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 24 / Figure/Table caption - extractive body cue:** Figure 14. Failure cases 2. In this case, the planner is over-cautious about the incoming vehicle in the narrow street. The dark environment is one ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 7 (3.3. Qualitative Results), p. 6 (Figure/Ta
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 10. Ablation for designs in the planning module. Results demonstrate the necessity of each preceding task. "BEV Att." in- dicates attending to BEV feature. ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (3. Experiments), p. 6 (3.2. Modular Results), p. 7 (3.3. Qualitative Results), p. 7 (3.3. Qualitative Results), metrics p. 7 (3.3. Qualitative Results), p. 7 (3.3. Qualitative Results), p. 6 (3.2. Modular Results), p. 6 (3.2. Modular Results), p. 21 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 6 (3.1. Joint Results), p. 6 (3.2. Modular Results), p. 7 (3.3. Qualitative Results), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 7 (3.3. Qualitative Results), p. 6 (Figure/Table caption), p. 6 (3.2. Modular Results), p. 7 (3.3. Qualitative Results), p. 21 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

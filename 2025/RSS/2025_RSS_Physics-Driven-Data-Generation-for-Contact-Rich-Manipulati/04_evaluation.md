@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 - **p. 7 / A. Policy Evaluation in Simulation - extractive body cue:** 1) Floating Allegro Hand: While the human demonstrator completes the task in approximately 5 seconds on average in the virtual reality environment, the demonstration trajectories ...
 - **p. 14 / A. CEM Implementation Details - extractive body cue:** The state cost matrix Qe = diag( done Ung)s Where rand n, denote the object and robot state dimensions, and 1 is a vector or ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Physies-driven data generation overview. Leveraging trajectory optimization, our framework automatically generates thousands of ‘dynamically feasible contactrich trajectories across a range of embodiments and ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 | Fig. 4: Human hand demo in VR and kinematic retargeting for different embodiments. The blue spheres illustrate the demo hand landmarks | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Fig. 11: Policy failure and recovery on hardware. The baseline policy frequently (a) gets stuck on the box surface when small deviations from the ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 | The baseline behavior cloning policy trained on the original | comparison identity and matched condition | p. 8 (A. Policy Evaluation in Simulation) |
 | (b-e) The baseline policies for the bimanual robot arms often exh | comparison identity and matched condition | p. 8 (A. Policy Evaluation in Simulation) |
 | Fig. 11: Policy failure and recovery on hardware. The baseline policy frequently (a) gets stuck on the box surface when small deviations from the ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,8 +104,6 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 - **p. 14 / A. CEM Implementation Details - extractive body cue:** Drake simulates the contact dynamics f at 200 Hz.
 - **p. 14 / A. CEM Implementation Details - extractive body cue:** All of the systems adopt 50 samples, 5 elites and initial standard deviation ¢ = 0.05 +1, for action sampling
 - **p. 5 / B. Demonstration-Guided Trajectory Optimization - extractive body cue:** Paameer lowing Allegro Hand Bimanual Robot Arms Init obj Gans pert md (21.5, 21.5.0) toby ot per. rad) 10,6, 30.3) (Object side ieagth fom) SK, ...
-- **p. 14 / A. CEM Implementation Details - extractive body cue:** Drake simulates the contact dynamics f at 200 Hz.
-- **p. 14 / A. CEM Implementation Details - extractive body cue:** All of the systems adopt 50 samples, 5 elites and initial standard deviation ¢ = 0.05 +1, for action sampling
 
 ## Generalization and Failure Cases
 
@@ -128,8 +115,6 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 | body limitation/failure cue | Common failure modes include the Allegro hand repeatedly missing contact with the cube or becoming stuck on its surface while attempting reorientation (visualized in ... | p. 8 (A. Policy Evaluation in Simulation) |
 | body limitation/failure cue | While kinematic retargeting of demonstrations might suffice to generate data for simpler manipulation tasks such as pick and place, it often falls short for ... | p. 5 (B. Demonstration-Guided Trajectory Optimization) |
 | body limitation/failure cue | In addition, replaying the kinematically retargeted trajectory often fails when the object pose deviates slightly from the demonstration, driving the object out of reach ... | p. 6 (B. Demonstration-Guided Trajectory Optimization) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -143,14 +128,6 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 | Since the system operates entirely in simulation, it removes. the dependency on robot hardware, significantly reducing the cost and complexity of data collection. | p. 4 (C. Trajectory Optimization for Contact-Rich Tasks) |
 | ‘The iiwa and Panda arms differ in contact geometry, velocity limits, and joint constraints, all of which are explicitly modeled within the trajectory optimization ... | p. 7 (B. Demonstration-Guided Trajectory Optimization) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / Figure/Table caption - extractive body cue:** Fig. 11: Policy failure and recovery on hardware. The baseline policy frequently (a) gets stuck on the box surface when small deviations from the demonstration ...
@@ -161,9 +138,8 @@ PDF body evaluation/result cue (p. 8 (A. Policy Evaluation in Simulation), p. 8 
 - **p. 6 / B. Demonstration-Guided Trajectory Optimization - extractive body cue:** In addition, replaying the kinematically retargeted trajectory often fails when the object pose deviates slightly from the demonstration, driving the object out of reach (visualized ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (VI. BEHAVIOR CLONING EXPERIMENTS), p. 8 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation), p. 14 (B. Policy Implementation Details), p. 7 (A. Policy Evaluation in Simulation), p. 14 (A. CEM Implementation Details), metrics p. 7 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation), p. 7 (A. Policy Evaluation in Simulation), p. 14 (A. CEM Implementation Details), p. 1 (Figure/Table caption), baselines p. 8 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation), p. 9 (Figure/Table caption), results p. 8 (A. Policy Evaluation in Simulation), p. 8 (A. Policy Evaluation in Simulation), p. 7 (A. Policy Evaluation in Simulation), p. 7 (A. Policy Evaluation in Simulation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

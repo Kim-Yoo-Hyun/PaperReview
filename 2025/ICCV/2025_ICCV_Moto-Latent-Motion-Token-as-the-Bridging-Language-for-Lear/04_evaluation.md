@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Moto-GPT as an Effective Robot Policy
 - **p. 8 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** This enables not only pretraining with human videos but also in-context robot learning guided by online human demonstrations.
 - **p. 8 / 5.3. Moto-GPT as an Effective Robot Policy - extractive body cue:** This demonstrates Moto-GPT's efficiency in action adaptation and its potential to improve robot manipulation tasks through large-scale video pre-training.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The overview of Moto, which utilizes Latent Motion Tokens as a bridging "language" for autoregressive pretraining on video data. The Moto-GPT pre-trained through ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Moto-GPT as an Effective Robot Policy
 | For example, the Google Everyday Robot uses a continuous value for gripper extension, necessitating Smooth-L1 loss for ∆grip. | definition/direction/unit from same section | p. 4 (4. Benchmarks and Datasets) |
 | Pre-training utilizes OXE data, and we collect 90 teleoperated demonstrations (30 per task) for finetuning. | definition/direction/unit from same section | p. 5 (4. Benchmarks and Datasets) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Moto-GPT as an Effective Robot Policy
 | To assess this, we collected 98 video triplets in CALVIN using the baseline policies and a random policy. | comparison identity and matched condition | p. 6 (5.2. Moto-GPT as a Useful Motion Prior Learner) |
 | With additional human video (SSV2) pre-training, Moto (OXE+SSV2) significantly outperforms both Moto w/o Motion Token and Moto (OXE) on the Move Near task in ... | comparison identity and matched condition | p. 7 (5.3. Moto-GPT as an Effective Robot Policy) |
 | For instance, Moto-GPT achieves a 52.5% success rate with just 1% of labeled data, compared to 0% for the variant. | comparison identity and matched condition | p. 8 (5.3. Moto-GPT as an Effective Robot Policy) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Moto-GPT as an Effective Robot Policy
 | body limitation/failure cue | This further demonstrates the robustness of MotoGPT in real-world deployment. | p. 7 (5.3. Moto-GPT as an Effective Robot Policy) |
 | body limitation/failure cue | Figure 9. With additional human video (SSV2) pre-training, Moto (OXE+SSV2) significantly outperforms both Moto w/o Motion Token and Moto (OXE) on the Move Near ... | p. 7 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Moto-GPT as an Effective Robot Policy
 | Video imitation generation via latent motion tokens, where a sequence of motion tokens extracted from a demonstration video are decoded into a new video. | p. 5 (4. Benchmarks and Datasets) |
 | We assess long-horizon task completion with the Franka Emika Panda robot, requiring consecutive completion of 5 out of 34 tasks in each trial in ... | p. 5 (4. Benchmarks and Datasets) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 5.2. Moto-GPT as a Useful Motion Prior Learner - extractive body cue:** 7, clearly differentiate successful trajectories from failures and random attempts.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 7 (5.3. Moto-GPT as an Effective Robot Policy
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 9. With additional human video (SSV2) pre-training, Moto (OXE+SSV2) significantly outperforms both Moto w/o Motion Token and Moto (OXE) on the Move Near task ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Benchmarks and Datasets), p. 5 (4. Benchmarks and Datasets), p. 6 (5.3. Moto-GPT as an Effective Robot Policy), p. 7 (5.3. Moto-GPT as an Effective Robot Policy), p. 6 (5.3. Moto-GPT as an Effective Robot Policy), p. 7 (5.3. Moto-GPT as an Effective Robot Policy), metrics p. 7 (5.3. Moto-GPT as an Effective Robot Policy), p. 7 (5.3. Moto-GPT as an Effective Robot Policy), p. 8 (5.3. Moto-GPT as an Effective Robot Policy), p. 8 (5.3. Moto-GPT as an Effective Robot Policy), p. 6 (5.2. Moto-GPT as a Useful Motion Prior Learner), p. 6 (5.2. Moto-GPT as a Useful Motion Prior Learner), baselines p. 7 (Figure/Table caption), p. 6 (5.3. Moto-GPT as an Effective Robot Policy), p. 8 (5.3. Moto-GPT as an Effective Robot Policy), p. 6 (5.2. Moto-GPT as a Useful Motion Prior Learner), p. 7 (5.3. Moto-GPT as an Effective Robot Policy), p. 8 (5.3. Moto-GPT as an Effective Robot Policy), results p. 7 (5.3. Moto-GPT as an Effective Robot Policy), p. 8 (5.3. Moto-GPT as an Effective Robot Policy), p. 6 (5.3. Moto-GPT as an Effective Robot Policy), p. 7 (5.3. Moto-GPT as an Effective Robot Policy), p. 6 (5.1. Latent Motion Token as an Interpretable Mo), p. 8 (5.3. Moto-GPT as an Effective Robot Policy).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 �
 - **p. 18 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** This allows us to directly employ pretrained weights from 2D-3D datasets for starting meta-learning on 3D-only datasets.
 - **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** Simultaneously training both heads might complicate and destabilize the optimization process due to significant heterogeneity across different modalities (Morency & Baltrušaitis, 2017; Lu et al., ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between traditional unimodal FS-PCS and our proposed multimodal FS-PCS. Previous FS-PCS methods only make use of point clouds as unimodal input. In ...
@@ -82,8 +80,6 @@ ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 �
 | Hence, we adopt a two-step training strategy to mitigate potential performance issues. | definition/direction/unit from same section | p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS) |
 | Figure 2: Overall architecture of the proposed MM-FSS. Given support and query point clouds, we first generate intermodal features Fi s/q from the IF ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 �
 | Fixed coefficients (1:1 and 1:0.5) are unable to dynamically adjust calibration and only slightly improve over the baseline (0:1). | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
 | Figure 6: Visual comparison between COSeg (An et al., 2024) and our proposed MM-FSS on the S3DIS dataset. Each row represents one 1-way 1-shot ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
 | Figure 1: Comparison between traditional unimodal FS-PCS and our proposed multimodal FS-PCS. Previous FS-PCS methods only make use of point clouds as unimodal input. ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 �
 | body limitation/failure cue | Despite leveraging the 2D-aligned backbone weights, COSeg† does not significantly improve over COSeg, highlighting the critical role of well-designed fusion modules in achieving significant ... | p. 8 (4 EXPERIMENTS) |
 | body limitation/failure cue | In the first step, we concentrate on training the IF head to learn robust 3D features aligned with 2D modality, providing a solid foundation ... | p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 �
 | Using the support intermodal features Fi s and the text embeddings T, we compute Gs, which is then used to generate predicted labels Ps. | p. 7 (3 METHODOLOGY) |
 | Note that it computes the relative importance between visual and textual modalities for all pairs of points and classes, improving the effective integration of ... | p. 7 (3 METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Using only Gq (1:0) yields the lowest performance due to the IF head's limitations in utilizing support samples for learning novel classes.
@@ -166,6 +145,5 @@ ScanNet과 S3DIS의 소수 예시 분할에서 비교하고, 융합과 시험 �
 - **p. 17 / B ADDITIONAL IMPLEMENTATION DETAILS - extractive body cue:** In the first step, we concentrate on training the IF head to learn robust 3D features aligned with 2D modality, providing a solid foundation for ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 18 (B ADDITIONAL IMPLEMENTATION DETAILS), metrics p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

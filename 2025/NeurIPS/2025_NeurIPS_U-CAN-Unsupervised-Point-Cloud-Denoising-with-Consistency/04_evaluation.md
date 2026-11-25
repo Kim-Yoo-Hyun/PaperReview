@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 9 / 4 Experiments - extractive body cue:** Sparse DMR-TTD ScoreD-TTD Ours Dense Figure 7: Visual Comparison under PU-Net. #Points 5K 10K CD P2M CD P2M PU-Net [56] 3.445 1.669 2.862 1.166 ScoreDenoise ...
 - **p. 7 / 4 Experiments - extractive body cue:** Top: The visualization of the noisy points and denoised points obtained by U-CAN under the whole scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview of our method. (a) We design a multi-step denoising framework to gradually filter the noisy point cloud. (b) We introduce a novel ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8
 | The PSNR scores in dB are reported. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | Figure 2: Illustrations on the effect of proposed constraint on denoising consistency. The noise errors indicate the Chamfer distance between the denoised and the ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8
 | 2, where the denoising consistency constraint demonstrates superior performance compared to the previous methods. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | 3, where our method significantly outperforms DMR-TTD and ScoreDenoise-TTD, and also achieve better performance than the supervised method PU-Net designed for the upsampling task. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | We further apply the adaption from denoising to upsampling to the state-of-the-art unsupervised point cloud denoising methods DMR-TTD and ScoreDenoise-TTD and report their upsampling ... | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8
 | body limitation/failure cue | Figure 2: Illustrations on the effect of proposed constraint on denoising consistency. The noise errors indicate the Chamfer distance between the denoised and the ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | We split the dataset into training and testing sets with the same setting as ScoreDenoise [29]. | p. 6 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8
 | Dataset: PU 10K, 1% 10K, 2% 10K, 3% Ablation CD P2M CD P2M CD P2M 1 step 2.676 1.046 3.903 1.700 5.251 2.720 2 ... | p. 9 (4 Experiments) |
 | 3D point clouds have been a fundamental representation in 3D computer vision and play a key role in autonomous driving [15], augmented/virtual reality [59] ... | p. 1 (1 Introduction) |
 | U-CAN: Unsupervised Point Cloud Denoising with Consistency-Aware Noise2Noise Matching Junsheng Zhou1∗ Xingyu Shi1∗ Haichuan Song2† Yi Fang3 Yu-Shen Liu1† Zhizhong Han4 School of Software, ... | p. 1 (Body text (section not recovered)) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 6 / 4 Experiments - extractive body cue:** We split the dataset into training and testing sets with the same setting as ScoreDenoise [29].
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

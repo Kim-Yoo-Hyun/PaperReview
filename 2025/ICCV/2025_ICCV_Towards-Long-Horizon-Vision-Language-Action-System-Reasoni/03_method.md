@@ -46,7 +46,6 @@ PDF body method statement (p. 5 (4.2.1. Multimodal Diffusion Policy), p. 5 (4.2.
 - **원문 대조:** 학습 시 action에 더한 Gaussian noise ε^k와 denoising network의 예측 사이 MSE를 최소화한다. Denoiser는 noisy action과 diffusion step, RGB·depth·point cloud·instruction·robot state 조건을 사용한다. ([PDF p. 5](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Towards_Long-Horizon_Vision-Language-Action_System_Reasoning_Acting_and_Memory_ICCV_2025_paper.pdf#page=5), §4.2.1 Multimodal Diffusion Policy, Eq. (9)).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (4.2.1. Multimodal Diffusion Policy).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -64,7 +63,6 @@ PDF body method statement (p. 5 (4.2.1. Multimodal Diffusion Policy), p. 5 (4.2.
 - **p. 5 / 4.2.2. Mixture of Policy Experts - extractive body cue:** The arm expert performs meta-actions for grasping and placing, outputting only the pose and velocity parameters for arm manipulation.
 - **p. 2 / 1. Introduction - extractive body cue:** On one hand we pursue task-oriented CoT in the Reasoning layer for effectively capturing meta-action sequences, while on the other hand we design a straightforward ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -79,13 +77,10 @@ PDF body method statement (p. 5 (4.2.1. Multimodal Diffusion Policy), p. 5 (4.2.
 
 - **원문 대조:** 학습 시 action에 더한 Gaussian noise ε^k와 denoising network의 예측 사이 MSE를 최소화한다. Denoiser는 noisy action과 diffusion step, RGB·depth·point cloud·instruction·robot state 조건을 사용한다. ([PDF p. 5](https://openaccess.thecvf.com/content/ICCV2025/papers/Li_Towards_Long-Horizon_Vision-Language-Action_System_Reasoning_Acting_and_Memory_ICCV_2025_paper.pdf#page=5), §4.2.1 Multimodal Diffusion Policy, Eq. (9)).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Additionally, fusion, adapters, sensor, data, text, consisting, linear, layers, encoder, outputs, unified, feature, space, denoising, network, then, predict, random, noise.
 - **Relevant PDF headings:** 4.2.1. Multimodal Diffusion Policy (p. 5); 4.2.2. Mixture of Policy Experts (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -105,20 +100,10 @@ PDF body method statement (p. 5 (4.2.1. Multimodal Diffusion Policy), p. 5 (4.2.
 - **p. 3 / 3. The System Dataset - extractive body cue:** Enhancing generalization in unstructured environments remains a key challenge, and our experiments show that a system robust in sandy conditions can more easily generalize to ...
 - **p. 8 / 5.3. Ablation Study - extractive body cue:** Similarly, the point-cloud-based BE also shows lower success rates, as point cloud data failed to align effectively with the semantic content of instructions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.2.1. Multimodal Diffusion Policy), p. 5 (4.2.1. Multimodal Diffusion Policy), objective p. 5 (4.2.1. Multimodal Diffusion Policy), temporal p. 2 (1. Introduction), p. 7 (5.2.1. Performance on Real World Tasks), p. 1 (Abstract), p. 7 (5.2.1. Performance on Real World Tasks), p. 1 (Abstract), p. 2 (2.1. Visual Chain-of-Thought).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

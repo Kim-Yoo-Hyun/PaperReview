@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** For each task, we train policies using 100 expert demonstrations and evaluate across 3 random seeds with 100 test episodes per seed.
 - **p. 7 / 4.4. Ablation Study - extractive body cue:** Robotic manipulation tasks have stringent requirements for real-time performance.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Motivation of G3Flow. Our approach leverages 3D generative model and language-guided detection model to gen- erate 3D semantic flow (top). Through continuous field ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 | Figure 1. Motivation of G3Flow. Our approach leverages 3D generative model and language-guided detection model to gen- erate 3D semantic flow (top). Through continuous ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 3. Failure mode of single-view 3D generation. When using a single view for 3D generation, certain geometric details may be inaccurately reconstructed due ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 | Baselines: We use the 3D Diffusion Policy (DP3) [40], which utilizes efficient point encoders to create compact 3D representations, and its variant with RGB ... | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | Table 5. Ablation on VFMs. Success rates of G3Flow imple- mented with different VFMs (our method uses DINOv2) on the Shoe Place (T) task. ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 4. Ablation on Quality of Semantic Field. We compare the success rates of scene-level features, D3Fields and G3Flow on Shoe Place and Dual ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 | body limitation/failure cue | This indicates robust handling of geometric variations while preserving semantic understanding. | p. 7 (34.04 Hz) |
 | body limitation/failure cue | While D3Fields benefits from human prior knowledge, our method outperforms it by focusing on object-centered visual inputs, which reduces irrelevant background noise (Sec. | p. 7 (4.4. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 | Our policy integrates three distinct types of information through separate MLP encoders. | p. 5 (3.4. G3Flow-Enhanced Diffusion Policy) |
 | Finally, the current robot joint states are encoded into robot state features fp, ensuring awareness of the manipulator's configuration. | p. 5 (3.4. G3Flow-Enhanced Diffusion Policy) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Failure mode of single-view 3D generation. When using a single view for 3D generation, certain geometric details may be inaccurately reconstructed due to ...
@@ -167,9 +146,8 @@ PDF body evaluation/result cue (p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 
 - **p. 7 / 4.4. Ablation Study - extractive body cue:** While D3Fields benefits from human prior knowledge, our method outperforms it by focusing on object-centered visual inputs, which reduces irrelevant background noise (Sec.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.3. Evaluation on Generalization Performance), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Ablation Study), metrics p. 6 (4.1. Experimental Setup), p. 6 (Figure/Table caption), p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 7 (4.2. Evaluation on Pose-aware Manipulation Tasks), p. 7 (4.4. Ablation Study), p. 6 (4.2. Evaluation on Pose-aware Manipulation Tasks), p. 6 (4.1. Experimental Setup), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (34.04 Hz), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on Pose-aware Manipulation Tasks).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 - **p. 4 / 3.2. Preliminary - extractive body cue:** These features are optimized through scale-aware contrastive learning.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Preliminary), p. 3 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 5 (3.4. Semantic Information Distillation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 - **p. 3 / 3.2. Preliminary - extractive body cue:** It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and depth ...
 - **p. 3 / 3.2. Preliminary - extractive body cue:** A key advantage is differentiable rasterization, which projects 3D Gaussians to 2D image planes and computes pixel colors via alpha compositing (depth-sorted blending of Gaussian ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 
 - **p. 3 / 3.2. Preliminary - extractive body cue:** It computes the scale sM of a 2D mask M in a view-consistent manner by projecting M into 3D space using camera intrinsics and depth ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, revisit, Gaussian, splatting, formulation, rendering, process, provides, differentiable, representation, suitable, semantic, transfer, Sec, features, rendered, pixels, gated, Supervision, uses.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,22 +110,11 @@ PDF body method statement (p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2.
 - **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
 - **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** A smaller Scale Gate value will amplify the channels in the features corresponding to fine-grained segmentation (such as object components).
 - **p. 6 / 4.1. Experiment Details - extractive body cue:** This alignment enables a robust measurement of semantic consistency between the inferred partitions and the reference annotations, while mitigating the impact of label permutations in ...
-- **p. 8 / 4.4. Parameter Sensitivity Experiment - extractive body cue:** Scale Gate S3DIS (mIoU%) 0.2 46.6 0.3 48.5 0.4 49.3 0.5 47.7 0.6 35.1 We further analyze SAM-specific parameters: cluster selection epsilon (ϵ) for boundary ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Method), p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), objective p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary), temporal p. 3 (3. Method), p. 4 (3.3. Points to 3D Gaussians Reconstruction), p. 4 (3.2. Preliminary), p. 5 (3.5. Gaussian-to-Point Cloud Alignment), p. 5 (3.4. Semantic Information Distillation), p. 6 (4.1. Experiment Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

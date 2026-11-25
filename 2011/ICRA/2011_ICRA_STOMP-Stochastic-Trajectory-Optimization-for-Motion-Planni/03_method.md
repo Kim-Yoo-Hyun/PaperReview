@@ -55,7 +55,6 @@ PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP
 - **p. 3 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** In this section, we discuss the application of the stochastic trajectory optimization algorithm in Table I to the problem of motion planning of a high-dimensional ...
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Motion planning for avoiding collision has been the most common goal, but there are other objectives like constraint handling, torque or energy minimization and achieving ...
 - **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** We assume that the start and goal configurations are provided in joint space.
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** In the constrained scenario, 93.3% of trials resulted in plans that were both collision-free and satisfied the task constraints.
 - **PDF p. 2, Eq. (10) (DOC-QA2 원문 대조):** Cost가 낮은 trajectory perturbation에 더 큰 exp(−S/λ) weight를 부여하는 stochastic gradient 유도다. 해당 문단은 trajectory execution rollout 없이 수행하는 optimization과 path-integral control의 관계를 설명한다.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Inspired, previous, probability, matching, literature, well, recent, areas, path, integral, reinforcement, learning, estimated, gradient, formulated, follows, Essentially, equation, above, expectation.
 - **Relevant PDF headings:** III. THE STOMP ALGORITHM (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,24 +108,13 @@ PDF body method statement (p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** The exploration noise magnitude for STOMP, and the gradient descent step size for CHOMP were both tuned to achieve good performance without instability.
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5. (a) Iterative evolution of trajectory costs for 10 trials of STOMP on a constrained planning task. (b) Feed-forward torques used in the planning ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
 - **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** (c) Trajectory optimized by STOMP to avoid collision with the shelf, constrained to maintain the upright orientation of the gripper.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** STOMP produced a collision-free trajectory in all (a) (b) (c) Fig.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 3 (IV. MOTION PLANNING FOR A ROBOT ARM), objective p. 2 (III. THE STOMP ALGORITHM), p. 2 (III. THE STOMP ALGORITHM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM), p. 3 (IV. MOTION PLANNING FOR A ROBOT ARM), temporal p. 2 (III. THE STOMP ALGORITHM), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Abstract), p. 1 (II. RELATED WORK), p. 2 (III. THE STOMP ALGORITHM).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

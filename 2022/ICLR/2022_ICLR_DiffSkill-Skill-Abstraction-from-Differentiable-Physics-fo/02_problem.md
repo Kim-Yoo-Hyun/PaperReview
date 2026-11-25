@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 8 | On the other hand, if we do not optimize for the intermediate goals, we also cannot determine which ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | In this way, a normalized performance of 0 representing a policy that does nothing and a normalized performance ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (2 METHOD), p. 2 (1 INTRODUCTION), p. 2 (2 METHOD), p. 4 (2 METHOD). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 4 (2 METHOD), p. 2 (1 INTRODUCTION), p. 2 (2 METHOD), p. 4 (2 METHOD), objective p. 5 (2 METHOD), p. 5 (2 METHOD), p. 14 (A IMPLEMENTATION DETAILS), p. 3 (2 METHOD), p. 3 (2 METHOD), p. 4 (2 METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

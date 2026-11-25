@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 - **p. 8 / B. Convergence Theorem - extractive body cue:** Unfortunately ifthe objective function evaluator changes the ‘values inthe state vector duting the optimization iteration, this
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (1) Point sets), p. 4 (B. Point to Implicit Entity Distance), p. 3 (A. Point to Parametric Entity Distance), p. 3 (A. Point to Parametric Entity Distance), p. 4 (A. Point to Parametric Entity Distance), p. 6 (B. Convergence Theorem).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 - **p. 6 / B. Convergence Theorem - extractive body cue:** which defines a direction in the registration state space.
 - **p. 6 / B. Convergence Theorem - extractive body cue:** then there is good direction a registration state vectors: Gis de.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, iterative, closest, point, ICP, algorithm, stated, theorem, proven, concerning, monotonic, convergence, property, Unfortunately, ifthe, objective, function, evaluator, changes, values.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), 
 - **p. 8 / B. Convergence Theorem - extractive body cue:** "To be precise, consider a 6=D slate space 9, where the ‘quaternion component gy is determined from the oer quaterrion components: go = yt - ...
 - **p. 9 / A. Initial States for Global Matching - extractive body cue:** (One must ‘ensure that the ist nonzero quatenion component is postive to avoid duplication of sates.) Fora really complicated set
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (1) Point sets), p. 8 (B. Convergence Theorem), p. 2 (1) Point sets), p. 2 (1) Point sets), p. 6 (B. Convergence Theorem), p. 7 (B. Convergence Theorem), objective p. 2 (1) Point sets), p. 3 (A. Point to Parametric Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 7 (B. Convergence Theorem), p. 8 (B. Convergence Theorem), temporal p. 1 (1. Istmopuction), p. 2 (1) Point sets), p. 2 (1) Point sets), p. 3 (A. Point to Parametric Entity Distance), p. 4 (B. Point to Implicit Entity Distance), p. 4 (B. Point to Implicit Entity Distance).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

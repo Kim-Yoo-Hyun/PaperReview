@@ -51,7 +51,6 @@ PDF body method statement (p. 2 (3. What data can power this task and model?), p
 - **p. 5 / 3. Segment Anything Model - extractive body cue:** We supervise mask prediction with the linear combination of focal loss [65] and dice loss [73] used in [14].
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 2 (3. What data can power this task and model?), p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model), p. 5 (3. Segment Anything Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 2 (3. What data can power this task and model?), p
 - **p. 1 / 1. Introduction - extractive body cue:** Such encoders also compose effectively with other modules to enable downstream tasks, such as image generation (e.g., DALL·E [83]).
 - **p. 3 / 3. What data can power this task and model? - extractive body cue:** We group images by number of masks per image for visualization (there are ∼100 masks per image on average).
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,16 +87,12 @@ PDF body method statement (p. 2 (3. What data can power this task and model?), p
 - **p. 5 / 3. Segment Anything Model - extractive body cue:** Motivated by scalability and powerful pretraining methods, we use an MAE [47] pre-trained Vision Transformer (ViT) [33] minimally adapted to process high resolution inputs [62].
 - **p. 2 / 3. What data can power this task and model? - extractive body cue:** Surprisingly, we find that a simple design satisfies all three constraints: a powerful image encoder computes an image embedding, a prompt encoder embeds prompts, and ...
 - **p. 11 / 7.5. Zero-Shot Text-to-Mask - extractive body cue:** That is, at inference time we run text through CLIP's text encoder and then give the resulting text embedding as a prompt to SAM (see ...
-- **p. 2 / 3. What data can power this task and model? - extractive body cue:** Surprisingly, we find that a simple design satisfies all three constraints: a powerful image encoder computes an image embedding, a prompt encoder embeds prompts, and ...
 - **p. 8 / 7. Zero-Shot Transfer Experiments - extractive body cue:** For all other model and training details, such as hyperparameters, refer to §A.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** promptable, segmentation, task, pre-training, objective, solve, general, downstream, tasks, prompt, engineering, Motivated, scalability, powerful, pretraining, methods, MAE, pre-trained, Vision, Transformer.
 - **Relevant PDF headings:** 2. What is the corresponding model architecture? (p. 1); 3. What data can power this task and model? (p. 1); 3. Segment Anything Model (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +112,10 @@ PDF body method statement (p. 2 (3. What data can power this task and model?), p
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 13: Ablation studies of our data engine stages, image encoder scaling, and training data scaling. (Left) Each data engine stage leads to improvements on ...
 - **p. 8 / 6. Segment Anything RAI Analysis - extractive body cue:** We believe our findings stem from the nature of the task, and acknowledge biases may arise when SAM is used as a component in larger ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model), p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model), objective p. 2 (3. What data can power this task and model?), p. 2 (3. What data can power this task and model?), p. 5 (3. Segment Anything Model), p. 5 (3. Segment Anything Model), temporal p. 8 (7. Zero-Shot Transfer Experiments), p. 10 (7.3. Zero-Shot Object Proposals), p. 2 (3. What data can power this task and model?), p. 2 (3. What data can power this task and model?), p. 4 (2. Segment Anything Task), p. 5 (3. Segment Anything Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

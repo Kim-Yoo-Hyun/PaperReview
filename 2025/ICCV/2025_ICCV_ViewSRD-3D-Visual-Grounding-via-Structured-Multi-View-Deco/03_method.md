@@ -51,7 +51,6 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 - **p. 5 / 3.3. Multi-view Textual-Scene Interaction Module - extractive body cue:** We take the average of these dot products across different sentences and compute a corresponding probability distribution using the softmax function.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 - **p. 3 / 3. ViewSRD - extractive body cue:** This decomposition enables more precise inference of relative relationships between objects, improving the model's ability to capture spatial interactions.
 - **p. 4 / 3.1. Simple Relation Decoupling Module - extractive body cue:** Given an input sentence, 𝐶𝑙𝑎𝑠first determines which word belongs to the target.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** effectively, integrate, sentence, features, text, encoders, viewpoint, extracted, CCVTs, introduce, Multi-view, Textual, Module, employs, cross-attention, mechanism, seamlessly, encode, feature, space.
 - **Relevant PDF headings:** 4.4. SRD Enhances Other 3DVG Methods (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 5 (3.3. Multi-view Textual-Scene Interaction Modul
 - **p. 8 / 5. Conclusion - extractive body cue:** While the decomposition into overlapping relations does not degrade performance, it diminishes the intended benefits of simplification.
 - **p. 7 / 4.2. 3D Visual Grounding Results - extractive body cue:** These results confirm the robustness and generalizability of our approach across diverse scenario.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions), objective p. 6 (3.5. Overall Loss Functions), p. 6 (3.5. Overall Loss Functions), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), p. 5 (3.3. Multi-view Textual-Scene Interaction Module), temporal p. 7 (4.4. SRD Enhances Other 3DVG Methods), p. 1 (Abstract), p. 1 (2. The nightstand is closest to the wall), p. 3 (3. ViewSRD), p. 6 (3.4. Textual-Scene Reasoning Module), p. 8 (5. Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

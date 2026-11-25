@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 - **p. 6 / 4.1. Monocular Depth Estimation - extractive body cue:** This indicates that DPT can also be usefully applied to smaller datasets.
 - **p. 7 / 4.3. Ablations - extractive body cue:** We choose these datasets since they provide high-quality ground truth.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. Left: Architecture overview. The input image is transformed into tokens (orange) either by extracting non-overlapping patches followed by a linear projection of their ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 | Relative performance is computed with respect to the original MiDaS model [30]. | definition/direction/unit from same section | p. 5 (4.1. Monocular Depth Estimation) |
 | We set the weight of the auxiliary loss to 0.2. | definition/direction/unit from same section | p. 6 (4.2. Semantic Segmentation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 | For both tasks, we show that DPT can significantly improve accuracy when compared to convolutional networks with a similar capacity, especially if a large ... | comparison identity and matched condition | p. 4 (4. Experiments) |
 | Both DPT variants significantly outperform the state of the art. | comparison identity and matched condition | p. 5 (4.1. Monocular Depth Estimation) |
 | While the fully-convolutional network indeed benefits from the larger training set, we observe that both DPT variants still strongly outperform this network. | comparison identity and matched condition | p. 5 (4.1. Monocular Depth Estimation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 | body limitation/failure cue | We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30]. | p. 5 (4.1. Monocular Depth Estimation) |
 | body limitation/failure cue | We observe that the performance of DPT variants indeed degrades more gracefully as inference resolution increases. | p. 8 (4.3. Ablations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,20 +139,11 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (4. Experiment
 | Transformer encoders, on the other hand, have a global receptive field HRWSI BlendedMVS ReDWeb Mean ResNet50 0.0890 0.0887 0.1029 0.0935 ResNext101-WSL 0.0780 0.0751 0.0886 ... | p. 8 (4.3. Ablations) |
 | We maintain the overall encoder-decoder structure that has been successful for dense prediction in the past. | p. 2 (3. Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.1. Monocular Depth Estimation - extractive body cue:** We thus first align predictions of the initial network to each training sample using the robust alignment procedure described in [30].
 - **p. 8 / 4.3. Ablations - extractive body cue:** We observe that the performance of DPT variants indeed degrades more gracefully as inference resolution increases.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.3. Ablations), p. 5 (4.1. Monocular Depth Estimation), p. 4 (4. Experiments), p. 4 (4.1. Monocular Depth Estimation), p. 5 (4.1. Monocular Depth Estimation), p. 6 (4.2. Semantic Segmentation), metrics p. 4 (4. Experiments), p. 5 (4.1. Monocular Depth Estimation), p. 6 (4.2. Semantic Segmentation), p. 8 (4.3. Ablations), p. 4 (4.1. Monocular Depth Estimation), p. 8 (4.3. Ablations), baselines p. 8 (4.3. Ablations), p. 8 (4.3. Ablations), p. 6 (Figure/Table caption), p. 4 (4. Experiments), p. 5 (4.1. Monocular Depth Estimation), p. 5 (4.1. Monocular Depth Estimation), results p. 5 (Figure/Table caption), p. 4 (4. Experiments), p. 8 (4.3. Ablations), p. 6 (4.1. Monocular Depth Estimation), p. 7 (4.3. Ablations), p. 8 (4.3. Ablations).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

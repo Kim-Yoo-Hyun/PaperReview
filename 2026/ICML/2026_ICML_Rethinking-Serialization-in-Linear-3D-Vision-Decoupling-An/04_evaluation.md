@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 - **p. 8 / 4.3. Analysis and Ablation - extractive body cue:** Dataset ˆσk Best mode S3DIS 0.0060 Identity ScanNetV2 0.0042 Identity ScanObjectNN 0.0251 Morton
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** (2) ScanNetV2 (Dai et al., 2017): Large-scale indoor dataset with 1,513 annotated 3D scans.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Architectural comparison of our method with serialization-based methods. Existing SSM/mamba methods force 3D point clouds into 1D sequences (top), introducing artificial or- dering ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 | AnIsoNet achieves strong performance among linear-complexity methods. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
 | (b) Identity Mode produces more concentrated feature-similarity responses on semantically consistent regions. | definition/direction/unit from same section | p. 7 (4.3. Analysis and Ablation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 | Its latency is not the lowest in the table-PointMamba is faster per forward pass-but AnIsoNet offers a stronger accuracy-resource trade-off, combining clearly better accuracy ... | comparison identity and matched condition | p. 8 (4.4. Efficiency Analysis) |
 | Decoupling analysis on S3DIS. ∆is measured relative to the Sphere+MLP baseline. | comparison identity and matched condition | p. 7 (4.3. Analysis and Ablation) |
 | AnIsoNet (red triangle) attains 82.62% mIoU with 12.2M parameters, outperforming larger models like PTv3 (46.2M, 73.4%) and PCM (38.5M, 79.6%). | comparison identity and matched condition | p. 8 (4.4. Efficiency Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 | body limitation/failure cue | A mismatched mode therefore causes noticeable degradation rather than collapse. | p. 7 (4.3. Analysis and Ablation) |
 | body limitation/failure cue | Because our claim concerns robustness rather than strict permutation invariance, we directly test the task-relevant notion of robustness by perturbing the inference-time input order ... | p. 7 (4.3. Analysis and Ablation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,20 +139,11 @@ PDF body evaluation/result cue (p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Expe
 | In our current implementation, the GISA mode is configured at the dataset level rather than predicted per sample. | p. 4 (3.1. Overview) |
 | Following the DeLA architecture (Chen et al., 2023), we use dataset-specific hierarchical LAGM encoders (Figure 2a). | p. 4 (3.1. Overview) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** A mismatched mode therefore causes noticeable degradation rather than collapse.
 - **p. 7 / 4.3. Analysis and Ablation - extractive body cue:** Because our claim concerns robustness rather than strict permutation invariance, we directly test the task-relevant notion of robustness by perturbing the inference-time input order on ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.3. Analysis and Ablation), p. 8 (4.3. Analysis and Ablation), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), metrics p. 8 (4.4. Efficiency Analysis), p. 8 (4.4. Efficiency Analysis), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), baselines p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 6 (4.2. Main Results), p. 8 (4.4. Efficiency Analysis), p. 7 (4.3. Analysis and Ablation), p. 8 (4.4. Efficiency Analysis), results p. 8 (4.4. Efficiency Analysis), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Main Results), p. 7 (4.3. Analysis and Ablation), p. 7 (4.3. Analysis and Ablation), p. 8 (4.4. Efficiency Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

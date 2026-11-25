@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 3 (3. Method), p. 4 (3.1
 - **p. 4 / 3.4. Pretraining Details - extractive body cue:** We employ the DDPM diffusion objective [25] with Ttrain = 1000 timesteps for pretraining, while adopting DDIM [69] with Teval = 20 timesteps during zero-shot ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.2. Training Objective), p. 3 (3. Method), p. 3 (3.1. Architecture), p. 4 (3.4. Pretraining Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 3 (3. Method), p. 4 (3.1
 - **p. 4 / 3.4. Pretraining Details - extractive body cue:** Based on preliminary experiments reported in ManiSkill2 [22], we utilize 2-frame image observations to predict 16 action chunks.
 - **p. 2 / 1. Introduction - extractive body cue:** Other diffusion policies [30, 61, 72] attempt to integrate historical image observations and instructions into embeddings prior to the denoising process, which might limit the ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 3 (3. Method), p. 4 (3.1
 - **p. 4 / 3.4. Pretraining Details - extractive body cue:** Training is conducted with a batch size of 8192 across 32 NVIDIA A100 GPUs, allocating 256 samples per GPU.
 - **p. 3 / 3. Method - extractive body cue:** Finally, we present the data and implementation specifics for the pretraining of our model.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** design, preserves, scalability, Transformer, networks, enables, denoising, conditioned, directly, image, patches, thereby, allowing, model, capture, nuanced, changes, action, over, historical.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. Architecture (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 3 (3. Method), p. 4 (3.1
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce Dita, an open-source, simple yet effective policy for generalist robotic learning. Pretrained on large-scale cross- embodiment datasets, Dita enables 10-shot adaptation ...
 - **p. 4 / 4. Simulation Experiments - extractive body cue:** Across all four benchmarks, Dita pretrained on OXE datasets Eω↑OXE is evaluated in a zero-shot manner on SimplerEnv, while it is finetuned on the remaining ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Architecture), p. 3 (3. Method), p. 4 (3.1. Architecture), p. 4 (3.1. Architecture), objective p. 4 (3.2. Training Objective), p. 3 (3. Method), p. 3 (3.1. Architecture), p. 4 (3.4. Pretraining Details), temporal p. 3 (3.1. Architecture), p. 4 (3.1. Architecture), p. 4 (3.1. Architecture), p. 6 (4.6. Ablation Study), p. 7 (5.1. Real-Robot Task Finetuning), p. 7 (5.1. Real-Robot Task Finetuning).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

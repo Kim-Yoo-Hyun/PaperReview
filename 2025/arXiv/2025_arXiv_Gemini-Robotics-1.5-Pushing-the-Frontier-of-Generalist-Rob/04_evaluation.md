@@ -37,8 +37,6 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 - **p. 4 / 2.3. Evaluation - extractive body cue:** Over 90% of the evaluation episodes during the development of Gemini Robotics 1.5 were conducted in simulation.
 - **p. 4 / 2.3. Evaluation - extractive body cue:** We use the open-source MuJoCo simulator (Todorov et al., 2012) to generate evaluation scenes for the robot embodiments in this report.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -59,21 +57,12 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 | We use the open-source MuJoCo simulator (Todorov et al., 2012) to generate evaluation scenes for the robot embodiments in this report. | definition/direction/unit from same section | p. 4 (2.3. Evaluation) |
 | This has allowed us to massively scale up the breadth of our evaluations to new objects, scenes, and environments, and to rapidly iterate on ... | definition/direction/unit from same section | p. 4 (2.3. Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | For all comparisons reported in this report, we perform A/B/n testing on real robots. | comparison identity and matched condition | p. 4 (2.3. Evaluation) |
 | To improve research iteration speed, we have developed methods for evaluation without real robots in the loop. | comparison identity and matched condition | p. 4 (2.3. Evaluation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -101,8 +90,6 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 |---|---|---|
 | body limitation/failure cue | Its performance on tasks like visual and spatial thinking, task planning, progress estimation, and success detection is critical for robust, real-world robotic applications. | p. 22 (7. Discussion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -116,22 +103,13 @@ PDF body evaluation/result cue (p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation)):
 | To accomplish a user-specified task, it can leverage digital tools to access external information or perform additional reasoning steps. | p. 3 (2.1. Model & Architecture) |
 | It breaks complex tasks into simpler steps that can be executed by the VLA, and it performs success detection to decide when to switch ... | p. 3 (2.1. Model & Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 22 / 7. Discussion - extractive body cue:** Its performance on tasks like visual and spatial thinking, task planning, progress estimation, and success detection is critical for robust, real-world robotic applications.
 
 - **Evidence anchors reviewed:** datasets p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), metrics p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), baselines p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation), results p. 4 (2.3. Evaluation), p. 4 (2.3. Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -52,7 +52,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (X. Xu
 - **p. 8 / X. Xu et al - extractive body cue:** The cosine similarity loss Ls will be integrated to train the model.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (X. Xu et al), p. 8 (X. Xu et al).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (X. Xu
 - **p. 2 / X. Xu et al - extractive body cue:** Given the simple GAP connectivity structure, these methods can easily identify the importance of each point by projecting back the output classification weight onto the ...
 - **p. 7 / X. Xu et al - extractive body cue:** After ranking the filtered classification logits Lf, we can get the more precise pseudo label Y ∈RN of the input point cloud.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,16 +88,12 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (X. Xu
 - **p. 4 / X. Xu et al - extractive body cue:** In summary, the main contributions of this paper are as follows: - We propose a weakly supervised method 3DSS-VLG for 3D WSSS, which takes 2D ...
 - **p. 3 / X. Xu et al - extractive body cue:** We first process these multi-view images using the image encoder of the pretrained off-the-shelf 2D OVSS model such as Openseg [12] to get the 2D ...
 - **p. 8 / X. Xu et al - extractive body cue:** For (a), we first utilize the text encoder εtext of Openseg to obtain embeddings of the category labels FC, which are frozen during the training ...
-- **p. 3 / X. Xu et al - extractive body cue:** We first process these multi-view images using the image encoder of the pretrained off-the-shelf 2D OVSS model such as Openseg [12] to get the 2D ...
 - **p. 7 / X. Xu et al - extractive body cue:** Similarly, we also freeze the text encoder and directly load the pretrained Openseg parameters.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Moreover, introduce, Embeddings, Specialization, Stage, purify, feature, representation, help, given, scene-level, label, specifying, better, supervised, corresponding, text, embedding, Point, clouds.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +109,10 @@ PDF body method statement (p. 1 (Body text (section not recovered)), p. 2 (X. Xu
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 3: Ablation studies of the 3DSS-VLG components on S3DIS dataset. ESGS Filtering ESS mIoU (a) 37.7 (b) ✓ 38.2 (c)
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 2: The proposed pseudo label generation procedure. We first leverage the text encoder εtext of Openseg to get embeddings of the full category labels ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Body text (section not recovered)), p. 2 (X. Xu et al), p. 4 (X. Xu et al), p. 8 (X. Xu et al), p. 3 (X. Xu et al), p. 6 (X. Xu et al), objective p. 8 (X. Xu et al), p. 8 (X. Xu et al), temporal p. 9 (4 Experiments), p. 10 (X. Xu et al), p. 12 (X. Xu et al), p. 13 (X. Xu et al), p. 14 (X. Xu et al).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

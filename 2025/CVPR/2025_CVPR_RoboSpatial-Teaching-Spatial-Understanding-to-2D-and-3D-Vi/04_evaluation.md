@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 - **p. 4 / 3.2. Dataset Generation - extractive body cue:** The pipeline takes as input a scene dataset Ds that contains RGB images, camera poses (both extrinsic and intrinsic parameters), and oriented 3D bounding box ...
 - **p. 5 / 4.1. Setup - extractive body cue:** Detailed data statistics are in the Appendix. diverse indoor environments: larger scenes for navigation and smaller object-centric setups for manipulation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. ROBOSPATIAL dataset facilitates 3D spatial reason- ing for robotic manipulation. This illustration demonstrates how a model trained on ROBOSPATIAL enables human-aligned spa- tial ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 | Although ROBOSPATIAL consists of template-generated QA pairs with a fixed set of spatial prepositions, we observe in Tab. | definition/direction/unit from same section | p. 7 (4.2. Results) |
 | These rely on the 3D bounding box layout and calibrated camera parameters to map spatial relationships into image coordinates. | definition/direction/unit from same section | p. 4 (3.2. Dataset Generation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 | Results demonstrate that models trained on ROBOSPATIAL exhibit significantly improved spatial reasoning capabilities, consistently outperforming baseline methods on the evaluation benchmark ROBOSPATIAL-Val, a held-out ... | comparison identity and matched condition | p. 2 (Dataset) |
 | We also include GPT-4o [42] as a closedsource baseline. | comparison identity and matched condition | p. 5 (4.1. Setup) |
 | 3 suggest that 3D VLMs tend to outperform 2D counterparts in spatial reasoning tasks, likely due to their ability to directly utilize depth information. | comparison identity and matched condition | p. 8 (4.2. Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,22 +125,12 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 | body limitation/failure cue | Questions fall into two categories: binary yes/no questions and coordinate prediction tasks. | p. 5 (4.1.2. Spatial Understanding Evaluation) |
 | body limitation/failure cue | Although the method does not require point clouds or meshes, it relies on camera intrinsics and extrinsics to project between 2D and 3D and ... | p. 4 (3.2. Dataset Generation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | We make the data and code for generating the dataset from 3D annotated scenes publicly available1. • VLMs trained on ROBOSPATIAL demonstrate superior spatial ... | p. 3 (Dataset) |
 | We use oriented 3D bounding boxes, provided by the source dataset, to compute spatial relationships. | p. 4 (3.2. Dataset Generation) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,9 +142,8 @@ PDF body evaluation/result cue (p. 2 (Dataset), p. 8 (4.3. Real Robot Experiment
 - **p. 4 / 3.2. Dataset Generation - extractive body cue:** Although the method does not require point clouds or meshes, it relies on camera intrinsics and extrinsics to project between 2D and 3D and to ...
 
 - **Evidence anchors reviewed:** datasets p. 3 (Dataset), p. 2 (Dataset), p. 2 (Dataset), p. 5 (4.1. Setup), p. 3 (Dataset), p. 6 (4.1.4. Out-of-Domain Evaluation), metrics p. 8 (4.3. Real Robot Experiments), p. 5 (4.1.2. Spatial Understanding Evaluation), p. 8 (4.3. Real Robot Experiments), p. 4 (3.2. Dataset Generation), p. 5 (4.1. Setup), p. 6 (4.1.4. Out-of-Domain Evaluation), baselines p. 8 (4.3. Real Robot Experiments), p. 3 (Dataset), p. 2 (Dataset), p. 2 (Dataset), p. 5 (4.1. Setup), p. 8 (4.2. Results), results p. 2 (Dataset), p. 8 (4.3. Real Robot Experiments), p. 6 (4.1.3. Cross-Dataset Generalization Evaluation), p. 8 (4.2. Results), p. 6 (Figure/Table caption), p. 2 (Dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

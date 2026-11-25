@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 - **p. 7 / 4.3. Compared Methods - extractive body cue:** Given its independence from textual training data, LLM-Grounder is utilized as a comparative benchmark to our method.
 - **p. 7 / 4.3. Compared Methods - extractive body cue:** [18], to locate objects within a 3D scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Comparison of fully-supervised and our language- free training paradigm. (b) Based on CLIP embedding space, our language-free training method uses multi-view images ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 | For the voting & grouping module, detection head, and cross-modal fusion module, the learning rates are set as 2e-3, 1e-4, and 5e-4, respectively, following ... | definition/direction/unit from same section | p. 5 (4.2. Implementation Details) |
 | Figure 2. The overview of our method. During training, we first encode 3D point cloud and multi-view images with point cloud encoder and CLIP ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 | Table 4. Comparison on different 3D visual grounding baseline methods. We only report the "overall" results. | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Given its ability to perform 3DVG without text-based training, akin to our proposed paradigm, OpenScene serves as a benchmark for comparison. | comparison identity and matched condition | p. 6 (4.3. Compared Methods) |
 | We show quantitative comparisons of our 3DLFVG and aforementioned methods on ScanRefer [4] and Nr3D/Sr3D [1] in Tab. | comparison identity and matched condition | p. 7 (4.4. Quantitative Comparison) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 | body limitation/failure cue | It does not have a red chair near it. | p. 7 (4.3. Compared Methods) |
 | body limitation/failure cue | Table 3. Ablation study on main components of our method. We report the "overall" results in terms of Acc@0.25 and Acc@0.5. PFG Relation Acc@0.25 ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 | By comparing these with the 2D mask relations, relation matching scores can be computed. | p. 4 (3.1. Overview) |
 | So, it ensures an efficient implementation of 3DVG given the texts during the inference phase. | p. 4 (3.1. Overview) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Extensive experiments conducted on mainstream datasets demonstrate the robustness and efficiency of our approach.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4.3. Compared
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Ablation study on main components of our method. We report the "overall" results in terms of Acc@0.25 and Acc@0.5. PFG Relation Acc@0.25 Acc@0.5 ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Datasets), p. 5 (4.1. Datasets), p. 6 (4.3. Compared Methods), p. 6 (4.2. Implementation Details), p. 7 (4.3. Compared Methods), p. 7 (4.3. Compared Methods), metrics p. 6 (4.2. Implementation Details), p. 6 (Figure/Table caption), p. 5 (4.2. Implementation Details), p. 5 (4.2. Implementation Details), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Implementation Details), p. 5 (4.2. Implementation Details), p. 7 (4.3. Compared Methods), p. 8 (Figure/Table caption), p. 6 (4.3. Compared Methods), p. 7 (4.4. Quantitative Comparison), results p. 6 (Figure/Table caption), p. 6 (4.3. Compared Methods), p. 7 (4.3. Compared Methods), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

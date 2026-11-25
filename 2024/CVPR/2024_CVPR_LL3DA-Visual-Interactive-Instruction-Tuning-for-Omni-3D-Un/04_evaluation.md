@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** Describe this object in the 3D scene.
 - **p. 8 / 5.4. Qualitative Results - extractive body cue:** We present several visualization results on different tasks in Fig.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose LL3DA, a Large Language 3D Assistant that demonstrates mighty instruction-following capacities of un- derstanding, reasoning, and planning in complex 3D environments. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 | The last row lists the performance of our model as a generalist. | definition/direction/unit from same section | p. 7 (5.3. Ablation Studies) |
 | This illustrates the importance of visual interaction in complex 3D environments. | definition/direction/unit from same section | p. 7 (5.3. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 | For fair comparison, we list methods that are trained under the standard per-word cross-entropy loss without additional 3D scenes. | comparison identity and matched condition | p. 6 (5.3. Ablation Studies) |
 | The listed methods are evaluated without any visual interactions for fair comparison. | comparison identity and matched condition | p. 7 (5.3. Ablation Studies) |
 | Quantitative Comparisons for 3D Question Answering on ScanQA[2]. | comparison identity and matched condition | p. 6 (5.3. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,19 +131,10 @@ PDF body evaluation/result cue (p. 5 (5.2. Comparison with SoTA Specialists), p.
 | In practice, we choose to keep the scene encoder frozen to save the memory cost during training. | p. 4 (3.2. Model Design) |
 | Then, we encode pclick with the 3D Fourier positional embeddings [48] function: pos (pclick) = [sin (2πpclick · B) ; cos (2πpclick · B)] ... | p. 4 (3.2. Model Design) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 5 (5. Experiments), p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), metrics p. 5 (5.2. Comparison with SoTA Specialists), p. 17 (Figure/Table caption), p. 5 (5.2. Comparison with SoTA Specialists), p. 17 (Figure/Table caption), p. 6 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), baselines p. 7 (5.3. Ablation Studies), p. 5 (5.2. Comparison with SoTA Specialists), p. 5 (5.2. Comparison with SoTA Specialists), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), results p. 5 (5.2. Comparison with SoTA Specialists), p. 7 (5.3. Ablation Studies), p. 6 (5.3. Ablation Studies), p. 7 (5.3. Ablation Studies), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

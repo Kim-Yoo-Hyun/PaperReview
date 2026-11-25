@@ -42,8 +42,6 @@
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** In the following subsections, Section IV-A describes the dataset configuration and implementation details, Section IV-B presents the experimental results obtained in the Nvidia Isaac simulation ...
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** In our real-world experiments, we deployed a robot equipped with six cameras to navigate each floor of the building.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Comparison of three language map representation methods. (a) The grid-based approach struggles to accurately represent objects at coarse resolutions and requires excessive memory ...
@@ -72,8 +70,6 @@
 | Fig. 5. Visualization of real-world experiments. : Start pose, representing the initial position from which navigation is initiated. : Coarse goal pose, selected based ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 4. Visualization of each language map representation in the near-goal region of NVIDIA's City Tower Demo 3D Models Pack scene using the viridis ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -81,13 +77,6 @@
 | Fig. 1. Comparison of three language map representation methods. (a) The grid-based approach struggles to accurately represent objects at coarse resolutions and requires excessive ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Fig. 3. Examples of objects used in our simulation navigation experiments. The top row displays large objects (volume ≥1 m3) such as statues and ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Fig. 5. Visualization of real-world experiments. : Start pose, representing the initial position from which navigation is initiated. : Coarse goal pose, selected based ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,8 +104,6 @@
 | body limitation/failure cue | In contrast, the node-based method needs about 70 times more memory than our method to reach a similar success rate, yet its performance in ... | p. 5 (1) Comparison of Language Map Representation Methods) |
 | body limitation/failure cue | Finally, in the Boxes scene, the grid-based method is hindered by z-axis projection artifacts, while the node-based method detects the boxes but fails to ... | p. 6 (1) Comparison of Language Map Representation Methods) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -129,14 +116,6 @@
 | This approach contrasts with previous methods that explicitly store precomputed embeddings at every node, leading to large memory usage. | p. 3 (III. METHOD) |
 | Inspired by NeRF frameworks [34], we implicitly encode the language embeddings of the scene as viewed from each position, rather than encoding the color ... | p. 3 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. Comparison of three language map representation methods. (a) The grid-based approach struggles to accurately represent objects at coarse resolutions and requires excessive memory ...
@@ -146,6 +125,5 @@
 - **p. 6 / 1) Comparison of Language Map Representation Methods - extractive body cue:** Finally, in the Boxes scene, the grid-based method is hindered by z-axis projection artifacts, while the node-based method detects the boxes but fails to plan ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 2 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

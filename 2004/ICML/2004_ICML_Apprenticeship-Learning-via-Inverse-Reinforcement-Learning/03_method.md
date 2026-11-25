@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3.1. 
 - **p. 4 / 3. Algorithm - extractive body cue:** 6-9), this policy attains performance near that of the expert's on the unknown reward function.6 Note that although we called one step of our algorithm ...
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3. Algorithm), p. 4 (3.1. A simpler algorithm).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3.1. 
 - **p. 3 / 3. Algorithm - extractive body cue:** To accomplish this, we will find a policy ˜π such that ∥µ(˜π) -µE∥2 ≤ϵ.
 - **p. 4 / 3. Algorithm - extractive body cue:** Further, by "mixing" together the policies π(i) according to the mixture weights λi as discussed previously, we obtain a policy whose feature expectations are given ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3.1. 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Whether, algorithm, terminates, discussed, Section, Then, directly, SVM, problem, quadratic, programming, generic, solver, Figure, example, what, first, three, iterations, could.
 - **Relevant PDF headings:** 3. Algorithm (p. 3); 3.1. A simpler algorithm (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3.1. 
 - **p. 4 / 4. Theoretical results - extractive body cue:** In the case where the true reward function R∗does not lie exactly in the span of the basis functions φ, the algorithm still enjoys a ...
 - **p. 4 / 4. Theoretical results - extractive body cue:** If the algorithm sometimes does not terminate, or if it sometimes takes a very (perhaps exponentially) large number of iterations to terminate, then it would ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3.1. A simpler algorithm), p. 4 (3. Algorithm), objective p. 3 (3. Algorithm), p. 3 (3. Algorithm), p. 4 (3. Algorithm), p. 4 (3. Algorithm), temporal p. 5 (5.1. Gridworld), p. 5 (5.1. Gridworld), p. 6 (5.2. Car driving simulation), p. 2 (2. Preliminaries), p. 2 (2. Preliminaries), p. 3 (3. Algorithm).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

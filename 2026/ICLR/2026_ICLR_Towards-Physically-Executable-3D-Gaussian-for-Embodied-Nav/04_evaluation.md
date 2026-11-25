@@ -52,8 +52,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** Notably, several baseline models with weak VLN performance (SR < 0.20) fail to understand navigation instructions or environmental information in our challenging tasks, behaving like ...
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Insight 2: 3DGS scene data exhibits strong generalizability.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Traditional 3DGS vs. Our work. Compared with traditional 3DGS, our InteriorGS pro- vides object-level 3DGS annotations across diverse indoor and outdoor scenes, including ...
@@ -87,8 +85,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | Bold values represent the best performance across all methods. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 | Gray values indicate that these metrics lack comparative significance due to the low navigation performance of the models. | definition/direction/unit from same section | p. 8 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -99,13 +95,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | The results show that 3DGS scene data achieves a perframe rendering time of 6.2 ms and an average memory usage of 220 MB, outperforming ... | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | 5 compares the performance of different models on high-level and low-level instructions in the VLN task.Compared with low-level instruction data, which are composed of ... | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Figure 1: Traditional 3DGS vs. Our work. Compared with traditional 3DGS, our InteriorGS pro- vides object-level 3DGS annotations across diverse indoor and outdoor scenes, ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | body limitation/failure cue | An episode is terminated immediately if a collision occurs, and the maximum episode time is set to 120 seconds. | p. 7 (4 EXPERIMENTS) |
 | body limitation/failure cue | In addition to the three novel metrics we proposed in Section 3.3 for evaluating the natural continuity of model navigation - CSR, ICP, and ... | p. 7 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 | Training was carried out on 8 NVIDIA Tesla H20 GPUs with a batch size of 256 and a learning rate of 2 × 10-5. | p. 15 (A IMPLEMENTATION DETAILS) |
 | We randomly selected 10k training samples and 1k validation samples from both traditional scanned mesh data and our 3DGS data, and conducted experiments with ... | p. 8 (4 EXPERIMENTS) |
 | We run A*-based shortest-path search to generate trajectories with a cost function that integrates free-space distance, narrow-passage penalties, and area preferences to ensure both ... | p. 15 (A IMPLEMENTATION DETAILS) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** In addition to the three novel metrics we proposed in Section 3.3 for evaluating the natural continuity of model navigation - CSR, ICP, and PS ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 15 (A IMPLEMENTATION DETAILS), metrics p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 3 (Figure/Table caption), p. 7 (4 EXPERIMENTS), baselines p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 1 (Figure/Table caption), results p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 7 | Though, these reconstructions are naturally constrained by the resolution and sensitivity limitations of the sensors. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | Our experimental results demonstrate that SITR outperforms baseline models and other related tactile representations in different downstream tasks, ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 14 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ tactile writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), interface p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 14 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE), objective p. 14 (A.1.2 ARCHITECTURE), p. 14 (A.1.2 ARCHITECTURE), p. 15 (A.1.2 ARCHITECTURE), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS), p. 24 (A.6.1 CONTRIBUTION OF LOSS TERMS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

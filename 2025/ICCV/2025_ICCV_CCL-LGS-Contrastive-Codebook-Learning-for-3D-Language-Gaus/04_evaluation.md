@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 - **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** Qualitative comparison on 3D-OVS dataset.
 - **p. 8 / 4.2. Experiments on 3D-OVS - extractive body cue:** Quantitative experiments results on 3D-OVS dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Quantitative comparison of our method and LangSplat under three challenging scenarios: Occlusion, Image Blur, and View- Dependent Variations. The results clearly demonstrate the ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 | Among the compared methods, our method produces the most accurate segmentation maps, further demonstrating the effectiveness of our CCL-LGS. | definition/direction/unit from same section | p. 8 (4.2. Experiments on 3D-OVS) |
 | Figure 2. The framework of our CCL-LGS. Top: Instance tracker responsible for mask association. Middle: CCL module that constructs consistent 2D semantic supervision. For ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 | Baseline 46.8 57.1 60.8 61.0 56.4 baseline(w/ pull loss) 48.0 58.0 70.1 62.0 59.5 baseline(w/ push loss) 55.1 61.0 66.0 59.3 60.4 Ours 62.3 ... | comparison identity and matched condition | p. 6 (4.1. Experiments on LERF) |
 | We observed that our method achieved an IoU result of 65.6 in 3D semantic segmentation, ranking either first or second across all four scenes, ... | comparison identity and matched condition | p. 6 (4.1. Experiments on LERF) |
 | In these two scenes, our method clearly outperforms the other two methods. | comparison identity and matched condition | p. 8 (4.2. Experiments on 3D-OVS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 | body limitation/failure cue | In the kitchen scene, we specifically focus on the cabinet, a challenging object that other methods frequently fail to segment correctly. | p. 6 (4.1. Experiments on LERF) |
 | body limitation/failure cue | Combining both ensures robust, discriminative 3D semantic segmentation in challenging scenes. | p. 7 (4.1. Experiments on LERF) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 | SAM Sub-Part Whole-Part 1 2 N Codebook Instance Tracker Rasterizer 𝓛𝓛𝒄𝒄𝒄𝒄 ෢ 𝑮𝑮𝑮𝑮Feature Map Frozen Tracker CLIP Multi-view Captures with Anything Masks by SAM ... | p. 4 (3.2. Two-Level Semantic Feature Extraction) |
 | The codebook serves as latent feature prototypes that structure the feature space for contrastive learning. | p. 5 (3.3. Contrastive Codebook Learning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations remain due to inherent capabilities of SAM and SAM2, as imperfect masks still affect results.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Expe
 - **p. 7 / 4.1. Experiments on LERF - extractive body cue:** Combining both ensures robust, discriminative 3D semantic segmentation in challenging scenes.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 8 (4.2. Experiments on 3D-OVS), metrics p. 6 (4. Experiments), p. 6 (4.1. Experiments on LERF), p. 1 (Figure/Table caption), p. 7 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), baselines p. 7 (4.1. Experiments on LERF), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (4.1. Experiments on LERF), p. 6 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), results p. 6 (4.1. Experiments on LERF), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 7 (4.1. Experiments on LERF), p. 8 (4.2. Experiments on 3D-OVS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

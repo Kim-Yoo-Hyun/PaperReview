@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 - **p. 9 / IX. Susmary ano Discussion - extractive body cue:** The use of the generalized task specification matrix has provided a more
 - **p. 9 / IX. Susmary ano Discussion - extractive body cue:** ‘A methodology for the description of end-effector constrained motion tasks based on the construction of generalized task specification matrices has been proposed.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. One-degree-of freedom moti,
@@ -76,20 +74,11 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 | This command vector is particularly useful when Used in conjunction with the gradient of an artificial potential field for collision avoidance (15] | definition/direction/unit from same section | p. 5 (IV. Exp-Errecror Morton Controt) |
 | Force rate feedback has also been used in F. ‘A more detailed description of the components involved in this control system, real-time implementation issues, ... | definition/direction/unit from same section | p. 7 (V. Constnainep Motion Operarions) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | no baseline sentence selected | not reported | verify comparison table |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -112,7 +101,6 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 - Numeric sentences retained from the body:
 - **p. 6 / IV. Exp-Errecror Morton Controt - extractive body cue:** [94] and [4°] are the symbolic notations for the n(n - 1)/2 x Tand.m x 1 column matrices
 - **p. 2 / I. Inrropucrion - extractive body cue:** where J designates the 3 x 3 identity matrix.
-- **p. 6 / IV. Exp-Errecror Morton Controt - extractive body cue:** [94] and [4°] are the symbolic notations for the n(n - 1)/2 x Tand.m x 1 column matrices
 
 ## Generalization and Failure Cases
 
@@ -123,8 +111,6 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 | body limitation/failure cue | ‘manipulator, and the dynamic behavior of the entire redundant system cannot be represented by a dynamic model in coordinates only of the end-effector configuration. | p. 7 (VI. ReDunpaNT MANIPULATORS) |
 | body limitation/failure cue | Within this framework of control and at the level ‘f the uncoupled system linear, nonlinear, robust [32], and adaptive [3] control structures can be ... | p. 5 (IV. Exp-Errecror Morton Controt) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -132,14 +118,6 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 | "The authors withthe Artificial Intelligence Laboratory, Computer Science Department, Cedar Hall, Stanford Universiy, Stanford, CA 94305, | p. 1 (I. Inrropucrion) |
 | This allows a more efficient implementation of the control system for real-time operations. | p. 3 (I. Inrropucrion) |
 | Force rate feedback has also been used in F. ‘A more detailed description of the components involved in this control system, real-time implementation issues, ... | p. 7 (V. Constnainep Motion Operarions) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -149,9 +127,8 @@ PDF body evaluation/result cue (p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror M
 - **p. 5 / IV. Exp-Errecror Morton Controt - extractive body cue:** Within this framework of control and at the level ‘f the uncoupled system linear, nonlinear, robust [32], and adaptive [3] control structures can be implemented.
 
 - **Evidence anchors reviewed:** datasets p. 4 (X 1 column matrix x of independent configuration parame), p. 5 (X 1 column matrix x of independent configuration parame), p. 3 (I. Inrropucrion), p. 3 (I. Inrropucrion), p. 5 (IV. Exp-Errecror Morton Controt), p. 9 (IX. Susmary ano Discussion), metrics p. 5 (IV. Exp-Errecror Morton Controt), p. 7 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions), p. 6 (V. Constnainep Motion Operarions), p. 9 (VI. Sixcutar Coxmiourarions), p. 3 (I. Inrropucrion), baselines 본문 anchor 없음, results p. 3 (I. Inrropucrion), p. 6 (IV. Exp-Errecror Morton Controt), p. 6 (V. Constnainep Motion Operarions), p. 8 (VII. Contnot. oF REDUNDANT MANIPULATORS), p. 8 (VII. Contnot. oF REDUNDANT MANIPULATORS), p. 9 (VI. Sixcutar Coxmiourarions).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

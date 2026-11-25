@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 - **p. 8 / 4.5. Ablation Analysis - extractive body cue:** This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches.
 - **p. 8 / 4.5. Ablation Analysis - extractive body cue:** The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial understanding.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 | Figure 2. The overall pipeline of GWM, which primarily consists of a 3D variational encoder and a latent diffusion transformer. The 3D variational encoder ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 4. Qualitative visualization on future state prediction of GWM on FRANKA-PNP and ROBOCASA. All predictions are rolled out by applying the unseen action ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 | This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches. | comparison identity and matched condition | p. 8 (4.5. Ablation Analysis) |
 | Choice of Gaussian Splatting As shown in Table 4, compared to directly building image-based world model with diffusion transformer on par with [1], introducing ... | comparison identity and matched condition | p. 8 (4.5. Ablation Analysis) |
 | Figure 3. Qualitative comparison between models on META- WORLD. GWM successfully predicts better details on the gripper movement (highlighted in blue). the future prediction ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 | body limitation/failure cue | In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust ... | p. 8 (5. Conclusion) |
 | body limitation/failure cue | Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on ... | p. 1 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,20 +126,11 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 | The shadow area represents 95% confidence interval (CI) across three random seeds. | p. 7 (4.3. GWM-based Reinforcement Learning) |
 | For fair comparisons, all compared methods use the same context length, horizon, and are trained to a maximum of 1 × 105 steps. | p. 7 (4.3. GWM-based Reinforcement Learning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust geometric ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Gaussian World Model (GWM) is a novel branch of world model that predicts dynamic future states and enables robotic manipulation based on the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis), metrics p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption), results p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 5 (4. Experiments), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

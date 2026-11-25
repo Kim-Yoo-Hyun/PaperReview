@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 5 (3.4. Spiking Neural N
 - **p. 6 / 3.4. Spiking Neural Network for Action Policy - extractive body cue:** We train the spiking action policy network using surrogate-gradient spatiotemporal backpropagation, accumulating gradients over discrete timesteps t = 1, . . . , T and ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.2. Spike Neural Network Vision Encoder), p. 4 (3.2. Spike Neural Network Vision Encoder), p. 3 (3.1. Architecture), p. 6 (3.4. Spiking Neural Network for Action Policy), p. 6 (3.4. Spiking Neural Network for Action Policy), p. 3 (3.2. Spike Neural Network Vision Encoder).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 5 (3.4. Spiking Neural N
 - **p. 3 / 3.1. Architecture - extractive body cue:** Spike-A maps the fused multimodal representation to continuous actions with a fully spiking policy network, achieving stable and robust closed-loop control under low-power constraints (see ...
 - **p. 4 / 3.2. Spike Neural Network Vision Encoder - extractive body cue:** The output xl[t] is the result of combining the two inputs over time and serves as the updated value at the time step t.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 5 (3.4. Spiking Neural N
 - **p. 5 / 3.4. Spiking Neural Network for Action Policy - extractive body cue:** During reinforcement learning, the network is trained using the Proximal Policy Optimization (PPO) algorithm to optimize its parameters.
 - **p. 6 / 3.4. Spiking Neural Network for Action Policy - extractive body cue:** We train the spiking action policy network using surrogate-gradient spatiotemporal backpropagation, accumulating gradients over discrete timesteps t = 1, . . . , T and ...
 - **p. 6 / 4.2. Main Results - extractive body cue:** SpikeVLA substantially reduces inference cost, lowering GPU memory usage from 16.1 GB to 6.2 GB and achieving an energy metric of E=49.09J, which is approximately ...
-- **p. 6 / 3.4. Spiking Neural Network for Action Policy - extractive body cue:** We train the spiking action policy network using surrogate-gradient spatiotemporal backpropagation, accumulating gradients over discrete timesteps t = 1, . . . , T and ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** SpikeVLA, end-to-end, spiking, VLA, architecture, embodied, navigation, consisting, vision, encoder, Spike-V, multimodal, language, model, Spike-L, fully, action, policy, network, Spike-A.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. Architecture (p. 3); 3.3. Multimodal Spiking Large Language Model (p. 4); 3.4. Spiking Neural Network for Action Policy (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +115,10 @@ PDF body method statement (p. 3 (3.1. Architecture), p. 5 (3.4. Spiking Neural N
 - **p. 6 / 4.2. Main Results - extractive body cue:** The left side shows a comparison of resource consumption between the different components of SpikeVLA and NaVILA (Cheng et al., 2025), while the right side ...
 - **p. 6 / 4.1. Experimental Setups - extractive body cue:** For low-level locomotion, we quantify command tracking and safety using linear and angular velocity tracking errors and the collision rate.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Architecture), p. 5 (3.4. Spiking Neural Network for Action Policy), p. 5 (3.4. Spiking Neural Network for Action Policy), p. 6 (3.4. Spiking Neural Network for Action Policy), p. 3 (3.2. Spike Neural Network Vision Encoder), p. 6 (3.4. Spiking Neural Network for Action Policy), objective p. 6 (3.4. Spiking Neural Network for Action Policy), p. 4 (3.2. Spike Neural Network Vision Encoder), p. 4 (3.2. Spike Neural Network Vision Encoder), p. 3 (3.1. Architecture), p. 3 (3.1. Architecture), p. 6 (3.4. Spiking Neural Network for Action Policy), temporal p. 4 (3.2. Spike Neural Network Vision Encoder), p. 3 (3.2. Spike Neural Network Vision Encoder), p. 3 (3.1. Architecture), p. 4 (3.3. Multimodal Spiking Large Language Model), p. 6 (3.4. Spiking Neural Network for Action Policy), p. 5 (3.3. Multimodal Spiking Large Language Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

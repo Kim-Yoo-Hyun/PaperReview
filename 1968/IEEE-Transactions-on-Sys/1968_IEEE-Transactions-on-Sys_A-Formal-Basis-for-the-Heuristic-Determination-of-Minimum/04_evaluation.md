@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 
 - dataset/benchmark/environment role PDF body cue not selected; no claim inferred
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption PDF body cue not selected; no claim inferred
@@ -69,8 +67,6 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 | In our example with cities connected by roads, no subgraph G01 is possible for which h(n) is less than the airline distance between city ... | definition/direction/unit from same section | p. 4 (6. The value of 0(no) remains) |
 | Nodes n2 and n3 are the successors of n, along arcs with costs as indicated. | definition/direction/unit from same section | p. 5 (6. The value of 0(no) remains) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -78,13 +74,6 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 | Compared with other no more informed admissible algorithms, it expands the fewest possible nodes necessary to guarantee finding an optimal path. | comparison identity and matched condition | p. 6 (6. The value of 0(no) remains) |
 | We can now prove a theorem about the optimality of A * as compared with any other admissible algorithm A that uses no more ... | comparison identity and matched condition | p. 6 (6. The value of 0(no) remains) |
 | Case 3 Termination is at a goal node without achieving minimum cost. | comparison identity and matched condition | p. 4 (6. The value of 0(no) remains) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,8 +102,6 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 | body limitation/failure cue | Our algorithm prescribes how to use special knowledge-e.g., the knowledge that the shortest road route between any pair of cities cannot be less than ... | p. 2 (2) The heuristic approach typically uses special knowl) |
 | body limitation/failure cue | Limitation of Subgraphs by Informationfrom the Problem In the preceding section, we proved that if h(n) is any lower bound on h(n), then A* ... | p. 4 (6. The value of 0(no) remains) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -122,14 +109,6 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 | Failure of A* to terminate could then only be caused by continued reopening of nodes within M steps of s. | p. 4 (6. The value of 0(no) remains) |
 | Let %(M) be the set of nodes accessible within M steps from s, and let P(M) be the number of nodes in %(M). | p. 4 (6. The value of 0(no) remains) |
 | Note that, although one cannot keep a running estimate of R while the algorithm proceeds because one does not know the value of f(s), ... | p. 7 (6. The value of 0(no) remains) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -141,9 +120,8 @@ PDF body evaluation/result cue (p. 4 (6. The value of 0(no) remains), p. 5 (6. T
 - **p. 4 / 6. The value of 0(no) remains - extractive body cue:** Limitation of Subgraphs by Informationfrom the Problem In the preceding section, we proved that if h(n) is any lower bound on h(n), then A* is ...
 
 - **Evidence anchors reviewed:** datasets 본문 anchor 없음, metrics p. 5 (6. The value of 0(no) remains), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (1) Mark s "open" and calculatef(s)), p. 3 (1) Mark s "open" and calculatef(s)), p. 4 (6. The value of 0(no) remains), baselines p. 6 (6. The value of 0(no) remains), p. 6 (6. The value of 0(no) remains), p. 4 (6. The value of 0(no) remains), results p. 4 (6. The value of 0(no) remains), p. 5 (6. The value of 0(no) remains), p. 2 (2) The heuristic approach typically uses special knowl), p. 2 (2) The heuristic approach typically uses special knowl), p. 3 (1) Mark s "open" and calculatef(s)), p. 3 (1) Mark s "open" and calculatef(s)).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

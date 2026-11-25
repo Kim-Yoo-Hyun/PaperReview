@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 - **p. 4 / Abstract - extractive body cue:** ates the probabilistic path pt under two marginal constraints, pt=0 = p0 and pt=1 = p1.
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract), p. 4 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 - **p. 1 / Abstract - extractive body cue:** 2023) defines policy learning as a conditional denoising diffusion process over the robot action space, conditioned on 2D observation features.
 - **p. 2 / Abstract - extractive body cue:** FlowPolicy allows for the fastest possible generation of target actions by directly defining straight-line flow conditions on the initial 3D point clouds.
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 - **p. 5 / Abstract - extractive body cue:** Each task is run repeatedly under three different random seeds, and their means and variances as well as inference times are calculated.
 - **p. 6 / Abstract - extractive body cue:** During the training phase, the weights are updated using the AdamW optimizer with a learning rate of 1e-4 and a batch size of 128.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, main, contributions, threefold, first, flow-based, policy, generation, framework, conditions, visual, representation, generate, robust, robotic, actions, demonstrations, namely, FlowPolicy, significantly.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p.
 - **p. 6 / Abstract - extractive body cue:** Our method successfully generates high-quality actions at real-time speeds, completing these tasks effectively, whereas DP3 either produces lower-quality actions (left) or fails to complete the ...
 - **p. 7 / Abstract - extractive body cue:** DP3 unsuccessfully picks up the red cube and fails the task.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 5 (Abstract), objective p. 5 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), temporal p. 5 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 5 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

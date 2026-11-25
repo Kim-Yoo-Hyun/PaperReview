@@ -44,7 +44,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (I. INTRODUCTION)): To address 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** While deep reinforcement learning (RL) has shown remarkable success in robot control, efficient exploration is highly sensitive to reward engineering [3].
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 1 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -60,7 +59,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (I. INTRODUCTION)): To address 
 - **p. 1 / Body text (section not recovered) - extractive body cue:** Thanks to the high-quality interaction-preserving motion retargeting, these policies are trained and deployed in a minimal and unified way: it involves only 5 rewards, 4 ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To address these challenges, imitating human motions offers a powerful alternative for learning whole-body control, especially for complex scene interactions.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -75,13 +73,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (I. INTRODUCTION)): To address 
 
 - **p. 1 / Abstract - extractive body cue:** All code, retargeted datasets, and trained policies will be publicly released.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, introduce, OMNIRETARGET, interactionpreserving, data, generation, engine, interaction, mesh, explicitly, models, preserves, crucial, spatial, contact, relationships, between, agent, terrain, manipulated.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -98,20 +93,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (I. INTRODUCTION)): To address 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Cross-embodiment robot-object-terrain interaction. Drake [52], which correctly handles the differential geometry of rotations on the S3 manifold [53]. Our interaction-mesh-based kinematic pipeline is ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Additional hardware results showing diverse, agile and human-like behaviors. • Observation noise: ±0.05 for orientation in Rot6D, ±0.5 m/s and ±0.2 rad/s for ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (I. INTRODUCTION), objective p. 1 (Abstract), p. 1 (I. INTRODUCTION), temporal p. 1 (Body text (section not recovered)), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

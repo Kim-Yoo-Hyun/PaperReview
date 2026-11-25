@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 - **p. 6 / A. Implementation of the Growth Mechanism - extractive body cue:** Similarly, G(0) allows the robot to adapt reward priorities to align with specific training objectives.
 - **p. 5 / A. Implementation of the Growth Mechanism - extractive body cue:** Instead of granting the policy full access to the action space from the star of training, we propose that partially limiting the robot's abilities can ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Overview of our SATA Framework. Dotted lines ind
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 | Similarly, G(0) allows the robot to adapt reward priorities to align with specific training objectives. | definition/direction/unit from same section | p. 6 (A. Implementation of the Growth Mechanism) |
 | The parameters ky, and ty denote the growth rate, the current training step, and the step at which the maximum growth rate occurs, respectively | definition/direction/unit from same section | p. 5 (A. Implementation of the Growth Mechanism) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 | ‘TABLE IV PERFORMANCE COMPARISON BETWEEN OUR METHOD AND BASELINES ACROSS DIFFERENT ROBUSTNESS TESTS (5 TRIALS FER TEST) | comparison identity and matched condition | p. 7 (A. Simulation Experiments) |
 | Ablation study of the proposed framework. showing successful traning in green and failurofpremature convergence in red, SATA ts compared with varans that lack the ... | comparison identity and matched condition | p. 6 (A. Implementation of the Growth Mechanism) |
 | 1) Ablation Study: "To evaluate the contribution of each component of our approach, we compare the performance of the complete framework (SATA) with variants ... | comparison identity and matched condition | p. 6 (A. Simulation Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,7 +106,6 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 - **p. 6 / A. Implementation of the Growth Mechanism - extractive body cue:** Growth Schedule E_ [000003 [to [24000 [Face [7.05 Nm Fend_/ 23.5 Nm / Faon_[ 100 Hz [ fom [ 200 He.
 - **p. 7 / A. Simulation Experiments - extractive body cue:** Training rewards (), without GiQ) adgptation, and cumulative rewards in simulation test (6), when Commanded to fun at '8 ms (lightly OOD),
 - **p. 7 / A. Simulation Experiments - extractive body cue:** ‘TABLE IV PERFORMANCE COMPARISON BETWEEN OUR METHOD AND BASELINES ACROSS DIFFERENT ROBUSTNESS TESTS (5 TRIALS FER TEST)
-- **p. 6 / A. Implementation of the Growth Mechanism - extractive body cue:** This framework enables high-throughput simulation, allowing us to simulate 4096 instances of the GO2 robot in parallel on a single NVIDIA RTX 4090 GPU.
 
 ## Generalization and Failure Cases
 
@@ -130,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 | body limitation/failure cue | 7, the robot's controller exhibited robust performance, successfully resisting these disturbances across all four legs ‘without overreacting. | p. 8 (4) Front eg sweep) |
 | body limitation/failure cue | In the first subsection, we illustrate the compliance of our method during humanrobot interactions, while Sections V-B2 and V-B3 highlight its robustness against external ... | p. 8 (4) Front eg sweep) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +125,6 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 | This framework enables high-throughput simulation, allowing us to simulate 4096 instances of the GO2 robot in parallel on a single NVIDIA RTX 4090 GPU. | p. 6 (A. Implementation of the Growth Mechanism) |
 | All hyperparameters related to the growth schedule and biomechanical model are summarized in Table IIL | p. 6 (A. Implementation of the Growth Mechanism) |
 | ‘TABLE IV PERFORMANCE COMPARISON BETWEEN OUR METHOD AND BASELINES ACROSS DIFFERENT ROBUSTNESS TESTS (5 TRIALS FER TEST) | p. 7 (A. Simulation Experiments) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -158,6 +136,5 @@ PDF body evaluation/result cue (p. 7 (A. Simulation Experiments), p. 7 (A. Simul
 - **p. 8 / 4) Front eg sweep - extractive body cue:** In the first subsection, we illustrate the compliance of our method during humanrobot interactions, while Sections V-B2 and V-B3 highlight its robustness against external disturbances.
 
 - **Evidence anchors reviewed:** datasets p. 7 (B. Lab Level Experiments), p. 6 (A. Implementation of the Growth Mechanism), p. 7 (A. Simulation Experiments), p. 6 (A. Implementation of the Growth Mechanism), p. 5 (A. Implementation of the Growth Mechanism), metrics p. 7 (A. Simulation Experiments), p. 7 (A. Simulation Experiments), p. 5 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Implementation of the Growth Mechanism), p. 5 (A. Implementation of the Growth Mechanism), baselines p. 7 (B. Lab Level Experiments), p. 7 (A. Simulation Experiments), p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Simulation Experiments), results p. 7 (A. Simulation Experiments), p. 7 (A. Simulation Experiments), p. 6 (A. Implementation of the Growth Mechanism), p. 6 (A. Simulation Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

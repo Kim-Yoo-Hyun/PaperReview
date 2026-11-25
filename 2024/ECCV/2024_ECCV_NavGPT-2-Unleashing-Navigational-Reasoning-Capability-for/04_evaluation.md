@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 9 (4 Experiments), p. 
 - **p. 14 / 4 Experiments - extractive body cue:** For the encoder-decoder model FlanT5, a 3.79% increment in SR is observed on the Val Unseen split when the model size is increased from XL ...
 - **p. 9 / 4 Experiments - extractive body cue:** We adopt a comprehensive set of navigation metrics to evaluate performance [6], including Trajectory Length (TL), which measures the average path length in meters; Navigation ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Left: Besides performing effective navigation planning, NavGPT-2 is capable of generating navigational reasoning in a human-interpretable way. Right: NavGPT-2 can support multi-round interaction ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 9 (4 Experiments), p. 
 | Methods # RxR-EN HM3D nDTW↑sDTW↑OSR↑SR↑ SPL↑ TL NE↓OSR↑SR↑ SPL↑ DUET 1 37.77 17.39 44.54 25.07 19.65 20.27 6.60 42.70 25.60 13.32 NavGPT-2FlanT5-XXL 2 38.50 ... | definition/direction/unit from same section | p. 13 (4 Experiments) |
 | Methods # Val Seen Val Unseen TL NE↓OSR↑SR↑SPL↑TL NE↓OSR↑SR↑SPL↑ NavGPT-2FlanT5-XL 1 13.02 3.34 74.24 69.44 61.72 13.68 3.37 74.37 67.52 56.01 w/o policy model ... | definition/direction/unit from same section | p. 14 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 9 (4 Experiments), p. 
 | The only difference lies in the language branch, where we harness the LLM's latent and the baseline adopt a 12layer transformer initialized from LXMERT ... | comparison identity and matched condition | p. 11 (4 Experiments) |
 | As shown in Table 4, NavGPT-2 outperforms DUET by 3.67% | comparison identity and matched condition | p. 12 (4 Experiments) |
 | NavGPT-2 outperforms all DUET variants in SR on the validation unseen split, and it reaches the same performance as DUET with full R2R data ... | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 9 (4 Experiments), p. 
 | body limitation/failure cue | We will leave a detailed investigation of this problem for future work. | p. 14 (4 Experiments) |
 | body limitation/failure cue | We hypothesize this improvement is due to the projection of visual features into the same LLM hidden space as language, leading to a more ... | p. 13 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,20 +138,11 @@ PDF body evaluation/result cue (p. 13 (4 Experiments), p. 9 (4 Experiments), p. 
 | For action prediction, the model employs both hidden representations of image tokens and instruction text tokens that have been processed by the LLM encoder ... | p. 5 (3 Method) |
 | For decoder-only LLMs, we obtain the latents from the last decoder layer. | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 4 Experiments - extractive body cue:** We will leave a detailed investigation of this problem for future work.
 - **p. 13 / 4 Experiments - extractive body cue:** We hypothesize this improvement is due to the projection of visual features into the same LLM hidden space as language, leading to a more robust ...
 
 - **Evidence anchors reviewed:** datasets p. 12 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), metrics p. 9 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), baselines p. 11 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 9 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

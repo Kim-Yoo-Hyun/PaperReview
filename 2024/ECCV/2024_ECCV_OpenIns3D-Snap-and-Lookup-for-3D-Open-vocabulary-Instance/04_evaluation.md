@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 10 / 4 Experiments - extractive body cue:** We also explored the performance of OpenIns3D on a more challenging dataset with more class categories.
 - **p. 10 / 4 Experiments - extractive body cue:** For STPLIS3D, we followed Mask3D to split the large outdoor scene into patches of 50m \times 50 m and lifted the camera up to 10m.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Complex Queries 3D Instance Segmentation with OpenIns3D. Abstract. In this work, we introduce OpenIns3D, a new 3D-input-only framework for 3D open-vocabulary scene understanding. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | Among them, S3DIS, ScanNetv2, and ScanNet200 are indoor point cloud datasets generated from RGBD images, Replica is a photo-realistic 3D indoor scene reconstruction, while ... | definition/direction/unit from same section | p. 9 (4 Experiments) |
 | We compare our zero-shot performance on the novel categories defined in the PLA-family work. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | In summary, OpenIns3D demonstrates the best performance among all existing methods if only 3D data is used as input and outperforms many existing state-of-the-art ... | comparison identity and matched condition | p. 12 (4 Experiments) |
 | The cross-domain models also demonstrate impressive performance on both datasets when compared with the baseline. | comparison identity and matched condition | p. 13 (4 Experiments) |
 | For a fair comparison, we followed their category splits and compared our results on novel classes, as demonstrated in Table 2. | comparison identity and matched condition | p. 10 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | body limitation/failure cue | It also shows certain limitations on small objects that are not well-reconstructed in 3D scenes. | p. 12 (4 Experiments) |
 | body limitation/failure cue | For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images ... | p. 11 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | (a) OpenIns3D follows the "Mask-Snap-Lookup" steps for open-vocabulary scene understanding. | p. 2 (1 Introduction) |
 | Overall, OpenIns3D comprises three core steps: Mask, Snap, and Lookup. | p. 3 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 6: 3D instance segmentation results on the ScanNet200 validation set. OpenIns3D demonstrates robust performance when compared to 2D-input-free models. However, notable limitations emerge when ...
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 11 / 4 Experiments - extractive body cue:** For 3D instance segmentation, compared to works in the PLA family [9,10,34] and the latest work Open3DIS [22], OpenIns3D does not require aligned images as ...
 
 - **Evidence anchors reviewed:** datasets p. 12 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), metrics p. 12 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 6 (Figure/Table caption), p. 12 (4 Experiments), p. 13 (4 Experiments), baselines p. 10 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

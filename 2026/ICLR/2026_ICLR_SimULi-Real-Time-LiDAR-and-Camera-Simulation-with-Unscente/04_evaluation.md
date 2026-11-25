@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** We further measure SplatAD (Hess et al., 2025), NeuRAD (Tonderski et al., 2024) and neurad-studio's UniSim (Yang et al., 2023b) implementation as joint camera-LiDAR baselines, ...
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Although our camera rendering builds upon 3DGUT (Wu et al., 2025b), the improvements in our pipeline (anchoring, appearance variation, environment map) improve rendering quality by ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: SimULi. We design a factorized 3D Gaussian representation that encodes camera and LiDAR information into separate sets of 3D Gaussians joined via nearest-neighbor ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | Figure 2: Method Overview. We model the scene as a dynamic graph (Ost et al., 2021) and pa- rameterize the background and each actor ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 5: Static NVS. Projecting LiDAR as a sparse depth map causes inaccuracies that degrade 3DGUT's rendering of the pole (above), which we avoid ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | Table 1: Waymo Interp. SimULi renders the fastest, outperforms all baselines by >2dB PSNR, and gives better depth reconstruction than LiDAR-only LiDAR-RT (Zhou et ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Compared to SplatAD (Hess et al., 2025), the method closest to ours, we improve PSNR by 0.4-1.7 dB without relying on CNNs for view ... | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
 | We validate the effectiveness of our method on two commonly used AV datasets across cameraonly, LiDAR-only, and joint camera-LiDAR baselines. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | body limitation/failure cue | Figure 6: Dynamic Scenes. FPS numbers are averaged across Waymo Dynamic and PandaSet. Approaches that use CNNs for upsampling (Yang et al., 2023b; Tonderski ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | The choice M = 32, Nε = 16 gives the best LiDAR rendering speed (note that does not affect quality). | p. 10 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | We provide pseudo-code in Procedure 1. | p. 6 (3 METHOD) |
 | We finally compute the azimuth tile count and the maximum point count per tile constraint M. | p. 6 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 5: Static NVS. Projecting LiDAR as a sparse depth map causes inaccuracies that degrade 3DGUT's rendering of the pole (above), which we avoid by ...
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** The choice M = 32, Nε = 16 gives the best LiDAR rendering speed (note that does not affect quality).
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 10 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), baselines p. 10 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (Figure/Table caption), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), results p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

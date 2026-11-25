@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (Figure/Table
 - **p. 8 / 8 GPUs - extractive body cue:** Method Seen Unseen Layouts Objects Receptacles MonolithicRL 91.7 ±1.1 86.3 ±1.4 74.7 ±1.8 52.7 ±2.0 SPA 70.2 ±1.9 72.7 ±1.8 72.7 ±1.8 60.3 ±2.0 SPA-Priv ...
 - **p. 10 / 8 GPUs - extractive body cue:** Results are on unseen layouts with mean and standard error computed for 100 episodes. navigation is often executed between successive skills, we include versions of ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: A mobile manipulator (Fetch robot) simulated in Habitat 2.0 performing rearrangement tasks in a ReplicaCAD apartment - (left) opening a drawer before picking ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (Figure/Table
 | Due to the difficulty of the full task, for analysis, the X-axis lists the sequence of agent-environment interactions (pick, place, open, close) required to ... | definition/direction/unit from same section | p. 9 (8 GPUs) |
 | The ablations for H2.0 (denoted by ‘- render opts', ‘-physics opts', and ‘-all opts.') show that principles followed in our system design lead to ... | definition/direction/unit from same section | p. 6 (8 GPUs) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (Figure/Table
 | In the easiest setting, Tidy House with oracle navigation (Figure 5a), TP+SPA performs better than TP+SRL. | comparison identity and matched condition | p. 10 (8 GPUs) |
 | Table 1: High-level comparison of different simulators. Note: Speeds were taken directly from respective publications or obtained via direct personal correspondence with the authors ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | However, we note the comparison between the two benchmarks is not exact since the robot type, number of objects, and 6 | comparison identity and matched condition | p. 6 (8 GPUs) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (Figure/Table
 | body limitation/failure cue | SensePlanAct (SPA) pipeline: Sensing consists of constructing an accumulative 3D point-cloud of the scene from depth sensors, which is then used for collision queries. | p. 8 (8 GPUs) |
 | body limitation/failure cue | The agent is evaluated on unseen layouts and configurations of objects, and so cannot simply memorize. | p. 9 (8 GPUs) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (Figure/Table
 | The visual input is encoded using a CNN, concatenated with embeddings of proprioceptive-sensing and goal coordinates, and fed to a recurrent actor-critic network, trained ... | p. 7 (8 GPUs) |
 | Million steps of experience (see Appendix C for details). | p. 8 (8 GPUs) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 8 GPUs - extractive body cue:** We make the following observations (See Appendix I for skill learning curves and SPA failure statistics): 1.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 6 (Figure/Table
 - **p. 9 / 8 GPUs - extractive body cue:** The agent is evaluated on unseen layouts and configurations of objects, and so cannot simply memorize.
 
 - **Evidence anchors reviewed:** datasets p. 6 (8 GPUs), p. 6 (8 GPUs), p. 8 (8 GPUs), p. 7 (8 GPUs), p. 10 (8 GPUs), p. 7 (8 GPUs), metrics p. 10 (Figure/Table caption), p. 8 (8 GPUs), p. 10 (8 GPUs), p. 6 (8 GPUs), p. 7 (8 GPUs), p. 8 (8 GPUs), baselines p. 10 (8 GPUs), p. 8 (8 GPUs), p. 8 (8 GPUs), p. 10 (8 GPUs), p. 3 (Figure/Table caption), p. 6 (8 GPUs), results p. 10 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (8 GPUs), p. 10 (8 GPUs), p. 7 (8 GPUs).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

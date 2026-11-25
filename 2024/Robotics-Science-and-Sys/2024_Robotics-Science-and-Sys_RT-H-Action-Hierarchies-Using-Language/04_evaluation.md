@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** 4: Examples showing how language motions depend on the context of the scene and task, taken from online evaluations of RTH trained on the Diverse+Kitchen ...
 - **p. 10 / V. EXPERIMENTS - extractive body cue:** Generalization To evaluate Q4, we study three types of generalization: generalization to new scenes (with similar objects but new backgrounds and lighting), to novel objects, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Given a task in language like "close the pistachio jar" and an image of the scene, RT-H utilizes a Vision Language Model (VLM) ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | Fig. 10: Open Pistachio Jar: Cumulative success rates for each method. | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | Fig. 9: Place Bowl Upright on Counter: Cumulative success rates for each method. | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | We discuss this in Section V-C. • RT-2-IWR is the interactive version of RT-2, which is additionally trained with human interventions in the form ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
 | RT-H outperforms RT-2 on most of the tasks, surpassing RT-2 by 15% on average, which strongly supports the benefit of action hierarchies (Q1), despite ... | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
 | RT-H and RT-H-Joint achieve lower MSE on both datasets compared to RT-2, illustrating the benefits of action hierarchies for ingesting multi-task datasets compared to ... | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | body limitation/failure cue | Failure Modes: RT-H demonstrates performance boosts on a wide variety of tasks, however the action hierarchy paradigm does lead to interesting failure modes. | p. 10 (V. EXPERIMENTS) |
 | body limitation/failure cue | Fig. 8: We show the generalization capabilities of RT-H with completely unseen tasks with minimal correction. By breaking down tasks into language motions, RT-H ... | p. 12 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | More specifically, RT-H passes the language motion to the Encoder in the action query, while RT-H-Joint treats the language motion as a Decoder input ... | p. 6 (V. EXPERIMENTS) |
 | In Table I, we report the minimum MSE across training checkpoints for RT-H, RT-H-Joint, and RT-2 when trained on either the Diverse+Kitchen dataset or ... | p. 7 (V. EXPERIMENTS) |
 | The advantage of language in these settings is to encode the shared structure between similar tasks (e.g., "pick coke can" vs. "pick an apple"), ... | p. 2 (I. INTRODUCTION) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 12 / Figure/Table caption - extractive body cue:** Fig. 8: We show the generalization capabilities of RT-H with completely unseen tasks with minimal correction. By breaking down tasks into language motions, RT-H learns ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), baselines p. 11 (Figure/Table caption), p. 8 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), results p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

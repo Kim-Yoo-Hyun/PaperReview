@@ -54,7 +54,6 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 - **p. 8 / 5.2. Graph Autoencoder - extractive body cue:** Implementation details: Our EGNN receives as input the 3D coordinate locations of each atom which are provided as x0 i in Equation 3 and an ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (5.2. Graph Autoencoder), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 - **p. 2 / 2.1. Equivariance - extractive body cue:** If our transformation φ : X -→Y is translation equivariant, translating the input set Tg(x) and then applying the function φ(Tx(x)) on it, will deliver ...
 - **p. 6 / 5.2. Graph Autoencoder - extractive body cue:** This method introduces noise sampled from a Gaussian distribution into the input node features of the graph h0 i ∼N(0, σI).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 - **p. 5 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** All algorithms are composed of 4 layers and have been trained under the same conditions, batch size 100, 10.000 epochs, Adam optimizer, the learning rate ...
 - **p. 7 / 5.2. Graph Autoencoder - extractive body cue:** All four models have 4 layers, 64 features for the hidden layers, the Swish activation function as a non-linearity and they were all trained for ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** decoder, Liu, takes, input, embedding, space, outputs, reconstructed, adjacency, matrix, function, defined, follows, Aij, Where, only, learnable, parameters, edge, applied.
 - **Relevant PDF headings:** 5.1. Modelling a dynamical system - N-body system (p. 5); 2. Our method outperforms both Radial Field and GNNs (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoe
 - **p. 6 / 5.1. Modelling a dynamical system - N-body system - extractive body cue:** E(n) Equivariant Graph Neural Networks 50.000 samples and we sweep over different amounts of data from 100 to 50.000 samples.
 - **p. 4 / Figure/Table caption - extractive body cue:** Table 1. Comparison over different works from the literature under the message passing framework notation. We created this table with the aim to provide a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 6 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), objective p. 6 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 7 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), temporal p. 5 (5.1. Modelling a dynamical system - N-body system), p. 5 (5.1. Modelling a dynamical system - N-body system), p. 6 (5.2. Graph Autoencoder), p. 8 (5.2. Graph Autoencoder), p. 3 (3.2. Extending EGNNs for vector type representations), p. 3 (3. Equivariant Graph Neural Networks).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

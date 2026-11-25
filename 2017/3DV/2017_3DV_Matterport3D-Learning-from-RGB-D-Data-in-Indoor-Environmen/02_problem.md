@@ -61,8 +61,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 4 (3.3. Properties of the Dat
 | body cue at p. 3 | Although we do not have ground-truth camera poses for the dataset and so cannot measure errors objectively, we ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | Please note the accuracy of the global alignment (no ghosting) and the relatively low noise in surface normals, ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (4.1. Keypoint Matching), p. 4 (3.3. Properties of the Dataset), p. 5 (4.1. Keypoint Matching), p. 8 (4.4. Region-Type Classification). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 5 (4.1. Keypoint Matching), p. 4 (3.3. Properties of the Dataset), p. 5 (4.1. Keypoint Matching), p. 8 (4.4. Region-Type Classification), objective p. 3 (3.3. Properties of the Dataset), p. 5 (4.1. Keypoint Matching), p. 6 (4.2. View Overlap Prediction), p. 6 (4.2. View Overlap Prediction), p. 7 (4.3. Surface Normal Estimation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

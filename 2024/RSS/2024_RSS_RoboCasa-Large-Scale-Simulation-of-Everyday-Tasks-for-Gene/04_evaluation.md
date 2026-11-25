@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 - **p. 4 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** This section outlines these tasks and our large multi-task dataset accompanying them.
 - **p. 5 / IV. ROBOCASA ACTIVITY DATASET - extractive body cue:** Atomic Tasks: Building Blocks of Behavior For a robot to perform complex tasks, it must master the foundational skills needed to solve these tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of RoboCasa. RoboCasa is a simulation framework for training generalist robot agents. Four pillars underlie RoboCasa: (1) Diverse assets, including 120 kitchen ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 | We aim to explore the following research questions in our experiments: 1) How effective are machine-generated trajectories from MimicGen in learning multi-task policies, in ... | definition/direction/unit from same section | p. 6 (V. EXPERIMENTS) |
 | Here we illustrate a small subset of these objects. | definition/direction/unit from same section | p. 5 (IV. ROBOCASA ACTIVITY DATASET) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 | Compared to training policies exclusively on in-domain realworld demonstrations, co-training substantially improves policy performance. | comparison identity and matched condition | p. 8 (3) Can large-scale simulation datasets facilitate knowledge) |
 | On seen objects, we see that cotraining with simulated data yields a 24.4% average success rate, compared to 13.6% with using real data only, ... | comparison identity and matched condition | p. 8 (3) Can large-scale simulation datasets facilitate knowledge) |
 | We aim to explore the following research questions in our experiments: 1) How effective are machine-generated trajectories from MimicGen in learning multi-task policies, in ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 | body limitation/failure cue | Some common failure modes include difficulty with fine-grained manipulation and difficulty effectively transitioning to the next stage of the task. | p. 7 (3) Can large-scale simulation datasets facilitate knowledge) |
 | body limitation/failure cue | The choice of policy architecture, learning algorithm, and finetuning strategy may play a critical role in performance, and these factors warrant investigation in future ... | p. 7 (3) Can large-scale simulation datasets facilitate knowledge) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 | We generate tasks across two steps (see Figure 6). | p. 5 (8) Navigation. These skills do not constitute an exhaustive) |
 | We specifically use the publicly available BC-Transformer implementation in RoboMimic [33]. | p. 6 (3) Can large-scale simulation datasets facilitate knowledge) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VI. CONCLUSION - extractive body cue:** We now pinpoint limitations and discuss exciting avenues for future future.
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (3) Can large-
 - **p. 7 / 3) Can large-scale simulation datasets facilitate knowledge - extractive body cue:** The choice of policy architecture, learning algorithm, and finetuning strategy may play a critical role in performance, and these factors warrant investigation in future work.
 
 - **Evidence anchors reviewed:** datasets p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), metrics p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (V. EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (V. EXPERIMENTS), results p. 7 (Figure/Table caption), p. 6 (3) Can large-scale simulation datasets facilitate knowledge), p. 7 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 8 (3) Can large-scale simulation datasets facilitate knowledge), p. 6 (3) Can large-scale simulation datasets facilitate knowledge).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

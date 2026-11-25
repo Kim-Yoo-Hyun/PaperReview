@@ -59,8 +59,6 @@ PDF body contribution framing (p. 6 (4.3. Object Part Segmentation), p. 2 (1. In
 |---|---|---|
 | no explicit assumption/failure cue | domain stress test only | not a paper claim |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3.5. Network Architecture), p. 6 (Method), p. 1 (1. Introduction), p. 6 (4.2. Shape Classification). The downstream handoff is claimed only when the body describes it.
@@ -68,7 +66,5 @@ PDF body contribution framing (p. 6 (4.3. Object Part Segmentation), p. 2 (1. In
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 5 (3.5. Network Architecture), p. 6 (Method), p. 1 (1. Introduction), p. 6 (4.2. Shape Classification), objective p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Network Architecture).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

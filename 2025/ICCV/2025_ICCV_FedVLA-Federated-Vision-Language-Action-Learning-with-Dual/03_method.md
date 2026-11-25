@@ -49,7 +49,6 @@ PDF body method statement (p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 
 - **p. 6 / 3.4. Algorithms - extractive body cue:** 1: Server Execute: 2: for each round t from 1 to T do 3: // Expert-Driven Aggregation 4: for each trunk layer l do 5: ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 (3.4. Algorithms).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 
 - **p. 5 / 3.4. Algorithms - extractive body cue:** At the start of each training round t, each client processes task-specific data using Instruction-Oriented Scene-Parsing to extract structured features, followed by Dual Gating MoE ...
 - **p. 6 / 3.4. Algorithms - extractive body cue:** Algorithm 2 FedVLA: Server Input: T is the number of training rounds. θ represents the global trunk parameters.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 
 - **p. 6 / 4. Experiments - extractive body cue:** Each client trains locally with a batch size of 256 using the Adam optimizer.
 - **p. 6 / 4. Experiments - extractive body cue:** In simulation, the model is trained with a learning rate of 5 × 10-6, while in real-world settings, the learning rate is set to 2×10-5.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** aggregated, global, trunk, module, then, redistributed, clients, next, training, round, start, client, processes, task-specific, data, Instruction-Oriented, Scene-Parsing, extract, structured, features.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 2); 2.3. Mixture of Experts in Large Models (p. 3); 3.4. Algorithms (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 
 - **p. 6 / 4. Experiments - extractive body cue:** For evaluation, the success and failure of a trial are recoreded as 1 and 0.
 - **p. 6 / 4.1. Simulation - extractive body cue:** For collision detection and dynamics simulation, we employ official physics engines to ensure accurate robotic interactions within the simulation environment.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 (3.4. Algorithms), objective p. 5 (3.4. Algorithms), p. 5 (3.4. Algorithms), p. 6 (3.4. Algorithms), temporal p. 6 (4.1. Simulation), p. 6 (4.2. Real-World), p. 7 (4.2. Real-World), p. 7 (4.3. Ablation Studies), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

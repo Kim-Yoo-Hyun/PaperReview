@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Evaluation of Localization and Mappin
 - **p. 7 / 4.3. Rendering Evaluation - extractive body cue:** The render visualization results on the Replica dataset of the proposed GS-SLAM and SOTA methods.
 - **p. 7 / 4.5. Ablation Study - extractive body cue:** We perform the ablation of GS-SLAM on the Replica dataset #Room0 subset to evaluate the effectiveness of coarse-to-fine tracking, and expansion mapping strategy.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The illustration of the proposed GS-SLAM. It first uti- lizes the 3D Gaussian representation and differentiable splatting rasterization pipeline in SLAM, achieving real-time ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Evaluation of Localization and Mappin
 | Effect of our expansion strategy for mapping. | definition/direction/unit from same section | p. 7 (4.5. Ablation Study) |
 | Note that Point-SLAM uses extra memory dynamic radius to improve performance (mark as †). | definition/direction/unit from same section | p. 7 (4.4. Runtime Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Evaluation of Localization and Mappin
 | 5 illustrate the runtime and memory usage of GS-SLAM and the state-of-the-art methods on the Replica and TUM-RGBD, respectively. | comparison identity and matched condition | p. 7 (4.4. Runtime Analysis) |
 | Table 6. Rendering performance on Replica dataset. We outperform existing dense neural RGB-D methods on the commonly reported rendering metrics. Note that GS-SLAM achieves ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Following [11, 27, 41, 48, 55], we use 8 scenes from the Replica dataset for localization, mesh reconstruction, and rendering quality comparison. | comparison identity and matched condition | p. 5 (4.1. Experimental Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Evaluation of Localization and Mappin
 | body limitation/failure cue | Figure 2. Overview of the proposed method. We aim to use 3D Gaussians to represent the scene and use the rendered RGB-D image for ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | We further evaluate the rendering performance using the peak signal-to-noise ratio (PSNR), SSIM [43], and LPIPS [52] by following [27]. | p. 5 (4.1. Experimental Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Evaluation of Localization and Mappin
 | Note that we do not use any neural network decoder in our system, which results in the zero learnable parameter. | p. 7 (4.4. Runtime Analysis) |
 | After projecting 3D Gaussians to the image plane, the color of one pixel is rendered by sorting the Gaussians in depth order and performing ... | p. 3 (3.1. 3D Gaussian Scene Representation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion and Limitations - extractive body cue:** We believe GS-SLAM has the potential to extend to larger scale with some improvements and will explore this in future work.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Evaluation of Localization and Mappin
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** We further evaluate the rendering performance using the peak signal-to-noise ratio (PSNR), SSIM [43], and LPIPS [52] by following [27].
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 6 (4.3. Rendering Evaluation), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Evaluation of Localization and Mapping), p. 7 (4.3. Rendering Evaluation), p. 7 (4.5. Ablation Study), metrics p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Evaluation of Localization and Mapping), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation of Localization and Mapping), baselines p. 6 (4.2. Evaluation of Localization and Mapping), p. 6 (4.2. Evaluation of Localization and Mapping), p. 7 (4.4. Runtime Analysis), p. 7 (4.4. Runtime Analysis), p. 8 (Figure/Table caption), p. 5 (4.1. Experimental Setup), results p. 6 (4.2. Evaluation of Localization and Mapping), p. 7 (4.5. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.3. Rendering Evaluation), p. 1 (Figure/Table caption), p. 7 (4.4. Runtime Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

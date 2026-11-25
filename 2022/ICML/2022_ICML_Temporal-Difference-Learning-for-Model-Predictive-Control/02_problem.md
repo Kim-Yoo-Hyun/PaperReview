@@ -63,8 +63,6 @@ PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p
 | body cue at p. 8 | Mean of 5 runs. have access to the egocentric camera fails. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Performance of LOOP is similar to SAC, and MPC with a simulator (MPC:sim) performs well on locomotion tasks ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3. TD-Learning for Model Predictive Control), p. 3 (3. TD-Learning for Model Predictive Control), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 2 (2. Preliminaries). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (3. TD-Learning for Model Predictive Control), p. 3 (3. TD-Learning for Model Predictive Control), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 2 (2. Preliminaries), objective p. 4 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 5 (4. Task-Oriented Latent Dynamics Model), p. 3 (3. TD-Learning for Model Predictive Control), p. 3 (3. TD-Learning for Model Predictive Control), p. 4 (4. Task-Oriented Latent Dynamics Model).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

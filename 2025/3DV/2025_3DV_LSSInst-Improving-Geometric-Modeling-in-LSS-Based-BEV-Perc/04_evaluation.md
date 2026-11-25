@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 - **p. 7 / 4.4. Noise Resistance for Practical Robustness - extractive body cue:** Although we have verified the high performance of LSSInst on nuScenes [1], even the large-scale autonomous driving dataset inevitably contain disturbances in the extrinsics obtained ...
 - **p. 7 / 4.3. Generalization Ability and Geometric-Wise - extractive body cue:** Comparison results of LSS-based detectors on 3D detection on the nuScenes test set.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. The conceptual comparison of LSSInst with previous camera-based fashions. in recent years. The reasons can be attributed not only to the lower deployment ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 | The noise resistance results for robustness. | definition/direction/unit from same section | p. 8 (4.5. Multiplicate Queries Ablations) |
 | Query Composition Composition of Queries mAP↑ NDS↑ | definition/direction/unit from same section | p. 8 (4.5. Multiplicate Queries Ablations) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 | Here, the baseline is BEVDepth4D [25] with 4 frames. | comparison identity and matched condition | p. 7 (4.4. Noise Resistance for Practical Robustness) |
 | Method Noise mAP%↑Attenu.%↓NDS%↑Attenu.%↓ Baseline 0 35.74 - 46.84 - LSSInst 38.28 - 49.43 - Baseline 0.5% 35.38 1.01 46.44 0.85 LSSInst 38.01 0.71 49.19 ... | comparison identity and matched condition | p. 8 (4.5. Multiplicate Queries Ablations) |
 | Figure 4. Qualitative comparison between baseline proposals (red), predictions (blue), their superposition (purple), and GT (white). Spatial Sampling and Fusion As for spatial sampling, ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 | body limitation/failure cue | Figure 3. Comparison results of per-classes mAP on nuScenes val set. D.2.2 Verification for Translation Improvement The mA*E is designed to measure a property ... | p. 13 (Figure/Table caption) |
 | body limitation/failure cue | Method Noise mAP%↑Attenu.%↓NDS%↑Attenu.%↓ Baseline 0 35.74 - 46.84 - LSSInst 38.28 - 49.43 - Baseline 0.5% 35.38 1.01 46.44 0.85 LSSInst 38.01 0.71 49.19 ... | p. 8 (4.5. Multiplicate Queries Ablations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 | This branch can be roughly regarded as a multilayer Transformer-decoder-like [42] module for 3D detection, which is briefly divided into two parts: box-level offset ... | p. 5 (3. Methodology) |
 | With this convenience, we can encode all the geometric-aware information of the entire box to substitute the transitional positional encoding, thereby expanding and enriching ... | p. 5 (3. Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.5. Multiplicate Queries Ablations - extractive body cue:** We can observe that on the one hand, relying solely on the potential queries cannot play a major role, and even utilizing all 900 queries ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Generalization Ability and Geometric-
 - **p. 8 / 4.5. Multiplicate Queries Ablations - extractive body cue:** Method Noise mAP%↑Attenu.%↓NDS%↑Attenu.%↓ Baseline 0 35.74 - 46.84 - LSSInst 38.28 - 49.43 - Baseline 0.5% 35.38 1.01 46.44 0.85 LSSInst 38.01 0.71 49.19 0.49 ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.4. Noise Resistance for Practical Robustness), p. 7 (4.3. Generalization Ability and Geometric-Wise), metrics p. 13 (Figure/Table caption), p. 7 (4.4. Noise Resistance for Practical Robustness), p. 7 (4.4. Noise Resistance for Practical Robustness), p. 6 (4.2. Benchmark Results), p. 1 (Figure/Table caption), p. 6 (4.1. Experimental Settings), baselines p. 6 (4.2. Benchmark Results), p. 8 (4.5. Multiplicate Queries Ablations), p. 6 (4.2. Benchmark Results), p. 7 (4.4. Noise Resistance for Practical Robustness), p. 8 (4.5. Multiplicate Queries Ablations), p. 14 (Figure/Table caption), results p. 6 (4.3. Generalization Ability and Geometric-Wise), p. 6 (4.2. Benchmark Results), p. 7 (4.5. Multiplicate Queries Ablations), p. 13 (Figure/Table caption), p. 7 (4.3. Generalization Ability and Geometric-Wise), p. 13 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

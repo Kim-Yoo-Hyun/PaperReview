@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (B. Utilizing Tactile Readi
 | body cue at p. 8 | The success rate along with the mean and standard ‘deviation ofthe force error at the contact points for ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | For the remaining failure case, the hysteresis of multiple taxels of the index finger created the illusion of ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (B. Force Estimation), p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 1 (A. State of Tactile Sensors). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ tactile writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Iyrropucrion), p. 1 (Abstract), p. 2 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 2 (B. Utilizing Tactile Readings), interface p. 5 (B. Force Estimation), p. 2 (B. Utilizing Tactile Readings), p. 5 (B. Force Estimation), p. 1 (A. State of Tactile Sensors), objective p. 2 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 3 (B. Utilizing Tactile Readings), p. 4 (B. Force Estimation), p. 4 (B. Force Estimation), p. 5 (B. Force Estimation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

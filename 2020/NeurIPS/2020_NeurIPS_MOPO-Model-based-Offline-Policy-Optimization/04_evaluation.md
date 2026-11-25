@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 - **p. 9 / 5 Experiments - extractive body cue:** In halfcheetah-jump, the agent is asked to run while jumping as high as possible given an training offline dataset of halfcheetah running.
 - **p. 9 / 5 Experiments - extractive body cue:** We include the mean and max undiscounted return of the episodes in the batch data (under Batch Mean and Batch Max, respectively) for comparison.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between vanilla model-based RL (MBPO [29]) with or without model ensembles and vanilla model-free RL (SAC [27]) on two offline RL tasks: ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 | Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Table 5: HIV treatment results, averaged over 3 random seeds. G Experiment Details G.1 Details of out-of-distribution environments For halfcheetah-jump, the reward function that ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 | Table 2: Average returns halfcheetah-jump and ant-angle that require out-of-distribution policy. The MOPO results are averaged over 6 random seeds, ± standard deviation, while ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Figure 1: Comparison between vanilla model-based RL (MBPO [29]) with or without model ensembles and vanilla model-free RL (SAC [27]) on two offline RL ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | In our experiments, we aim to study the follow questions: (1) How does MOPO perform on standard offline RL benchmarks in comparison to prior ... | comparison identity and matched condition | p. 7 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 | body limitation/failure cue | Numbers for model-free methods taken from [18], which does not report standard deviation. | p. 8 (5 Experiments) |
 | body limitation/failure cue | Figure 1: Comparison between vanilla model-based RL (MBPO [29]) with or without model ensembles and vanilla model-free RL (SAC [27]) on two offline RL ... | p. 2 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 | Recent advances in machine learning using deep neural networks have shown significant successes in scaling to large realistic datasets, such as ImageNet [13] in ... | p. 1 (1 Introduction) |
 | We discuss important practical implementation details in Section 4.3. | p. 4 (3 Preliminaries) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Conclusion - extractive body cue:** However, uncertainty estimation does not explain the entire difference nor does it explain why model-free methods cannot also enjoy the benefits of uncertainty estimation.
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 18 (Figure/Table
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between vanilla model-based RL (MBPO [29]) with or without model ensembles and vanilla model-free RL (SAC [27]) on two offline RL tasks: ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), metrics p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 8 (5 Experiments), p. 18 (Figure/Table caption), p. 7 (5 Experiments), p. 9 (5 Experiments), baselines p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5 Experiments), results p. 9 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

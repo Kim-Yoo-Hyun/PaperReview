@@ -46,7 +46,6 @@ PDF body method statement (p. 28 (B.2 Algorithm 3 termination)): We prove here t
 - **p. 28 / B.2 Algorithm 3 termination - extractive body cue:** The first outer iteration (k = 1) begins with a sequence of activations (at most m) until all the constraints are active or satisfied.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 28 (B.2 Algorithm 3 termination), p. 28 (B.2 Algorithm 3 termination).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 28 (B.2 Algorithm 3 termination)): We prove here t
 - **p. 2 / 1 Introduction - extractive body cue:** In [Mansard et al., 2009], it was proposed to realize an homotopy between the control law with and without avoidance.
 - **p. 4 / 1 Introduction - extractive body cue:** The complete solution solving (A1, b1) at best and (A2, b2) if possible is: x∗ 2 = A+ 1 b1 + (A2P1)+(b2 -A2A+ 1 b1) ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 28 (B.2 Algorithm 3 termination)): We prove here t
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** prove, here, outer, loop, Algorithm, terminates, note, total, number, constraints, first, iteration, begins, sequence, activations, most, until, active, satisfied, Consider.
 - **Relevant PDF headings:** B.2 Algorithm 3 termination (p. 28).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,23 +103,13 @@ PDF body method statement (p. 28 (B.2 Algorithm 3 termination)): We prove here t
 - **p. 25 / 6.2.2 Results - extractive body cue:** The grasping task is finally removed when the last position is reached.
 - **p. 25 / 6.2.2 Results - extractive body cue:** In exchange, the number of control cycles without update decreases to 96.6%.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 28 (B.2 Algorithm 3 termination), objective p. 28 (B.2 Algorithm 3 termination), p. 28 (B.2 Algorithm 3 termination), temporal p. 1 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), p. 6 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 U T), p. 12 (2.6 Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

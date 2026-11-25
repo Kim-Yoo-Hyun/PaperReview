@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** The final prediction ˜zi for the i-th token is the word in the vocabulary with the highest probability, expressed as: ˜zi = arg max w∈vocab ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 4 / 3 METHOD - extractive body cue:** 2, primarily consists of two main components: (1) a point cloud multimodal model which is trained to accept point cloud and text inputs and generate ...
 - **p. 14 / A.1 BASELINE MODELS DETAILS - extractive body cue:** For IAGNet (Yang et al., 2023), an affordance detection method that utilizes paired image-point cloud data as input.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 7 / 4 EXPERIMENT - extractive body cue:** For the point encoder (fpe), we adopt Point-BERT (Yu et al., 2022), pre-trained with ULIP-2 (Xue et al., 2024) in the ModelNet dataset (Vishwanath et ...
 - **p. 8 / 4 EXPERIMENT - extractive body cue:** In particular, we compare 2 different implementations: (1) w/o PC removes the pre-trained weights fPB and fAFD, directly training our 3D-ADLLM; (2) w/o UL removes ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** AffordanceLLM, consists, following, modules, pre-trained, point, cloud, encoder, projector, fproj, backbone, fPB, affordance, decoder, fAFD, large, language, model, LLM, fllm.
 - **Relevant PDF headings:** 3 METHOD (p. 3); A.1 BASELINE MODELS DETAILS (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 15 / A.3 DATA ANALYSIS - extractive body cue:** Full-view: Given an object as 3D point cloud without knowing the affordances supported by the object, the full-shape affordance estimation task aims to estimate the ...
 - **p. 7 / 4 EXPERIMENT - extractive body cue:** For pretraining, we split it into single-part segmentation instances.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD), objective p. 7 (3 METHOD), p. 7 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.4 TRAINING DETAILS), p. 5 (3 METHOD), temporal p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

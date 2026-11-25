@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiment), p. 11 (4 Experiment), p. 1
 - **p. 12 / 4 Experiment - extractive body cue:** 3: The selected novel view synthesis of scene0000 from the ScanNet dataset [4].
 - **p. 12 / 4 Experiment - extractive body cue:** (10), which is crucial for enabling scene manipulation for robotics or mixed reality applications.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: The illustration of the proposed SGS-SLAM. It employs 2D inputs encompass- ing appearance, geometry, and semantic information, leveraging Gaussian Splatting and differentiable rendering ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiment), p. 11 (4 Experiment), p. 1
 | For each scene, we compute the average mIoU score by comparing the rendered and the ground-truth 2D semantic image in the training view. | definition/direction/unit from same section | p. 11 (4 Experiment) |
 | Fig. 1: The illustration of the proposed SGS-SLAM. It employs 2D inputs encompass- ing appearance, geometry, and semantic information, leveraging Gaussian Splatting and differentiable ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiment), p. 11 (4 Experiment), p. 1
 | Table 3: Quantitative comparison of our method against existing semantic NeRF- based SLAM methods on the Replica dataset [35]. The baselines are limited to ... | comparison identity and matched condition | p. 11 (Figure/Table caption) |
 | Baselines We compare the tracking and mapping with state-of-the-art methods NICE-SLAM [48], vMap [19], Co-SLAM [39], ESLAM [16], and SplaTAM [17]. | comparison identity and matched condition | p. 9 (4 Experiment) |
 | Our method outperforms baselines by a large margin primarily due to the integration of keyframe optimization and semantic constraints. | comparison identity and matched condition | p. 12 (4 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiment), p. 11 (4 Experiment), p. 1
 | body limitation/failure cue | The results demonstrate that our method delivers more high-fidelity and robust reconstructions. | p. 9 (4 Experiment) |
 | body limitation/failure cue | Additionally, utilizing features from different channels of Gaussians, such as geometry, appearance, and semantic information, provides multiple levels of supervision, resulting in a more ... | p. 11 (4 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 13 (4 Experiment), p. 11 (4 Experiment), p. 1
 | In addition, we compute an uncertainty score for each keyframe, defined as U(t) = e-τt, with t representing the timestamp of the keyframe and ... | p. 7 (3 Method) |
 | Liu et al. \math c a l { L}(I_ {\r m pix} ) = \sum _{\rm pi x} \ alpha /I_{\rm pix}^{GT} - I_{\rm ... | p. 8 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / 4 Experiment - extractive body cue:** Specifically, the system without appearance color cannot provide rendered views, whereas camera pose and depth can still be estimated by leveraging depth and
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 13 (4 Experiment), p. 11 (4 Experiment), p. 1
 - **p. 11 / 4 Experiment - extractive body cue:** Additionally, utilizing features from different channels of Gaussians, such as geometry, appearance, and semantic information, provides multiple levels of supervision, resulting in a more robust ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiment), p. 11 (4 Experiment), p. 14 (4 Experiment), p. 11 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), metrics p. 10 (4 Experiment), p. 8 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 11 (4 Experiment), baselines p. 11 (4 Experiment), p. 9 (4 Experiment), p. 10 (Figure/Table caption), p. 11 (Figure/Table caption), p. 9 (4 Experiment), p. 12 (4 Experiment), results p. 13 (4 Experiment), p. 11 (4 Experiment), p. 11 (4 Experiment), p. 10 (Figure/Table caption), p. 9 (4 Experiment), p. 10 (4 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

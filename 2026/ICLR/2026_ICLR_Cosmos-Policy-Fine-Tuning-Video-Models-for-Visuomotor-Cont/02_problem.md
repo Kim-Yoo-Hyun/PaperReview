@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 9 | Figure 5: Common failure modes of π0.5 and OpenVLA-OFT+ on two challenging ALOHA robot tasks. Left: π0.5 struggles ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | Figure 6: World model predictions: base Cosmos Policy vs. fine-tuned checkpoint. Top: The base Cosmos Policy's world model ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 5 (3 PRELIMINARIES). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 6 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), interface p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 5 (3 PRELIMINARIES), objective p. 17 (A.2.4 ALOHA TRAINING DETAILS), p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), p. 22 (A.4.2 COSMOS POLICY INFERENCE LATENCY).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

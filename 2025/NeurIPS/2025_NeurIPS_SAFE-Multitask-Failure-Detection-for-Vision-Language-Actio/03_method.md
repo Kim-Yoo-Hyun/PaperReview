@@ -48,7 +48,6 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 - **p. 4 / 4 Method - extractive body cue:** 1(c), we can see that failure rollout initially stays out of the "failure zone" when it progresses normally, and when the robot mistakenly drops the ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 - **p. 1 / 1 Introduction - extractive body cue:** VLAs are designed to accomplish diverse tasks and may frequently encounter novel task instructions and unseen environments during deployment.
 - **p. 2 / 1 Introduction - extractive body cue:** Experiments show that SAFE outperforms baselines and achieves state-of-the-art (SOTA) performance.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 - **p. 10 / 6 Results - extractive body cue:** For example, SAFE-LSTM contains 2.3 million parameters and introduces an additional 0.73 ms of inference time.
 - **p. 4 / 4 Method - extractive body cue:** 1(c), we can see that failure rollout initially stays out of the "failure zone" when it progresses normally, and when the robot mistakenly drops the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Encoder, Decoder, Action, Observation, Instruction, VLA, Model, SAFE-MLP, SAFE-LSTM, MLP, LSTM, Visual, Analysis, Latent, Space, VLAs, process, multi-modal, inputs, extract.
 - **Relevant PDF headings:** 4 Method (p. 4); B.1 Vision-Language-Action Models (p. 23).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,13 @@ PDF body method statement (p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method)): E
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 1: Failure detection results on simulation benchmarks, measured by area under ROC (ROC- AUC). "-" indicates that the failure detection method does not apply. ...
 - **p. 5 / 3. Calibrate failure detection - extractive body cue:** Inspired by this observation, we design SAFE, which uses the internal features of VLAs for failure detection.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4 Method), p. 4 (4 Method), p. 4 (4 Method), objective p. 4 (4 Method), p. 4 (4 Method), temporal p. 4 (4 Method), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 5 (3. Calibrate failure detection), p. 8 (0 SimplerEnv), p. 9 (0 SimplerEnv).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

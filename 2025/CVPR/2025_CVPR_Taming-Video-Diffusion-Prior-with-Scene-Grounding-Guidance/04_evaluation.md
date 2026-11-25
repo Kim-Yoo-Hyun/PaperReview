@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 - **p. 7 / 4.2. Comparisons - extractive body cue:** Qualitative comparisons on the Replica and ScanNet++ datasets.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation experiments on the Replica dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We tackle the critical issues of (a) extrapolation and (b) occlusion in sparse-input 3DGS by leveraging a video diffusion model. Vanilla generation often ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 | Figure 1. We tackle the critical issues of (a) extrapolation and (b) occlusion in sparse-input 3DGS by leveraging a video diffusion model. Vanilla generation ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Framework overview of our proposed method. It consists of three parts: scene-grounding guidance, trajectory initialization, and optimization scheme with generated sequences. Initially, ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 | Baseline 3DGS Ours Ground Truth Figure 6. | comparison identity and matched condition | p. 7 (4.3. Ablation Studies) |
 | 3 show that our method outperforms these two methods by more than 1.0 dB in PSNR. | comparison identity and matched condition | p. 8 (4.4. Further Comparisons with Inpainting Methods) |
 | (b) Effectiveness of the proposed scheme for 3DGS optimization. w/ Guided Genration&Traj. w/ Perceptual Loss Baseline 3DGS Figure 7. | comparison identity and matched condition | p. 8 (4.3. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 | body limitation/failure cue | Moreover, the ‘inside-out' viewing directions make occlusion common in this benchmark. | p. 6 (4.1. Experimental Setups) |
 | body limitation/failure cue | Our method effectively addresses the issues of extrapolation and occlusion while preserving finer details and reducing artifacts. | p. 7 (4.2. Comparisons) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 | 3: Given: Latent image-to-video diffusion model ϵθ, VAE decoder D, pre-defined βt, ¯αt and guidance scale γt. | p. 4 (3.2. Generation via Scene-Grounding Guidance) |
 | The sampling is conducted by iterative denoising for T steps [56] as follows: \la b el {eq:ddp m } \se tle ngth { \ ... | p. 4 (3.1. Preliminary) |
 | (4)) as: \la be l {eq : g u i d e_ l oss} \s e tlength {\a b o v ed i s ... | p. 5 (3.2. Generation via Scene-Grounding Guidance) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparisons), p. 8 (Figure/Table capt
 - **p. 7 / 4.2. Comparisons - extractive body cue:** Our method effectively addresses the issues of extrapolation and occlusion while preserving finer details and reducing artifacts.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setups), p. 6 (4.2. Comparisons), p. 8 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 7 (4.2. Comparisons), p. 8 (4.3. Ablation Studies), metrics p. 6 (4.1. Experimental Setups), p. 8 (4.4. Further Comparisons with Inpainting Methods), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Comparisons), p. 7 (4.2. Comparisons), p. 7 (4.3. Ablation Studies), baselines p. 6 (4.1. Experimental Setups), p. 7 (4.2. Comparisons), p. 6 (4.1. Experimental Setups), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Further Comparisons with Inpainting Methods), p. 8 (4.3. Ablation Studies), results p. 6 (4.2. Comparisons), p. 8 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 7 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.1. Experimental Setups).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

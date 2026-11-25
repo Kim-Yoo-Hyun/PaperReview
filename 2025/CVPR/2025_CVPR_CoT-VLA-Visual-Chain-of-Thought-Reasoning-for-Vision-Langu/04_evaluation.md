@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 8 / 4.4. Better Visual Reasoning Helps - extractive body cue:** We build our system upon VILA-U, demonstrating strong performance across diverse robotic manipulation tasks.
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** As shown in Figure 6, both benchmark suites demonstrate that action sequence prediction consistently outperforms single-action prediction.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between vanilla VLA and CoT-VLA frameworks. Prior VLA models (top) directly predict robot ac- tions from task inputs without explicit reasoning steps ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (Figure/Table 
 | While the dataset was incorporated into the pretraining phase alongside OpenX, we performed additional task-specific fine-tuning exclusively on Bridge-V2 until achieving a training action ... | definition/direction/unit from same section | p. 5 (4.1. Experimental Setup) |
 | Right: final state (sobs T ) upon task completion. | definition/direction/unit from same section | p. 7 (4.2. Evaluations Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (Figure/Table 
 | Second, our autoregressive image generation produces lower visual quality compared to state-of-the-art diffusion-based models. | comparison identity and matched condition | p. 8 (4.4. Better Visual Reasoning Helps) |
 | CoT-VLA achieves the best or competitive performance across all LIBERO benchmarks suites compared to baseline approaches. | comparison identity and matched condition | p. 5 (10. For complete dataset specifications and training hyper) |
 | We evaluate four model variants: VLA - a baseline implementation following the standard VLA framework [29], with the same VILA-U backbone but without chain-of-thought ... | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | Compared to OpenVLA [29], CoT-VLA shows slightly lower success rates in visual and language generalization tasks due to grasping failures from action chunking (see ... | p. 6 (4.2. Evaluations Results) |
 | body limitation/failure cue | Following [29], we evaluate on four tasks designed in [29] to evaluate visual robustness (varying distractors), motion generalization (novel object positions), semantic generalization (unseen ... | p. 5 (4.1. Experimental Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (Figure/Table 
 | We evaluate each task across 5 trials under two conditions: (1) CoT-VLA using its generated goal images and (2) CoT-VLA using ground-truth goal images ... | p. 8 (4.4. Better Visual Reasoning Helps) |
 | Recent advancement in fast image generation or fast LLM inference techniques could potentially improve the throughput of the model [7, 31, 33, 57, 73] ... | p. 8 (4.4. Better Visual Reasoning Helps) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 3. Better visual reasoning helps. Success rates compar- ing CoT-VLA using generated versus ground-truth goal images on out-of-distribution tasks. Results demonstrate that improved visual ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** Following [29], we evaluate on four tasks designed in [29] to evaluate visual robustness (varying distractors), motion generalization (novel object positions), semantic generalization (unseen language ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4. Experiments), p. 7 (4.3. Ablation Study), p. 6 (4.1. Experimental Setup), p. 8 (4.4. Better Visual Reasoning Helps), p. 6 (4.2. Evaluations Results), metrics p. 6 (4.2. Evaluations Results), p. 6 (4.2. Evaluations Results), p. 5 (Figure/Table caption), p. 7 (4.3. Ablation Study), p. 8 (4.4. Better Visual Reasoning Helps), p. 8 (4.4. Better Visual Reasoning Helps), baselines p. 5 (4. Experiments), p. 6 (4.2. Evaluations Results), p. 6 (4.2. Evaluations Results), p. 8 (4.4. Better Visual Reasoning Helps), p. 5 (10. For complete dataset specifications and training hyper), p. 7 (4.3. Ablation Study), results p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluations Results), p. 8 (4.3. Ablation Study), p. 6 (4.2. Evaluations Results), p. 7 (4.3. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

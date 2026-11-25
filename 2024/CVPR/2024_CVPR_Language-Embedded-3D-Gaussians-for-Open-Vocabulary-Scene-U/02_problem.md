@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 6 | Specifically, DFF [22] fails to identify "asphalt ground" in scene "bicycle" and "flower" in scene "garden". | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | This may be caused by its use of LSeg [24], which is unstable to compute correct features in ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3.4. Language Embedded 3D Gaussians), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 5 (3.4. Language Embedded 3D Gaussians), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), objective p. 5 (3.4. Language Embedded 3D Gaussians), p. 3 (3. Method), p. 4 (3.3. Quantization of Language Features), p. 4 (3.3. Quantization of Language Features), p. 5 (3.4. Language Embedded 3D Gaussians), p. 6 (Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

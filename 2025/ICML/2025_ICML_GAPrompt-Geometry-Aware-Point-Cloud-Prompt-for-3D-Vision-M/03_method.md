@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 - **p. 3 / 3. The Proposed Method - extractive body cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3. The Proposed Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 - **p. 2 / 1. Introduction - extractive body cue:** Our approach begins with the introduction of a Point Prompt, which explicitly incorporates point cloud data as input, allowing the model to better capture subtle ...
 - **p. 1 / 1. Introduction - extractive body cue:** The advent of scanning sensor devices has significantly facilitated the acquisition of 3D point cloud data, an inherently irregular and unstructured geometric representation.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 - **p. 3 / 3. The Proposed Method - extractive body cue:** As shown in Figure 3, given a pre-trained 3D transformer with N blocks and a specific downstream task, we freeze the backbone and solely update ...
 - **p. 4 / 3.1. Point Prompt - extractive body cue:** Following the original architecture of the pre-trained model, the prompted point cloud is encoded into Lt point tokens h1 by the token embedding module.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, feed, tokens, Prompt, Propagation, mechanism, injecting, feature, extraction, process, Prompt-Propagation, where, RLt, propagated, input, Furthermore, adjust, adapters, enhanced, shape.
 - **Relevant PDF headings:** 2.1. Pre-trained 3D Vision Model (p. 2); 3. The Proposed Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p
 - **p. 5 / 3.4. Analysis and Discussion - extractive body cue:** The attention mechanism with prompt integration can be formally expressed as follows: oi = Attn.(WQhi, WKhi, WV hi), (17) ˆoi = Attn.(WQhi, WK[pi, hi], WV ...
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** As demonstrated in Table 1, we conducted experiments on three variants of ScanObjectNN, each with increasing complexity.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Point Prompt), p. 4 (3.1. Point Prompt), p. 3 (3.1. Point Prompt), p. 5 (3.2. Point Shift Prompter), p. 5 (3.2. Point Shift Prompter), p. 3 (3. The Proposed Method), objective p. 4 (3.2. Point Shift Prompter), p. 3 (3. The Proposed Method), temporal p. 4 (3.2. Point Shift Prompter), p. 4 (3.2. Point Shift Prompter), p. 5 (3.3. Prompt Propagation), p. 5 (3.3. Prompt Propagation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

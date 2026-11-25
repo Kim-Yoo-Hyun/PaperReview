@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 - **p. 6 / 3 Experiments - extractive body cue:** Real-world Experiments For real-world experiments, we collect 100 trajectories per task for the four GR1 and three Franka tasks.
 - **p. 7 / 3 Experiments - extractive body cue:** Leveraging this capability, we generate 50 neural trajectories for each of the 14 novel behavior tasks and train our downstream visuomotor robot policy only on ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Generalization through DREAMGEN. We enable 2D visuomotor robot policies to generalize to new environments with new behaviors, while only collecting teleoperation data for ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 | 0 10 20 30 40 50 60 70 DreamGenBench Score 0 5 10 15 20 RoboCasa Score WAN CogVideoX Hunyuan Cosmos Figure 6: Performance ... | definition/direction/unit from same section | p. 8 (3 Experiments) |
 | Empricially, we observe a higher performance gain for GR00T N1 compared to DP and π0; we hypothesize that having separate action and decoder parameters ... | definition/direction/unit from same section | p. 6 (3 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 | Figure 1: Generalization through DREAMGEN. We enable 2D visuomotor robot policies to generalize to new environments with new behaviors, while only collecting teleoperation data ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 4: Scaling # of Neural Trajectories in RoboCasa. We vary the sizes of neural trajectories (x-axis) and ground-truth trajectories (low, mid, high) and ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Behavior Generalization We investigate whether our pipeline enables robots to learn entirely new behaviors solely from neural trajectories without involving any human teleoperation. | comparison identity and matched condition | p. 7 (3 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 | body limitation/failure cue | Table 3. One benefit of latent actions is that it does not require actually having ground-truth actions for the target robot embodiment when training ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Lastly, the baseline model trained only on pick-and-place in a single environment shows 0% Success Rate, since it does not have the ability to ... | p. 7 (3 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 | For GR00T N1, we treat the two types of trajectories as separate embodiments by using separate action encoder and decoder. | p. 4 (1 Introduction) |
 | For the inverse dynamics model (IDM) architecture, we use diffusion transformers with SigLIP-2 vision encoder and train with a flow matching objective. | p. 4 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Conclusion - extractive body cue:** 7 Limitation Our approach is complementary to existing methods that learn from videos, although we do not directly benchmark against them.
@@ -167,9 +146,8 @@ PDF body evaluation/result cue (p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7
 - **p. 7 / 3 Experiments - extractive body cue:** Lastly, the baseline model trained only on pick-and-place in a single environment shows 0% Success Rate, since it does not have the ability to generalize ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (3 Experiments), p. 5 (3 Experiments), p. 8 (3 Experiments), p. 8 (3 Experiments), p. 6 (3 Experiments), p. 5 (3 Experiments), metrics p. 5 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (3 Experiments), baselines p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 1 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (3 Experiments), results p. 5 (3 Experiments), p. 6 (3 Experiments), p. 7 (3 Experiments), p. 7 (3 Experiments), p. 5 (Figure/Table caption), p. 8 (3 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 2 / 1 Introduction - extractive body cue:** For rationale-augmented training and finetuning methods, it is costly to create a large set of high quality rationales, which is much more complicated than simple ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 1 / Abstract - extractive body cue:** For instance, prompting a PaLM 540B with just eight chain-of-thought exemplars achieves state-of-the-art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned ...
 - **p. 4 / 1 Introduction - extractive body cue:** Math Word Problems (free response) Math Word Problems (multiple choice) CSQA (commonsense) StrategyQA Date Understanding Sports Understanding Last Letter Concatenation Coin Flip (state tracking) Q: ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 4 / 1 Introduction - extractive body cue:** For AQuA, we used four exemplars and solutions from the training set, as given in Appendix Table 21.
 - **p. 6 / 3.2 Results - extractive body cue:** To confirm that successful chain-of-thought prompting works for other sets of exemplars, we also run experiments with three sets of eight exemplars randomly sampled from ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, GPT-3, Brown, text-ada-001, text-babbage-001, text-curie-001, text-davinci-002, presumably, correspond, InstructGPT, models, parameters, Ouyang, second, LaMDA, Thoppilan, underscores, large, language, learn.
 - **Relevant PDF headings:** A.1 Why does increasing model scale improve chain-of-thought prompting? (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 4 (1 Introduction), p. 2 (1 Introduction), p. 2 (1
 - **p. 9 / 6 Discussion - extractive body cue:** As for limitations, we first qualify that although chain of thought emulates the thought processes of human reasoners, this does not answer whether the neural ...
 - **p. 9 / 6 Discussion - extractive body cue:** Third, there is no guarantee of correct reasoning paths, which can lead to both correct and incorrect answers; improving factual generations of language models is ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), p. 8 (6 Discussion), objective p. 2 (1 Introduction), p. 2 (1 Introduction), temporal p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

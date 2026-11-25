@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 8 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** [Bottom] Real-robot execution of an RL policy trained in simulation and zero-shot onto the real Language Table task.
 - **p. 8 / 1. Put cup 2. Pen 3. Apple - extractive body cue:** We then directly deploy the RL policy trained in the simulator onto the real robot in zero-shot, and observe successful task executions as shown in ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: A universal simulator (UniSim). The simulator of the real-world learns from broad data with diverse information including objects, scenes, human activities, motions in ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 | Table 3: Evaluation of RL policy. Percentage of successful simulated rollouts (out of 48 tasks) using the VLA policy with and without RL finetuning ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Figure 7: Long-horizon simulation. A VLM poliy generates high-level language actions (first row) which are executed in the simulator (middle row) similar to how ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 | Table 3: Evaluation of RL policy. Percentage of successful simulated rollouts (out of 48 tasks) using the VLA policy with and without RL finetuning ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | We compare PaLI-X finetuned on purely generated videos to pretrained PaLI-X without finetuning and PaLI-X finetuned on original ActivityNet Captions in Table 4. | comparison identity and matched condition | p. 8 (1. Put cup 2. Pen 3. Apple) |
 | Table 8: Ablations of datasets using FVD and CLIP score on the held-out test split. Including internet data and diverse human activity and robot ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 | body limitation/failure cue | Figure 13: Failed environment simulation from the action "uncover bottle" without training on broad data as in UniSim. Top two videos are generated from ... | p. 24 (Figure/Table caption) |
 | body limitation/failure cue | Figure 14: When the text-to-video model behind UniSim is only trained on data from Brohan et al. (2022) as opposed incorporating broad data from ... | p. 25 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 | To acquire reward information, we use the number of steps-to-completion from the training data as a proxy reward to train a model that maps ... | p. 7 (1. Put cup 2. Pen 3. Apple) |
 | We first do a sanity check on simulating real-robot executions by applying low-level control actions (e.g., ∆x = 0.05, δy = 0.05) repeatedly for ... | p. 8 (1. Put cup 2. Pen 3. Apple) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 8. Close top - extractive body cue:** Flexibility in diffusion models promotes simulation of highly stochastic environments that cannot be controlled by actions, so that a policy can learn to only control ...
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 7 (Figure/Table
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 14: When the text-to-video model behind UniSim is only trained on data from Brohan et al. (2022) as opposed incorporating broad data from the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (1. Put cup 2. Pen 3. Apple), p. 8 (1. Put cup 2. Pen 3. Apple), metrics p. 8 (Figure/Table caption), p. 18 (Figure/Table caption), p. 22 (Figure/Table caption), p. 5 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 6 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 22 (Figure/Table caption), results p. 22 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (1. Put cup 2. Pen 3. Apple), p. 22 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

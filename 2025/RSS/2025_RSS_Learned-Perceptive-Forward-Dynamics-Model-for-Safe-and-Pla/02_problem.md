@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Body text (section boundary not confidently
 | body cue at p. 8 | In the planar environment, robot failures are rare (0.042%), likely caused by simulation instabilities that the model cannot ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | The proposed FDM accurately predicts failures due to collisions and ealy path terminations caused by unlzaversable stars and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (A. Dynamics Modeling), p. 2 (A. Dynamics Modeling), p. 3 (A. Dynamics Modeling), p. 5 (B. Model Architecture). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ locomotion writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Inrropucrion), p. 2 (1. Inrropucrion), p. 1 (Body text (section boundary not confidently recovered)), p. 3 (B. Planning), p. 3 (A. Dynamics Modeling), interface p. 3 (A. Dynamics Modeling), p. 2 (A. Dynamics Modeling), p. 3 (A. Dynamics Modeling), p. 5 (B. Model Architecture), objective p. 4 (A. Dynamics Modeling), p. 5 (B. Model Architecture), p. 4 (B. Planning), p. 5 (B. Model Architecture), p. 3 (B. Model Predictive Path Integral Control), p. 3 (B. Model Predictive Path Integral Control).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

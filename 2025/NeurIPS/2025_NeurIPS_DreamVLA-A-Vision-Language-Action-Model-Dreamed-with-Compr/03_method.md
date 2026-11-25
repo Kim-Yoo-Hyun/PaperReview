@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 M
 - **p. 24 / A.3 Training Detail - extractive body cue:** The total loss can be formulated as: L = λdynLdyn + λdepthLdepth + λsemLsem + λDiTLDiT (10) where λdyn = 0.1, λdepth = 0.001, λsem ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (3 Methodology), p. 6 (3 Methodology), p. 7 (3 Methodology), p. 23 (A.1 DreamVLA Architecture), p. 24 (A.3 Training Detail), p. 24 (A.2 Feature Extraction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 M
 - **p. 1 / 1 Introduction - extractive body cue:** One promising direction is Vision-Language-Action (VLA) models, which leverage the rich understanding capabilities of pre-trained Multimodal Large Language Models (MMLMs) [26-29] to directly map natural ...
 - **p. 5 / 3 Methodology - extractive body cue:** Predicting dynamic regions tells the robot what parts of the scene are about to move, allowing the model to capture the statistical link between the ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 M
 - **p. 7 / 4 Experiments - extractive body cue:** All models are trained for 20 epochs, and we select the checkpoint with the highest validation success rate (SR) for final evaluation.
 - **p. 22 / A.1 DreamVLA Architecture - extractive body cue:** We employ an MAE-pretrained ViT-B [104] as the vision encoder.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Large, Language, Model, Task, Instruction, Text, Encoder, Observation, Visual, State, Robot, Diffusion, Transformer, Training, Only, noise, Decoder, Dynamic, Depth, Frozen.
 - **Relevant PDF headings:** 3 Methodology (p. 3); A.1 DreamVLA Architecture (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 M
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Vanilla VLA directly maps visual observations and language instructions to actions. (b) Models leveraging separate image/video generation or copilot models to generate ...
 - **p. 23 / A.1 DreamVLA Architecture - extractive body cue:** We configure the DiT model with the base variant (DiT-B), using an action token embedding size equal to the hidden dimension of the fusion Transformer.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Methodology), p. 7 (3 Methodology), p. 4 (3 Methodology), p. 23 (A.1 DreamVLA Architecture), p. 23 (A.1 DreamVLA Architecture), p. 5 (3 Methodology), objective p. 5 (3 Methodology), p. 7 (3 Methodology), p. 23 (A.1 DreamVLA Architecture), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 24 (A.3 Training Detail), temporal p. 23 (A.1 DreamVLA Architecture), p. 4 (3 Methodology), p. 22 (A.1 DreamVLA Architecture), p. 5 (3 Methodology), p. 4 (3 Methodology), p. 7 (3 Methodology).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

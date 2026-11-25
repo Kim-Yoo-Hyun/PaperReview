@@ -57,7 +57,6 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 - **p. 7 / IV. PLANNING WITH SAFE POLYTOPES - extractive body cue:** By stacking the hyperplane constraints (aj, bj), we arrive at a polytope Ax ≥b that is guaranteed to be safe.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 - **p. 6 / IV. PLANNING WITH SAFE POLYTOPES - extractive body cue:** Sion's minimax theorem states that switching the order of the minimum and maximum yields identical solutions when K(s, t) is concave in s and convex ...
 - **p. 9 / IV. PLANNING WITH SAFE POLYTOPES - extractive body cue:** For simplicity of notation, we will refer to the output of Splat-Plan as X(T), which takes in metric time, finds the associated spline Xp, and ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 
 - **p. 8 / IV. PLANNING WITH SAFE POLYTOPES - extractive body cue:** (7f) Without the dynamics constraints (7f), the optimization problem reduces to a quadratic program that can be solved in real-time, producing a trajectory that can ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** solve, maxs, Algorithm, While, there, many, ways, could, convert, ellipsoidal, representation, conservative, occupancy, grid, following, parallelizable, efficient, Section, Without, dynamics.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PL
 - **p. 13 / VI. EXPERIMENTS - extractive body cue:** 6) Splat-Loc Evaluations: We validate the performance of Splat-Loc in hardware experiments in the Maze scene, showing that Splat-Loc achieves relatively the same level of ...
 - **p. 14 / VI. EXPERIMENTS - extractive body cue:** Meanwhile, Splat-Loc needed no such alignment, and was kept running continuously throughout all experiments without zero-ing (even
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 5 (IV. PLANNING WITH SAFE POLYTOPES), objective p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), p. 8 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 6 (IV. PLANNING WITH SAFE POLYTOPES), p. 7 (IV. PLANNING WITH SAFE POLYTOPES), temporal p. 1 (Abstract), p. 12 (VI. EXPERIMENTS), p. 15 (VII. CONCLUSION), p. 9 (V. MONOCULAR POSE ESTIMATION), p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

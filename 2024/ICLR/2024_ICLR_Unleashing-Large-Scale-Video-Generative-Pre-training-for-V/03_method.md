@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 14 / A.1 NETWORK AND TRAINING DETAILS - extractive body cue:** The causal transformer of GR-1 contains 12 layers and 12 heads with a hidden size of 384.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3 METHOD), p. 5 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** The data for the large-scale video generative pre-training are sourced from the recently proposed Ego4D dataset (Grauman et al., 2022) which contains massive-scale human-object interactions.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Robotics data is also generative in a sense that the observation is only revealed after the action is taken.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 15 / A.3 REAL ROBOT EXPERIMENTS - extractive body cue:** In both experiments, we use the same training setting as in the CALVIN experiments except that the batch size and training epochs are changed to ...
 - **p. 7 / 4 EXPERIMENT - extractive body cue:** We freeze the R3M image encoder during training as in Nair et al.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** trajectory, consists, language, instruction, sequence, observation, images, robot, states, actions, ARCHITECTURE, GR-1, Fig, Since, action, continuous, Smooth-L1, loss, Larm, training.
 - **Relevant PDF headings:** 3 METHOD (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p.
 - **p. 15 / Figure/Table caption - extractive body cue:** Table 4: Ablation Studies. Pre-Training Video Prediction Data Tasks completed in a row 1 2 3
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 7: Ablation Studies. (a) We show the average length (averaged number of completed tasks in a row of 5) on CALVIN benchmark. (b) We ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 14 (A.1 NETWORK AND TRAINING DETAILS), p. 14 (A.1 NETWORK AND TRAINING DETAILS), objective p. 5 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 14 (A.1 NETWORK AND TRAINING DETAILS), p. 4 (3 METHOD), p. 14 (A.1 NETWORK AND TRAINING DETAILS), temporal p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 14 (A.1 NETWORK AND TRAINING DETAILS), p. 7 (4 EXPERIMENT).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

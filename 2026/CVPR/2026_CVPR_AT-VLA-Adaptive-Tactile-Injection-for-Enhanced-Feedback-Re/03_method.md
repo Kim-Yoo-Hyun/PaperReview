@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 - **p. 5 / 3.3. Effective Tactile Reaction Dual-Stream - extractive body cue:** We extract the tactile token after the Action Expert module and employ a lightweight decoder network to generate the next-step tactile signal, supervised by an ...
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 5 (3.4. Training Objectives and Inference Pipeline), p. 4 (3.1. Framework of AT-VLA), p. 4 (3.2. Adaptive Tactile Injection), p. 5 (3.3. Effective Tactile Reaction Dual-Stream).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 - **p. 5 / 3.3. Effective Tactile Reaction Dual-Stream - extractive body cue:** For a rapid reaction, we define the input modalities process into two streams: a slow stream operates at a lower inference speed to interpret visual ...
 - **p. 5 / 3.3. Effective Tactile Reaction Dual-Stream - extractive body cue:** Furthermore, to advance the fast stream with an accurate reaction to tactile input, we aim to enhance the model towards a deeper understanding of tactile ...
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 
 - **p. 4 / 3.1. Framework of AT-VLA - extractive body cue:** The tactile encoder is a lightweight module composed of several MLP layers, designed to ensure fast inference while efficiently processing tactile signals.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Therefore, address, issues, Adaptive, Tactile, Injection, module, dynamically, controls, when, where, feedback, injected, enables, action, expert, flexibly, handle, different, gate.
 - **Relevant PDF headings:** 2.1. Vision Language Action Model (p. 2); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +110,13 @@ PDF body method statement (p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Fr
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 4. Visualization. We visualize the execution progress of four typical contact-rich tasks. is crucial for real-world robotic applications where sensor failures or missing modalities ...
 - **p. 5 / 4.2. Contact-rich Task Evaluation - extractive body cue:** 2. π0.5 [6] is a state-of-the-art VLA model consisting of both pretraining and post-training stages.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Adaptive Tactile Injection), p. 3 (3.1. Framework of AT-VLA), p. 4 (3.1. Framework of AT-VLA), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 3 (3.1. Framework of AT-VLA), objective p. 5 (3.4. Training Objectives and Inference Pipeline), p. 4 (3.2. Adaptive Tactile Injection), p. 4 (3.1. Framework of AT-VLA), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), temporal p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 5 (3.3. Effective Tactile Reaction Dual-Stream), p. 4 (3.2. Adaptive Tactile Injection), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATA
 - **p. 4 / 3 DATASET - extractive body cue:** To enhance dataset diversity, we collected two types of raw manipulation data: (1) In-the-Wild setting (i.e., diverse indoor scenarios), emphasizing the diversity of scenes and ...
 - **p. 18 / A.1.1 EXPERIMENTAL SETTING - extractive body cue:** All Experiments are conducted in a few-shot TableTop evaluation with a real-world Franka Research 3 arm equipped with a Robotiq-2f-85 gripper.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: RoboInter manipulation suite includes annotation tools, annotated data, curated VQA dataset, and their applications in VLMs and VLAs. RoboInter provides a dataset with ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATA
 | EC-E2E records a lower ID success rate than IC-E2E (68.3% vs. | definition/direction/unit from same section | p. 10 (3 DATASET) |
 | In ID evaluations, IC-E2E attains an average success rate of 77.3%, compared with 65.0% of Vanilla. | definition/direction/unit from same section | p. 10 (3 DATASET) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATA
 | (3) Vanilla: A from-scratch baseline without a pretrained Planner and without annotated intermediate representations. | comparison identity and matched condition | p. 18 (A.1.1 EXPERIMENTAL SETTING) |
 | Its slightly larger ID→OOD drop compared to EC-E2E indicates that the asynchronous two-module design is somewhat more sensitive to distribution shift, yet still substantially ... | comparison identity and matched condition | p. 18 (A.1.1 EXPERIMENTAL SETTING) |
 | We compare two settings: Oracle+Executor and RoboInter-Te-Modular. | comparison identity and matched condition | p. 22 (A.2.2 EXPERIMENT RESULTS FOR DATA SCALING LAW) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATA
 | body limitation/failure cue | This approach can yield robust embodied perception and more accurate task-relevant visual cues. | p. 6 (3 DATASET) |
 | body limitation/failure cue | The Planner exhibits enhanced understanding and generation for manipulation, strong general grounding abilities, and robust perception across diverse scenes. | p. 6 (3 DATASET) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATA
 | Each model consists of a base LLM, a vision encoder, and an MLP-based vision-language projector. | p. 6 (3 DATASET) |
 | OLS is computed as the average value over 100K transitions from evaluation videos, ensuring statistical stability. | p. 8 (3 DATASET) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / Figure/Table caption - extractive body cue:** Figure 5: Real-World Experiments. The top charts present results from 15 in-distribution (ID) and 15 out-of-distribution (OOD) trials. The bottom panel illustrates the OOD test ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATA
 - **p. 6 / 3 DATASET - extractive body cue:** The Planner exhibits enhanced understanding and generation for manipulation, strong general grounding abilities, and robust perception across diverse scenes.
 
 - **Evidence anchors reviewed:** datasets p. 26 (A.3.3 CLOSE-LOOP EVALUATION ON REAL-WORLD WIDOWX ROBOT), p. 5 (3 DATASET), p. 25 (A.3.1 OPEN-LOOP CROSS-PLATFORM EVALUATION), p. 25 (A.3.2 CLOSE-LOOP EVALUATION ON SIMPLERENV), p. 27 (A.4.2 VQA BENCHMARKS), p. 4 (3 DATASET), metrics p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 25 (A.3.2 CLOSE-LOOP EVALUATION ON SIMPLERENV), p. 25 (A.3.2 CLOSE-LOOP EVALUATION ON SIMPLERENV), p. 24 (A.2.4 DETAILED RESULTS OF PLANNER ON TEMPORAL ROBOINTER-VQA), p. 9 (3 DATASET), baselines p. 25 (A.3.2 CLOSE-LOOP EVALUATION ON SIMPLERENV), p. 25 (A.3.1 OPEN-LOOP CROSS-PLATFORM EVALUATION), p. 8 (3 DATASET), p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 22 (A.2.2 EXPERIMENT RESULTS FOR DATA SCALING LAW), results p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 9 (3 DATASET), p. 25 (A.3.1 OPEN-LOOP CROSS-PLATFORM EVALUATION), p. 10 (3 DATASET), p. 18 (A.1.1 EXPERIMENTAL SETTING), p. 7 (3 DATASET).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

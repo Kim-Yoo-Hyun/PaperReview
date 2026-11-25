@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (3.4. 3D Reconstruction Updating), p. 5 (3.4. 3D
 - **p. 5 / 3.4. 3D Reconstruction Updating - extractive body cue:** We employ an spline-based interpolation scheme that regularizes both camera translation and rotation to ensure physically plausible motion.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. 3D Reconstruction Updating).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 5 (3.4. 3D Reconstruction Updating), p. 5 (3.4. 3D
 - **p. 2 / 1. Introduction - extractive body cue:** A Geometry Adapter module further injects these appearance and geometry features into the transformer backbone of the video generator, enabling geometry-aware conditioning.
 - **p. 5 / 3.4. 3D Reconstruction Updating - extractive body cue:** 3.3) along this trajectory to obtain novel renderings, which are then refined by our geometry-aware video generator to produce artifactfree frames.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 5 (3.4. 3D Reconstruction Updating), p. 5 (3.4. 3D
 - **p. 6 / 15.11 FPS - extractive body cue:** Training uses the AdamW optimizer with a linear learning rate (LR) warm-up over the first 1K steps, followed by a constant LR of 1×10-5.
 - **p. 7 / 5.1. Results - extractive body cue:** 1, measuring the average frame rate based on end-to-end inference time on a single H200 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** along, trajectory, obtain, novel, renderings, then, refined, geometry-aware, video, generator, produce, artifactfree, frames, Finally, merge, generated, views, original, inputs, optimize.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 5 (3.4. 3D Reconstruction Updating), p. 5 (3.4. 3D
 - **p. 8 / 5.2. Ablation Studies - extractive body cue:** Ablation on Artifact Simulation and Architecture.
 - **p. 8 / 6. Conclusion - extractive body cue:** We discuss our limitations and future work in Supp.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. 3D Reconstruction Updating), p. 5 (3.4. 3D Reconstruction Updating), objective p. 5 (3.4. 3D Reconstruction Updating), p. 5 (3.4. 3D Reconstruction Updating), temporal p. 6 (15.11 FPS), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 1 (Abstract), p. 7 (5.1. Results), p. 8 (5.1. Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

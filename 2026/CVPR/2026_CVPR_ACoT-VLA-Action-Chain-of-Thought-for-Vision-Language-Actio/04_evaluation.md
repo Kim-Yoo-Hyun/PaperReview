@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 - **p. 7 / 4.3. Ablation Study - extractive body cue:** We examine each component's contribution via systematic ablation experiments on the LIBERO benchmark, which are Name Action shift Action horizon Equi. horizon Spatial Object Goal ...
 - **p. 8 / 4.4. Real-World Deployment - extractive body cue:** Additionally, to examine the cross-embodiment adaptability, we also perform the "Open-set Pick" task on the AgileX robotic platform.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Chain-of-Thought in different spaces. (a) Language CoT paradigm predicts sub-tasks as intermediate reasoning. (b) Visual CoT paradigm synthesizes a goal image to provide ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 | The reduced dimension in the downsampling strategy is set to d′ = 128. | definition/direction/unit from same section | p. 5 (4.1. Experimental Setup) |
 | We set the balance factors in training losses as λ1 = λ2 = 0.5. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 | As reported in Table 1, the quantitative evaluation results demonstrate that our proposed approach outperforms existing methods across all tracks. | comparison identity and matched condition | p. 6 (4.2. Simulation Experiments) |
 | Baseline 98.8 98.2 98.0 92.4 96.9 Query 98.8 99.0 97.2 92.8 97.0 Attention Pooling 99.4 98.6 98.2 92.8 97.3 Downsample 99.2 99.2 98.2 95.6 ... | comparison identity and matched condition | p. 7 (4.3. Ablation Study) |
 | We observe that various parameter combinations consistently bring improvements over the baseline, indicating that providing action cues is broadly beneficial for policy learning. | comparison identity and matched condition | p. 8 (4.3. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 | body limitation/failure cue | Through leveraging actions as intermediate reasoning, the model feeds the action head with structured action guidance, which significantly enhances the robustness in long-horizon manipulation ... | p. 6 (4.2. Simulation Experiments) |
 | body limitation/failure cue | These results highlight the effectiveness of our action-space reasoning in improving generalization and robust policy learning. | p. 7 (4.2. Simulation Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 | 2 (c), given a noisy action segment ˜at:t+H-1, we first encode it into noisy action embedding via a MLP projector. | p. 4 (3.4. Action-Guided Prediction) |
 | Note that although both encode action-relevant information, they may highlight different facets of the underlying motion. | p. 4 (3.4. Action-Guided Prediction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Simulation Experiments - extractive body cue:** Concretely, LIBERO-Plus introduces 7 perturbation dimensions, i.e., camera-viewpoints (Camera), robot-initialstates (Robot), language-variations (Language), lightingconditions (Light), background-textures (Background), sensor-noise (Noi ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 - **p. 7 / 4.2. Simulation Experiments - extractive body cue:** These results highlight the effectiveness of our action-space reasoning in improving generalization and robust policy learning.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Simulation Experiments), metrics p. 7 (4.2. Simulation Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.4. Real-World Deployment), p. 5 (Figure/Table caption), p. 6 (4.2. Simulation Experiments), p. 8 (4.3. Ablation Study), baselines p. 7 (Figure/Table caption), p. 8 (4.3. Ablation Study), p. 6 (4.2. Simulation Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), results p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 6 (4.2. Simulation Experiments), p. 7 (4.2. Simulation Experiments), p. 8 (4.3. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

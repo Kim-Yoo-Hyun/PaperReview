@@ -48,7 +48,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** Additionally, it incorporates a Preservation Constraint computed with respect to Vp.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** 2.2 POINT CLOUD COMPLETION Point cloud completion aims to recover completed point clouds from partial input point clouds.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** The Fractal approach focuses on predicting only the missing regions of point clouds, preserving existing details by retaining the shapes from the partial input.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** To introduce priors from pretrained 2D diffusion models, we use 3D Gaussian Splatting (GS) to achieve differentiable rendering from 3D point clouds to 2D images.
 - **p. 4 / 3 METHODOLOGY - extractive body cue:** Additionally, it incorporates a Preservation Constraint computed with respect to Vp.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, Iin, guide, optimization, Gaussians, borrowing, priors, diffusion, model, Zero, to-3, Liu, whole, completion, process, composed, Partial, Gaussian, Initialization, PGI.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 5: The setting of mentioned hyper-parameters in Sec. 3. Hyper-parameters w0 ∼w3 1e-3, 1e3, 1e2, 0.1 δ, σ0, σn 0.01, 0.005, 0.05 Iterations 1000 ...
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 11: Ablation Study for the Fractal completion strategy. W/ Fractal and W/O Fractal denote using and not using Fractal completion strategy, respectively.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), objective p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), temporal p. 5 (2) The color Gc), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (1) The opacity Go), p. 6 (2) The color Gc).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

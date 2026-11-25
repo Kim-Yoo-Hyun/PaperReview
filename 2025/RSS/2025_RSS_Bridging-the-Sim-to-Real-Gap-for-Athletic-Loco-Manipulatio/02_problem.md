@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. Iyrropucrion), p. 1 (Body text (section 
 | body cue at p. 7 | ‘To avoid the reliance on high-quality pre-training, another possibility is to discard the explicit notion of reference trajectories ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | For this comparison, wwe train and test policies with a fixed-base arm, to avoid the risk of the ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (B. Whole-body Controller Pre-training), p. 3 (B. Whole-body Controller Pre-training), p. 2 (1. Iyrropucrion), p. 4 (B. Whole-body Controller Pre-training). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ locomotion writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Body text (section not recovered)), p. 1 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p. 3 (A. Unsupervised Actuator Net), interface p. 3 (B. Whole-body Controller Pre-training), p. 3 (B. Whole-body Controller Pre-training), p. 2 (1. Iyrropucrion), p. 4 (B. Whole-body Controller Pre-training), objective p. 4 (B. Whole-body Controller Pre-training), p. 4 (B. Whole-body Controller Pre-training).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

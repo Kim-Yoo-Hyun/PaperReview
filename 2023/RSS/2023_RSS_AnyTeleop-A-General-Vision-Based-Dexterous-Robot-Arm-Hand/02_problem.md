@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 | body cue at p. 8 | (ii) Different from the baseline, our system explicitly supports teleoperation with arm-hand system and guarantees no self-collision. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | On the contrary, the baseline system utilizes retargeting to generate joint trajectory for robot arm, which may lead ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (6) Simple deployment. AnyTeleop and all libraries are), p. 8 (VII. APPLICATIONS), p. 4 (IV. TELEOPERATION SERVER), p. 2 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ robot_data writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 4 (6) Simple deployment. AnyTeleop and all libraries are), p. 8 (VII. APPLICATIONS), p. 4 (IV. TELEOPERATION SERVER), p. 2 (I. INTRODUCTION), objective p. 7 (VII. APPLICATIONS), p. 5 (IV. TELEOPERATION SERVER).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

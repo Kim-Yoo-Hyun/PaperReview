@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8
 - **p. 9 / 4 Experiments - extractive body cue:** With this module that employs mask guidance for geometry refinement, we can obtain much better 3D geometries ("depth estimation") and higher visual quality ("novel view ...
 - **p. 15 / A.1 Data Preprocessing - extractive body cue:** During training, we constrain the IoU to [0.3, 0.8] to randomly select our training samples from scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Simultaneous Scene Understanding and 3D Reconstruction (SIU3R). (a) 2D-to-3D Feature alignment paradigm of previous methods. (b) Alignment-free paradigm of our SIU3R method. (c) ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8
 | For understanding-only method (i.e., Mask2Former), we only use its mask losses for supervision. | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | The qualitative results also demonstrate the superiority of our method. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8
 | All baseline methods are evaluated on ScanNet dataset under the same protocols as ours for fair comparison. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | Please refer to our appendices for more results (3D instance and panoptic segmentation, extension to versatile 3D editing, comparisons with more 3D-based baselines, real-world ... | comparison identity and matched condition | p. 9 (4 Experiments) |
 | As demonstrated in Fig.5 (b), thanks to our simultaneous task modeling and Multi-View Mask Aggregation mechanism, our method can effectively leverage geometric clues to ... | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,19 +133,10 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8
 | We design our Image Encoder following [52]'s architecture as a Vision Transformer (ViT) enhanced with an adapter module. | p. 4 (3 Methodology) |
 | In (a), we employ multi-view semantic-focused features fU, unified queries Q, and L1 stacked cross-/self-attention layer blocks to decode cross-view instance and semantic masks. | p. 5 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not recovered
 
 - **Evidence anchors reviewed:** datasets p. 15 (A.1 Data Preprocessing), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), metrics p. 7 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 15 (A.1 Data Preprocessing), p. 15 (A.1 Data Preprocessing), p. 7 (4 Experiments), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), results p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

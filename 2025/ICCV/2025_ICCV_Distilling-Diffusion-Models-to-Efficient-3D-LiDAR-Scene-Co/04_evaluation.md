@@ -44,8 +44,6 @@ SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시�
 - **p. 7 / 5.3. Qualitative analysis - extractive body cue:** 4 shows the completed scenes by our proposed ScoreLiDAR and LiDiff [23] on KITTI-360.
 - **p. 8 / 5.3. Qualitative analysis - extractive body cue:** The bar chart shows the distribution of distances between corresponding points in the completed and ground truth scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A demonstration of the LiDAR scene completion examples. Given a sparse LiDAR scan in (a), the model aims to recover the ground-truth dense ...
@@ -79,8 +77,6 @@ SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시�
 | Figure 1. A demonstration of the LiDAR scene completion examples. Given a sparse LiDAR scan in (a), the model aims to recover the ground-truth ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | The performance of ScoreLiDAR outperforms the teacher model LiDiff [23]. | definition/direction/unit from same section | p. 6 (5.1. Scene completion) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시�
 | ScoreLiDAR achieves completion results with higher quality and greater fidelity in less time compared to LiDiff. | comparison identity and matched condition | p. 7 (5.3. Qualitative analysis) |
 | Figure 1. A demonstration of the LiDAR scene completion examples. Given a sparse LiDAR scan in (a), the model aims to recover the ground-truth ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | 5, on both datasets, the difference of point distance matrix between the completed scene of LiDiff [23] and the ground truth is the largest, ... | comparison identity and matched condition | p. 8 (5.3. Qualitative analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시�
 | body limitation/failure cue | Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the ... | p. 8 (6. Conclusion) |
 | body limitation/failure cue | We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss. | p. 7 (5.2. Ablation study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,20 +131,11 @@ SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시�
 | Our goal is to distill a pre-trained 3D LiDAR scene completion diffusion model into a student model with significantly fewer sampling steps, enabling efficient ... | p. 4 (4. Method) |
 | Therefore, we select n key points to compute the distance matrix with n ≪M. | p. 5 (4.2. Structural loss) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** Thus, further exploration is required to find a more effective method to improve the training process of ScoreLiDAR and avoid the limitations of the teacher ...
 - **p. 7 / 5.2. Ablation study - extractive body cue:** We compared the scene completion performances of the proposed ScoreLiDAR with a variant that does not incorporate structural loss.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiment), p. 7 (5.2. Ablation study), p. 8 (5.3. Qualitative analysis), p. 6 (5.1. Scene completion), p. 7 (5.3. Qualitative analysis), p. 8 (5.3. Qualitative analysis), metrics p. 7 (5.2. Ablation study), p. 7 (5.3. Qualitative analysis), p. 2 (Figure/Table caption), p. 6 (5. Experiment), p. 8 (5.3. Qualitative analysis), p. 8 (Figure/Table caption), baselines p. 6 (5.1. Scene completion), p. 7 (5.2. Ablation study), p. 6 (5.1. Scene completion), p. 7 (5.3. Qualitative analysis), p. 1 (Figure/Table caption), p. 8 (5.3. Qualitative analysis), results p. 7 (5.2. Ablation study), p. 7 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 6 (5.1. Scene completion), p. 2 (Figure/Table caption), p. 8 (5.3. Qualitative analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

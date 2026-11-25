@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 - **p. 8 / 8 Discussion - extractive body cue:** Further research is needed to understand how to effectively leverage pre-trained touch representations in behavioral cloning for robot manipulation tasks.
 - **p. 8 / 8 Discussion - extractive body cue:** On average, Sparsh achieves a 95.1% improvement compared to an end-to-end approach when all models have access to only 33% -50% of the labeled dataset ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We present Sparsh, a family of general touch representations, and TacBench, a standardized benchmark of six touch-centric tasks ([T1]-[T6]) covering prominent problems in ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 | Table 10: Accuracy for textile classification over 20 classes using GelSight with markers dataset under different budget of labeled data. Results over 26k tactile ... | definition/direction/unit from same section | p. 28 (Figure/Table caption) |
 | These include the high precision required to keep the bead in place, the impossibility of error recovery once grip is lost, and trajectory drift ... | definition/direction/unit from same section | p. 8 (8 Discussion) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 | Figure 4: Summary of results comparing Sparsh and E2E on [T1]-[T6] tasks in TacBench across varying amounts of labeled data. Pre-training with SSL yields ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | On average Sparsh (DINO) outperforms Sparsh (IJEPA) by 5.6% across the benchmark. | comparison identity and matched condition | p. 8 (8 Discussion) |
 | On average, Sparsh achieves a 95.1% improvement compared to an end-to-end approach when all models have access to only 33% -50% of the labeled ... | comparison identity and matched condition | p. 8 (8 Discussion) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 | body limitation/failure cue | Using as little as 10% or 1% of the labeled data for force estimation and slip detection still yields acceptable results (e.g. force error ... | p. 8 (8 Discussion) |
 | body limitation/failure cue | Table 8: Accuracy and 95% confidence interval for pose estimation task following the regression-by- classification paradigm. Relative pose between object and ring finger. Metrics ... | p. 25 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 | Fine-tuning Sparsh encoders is another method of assessing the quality of pre-trained representations. | p. 8 (8 Discussion) |
 | Our aim is to enable efforts to compile larger tactile datasets that include additional vision-based tactile sensors and leverage the benefits of scaling up ... | p. 8 (8 Discussion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 13: Failure case where the ground truth does not reflect slip since it relies on an experimental coefficient of friction. Despite the inaccuracies in ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (8 Discussion)
 - **p. 25 / Figure/Table caption - extractive body cue:** Table 8: Accuracy and 95% confidence interval for pose estimation task following the regression-by- classification paradigm. Relative pose between object and ring finger. Metrics computed ...
 
 - **Evidence anchors reviewed:** datasets p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (Body text (section boundary not confidently recovered)), p. 8 (8 Discussion), p. 8 (8 Discussion), metrics p. 28 (Figure/Table caption), p. 24 (Figure/Table caption), p. 24 (Figure/Table caption), p. 26 (Figure/Table caption), p. 25 (Figure/Table caption), p. 27 (Figure/Table caption), baselines p. 3 (Figure/Table caption), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 7 (Figure/Table caption), p. 8 (8 Discussion), p. 8 (8 Discussion), results p. 7 (Figure/Table caption), p. 8 (8 Discussion), p. 1 (Figure/Table caption), p. 8 (8 Discussion), p. 26 (Figure/Table caption), p. 27 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

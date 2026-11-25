@@ -55,7 +55,6 @@ PDF body method statement (p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 2 (1 In
 - **p. 3 / 1 Introduction - extractive body cue:** GeoCalib is also more interpretable: we can easily visualize the cues that it relies on, and the optimization uncertainties help flag failure cases and can ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 1 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 2 (1 In
 - **p. 2 / 1 Introduction - extractive body cue:** Recent research has tackled the task of single-image calibration with deep networks trained in a supervised manner [14,37,44,50,73].
 - **p. 3 / 1 Introduction - extractive body cue:** GeoCalib: Learning Single-image Calibration with Geometric Optimization 3 applications.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 2 (1 In
 - **p. 2 / 1 Introduction - extractive body cue:** Veicht et al. ✓accurate ✗not robust man-made natural input image classical geometry lines & vanishing points black-box learning end-to-end training GeoCalib learning & optimization FAILURE ...
 - **p. 3 / 1 Introduction - extractive body cue:** This makes it possible to handle different camera models, such as pinhole and fisheye, without any retraining.
 - **p. 3 / 1 Introduction - extractive body cue:** The code and trained models will be released publicly.
-- **p. 3 / 1 Introduction - extractive body cue:** The code and trained models will be released publicly.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, GeoCalib, deep, neural, network, leverages, universal, rules, geometry, through, optimization, process, Given, finite, model, capacity, only, approximated, within, domain.
 - **Relevant PDF headings:** A Method (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 2 (1 In
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 3: Good features to calibrate. We show the confidences learned by GeoCalib for both components of the Perspective Field. The up-vector is most confident ...
 - **p. 11 / 5 Experiments - extractive body cue:** UVP [58] assumes a Manhattan world, and this stronger assumption about scene configuration enables slightly more accurate predictions on easy samples, but completely fails in ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 3 (1 Introduction), objective p. 1 (2 Microsoft Mixed Reality & AI Lab), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), temporal p. 10 (5 Experiments), p. 12 (5 Experiments), p. 2 (1 Introduction), p. 3 (2 Related work), p. 3 (2 Related work), p. 4 (2 Related work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

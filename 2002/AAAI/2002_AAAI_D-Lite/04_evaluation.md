@@ -54,8 +54,6 @@ PDF body evaluation/result cue (p. 7 (A Performance of D* Lite), p. 7 (A B), p. 
 - **p. 6 / Abstract - extractive body cue:** This is not a problem since the g-value is not used to determine how the robot should move.
 - **p. 7 / A Performance of D* Lite - extractive body cue:** Greedy mapping discretizes the terrain into cells with uniform resolution and then always moves the robot from its current cell to the closest cell with ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Simple Example. along the path and discovered the first blocked cell it did not know about. Cells whose goal distances have changed are ...
@@ -89,8 +87,6 @@ PDF body evaluation/result cue (p. 7 (A Performance of D* Lite), p. 7 (A B), p. 
 | 원문 대조: LPA*에서 locally underconsistent vertex를 확장하면 그 vertex와 successor의 local consistency가 영향을 받을 수 있어 rhs와 queue membership을 갱신한다. ([PDF p. 3](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=3), Lifelong Planning A*: The Algorithm) | Algorithm update case; metric 수치 아님 | [PDF p. 3](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=3), Lifelong Planning A*: The Algorithm |
 | 원문 대조: LPA*에서 locally overconsistent vertex의 g를 rhs로 바꾸면 successor의 local consistency가 달라질 수 있다. 해당 successor들을 UpdateVertex로 처리한다. ([PDF p. 3](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=3), Lifelong Planning A*: The Algorithm) | Algorithm update case; metric 수치 아님 | [PDF p. 3](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=3), Lifelong Planning A*: The Algorithm |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -100,13 +96,6 @@ PDF body evaluation/result cue (p. 7 (A Performance of D* Lite), p. 7 (A B), p. 
 | In the following, we study to which degree the combination of incremental and heuristic search that D* Lite implements outperforms incremental or heuristic searches ... | comparison identity and matched condition | p. 6 (Abstract) |
 | These results also confirm earlier experimental results that D* can outperform A* for goal-directed navigation in unknown terrain by one order of magnitude or ... | comparison identity and matched condition | p. 7 (A B) |
 | We decided not to include D* Lite without both heuristic and incremental search in the comparison because it performs so poorly that graphing its ... | comparison identity and matched condition | p. 6 (Abstract) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -145,8 +134,6 @@ PDF body evaluation/result cue (p. 7 (A Performance of D* Lite), p. 7 (A B), p. 
 | body limitation/failure cue | Note that, in an actual implementation, Initialize() only needs to initialize a vertex when it encounters it during the search and thus does not ... | p. 3 (Abstract) |
 | body limitation/failure cue | Theorem 6 ComputeShortestPath() does not expand any vertices whose g-values were equal to their respective start distances before ComputeShortestPath() was called. | p. 4 (Abstract) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -160,14 +147,6 @@ PDF body evaluation/result cue (p. 7 (A Performance of D* Lite), p. 7 (A B), p. 
 | 원문 대조: Theorem 5는 LPA*에서 확장 가능한 locally overconsistent vertex를 goal의 [f; start-distance] key 이하인 범위로 제한한다. 이는 D* Lite의 전체 runtime 수치나 실험 ablation 결과가 아니다. ([PDF p. 4](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=4), Analytical Results, Theorem 5 (LPA*)) | [PDF p. 4](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=4), Analytical Results, Theorem 5 (LPA*) |
 | The next theorem generalizes this result to all locally inconsistent vertices expanded by ComputeShortestPath(). | p. 4 (Abstract) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Abstract - extractive body cue:** They change to infinity when the robot discovers that they cannot be traversed.
@@ -178,6 +157,5 @@ PDF body evaluation/result cue (p. 7 (A Performance of D* Lite), p. 7 (A B), p. 
 - **p. 4 / Abstract - extractive body cue:** Theorem 6 ComputeShortestPath() does not expand any vertices whose g-values were equal to their respective start distances before ComputeShortestPath() was called.
 
 - **Evidence anchors reviewed:** datasets p. 6 (Abstract), p. 2 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 5 (Abstract), p. 5 (Abstract), metrics p. 6 (Abstract), p. 5 (Abstract), p. 5 (Abstract), p. 6 (Abstract), p. 2 (Abstract), p. 2 (Abstract), baselines p. 7 (A Performance of D* Lite), p. 3 (Abstract), p. 6 (Abstract), p. 7 (A B), p. 6 (Abstract), results p. 7 (A Performance of D* Lite), p. 7 (A B), p. 6 (Abstract), p. 6 (Abstract), p. 2 (Abstract), p. 3 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

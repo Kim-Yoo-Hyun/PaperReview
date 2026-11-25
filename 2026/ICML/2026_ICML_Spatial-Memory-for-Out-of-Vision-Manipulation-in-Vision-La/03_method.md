@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Met
 - **p. 5 / 3.2. Dynamic Memory Refinement - extractive body cue:** The updated memory is denoted as ˆ Mt = { ˆmt k}NM t k=1, where N M t is the number of memory entries.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 4 (3.1. Spatial Memory Construction), p. 5 (3.2. Dynamic Memory Refinement), p. 5 (3.2. Dynamic Memory Refinement).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Met
 - **p. 6 / 3.3. Contextual Memory Retrieval - extractive body cue:** The original vision-language tokens, robot state, and noised action embeddings are directly fed into the DiT, where Xboost serves as global context that modulates token ...
 - **p. 4 / 3.1. Spatial Memory Construction - extractive body cue:** Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action 1 2 3 Before Manipulation: Head Scanning A.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Met
 - **p. 6 / 4.2. Implementation - extractive body cue:** During training, all components are optimized except the VLM language decoder, using multi-task learning with a batch size of 60 for 30,000 steps on 32 ...
 - **p. 6 / 4.2. Implementation - extractive body cue:** All inference are executed on a server equipped with an NVIDIA RTX 4090 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** sampled, frame, processed, unified, perception, pipeline, consisting, geometry, prior, network, VGGT, Wang, camera, pose, coarse, scene, estimation, semantic, module, YOLO.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Met
 - **p. 7 / 4.3. Real World Results - extractive body cue:** No-Scan SOMA slightly outperforms Scan+GR00T despite using only a single-view initialization, highlighting the benefit of an explicit memory structure even without multi-view coverage.
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 8. Analysis about time and gpu cost per demo of different component choice in the memory preprocess stage. raw 3D bounding box bk ∈R8×3 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 6 (3.3. Contextual Memory Retrieval), p. 6 (3.3. Contextual Memory Retrieval), p. 4 (3.1. Spatial Memory Construction), objective p. 3 (3. Method), p. 4 (3.1. Spatial Memory Construction), p. 4 (3.1. Spatial Memory Construction), p. 5 (3.2. Dynamic Memory Refinement), p. 5 (3.2. Dynamic Memory Refinement), temporal p. 5 (3.2. Dynamic Memory Refinement), p. 3 (3.1. Spatial Memory Construction), p. 3 (3. Method), p. 5 (3.2. Dynamic Memory Refinement), p. 6 (4.1. Benchmarks), p. 6 (4.1. Benchmarks).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

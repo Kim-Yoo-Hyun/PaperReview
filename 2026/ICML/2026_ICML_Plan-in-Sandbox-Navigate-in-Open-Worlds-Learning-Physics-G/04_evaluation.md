@@ -47,8 +47,6 @@ A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이
 - **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** Effects of Main Components. "Task" denotes synthesized tasks; "Exp" denotes experience rules; "AAC" denotes Asymmetric Adaptive Clipping.
 - **p. 8 / 4.5. Analysis and Ablation - extractive body cue:** Subsequently, the introduction of sandbox-synthesized tasks (+Task) serves as a primary driver of capability, further raising A-EQA scores to 50.71% (2B) and 57.14% (4B).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a): Our SAGE framework utilizes a physics-grounded sandbox for self-evolving data generation and policy optimization, enabling the agent to bridge the gap between ...
@@ -84,8 +82,6 @@ A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이
 | Figure 3. Asymmetric Adaptive Clipping (AAC). While both standard and augmented samples share a conservative lower bound (1 -ϵstd) to prevent policy collapse under ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 9. Sensitivity to ϵexp schedules. All values are in percent (%). Schedule A-EQA GOAT-Bench SR† SPL† SR SPL | definition/direction/unit from same section | p. 14 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이
 | Benchmarking against the set of 14,526 efficiently synthesized valid trajectories (comprising 7,988 from HM3D and 6,538 from InteriorGS) as the 100% baseline, Figure 5 ... | comparison identity and matched condition | p. 7 (4.3. Analysis on Sandbox Data) |
 | Method A-EQA GOAT-Bench SR† SPL† SR SPL RL Baselines SenseAct-NN Skill Chain 24.7 13.3 29.5 11.3 SenseAct-NN Monolithic 20.6 10.1 12.3 6.8 Closed-Source VLMs ... | comparison identity and matched condition | p. 7 (4.2. Main Navigation Results) |
 | Training via Genesis and Evolution (+G.&E.) boosts A-EQA SR† by 6.29% over the zero-shot baseline, 8 | comparison identity and matched condition | p. 8 (4.5. Analysis and Ablation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이
 | body limitation/failure cue | Conservative clipping (ϵexp = 0.4) causes underfitting, failing to exploit Genesis signals. | p. 8 (4.4. Analysis on Evolution) |
 | body limitation/failure cue | Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps. | p. 8 (4.4. Analysis on Evolution) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이
 | Plan in Sandbox, Navigate in Open Worlds: Learning Physics-Grounded Abstracted Experience for Embodied Navigation 0 50 100 150 200 Training Steps 42 44 46 ... | p. 7 (4.2. Main Navigation Results) |
 | Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps. | p. 8 (4.4. Analysis on Evolution) |
 | An optimally relaxed bound (ϵexp = 1.0) balances this, enabling rapid experience absorption without policy collapse, achieving a peak SR† of 53.21% and SPL† ... | p. 8 (4.4. Analysis on Evolution) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -168,6 +147,5 @@ A-EQA는 탐색 후 에이전트가 작성한 답을 평가한다. 논문은 이
 - **p. 8 / 4.4. Analysis on Evolution - extractive body cue:** Conversely, aggressive updates (ϵexp = 1.2) lead to instability and performance degradation after 100 steps.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.5. Analysis and Ablation), p. 8 (4.5. Analysis and Ablation), metrics p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution), p. 8 (4.4. Analysis on Evolution), p. 7 (4.4. Analysis on Evolution), baselines p. 6 (4.2. Main Navigation Results), p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), results p. 6 (4.2. Main Navigation Results), p. 8 (4.5. Analysis and Ablation), p. 6 (4.1. Experimental Settings), p. 7 (4.3. Analysis on Sandbox Data), p. 7 (4.3. Analysis on Sandbox Data), p. 8 (4.4. Analysis on Evolution).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 - **p. 8 / 5 Experiment - extractive body cue:** Wrong interaction keypoints will result in the robot moving elsewhere due to physical constraints that prevent it from performing fixed-base manipulation actions.
 - **p. 14 / A.3 Training Details - extractive body cue:** The target is the object to be interacted with, and the subgoal is the condition that needs to be completed.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: MoTo can be plugged into any fixed-base manipulation model and transferred to mobile manipulation tasks in a zero-shot manner, enabling generalized mobile manipulation. ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 | To better fine-tune OpenVLA [11] to mitigate cross-robot ontology differences, we collected a total of 20k data and fine-tuned 10k epoch on 8 RTX ... | definition/direction/unit from same section | p. 13 (A.3 Training Details) |
 | We fine-tuned the model for 150,000 gradient steps on 8 NVIDIA RTX 4090 GPUs (total batch size 128) using the AdamW optimizer (learning rate ... | definition/direction/unit from same section | p. 13 (A.3 Training Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 | Interestingly, iDP3 and AnyGrasp outperform RDT-1B in mobile manipulation, owing to stronger viewpoint generalization from 3D point cloud observations. | comparison identity and matched condition | p. 8 (5 Experiment) |
 | We utilize an OVMM-heuristic baseline to collect manipulation expert trajectories that include robot proprioception, action, and visual observations to fine-tune off-the-shelf manipulation foundation models. | comparison identity and matched condition | p. 13 (A.1 Simulator Experiment) |
 | In the OVMM simulator, we collect expert demonstration data for pick-and-place during mobile manipulation with heuristic baselines. | comparison identity and matched condition | p. 13 (A.3 Training Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 - **p. 13 / A.2 Real World Experiment - extractive body cue:** The real-world experiments are all performed on a single RTX 4060 GPU.
 - **p. 13 / A.3 Training Details - extractive body cue:** To better fine-tune OpenVLA [11] to mitigate cross-robot ontology differences, we collected a total of 20k data and fine-tuned 10k epoch on 8 RTX 3090 ...
 - **p. 13 / A.3 Training Details - extractive body cue:** We fine-tuned the model for 150,000 gradient steps on 8 NVIDIA RTX 4090 GPUs (total batch size 128) using the AdamW optimizer (learning rate 1×10-4, ...
-- **p. 13 / A.3 Training Details - extractive body cue:** To better fine-tune OpenVLA [11] to mitigate cross-robot ontology differences, we collected a total of 20k data and fine-tuned 10k epoch on 8 RTX 3090 ...
-- **p. 13 / A.3 Training Details - extractive body cue:** We fine-tuned the model for 150,000 gradient steps on 8 NVIDIA RTX 4090 GPUs (total batch size 128) using the AdamW optimizer (learning rate 1×10-4, ...
 
 ## Generalization and Failure Cases
 
@@ -137,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 | body limitation/failure cue | Figure 7: Failure Cases in real-world experiments. D.1 Manipulation Visualization Figure 6 demonstrates the scene keypoint generation and mobile trajectory in task "Serve me ... | p. 16 (Figure/Table caption) |
 | body limitation/failure cue | 5.3 Real World Experiments The OVMM baseline cannot be directly deployed in the real world due to the sim-to-real gap. | p. 8 (5 Experiment) |
 | body limitation/failure cue | The inconsistency of multi-view keypoints in the "w/o Fusion" setting results in a serious performance drop (2.42% lower success rate compared to Single View), ... | p. 8 (5 Experiment) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -150,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 | The real-world experiments are all performed on a single RTX 4060 GPU. | p. 13 (A.2 Real World Experiment) |
 | We uniformly sample Nq query points on the robot surface Ωto evaluate the collision cost: Fc t = Nq X j=1 max(0, ϵ0 -D(qj ... | p. 6 (4 Approach) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 6: Visualization results for keypoint generation. MoTo selects keypoint proposals (red points) from multi-views, projects them into 3D space and votes to generate keypoints ...
@@ -166,6 +143,5 @@ PDF body evaluation/result cue (p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (
 - **p. 8 / 5 Experiment - extractive body cue:** The inconsistency of multi-view keypoints in the "w/o Fusion" setting results in a serious performance drop (2.42% lower success rate compared to Single View), because ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (A.1 Simulator Experiment), p. 13 (A.2 Real World Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), metrics p. 8 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 7 (5 Experiment), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 7 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 8 (5 Experiment), p. 13 (A.1 Simulator Experiment), p. 13 (A.3 Training Details), results p. 8 (5 Experiment), p. 7 (5 Experiment), p. 8 (5 Experiment), p. 7 (5 Experiment), p. 13 (A.3 Training Details), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

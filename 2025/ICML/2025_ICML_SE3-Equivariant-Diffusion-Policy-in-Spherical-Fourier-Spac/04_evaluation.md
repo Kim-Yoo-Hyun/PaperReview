@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Simulation Experiments), p. 9 (Figure
 - **p. 8 / 5.2. Physical Experiments - extractive body cue:** Success rate (%) of 5 physical experiments over 20 evaluation episodes.
 - **p. 8 / 5.2. Physical Experiments - extractive body cue:** The action space and number of training demonstrations are listed under each task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SDP enforces that the policy is SO(3) equivariant. Specifically, in the second row, an SO(3) rotation that is applied to the scene leads ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Simulation Experiments), p. 9 (Figure
 | SDP demonstrates the best performance on 10 tasks. | definition/direction/unit from same section | p. 7 (5.2. Physical Experiments) |
 | Figure 1. SDP enforces that the policy is SO(3) equivariant. Specifically, in the second row, an SO(3) rotation that is applied to the scene ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Simulation Experiments), p. 9 (Figure
 | As the degress of SE(3) initialization increases, SDP maintains reasonable performance while the performance of other baselines drop severely. | comparison identity and matched condition | p. 7 (5.2. Physical Experiments) |
 | Table 4. Ablation study. The relative action space and the spherical representation are critical for the SE(3) generalization, while the latter one is more ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 6. Comparison of inference time. At the costs of 5× solver than DiffPo, SDP achieves continuous SE(3) equivariance and does not need preprocessing. ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Simulation Experiments), p. 9 (Figure
 | body limitation/failure cue | The observations are captured by two stationary RGBD cameras positioned above the workspace to minimize occlusion. | p. 6 (5.2. Physical Experiments) |
 | body limitation/failure cue | We hypothesize that this drop is caused by pointcloud occlusion and object instability due to gravity, both of which disrupt SE(3) equivariance. | p. 6 (5.1. Simulation Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 6 (5.1. Simulation Experiments), p. 9 (Figure
 | The vector C encodes the state in spherical Fourier space up to degree L. | p. 5 (4.3. Spherical Denoising Temporal U-net) |
 | The robot state e is concatenated to the output of the encoder yielding C. | p. 5 (4.2. Representing State and Action by Spherical Signal) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6. Conclusion and Limitations - extractive body cue:** One limitation of the proposed method is that it operates in position control, ignoring contact forces, which leads to protective stops in the Flip Book ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 6 (5.1. Simulation Experiments), p. 9 (Figure
 - **p. 6 / 5.1. Simulation Experiments - extractive body cue:** We hypothesize that this drop is caused by pointcloud occlusion and object instability due to gravity, both of which disrupt SE(3) equivariance.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Simulation Experiments), p. 7 (5.2. Physical Experiments), p. 6 (5.1. Simulation Experiments), p. 7 (5.2. Physical Experiments), p. 8 (5.2. Physical Experiments), p. 8 (5.2. Physical Experiments), metrics p. 6 (5.1. Simulation Experiments), p. 7 (5.2. Physical Experiments), p. 8 (5.2. Physical Experiments), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption), p. 6 (5.1. Simulation Experiments), baselines p. 6 (5.1. Simulation Experiments), p. 6 (5.1. Simulation Experiments), p. 7 (5.2. Physical Experiments), p. 7 (5.2. Physical Experiments), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), results p. 6 (5.1. Simulation Experiments), p. 9 (Figure/Table caption), p. 6 (5.1. Simulation Experiments), p. 7 (Figure/Table caption), p. 8 (5.2. Physical Experiments), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

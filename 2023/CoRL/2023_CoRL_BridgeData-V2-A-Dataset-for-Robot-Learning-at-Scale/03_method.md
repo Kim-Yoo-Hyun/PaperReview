@@ -52,7 +52,6 @@ PDF body method statement (p. 14 (B.2 Diffusion goal-conditioned behavior clonin
 - **p. 15 / B.5 Language-conditioned behavior cloning - extractive body cue:** We use the Adam optimizer [60] with a learning rate of 3e-4.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 14 (B.4 Contrastive RL), p. 14 (B.2 Diffusion goal-conditioned behavior cloning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 14 (B.2 Diffusion goal-conditioned behavior clonin
 - **p. 13 / B Learning Method Implementation Details - extractive body cue:** All the goal-conditioned methods take in both an observation and goal.
 - **p. 13 / B Learning Method Implementation Details - extractive body cue:** During training, the goal associated with an observation is selected by uniformly sampling an observation from the future timesteps in the trajectory.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,15 +85,11 @@ PDF body method statement (p. 14 (B.2 Diffusion goal-conditioned behavior clonin
 ## Training vs Inference
 
 - **p. 13 / B Learning Method Implementation Details - extractive body cue:** During training, the goal associated with an observation is selected by uniformly sampling an observation from the future timesteps in the trajectory.
-- **p. 13 / B Learning Method Implementation Details - extractive body cue:** During training, the goal associated with an observation is selected by uniformly sampling an observation from the future timesteps in the trajectory.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** DDPM, Denoising, Diffusion, Probabilistic, Models, style, objective, introduced, image, encodings, then, pass, through, MLPs, representations, observation, goal, same, hyper-parameters, original.
 - **Relevant PDF headings:** B Learning Method Implementation Details (p. 13).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +109,10 @@ PDF body method statement (p. 14 (B.2 Diffusion goal-conditioned behavior clonin
 - **p. 7 / 5 Experiments - extractive body cue:** Additionally, the "put eggplant in pot" is a very challenging task in both labs since the eggplant easily slips out of the gripper.
 - **p. 3 / Dataset - extractive body cue:** Training on a combination of the largest datasets released so far is an exciting and promising direction for future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (B.2 Diffusion goal-conditioned behavior cloning), p. 14 (B.4 Contrastive RL), p. 15 (B.6 RT-1), p. 13 (B Learning Method Implementation Details), p. 15 (B.5 Language-conditioned behavior cloning), p. 13 (B Learning Method Implementation Details), objective p. 14 (B.4 Contrastive RL), p. 14 (B.2 Diffusion goal-conditioned behavior cloning), p. 15 (B.5 Language-conditioned behavior cloning), temporal p. 14 (B.3 Action Chunking with Transformers), p. 13 (B Learning Method Implementation Details), p. 15 (B.6 RT-1), p. 6 (5 Experiments), p. 8 (5 Experiments), p. 14 (B.1 Goal-conditioned behavior cloning).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

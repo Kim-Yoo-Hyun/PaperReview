@@ -48,7 +48,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Context length becomes a major constraint when VLMs process long-horizon videos.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** Hand-object interactions are critical in demonstration videos [35, 36] and we observe that hands typically move slower when picking or placing objects, providing a clue ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We compare SeeDo against baselines such as the state-of-the-art video VLMs [10, 11], and find that SeeDo achieve the best performance.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** module, first, instructs, VLM, identify, objects, frames, then, open-vocabulary, object, detector, extract, bounding, boxes, frame, real-world, experiment, follow, segmentation, model.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Additionally, we identify three types of errors from the failure cases to analyze and provide insights on the strengths and weaknesses of various models on ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, spatial errors remain the main source of SeeDo 's failures.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), objective p. 3 (III. METHOD), temporal p. 5 (IV. EXPERIMENTS), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORKS), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

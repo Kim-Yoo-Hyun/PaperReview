@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (4.3. Injecting Goal Generation Ability into 3D-
 - **p. 8 / 5.3. Embodied Action Planning - extractive body cue:** Evaluation of action planning on CALVIN dataset. matches the baseline performance in most tasks within the RLBench action prediction, showing its planning capability.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (4.3. Injecting Goal Generation Ability into 3D-
 - **p. 5 / 4.3.2. BRIDGING LLM AND GOAL GENERATION - extractive body cue:** Challenges remain as to how to seamlessly incorporate the pretrained decoders into the LLMs so that 3D-VLA could generate goals with regard to any pretrained ...
 - **p. 8 / 5.3. Embodied Action Planning - extractive body cue:** 3D-VLA: A 3D Vision-Language-Action Generative World Model Move green chip bag near water bottle (RT-1) RT-1 Jaco Play Place the long bread on the table ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (4.3. Injecting Goal Generation Ability into 3D-
 - **p. 6 / 4.3.2. BRIDGING LLM AND GOAL GENERATION - extractive body cue:** To make training 3D-VLA more efficient and to avoid catastrophic forgetting, we utilize LoRA (Hu et al., 2021) to fine-tune different diffusion models.
 - **p. 8 / 5.3. Embodied Action Planning - extractive body cue:** The results in the first row are sampled from the test set of held-in training data while the second row is the unseen environments gathered ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, pretrain, embodied, diffusion, models, terms, different, modalities, images, depths, point, clouds, then, align, decoders, embedding, space, D-VLA, through, alignment.
 - **Relevant PDF headings:** 4. Methods (p. 4); 4.3.1. PRETRAINING EMBODIED DIFFUSION MODELS (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 5 (4.3. Injecting Goal Generation Ability into 3D-
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Examples from our 3D Embodied Instruction Tuning Dataset. added tokens enable our model to perform a wider range of embodied tasks and support ...
 - **p. 5 / 4.3.1. PRETRAINING EMBODIED DIFFUSION MODELS - extractive body cue:** FOR GOAL GENERATION To address the limitations of current diffusion models for goal generation in an embodied environment, we train RGBD to RGB-D and point-cloud ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.3. Injecting Goal Generation Ability into 3D-VLA), p. 5 (4.2.2. INTERACTION TOKENS), p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION), p. 4 (4.1. Overview), p. 4 (4.1. Overview), p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION), objective p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION), p. 5 (4.3. Injecting Goal Generation Ability into 3D-VLA), p. 7 (5.3. Embodied Action Planning), p. 8 (5.3. Embodied Action Planning), temporal p. 5 (4.2.2. INTERACTION TOKENS), p. 5 (4.3. Injecting Goal Generation Ability into 3D-VLA), p. 6 (4.3.2. BRIDGING LLM AND GOAL GENERATION), p. 7 (5.2. Multi-modal Goal Generation), p. 1 (1. Introduction), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

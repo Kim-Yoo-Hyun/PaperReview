@@ -657,24 +657,17 @@ def render(rows, meta):
             lines.append(f"| {title} | {correction['basis']} "
                          f"[기존에 연결된 PDF]({correction['before_source']}) · [게재본]({review['source']}) |")
         lines.append("")
-    for row in rows:
-        if change := row.get("byline_correction"):
-            if change.get("batch"):
-                continue
-            short_title = row["title"].split(":")[0]
-            lines += [f"**{short_title} 저자 표기.** {change['verified_on']}에 {change['basis']} "
-                      f"[게재본 표제면]({change['source']})", ""]
+    bylines = [r["byline_correction"] for r in rows if r.get("byline_correction")]
+    summary_bylines = sum(not change.get("batch") for change in bylines)
+    if summary_bylines:
+        lines += [f"요약·서지 검토 중 {summary_bylines}편의 저자 표기 또는 순서를 고쳤다. "
+                  "교정 전후 명단과 표제면 출처는 감사 원장의 `byline_correction`에 있다. [논문별 조회](#논문별-조회)", ""]
     clarified = [r for r in rows if "scope_clarification" in r.get("summary_review", {})]
     if clarified:
-        lines += ["### 평가 조건과 지표", "", "| 논문 | 원문에서 확인한 범위 |", "|---|---|"]
-        short_titles = Counter(row["title"].split(":")[0] for row in clarified)
-        for row in clarified:
-            review = row["summary_review"]
-            title = row["title"].split(":")[0]
-            if short_titles[title] > 1:
-                title = row["title"]
-            lines.append(f"| {title} | {cited_statement(review['scope_clarification'], review)} |")
-        lines.append("")
+        lines += ["### 평가 조건과 지표", "",
+                  f"{len(clarified)}편의 평가 조건·지표를 보완했다. 각 논문의 `04_evaluation.md`와 감사 원장의 "
+                  "`summary_review.scope_clarification`에서 측정 조건과 원문 위치를 확인할 수 있다. "
+                  f"[논문별 조회](#논문별-조회) · [감사 원장]({ledger})", ""]
     taxonomy_reviews = [r["taxonomy_review"] for r in rows if "taxonomy_review" in r]
     if taxonomy_reviews:
         lines += ["## 다축 태그와 공개 자료", "",
@@ -689,13 +682,10 @@ def render(rows, meta):
             lines.append(f"| {batch} | {sum(bool(r.get('fields')) for r in group)} | {findings['file']} | "
                          f"{findings['not_released']} | {findings['unresolved']} | {sum('legacy_tags' in r for r in group)} |")
         lines.append("")
-    bylines = [(row, change) for row in rows if (change := row.get("byline_correction", {})).get("batch")]
-    if bylines:
-        lines += [f"다축 정규화에서 저자 {len(bylines)}편의 표기나 순서를 원문 표제면에 맞췄다. "
-                  "각 레코드에 이전 저자 목록을 보존했다.", "", "| 논문 | 표제면 대조 |", "|---|---|"]
-        for row, change in bylines:
-            lines.append(f"| {row['title'].split(':')[0]} | {change['basis']} [원문]({change['source']}) |")
-        lines.append("")
+    taxonomy_bylines = len(bylines) - summary_bylines
+    if taxonomy_bylines:
+        lines += [f"다축 정규화에서 {taxonomy_bylines}편의 저자 표기·순서를 교정했다. "
+                  f"논문별 원문과 이전 명단은 `byline_correction`에 보존했다. [감사 원장]({ledger})", ""]
     artifacts = [fields for r in rows if (fields := r.get("artifact_review", {}).get("fields"))]
     if artifacts:
         rechecks = [r["artifact_recheck"]["fields"] for r in rows if "artifact_recheck" in r]

@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (8 GPUs)
 - **p. 6 / 8 GPUs - extractive body cue:** In contrast, H2.0 single-process with all optimizations turned off is 240% faster (242 vs 100 SPS).
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 8 (8 GPUs), p. 7 (8 GPUs).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (8 GPUs)
 - **p. 3 / 1 Introduction - extractive body cue:** Specifically, once the end-effector reaches 15cm (or closer) to an object, a discrete grasp action becomes available that, if executed, snaps the object into its ...
 - **p. 6 / 8 GPUs - extractive body cue:** 242 ±2 177 ±3 224 ±3 2223 ±3 814 ±2 941 ±2 7192 ±55 3965 ±30 4829 ±50 Table 2: Benchmarking H2.0 performance: simulation steps ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (8 GPUs)
 - **p. 2 / 1 Introduction - extractive body cue:** Training and testing such robots in hardware directly is slow, expensive, and difficult to reproduce.
 - **p. 7 / 8 GPUs - extractive body cue:** The visual input is encoded using a CNN, concatenated with embeddings of proprioceptive-sensing and goal coordinates, and fed to a recurrent actor-critic network, trained with ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, Habitat, simulation, platform, training, virtual, robots, interactive, environments, complex, physics-enabled, scenarios, design, choice, does, support, non-rigid, dynamics, deformables, fluids.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (8 GPUs)
 - **p. 10 / 8 GPUs - extractive body cue:** Sense-plan-act variants scale poorly to increasing task complexity.
 - **p. 10 / 8 GPUs - extractive body cue:** In the more complex task of PrepareGroceries (Figure 5b), TP+SRL outperforms TP+SPA both with and without oracle navigation due to the perception challenge of the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (8 GPUs), p. 7 (8 GPUs), p. 2 (1 Introduction), p. 6 (8 GPUs), objective p. 8 (8 GPUs), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 6 (8 GPUs), p. 6 (8 GPUs), temporal p. 1 (Abstract), p. 5 (2 Related Work), p. 6 (2 Related Work), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** Effects of Different Learning Objectives.
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** In the IRAS task, the average Arr is approximately 18%.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: The comparison of the affordance detection paradigm based on our IRAS or traditional label-based segmentation tasks. (a) shows that label-based paradigm can only ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 | 4, our model demonstrates the capacity to accurately comprehend object affordance given the complex reasoning instruction. | definition/direction/unit from same section | p. 10 (4 EXPERIMENT) |
 | Moreover, our 3D-ADLLM surpasses other models by employing a multi-stage training strategy that facilitates knowledge transfer and extraction of world knowledge from LLMs. | definition/direction/unit from same section | p. 10 (4 EXPERIMENT) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 | However, in the partial-view setting, the performance of Phi shows no significant difference compared to Qwen. | comparison identity and matched condition | p. 9 (4 EXPERIMENT) |
 | 4 (g), our model significantly outperforms other models. | comparison identity and matched condition | p. 10 (4 EXPERIMENT) |
 | (c) (e) (f) (g) (h) OpenAD (DGCNN) Ours 3D-ADLLM GT LASO OpenAD (PointNet++) Figure 4: The visualization results of our 3D-ADLLM compared with others. | comparison identity and matched condition | p. 10 (4 EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 | body limitation/failure cue | 4.2.2 OUT-OF-DISTRIBUTION RESULTS The test in out-of-distribution (ood) datasets is essential to assess the generalization capability of the model. | p. 8 (4 EXPERIMENT) |
 | body limitation/failure cue | Notably, the most substantial performance degradation with about 6% occurs in mIoU when the PC module is removed. | p. 9 (4 EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,20 +135,11 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 
 | Finally, the special token and dense point features from fPB is fed into our designed affordance decoder to generate the final affordance mask. | p. 4 (3 METHOD) |
 | Text Embedding Projector LoRA LLM Point Encoder Point Backbone Affordance Decoder ℎ௔௙௙ <AFF> Feature Point Feature Learned Affordance query Frozen Trainable Figure 2: The ... | p. 4 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4 EXPERIMENT - extractive body cue:** 4.2.2 OUT-OF-DISTRIBUTION RESULTS The test in out-of-distribution (ood) datasets is essential to assess the generalization capability of the model.
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** Notably, the most substantial performance degradation with about 6% occurs in mIoU when the PC module is removed.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 15 (A.3 DATA ANALYSIS), p. 15 (A.3 DATA ANALYSIS), metrics p. 8 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 15 (A.3 DATA ANALYSIS), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), baselines p. 7 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), results p. 8 (4 EXPERIMENT), p. 10 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 14 (A.2 COMPARISON RESULTS ON CLOSE SET), p. 9 (4 EXPERIMENT), p. 9 (4 EXPERIMENT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

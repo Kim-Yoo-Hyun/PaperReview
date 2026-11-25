@@ -49,7 +49,6 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 - **p. 5 / 3.5. Method extensions - extractive body cue:** Each of these losses is guided by a unique one-hot vector Hqi that defines the relevant prototypes for each query.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.5. Method extensions), p. 5 (3.5. Method extensions).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 - **p. 5 / 3.5. Method extensions - extractive body cue:** Given these conditions, the input 3D representations and query modalities can vary widely-from a single feature field satisfying both requirements (e.g.
 - **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** GrowSP uses features obtained from SparseConv while every other baselines uses DINO as input.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 
 - **p. 8 / 4.3.2. Unsupervised Semantic Segmentation - extractive body cue:** Since SmooSeg only produces 2D segmentations, we recover a 3D segmentation by training a Semantic-NeRF [39] on its outputs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, projector, requires, least, spatially, precise, feature, field, perform, segmentation, dense, encoders, Since, SmooSeg, only, produces, segmentations, recover, training, Semantic-NeRF.
 - **Relevant PDF headings:** 3.5. Method extensions (p. 5); 4.2.1. Evaluated methods (p. 6); Method (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +104,10 @@ PDF body method statement (p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervi
 - **p. 5 / 4. Experimental evaluations - extractive body cue:** Additional details on hyperparameters, evaluation protocols and baselines can be found in the supplementary materials, as well as ablative experiments and analysis on DiSCO's limitations.
 - **p. 7 / 4.2.3. Ablations studies - extractive body cue:** The last column refers to the main experiment where the number of prototypes is fixed and does not depend on NGT .
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation), p. 5 (3.5. Method extensions), p. 8 (4.3.2. Unsupervised Semantic Segmentation), objective p. 5 (3.5. Method extensions), p. 5 (3.5. Method extensions), temporal p. 5 (4.1. Implementation and evaluation details), p. 2 (2. Related Works).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

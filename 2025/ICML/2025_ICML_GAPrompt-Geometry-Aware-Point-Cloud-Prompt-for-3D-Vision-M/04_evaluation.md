@@ -44,8 +44,6 @@ ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교
 - **p. 7 / 4.1. Experimental Settings - extractive body cue:** ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the task.
 - **p. 5 / 3.4. Analysis and Discussion - extractive body cue:** The objective of our method is to facilitate task-specific model adaptation through the integration of geometricaware prompt mechanisms.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our GAPrompt compares to full fine-tuning and existing PEFT methods. We compare the classification accuracy on the hardest variant of ScanObjectNN (Uy et ...
@@ -79,8 +77,6 @@ ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교
 | Classification on three variants of the ScanObjectNN and the ModelNet40, including the number of trainable parameters (Param) and overall accuracy (Acc). | definition/direction/unit from same section | p. 6 (3.4. Analysis and Discussion) |
 | We evaluate the performance of our proposed GAPrompt on the point cloud classification task. | definition/direction/unit from same section | p. 6 (4. Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교
 | Following baselines, we sample 1024 points per instance. | comparison identity and matched condition | p. 7 (4.1. Experimental Settings) |
 | Ablation study of Prompt Propagation mechanism and prompt enhancing factor βp. | comparison identity and matched condition | p. 8 (4.3. Ablation Study) |
 | As shown in Figure 4, we conduct ablation experiments on prompt propagation settings and prompt enhancing factor βp. | comparison identity and matched condition | p. 8 (4.3. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교
 | body limitation/failure cue | ModelNet40 (Wu et al., 2015) comprises 12,311 pristine 3D CAD models across 40 categories, with complete, uniform, and noise-free point clouds that simplify the ... | p. 7 (4.1. Experimental Settings) |
 | body limitation/failure cue | Intuitively, it is because this setting brings more randomness and results in more robust convergence. | p. 8 (4.3. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교
 | The hyperparameters are set as βa = 0.5, βp = 0.5 and P = 20. | p. 6 (4. Experiments) |
 | Basically, we only use the Shift Head to produce shifted point clouds as input for the encoder, attaining 88.23% accuracy. | p. 8 (4.3. Ablation Study) |
 | Following the original architecture of the pre-trained model, the prompted point cloud is encoded into Lt point tokens h1 by the token embedding module. | p. 4 (3.1. Point Prompt) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,6 +139,5 @@ ScanObjectNN 등에서 분류 성능과 갱신 파라미터 수를 함께 비교
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** Intuitively, it is because this setting brings more randomness and results in more robust convergence.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 6 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 7 (4.1. Experimental Settings), p. 7 (4.1. Experimental Settings), metrics p. 7 (4.1. Experimental Settings), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (4.2. Quantitative Analysis), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Experimental Settings), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), results p. 7 (4.2. Quantitative Analysis), p. 7 (4.2. Quantitative Analysis), p. 8 (4.3. Ablation Study), p. 13 (Figure/Table caption), p. 6 (4. Experiments), p. 8 (4.3. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

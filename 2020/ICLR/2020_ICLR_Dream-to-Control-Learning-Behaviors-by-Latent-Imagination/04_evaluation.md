@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** With an average score of 823 across tasks after 5 × 106 environment steps, Dreamer exceeds the performance of the strong model-free D4PG agent that ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** This suggests that future improvements in representation learning are likely to translate to higher task performance with Dreamer.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Dreamer learns a world model from past experience and efficiently learns farsighted behaviors in its latent
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | Reward prediction alone was not sufficient in our experiments. | definition/direction/unit from same section | p. 9 (6 EXPERIMENTS) |
 | Figure 4: Imagination horizons. We compare the final performance of Dreamer, learning an action model without value prediction, and online planning using PlaNet. Learning ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | The empirical success of Dreamer shows that learning behaviors by latent imagination with world models can outperform top methods based on experience replay. | comparison identity and matched condition | p. 9 (6 EXPERIMENTS) |
 | Figure 6: Performance comparison to existing methods. Dreamer inherits the data-efficiency of PlaNet while exceeding the asymptotic performance of the best model-free agents. After ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 10: Comparison of action selection schemes on the continuous control tasks of the DeepMind Control Suite from pixel inputs. The lines show mean ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | body limitation/failure cue | Figure 4: Imagination horizons. We compare the final performance of Dreamer, learning an action model without value prediction, and online planning using PlaNet. Learning ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Figure 12: Robustness of Dreamer to different control frequencies. Reinforcement learning methods can be sensitive to this hyper parameter, which could be amplified when ... | p. 19 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 | The representation model encodes observations and actions to create continuous vector-valued model states st with Markovian transitions (Watter et al., 2015; Zhang et al., ... | p. 2 (1 INTRODUCTION) |
 | Vk N estimates rewards beyond k steps with the learned value model. | p. 4 (B Sequence length) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2: Image observations for 5 of the 20 visual control tasks used in our experiments. The tasks pose a variety of challenges including contact ...
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9
 - **p. 19 / Figure/Table caption - extractive body cue:** Figure 12: Robustness of Dreamer to different control frequencies. Reinforcement learning methods can be sensitive to this hyper parameter, which could be amplified when learning ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), metrics p. 18 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (6 EXPERIMENTS), p. 17 (Figure/Table caption), p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), baselines p. 8 (6 EXPERIMENTS), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 6 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 16 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

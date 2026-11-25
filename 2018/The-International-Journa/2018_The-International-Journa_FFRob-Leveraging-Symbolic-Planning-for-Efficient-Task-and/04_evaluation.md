@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 - **p. 28 / 11 Experiments - extractive body cue:** The robot must also wash the cups (blue and cyan blocks) and set the table using the blue cups.
 - **p. 31 / 11.4 Results - extractive body cue:** Because each object has an explicit goal, HGoals corresponds well with the actual distance to the goal, which is approximately twice HGoals.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. A task and motion planning problem requiring cooking dinner. The robot must obtain two green cabbages from the shelves, clean them on the ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 | All but 1 of our algorithms were able to solve it with an above 95 percent success ratio in less than 40 seconds. | definition/direction/unit from same section | p. 31 (11.4 Results) |
 | Figure 6. Method for computing relaxed planning costs. Despite this, several relaxed planning heuristics have been shown to give effective estimates of the distance ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 | This allows a large number of placements to be created for constrained problems without greatly increasing the branching factor. | comparison identity and matched condition | p. 30 (11 Experiments) |
 | Figure 2. The FFROB algorithm. 5.1 Extended Action Specification We model discretized PPM problems using a rep- resentation that extends Simple Action Specification (SAS+) ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 15. A star-graph CRG visualized using end-effector poses. PATH(q, q′; (V, E)) (without considering any placed or held objects). In practice, we only ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 | body limitation/failure cue | Future work includes analytically and empirically investigating the quality of solutions returned by FFROB with respect to costs. | p. 31 (12 Conclusion) |
 | body limitation/failure cue | Future work involves using the planning to guide the sampling such as done by Garrett et al. | p. 32 (12 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 | HF F Rob, HA gave the best performance in both success rate and runtime. | p. 30 (11.4 Results) |
 | Experiment results over 50 trials. informative heuristic estimate. | p. 31 (11.4 Results) |
 | 3 We prove completeness results for FFROB by identifying a class of non-degenerate PPM problems and proving FFROB will solve them with finite expected ... | p. 3 (1.1 Approach) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 30 (11.4 Results), p. 30 (11.4 Results), p. 3
 - **p. 32 / 12 Conclusion - extractive body cue:** Future work involves using the planning to guide the sampling such as done by Garrett et al.
 
 - **Evidence anchors reviewed:** datasets p. 30 (11 Experiments), p. 30 (11 Experiments), p. 31 (11.4 Results), p. 27 (11 Experiments), p. 27 (11 Experiments), p. 28 (11 Experiments), metrics p. 30 (11.4 Results), p. 30 (11 Experiments), p. 31 (11.4 Results), p. 27 (11 Experiments), p. 28 (11 Experiments), p. 29 (11 Experiments), baselines p. 29 (11 Experiments), p. 30 (11 Experiments), p. 31 (Figure/Table caption), p. 30 (11 Experiments), p. 7 (Figure/Table caption), p. 17 (Figure/Table caption), results p. 30 (11.4 Results), p. 30 (11.4 Results), p. 31 (11.4 Results), p. 31 (11.4 Results), p. 32 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

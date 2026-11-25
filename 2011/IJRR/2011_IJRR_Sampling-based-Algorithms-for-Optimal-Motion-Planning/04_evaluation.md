@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 - **p. 32 / V RRT∗ - extractive body cue:** Let n denote the total number of iterations (or, alternatively, the number of samples), and m denote the number of obstacles in the environment.
 - **p. 33 / V RRT∗ - extractive body cue:** Both algorithms are run in a square environment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Table 1: Summary of results. Time and space complexity are expressed as a function of the number of samples n, for a fixed environment.
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 | Hence, the graph returned by sPRM includes all the paths that are present in the graph returned by PRM∗. | definition/direction/unit from same section | p. 25 (V RRT∗) |
 | Thus, no edge can cross the white cube illustrated in Figure 6. | definition/direction/unit from same section | p. 26 (V RRT∗) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 | A comparison with the RRT algorithm is provided in the same figure. | comparison identity and matched condition | p. 34 (V RRT∗) |
 | Figure 18: A comparison of the running time of the RRT∗and the RRT algorithms. The ratio of the running time of the RRT∗over that ... | comparison identity and matched condition | p. 42 (Figure/Table caption) |
 | Figure 19: A comparison of the running time of the RRT∗and the RRT algorithms in an environ- ment with obstacles. The ratio of the ... | comparison identity and matched condition | p. 43 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 | body limitation/failure cue | The next lemma upper-bounds the number of calls to the CollisionFree procedure in the proposed algorithms. | p. 30 (V RRT∗) |
 | body limitation/failure cue | Let A denote the event that the sample Xn drawn at the last iteration falls into the rn interior of Xfree. | p. 30 (V RRT∗) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 | More precisely, the algorithm is analyzed when it is run with Poisson(n) samples. | p. 25 (V RRT∗) |
 | For n ∈N and m ∈{1, 2, . . . , Mn}, consider the tile m when the algorithm is run with Poisson(n) samples. | p. 25 (V RRT∗) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 35 / 6 Conclusion - extractive body cue:** In order to address these limitations of existing algorithms, a number of new algorithms are introduced, and proven to be asymptotically optimal and computational efficient, ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT
 - **p. 30 / V RRT∗ - extractive body cue:** Let A denote the event that the sample Xn drawn at the last iteration falls into the rn interior of Xfree.
 
 - **Evidence anchors reviewed:** datasets p. 31 (V RRT∗), p. 25 (V RRT∗), p. 29 (V RRT∗), p. 31 (V RRT∗), p. 32 (V RRT∗), p. 33 (V RRT∗), metrics p. 61 (Figure/Table caption), p. 17 (Figure/Table caption), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 21 (Figure/Table caption), p. 25 (V RRT∗), baselines p. 29 (V RRT∗), p. 32 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 42 (Figure/Table caption), p. 43 (Figure/Table caption), results p. 31 (V RRT∗), p. 33 (V RRT∗), p. 33 (V RRT∗), p. 34 (V RRT∗), p. 5 (Figure/Table caption), p. 29 (V RRT∗).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

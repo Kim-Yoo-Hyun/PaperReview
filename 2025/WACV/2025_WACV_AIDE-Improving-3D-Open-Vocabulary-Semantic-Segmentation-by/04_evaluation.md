@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 - **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** Train Dataset Metrics (Baseline/AIDE) hIoU mIoUB mIoUN Test Dataset: S3DIS (B8/N4) ScanNet (B15/N4) 32.1/35.9 31.6/39.9 32.6/33.8 ScanNet (B12/N7) 22.2/25.8 25.0/23.3 19.9/28.9 ScanNet (B10/N9) 24.7/31.0 30.5/38.9 ...
 - **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** To better understand how our AIDE excels at segmenting seen and unseen objects, we visualize segmentation results in Figs.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Previous methods use misaligned paired data (e.g., image/point cloud 1 is closest to text 2) and freeze the text encoder trained on 2D ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 | It underscores the importance of well-designed captioning techniques in improving alignment with the text encoder. | definition/direction/unit from same section | p. 6 (4.3. Ablation Studies) |
 | Notably, the introduction of adaptive segmentation module alone improves hIoU from 65.3 to 66.3, and mIoUB from 68.3 to 70.2, illustrating the efficacy in ... | definition/direction/unit from same section | p. 6 (4.3. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 | Ablation studies on different modules of AIDE. "Adaptive Segmentation" refers to the adaptive segmentation module. "Caption Selection" and "Caption Sampling" refer to using temperature-based ... | comparison identity and matched condition | p. 7 (4.3. Ablation Studies) |
 | Benchmarks, Baselines, and Implementation Benchmarks and category partitions. | comparison identity and matched condition | p. 5 (4. Experiments) |
 | Following PLA [23], which is also our baseline, we employ the sparse-convolution-based UNet [29] with a base hidden dimension of 16 as our 3D ... | comparison identity and matched condition | p. 5 (4. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 | body limitation/failure cue | Table 7. Ablation studies on using different text encoders of AIDE on ScanNet (B15/N4). this phenomenon. As generating over 30 captions per tem- perature ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | On the other side, AIDE still maintains a lead over the baseline, demonstrating its robustness to variations in vocabulary. | p. 8 (4.4. Qualitative Results-Generalization) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 | Parameters and throughput comparison. | p. 8 (4.4. Qualitative Results-Generalization) |
 | We also include a parameter and throughput analysis in Tab. | p. 8 (4.4. Qualitative Results-Generalization) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4. Experiments - extractive body cue:** Due to space limitations, the details of benchmarks and partitions are deferred to Appendix C.1.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 8 (4.4. Qualitative Results-Generalization), 
 - **p. 8 / 4.4. Qualitative Results-Generalization - extractive body cue:** On the other side, AIDE still maintains a lead over the baseline, demonstrating its robustness to variations in vocabulary.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 6 (4.2. Quantative Results), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.4. Qualitative Results-Generalization), p. 8 (4.4. Qualitative Results-Generalization), metrics p. 8 (4.4. Qualitative Results-Generalization), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (4. Experiments), baselines p. 6 (4.2. Quantative Results), p. 8 (4.4. Qualitative Results-Generalization), p. 8 (4.4. Qualitative Results-Generalization), p. 7 (4.3. Ablation Studies), p. 5 (4. Experiments), p. 5 (4. Experiments), results p. 8 (4.4. Qualitative Results-Generalization), p. 7 (Figure/Table caption), p. 7 (4.3. Ablation Studies), p. 6 (4.2. Quantative Results), p. 6 (4.2. Quantative Results), p. 8 (4.4. Qualitative Results-Generalization).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

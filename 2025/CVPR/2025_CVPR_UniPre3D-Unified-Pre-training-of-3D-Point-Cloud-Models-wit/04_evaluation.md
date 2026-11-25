@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Furthermore, point fusion proves to be more effective for scene pre-training than feature fusion, with optimal fine-tuning results across all datasets achieved when fusing 2D ...
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** The ablation results confirm our findings from object pre-training, that supplementary image knowledge is essential for enhancing our pre-training pipeline, particularly on the challenging long-tail ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Pre-training paradigm comparison. Existing object- level pre-training methods usually follow a generative masked auto-encoding (MAE) paradigm. Their scene-level counterparts mostly leverage the contrastive ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.
 | For scene models, we use the AdamW optimizer [27] with a weight decay of 0.01 and an initial learning rate of 10-4. | definition/direction/unit from same section | p. 5 (4.1. Pre-training) |
 | We report the mean average precision. | definition/direction/unit from same section | p. 8 (4.3. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.
 | For semantic segmentation in Table 3, UniPre3D outperforms previous object pre-training methods using the standard Transformer backbone on S3DIS. | comparison identity and matched condition | p. 7 (4.2.2. Scene-level Fine-tuning) |
 | We use PointGroup [19] as the baseline model, following previous papers. | comparison identity and matched condition | p. 8 (4.3. Ablation Studies) |
 | Additionally, the requirement for both point clouds and images adds data curation burden compared with other point-only pre-training methods. | comparison identity and matched condition | p. 8 (4.4. Limitations) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.
 | body limitation/failure cue | However, UniPre3D accurately predicts both geometry and color for other perspectives, demonstrating the 3D backbone is pre-trained to extract robust geometric features. | p. 6 (4.1. Pre-training) |
 | body limitation/failure cue | Model Pre-train ScanNet20 ScanNet200 S3DIS Point-based Model PointNet [34] ✗ - - 41.1 PointNet++ [35] ✗ - - 53.5 PointNeXt [39] ✗ 71.5 - ... | p. 7 (4.2.2. Scene-level Fine-tuning) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.
 | Subsequently, we integrate the 3D feature F3D ∈RN×C3D from the final decoder layer of the backbone with ˆF2D: F_\ m athrm {fuse} = \mathrm ... | p. 4 (3.3. Scale-Adaptive Cross-Modal Fusion) |
 | These 2D features are then encoded into the 3D domain using a learnable but lightweight adaptation block A, followed by back-projection to the 3D ... | p. 4 (3.2. Overall Pipeline) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.4. Limitations - extractive body cue:** Even though we make an effective effort towards unified pre-training, there are still some limitations to be resolved in future research.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.
 - **p. 7 / 4.2.2. Scene-level Fine-tuning - extractive body cue:** Model Pre-train ScanNet20 ScanNet200 S3DIS Point-based Model PointNet [34] ✗ - - 41.1 PointNet++ [35] ✗ - - 53.5 PointNeXt [39] ✗ 71.5 - 70.5 ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Pre-training), p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), p. 5 (4.1. Pre-training), p. 6 (4.2.2. Scene-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), metrics p. 6 (4.2.1. Object-level Fine-tuning), p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), p. 8 (Figure/Table caption), p. 5 (4.1. Pre-training), baselines p. 5 (4.1. Pre-training), p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.3. Ablation Studies), p. 7 (4.2.2. Scene-level Fine-tuning), p. 8 (4.3. Ablation Studies), p. 8 (4.4. Limitations), results p. 6 (4.2.1. Object-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), p. 7 (4.2.2. Scene-level Fine-tuning), p. 8 (4.3. Ablation Studies), p. 5 (4.1. Pre-training), p. 6 (4.2.1. Object-level Fine-tuning).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

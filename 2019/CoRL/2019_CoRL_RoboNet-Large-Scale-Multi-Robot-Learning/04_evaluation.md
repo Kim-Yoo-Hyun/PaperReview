@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 12 / C Database Implementation Details - extractive body cue:** D Description of Benchmarking Tasks For all control benchmarks we used object relocation tasks from a set of fixed initial positions towards a set of ...
 - **p. 12 / C Database Implementation Details - extractive body cue:** The experimental setups for each robot are depicted in Figure 7.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: A glimpse of the RoboNet dataset, with example trajectories, robots, and viewpoints. We collected data with Sawyer, Franka, WidowX, Kuka, and Baxter robots, ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | The database stores every trajectory as a separate entity with a set of attributes that can be filtered. | definition/direction/unit from same section | p. 12 (C Database Implementation Details) |
 | Figure 8: Example task of pushing an object with an unseen gripper, in this case the Robotiq gripper. Avg. distance (cm) zero-shot 15.5 ± ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | Table 4: Results for adapta- tion to an unseen Franka robot. The model pre-trained on RoboNet without the Franka, R3, and Fetch data, achieves ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 8: Example task of pushing an object with an unseen gripper, in this case the Robotiq gripper. Avg. distance (cm) zero-shot 15.5 ± ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | Avg. distance (cm) zero-shot 15.5 ± 2.6 without pretraining 17 ± 1.8 pretraining on Sawyer-only 9.8 ± 2.1 pretraining on all of RoboNet 14.7 ... | comparison identity and matched condition | p. 13 (C Database Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,9 +104,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 13 / C Database Implementation Details - extractive body cue:** The results qualitative results of this evaluation are shown in Figure 8 and the quantitative results are in Table 7, averaging over 10 trajectories each.
 - **p. 13 / C Database Implementation Details - extractive body cue:** Avg. distance (cm) zero-shot 15.5 ± 2.6 without pretraining 17 ± 1.8 pretraining on Sawyer-only 9.8 ± 2.1 pretraining on all of RoboNet 14.7 ± ...
 - **p. 13 / C Database Implementation Details - extractive body cue:** The model trained on only Sawyer data performs the best when fine-tuned on 300 trajectories with a Robotiq gripper.
-- **p. 13 / C Database Implementation Details - extractive body cue:** The results qualitative results of this evaluation are shown in Figure 8 and the quantitative results are in Table 7, averaging over 10 trajectories each.
-- **p. 13 / C Database Implementation Details - extractive body cue:** Avg. distance (cm) zero-shot 15.5 ± 2.6 without pretraining 17 ± 1.8 pretraining on Sawyer-only 9.8 ± 2.1 pretraining on all of RoboNet 14.7 ± ...
-- **p. 13 / C Database Implementation Details - extractive body cue:** The model trained on only Sawyer data performs the best when fine-tuned on 300 trajectories with a Robotiq gripper.
 
 ## Generalization and Failure Cases
 
@@ -125,8 +111,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 |---|---|---|
 | body limitation/failure cue | Next, we discuss limitations of the dataset and evaluation, and additional directions for future work. | p. 8 (6 Discussion) |
 | body limitation/failure cue | While our results demonstrated a large degree of generalization, a number of important limitations remain, which we aim to study in future work. | p. 8 (6 Discussion) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -136,20 +120,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | We provide code infrastructure that allows a user to filter certain subsets of attributes for training and testing. | p. 12 (C Database Implementation Details) |
 | executing the action sequences computed by the algorithm the remaining distance to the goal is measured using a tape, and success is determined by ... | p. 13 (C Database Implementation Details) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6 Discussion - extractive body cue:** Next, we discuss limitations of the dataset and evaluation, and additional directions for future work.
 - **p. 8 / 6 Discussion - extractive body cue:** While our results demonstrated a large degree of generalization, a number of important limitations remain, which we aim to study in future work.
 
 - **Evidence anchors reviewed:** datasets p. 13 (C Database Implementation Details), p. 13 (C Database Implementation Details), p. 12 (C Database Implementation Details), p. 12 (C Database Implementation Details), metrics p. 6 (Figure/Table caption), p. 13 (C Database Implementation Details), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 12 (C Database Implementation Details), p. 13 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (C Database Implementation Details), results p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 13 (C Database Implementation Details), p. 13 (C Database Implementation Details).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

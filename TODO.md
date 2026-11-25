@@ -2,7 +2,7 @@
 
 ## 재개 순서
 
-**다음 원장 작업은 다축 태그가 남은 NEXT 77편 중 앞의 50편이다.** 안정 ID 순으로 *When Life Gives You BC, Make Q-functions* (`pr-1125`)부터 *Tune to Learn* (`pr-1197`)까지다. 행동 복제에서 추출한 가치와 환경 상호작용으로 학습한 가치를 구분하고, 제어 이득이나 실행 주기가 달라지는 비교에서는 같은 정책의 어느 제어 조건을 측정했는지 기록한다. [직전 배치와 매핑](./work/update/REGISTRY.md#여덟-번째-배치-태그-매핑) · [별도 등록 배치](./work/sources/batches/gapfill_2026_11.yaml)
+**다음 원장 작업은 다축 태그가 남은 NEXT 77편 중 앞의 50편이다.** 안정 ID 순으로 *When Life Gives You BC, Make Q-functions* (`pr-1125`)부터 *Tune to Learn* (`pr-1197`)까지다. 행동 복제에서 추출한 가치와 환경 상호작용으로 학습한 가치를 구분하고, 제어 이득이나 실행 주기가 달라지는 비교에서는 같은 정책의 어느 제어 조건을 측정했는지 기록한다. [직전 배치와 매핑](./work/update/REGISTRY.md#taxonomy-batches) · [별도 등록 배치](./work/sources/batches/gapfill_2026_11.yaml)
 
 **다음 연구 작업은 G1이 걸쇠를 당기다가 저항이 갑자기 사라질 때 균형을 유지하는지 시뮬레이션에서 확인하는 것이다.** 후보 4의 첫 비교는 다음 순서로 진행한다. [선행 연구와 판별 기준](./work/research_topics/README.md#g1-load-release) · [공개 G1 모델](https://github.com/google-deepmind/mujoco_menagerie/blob/main/unitree_g1/README.md)
 
@@ -24,9 +24,5 @@ CORE 31편에 남은 공개 여부 55개는 새 배포 파일이나 저자의 �
 
 ## 직전 완료
 
-- **11월 25일 NEXT 50편 다축 정규화.** *PhysTwin*부터 *Force Policy*까지 원문과 배포처를 대조해 누적 423/500편을 마쳤다. 공개 여부 150개 중 코드 33개·가중치 17개·데이터 21개는 파일과 용도를 확인했고, 3개는 저자가 공개 예정이라고 밝혔으며 76개는 미확인이다. 저자 9편, 검색 태그 16편, 프로젝트 주소 4편을 교정했다. [논문별 근거](./work/sources/batches/core_next_08.yaml) · [판본·배포 범위](./work/update/REGISTRY.md#여덟-번째-배치-태그-매핑)
-- **11월 24일 CORE 공개 자료와 DeXtreme 저자 대조.** 미확인 68개를 전부 검토해 배포 파일 7건, 연구 산출물에 해당하지 않는 항목 6건을 확인했다. 실험 데이터가 ‘해당 없음’으로 기록돼 있던 7편은 ‘배포 파일 미확인’으로 교정했다. DeXtreme은 ICRA 게재본 5977쪽에서 기존 저자 14명의 표기와 순서를 확인했다. [공개 범위와 판본](./research/SOURCE_AUDIT.md#core-공개-자료)
-- **11월 24일 수식·그림 전사 교정.** 10편의 노트 31개에서 91줄을 원문과 대조했다. 전체 표준 노트 6,260개를 다시 검색한 결과 글꼴 전용 문자와 유니코드 대체 문자는 0개였다. TD-MPC2의 문제 정의와 평가 노트에서도 잠재 공간 계획과 단일 과제 지표를 바로잡았다. [교정과 원문 위치](./research/SOURCE_AUDIT.md#노트의-수식과-도식)
-- **11월 24일 요약·기여 전수 대조 완료.** ARCHIVE 마지막 98편(*SR3R*~*LangRef3DGS*)의 요약 98개와 기여 196개를 게재본에 연결했다. 저자 표기·순서 12편, 학회 웹 서지와 인쇄 제목이 다른 2편을 반영했다. 평가 노트 49편 중 40편에서 평가 유형을 바로잡고 17편에 원문의 수치·조건을 명시했다. 전체 1,252편이 요약·기여 항목을 통과했다. [배치 원장](./research/SOURCE_AUDIT.md#요약기여-원문-대조) · [판본 교정](./work/update/REGISTRY.md#note-review)
-- **시연의 선택적 재수집.** 네 원격조작 자료를 대조했다. 원래 요청을 복원할 수 없으면서 같은 작업에서 가이드 방향만 바꿔 재시연할 수 있는 표본이 확보될 때까지 파일럿을 보류한다. [결과](./work/research_topics/demonstration_recollection/내용/README.md) · [공개 표본 재검산](./work/research_topics/demonstration_recollection/재현%20방법/README.md)
-- **레지스트리.** 공유 제어 원문 2편을 등록하고 DROID 공개 자료를 교정했다. 기존 23편의 등록 판정과 이전 실험의 수치·재개 조건은 각 결과 문서에서 확인할 수 있다. [등록과 교정](./work/update/REGISTRY.md) · [누락 심사](./research/GAPFILL.md) · [종료·보류 결과](./work/research_topics/RESULTS.md)
+- 레지스트리 공통 검토 질문을 한곳에 모으고, 논문별 노트에는 원문 근거와 개별 판단을 남겼다. 한 논문의 모든 검색 태그와 별칭은 색인 한 행에서 볼 수 있다. [공통 검토 기준](./research/READING_STATUS.md#note-checks) · [논문 색인](./research/REGISTRY_INDEX.csv)
+- 직전 원문 검토 범위는 *PhysTwin*부터 *Force Policy*까지 50편이다. 집중 읽기 500편 중 423편에 다축 태그가 있다. 공개 범위가 미확인인 필드와 교정 전 값은 배치 원장에서 조회한다. [직전 50편](./work/sources/batches/core_next_08.yaml) · [배치 전체](./work/update/REGISTRY.md#taxonomy-batches) · [원문 감사](./research/SOURCE_AUDIT.md)

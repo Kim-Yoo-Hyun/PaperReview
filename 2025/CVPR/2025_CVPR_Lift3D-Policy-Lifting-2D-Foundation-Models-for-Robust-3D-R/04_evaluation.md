@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Si
 - **p. 6 / 4.2. Real-World Experiment - extractive body cue:** Additional details of the real-world dataset and assets are provided in Appendix A.
 - **p. 5 / 4. Experiments - extractive body cue:** In Sections 4.1 and 4.2, we evaluate the manipulation capability of our proposed Lift3D by presenting the experimental settings and results from both simulation and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Lift3D empowers 2D foundation models with 3D manipulation capabilities by refining implicit 3D robotic representations through task-related affordance masking and depth reconstruction, while ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Si
 | Table 4. Generalization. ‘Object', ‘Background', and ‘Brightness' represent different manipulated objects, background scenes, and lighting conditions, respectively. The image above illustrates the three test ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Figure 3. The qualitative results of Lift3D in real-world experiments, including the input point cloud examples, manipulation progress, and the task completion end state, ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Si
 | Table 4. Generalization. ‘Object', ‘Background', and ‘Brightness' represent different manipulated objects, background scenes, and lighting conditions, respectively. The image above illustrates the three test ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | The effectiveness of each component is validated through an ablation study in Section 4.3. | comparison identity and matched condition | p. 5 (4. Experiments) |
 | Table 3. Ablation study. In the Task-aware MAE, AMS refers to the affordance-guided masking strategy, Depth and RGB refer to the reconstruction targets, and ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Si
 | body limitation/failure cue | Figure 1. Lift3D empowers 2D foundation models with 3D manipulation capabilities by refining implicit 3D robotic representations through task-related affordance masking and depth reconstruction, ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | These results demonstrate that Lift3D effectively enhances the 2D foundation model with robust manipulation capabilities, enabling a deeper understanding of robotic 3D scenes by ... | p. 6 (4.1. Simulation Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Si
 | The masked tokens and encoded visible tokens are processed by the MAE decoder for depth reconstruction, enhancing 3D spatial awareness. | p. 4 (3.2. Task-aware Masked Autoencoder) |
 | These 2D PEs are then used to directly encode the 3D tokens. | p. 5 (3.3. 2D Model-lifting Strategy) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion and Limitation - extractive body cue:** In terms of limitations, our Lift3D framework focuses on lifting 2D vision models to 3D manipulation tasks, which means it cannot comprehend language conditions.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Si
 - **p. 6 / 4.1. Simulation Experiment - extractive body cue:** These results demonstrate that Lift3D effectively enhances the 2D foundation model with robust manipulation capabilities, enabling a deeper understanding of robotic 3D scenes by leveraging ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Simulation Experiment), p. 5 (4.1. Simulation Experiment), p. 6 (4.2. Real-World Experiment), p. 5 (4. Experiments), metrics p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Simulation Experiment), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Simulation Experiment), p. 7 (Figure/Table caption), p. 5 (4. Experiments), p. 7 (Figure/Table caption), results p. 6 (4.1. Simulation Experiment), p. 6 (4.1. Simulation Experiment), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (4.1. Simulation Experiment), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

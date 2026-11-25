@@ -53,7 +53,6 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 - **p. 9 / B. Policy Steering for Open-World Alignment - extractive body cue:** We also showcase an additional application of our system as a runtime monitor Which returns if a single action plan is good or bad, opening ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 - **p. 4 / 1. InTRopucTION - extractive body cue:** IV-A), a Recurrent State Space Model (RSSM) is pretrained to leam good latent embeddings of the dynamics conditioned on the observations and actions.
 - **p. 6 / A. From Action Rollouts to Behavior Narration - extractive body cue:** This method uses the encoder £4 on ground-truth future observations 10 get privileged (posterior) future latent states Zeer as input for the VLM.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,16 +89,11 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 - **p. 7 / B. Policy Steering for Open-World Alignment - extractive body cue:** For each phase, we visualize the imagined T-step rollouts decoded from the world model for the 3 out of 6 action plans sampled from the ...
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** We fine-tune the model using the Low-Rank Adaptation (LoRA) technique [20], keeping both the encoder £ and the latent ‘dynamics model f,, frozen during the ...
 - **p. 9 / B. Policy Steering for Open-World Alignment - extractive body cue:** Inference time for each component in the system (averaged across 3 runs) shows that FOREWARN greatly reduces the time to generate behavior narrations from our ...
-- **p. 9 / B. Policy Steering for Open-World Alignment - extractive body cue:** Our system queries the VLM twice to first generate behavior narrations and then select the best action plan, The overall inference time is 3.7 seconds ...
-- **p. 7 / B. Policy Steering for Open-World Alignment - extractive body cue:** For each phase, we visualize the imagined T-step rollouts decoded from the world model for the 3 out of 6 action plans sampled from the ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** system, queries, VLM, twice, first, generate, behavior, narrations, then, select, best, action, plan, overall, inference, time, seconds, among, generation, candidate.
 - **Relevant PDF headings:** B. Policy Steering for Open-World Alignment (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +113,13 @@ PDF body method statement (p. 9 (B. Policy Steering for Open-World Alignment), p
 - **p. 8 / B. Policy Steering for Open-World Alignment - extractive body cue:** (4) Classfier-Dyn-Latent, which is similar to VLM-DynLat-Category, but instead of relying ‘on a VLM, it directly takes the predicted latent embeddings Seq 88 input and ...
 - **p. 9 / VI. Limrrations - extractive body cue:** B2 revealed that our system's primary failures stem from the world model's imprecise "imagination", exacerbated by our limited training data.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 8 (B. Policy Steering for Open-World Alignment), p. 8 (B. Policy Steering for Open-World Alignment), p. 7 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), objective p. 8 (B. Policy Steering for Open-World Alignment), p. 6 (A. From Action Rollouts to Behavior Narration), p. 9 (B. Policy Steering for Open-World Alignment), temporal p. 6 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 3 (1. InTRopucTION), p. 3 (1. InTRopucTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3. Latency-Consistent Training Pipeline), p. 
 - **p. 4 / 3.2. Think-in-Control VLA - extractive body cue:** These inputs are concatenated as key-value tokens, and the updated action query representation is passed through an MLP to generate the action outputs.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.3. Latency-Consistent Training Pipeline), p. 5 (3.3. Latency-Consistent Training Pipeline), p. 4 (3.2. Think-in-Control VLA), p. 4 (3.2. Think-in-Control VLA).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3. Latency-Consistent Training Pipeline), p. 
 - **p. 4 / 3.2. Think-in-Control VLA - extractive body cue:** At a high level, a VLM performs semantic reasoning over delayed visual context and language instructions, while a reactive action policy executes at a high ...
 - **p. 6 / 3.4. DynaNav - extractive body cue:** For each task, standardized initial and goal positions are specified with a language instruction.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 5 (3.3. Latency-Consistent Training Pipeline), p. 
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** For training the action expert, we increase the batch size to 16 per GPU and set the initial learning rate to 2 × 10-4.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Training is performed using Distributed Data Parallel on eight NVIDIA L40S GPUs, with a batch size of 2 per GPU.
 - **p. 5 / 3.3. Latency-Consistent Training Pipeline - extractive body cue:** We mix waypoint-only and scene-reasoningaugmented targets during training for flexible prompting at inference time.
-- **p. 5 / 3.3. Latency-Consistent Training Pipeline - extractive body cue:** Pooling Concatenate Value State + Goal MLP MLP (a) (b) +++ Asynchronous Inference in Closed-loop Multi-stage Training IL with Delayed Inference VLM SFT (d) (c) ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Pooling, Concatenate, Value, State, Goal, MLP, Asynchronous, Inference, Closed-loop, Multi-stage, Training, Delayed, VLM, SFT, Online, Cross-Attention, Offline, Data, Action, Env.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +115,10 @@ PDF body method statement (p. 5 (3.3. Latency-Consistent Training Pipeline), p. 
 - **p. 7 / 4.2. Simulation Testing - extractive body cue:** The synchronous TIC-VLA variant also degrades substantially, confirming that blocking control on slow VLM inference harms real-time navigation.
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 7. Overview of the annotation pipeline for VLM SFT. Representative frames and future trajectory information are used to generate long-horizon navigation instructions and concise ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Latency-Consistent Training Pipeline), p. 5 (3.3. Latency-Consistent Training Pipeline), p. 4 (3.2. Think-in-Control VLA), p. 4 (3.2. Think-in-Control VLA), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), objective p. 5 (3.3. Latency-Consistent Training Pipeline), p. 5 (3.3. Latency-Consistent Training Pipeline), p. 3 (3.1. Problem Formulation), p. 4 (3.2. Think-in-Control VLA), p. 4 (3.2. Think-in-Control VLA), temporal p. 3 (3.1. Problem Formulation), p. 1 (Abstract), p. 4 (3.2. Think-in-Control VLA), p. 4 (3.2. Think-in-Control VLA), p. 5 (3.3. Latency-Consistent Training Pipeline), p. 5 (3.3. Latency-Consistent Training Pipeline).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

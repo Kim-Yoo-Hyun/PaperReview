@@ -45,7 +45,6 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 - **p. 6 / 7. Efficient Implementation - extractive body cue:** The computational cost of the algorithm presented here is roughly equal to that of a planar convolution with a filter bank that is the same ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -64,7 +63,6 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 - **p. 1 / 1. Introduction - extractive body cue:** By using the same weights to analyze or model each part of the image, a convolution layer uses far fewer parameters than a fully connected ...
 - **p. 6 / 7. Efficient Implementation - extractive body cue:** A plane symmetry group G is called split if any transformation g ∈G can be decomposed into a translation t ∈Z2 and a transformation s ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -79,13 +77,10 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 
 - **p. 8 / 8.1. Rotated MNIST - extractive body cue:** The learning rate was divided by 10 at epoch 50, 100 and 150, and training was continued for 300 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** computational, cost, algorithm, presented, here, roughly, equal, planar, convolution, filter, bank, same, size, augmented, G-convolution, because, transformation, negligible, second, part.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -105,20 +100,10 @@ PDF body method statement (p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar
 - **p. 8 / 9. Discussion & Future work - extractive body cue:** One limitation of the method as presented here is that it only works for discrete groups.
 - **p. 8 / 9. Discussion & Future work - extractive body cue:** In future work, we want to implement G-CNNs that work on hexagonal lattices which have an increased number of symmetries relative to square grids, as ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (7. Efficient Implementation), p. 7 (7.2. Planar convolution), p. 7 (7.1. Filter transformation), objective p. 6 (7. Efficient Implementation), temporal p. 7 (8.1. Rotated MNIST), p. 8 (8.1. Rotated MNIST), p. 1 (48.
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (
 - **p. 24 / C.4 METRICS - extractive body cue:** In particular, GF better preserves object shapes and scene layouts that are visible in context, while generating reasonable scenes not seen in the context.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Average scores on Camera Following, Object Consistency, and Scene Continuity.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Geometry Forcing equips video diffusion models with 3D awareness. (a) We pro- pose Geometry Forcing (GF), a simple yet effective paradigm to internalize ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (
 | The reprojection error is then computed by measuring the average Euclidean distance between the projected and observed pixel locations of co-visible 3D points across ... | definition/direction/unit from same section | p. 18 (C.4 METRICS) |
 | Reprojection error (RPE) is a widely used metric in visual SLAM to evaluate multi-view geometric consistency. | definition/direction/unit from same section | p. 18 (C.4 METRICS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (
 | 6, GF consistently outperforms all baselines across the three aspects of 3D consistency, demonstrating its effectiveness in producing geometrically coherent videos. | comparison identity and matched condition | p. 9 (5 EXPERIMENTS) |
 | Figure 1: Geometry Forcing equips video diffusion models with 3D awareness. (a) We pro- pose Geometry Forcing (GF), a simple yet effective paradigm to ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 7: Qualitative comparisons on camera-conditioned video generation. All the videos are generated given the first frame and per-frame camera pose. We comprehensively compare ... | comparison identity and matched condition | p. 23 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (
 | body limitation/failure cue | To combine the autoregressive nature with diffusion models, Diffusion Forcing (Chen et al., 2024a) proposes training video diffusion models with independent noise levels for ... | p. 6 (236 Discussion) |
 | body limitation/failure cue | Motivated by the observation that video diffusion models trained on raw pixel data often fail to capture meaningful 3D structure, our method introduces two ... | p. 10 (6 CONCLUSION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (
 | For fine-tuning, our method requires only a few thousand steps and completes within hours, yielding substantial efficiency gains over full pre-training. | p. 20 (C.4 METRICS) |
 | E DISCUSSION E.1 COMPUTATIONAL EFFICIENCY We perform detailed profiling of our method on an NVIDIA A800 GPU and report the execution time and floating-point ... | p. 20 (C.4 METRICS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 6 CONCLUSION - extractive body cue:** The primary limitation of this work lies in its scale.
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (
 - **p. 10 / 6 CONCLUSION - extractive body cue:** Motivated by the observation that video diffusion models trained on raw pixel data often fail to capture meaningful 3D structure, our method introduces two alignment ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 EXPERIMENTS), p. 18 (C.1 DATASET), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 18 (C.1 DATASET), metrics p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), baselines p. 7 (Figure/Table caption), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 1 (Figure/Table caption), p. 23 (Figure/Table caption), results p. 20 (C.4 METRICS), p. 19 (C.4 METRICS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

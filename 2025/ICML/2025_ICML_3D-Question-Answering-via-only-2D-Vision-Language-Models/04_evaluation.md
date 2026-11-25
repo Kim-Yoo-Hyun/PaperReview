@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (Figure/Table 
 - **p. 7 / 5. Experiments - extractive body cue:** ScanQA contains over 41K question-answer annotations across 800 indoor 3D scenes, which are divided into train, val, and test sets (with or without objects).
 - **p. 7 / 5. Experiments - extractive body cue:** SQA contains over 33K questionanswer pairs derived from 650 indoor scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of 3D Question Answering meth- ods. (a): a1 for 3D-based methods; a2 and a3 for hybrid (2D+3D) methods. All of these methods ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (Figure/Table 
 | Figure 3: The pipeline of zero-shot 3D-QA using three different view selection methods: uniform sampling (option ①), image retrieval (option ②), and our cdViews ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 7: The results of EM@1 using two configurations: optimal k (blue) vs. fixed k=9 (green). X-axis is the thresh- old T of viewNMS. ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (Figure/Table 
 | Table 2: An ablation study performed on ScanQA. We show the best EM@1 scores with the corresponding (optimal) k. selected views is shown in ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 1: Comparison of 3D Question Answering meth- ods. (a): a1 for 3D-based methods; a2 and a3 for hybrid (2D+3D) methods. All of these ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 2: Comparison of view selection methods. (cdViews) and then use them to perform LVLMs-based 3D-QA in a zero-shot manner. cdViews is designed on ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (Figure/Table 
 |---|---|---|
 | body limitation/failure cue | The reason is that the uniform sampling method ignores the question and the image retrieval method often fails to capture critical views or introduces ... | p. 7 (5.1. Comparisons with the State-of-the-Arts) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,19 +125,10 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (Figure/Table 
 | The training of viewSelector contains two steps: data annotation and model training. | p. 5 (3. Preliminaries) |
 | 4.2. viewSelector As shown in Figure 3, viewSelector is plugged between the visual encoder and LVLM to select "views" in the feature space. | p. 6 (3. Preliminaries) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.1. Comparisons with the State-of-the-Arts - extractive body cue:** The reason is that the uniform sampling method ignores the question and the image retrieval method often fails to capture critical views or introduces redundancy ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5. Experiments), p. 7 (5. Experiments), metrics p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 7 (5. Experiments), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (5. Experiments), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

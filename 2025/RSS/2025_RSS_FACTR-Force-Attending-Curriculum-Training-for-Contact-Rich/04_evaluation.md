@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 - **p. 9 / C. Policy Evaluation - extractive body cue:** [Right] FACTR leams to aitend to force more to complete the task.
 - **p. 9 / C. Policy Evaluation - extractive body cue:** We choose the task of pivoting, one of the hardest tasks from our task suite, for the ablations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: Our low-cost bimanual teleoperation system with force- feedback. The system features wo actuated leader arms, two follower arms with external joint torque sensors ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 | We found that performance with a curriculum of decaying smoothing performs better than a fixed curriculum across all tasks. | definition/direction/unit from same section | p. 9 (C. Policy Evaluation) |
 | We hypothesize that to enable better performance, the final policy needs to take in the fully unblurred vision information. | definition/direction/unit from same section | p. 9 (C. Policy Evaluation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 | Without a curriculum, policies naively incorporating force achieve a success rate of 61.2%, ‘hile FACTR achieves a success rate of 87.5%, which shows that ... | comparison identity and matched condition | p. 8 (C. Policy Evaluation) |
 | ‘Comparisons with other scheduler parameters. | comparison identity and matched condition | p. 9 (C. Policy Evaluation) |
 | We choose the task of pivoting, one of the hardest tasks from our task suite, for the ablations. | comparison identity and matched condition | p. 9 (C. Policy Evaluation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 | body limitation/failure cue | 6, All the policies perform similarly on the train objects for most tasks, except for the rolling dough task, where the vision-only policy smashes ... | p. 7 (C. Policy Evaluation) |
 | body limitation/failure cue | FACTR leads to better recovery behavior. | p. 8 (C. Policy Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 | We let dues be the predicted future joint position targets over the next k time steps. | p. 4 (A. Problem Statement and Base Model) |
 | Vision Encoder 4 Extemal : . a Force ext | p. 5 (A. Problem Statement and Base Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / VI. CONCLUSION AND LIMITATIONS - extractive body cue:** Developing. adaptive or self-tuning curriculum strategies could help mitigate this issue by dynamically adjusting hyperparameters based on task-specific requirements, Addressing these limitations could further enhance ...
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 8 (C. Policy Evaluation), p. 8 (C. Policy Eva
 - **p. 8 / C. Policy Evaluation - extractive body cue:** FACTR leads to better recovery behavior.
 
 - **Evidence anchors reviewed:** datasets p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), p. 8 (C. Policy Evaluation), metrics p. 7 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 6 (A. Experimental Setup), baselines p. 7 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 9 (C. Policy Evaluation), p. 9 (C. Policy Evaluation), results p. 8 (C. Policy Evaluation), p. 8 (C. Policy Evaluation), p. 7 (C. Policy Evaluation), p. 7 (B. Teleoperation Evaluation), p. 6 (A. Experimental Setup), p. 9 (C. Policy Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

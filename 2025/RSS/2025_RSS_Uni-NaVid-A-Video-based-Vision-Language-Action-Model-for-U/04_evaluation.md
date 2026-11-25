@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 - **p. 10 / C. Qualitative Results in Real-World - extractive body cue:** We conducted extensive experiments on real-world environ- ‘ments (experiment details are provided in the supplemental material) under diverse environments in a zero-shot manner, Notably, both ...
 - **p. 11 / C. Qualitative Results in Real-World - extractive body cue:** First, Uni-NaVid is trained and evaluated on four welldefined navigation tasks, while there exists a large body of literature on insightful and practical navigation datasets ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Uni-NaVid learns general navigation skills across four embodied navigation tasks using 3.6 million navigation samples.
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 | Our model demonstrates impressiove performance in aligning the current navigation process with the instructions to reason about the current state of navigation Furthermore, we ... | definition/direction/unit from same section | p. 10 (C. Qualitative Results in Real-World) |
 | (a) We present the multi-task synergy of our method, illustrating the performance comparison between training with a single task and training with multiple tasks; ... | definition/direction/unit from same section | p. 11 (C. Qualitative Results in Real-World) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 | As shown in ‘Table VIL, Uni-NaVid outperforms the comparison methods fon both SR. | comparison identity and matched condition | p. 9 (B. Individual Task Results) |
 | standard evaluation metrics [4], including success rate (SR), oracle success rate (OS), success weighted by path length (SPL) [3], trajectory length (TL), following rate ... | comparison identity and matched condition | p. 7 (VI. EXPERIMENT) |
 | (48.8%) compared to previous state-of-theart methods. | comparison identity and matched condition | p. 8 (B. Individual Task Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 | body limitation/failure cue | This limitation could be alleviated by extending the moel to predict | p. 11 (C. Qualitative Results in Real-World) |
 | body limitation/failure cue | gies, while also highlighting robust open-world understanding capabilities. | p. 10 (B. Individual Task Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 | For real-world deployment, we utilize a remote server with an NVIDIA A100 GPU to run Uni-NaVid, which processes observations (along with text | p. 7 (VI. EXPERIMENT) |
 | Uni-NaVid is trained on a cluster server with 40 NVIDIA H800 GPUs for approximately 35 hours, totaling 1400 GPU hours. | p. 7 (B. Training Strategy of Uni-NaVid) |
 | Additional ablation studies on architecture and hyperparameters are provided in the Supplementary Materia | p. 11 (C. Qualitative Results in Real-World) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -162,9 +141,8 @@ PDF body evaluation/result cue (p. 8 (B. Individual Task Results), p. 8 (B. Indi
 - **p. 10 / B. Individual Task Results - extractive body cue:** gies, while also highlighting robust open-world understanding capabilities.
 
 - **Evidence anchors reviewed:** datasets p. 7 (VI. EXPERIMENT), p. 7 (VI. EXPERIMENT), p. 8 (VI. EXPERIMENT), p. 11 (C. Qualitative Results in Real-World), p. 8 (VI. EXPERIMENT), p. 10 (B. Individual Task Results), metrics p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 10 (C. Qualitative Results in Real-World), baselines p. 9 (B. Individual Task Results), p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 7 (VI. EXPERIMENT), p. 8 (B. Individual Task Results), results p. 8 (B. Individual Task Results), p. 8 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World), p. 9 (B. Individual Task Results), p. 9 (B. Individual Task Results), p. 11 (C. Qualitative Results in Real-World).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

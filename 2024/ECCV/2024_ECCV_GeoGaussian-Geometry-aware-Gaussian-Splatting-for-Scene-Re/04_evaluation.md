@@ -43,8 +43,6 @@
 - **p. 4 / 1 Introduction - extractive body cue:** Li et al. - Evaluations on the public datasets demonstrate that the proposed method improves rendering quality compared to state-of-the-art Gaussian Splatting methods.
 - **p. 3 / 1 Introduction - extractive body cue:** Recently, 3D Gaussian Splatting (3DGS) [18] has gained significant attention in the community, which shows that the rendering speed in high-quality NVS tasks can be ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Comparisons of novel view rendering and 3D Gaussian model on the Replica Datasets. As highlighted in the second row, the proposed method shows ...
@@ -78,8 +76,6 @@
 | Fig. 4: Statistics of the number of Gaussians in sequences of Replica. To make the comparison compact, more values are illustrated in Appendix. evident ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 | While NeRFs offer high-quality rendering, 3D Gaussian Splatting ( [8,18]) shows better performance in terms of training speed and rendering quality. | definition/direction/unit from same section | p. 1 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | Fig. 4: Statistics of the number of Gaussians in sequences of Replica. To make the comparison compact, more values are illustrated in Appendix. evident ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | Our proposed pipeline achieves state-of-the-art performance in novel view synthesis and geometric reconstruction, as evaluated qualitatively and quantitatively on public datasets. | comparison identity and matched condition | p. 1 (Body text (section not recovered)) |
 | Compared to learning-based mesh methods, NeRF [25] proposes a continuous volumetric function representation using a multi-layer perceptron (MLP), which produces high-quality renderings with impressive ... | comparison identity and matched condition | p. 2 (1 Introduction) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,7 +102,6 @@
 
 - Numeric sentences retained from the body:
 - **p. 3 / 1 Introduction - extractive body cue:** Recently, 3D Gaussian Splatting (3DGS) [18] has gained significant attention in the community, which shows that the rendering speed in high-quality NVS tasks can be ...
-- **p. 3 / 1 Introduction - extractive body cue:** Recently, 3D Gaussian Splatting (3DGS) [18] has gained significant attention in the community, which shows that the rendering speed in high-quality NVS tasks can be ...
 
 ## Generalization and Failure Cases
 
@@ -123,8 +111,6 @@
 | body limitation/failure cue | However, in the Gaussian Splatting optimization process, the geometry of 3D Gaussian models lacks sufficient constraints especially in low-textured regions, leading to significant degradation ... | p. 2 (1 Introduction) |
 | body limitation/failure cue | Fig. 4: Statistics of the number of Gaussians in sequences of Replica. To make the comparison compact, more values are illustrated in Appendix. evident ... | p. 12 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -133,14 +119,6 @@
 | GeoGaussian 3 spite a significant reduction in training time with these methods, improving rendering efficiency is still a pressing requirement for applications such as ... | p. 3 (1 Introduction) |
 | Due to the impressive rendering quality of Neural Radiance Fields (NeRF) [25], the area of photo-realistic novel view synthesis (NVS) has become a popular ... | p. 1 (1 Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Body text (section not recovered) - extractive body cue:** This degradation significantly affects the rendering quality of novel views that deviate significantly from the viewpoints in the training data.
@@ -148,6 +126,5 @@
 - **p. 12 / Figure/Table caption - extractive body cue:** Fig. 4: Statistics of the number of Gaussians in sequences of Replica. To make the comparison compact, more values are illustrated in Appendix. evident in ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (Body text (section not recovered)), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 3 (1 Introduction), metrics p. 13 (Figure/Table caption), p. 2 (1 Introduction), p. 2 (Figure/Table caption), p. 3 (1 Introduction), p. 5 (Figure/Table caption), p. 11 (Figure/Table caption), baselines p. 4 (1 Introduction), p. 9 (Figure/Table caption), p. 11 (Figure/Table caption), p. 12 (Figure/Table caption), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), results p. 13 (Figure/Table caption), p. 1 (Body text (section not recovered)), p. 11 (Figure/Table caption), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

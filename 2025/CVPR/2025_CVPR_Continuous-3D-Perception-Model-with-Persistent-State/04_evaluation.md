@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocu
 - **p. 7 / 4.3. 3D Reconstruction - extractive body cue:** Spann3R [101] is neither designed nor trained on dynamic scenes, making it less effective at handling moving objects, such as humans.
 - **p. 6 / 4.1. Monocular and Video Depth Estimation - extractive body cue:** We report scale-invariant depth and metric depth accuracy on Sintel, Bonn, and KITTI datasets.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Continuous 3D Perception. Given a stream of RGB images as input, our approach enables dense 3D reconstruction in an online, continuous manner, estimating ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocu
 | We report the performance on Sintel, Bonn, KITTI, and NYU-v2 (static) datasets. | definition/direction/unit from same section | p. 5 (4.1. Monocular and Video Depth Estimation) |
 | We demonstrate this capability of our method in Tab. | definition/direction/unit from same section | p. 7 (4.4. Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocu
 | We compare to baselines that share this feature. | comparison identity and matched condition | p. 6 (4.2. Camera Pose Estimation) |
 | Our method significantly outperforms the other online approach Spann3R [101], and achieves comparable or sometimes better results than the top optimization-based method, DUSt3RGA, while ... | comparison identity and matched condition | p. 7 (4.3. 3D Reconstruction) |
 | 5, revisiting improves performance compared to the online version, especially for accuracy. | comparison identity and matched condition | p. 8 (4.4. Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocu
 | body limitation/failure cue | Most prior approaches do so through test-time optimization, as seen in RobustCVD [47] and CasualSAM [128], which jointly estimate camera parameters and dense depth ... | p. 6 (4.2. Camera Pose Estimation) |
 | body limitation/failure cue | Table 6. Training Datasets. We provide more details of our training datasets. We classify a dataset as dynamic if annotations exist for moving objects ... | p. 16 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocu
 | Within the decoders, the outputs from both sides cross-attend to each other at each decoder block to ensure effective information transfer. | p. 3 (3.1. State-Input Interaction Mechanism) |
 | Both processes occur simultaneously through two interconnected ViT decoders. | p. 4 (3.1. State-Input Interaction Mechanism) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Camera Pose Estimation - extractive body cue:** Unlike most visual odometry methods [17, 34, 96], our method does not require any camera calibration.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocu
 - **p. 16 / Figure/Table caption - extractive body cue:** Table 6. Training Datasets. We provide more details of our training datasets. We classify a dataset as dynamic if annotations exist for moving objects like ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.4. Analysis), p. 5 (4.1. Monocular and Video Depth Estimation), p. 5 (4. Experiments), p. 6 (4.3. 3D Reconstruction), p. 7 (4.3. 3D Reconstruction), p. 8 (4.4. Analysis), metrics p. 6 (4.3. 3D Reconstruction), p. 8 (4.4. Analysis), p. 5 (4.1. Monocular and Video Depth Estimation), p. 6 (4.1. Monocular and Video Depth Estimation), p. 7 (4.3. 3D Reconstruction), p. 8 (4.4. Analysis), baselines p. 6 (4.1. Monocular and Video Depth Estimation), p. 5 (4.1. Monocular and Video Depth Estimation), p. 5 (4.1. Monocular and Video Depth Estimation), p. 6 (4.2. Camera Pose Estimation), p. 7 (4.3. 3D Reconstruction), p. 8 (4.4. Analysis), results p. 7 (4.3. 3D Reconstruction), p. 6 (4.1. Monocular and Video Depth Estimation), p. 8 (4.4. Analysis), p. 6 (4.1. Monocular and Video Depth Estimation), p. 5 (4.1. Monocular and Video Depth Estimation), p. 7 (4.3. 3D Reconstruction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

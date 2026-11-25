@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 - **p. 3 / B. Phase-based Motion Tracking Policy Training - extractive body cue:** Using the agent's proprioception SP and the goal state sf, we define the reward as ry = Rs!
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 10 (B. Different Usage of Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 11 (B. Different Usage of Delta Action Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 - **p. 4 / B. Phase-based Motion Tracking Policy Training - extractive body cue:** PosT-TRAINING: TRAINING DELTA ACTION MODEL AND FINE-TUNING MOTION TRACKING POLICY
 - **p. 4 / B. Phase-based Motion Tracking Policy Training - extractive body cue:** ‘The policy trained in the first stage can track the reference motion in the real-world but does not achieve high motion quality. ‘Thus, during the ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 - **p. 10 / A. Key Factors in Training Delta Action Models - extractive body cue:** ‘essential principles for effectively training a high-performing delta action model.
 - **p. 3 / 3) Extensive experiments in both simulation and real-world - extractive body cue:** 4) To facilitate smooth transfer between simulators, we develop and open-source a multi-simulstor training and evaluation codebase for help accelerate further research.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** policy, trained, first, stage, track, reference, motion, real-world, does, achieve, high, quality, Thus, during, second, Figure, leverage, data, rolled, pre-trained.
 - **Relevant PDF headings:** B. Phase-based Motion Tracking Policy Training (p. 3); B. Training Delta Action Model (p. 4); C. Fine-tuning Motion Tracking Policy under New Dynamics (p. 5); B. Comparison of Policy Fine-Tuning Performance (p. 7); A. Key Factors in Training Delta Action Models (p. 9); B. Different Usage of Delta Action Model (p. 10); A. Learning-based Methods for Humanoid Control (p. 11).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 4 (B. Phase-based Motion Tracking Policy Training)
 - **p. 10 / A. Key Factors in Training Delta Action Models - extractive body cue:** However, this trend ‘does not consistently extend to closed-loop performance.
 - **p. 3 / 3) Extensive experiments in both simulation and real-world - extractive body cue:** b) Simulation-based Data Cleaning: Since the reconstruction process can introduce noise and errors [25], some estimated motions may not be physically feasible, making them unsuitable ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 5 (B. Training Delta Action Model), p. 10 (B. Different Usage of Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 10 (A. Key Factors in Training Delta Action Models), objective p. 10 (B. Different Usage of Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 5 (B. Training Delta Action Model), p. 4 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), p. 3 (B. Phase-based Motion Tracking Policy Training), temporal p. 3 (B. Phase-based Motion Tracking Policy Training), p. 4 (A. Data Collection), p. 10 (A. Key Factors in Training Delta Action Models), p. 11 (B. Different Usage of Delta Action Model), p. 12 (B. Offine and Online System Identification for Roboties), p. 2 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

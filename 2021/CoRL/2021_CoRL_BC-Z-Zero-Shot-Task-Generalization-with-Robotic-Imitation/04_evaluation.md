@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 8 / 7 Discussion - extractive body cue:** Our evaluation covered 29 unseen vision-based manipulation tasks with a variety of objects and scenes.
 - **p. 8 / 7 Discussion - extractive body cue:** However, even for tasks that are less successful, the robot often exhibits behavior suggesting that it understands at least part of the task, reaching for ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of BC-Z. We collect a large-scale dataset (25,877 episodes) of 100 diverse manipulation tasks, and train a 7-DoF multi-task policy that conditions ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Table 7: Performance comparsion one-hot, language, or video conditioning over 21 training tasks. Video policies are conditioned on held-out videos of the training tasks. ... | definition/direction/unit from same section | p. 21 (Figure/Table caption) |
 | Table 9: Performance comparison between different video embeddings on selected tasks. All tasks are held-out unless otherwise indicated. Numbers in (parentheses) are 1 unit ... | definition/direction/unit from same section | p. 23 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Through the experiments, we also learn that 100 training tasks is sufficient for enabling generalization to new tasks, that HG-DAgger is important for good ... | comparison identity and matched condition | p. 8 (7 Discussion) |
 | Figure 13: An example of adapting a sim image (left) to look real (right) using RetinaGAN [51]. environment (including the door). Further, any collision ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
 | Table 7: Performance comparsion one-hot, language, or video conditioning over 21 training tasks. Video policies are conditioned on held-out videos of the training tasks. ... | comparison identity and matched condition | p. 21 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,21 +121,11 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | Figure 4: Qualitative examples of BC-Z successfully performing held-out tasks. push open a door while avoiding collisions. Both tasks use the architecture in Figure ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Figure 8: Human demonstrations of the task (left) are augmented with random distortions and reflec- tions (right), then trained to match language features for ... | p. 15 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | With sufficient real-world data, these methods should in principle enable robots to generalize across new tasks, objects, and scenes without requiring hand-coded, task-specific representations. | p. 1 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -158,9 +137,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 15 / Figure/Table caption - extractive body cue:** Figure 8: Human demonstrations of the task (left) are augmented with random distortions and reflec- tions (right), then trained to match language features for the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (7 Discussion), p. 8 (7 Discussion), metrics p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 14 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (7 Discussion), p. 6 (Figure/Table caption), baselines p. 17 (Figure/Table caption), p. 18 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (7 Discussion), p. 20 (Figure/Table caption), p. 21 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 14 (Figure/Table caption), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 - **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** The legs of the robot are 0.82m high.
 - **p. 7 / 4.1 Sarcos Humanoid Robot - extractive body cue:** Moving the CoP across this link makes the foot bend and causes the robot to fall.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption cue 없음
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 | With the proposed decomposition we decreased the computation time by approximately 40%. design and the PD controller described in Section 3 and then test ... | definition/direction/unit from same section | p. 10 (5.2 Balance Control Experiments) |
 | As a consequence, the tracking of the CoG, which is in a lower priority, is not ideal but still achieves a reasonable performance. | definition/direction/unit from same section | p. 13 (5.3 Tracking Experiments in Double Support) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 | 2.1 3 3 eq PD control on CoG (2 -c) × 6 PD control on swing foot 4 25 + 6 eq PD control ... | comparison identity and matched condition | p. 9 (5.1 Processing Time) |
 | 5 Processing time of a stepping task (see Table 1) using the decomposition proposed in Section 2.3 (red) and the same task performed without ... | comparison identity and matched condition | p. 10 (5.2 Balance Control Experiments) |
 | For both momentum control tasks, the robot was able to withstand impacts with high peak forces and strong impulses without falling. | comparison identity and matched condition | p. 11 (5.2.2 Comparison of momentum controllers) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 | body limitation/failure cue | These details are important in order to understand the strengths and limitations of the presented experiments. | p. 7 (4 Experimental Setup) |
 | body limitation/failure cue | The highest two priorities satisfy hardware limitations and dynamic constraints, the third priority task tracks a predefined center of gravity and swing foot motion ... | p. 9 (5.1 Processing Time) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 | Concerning computation time, the controller computes a solution in average well below 1ms but a maximum at 1.05ms is reached a few times during ... | p. 15 (5.4 Single Support Experiments) |
 | The same is true for joint limits, which can be written as ¨qmin ≤¨qj ≤¨qmax, where the bounds are computed in the form ¨qmin/max ... | p. 3 (2.1 Modelling Assumptions and Problem Formulation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 17 / 6.2 Relation to other balancing approaches - extractive body cue:** Also, separating the EoM from kinematic contact constraints allows to keep solutions consistent with the dynamics even in postures where the feet cannot be kept ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (4.2 Low-level torque control), p. 8 (4.2 L
 - **p. 9 / 5.1 Processing Time - extractive body cue:** The highest two priorities satisfy hardware limitations and dynamic constraints, the third priority task tracks a predefined center of gravity and swing foot motion and ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (5.1 Processing Time), p. 15 (5.4 Single Support Experiments), p. 9 (5.1 Processing Time), p. 11 (5.2.2 Comparison of momentum controllers), p. 15 (5.4 Single Support Experiments), p. 16 (5.4 Single Support Experiments), metrics p. 11 (5.2.2 Comparison of momentum controllers), p. 11 (5.2.2 Comparison of momentum controllers), p. 8 (4.3 State estimation), p. 8 (4.1 Sarcos Humanoid Robot), p. 9 (5.1 Processing Time), p. 10 (5.2 Balance Control Experiments), baselines p. 16 (5.4 Single Support Experiments), p. 8 (4.4 Dynamic model), p. 9 (5.1 Processing Time), p. 9 (5.1 Processing Time), p. 10 (5.2 Balance Control Experiments), p. 11 (5.2.2 Comparison of momentum controllers), results p. 8 (4.2 Low-level torque control), p. 8 (4.2 Low-level torque control), p. 13 (5.3 Tracking Experiments in Double Support), p. 13 (5.3 Tracking Experiments in Double Support), p. 7 (4 Experimental Setup), p. 10 (5.2 Balance Control Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

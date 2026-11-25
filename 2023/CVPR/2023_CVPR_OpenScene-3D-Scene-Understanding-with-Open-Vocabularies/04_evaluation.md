@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 - **p. 6 / 4.1. Comparisons - extractive body cue:** Images of 3D semantic segmentation results on public indoor and outdoor benchmarks.
 - **p. 6 / 4.1. Comparisons - extractive body cue:** ScanNet [11] Matterport3D [4] nuScenes [3] Input Fully supervised [10] MSeg Voting [29] Ours GT Segmentation Figure 4.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Open-vocabulary 3D Scene Understanding. We propose OpenScene, a zero-shot approach to 3D scene understanding that co-embeds dense 3D point features with image pixels ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 | 4, we successfully segment the picture on the wall, while the GT misses it. | definition/direction/unit from same section | p. 5 (4.1. Comparisons) |
 | Table 6. Open-vocabulary 3D Search Results. Each row depicts a search of the Matterport3D test set for a class given as a text query. ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 | Comparison of semantic segmentation performance of different 3D features computed by our method. the mean accuracy for groups of 20 classes ranked by frequency. | comparison identity and matched condition | p. 6 (4.1. Comparisons) |
 | Figure 1. Open-vocabulary 3D Scene Understanding. We propose OpenScene, a zero-shot approach to 3D scene understanding that co-embeds dense 3D point features with image ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 4. Qualitative comparisons. Images of 3D semantic segmentation results on public indoor and outdoor benchmarks. K = 21 K = 40 K = ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 | body limitation/failure cue | In contrast, we are more robust to such rare objects since we do not rely upon any 3D labeled data. | p. 6 (4.1. Comparisons) |
 | body limitation/failure cue | This suggests that leveraging patterns in both 2D and 3D domains makes the ensemble features more robust and descriptive. | p. 6 (4.2. Ablation Studies & Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 | We first compute per-pixel features for every image using a model pre-trained for open-vocabulary 2D semantic segmentation. | p. 3 (3. Method) |
 | Given RGB images with a resolution of H × W, we can simply compute the per-pixel embeddings from the (frozen) segmentation model E2D, denoted ... | p. 3 (3.1. Image Feature Fusion) |
 | For example, for the zero-shot 3D semantic segmentation using 2D-3D ensemble features, the final segmentation for each 3D point is computed point-wise by argmax ... | p. 4 (3.4. Inference) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -159,6 +138,5 @@ PDF body evaluation/result cue (p. 5 (4.1. Comparisons), p. 5 (4. Experiments), 
 - **p. 6 / 4.2. Ablation Studies & Analysis - extractive body cue:** This suggests that leveraging patterns in both 2D and 3D domains makes the ensemble features more robust and descriptive.
 
 - **Evidence anchors reviewed:** datasets p. 4 (4. Experiments), p. 4 (4. Experiments), p. 5 (4.1. Comparisons), p. 5 (4.1. Comparisons), p. 6 (4.1. Comparisons), p. 6 (4.1. Comparisons), metrics p. 6 (4.1. Comparisons), p. 6 (4.2. Ablation Studies & Analysis), p. 3 (Figure/Table caption), p. 4 (4. Experiments), p. 5 (4.1. Comparisons), p. 5 (4.1. Comparisons), baselines p. 5 (4.1. Comparisons), p. 5 (4. Experiments), p. 6 (4.1. Comparisons), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 5 (4.1. Comparisons), p. 5 (4. Experiments), p. 6 (4.1. Comparisons), p. 6 (4.1. Comparisons), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

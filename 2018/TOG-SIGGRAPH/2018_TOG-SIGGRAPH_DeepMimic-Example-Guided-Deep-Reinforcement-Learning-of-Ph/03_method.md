@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 4 / 4 BACKGROUND - extractive body cue:** The policy gradient can therefore be interpreted as increasing the likelihood of actions that lead to higher than expected returns, while decreasing the likelihood of ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 3 / 4 BACKGROUND - extractive body cue:** At each control timestep, the agent observes the current state st and samples an action at from π.
 - **p. 5 / 4 BACKGROUND - extractive body cue:** The policy only receives reward retrospectively, once it has visited a state.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 5 / 4 BACKGROUND - extractive body cue:** Training proceeds episodically, where at the start of each episode, an initial state s0 is sampled uniformly from the reference motion (section 6.1), and rollouts ...
 - **p. 8 / 4 BACKGROUND - extractive body cue:** The memory state h can be removed by training a recurrent policy, but our simple solution avoids the complexities of training recurrent networks while still ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Property, Humanoid, Atlas, T-Rex, Dragon, Links, Total, Mass, Height, Degrees, Freedom, State, Features, Action, Parameters, Without, early, termination, data, collected.
 - **Relevant PDF headings:** B OFF-POLICY LEARNING (p. 15); C PROXIMAL POLICY OPTIMIZATION (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 12 / 10 RESULTS - extractive body cue:** To retarget the motion clips, we simply copied the local joint rotations from the humanoid to the Atlas, without any further modification.
 - **p. 12 / 10 RESULTS - extractive body cue:** When the character falls, the composite policy activates the appropriate getup policy without requiring any manual scripting, as shown in the supplemental video.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 3 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), objective p. 5 (4 BACKGROUND), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BACKGROUND), temporal p. 5 (4 BACKGROUND), p. 2 (2 RELATED WORK), p. 3 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 6 (4 BACKGROUND).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

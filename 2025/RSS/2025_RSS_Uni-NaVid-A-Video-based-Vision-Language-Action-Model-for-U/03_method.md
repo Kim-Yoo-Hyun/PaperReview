@@ -46,7 +46,6 @@ PDF body method statement (p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Tr
 - **p. 7 / B. Training Strategy of Uni-NaVid - extractive body cue:** Following the training strategy of VLM [SI], we optimize the trainable parameters for only 1 epoch
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Tr
 - **p. 4 / 1. Ivrropuction - extractive body cue:** As common, the instructions are also tokenized as a set of tokens, known as language observation tokens.
 - **p. 4 / 1. Ivrropuction - extractive body cue:** Both the visual observation tokens and language observation tokens are ‘concatenated and passed to the Large Language Model (LLM), ‘which infers four action tokens that ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Tr
 - **p. 7 / B. Training Strategy of Uni-NaVid - extractive body cue:** During training, the vision encoder (EVACLIP (77) and large language model (Vicuna-7B [20)) are preloaded with default pre-trained weight.
 - **p. 7 / B. Training Strategy of Uni-NaVid - extractive body cue:** Uni-NaVid is trained on a cluster server with 40 NVIDIA H800 GPUs for approximately 35 hours, totaling 1400 GPU hours.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** incorporate, openworld, knowledge, follow, previous, Vision-and-Language, Action, models, integrating, open-world, video, questionanswering, during, training, Specifically, adopt, two-stage, process, common, strategy.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,23 +105,13 @@ PDF body method statement (p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Tr
 - **p. 7 / VI. EXPERIMENT - extractive body cue:** standard evaluation metrics [4], including success rate (SR), oracle success rate (OS), success weighted by path length (SPL) [3], trajectory length (TL), following rate (FR) ...
 - **p. 11 / C. Qualitative Results in Real-World - extractive body cue:** Despite the promising results, Uni-NaVid has several limitations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (B. Training Strategy of Uni-NaVid), p. 7 (B. Training Strategy of Uni-NaVid), objective p. 7 (B. Training Strategy of Uni-NaVid), temporal p. 2 (1. Ivrropuction), p. 1 (Abstract), p. 7 (VI. EXPERIMENT), p. 4 (B. Online Visual Token Merging), p. 4 (1. Ivrropuction), p. 5 (1 Xan 7p (A Xgl HY + Xedos)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

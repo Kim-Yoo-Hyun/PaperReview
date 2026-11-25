@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.2. Monocular feed-forward multi-Gaussians), p
 - **p. 4 / 3. Method - extractive body cue:** The field is rendered into an image J by integrating the radiance along the line of sight using the emission-absorption [41] equation J(u) = R ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3. Method), p. 4 (3. Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.2. Monocular feed-forward multi-Gaussians), p
 - **p. 1 / 1. Introduction - extractive body cue:** The approach is simple: predict the parameters of a coloured 3D Gaussian for each input image pixel using a standard image-to-image neural network architecture.
 - **p. 2 / 1. Introduction - extractive body cue:** Flash3D achieves stateof-the-art novel view synthesis accuracy in all metrics on RealEstate10K [76].
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.2. Monocular feed-forward multi-Gaussians), p
 - **p. 5 / 4.1. Experiment settings - extractive body cue:** The entire model is trained on a single A6000 GPU for 40,000 iterations with batch size 16.
 - **p. 5 / 4.1. Experiment settings - extractive body cue:** The training is remarkably efficient, completed in one day on a single A6000 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, image, estimated, depth, baseline, model, consists, additional, network, takes, input, returns, required, per-pixel, Gaussian, parameters, goal, learn, neural, predicts.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 4 (3.2. Monocular feed-forward multi-Gaussians), p
 - **p. 13 / Figure/Table caption - extractive body cue:** Figure 6. Analysis of Gaussian allocation. Gaussians from the first layer (red) are allocated in visible parts, from the second layer (green) in occluded regions ...
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 6. Ablation Study for Depth Decoder Architectures. Here, we ablate the probabilistic depth as in pixelSplat [9], but only for the K > 1 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Monocular feed-forward multi-Gaussians), p. 3 (3. Method), p. 4 (3.2. Monocular feed-forward multi-Gaussians), p. 3 (3. Method), p. 5 (3.2. Monocular feed-forward multi-Gaussians), p. 5 (3.2. Monocular feed-forward multi-Gaussians), objective p. 4 (3. Method), p. 4 (3. Method), temporal p. 6 (4.2. Cross-domain novel view synthesis), p. 8 (4.5. Ablation study and analysis), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (2. Related Work), p. 8 (5. Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

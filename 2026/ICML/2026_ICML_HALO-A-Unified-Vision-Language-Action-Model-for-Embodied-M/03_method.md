@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.4. Training Recipe), p. 5 (3.4. Training Reci
 - **p. 3 / 3. Method - extractive body cue:** Collectively, these components empower the model to engage in textual reasoning, visual foresight, and grounded action prediction.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (3.4. Training Recipe), p. 5 (3.3. EM-CoT Data Pipeline), p. 5 (3.4. Training Recipe), p. 6 (3.4. Training Recipe), p. 16 (C. Training Implementation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.4. Training Recipe), p. 5 (3.4. Training Reci
 - **p. 4 / 3.2. Unified Architecture - extractive body cue:** By default, the model operates as an auto-regressive planner; however, the generation of specific tokens (e.g., ⟨visual start⟩or ⟨action start⟩) triggers the routing of hidden ...
 - **p. 5 / 3.3. EM-CoT Data Pipeline - extractive body cue:** (c) Action Prediction Task Instruction: Set the blocks in the order of red, green, blue.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (3.4. Training Recipe), p. 5 (3.4. Training Reci
 - **p. 7 / 4.1. Experiment Settings - extractive body cue:** Using these datasets, HALO is fine-tuned for 110k steps in simulation and 80k steps in real-world experiments.
 - **p. 7 / 4.1. Experiment Settings - extractive body cue:** During pre-training, following (Deng et al., 2025), training samples are concatenated to a maximum sequence length of 27k tokens, and Flex Attention (Dong et al., ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Crucially, employ, dual-path, visual, pathway, integrates, complementary, semantic, spatial, representations, ViT, branch, first, captures, high-level, context, while, VAE, provides, spatially.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.2. Unified Architecture (p. 4); A. Details on Model Architecture (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 6 (3.4. Training Recipe), p. 5 (3.4. Training Reci
 - **p. 16 / C. Training Implementation - extractive body cue:** In this section, we provide details on pre-training and fine-tuning of HALO.
 - **p. 16 / C. Training Implementation - extractive body cue:** Then, we fine-tune HALO on 32 Nvidia H100 GPUs with sequence length of 27k, 110k steps for simulation, 80k steps for real experiment.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.4. Training Recipe), p. 5 (3.4. Training Recipe), p. 3 (3.1. Problem Formulation), p. 4 (3.2. Unified Architecture), p. 3 (3.1. Problem Formulation), p. 4 (3.2. Unified Architecture), objective p. 6 (3.4. Training Recipe), p. 5 (3.3. EM-CoT Data Pipeline), p. 5 (3.4. Training Recipe), p. 6 (3.4. Training Recipe), p. 16 (C. Training Implementation), p. 3 (3. Method), temporal p. 3 (3.1. Problem Formulation), p. 6 (3.4. Training Recipe), p. 7 (4.1. Experiment Settings), p. 16 (C. Training Implementation), p. 16 (C. Training Implementation), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

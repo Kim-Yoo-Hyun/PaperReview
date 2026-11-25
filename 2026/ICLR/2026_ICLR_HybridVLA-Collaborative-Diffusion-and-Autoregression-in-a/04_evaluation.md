@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), 
 - **p. 7 / 12.3 Hz - extractive body cue:** tasks are performed using a Franka Panda robot and a front-view camera.
 - **p. 7 / 12.3 Hz - extractive body cue:** Following the frame-sampling method used in previous works (Shridhar et al., 2022; Goyal et al., 2023; Jia et al., 2024), we construct the training dataset, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Unlike recent diffusion-based VLA methods that attach a separate diffusion head after VLMs, (b) HybridVLA innovatively integrates diffusion and autoregressive action prediction ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), 
 | To provide a clearer overview, in the Table 6 below, we summarize the average score and average accuracy drop percentage across all unseen configurations. | definition/direction/unit from same section | p. 10 (12.3 Hz) |
 | The superior performance on Wipe blackboard and Open drawer and place inside further underscores the robustness of our method in long-horizon tasks. | definition/direction/unit from same section | p. 9 (12.3 Hz) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), 
 | Remarkably, compared to CogACT and π0, HybridVLA-dif (7B) also achieves performance improvements of 12% and 11%, respectively. | comparison identity and matched condition | p. 7 (12.3 Hz) |
 | Our method consistently outperforms previous VLA approaches across five distinct tasks, highlighting HybridVLA's ability to effectively leverage LLM's pretrained knowledge for dual-arm coordination in ... | comparison identity and matched condition | p. 9 (12.3 Hz) |
 | Figure 7: The model architectures of variation1. The transformer-based diffusion head is attached to HybridVLA. Figure 7 and 8 shows schematic diagrams of the ... | comparison identity and matched condition | p. 24 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), 
 | body limitation/failure cue | 5 CONCLUSION AND LIMITATION In this paper, we introduce HybridVLA, a unified Vision-Language-Action (VLA) framework that equips a single LLM with both diffusion-based and ... | p. 10 (12.3 Hz) |
 | body limitation/failure cue | Figure 4: Real-World Assets and Experimental Settings. We provide visualizations of the assets used and the settings for single-arm FR3 robot tasks and dual-arm ... | p. 21 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), 
 | As shown in the right of Figure 1, HybridVLA is first pretrained on large-scale, diverse, cross-embodiment robotic datasets, including Open XEmbodiment (O'Neill et al., ... | p. 2 (1 INTRODUCTION) |
 | Unlike prior diffusion-based VLA methods (Black et al., 2024; Li et al., 2024a) that append an independent diffusion head after the LLM (Figure 1 ... | p. 2 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 12.3 Hz - extractive body cue:** Additional qualitative results and failure case analyses are provided in Appendix D and Appendix E, respectively, and execution videos are available in the supplementary materials.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), 
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 4: Real-World Assets and Experimental Settings. We provide visualizations of the assets used and the settings for single-arm FR3 robot tasks and dual-arm AgileX ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (12.3 Hz), p. 8 (12.3 Hz), p. 10 (12.3 Hz), p. 6 (4 EXPERIMENT), p. 10 (12.3 Hz), p. 6 (4 EXPERIMENT), metrics p. 7 (4 EXPERIMENT), p. 7 (12.3 Hz), p. 8 (12.3 Hz), p. 9 (12.3 Hz), p. 23 (Figure/Table caption), p. 23 (Figure/Table caption), baselines p. 10 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), p. 24 (Figure/Table caption), results p. 7 (12.3 Hz), p. 7 (12.3 Hz), p. 9 (12.3 Hz), p. 8 (12.3 Hz), p. 2 (Figure/Table caption), p. 10 (12.3 Hz).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

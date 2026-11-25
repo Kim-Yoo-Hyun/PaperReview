@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 - **p. 7 / 5.3. Ablation Studies - extractive body cue:** The Pose Diffusion denotes learning a diffusion policy directly over the end-effector pose trajectories and generate robot controls by solving the inverse kinematics.
 - **p. 7 / 5.3. Ablation Studies - extractive body cue:** However, for tasks that require a fine-grained trajectory, e.g., toilet seat up, RRT fails completely.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned on ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 | Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. We focus on learning multi-task language-guided agent for robotic manipulation. Unlike a standard motion planner that only samples an arbitrary trajectory to ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 | More details of the baseline algorithms are available in the appendix. | comparison identity and matched condition | p. 6 (5.2. Simulation Experiments) |
 | Hierarchical agents outperform simple low-level continuous control policies. | comparison identity and matched condition | p. 7 (5.2. Simulation Experiments) |
 | We observe that both achieve worse performance when compared to the original RK-Diffuser, which indicates that understanding the 3D environment is necessary for generalisable ... | comparison identity and matched condition | p. 8 (5.3. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 | body limitation/failure cue | Figure 1. We introduce HDP, a hierarchical agent for robotic ma- nipulation. At the high-level, HDP learns to predict the next-best end-effector pose. Conditioned ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Future works could explore improving the framework by designing more unified structures that minimises the compounding error. | p. 8 (6. Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 | \vv { a }_ \join t ^ 0 \ left a ro w \v v {a }_\joint ^0 - \alpha \frac {\partial \parallel \vv ... | p. 5 (4.3. Low-Level RK-Diffuser) |
 | The forward diffusion processes adds Gaussian noise to x0 in K steps, which gives a sequence of noisy samples {xi}K i=1. | p. 3 (3.1. Diffusion Models) |
 | To tackle the large number of visual and language tokens, PerAct adopts PerceiverIO [14], which encodes the inputs with a small set of latent ... | p. 4 (4.2. High-Level Next-Best Pose Agent) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 - **p. 8 / 6. Conclusion - extractive body cue:** Future works could explore improving the framework by designing more unified structures that minimises the compounding error.
 
 - **Evidence anchors reviewed:** datasets p. 4 (4.1. Dataset Preparation), p. 6 (5. Experiments), p. 8 (5.4. Real Robot Experiment), p. 8 (5.3. Ablation Studies), p. 6 (5. Experiments), p. 4 (4.1. Dataset Preparation), metrics p. 8 (5.3. Ablation Studies), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (5. Experiments), p. 7 (5.3. Ablation Studies), baselines p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (Figure/Table caption), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.3. Ablation Studies), results p. 7 (5.2. Simulation Experiments), p. 8 (Figure/Table caption), p. 6 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (5.1. Trajectory Visualisations).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

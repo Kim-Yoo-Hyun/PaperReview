@@ -63,8 +63,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 4 (2. Recursively compute for
 | body cue at p. 2 | This arises quite frequently when, for instance, the behavior demonstrated by the agent is imperfect, or the planning ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 2 | We employ the principle of maximum entropy, which resolves this ambiguity by choosing the distribution that does not ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (Abstract), p. 4 (2. Recursively compute for N iterations), p. 1 (Abstract), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ il writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), interface p. 3 (Abstract), p. 4 (2. Recursively compute for N iterations), p. 1 (Abstract), p. 1 (Abstract), objective p. 3 (Abstract), p. 3 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 4 (2. Recursively compute for N iterations).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

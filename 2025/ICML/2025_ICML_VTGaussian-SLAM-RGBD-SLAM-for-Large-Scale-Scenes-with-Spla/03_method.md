@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Camer
 - **p. 4 / 3.3. Tracking Cameras - extractive body cue:** We optimize pi to minimize rendering errors, min pi αWi//Vi -V ′ i //1 + βWi//Di -D′ i//1, (1) where {V ′ i , D′ ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (3.5. Bundle Adjustment), p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Cameras), p. 4 (3.3. Tracking Cameras).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Camer
 - **p. 5 / 3.4. Mapping Scenes - extractive body cue:** In each section, we first initialize Gaussians at all pixels on the depth map at the head frame, and then complement Gaussians at pixels uncovered ...
 - **p. 2 / 1. Introduction - extractive body cue:** Our tracking and mapping strategies remove the need of holding and optimizing all Gaussians in memory throughout the training, which improves the scalability of 3DGS ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Camer
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** minimize, rendering, errors, respect, observations, Vi-V, Ui//Di-D, i//1, where, SSIM, loss, mask, removes, pixels, without, valid, depth, values, balance, weights.
 - **Relevant PDF headings:** 3. Methods (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Camer
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview. (a) and (c) are tracking strategies, while (b) and (d) are mapping strategies. Please refer to Sec. 3.1 for more details. geometry ...
 - **p. 8 / 4.2. Ablation Studies and Analysis - extractive body cue:** We cannot use a large number of Gaussians 8
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Cameras), p. 4 (3.3. Tracking Cameras), p. 5 (3.5. Bundle Adjustment), objective p. 5 (3.4. Mapping Scenes), p. 5 (3.5. Bundle Adjustment), p. 3 (3.3. Tracking Cameras), p. 3 (3.1. Overview), p. 4 (3.3. Tracking Cameras), p. 4 (3.3. Tracking Cameras), temporal p. 3 (3.1. Overview), p. 3 (3.1. Overview), p. 4 (3.3. Tracking Cameras), p. 5 (4. Experiments and Analysis), p. 9 (4.2. Ablation Studies and Analysis), p. 4 (3.3. Tracking Cameras).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -48,8 +48,6 @@
 - **p. 6 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** Similar to Octo, RT-1-X is pretrained on the Open X-Embodiment robot dataset and aims to control multiple robots zero-shot, thus providing a natural point of ...
 - **p. 5 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** We also evaluate Octo for data-efficient finetuning to new environments and tasks, including with new observations (force-torque inputs in "Berkeley Insertion"), new action spaces (joint ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We introduce Octo, an open-source, generalist policy for robotic manipulation. Octo is a transformer-based policy pretrained on 800k diverse robot episodes from the ...
@@ -82,8 +80,6 @@
 | We use the AdamW optimizer [51] with an inverse square root decay learning rate schedule [97], with weight decay of 0.1 and gradient clipping ... | definition/direction/unit from same section | p. 5 (III. THE OCTO MODEL) |
 | In all finetuning experiments, we employ the same recipe: given a small target domain dataset with around 100 trajectories, we finetune for 50k steps ... | definition/direction/unit from same section | p. 5 (III. THE OCTO MODEL) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@
 | We adopt this as our from-scratch baseline ("ResNet+Transformer Scratch"). | comparison identity and matched condition | p. 6 (1) Can Octo control multiple robot embodiments and solve) |
 | The RT-1-X and RT-2-X models [67] are trained on a more restricted subset of 350K episodes (compared to 800k episodes for Octo). | comparison identity and matched condition | p. 6 (1) Can Octo control multiple robot embodiments and solve) |
 | For the WidowX and RT-1 Robot evaluations, we also compared to RT-2-X (55 billion parameters) [103] and found that Octo performed similarly. | comparison identity and matched condition | p. 7 (1) Can Octo control multiple robot embodiments and solve) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@
 | body limitation/failure cue | Finally, we zero-pad any missing camera channels and align the gripper action spaces between the datasets such that a gripper command of +1 means ... | p. 5 (III. THE OCTO MODEL) |
 | body limitation/failure cue | (1) The hyperparameters α, γ, and σ correspond to the noise schedule: we use the standard cosine schedule from [66]. | p. 5 (III. THE OCTO MODEL) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@
 | Each domain uses ∼100 target demonstrations and the same finetuning hyperparameters. | p. 7 (1) Can Octo control multiple robot embodiments and solve) |
 | Unless noted otherwise, we perform all ablations on the OctoSmall model due to our compute budget. | p. 7 (1) Can Octo control multiple robot embodiments and solve) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 1) Can Octo control multiple robot embodiments and solve - extractive body cue:** While the Octo model achieves high success on novel objects, zero-shot performance slightly degrades in a new scene, and high degradation for novel behaviors like ...
@@ -166,9 +145,8 @@
 - **p. 5 / III. THE OCTO MODEL - extractive body cue:** (1) The hyperparameters α, γ, and σ correspond to the noise schedule: we use the standard cosine schedule from [66].
 
 - **Evidence anchors reviewed:** datasets p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (1) Can Octo control multiple robot embodiments and solve), metrics p. 8 (Figure/Table caption), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 4 (Figure/Table caption), baselines p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), results p. 8 (Figure/Table caption), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 7 (1) Can Octo control multiple robot embodiments and solve), p. 6 (1) Can Octo control multiple robot embodiments and solve), p. 5 (III. THE OCTO MODEL), p. 5 (III. THE OCTO MODEL).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

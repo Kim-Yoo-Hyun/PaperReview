@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.4. Evaluati
 - **p. 7 / 4.3. Evaluation Setup and Metrics - extractive body cue:** For a fair comparison, we benchmark against several state-of-the-art baselines, evaluating their publicly available pre-trained weights under the same preprocessing and cropping protocol.
 - **p. 8 / 4.4. Evaluation Results - extractive body cue:** Our PointDiT is significantly better in terms of reconstructing thin structures (1st row), transparent objects (2nd rows), and maintaining a more accurate relative scale across ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. PointDiT. A minimalist pixel-space Diffusion Trans- former operating directly on raw point map patches, conditioned on image tokens from a pre-trained DINOv3. The ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.4. Evaluati
 | They further improve the accuracy metrics (Rel and δ1), confirming that our model readily benefits from geometry-aware features. | definition/direction/unit from same section | p. 9 (4.5. Ablation and Analysis) |
 | Table 1. Comparisons. Average results on 7 real-world evaluation datasets with 3,444 samples. The image resolution is 512 × 512. Relp and δp 1 ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.4. Evaluati
 | We show additional depth comparisons in the appendix (Figure 7). | comparison identity and matched condition | p. 8 (4.4. Evaluation Results) |
 | Even without any pretrained image backbone (i.e., with plain linear embeddings), our model already achieves decent results. | comparison identity and matched condition | p. 9 (4.5. Ablation and Analysis) |
 | Overall, the generative formulation improves the boundary metric BF1 from 10.90 to 13.92 under this controlled comparison. of the two models. | comparison identity and matched condition | p. 9 (4.5. Ablation and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.4. Evaluati
 | body limitation/failure cue | In Table 2, we study the model's sensitivity to noise sampling in single-step inference, and find it highly robust across stochastic initializations. | p. 7 (4.4. Evaluation Results) |
 | body limitation/failure cue | Performance is nearly invariant to the noise, with all-zeros matching or slightly exceeding stochastic sampling, indicating the model learns to be robust to different ... | p. 7 (4.3. Evaluation Setup and Metrics) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.4. Evaluati
 | To save compute, the 512 × 512 models in this part are fine-tuned on a 6dataset subset (Hypersim, VKITTI2, UrbanSyn, Synscapes, TartanAir, and OmniWorldGame; ... | p. 10 (4.5. Ablation and Analysis) |
 | Formally, given an input image c ∈RH×W ×3, our goal is to estimate the corresponding point map x ∈ RH×W ×3, in which each ... | p. 3 (3. Approach) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. Comparison with latent diffusion and regression. The two dominant paradigms each have an inherent limitation: (a) the VAE in latent diffusion models introduces ...
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.4. Evaluati
 - **p. 7 / 4.3. Evaluation Setup and Metrics - extractive body cue:** Performance is nearly invariant to the noise, with all-zeros matching or slightly exceeding stochastic sampling, indicating the model learns to be robust to different noise ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.5. Ablation and Analysis), p. 6 (4.2. Implementation Details), p. 6 (4.3. Evaluation Setup and Metrics), p. 10 (4.5. Ablation and Analysis), p. 7 (4.3. Evaluation Setup and Metrics), p. 10 (4.5. Ablation and Analysis), metrics p. 7 (4.3. Evaluation Setup and Metrics), p. 7 (4.4. Evaluation Results), p. 9 (4.5. Ablation and Analysis), p. 10 (4.5. Ablation and Analysis), p. 6 (4.2. Implementation Details), p. 8 (4.4. Evaluation Results), baselines p. 7 (4.3. Evaluation Setup and Metrics), p. 7 (Figure/Table caption), p. 8 (4.4. Evaluation Results), p. 8 (4.4. Evaluation Results), p. 9 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), results p. 7 (Figure/Table caption), p. 7 (4.4. Evaluation Results), p. 8 (4.4. Evaluation Results), p. 9 (4.5. Ablation and Analysis), p. 9 (4.5. Ablation and Analysis), p. 10 (4.5. Ablation and Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

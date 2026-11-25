@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL
 - **p. 1 / I. INTRODUCTION - extractive body cue:** The first formulates the problem as a min-max optimization, finding a control policy that minimizes the cost under worst-case disturbances.
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 6 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 6 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL
 - **p. 7 / III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL - extractive body cue:** Let the Jacobians of the dynamics fxk, fuk, fθk and the Hessians of the stateaction value function Q(k) uu , Q(k) ux , and Q(k) ...
 - **p. 8 / IV. DIFFERENTIABLE TUBE-BASED MPC - extractive body cue:** This has the effect of increasing the state dimension of the problem but does not affect the algorithm computationally as the input dimension is unchanged ...
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL
 - **p. 5 / III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL - extractive body cue:** However, we propose an alternative methodology enabled through differentiable optimization that allows the parameters to be learned and adapted online through minimization of an appropriately ...
 - **p. 1 / Abstract - extractive body cue:** The proposed algorithm is benchmarked on multiple nonlinear robotic systems, including two systems in the MuJoCo simulator environment and one hardware experiment on the Robotarium ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** However, alternative, methodology, enabled, through, differentiable, optimization, allows, parameters, learned, adapted, online, minimization, appropriately, specified, loss, function, describing, desired, task.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL
 - **p. 11 / V. EXPERIMENTS - extractive body cue:** NT-MPC is robust to disturbances due to both modeling error and process noise and can reach the target state successfully (Fig.
 - **p. 9 / V. EXPERIMENTS - extractive body cue:** While both algorithms remain safe and avoid collisions (see Table I), only DT-MPC is able to complete the task the majority of the time.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC), p. 3 (II. MATHEMATICAL BACKGROUND), p. 4 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 7 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), objective p. 6 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 4 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 2 (II. MATHEMATICAL BACKGROUND), p. 5 (III. GENERALIZED DIFFERENTIABLE OPTIMAL CONTROL), p. 8 (IV. DIFFERENTIABLE TUBE-BASED MPC), p. 1 (I. INTRODUCTION), temporal p. 2 (II. MATHEMATICAL BACKGROUND), p. 9 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 11 (VI. CONCLUSION), p. 1 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

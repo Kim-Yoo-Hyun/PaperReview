@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2 Preliminaries), p. 5 (2 Prel
 - **p. 5 / 2 Preliminaries - extractive body cue:** Algorithm 1 SayCan Given: A high level instruction i, state s0, and a set of skills Π and their language descriptions ℓΠ 1: n = ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (2 Preliminaries).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2 Preliminaries), p. 5 (2 Prel
 - **p. 5 / 2 Preliminaries - extractive body cue:** The success of language command execution is rated by humans where the raters are given a video of the robot performing the skill, together with ...
 - **p. 2 / 2 Preliminaries - extractive body cue:** In particular, we define a Markov decision process (MDP) M = (S, A, P, R, γ), where S and A are state and action spaces, ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2 Preliminaries), p. 5 (2 Prel
 - **p. 1 / Abstract - extractive body cue:** We propose to provide real-world grounding by means of pretrained skills, which are used to constrain the model to propose natural language actions that are ...
 - **p. 3 / 2 Preliminaries - extractive body cue:** However, this is not enough to fully constrain the output to admissible primitive skills for an embodied agent, and indeed at times it can produce ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** provide, real-world, grounding, means, pretrained, skills, constrain, model, natural, language, actions, feasible, contextually, appropriate, Recent, breakthroughs, initiated, neural, network-based, Attention.
 - **Relevant PDF headings:** C.1 RL and BC Policy Architecture (p. 19); C.2 RL and BC Policy Training (p. 20); C.3 RL and BC Policy Evaluations (p. 21).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2 Preliminaries), p. 5 (2 Prel
 - **p. 29 / Figure/Table caption - extractive body cue:** Table 6: Ablations over the size of the LLM. Compared only with the generative outputs (no value function) with USE embeddings [15]. Listing 2: Prompt ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: LLMs have not interacted with their environment and observed the outcome of their responses, and thus are not grounded in the world. SayCan ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (2 Preliminaries), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 2 (2 Preliminaries), p. 4 (2 Preliminaries), objective p. 3 (2 Preliminaries), p. 3 (2 Preliminaries), p. 4 (2 Preliminaries), p. 5 (2 Preliminaries), p. 2 (2 Preliminaries), p. 5 (2 Preliminaries), temporal p. 2 (1 Introduction), p. 6 (2 Preliminaries), p. 7 (5.1 Results), p. 7 (5.1 Results), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

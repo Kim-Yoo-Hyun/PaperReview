@@ -46,8 +46,6 @@ SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 
 - **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** SceneSplat here is trained on the single dataset respectively.
 - **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** Reported on the Matterport3D test split labeled in 21 semantic classes, the box plot shows a clear positive trend between the input 3DGS scene training ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present the 3DGS indoor dataset SceneSplat-7K which includes 7K scenes generated from ARKitScenes [1], Replica [46], ScanNet [5], ScanNet++ [57], Hypersim[43], 3RScan ...
@@ -81,8 +79,6 @@ SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 
 | Figure 1. We present the 3DGS indoor dataset SceneSplat-7K which includes 7K scenes generated from ARKitScenes [1], Replica [46], ScanNet [5], ScanNet++ [57], Hypersim[43], ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | We introduce SceneSplat-7K - a carefully curated dataset of 3D Gaussian Splats representing indoor scenes. | definition/direction/unit from same section | p. 3 (3. SceneSplat Dataset) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 
 | Effectiveness of Using 3DGS in Vision-Language Pretraining Compared to Point Clouds. | comparison identity and matched condition | p. 8 (5.3. Further Statistical Evaluation) |
 | SceneSplat trained on 3DGS parameters consistently outperforms the variant trained on point cloud properties. | comparison identity and matched condition | p. 8 (5.3. Further Statistical Evaluation) |
 | Figure 2. SceneSplat Overview. The SceneSplat-7K dataset enables Vision-Language Pretraining and Self-Supervised Pretrain- ing. For vision-language pretraining, we associate each 3D Gaussian primitive with ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 
 | body limitation/failure cue | Low PSNRs usually come out of blurry input images, poor Gaussian centers optimization, and insufficient scene coverage, where the 3DGS parameters cannot resolve the ... | p. 8 (5.3. Further Statistical Evaluation) |
 | body limitation/failure cue | Although the collected labels are not perfect, large-scale pretraining can filter noise and learn meaningful patterns. | p. 7 (5.3. Further Statistical Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,20 +133,11 @@ SceneSplat-7K의 7,916개 장면은 일곱 기존 실내 자료에서 구축한 
 | Contrastive Loss ScanNet200 (200) ScanNet++ (100) f-mIoU f-mAcc f-mIoU f-mAcc w/o 13.7 22.5 19.6 34.4 always apply 13.2 23.4 23.2 39.3 last 75% epochs ... | p. 8 (5.3. Further Statistical Evaluation) |
 | Constructing this dataset required an equivalent of 150 days of computation on an NVIDIA L4 GPU. | p. 4 (3.2. Data Statistic) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5.3. Further Statistical Evaluation - extractive body cue:** Low PSNRs usually come out of blurry input images, poor Gaussian centers optimization, and insufficient scene coverage, where the 3DGS parameters cannot resolve the scene ...
 - **p. 7 / 5.3. Further Statistical Evaluation - extractive body cue:** Although the collected labels are not perfect, large-scale pretraining can filter noise and learn meaningful patterns.
 
 - **Evidence anchors reviewed:** datasets p. 3 (3. SceneSplat Dataset), p. 8 (5.3. Further Statistical Evaluation), p. 3 (3. SceneSplat Dataset), p. 4 (3.2. Data Statistic), p. 6 (5.1. Vision-Language Pretraining), p. 6 (5.1. Vision-Language Pretraining), metrics p. 7 (Figure/Table caption), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation), p. 6 (5.1. Vision-Language Pretraining), p. 6 (5.1. Vision-Language Pretraining), p. 7 (5.3. Further Statistical Evaluation), baselines p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (5.2. Label-free 3DGS Pretraining), p. 8 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation), p. 5 (Figure/Table caption), results p. 6 (5.2. Label-free 3DGS Pretraining), p. 7 (Figure/Table caption), p. 6 (5.1. Vision-Language Pretraining), p. 3 (Figure/Table caption), p. 7 (5.3. Further Statistical Evaluation), p. 8 (5.3. Further Statistical Evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

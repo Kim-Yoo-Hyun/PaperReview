@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 9 (4 Experiments), p. 
 - **p. 7 / 4 Experiments - extractive body cue:** We assess our model on the large-scale RealEstate10K [51] and ACID [20] datasets.
 - **p. 9 / 4 Experiments - extractive body cue:** The first three rows are from RealEstate10K (indoor scenes), while the last one is from ACID (outdoor scenes).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our MVSplat outperforms pixelSplat [1] in terms of both appearance and geometry quality with 10× fewer parameters and more than 2× faster inference ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 9 (4 Experiments), p. 
 | 4 demonstrates the feed-forward geometry reconstruction results of MVSplat, without any extra fine-tuning. | definition/direction/unit from same section | p. 10 (4 Experiments) |
 | To demonstrate this advantage, we conduct two cross-dataset evaluations. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 9 (4 Experiments), p. 
 | The baseline methods exhibit obvious artifacts for these regions, while MVSplat shows no such artifacts due to our cost volume-based geometry representation. | comparison identity and matched condition | p. 9 (4 Experiments) |
 | This includes pixelNeRF [46], GPNR [33], AttnRend [10] and pixelSplat [1], with results taken directly from the pixelSplat [1] paper, and the recent state-of-the-art ... | comparison identity and matched condition | p. 9 (4 Experiments) |
 | 1, apart from attaining superior image quality, MVSplat also shows the fastest inference time among all the compared models, accompanied by a lightweight model ... | comparison identity and matched condition | p. 10 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 9 (4 Experiments), p. 
 | body limitation/failure cue | This discrepancy is attributed to the reliance of pixelSplat on pure feature aggregation, which lacks robustness to changes in feature distribution. | p. 12 (4 Experiments) |
 | body limitation/failure cue | When removing it from the "base" model, the quantitative results drop significantly: it decreases the PSNR by more than 3dB, and increases LPIPS by ... | p. 13 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 9 (4 Experiments), p. 
 | (2) and compute their correlations via Eq. | p. 6 (3 Method) |
 | We then compute the dot product [43,44] between F i and F j→i dm to obtain the correlation | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 4 Experiments - extractive body cue:** This limitation is analogous to the reason why pixelSplat performs inferior in cross-dataset generalization tests discussed earlier.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 12 (4 Experiments), p. 9 (4 Experiments), p. 
 - **p. 13 / 4 Experiments - extractive body cue:** When removing it from the "base" model, the quantitative results drop significantly: it decreases the PSNR by more than 3dB, and increases LPIPS by 0.064 ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 11 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 7 (4 Experiments), metrics p. 8 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), baselines p. 10 (4 Experiments), p. 13 (Figure/Table caption), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), results p. 12 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments), p. 8 (4 Experiments), p. 11 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

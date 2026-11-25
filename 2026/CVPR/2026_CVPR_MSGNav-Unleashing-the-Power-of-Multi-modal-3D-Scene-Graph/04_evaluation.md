@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. 
 - **p. 7 / 4.2.1. Goat-Bench Benchmark - extractive body cue:** These results highlight the effectiveness of our multi-modal scene graph in tackling multi-modal lifelong navigation tasks.
 - **p. 7 / 4.2.1. Goat-Bench Benchmark - extractive body cue:** The results in Table 1 also show the outstanding performance of our MSGNav in tackling multimodal goals, lifelong navigation task settings.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. One example illustrating the key insights of our work. We introduce the Multi-modal 3D Scene Graph (M3DSG) as an alternative to traditional 3D ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. 
 | We used the official success distance threshold from the benchmark: 0.25 for GoatBench and 1.0 for HM3D-ObjNav. | definition/direction/unit from same section | p. 6 (4.1. Experimental Setting) |
 | Figure 2. Performance comparisons between our MSGNav and other existing methods for embodied navigation on Goat-Bench [19]: the multi-modal open-vocabulary navigation benchmark. (a) The ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. 
 | We will show the main comparison results with other stateof-the-art methods on the Goat-Bench [19] and HM3D37159 | comparison identity and matched condition | p. 6 (4.2. Main Experimental Results) |
 | Figure 2. Performance comparisons between our MSGNav and other existing methods for embodied navigation on Goat-Bench [19]: the multi-modal open-vocabulary navigation benchmark. (a) The ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Table 4. Scene graph experiment across the first episode of each scene on the "Val Unseen" split of GOAT-Bench. "Node-only" indicates Concept-graph [9] without ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. 
 | body limitation/failure cue | In this paper, we propose the MSGNav, a zero-shot embodied navigation framework built upon a Multi-modal 3D Scene Graph (M3DSG) that preserves visual information ... | p. 8 (5. Conclusion) |
 | body limitation/failure cue | Figure 4. Demonstration of the "last-mile" problem. (a) Previ- ous methods select the nearest traversable position after target lo- calization, and often fail due ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. 
 | For each candidate vi, VVD computes a visibility score by evaluating occlusion between vi and target point cloud PC¯o. | p. 6 (3.3.4. Visibility-based Viewpoint Decision (VVD)) |
 | (b) Our VVD samples candidate viewpoints and computes visibility, which can select a suitable viewpoint close to GT for successful navigation. can also influence ... | p. 6 (3.3.3. Closed-Loop Reasoning (CLR)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 5. Statistical box plot of candidate viewpoint scores com- puted by the VVD module and distances from GT viewpoints. representations in embodied navigation. Limitations ...
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 4. Demonstration of the "last-mile" problem. (a) Previ- ous methods select the nearest traversable position after target lo- calization, and often fail due to ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setting), p. 6 (4.1. Experimental Setting), p. 7 (4.2.1. Goat-Bench Benchmark), p. 7 (4.2.1. Goat-Bench Benchmark), metrics p. 6 (4.1. Experimental Setting), p. 8 (Figure/Table caption), p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 8 (Figure/Table caption), p. 7 (4.2.1. Goat-Bench Benchmark), p. 6 (4.1. Experimental Setting), baselines p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 8 (Figure/Table caption), p. 7 (4.2.1. Goat-Bench Benchmark), p. 6 (4.2. Main Experimental Results), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 7 (4.2.2. HM3D-ObjNav Benchmark), p. 6 (4.1. Experimental Setting), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 2 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

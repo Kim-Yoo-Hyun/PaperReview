@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 - **p. 8 / 3 EXPERIMENTS - extractive body cue:** Since we do not have the intermediate goals anymore, we try two different ways of choosing the skills to execute at each stage: Randomly pick ...
 - **p. 8 / 3 EXPERIMENTS - extractive body cue:** Method Task LiftSpread GatherTransport CutRearrange No Discrete Planning 0.758 / 20% 0.312 / 0% 0.118 / 0% Direct Execution (Random) 0.593 / 15% 0.369 / ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Humans use various tools to manipulate deformable objects much more effectively than state-of-the-art robotic systems. This work aims to narrow the gap and ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 | Figure 2: (a) Collecting demonstration trajectories by running a gradient-based trajectory optimizer in a differentiable simulator. (b) Neural abstraction by imitating the expert demonstration, ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | In this case, we can see that using random skills at each stage results in poor performance. | definition/direction/unit from same section | p. 8 (3 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 | Behavior Cloning We compare with another baseline that directly trains a goal-conditioned policy with Behavior Cloning (BC) and hindsight relabeling using all tools. | comparison identity and matched condition | p. 6 (3 EXPERIMENTS) |
 | Second, with multiple tools, we can see that DiffSkill significantly outperforms the single-skill policy. | comparison identity and matched condition | p. 7 (3 EXPERIMENTS) |
 | Still, DiffSkill is able to achieve higher success, even though the trajectory optimizer oracle achieves a higher average score. | comparison identity and matched condition | p. 7 (3 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 - Numeric sentences retained from the body:
 - **p. 6 / 3 EXPERIMENTS - extractive body cue:** These modules share the same encoder architecture: 4 convolutional layers with a kernel size of 4 and a stride of 2 and a channel size ...
 - **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** Model parameter Value dimension of latent space 8 MLP hidden node number 1024 Training parameters Value learning rate 0.001 batch size 128 optimizer Adam beta1 ...
-- **p. 14 / A IMPLEMENTATION DETAILS - extractive body cue:** Model parameter Value dimension of latent space 8 MLP hidden node number 1024 Training parameters Value learning rate 0.001 batch size 128 optimizer Adam beta1 ...
 
 ## Generalization and Failure Cases
 
@@ -136,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 | body limitation/failure cue | In this way, a normalized performance of 0 representing a policy that does nothing and a normalized performance of 1 representing an upper bound ... | p. 6 (3 EXPERIMENTS) |
 | body limitation/failure cue | This is because the trajectory optimizer is more reliable at finding partial solutions that transport part of the dough to the target locations but ... | p. 7 (3 EXPERIMENTS) |
 | body limitation/failure cue | There are a few interesting directions for future work. | p. 9 (4 RELATED WORK) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -152,14 +138,6 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 | Additionally, the trajectory optimizer takes minutes to run, which is too slow during evaluation for real-time applications. | p. 4 (2 METHOD) |
 | Variational Auto-Encoder: As will be explained in Section 2.4, we will plan to compose skills in a latent space instead of optimizing directly in ... | p. 4 (2 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3 EXPERIMENTS - extractive body cue:** In Table 3, we can see that the learned skills (labeled as Behavior Cloning) approach the normalized performance of the trajectory optimization (Trajectory Opt) on ...
@@ -170,9 +148,8 @@ PDF body evaluation/result cue (p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8
 - **p. 9 / 4 RELATED WORK - extractive body cue:** There are a few interesting directions for future work.
 
 - **Evidence anchors reviewed:** datasets p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), metrics p. 6 (3 EXPERIMENTS), p. 7 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 14 (A IMPLEMENTATION DETAILS), baselines p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 2 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), results p. 7 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

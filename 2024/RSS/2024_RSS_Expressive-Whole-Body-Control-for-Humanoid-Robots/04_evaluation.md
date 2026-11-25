@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 - **p. 8 / IV. RESULTS - extractive body cue:** We choose the uptown funk motion from O.O.D. dataset form II From Fig.
 - **p. 8 / IV. RESULTS - extractive body cue:** The top row shows the robot motions and original dance video snapshots.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our Robot demonstrates diverse and expressive whole-body movements in different scenarios. Top Row: The robot is dancing, hugging and doing high-five with a ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 | This phenomenon can be further evidenced by Full Body Tracking baseline having a poor performance compared to our method and is not able to ... | definition/direction/unit from same section | p. 8 (IV. RESULTS) |
 | Fig. 15: Video-to-Motion evaluation. (a,b) The videos were self-recorded and subsequently processed offline using Move One [3] to create custom motions. (c,d) To assess ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 | IV Baseline vx vy roll pitch base height Random Sample ±2.0 ±1.0 ±0.5 ±0.5 [0.9, 1.1] Random Sample Small ±1.5 ±1.0 ±0.2 ±0.2 [0.9, ... | comparison identity and matched condition | p. 5 (IV. RESULTS) |
 | In this section we aim to answer the following questions through extensive experiments both in sim and the real world: • How well does ... | comparison identity and matched condition | p. 5 (IV. RESULTS) |
 | The Random Sample baseline's behavior is a kneel-down motion for all the goals as shown in Fig. | comparison identity and matched condition | p. 6 (IV. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 | body limitation/failure cue | Again our method does not require such manual tuning of curriculum to work. | p. 6 (IV. RESULTS) |
 | body limitation/failure cue | Fig. 13: Policy's state distribution under different sampling strategies. The green dots are the policy rollout's states. For dataset sampling, we record 20 data ... | p. 15 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 | We first bin all sampled points into a grid of size 0.2x0.2 (regardless of the unit, except the grid size along y axis of ... | p. 6 (IV. RESULTS) |
 | We compute the step frequency using the same method in Fig. | p. 8 (IV. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / VII. LIMITATIONS - extractive body cue:** Auto recovery and initialization could be explored to reduce the cost of doing experiments.
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Fi
 - **p. 15 / Figure/Table caption - extractive body cue:** Fig. 13: Policy's state distribution under different sampling strategies. The green dots are the policy rollout's states. For dataset sampling, we record 20 data points ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), metrics p. 7 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 7 (IV. RESULTS), baselines p. 6 (IV. RESULTS), p. 8 (IV. RESULTS), p. 7 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), results p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 9 (Figure/Table caption), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 7 (IV. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

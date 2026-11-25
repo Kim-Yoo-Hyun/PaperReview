@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2.
 - **p. 8 / Method - extractive body cue:** Our method reconstructs the static scenes with correct geometry even under limited view constraints.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.2. Adaptive Local-Global Masking), p. 3 (3.2. Adaptive Local-Global Masking), p. 5 (3.3. Voxel-guided Gaussian Splatting), p. 6 (3.3. Voxel-guided Gaussian Splatting), p. 6 (3.3. Voxel-guided Gaussian Splatting), p. 8 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2.
 - **p. 2 / 1. Introduction - extractive body cue:** Similar to challenges faced in sparse-view 3D reconstruction [15, 48], radiance fields may overfit to the inputs in limited view constraints, leading to poor rendering ...
 - **p. 4 / 3.2. Adaptive Local-Global Masking - extractive body cue:** The sampled point cloud is used to initialize Gaussian primitives, which is then optimized using a voxel-guided strategy.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2.
 - **p. 6 / 3.3. Voxel-guided Gaussian Splatting - extractive body cue:** Therefore, we additionally incorporate a voxelguided optimization strategy to direct the optimization of 3DGS under limited view constraints.
 - **p. 6 / 4.1. Setups - extractive body cue:** For our method, we train the model with 7,000 iterations and all results are obtained using a NVIDIA A100 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** image, training, segmentation, model, obtain, mNi, where, represents, mask, j-th, object, denotes, number, masks, establish, accurate, appropriate, threshold, across, different.
 - **Relevant PDF headings:** 3. Method (p. 3); Method (p. 7); Method (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2.
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 10. The ablations of our method on the DroneS- plat(dynamic) and NeRF On-the-go dataset. The 1st , 2nd and 3rd best results are highlighted. ...
 - **p. 8 / 5. Conclusions - extractive body cue:** We present DroneSplat, a novel framework for robust 3D reconstruction from in-the-wild drone imagery.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2. Adaptive Local-Global Masking), p. 5 (3.2. Adaptive Local-Global Masking), p. 3 (3.2. Adaptive Local-Global Masking), p. 3 (3.2. Adaptive Local-Global Masking), p. 5 (3.2. Adaptive Local-Global Masking), objective p. 3 (3.1. Preliminaries), p. 6 (3.3. Voxel-guided Gaussian Splatting), p. 3 (3.2. Adaptive Local-Global Masking), p. 5 (3.3. Voxel-guided Gaussian Splatting), p. 6 (3.3. Voxel-guided Gaussian Splatting), p. 8 (Method), temporal p. 4 (3.2. Adaptive Local-Global Masking), p. 4 (3.2. Adaptive Local-Global Masking), p. 5 (3.2. Adaptive Local-Global Masking), p. 5 (3.2. Adaptive Local-Global Masking), p. 6 (4.1. Setups), p. 7 (Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

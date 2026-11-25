@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 - **p. 4 / IV. SOFTWARE IMPLEMENTATION - extractive body cue:** However, using a multiple-shooting approach allows us to parallelize the forward simulation over the individual multiple-shooting intervals.
 - **p. 7 / VI. RESULTS - extractive body cue:** This is illustrated in Figure 9 which compares the costs of the trajectories obtained from both algorithms during a trot task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. The quadrupeds HyQ-blue (left front) and ANYmal (right), which served as test platforms for our MPC experiments. In recent years, there has been ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 | We measured the rate of incoming trajectories that the tracking controller received. | definition/direction/unit from same section | p. 6 (VI. RESULTS) |
 | Multithreading and Vectorization Another important factor for obtaining best performance is multi-threading. | definition/direction/unit from same section | p. 4 (IV. SOFTWARE IMPLEMENTATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 | framework is lean compared to sophisticated physics engines and produces fast to evaluate, hard realtime capable code. | comparison identity and matched condition | p. 4 (IV. SOFTWARE IMPLEMENTATION) |
 | The symplectic integrator allows us to increase the integration step size by a factor of four compared to explicit schemes [17]. | comparison identity and matched condition | p. 4 (IV. SOFTWARE IMPLEMENTATION) |
 | HyQ can be perturbed significantly both on the base and the legs without reacting stiffly. | comparison identity and matched condition | p. 5 (VI. RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 | body limitation/failure cue | Also here we observe that the controller is robust to disturbances. | p. 6 (VI. RESULTS) |
 | body limitation/failure cue | We expect that a longer time horizon could show more elaborate disturbance rejection and recovery behavior since it offers more flexibility and predictive capabilities ... | p. 7 (VII. SUMMARY AND OUTLOOK) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 | We run a so called "real-time iteration scheme" [23], where we apply the optimized trajectory after a single iteration. | p. 5 (VI. RESULTS) |
 | For all timings and experiments, the NMPC solver is run on an Intel Core i7 4790 quadcore PC with 3.6 GHz. | p. 6 (VI. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / IV. SOFTWARE IMPLEMENTATION - extractive body cue:** However, both parallel execution and vectorization cannot be leveraged automatically by standard compilers.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 5 (VI. RESULTS),
 - **p. 7 / VII. SUMMARY AND OUTLOOK - extractive body cue:** We expect that a longer time horizon could show more elaborate disturbance rejection and recovery behavior since it offers more flexibility and predictive capabilities to ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS), p. 7 (VI. RESULTS), metrics p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS), baselines p. 6 (VI. RESULTS), p. 6 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), results p. 7 (Figure/Table caption), p. 5 (VI. RESULTS), p. 7 (VI. RESULTS), p. 4 (IV. SOFTWARE IMPLEMENTATION), p. 5 (VI. RESULTS), p. 6 (VI. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

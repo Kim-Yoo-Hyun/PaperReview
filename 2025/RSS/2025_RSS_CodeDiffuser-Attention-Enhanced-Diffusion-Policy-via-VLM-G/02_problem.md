@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (B. Foundational Vision Model for Roboties),
 | body cue at p. 6 | (b) Failure Breakdown of Two Special Scenarios | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | We observe that failure primarily occurs at the task stage with the highest ambiguity, demonstrating a strong cconrelation ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (A. Problem Statement), p. 4 (A. Problem Statement), p. 3 (A. Problem Statement), p. 6 (B. Analysis of Existing Imitation Learning Algorithm). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (A. Problem Statement), p. 3 (A. Problem Statement), interface p. 3 (A. Problem Statement), p. 4 (A. Problem Statement), p. 3 (A. Problem Statement), p. 6 (B. Analysis of Existing Imitation Learning Algorithm), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

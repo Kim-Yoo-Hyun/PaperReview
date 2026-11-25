@@ -42,8 +42,6 @@ Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시�
 - **p. 7 / 4.2. Comparison - extractive body cue:** Qualitative Comparisons of different methods on Mip-NeRF360 [5], Tanks and Temples [22] and OMMO [25] Datasets.
 - **p. 8 / 4.2. Comparison - extractive body cue:** Ablation for proposed components in our framework on Mip-NeRF360 [5] dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Novel View Synthesis Comparison. We propose a novel Gaussian Splatting initialization pipeline to address the degradation in novel view rendering quality caused by ...
@@ -77,8 +75,6 @@ Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시�
 | Figure 4. Unbiased Depth Rendering. Illustration of depth ren- dering with the alpha-blending method and our unbiased method. This implies that the resulting coarse ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 3. Point Cloud from different depths. We compare the point cloud from different depths for single view and multiple views. (a) Rendered Depth ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시�
 | Our method demonstrates superior performance compared to existing point-free methods and the original 3DGS across all metrics. | comparison identity and matched condition | p. 7 (4.2. Comparison) |
 | Ablation for proposed components in our framework on Mip-NeRF360 [5] dataset. | comparison identity and matched condition | p. 8 (4.2. Comparison) |
 | Ablation for different depths used for initialization on Mip-NeRF360 [5] dataset. | comparison identity and matched condition | p. 8 (4.2. Comparison) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시�
 | body limitation/failure cue | Figure 1. Novel View Synthesis Comparison. We propose a novel Gaussian Splatting initialization pipeline to address the degradation in novel view rendering quality caused ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Figure 3. Point Cloud from different depths. We compare the point cloud from different depths for single view and multiple views. (a) Rendered Depth ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@ Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시�
 | As highlighted in RAINGS [18], the sparse-large-variance (SLV) initialization enables effective signal prediction within few training steps. | p. 3 (3.2. Effective Depth Alignment) |
 | Previous works [9, 14, 43] typically utilize alphablending to compute the depth at pixel u as Eq. | p. 4 (3.2. Effective Depth Alignment) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Comparison - extractive body cue:** Additionally, since [14] does not account for scale when utilizing monocular depth to estimate camera poses and generate 3D points, directly using the ground-truth poses ...
@@ -157,6 +136,5 @@ Mip-NeRF360과 Tanks and Temples 등에서 SfM 점을 쓴 초기화와 새 시�
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Point Cloud from different depths. We compare the point cloud from different depths for single view and multiple views. (a) Rendered Depth from ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 8 (4.3. Ablation Study), p. 7 (4.2. Comparison), p. 8 (4.2. Comparison), metrics p. 6 (4.2. Comparison), p. 8 (4.2. Comparison), p. 6 (4.2. Comparison), p. 7 (4.2. Comparison), p. 7 (4.2. Comparison), p. 8 (4.3. Ablation Study), baselines p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), p. 7 (4.2. Comparison), p. 7 (4.2. Comparison), p. 8 (4.2. Comparison), p. 8 (4.2. Comparison), results p. 6 (4.2. Comparison), p. 7 (4.2. Comparison), p. 6 (4.2. Comparison), p. 8 (4.3. Ablation Study), p. 8 (4.3. Ablation Study), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

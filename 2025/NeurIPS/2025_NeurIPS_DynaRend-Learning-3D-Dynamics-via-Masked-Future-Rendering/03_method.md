@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 5 / 3 Methodology - extractive body cue:** The rendering losses for reconstruction and future prediction are formulated as Lrecon = λc//C(r) -ˆC(r, Vnow)// + λs//S(r) -ˆS(r, Vnow)// + λdSiLog(D(r), ˆD(r, Vnow)), Lpred ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), p. 6 (3 Methodology).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 2 / 1 Introduction - extractive body cue:** The masked features and the language instruction are processed through a reconstructive and a predictive model, yielding two intermediate feature volumes that represent the current ...
 - **p. 6 / 3 Methodology - extractive body cue:** For rotation component arot and gripper state agripper, we query the triplane features at the predicted action translation position by interpolating the three planes and ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 9 / 4 Experiments - extractive body cue:** The training hyperparameters are kept consistent with the simulation experiments.
 - **p. 9 / 4 Experiments - extractive body cue:** We pretrain our model on the collected real-world dataset for 30k steps with augmented views and fine-tune it for an additional 10k steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** demonstration, consists, trajectory, sequence, where, element, represented, triplet, including, visual, observation, language, instruction, end-effector, state, incorporate, task-specific, information, encode, pretrained.
 - **Relevant PDF headings:** 3 Methodology (p. 3); Method (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 4 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 M
 - **p. 9 / 4 Experiments - extractive body cue:** We further conduct an ablation on the target view augmentation strategy, as shown in Tab.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: DynaRend framework overview. (a) We reconstruct the point cloud from multi-view RGB-D inputs, encode it with an MLP, and project it onto three ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Methodology), p. 4 (3 Methodology), p. 6 (3 Methodology), p. 6 (3 Methodology), p. 5 (3 Methodology), p. 3 (3 Methodology), objective p. 6 (3 Methodology), p. 6 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 5 (3 Methodology), p. 5 (3 Methodology), temporal p. 6 (4 Experiments), p. 6 (4 Experiments), p. 3 (3 Methodology), p. 3 (3 Methodology), p. 4 (3 Methodology), p. 4 (3 Methodology).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 - **p. 3 / 3. Method - extractive body cue:** Finally, we present our losses and density control modifications in Sec.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Rasterization), p. 3 (3. Method), p. 5 (3.5. Optimization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 - **p. 4 / 3.2. Gaussian Canonical Field - extractive body cue:** The identity branch uses a multi-layer perception (MLP) to map the 3D coordinate of the point cloud into the embedding space (dubbed as Fp ∈RN×C) ...
 - **p. 2 / 1. Introduction - extractive body cue:** We introduce the continuous 6D rotation [68] to ensure that the network learns a continuous function in the parameter space, which accurately represents the rotational ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 
 - **p. 7 / 4.3. Quantitative Results - extractive body cue:** The computational costs are: training time around 2h (avg. on D-NeRF dataset), render FPS 12 (fixed viewpoint), model size (34MB points cloud + 14MB network).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, geometric, branch, enables, geometry, feature, learning, Gaussian, distributions, subsequent, deformation, field, optimize, model, photometric, loss, motion, adapt, density, control.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Opti
 - **p. 7 / 4.4. Visualization Results - extractive body cue:** Since 3D-DS cannot model dynamic scenes, the quality of the point cloud is poor.
 - **p. 7 / 4.3. Quantitative Results - extractive body cue:** Since it inherently cannot model the deformation of the dynamic scene, 3D-GS performs poorly in dynamic view synthesis.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Gaussian Canonical Field), p. 5 (3.5. Optimization), p. 5 (3.5. Optimization), p. 4 (3.2. Gaussian Canonical Field), p. 3 (3. Method), objective p. 5 (3.4. Rasterization), p. 5 (3.5. Optimization), p. 3 (3. Method), temporal p. 3 (3. Method), p. 1 (1. Introduction), p. 3 (3. Method), p. 7 (4.3. Quantitative Results), p. 2 (2.2. Dynamic View Synthesis), p. 2 (2.1. Novel View Synthesis).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

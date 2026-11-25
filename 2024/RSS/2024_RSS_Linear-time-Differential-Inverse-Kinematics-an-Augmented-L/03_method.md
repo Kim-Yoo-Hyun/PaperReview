@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (II. BACKGROUND), p. 2 (II. BAC
 - **p. 4 / III. LOW-COMPLEXITY DIFFERENTIAL INVERSE - extractive body cue:** To make this explicit: zk+1 = arg min z LA(vk+1, νk+1, z, yk, wk) = arg min z ( IKbox(z) + wk⊤(νk+1 -z) + µk ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 6 (IV. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 4 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 4 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 5 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 6 (IV. LOW-COMPLEXITY DIFFERENTIAL INVERSE).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (II. BACKGROUND), p. 2 (II. BAC
 - **p. 1 / Abstract - extractive body cue:** We measure computation times 2-3× shorter than the QP-based state of the art.
 - **p. 1 / Abstract - extractive body cue:** Differential inverse kinematics is a core robotics problem whose state-of-the-art solutions are currently based on quadratic programming.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (II. BACKGROUND), p. 2 (II. BAC
 - **p. 5 / IV. LOW-COMPLEXITY DIFFERENTIAL INVERSE - extractive body cue:** We first present the final constrained IK algorithm in Algorithm 1, where the equality-constrained QP IK sub-problem is solved on line 5 using the proposed ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** For one, solving a differential IK quadratic program is still a resource-constrained operation, with computation times on the same scale of order as the frequency ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** embracing, techniques, spirit, rigid-body, dynamics, algorithms, Featherstone, introduce, solves, equality-constrained, differential, problems, lineartime, complexity, First, introduced, ADMM, tailored, convex, constrained.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 1 (Abstract), p. 2 (II. BACKGROUND), p. 2 (II. BAC
 - **p. 9 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** LOIK scales essentially like the "QP lower bound" of frame Jacobian computations (another linear-time algorithm), with 3This means in particular that, for "OSQP (Drake)", (1) ...
 - **p. 10 / V. EXPERIMENTAL VALIDATION AND BENCHMARKS - extractive body cue:** First, LOIK does not support robot topologies with internal closed loops, as its recursive derivation relies on a tree topology.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (II. BACKGROUND), p. 2 (II. BACKGROUND), p. 6 (IV. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 3 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 5 (IV. LOW-COMPLEXITY DIFFERENTIAL INVERSE), objective p. 3 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 2 (II. BACKGROUND), p. 7 (B. Feasibility Detection), p. 7 (B. Feasibility Detection), p. 6 (IV. LOW-COMPLEXITY DIFFERENTIAL INVERSE), p. 4 (III. LOW-COMPLEXITY DIFFERENTIAL INVERSE), temporal p. 8 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 10 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 8 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS), p. 9 (V. EXPERIMENTAL VALIDATION AND BENCHMARKS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

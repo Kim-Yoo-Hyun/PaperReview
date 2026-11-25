@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 - **p. 8 / 6.2. Benchmarks - extractive body cue:** An episode in LIBERO is stopped once the robot completes its task.
 - **p. 7 / 6. Experiments - extractive body cue:** We test TDQC, our sequentially calibrated success predictor in sequential tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Sequential Brier scores across benchmarks. Sequential Brier score (lower is better) on an unseen validation set averaged over 21 random seeds (train/validation task ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 | Table 16. Performance degregation as a function of failed trajectories, evaluated on π0-FAST LIBERO-10 (unseen tasks). We vary the proportion of failed trajectories retained ... | definition/direction/unit from same section | p. 26 (Figure/Table caption) |
 | Figure 3. ROC-AUC vs Brier score over all learned baselines in all benchmarks at the minimum rollout length. Points are grouped by method and ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 | Figure 3. ROC-AUC vs Brier score over all learned baselines in all benchmarks at the minimum rollout length. Points are grouped by method and ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Table 3. Benchmark statistics: task split into seen/unseen subsets and corresponding numbers of training and evaluation rollouts. Table 3 summarize each benchmark statistics on ... | comparison identity and matched condition | p. 17 (Figure/Table caption) |
 | Table 13. ROC-AUC results on simulation and real robot experiment (higher is better). Results are averaged over 21 seeds that determined different train-test split ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 | body limitation/failure cue | First, we observe that the failure predictor generalizes across unseen tasks within an environment but not across environments, embodiments, or action parameterizations. | p. 10 (7. Conclusion and Future Works) |
 | body limitation/failure cue | Figure 7. Successful rollout with informative failure scores of TDQC top 10 probabilities on OpenVLA LIBERO-10 benckmark. task: "put both the alphabet soup and ... | p. 25 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 | (2025) using π0-FAST-DROID checkpoints (Pertsch et al., 2025). | p. 8 (6.2. Benchmarks) |
 | Real-World WidowX We consider the WidowX data and OpenVLA checkpoints published in Gu et al. | p. 8 (6.2. Benchmarks) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / Figure/Table caption - extractive body cue:** Figure 4. Averaged success rates over additional simulation steps for action selection configurations. All experiments evalu- ate 3 unseen tasks from LIBERO-10 taken with OpenVLA, ...
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 23 (Figure/Table caption), p. 2 (Figure/Table
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 7. Successful rollout with informative failure scores of TDQC top 10 probabilities on OpenVLA LIBERO-10 benckmark. task: "put both the alphabet soup and the ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (6.2. Benchmarks), p. 8 (6.2. Benchmarks), p. 7 (6. Experiments), metrics p. 28 (Figure/Table caption), p. 2 (Figure/Table caption), p. 23 (Figure/Table caption), p. 10 (Figure/Table caption), p. 18 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (Figure/Table caption), p. 17 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 23 (Figure/Table caption), p. 2 (Figure/Table caption), p. 10 (Figure/Table caption), p. 22 (Figure/Table caption), p. 28 (Figure/Table caption), p. 25 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

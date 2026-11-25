@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 - **p. 5 / 4.1. Setup - extractive body cue:** The robot is required to stamp within a designated region.
 - **p. 5 / 4.1. Setup - extractive body cue:** The robot is required to rotate a lid to open a container.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. AT-VLA improves upon previous VLA approaches in contact-rich tasks by introducing Adaptive Tactile Injection, which balances pretrained knowledge with the learning of newly ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 | Figure 1. AT-VLA improves upon previous VLA approaches in contact-rich tasks by introducing Adaptive Tactile Injection, which balances pretrained knowledge with the learning of ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Framework of AT-VLA. The tactile gate adaptively determines whether tactile tokens should be used as conditional inputs for action generation within the ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 | 2. π0.5 [6] is a state-of-the-art VLA model consisting of both pretraining and post-training stages. | comparison identity and matched condition | p. 5 (4.2. Contact-rich Task Evaluation) |
 | Figure 3. Intuition. We visualize the attention maps in the Action Expert module to examine how the model's attention distribution and action reasoning vary ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | Table 3. Ablation study. Each variant selectively removes or changes components to assess their contributions. Components Tactile Format Tasks Tactile Gate Adaptive Cross Attention | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 | body limitation/failure cue | Future work may explore scaling this framework to more complex tasks and diverse real-world environments, further advancing general-purpose embodied intelligence. | p. 8 (5. Conclusion) |
 | body limitation/failure cue | Insufficient compliance could result in collisions with the neck of the vase. d). | p. 5 (4.1. Setup) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 | We use the hardware, AgiBot Genie1, featuring dual 7-DoF arms, equipped with a front-view camera and two cameras mounted on the wrist. | p. 5 (4.1. Setup) |
 | To enable the model to handle contact-rich tasks, we introduce an additional tactile encoder. | p. 4 (3.1. Framework of AT-VLA) |
 | The tactile encoder is a lightweight module composed of several MLP layers, designed to ensure fast inference while efficiently processing tactile signals. | p. 4 (3.1. Framework of AT-VLA) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,9 +139,8 @@ PDF body evaluation/result cue (p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (
 - **p. 5 / 4.1. Setup - extractive body cue:** Insufficient compliance could result in collisions with the neck of the vase. d).
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup), p. 5 (4.1. Setup), metrics p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.1. Setup), p. 4 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 5 (4.2. Contact-rich Task Evaluation), p. 5 (4.2. Contact-rich Task Evaluation), p. 4 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 6 (4.2. Contact-rich Task Evaluation), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

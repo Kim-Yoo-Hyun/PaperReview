@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 - **p. 8 / 4.5. Qualitative Analysis - extractive body cue:** We also conduct real-world experiments to further validate the effectiveness of our method.
 - **p. 7 / 4.3. Quantitative Comparison - extractive body cue:** HOV-SG [44] can be directly used for path planning, thus it is evaluated and compared with our method in this task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) A 3D scene. (b) The corresponding semantic 3D map based on point clouds (6.8M). (c) Our Octree-Graph where each object is represented ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 | 7, robots can accurately find the target and successfully navigate to it relying on our Octree-Graph. | definition/direction/unit from same section | p. 8 (4.5. Qualitative Analysis) |
 | We can see that our method exhibits more accurate object semantics and fewer incorrect segments than comparison methods. | definition/direction/unit from same section | p. 8 (4.5. Qualitative Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 | Row 0 serves as a fixed-threshold group-wise merging baseline with no extra design. | comparison identity and matched condition | p. 7 (4.4. Ablation Studies) |
 | However, at the same depth, the adaptive-octree exhibits a much higher mEOR compared to the octree. | comparison identity and matched condition | p. 7 (4.4. Ablation Studies) |
 | To further verify the efficiency of our method, we conduct path planning experiments using A* [9] and Jump Point Search [52] algorithms on the ... | comparison identity and matched condition | p. 8 (4.4. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 |---|---|---|
 | body limitation/failure cue | We also analyze the impact of hyper-parameter I, and the results in Rows 3-5 show that our method exhibits robustness to I ranging from ... | p. 7 (4.4. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,19 +133,10 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (4.4. Ablation
 | To merge the left segments, we compute an overall similarity ϕ = ϕiou geo + ϕior geo + ϕv sem + ϕc sem, and ... | p. 4 (3.3. Chronological Group-wise Segment Merging) |
 | The size of each node in this adaptive-octree can be computed as follows: dl = (bmax -bmin) /2l, (2) where bmax and bmin are ... | p. 5 (3.5. Octree-Graph Construction and Applications) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.4. Ablation Studies - extractive body cue:** We also analyze the impact of hyper-parameter I, and the results in Rows 3-5 show that our method exhibits robustness to I ranging from 100 ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics), p. 6 (4.2. Dataset and Evaluation Metrics), p. 6 (4.3. Quantitative Comparison), p. 7 (4.3. Quantitative Comparison), p. 8 (4.4. Ablation Studies), metrics p. 6 (4.3. Quantitative Comparison), p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics), p. 7 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 6 (4.3. Quantitative Comparison), baselines p. 6 (4.3. Quantitative Comparison), p. 8 (4.5. Qualitative Analysis), p. 6 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 7 (4.4. Ablation Studies), p. 8 (4.4. Ablation Studies), results p. 6 (Figure/Table caption), p. 7 (4.4. Ablation Studies), p. 6 (4.3. Quantitative Comparison), p. 7 (4.4. Ablation Studies), p. 5 (4.2. Dataset and Evaluation Metrics), p. 5 (4.2. Dataset and Evaluation Metrics).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

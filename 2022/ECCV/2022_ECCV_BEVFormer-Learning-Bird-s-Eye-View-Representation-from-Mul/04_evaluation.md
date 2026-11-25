@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 11 (Figure/Tabl
 - **p. 16 / A.2 VPN and Lift-Splat - extractive body cue:** The backbone and the task heads are the same as the BEVFomer for fair comparisons.
 - **p. 16 / A.3 Task Heads - extractive body cue:** Following [47], we use 900 object queries and keep 300 predicted boxes with highest confidence scores during inference.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We propose BEVFormer, a paradigm for autonomous driving that applies both Transformer and Temporal structure to generate bird's-eye-view (BEV) features from multi-camera inputs. ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 11 (Figure/Tabl
 | Figure 4: Visualization results of BEVFormer on nuScenes val set. We show the 3D bboxes predictions in multi-camera images and the bird's-eye-view. predicted boxes ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 | 5, for each class of the semantic map, we follow the mask decoder in [22] to use one learnable query to represent this class, ... | definition/direction/unit from same section | p. 16 (A.3 Task Heads) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 11 (Figure/Tabl
 | Figure 4: Visualization results of BEVFormer on nuScenes val set. We show the 3D bboxes predictions in multi-camera images and the bird's-eye-view. predicted boxes ... | comparison identity and matched condition | p. 11 (Figure/Table caption) |
 | Tab. 6. We ablate the scales of BEVFormer in three aspects, including whether to use multi-scale view features, the shape of BEV queries, and ... | comparison identity and matched condition | p. 11 (Figure/Table caption) |
 | We use VPN [30] and Lift-Splat [32] as two baselines in this work. | comparison identity and matched condition | p. 16 (A.2 VPN and Lift-Splat) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 11 (Figure/Tabl
 | body limitation/failure cue | To evaluate the performance of BEVFormer on objects with different occlusion levels, we divide the validation set of nuScenes into four subsets according to ... | p. 10 (C R101) |
 | body limitation/failure cue | Notably, compared to other attention mechanisms that rely on precise camera intrinsic and extrinsic, global attention is more robust to camera calibration. | p. 16 (A.4 Spatial Cross-Attention) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 11 (Figure/Tabl
 | We use the thresholds of 0.5 and 0.7 for 3D IoU to compute the mAP on Waymo dataset. | p. 7 (4 Experiments) |
 | The input BEV features Bt-1 for each encoder layer are the same and require no gradients. | p. 7 (4 Experiments) |
 | We employ the official codes1 in this work. | p. 16 (A.2 VPN and Lift-Splat) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 10 (Figure/Table caption), p. 11 (Figure/Tabl
 - **p. 16 / A.4 Spatial Cross-Attention - extractive body cue:** Notably, compared to other attention mechanisms that rely on precise camera intrinsic and extrinsic, global attention is more robust to camera calibration.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 17 (A.4 Spatial Cross-Attention), p. 16 (A.2 VPN and Lift-Splat), p. 16 (A.3 Task Heads), metrics p. 7 (4 Experiments), p. 10 (Figure/Table caption), p. 7 (4 Experiments), p. 16 (A.3 Task Heads), p. 9 (Figure/Table caption), p. 8 (4 Experiments), baselines p. 7 (4 Experiments), p. 7 (4 Experiments), p. 10 (Figure/Table caption), p. 11 (Figure/Table caption), p. 11 (Figure/Table caption), p. 16 (A.2 VPN and Lift-Splat), results p. 10 (Figure/Table caption), p. 11 (Figure/Table caption), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 11 (Figure/Table caption), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

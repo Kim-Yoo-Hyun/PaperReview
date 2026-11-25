@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 - **p. 7 / 5.2. Architecture Design Analysis - extractive body cue:** We use the ModelNet40 shape classification problem as a test bed for comparisons of those options, the following two control experiment will also use this ...
 - **p. 8 / 5.4. Time and Space Complexity Analysis - extractive body cue:** Empirically, PointNet is able to process more than one million points per second for point cloud classification (around 1K objects/second) or semantic segmentation (around 2 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Applications of PointNet. We propose a novel deep net architecture that consumes raw point cloud (set of points) without voxelization or rendering. It ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 | 30 40 50 60 70 80 90 0 0.05 0.1 Accuracy (%) Perturbation noise std 30 40 50 60 70 80 90 100 0 ... | definition/direction/unit from same section | p. 8 (5.2. Architecture Design Analysis) |
 | Figure 23. PointNet segmentation failure cases. In this figure, we summarize six types of common errors in our segmentation application. The prediction and the ... | definition/direction/unit from same section | p. 18 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 | We observe a 2.3% mean IoU improvement and our net beats the baseline methods in most categories. | comparison identity and matched condition | p. 6 (5.1. Applications) |
 | Our net achieves state-of-the-art among deep nets on 3D input. | comparison identity and matched condition | p. 5 (4.3. Theoretical Analysis) |
 | Then, (a) ∀S, ∃CS, NS ⊆X, f(T) = f(S) if CS ⊆T ⊆NS; (b) /CS/ ≤K input #views accuracy accuracy avg. class overall SPH ... | comparison identity and matched condition | p. 5 (4.3. Theoretical Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 | body limitation/failure cue | Our network is able to output smooth predictions and is robust to missing points and occlusions. | p. 7 (5.1. Applications) |
 | body limitation/failure cue | The robustness is gained in analogy to the sparsity principle in machine learning models. | p. 5 (4.3. Theoretical Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 | Empirically, PointNet is able to process more than one million points per second for point cloud classification (around 1K objects/second) or semantic segmentation (around ... | p. 8 (5.4. Time and Space Complexity Analysis) |
 | [9] introduces the idea of spatial transformer to align 2D images through sampling and interpolation, achieved by a specifically tailored layer implemented on GPU. | p. 4 (4.2. PointNet Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 23. PointNet segmentation failure cases. In this figure, we summarize six types of common errors in our segmentation application. The prediction and the ground-truth ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 7 (5.1. Applications), p. 5 (5.1. Application
 - **p. 5 / 4.3. Theoretical Analysis - extractive body cue:** The robustness is gained in analogy to the sparsity principle in machine learning models.
 
 - **Evidence anchors reviewed:** datasets p. 5 (5.1. Applications), p. 6 (5.1. Applications), p. 6 (5.1. Applications), p. 5 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 7 (5.2. Architecture Design Analysis), metrics p. 6 (5.1. Applications), p. 6 (5.1. Applications), p. 12 (Figure/Table caption), p. 7 (5.2. Architecture Design Analysis), p. 7 (5.2. Architecture Design Analysis), p. 8 (5.2. Architecture Design Analysis), baselines p. 7 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 6 (Figure/Table caption), p. 6 (5.1. Applications), p. 5 (4.3. Theoretical Analysis), p. 5 (4.3. Theoretical Analysis), results p. 7 (5.1. Applications), p. 5 (5.1. Applications), p. 6 (5.1. Applications), p. 7 (5.2. Architecture Design Analysis), p. 8 (5.4. Time and Space Complexity Analysis), p. 6 (5.1. Applications).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

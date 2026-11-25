@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiment), p. 10 (4 Experiment), p. 1
 - **p. 14 / 4 Experiment - extractive body cue:** 6, models often misdirect mechanically stable, collision-free grasps toward semantic distractors, particularly in scenes where multiple objects share high visual similarity.
 - **p. 37 / C.2 Training Configurations - extractive body cue:** To enforce precise spatial grounding, the dataset incorporates Chain-of-Thought (CoT) bounding box predictions, with the loss objectives scaled asymmetrically (1.0 for VLA action formulation and ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Real-world VLA deployment is severely bottlenecked by physical safety and semantic reasoning, constituting critical (a) VLA Safety Challenges. To systemati- cally evaluate these ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiment), p. 10 (4 Experiment), p. 1
 | While the policy is capable of generating collision-free trajectories, perceptual errors in multi-object scenes can lead the end-effector toward incorrect targets. yields a collision-free ... | definition/direction/unit from same section | p. 14 (4 Experiment) |
 | The F1 score is computed as \ mat hrm {F 1 }=\frac {2\mathrm {TP}}{2\mathrm {TP}+\mathrm {FP}+\mathrm {FN}}. | definition/direction/unit from same section | p. 38 (C.3 Additional Experimental Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiment), p. 10 (4 Experiment), p. 1
 | 4 summarize the comprehensive evaluation of the baseline models across our proposed multi-level safety-centric task taxonomy. | comparison identity and matched condition | p. 10 (4 Experiment) |
 | CuRobo serves as a privileged planner baseline. | comparison identity and matched condition | p. 12 (4 Experiment) |
 | Specifically, the introduction of unseen objects (Unseen Object) induces only a marginal CR increase from the 2.7% baseline to 3.3%. | comparison identity and matched condition | p. 13 (4 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiment), p. 10 (4 Experiment), p. 1
 | body limitation/failure cue | Meanwhile, LIBEROSafety remains a simulation-based benchmark; it cannot fully capture realworld contact dynamics, hardware latency, or unpredictable human behavior. | p. 14 (5 Conclusion) |
 | body limitation/failure cue | We introduce a UBDDL-powered parametric framework that procedurally generates diverse safety-critical scenes, together with a keypose-driven data generation pipeline that alleviates the scalability constraints ... | p. 14 (5 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiment), p. 10 (4 Experiment), p. 1
 | Each task is evaluated over 10 independent trials, and all reported results are averaged across three distinct random seeds to ensure statistical robustness. | p. 10 (4 Experiment) |
 | Metrics are reported as mean Success Rate (SR, %), with standard deviations computed across three training seeds shown in parentheses. | p. 11 (4 Experiment) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 39 / C.3 Additional Experimental Results - extractive body cue:** This suggests that broader trajectory coverage can improve safety-aware execution across multiple VLA architectures, although it does not fully eliminate collision or task-completion failures.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 11 (4 Experiment), p. 10 (4 Experiment), p. 1
 - **p. 14 / 5 Conclusion - extractive body cue:** We introduce a UBDDL-powered parametric framework that procedurally generates diverse safety-critical scenes, together with a keypose-driven data generation pipeline that alleviates the scalability constraints of ...
 
 - **Evidence anchors reviewed:** datasets p. 40 (C.3 Additional Experimental Results), p. 14 (4 Experiment), p. 37 (C.2 Training Configurations), p. 41 (C.3 Additional Experimental Results), p. 13 (4 Experiment), p. 13 (4 Experiment), metrics p. 11 (4 Experiment), p. 10 (4 Experiment), p. 38 (C.3 Additional Experimental Results), p. 10 (4 Experiment), p. 11 (4 Experiment), p. 32 (C.1 Model Details), baselines p. 13 (4 Experiment), p. 10 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment), p. 12 (4 Experiment), p. 13 (4 Experiment), results p. 11 (4 Experiment), p. 10 (4 Experiment), p. 12 (4 Experiment), p. 12 (4 Experiment), p. 13 (4 Experiment), p. 10 (4 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

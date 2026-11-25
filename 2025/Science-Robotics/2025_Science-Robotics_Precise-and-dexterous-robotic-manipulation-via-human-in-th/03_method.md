@@ -54,7 +54,6 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 - **p. 9 / 3.5. Training Process - extractive body cue:** Such an intervention strategy will cause the overestimation of the value function, particularly in the early stages of the training process; which can result in ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 - **p. 3 / 1. Introduction - extractive body cue:** This analysis explores why RL achieves a near-perfect success rate, and further examines the flexibility of RL policies to serve as a general-purpose vision-based policy ...
 - **p. 3 / 1. Introduction - extractive body cue:** Notably, our system is, to the best of our knowledge, the first to achieve dual-arm coordination with image inputs using RL in real-world settings, as ...
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,8 +92,6 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 - **p. 14 / 4.3. Experimental Results - extractive body cue:** We then run this policy and collect human expert corrections, such that the total amount of trials and interventions matches RL training.
 - **p. 13 / 4.3. Experimental Results - extractive body cue:** For each task, we report the success rate, cycle time, and training time.
 - **p. 15 / 4.3. Experimental Results - extractive body cue:** Additionally, it achieves such performance within practical training times, even for highdimensional observations and action spaces, such as those required for bimanual manipulation.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
@@ -120,23 +116,13 @@ PDF body method statement (p. 9 (3.5. Training Process), p. 9 (3.5. Training Pro
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 2: Overview of HIL-SERL. This figure illustrates the architecture of HIL-SERL, which comprises three primary components: the actor process, the learner process, and replay ...
 - **p. 21 / 6. Discussion - extractive body cue:** We also see some limitations of our approach.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), objective p. 8 (3.5. Training Process), p. 8 (3.5. Training Process), p. 9 (3.5. Training Process), p. 9 (3.5. Training Process), temporal p. 15 (4.3. Experimental Results), p. 7 (3.4. Human-in-the-Loop Reinforcement Learning), p. 19 (5.2. Reactive Policy and Predictive Policy), p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

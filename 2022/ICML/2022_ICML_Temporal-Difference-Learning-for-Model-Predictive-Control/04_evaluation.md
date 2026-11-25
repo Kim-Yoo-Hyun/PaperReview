@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 - **p. 9 / 5. Experiments - extractive body cue:** Methods are benchmarked on a single RTX3090 GPU.
 - **p. 5 / 5. Experiments - extractive body cue:** We seek to answer the following questions: -How does planning with TD-MPC compare to state-ofthe-art model-based and model-free approaches? -Are TOLD models capable of multi-task ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. (Top) We present a framework for MPC using a task-oriented latent dynamics model and value function learned jointly by temporal difference learning. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 | 10: zt = hθ(st) ◁Encode first observation 11: J = 0 ◁Initialize J for loss accumulation 12: for i = t...t + H do ... | definition/direction/unit from same section | p. 5 (5. Experiments) |
 | All three methods learn a model using a reconstruction loss, and select actions using either MPC or a learned policy. -MuZero (Schrittwieser et al., ... | definition/direction/unit from same section | p. 6 (5. Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 | However, we also observe that we can reduce the planning cost during inference by 50% (compared to during training) without a drop in performance ... | comparison identity and matched condition | p. 8 (5. Experiments) |
 | We choose these two benchmarks for their great task diversity and availability of baseline implementations and results. | comparison identity and matched condition | p. 5 (5. Experiments) |
 | See Appendix G for further discussion on baselines. | comparison identity and matched condition | p. 6 (5. Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 | body limitation/failure cue | Mean of 5 runs. have access to the egocentric camera fails. | p. 8 (5. Experiments) |
 | body limitation/failure cue | Performance of LOOP is similar to SAC, and MPC with a simulator (MPC:sim) performs well on locomotion tasks but fails in tasks with sparse ... | p. 8 (5. Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 | While baselines use task-dependent hyperparameters, TD-MPC uses the same hyperparameters for all tasks. | p. 7 (5. Experiments) |
 | Results are shown in Table 1. -12 image-based tasks from the DMControl Dreamer benchmark (3M environment steps). | p. 7 (5. Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5. Experiments - extractive body cue:** Due to dimensionality explosion under discretization, MuZero and EfficientZero cannot feasibly solve tasks with higher-dimensional action spaces, e.g., Walker Walk and Cheetah Run (A ∈R6), ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 17 (Figure/Tabl
 - **p. 8 / 5. Experiments - extractive body cue:** Performance of LOOP is similar to SAC, and MPC with a simulator (MPC:sim) performs well on locomotion tasks but fails in tasks with sparse rewards.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5. Experiments), p. 7 (5. Experiments), p. 7 (5. Experiments), p. 5 (5. Experiments), p. 6 (5. Experiments), p. 8 (5. Experiments), metrics p. 8 (5. Experiments), p. 8 (Figure/Table caption), p. 19 (Figure/Table caption), p. 17 (Figure/Table caption), p. 15 (Figure/Table caption), p. 5 (5. Experiments), baselines p. 7 (Figure/Table caption), p. 8 (5. Experiments), p. 7 (Figure/Table caption), p. 8 (5. Experiments), p. 5 (5. Experiments), p. 6 (5. Experiments), results p. 19 (Figure/Table caption), p. 17 (Figure/Table caption), p. 8 (5. Experiments), p. 8 (5. Experiments), p. 6 (5. Experiments), p. 7 (5. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

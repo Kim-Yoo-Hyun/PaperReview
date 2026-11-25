@@ -47,8 +47,6 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 - **p. 6 / VII. SIMULATION RESULTS - extractive body cue:** Task success rate (mean % over 60 test-time episodes in simulation of the best saved snapshot) vs. # of demonstration episodes (1, 10, 100, or ...
 - **p. 5 / VI. SIMULATION EXPERIMENTS - extractive body cue:** Episodes for fabric-cover are successful if the fabric covers the cube.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Example of a trained Transporter Network policy in action on the bag-items-1 task (see Table I). The setup involves a simulated UR5 robot ...
@@ -82,8 +80,6 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 | Fig. 3: The proposed Transporter-Goal-Split, applied to an example on bag-color-goal, where given the current image ot and goal og, the objective is to ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Fig. 6: The physical setup from a third-person view, using a Franka robot with a hand-mounted camera. The blue contours show the field-of-view for ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 | Models are trained for 20K iterations, with a batch size of 1 for the three Transporter models and 128 for the two ground truth ... | comparison identity and matched condition | p. 5 (VII. SIMULATION RESULTS) |
 | Ground truth baselines are tested in both settings, where in the goalconditioned case, we concatenate the ground truth pose information in both the current ... | comparison identity and matched condition | p. 5 (VI. SIMULATION EXPERIMENTS) |
 | For the first eight tasks listed, we benchmark with Transporter Networks [68] ("Transporter") and two baselines that use ground-truth pose information instead of images ... | comparison identity and matched condition | p. 6 (VII. SIMULATION RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 | body limitation/failure cue | Fig. 3: The proposed Transporter-Goal-Split, applied to an example on bag-color-goal, where given the current image ot and goal og, the objective is to ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Bags with handles (e.g., top right) or with more stiffness will be addressed in future work. | p. 5 (V. SIMULATOR AND TASKS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 - 개정판 v4의 케이블 검증은 서로 다른 목표 영상으로 실물 에피소드 10개를 실행했다. 케이블 마스크 IoU 0.25를 넘긴 시행은 7개였다. [PDF 7쪽](https://arxiv.org/pdf/2012.03385v4#page=7)
@@ -146,14 +133,6 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 | The project website contains supplementary material, including the appendix, code, data, and videos. | p. 1 (I. INTRODUCTION) |
 | Depending on the task stage and the gripped item, actions lift the gripped object to a different hard-coded height. | p. 5 (V. SIMULATOR AND TASKS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 5: Failure cases we observe from trained Transporter policies on bag tasks. Left: in all bag tasks, a failure case may result from covering ...
@@ -164,6 +143,5 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 - **p. 5 / V. SIMULATOR AND TASKS - extractive body cue:** Bags with handles (e.g., top right) or with more stiffness will be addressed in future work.
 
 - **Evidence anchors reviewed:** datasets p. 6 (VIII. PHYSICAL EXPERIMENTS AND RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS), p. 6 (VII. SIMULATION RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS), metrics p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS), p. 14 (Figure/Table caption), p. 2 (Figure/Table caption), p. 5 (VI. SIMULATION EXPERIMENTS), baselines p. 6 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS), p. 6 (VII. SIMULATION RESULTS), results p. 6 (VII. SIMULATION RESULTS), p. 6 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS), p. 5 (VII. SIMULATION RESULTS), p. 14 (Figure/Table caption), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

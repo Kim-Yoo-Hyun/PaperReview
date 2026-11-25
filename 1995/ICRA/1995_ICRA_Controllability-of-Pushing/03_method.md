@@ -52,7 +52,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (X. The 
 - **p. 1 / 1 Introduction - extractive body cue:** Other useful sources of control forces include gravity, the frictional kinematic constraints (floor, walls, obstacles) making up the robot's environment, and dynamic forces.
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 1 (1 Introduction), p. 1 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (X. The 
 - **p. 5 / C H can be followed - extractive body cue:** Because the two force directions are not opposite, the two velocity directions are also not opposite.
 - **p. 1 / 1 Introduction - extractive body cue:** In general, the manipulator can apply control forces through any of the frictional kinematic constraints that comprise the manipulator.
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (X. The 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** case, line, contact, find, pushing, directions, keep, object, fixed, pusher, sensorless, plans, reposition, among, obstacles, modeling, frictional, forces, however, move.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (X. The 
 - **p. 6 / C H can be followed - extractive body cue:** In fact, with no information about the support friction distribution s(x) other than the center of friction, no velocity direction is guaranteed to be in ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 9: A plan found using stable pushes from only two edges. the set of stable pushing directions using STABLE. In light of Proposition 2, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (X. The Lie algebra), p. 4 (C H can be followed), p. 5 (C H can be followed), p. 5 (C H can be followed), objective p. 1 (1 Introduction), p. 1 (1 Introduction), temporal p. 2 (1.1 Related work), p. 1 (1.1 Related work), p. 1 (1.1 Related work), p. 2 (1.1 Related work), p. 3 (1.1 Related work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

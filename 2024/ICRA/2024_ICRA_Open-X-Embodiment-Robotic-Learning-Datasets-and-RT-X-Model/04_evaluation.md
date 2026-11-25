@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIM
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** Our experiments answer three questions about the effect of X-embodiment training: (1) Can policies trained on our X-embodiment dataset effectively enable positive transfer, such that ...
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** For small-scale dataset experiments, we use Kitchen Manipulation [128], Cable Routing [129], NYU Door Opening [130], AUTOLab UR5 [132], and Robot Play [134].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe. The dataset represents diverse behaviors, robot embodiments ...
@@ -74,8 +72,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIM
 | Fig. 1: We propose an open, large-scale dataset for robot learning curated from 21 institutions across the globe. The dataset represents diverse behaviors, robot ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | For each small dataset domain, we compare the performance of the RT-1-X model, and for each large dataset we consider both the RT-1-X and ... | definition/direction/unit from same section | p. 5 (V. EXPERIMENTAL RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -85,13 +81,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIM
 | We also note that the 55B model has significantly higher success rate in the Emergent Skills compared to the 5B model (row (2) vs ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTAL RESULTS) |
 | Comparing rows (1) and (2), we find that RT-2-X outperforms RT-2 by ∼3×, suggesting that incorporating data from other robots into the training improves ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTAL RESULTS) |
 | Fig. 2: The Open X-Embodiment Dataset. (a): the dataset consists of 60 individual datasets across 22 embodiments. (b): the Franka robot has the largest ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIM
 | body limitation/failure cue | DISCUSSION, FUTURE WORK, AND OPEN PROBLEMS We presented a consolidated dataset that combines data from 22 robotic embodiments collected through a collaboration between 21 ... | p. 6 (V. EXPERIMENTAL RESULTS) |
 | body limitation/failure cue | 5: To assess transfer between embodiments, we evaluate the RT-2-X model on out-of-distribution skills. | p. 6 (V. EXPERIMENTAL RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIM
 | We introduce the Open X-Embodiment Repository (robotics-transformer-x.github.io) - an open-source repository which includes large-scale data along with pre-trained model checkpoints for X-embodied robot learning ... | p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY) |
 | More specifically, we provide and maintain the following open-source resources to the broader community: • Open X-Embodiment Dataset: robot learning dataset with 1M+ robot ... | p. 3 (III. THE OPEN X-EMBODIMENT REPOSITORY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / V. EXPERIMENTAL RESULTS - extractive body cue:** In the largedataset setting, the RT-1-X model does not outperform the RT-1 baseline trained on only the embodiment-specific dataset, which indicates underfitting for that model ...
@@ -156,9 +135,8 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIM
 - **p. 6 / V. EXPERIMENTAL RESULTS - extractive body cue:** 5: To assess transfer between embodiments, we evaluate the RT-2-X model on out-of-distribution skills.
 
 - **Evidence anchors reviewed:** datasets p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), metrics p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (V. EXPERIMENTAL RESULTS), baselines p. 5 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 3 (Figure/Table caption), results p. 6 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 5 (V. EXPERIMENTAL RESULTS), p. 6 (V. EXPERIMENTAL RESULTS), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

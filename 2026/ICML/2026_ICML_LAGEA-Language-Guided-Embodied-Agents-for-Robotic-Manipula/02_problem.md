@@ -63,8 +63,6 @@ PDF body contribution framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | Alignment enables control-relevant geometry: (a) success/failure logit margin increases over training, (b) policy success accelerates, and (c) BCE/InfoNCE ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 19 | Figure 9. Schema for structured feedback returned by the VLM Example structured feedback is shown for two Meta-World ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Reward Generation), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 5 (3.2. Reward Generation), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.2. Reward Generation), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 5 (3.2. Reward Generation), p. 1 (1. Introduction), objective p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 4 (3.1.3. FEEDBACK ALIGNMENT), p. 3 (3.1.2. KEY FRAME GENERATION).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

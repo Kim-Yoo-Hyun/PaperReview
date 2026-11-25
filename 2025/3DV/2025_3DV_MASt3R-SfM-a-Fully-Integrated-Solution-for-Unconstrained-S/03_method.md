@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (4.1. Scene graph), p. 4 (4.1. Scene graph), p. 
 - **p. 6 / 4.4. Refinement - extractive body cue:** This way, correspondences that do not overlap exactly are still both tied to the same anchor point with a high probability.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4. Proposed Method), p. 4 (4. Proposed Method), p. 5 (4.3. Coarse alignment), p. 5 (4.2. Local reconstruction), p. 6 (4.4. Refinement).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (4.1. Scene graph), p. 4 (4.1. Scene graph), p. 
 - **p. 1 / 1. Introduction - extractive body cue:** This approach has been the standard for several decades, yet it remains brittle and fails when the input images do not sufficiently overlap, or when ...
 - **p. 4 / 4.1. Scene graph - extractive body cue:** The output from the retrieval step is a similarity matrix 𝑆∈[0, 1]𝑁×𝑁.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (4.1. Scene graph), p. 4 (4.1. Scene graph), p. 
 
 - **p. 4 / 4.1. Scene graph - extractive body cue:** Note that this method is training-free, only requiring to compute the whitening matrix and the codebook once from a representative set of features.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** nutshell, consider, output, encoder, local, features, apply, feature, whitening, quantize, them, according, codebook, previously, obtained, k-means, clustering, then, aggregate, binarize.
 - **Relevant PDF headings:** 4. Proposed Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (4.1. Scene graph), p. 4 (4.1. Scene graph), p. 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Top: Relative rotation (RRA) and translation (RTA) accuracies on the CO3Dv2 dataset when varying the number of input views with random subsampling (the ...
 - **p. 11 / Figure/Table caption - extractive body cue:** Figure 5: Qualitative reconstruction results for MASt3R-SfM on ETH-3D (top) and Tanks&Temples (bottom). These are the raw outputs of the proposed SfM pipeline, without further ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Scene graph), p. 4 (4.1. Scene graph), p. 5 (4.2. Local reconstruction), p. 5 (4.2. Local reconstruction), objective p. 4 (4. Proposed Method), p. 4 (4. Proposed Method), p. 5 (4.3. Coarse alignment), p. 5 (4.4. Refinement), p. 6 (4.4. Refinement), p. 6 (4.4. Refinement), temporal p. 4 (4.1. Scene graph), p. 4 (4.1. Scene graph), p. 5 (4.3. Coarse alignment), p. 6 (5.1. Experimental setup), p. 6 (5.1. Experimental setup), p. 7 (5.2. Comparison with the state of the art).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

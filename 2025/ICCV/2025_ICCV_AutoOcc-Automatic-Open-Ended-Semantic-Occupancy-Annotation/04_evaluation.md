@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 - **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** Our method enables high-quality annotation of semantic 3D occupancy, capturing fine-grained geometry, structurally challenging regions, and dynamic objects across complex scenes. demonstrates better performance, based ...
 - **p. 6 / 4.1. Implementation Details - extractive body cue:** We set the resolutions of images as 900 × 1600 for Occ3D-nuScenes and 370 × 1226 for SemanticKITTI.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. AutoOcc is a fully automatic, vision-centric pipeline for open-ended semantic 3D occupancy annotation. Our method achieves more efficient and effective semantic occupancy auto-labeling ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 | Figure 3. Vision-Language Guided Gaussian Splatting (VL- GS) efficiently reconstructs semantic instances using a scalable strategy guided by semantic attention maps from VLMs. Addi- ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 6. Semantic occupancy of dynamics. AutoOcc accurately annotates the semantic occupancy of dynamic objects, maintains spatiotemporal consistency, and infers occluded parts. | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 | As shown in Table 2, using pure visual input, our method outperforms GaussianOcc [13], which utilizes vanilla GS as an intermediate representation. | comparison identity and matched condition | p. 7 (4.2. Performance Evaluation and Analysis) |
 | Table 1. Comparisons between AutoOcc and existing semantic occupancy annotation pipelines. The definitions of closed-set, open- set, and open-ended are introduced in Section 2. ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Comparisons of annotation efficiency. | comparison identity and matched condition | p. 8 (4.3. Zero-shot and Generalization Ability) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 | body limitation/failure cue | In extreme weather conditions (e.g., rain and nighttime), our method maintains robust performance, achieving annotation results comparable to or even surpassing manually labeled ground ... | p. 7 (4.2. Performance Evaluation and Analysis) |
 | body limitation/failure cue | While the aforementioned approaches do not require additional supervision, they struggle with efficiently modeling semantic geometry and neglect dynamic objects, leading to performance degradation. | p. 7 (4.2. Performance Evaluation and Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,20 +127,11 @@ PDF body evaluation/result cue (p. 6 (4.2. Performance Evaluation and Analysis),
 | Specifically, we use the attention map generation method [1, 29] to compute and aggregate the attentions from transformer decoder, with N output tokens S ... | p. 4 (3.1. Vision-Language Guidance) |
 | We aggregate the multi-frame of LiDAR points over time and compute the anchor centers pc = (xi c, yi c, zi c). | p. 5 (3.2. VL-GS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** In extreme weather conditions (e.g., rain and nighttime), our method maintains robust performance, achieving annotation results comparable to or even surpassing manually labeled ground truth.
 - **p. 7 / 4.2. Performance Evaluation and Analysis - extractive body cue:** While the aforementioned approaches do not require additional supervision, they struggle with efficiently modeling semantic geometry and neglect dynamic objects, leading to performance degradation.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Implementation Details), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 6 (4.1. Implementation Details), metrics p. 6 (Figure/Table caption), p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 6 (4.2. Performance Evaluation and Analysis), p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 2 (Figure/Table caption), p. 8 (4.3. Zero-shot and Generalization Ability), results p. 6 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 7 (4.2. Performance Evaluation and Analysis), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (4.2. Performance Evaluation and Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

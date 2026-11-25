@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 - **p. 6 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** 3) Are the resulting movements safe for execution on physical hardware, and are elegant/nimble/human-like?
 - **p. 7 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** (b/c) unnatural grasp for hammer (d) unnatural use of wrist for unlatching the door. be useful for training on the physical hardware.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We demonstrate a wide range of dexterous manipulation skills such as object relocation, in-hand manipulation, tool use, and opening doors using DRL methods. ...
@@ -80,20 +78,11 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 | Figure 3: In-hand manipulation - reposition the blue pen to match the orientation of the green target. The base of the hand is fixed. ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 10: Performance of RL with demonstrations methods - DAPG(ours) and DDPGfD. DAPG significantly outperforms DDPGfD. For DAPG, we plot the performance of the ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Figure 10: Performance of RL with demonstrations methods - DAPG(ours) and DDPGfD. DAPG significantly outperforms DDPGfD. For DAPG, we plot the performance of the ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -121,8 +110,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 | body limitation/failure cue | The mental models of solution strategies that humans have for these tasks are indeed quite robust. | p. 7 (2) Do the resulting policies exhibit desirable properties like) |
 | body limitation/failure cue | Furthermore, we take the additional step of analyzing the robustness of these policies to variations in environments that were not experienced during training. | p. 7 (2) Do the resulting policies exhibit desirable properties like) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -133,14 +120,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 | 3) Are the resulting movements safe for execution on physical hardware, and are elegant/nimble/human-like? | p. 6 (2) Do the resulting policies exhibit desirable properties like) |
 | (b/c) unnatural grasp for hammer (d) unnatural use of wrist for unlatching the door. be useful for training on the physical hardware. | p. 7 (2) Do the resulting policies exhibit desirable properties like) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. RESULTS AND DISCUSSION - extractive body cue:** Subsequently, we demonstrate the benefits of incorporating human demonstrations with regard to faster learning, increased robustness of trained policies, and ability to cope with sparse ...
@@ -149,9 +128,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 6 (2) Do the res
 - **p. 7 / 2) Do the resulting policies exhibit desirable properties like - extractive body cue:** Furthermore, we take the additional step of analyzing the robustness of these policies to variations in environments that were not experienced during training.
 
 - **Evidence anchors reviewed:** datasets p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), metrics p. 6 (V. RESULTS AND DISCUSSION), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 6 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 7 (2) Do the resulting policies exhibit desirable properties like), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

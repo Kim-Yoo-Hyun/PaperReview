@@ -57,7 +57,6 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 - **p. 6 / 4.2. Soft Actor-Critic - extractive body cue:** Soft Actor-Critic 0.0 0.2 0.4 0.6 0.8 1.0 million steps 0 1000 2000 3000 4000 average return (a) Hopper-v1 0.0 0.2 0.4 0.6 0.8 1.0 ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 4 (4.1. Derivation of Soft Policy Iteration), p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 5 (4.2. Soft Actor-Critic).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 - **p. 2 / 1. Introduction - extractive body cue:** However, the on-policy variants suffer from poor sample complexity for the reasons discussed above, while the off-policy variants require complex approximate inference procedures in continuous ...
 - **p. 2 / 1. Introduction - extractive body cue:** This algorithm extends readily to very complex, high-dimensional tasks, such as the Humanoid benchmark (Duan et al., 2016) with 21 action dimensions, where off-policy methods ...
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 - **p. 6 / 5. Experiments - extractive body cue:** The source code of our SAC implementation1 and videos2 are available online.
 - **p. 7 / 5.1. Comparative Evaluation - extractive body cue:** We train five different instances of each algorithm with different random seeds, with each performing one evaluation rollout every 1000 environment steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** will, first, present, derivation, verify, corresponding, algorithm, converges, optimal, policy, density, class, then, practical, deep, reinforcement, learning, theory, Soft, Actor-Critic.
 - **Relevant PDF headings:** 4. From Soft Policy Iteration to Soft (p. 3); 4.1. Derivation of Soft Policy Iteration (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4
 - **p. 8 / 5.2. Ablation Study - extractive body cue:** We found this variant to benefit from taking more than one gradient step between the environment steps, which can improve performance but also increases the ...
 - **p. 8 / 6. Conclusion - extractive body cue:** Our results suggest that stochastic, entropy maximizing reinforcement learning algorithms can provide a promising avenue for improved robustness and stability, and further exploration of maximum ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (4. From Soft Policy Iteration to Soft), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), p. 4 (4.2. Soft Actor-Critic), p. 5 (4.2. Soft Actor-Critic), p. 3 (4. From Soft Policy Iteration to Soft), objective p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 4 (4.1. Derivation of Soft Policy Iteration), p. 5 (4.2. Soft Actor-Critic), p. 6 (4.2. Soft Actor-Critic), temporal p. 7 (5.1. Comparative Evaluation), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 7 (5.1. Comparative Evaluation), p. 8 (5.2. Ablation Study), p. 8 (5.2. Ablation Study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

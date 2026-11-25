@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK
 - **p. 6 / 4.3. Low-Level RK-Diffuser - extractive body cue:** This allows us to train a jointposition trajectory which better regularizes the joint positions with the kinematics as an inductive bias.
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 4 (4.2. High-Level Next-Best Pose Agent), p. 4 (4.2. High-Level Next-Best Pose Agent), p. 5 (4.3. Low-Level RK-Diffuser), p. 5 (4.3. Low-Level RK-Diffuser), p. 6 (4.3. Low-Level RK-Diffuser).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK
 - **p. 4 / 4.2. High-Level Next-Best Pose Agent - extractive body cue:** For the high-level policy ahigh = (apose, agrip) ∼πhigh(a / o, l), we utilise a next-best pose agent [17] with structured action representations.
 - **p. 5 / 4.3. Low-Level RK-Diffuser - extractive body cue:** For action trajectories sampled from each learned policy, a0 pose ∼pθ(a0 pose / a1 pose, Cpose) and a0 joint ∼pϕ(a0 joint / a1 joint, Cpose), ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK
 - **p. 3 / 3.1. Diffusion Models - extractive body cue:** The model can be trained by maximising the evidence lower bound (ELBO) \math bb {E}_ { x_ 0 }[\ log p_\t heta (x^0) ] \ge ...
 - **p. 6 / 4.3. Low-Level RK-Diffuser - extractive body cue:** During training, most of the manipulation algorithms use sampling-based motion planners whose trajectories might be sub-optimal.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb, left, frac, theta, right, label, context, decision, making, diffusion, policies.
 - **Relevant PDF headings:** 2.2. Diffusion Models (p. 2); 3.1. Diffusion Models (p. 3); 4. Hierarchical Diffusion Policy (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** For RKD-RGB, we discard the depth information and use a pretrained ResNet50 to extract the image features; for RKD-ResNet, we ablate using a ResNet to ...
 - **p. 8 / 6. Conclusion - extractive body cue:** Although we have demonstrated some robustness of RK-Diffuser to out-of-distribution poses, the nature of behaviour cloning for longer-horizon tasks suggests that error accumulation could lead ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK-Diffuser), p. 5 (4.3. Low-Level RK-Diffuser), p. 4 (4.1. Dataset Preparation), p. 4 (4. Hierarchical Diffusion Policy), p. 6 (4.3. Low-Level RK-Diffuser), objective p. 4 (4.2. High-Level Next-Best Pose Agent), p. 5 (4.3. Low-Level RK-Diffuser), p. 5 (4.3. Low-Level RK-Diffuser), p. 4 (4.2. High-Level Next-Best Pose Agent), p. 6 (4.3. Low-Level RK-Diffuser), p. 6 (4.3. Low-Level RK-Diffuser), temporal p. 6 (5.2. Simulation Experiments), p. 8 (5.4. Real Robot Experiment), p. 6 (4.4. Practical Implementation Choices), p. 7 (5.2. Simulation Experiments), p. 7 (5.2. Simulation Experiments), p. 3 (3.1. Diffusion Models).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

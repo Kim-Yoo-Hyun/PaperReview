@@ -57,7 +57,6 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 
 - **PDF p. 6, §3.2 tracking (DOC-QA2 원문 대조):** sMOTA_r=max(0,1−(IDS_r+FP_r+FN_r−(1−r)P)/(rP)). Recall [0.1,1]에서 40-point interpolation하고 해당 값들을 평균한 sAMOTA를 primary tracking metric으로 사용한다.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 6 (3.2. Tracking), p. 4 (2. The nuScenes dataset), p. 6 (3.1. Detection).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 
 - **p. 3 / 1.2. Related datasets - extractive body cue:** KITTI [32] was the pioneering multimodal dataset providing dense pointclouds from a lidar sensor as well as front-facing stereo images and GPS/IMU data.
 - **p. 4 / 2. The nuScenes dataset - extractive body cue:** Sensor data in nuScenes. erage of 16km/h).
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 
 - **p. 7 / 4.1. Baselines - extractive body cue:** From the detection challenge, we pick the best performing lidar method (Megvii [90]), the fastest reported method at inference time (PointPillars [51]), as well as ...
 - **p. 2 / 1.1. Contributions - extractive body cue:** All data, code, and information is made available online3.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Furthermore, reflectance, lidar, important, feature, algorithms, rely, increasingly, machine, learning, drives, need, benchmark, datasets, enables, research, multiple, tasks, object, detection.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 
 - **p. 16 / Figure/Table caption - extractive body cue:** Figure 16. PointPillars [51] detection performance vs. semantic prior map location on the val set. For the best lidar network (10 li- dar sweeps with ...
 - **p. 8 / 5. Conclusion - extractive body cue:** Future work will add image-level and pointlevel semantic labels and a benchmark for trajectory prediction [63].
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1.1. Contributions), p. 2 (1. Introduction), p. 3 (1.2. Related datasets), p. 3 (2. The nuScenes dataset), objective p. 5 (3.1. Detection), p. 1 (1. Introduction), p. 4 (2. The nuScenes dataset), p. 5 (2. The nuScenes dataset), p. 6 (3.2. Tracking), temporal p. 6 (4.1. Baselines), p. 7 (4.2. Analysis), p. 7 (4.2. Analysis), p. 4 (2. The nuScenes dataset), p. 1 (Abstract), p. 2 (1.1. Contributions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

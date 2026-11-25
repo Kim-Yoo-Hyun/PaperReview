@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 - **p. 8 / X. Zhu et al - extractive body cue:** We propose a multimodal mask distillation loss to train our 3D mask generator:
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 4 (X. Zhu et al), p. 5 (X. Zhu et al), p. 8 (X. Zhu et al), p. 8 (X. Zhu et al).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 - **p. 6 / X. Zhu et al - extractive body cue:** The 3D branch utilizes the point cloud and 2D mask embeddings as input.
 - **p. 6 / X. Zhu et al - extractive body cue:** The 3D branch takes the point cloud and the 2D mask embeddings as inputs.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 - **p. 3 / 1 Introduction - extractive body cue:** In summary, we make the following contributions: - To the best of our knowledge, we are the first to leverage text-image diffusion to perform open-vocabulary ...
 - **p. 4 / X. Zhu et al - extractive body cue:** (b) Directly using a 3D mask proposal network trained on labeled 3D data to produce class-agnostic masks, and then pool corresponding representations from the CLIP ...
 - **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
-- **p. 3 / 1 Introduction - extractive body cue:** The frozen features extracted from the decoder of the U-Net in the diffusion model are trained with generative objectives, and cannot be directly used for ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, make, following, contributions, best, knowledge, first, leverage, text-image, diffusion, perform, open-vocabulary, semantic, segmentation, novel, mask, distillation, train, prediction, model.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +115,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 H
 - **p. 13 / Figure/Table caption - extractive body cue:** Fig. 4: Qualitative results from our model and OpenScene on zero-shot se- mantic segmentation. We visualize the segmentation results on the validation set of ScanNet200 ...
 - **p. 13 / 5 Conclusion - extractive body cue:** There are several limitations of the proposed model.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 1 (4 HKUST), p. 3 (1 Introduction), p. 8 (X. Zhu et al), p. 2 (1 Introduction), objective p. 3 (1 Introduction), p. 4 (X. Zhu et al), p. 4 (X. Zhu et al), p. 5 (X. Zhu et al), p. 7 (X. Zhu et al), p. 8 (X. Zhu et al), temporal p. 6 (X. Zhu et al), p. 7 (X. Zhu et al), p. 8 (X. Zhu et al), p. 11 (X. Zhu et al).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

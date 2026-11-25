@@ -50,8 +50,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 - **p. 8 / 4 Experiments - extractive body cue:** We conduct the qualitative comparisons on the DTU dataset and the BlendedMVS dataset in both settings, w/ mask and w/o mask, in Figure 4 and ...
 - **p. 9 / 4 Experiments - extractive body cue:** Our method works better for the objects with abrupt depth changes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Illustration of the surface rendering and volume rendering. (b) A toy example of bamboo planter, where there are occlusions on the top ...
@@ -85,8 +83,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 | (1) The state-of-the-art surface rendering approach - IDR [49]: IDR can reconstruct surface with high quality but requires foreground masks as supervision; Since IDR ... | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | As shown in Figure 6, the quantitative result of naive solution is worse than our weight choice (e) in terms of the Chamfer distance. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -97,13 +93,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 | More details of the baseline methods are included in the supplementary material. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | Regarding the w/o mask setting, we visually compare our method with NeRF and COLMAP in the setting of w/o mask in Figure 5, which ... | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Figure 10: The section points and mid-points defined on a ray. D.2 Baselines IDR[49]. To implement IDR, we use their officially released codes2 and ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 | body limitation/failure cue | Figure 1: (a) Illustration of the surface rendering and volume rendering. (b) A toy example of bamboo planter, where there are occlusions on the ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: Illustration of (a) weight bias of naive solution, and (b) the weight function defined in our solution, which is unbiased in the ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 | Upon successful minimization of a loss function based on this supervision, the zero-level set of the network-encoded SDF is expected to represent an accurately ... | p. 4 (3 Method) |
 | Volume-rendering weight w(t)=T(t)ρ(t), accumulated transmittance T(t)=exp(−∫₀ᵗρ(u)du). | PDF p. 5 §3; rendering definition이며 metric 결과가 아님 |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5 Conclusion - extractive body cue:** One limitation of our method is that although our method does not heavily rely on correspondence matching of texture features, the performance would still degrade ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 8 (4 Experiments), p. 2
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Illustration of (a) weight bias of naive solution, and (b) the weight function defined in our solution, which is unbiased in the first-order ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), metrics p. 8 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), p. 19 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 8 (4 Experiments), p. 2 (Figure/Table caption), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 18 (Figure/Table caption), results p. 8 (4 Experiments), p. 8 (4 Experiments), p. 20 (Figure/Table caption), p. 2 (Figure/Table caption), p. 9 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

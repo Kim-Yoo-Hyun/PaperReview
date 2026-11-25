@@ -54,7 +54,6 @@ PDF body method statement (p. 10 (Method), p. 10 (Method), p. 11 (Method), p. 12
 - **p. 10 / Method - extractive body cue:** To demonstrate BridgeVLA's advantages over existing manipulation policy, we compare it with four types of representative methods: 1) SpatialVLA [16]: A state-of-the-art 3D VLA model ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 11 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 10 (Method), p. 10 (Method), p. 11 (Method), p. 12
 - **p. 3 / 1 Introduction - extractive body cue:** In summary, the contributions of this paper are threefold: • We introduce BridgeVLA, a novel 3D VLA model that efficiently and effectively learns 3D robot ...
 - **p. 10 / Method - extractive body cue:** 3) ACT [24]: A state-of-the-art 2D non-VLA model using a Conditional Variational Autoencoder (CVAE) to model action distributions.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 10 (Method), p. 10 (Method), p. 11 (Method), p. 12
 - **p. 11 / Method - extractive body cue:** The ablated model was also harder to train and more sensitive to hyperparameters-requiring a batch size of 192 and careful learning rate tuning-while our original ...
 - **p. 7 / 4 Experiments - extractive body cue:** Specifically, our evaluation includes three steps: 1) train the model with the original RLBench data without perturbations (100 trajectories per task) on 20 tasks, 2) ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** demonstrate, BridgeVLA, advantages, over, existing, manipulation, policy, compare, four, types, representative, methods, SpatialVLA, state-of-the-art, VLA, model, incorporates, information, through, Ego3D.
 - **Relevant PDF headings:** Method (p. 9); Method (p. 10); Method (p. 20); Method (p. 21).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 10 (Method), p. 10 (Method), p. 11 (Method), p. 12
 - **p. 8 / 4 Experiments - extractive body cue:** These results address Q3, showcasing that BridgeVLA possesses strong robustness against visual perturbation.
 - **p. 9 / Method - extractive body cue:** Distractor, Lighting, Background, and Height aim to evaluate the robustness 9
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 10 (Method), p. 10 (Method), p. 11 (Method), p. 12 (Method), p. 11 (Method), p. 12 (Method), objective p. 11 (Method), p. 11 (Method), p. 12 (Method), p. 10 (Method), temporal p. 7 (4 Experiments), p. 7 (4 Experiments), p. 9 (Method), p. 9 (Method), p. 12 (Method), p. 4 (3.1 Preliminaries).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

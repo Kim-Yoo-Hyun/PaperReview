@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (IV. METHODS), p. 1 (I. INTRODUCTION), p. 1 
 | body cue at p. 5 | [25], where each rollout is started from some states sampled from the reference motions and is terminated when ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | A benefit of the fixed covariance is that because of the noise constantly injected into the system during ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 locomotion writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 2 (III. PRELIMINARIES), p. 2 (III. PRELIMINARIES). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ locomotion writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (III. PRELIMINARIES), p. 2 (III. PRELIMINARIES), p. 3 (III. PRELIMINARIES), interface p. 3 (IV. METHODS), p. 3 (IV. METHODS), p. 2 (III. PRELIMINARIES), p. 2 (III. PRELIMINARIES), objective p. 4 (IV. METHODS), p. 5 (VI. POLICY COMPRESSION AND DISTILLATION), p. 4 (IV. METHODS), p. 3 (IV. METHODS), p. 3 (IV. METHODS).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

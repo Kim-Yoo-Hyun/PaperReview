@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** We design four distinct real-world tasks to evaluate a range of core manipulation capabilities: Place Tomato in Pan, a foundational pick-and-place task requiring reasoning about ...
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** Real World Experiments (Q3) Our framework is tested on four diverse real-world manipulation tasks to validate its practical applicability.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to generate ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2: Overview of the Goal-VLA framework, which decouples the manipulation pipeline into three stages: (a) Goal State Reasoning: A VLM generates a goal ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | As shown in Table III, our method achieves a 60% average success rate, significantly outperforming baselines like MOKA (22.5%) and MolmoAct (27.5%). | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
 | This suggests a fundamental weakness in the baselines' intermediate representations. | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | Starting from a 40.0% success rate for the baseline model, adding Input Enhancement provides the most significant single improvement (+27.5pp), while the Reflector alone ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | body limitation/failure cue | Fig. 1: Goal-VLA maps a single-view RGB-D image and a language instruction to executable manipulation actions. Our approach employs an object-centric world model to ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | To robustly assess performance and account for variations in object placement, each task is evaluated across 10 random seeds. | p. 6 (IV. EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | The objective of this module is to compute the rotation R ∈SO(3) and translation t ∈R3 that maps the object from its initial pose ... | p. 4 (III. METHOD) |
 | (b) Spatial Grounding: The object's transformation is computed by feature matching and point cloud registration between the initial and goal states. | p. 4 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Reflection's Necessary: Figure 3 highlights a typical failure mode of image generation.
@@ -156,6 +135,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** To robustly assess performance and account for variations in object placement, each task is evaluated across 10 random seeds.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

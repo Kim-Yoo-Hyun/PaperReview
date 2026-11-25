@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** Real Robot The attached video shows demonstrations of trajectories planned using STOMP in a household environment, executed 1This result was obtained using the standard CHOMP ...
 - **p. 4 / V. EXPERIMENTS - extractive body cue:** STOMP is an algorithm that performs local optimization, i.e. it finds a locally optimum trajectory rather than a global one.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Fig. 2. (a) Each curve depicts a column/row of the symmetric matrix R-1. (b) 20 random samples of ϵ, drawn from a zero mean ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 3. (a) Simulation setup used to evaluate STOMP as a robot arm motion planner. (b) Initial straight-line trajectory between two shelves. (c) Trajectory ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | The exploration noise magnitude for STOMP, and the gradient descent step size for CHOMP were both tuned to achieve good performance without instability. | comparison identity and matched condition | p. 5 (V. EXPERIMENTS) |
 | Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Fig. 5. (a) Iterative evolution of trajectory costs for 10 trials of STOMP on a constrained planning task. (b) Feed-forward torques used in the ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | body limitation/failure cue | An additional advantage is that no gradient step-size parameter is required; the only open parameter in this algorithm is the magnitude of the exploration ... | p. 3 (5) Update θ ←θ + δθ) |
 | body limitation/failure cue | Additionally, since the convex combination of noise is smoothed through the M matrix, the resulting updated trajectory smoothly touches the joint limit as opposed ... | p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 | Scaling this to multiple dimensions simply involves performing the sampling and update steps for each dimension independently in each iteration. | p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |
 | The signed EDT d(x), computed throughout the voxel grid, provides information about the distance to the boundary of the closest obstacle, both inside and ... | p. 4 (IV. MOTION PLANNING FOR A ROBOT ARM) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. (a) The Willow Garage PR2 robot manipulating objects in a household environment. (b) Simulation of the PR2 robot avoiding a pole in a ...
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p.
 - **p. 4 / IV. MOTION PLANNING FOR A ROBOT ARM - extractive body cue:** Additionally, since the convex combination of noise is smoothed through the M matrix, the resulting updated trajectory smoothly touches the joint limit as opposed to ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), metrics p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 4 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption), baselines p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), results p. 5 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 4 (V. EXPERIMENTS), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -63,8 +63,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 4 (1 Introduction), p. 
 | body cue at p. 26 | Figure 8: Illustration of obstacle avoidance with a coupling term. The obstacle is the large (red) sphere in ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 29 | In this section, we illustrate how both temporal and spatial coupling can be used together to model disturbance ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 control writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 8 (2 A Learnable Nonlinear Attractor Systems), p. 8 (2 A Learnable Nonlinear Attractor Systems). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ control writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), interface p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 6 (2 A Learnable Nonlinear Attractor Systems), p. 8 (2 A Learnable Nonlinear Attractor Systems), p. 8 (2 A Learnable Nonlinear Attractor Systems), objective p. 2 (Body text (section not recovered)), p. 3 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 4 (2 A Learnable Nonlinear Attractor Systems), p. 5 (2 A Learnable Nonlinear Attractor Systems).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

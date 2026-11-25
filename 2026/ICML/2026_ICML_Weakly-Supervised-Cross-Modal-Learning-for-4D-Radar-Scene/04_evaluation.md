@@ -44,8 +44,6 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 - **p. 8 / 4.1. Main Results - extractive body cue:** Lsc is the soft chamfer loss without instance-aware guidance and Lss is the KNN-based spatial smoothness loss; both are from RaFlow (Ding et al., 2022). ...
 - **p. 8 / 4.1. Main Results - extractive body cue:** Ablation Study on Loss Terms on VoD validation set.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison between existing self-supervised (SSF) and cross-modal supervised (CMS) radar scene flow estimation settings and our weakly supervised cross-modal learning setting. SF , ...
@@ -79,8 +77,6 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 | Figure 8. Visualization of failure cases on VoD validation set. Each row displays a driving scenario and regions with large scene flow estimation errors ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Figure 1. Comparison between existing self-supervised (SSF) and cross-modal supervised (CMS) radar scene flow estimation settings and our weakly supervised cross-modal learning setting. SF ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 | When compared to LiDAR-based approaches, our method even surpasses the best fully supervised model, PVRAFT (Wei et al., 2021), achieving performance improvements across all ... | comparison identity and matched condition | p. 7 (4.1. Main Results) |
 | As shown in the last section of Table 2, when replacing the backbone of PointPWC and RaFlow with IterFlow while keeping their respective loss ... | comparison identity and matched condition | p. 8 (4.1. Main Results) |
 | Ablation Study on Loss Terms on VoD validation set. | comparison identity and matched condition | p. 8 (4.1. Main Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 | body limitation/failure cue | This result highlights that our ball query-based correlation operation is more robust in sparse radar scenarios than the KNN-based and voxelbased correlation modules used ... | p. 7 (4.1. Main Results) |
 | body limitation/failure cue | Finally, comparing rows 5 and 7, we find that using LiDARbased losses in (Wu et al., 2020) to train our IterFlow results in dramatic ... | p. 8 (4.1. Main Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 | During training, the consecutive radar point clouds Pt and Pt+1 are fed into IterFlow to generate the final scene flow prediction FK ∈RN1×3 after ... | p. 3 (3. Method) |
 | Here φ(·) represents the multi-scale encoder. | p. 4 (3.1. IterFlow) |
 | Meanwhile, the coarse flow vector Fk-1 is also encoded via an MLP. | p. 4 (3.1. IterFlow) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,6 +142,5 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 - **p. 8 / 4.1. Main Results - extractive body cue:** Finally, comparing rows 5 and 7, we find that using LiDARbased losses in (Wu et al., 2020) to train our IterFlow results in dramatic performance ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. Main Results), p. 7 (4.1. Main Results), p. 8 (4.1. Main Results), p. 8 (4.1. Main Results), metrics p. 8 (4.2. Ablation Studies), p. 7 (4.1. Main Results), p. 6 (4. Experiments), p. 7 (4.1. Main Results), p. 8 (4.1. Main Results), p. 6 (4. Experiments), baselines p. 6 (4. Experiments), p. 6 (4.1. Main Results), p. 7 (4.1. Main Results), p. 7 (4.1. Main Results), p. 8 (4.1. Main Results), p. 8 (4.1. Main Results), results p. 8 (4.2. Ablation Studies), p. 7 (4.1. Main Results), p. 7 (4.1. Main Results), p. 8 (4.1. Main Results), p. 6 (4. Experiments), p. 13 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

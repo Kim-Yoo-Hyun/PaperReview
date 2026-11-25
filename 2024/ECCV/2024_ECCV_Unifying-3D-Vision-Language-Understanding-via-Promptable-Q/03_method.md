@@ -54,7 +54,6 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** The prompt-guided query learning module takes in zero-initialized instance queries and progressively retrieves task-relevant information from aligned scene features under the guidance of task prompts.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 8 (3 Method), p. 8 (3 Method), p. 6 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** Point Cloud To process the point cloud of a 3D scene, we first partition the full point cloud into the pre-generated segments.
 - **p. 1 / 1 Introduction - extractive body cue:** In recent years, numerous tasks and datasets for benchmarking 3D scene understanding with languages have been proposed, including 3D semantic segmentation [52], 3D vision-language ⋆Work ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p.
 - **p. 8 / 3 Method - extractive body cue:** During training, we follow [54, 70] to apply Hungarian Matching between queries and ground-truth objects, then calculate the mask loss: \ma t hcal {L} _ ...
 - **p. 5 / 3 Method - extractive body cue:** We encode the textual and visual prompts by the pre-trained CLIP
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Within, decoder, layer, instance, queries, retrieve, task-relevant, information, first, attending, scene, features, parallel, then, task, prompt, followed, spatial, self-attention, model.
 - **Relevant PDF headings:** 3 Method (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p.
 - **p. 10 / 4 Experiments - extractive body cue:** However, our model trained only on the Multi3DRefer dataset "PQ3D (sg.)" exhibits better performance in the ZT and MT metric, but falls short of the ...
 - **p. 11 / 4 Experiments - extractive body cue:** As our model utilizes the CLIP text encoder, it may face limitations in understanding long sentences.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 8 (3 Method), objective p. 8 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 6 (3 Method), temporal p. 1 (1 Introduction), p. 5 (2 Related Work), p. 5 (2 Related Work), p. 14 (4. Adjust the temperature or settings of the heater).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

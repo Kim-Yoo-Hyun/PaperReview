@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Therefore, our approach is not limited to robotic applications, demonstrating its versatility and applicability to graphics-related tasks as well.
 - **p. 9 / 5 EXPERIMENTS - extractive body cue:** Many state-of-the-art networks in robot learning build upon architectural designs originally developed for other domains, such as vision and language.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: We introduce the Neural Rodrigues Operator, a learnable extension of the classical Rodrigues' Rotation Formula from robot control, where the original coefficients are ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | We use the standard protocol and report metrics on 3D joint and 3D mesh accuracy. | definition/direction/unit from same section | p. 9 (5 EXPERIMENTS) |
 | Moreover, its training loss decreases much faster (Figure 3b), demonstrating better data efficiency. | definition/direction/unit from same section | p. 6 (5 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | GCN baselines produce visible artifacts, and all four baseline methods accumulate substantial error near the fingertips. | comparison identity and matched condition | p. 7 (5 EXPERIMENTS) |
 | Baseline architectures include the U-Net and Transformer designs from the original Diffusion Policy paper. | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
 | We integrate the Rodrigues Network as a backbone into the Diffusion Policy (Chi et al., 2023), one of the state-of-the-art imitation learning frameworks, and ... | comparison identity and matched condition | p. 8 (5 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 |---|---|---|
 | body limitation/failure cue | Our method replaces these with the Rodrigues Network, which takes the current observation, denoising timestep, and a noisy action as inputs and predicts the ... | p. 8 (5 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,19 +138,10 @@ PDF body evaluation/result cue (p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8
 | Additionally, we show our network achieving state-of-the-art results in human hand pose estimation from images, where the articulated actor is no longer a robot, ... | p. 2 (1 INTRODUCTION) |
 | Given the pose of the base link P0, the poses of the descendant links can be computed recursively from parents to children. | p. 3 (3.1 BACKGROUND) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** Our method replaces these with the Rodrigues Network, which takes the current observation, denoising timestep, and a noisy action as inputs and predicts the corresponding ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), metrics p. 8 (5 EXPERIMENTS), p. 9 (Figure/Table caption), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), baselines p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), results p. 9 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 6 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

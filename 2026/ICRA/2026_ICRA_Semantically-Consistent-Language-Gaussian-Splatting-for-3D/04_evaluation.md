@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 5 / V. EXPERIMENTS - extractive body cue:** Additionally, we report results on the Replica [28] dataset, which has labeled point clouds
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** I, we show the results on the LERF dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Visualization of the language embedding supervision. For the "red bag" circled in yellow, the ground-truth constructed by LangSplat [23] is inconsistent across frames, ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | Fig. 2: IoU metric per query vs. cosine similarity thresholds for the standard querying method. We observe that it does not have a consistent ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Fig. 3: Overview of the proposed method. In Sec. IV-A, we present a masklet extraction algorithm (Alg. 1) that leverages Segment Anything Models to ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | We observe that Ours consistently outperforms LangSplat-m and, on average, is better than OpenGaussian, achieving an improvement of +4.14 in mIoU and +10.66 in ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
 | To further benchmark the performance, we included more baseline methods modified (m) for direct 3D querying: LangSplatm [23], which also trains a language 3D ... | comparison identity and matched condition | p. 6 (V. EXPERIMENTS) |
 | We also see that our proposed GT-anchored query significantly outperforms the canonical query. | comparison identity and matched condition | p. 7 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | body limitation/failure cue | Therefore, any high threshold works well, which improves the queries' reliability and robustness. | p. 5 (IV. METHOD) |
 | body limitation/failure cue | We observe that LangSplat-m and GaussianGrouping-m failed to retrieve the correct object, and OpenGaussian only retrieves part of the cloth with noisy points from ... | p. 7 (V. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 | This is done by masking out the image It using the extracted masklet and then passing it to CLIP's image encoder: ¯ϕr = T ... | p. 4 (IV. METHOD) |
 | With the retrieved GT ¯ϕ∗ r, we compress it into lower dimension with the pretrained encoder E. | p. 5 (IV. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** Note that all four methods encounter a common failure mode of empty query, i.e., no valid Gaussians are returned for a text query, resulting in ...
@@ -162,6 +141,5 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p.
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** We observe that LangSplat-m and GaussianGrouping-m failed to retrieve the correct object, and OpenGaussian only retrieves part of the cloth with noisy points from other ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), metrics p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 7 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), results p. 6 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 2 (Figure/Table caption), p. 5 (V. EXPERIMENTS), p. 6 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

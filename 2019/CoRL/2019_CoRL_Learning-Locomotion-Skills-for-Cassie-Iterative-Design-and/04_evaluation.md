@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 4 / V. EXPERIMENTAL SETUP - extractive body cue:** The simulator includes a detailed model of the robot's rigid-bodydynamics, including the reflected inertia of the robot's motors, as well as empirically measured noise and ...
 - **p. 4 / V. EXPERIMENTAL SETUP - extractive body cue:** 3, is designed and built by Agility Robotics.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Cassie walking on a treadmill with a neural network policy. gradient updates that combine the supervised learning samples and conventional DRL policy-gradient samples, ...
@@ -80,21 +78,12 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 | Fig. 5: Network sizes impact the final result for reinforce- ment learning. We observe that larger network sizes typically learn faster and yield more ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Fig. 7: Comparison of the norm of the angular velocity of the pelvis before and after optimization. We extend this iterative-improvement approach to an ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Fig. 5: Network sizes impact the final result for reinforce- ment learning. We observe that larger network sizes typically learn faster and yield more ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Fig. 7: Comparison of the norm of the angular velocity of the pelvis before and after optimization. We extend this iterative-improvement approach to an ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,22 +117,12 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | Fig. 5: Network sizes impact the final result for reinforce- ment learning. We observe that larger network sizes typically learn faster and yield more ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 2: A walking policy produces a limit cycle, represented by the blue closed curve, and the green arrows indicate the required feedback to ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | This process runs at 2 kHz on an embedded computer directly connected to the robot's hardware. | p. 5 (V. EXPERIMENTAL SETUP) |
 | The same filtering and estimation code as used on hardware is used internally in the simulator, rather than giving the policy direct access to ... | p. 5 (V. EXPERIMENTAL SETUP) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -155,6 +134,5 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: A walking policy produces a limit cycle, represented by the blue closed curve, and the green arrows indicate the required feedback to return ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 4 (V. EXPERIMENTAL SETUP), p. 4 (V. EXPERIMENTAL SETUP), metrics p. 4 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP), p. 4 (V. EXPERIMENTAL SETUP), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL SETUP), p. 5 (V. EXPERIMENTAL SETUP).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

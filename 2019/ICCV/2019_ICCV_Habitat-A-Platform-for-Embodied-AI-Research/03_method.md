@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation
 - **p. 2 / 1. Introduction - extractive body cue:** In the context of embodied AI, simulators help overcome the aforementioned challenges - they can run orders of magnitude faster than real-time and can be ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 6 (4. PointGoal Navigation at Scale).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation
 - **p. 5 / 4. PointGoal Navigation at Scale - extractive body cue:** This task is ostensibly simple to define - an agent is initialized at a random starting position and orientation in an environment and asked to ...
 - **p. 1 / 1. Introduction - extractive body cue:** The embodiment hypothesis is the idea that intelligence emerges in the interaction of an agent with an environment and as a result of sensorimotor activity.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation
 - **p. 6 / 4. PointGoal Navigation at Scale - extractive body cue:** The agent calls the stop action when within 0.2m of the goal. - RL (PPO) is an agent trained with reinforcement learning, specifically proximal policy ...
 - **p. 6 / 4. PointGoal Navigation at Scale - extractive body cue:** When training learning-based agents, we first divide the scenes in the training set equally among 8 (Gibson), 6 (Matterport3D) concurrently running simulator worker threads.
 - **p. 2 / 1. Introduction - extractive body cue:** Habitat-API: a modular high-level library for endto-end development of embodied AI algorithms - defining embodied AI tasks (e.g. navigation, instruction following, question answering), configuring and ...
-- **p. 4 / 3. Habitat Platform - extractive body cue:** RGB, depth, contact, GPS, compass sensors) attached to each agent. - Scenario and task API: allows portable definition of tasks and their evaluation protocols. - ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** unified, embodied, agent, stack, Habitat, platform, including, generic, dataset, support, highly, performant, simulator, Habitat-Sim, flexible, API, Habitat-API, allowing, definition, evaluation.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +115,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation
 - **p. 8 / 5. Results and Findings - extractive body cue:** RGB and RGBD agents suffer a significant performance degradation, while the Blind agent is least affected (as we would expect).
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 7: Performance of Habitat-Sim under different sensor frame memory transfer strategies for increasing image resolution. We see that ‘GPU->GPU' is unaffected by image resolution ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 5 (4. PointGoal Navigation at Scale), p. 4 (3. Habitat Platform), p. 6 (4. PointGoal Navigation at Scale), p. 6 (4. PointGoal Navigation at Scale), p. 1 (Abstract), objective p. 4 (3. Habitat Platform), p. 6 (4. PointGoal Navigation at Scale), p. 6 (4. PointGoal Navigation at Scale), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), temporal p. 5 (4. PointGoal Navigation at Scale), p. 1 (Abstract), p. 3 (2. Related Work), p. 3 (2. Related Work), p. 4 (3. Habitat Platform), p. 6 (4. PointGoal Navigation at Scale).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

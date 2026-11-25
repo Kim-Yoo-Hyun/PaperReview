@@ -50,7 +50,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Beyond architectural constraints, physical and action space variations across robots introduce data heterogeneity that risks negative transfer (Pan & Yang, 2009).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 2 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** In particular, RDT has exceptional zero-shot and few-shot (1 ∼5 shots) generalizability to unseen objects, scenes, instructions, and even skills.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Compared with unimanual manipulation, bimanual manipulation has more possible action modes, leading to stronger multi-modality.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** It can reduce the diffusion steps required to sample an action chunk from 100 steps to 5 steps, achieving an action chunk inference frequency of ...
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** It takes three days to fine-tune this model using the same GPUs for 130K steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, Robotics, Diffusion, Transformer, RDT, largest, bimanual, manipulation, foundation, model, strong, generalizability, further, enable, training, heterogeneous, data, Physically, Interpretable, Unified.
 - **Relevant PDF headings:** B ARCHITECTURE DETAILS (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,23 +108,13 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 25 / Figure/Table caption - extractive body cue:** Table 7: Comparision of different baselines. We compare baselines as well as different variants of our model in terms of model size, data size, and ...
 - **p. 7 / 5 EXPERIMENTS - extractive body cue:** We use the pre-training and fine-tuning datasets in Sec.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), objective p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), temporal p. 8 (5 EXPERIMENTS), p. 4 (2 RELATED WORK), p. 5 (2 RELATED WORK), p. 4 (2 RELATED WORK), p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

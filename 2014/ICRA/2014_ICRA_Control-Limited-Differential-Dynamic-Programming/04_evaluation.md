@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 - **p. 4 / IV. RESULTS - extractive body cue:** All the experiments are performed in simulation, which is enough to demonstrate the relationship with respect to unconstrained classical DDP.
 - **p. 5 / IV. RESULTS - extractive body cue:** Middle: the control trajectory U ≡{u0 . . . u199}.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Left: The humanoid robot HRP-2. Right: Real-time reaching and balancing behaviors are described in Section IV and in the attached movie. methods are ...
@@ -73,8 +71,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 | Distance was measured using the Hubertype function z(x,p) = √ x2 + p2-p. | definition/direction/unit from same section | p. 5 (IV. RESULTS) |
 | In the demonstrated example, the robot has to reach a moving target with its right gripper, while standing and if necessary stepping to maintain ... | definition/direction/unit from same section | p. 6 (IV. RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -83,13 +79,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 | We begin with an initial comparison of the three solution types on a set of simple linear systems randomly selected in Sec. | comparison identity and matched condition | p. 4 (IV. RESULTS) |
 | 4 gives the convergence rate comparison. | comparison identity and matched condition | p. 5 (IV. RESULTS) |
 | Fig. 3. Comparison between squashing-functions and BOX-DDP. Left column: Bird's eye view of the parking trajectories obtained after convergence of both DDP, starting from ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -113,8 +102,6 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -126,22 +113,13 @@ PDF body evaluation/result cue (p. 6 (IV. RESULTS), p. 5 (IV. RESULTS)): However
 | (13f) The "parking" task is encoded as a final-cost on the distance of the last state from (0,0,0,0), i.e. at the plane origin, facing ... | p. 5 (IV. RESULTS) |
 | 0 500 -4 -2 0 2 4 6 states 0 500 -2 -1.5 -1 -0.5 0 0.5 1 1.5 2 squashing function controls 0 ... | p. 6 (IV. RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
 - **Evidence anchors reviewed:** datasets p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), p. 6 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), metrics p. 4 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (IV. RESULTS), baselines p. 4 (IV. RESULTS), p. 4 (IV. RESULTS), p. 5 (IV. RESULTS), p. 6 (Figure/Table caption), results p. 6 (IV. RESULTS), p. 5 (IV. RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

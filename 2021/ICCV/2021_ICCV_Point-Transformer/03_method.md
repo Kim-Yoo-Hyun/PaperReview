@@ -52,7 +52,6 @@ PDF body method statement (p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Netw
 - **p. 5 / 3.5. Network Architecture - extractive body cue:** The feature encoder in point transformer networks for semantic segmentation and classification has five stages that operate on progressively downsampled point sets.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Network Architecture).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Netw
 - **p. 5 / 3.5. Network Architecture - extractive body cue:** Their primary function is to map features from the downsampled input point set P2 onto its superset P1 ⊃P2.
 - **p. 2 / 1. Introduction - extractive body cue:** We conduct controlled studies to examine specific choices in the Point Transformer design and set the new state of the art on multiple highly competitive ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Netw
 - **p. 6 / 4.3. Object Part Segmentation - extractive body cue:** It consists of 16,880 models from 16 shape categories, with 14,006 3D models for training and 2,874 for testing.
 - **p. 5 / 4. Experiments - extractive body cue:** For 3D shape classification on ModelNet40 and 3D object part segmentation on ShapeNetPart, we train for 200 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** consists, models, shape, categories, training, testing, feature, encoder, point, transformer, networks, semantic, segmentation, classification, five, stages, operate, progressively, downsampled, sets.
 - **Relevant PDF headings:** 3.5. Network Architecture (p. 4); Method (p. 6); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +106,10 @@ PDF body method statement (p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Netw
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 6. Ablation study: position encoding. Operator mIoU mAcc OA MLP 61.7 68.6
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 7. Ablation study: form of self-attention operator. Visualization. Object part segmentation results on a num- ber of models are shown in Figure 7. The ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Network Architecture), p. 5 (3.5. Network Architecture), p. 4 (3.5. Network Architecture), p. 6 (4.2. Shape Classification), p. 4 (3.5. Network Architecture), objective p. 6 (4.3. Object Part Segmentation), p. 5 (3.5. Network Architecture), temporal p. 5 (4. Experiments), p. 5 (4.1. Semantic Segmentation), p. 6 (4.2. Shape Classification), p. 6 (Method), p. 7 (Method), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

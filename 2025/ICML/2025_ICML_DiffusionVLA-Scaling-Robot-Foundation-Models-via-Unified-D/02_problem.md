@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (3. Methodology), p. 2 (1. Introduction), p.
 | body cue at p. 4 | Table 1: Experimental Results for Multi-Task Learning on Real Robot. We report the count of pre-trained trajectories. We ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | In Section 4.2, we compare DiVLA against other state-of-the-art models within a standard multi-task setting, assessing its performance ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3.2. Model Design Choices), p. 5 (3.1. Architecture), p. 2 (1. Introduction), p. 3 (3. Methodology). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 5 (3.2. Model Design Choices), p. 5 (3.1. Architecture), p. 2 (1. Introduction), p. 3 (3. Methodology), objective p. 5 (3.2. Model Design Choices), p. 5 (3.2. Model Design Choices).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

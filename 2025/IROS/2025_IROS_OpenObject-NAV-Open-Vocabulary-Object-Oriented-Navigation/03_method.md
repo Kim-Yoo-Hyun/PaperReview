@@ -52,7 +52,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** After the comparison, the carried objects on Ocr match are updated accordingly: they are either added, removed, or left unchanged.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 2 / III. METHOD - extractive body cue:** We select specific point clouds from M and project them onto the x -y plane: wall point clouds within a certain height range from the ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** In the process of robot navigation, new observations are matched with carrier objects in the carrier layer.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** robot, selects, next, action, current, state, according, specific, policy, Given, CRt, CTt, then, Stop, Leveraging, LLM, commonsense, understanding, object-carrier, relationships.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +108,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. ME
 - **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** If the robot fails to reach the target, the SPL score is zero.
 - **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** VLMap Ours ConceptGraph Result: Success Result: Success Result: Failed ---Find a chair Result: Failed ---Find yellow bottle Result: Failed ---Find chairs Task 1: black bottle ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), p. 4 (III. METHOD), p. 2 (III. METHOD), objective p. 2 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), temporal p. 2 (III. METHOD), p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (Abstract), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

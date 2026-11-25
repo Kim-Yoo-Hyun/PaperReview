@@ -55,7 +55,6 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 6 / 3 Method - extractive body cue:** Therefore, a subset of proposal masks are optimized to best match labeled masks.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 7 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 6 (3 Method), p. 6 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** Then we annotate a large image-text dataset with pseudo segmentation labels using the teacher model.
 - **p. 3 / 1 Introduction - extractive body cue:** To our knowledge, OpenSeg is the first work in image segmentation to demonstrate zero-shot transfer results across datasets using language.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 13 / 4 Experiments - extractive body cue:** We may be able to reduce the gap by increasing the batch size and training with more data.
 - **p. 12 / 4 Experiments - extractive body cue:** For the strongest OpenSeg (last two rows), we initialize EfficientNet-b7 backbone with ALIGN pre-trained image encoder [23].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Learning, Segmentation, Masks, design, model, architecture, consists, feature, pyramid, network, FPN, multi-scale, extraction, cross-attention, module, region, proposal, taking, inputs, randomly.
 - **Relevant PDF headings:** 3 Method (p. 6); B Limitations of our approach (p. 18); C Architecture of the cross-attention module (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p.
 - **p. 10 / 4 Experiments - extractive body cue:** Since we initialize the backbone of OpenSeg from ALIGN's pretrained checkpoint, we use ALIGN as a baseline.
 - **p. 12 / 4 Experiments - extractive body cue:** We initialize ResNet101 backbone of OpenSeg and LSeg+ with ImageNet pretrained weights similar to the baselines.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method), p. 7 (3 Method), p. 8 (3 Method), objective p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 6 (3 Method), temporal p. 8 (4 Experiments), p. 8 (4 Experiments), p. 13 (4 Experiments), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), p. 3 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

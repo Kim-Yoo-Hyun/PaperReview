@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.
 - **p. 7 / 4.4. Evaluation on Human Shapes - extractive body cue:** We present results on the SHREC'19 dataset.
 - **p. 7 / 4.4. Evaluation on Human Shapes - extractive body cue:** We choose baseline methods trained on SURREAL as it is a significantly larger dataset (consisting of human shapes) than SHREC'19, leading to improved performance.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Correspondence in-the-wild. We introduce DIFF3F, a novel feature distiller that harnesses the expressive power of in- painting diffusion features and distills them to ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.
 | Figure 2. Method overview. DIFF3F is a feature distiller to map semantic diffusion features to 3D surface points. We render the given shape without ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 3. Results gallery. DIFF3F's performance on various point correspondence challenges. Corresponding points are similarly colored. Note that DIFF3F can successfully distinguish between symmetric ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.
 | To make a fair comparison with existing works, we follow a similar experiment setup described in DPC [30] and SE-ORNet [14]. | comparison identity and matched condition | p. 6 (4.1. Datasets and Benchmarks) |
 | Ablation SHREC'19 SHREC'20 acc ↑ err ↓ acc ↑ err ↓ w/o ControlNet (untextured) 17.20 2.04 65.48 0.69 TEXTure[46]+DINO 17.20 2.04 65.48 0.69 w/o ... | comparison identity and matched condition | p. 8 (4.6. Ablations) |
 | Figure 1. Correspondence in-the-wild. We introduce DIFF3F, a novel feature distiller that harnesses the expressive power of in- painting diffusion features and distills them ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.
 | body limitation/failure cue | Figure 3. Results gallery. DIFF3F's performance on various point correspondence challenges. Corresponding points are similarly colored. Note that DIFF3F can successfully distinguish between symmetric ... | p. 5 (Figure/Table caption) |
 | body limitation/failure cue | Additionally, varied textured renderings enable a more robust feature aggregation due to the implicit denoising of unnecessary feature dimensions 4500 | p. 7 (4.6. Ablations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.
 | Next, we describe how to use these descriptors to compute correspondences between pairs of shapes. | p. 5 (3.3. Distilling 2D Features to 3D) |
 | Each pixel gets a 1280 dimensional feature from the diffusion UNet, aggregated over diffusion time steps. | p. 5 (3.2. Semantics through Painting) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** Since our method relies on multi-view images, DIFF3F fails to produce features on parts of the shapes that are invisible from all the sampled views ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.
 - **p. 7 / 4.6. Ablations - extractive body cue:** Additionally, varied textured renderings enable a more robust feature aggregation due to the implicit denoising of unnecessary feature dimensions 4500
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Datasets and Benchmarks), p. 6 (4.1. Datasets and Benchmarks), p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.4. Evaluation on Human Shapes), metrics p. 8 (4.6. Ablations), p. 6 (4.2. Evaluation Metrics), p. 6 (4.2. Evaluation Metrics), p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.6. Ablations), p. 8 (4.6. Ablations), baselines p. 7 (4.5. Evaluation on Animal Shapes), p. 7 (4.4. Evaluation on Human Shapes), p. 6 (4.3. Baseline Methods), p. 6 (4.1. Datasets and Benchmarks), p. 8 (4.6. Ablations), p. 1 (Figure/Table caption), results p. 7 (4.4. Evaluation on Human Shapes), p. 7 (4.4. Evaluation on Human Shapes), p. 6 (4.1. Datasets and Benchmarks), p. 1 (Figure/Table caption), p. 8 (4.6. Ablations), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -60,8 +60,6 @@ PDF body contribution framing (p. 7 (B. Bi-level Planning), p. 4 (A. Problem Set
 | body cue at p. 2 | For instance, CALVIN incorporates spatial semantics but lacks explicit partlevel semantics, treating components like a "door handle as ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | However, VLM-based planners can still fail during task planning, particularly in tasks that require a long chain of, ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 8 (B. Bi-level Planning). The downstream handoff is claimed only when the body describes it.
@@ -69,10 +67,8 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), interface p. 7 (1 Actions .ow-Level Action), p. 6 (A. End-to-End Policy Learning), p. 7 (1 Actions .ow-Level Action), p. 8 (B. Bi-level Planning), objective p. 7 (1 Actions .ow-Level Action), p. 7 (B. Bi-level Planning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 - **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** The token numbers represent the average number of visual tokens required per navigation step, computed over 121 sampled navigation trajectories across 61 training scenes.
 - **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Crucially, the consistent relative improvements observed both with the SRDF dataset (Table 2) and without it (Table 3) confirm that GA-VLN provides a robust spatial ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of different representations for VLN. (A) Dense image-based representations contain heavy token redun- dancy and lack explicit spatial structure. (B) Our Geometry-Aware ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 | The model is optimized using a cosine annealing schedule with a minimum learning rate. | definition/direction/unit from same section | p. 5 (4.1. Experimental Setup) |
 | While performance slightly improves when extending the temporal window from 32 to 48 action steps, it saturates or even decreases with longer histories. | definition/direction/unit from same section | p. 7 (4.4. Design Analysis of GA-BEV) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 | We compare our approach with a comprehensive set of state-of-the-art monocular VLN methods in continuous environments, including modular planners, 3D end-toend agents, and recent ... | comparison identity and matched condition | p. 5 (4.2. Comparison with State-of-the-Art Methods) |
 | This indicates that our architectural design and data scaling strategies act as complementary, rather than conflicting, drivers for achieving state-of-the-art performance. | comparison identity and matched condition | p. 7 (4.4. Design Analysis of GA-BEV) |
 | 3, despite operating without any auxiliary obstacle avoidance or mapping modules, the agent successfully executes complex natural-language instructions and constructs meaningful geometric surrounding BEV ... | comparison identity and matched condition | p. 8 (4.5. Real-World Robot Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,7 +115,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** For BEV representation settings, grid cell size ∆is 0.25 meters, BEV range is [-10 meters, 10 meters].
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** All reported results are obtained using models pretrained for 2 epochs.
 - **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Incorporating 3D-geometric priors via VGGT (Row #3) further pushes the SR to 53.56% with a manageable 514 tokens.
-- **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Incorporating 3D-geometric priors via VGGT (Row #3) further pushes the SR to 53.56% with a manageable 514 tokens.
 - **p. 8 / 4.6. Robustness to Noise - extractive body cue:** 4 evaluates GA-VLN under noise levels modeled after real-world error profiles of Stretch 3 robot.
 
 ## Generalization and Failure Cases
@@ -138,8 +126,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 | body limitation/failure cue | Their combination strengthens spatial reasoning, enhances data efficiency, and yields a more robust navigation representation. | p. 6 (4.3. Ablation Study and Efficiency Analysis) |
 | body limitation/failure cue | Crucially, these consistent relative improvements across different data scales confirm that GAVLN provides a robust spatial inductive bias independent of data volume. | p. 7 (4.4. Design Analysis of GA-BEV) |
 | body limitation/failure cue | Noise N(0, σ2) NE↓ OSR↑ SR↑ SPL↑ w/o Noise - 4.80 67.59 60.96 55.19 Depth σ = 0.05m 4.82 65.63 59.11 54.25 Pose σ ... | p. 8 (4.4. Design Analysis of GA-BEV) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -154,14 +140,6 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 | While performance slightly improves when extending the temporal window from 32 to 48 action steps, it saturates or even decreases with longer histories. | p. 7 (4.4. Design Analysis of GA-BEV) |
 | The token numbers represent the average number of visual tokens required per navigation step, computed over 121 sampled navigation trajectories across 61 training scenes. | p. 7 (4.4. Design Analysis of GA-BEV) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.4. Design Analysis of GA-BEV - extractive body cue:** An overly fine grid (row #4) fails to effectively compress redundant features, while an overly coarse grid (row #5) leads to the loss of important ...
@@ -171,6 +149,5 @@ PDF body evaluation/result cue (p. 5 (4.1. Experimental Setup), p. 5 (4.2. Compa
 - **p. 8 / 4.4. Design Analysis of GA-BEV - extractive body cue:** Noise N(0, σ2) NE↓ OSR↑ SR↑ SPL↑ w/o Noise - 4.80 67.59 60.96 55.19 Depth σ = 0.05m 4.82 65.63 59.11 54.25 Pose σ = ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 8 (4.5. Real-World Robot Experiments), p. 8 (4.5. Real-World Robot Experiments), metrics p. 5 (4.1. Experimental Setup), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 7 (4.4. Design Analysis of GA-BEV), p. 8 (Figure/Table caption), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 8 (4.4. Design Analysis of GA-BEV), baselines p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 6 (4.2. Comparison with State-of-the-Art Methods), p. 5 (4.1. Experimental Setup), p. 5 (4.2. Comparison with State-of-the-Art Methods), p. 7 (4.4. Design Analysis of GA-BEV), p. 8 (4.5. Real-World Robot Experiments), results p. 5 (4.1. Experimental Setup), p. 5 (4.2. Comparison with State-of-the-Art Methods), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 6 (4.3. Ablation Study and Efficiency Analysis), p. 7 (4.4. Design Analysis of GA-BEV), p. 7 (4.4. Design Analysis of GA-BEV).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

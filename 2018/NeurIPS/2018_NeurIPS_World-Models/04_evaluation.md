@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 - **p. 6 / 4.1. Learning Inside of a Dream - extractive body cue:** We have just seen that a policy learned inside of the real environment appears to somewhat function inside of the dream environment.
 - **p. 6 / 4.1. Learning Inside of a Dream - extractive body cue:** This begs the question - can we train our agent to learn inside of its own dream, and transfer this policy back to the actual ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. A World Model, from Scott McCloud's Understanding Comics. (McCloud, 1993; E, 2012) current motor actions (Keller et al., 2012; Leinweber et al., 2017). ...
@@ -84,21 +82,12 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 | Figure 16. Deploying our policy learned inside of the dream RNN environment back into the actual VizDoom environment. We took the agent trained inside ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | Table 2. Take Cover scores at various temperature settings. We see that while increasing the temperature of the M model makes it more difficult ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | We can also train individual VAE and MDN-RNN models without having to exhaustively tune hyperparameters. | comparison identity and matched condition | p. 4 (3.1. World Model for Feature Extraction) |
 | Figure 1. A World Model, from Scott McCloud's Understanding Comics. (McCloud, 1993; E, 2012) current motor actions (Keller et al., 2012; Leinweber et al., ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 | body limitation/failure cue | Figure 17. An interactive VAE of Doom in the online article. We see that even though the V model is not able to capture ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | After all, our agent does not directly observe the reality, but only sees what the world model lets it see. | p. 6 (4.1. Learning Inside of a Dream) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 | The score over 100 random consecutive trials is ∼1100 time steps, far beyond the required score of 750 time steps, and also much higher ... | p. 8 (4.4. Transfer Policy to Actual Environment) |
 | It also has a memory component that makes predictions about future codes based on historical information. | p. 2 (2. Agent Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / 7. Discussion - extractive body cue:** After all, unsupervised learning cannot, by definition, know what will be useful for the task at hand.
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 4 (3.1. World Mo
 - **p. 6 / 4.1. Learning Inside of a Dream - extractive body cue:** After all, our agent does not directly observe the reality, but only sees what the world model lets it see.
 
 - **Evidence anchors reviewed:** datasets p. 4 (3.1. World Model for Feature Extraction), p. 4 (3.1. World Model for Feature Extraction), p. 7 (4.2. Procedure), p. 7 (4.1. Learning Inside of a Dream), p. 5 (3.1. World Model for Feature Extraction), p. 5 (3.1. World Model for Feature Extraction), metrics p. 4 (3.1. World Model for Feature Extraction), p. 15 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 5 (3.2. Procedure), p. 5 (3.1. World Model for Feature Extraction), p. 7 (4.1. Learning Inside of a Dream), baselines p. 4 (3.1. World Model for Feature Extraction), p. 1 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 4 (3.1. World Model for Feature Extraction), p. 4 (3. Car Racing Experiment), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

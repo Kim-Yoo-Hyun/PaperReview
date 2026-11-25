@@ -65,8 +65,6 @@ PDF body contribution framing (p. 5 (1 Introduction), p. 9 (2 Background), p. 5 
 | body cue at p. 27 | Table 8: Observations used for ANYmal training. For rough terrain locomotion with sim-to-real, we extend the observations with ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 27 | Reward Symbol Definition Weight Linear velocity tracking Rvel,xy φ(v∗ b,xy -vb,xy) 1dt Angular velocity tracking Rvel,yaw φ(ω∗ b,z ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (1 Introduction), p. 10 (2 Background), p. 5 (1 Introduction), p. 7 (2 Background). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 4 (1 Introduction), p. 7 (2 Background), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), interface p. 5 (1 Introduction), p. 10 (2 Background), p. 5 (1 Introduction), p. 7 (2 Background), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

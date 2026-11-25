@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 - **p. 10 / 4 Experiments - extractive body cue:** Thus, storing more data is insufficient; effective robots must maintain a concise, consistent memory.
 - **p. 10 / 4 Experiments - extractive body cue:** Object Search Counting Rearrangement Average 50 60 70 80 90 100 Task Progress (%) 86 78 76 80 74 91 84 83 92 92 87 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption cue 없음
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | While this minimizes premature stops (high Precision), the low Recall creates a "missing signal" problem where the agent might overshoot its target or enter ... | definition/direction/unit from same section | p. 12 (4 Experiments) |
 | These tasks are specifically curated to evaluate diverse capabilities, including user interaction, preference memory, updating memory and planning with exploration. | definition/direction/unit from same section | p. 7 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | To assess the need for dynamic memory management, we run an ablation against two baselines: (1) No Management, which only supports Add/Retrieve and keeps ... | comparison identity and matched condition | p. 10 (4 Experiments) |
 | Human High-level: A human oracle provides the correct subtask description at each step. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | We compare HiMe against Transient, Sentry, and Flat Memory baselines across three longhorizon tasks. | comparison identity and matched condition | p. 9 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | body limitation/failure cue | Without the Sentry, the Planner operates on a frame-by-frame style, and this high-frequency re-evaluation makes the robot hypersensitive to transient visual noise, leading to ... | p. 8 (4 Experiments) |
 | body limitation/failure cue | HiMe consistently outperforms both text-only and image-only baselines across all three tasks, verifying the robustness of our cross-modal memory mechanism. | p. 10 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 | This ablation validates the sentry's role in reducing computational redundancy and aligning planning steps with the dynamics of environments. | p. 8 (4 Experiments) |
 | To assess the need for dynamic memory management, we run an ablation against two baselines: (1) No Management, which only supports Add/Retrieve and keeps ... | p. 10 (4 Experiments) |
 | However, these training-based methods are often constrained by limited context windows and the inherent difficulty of optimizing long-range causal dependencies over hundreds of steps. | p. 2 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 9 (4 Experiments), p. 1
 - **p. 10 / 4 Experiments - extractive body cue:** HiMe consistently outperforms both text-only and image-only baselines across all three tasks, verifying the robustness of our cross-modal memory mechanism.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 8 (4 Experiments), metrics p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 7 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), baselines p. 9 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), results p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

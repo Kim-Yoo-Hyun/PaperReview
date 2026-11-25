@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 - **p. 7 / 3 Method - extractive body cue:** The loss function is defined as L = Lcolor + λLreg + βLmask.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), p. 7 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 - **p. 1 / 1 Introduction - extractive body cue:** To train their neural models, these methods use a differentiable surface rendering method to render a 3D object into images and compare them against input ...
 - **p. 2 / 1 Introduction - extractive body cue:** This volume rendering approach samples multiple points along each ray and perform α-composition of the colors of the sampled points to produce the output pixel ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 - **p. 4 / 3 Method - extractive body cue:** Note that the standard deviation of φs(x) is given by 1/s, which is also a trainable parameter, that is, 1/s approaches to zero as the ...
 - **p. 8 / 4 Experiments - extractive body cue:** We sample 512 rays per batch and train our model for 300k iterations for 14 hours (for the ‘w/ mask' setting) and 16 hours (for ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** order, apply, volume, rendering, training, SDF, network, first, introduce, probability, density, function, called, S-density, where, signed, distance, Same, IDR, empirically.
 - **Relevant PDF headings:** 3 Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 3 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p.
 - **p. 10 / 4 Experiments - extractive body cue:** Without Eikonal regularization or geometric initialization, the result on Chamfer distance is on par with that of the full model.
 - **p. 20 / Figure/Table caption - extractive body cue:** Table 4: Quantitative comparisons with NeRF on the task of novel view synthesis without mask supervision. E.2 Novel View Synthesis In this experiment, we held ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 Method), p. 7 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 3 (3 Method), p. 6 (3 Method), objective p. 4 (3 Method), p. 7 (3 Method), p. 3 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method), temporal p. 5 (3 Method), p. 3 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 - **p. 20 / B.3.5 Question-Answer Pair Generation - extractive body cue:** 49 D.4.2 Reward Design and Policy Update . . . . . . . . . . . . . . . . . . ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 Method), p. 5 (3 Method), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 54 (C Implementation Details and Samples of RefSpatial-Bench), p. 57 (C Implementation Details and Samples of RefSpatial-Bench), p. 57 (C Implementation Details and Samples of RefSpatial-Bench).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 - **p. 5 / 3 Method - extractive body cue:** Therefore, the model is jointly optimized on RGB and RGB-D inputs, with separate updates for the image and depth encoders.
 - **p. 49 / C Implementation Details and Samples of RefSpatial-Bench - extractive body cue:** D.4.2 Reward Design and Policy Update Each sampled action ai is assigned a reward R(ai) based on verifiable criteria, yielding a reward set r1, r2, ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 - **p. 49 / C Implementation Details and Samples of RefSpatial-Bench - extractive body cue:** Training is conducted for two epochs with a batch size of 1 per GPU and 8 outputs in GRPO.
 - **p. 48 / C Implementation Details and Samples of RefSpatial-Bench - extractive body cue:** The 2B variant is trained with a batch size of 7 per GPU, and the 8B variant with 3, both for one epoch.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, elaborate, RoboRefer, including, architecture, training, strategies, Sec, employs, separate, RGB, depth, encoders, extract, features, aligned, projectors, LLM, VQA, point.
 - **Relevant PDF headings:** 3 Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p.
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 2: Performance on current referring and multi-step spatial referring benchmarks. L. and P. denote our benchmark's Location and Placement parts; U. indicates unseen compositional ...
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 6: Visual overview of the multi-stage filtering results. Row 1: Images discarded by SigLIP2 due to insufficient spatial context (e.g., close-ups, text). Row 2: ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3 Method), p. 4 (3 Method), p. 4 (3 Method), p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 5 (3 Method), p. 50 (C Implementation Details and Samples of RefSpatial-Bench), objective p. 49 (C Implementation Details and Samples of RefSpatial-Bench), p. 48 (C Implementation Details and Samples of RefSpatial-Bench), p. 5 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 20 (B.3.5 Question-Answer Pair Generation), temporal p. 9 (4 Experiments), p. 61 (C Implementation Details and Samples of RefSpatial-Bench), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 9 / 4.6. Finetuning for Downstream Tasks - extractive body cue:** Quantitative comparisons for view synthesis on GSO [28] dataset.
 - **p. 6 / 4. Experiments - extractive body cue:** This section compares our method to state-of-the-art approaches across multiple tasks to show its effectiveness.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. VGGT is a large feed-forward transformer with minimal 3D-inductive biases trained on a trove of 3D-annotated data. It accepts up to hundreds of ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 8 (Figure/Table
 | The final metric is the relative pose accuracy, measured by AUC. | definition/direction/unit from same section | p. 8 (4.4. Image Matching) |
 | Table 8. Dynamic Point Tracking Results on the TAP-Vid benchmarks. Although our model was not designed for dynamic scenes, simply fine-tuning CoTracker with our ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 8 (Figure/Table
 | Figure 1. VGGT is a large feed-forward transformer with minimal 3D-inductive biases trained on a trove of 3D-annotated data. It accepts up to hundreds ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | This section compares our method to state-of-the-art approaches across multiple tasks to show its effectiveness. | comparison identity and matched condition | p. 6 (4. Experiments) |
 | Compared to concurrent works [111, 127, 141, 156] (indicated by ‡), our method demonstrates significant performance advantages, with speed similar to the fastest variant ... | comparison identity and matched condition | p. 7 (4.1. Camera Pose Estimation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 8 (Figure/Table
 | body limitation/failure cue | It is worth mentioning that we apply aggressive color augmentation independently across each frame within the same scene, enhancing the model's robustness to varying ... | p. 12 (6. Conclusions) |
 | body limitation/failure cue | Following standard practices, we report these point-tracking metrics: Occlusion Accuracy (OA), which comprises the binary accuracy of occlusion predictions; δvis avg, comprising the 9 | p. 9 (4.6. Finetuning for Downstream Tasks) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 8 (Figure/Table
 | The hyperparameters such as the hidden dimension and the number of heads are kept the same. | p. 9 (4.5. Ablation Studies) |
 | Then, for the target views, we use a convolutional layer to encode their Pl¨ucker ray images into tokens. | p. 9 (4.6. Finetuning for Downstream Tasks) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 5. Discussions - extractive body cue:** While our method exhibits strong generalization to diverse in-the-wild scenes, several limitations remain.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 9 / 4.6. Finetuning for Downstream Tasks - extractive body cue:** Following standard practices, we report these point-tracking metrics: Occlusion Accuracy (OA), which comprises the binary accuracy of occlusion predictions; δvis avg, comprising the 9
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.4. Image Matching), p. 6 (4.1. Camera Pose Estimation), p. 7 (4.1. Camera Pose Estimation), p. 7 (4.1. Camera Pose Estimation), p. 8 (4.3. Point Map Estimation), p. 9 (4.6. Finetuning for Downstream Tasks), metrics p. 7 (4.1. Camera Pose Estimation), p. 6 (4.1. Camera Pose Estimation), p. 8 (4.3. Point Map Estimation), p. 9 (4.5. Ablation Studies), p. 9 (4.5. Ablation Studies), p. 7 (4.1. Camera Pose Estimation), baselines p. 7 (4.1. Camera Pose Estimation), p. 9 (4.5. Ablation Studies), p. 12 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (4. Experiments), p. 7 (4.1. Camera Pose Estimation), results p. 12 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (4.1. Camera Pose Estimation), p. 8 (4.3. Point Map Estimation), p. 7 (4.1. Camera Pose Estimation), p. 9 (4.5. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

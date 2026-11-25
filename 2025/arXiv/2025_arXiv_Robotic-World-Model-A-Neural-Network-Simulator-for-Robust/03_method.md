@@ -58,7 +58,6 @@ PDF body method statement (p. 6 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approac
 - **p. 5 / 3 Approach - extractive body cue:** Rewards are computed from imagined observations and privileged information.
 - **Formal bridge:** sim state s_t and parameters δ -> sim action/rollout -> physics/model/planning objective -> fidelity, throughput and downstream task utility.
 - **Equation/algorithm anchors:** p. 4 (3 Approach), p. 4 (3 Approach), p. 5 (3 Approach), p. 19 (A.4.3 Collision Handling and Model Pretraining), p. 5 (3 Approach), p. 6 (3 Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 6 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approac
 - **p. 19 / A.4.3 Collision Handling and Model Pretraining - extractive body cue:** During policy optimization, MBPO-PPO treats these termination predictions as episode-ending events in imagination rollouts, affecting PPO's return computation and state values.
 - **p. 5 / 3 Approach - extractive body cue:** Imagination agents are initialized from samples in D and simulate trajectories using the world model for T steps, enabling policy updates through a reinforcement learning ...
 - **Normalized interface:** observation=simulated state, geometry, contact와 control input; state=dynamics/contact state 또는 learned simulator representation; output/action=simulation step, trajectory 또는 environment query.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 6 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approac
 - **p. 8 / 4 Experiments - extractive body cue:** The policy is trained using estimated rewards computed from predicted observations by RWM.
 - **p. 8 / 4 Experiments - extractive body cue:** 4.4 Policy Learning and Hardware Transfer Using MBPO-PPO, we train a goal-conditioned velocity tracking policy for ANYmal D and Unitree G1 leveraging RWM.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Algorithm, Policy, optimization, RWM, Initialize, world, model, replay, buffer, learning, iterations, Collect, observation-action, pairs, interacting, environment, Update, autoregressive, training, data.
 - **Relevant PDF headings:** 3 Approach (p. 4); A.2 Network Architecture (p. 16); A.4.3 Collision Handling and Model Pretraining (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 6 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approac
 - **p. 7 / 4 Experiments - extractive body cue:** Grey curves represent the MLP baseline, which exhibits significantly higher error accumulation and reduced robustness to noise.
 - **p. 7 / 4 Experiments - extractive body cue:** To assess the robustness of RWM, we analyze its performance under Gaussian noise perturbations applied to both observations and actions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3 Approach), p. 4 (3 Approach), p. 4 (3 Approach), p. 5 (3 Approach), p. 5 (3 Approach), p. 6 (3 Approach), objective p. 4 (3 Approach), p. 19 (A.4.3 Collision Handling and Model Pretraining), p. 4 (3 Approach), p. 5 (3 Approach), p. 19 (A.4.3 Collision Handling and Model Pretraining), p. 5 (3 Approach), temporal p. 6 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 4 (3 Approach), p. 4 (3 Approach), p. 5 (3 Approach).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

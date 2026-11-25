@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 - **p. 8 / 4.4. Qualitative results - extractive body cue:** OVON GOAT SG3D Dataset 15 20 25 30 35 40 SR (%) 27.8 22.2 22.9 33.3 36.1 27.9 VLE w/o vle w/ vle (a) Effect ...
 - **p. 8 / 4.4. Qualitative results - extractive body cue:** Object Description Image Goal Type 10 20 30 40 50 60 70 80 SR (%) 10.5 28.6 26.7 52.6 71.4 60.0 Memory w/o mem w ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. MTU3D is a versatile embodied navigation model capable of processing diverse inputs, including object categories, image snapshots, natural language descriptions, task plan sequences, ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 | Ablation studies showing (a) the impact of vision-language-exploration pretraining, (b) exploration efficiency on seen environments, and (c) the contribution of spatial memory to navigation ... | definition/direction/unit from same section | p. 8 (4.4. Qualitative results) |
 | Figure 3. Our proposed model processes RGB-D sequences to generate object queries, which are stored in a memory bank. The spatial reasoning layer then ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 | This indicates that our approach enables a more efficient trajectory, avoiding the exhaustive search across all locations that baseline models rely on. | comparison identity and matched condition | p. 7 (4.2. Quantitative Results) |
 | Table 1. Comparison of different paradigms. MTU3D uniquely integrates advantages from both sides, supporting online explo- ration and lifelong visual grounding. time decision-making. Specifically, ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Figure 1. MTU3D is a versatile embodied navigation model capable of processing diverse inputs, including object categories, image snapshots, natural language descriptions, task plan ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 |---|---|---|
 | no explicit failure cue selected | unreported; domain stress test remains open | verify Discussion/Conclusion |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,22 +127,13 @@ PDF body evaluation/result cue (p. 6 (4.2. Quantitative Results), p. 6 (Figure/T
 | All training runs on four NVIDIA A100 GPUs around 164 GPU hours. | p. 6 (4.1. Experimental setting) |
 | 4c demonstrate that MTU surpasses frontier exploration in both SR and SPL as exploration steps increase. | p. 7 (4.3. Discussions) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - explicit limitation/failure sentence not stated or recoverable in the selected PDF body
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 8 (4.4. Qualitative results), p. 8 (4.4. Qualitative results), metrics p. 6 (4.2. Quantitative Results), p. 6 (4.1. Experimental setting), p. 7 (4.2. Quantitative Results), p. 7 (4.3. Discussions), p. 8 (4.4. Qualitative results), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 6 (4.2. Quantitative Results), p. 7 (4.2. Quantitative Results), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption), results p. 6 (4.2. Quantitative Results), p. 6 (Figure/Table caption), p. 7 (4.3. Discussions), p. 7 (4.3. Discussions), p. 3 (Figure/Table caption), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

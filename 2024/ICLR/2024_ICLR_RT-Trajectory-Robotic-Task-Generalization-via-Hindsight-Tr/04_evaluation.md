@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 14 / B.1 GUI FOR HUMAN-DRAWN TRAJECTORY SKETCHES - extractive body cue:** Given the current robot camera image, a user can drag and move the mouse to draw curves on the canvas.
 - **p. 14 / B.1 GUI FOR HUMAN-DRAWN TRAJECTORY SKETCHES - extractive body cue:** As the main trajectory generation method we study is user-specified trajectory drawings, we develop a graphical user interface (GUI) for users to draw trajectory sketches.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: We propose RT-Trajectory, a framework for utilizing coarse trajectory sketches for policy conditioning. We train on hindsight trajectory sketches (top left) and evaluate ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Figure 11: First-interaction height alignment compares the relative difference between the z-height of the first gripper interactions of query trajectories to the first gripper ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 | Figure 12: We visualize the distribution of Fr´echet distances of query trajectories to the most similar training trajectories, as measured by motion similarity. The ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Figure 12: We visualize the distribution of Fr´echet distances of query trajectories to the most similar training trajectories, as measured by motion similarity. The ... | comparison identity and matched condition | p. 10 (Figure/Table caption) |
 | Table 3: The list of unseen evaluation tasks with their descriptions and example language instructions. Language instructions are only used for language-conditioned baselines. "Count" ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | Table 2: The list of seen training tasks with their descriptions and example language instructions. Language instructions are only used for language-conditioned baselines. "Count" ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | body limitation/failure cue | Figure 20: Example of retry behavior. The first image is the trajectory sketch generated from the CaP overlaid on the initial observation. The remaining ... | p. 22 (Figure/Table caption) |
 | body limitation/failure cue | With little to moderate trajectory prompt engineering, we find that RT-Trajectory is able to successfully perform a variety of tasks requiring novel motion generalization ... | p. 8 (3. What emergent capabilities are enabled by RT-Trajectory?) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 | Prompting LLMs with Code as Policies Large Language Models have demonstrated the ability to write code to perform robotics tasks (Liang et al., 2022). | p. 5 (3 METHOD) |
 | We study 4 different methods to generate trajectory sketches: human drawings, human videos, prompting LLMs with Code as Policies, and image generation models. | p. 5 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 19: Case studies in prompt engineering. Each row shows the trajectory sketch overlaid on the first frame and the corresponding rollout. As seen in ...
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 8 (Figure/Table 
 - **p. 8 / 3. What emergent capabilities are enabled by RT-Trajectory? - extractive body cue:** With little to moderate trajectory prompt engineering, we find that RT-Trajectory is able to successfully perform a variety of tasks requiring novel motion generalization and ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 EXPERIMENTS), p. 15 (B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES), p. 5 (4 EXPERIMENTS), p. 15 (B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES), p. 14 (B.1 GUI FOR HUMAN-DRAWN TRAJECTORY SKETCHES), p. 14 (B.1 GUI FOR HUMAN-DRAWN TRAJECTORY SKETCHES), metrics p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES), p. 15 (Figure/Table caption), p. 8 (Figure/Table caption), baselines p. 10 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption), p. 10 (Figure/Table caption), p. 14 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 17 (Figure/Table caption), p. 7 (Figure/Table caption), p. 14 (Figure/Table caption), p. 15 (B.2 COLLECTING HUMAN-DRAWN TRAJECTORY SKETCHES).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (Method), p. 5 (3 Method), p. 2 (3 Method), p. 3
 - **p. 5 / 3 Method - extractive body cue:** A few shared fully connected and ReLU layers are applied to update each point's feature vector.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (Method), p. 2 (3 Method), p. 3 (3 Method), p. 5 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (Method), p. 5 (3 Method), p. 2 (3 Method), p. 3
 - **p. 4 / 3 Method - extractive body cue:** In this layer, the input are N ′ local regions of points with data size N ′×K×(d+C).
 - **p. 4 / 3 Method - extractive body cue:** 3.2, each abstraction level contains grouping and feature extraction of a single scale.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 7 (Method), p. 5 (3 Method), p. 2 (3 Method), p. 3
 
 - **p. 6 / Method - extractive body cue:** SSG (ablated PointNet++ with single scale grouping in each level) fails to generalize to sparse sampling density while SSG+DP amends the problem by randomly dropping ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** features, input, then, sample, group, points, according, underlying, metric, space, interpolated, Nl-1, concatenated, skip, linked, point, abstraction, level, Finally, PointNet.
 - **Relevant PDF headings:** 3 Method (p. 2); Method (p. 6); B.1 Network Architectures (p. 11); B.3 MNIST and ModelNet40 Experiment Details (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 7 (Method), p. 5 (3 Method), p. 2 (3 Method), p. 3
 - **p. 7 / Figure/Table caption - extractive body cue:** Figure 6: Scannet labeling results. [20] cap- tures the overall layout of the room correctly but fails to discover the furniture. Our ap- proach, in ...
 - **p. 5 / 4 Experiments - extractive body cue:** Note that PointNet (vanilla) in Table 2 is the the version in [20] that does not use transformation networks, which is equivalent to our hierarchical ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (Method), p. 5 (3 Method), p. 2 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p. 4 (3 Method), objective p. 4 (3 Method), p. 5 (3 Method), p. 6 (Method), p. 3 (3 Method), p. 4 (3 Method), p. 5 (3 Method), temporal p. 3 (3 Method), p. 3 (3 Method), p. 4 (3 Method), p. 7 (Method), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

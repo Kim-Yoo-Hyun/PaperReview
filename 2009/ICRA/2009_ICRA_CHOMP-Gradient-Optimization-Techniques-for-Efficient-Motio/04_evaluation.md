@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 - **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** The Robotics Institute team has been quite competitive in phase II, the most recent phase of the Learning Locomotion project.
 - **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** Its effect in practice is to add a small gradient term that sends colliding points of the robot upwards regardless of the gradient of the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform a ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 | Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 7. The LittleDog robot, designed and built by Boston Dynamics, Inc., along with sample terrains. Leftmost: Jersey barrier. Middle left: steps. Using CHOMP ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 | CHOMP successfully found collision-free trajectories for 99 of the 105 problem.4 We additionally compared the performance of CHOMP when initialized to a straight-line trajectory ... | comparison identity and matched condition | p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
 | Surprisingly, when CHOMP successfully finds a collision free trajectory, straight-line 4We found that adding a small amount (.001) to the diagonal of A improved ... | comparison identity and matched condition | p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
 | Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -119,8 +108,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 - Numeric sentences retained from the body:
 - **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** Typical footstep durations run between 0.6 s and 1.2 s.
 - **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** We discretize the trajectories at the LittleDog host computer control cycle frequency, which is 100 Hz.
-- **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** Typical footstep durations run between 0.6 s and 1.2 s.
-- **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** We discretize the trajectories at the LittleDog host computer control cycle frequency, which is 100 Hz.
 
 ## Generalization and Failure Cases
 
@@ -132,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 | body limitation/failure cue | Without explicitly optimizing trajectory dynamics, the RRT returns a poor initial trajectory which causes CHOMP to quickly fall into a suboptimal local minimum. from ... | p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
 | body limitation/failure cue | CHOMP successfully found collision-free trajectories for 99 of the 105 problem.4 We additionally compared the performance of CHOMP when initialized to a straight-line trajectory ... | p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM) |
 | body limitation/failure cue | The prior is defined as penalizing the distance below some known obstacle-free height when the swing leg is in collision with the terrain. | p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -148,14 +133,6 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 | Gradient descent minimizes an uninformed, isotropic quadratic approximation while more sophisticated methods, like Newton steps, compute tighter lower bounds using a Hessian. | p. 3 (II. THE CHOMP ALGORITHM) |
 | In practice, we discretize our trajectory into a set of n waypoints q1, . . . , qn (excluding the end points) and compute ... | p. 2 (II. THE CHOMP ALGORITHM) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Experimental robotic platforms: Boston Dynamics's LittleDog (left), and Barrett Technology's WAM arm (right). collision free. As a result, CHOMP can often transform a ...
@@ -166,9 +143,8 @@ PDF body evaluation/result cue (p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (
 - **p. 7 / IV. IMPLEMENTATION ON A QUADRUPED ROBOT - extractive body cue:** The prior is defined as penalizing the distance below some known obstacle-free height when the swing leg is in collision with the terrain.
 
 - **Evidence anchors reviewed:** datasets p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), metrics p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), baselines p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 1 (Figure/Table caption), results p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 6 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 5 (III. EXPERIMENTS ON A ROBOTIC ARM), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT), p. 7 (IV. IMPLEMENTATION ON A QUADRUPED ROBOT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

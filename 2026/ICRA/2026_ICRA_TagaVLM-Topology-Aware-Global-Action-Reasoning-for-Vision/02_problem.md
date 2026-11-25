@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p
 | body cue at p. 6 | However, due to computational resource limitations, TagaVLM-7B is fine-tuned with only 200K augmented samples. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | However, owing to the limitation of computational resources, the amount of training data used for the proposed method ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (III. METHOD), p. 1 (I. INTRODUCTION), p. 5 (III. METHOD), p. 2 (I. INTRODUCTION). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), interface p. 5 (III. METHOD), p. 1 (I. INTRODUCTION), p. 5 (III. METHOD), p. 2 (I. INTRODUCTION), objective p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 4 (III. METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

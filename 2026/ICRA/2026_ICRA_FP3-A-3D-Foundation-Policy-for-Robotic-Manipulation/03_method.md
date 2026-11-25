@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** We use the AdamW optimizer [40] with a cosine learning rate schedule.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Towards this goal of policy foundation models, there have been some initial attempts at vision-language-action (VLA) models [80, 36, 3], which build upon the vision-language ...
 - **p. 4 / III. METHOD - extractive body cue:** To handle the partial observation, we stack 2 frames as input, including 1 step observation history, to compensate for the missing dynamic information of the ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,15 +90,11 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 8 / 8 Training Scenes - extractive body cue:** We achieve the best performance when using 3D point cloud input, a larger model, and largerscale pre-training data.
 - **p. 7 / 8 Training Scenes - extractive body cue:** 4: Visualizations of post-training environments and in-the-wild evaluations.
 - **p. 4 / III. METHOD - extractive body cue:** The FP3 base model is pre-trained for 3M steps with a batch size of 128 using 8 NVIDIA A800 GPUs, which takes about 48 hours.
-- **p. 8 / 8 Training Scenes - extractive body cue:** FP3 can perfectly follow the instructions to execute the correct tasks rather than simply memorize the training distribution. • FP3-Base-Image converts the point cloud observations ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** FP3, encoder-decoder, transformer, network, following, two-stage, pre-training, post-training, recipe, Now, describe, detailed, structure, model, including, encoding, multi-modal, inputs, transformer-based, architecture.
 - **Relevant PDF headings:** 1) We propose a novel diffusion-based 3D robot policy (p. 2); III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +114,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. ME
 - **p. 8 / 8 Training Scenes - extractive body cue:** FP3 can perfectly follow the instructions to execute the correct tasks rather than simply memorize the training distribution. • FP3-Base-Image converts the point cloud observations ...
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of 3D Foundation Policy (FP3), a 1.3B 3D point cloud-based language-visuomotor policy pre-trained on 60k episodes from the DROID dataset [35]. FP3 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 8 (8 Training Scenes), p. 8 (8 Training Scenes), objective p. 4 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), temporal p. 4 (III. METHOD), p. 4 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 6 (4) Can FP3 correctly execute the corresponding tasks fol), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

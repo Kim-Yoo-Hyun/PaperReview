@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid
 - **p. 5 / 3.4. Training Objective - extractive body cue:** Additionally, a regularization loss LReg, consisting of a selfsupervised distortion loss and a normal consistency loss [19], is used to improve the geometry reconstruction.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 3 (3. Method), p. 5 (3.4. Training Objective), p. 5 (3.4. Training Objective).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid
 - **p. 5 / 3.4. Training Objective - extractive body cue:** It can be formulated as: Ltotal = Lc + λdLd + λregLreg (7) Lc = λ1L1(Irgb, ˆIrgb) + λ2L1(Iα, ˆIα) + λ3Llp(Irgb, ˆIrgb) (8) Ld ...
 - **p. 1 / 1. Introduction - extractive body cue:** However, the persisting challenge arises due to the inherent geometric ambiguity and limited information provided in single-view images.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid
 - **p. 5 / 3.4. Training Objective - extractive body cue:** We train the full paradigm via color Lc and depth Ld loss supervision, optimizing reconstruction objectives between rendered and ground-truth RGB/depth images.
 - **p. 5 / 4.1. Experimental Settings - extractive body cue:** Our model is trained on four A100 (40G) GPUs for approximately 6.5 days, employing a batch size of four per GPU with bfloat16 precision, resulting ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, simple, effective, feature-level, crossvolume, fusion, module, fuses, RGB, normal, volumes, reproduce, fine-grained, RGBN, volume, aligning, crucial, semantic, geometric, cues.
 - **Relevant PDF headings:** 3. Method (p. 3); 3. The model performance demonstrates a significant im (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid
 - **p. 7 / 4.5. Ablation study - extractive body cue:** Especially, the depth and regularization loss functions, which cannot be achieved by 3D 21564
 - **p. 8 / 5. Conclusion and Limitations - extractive body cue:** The performance degradation occurs when the MVD models generate images with a higher level of view inconsistency.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. Hybrid Voxel-Gaussian), p. 5 (3.4. Training Objective), p. 5 (3.4. Training Objective), objective p. 3 (3. Method), p. 5 (3.4. Training Objective), p. 5 (3.4. Training Objective), temporal p. 5 (4.1. Experimental Settings), p. 4 (3.2. Cross-volume Fusion), p. 4 (3.2. Cross-volume Fusion), p. 8 (5. Conclusion and Limitations).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

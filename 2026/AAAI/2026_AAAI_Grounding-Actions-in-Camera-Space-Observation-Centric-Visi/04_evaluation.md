@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Method Avg Task1 Task2 Task3 Task4 Task5 Task6 Task7 Task8 Robot Base(Fixed Camera, From Table II) 66.3% 70.0% 70.0% 90.0% 60.0% 60.0% 60.0% 60.0% 60.0% ...
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** ROBOT BASE AND CAMERA BASE INDICATES THE MODEL WE BUILT IN ROBOT BASE COORDINATES AND THIRD-PERSON CAMERA BASE COORDINATE FOLLOWING DITA [6], RESPECTIVELY.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1. We introduce the Observation-Centric VLA (OC-VLA) framework. By transforming end-effector actions from the robot base coordinate to the third-person camera coordinate, OC-VLA aligns ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Fig. 1. We introduce the Observation-Centric VLA (OC-VLA) framework. By transforming end-effector actions from the robot base coordinate to the third-person camera coordinate, OC-VLA ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Fig. 5. A qualitative comparison in real-robot experiments. Failures are highlighted with red circles. the same data. This indicates that our method can partially ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | Fig. 9. Qualitative Comparison on ManiSkill2 of OC-VLA and Baseline. OC-VLA show better performance on the grasp pose and searching for the goal point. | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | METHODS ANNOTATED WITH "(VAR)" INDICATE RESULTS OBTAINED UNDER ZERO-SHOT CAMERA EVALUATION, WHILE THOSE WITHOUT THE ANNOTATION CORRESPOND TO EVALUATIONS CONDUCTED USING THE TRAINING CAM ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Fig. 5. A qualitative comparison in real-robot experiments. Failures are highlighted with red circles. the same data. This indicates that our method can partially ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | body limitation/failure cue | In this setting, the camera viewpoint remains fixed and identical throughout both the finetuning and evaluation phases. • Slight Camera Perturbations To further validate ... | p. 5 (IV. EXPERIMENTS) |
 | body limitation/failure cue | To assess the model's robustness to changes in camera perspective, we conduct zero-shot evaluations using models fine-tuned with demonstrations from Camera 1. | p. 6 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 | In the following, we detail the model implementations for each action space. | p. 4 (IV. EXPERIMENTS) |
 | The entire transformer functions as a Diffusion Transformer (DiT) [39], which iteratively denoises the input over multiple steps to generate the final end-effector action. | p. 4 (IV. EXPERIMENTS) |
 | OC-VLA transforms the end effector pose whether defined in a discrete or continuous action space from the robot base coordinate to the third-person camera ... | p. 3 (III. METHOD) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** To assess the model's robustness to changes in camera perspective, we conduct zero-shot evaluations using models fine-tuned with demonstrations from Camera 1.
 
 - **Evidence anchors reviewed:** datasets p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 14 (Figure/Table caption), p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), results p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 11 (Figure/Table caption), p. 2 (Figure/Table caption), p. 4 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

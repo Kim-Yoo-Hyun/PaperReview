@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 4 / III. APPROACH - extractive body cue:** The final loss for direction inference is: L = λLdist +LAoT, where λ = 100 in our experiments.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 2 / I. INTRODUCTION - extractive body cue:** However, to avoid the back-and-forth actions, the network takes the history state as input and infers an additional "Arrow-of-Time (AoT)" attribute for each action.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** The action trajectories inferred by the policy network (shown in Fig.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,15 +87,11 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 
 - **p. 3 / III. APPROACH - extractive body cue:** DistDecoder is a fully-connected neural network trained using MSE loss Ldist for the executed action at.
 - **p. 2 / III. APPROACH - extractive body cue:** These three requirements directly correspond to the three key components of our algorithm, which are action position selection (a), action distance (b) and Arrow-of-Time inference ...
-- **p. 3 / III. APPROACH - extractive body cue:** DistDecoder is a fully-connected neural network trained using MSE loss Ldist for the executed action at.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** U-Net, architecture, task, network, supervised, outcome, executed, action, pixels, DistDecoder, fully-connected, neural, trained, MSE, loss, Ldist, first, half, sequence, select.
 - **Relevant PDF headings:** III. APPROACH (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +111,13 @@ PDF body method statement (p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 4: Open-ended state exploration. Arrow length indicates the inferred distance value, color indicates the inferred AoT label. We visualized the uniform samples to better ...
 - **p. 5 / IV. EVALUATION - extractive body cue:** I we can see that [ Where2Act ] is able to achieve similar performance in "single action effects", however, both [ Where2Act ] and [ ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH), p. 2 (III. APPROACH), p. 2 (III. APPROACH), objective p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), temporal p. 1 (I. INTRODUCTION), p. 5 (IV. EVALUATION), p. 1 (I. INTRODUCTION), p. 2 (II. RELATED WORK), p. 5 (IV. EVALUATION), p. 6 (IV. EVALUATION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

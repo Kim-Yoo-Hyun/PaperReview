@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experimental results), p. 7 (5.2. Exp
 - **p. 8 / 5.2. Experimental results - extractive body cue:** This shows the vital role of segmentation for landmark objects.
 - **p. 8 / 5.2. Experimental results - extractive body cue:** The omission of SegAround impairs performance particularly in the SPR task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview of the proposed compositional geographic reasoning task. This task enables natural language interaction with city-scale 3D scenes, supporting diverse geographic reasoning scenarios. ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experimental results), p. 7 (5.2. Exp
 | Given a query qk describing a question, this task requires models to accurately measure the height (MES-H) and distance (MES-D) of buildings. | definition/direction/unit from same section | p. 6 (4.1. Task Definition) |
 | Figure 1. Overview of the proposed compositional geographic reasoning task. This task enables natural language interaction with city-scale 3D scenes, supporting diverse geographic reasoning ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experimental results), p. 7 (5.2. Exp
 | Note that these comparison VLN-based baselines do not support pixel-level inference, so the GRD task is not evaluated. | comparison identity and matched condition | p. 8 (5.2. Experimental results) |
 | It is scaled up more than 10 times compared to the datasets used in previous works, and contains many more words [26, 53] (Appendix ... | comparison identity and matched condition | p. 6 (4.3. Dataset construction and statistics) |
 | See appendix B for more ablation studies. | comparison identity and matched condition | p. 8 (5.2. Experimental results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,21 +116,11 @@ PDF body evaluation/result cue (p. 7 (5.2. Experimental results), p. 7 (5.2. Exp
 | body limitation/failure cue | Note that MES-H and CMP are not evaluated in UrbanScene3D because Ground Truth for height cannot be obtained. | p. 7 (5.1. Evaluation metrics) |
 | body limitation/failure cue | These results demonstrate the limitations of localization using 3D language fields alone in 3D urban scenes and the effectiveness of GV-APIs and visual programming ... | p. 7 (5.2. Experimental results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | For the SPR and CMP tasks, exact match criteria are applied to determine correctness to compute accuracy. | p. 7 (5.1. Evaluation metrics) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -151,6 +130,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Experimental results), p. 7 (5.2. Exp
 - **p. 7 / 5.2. Experimental results - extractive body cue:** These results demonstrate the limitations of localization using 3D language fields alone in 3D urban scenes and the effectiveness of GV-APIs and visual programming in ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. GeoEval3D Dataset), p. 6 (4. GeoEval3D Dataset), p. 7 (5.1. Evaluation metrics), p. 7 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 8 (5.2. Experimental results), metrics p. 7 (5.1. Evaluation metrics), p. 7 (5.1. Evaluation metrics), p. 8 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 5 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 7 (5.2. Experimental results), p. 7 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 6 (4.3. Dataset construction and statistics), p. 8 (5.2. Experimental results), results p. 7 (5.2. Experimental results), p. 7 (5.2. Experimental results), p. 5 (Figure/Table caption), p. 8 (5.2. Experimental results), p. 8 (5.2. Experimental results), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** While a longer N includes more past observations, it can clutter the visual context and potentially obscure key objects or the robot end-effector, while a ...
 - **p. 8 / 4 EXPERIMENT - extractive body cue:** Is performance gain of TraceVLA coming from further finetuning on a smaller subset of Open X-embodiment dataset?
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: An illustration of our method. The first image shows the original robot's observation, while the second contains the same image with overlaid visual ...
@@ -86,8 +84,6 @@
 | Table 3: Impact of transparency on performance. Color: The choice of color scheme was also tested. The default TraceVLA color scheme uses RYPBG (Red, ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | Table 5: Multitask success rates on LIBERO simulation benchmarks. In addition to SimplerEnv and WIDOWX-250 real robot experiments, in this section, we conduct an ... | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -98,13 +94,6 @@
 | As shown in Table 1, TraceVLA consistently outperforms OpenVLA across various tasks and evaluation metrics in the SimplerEnv Google robot tasks. | comparison identity and matched condition | p. 5 (4 EXPERIMENT) |
 | In theory, the model should receive more information from these 6 complete frames compared to visual trace prompting. | comparison identity and matched condition | p. 8 (4 EXPERIMENT) |
 | Interestingly, using this text-based trace yields a 2.4% average performance gain over the baseline VLA model, suggesting that point tracking information is indeed useful ... | comparison identity and matched condition | p. 8 (4 EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -143,8 +132,6 @@
 | body limitation/failure cue | Figure 1. In additional, we finetuned a more compact VLA model, TraceVLA-Phi3, using the 4B-parameter Phi-3-Vision as a backbone on the Open X-Embodiments dataset, ... | p. 2 (Figure/Table caption) |
 | body limitation/failure cue | This comprehensive set of variations allows us to assess the robustness and adaptability of our approach in handling diverse manipulation scenarios, particularly evaluating the ... | p. 5 (4 EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -158,14 +145,6 @@
 | This performance drop is likely due to redundant information between visual tokens at different timesteps, which may distract the model from focusing on the ... | p. 8 (4 EXPERIMENT) |
 | While text descriptions can precisely convey the location and movement of each point, they also increase token count (by ∼150 tokens) compared with visual ... | p. 8 (4 EXPERIMENT) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4 EXPERIMENT - extractive body cue:** In the pick-place banana task, TraceVLA's only failures occurred due to grasping issues, while OpenVLA, even when successfully grasping the banana, failed to follow the ...
@@ -176,6 +155,5 @@
 - **p. 5 / 4 EXPERIMENT - extractive body cue:** This comprehensive set of variations allows us to assess the robustness and adaptability of our approach in handling diverse manipulation scenarios, particularly evaluating the spatial ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENT), p. 5 (4 EXPERIMENT), p. 5 (4 EXPERIMENT), p. 6 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), metrics p. 6 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 17 (Figure/Table caption), p. 6 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), baselines p. 6 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 7 (Figure/Table caption), p. 5 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), results p. 6 (4 EXPERIMENT), p. 7 (4 EXPERIMENT), p. 9 (4 EXPERIMENT), p. 6 (4 EXPERIMENT), p. 8 (4 EXPERIMENT), p. 17 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

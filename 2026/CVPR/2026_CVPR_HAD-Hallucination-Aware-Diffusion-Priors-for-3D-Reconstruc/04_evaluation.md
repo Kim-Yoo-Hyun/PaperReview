@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 - **p. 7 / 5.3. Cross-domain evaluation - extractive body cue:** We also examine whether our HAD can generalize to a different dataset - MipNeRF360 [3].
 - **p. 8 / 5.4. Ablation studies - extractive body cue:** We calculate the Mean Absolute Error (MAE) of the predicted hallucination score maps on the test scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. While diffusion priors [41] enhance the quality of 3D reconstruction, they introduce detrimental aliens - the hallucinated elements that do not exist in ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 | We conduct ablation studies on different components, the number of versions and fusion strategy in the multisampling strategy (M.S.), the pretrained multiview encoder, and ... | definition/direction/unit from same section | p. 7 (5.4. Ablation studies) |
 | Figure 1. While diffusion priors [41] enhance the quality of 3D reconstruction, they introduce detrimental aliens - the hallucinated elements that do not exist ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 | We compare against baselines including FSGS [52], GenFusion [43] and Difix3D [41]. | comparison identity and matched condition | p. 7 (5.3. Cross-domain evaluation) |
 | Similarly, our method without the pretrained multi-view encoder performs worse. | comparison identity and matched condition | p. 8 (5.4. Ablation studies) |
 | This comparison demonstrates the importance of leveraging multi-view reasoning ability of a pretrained NVS network. | comparison identity and matched condition | p. 8 (5.4. Ablation studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 | body limitation/failure cue | We primarily use Peak Signal-toNoise Ratio (PSNR), structural (SSIM [39]) and perceptual (LPIPS [50]) similarities as metrics to quantify the performance of novel view ... | p. 6 (5.1. Experimental Setup) |
 | body limitation/failure cue | Notably, while the post-rendering improves the photorealism metric (LPIPS), it degrades fidelity metrics (PSNR and SSIM) for both Difix3D and our method. | p. 7 (5.2. In-domain evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 | We conduct ablation studies on different components, the number of versions and fusion strategy in the multisampling strategy (M.S.), the pretrained multiview encoder, and ... | p. 7 (5.4. Ablation studies) |
 | Similarly, our method without the pretrained multi-view encoder performs worse. | p. 8 (5.4. Ablation studies) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion and Future Work - extractive body cue:** In this work, we identify and address a critical limitation in diffusion-assisted 3D reconstruction: while diffusion priors effectively alleviate data sparsity, they introduce hallucinated content ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablatio
 - **p. 7 / 5.2. In-domain evaluation - extractive body cue:** Notably, while the post-rendering improves the photorealism metric (LPIPS), it degrades fidelity metrics (PSNR and SSIM) for both Difix3D and our method.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 8 (5.4. Ablation studies), p. 7 (5.3. Cross-domain evaluation), p. 8 (5.4. Ablation studies), metrics p. 8 (Figure/Table caption), p. 8 (5.4. Ablation studies), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 7 (5.2. In-domain evaluation), p. 4 (Figure/Table caption), baselines p. 6 (5.2. In-domain evaluation), p. 7 (5.3. Cross-domain evaluation), p. 6 (5.2. In-domain evaluation), p. 7 (5.3. Cross-domain evaluation), p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablation studies), results p. 8 (5.4. Ablation studies), p. 8 (5.4. Ablation studies), p. 7 (5.3. Cross-domain evaluation), p. 7 (5.4. Ablation studies), p. 1 (Figure/Table caption), p. 6 (5.2. In-domain evaluation).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

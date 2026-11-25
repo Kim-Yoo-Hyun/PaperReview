@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 - **p. 8 / 4.5. Ablation Study - extractive body cue:** We evaluate the effect of varying view counts on 3DVG performance using the Nr3D dataset.
 - **p. 8 / 4.5. Ablation Study - extractive body cue:** To assess the contribution of each component within ViewSRD, we conducted detailed ablation studies on the Nr3D dataset [1].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. (a) Previous 3DVG methods struggle with ambiguities from complex multi-anchor queries and perspective shifts. (b) ViewSRD addresses this by using the SRD module ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 | We use AdamW [30] with a learning rate of 0.0005. | definition/direction/unit from same section | p. 6 (4.1. Experiment Settings) |
 | Figure 2. Overview of ViewSRD. We begin by employing the Simple Relation Decoupling (SRD) module to decompose complex multi- anchor queries into multiple simpler ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 | In contrast, existing methods such as MVT [18] and CoT3DRef [2], which do not account for the necessity of spatial relationship decoupling, exhibit a ... | comparison identity and matched condition | p. 7 (4.3. Analysis of Anchors) |
 | Ablation of view numbers on Nr3D [1]. | comparison identity and matched condition | p. 8 (4.4. SRD Enhances Other 3DVG Methods) |
 | Accuracy comparison when replacing different LLMs in SRD module on Nr3D [1]. | comparison identity and matched condition | p. 8 (4.5. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 | body limitation/failure cue | These results confirm the robustness and generalizability of our approach across diverse scenario. | p. 7 (4.2. 3D Visual Grounding Results) |
 | body limitation/failure cue | In contrast, ViewSRD correctly grounds targets by decomposing complex queries and leveraging robust spatial relationships between targetanchor pairs. | p. 7 (4.2. 3D Visual Grounding Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 | We take the average of these dot products across different sentences and compute a corresponding probability distribution using the softmax function. | p. 5 (3.3. Multi-view Textual-Scene Interaction Module) |
 | To achieve this, we employ PointNet++ [35] as the scene encoder, computing scene features 𝐹𝑉𝑛for each viewpoint, where 𝑛∈𝑁denotes the scene index across 𝑁viewpoints. | p. 5 (3.3. Multi-view Textual-Scene Interaction Module) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** A limitation of ViewSRD is its assumption that complex queries can be fully decomposed without overlapping relationships.
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4
 - **p. 7 / 4.2. 3D Visual Grounding Results - extractive body cue:** In contrast, ViewSRD correctly grounds targets by decomposing complex queries and leveraging robust spatial relationships between targetanchor pairs.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), metrics p. 8 (4.5. Ablation Study), p. 7 (4.3. Analysis of Anchors), p. 7 (4.3. Analysis of Anchors), p. 6 (4.1. Experiment Settings), p. 8 (4.5. Ablation Study), p. 1 (Figure/Table caption), baselines p. 6 (4.2. 3D Visual Grounding Results), p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.4. SRD Enhances Other 3DVG Methods), p. 8 (4.5. Ablation Study), results p. 7 (4.2. 3D Visual Grounding Results), p. 7 (4.3. Analysis of Anchors), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 6 (4.1. Experiment Settings), p. 6 (4.1. Experiment Settings).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

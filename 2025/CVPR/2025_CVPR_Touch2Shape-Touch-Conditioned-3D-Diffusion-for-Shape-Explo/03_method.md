@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (
 - **p. 4 / 3.1. Touch-conditioned Diffusion Model - extractive body cue:** The loss function is: Lrl = ↓log eq·kp/ε !K i=0 eq·ki/ε , (3) where q is the query feature, k is the key feature, ki ...
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 5 (3.3. Policy Training), p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (3.1. Touch-conditioned Diffusion Model), p. 5 (3.3. Policy Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (
 - **p. 5 / 3.3. Policy Training - extractive body cue:** Subsequently, we construct an action embedding module to derive the embedding for the potential actions.
 - **p. 3 / 3. Method - extractive body cue:** In test stage, we gather tactile images (T0, ..., Tn→1) from the target, utilizing the trained diffusion model to obtain a lowdimensional representation for predicting ...
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,15 +90,11 @@ PDF body method statement (p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (
 - **p. 3 / 3. Method - extractive body cue:** In test stage, we gather tactile images (T0, ..., Tn→1) from the target, utilizing the trained diffusion model to obtain a lowdimensional representation for predicting ...
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** After the diffusion model training finished, we conducted policy training in silmulation environment [34] for 200 epochs with a learning rate of 0.0003 and batch ...
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** The diffusion model was trained for 1 million iterations with an initial learning rate of 0.00001 and batch size of 12, while the touch shape ...
-- **p. 5 / 3.3. Policy Training - extractive body cue:** We first employ the pre-trained latent encoder in Figure 2 (c) to encode both the initial and current latent vectors of the touch-conditioned diffusion model.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** loss, function, diffusion, model, training, follows, Ldiff, t//2, where, added, gaussian, noise, denoising, network, touch, condition, extraction, inputs, number, timesteps.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.1. Touch-conditioned Diffusion Model (p. 4); 3.3. Policy Training (p. 5); 4.3. Evaluation on Policy (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. We pretrained (a) the shape encoder and decoder, (b) the touch CNN model that is used for touch chart prediction, and (c) the ...
 - **p. 7 / 4.3. Evaluation on Policy - extractive body cue:** Furthermore, the Oracle policy is used to select the action which resulted in the best improvement, which is viewed as an upper-bound point of comparison ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (3.1. Touch-conditioned Diffusion Model), p. 5 (3.3. Policy Training), p. 5 (3.3. Policy Training), p. 3 (3. Method), p. 3 (3. Method), objective p. 5 (3.3. Policy Training), p. 5 (3.3. Policy Training), p. 4 (3.1. Touch-conditioned Diffusion Model), p. 4 (3.1. Touch-conditioned Diffusion Model), temporal p. 5 (3.3. Policy Training), p. 5 (3.3. Policy Training), p. 4 (3.1. Touch-conditioned Diffusion Model), p. 1 (body section not recovered), p. 4 (3. Method), p. 6 (4.2. Evaluation on Reconstruction Performance).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

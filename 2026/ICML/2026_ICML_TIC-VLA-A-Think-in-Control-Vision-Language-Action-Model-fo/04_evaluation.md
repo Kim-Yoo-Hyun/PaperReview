@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** The primary language-guided navigation baselines are listed below: (1) NaVILA (Cheng et al., 2024), a hierarchical VLA model that translates language instructions into mid-level commands; ...
 - **p. 7 / 4.1. Experimental Setup - extractive body cue:** Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments t=2.6s t=6.4s t=13.3s t=27.9s t=32.3s t=2.3s t=7.7s t=18.3s t=54.3s t=57.3s t=69.1s I am at the end ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. TIC-VLA enables real-time, language-conditioned nav- igation by decoupling slow vision-language reasoning from fast reactive control via a delayed semantic-control interface. A latency- consistent ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 | Figure 10. Online reinforcement learning tasks used to train TIC-VLA across three environments and tasks. The weights for the reward function (Equation (5)) are ... | definition/direction/unit from same section | p. 19 (Figure/Table caption) |
 | We adopt the following evaluation metrics: (1) Navigation Error (NE): the final distance between 6 | definition/direction/unit from same section | p. 6 (4.1. Experimental Setup) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 | Point-goal navigation policies are included as reference baselines to contextualize task difficulty: (1) a vanilla Behavior Cloning (BC) policy that maps RGB observations and ... | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | Figure 10. Online reinforcement learning tasks used to train TIC-VLA across three environments and tasks. The weights for the reward function (Equation (5)) are ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
 | All evaluations are conducted zero-shot, without task-specific training data. | comparison identity and matched condition | p. 8 (4.3. Real-world Testing) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 | body limitation/failure cue | After RL fine-tuning, TICVLA achieves the highest success rate and the lowest collision rate, indicating improved closed-loop robustness in dynamic scenes. | p. 7 (4.2. Simulation Testing) |
 | body limitation/failure cue | Third, extending beyond navigation to domains such as robotic manipulation remains future work. | p. 9 (5. Conclusions) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 | All experiments are conducted on an NVIDIA L40S GPU, with the action policy running at 10 Hz and asynchronous VLM reasoning running at 0.5 ... | p. 7 (4.2. Simulation Testing) |
 | Task descriptions and hardware configurations are shown in Figure 6. | p. 8 (4.3. Real-world Testing) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.1. Experimental Setup - extractive body cue:** An episode is considered a failure if manual intervention is required to prevent collisions.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simul
 - **p. 9 / 5. Conclusions - extractive body cue:** Third, extending beyond navigation to domains such as robotic manipulation remains future work.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 8 (4.3. Real-world Testing), p. 8 (4.3. Real-world Testing), p. 9 (4.4. Ablation Study), metrics p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study), p. 9 (4.4. Ablation Study), p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 8 (4.3. Real-world Testing), baselines p. 7 (4.2. Simulation Testing), p. 7 (4.2. Simulation Testing), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 19 (Figure/Table caption), p. 8 (4.3. Real-world Testing), results p. 7 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 8 (4.2. Simulation Testing), p. 9 (4.4. Ablation Study), p. 7 (4.1. Experimental Setup), p. 9 (4.4. Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

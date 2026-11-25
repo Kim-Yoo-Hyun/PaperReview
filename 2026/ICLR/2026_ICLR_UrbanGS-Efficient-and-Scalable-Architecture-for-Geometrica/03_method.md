@@ -55,7 +55,6 @@ PDF body method statement (p. 7 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 - **p. 4 / 3.1 PRELIMINARIES - extractive body cue:** To reconstruct scene surfaces, we enforce normal priors N predicted by a pretrained monocular deep neural network (Bae & Davison, 2024) to supervise the rendered ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 7 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** Since the Mill-19 (Yu et al., 2022), UrbanScene3D (Lin et al., 2022), and GauU-Scene (Xiong et al., 2024) datasets contain thousands of high-resolution images, we ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** To ensure the reliability of depth alignment across multiple views, we propose an adaptive confidence weighting strategy that dynamically ad2
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 7 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** We compare the training time of our method with that of existing methods.
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** The results demonstrate that our SAGP is more effective at preserving the original geometric quality (higher F1 score) while significantly reducing the number of Gaussians, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, when, obtaining, global, coarse, DGS, model, eliminate, redundant, Gaussians, through, SAGP, pruning, prevent, attracting, non-contributing, views, amplifying, computational, load.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 7 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p
 - **p. 15 / A IMPLEMENTATION DETAILS - extractive body cue:** When constructing the coarse global Gaussian model, we apply an initial, simple pruning rule to remove obviously redundant Gaussians, reduce memory, and obtain a compact ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: UrbanGS training pipeline and core components. (a) Training Pipeline: Starting from coarse global Gaussians, we apply spatially adaptive Gaussian pruning to obtain compact ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), p. 15 (A IMPLEMENTATION DETAILS), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), objective p. 6 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES), temporal p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 5 (3.1 PRELIMINARIES), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

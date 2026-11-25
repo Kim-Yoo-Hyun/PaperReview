@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** Both networks are supervised via MSE Loss between predicted and real coverage.
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 5 (IV. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** To reduce noise in reward computation, at the beginning of each blowing action the blower turns on for 2 s after movement to ensure the ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** By controlling the blower's direction, the system can apply dense forces on out-of-contact surfaces (A and B) to efficiently achieve its goal. • High-speed interactions ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHO
 - **p. 5 / IV. METHOD - extractive body cue:** In total, we collected 4,400 (4,000 for training, 400 for validation) interactions over the course of 10 hours and trained the blowing network 50 epochs ...
 - **p. 7 / V. EVALUATION - extractive body cue:** Training of [FlingBot+] takes only 300 epochs, while [FlingBot] requires over 2,000 epochs to converge.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** same, blowing, network, architecture, unfolding, task, modifications, action, parameterization, reward, signal, directly, train, policy, real-world, data, consists, image, encoder, layer.
 - **Relevant PDF headings:** IV. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHO
 - **p. 6 / V. EVALUATION - extractive body cue:** The failure of [FlingBot] is due to its limited move speed, which needs to Large Rect X-Large Rect Shirt Dress Pick&Place 36.2 / 13.1 38.0 ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 10: Failure Cases. (a) A corner is inadvertently rolled up due to Eddy effects. (b) Multiple layers of the fabric are mistakenly grasped. (c) ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 3 (IV. METHOD), p. 3 (IV. METHOD), objective p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD), p. 5 (IV. METHOD), temporal p. 5 (IV. METHOD), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 8 (V. EVALUATION), p. 1 (Abstract), p. 4 (IV. METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

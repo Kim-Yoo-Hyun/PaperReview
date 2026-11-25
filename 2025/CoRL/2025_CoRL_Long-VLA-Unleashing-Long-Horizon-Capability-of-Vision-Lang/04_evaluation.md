@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 - **p. 8 / 4 Experiment - extractive body cue:** This versatility not only validates the robustness of our approach but also highlights its potential for integration with a wide range of existing VLA models, ...
 - **p. 8 / 4 Experiment - extractive body cue:** This observation is fully consistent with the findings in RH20T-P [61], suggesting that adopting a decomposition strategy allows the model to efficiently correct task execution ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: In contrast to previous methods that (a) adopt a unified model but are limited to short- horizon tasks and fail to address skill ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 | In this manner, a shared policy can be trained across stages, effectively combining the data-driven advantages of endto-end VLA models with strategies for long-horizon ... | definition/direction/unit from same section | p. 8 (4 Experiment) |
 | Performance significantly improves with input-level adaptation, mainly from adding detection data during movement for better control and removing unwanted third-person visual interference during interaction ... | definition/direction/unit from same section | p. 8 (4 Experiment) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 | In addition, we include several baselines to more comprehensively evaluate the effectiveness of our method: video generation-based VLA models (GR-1 [58] and UP-VLA [59]) ... | comparison identity and matched condition | p. 6 (4 Experiment) |
 | RandomLocation 1 2 3 4 0 25 50 75 100 Task completed (%) Random Location 1 2 3 4 5 6 7 8 0 ... | comparison identity and matched condition | p. 7 (4 Experiment) |
 | Figure 1: In contrast to previous methods that (a) adopt a unified model but are limited to short- horizon tasks and fail to address ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 | body limitation/failure cue | (Left: cleaning; Right: sorting) These performance gains stem from two key factors: the robust capability of our base policy and the substantial enhancement provided ... | p. 7 (4 Experiment) |
 | body limitation/failure cue | Performance significantly improves with input-level adaptation, mainly from adding detection data during movement for better control and removing unwanted third-person visual interference during interaction ... | p. 8 (4 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 | (3) where α is a hyperparameter, which we set to 0.1. | p. 4 (3 Method) |
 | This ensures that attention is only computed between active token pairs. | p. 4 (3 Method) |
 | Further implementation details are provided in Appendix C.1. | p. 5 (3 Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -167,9 +146,8 @@ PDF body evaluation/result cue (p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (
 - **p. 8 / 4 Experiment - extractive body cue:** Performance significantly improves with input-level adaptation, mainly from adding detection data during movement for better control and removing unwanted third-person visual interference during interaction for ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Experiment), p. 6 (4 Experiment), p. 5 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), metrics p. 6 (4 Experiment), p. 13 (Figure/Table caption), p. 7 (4 Experiment), p. 1 (Figure/Table caption), p. 6 (4 Experiment), p. 7 (4 Experiment), baselines p. 7 (4 Experiment), p. 5 (4 Experiment), p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 1 (Figure/Table caption), results p. 6 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

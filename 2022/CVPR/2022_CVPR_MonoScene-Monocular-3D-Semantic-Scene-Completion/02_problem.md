@@ -62,8 +62,6 @@ PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p
 | body cue at p. 2 | Figure 2. MonoScene framework. We infer 3D SSC from a single RGB image, leveraging 2D and 3D UNets, ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | Figure 6. Frustum Proportion Loss. Considering an image di- vided into same-size 2D patches (here, 2×2), each corresponds ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. Features Line of Sight Projection (FLoSP)), p. 2 (3. Method), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), interface p. 3 (3.1. Features Line of Sight Projection (FLoSP)), p. 2 (3. Method), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)), objective p. 2 (3. Method), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)), p. 4 (3.3. Losses), p. 4 (3.3. Losses).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

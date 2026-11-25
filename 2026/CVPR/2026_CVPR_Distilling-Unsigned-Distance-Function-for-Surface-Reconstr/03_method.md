@@ -57,7 +57,6 @@ PDF body method statement (p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.
 - **p. 5 / 3.5. Joint Optimization - extractive body cue:** This composite objective integrates fine-grained local shape priors and encourages the recovery of detailed, smooth, and topologically consistent surfaces.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.3. Band-limited Knowledge Distillation), p. 3 (3. Method), p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.3. Band-limited Knowledge Distillation), p. 5 (3.5. Joint Optimization), p. 5 (3.5. Joint Optimization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.
 - **p. 1 / 1. Introduction - extractive body cue:** In contrast, unsigned distance function (UDF) dispenses with the global sign and †Corresponding authors. can represent open geometry directly, attractive for objects or scenes containing ...
 - **p. 4 / 3.2. Learning Patch-based UDF Priors - extractive body cue:** We then can synthesize a series of point cloud patches using Eq.(4) for training patch-based UDF priors with groundtruth UDF values for queries [19].
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.
 - **p. 4 / 3.2. Learning Patch-based UDF Priors - extractive body cue:** We then can synthesize a series of point cloud patches using Eq.(4) for training patch-based UDF priors with groundtruth UDF values for queries [19].
 - **p. 5 / 4.1. Experiment Settings - extractive body cue:** We train the UDF network with the Adam optimizer and an initial learning rate of 1 × 10-3, using a cosine learning rate decay strategy ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Considering, strengths, LoSF-UDF, including, robustness, noise, local, feature, representation, teacher, UDF, model, distillation, denoted, integrate, patch-based, prior, DGS, optimization, regularize.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.
 - **p. 8 / 5. Conclusion - extractive body cue:** In future work, we plan to extend the framework to handle sparse setting and dynamic scenes and explore the integration of semantic priors to further ...
 - **p. 8 / 4.3. DTU Dataset - extractive body cue:** It is well known that learning unsigned distance functions (UDFs) is intrinsically more challenging than learning signed distance fields (SDFs), due to sign ambiguity and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.2. Learning Patch-based UDF Priors), p. 5 (3.3. Band-limited Knowledge Distillation), p. 4 (3.2. Learning Patch-based UDF Priors), p. 5 (3.4. Visibility and Geometry Aware Weighting), p. 3 (3.2. Learning Patch-based UDF Priors), objective p. 3 (3. Method), p. 4 (3.3. Band-limited Knowledge Distillation), p. 5 (3.5. Joint Optimization), p. 3 (3.2. Learning Patch-based UDF Priors), p. 4 (3.3. Band-limited Knowledge Distillation), p. 5 (3.5. Joint Optimization), temporal p. 2 (2.2. Learning SDFs with Multiview Images), p. 2 (1. Introduction), p. 3 (3.2. Learning Patch-based UDF Priors), p. 3 (3. Method), p. 1 (1. Introduction), p. 7 (4.2. DF3D Dataset).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

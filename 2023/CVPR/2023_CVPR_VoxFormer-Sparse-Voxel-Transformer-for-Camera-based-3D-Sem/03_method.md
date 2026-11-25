@@ -54,7 +54,6 @@ PDF body method statement (p. 3 (3.1. Preliminary), p. 5 (3.3. Predefined Parame
 - **p. 4 / 3.3. Predefined Parameters - extractive body cue:** Depthbased Query Proposal Feature Extractor Depth Prediction Voxel Queries 𝑸 𝑤 ℎ 𝑧 Voxel Features 𝑭𝒕𝟑𝑫 … Query Proposals 𝑸𝒑 Image 𝐼%, 𝐼%&', … Image ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Predefined Parameters), p. 3 (3.1. Preliminary), p. 5 (3.6. Training Loss), p. 3 (3.2. Overall Architecture), p. 4 (3.3. Predefined Parameters), p. 4 (3.3. Predefined Parameters).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 3 (3.1. Preliminary), p. 5 (3.3. Predefined Parame
 - **p. 4 / 3.3. Predefined Parameters - extractive body cue:** Note that our framework supports the input of single or multiple images. computations.
 - **p. 5 / 3.3. Predefined Parameters - extractive body cue:** Finally, we perform a weighted sum of the sampled features as the output of deformable cross-attention (DCA): DCA(qp, F2D) = 1 /Vt/ X t∈Vt DA(qp, ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 3 (3.1. Preliminary), p. 5 (3.3. Predefined Parame
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** We train stage-1 and stage-2 separately with 24 epochs, a learning rate of 2×10-4.
 - **p. 7 / 4.2. Performance - extractive body cue:** Besides, VoxFormer needs less than 16GB GPU memory during training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Motivated, reconstruction-beforehallucination, sparsity-in-3D-space, build, twostage, framework, stage-1, CNN, proposes, sparse, voxel, queries, image, depth, attend, images, since, features, correspond, visible.
 - **Relevant PDF headings:** 3. Methodology (p. 3); 3.2. Overall Architecture (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 3 (3.1. Preliminary), p. 5 (3.3. Predefined Parame
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 4. Ablation study for query proposal. Our depth-based query proposal performs best. t
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 6. Ablation study for 2D image feature layers. Spatial resolution is relative to the input image size. Methods IoU (%) mIoU (%) Ours 44.02 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Preliminary), p. 5 (3.3. Predefined Parameters), p. 5 (3.3. Predefined Parameters), p. 3 (3.2. Overall Architecture), p. 4 (3.3. Predefined Parameters), p. 4 (3.3. Predefined Parameters), objective p. 5 (3.6. Training Loss), p. 5 (3.6. Training Loss), p. 3 (3.1. Preliminary), p. 3 (3.2. Overall Architecture), p. 4 (3.3. Predefined Parameters), temporal p. 3 (3.2. Overall Architecture), p. 3 (3.1. Preliminary), p. 4 (3.3. Predefined Parameters), p. 4 (3.3. Predefined Parameters), p. 5 (4.1. Experimental Setup), p. 5 (3.6. Training Loss).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

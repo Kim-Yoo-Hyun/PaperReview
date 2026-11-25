@@ -46,7 +46,6 @@ PDF body method statement (p. 9 (Method), p. 9 (Method)): Visual features Before
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 9 (Method), p. 9 (Method)): Visual features Before
 - **p. 9 / Method - extractive body cue:** Question categories: NAT = natural science, SOC = social science, LAN = language science, TXT = text context, IMG = image context, NO = no ...
 - **p. 9 / Method - extractive body cue:** We hypothesize that this is because CLIP's last layer features may focus more on global and abstract image properties compared to the layer before it, ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,15 +82,11 @@ PDF body method statement (p. 9 (Method), p. 9 (Method)): Visual features Before
 - **p. 5 / 5 Experiments - extractive body cue:** We pre-train our model on the filtered CC-595K subset for 1 epoch with a learning rate of 2e-3 and a batch size of 128, and ...
 - **p. 5 / 5 Experiments - extractive body cue:** We train all models with 8× A100s, following Vicuna's hyperparameters [9].
 - **p. 8 / 5 Experiments - extractive body cue:** For LLaVA, we use the visual features before the last layer, ask the model to first predict reasons and then the answer, and train it ...
-- **p. 9 / Method - extractive body cue:** To decide the order between the answer and reasoning process in the model prediction, we run both variants and observe that answer-first reports the best ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Visual, features, Before, Last, Best, variant, Predict, answer, first, Training, scratch, model, size, Table, Design, choice, ablations, decide, order, between.
 - **Relevant PDF headings:** Method (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +106,10 @@ PDF body method statement (p. 9 (Method), p. 9 (Method)): Visual features Before
 - **p. 18 / Figure/Table caption - extractive body cue:** Figure 4: LLaVA relates the movie scenes to the textual knowledge from the pretrained LLM. The painting depicts a dog in a humorous situation, where ...
 - **p. 7 / 5 Experiments - extractive body cue:** We also observed an interesting failure of LLaVA, as it responds with yes when asked if strawberry-flavored yogurt is present, even though the fridge contains ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 9 (Method), p. 9 (Method), objective 본문 anchor 없음, temporal p. 6 (5 Experiments), p. 7 (5 Experiments), p. 2 (2 Related Work), p. 3 (2 Related Work), p. 4 (2 Related Work), p. 4 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

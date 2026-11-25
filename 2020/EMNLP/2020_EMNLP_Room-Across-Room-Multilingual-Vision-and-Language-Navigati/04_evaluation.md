@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8
 - **p. 8 / 5 Experiments - extractive body cue:** 8) performs best on both datasets, but domain differences thwart simple transfer learning (i.e., train on X, evaluate on Y). instruction-path pair is treated as ...
 - **p. 9 / 5 Experiments - extractive body cue:** Method Vision Language en hi te en hi te en hi te en hi te (4) Multi ✓ ✓ 11.0 10.9 11.0 22.2 23.0 23.1 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: RxR's instructions are densely grounded to the visual scene by aligning the annotator's virtual pose to their spoken instructions for navigating a path. ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8
 | While the learned agent is clearly much better than a random agent, there is a great deal of headroom to reach human performance. | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | Figure 2: Given the panorama navigation graph P with room graph R in Figure 2a, we sample a simple room path (r0, r2, r3) ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8
 | Table 4: Simple baselines on val-unseen paths. RxR proves more difficult than R2R overall, and less amenable to agents that tend to go straight ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | In contrast, the vision-only model has no access to the instructions, without which the paths are highly random. | comparison identity and matched condition | p. 9 (5 Experiments) |
 | Table 1: VLN dataset comparison. RxR is larger, multi- lingual, and includes dense spatiotemporal groundings (Ground) and follower demonstrations (Demos). led to a focus ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8
 | body limitation/failure cue | Although RxR and R2R share the same underlying environments, we note that RxR →R2R cannot exploit R2R's | p. 8 (5 Experiments) |
 | body limitation/failure cue | This is consistent with results in multilingual machine translation (MT) and automatic speech recognition (ASR) where adding more languages can also lead to degradation ... | p. 8 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,20 +131,11 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8
 | On average, Guide task annotations (including both steps, performed back-to-back) take 458 seconds. | p. 5 (1 Introduction) |
 | Each simple baseline requires a stopping criteria; we choose to stop after N steps where N is the average number of steps in the ... | p. 6 (3. Given correct first step then go straight) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 Experiments - extractive body cue:** Although RxR and R2R share the same underlying environments, we note that RxR →R2R cannot exploit R2R's
 - **p. 8 / 5 Experiments - extractive body cue:** This is consistent with results in multilingual machine translation (MT) and automatic speech recognition (ASR) where adding more languages can also lead to degradation for ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), metrics p. 6 (Figure/Table caption), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 6 (Figure/Table caption), p. 9 (5 Experiments), p. 2 (Figure/Table caption), results p. 8 (5 Experiments), p. 9 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

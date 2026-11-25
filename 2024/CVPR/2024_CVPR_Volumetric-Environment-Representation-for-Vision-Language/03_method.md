@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 - **p. 5 / 3.3. Action Prediction - extractive body cue:** In the training stage, a heatmap [102] with a Gaussian kernel is used to supervise this action prediction (§3.5).
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (3.1. Environment Encoder), p. 4 (3.1. Environment Encoder), p. 6 (3.5. Implementation Details), p. 6 (3.5. Implementation Details), p. 5 (3.3. Action Prediction), p. 5 (3.3. Action Prediction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 - **p. 4 / 3.2. Volume State Estimation - extractive body cue:** As the entire environment is partially observable, the current state transition (st →st+1 in X) is regarded as a local consideration for action prediction.
 - **p. 5 / 3.3. Action Prediction - extractive body cue:** After executing the action in A∗ t , our agent reaches the next viewpoint v∗ t+1,0, and will iteratively: (1) encode its current observation as ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** environment, representation, first, reshaped, RDe, then, adopt, multi-layer, transformers, MLT, model, relations, between, follows, where, updated, representations, denotes, concatenation, operation.
 - **Relevant PDF headings:** 3. Approach (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Envir
 - **p. 6 / 3.5. Implementation Details - extractive body cue:** For the multiview images, we adopt ViT-B/16 [20] pretrained on ImageNet to extract features.
 - **p. 6 / 3.5. Implementation Details - extractive body cue:** Following recent VLN practice [14, 16, 33], both offline pretraining and finetuning are adopted.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Volume State Estimation), p. 3 (3.1. Environment Encoder), p. 4 (3.2. Volume State Estimation), p. 5 (3.4. Annotation Generation), p. 5 (3.3. Action Prediction), p. 3 (3. Approach), objective p. 4 (3.1. Environment Encoder), p. 6 (3.5. Implementation Details), p. 6 (3.5. Implementation Details), p. 4 (3.1. Environment Encoder), p. 5 (3.3. Action Prediction), p. 5 (3.3. Action Prediction), temporal p. 1 (Abstract), p. 3 (3. Approach), p. 1 (1. Introduction), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 6 (3.5. Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

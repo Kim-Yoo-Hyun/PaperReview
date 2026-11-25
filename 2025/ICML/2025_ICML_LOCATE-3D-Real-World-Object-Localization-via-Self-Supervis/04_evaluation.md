@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Evaluating LOCATE 3D in novel environ
 - **p. 7 / 4.1. How does LOCATE 3D compare to prior methods - extractive body cue:** LOCATE 3D: Real-World Object Localization via Self-Supervised Learning in 3D Table 2: Ablation study of input features and encoder configurations.
 - **p. 7 / 4.2. Understanding the impact of 3D-JEPA - extractive body cue:** On this task, 3D-JEPA outperforms ConceptFusion 39% to 34%.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overall Architecture of LOCATE 3D, which operates in three phases. In Phase 1: Preprocessing, we construct a point cloud with "lifted" features from ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Evaluating LOCATE 3D in novel environ
 | Table 3: Impact of 2D foundation features on LOCATE 3D. We evaluate accuracy (@25 and @50 IoU) on the combined SR3D, NR3D, ScanRefer evaluation ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Table 4: Generalization of LOCATE 3D. We report accuracy @25 IoU. Using lifted 2D foundation features consistently im- proves results compared to RGB features, ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Evaluating LOCATE 3D in novel environ
 | Table 1: Results on 3D language grounding in 3D mesh and sensor point clouds (PC). We evaluate top-1 accuracy on the validation set without ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Table 12: Comparison of various ablations and baselines. Metrics shown as (@25, @50) for SN Joint, SR3D, NR3D, ScanRefer, SN++, and ARKitScenes. Input Features ... | comparison identity and matched condition | p. 27 (Figure/Table caption) |
 | As shown in Table 9, L3DD significantly increases the scale of existing 3D RefExp data along two key axes when compared to prior data ... | comparison identity and matched condition | p. 5 (3.2. Comparison with prior datasets) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Evaluating LOCATE 3D in novel environ
 | body limitation/failure cue | Table 10: Impact of scene diversity. We train all models on SR3D+NR3D+ScanRefer and add 30K samples from L3DD. We ablate whether these extra samples ... | p. 24 (Figure/Table caption) |
 | body limitation/failure cue | Figure 12: Examples of the Spot robot at the end of navigation task before the pick task (right) the output bounding boxes of LOCATE ... | p. 25 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Evaluating LOCATE 3D in novel environ
 | What is the impact of scaling the decoder? | p. 8 (4.3. LOCATE 3D ablations) |
 | We evaluate three different decoder sizes. | p. 8 (4.3. LOCATE 3D ablations) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.5. Computational Analysis - extractive body cue:** Limitations We can utilize such caching because our benchmarks operate under static (ScanNet) or quasi-static (robot) environments.
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 8 (4.4. Evaluating LOCATE 3D in novel environ
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 12: Examples of the Spot robot at the end of navigation task before the pick task (right) the output bounding boxes of LOCATE 3D+ ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 6 (4. Experiments and Analysis), p. 5 (3. LOCATE 3D DATASET Overview), p. 5 (3.1. Dataset Statistics), p. 6 (4. Experiments and Analysis), metrics p. 20 (Figure/Table caption), p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 18 (Figure/Table caption), p. 18 (Figure/Table caption), baselines p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 6 (4.1. How does LOCATE 3D compare to prior methods), p. 6 (Figure/Table caption), p. 27 (Figure/Table caption), p. 5 (3.2. Comparison with prior datasets), results p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 8 (4.4. Evaluating LOCATE 3D in novel environments), p. 20 (Figure/Table caption), p. 7 (4.1. How does LOCATE 3D compare to prior methods), p. 24 (Figure/Table caption), p. 6 (4.1. How does LOCATE 3D compare to prior methods).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

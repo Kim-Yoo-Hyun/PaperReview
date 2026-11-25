@@ -64,8 +64,6 @@ PDF body contribution framing (p. 3 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 18 | We leave this direction as future work. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 18 | We leave deep investigation on scaling laws for WAMs as future work. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (3.1. Model Architecture), p. 2 (1. Introduction), p. 7 (3.1. Model Architecture), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), interface p. 6 (3.1. Model Architecture), p. 2 (1. Introduction), p. 7 (3.1. Model Architecture), p. 2 (1. Introduction), objective p. 7 (3.1. Model Architecture), p. 7 (3.1. Model Architecture), p. 8 (3.2.3. System-level Optimizations), p. 9 (3.2.4. Implementation-level Optimizations), p. 8 (3.1. Model Architecture).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 - **p. 3 / III. METHOD - extractive body cue:** We model the exploration of a displaced object as a fixedpolicy Markov decision process (MDP) below. state space S: In the current step t, we ...
 - **p. 4 / III. METHOD - extractive body cue:** As the robot navigates, it periodically captures RGB and depth images from the environment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. The robot executes long-sequence, multi-modal, and multi-type daily object navigation commands based on a dynamic carrier-relationship scene graph. First, it successfully navigates to ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 | The first figure presents the SPL results in Sec. | definition/direction/unit from same section | p. 6 (1. Does the carrier-relationship scene graph (CRSG) im) |
 | III, our method achieves the highest SPL, followed by only-carriers LLM. | definition/direction/unit from same section | p. 6 (1. Does the carrier-relationship scene graph (CRSG) im) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 | Ablation Study To further investigate the role of CRSG updates in efficient navigation to everyday objects, we conducted ablation experiments on one long-sequence navigation ... | comparison identity and matched condition | p. 6 (1. Does the carrier-relationship scene graph (CRSG) im) |
 | If the input command is an image, an LLM-based image comparison is also performed. | comparison identity and matched condition | p. 4 (III. METHOD) |
 | Static Object Query Experiment: Comparison of Target Object Query Results on the Offline Map. | comparison identity and matched condition | p. 5 (1. Does the carrier-relationship scene graph (CRSG) im) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 | body limitation/failure cue | If the robot fails to reach the target, the SPL score is zero. | p. 4 (1. Does the carrier-relationship scene graph (CRSG) im) |
 | body limitation/failure cue | VLMap Ours ConceptGraph Result: Success Result: Success Result: Failed ---Find a chair Result: Failed ---Find yellow bottle Result: Failed ---Find chairs Task 1: black ... | p. 5 (1. Does the carrier-relationship scene graph (CRSG) im) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,20 +128,11 @@ PDF body evaluation/result cue (p. 5 (1. Does the carrier-relationship scene gra
 | Navigation Strategy for a Displaced Object Let the input navigation command for the target object be either a text, or an image. text or ... | p. 3 (III. METHOD) |
 | The RGB images are processed through CropFormer [38], Tokenize Anything model [35], CLIP [22] and SBERT [36] to obtain instance masks, captions, encoded CLIP ... | p. 4 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** If the robot fails to reach the target, the SPL score is zero.
 - **p. 5 / 1. Does the carrier-relationship scene graph (CRSG) im - extractive body cue:** VLMap Ours ConceptGraph Result: Success Result: Success Result: Failed ---Find a chair Result: Failed ---Find yellow bottle Result: Failed ---Find chairs Task 1: black bottle ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 2 (III. METHOD), p. 2 (III. METHOD), metrics p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), baselines p. 3 (III. METHOD), p. 4 (III. METHOD), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (III. METHOD), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), results p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 4 (1. Does the carrier-relationship scene graph (CRSG) im), p. 5 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im), p. 6 (1. Does the carrier-relationship scene graph (CRSG) im).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

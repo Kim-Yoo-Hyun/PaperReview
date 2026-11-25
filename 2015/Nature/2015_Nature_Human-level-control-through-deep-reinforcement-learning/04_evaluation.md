@@ -51,8 +51,6 @@
 - **p. 12 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Each agent was evaluated every 250,000 training frames for 135,000 validation frames and the highest average episode score is reported.
 - **p. 4 / 2 6 F E B R U A R Y - extractive body cue:** Object recognition with features inspired by visual cortex.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - figure/table caption cue 없음
@@ -79,8 +77,6 @@
 | Bellman TD error의 update contribution을 [−1,1]로 clip한다. 큰 residual에 대해서 absolute-value loss와 같은 bounded-gradient 효과를 설명한다. | Training stabilization choice; evaluation metric이나 reward clipping과 구분 | PDF p. 7 Methods |
 | Each of the peaks in the value function curve corresponds to a reward obtained by clearing a brick. | definition/direction/unit from same section | p. 9 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@
 | This had a minimal effect: changing the normalized DQN performance by more than 5% in only six games (Boxing, Breakout, Crazy Climber, Demon Attack, ... | comparison identity and matched condition | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | This modification makes the algorithm more stable compared to standard online Q-learning, where an update thatincreasesQ(st,at)oftenalsoincreasesQ(st 1 1,a)forallaandhencealsoincreases the target yj, possibly leading to ... | comparison identity and matched condition | p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | Note also that the number of training frames was shorter (10 million frames) as compared to the main results presented in Extended Data Table ... | comparison identity and matched condition | p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -119,9 +108,6 @@
 - **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action ...
 - **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** 10 Hz is about the fastest that a human player can select the ‘fire' button, and setting the random agent to this frequency avoids spurious ...
 - **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** As in the original Atari 2600 environment, the emulator was run at 60 Hz and the audio output was disabled: as such, the sensory input ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** 10 Hz is about the fastest that a human player can select the ‘fire' button, and setting the random agent to this frequency avoids spurious ...
-- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** As in the original Atari 2600 environment, the emulator was run at 60 Hz and the audio output was disabled: as such, the sensory input ...
 
 ## Generalization and Failure Cases
 
@@ -133,8 +119,6 @@
 | body limitation/failure cue | At time point 2, the agent starts moving the paddle towards the ball and the value of the ‘up' action stays high while the ... | p. 9 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | body limitation/failure cue | The final term is the variance of the targets, which does not depend on the parameters hi that we are currently optimizing, and may ... | p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | body limitation/failure cue | This approach is in some respects limited because the memory buffer does not differentiate important transitions and always overwrites with recent transitions owing to ... | p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -150,14 +134,6 @@
 | 2 with respect to the network parameters h Every C steps reset ^Q~Q End For End For 31. | p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 | We did not perform a systematic grid search owing to the high computational cost, although it is conceivable that even better results could be ... | p. 10 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Why there are complementary learning systems in the hippocampus and neocortex: insights from the successes and failures of connectionist models of learning and memory.
@@ -168,6 +144,5 @@
 - **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This approach is in some respects limited because the memory buffer does not differentiate important transitions and always overwrites with recent transitions owing to the ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (2 6 F E B R U A R Y), p. 5 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), metrics p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 4 (2 6 F E B R U A R Y), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), baselines p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 13 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 12 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), results p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 7 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y), p. 11 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

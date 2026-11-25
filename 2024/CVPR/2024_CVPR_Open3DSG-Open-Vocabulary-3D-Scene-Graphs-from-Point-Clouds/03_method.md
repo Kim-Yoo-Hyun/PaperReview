@@ -46,7 +46,6 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method)): We first constru
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method)): We first constru
 - **p. 2 / 1. Introduction - extractive body cue:** Thus effectively proposing the first open-vocabulary scene graph prediction approach from 3D point cloud data. • Our proposed approach shows promising results on the closed-set ...
 - **p. 2 / 1. Introduction - extractive body cue:** We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method)): We first constru
 
 - **p. 3 / 3. Method - extractive body cue:** At inference time, we perform a two-step prediction for objects and relationships.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, construct, initial, graph, representation, Sec, features, then, aligned, ones, extracted, GNN, parallel, extract, vision-language, images, overall, goal, distill, knowledge.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,20 +102,10 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method)): We first constru
 - **p. 7 / 4.2. Closed-set 3D scene graph prediction - extractive body cue:** We demonstrate that a naive CLIP-based approach is ill-suited for relationship prediction, but also a two-step approach similar to our method by combining OpenSeg [11] ...
 - **p. 7 / 4.2. Closed-set 3D scene graph prediction - extractive body cue:** This demonstrates the core advantage of our zero-shot open-vocabulary approach that it performs robustly on a wide variety of objects and predicates.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Method), p. 3 (3. Method), objective 본문 anchor 없음, temporal p. 3 (3. Method), p. 3 (3.2. 2D feature extraction), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 7 (4.2. Closed-set 3D scene graph prediction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

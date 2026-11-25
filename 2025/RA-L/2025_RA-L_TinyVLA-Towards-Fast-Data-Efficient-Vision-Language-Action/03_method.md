@@ -48,7 +48,6 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** We adopt diffusion policy as our policy head. limits gradient updates to a low-dimensional space.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 1 / I. INTRODUCTION - extractive body cue:** However, these methods suffer from a critical drawback: extremely slow inference speeds, largely due to their dependence on large visionlanguage models and auto-regressive action token ...
 - **p. 7 / 1 Background - extractive body cue:** WEN et al.: TINYVLA: TOWARDS FAST, DATA-EFFICIENT VISION-LANGUAGE-ACTION MODELS FOR ROBOTIC MANIPULATION 7 generalization can be seen in variations in background color, object texture, or ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,15 +83,11 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
 - **p. 3 / III. METHOD - extractive body cue:** After training is completed, we apply re-parameterization techniques to integrate the LoRA module seamlessly into the standard language model, thereby enhancing inference speed.
 - **p. 2 / III. METHOD - extractive body cue:** We then followed the training pipeline of LLaVA [13], using their vision-language dataset to train this family of VLMs.
-- **p. 2 / III. METHOD - extractive body cue:** TinyVLA encompasses several crucial designs: 1) We adopt a pre-trained VLM as the initialization of a policy network; 2) During training the robot data, we ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** TinyVLA, encompasses, several, crucial, designs, adopt, pre-trained, VLM, initialization, policy, network, During, training, robot, data, freeze, parts, utilize, parameter-efficient, finetuning.
 - **Relevant PDF headings:** III. METHOD (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +107,10 @@ PDF body method statement (p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. ME
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** We use a cross mark to denote the failure of the model and a checkmark to indicate successful task completion.
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 10: Types of failure for TinyVLA with different sizes of pre-trained vision-language models.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (III. METHOD), objective p. 3 (III. METHOD), temporal p. 2 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 - **p. 5 / III. WMNAV APPROACH - extractive body cue:** If there is no sofa, then return failure message.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 5 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Panoramic Image Input Getting Observation Fig.
 - **p. 4 / III. WMNAV APPROACH - extractive body cue:** The cost is fed into PlanVLM and ReasonVLM as part of their prompts to implicitly optimize the outputs in the navigation policy.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 - **p. 6 / III. WMNAV APPROACH - extractive body cue:** TF refers to trainingfree, and ZS refers to zero-shot.
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** Similar to the frontier map, our simple and online maintained Curiosity Value Map, without prior information from other detectors, makes full use of the scene ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, direction, panoramic, image, highest, score, selected, sent, navigation, policy, module, Figure, updated, combining, curiosity, value, previous, step, st-1, Cost.
 - **Relevant PDF headings:** III. WMNAV APPROACH (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** But textual information cannot accurately describe the spatial relationships in the scene, and it is difficult for LLM to make good spatial decisions.
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** However, since VLM is trained on egocentric image data, it does not take advantage of VLM's powerful egocentric reasoning ability.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), objective p. 4 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 3 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), p. 5 (III. WMNAV APPROACH), temporal p. 3 (III. WMNAV APPROACH), p. 4 (III. WMNAV APPROACH), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

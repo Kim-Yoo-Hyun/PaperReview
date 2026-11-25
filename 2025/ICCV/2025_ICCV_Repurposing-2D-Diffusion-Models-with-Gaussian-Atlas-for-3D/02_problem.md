@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p
 | body cue at p. 4 | As a result, diffusion models are not able to capture the irregular patterns and fail to generate meaningful ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | By injecting Gaussian noise to the latents, F can be trained through self-supervised denoising via v-parameterization [39]: Ldiff ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 3 (3. GaussianVerse), p. 3 (3. GaussianVerse), p. 4 (4. Formulating 3D Gaussians as 2D Atlas). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 3 (3. GaussianVerse), p. 3 (3. GaussianVerse), p. 4 (4. Formulating 3D Gaussians as 2D Atlas), objective p. 1 (1. Introduction), p. 3 (3. GaussianVerse), p. 4 (3. GaussianVerse), p. 4 (4. Formulating 3D Gaussians as 2D Atlas).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

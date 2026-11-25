@@ -49,7 +49,6 @@ PDF body method statement (p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 8 (Me
 - **p. 7 / Method - extractive body cue:** The extreme long-horizon in our activities causes the visuomotor control (RL-VMC) policy to fail in all three activities, potentially due to problems such as credit ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 7 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 8 (Me
 - **p. 8 / Method - extractive body cue:** 6.1), policy failures (i.e., selecting the wrong action primitive) dominate.
 - **p. 2 / 1 Introduction - extractive body cue:** The BEHAVIOR-1K DATASET is a large-scale dataset comprising 1) a commonsense knowledge base for 1,000 activities with definitions in predicate logic (initial and goal conditions), ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 8 (Me
 
 - **p. 8 / Method - extractive body cue:** We also evaluate to what extent the simplifications we introduce in physics and actuation (grasping, motion execution) during training impact the performance of RL-Prim. during ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** evaluate, three, different, baselines, state-of-the-art, reinforcement, learning, algorithms, RL-VMC, visuomotor, control, image, low-level, joint, commands, solution, Soft, Actor-Critic, SAC, RL-Prim.
 - **Relevant PDF headings:** Method (p. 7); Method (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 8 (Me
 - **p. 7 / Method - extractive body cue:** All agents are trained with a sparse task success reward without any reward engineering.
 - **p. 1 / Abstract - extractive body cue:** BEHAVIOR-1K includes two components, guided and motivated by the results of an extensive survey on ‘what do you want robots to do for you?'.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 8 (Method), objective p. 7 (Method), p. 7 (Method), temporal p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 1 (Abstract), p. 3 (6. Clean a shower).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 - **p. 5 / §3.2 - extractive body cue:** Equation 6 is solved by iteratively sampling action sequences from N(µ, σ2), evaluating their expected return, and updating µ, σ based on a weighted average.
 - **학습과 제어.** 식 3으로 세계 모델을, 식 4로 정책 사전분포를 학습한다. 식 6은 그 모델로 제어 시점의 기대 수익을 최적화한다. [§3.1 식 3 · PDF 4쪽](https://arxiv.org/pdf/2310.16828v2#page=4) · [§3.1 식 4 · PDF 4쪽](https://arxiv.org/pdf/2310.16828v2#page=4) · [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
 - **식 위치.** 구성 요소는 식 2, 세계 모델 학습은 식 3, 정책 학습은 식 4, 행동열 계획은 식 6에 정의된다. [§3.1 그림 3·식 2 · PDF 3쪽](https://arxiv.org/pdf/2310.16828v2#page=3) · [§3.1 식 3 · PDF 4쪽](https://arxiv.org/pdf/2310.16828v2#page=4) · [§3.2 식 6의 실행 절차 · PDF 5쪽](https://arxiv.org/pdf/2310.16828v2#page=5)
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -92,8 +91,6 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 
 - **p. 5 / §3.3 - extractive body cue:** To do so, we zero-pad all model inputs and outputs to their largest respective dimensions, and mask out invalid action dimensions in predictions made by ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** TD-MPC2, architecture, Figure, consists, five, components, Encoder, Maps, observations, latent, representations, dynamics, Models, forward, Reward, Predicts, transition, Terminal, value, discounted.
@@ -118,15 +115,9 @@ PDF body method statement (p. 3 (2 BACKGROUND), p. 1 (ABSTRACT), p. 5 (2 BACKGRO
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 18. Normalized task embeddings. Normalized score of 19M parameter multitask (80 tasks) TD-MPC2 agents, with and without normalized task embeddings e as described in ...
 - **p. 25 / Figure/Table caption - extractive body cue:** Figure 19. T-SNE of task embeddings with and without normalization. T-SNE (van der Maaten & Hinton, 2008) visualizations of task embeddings learned by TD-MPC2 agent ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 

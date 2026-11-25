@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), 
 - **p. 10 / V. EXPERIMENTS - extractive body cue:** Dubins Vehicle Quadrotor Robot Arm Cheetah Quadruped Successes Violations Successes Violations Successes Violations Successes Violations Successes Violations NT-MPC 14% 0% 14% 20% 0% 56% 26% ...
 - **p. 9 / V. EXPERIMENTS - extractive body cue:** Furthermore, we present a hardware experiment showing the ability of DT-MPC to adapt to an out-of-distribution test case.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Proposed differentiable robust MPC architecture. Or- ange dashed arrows show how gradients are passed in our
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), 
 | Meanwhile, DTMPC adapts to the environment, maintaining safety and robust task performance. | definition/direction/unit from same section | p. 9 (V. EXPERIMENTS) |
 | The nominal MPC parameters are kept fixed, while the ancillary MPC is allowed to adapt through minimization of the loss defined in Eq. | definition/direction/unit from same section | p. 9 (V. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), 
 | Fig. 2: Controlled quadrotor trajectories subject to large distur- bances. 50 trajectories are plotted for each algorithm. ‘Nom- inal' corresponds to the reference trajectory ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Fig. 3: Jacobian estimate errors on the quadrotor system as a function of DDP iterate error. differentiable compute graph and backpropagating to compute Jacobians ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | This puts the proposed framework to the test, especially in comparison to the non-adaptive, nonlinear tube-based MPC. | comparison identity and matched condition | p. 9 (V. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), 
 | body limitation/failure cue | NT-MPC is robust to disturbances due to both modeling error and process noise and can reach the target state successfully (Fig. | p. 11 (V. EXPERIMENTS) |
 | body limitation/failure cue | While both algorithms remain safe and avoid collisions (see Table I), only DT-MPC is able to complete the task the majority of the time. | p. 9 (V. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), 
 | The proposed algorithm is benchmarked on multiple nonlinear robotic systems, including two systems in the MuJoCo simulator environment and one hardware experiment on the ... | p. 1 (Abstract) |
 | A hardware experiment on the Robotarium [52] demonstrates the ability of the proposed DT-MPC to adapt to an out-of-distribution test case. | p. 2 (I. INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / V. EXPERIMENTS - extractive body cue:** For this task, the nominal controller (tuned for deterministic task completion) is too aggressive for the magnitude of disturbances received, leading to a large number ...
@@ -167,9 +146,8 @@ PDF body evaluation/result cue (p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), 
 - **p. 9 / V. EXPERIMENTS - extractive body cue:** While both algorithms remain safe and avoid collisions (see Table I), only DT-MPC is able to complete the task the majority of the time.
 
 - **Evidence anchors reviewed:** datasets p. 9 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 10 (V. EXPERIMENTS), p. 9 (V. EXPERIMENTS), metrics p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 19 (Figure/Table caption), baselines p. 11 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 20 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (V. EXPERIMENTS), results p. 10 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 11 (V. EXPERIMENTS), p. 20 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (V. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

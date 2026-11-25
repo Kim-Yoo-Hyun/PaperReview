@@ -55,7 +55,6 @@ PDF body method statement (p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tun
 - **p. 6 / 3.3. Sim-to-real Transfer - extractive body cue:** To determine which parameters to update for pose prediction during TTA, we analyze the outcomes of the reasoning steps during inference in Fig.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.1. Fine-tuning Strategy), p. 4 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), p. 6 (3.3. Sim-to-real Transfer).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tun
 - **p. 2 / 1. Introduction - extractive body cue:** This method relies on force feedback generated along the axes and the object to adaptively adjust the direction and predict the trajectory.
 - **p. 2 / 1. Introduction - extractive body cue:** action trajectories (i.e. end-effector trajectories) [4, 40] poses challenges in generalization due to minimal low-level action samples in their pretraining data.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tun
 - **p. 6 / 4.1. Training Details - extractive body cue:** It includes pre-trained CLIP [25] as the visual encoder, 7B LLaMA [26] model as the decoder, and multi-modal projection module of 32 transformer layers.
 - **p. 3 / 3.1. Fine-tuning Strategy - extractive body cue:** While text prompts T are encoded into a text feature using the tokenizer of the pre-trained LLaMa [26].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, given, current, test, sample, introduce, additional, reasoning, step, prompt, model, assess, whether, predicted, position, lead, successful, manipulation, Architecture, adopt.
 - **Relevant PDF headings:** 2.2. Multimodal Large Language Models (p. 3); 3. Method (p. 3); 3.2. Active Impedance Adaptation Policy (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tun
 - **p. 8 / 4.3. Ablation and Analysis - extractive body cue:** For comparison, we ask the model to generate the final pose prediction directly without the thinking process in Fig.
 - **p. 8 / 4.4. Real-world Evaluation - extractive body cue:** Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tuning Strategy), p. 3 (3.1. Fine-tuning Strategy), p. 4 (3.1. Fine-tuning Strategy), p. 4 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), objective p. 4 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), p. 4 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), p. 3 (3.1. Fine-tuning Strategy), p. 6 (3.3. Sim-to-real Transfer), temporal p. 5 (3.1. Fine-tuning Strategy), p. 5 (3.2. Active Impedance Adaptation Policy), p. 6 (3.3. Sim-to-real Transfer), p. 6 (3.3. Sim-to-real Transfer).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

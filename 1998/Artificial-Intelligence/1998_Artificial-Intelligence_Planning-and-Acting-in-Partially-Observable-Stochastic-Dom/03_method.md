@@ -56,7 +56,6 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 - **p. 24 / 4.5. Alternative Approaches - extractive body cue:** White and Scherer [65] propose an alternative approach in which the reward function is changed so that all of the algorithms discussed in this chapter ...
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 23 (4.5. Alternative Approaches), p. 19 (44 The Witness Algorithm).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 - **p. 11 / 3.4 Finding an Optimal Policy - extractive body cue:** The policy component of a POMDP agent must map the current belief state into action.
 - **p. 5 / 2.2 Acting Optimally - extractive body cue:** The policy 7 is to be used to choose the action on the to-last step as a function of the current state, s,.
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** resulting, algorithm, might, called, two-pass, form, much, like, witness, because, first, constructs, separate, Q-function, then, combines, Q-functions, together, create, optimal.
 - **Relevant PDF headings:** 2.9 Computing an Optimal Policy (p. 7); 3.4 Finding an Optimal Policy (p. 11); 4.1 Policy Trees (p. 12); 44 The Witness Algorithm (p. 18); 4.5. Alternative Approaches (p. 23); 6.3 Transition Model (p. 33); 6.4 Observation Model (p. 34).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 23 (4.5. Alternative Approaches), p. 19 (44 The Wi
 - **p. 29 / 5.4 Plan Graphs - extractive body cue:** This is because the behavior of ‘these algorithms on this problem appears to be extremely sensitive to the numerical precision used in comparisons-the better the ...
 - **p. 29 / 5.4 Plan Graphs - extractive body cue:** One drawback of the POMDP approach is that the agent must maintain a belief state and use it to select an optimal action on every ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 23 (4.5. Alternative Approaches), p. 19 (44 The Witness Algorithm), p. 7 (2.9 Computing an Optimal Policy), p. 23 (4.5. Alternative Approaches), p. 18 (44 The Witness Algorithm), p. 18 (44 The Witness Algorithm), objective p. 19 (44 The Witness Algorithm), p. 19 (44 The Witness Algorithm), p. 12 (3.4 Finding an Optimal Policy), p. 12 (3.4 Finding an Optimal Policy), p. 23 (4.5. Alternative Approaches), p. 24 (4.5. Alternative Approaches), temporal p. 28 (5.3 Infinite-Horizon Policies), p. 5 (2.2 Acting Optimally), p. 25 (5.2. Finite-Horizon Policies), p. 26 (5.2. Finite-Horizon Policies), p. 28 (5.3 Infinite-Horizon Policies), p. 4 (2.2 Acting Optimally).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

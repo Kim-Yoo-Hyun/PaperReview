@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION),
 - **p. 4 / 3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS - extractive body cue:** Multi-View and Guidance Cost Volume Construction and Aggregation.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.3. Loss Function), p. 5 (3.3. Loss Function), p. 3 (3.2.1. COARSE ALIGNMENT OF 3D GAUSSIANS), p. 3 (3.1. Problem Formulation), p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION), p. 4 (3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION),
 - **p. 5 / 3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS - extractive body cue:** To condition the prediction of Gaussian parameters, such as opacity, covariance, and color, we incorporate Sgeo as additional input.
 - **p. 2 / 1. Introduction - extractive body cue:** We summarize our contributions below: • We propose PF3plat, a feed-forward network that reconstructs 3D scenes, parameterized by 3D Gaussians, from sparse, unposed views without ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION),
 - **p. 8 / 4.5. Analysis and More Results - extractive body cue:** Finally, we provide the inference time of each of our components: overall inference time, UniDepth processing time, and decoder time.
 - **p. 5 / 4.1. Implementation Details - extractive body cue:** The code and pretrained weights will be made publicly available.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** refinement, module, includes, pixel-wise, depth, offset, estimation, uses, feature, maps, network, Piccinelli, sole, input, processes, them, through, series, self-attention, operations.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION),
 - **p. 9 / 5. Conclusion - extractive body cue:** Our framework, PFSplat, is built on foundation models to overcome inherent limitations of 3DGS.
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Similar observations are made in (I-I), (I-II), and (I-V), where we identify that directly tuning the depth network or training only with photometric losses leads ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION), p. 4 (3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS), p. 3 (3.2.1. COARSE ALIGNMENT OF 3D GAUSSIANS), p. 5 (3.3. Loss Function), p. 5 (3.3. Loss Function), p. 3 (3.2.1. COARSE ALIGNMENT OF 3D GAUSSIANS), objective p. 5 (3.3. Loss Function), p. 5 (3.3. Loss Function), p. 4 (3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS), p. 3 (3.2.1. COARSE ALIGNMENT OF 3D GAUSSIANS), p. 3 (3.1. Problem Formulation), p. 4 (3.2.4. 3D GAUSSIAN PARAMTER PREDICTIONS), temporal p. 2 (2. Related Work), p. 3 (3.2.1. COARSE ALIGNMENT OF 3D GAUSSIANS), p. 5 (4.1. Implementation Details), p. 5 (3.3. Loss Function), p. 1 (1. Introduction), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

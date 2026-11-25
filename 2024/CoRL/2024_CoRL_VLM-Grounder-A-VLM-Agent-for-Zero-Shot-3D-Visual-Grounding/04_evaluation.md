@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (3 Methodology
 - **p. 8 / 3 Methodology - extractive body cue:** We introduced a novel Visual-Retrieval benchmark to evaluate the impact of stitching operations on VLM's visual understanding.
 - **p. 8 / 3 Methodology - extractive body cue:** Timeout 1 0 1.00 亡一－－的I；血勹匾96009511 I 400 c、l 0 ."贮E.....""．一．．比＂一·黯勺置星一·屙已』"· U,OO U O3 J ｀斗丘且矗诅U.O~L U 0乙U 0.99 、 I 寸 旨厦"'I'■，配切谭心1戎·""'.rl l 0 啊948 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison between LLM-based methods and VLM-Grounder. VLM's visual processing. Further, we propose a dynamic stitching strategy that dynamically uses the optimal layouts identified ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (3 Methodology
 | Table 1: 3D visual grounding results on ScanRefer. Without using geometric information from point clouds, VLM-Grounder outperforms previous zero-shot methods and achieves performance comparable ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Figure 3: Visual-Retrieval benchmark. We randomly select 1,000 images from the ScanNet dataset, each annotated with a unique ID. Addition- ally, a block of ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (3 Methodology
 | Table 8: Baseline results on the selected 250 samples. Overall Unique Multiple Methods Acc@0.25 Acc@0.5 Acc@0.25 Acc@0.5 Acc@0.25 Acc@0.5 BUTD-DETR[28] 54.0 | comparison identity and matched condition | p. 18 (Figure/Table caption) |
 | Table 2: 3D visual grounding results on Nr3D. VLM-Grounder surpasses the previous SOTA zero- shot method without requiring access to point clouds or ground-truth ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 1: Comparison between LLM-based methods and VLM-Grounder. VLM's visual processing. Further, we propose a dynamic stitching strategy that dynamically uses the optimal layouts ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,21 +119,11 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (3 Methodology
 | body limitation/failure cue | Further discussions on limitations, error analysis, inferencing time, and qualitative results are provided in the supplementary material. | p. 8 (3 Methodology) |
 | body limitation/failure cue | VLM-Grounder does not need such priors for input, so we match our predicted box to the ground truth box with the closest center and ... | p. 5 (3 Methodology) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Pseudo-code for the dynamic stitching strategy is provided in the supplementary material. | p. 4 (3 Methodology) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -156,6 +135,5 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (3 Methodology
 - **p. 5 / 3 Methodology - extractive body cue:** VLM-Grounder does not need such priors for input, so we match our predicted box to the ground truth box with the closest center and use ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (3 Methodology), p. 8 (3 Methodology), metrics p. 19 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (3 Methodology), p. 2 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (3 Methodology), p. 18 (Figure/Table caption), p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 8 (3 Methodology), p. 8 (3 Methodology), p. 19 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

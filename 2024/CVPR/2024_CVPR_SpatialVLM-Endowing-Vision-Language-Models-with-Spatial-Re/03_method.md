@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (3. SpatialVLM), p. 1 (Body text (section not re
 - **p. 7 / 3.3. Learning Spatial Reasoning - extractive body cue:** In this example, with the help of an LLM orchestrating SpatialVLM, the system is able to answer questions like "Does the blue coke can, the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset), p. 7 (3.3. Learning Spatial Reasoning).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (3. SpatialVLM), p. 1 (Body text (section not re
 - **p. 2 / 1. Introduction - extractive body cue:** While VLMs are powerful general-purpose models for a wide range of tasks, most state-of-the-art VLMs still struggle with spatial reasoning, i.e. tasks that require understanding ...
 - **p. 5 / 3.2. Large-Scale Spatial Reasoning VQA Dataset - extractive body cue:** This property allows us to do template-based generation, an approach commonly adopted by instruction tuning works [64].
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (3. SpatialVLM), p. 1 (Body text (section not re
 - **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** We train both models for 70k steps, and evaluate percentages of answers from both models that fall into various ranges of the ground truth value ...
 - **p. 4 / 3.1. Spatial Grounding from 2D Images - extractive body cue:** Semantic Filtering While internet-scale image-captioning datasets have been widely used in VLM training [12], many images in these datasets are not suitable for synthesizing spatial ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Concretely, design, comprehensive, data, generation, framework, first, leverages, off-the-shelf, computer, vision, models, including, open-vocabulary, detection, metric, depth, estimation, semantic, segmentation.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (3. SpatialVLM), p. 1 (Body text (section not re
 - **p. 9 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** This seem to suggest that VLMs are generally underfitting in the distribution of tasks close to spatial reasoning, and can benefit from spatial VQA supervisions ...
 - **p. 10 / 4.2. Effect of Spatial VQA Data to General VQA - extractive body cue:** A PaLM 2-E model trained with SpatialVLM data improves VQA v2 performance by 2.4% compared to a model with the same number of parameters, but ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3. SpatialVLM), p. 1 (Body text (section not recovered)), p. 2 (1. Introduction), p. 6 (3.3. Learning Spatial Reasoning), p. 5 (3.1. Spatial Grounding from 2D Images), p. 1 (Body text (section not recovered)), objective p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.2. Large-Scale Spatial Reasoning VQA Dataset), p. 7 (3.3. Learning Spatial Reasoning), temporal p. 9 (4.1. Spatial VQA performance), p. 10 (4.2. Effect of Spatial VQA Data to General VQA), p. 10 (4.4. Effect of Noisy Quantitative Spatial Answers), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), p. 11 (4.5. Spatial Reasoning Unlocks Novel Applications), p. 5 (3.1. Spatial Grounding from 2D Images).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

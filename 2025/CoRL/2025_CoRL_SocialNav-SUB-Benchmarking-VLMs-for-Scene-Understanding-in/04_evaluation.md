@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7
 - **p. 18 / 7 Appendix - extractive body cue:** Bottom-left: GPT-4o correctly answers that person 5 is on the left, whereas both Gemini and LLaVa-Next-Video answer that person 5 is behind the robot.
 - **p. 18 / 7 Appendix - extractive body cue:** Bottom-right: Most VLMs (but not all) predict that person 6 is being considered as the robot is moving towards the goal, similar to the distribution ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Examples of social robot navigation scenarios from SCAND [4]. The ability to de- termine socially compliant navigation actions requires understanding each dynamic scene ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7
 | Empirically we have observed errors are lower for well-observed pedestrians and larger under heavy occlusion. | definition/direction/unit from same section | p. 15 (7 Appendix) |
 | Estimates are generally close ( < 1 m displacement error) to pseudo-ground truth for well-observed pedestrians; errors increase for heavily occluded subjects. in the ... | definition/direction/unit from same section | p. 16 (7 Appendix) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7
 | Table 2: Ablation experiment of querying strategies. The metric used is Probability of Agreement (PA). The baseline row BEV+CoT represents the performance with both ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | This particular example highlights using scene context from the human oracle. | comparison identity and matched condition | p. 14 (7 Appendix) |
 | Question Type Options The robot is (Select all that apply) Multiple Select moving ahead; turning left; turning right At the end, {PERSON} ends up ... | comparison identity and matched condition | p. 21 (7 Appendix) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7
 | body limitation/failure cue | Overall 33.8% failure rate; very limited Robot Action to Person diversity-only avoiding (53.1%) and not considering (6.38%). | p. 19 (7 Appendix) |
 | body limitation/failure cue | Since SCAND does not provide 3D human pose labels, we validated this pipeline and tuned the hyperparameters on the CODa dataset [41], which provides ... | p. 15 (7 Appendix) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7
 | We computed a weighted sum of these features and selected top-scoring scenes. | p. 15 (7 Appendix) |
 | The "Person Goal Obstruction" question may provide sufficient information for the VLM to easily answer the "Robot Affected By Person" question, to which we ... | p. 24 (7 Appendix) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.3 Discussion - extractive body cue:** Overall, our evaluation reveals that while state-of-the-art large VLMs like OpenAI o4-mini and Gemini 2.0 show promising advances, they still fall short of human oracle ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7
 - **p. 15 / 7 Appendix - extractive body cue:** Since SCAND does not provide 3D human pose labels, we validated this pipeline and tuned the hyperparameters on the CODa dataset [41], which provides high-quality ...
 
 - **Evidence anchors reviewed:** datasets p. 14 (7 Appendix), p. 14 (7 Appendix), p. 15 (7 Appendix), p. 19 (7 Appendix), p. 22 (7 Appendix), p. 15 (7 Appendix), metrics p. 14 (7 Appendix), p. 7 (Figure/Table caption), p. 19 (7 Appendix), p. 19 (7 Appendix), p. 14 (7 Appendix), p. 15 (7 Appendix), baselines p. 3 (Figure/Table caption), p. 14 (7 Appendix), p. 23 (7 Appendix), p. 8 (Figure/Table caption), p. 14 (7 Appendix), p. 21 (7 Appendix), results p. 14 (7 Appendix), p. 23 (7 Appendix), p. 24 (7 Appendix), p. 15 (7 Appendix), p. 7 (Figure/Table caption), p. 14 (7 Appendix).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

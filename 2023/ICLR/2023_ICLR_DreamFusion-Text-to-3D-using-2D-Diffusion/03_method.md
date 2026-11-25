@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (3. Diffusion loss with view-dependent condition
 - **p. 16 / A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS - extractive body cue:** If orientation loss is too high, surfaces become oversmoothed.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (3. Diffusion loss with view-dependent condition
 - **p. 7 / 3. Diffusion loss with view-dependent conditioning - extractive body cue:** We therefore found it beneficial to append view-dependent text to the provided input text based on the location of the randomly sampled camera.
 - **p. 15 / A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS - extractive body cue:** In NeRF, each 3D input point is mapped to a higher dimensional space using a sinusoidal positional encoding function (Vaswani et al., 2017).
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 7 (3. Diffusion loss with view-dependent condition
 - **p. 7 / 3. Diffusion loss with view-dependent conditioning - extractive body cue:** We use the pretrained 64 × 64 base text-to-image model from Saharia et al.
 - **p. 8 / 4. Optimization - extractive body cue:** Metrics shown in parentheses may be overfit, as the same CLIP model is used during training and eval.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** pretrained, base, text-to-image, model, Saharia, orientation, loss, Ref-NeRF, Verbin, encourage, normal, vectors, density, field, face, toward, camera, when, they, visible.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 7 (3. Diffusion loss with view-dependent condition
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: DreamFusion uses a pretrained text-to-image diffusion model to generate realistic 3D models from text prompts. Rendered 3D models are presented from two views, ...
 - **p. 9 / 5 DISCUSSION - extractive body cue:** Though DreamFusion produces compelling results and outperforms prior work on this task, it still has several limitations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3. Diffusion loss with view-dependent conditioning), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS), p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 15 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS), p. 8 (4. Optimization), objective p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 17 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 18 (A.4 DERIVING THE SCORE DISTILLATION SAMPLING LOSS AND GRADIENTS), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS), temporal p. 3 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 7 (3. Diffusion loss with view-dependent conditioning), p. 15 (A APPENDIX).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

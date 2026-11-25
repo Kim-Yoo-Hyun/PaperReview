@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 - **p. 5 / C T1 - extractive body cue:** The NSP task is closely related to representationlearning objectives used in Jernite et al.
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (C T1), p. 4 (C T1), p. 5 (C T1).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** BERT is the first finetuning based representation model that achieves state-of-the-art performance on a large suite of sentence-level and token-level tasks, outperforming many task-specific architectures. ...
 - **p. 3 / C T1 - extractive body cue:** Apart from output layers, the same architectures are used in both pre-training and fine-tuning.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 - **p. 6 / 4 Experiments - extractive body cue:** We fine-tune for 3 epochs with a learning rate of 5e-5 and a batch size of 32.
 - **p. 6 / 4 Experiments - extractive body cue:** We use a batch size of 32 and fine-tune for 3 epochs over the data for all GLUE tasks.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, language, representation, model, called, BERT, stands, Bidirectional, Encoder, Representations, Transformers, first, finetuning, achieves, state-of-the-art, performance, large, suite, sentence-level, token-level.
 - **Relevant PDF headings:** 0.3 F1 behind fine-tuning the entire model. This (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Intro
 - **p. 7 / 4 Experiments - extractive body cue:** 5 Ablation Studies In this section, we perform ablation experiments over a number of facets of BERT in order to better understand their relative importance.
 - **p. 9 / 4 Experiments - extractive body cue:** Following standard practice, we formulate this as a tagging task but do not use a CRF Hyperparams Dev Set Accuracy #L #H #A LM (ppl) ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (C T1), p. 1 (1 Introduction), p. 3 (C T1), objective p. 1 (1 Introduction), p. 4 (C T1), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (C T1), p. 5 (C T1), temporal p. 5 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 3 (C T1), p. 2 (2 Related Work), p. 4 (C T1).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

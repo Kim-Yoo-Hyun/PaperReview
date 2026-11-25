@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (Method), p. 5 (Method), p. 6 (4.3. Fine-tuned t
 - **p. 7 / Method - extractive body cue:** Moreover, with our used semantic constraint Lfeat, the power of unlabeled images can be further amplified for the depth estimation task.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (Method), p. 5 (Method), p. 6 (4.4. Fine-tuned to Semantic Segmentation), p. 7 (Method), p. 7 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (Method), p. 5 (Method), p. 6 (4.3. Fine-tuned t
 - **p. 6 / Method - extractive body cue:** We highlight best, second best results, as well as most discriminative metrics. ∗: Reproduced by us. benchmarks KITTI and NYUv2, although MiDaS v3.1 uses the ...
 - **p. 7 / Method - extractive body cue:** Moreover, with our used semantic constraint Lfeat, the power of unlabeled images can be further amplified for the depth estimation task.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (Method), p. 5 (Method), p. 6 (4.3. Fine-tuned t
 - **p. 5 / 4.1. Implementation Details - extractive body cue:** In both stages, the base learning rate of the pre-trained encoder is set as 5e-6, while the randomly initialized decoder uses a 10× larger learning ...
 - **p. 9 / 6. More Implementation Details - extractive body cue:** The batch size is 16 and the model is trained for 5 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Thus, beneficial, exhaustively, enforce, depth, model, produce, exactly, same, features, frozen, encoder, feature, alignment, loss, formulated, frac, where, measures, cosine.
 - **Relevant PDF headings:** Method (p. 5); Method (p. 6); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 5 (Method), p. 5 (Method), p. 6 (4.3. Fine-tuned t
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 12. Ablation studies on different values of the tolerance margin α for the feature alignment loss Lfeat. Limited by space, we only report the ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. Our pipeline. Solid line: flow of labeled images, dotted line: unlabeled images. We especially highlight the value of large-scale unlabeled images. The S ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (Method), p. 5 (Method), p. 6 (4.3. Fine-tuned to Metric Depth Estimation), p. 7 (Method), p. 7 (Method), p. 6 (4.3. Fine-tuned to Metric Depth Estimation), objective p. 5 (Method), p. 5 (Method), p. 6 (4.4. Fine-tuned to Semantic Segmentation), p. 7 (Method), p. 7 (Method), temporal p. 5 (4.1. Implementation Details), p. 5 (Method), p. 6 (4.3. Fine-tuned to Metric Depth Estimation), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 4 (3.2. Unleashing the Power of Unlabeled Images).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

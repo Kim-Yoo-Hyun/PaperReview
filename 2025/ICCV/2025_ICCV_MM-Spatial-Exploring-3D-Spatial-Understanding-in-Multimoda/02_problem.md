@@ -59,8 +59,6 @@ PDF body contribution framing (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data a
 | body cue at p. 5 | MM-Spatial-3B 8 substantially outperforms various (much larger) top opensource and commercial models 1 - 6 , incl. the ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Table 6. SpatialRGPT-Bench Results. MM-Spatial-3B achieves SOTA with both image-only input and tool-use monocular depth, out- performing SpatialRGPT-VILA-1.5-8B ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 8 (Model), p. 1 (1. Introduction), p. 4 (4.1. Model Architecture), p. 4 (4.1. Model Architecture). The downstream handoff is claimed only when the body describes it.
@@ -68,7 +66,5 @@ PDF body contribution framing (p. 4 (4.1. Model Architecture), p. 4 (4.2. Data a
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), interface p. 8 (Model), p. 1 (1. Introduction), p. 4 (4.1. Model Architecture), p. 4 (4.1. Model Architecture), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

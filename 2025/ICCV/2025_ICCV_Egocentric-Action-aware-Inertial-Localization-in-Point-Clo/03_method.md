@@ -47,7 +47,6 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 - **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** Finally, a multi-layer perceptron maps the fused representation to action likelihood.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2.2. Location-aware action recognition).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 - **p. 3 / 3. Problem Setting - extractive body cue:** We also denote the point cloud of the environment by P.
 - **p. 5 / 4.2.2. Location-aware action recognition - extractive body cue:** In summary, our whole model in Stage 2 is supervised by Lstage2 = Ltraj + Laction.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 - **p. 5 / 5.1. Experimental Setup - extractive body cue:** We trained Stage 1 for 250 epochs and Stage 2 for 100 epochs, using a batch size of 64, a learning rate of 10^{-3} , ...
 - **p. 7 / 5.4. Ablation Studies - extractive body cue:** Modalities Engagement for Action-aware Alignment In Stage 1 of our framework, we focus on effectively training the IMU and the point cloud encoders to yield ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** then, blend, spatial, features, IMU, through, addition, training, supervised, cross-entropy, loss, Finally, multi-layer, perceptron, maps, fused, representation, action, likelihood, summary.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,23 +103,12 @@ PDF body method statement (p. 5 (4.2.2. Location-aware action recognition), p. 5
 - **p. 8 / 5.4. Ablation Studies - extractive body cue:** More Ablation Results in Supplementary Material Further ablation results can be found in Tab.
 - **p. 6 / 5.3. Inertial Action Recognition Results - extractive body cue:** IMU2CLIP [41] uses a strategy similar to our Stage 1, employing a pretrained CLIP model [43, 50] to guide IMU feature extraction and fine-tuning with ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Short-Term Action-Location Alignment. In this first stage, our objective is to train a point cloud encoder and an IMU encoder using contrastive learning. ...
-- **p. 7 / 5.4. Ablation Studies - extractive body cue:** Furthermore, even in scenarios where action caption annotations are unavailable in the training set, our method does not fail, ensuring reasonable accuracy without relying on ...
 - **p. 8 / 6. Limitations and Future Directions - extractive body cue:** While our method can robustly exploit head-mounted IMU signals for human localization within pre-built point clouds, it does hinge on several factors that present avenues ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition), objective p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.2. Location-aware action recognition), temporal p. 7 (5.4. Ablation Studies), p. 8 (5.5. Qualitative evaluations), p. 8 (5.4. Ablation Studies), p. 5 (4.2.2. Location-aware action recognition), p. 5 (4.2.1. Spatiotemporal reasoning for trajectory prediction), p. 6 (5.3. Inertial Action Recognition Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

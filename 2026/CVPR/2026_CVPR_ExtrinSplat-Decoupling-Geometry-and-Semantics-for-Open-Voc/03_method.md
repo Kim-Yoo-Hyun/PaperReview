@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.3. Object-level Grouping), p. 3 (3.1. Overall
 - **p. 3 / 3.1. Overall Architecture - extractive body cue:** Our method takes an optimized 3DGS scene representation and its corresponding image sequence as input.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 7 (4.2. Open-Vocabulary 3D Semantic Segmentation), p. 5 (3.5. Extrinsic Semantic Index Layer).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.3. Object-level Grouping), p. 3 (3.1. Overall
 - **p. 6 / 2) Baselines. We compare our method with several recent - extractive body cue:** In contrast, our method correctly interprets fine-grained instructions to generate precise selections with well-defined boundaries.
 - **p. 7 / 4.2. Open-Vocabulary 3D Semantic Segmentation - extractive body cue:** The objective is to automatically extract 3D Gaussian points corresponding to input class names (e.g., wall, chair, table).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (3.3. Object-level Grouping), p. 3 (3.1. Overall
 - **p. 7 / 2) Baselines. We compare our method with several recent - extractive body cue:** Method Ramen Teatime Figurines Waldo Mean 2D Methods LEGaussians 46.0 60.3 40.8 39.4 46.6 LangSplat 51.2 65.1 44.7 44.5 51.4 Feature-3DGS 43.7 58.8 40.5 39.6 ...
 - **p. 5 / 2) Baselines. We compare our method with several recent - extractive body cue:** To provide a clear comparison, we detail the comparative aspects such as training time and search thresholds for these methods in Tab.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, group, first, identify, object, high-confidence, core, mask, back-projection, then, refine, boundaries, identifying, excluding, ambiguous, points, neutral, point, processing, module.
 - **Relevant PDF headings:** A Vision-Language Model (VLM) then interprets these groups (p. 1); 3. Method (p. 3); 3.1. Overall Architecture (p. 3); 2) Baselines. We compare our method with several recent (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.3. Object-level Grouping), p. 3 (3.1. Overall
 - **p. 8 / 5. Conclusion and Limitation - extractive body cue:** Addressing these issues remains a promising direction for future work.
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 3. Qualitative results on object selection from the LERF dataset. OpenGaussian fails to separate nearby objects or maintain sharp boundaries, while Dr.Splat struggles to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.3. Object-level Grouping), p. 3 (3.1. Overall Architecture), p. 7 (2) Baselines. We compare our method with several recent), p. 5 (3.5. Extrinsic Semantic Index Layer), p. 6 (2) Baselines. We compare our method with several recent), p. 5 (3.5. Extrinsic Semantic Index Layer), objective p. 4 (3.2. Data Preparation), p. 5 (3.4. Instance Feature Extraction), p. 6 (2) Baselines. We compare our method with several recent), p. 7 (4.2. Open-Vocabulary 3D Semantic Segmentation), p. 1 (A Vision-Language Model (VLM) then interprets these groups), p. 3 (3.1. Overall Architecture), temporal p. 3 (3.1. Overall Architecture), p. 3 (3.1. Overall Architecture), p. 5 (3.4. Instance Feature Extraction), p. 1 (Abstract), p. 1 (A Vision-Language Model (VLM) then interprets these groups), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

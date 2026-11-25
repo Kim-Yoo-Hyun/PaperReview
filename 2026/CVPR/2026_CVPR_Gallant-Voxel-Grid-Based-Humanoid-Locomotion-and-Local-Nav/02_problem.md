@@ -60,8 +60,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | On other terrains-especially Platforms and Stairs, previously considered unstable due to collision risk [21]-Gallant achieves high success by ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | In real-world tests, a single LiDAR policy covers the ground obstacles handled by elevation-map controllers while also tackling ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 3 (3. Method), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -69,7 +67,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 2 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 3 (3. Method), p. 2 (1. Introduction), objective p. 3 (3.1. Problem Formulation), p. 3 (3.2. Efficient LiDAR Simulation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

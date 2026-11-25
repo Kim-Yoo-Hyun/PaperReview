@@ -6,8 +6,8 @@
 
 | 목적 | 문서 |
 |---|---|
-| 논문 검색 | [논문 목록](./PAPER.md) · [필터용 색인](./research/REGISTRY_INDEX.csv) |
-| 정독 순서와 진행 | [읽기 계획](./research/READING_PLAN.md) · [읽기 상태 안내](./research/READING_STATUS.md) |
+| 논문 검색 | [분야별 논문 목록](./PAPER.md) · [제목·태그·별칭 색인](./research/REGISTRY_INDEX.csv) |
+| 정독 순서와 진행 | [읽기 계획](./research/READING_PLAN.md) · [읽기 기록](./research/READING_STATUS.csv) · [노트 검토 기준](./research/READING_STATUS.md#note-checks) |
 | 분야별 비교 | [분야별 합성](./synthesis/README.md) · [로보틱스 연구 동향](./work/update/ROBOTICS_TRENDS.md) |
 | 연구 질문과 다음 검증 | [연구 설계](./research/RESEARCH_GUIDE.md) · [연구 후보](./work/research_topics/README.md) · [다음 작업](./TODO.md) |
 | 실험 재현 | [Docker 재현](./work/experiments/README.md) |
@@ -19,13 +19,6 @@
 |---:|---:|---:|---:|---:|
 | 1,252 | 50 | 450 | 510 | 242 |
 
-전체 1,252편의 요약·기여를 원문에 대조했다. 2026-11-25 기준 서지·기여·태그·공개 여부 등 감사 10개 항목을 모두 통과한 논문은 92편이다. 집중 읽기 500편 중 **423편(84.6%)**에 방법·기체·입력·데이터 출처·공개 범위를 기록했다. 정규화한 CORE 50편·NEXT 350편과 별도 등록한 NEXT 23편이다. [태그 매핑과 배치](./work/update/REGISTRY.md#여덟-번째-배치-태그-매핑) · [원문 감사](./research/SOURCE_AUDIT.md) · [읽기 기록](./research/READING_STATUS.csv) · [레지스트리 통계](./research/REGISTRY_STATS.md)
+2026-11-25 기준 전체 1,252편의 요약·핵심 기여를 원문과 대조했다. 감사 10개 항목을 모두 통과한 논문은 92편이다. 집중 읽기 500편 중 423편(84.6%)에 방법·기체·모달리티·데이터 출처·공개 범위가 기록돼 있다. [감사 결과와 미확인 범위](./research/SOURCE_AUDIT.md) · [분류 배치](./work/update/REGISTRY.md#taxonomy-batches) · [전체 통계](./research/REGISTRY_STATS.md)
 
-## 사용법
-
-1. [논문 목록](./PAPER.md)에서 제목·주제·venue를 찾고 `01_overview.md`에서 출처와 확인 수준을 확인한다.
-2. `02_problem.md`부터 `05_insights.md`까지 문제, 방법, 평가, 후속 연구 해석을 확인한다. 논문 제목은 공식 표기를 사용한다.
-3. [분야별 비교표](./synthesis/README.md)에서 방법과 평가 조건을 비교한다. 실제 정독을 마친 뒤 [읽기 기록](./research/READING_STATUS.csv)에 분석을 남긴다.
-4. 현행 후보의 질문과 근거는 각 `내용/README.md`, 실행 조건과 명령은 `재현 방법/README.md`에서 찾는다.
-
-[작업 폴더](./work/README.md) · [조사와 변경](./work/update/README.md)
+각 논문의 `01_overview.md`에서 출처와 확인 수준을 먼저 확인한다. 나머지 네 노트에 문제, 방법, 평가, 후속 연구에 관한 해석이 있다. 연구 후보의 문헌 근거는 `내용/README.md`, 재현 명령과 실제 실행 범위는 `재현 방법/README.md`에 모았다.

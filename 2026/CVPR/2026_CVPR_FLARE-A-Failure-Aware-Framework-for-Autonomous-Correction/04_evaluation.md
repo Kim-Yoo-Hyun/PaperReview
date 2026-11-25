@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 - **p. 8 / 5.2. Ablations and Analysis for Reset skills learning - extractive body cue:** The effective failure analysis provides highquality reset dataset for further demonstration collection.
 - **p. 8 / 5.2. Ablations and Analysis for Reset skills learning - extractive body cue:** 5b, the robot must reset the coffee machine lid before adjusting the coffee pod pose; thus, the effective reset object is the lid.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. FLARE: Failure-Aware Resilience in VLA. Previous methods are brittle, failing from minor perturbations (ID errors) or catastrophic states (OOD errors), and do not ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 | Figure 2. The overall framework of our method. We first collect the failure data with the VLA model trained with regular demonstrations. Then we ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 1. FLARE: Failure-Aware Resilience in VLA. Previous methods are brittle, failing from minor perturbations (ID errors) or catastrophic states (OOD errors), and do ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 | 4, our method consistently outperforms all baselines, including Phoenix and π0.5. | comparison identity and matched condition | p. 7 (5.1. Analysis of Perturbation & Bridging) |
 | The performance comparison for our method and two variants, Ours w/o Reset and Ours-Oracle. | comparison identity and matched condition | p. 8 (5.2. Ablations and Analysis for Reset skills learning) |
 | The retry/reset classification accuracy reaches 88% and 96% for the two tasks, demonstrating the strong video reasoning capabilities of state-of-the-art multimodal LLMs. | comparison identity and matched condition | p. 8 (5.2. Ablations and Analysis for Reset skills learning) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 | body limitation/failure cue | Table 1. Comparison of experimental results across 9 manipulation tasks in RoboMimic Simulation. The ‘D' suffix in the task names denotes the range of ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | For "reset" skills, we used Gemini-2.5-Pro to analyze failure videos. | p. 6 (4. Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 | Real-World Task (40 trials) π0.5 (Baseline) Ours (FLARE) Stack Three Blocks 62.5% 75.0% Insert U-shaped Block 45.0% 55.0% Figure 3. | p. 7 (4. Experiment) |
 | The Sensitivity of Hyper-Parameters In this section, we investigate two key hyperparameters in our perturbation & bridging augmentation strategy: the rotation r and the ... | p. 7 (5.1. Analysis of Perturbation & Bridging) |
 | For timestamp identification, we compute accuracy by checking whether the identified frame corresponds to the correct reset object. | p. 8 (5.2. Ablations and Analysis for Reset skills learning) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,9 +145,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (4. Experiment
 - **p. 6 / 4. Experiment - extractive body cue:** For "reset" skills, we used Gemini-2.5-Pro to analyze failure videos.
 
 - **Evidence anchors reviewed:** datasets p. 7 (4. Experiment), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 6 (4. Experiment), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning), metrics p. 6 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (Figure/Table caption), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 7 (5.1. Analysis of Perturbation & Bridging), baselines p. 6 (4. Experiment), p. 7 (4. Experiment), p. 6 (Figure/Table caption), p. 7 (5.1. Analysis of Perturbation & Bridging), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning), results p. 6 (Figure/Table caption), p. 6 (4. Experiment), p. 7 (5.1. Analysis of Perturbation & Bridging), p. 7 (Figure/Table caption), p. 8 (5.2. Ablations and Analysis for Reset skills learning), p. 8 (5.2. Ablations and Analysis for Reset skills learning).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

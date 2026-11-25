@@ -51,7 +51,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 1 / 1 Introduction - extractive body cue:** In parallel, there has been great progress in learning models for visual representations [11, 12] and aligning representations of vision and language [13, 14, 15] ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 2 / 1 Introduction - extractive body cue:** We also demonstrate our approach on a Franka Panda manipulator with one multi-task model for 9 real-world tasks trained with just 179 image-action pairs (see ...
 - **p. 3 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: • An extended benchmark of language-grounding tasks for manipulation in Ravens [2]. • Two-stream architecture for using internet ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,16 +84,12 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 1 / 1 Introduction - extractive body cue:** In parallel, there has been great progress in learning models for visual representations [11, 12] and aligning representations of vision and language [13, 14, 15] ...
 - **p. 3 / 1 Introduction - extractive body cue:** In summary, our contributions are as follows: • An extended benchmark of language-grounding tasks for manipulation in Ravens [2]. • Two-stream architecture for using internet ...
 - **p. 3 / 1 Introduction - extractive body cue:** The benchmark, code, and pre-trained models are available at: cliport.github.io.
-- **p. 3 / 1 Introduction - extractive body cue:** The benchmark, code, and pre-trained models are available at: cliport.github.io.
 - **p. 7 / 4 Results - extractive body cue:** Although pre-trained CLIP has been exposed to the attribute ‘pink', it could correspond to different concepts in the physical setting depending on factors like lighting ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** insight, formulating, tabletop, manipulation, series, pick-and-place, affordance, predictions, where, objective, detect, actions, rather, objects, then, learn, policy, framework, combines, best.
 - **Relevant PDF headings:** C Two Stream Architecture Details (p. 20).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,23 +109,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Intro
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 3. Language-conditioned tasks in Ravens [2] with their associated challenges. We extend the Ravens benchmark [2] to 10 language-conditioned. 8 out of 10 tasks ...
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 9. Data Augmentation: SE(2) transform applied to RGB-D input. The left image shows the original input, and the right image shows the transformed input ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 2 (1 Introduction), p. 1 (1 Introduction), temporal p. 5 (2 Related Work), p. 1 (Abstract), p. 4 (2 Related Work), p. 4 (2 Related Work), p. 1 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

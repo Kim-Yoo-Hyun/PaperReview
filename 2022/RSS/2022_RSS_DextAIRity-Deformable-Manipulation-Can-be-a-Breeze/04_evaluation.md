@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 - **p. 7 / V. EVALUATION - extractive body cue:** II shows performance averaged over 10 test episodes; our policy achieves over 80% on all cloth types, outperforming [FlingBot] and [Pick&Place] by roughly 60% and ...
 - **p. 8 / V. EVALUATION - extractive body cue:** Small Bag Yellow Bag Blue Bag Shake 0.00 / 0.56 0.00 / 0.68 0.00 / 0.65 DextAIRity-fixed 0.40 / 0.86 0.52 / 0.92 0.56 / ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DextAIRity manipulates deformable objects by controlling an active airflow. We demonstrate DextAIRity with two tasks that are particularly challenging for traditional contact-based manipulation: ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 | Cloth unfolding Performance is measured by cloth coverage at the end of each episode. | definition/direction/unit from same section | p. 5 (V. EVALUATION) |
 | We also investigate these approaches' performance on cloth that is significantly larger than the robot's reach range. | definition/direction/unit from same section | p. 6 (V. EVALUATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 | II shows performance averaged over 10 test episodes; our policy achieves over 80% on all cloth types, outperforming [FlingBot] and [Pick&Place] by roughly 60% ... | comparison identity and matched condition | p. 7 (V. EVALUATION) |
 | Ablations: We compare our system with the following alternative approaches for bag opening: • Shake: moves the bag back-and-forth by rotating last joint and ... | comparison identity and matched condition | p. 7 (V. EVALUATION) |
 | Fig. 1: DextAIRity manipulates deformable objects by controlling an active airflow. We demonstrate DextAIRity with two tasks that are particularly challenging for traditional contact-based ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 | body limitation/failure cue | 7, suggests [FlingBot] can successfully unfold shirts with width within the reach range but it fails (see the pink dress) when items become much ... | p. 7 (V. EVALUATION) |
 | body limitation/failure cue | 7) suggest that even on out of distribution clothing, our learned grasping policy attempts to grasp cloth corners and the blowing policy preferentially directs ... | p. 7 (V. EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 | 9: Bag opening success rate v.s. steps. | p. 8 (V. EVALUATION) |
 | 8 show that [DextAIRity] tends to blow horizontally in the first step and adopts a more top-down blowing action in the subsequent steps. | p. 8 (V. EVALUATION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VI. LIMITATIONS AND PRACTICAL CONSIDERATIONS - extractive body cue:** While in this paper we demonstrate the effectiveness of directed air to manipulate deformable objects, we discuss a few limitations and practical considerations of deploying ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 - **p. 7 / V. EVALUATION - extractive body cue:** 7) suggest that even on out of distribution clothing, our learned grasping policy attempts to grasp cloth corners and the blowing policy preferentially directs air ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 5 (V. EVALUATION), p. 6 (V. EVALUATION), p. 7 (V. EVALUATION), p. 7 (V. EVALUATION), metrics p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8 (V. EVALUATION), p. 7 (V. EVALUATION), p. 5 (V. EVALUATION), p. 4 (Figure/Table caption), baselines p. 6 (V. EVALUATION), p. 6 (V. EVALUATION), p. 7 (V. EVALUATION), p. 7 (V. EVALUATION), p. 1 (Figure/Table caption), results p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8 (V. EVALUATION), p. 6 (V. EVALUATION), p. 7 (V. EVALUATION), p. 6 (V. EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

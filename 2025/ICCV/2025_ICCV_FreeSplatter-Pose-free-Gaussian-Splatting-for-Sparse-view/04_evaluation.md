@@ -43,8 +43,6 @@
 - **p. 6 / 4.1. Experimental Settings - extractive body cue:** Scene-level performance is assessed on the test splits of ScanNet++[62] and CO3Dv2 [37].
 - **p. 6 / 4.2. Sparse-view Reconstruction - extractive body cue:** Prior pose-free object reconstruction approaches like LEAP [26] exhibits limited generalization due to its small-scale training, while PF-LRM [49] is highly relevant and serves as ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. FreeSplatter reconstructs high-fidelity 3D Gaussians and estimates accurate camera poses from uncalibrated sparse-view images in a feed-forward manner, handling both object-centric (1st row) ...
@@ -78,8 +76,6 @@
 | Figure 4. Sparse-view Reconstruction on GSO dataset. * indi- cates that ground truth camera poses are used as input. at other pixels remain unconstrained. ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Table 4. Camera Pose Estimation on Object-centric and Scene- level Datasets. To be noted, Re10K is outside the training dataset. methods (pixelSplat, MVSplat) on ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@
 | Figure 2. FreeSplatter Pipeline. Given N uncalibrated input views without any known camera extrinsics or intrinsics, we first patchify each image into tokens and ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Table 6. Ablation Study on Pixel-alignment Loss. The results on GSO and ScanNet++ are evaluated with FreeSplatter-O and FreeSplatter-S, respectively. Number of Input Views. ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 5. Ablation Study on Model Architecture. The results are evaluated on the GSO dataset with FreeSplatter-O. uate pose estimation performance using both rotation ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@
 | body limitation/failure cue | Figure 3. Sparse-view Reconstruction on PF-LRM's Evaluation Datasets. FreeSplatter-O synthesizes significantly better visual details than PF-LRM. The 1st row is from the GSO dataset, ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | Figure 4. Sparse-view Reconstruction on GSO dataset. * indi- cates that ground truth camera poses are used as input. at other pixels remain unconstrained. ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,20 +129,11 @@
 | Due to the lack of code, we benchmark against PF-LRM using their provided evaluation datasets and inference results. | p. 7 (0.027 Method) |
 | It is important to note that the TE metric is scaleinvariant: we first compute the relative translations between views for both ground truth and ... | p. 8 (4.3. Camera Pose Estimation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Sparse-view Reconstruction on PF-LRM's Evaluation Datasets. FreeSplatter-O synthesizes significantly better visual details than PF-LRM. The 1st row is from the GSO dataset, while ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Sparse-view Reconstruction on GSO dataset. * indi- cates that ground truth camera poses are used as input. at other pixels remain unconstrained. Besides, ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4. Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Sparse-view Reconstruction), metrics p. 8 (Figure/Table caption), p. 6 (4.1. Experimental Settings), p. 5 (Figure/Table caption), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 6 (4.2. Sparse-view Reconstruction), p. 5 (4.1. Experimental Settings), p. 3 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

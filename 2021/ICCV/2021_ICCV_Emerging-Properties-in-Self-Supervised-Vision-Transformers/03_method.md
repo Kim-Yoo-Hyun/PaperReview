@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.
 - **p. 4 / 3.1. SSL with Knowledge Distillation - extractive body cue:** The update rule is θt ←λθt + (1 -λ)θs, with λ following a cosine schedule from 0.996 to 1 during training [30].
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 4 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 4 (3.1. SSL with Knowledge Distillation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.
 - **p. 2 / 1. Introduction - extractive body cue:** The output of the teacher network is centered with a mean computed over the batch.
 - **p. 1 / 1. Introduction - extractive body cue:** Their adoption has been coupled with a training strategy inspired by natural language processing (NLP), that is, pretraining on large quantities of data and finetuning ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.
 - **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** Nonetheless, a base ViT with 8 × 8 patches trained with DINO achieves 80.1% top-1 in linear classification and 77.4% with a k-NN classifier with ...
 - **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** ViT-S/16 ImNet 33.5 8.9 63.0 37.2 DINO ResNet-50 ImNet 35.4 11.1 55.9 27.5 DINO ViT-S/16 ImNet 41.8 13.7 63.1 34.4 DINO ViT-S/16 GLDv2 51.5 24.3 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** neural, network, composed, backbone, ViT, ResNet, projection, head, While, framework, stabilized, multiple, normalizations, only, centering, sharpening, momentum, teacher, outputs, avoid.
 - **Relevant PDF headings:** 3. Approach (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.
 - **p. 4 / Figure/Table caption - extractive body cue:** Table 1: Networks configuration. "Blocks" is the number of Transformer blocks, "dim" is channel dimension and "heads" is the number of heads in multi-head attention. ...
 - **p. 6 / 4.1. Comparing with SSL frameworks on ImageNet - extractive body cue:** We explore variants of ViT-S in Appendix D.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), objective p. 3 (3.1. SSL with Knowledge Distillation), p. 3 (3.1. SSL with Knowledge Distillation), p. 4 (3.1. SSL with Knowledge Distillation), p. 4 (3.1. SSL with Knowledge Distillation), temporal p. 4 (3.2. Implementation and evaluation protocols), p. 4 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols), p. 5 (3.2. Implementation and evaluation protocols), p. 2 (2. Related work), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

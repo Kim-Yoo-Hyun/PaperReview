@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table capti
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** These ScanNet and ScanNet++ scenes are captured from the real world, where rich object diversity falls beyond the closed-vocabulary scope of GoReloc.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Scenes used in our experiments all exhibit a long-tail object distribution.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: OpenReLoc, an open-vocabulary visual relocalization system, can achieve robust and accurate relocalization performance on various indoor scenes, based on an object-level map. As ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table capti
 | With respect to success rate, we count the percentage of correctly relocalized query images within given translation thresholds: 50cm and 25cm, i.e., Recall[%] at ... | definition/direction/unit from same section | p. 5 (IV. EXPERIMENTS) |
 | Fig. 3: Subgraph Similarity. We seek an assignment among all possible neighbor pairs to maximize the total matching score as the subgraph similarity. negatively ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table capti
 | V, it can be seen that our method can still outperform GoReloc in both success rate and accuracy. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Map Size Analysis We also report the map memory consumption of different baselines on the ScanNet ‘0568' scene in Tab. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | VII, where object-level methods (GoReloc [6] and Ours) can construct a more compact map compared to low-level vision methods. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table capti
 | body limitation/failure cue | As a result, GoReloc fails to identify valid matching objects in many observations. | p. 6 (IV. EXPERIMENTS) |
 | body limitation/failure cue | Fig. 1: OpenReLoc, an open-vocabulary visual relocalization system, can achieve robust and accurate relocalization performance on various indoor scenes, based on an object-level map. ... | p. 2 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table capti
 | They are considered invalid or even negative and should be discarded in subsequent steps. | p. 4 (III. METHOD) |
 | Recent progress suggested that the advanced CLIP model can work as an effective object descriptor encoder [7]. | p. 4 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 6: Open-vocabulary Object Matching. Open-vocabulary object-level mapping allows us to recognize diverse objects. methods achieve comparable efficiency. The relocalization module typically serves as an ...
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table capti
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: OpenReLoc, an open-vocabulary visual relocalization system, can achieve robust and accurate relocalization performance on various indoor scenes, based on an object-level map. As ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 2 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 7 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

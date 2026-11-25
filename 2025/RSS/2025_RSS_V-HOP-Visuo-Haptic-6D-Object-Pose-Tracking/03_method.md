@@ -46,7 +46,6 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 - **p. 1 / 1. INTRODUCTION - extractive body cue:** Accurately tracking object poses is a core capability for robotic manipulation, and would enable contact-tich and dexterous manipulations with efficent imitation or reinforcement learning (68, ...
 - **p. 3 / III. MeTHODOLOGY - extractive body cue:** We propose V-HOP, a data-driven approach that fuses visual and haptic modalities to achieve accurate 6D object pose tracking.
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 
 - **p. 3 / III. MeTHODOLOGY - extractive body cue:** Later, we introduce our visuo-haptic model and how it is trained.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Later, introduce, visuo-haptic, model, trained, first, outline, core, representations, haptic, modality, gripper, object, Problem, Definition, tackle, model-based, visu, tracking, assuming.
 - **Relevant PDF headings:** III. MeTHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,23 +102,13 @@ PDF body method statement (p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY)): La
 - **p. 9 / VI. RELATED Works - extractive body cue:** While model-free approaches [65, 69, 54] exist, they fall outside the scope of this work.
 - **p. 5 / A. Multi-embodied Dataset - extractive body cue:** V) demonstrate robust performance and eliminate the need for costly real-world data collection,
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. MeTHODOLOGY), p. 3 (III. MeTHODOLOGY), objective 본문 anchor 없음, temporal p. 1 (Abstract), p. 1 (1. INTRODUCTION), p. 2 (1. INTRODUCTION), p. 7 (B. Bimanual Handover Experiment), p. 7 (experiment), p. 8 (B. Bimanual Handover Experiment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

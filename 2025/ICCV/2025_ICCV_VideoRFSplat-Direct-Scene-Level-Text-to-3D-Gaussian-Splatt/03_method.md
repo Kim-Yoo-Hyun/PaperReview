@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 
 - **p. 4 / 4.1. Dual-Stream Pose-Video Joint Model - extractive body cue:** We concatenate the pose timestep embedding and hR, as well as the video timestep embedding and hI, then update them bidirectionally via cross-attention: hR ←CrossAttention(hI, ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (4.1. Dual-Stream Pose-Video Joint Model), p. 5 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 (4.1. Dual-Stream Pose-Video Joint Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 
 - **p. 7 / Method - extractive body cue:** Specifically, Director3D often produces blurry outputs, lacking sharpness and detail for realism.
 - **p. 4 / 4.1. Dual-Stream Pose-Video Joint Model - extractive body cue:** This exchange enables controlled interaction between the two models while preserving their specialized forward paths and reducing interference between pose and multi-view modalities.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 
 - **p. 8 / Method - extractive body cue:** Our proposed training scheme, which divides timesteps, demonstrates slightly better results.
 - **p. 8 / Method - extractive body cue:** This suggests that our approach of dividing timesteps during training is not detrimental and achieves comparable or marginally improved performance.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** reduce, interference, dual-stream, architecture, dedicated, submodules, pose, image, generation, communicating, cross-attention, intermediate, layers, Fig, model, adopts, transformer-based, explicitly, conditioned, textual.
 - **Relevant PDF headings:** 2.1. Diffusion Models and Rectified Flow (p. 3); 2.2. 3D Generative Models (p. 3); 4.1. Dual-Stream Pose-Video Joint Model (p. 4); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Failure analysis of synchronized sampling and the effectiveness of asynchronous sampling. (Left) Early in sampling (t > 0.85), synchronous sampling induces excessive oscillations ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Architecture Comparison. For each example, Left: chan- nel concat architecture (SplatFlow). Right: our architecture. framed key objects. We hypothesize that uncertainty in early ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 5 (4.1. Dual-Stream Pose-Video Joint Model), p. 5 (4.1. Dual-Stream Pose-Video Joint Model), p. 8 (Method), p. 8 (Method), objective p. 5 (4.1. Dual-Stream Pose-Video Joint Model), p. 5 (4.1. Dual-Stream Pose-Video Joint Model), p. 4 (4.1. Dual-Stream Pose-Video Joint Model), temporal p. 8 (Method), p. 8 (Method), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (5.1. Experimental Setups), p. 6 (5.1. Experimental Setups).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

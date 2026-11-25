@@ -46,8 +46,6 @@
 - **p. 5 / 4.3. Optimization Stability - extractive body cue:** We analyze the smoothness of the optimization trajectory by examining the Lipschitz properties of the driving force.
 - **p. 5 / 4.2. Exclusion of Degenerate Solutions - extractive body cue:** It must migrate along the trajectory defined by -∂dT ∂µ until exiting Ωfree, thereby ensuring Sdeg ∩Ωfree = ∅in the convergence limit.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR). However, in large-scale outdoor scenes, such priors ...
@@ -81,8 +79,6 @@
 | Figure 1. Accurate geometric priors can significantly improve Gaussian initialization and optimization (e.g., via point clouds from LiDAR). However, in large-scale outdoor scenes, such ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | During training, the geometric regularization operates with linear complexity relative to the number of primitives N. | definition/direction/unit from same section | p. 4 (3.5. Complexity and Implementation Efficiency) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@
 | 3 shows the generalization gap between Train and Test PSNR across different baseline methods. | comparison identity and matched condition | p. 8 (5.5. Training Generalization Comparison) |
 | For a fair comparison, we initialize all methods with identical point clouds whenever applicable. | comparison identity and matched condition | p. 6 (5.1. Experimental Setup) |
 | Visual Comparison on KITTI and Waymo Open Dataset. | comparison identity and matched condition | p. 7 (5.3. Qualitative Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@
 | body limitation/failure cue | We conduct our evaluation on the KITTI [37] and Waymo Open Dataset [35], selecting sequences characterized by complex occlusions and unbounded backgrounds. | p. 6 (5.1. Experimental Setup) |
 | body limitation/failure cue | This mathematically justifies the system's ability to reconstruct geometry in blind spots (e.g., occlusion or far-field) solely through multi-view consistency. | p. 6 (4.4. Permissiveness via Asymptotic Variance Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@
 | In the initialization step, we compute the Euclidean Distance Transform [11] for the LiDAR point cloud and derive the gradient field ∇Egeom via central ... | p. 4 (3.5. Complexity and Implementation Efficiency) |
 | All geometric metrics are computed with identical filtering and evaluation criteria across methods, ensuring that observed differences stem from reconstruction quality rather than evaluation ... | p. 6 (5.1. Experimental Setup) |
 | The pixel color C(u) for a pixel u ∈R2 is computed via α-blending of K ordered primitives overlapping the pixel: C(u) = K X ... | p. 3 (3. Methodology) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -162,6 +141,5 @@
 - **p. 6 / 4.4. Permissiveness via Asymptotic Variance Analysis - extractive body cue:** This mathematically justifies the system's ability to reconstruct geometry in blind spots (e.g., occlusion or far-field) solely through multi-view consistency.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 6 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), metrics p. 6 (5.2. Quantitative Analysis), p. 6 (5.2. Quantitative Analysis), p. 7 (5.3. Qualitative Results), p. 8 (5.4. Ablation Studies), p. 8 (5.4. Ablation Studies), p. 19 (Figure/Table caption), baselines p. 7 (5.3. Qualitative Results), p. 8 (5.3. Qualitative Results), p. 6 (5.3. Qualitative Results), p. 8 (5.5. Training Generalization Comparison), p. 6 (5.1. Experimental Setup), p. 7 (5.3. Qualitative Results), results p. 6 (5.2. Quantitative Analysis), p. 6 (5.1. Experimental Setup), p. 8 (5.5. Training Generalization Comparison), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 - **p. 4 / 3.2. Efficient group convolution - extractive body cue:** Previous works such as [9, 48] have relied on the discretization of SO(3) using platonic solids that assign to each spatial component the same finite ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Group equivariant convolution), p. 4 (3.2. Efficient group convolution).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 - **p. 4 / 3.2. Efficient group convolution - extractive body cue:** Note that the point cloud is treated as a sparse feature map that defines the sampling of the spatial component.
 - **p. 1 / 1. Introduction - extractive body cue:** Baking SE(3)- equivariance into the network architecture can thus be beneficial since equivariant features maintain information about the input group transform across neural layers, making ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 - **p. 5 / 4. Experiments - extractive body cue:** Due to space constraints, additional experiments, ablation studies, detailed dataset description and implementation are provided in the supplementary materials.
 - **p. 6 / 4.2. Shape classification - extractive body cue:** Analyzing the effect of different samples used to compute the integral over SO(3) for training and testing, we can see that Ours, even with 1 ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** equivariance, feature, maps, need, lifted, group, itself, since, then, stabilizer, subgroup, only, consists, trivial, element, kernel, longer, constrained, more, formal.
 - **Relevant PDF headings:** 3. Methods (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.1. Group equivariant convolution), p. 3 (3.1.
 - **p. 7 / 4.3. Semantic segmentation - extractive body cue:** Global equivariant methods such as VN, or FA struggle with out-of-distribution models.
 - **p. 8 / 4.3. Semantic segmentation - extractive body cue:** Comparison to equivariant models on the classification task of ModelNet40 for different setups.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 5 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution), p. 4 (3.2. Efficient group convolution), objective p. 3 (3.1. Group equivariant convolution), p. 3 (3.1. Group equivariant convolution), p. 4 (3.2. Efficient group convolution), temporal p. 7 (4.3. Semantic segmentation), p. 7 (4.3. Semantic segmentation), p. 4 (3.2. Efficient group convolution), p. 4 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution), p. 5 (3.2. Efficient group convolution).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

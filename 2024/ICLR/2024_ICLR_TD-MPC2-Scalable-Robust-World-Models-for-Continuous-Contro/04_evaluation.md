@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** Success rate (%) as a function of environment steps on 5 object manipulation tasks from ManiSkill2.
 - **p. 8 / 4.1 RESULTS - extractive body cue:** Episode return as a function of environment steps on 10 image-based DMControl tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview. TD-MPC2 compares favorably to existing model-free and model-based RL methods across 104 continuous control tasks spanning multiple domains, with a single set ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 | Tasks include high-dimensional state and action spaces (up to A ∈R39), sparse rewards, multi-object manipulation, physiologically accurate musculoskeletal motor control, complex locomotion (e.g. | definition/direction/unit from same section | p. 5 (4 EXPERIMENTS) |
 | Lastly, we want to remark that, while TD-MPC2 relies on rewards for task learning, it is useful to adopt a generalized notion of reward ... | definition/direction/unit from same section | p. 9 (4.1 RESULTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 | Due to our careful design of the TD-MPC2 algorithm, scaling up is straightforward: to improve rate of convergence we use a 4× larger batch ... | comparison identity and matched condition | p. 7 (4.1 RESULTS) |
 | TD-MPC2 is comparable to state-of-the-art. | comparison identity and matched condition | p. 8 (4.1 RESULTS) |
 | To demonstrate this, we replace the encoder of TD-MPC2 with a shallow convolutional encoder, and benchmark it against current state-of-the-art methods for visual RL ... | comparison identity and matched condition | p. 9 (4.1 RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 | body limitation/failure cue | While our work mainly focuses on the scaling and robustness of world models, we also explore the efficacy of finetuning pretrained world models for ... | p. 7 (4.1 RESULTS) |
 | body limitation/failure cue | We observe that all of our proposed improvements contribute meaningfully to the robustness and strong performance of TD-MPC2 in both single-task RL and multi-task ... | p. 8 (4.1 RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 | Mean and 95% CIs over 3 random seeds. | p. 8 (4.1 RESULTS) |
 | TD-MPC2 performs comparably to the two best baselines, DrQ-v2 and DreamerV3, without any changes to hyperparameters. | p. 9 (4.1 RESULTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4.1 RESULTS - extractive body cue:** While we are excited by the potential of generalist world models, several challenges remain: (i) misspecification of task rewards can lead to unintended outcomes (Clark ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 22 (Figure/Table caption), p. 23 (Figure/Tabl
 - **p. 8 / 4.1 RESULTS - extractive body cue:** We observe that all of our proposed improvements contribute meaningfully to the robustness and strong performance of TD-MPC2 in both single-task RL and multi-task RL.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.1 RESULTS), p. 6 (4 EXPERIMENTS), p. 7 (4.1 RESULTS), p. 7 (4.1 RESULTS), p. 9 (4.1 RESULTS), p. 9 (4.1 RESULTS), metrics p. 7 (4.1 RESULTS), p. 5 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 24 (Figure/Table caption), baselines p. 6 (4.1 RESULTS), p. 6 (4 EXPERIMENTS), p. 9 (4.1 RESULTS), p. 7 (4.1 RESULTS), p. 8 (4.1 RESULTS), p. 9 (4.1 RESULTS), results p. 22 (Figure/Table caption), p. 23 (Figure/Table caption), p. 5 (Figure/Table caption), p. 23 (Figure/Table caption), p. 7 (4.1 RESULTS), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

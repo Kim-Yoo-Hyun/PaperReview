@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 1 (Abstract), p. 4 (3.1 
 - **p. 1 / Abstract - extractive body cue:** Our results demonstrate that: 1) visually grounded planning representations are generally better than language planning representations; 2) the Hierarchical-VLA paradigm generally achieves superior or comparable ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (1 Introduction), p. 7 (3.1 Preliminaries), p. 3 (1 Introduction), p. 4 (1 Introduction), p. 6 (3.1 Preliminaries), p. 6 (3.1 Preliminaries).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 1 (Abstract), p. 4 (3.1 
 - **p. 5 / 3.1 Preliminaries - extractive body cue:** Each point from the downsampled point cloud will be seen as a token and these 3D tokens are sent to the action head as additional ...
 - **p. 2 / 1 Introduction - extractive body cue:** ActionOnly-VLA Integrated-VLA Hierarchical-VLA PlanningOnly-VLA VLA Images Action Language VLM Images Plan Language VLA Images Action Language Plan Planner Action Policy Plan Images Language Figure 1: ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 1 (Abstract), p. 4 (3.1 
 - **p. 7 / 3.1 Preliminaries - extractive body cue:** Analysis: The implicit planning paradigm leverages various auxiliary task planning objectives as additional losses for training, and during inference, there is no difference between it ...
 - **p. 8 / 3.1 Preliminaries - extractive body cue:** (b) Training cost and inference time for different representations.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Figure, VLM, together, planning, heads, task, modify, action, head, encoder-decoder, transformer, policy, learning, systematically, investigate, impacts, different, paradigms, representations, isolating.
 - **Relevant PDF headings:** C VLA-OS Model Details (p. 25).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 6 (3.1 Preliminaries), p. 1 (Abstract), p. 4 (3.1 
 - **p. 11 / 1. Why are visually grounded representations better than language? - extractive body cue:** This is because that our finding 6 shows that task planning pretraining is useful.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Left: four different VLA paradigms. Note that in this paper, we didn't explore PlanningOnly- VLA since they usually cannot be trained with the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3.1 Preliminaries), p. 1 (Abstract), p. 4 (3.1 Preliminaries), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 4 (1 Introduction), p. 7 (3.1 Preliminaries), p. 3 (1 Introduction), p. 6 (3.1 Preliminaries), p. 8 (3.1 Preliminaries), p. 1 (Abstract), temporal p. 5 (3.1 Preliminaries), p. 5 (3.1 Preliminaries), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (3.1 Preliminaries).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

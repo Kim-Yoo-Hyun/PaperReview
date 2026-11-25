@@ -52,7 +52,6 @@ PDF body method statement (p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 
 - **p. 5 / 3.3. Generated-RGB Branch - extractive body cue:** While increasing K improves viewpoint coverage, it also increases computational cost.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Problem Definition), p. 4 (3.3. Generated-RGB Branch), p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 5 (3.5. Match-then-Fuse Probabilistic Fusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 
 - **p. 1 / 1. Introduction - extractive body cue:** The pipeline operates in two parallel branches: (1) GeneratedRGB Branch - a World Foundation Model generates RGB views that are geometrically aligned with the input ...
 - **p. 5 / 3.4. Geometric Branch - extractive body cue:** The parallel geometric branch directly processes the input point clouds.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 
 - **p. 4 / 3.3. Generated-RGB Branch - extractive body cue:** Specifically, we use MASt3R [14], a VFM trained to produce dense correspondence-aware features.
 - **p. 4 / 3.2. C-GenReg - Overview - extractive body cue:** In parallel, the geometric branch encodes the raw point clouds using a pretrained registration-oriented 3D feature extractor, yielding complementary geometric descriptors.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** meet, goals, match-then-fuse, probabilistic, strategy, where, putative, correspondences, first, established, independently, modality, computing, feature, similarity, matrices, between, source, target, points.
 - **Relevant PDF headings:** 3. Method (p. 3); 4.2. Method Evaluation (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,22 +108,11 @@ PDF body method statement (p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 
 - **p. 7 / 4.2. Method Evaluation - extractive body cue:** For reference, we additionally report C-GenReg-Oracle, which replaces the generated RGB with the real RGB input to provide an empirical upper bound on our pipeline's ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. C-GenReg Overview: A training-free, zero-shot point cloud registration framework with two parallel branches. (1) Generated-RGB Branch - source and target point clouds are ...
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 4. Prompt robustness on 3DMatch. Relative rotation (RRE,◦) and translation (RTE, cm) errors under different prompt types. geometric coherence across viewpoints. A task-specific VFM ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 4 (3.3. Generated-RGB Branch), p. 4 (3.3. Generated-RGB Branch), p. 3 (3.2. C-GenReg - Overview), p. 3 (3.1. Problem Definition), objective p. 5 (3.5. Match-then-Fuse Probabilistic Fusion), p. 4 (3.3. Generated-RGB Branch), p. 5 (3.3. Generated-RGB Branch), temporal p. 4 (3.3. Generated-RGB Branch), p. 4 (3.3. Generated-RGB Branch), p. 5 (3.3. Generated-RGB Branch), p. 3 (2. Related Work), p. 5 (3.3. Generated-RGB Branch), p. 7 (4.2. Method Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

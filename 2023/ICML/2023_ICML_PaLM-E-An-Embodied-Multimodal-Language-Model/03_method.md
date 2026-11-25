@@ -52,7 +52,6 @@ PDF body method statement (p. 5 (5. Training Recipes), p. 5 (5. Training Recipes
 - **p. 6 / 5. Training Recipes - extractive body cue:** In experiments with φOSRT, we also freeze the slot representation, i.e. we only update the small projector ψ which serves as the interface between OSRT ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (5. Training Recipes), p. 5 (5. Training Recipes), p. 6 (5. Training Recipes).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 5 (5. Training Recipes), p. 5 (5. Training Recipes
 - **p. 1 / 1. Introduction - extractive body cue:** Further, in our experiments we show that current state-of-the-art visuallanguage models trained on typical vision-language tasks such as visual-question-answering (VQA) cannot directly solve robotic reasoning ...
 - **p. 6 / 5. Training Recipes - extractive body cue:** PaLM-E: An Embodied Multimodal Language Model input encoders, and if so, how different-modality encoders compare.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 5 (5. Training Recipes), p. 5 (5. Training Recipes
 - **p. 5 / 5. Training Recipes - extractive body cue:** Those encoders are either pre-trained or trained from scratch, see Sec.
 - **p. 8 / 6.4. Mobile Manipulation Environment - extractive body cue:** PaLM-E is trained to generate the next step of the plan, conditioned on the history of taken steps and the current image observation of the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Despite, being, decoder-only, model, text, consists, prefix, part, index, formed, multi-modal, sentences, prediction, target, only, contains, tokens, PaLM-E, trained, dataset.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 5 (5. Training Recipes), p. 5 (5. Training Recipes
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Overview of transfer learning demonstrated by PaLM- E: across three different robotics domains, using PaLM and ViT pretraining together with the full mixture ...
 - **p. 6 / 6. Experiments - extractive body cue:** For the mobile manipulation and Language-Table environments, PaLM-E is integrated into the control loop to execute the plans in the real world, and has to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (5. Training Recipes), p. 5 (5. Training Recipes), p. 6 (5. Training Recipes), p. 6 (5. Training Recipes), objective p. 5 (5. Training Recipes), p. 5 (5. Training Recipes), p. 6 (5. Training Recipes), temporal p. 7 (6.3. Language-Table Environment), p. 8 (6.4. Mobile Manipulation Environment), p. 8 (6.4. Mobile Manipulation Environment), p. 6 (6. Experiments), p. 6 (6. Experiments), p. 7 (6.3. Language-Table Environment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

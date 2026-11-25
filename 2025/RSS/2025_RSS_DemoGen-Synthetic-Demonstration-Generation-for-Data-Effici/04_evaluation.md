@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** R3M utilizes a ResNet [21] architecture and is pre-trained on roboties-specific tasks.
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** In real-world experiments, we use the DBSCAN [15] elustering algorithm to discard the outlier points and downsample the number of points in the point cloud ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: DemoGen isa fully synthetic approach for a ‘of visuomotor policies and can facilitate one-shot i
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 | Fig. 17: Mlustration for the ADR strategy. Asynchronous transfor ‘mations are applied tothe disturbed object and the robot end-effector to simulate the disturbance resistance ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 | Fig. 18: DemoGen for obstacle avoidance. (ab) Policy trained on the source demonstration collides with the unseen obstacle. (ed) Policy trained on the generated ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 | Fig. 22: Raw evaluation results in the Sauce-Spreading task. (Top) Examples of the processing results for metric calculation. (Bottom) Compared with the regular DemoGen, ... | comparison identity and matched condition | p. 18 (Figure/Table caption) |
 | 1) Details for Policy Training: Fora fair comparison, we fix the total training steps counted by observation-action pairs to be 2M for all evaluated ... | comparison identity and matched condition | p. 17 (A. Policy Training and Implementation Details) |
 | Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 ... | comparison identity and matched condition | p. 17 (A. Policy Training and Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -116,8 +105,6 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 - **p. 4 / B. Benchmarking Spatial Generalization Capability - extractive body cue:** We report the relationship between the agent's performance Jn success rates and the number of demonstrations used for traning ‘when different visuomotor policies and object ...
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** To stabilize the training process, we use AdamW [32] optimizer and set the learning rate to be Le with a 500 step warmup.
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** In real-world experiments, we use the DBSCAN [15] elustering algorithm to discard the outlier points and downsample the number of points in the point cloud ...
-- **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** To stabilize the training process, we use AdamW [32] optimizer and set the learning rate to be Le with a 500 step warmup.
-- **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** In real-world experiments, we use the DBSCAN [15] elustering algorithm to discard the outlier points and downsample the number of points in the point cloud ...
 
 ## Generalization and Failure Cases
 
@@ -130,8 +117,6 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 | body limitation/failure cue | 16: DemoGen for disturbance resistance. | p. 11 (B. Cluttered Scene) |
 | body limitation/failure cue | Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 ... | p. 17 (A. Policy Training and Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +126,6 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 | Detailed implementations are provided in Appendix A2. | p. 4 (B. Benchmarking Spatial Generalization Capability) |
 | On the other hand, both 3D representations and pre-trained 2D visual encoders contribute to improved spatial generalization capabilities. | p. 4 (B. Benchmarking Spatial Generalization Capability) |
 | Under the 4x4 homogeneous matrix representation, the spatial transformation between the target and source configurations is computed as: | p. 5 (C. TAMP-based Action Generation) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -160,9 +137,8 @@ PDF body evaluation/result cue (p. 4 (B. Benchmarking Spatial Generalization Cap
 - **p. 17 / A. Policy Training and Implementation Details - extractive body cue:** Since Ts indicates the steps of actions executed on the robot without re-planning, our horizon settings result in a closed-loop re-planning latency of 0.5 seconds. ...
 
 - **Evidence anchors reviewed:** datasets p. 4 (B. Benchmarking Spatial Generalization Capability), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), metrics p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 11 (Figure/Table caption), baselines p. 18 (Figure/Table caption), p. 17 (A. Policy Training and Implementation Details), p. 17 (A. Policy Training and Implementation Details), results p. 4 (B. Benchmarking Spatial Generalization Capability), p. 18 (Figure/Table caption), p. 4 (B. Benchmarking Spatial Generalization Capability), p. 3 (Figure/Table caption), p. 7 (Figure/Table caption), p. 17 (A. Policy Training and Implementation Details).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** This avoids any issues with out-ofdistribution actions, since the TD loss only uses dataset actions.
 - **p. 6 / 3 PRELIMINARIES - extractive body cue:** 4.4 ANALYSIS In this section, we will show that IQL can recover the optimal value function under the dataset support constraints.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 1: Left: The asymmetric squared loss used for expectile regression. τ = 0.5 corresponds to the standard mean squared error loss, while τ = ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 | We resolve this by introducing a separate value function that approximates an expectile only with respect to the action distribution, leading to the following ... | definition/direction/unit from same section | p. 5 (3 PRELIMINARIES) |
 | The quantile regression loss is defined as an asymmetric ℓ1 loss. | definition/direction/unit from same section | p. 4 (3 PRELIMINARIES) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 | On the Ant Maze domains, IQL significantly outperforms both prior methods after online finetuning. | comparison identity and matched condition | p. 9 (3 PRELIMINARIES) |
 | Prior work (Brandfonbrener et al., 2021; Peng et al., 2019) has proposed directly using this objective to learn Qπβ, and then train the policy ... | comparison identity and matched condition | p. 4 (3 PRELIMINARIES) |
 | 2Our method could also be derived with quantiles, but since we are not interested in learning all of the expectiles/quantiles, unlike prior work (Dabney ... | comparison identity and matched condition | p. 4 (3 PRELIMINARIES) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,7 +112,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 - **p. 8 / 3 PRELIMINARIES - extractive body cue:** 0.00 0.25 0.50 0.75 1.00 Gradient Steps (×106) 0 50 100 Episode Return antmaze-medium-play-v0 0.00 0.25 0.50 0.75 1.00 Gradient Steps (×106) 0 50 100 ...
 - **p. 9 / 3 PRELIMINARIES - extractive body cue:** For example, the original implementation of CQL takes more than 4 hours to perform 1M updates, while ours takes only 80 minutes.
 - **p. 9 / 3 PRELIMINARIES - extractive body cue:** Even so, IQL still requires about 4x less time than our reimplementation of CQL on average, and is comparable to the fastest prior one-step methods.
-- **p. 5 / 3 PRELIMINARIES - extractive body cue:** 1.0 0.5 0.0 0.5 1.0 u 0.0 0.2 0.4 0.6 0.8 1.0 / (u < 0)/u2 = 0.01 = 0.1 = 0.5 = 0.9 = ...
 
 ## Generalization and Failure Cases
 
@@ -133,8 +121,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 | body limitation/failure cue | Note that the policy does not influence the value function in any way, and therefore extraction could be performed either concurrently or after TD ... | p. 6 (3 PRELIMINARIES) |
 | body limitation/failure cue | Since IQL (d) performs iterative dynamic programming, it correctly propagates the signal, and the values are no longer dominated by noise. | p. 7 (3 PRELIMINARIES) |
 | body limitation/failure cue | When the static dataset is heavily corrupted by suboptimal actions, one-step policy evaluation results in a value function that degrades to zero far from ... | p. 7 (3 PRELIMINARIES) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -149,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 | Thus, we treat τ as a hyperparameter. | p. 7 (3 PRELIMINARIES) |
 | (2021) reports results for a set of hyperparameters, such as batch and network size, that is significantly different from other methods. | p. 8 (3 PRELIMINARIES) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 3 PRELIMINARIES - extractive body cue:** TD learning (IQL): for each gradient step do ψ ←ψ -λV ∇ψLV (ψ) θ ←θ -λQ∇θLQ(θ) ˆθ ←(1 -α)ˆθ + αθ end for Policy extraction ...
@@ -165,9 +143,8 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARI
 - **p. 7 / 3 PRELIMINARIES - extractive body cue:** When the static dataset is heavily corrupted by suboptimal actions, one-step policy evaluation results in a value function that degrades to zero far from the ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), metrics p. 5 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES), p. 8 (Figure/Table caption), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), baselines p. 8 (Figure/Table caption), p. 8 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 9 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), results p. 9 (Figure/Table caption), p. 9 (3 PRELIMINARIES), p. 8 (Figure/Table caption), p. 5 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 7 (3 PRELIMINARIES).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

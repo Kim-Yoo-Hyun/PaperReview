@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 22 (C.
 - **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** The model is trained for 2000 epochs on 80 NVIDIA A100-80G GPUs, using a gradient clipping threshold of 1.0.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 22 (C.2 PRE-TRAINING DETAILS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 22 (C.
 - **p. 22 / C.1 DATASET DETAILS - extractive body cue:** Consequently, we resize the images to 1024 × 1024 before feeding them into RADIO, which outputs a feature map of size 64 × 64.
 - **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** (2021), which train a neural network to detect the 7-DoF grasp poses on monocular image observations.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 22 (C.
 - **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** Given an image pair from different viewpoints, we first extract features from each image using a frozen, pre-trained Vision Transformer (ViT) encoder.
 - **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** In this study, we maintained all settings identical-data loading, training techniques, hyperparameters, and the encoder-while replacing the volume neural rendering decoder with a multiview transformer-based ...
 - **p. 23 / C.2 PRE-TRAINING DETAILS - extractive body cue:** We train for a total of 1.1M frames and all other hyperparameters including random seeds are kept as default and same.
-- **p. 24 / C.2 PRE-TRAINING DETAILS - extractive body cue:** In this study, we maintained all settings identical-data loading, training techniques, hyperparameters, and the encoder-while replacing the volume neural rendering decoder with a multiview transformer-based ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Finally, explain, image, rendering, feature, volume, loss, functions, network, optimization, Sec, then, unpatchify, them, obtain, latent, size, where, ViT, patch.
 - **Relevant PDF headings:** 2 METHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +115,10 @@ PDF body method statement (p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 22 (C.
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 7: Mask ratio and loss components. C., D., S. denote color, depth, and semantic. Mask Ratio Loss VC-1 Benchmark Mean S.R.
 - **p. 22 / C.2 PRE-TRAINING DETAILS - extractive body cue:** To facilitate faster convergence and improve stability, we initialize the encoder with ImageNet pretrained weights from the Masked Autoencoder (MAE), applying a learning rate layer ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (2 METHODOLOGY), p. 3 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 24 (C.2 PRE-TRAINING DETAILS), objective p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 22 (C.2 PRE-TRAINING DETAILS), temporal p. 3 (2 METHODOLOGY), p. 4 (2 METHODOLOGY), p. 21 (C.1 DATASET DETAILS), p. 21 (C.1 DATASET DETAILS), p. 22 (C.1 DATASET DETAILS), p. 22 (C.1 DATASET DETAILS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

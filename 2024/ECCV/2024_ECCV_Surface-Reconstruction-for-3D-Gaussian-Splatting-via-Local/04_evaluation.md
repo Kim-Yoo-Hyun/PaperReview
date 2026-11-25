@@ -44,8 +44,6 @@
 - **p. 14 / 4 Experiments - extractive body cue:** This shows the potential ability of 3DGS to achieve high-quality surface reconstruction for real-world capture.
 - **p. 12 / 4 Experiments - extractive body cue:** In terms of storage, thanks to the Scaffold-GS baseline, our framework only takes about 45MB for each scene while the size of the SuGaR model ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of GSrec. GSrec first leverages the monocular geometry cue as supervision to adjust the position and orientation of each 3D Gaussian primitive. ...
@@ -79,8 +77,6 @@
 | Chamfer-L1↓F-score ↑ COLMAP [41] 0.141 0.537 UNISURF [33] 0.359 0.267 NeuS [51] 0.194 0.291 VolSDF [58] 0.267 0.346 Manhattan-SDF [16] 0.070 0.602 MonoSDF (Grid) ... | definition/direction/unit from same section | p. 14 (4 Experiments) |
 | Method Geometry Guidance MLS design Reconstruction metric Normal Depth IMLS RIMLS Normal-C ↑ F-score ↑ (a) Scaffold-GS [25]+D ✗ ✓ ✗ ✗ 66.53±2.56 55.33±6.29 ... | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@
 | 1 where our method outperforms both of SuGaR's variants with a clear margin. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | We compared the key components with the variants of [25] including the guidance and the joint optimization. | comparison identity and matched condition | p. 12 (4 Experiments) |
 | 2, the inaccurate normal estimated by the density gradient will lead to a degraded iso-surface estimation compared with Scaffold-GS+D and ScaffoldGS+N. | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@
 | body limitation/failure cue | Although the MonoSDF (MLP) adopts pure MLP structure which shows robustness to the camera noise, the training time of such a variant gets much ... | p. 14 (4 Experiments) |
 | body limitation/failure cue | 2, the inaccurate normal estimated by the density gradient will lead to a degraded iso-surface estimation compared with Scaffold-GS+D and ScaffoldGS+N. | p. 12 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@
 | 4 (a), we find that our approach is comparable with ManhattanSDF [16] and the MonoSDF [62] in which multi-resolution grid embedding [32] is utilized, ... | p. 14 (4 Experiments) |
 | Scaffold-GS proposes to use learnable anchor points as seeds and generate new Gaussians from these anchors along with their attributes (including color, opacity, and ... | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Fig. 2: Joint optimization of 3DGS and neural implicit representation. We propose a novel strategy to further align the Gaussians with the surface. We jointly ...
@@ -159,6 +138,5 @@
 - **p. 12 / 4 Experiments - extractive body cue:** 2, the inaccurate normal estimated by the density gradient will lead to a degraded iso-surface estimation compared with Scaffold-GS+D and ScaffoldGS+N.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 14 (4 Experiments), metrics p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), baselines p. 14 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), results p. 13 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 12 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

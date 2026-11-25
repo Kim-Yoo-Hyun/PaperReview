@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 - **p. 7 / 5 Results - extractive body cue:** 5.4 Example Applications to Robotic Manipulation: Grasping Specific Points Here we demonstrate a variety of manipulation applications in grasping specific points on objects, where the ...
 - **p. 5 / 5 Results - extractive body cue:** Our object set is also summarized (right).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Overview of the data collection and training procedure. (a) automated collection with a robot arm. (b) change detection using the dense 3D reconstruction. ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 | The techniques in Section 3.2 provide significant improvement in both (a) qualitative consistency over a wide variety of viewpoints, and (b) quantitative precision in ... | definition/direction/unit from same section | p. 6 (5 Results) |
 | Figure 7: (a) Kuka IIWA LRB robot arm. (b) Schunk WSG 50 gripper with Primesense Carmine 1.09 attached Appendix A Experimental Hardware All of ... | definition/direction/unit from same section | p. 11 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 | Our new standard single-object training procedure (standard-SO) performs significantly better than our implementation of prior work's training procedures (Schmidt), and we isolate and measure ... | comparison identity and matched condition | p. 6 (5 Results) |
 | (b) shows that for a dataset containing 10 scenes of a drill, learned descriptors are inconsistent without background and orientation randomization during training (middle), ... | comparison identity and matched condition | p. 6 (5 Results) |
 | Networks with a number label were trained with cross object loss and the number denotes the descriptor dimension. no-cross-object is a network trained without ... | comparison identity and matched condition | p. 7 (5 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,21 +120,11 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 | body limitation/failure cue | The generalization extends to instances that a priori we thought would be failure modes: we expected the boot (Figure 6h) to be a failure ... | p. 7 (5 Results) |
 | body limitation/failure cue | In future work we are interested to explore new approaches to solving manipulation problems that exploit the dense visual information that learned dense descriptors ... | p. 8 (6 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | Our new standard single-object training procedure (standard-SO) performs significantly better than our implementation of prior work's training procedures (Schmidt), and we isolate and measure ... | p. 6 (5 Results) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -153,9 +132,8 @@ PDF body evaluation/result cue (p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Resu
 - **p. 8 / 6 Conclusion - extractive body cue:** In future work we are interested to explore new approaches to solving manipulation problems that exploit the dense visual information that learned dense descriptors provide, ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 Results), p. 8 (5 Results), p. 6 (5 Results), p. 8 (5 Results), p. 5 (5 Results), p. 7 (5 Results), metrics p. 7 (5 Results), p. 7 (5 Results), p. 5 (5 Results), p. 6 (5 Results), p. 6 (5 Results), p. 11 (Figure/Table caption), baselines p. 7 (5 Results), p. 6 (5 Results), p. 6 (5 Results), p. 7 (5 Results), results p. 7 (5 Results), p. 6 (5 Results), p. 7 (5 Results), p. 6 (5 Results), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

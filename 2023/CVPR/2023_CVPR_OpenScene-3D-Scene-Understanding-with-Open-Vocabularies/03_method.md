@@ -48,7 +48,6 @@ PDF body method statement (p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature
 - **p. 4 / 3.2. 3D Distillation - extractive body cue:** To enforce the output of the network F3D to be consistent with the fused features F2D, we use a cosine similarity loss: \ c L ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (3.4. Inference), p. 4 (3.2. 3D Distillation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature
 - **p. 3 / 3.1. Image Feature Fusion - extractive body cue:** The first step in our approach is to extract dense perpixel embeddings for each RGB image from a 2D visuallanguage segmentation model, and then back-project ...
 - **p. 2 / 1. Introduction - extractive body cue:** To achieve this, we establish associations between 3D points and pixels from posed images in the 3D scene, and train a 3D network to embed ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,15 +81,11 @@ PDF body method statement (p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature
 ## Training vs Inference
 
 - **p. 3 / 3. Method - extractive body cue:** We first compute per-pixel features for every image using a model pre-trained for open-vocabulary 2D semantic segmentation.
-- **p. 3 / 3. Method - extractive body cue:** We first compute per-pixel features for every image using a model pre-trained for open-vocabulary 2D semantic segmentation.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** enforce, output, network, F3D, consistent, fused, features, F2D, cosine, similarity, loss, text, label, MinkowskiNet18A, backbone, E3D, change, dimension, outputs, first.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,20 +105,10 @@ PDF body method statement (p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature
 - **p. 5 / 4. Experiments - extractive body cue:** Unlike [39], which requires training on 16 seen classes, our approach does not train with any 2D or 3D ground labels on any classes.
 - **p. 5 / 4.1. Comparisons - extractive body cue:** Our results on those classes is significantly better than [39] (7.7% vs 62.8% mIoU), even though 3DGenz [39] utilizes ground truth data for 16 seen ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature Fusion), p. 3 (3. Method), p. 4 (3.3. 2D-3D Feature Ensemble), objective p. 4 (3.2. 3D Distillation), temporal p. 3 (3.1. Image Feature Fusion), p. 4 (3.1. Image Feature Fusion), p. 4 (3.1. Image Feature Fusion), p. 6 (4.1. Comparisons), p. 3 (2. Related Work), p. 2 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

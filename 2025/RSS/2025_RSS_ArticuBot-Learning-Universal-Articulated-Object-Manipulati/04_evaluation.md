@@ -46,8 +46,6 @@
 - **p. 13 / C. Mobile X-Arm Results - extractive body cue:** Some of the tested real-world objects are quite challenging, for example, cabinet C3 has a very small handle that protrudes only 2 cm from the ...
 - **p. 7 / V. SIMULATION RESULTS - extractive body cue:** We extracted 332 objects from 5 different categories: storage furniture,
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: System overview of ArticuBot. Top: We combine sampling-based grasping, motion planning, and opening actions to efficiently generate thousands of demonstrations in simulation. These ...
@@ -77,8 +75,6 @@
 | We do notice a drop in the normalized opening performance ‘compared to the table-top Franka experiments. | definition/direction/unit from same section | p. 13 (C. Mobile X-Arm Results) |
 | Fig. 2: System overview of ArticuBot. Top: We combine sampling-based grasping, motion planning, and opening actions to efficiently generate thousands of demonstrations in simulation. ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@
 | Fig. 3: Comparison of hierarchical and non-hierarchical poli | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Fig. 4: Comparison of different high-level poli | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Fig. 7: Comparison of AnticuBot with FlowBotSD and AO-Grasp on 9 test objects in Lab A with table-top Franka, We omit | comparison identity and matched condition | p. 11 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@
 | body limitation/failure cue | The major failure case for FlowBot3D is that the predicted flow is in the wrong direction, e.g., it predicts upwards flows for ‘opening a ... | p. 12 (B. Table-Top Franka Arm Results) |
 | body limitation/failure cue | We do not input the optional segmentation mask for the target link to open for FlowBot3D, as such masks are not readily available in ... | p. 11 (A. Setups) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@
 | IK is then performed for the ‘end-effector to reach each of the computed poses along the trajectory to open the object. | p. 5 (2. Hierarchical Policy Learning -- Low-level Policy Architecture) |
 | takes 3D point cloud as input and outputs delta endeffector transformations as the actions. + DP3 Transformer, which replaces the simplified PointNet encoder in ... | p. 8 (B. Is a Hierarchical Policy Needed?) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / C. Mobile X-Arm Results - extractive body cue:** See Appendix L for visualizations of some of the failure cases of ArticuBot, and some basic failure recovery abilities of ArticuBot.
@@ -157,6 +136,5 @@
 - **p. 11 / A. Setups - extractive body cue:** We do not input the optional segmentation mask for the target link to open for FlowBot3D, as such masks are not readily available in the ...
 
 - **Evidence anchors reviewed:** datasets p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS), p. 12 (B. Table-Top Franka Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 7 (V. SIMULATION RESULTS), metrics p. 12 (C. Mobile X-Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 4 (Figure/Table caption), baselines p. 12 (B. Table-Top Franka Arm Results), p. 12 (B. Table-Top Franka Arm Results), p. 13 (C. Mobile X-Arm Results), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), results p. 12 (B. Table-Top Franka Arm Results), p. 12 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results), p. 13 (C. Mobile X-Arm Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

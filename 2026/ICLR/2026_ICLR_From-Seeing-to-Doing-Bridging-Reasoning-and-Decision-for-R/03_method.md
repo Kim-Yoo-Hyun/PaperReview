@@ -53,7 +53,6 @@ PDF body method statement (p. 6 (4. How to avoid collisions?), p. 5 (4. How to a
 - **p. 5 / 4. How to avoid collisions? - extractive body cue:** To address this, we developed a progressive, weakto-strong data pipeline to cultivate these abilities hierarchically.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (4. How to avoid collisions?).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 6 (4. How to avoid collisions?), p. 5 (4. How to a
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** FSD is an enhanced affordance-based VLA that generalizes effectively to new instructions and scenes through its reasoning abilities.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** However, they remain limited, often providing aids that are not comprehensive enough for complex decision-making and predicting raw coordinates without an explicit reasoning process, which ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 6 (4. How to avoid collisions?), p. 5 (4. How to a
 - **p. 6 / 4. How to avoid collisions? - extractive body cue:** FSD's architecture features a frozen CLIP-ViT-L (Gao et al., 2024) image encoder and a Vicuna-13B (Zheng et al., 2023b) LLM, which are connected by a ...
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Current approaches (Kim et al., 2024; Brohan et al., 2023; Ni et al., 2025) leverage pre-trained Vision-Language Models (VLMs) and transform them into Vision-Language-Action Models ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** (a) VABench-Point Model Accuracy ↑ GPT4o 9.30 ASMv2 10.07 RoboPoint 19.09 RoboBrain 7.00 FSD 61.82 w/o SrCoT 26.21 w/o Alignment 55.92 (b) VABench-VisualTrace Model RMSE↓ ...
-- **p. 6 / 4. How to avoid collisions? - extractive body cue:** FSD's architecture features a frozen CLIP-ViT-L (Gao et al., 2024) image encoder and a Vicuna-13B (Zheng et al., 2023b) LLM, which are connected by a ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** training, process, unfolds, stages, General, Spatial, Reasoning, Enhancement, first, stage, Level, data, cultivate, model, core, embodied, visual, trace, generation, Dataset.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +113,10 @@ PDF body method statement (p. 6 (4. How to avoid collisions?), p. 5 (4. How to a
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** Pick up strawberry Place egg in green pot Remove egg from plate Fold the towel Move cucumber between pot and bowl Move strawberry left of ...
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** This approach avoids both the costly fine-tuning and step-by-step inference required by OpenVLA and the system overhead of a multicomponent pipeline like MOKA.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (4. How to avoid collisions?), p. 5 (4. How to avoid collisions?), p. 1 (ABSTRACT), p. 6 (4. How to avoid collisions?), p. 2 (1 INTRODUCTION), p. 5 (4. How to avoid collisions?), objective p. 6 (4. How to avoid collisions?), p. 4 (4. How to avoid collisions?), p. 5 (4. How to avoid collisions?), temporal p. 9 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 10 (6 EXPERIMENTS), p. 3 (2 RELATED WORK), p. 5 (4. How to avoid collisions?).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

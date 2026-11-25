@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 - **p. 1 / Abstract - extractive body cue:** We develop an RL-based sim-to-real pipeline, which involves large-scale retargeting and augmentation of human motion datasets, learning a real-world deployable policy with sparse sensor input ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 5 (1 Introduction), p. 2 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 4 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 - **p. 3 / 1 Introduction - extractive body cue:** We formulate the learning problem as goal-conditioned RL for a Markov Decision Process (MDP) defined by the tuple M = ⟨S, A, T , R, ...
 - **p. 5 / 1 Introduction - extractive body cue:** Note that no global linear velocity vt information is included in our observations and the policy implicitly learns velocity using history information.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -98,13 +96,10 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 - **p. 2 / 1 Introduction - extractive body cue:** In conclusion, our contributions are as follows: (1) We propose a pipeline to train a robust humanoid control policy that supports whole-body dexterous loco-manipulation with ...
 - **p. 8 / 1 Introduction - extractive body cue:** The training hyperparameters are in Appendix L.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** tackle, issue, first, train, teacher, policy, uses, privileged, state, information, then, distill, student, limited, space, draw, conclusions, Diffusion, significantly, outperforms.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -124,23 +119,13 @@ PDF body method statement (p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1
 - **p. 24 / Figure/Table caption - extractive body cue:** Table 17: Quantitative LfD autonomous agents performance for 4 tasks. Metrics Catch-Release Squat Hammer-Catch Rock-Paper-Scissors (a) Ablation on Data size 25%data
 - **p. 21 / Figure/Table caption - extractive body cue:** Table 15: Reward components and weights: penalty rewards for preventing undesired behaviors for sim-to-real transfer, regularization to refine motion, and task reward to achieve successful ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 5 (1 Introduction), objective p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 Introduction), p. 4 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), temporal p. 6 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction), p. 6 (1 Introduction), p. 7 (1 Introduction), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

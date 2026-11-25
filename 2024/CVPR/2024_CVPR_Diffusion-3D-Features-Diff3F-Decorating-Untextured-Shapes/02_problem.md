@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 6 | Table 2. Comparison. We report correspondence accuracy within 1% error tolerance, with our method against competing works. The ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Results using 3D-CODED are particularly poor on TOSCA mainly for two reasons: (i) It needs a much larger ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3.2. Semantics through Painting), p. 4 (3.1. Semantic Diffusion Features), p. 5 (3.3. Distilling 2D Features to 3D), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 4 (3.2. Semantics through Painting), p. 4 (3.1. Semantic Diffusion Features), p. 5 (3.3. Distilling 2D Features to 3D), p. 1 (1. Introduction), objective p. 4 (3.1. Semantic Diffusion Features), p. 4 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting), p. 5 (3.2. Semantics through Painting).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

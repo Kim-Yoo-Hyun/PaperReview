@@ -42,7 +42,6 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 - **p. 3 / II. PROBLEM FORMULATION - extractive body cue:** We assume in the rest of this paper, without loss of generality, that the observation and action space are given by the H1 humanoid robot ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 3 (II. PROBLEM FORMULATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -60,7 +59,6 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 - **p. 2 / I. INTRODUCTION - extractive body cue:** We propose to train a novel controller that takes both a reference motion and a root movement command as inputs for real humanoid robot control.
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our work benefits from prior research from the computer graphics community on physics-based character animation [35], and from the robotics community on using deep reinforcement ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -75,13 +73,10 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** assume, rest, without, loss, generality, observation, action, space, given, humanoid, robot, design, consider, motion, control, learning, goalconditioned, motor, policy, where.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -101,20 +96,10 @@ PDF body method statement (p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FOR
 - **p. 5 / IV. RESULTS - extractive body cue:** Note that although Random Sample looks better than Motion Sample, the heatmap does not consider the sample density.
 - **p. 6 / IV. RESULTS - extractive body cue:** Why does not ExBody do full DoF tracking?
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (II. PROBLEM FORMULATION), p. 3 (II. PROBLEM FORMULATION), objective p. 3 (II. PROBLEM FORMULATION), temporal p. 7 (IV. RESULTS), p. 7 (IV. RESULTS), p. 8 (IV. RESULTS), p. 8 (IV. RESULTS), p. 1 (I. INTRODUCTION), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

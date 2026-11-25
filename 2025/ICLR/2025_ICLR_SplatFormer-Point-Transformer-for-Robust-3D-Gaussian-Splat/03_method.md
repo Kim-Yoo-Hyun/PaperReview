@@ -51,7 +51,6 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 - **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 16 (B IMPLEMENTATION DETAILS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** However, AR and VR applications require not only smooth transitions between input views but also the ability to explore novel regions of interest from viewing ...
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** This often results in elongated Gaussian splats that cover only the thin areas projected on the input views, leading to sparse surface coverage.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,15 +87,11 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 - **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** It takes 2 days to generate each training dataset.
 - **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** The primary computational bottleneck still lies in the training stage.
 - **p. 17 / B IMPLEMENTATION DETAILS - extractive body cue:** Regarding SplatFormer's inference efficiency, most input splats in our object-centric test sets contain 70k-100k gaussians, requiring only 900MB of GPU memory for one feed-forward inference ...
-- **p. 16 / B IMPLEMENTATION DETAILS - extractive body cue:** For the training of our full model, we use 8 RTX4090s with one scene per GPU, set gradient accumulation steps as 4, and train for ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** feature, decoder, composed, five, separate, MLP, branches, responsible, predicting, residuals, means, opacity, quaternion, scales, spherical, harmonics, coefficients, training, full, model.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTA
 - **p. 10 / 5 EXPERIMENTS - extractive body cue:** Our method has several limitations that provide directions for future work.
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 2: Limitations of 3DGS in OOD-NVS setup. We observe that the quality of novel views obtained via 3DGS significantly deteriorates as the test camera ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 15 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS), objective p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), temporal p. 8 (5 EXPERIMENTS), p. 8 (5 EXPERIMENTS), p. 9 (5 EXPERIMENTS), p. 16 (B IMPLEMENTATION DETAILS), p. 16 (B IMPLEMENTATION DETAILS), p. 17 (B IMPLEMENTATION DETAILS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

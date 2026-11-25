@@ -52,8 +52,6 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 - **p. 10 / 4.2. Description of Tasks - extractive body cue:** HIL-SERL: Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning I J F G H K
 - **p. 14 / 4.3. Experimental Results - extractive body cue:** For HG-DAgger, the success rate fluctuates throughout training episodes and does not necessarily increase as training progresses.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overview of experimental tasks. A subset of tasks considered in this paper, they include whipping out a Jenga block from its tower, flipping ...
@@ -87,8 +85,6 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 | 1, HIL-SERL achieved a success rate of 100% within 1 to 2.5 hours of real-world training on nearly all the tasks. | definition/direction/unit from same section | p. 15 (4.3. Experimental Results) |
 | This is a significant improvement over the HG-DAgger baseline, which achieved an average success rate of 49.7% across all tasks. | definition/direction/unit from same section | p. 15 (4.3. Experimental Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -99,13 +95,6 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 | For these tasks, we instead collect 50 and 200 offline demonstrations and train BC policies as baselines. | comparison identity and matched condition | p. 14 (4.3. Experimental Results) |
 | Therefore, we compare our approach to imitation learning by training a baseline with HG-DAgger (Kelly et al., 2018), using the same amount of human ... | comparison identity and matched condition | p. 14 (4.3. Experimental Results) |
 | Our method outperforms HG-DAgger due to key advantages of RL. | comparison identity and matched condition | p. 15 (4.3. Experimental Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -144,8 +133,6 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 | body limitation/failure cue | Figure 6: Robustness evaluation for policies learned by our method. (A) RAM insertion under external perturbations, such as a moving motherboard. (B) Retrying behavior ... | p. 16 (Figure/Table caption) |
 | body limitation/failure cue | For HG-DAgger, the success rate fluctuates throughout training episodes and does not necessarily increase as training progresses. | p. 14 (4.3. Experimental Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -159,14 +146,6 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 | Specifically, we run it for the same number of episodes as our method and aim to provide a comparable number of interventions per episode. | p. 14 (4.3. Experimental Results) |
 | Specifically, we report the intervention rate, for which we calculate the ratio of intervened timesteps to total timesteps within an episode and report a ... | p. 15 (4.3. Experimental Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 21 / 6. Discussion - extractive body cue:** We also see some limitations of our approach.
@@ -177,9 +156,8 @@ PDF body evaluation/result cue (p. 15 (4.3. Experimental Results), p. 15 (4.3. E
 - **p. 14 / 4.3. Experimental Results - extractive body cue:** For HG-DAgger, the success rate fluctuates throughout training episodes and does not necessarily increase as training progresses.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4.1. Overview of Experiments), p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), metrics p. 8 (Figure/Table caption), p. 17 (5. Result Analysis), p. 18 (5.1. Reliability of the Learned Policies), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), baselines p. 9 (4.1. Overview of Experiments), p. 13 (4.3. Experimental Results), p. 13 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 14 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), results p. 15 (4.3. Experimental Results), p. 15 (4.3. Experimental Results), p. 17 (5. Result Analysis), p. 18 (5.1. Reliability of the Learned Policies), p. 19 (5.1. Reliability of the Learned Policies), p. 18 (5.1. Reliability of the Learned Policies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

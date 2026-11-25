@@ -53,7 +53,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 17 / A.4 TRAINING DETAILS - extractive body cue:** Training is performed on 8 NVIDIA A800 GPUs for 2 days using the AdamW optimizer.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** 1, our method is the only one that simultaneously enables multi-view instance matching, image-to-3D reconstruction, and scene understanding, while achieving state-of-the-art performance across all tasks.
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** For synthetic datasets (e.g., Aria and Infinigen), we simultaneously generate the RGB image, depth map, camera pose, and object-level segmentation masks for each rendered view.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** Overall, we train the whole model in a multi-task loss: Loverall = Lpose + Ldepth + Lpmap + Lmvc, (5) where geometry supervision terms pose ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** IGGT, consists, three, parts, Large, Unified, Transformer, capture, Token, Representation, multiple, images, Downstream, Heads, Cross-Modal, Fusion, Block, simultaneously, predict, geometric.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 4); A.2 USE OF LARGE LANGUAGE MODELS (p. 16).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 M
 - **p. 20 / Figure/Table caption - extractive body cue:** Table 7: Ablation study with different values of λ of contrastive supervision. Metrics λ 0.1 0.5 1 2 10
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Furthermore, we provide additional visualizations of our 3D-consistent instance features using Principal Component Analysis (PCA), along with their corresponding clustered masks, as shown in Fig.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), objective p. 5 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 17 (A.4 TRAINING DETAILS), temporal p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 7 (4 EXPERIMENTS), p. 9 (8.83 AP while avoiding its expensive mesh gen), p. 21 (A.8 CLASS-AGNOSTIC SEGMENTATION EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

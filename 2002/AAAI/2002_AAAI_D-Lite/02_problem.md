@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 4 (Abstract)
 | Queue API (실패 근거 아님) | 원문 대조: U.Update(s,k)는 queue 안 vertex s의 priority를 k로 바꾸며 같으면 아무 작업도 하지 않는다. U.Remove(s)는 s를 queue에서 제거한다. 이는 queue API 정의이며 failure나 ablation 결과가 아니다. ([PDF p. 2](https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/integrated3/koenig_dstarlite_aaai02b.pdf#page=2), Figure 2 위 priority-queue API와 graph notation) | PDF p. 2 |
 | body cue at p. 3 | This is similar to what A* can do if it does not use backpointers. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (Abstract), p. 3 (Abstract), p. 5 (Abstract), p. 1 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract), interface p. 1 (Abstract), p. 3 (Abstract), p. 5 (Abstract), p. 1 (Abstract), objective p. 3 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 4 (Abstract).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

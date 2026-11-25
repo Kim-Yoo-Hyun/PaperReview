@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 9 | We then provide additional architecture details in Section C, and in Section D we discuss potential limitations of ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 3 | Figure 2. Recurrent Interface Networks (RIN) architecture. (a) Latent tokens Zin read from input tokens Xin, are processed ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3. Diffusion Preliminaries), p. 2 (1. Introduction), p. 3 (3. Diffusion Preliminaries), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Diffusion Preliminaries), interface p. 3 (3. Diffusion Preliminaries), p. 2 (1. Introduction), p. 3 (3. Diffusion Preliminaries), p. 1 (1. Introduction), objective p. 5 (4.4. Training Procedure).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

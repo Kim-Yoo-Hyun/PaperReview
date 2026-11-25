@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING
 - **p. 3 / III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING - extractive body cue:** Following [40], we keep both encoders unfrozen, continuing to update the weights during policy learning.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Two key components consistently improve the performance of robotic manipulation: (1) pre-training on a large amount of data [1]-[5] and (2) using multisensory input, especially ...
 - **p. 2 / III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING - extractive body cue:** Image observations are obtained from a third-person view camera and audio is obtained by averaging the signal captured from four contact microphones mounted on the ...
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** 2) Scaling Performance: We run evaluations on the scooping task for models trained with dataset sizes 50% (30 demos) and 150% (90 demos) of the ...
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** The results show that keeping the pre-trained audio encoder weights frozen during policy learning only slightly diminishes the performance of our method and still outperforms ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** isolate, effect, large-scale, pre-training, audio, encoder, R3M, proven, visual, features, robotic, applications, ResNet18, pre-trained, Ego4D, human, video, dataset, time, contrastive.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** (a) Zero-Shot Transfer (b) Scaling Performance (c) Generalization (d) Architecture Ablation Fig.
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 2: Two-stage model training. AVID and R3M pretraining leverages the large scale of internet video data (blue dashed box). We initialize the vision and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 2 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 2 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), objective p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), temporal p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 3 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 1 (I. INTRODUCTION), p. 2 (III. MANIPULATION WITH AUDIO-VISUAL PRETRAINING), p. 2 (II. RELATED WORK), p. 4 (IV. EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

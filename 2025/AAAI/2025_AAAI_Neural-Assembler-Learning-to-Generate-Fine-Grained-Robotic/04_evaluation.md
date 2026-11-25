@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **p. 9 / 4 Experiments - extractive body cue:** As indicated in Table 3, the Neural Assembler achieves performance in real-world experiments close to the results obtained in simulated environments, demonstrating its robust applicability.
 - **p. 7 / 4 Experiments - extractive body cue:** 5 further shows the generated assembly instructions for a brick model in the CLEVR-Assembly Dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Schematic illustration of the proposed Neural Assembler. See Section 3 for more details. integrate information from images captured from multiple perspectives. Secondly, estimating ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | For 3D pose estimation, we select the perspective with a confidence score greater than a threshold and extract its 12 | definition/direction/unit from same section | p. 12 (A.2 Implementation Details) |
 | Fig.6 further shows the generated assembly instructions for a LEGO model. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | Number of views Furthermore, we compared the results obtained by accepting different numbers of images as input. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | The results in Table 1 and Table 2 shows that Neural Assembler can yield more accurate results than other baselines. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Table 2: Comparison of baselines on per-step metrics. | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **p. 12 / A.1 Dataset Generation - extractive body cue:** The rotation is sampled from (0, (90 · k ± 30)◦, (45 ± 15)◦) for camera k.
 - **p. 12 / A.2 Implementation Details - extractive body cue:** All models are trained using AdamW, with an initial rate of 5e-4, decaying by 0.8 per epoch, a weight decay of 1e-3, and batch size ...
 - **p. 13 / A.2 Implementation Details - extractive body cue:** Model Architecture A pre-trained Vision Transformer (ViT-B/16) processes an image of size 224×224, yielding image features of dimension 768×(196+1).
-- **p. 12 / A.2 Implementation Details - extractive body cue:** All models are trained using AdamW, with an initial rate of 5e-4, decaying by 0.8 per epoch, a weight decay of 1e-3, and batch size ...
-- **p. 13 / A.2 Implementation Details - extractive body cue:** Model Architecture A pre-trained Vision Transformer (ViT-B/16) processes an image of size 224×224, yielding image features of dimension 768×(196+1).
 
 ## Generalization and Failure Cases
 
@@ -141,8 +128,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | body limitation/failure cue | The two datasets, characterized by brick number, occlusion from variable visibility, and complex assembly graph, reflect the complexity of assembly tasks. | p. 6 (4 Experiments) |
 | body limitation/failure cue | This is because each brick may not be seen from some perspectives due to the existence of occlusion. | p. 7 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +139,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | Hyperparameters For training loss: L = α · Lcount + β · Lgraph + Lpose, (6) Lpose = Lkeypoint + Lmask + γ1Lrotation (7) ... | p. 12 (A.2 Implementation Details) |
 | For the Transformer Decoder, the query is constituted by object queries of dimension (N1 + N2 + 16) × 256. | p. 13 (A.2 Implementation Details) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 12 / A.1 Dataset Generation - extractive body cue:** The operation is rolled back if the brick is unstable upon free fall.
@@ -172,9 +149,8 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **p. 7 / 4 Experiments - extractive body cue:** This is because each brick may not be seen from some perspectives due to the existence of occlusion.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 5 (Figure/Table caption), baselines p. 7 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (Figure/Table caption), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 6 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

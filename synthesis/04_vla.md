@@ -582,7 +582,7 @@ NeurIPS 2026 링크는 공식 program/poster에 공개된 abstract를 확인한 
 
 ### 반응형 navigation의 계획 변경 — GAP-P4
 
-반응형 navigation의 질문은 [GAP-PLAN](./01_control.md#gap-plan-2026)이 소유한다. [P3 계약 검사](../work/experiments/reactive_nav_contract/RESULTS.md) 이후 [P4](../work/experiments/reactive_nav_pilot/RESULTS.md)에서 Docker 상태 기반384 branch를 비교했으나 위험·보정 악화 joint gate를 통과하지 못해 현재 진단은 HOLD다. 이는 image/language 정책 실행이나 VLA 성능의 부정 결과가 아니다. ABot의 검토한 pose/occupancy loop에는 reactive pedestrian·physical clock의 연결이 미확인이며 native VLA는 HOLD다. 이미지/언어가 route 선택을 바꾸는 task와 checkpoint/controller/time/evaluator packet을 따로 확보해야 한다.
+반응형 navigation의 질문은 [GAP-PLAN](./01_control.md#gap-plan-2026)이 소유한다. [P3 계약 검사](../work/experiments/reactive_nav_contract/README.md#results) 이후 [P4](../work/experiments/reactive_nav_pilot/RESULTS.md)에서 Docker 상태 기반384 branch를 비교했으나 위험·보정 악화 joint gate를 통과하지 못해 현재 진단은 HOLD다. 이는 image/language 정책 실행이나 VLA 성능의 부정 결과가 아니다. ABot의 검토한 pose/occupancy loop에는 reactive pedestrian·physical clock의 연결이 미확인이며 native VLA는 HOLD다. 이미지/언어가 route 선택을 바꾸는 task와 checkpoint/controller/time/evaluator packet을 따로 확보해야 한다.
 
 ### 숨은 시연 정보·coverage 연결 — GAP-CF1/CF2
 

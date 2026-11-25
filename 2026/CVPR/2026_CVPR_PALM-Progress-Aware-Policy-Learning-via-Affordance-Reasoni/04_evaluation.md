@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 - **p. 8 / 4.3. Real-World Experiments - extractive body cue:** We report the success rate (SR) and average length for each task over 20 real-world rollouts.
 - **p. 7 / 4.2. Ablation Studies - extractive body cue:** Results on the CALVIN ABC→D benchmark demonstrate the effectiveness of each training module under both pre-training and fine-tuning.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. In contrast to vanilla VLAs that directly map inputs to actions or to predictive methods that forecast dense future images, PALM introduces learnable ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 | As shown in Table 5, results demonstrate PALM's superior generalization over baselines as the task sequence length increases, showing its robustness in longhorizon settings. | definition/direction/unit from same section | p. 8 (4.3. Real-World Experiments) |
 | PALM achieves the best performance over previous methods. | definition/direction/unit from same section | p. 7 (4.2. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 | As shown in Table 5, results demonstrate PALM's superior generalization over baselines as the task sequence length increases, showing its robustness in longhorizon settings. | comparison identity and matched condition | p. 8 (4.3. Real-World Experiments) |
 | Figure 1. In contrast to vanilla VLAs that directly map inputs to actions or to predictive methods that forecast dense future images, PALM introduces ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Ablation studies of PALM components. | comparison identity and matched condition | p. 7 (4.2. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 | body limitation/failure cue | PALM achieves stateof-the-art results on two benchmarks, with a 12.5% improvement on CALVIN ABC→D and 91.8% success on LIBEROLONG, and shows significant robustness in ... | p. 8 (5. Conclusion) |
 | body limitation/failure cue | As shown in Table 5, results demonstrate PALM's superior generalization over baselines as the task sequence length increases, showing its robustness in longhorizon settings. | p. 8 (4.3. Real-World Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,23 +136,14 @@ PDF body evaluation/result cue (p. 6 (4.1. Simulation Experiments), p. 7 (Figure
 | Affordance Queries Action-progress Queries Multi-Modal Encoders Affordance prediction Frozen Trainable Unidirectional Attention Action-progress <Global> <Local> <Spatial> <Dynamic> T S V G | p. 4 (3.2. PALM Architecture) |
 | Training follows the standard diffusion objective: ˜yt⇥t+n-1,td = ‘ ¯↵td yt⇥t+n-1 + ‘ 1 -¯↵td ✏ (9) LDiT = Etd, ✏æ✏-✏✓(˜yt⇥t+n-1,td ∑l, ot, st, ... | p. 5 (3.4. Progress-aware Policy via Inverse Dynamics) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** PALM achieves stateof-the-art results on two benchmarks, with a 12.5% improvement on CALVIN ABC→D and 91.8% success on LIBEROLONG, and shows significant robustness in real-world ...
 - **p. 8 / 4.3. Real-World Experiments - extractive body cue:** As shown in Table 5, results demonstrate PALM's superior generalization over baselines as the task sequence length increases, showing its robustness in longhorizon settings.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiments), p. 8 (4.3. Real-World Experiments), p. 6 (4.1. Simulation Experiments), p. 7 (4.2. Ablation Studies), p. 5 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), metrics p. 7 (4.2. Ablation Studies), p. 6 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 8 (4.3. Real-World Experiments), baselines p. 6 (4.1. Simulation Experiments), p. 6 (4.1. Simulation Experiments), p. 8 (4.3. Real-World Experiments), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 7 (4.2. Ablation Studies), results p. 6 (4.1. Simulation Experiments), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (4.3. Real-World Experiments), p. 1 (Figure/Table caption), p. 7 (4.2. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

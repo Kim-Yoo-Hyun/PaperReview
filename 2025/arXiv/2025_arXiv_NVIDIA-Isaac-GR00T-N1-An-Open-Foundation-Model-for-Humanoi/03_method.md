@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 - **p. 7 / 2.2. Training Data Generation - extractive body cue:** These simulation data significantly supplement the real-robot data with minimal human costs.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation), p. 5 (2.2. Training Data Generation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 - **p. 4 / 2.1. Model Architecture - extractive body cue:** The model takes as input noised actions in addition to encodings of the robot's proprioceptive state, image tokens, and text tokens.
 - **p. 5 / 2.1. Model Architecture - extractive body cue:** The self-attention blocks operate on noised action token embeddings 𝐴𝜏 𝑡together with state embeddings 𝑞𝑡, while cross-attention blocks allow conditioning on the vision-language token embeddings ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 - **p. 3 / 2. GR00T N1 Foundation Model - extractive body cue:** We highlight three key features of GR00T N1: • We design a compositional model that integrates Vision-Language Model (VLM)-based reasoning module (System 2) and Diffusion ...
 - **p. 14 / 4.3. Experiment Setup - extractive body cue:** Evaluation Protocol For simulated benchmark evaluation, we report the average success rate over 100 trials, taking the maximum score of the last 5 checkpoints, where ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** GR00T, Open, Foundation, Model, Generalist, Humanoid, Robots, Robot, State, Eagle-2, VLM, Cross-Attention, Self-Attention, Encoder, Action, Decoder, DiT, Blocks, Motor, Pick.
 - **Relevant PDF headings:** 2. GR00T N1 Foundation Model (p. 3); 2.1. Model Architecture (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 4 (2.1. Model Architecture), p. 8 (2.3. Training D
 - **p. 13 / 4.2. Real-World Benchmarks - extractive body cue:** We design two manipulation tasks to assess our pretrained models.
 - **p. 15 / 4.4. Quantitative Results - extractive body cue:** For each task, we evaluate the pretrained GR00T-N1-2B model using five different objects, with three trials per object.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 5 (2.2. Training Data Generation), p. 4 (2.1. Model Architecture), p. 8 (2.3. Training Details), p. 3 (2. GR00T N1 Foundation Model), objective p. 8 (2.3. Training Details), p. 5 (2.1. Model Architecture), p. 5 (2.2. Training Data Generation), p. 7 (2.2. Training Data Generation), temporal p. 14 (4.3. Experiment Setup), p. 5 (2.1. Model Architecture), p. 13 (4.2. Real-World Benchmarks), p. 14 (4.3. Experiment Setup), p. 17 (4.5. Qualitative Results), p. 17 (4.6. Limitations).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

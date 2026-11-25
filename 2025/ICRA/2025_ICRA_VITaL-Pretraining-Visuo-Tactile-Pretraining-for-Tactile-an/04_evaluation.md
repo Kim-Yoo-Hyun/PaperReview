@@ -44,8 +44,6 @@
 - **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** For both pretrained and non-pretrained tactileonly diffusion policies, the robot would pick up the USB cable, but then would alternate between trying to move back ...
 - **p. 6 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** We used the same run parameters as the cable plugging task, with 100 demos collected, an 80/20 train/test split, and noise added to the predicted ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Diagram of our approach. First, a vision encoder and a tactile encoder are pretrained on the collected demonstrations using a temporally informed multi-modal ...
@@ -78,8 +76,6 @@
 | Fig. 1. Diagram of our approach. First, a vision encoder and a tactile encoder are pretrained on the collected demonstrations using a temporally informed ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2. Contrastive loss visualization. A series of visual observations V1, V2, ..., VN and tactile observations T1, T2, ..., TN are collected, and ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | This result illustrates the key benefit of using visuo-tactile pretraining on a vision-only agent: the agent gains a significant performance boost from tactile data ... | comparison identity and matched condition | p. 6 (IV. EXPERIMENTAL EVALUATION) |
 | Fig. 1. Diagram of our approach. First, a vision encoder and a tactile encoder are pretrained on the collected demonstrations using a temporally informed ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Fig. 4. Expermental Setup. A GelSight captures tactile observations, while 6 Realsense cameras observe the scene (only two can be seen above; three are ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@
 | body limitation/failure cue | Fig. 3. Imitation learning networks. ACT (left) is trained as an autoencoder, predicting a sequence of actions at each timestep (at). At inference, the ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | To increase the task's difficulty, we added random noise with a standard deviation of 2.5mm to the agent's actions during inference. | p. 5 (IV. EXPERIMENTAL EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@
 | A diagram of our two implementations can be seen in Figure 3. | p. 3 (III. METHODS) |
 | The data collection system was run at 10 Hz. | p. 4 (III. METHODS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. CONCLUSIONS - extractive body cue:** A major limitation of this work is that task-specific data was used for pretraining.
@@ -164,6 +143,5 @@
 - **p. 5 / IV. EXPERIMENTAL EVALUATION - extractive body cue:** To increase the task's difficulty, we added random noise with a standard deviation of 2.5mm to the agent's actions during inference.
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), metrics p. 5 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), baselines p. 5 (IV. EXPERIMENTAL EVALUATION), p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 5 (IV. EXPERIMENTAL EVALUATION), p. 6 (IV. EXPERIMENTAL EVALUATION), p. 6 (Figure/Table caption), p. 5 (IV. EXPERIMENTAL EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

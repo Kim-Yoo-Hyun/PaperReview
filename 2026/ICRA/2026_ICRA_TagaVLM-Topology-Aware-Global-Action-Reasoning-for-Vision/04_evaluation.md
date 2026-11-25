@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** All ablation experiments are conducted on the TagaVLM-0.5B model and the val unseen split of R2R dataset.
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** By using the rich scene diversity provided by HM3D, an additional 500K augmented data samples are utilized for the first-stage fine-tuning, which improves the model's ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Motivation of the proposed method. Previous methods (c) usually employ a two-stage pipeline that uses VLMs to convert visual observations to text for ...
@@ -75,8 +73,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Fig. 1. Motivation of the proposed method. Previous methods (c) usually employ a two-stage pipeline that uses VLMs to convert visual observations to text ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 2. Overview of the TagaVLM. The pretrained observation encoder and projector encode RGB observations from each node to the semantic space. Textual information ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -85,13 +81,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | Compared with the baseline in row (b) of Tab. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | It prevents fair comparison between these methods, and therefore, NaviLLM is not compared in this work. | comparison identity and matched condition | p. 7 (IV. EXPERIMENTS) |
 | Notably, compared to MapGPT[15], our approach achieves an absolute improvement of 3.39% in SR and 9.08 in SPL on the val unseen split. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,8 +113,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | body limitation/failure cue | However, due to computational resource limitations, TagaVLM-7B is fine-tuned with only 200K augmented samples. | p. 6 (IV. EXPERIMENTS) |
 | body limitation/failure cue | However, owing to the limitation of computational resources, the amount of training data used for the proposed method is significantly smaller than that of ... | p. 7 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 | (b) Shows TagaVLM's 6 navigation steps from the starting node Node1 to the target destination. | p. 5 (III. METHOD) |
 | Through the above steps, we obtain a token-wise affinity matrix where a higher value indicates a lower degree of correlation. | p. 5 (III. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. CONCLUSIONS - extractive body cue:** Future work will build on this strong baseline by scaling training on larger datasets, enriching STAR-Att with more complex geometric priors, and extending our framework ...
@@ -152,6 +131,5 @@ PDF body evaluation/result cue (p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), 
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** However, owing to the limitation of computational resources, the amount of training data used for the proposed method is significantly smaller than that of NaviLLM[16], ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), metrics p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), results p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

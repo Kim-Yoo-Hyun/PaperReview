@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3
 - **p. 7 / 3 EXPERIMENTS - extractive body cue:** An interesting observation emerges that when finetuning on the same Vlaser-6M dataset, a smaller sized Vlaser-2B outperforms Vlaser-8B on simple point grounding tasks that require ...
 - **p. 22 / A.3 SIMULATION EVALUATION DETAILS - extractive body cue:** To ensure fair evaluation, we use checkpoints with the same number of iterations for the WidowX Robot Task and the Google Robot Task, respectively.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Overall framework, capabilities, and evaluation of Vlaser. Top-left: Composition of the Vlaser-6M dataset, featuring multi-task embodied data-including QA, grounding, spatial reasoning, and planning-along ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3
 | For EmbodiedBench, we further assess performance in two simulation environments ALFRED (Shridhar et al., 2020) and Habitat (Szot et al., 2021). | definition/direction/unit from same section | p. 6 (3 EXPERIMENTS) |
 | It targets the key real-to-sim gaps - control and vision so that simulated performance reliably tracks real-robot outcomes. | definition/direction/unit from same section | p. 8 (3 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3
 | The task success rates of Vlaser-OOD and the baseline InternVL3-2B remain close. | comparison identity and matched condition | p. 9 (3 EXPERIMENTS) |
 | Regarding the three types of in-domain data annotations, we experimentally find that incorporating any of them leads to significant performance gains over the baseline. | comparison identity and matched condition | p. 9 (3 EXPERIMENTS) |
 | Table 1: Comparison with existing close-sourced, open-sourced and embodied-related VLMs on 12 general embodied reasoning benchmarks, spanning from embodied QA, planning, embodied grounding to ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3
 | body limitation/failure cue | This conclusion is as same as the results in 3.2, which demonstrates great robustness of our method. | p. 9 (3 EXPERIMENTS) |
 | body limitation/failure cue | Carrot on the plate Put eggplant in basket InternVL3-2B Fail Vlaser Success Vlaser-QA Success Spoon on the towel Stack Cube InternVL3-2B Fail Vlaser Success ... | p. 27 (A.4 QUALITATIVE DEMONSTRATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3
 | In the flow matching configuration, we use 10 inference steps during the inference phase and apply Euler method as numerical integration method. | p. 22 (A.3 SIMULATION EVALUATION DETAILS) |
 | To ensure fair evaluation, we use checkpoints with the same number of iterations for the WidowX Robot Task and the Google Robot Task, respectively. | p. 22 (A.3 SIMULATION EVALUATION DETAILS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 3 EXPERIMENTS - extractive body cue:** These results indicate that Vlaser delivers a well-balanced and robust capability set, performing strongly across multiple dimensions of embodied intelligence - from embodied question answering ...
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3
 - **p. 27 / A.4 QUALITATIVE DEMONSTRATION - extractive body cue:** Carrot on the plate Put eggplant in basket InternVL3-2B Fail Vlaser Success Vlaser-QA Success Spoon on the towel Stack Cube InternVL3-2B Fail Vlaser Success Vlaser-QA ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), metrics p. 7 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), p. 6 (Figure/Table caption), results p. 9 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 3 (Figure/Table caption), p. 7 (3 EXPERIMENTS), p. 9 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

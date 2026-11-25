@@ -43,8 +43,6 @@
 - **p. 8 / 5.4. Ablation Study - extractive body cue:** Furthermore, integrating DINO features significantly improves the definition of object query boundaries.
 - **p. 8 / 5.4. Ablation Study - extractive body cue:** The load balancing loss, introduced during the quantization phase, results in a more utilized discrete feature space, facilitating the distinguish of objects with similar semantics, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We present Language Embedded 3D Gaussians, a novel scene representation for open-vocabulary querying. The top row visualizes the original image, novel view synthesis ...
@@ -78,8 +76,6 @@
 | Figure 2. The training process for Language-embedded 3D Gaussians starts with initializing scenes following 3D Gaussian Splatting [20] and randomly initializing semantic features and ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | We implement our method using PyTorch [34], and incorporate the CUDA kernel from 3D Gaussian Splatting [20] to speed up the rasterization rendering process. | definition/direction/unit from same section | p. 5 (4. Implementation Details) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | Comparison of ablation experiments. | comparison identity and matched condition | p. 8 (5.4. Ablation Study) |
 | 1 presents a comparison across various metrics, including novel view synthesis quality, open-vocabulary query accuracy, and computational efficiency. | comparison identity and matched condition | p. 6 (5.2. Comparisons) |
 | We demonstrate the results of ablation studies in Tab. | comparison identity and matched condition | p. 7 (5.4. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@
 | body limitation/failure cue | Specifically, DFF [22] fails to identify "asphalt ground" in scene "bicycle" and "flower" in scene "garden". | p. 6 (5.2. Comparisons) |
 | body limitation/failure cue | This may be caused by its use of LSeg [24], which is unstable to compute correct features in complex scenes. | p. 6 (5.2. Comparisons) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -139,14 +126,6 @@
 | We then render these compact semantic feature vectors into a 2D feature map with rasterization and alpha blending, and decode the 2D feature map ... | p. 5 (3.4. Language Embedded 3D Gaussians) |
 | During training process, a softmax operation is applied to the decoder's output, yielding the language feature index distribution ˆ M ∈RH×W ×N, where H ... | p. 5 (3.4. Language Embedded 3D Gaussians) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** These limitations might be overcome with more advanced visual-language models and native per-pixel semantic features.
@@ -155,6 +134,5 @@
 - **p. 6 / 5.2. Comparisons - extractive body cue:** This may be caused by its use of LSeg [24], which is unstable to compute correct features in complex scenes.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Basic Setups), p. 6 (5.2. Comparisons), p. 7 (5.3. Open-vocabulary Query), p. 7 (5.2. Comparisons), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), metrics p. 6 (5.1. Basic Setups), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 7 (5.4. Ablation Study), baselines p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 8 (5.4. Ablation Study), p. 8 (5.4. Ablation Study), p. 6 (5.2. Comparisons), p. 7 (5.4. Ablation Study), results p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 6 (5.2. Comparisons), p. 7 (5.2. Comparisons), p. 4 (Figure/Table caption), p. 6 (5.2. Comparisons).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

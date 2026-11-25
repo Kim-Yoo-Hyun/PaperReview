@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. A
 - **p. 3 / IV. APPROACH - extractive body cue:** Use the alignment between a label embedding and f(Pi) to find the label with the highest probability for that pixel.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. APPROACH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. A
 - **p. 3 / IV. APPROACH - extractive body cue:** Problem Statement We aim to build a system that can connect points of a 3D scene with their visual and semantic meaning.
 - **p. 2 / III. BACKGROUND - extractive body cue:** In this section, we provide descriptions of the recent advances in machine learning that makes CLIP-Fields possible. a) Contrastive Image-Language Pretraining: This pretraining method, colloquially ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. A
 - **p. 4 / IV. APPROACH - extractive body cue:** We use the following training objectives: Semantic Label Embedding: This objective trains the function encoding the semantic information of a 3D point as a n-dimensional ...
 - **p. 3 / IV. APPROACH - extractive body cue:** When no human annotations are available, we use web-image trained object detection models on our RGB images.
 - **p. 3 / IV. APPROACH - extractive body cue:** To train our model, we first preprocess this set of RGB-D frames into a scene dataset (Fig.
-- **p. 4 / IV. APPROACH - extractive body cue:** We use a Multi-resolution Hash Encoder [20] to learn a low level spatial representation mapping R3 →Rd, which is then mapped to higher dimensions and ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Multi-resolution, Hash, Encoder, learn, level, spatial, representation, mapping, then, mapped, higher, dimensions, trained, contrastive, objectives, semantic, label, heads, associated, encoding.
 - **Relevant PDF headings:** IV. APPROACH (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +112,12 @@ PDF body method statement (p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. A
 - **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** Detic is absent from the first two evaluations since it is a detection model and thus cannot be fine-tuned on segmentation labels.
 - **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** Semantic Navigation on Robot with CLIP-Fields as Semantic-Spatial Memory Training a CLIP-Fields with available data, whether they are labeled by humans or pretrained models, gives ...
 - **p. 8 / VI. CONCLUSIONS AND FUTURE WORK - extractive body cue:** In future work, we hope to explore models that share parameters across scenes, and can handle dynamic scenes and objects.
-- **p. 5 / V. EXPERIMENTAL EVALUATION - extractive body cue:** Detic is absent from the first two evaluations since it is a detection model and thus cannot be fine-tuned on segmentation labels.
 - **p. 8 / V. EXPERIMENTAL EVALUATION - extractive body cue:** However, if an object was misidentified during data preparation, CLIP-Fields fails to correctly identify it as well.
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 3 (IV. APPROACH), p. 3 (IV. APPROACH), objective p. 4 (IV. APPROACH), p. 5 (IV. APPROACH), p. 5 (IV. APPROACH), p. 3 (IV. APPROACH), p. 4 (IV. APPROACH), p. 3 (IV. APPROACH), temporal p. 2 (II. RELATED WORK), p. 5 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

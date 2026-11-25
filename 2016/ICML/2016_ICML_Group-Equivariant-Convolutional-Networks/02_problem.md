@@ -59,8 +59,6 @@ PDF body contribution framing (p. 6 (7. Efficient Implementation)): Here we pres
 | body cue at p. 7 | (2007) (when trained on 12k and evaluated on 50k), but does not match the previous state of the ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | This network (P4CNNRotationPooling) outperforms the baseline and the previous state of the art, but performs significantly worse than ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 7 (7.2. Planar convolution), p. 7 (7.1. Filter transformation), p. 1 (1. Introduction), p. 1 (1. Introduction). The downstream handoff is claimed only when the body describes it.
@@ -68,7 +66,5 @@ PDF body contribution framing (p. 6 (7. Efficient Implementation)): Here we pres
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), interface p. 7 (7.2. Planar convolution), p. 7 (7.1. Filter transformation), p. 1 (1. Introduction), p. 1 (1. Introduction), objective no optimization/equation sentence selected.
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

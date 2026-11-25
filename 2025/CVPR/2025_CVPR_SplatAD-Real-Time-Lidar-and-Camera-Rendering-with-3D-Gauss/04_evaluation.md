@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 - **p. 8 / 4.3. Ablations - extractive body cue:** Metrics are averaged over all three datasets to avoid any dataset-specific biases.
 - **p. 8 / 4.2. Lidar rendering - extractive body cue:** NVS results averaged over 10 sequences from PandaSet, nuScenes, and Argoverse2 when removing model components.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SplatAD is the first method capable of realistic camera and lidar rendering using 3D Gaussian Splatting. Whereas previous methods are either fast or ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 | Further, we note that SplatAD's performance on hold-out validation images in Tab. | definition/direction/unit from same section | p. 7 (4.1. Image rendering) |
 | LBCE is a binary cross-entropy loss on the predicted ray drop probability, where ground-truth is generated in the same way as for NeuRAD. | definition/direction/unit from same section | p. 5 (3.4. Optimization and implementation) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 | Furthermore, our lidar rendering approach is superior to the naive depth image-based method used for 3DGS baselines, both in terms of speed and quality. | comparison identity and matched condition | p. 8 (4.2. Lidar rendering) |
 | The CNN decoder improves sharpness and is more true to color than the MLP decoder. that we do not report intensity or ray drop ... | comparison identity and matched condition | p. 8 (4.2. Lidar rendering) |
 | We use [16] as is, without any special treatment of Gaussians assigned to dynamic actors. | comparison identity and matched condition | p. 6 (3.4. Optimization and implementation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 | body limitation/failure cue | However, we note that using Inception-v3 features instead does not change the model ranking or our conclusions. | p. 7 (4.1. Image rendering) |
 | body limitation/failure cue | To validate the robustness of our method, we evaluate it across multiple popular AD datasets, using the same set of hyperparameters. | p. 6 (4. Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 | Finally, the rasterized features are decoded into the respective image and lidar point cloud representations. data, with the ability to alter the locations of ... | p. 3 (3. Method) |
 | (3) To rasterize a pixel, we α-blend RGB values f rgb i and features fi of the depth-sorted Gaussians intersecting the current tile \la ... | p. 4 (3.2. Camera rendering) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** Limitations and future work: SplatAD is currently limited to modeling all dynamic actors as rigid.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 7 (4.1. Image re
 - **p. 6 / 4. Experiments - extractive body cue:** To validate the robustness of our method, we evaluate it across multiple popular AD datasets, using the same set of hyperparameters.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 7 (4. Experiments), p. 6 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Ablations), p. 8 (4.2. Lidar rendering), metrics p. 7 (4.2. Lidar rendering), p. 8 (4.2. Lidar rendering), p. 8 (4.3. Ablations), p. 6 (3.4. Optimization and implementation), p. 1 (Figure/Table caption), p. 6 (4. Experiments), baselines p. 6 (3.4. Optimization and implementation), p. 7 (4. Experiments), p. 7 (4.1. Image rendering), p. 8 (4.2. Lidar rendering), p. 8 (4.2. Lidar rendering), p. 6 (3.4. Optimization and implementation), results p. 7 (Figure/Table caption), p. 7 (4.1. Image rendering), p. 8 (4.3. Ablations), p. 8 (4.2. Lidar rendering), p. 6 (3.4. Optimization and implementation), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

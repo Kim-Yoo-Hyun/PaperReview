@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (4.1. Regularization with Depth Normal Consisten
 - **p. 6 / 4.4. Mesh Extraction - extractive body cue:** Next, we apply the IsoOctree meshing algorithm [24], which starts with a uniform grid and progressively subdivides the volume into finer regions based on a ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.2. Adaptive Normal Regularization), p. 5 (4.3. Optimization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (4.1. Regularization with Depth Normal Consisten
 - **p. 3 / 3.1. Geometric Priors from Handheld Devices - extractive body cue:** Although these models learn from large-scale image-geometry pairs, they struggle to achieve the same accuracy in metric depth compared to physical sensors found in devices ...
 - **p. 3 / 3.1. Geometric Priors from Handheld Devices - extractive body cue:** In the case of the iPhone, the resolution of the physical sensors is usually very small (e.g., only 16 × 16); however, sophisticated post-processing and ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (4.1. Regularization with Depth Normal Consisten
 - **p. 5 / 4.2. Adaptive Normal Regularization - extractive body cue:** The ANR strategy is designed to first regularize Gaussian normals using the fully pre-trained normals Np, and subsequently relax the training by relying only on ...
 - **p. 6 / 4.4. Mesh Extraction - extractive body cue:** To achieve this, we employ a point cloud hint: we back-project our output depth maps from all training images into a point cloud and expand ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** filter, inaccurate, depth, estimates, check, orientation, consistency, between, generated, pre-train, model, angle, threshold, filtering, otherwise, where, arccos, During, training, first.
 - **Relevant PDF headings:** 4. Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 4 (4.1. Regularization with Depth Normal Consisten
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Demonstration of iPhone and Kinect sensor depths. The iPhone struggles to capture accurate depth values for (a) objects at a far distance, and ...
 - **p. 8 / 5.3. Ablation Studies - extractive body cue:** Lastly, the DNC and ANR terms help preserve details for objects and reduce overall noise.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Regularization with Depth Normal Consistency), p. 4 (4.1. Regularization with Depth Normal Consistency), p. 5 (4.1. Regularization with Depth Normal Consistency), p. 5 (4.2. Adaptive Normal Regularization), p. 6 (4.4. Mesh Extraction), p. 6 (4.4. Mesh Extraction), objective p. 5 (4.2. Adaptive Normal Regularization), p. 5 (4.3. Optimization), p. 4 (4. Method), p. 4 (4. Method), p. 6 (4.4. Mesh Extraction), p. 6 (4.4. Mesh Extraction), temporal p. 7 (5.2. Novel View Synthesis), p. 4 (4.1. Regularization with Depth Normal Consistency), p. 5 (4.4. Mesh Extraction), p. 5 (4.3. Optimization), p. 6 (5. Experiments), p. 6 (5.1. 3D Reconstruction Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

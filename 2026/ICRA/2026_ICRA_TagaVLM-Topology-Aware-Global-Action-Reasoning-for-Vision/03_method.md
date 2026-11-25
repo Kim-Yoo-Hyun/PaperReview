@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** Et is updated accordingly, and the visual representations of current and candidate nodes are simultaneously updated based on new observations from vt c.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 4 (III. METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 3 / III. METHOD - extractive body cue:** To endow the VLM with inherent spatial understanding ability and topological-visual alignment power, while keeping its pretrained knowledge, in this work, a fully end-toend Topology-Aware ...
 - **p. 3 / III. METHOD - extractive body cue:** In the following subsections, we will elaborate on the four key components of our framework: (1) online topological map for global environment representation, (2) Interleaved ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 4 / III. METHOD - extractive body cue:** Given Gt and the stored visual representations of each node Vt = {vt i}Kt i=1, an effective pretrained Vision Transformer (ViT) [37] is employed as ...
 - **p. 5 / III. METHOD - extractive body cue:** In the training process, the TagaVLM is finetuned with the single-step action prediction (SAP) task to align the instruction-trajectory paired data of VLN with the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** following, subsections, will, elaborate, four, components, framework, online, topological, global, environment, representation, Interleaved, Navigation, Prompt, task, adaptation, Spatial, Topology, Aware.
 - **Relevant PDF headings:** III. METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. ME
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2. Overview of the TagaVLM. The pretrained observation encoder and projector encode RGB observations from each node to the semantic space. Textual information containing ...
 - **p. 7 / V. CONCLUSIONS - extractive body cue:** Future work will build on this strong baseline by scaling training on larger datasets, enriching STAR-Att with more complex geometric priors, and extending our framework ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (III. METHOD), p. 4 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), objective p. 5 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (III. METHOD), p. 3 (III. METHOD), p. 4 (III. METHOD), temporal p. 5 (III. METHOD), p. 3 (III. METHOD), p. 3 (III. METHOD), p. 2 (I. INTRODUCTION), p. 4 (III. METHOD), p. 4 (III. METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

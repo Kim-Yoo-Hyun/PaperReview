@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experiment Results), p. 6 (4.2. Exper
 - **p. 8 / 0.724 17.28 13.31 ≈60min - extractive body cue:** Comparison with 4 and 8-view settings on the RE10k [46] and ScanNet [6] datasets.
 - **p. 8 / 0.724 17.28 13.31 ≈60min - extractive body cue:** Zero-shot generalization on Mip-NeRF360 [1] dataset View Nums PSNR↑SSIM↑LPIPS↓mIoU↑Acc↑ rel↓
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Uni3R takes unposed arbitrary multi-view images as input and produces a unified 3D Gaussian scene representation, enabling state-of-the-art performance in view synthesis, semantic ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experiment Results), p. 6 (4.2. Exper
 | Figure 1. Uni3R takes unposed arbitrary multi-view images as input and produces a unified 3D Gaussian scene representation, enabling state-of-the-art performance in view synthesis, ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. Architectural overview of the Uni3R pipeline. Uni3R predicts a set of Gaussian primitives with jointly integrated geometry, appearance, and open-vocabulary semantics in ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experiment Results), p. 6 (4.2. Exper
 | While Uni3R is supervised by LSeg, it outperforms by resolving 2D view-dependent ambiguities through 3D spatial fusion. | comparison identity and matched condition | p. 6 (4.2. Experiment Results) |
 | Figure 1. Uni3R takes unposed arbitrary multi-view images as input and produces a unified 3D Gaussian scene representation, enabling state-of-the-art performance in view synthesis, ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | This experiment highlights Uni3R's ability to handle long sequences and wide-baseline configurations, producing high-fidelity and semantically consistent 3D reconstructions in a single feed-forward pass. | comparison identity and matched condition | p. 8 (4.3. Analysis and Ablations) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experiment Results), p. 6 (4.2. Exper
 | body limitation/failure cue | When the geometric loss is removed, the model exhibits degraded 3D consistency (higher depth error and lower τ), validating its effectiveness in improving point ... | p. 8 (4.3. Analysis and Ablations) |
 | body limitation/failure cue | The scale-invariant constraint contributes to rendering stability across scenes with varying depth ranges, while the intrinsic embedding improves robustness by aligning scenes of varying ... | p. 8 (4.3. Analysis and Ablations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Experiment Results), p. 6 (4.2. Exper
 | Following NoPoSplat [40], we encode each camera's focal length and principal point with a linear projection. | p. 4 (3.1.1. Intrinsic Embedding) |
 | The output latent tokens from the encoder encapsulate a holistic and globally consistent understanding of the 3D scene. | p. 4 (3.1.2. Cross-View Transformer Encoder) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Experiment Results - extractive body cue:** Thus, Uni3R not only mimics LSeg, but also leverages 3D consistency to produce a denoised, robust semantic prediction.
@@ -157,6 +136,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Experiment Results), p. 6 (4.2. Exper
 - **p. 8 / 4.3. Analysis and Ablations - extractive body cue:** The scale-invariant constraint contributes to rendering stability across scenes with varying depth ranges, while the intrinsic embedding improves robustness by aligning scenes of varying scales ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (0.724 17.28 13.31 ≈60min), p. 7 (0.724 17.28 13.31 ≈60min), p. 8 (0.724 17.28 13.31 ≈60min), p. 8 (0.724 17.28 13.31 ≈60min), metrics p. 8 (Figure/Table caption), p. 6 (4.2. Experiment Results), p. 8 (4.3. Analysis and Ablations), p. 6 (4.2. Experiment Results), p. 7 (0.724 17.28 13.31 ≈60min), p. 1 (Figure/Table caption), baselines p. 7 (0.724 17.28 13.31 ≈60min), p. 7 (0.724 17.28 13.31 ≈60min), p. 6 (4.1. Experimental Setup), p. 6 (4.2. Experiment Results), p. 1 (Figure/Table caption), p. 8 (4.3. Analysis and Ablations), results p. 6 (4.2. Experiment Results), p. 6 (4.2. Experiment Results), p. 7 (0.724 17.28 13.31 ≈60min), p. 7 (0.724 17.28 13.31 ≈60min), p. 8 (4.3. Analysis and Ablations), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** The results are evaluated on ScanNetV2 dataset.
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** Ablation studies of different matching strategies for global map fusion on ScanNetV2 dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and 2D ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 | Compared with the offline SOTA PanoGS [58], our approach still exists a small performance gap. mentation approach [44] (trained on ScanNetV2 [5]) to obtain ... | definition/direction/unit from same section | p. 6 (4.1. Experimental Settings) |
 | In contrast, our clusteringbased approach can obtain accurate instance-level information for objects with the same semantics. | definition/direction/unit from same section | p. 7 (4.2. Main Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 | 3D Semantic and Panoptic Segmentation Results on ScanNetV2 and Replica Datasets. ∗indicates the baseline results are taken from [58] which use the 3D instance ... | comparison identity and matched condition | p. 6 (4.1. Experimental Settings) |
 | Unlike offline baselines [33, 50, 58] that use ground truth point clouds as input, our method reconstructs the scene from RGB-D streams. | comparison identity and matched condition | p. 5 (4.1. Experimental Settings) |
 | Since the baselines [31, 33, 50] marked with ∗ cannot obtain 3D panoptic results, we use the performance reported in [58], which uses a ... | comparison identity and matched condition | p. 5 (4.1. Experimental Settings) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 | body limitation/failure cue | Since some offline baselines (LangSplat [33], OpenGaussian [50], OpenScene [31]) marked with ∗cannot inherently output 3D instances, PanoGS [58] provides supervised instance annotations [44] ... | p. 7 (4.2. Main Experiments) |
 | body limitation/failure cue | Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and ... | p. 1 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 | More detailed runtime analyses are provided in our Supp. | p. 7 (4.2. Main Experiments) |
 | After clustering the 3D Gaussian segments, we voxelize the 3D space to efficiently compute and update spatial attributes. | p. 4 (3.2. Local Consistent Map Construction) |
 | The semantic cue is then computed as the cosine similarity between language features: X(Si, Sj) = zi · zj/(//zi// · //zj//). | p. 4 (3.2. Local Consistent Map Construction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Ex
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of OnlinePG, which integrates geometric reconstruction and open-vocabulary panoptic perception built upon 3D Gaussian Splatting. Given the posed video stream and 2D ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 7 (4.2. Main Experiments), p. 6 (4.1. Experimental Settings), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), metrics p. 8 (4.3. Ablation Studies), p. 5 (4.1. Experimental Settings), p. 8 (4.3. Ablation Studies), p. 7 (4.2. Main Experiments), p. 5 (4.1. Experimental Settings), p. 6 (4.1. Experimental Settings), baselines p. 6 (Figure/Table caption), p. 7 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 6 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), p. 5 (4.1. Experimental Settings), results p. 7 (4.3. Ablation Studies), p. 6 (4.2. Main Experiments), p. 6 (4.2. Main Experiments), p. 7 (4.2. Main Experiments), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

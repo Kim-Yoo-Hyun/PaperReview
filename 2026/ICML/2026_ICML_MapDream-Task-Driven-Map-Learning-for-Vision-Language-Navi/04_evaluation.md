@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 - **p. 7 / 4.4. Qualitative Analysis - extractive body cue:** These results indicate that the learned maps serve as effective abstractions of the environment, supporting accurate navigation without requiring full scene reconstruction.
 - **p. 7 / 4.5.1. TWO-STAGE TRAINING - extractive body cue:** Effect of staged learning on R2R-CE val-unseen.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Map-in-the-Loop Architecture. Unlike previous ap- proaches that either omit maps or rely on expert-designed represen- tations, MapDream adopts a map-in-the-loop design that learns ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | Reinforcement learning consistently improves all variants, with SR gains of +3.4 (All), +5.5 (Distance), +4.1 (Landmark), and +4.2 (Occupancy), accompanied by increases in SPL ... | definition/direction/unit from same section | p. 7 (4.5.2. REINFORCEMENT FINE-TUNING UNDER) |
 | We conduct three ablation studies on R2R-CE that jointly probe MapDream along complementary design dimensions: optimization strategy, robustness to map initialization, and representation capacity. | definition/direction/unit from same section | p. 7 (4.5. Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | The policy is initialized from pretrained NVILA-2B weights and trained with a mixture of oracle expert trajectories and DAgger-collected data. | comparison identity and matched condition | p. 6 (4.2.2. TRAINING DETAILS) |
 | We compare MapDream with state-of-the-art methods on the R2R-CE and RxR-CE benchmarks under a single RGB camera (monocular) observation setting. | comparison identity and matched condition | p. 6 (4.3. Comparison with State-of-the-Art Methods) |
 | Introducing Stage 1 yields consistent improvements across all metrics over the baseline, demonstrating that generative task-driven maps provide useful spatial abstractions for instruction-following navigation. | comparison identity and matched condition | p. 7 (4.5.1. TWO-STAGE TRAINING) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | body limitation/failure cue | These results empirically validate that learning spatial abstractions under navigation objectives leads to more robust decision making in continuous environments. | p. 6 (4.3. Comparison with State-of-the-Art Methods) |
 | body limitation/failure cue | We conduct three ablation studies on R2R-CE that jointly probe MapDream along complementary design dimensions: optimization strategy, robustness to map initialization, and representation capacity. | p. 7 (4.5. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 | 4, MapDream generates task-driven maps that evolve with the robot's motion and encode navigationrelevant spatial affordances, allowing the robot to follow long-horizon language instructions ... | p. 8 (4.6. Real-world Generalization) |
 | We adopt lightweight ground-truth map signals during supervised pre-training to encode navigation-critical cues; this design is not exclusive, and alternative compact variants are possible. | p. 4 (3.3.1. MAP SUPERVISION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.1.1. EXPERIMENTAL ENVIRONMENTS - extractive body cue:** We focus on the continuous-environment (CE) protocol because continuous control introduces fine motion granularity and realistic noise, making navigation sensitive to small geometric deviations.
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparison with State-of-the-Art Meth
 - **p. 7 / 4.5. Ablation Study - extractive body cue:** We conduct three ablation studies on R2R-CE that jointly probe MapDream along complementary design dimensions: optimization strategy, robustness to map initialization, and representation capacity.
 
 - **Evidence anchors reviewed:** datasets p. 8 (4.6. Real-world Generalization), p. 6 (4.2.2. TRAINING DETAILS), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS), p. 8 (4.6. Real-world Generalization), p. 5 (4.1.1. EXPERIMENTAL ENVIRONMENTS), p. 6 (4.2.2. TRAINING DETAILS), metrics p. 5 (4.1.2. METRICS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 5 (4.1.2. METRICS), baselines p. 7 (4.5.1. TWO-STAGE TRAINING), p. 5 (4.2.1. DATASET COLLECTION), p. 5 (4.1.2. METRICS), p. 6 (4.2.2. TRAINING DETAILS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 7 (4.5.1. TWO-STAGE TRAINING), results p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 5 (4.1.2. METRICS), p. 6 (4.3. Comparison with State-of-the-Art Methods), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 8 (4.5.3. BEV MAP RESOLUTION AND TOKEN BUDGET), p. 7 (4.5.2. REINFORCEMENT FINE-TUNING UNDER).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

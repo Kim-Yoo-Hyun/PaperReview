@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (1. Iyrropucrion), p. 2 (1. Iyrropucrion), p
 | body cue at p. 7 | We noticed that the dataset contains extensive recovery data from the moments of failure to correct the policy. ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | We believe that pretraining the model on web-scale video datasets could significantly enhance its generalization capabilites, and we ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Iyrropucrion). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 1 (Abstract), p. 1 (Abstract), p. 3 (1. Iyrropucrion), interface p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Iyrropucrion), objective p. 4 (C. Decoupled Video and Action Diffusions), p. 4 (C. Decoupled Video and Action Diffusions), p. 5 (C. Decoupled Video and Action Diffusions).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

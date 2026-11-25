@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 - **p. 22 / A.1 DreamVLA Architecture - extractive body cue:** We tokenize the robot state using an MLP.
 - **p. 22 / A.1 DreamVLA Architecture - extractive body cue:** The robot state consists of the arm and gripper state.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: (a) Vanilla VLA directly maps visual observations and language instructions to actions. (b) Models leveraging separate image/video generation or copilot models to generate ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 | Parameter Value Model type DiT-B Token size 1024 Action prediction window 2 future steps (3-frame chunk) Past context steps 0 Number of Transformer layers ... | definition/direction/unit from same section | p. 23 (A.1 DreamVLA Architecture) |
 | By contrast, supervising the network with depth map, DINO or SAM features alone not only fails to help but often degrades performance. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 | With the limited model attention budget, these competing gradients dilute the task-relevant features and push the backbone toward suboptimal optima, producing the observed drop ... | comparison identity and matched condition | p. 9 (4 Experiments) |
 | Figure 3: Visualization of dynamic regions over time. We show the static camera (left) and wrist-mounted camera (right) observations alongside the corresponding dynamic masks ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Table 1: CALVIN ABC-D results. We present the average success computed over 1000 rollouts for each task and the average number of completed tasks ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 | body limitation/failure cue | Figure 10: Qualitative results of real world language-grounded manipulation. D Additional Discussions and Future Work i. Scaling Laws. A promising direction for future exploration ... | p. 29 (Figure/Table caption) |
 | body limitation/failure cue | Figure 2: Framework Overview. Given the current robot state st, observation ot, and language instruction, DreamVLA encodes multimodal inputs via frozen text, visual encoders ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 | Increasing to K = 16 introduces redundant tokens that compete for attention and raise GPU memory, bringing no extra gain and slightly lower generalization. | p. 10 (4 Experiments) |
 | We employ an MAE-pretrained ViT-B [104] as the vision encoder. | p. 22 (A.1 DreamVLA Architecture) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 4 Experiments - extractive body cue:** By contrast, supervising the network with depth map, DINO or SAM features alone not only fails to help but often degrades performance.
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 Experiments
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Framework Overview. Given the current robot state st, observation ot, and language instruction, DreamVLA encodes multimodal inputs via frozen text, visual encoders and ...
 
 - **Evidence anchors reviewed:** datasets p. 24 (A.2 Feature Extraction), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 9 (4 Experiments), metrics p. 9 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 8 (4 Experiments), baselines p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 9 (4 Experiments), p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 8 (4 Experiments), p. 7 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

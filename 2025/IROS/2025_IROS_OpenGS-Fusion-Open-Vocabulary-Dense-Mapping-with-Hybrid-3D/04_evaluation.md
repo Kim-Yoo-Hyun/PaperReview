@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise.
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** Reconstruction and scene understanding results on our self-captured dataset, demonstrated across three representative spatial locations.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Comparison of Model Architectures. Compared to 3DGS-feature- field-based methods [12]-[15], our approach enables online modeling of scene appearance, geometry, and semantics while supporting ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 | Fig. 2. Overview of OpenGS-Fusion. Receiving RGB-D input with 2D language embeddings extracted from 2D foundation models, we simultaneously update the appearance, geometry and ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 3. A visual demonstration of our proposed AT-MLLM. This strategy enables the precise localization of multiple objects in 3D space through multi-stage threshold ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 | Based on similarity scores, we select the most relevant 3D primitives and quantitatively compare them with the ground-truth 3D object segmentation 2) Baselines: We ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENT) |
 | Our method achieves state-of-the-art performance in PSNR, SSIM, LPIPS, and Depth L1. | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | Compared to a fixed threshold strategy (set at 0.6), our AT-MLLM module enhances the final scene understanding of mIoU by 17% (at 5 cm ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 | body limitation/failure cue | 5 presents qualitative rendering results in four real-world scenes, highlighting the robustness of our method against motion blur and depth noise. | p. 6 (IV. EXPERIMENT) |
 | body limitation/failure cue | We attribute this to the incorporation of our extra GS initialization and pruning mechanism, which leverages the TSDF to improve robustness when handling real-world ... | p. 6 (IV. EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 | 2) Refined 3D Object Understanding: To achieve precise 3D object localization, we compute semantic similarity across all spatial regions within the semantic space. | p. 2 (2) Limited 3D Object-Level Understanding. Most exist) |
 | OpenVDB [25] is a data structure designed to manipulate unbounded volumetric data, enabling efficient CPU-based operations. | p. 3 (III. OPENGS-FUSION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. CONCLUSIONS - extractive body cue:** However, our method currently relies on accurate pose estimation and faces limitations in query efficiency.
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p.
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** We attribute this to the incorporation of our extra GS initialization and pruning mechanism, which leverages the TSDF to improve robustness when handling real-world scene ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), metrics p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), baselines p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 1 (Figure/Table caption), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), results p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

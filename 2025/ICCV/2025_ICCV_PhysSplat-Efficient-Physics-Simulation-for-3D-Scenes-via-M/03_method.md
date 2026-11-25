@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 - **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** The network predicts the geometry-aware probability distribution P of physical properties across particles, P = Dθ(X). where X is the position of 3D Gaussians of ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Material Point Method), p. 5 (4.3. Physics-Based Dynamics).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 - **p. 3 / 3.1. Material Point Method - extractive body cue:** The Material Point Method (MPM)[12] is a popular simulation framework for multi-physics phenomena due to its capability to handle topology changes and frictional interactions.
 - **p. 5 / 4.3. Physics-Based Dynamics - extractive body cue:** Our observation is that softer objects and those with complex shapes require more driving particles to accurately simulate their dynamics.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 - **p. 6 / 5.3. Comparison with SOTA Methods - extractive body cue:** Since PhysDreamer [47] has not released its training code, we only compare the four evaluation scene and are unable to report its inference time.
 - **p. 8 / Method - extractive body cue:** Time measures the inference speed for physics-based 4D generation on an single RTX 4090 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, VQA, model, BLIP, produce, text, description, image, Material, Property, Distribution, Prediction, MPDP, estimate, full, simulating, object, dynamics, driving, particles.
 - **Relevant PDF headings:** 3.1. Material Point Method (p. 3); 4. Our Methodology (p. 3); 5.3. Comparison with SOTA Methods (p. 6); Method (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 4 (4.2. MLLM-based Physical Property Perception), 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 7. Ablation study. Visualization of space-time slices for ablation study on PhysDreamer [47]. Our method can generate closer content compared with the real capture. ...
 - **p. 8 / 7. Conclusion - extractive body cue:** Future work will explore to reconstruct occluded parts, further enhancing realism and expanding applications in interactive virtual experiences.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.2. MLLM-based Physical Property Perception), p. 3 (4. Our Methodology), p. 3 (4.1. 3D Open-vocabulary Segmentation), p. 4 (4.1. 3D Open-vocabulary Segmentation), p. 5 (4.3. Physics-Based Dynamics), p. 5 (4.3. Physics-Based Dynamics), objective p. 3 (3.1. Material Point Method), p. 4 (4.2. MLLM-based Physical Property Perception), p. 4 (4.2. MLLM-based Physical Property Perception), p. 5 (4.3. Physics-Based Dynamics), p. 5 (4.3. Physics-Based Dynamics), temporal p. 3 (3.1. Material Point Method), p. 6 (5.1. Implementation Details), p. 3 (3.1. Material Point Method), p. 6 (5.3. Comparison with SOTA Methods), p. 8 (Method), p. 8 (7. Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

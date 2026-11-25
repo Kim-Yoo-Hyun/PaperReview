@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.2. Unified Spatial Prediction), p. 4 (3.2. Un
 - **p. 3 / 3.1. Multi-modal Tokenization - extractive body cue:** (1) During training, we randomly drop each of T cam i , T intr i , and T depth i independently with probability 0.5, setting ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4. Model Training), p. 5 (3.2. Unified Spatial Prediction), p. 6 (4. Model Training), p. 6 (4. Model Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.2. Unified Spatial Prediction), p. 4 (3.2. Un
 - **p. 1 / 1. Introduction - extractive body cue:** Recently, the field has shifted toward feed-forward foundation models, with models like DUSt3R (Wang et al., 2024) and VGGT (Wang et al., 2025a) demonstrating remarkable ...
 - **p. 4 / 3.2. Unified Spatial Prediction - extractive body cue:** The input images along with optional priors are tokenized as described in Sec.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3.2. Unified Spatial Prediction), p. 4 (3.2. Un
 - **p. 6 / 4. Model Training - extractive body cue:** A.1 for the details of training losses and the specific values of these weights.
 - **p. 4 / 3.1. Multi-modal Tokenization - extractive body cue:** This enables flexible control over input modalities at inference time.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, issues, introduce, decoupled, modeling, strategy, separates, geometry, prediction, appearance, reconstruction, along, curriculum, learning, scheme, progressively, balances, task, difficulties, during.
 - **Relevant PDF headings:** 3. Method (p. 3); 4. Model Training (p. 5); 5.3. Comparison with Prior-guided Methods (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (3.2. Unified Spatial Prediction), p. 4 (3.2. Un
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 13. Ablation study comparing our decoupled training strategy against joint training. Lower is better for all error metrics (↓); higher is better for PSNR ...
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 14. Sensitivity analysis on the prior dropout probability p. Performance is reported under both no-prior and all-prior inference conditions. Lower is better for all ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Unified Spatial Prediction), p. 4 (3.2. Unified Spatial Prediction), p. 3 (3. Method), p. 5 (3.2. Unified Spatial Prediction), p. 3 (3.1. Multi-modal Tokenization), p. 5 (3.2. Unified Spatial Prediction), objective p. 5 (4. Model Training), p. 4 (3.1. Multi-modal Tokenization), p. 5 (3.2. Unified Spatial Prediction), p. 6 (4. Model Training), p. 6 (4. Model Training), p. 3 (3.1. Multi-modal Tokenization), temporal p. 3 (3. Method), p. 3 (3.1. Multi-modal Tokenization), p. 4 (3.1. Multi-modal Tokenization), p. 4 (3.2. Unified Spatial Prediction), p. 7 (5.1. Evaluation on Different Tasks), p. 8 (5.4. Ablation Study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

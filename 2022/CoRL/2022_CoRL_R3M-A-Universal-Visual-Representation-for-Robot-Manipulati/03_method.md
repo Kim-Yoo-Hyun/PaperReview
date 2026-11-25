@@ -46,7 +46,6 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 - **p. 14 / A.3 Additional Implementation Details - extractive body cue:** Additionally in training for Equation 2, we consider the following positive pairs within a single batch element: Initial and Final Frames (I0, Ig), (I0, Ij>i), ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 - **p. 14 / A.3 Additional Implementation Details - extractive body cue:** Instead we use 3 negative examples, sampled from different videos in the batch.
 - **p. 14 / A.3 Additional Implementation Details - extractive body cue:** In practice, we use more than one negative video example in training Equations 1 and 2.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 - **p. 14 / A.3 Additional Implementation Details - extractive body cue:** In practice, we use more than one negative video example in training Equations 1 and 2.
 - **p. 14 / A.3 Additional Implementation Details - extractive body cue:** Using a larger number of positive examples from a single video and multiple negative examples from different videos stabilizes training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** practice, more, negative, video, example, training, Equations, larger, number, positive, examples, single, multiple, different, videos, stabilizes, Additionally, Equation, consider, following.
 - **Relevant PDF headings:** A.2 Training Architecture and Hyper-Parameters (p. 14).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,23 +103,13 @@ PDF body method statement (p. 14 (A.3 Additional Implementation Details), p. 14 
 - **p. 8 / 2. We - extractive body cue:** 5 Limitations and Future Work In this work, we set out to study if pre-training visual representations on diverse human videos can enable efficient learning ...
 - **p. 8 / 2. We - extractive body cue:** While we were excited by strong results on a wide set of simulated and real robotic tasks, a number of important limitations remain.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details), objective p. 14 (A.3 Additional Implementation Details), p. 14 (A.3 Additional Implementation Details), temporal p. 5 (4 Experiments), p. 14 (A.3 Additional Implementation Details), p. 3 (3.1 Preliminaries), p. 3 (2 Related Work), p. 4 (3.1 Preliminaries), p. 5 (2. We).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

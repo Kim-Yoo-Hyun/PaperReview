@@ -43,7 +43,6 @@ PDF body method statement (p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1
 - **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** This ensures compliance with the token length constraints of large language models, effectively expanding the scale of trainable data.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.2. Metric Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -59,7 +58,6 @@ PDF body method statement (p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1
 - **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** For mesh-derived dense point clouds, FPS begins with a random point and iteratively chooses the farthest point to yield N center points.
 - **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** We begin by densely sampling point clouds from the mesh and then apply farthest point sampling (FPS) and KNN to identify central points and point ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -76,13 +74,10 @@ PDF body method statement (p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1
 - **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** This ensures compliance with the token length constraints of large language models, effectively expanding the scale of trainable data.
 - **p. 1 / 2.1. Shape Novelty Analysis - extractive body cue:** We compute the Chamfer Distance between samples to identify the three most similar training meshes to the generated meshes for comparison.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** SamPart3D, pretrained, Objaverse, backbone, network, designed, extract, visual, features, ensures, compliance, token, length, constraints, large, language, models, effectively, expanding, scale.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -99,20 +94,10 @@ PDF body method statement (p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1
 - **p. 1 / 1.1. Construction of Primitive-Mesh - extractive body cue:** To obtain semantic labels for each part, we render multiview images and annotate the corresponding 2D regions for each segmented 3D component.
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Failure case. The limited semantic dataset size reduces text-geometry alignment for more fine-grained generations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh), objective p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh), temporal p. 1 (1.1. Construction of Primitive-Mesh), p. 1 (1.1. Construction of Primitive-Mesh).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

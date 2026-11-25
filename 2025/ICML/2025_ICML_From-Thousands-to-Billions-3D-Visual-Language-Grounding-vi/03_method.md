@@ -50,7 +50,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Int
 - **p. 2 / 1. Introduction - extractive body cue:** This render-supervised formulation offers several key advantages.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 1 (1. Introduction), p. 2 (1. Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Int
 - **p. 1 / Abstract - extractive body cue:** LIFT-GS achieves state-of-the-art results with 25.7% mAP on open-vocabulary instance segmentation (vs.
 - **p. 2 / 1. Introduction - extractive body cue:** Any 3D/4D task with renderable outputs can potentially leverage 2D supervision.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,16 +82,11 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Int
 - **p. 1 / Abstract - extractive body cue:** This rendersupervised formulation enables end-to-end training of complete encoder-decoder architectures and is inherently model-agnostic.
 - **p. 2 / 1. Introduction - extractive body cue:** Second, this allows us to overcome fundamental scaling limitations by training a large transformer decoder instead of previous dual-encoder approaches (as shown in Fig 3) ...
 - **p. 2 / 1. Introduction - extractive body cue:** Third, the approach is highly practical: LIFT-GS operates directly on raw point clouds from sensors, such as the outputs from SLAM or SfM systems, eliminating ...
-- **p. 1 / Abstract - extractive body cue:** This rendersupervised formulation enables end-to-end training of complete encoder-decoder architectures and is inherently model-agnostic.
-- **p. 2 / 1. Introduction - extractive body cue:** Second, this allows us to overcome fundamental scaling limitations by training a large transformer decoder instead of previous dual-encoder approaches (as shown in Fig 3) ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** rendersupervised, formulation, enables, end-to-end, training, complete, encoder-decoder, architectures, inherently, model-agnostic, First, architecture-agnostic, specifying, only, outputs, leaves, flexibility, underlying, model, design.
 - **Relevant PDF headings:** 2.4. Foundation Model Distillation at Scale (p. 3); 3. Method (p. 4); 3.3. Architecture (p. 6); 4.5. 2D Foundation Models Scaling and Exploration (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +106,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Int
 - **p. 2 / 1. Introduction - extractive body cue:** This approach could enable training 3D models without any 3D mask annotations.
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Fine-tune Data Scaling. We show how Grounding Accuracy changes with increasing Data Ratio from 0.1 to 1.0. Finetuning Data Scaling We observe that ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), objective p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), temporal 본문 anchor 없음.
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

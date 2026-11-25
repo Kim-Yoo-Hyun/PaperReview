@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPER
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Method ScanNet200 Matterport40 Matterport80 Matterport160 f-mIoU f-mAcc mIoU mAcc mIoU mAcc mIoU mAcc PLA (Ding et al., 2023) 1.8 3.1 - - - - - ...
 - **p. 14 / A.1 NETWORK ARCHITECTURES - extractive body cue:** We hypothesize that features learned via this multi-modal, multi-task objective provide richer semantic information for 3D scene understanding than those from networks trained solely on ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: The Fundamental Disconnect: Semantic Richness vs. Geometric Coherence. Left: Original RGB 3D scene. Middle: Features distilled from 2D VLMs (Zou et al., 2023) ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPER
 | The richness-complexity score weight is held constant at γ = 0.5. | definition/direction/unit from same section | p. 15 (A.2 DATASET DETAILS AND SUBSET SELECTION) |
 | As shown in Table 1, GeoPurify demonstrates exceptional performance by leveraging a curated data subset of only ∼1.5%. | definition/direction/unit from same section | p. 7 (4 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPER
 | 4.2 QUANTITATIVE RESULTS We evaluate GeoPurify against state-of-the-art methods on open-vocabulary and long-tail 3D segmentation benchmarks. | comparison identity and matched condition | p. 6 (4 EXPERIMENTS) |
 | The advantage is even more pronounced in the mean Accuracy (mAcc) metric, where GeoPurify attains 72.5 on ScanNetV2 and 62.4 on Matterport3D, substantially outperforming ... | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
 | As shown in Table 3, GeoPurify significantly outperforms existing methods in both transfer directions. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPER
 | body limitation/failure cue | We attribute this robustness to our decoupled design. | p. 7 (4 EXPERIMENTS) |
 | body limitation/failure cue | This robust generalization arises from the synergy between our semantic and geometric modules. | p. 7 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPER
 | Our code and pre-trained models will be made publicly available upon publication. | p. 14 (A EXPERIMENTAL SETUP AND IMPLEMENTATION DETAILS) |
 | This section provides the implementation details for our experiments to ensure reproducibility. | p. 14 (A EXPERIMENTAL SETUP AND IMPLEMENTATION DETAILS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 6: Illustration of typical failure modes. From left to right: challenges with the presence of over-smoothing artifacts at object boundaries, and inherited semantic errors ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPER
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** This robust generalization arises from the synergy between our semantic and geometric modules.
 
 - **Evidence anchors reviewed:** datasets p. 15 (A.2 DATASET DETAILS AND SUBSET SELECTION), p. 15 (A.2 DATASET DETAILS AND SUBSET SELECTION), p. 7 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 5 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), metrics p. 6 (4 EXPERIMENTS), p. 21 (Figure/Table caption), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 15 (A.2 DATASET DETAILS AND SUBSET SELECTION), baselines p. 8 (4 EXPERIMENTS), p. 20 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 6 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), results p. 14 (A.1 NETWORK ARCHITECTURES), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 
 | body cue at p. 4 | Fig. 4: Open-ended state exploration. Arrow length indicates the inferred distance value, color indicates the inferred AoT label. ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 5 | I we can see that [ Where2Act ] is able to achieve similar performance in "single action effects", ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 2 (III. APPROACH), p. 4 (III. APPROACH). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 3 (III. APPROACH), p. 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 2 (III. APPROACH), p. 4 (III. APPROACH), objective p. 3 (III. APPROACH), p. 3 (III. APPROACH), p. 4 (III. APPROACH), p. 4 (III. APPROACH).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

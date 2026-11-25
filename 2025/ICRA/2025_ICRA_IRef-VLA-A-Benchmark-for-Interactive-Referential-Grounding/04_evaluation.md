@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTI
 - **p. 1 / I. INTRODUCTION - extractive body cue:** First, we provide the largest real-world dataset based on 3D scenes from a diverse set of existing indoor scans.
 - **p. 1 / Abstract - extractive body cue:** To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Sample region from the dataset visualized with (a) a scene graph and (b) a corresponding referential statement . The pursuit of such agents ...
@@ -72,8 +70,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTI
 | Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -82,13 +78,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTI
 | Fig. 5. A comparison between heuristically generated statements describing a binary spatial relation from Sr3D, Nr3D [14], SceneVerse [16], and IRef- VLA. Both chairs ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
 | Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Third, the scale of available visionlanguage data in the 3D space pales in comparison to the amount of 2D data, which was crucial to ... | comparison identity and matched condition | p. 1 (I. INTRODUCTION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -114,21 +103,11 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTI
 | body limitation/failure cue | Second, human referential language often involves spatial reasoning, implicit and explicit affordances, open-vocabulary language, and may even be incorrect or refer to something that ... | p. 1 (I. INTRODUCTION) |
 | body limitation/failure cue | Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | The dataset and all source code is publicly released1. | p. 1 (Abstract) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -137,6 +116,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTI
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 6. Pipeline for graph-search and alternative generation baseline through a simple two-layer MLP and trained with a cross- entropy loss. The additional referential losses ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (I. INTRODUCTION), p. 1 (Abstract), metrics p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption), p. 1 (Abstract), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 1 (Abstract), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (I. INTRODUCTION), results p. 5 (Figure/Table caption), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

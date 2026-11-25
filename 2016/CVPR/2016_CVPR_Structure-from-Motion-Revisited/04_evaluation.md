@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 - **p. 8 / 7.82 M - extractive body cue:** For each dataset, we report the largest reconstructed component.
 - **p. 8 / 7.82 M - extractive body cue:** For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Result of Rome with 21K registered out of 75K images.
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 | Figure 3. Scores for different number of points (left and right) with different distributions (top and bottom) in the image for L = 3. ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | In addition, we achieve the best pose accuracy for the Quad dataset: DISCO 1.16m, Bundler 1.01m, VisualSFM 0.89m, and Ours 0.85m. | definition/direction/unit from same section | p. 8 (7.82 M) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 | We run experiments on a large variety of datasets to evaluate both the proposed components and the overall system compared to state-of-the-art incremental (Bundler ... | comparison identity and matched condition | p. 7 (5. Experiments) |
 | 9 shows a result of Bundler compared to our method. | comparison identity and matched condition | p. 8 (7.82 M) |
 | For all datasets, we significantly outperform any other method in terms of completeness, especially for the larger models. | comparison identity and matched condition | p. 8 (7.82 M) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,8 +111,6 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 | body limitation/failure cue | Robust and Efficient Triangulation. | p. 7 (5. Experiments) |
 | body limitation/failure cue | The reconstruction quality is comparable for all choices of V > 0.3 and increasingly degrades for a smaller V . | p. 8 (7.82 M) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -135,14 +122,6 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 | Moreover, the robustness, accuracy, and performance of the reconstruction depends on the seed location of the incremental process. | p. 2 (2.2. Incremental Reconstruction) |
 | In contrast, initializing from a sparser location results in lower runtimes, since BAs deal with overall sparser problems accumulated over the reconstruction process. | p. 2 (2.2. Incremental Reconstruction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** The proposed components of the algorithm improve the state of the art in terms of completeness, robustness, accuracy, and efficiency.
@@ -151,6 +130,5 @@ PDF body evaluation/result cue (p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table
 - **p. 8 / 7.82 M - extractive body cue:** The reconstruction quality is comparable for all choices of V > 0.3 and increasingly degrades for a smaller V .
 
 - **Evidence anchors reviewed:** datasets p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (7.82 M), p. 8 (7.82 M), metrics p. 7 (5. Experiments), p. 7 (5. Experiments), p. 8 (7.82 M), p. 4 (Figure/Table caption), p. 8 (7.82 M), baselines p. 7 (5. Experiments), p. 8 (7.82 M), p. 8 (7.82 M), results p. 8 (7.82 M), p. 8 (7.82 M), p. 4 (Figure/Table caption), p. 7 (5. Experiments), p. 7 (5. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

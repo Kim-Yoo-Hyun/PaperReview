@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** With these prediction heads in place, we now analyze how our method differs from previous approaches in terms of the output Gaussian space and the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 4 / 3 METHOD - extractive body cue:** 3.1 PROBLEM FORMULATION Our method takes as input sparse unposed multi-view images and corresponding camera intrinsic parameters {Iv, kv}V v=1, where V is the number ...
 - **p. 6 / 3 METHOD - extractive body cue:** Given unposed image pairs, our method learns to reconstruct a plausible 3D scene that aligns with the given inputs.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,15 +92,11 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 4 / 3 METHOD - extractive body cue:** Both encoder and decoder utilize pure Vision Transformer (ViT) structures, without injecting any geometric priors (e.g. epipolar constraints employed in pixelSplat (Charatan et al., 2024), ...
 - **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** We first describe the process for training the 256 × 256 model, which serves as the basis for all baseline comparisons.
 - **p. 15 / A MORE IMPLEMENTATION DETAILS - extractive body cue:** We also experimented with training our model on a single A6000 GPU (48 GB memory).
-- **p. 4 / 3 METHOD - extractive body cue:** Both encoder and decoder utilize pure Vision Transformer (ViT) structures, without injecting any geometric priors (e.g. epipolar constraints employed in pixelSplat (Charatan et al., 2024), ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Next, output, features, encoder, ViT, decoder, module, where, view, interact, other, views, through, cross-attention, layers, attention, block, facilitating, multi-view, information.
 - **Relevant PDF headings:** 3 METHOD (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +116,10 @@ PDF body method statement (p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** This further shows the benefits of using a standard ViT without incorporating additional geometric operations.
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** Ablation on Camera Intrinsic Embedding.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), objective p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), temporal p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

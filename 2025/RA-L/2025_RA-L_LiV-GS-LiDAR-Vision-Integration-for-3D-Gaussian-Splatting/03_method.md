@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 5 / III. METHODOLOGY - extractive body cue:** The new Gaussian split from the reliable Gaussian is regarded as reliable Gaussian after undergoing a round of back-end optimization, the process of which continue ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Our method estimates robot pose by aligning Gaussian covariance from rendering with the current observations, with the back-end correcting drift and updating the Gaussian map.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To overcome depth continuity issues between vision and LiDAR in unbounded scenes, we propose a Gaussian splitting method based on LiDAR point clouds, ensuring proper ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** We introduce a Conditional Gaussian Constraint (CGC) to adjust the positions of color-supervised Gaussians through the loss function (10).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Since, length, Gaussian, normal, difficult, restrict, during, optimization, introduced, normalization, point, clouds, Gaussians, robustness, tracking, algorithm, ensured, stable, orientation, introduce.
 - **Relevant PDF headings:** III. METHODOLOGY (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 8: Visualization of cross-modal mmWave radar lo- calization trajectory. mmWave radar localization on the Gaussian map. Unlike LiDAR, the point clouds of mm-Wave radar ...
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Our method does not use the IMU data.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), temporal p. 7 (IV. EXPERIMENT), p. 4 (III. METHODOLOGY), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 3 (III. METHODOLOGY).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

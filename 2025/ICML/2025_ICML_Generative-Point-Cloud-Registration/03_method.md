@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 - **p. 4 / 3.3. Zero-Shot Texture Consistency Generation - extractive body cue:** Here, xP t , xQ t ∈RH′×W ′×d denote the noisy latent representations corresponding to source and target images; dP, dQ ∈RH′×W ′×d represent the ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 3 (3. Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 - **p. 1 / 1. Introduction - extractive body cue:** Unlike geometry-only matching in previous methods, our approach introduces MatchControlNet, a matching-specific 2D generative model that generates cross-view images pairs from point cloud data, providing ...
 - **p. 2 / 1. Introduction - extractive body cue:** Match-ControlNet leverages ControlNet's depthconditioned generation capabilities to produce images geometrically aligned with depth maps (derived from the point cloud pairs), ensuring 2D-3D geometric consistency.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,15 +86,11 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 
 - **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
 - **p. 6 / 4.1. Experimental Setting - extractive body cue:** Following the default fine-tuning configuration of ControlNet (Zhang et al., 2023), we adopt the AdamW optimizer (Loshchilov, 2017) with a learning rate of 1e-5 and ...
-- **p. 3 / 3.2. Zero-Shot Geometric Consistency Generation - extractive body cue:** It operates within the latent space of a pretrained autoencoder, where a denoiser ϵθ(xt; t, c) (conditioned on the timstamp t and tokenized text prompt ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** denoiser, follows, UNet, architecture, encoder, middle, block, skip-connected, decoder, incorporating, stacked, transformer, residual, modules, illustrates, coupling, source, target, noisy, latent.
 - **Relevant PDF headings:** 3. Approach (p. 3); 4.2. Comparison with Existing Methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +110,10 @@ PDF body method statement (p. 4 (3.2. Zero-Shot Geometric Consistency Generation
 - **p. 5 / 4.1. Experimental Setting - extractive body cue:** During the few-shot fine-tuning stage, we randomly select 3,000 sample pairs from the Scan5
 - **p. 6 / 4.1. Experimental Setting - extractive body cue:** Net training set (Dai et al., 2017) for model fine-tuning.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 4 (3.3. Zero-Shot Texture Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 5 (3.5. Geometric-Color Fused Point Descriptor), p. 3 (3.2. Zero-Shot Geometric Consistency Generation), p. 3 (3.2. Zero-Shot Geometric Consistency Generation), objective p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning), p. 4 (3.3. Zero-Shot Texture Consistency Generation), temporal p. 6 (4.2. Comparison with Existing Methods), p. 6 (4.2. Comparison with Existing Methods), p. 7 (4.2. Comparison with Existing Methods), p. 8 (4.3. Ablation Studies and Analysis), p. 8 (4.3. Ablation Studies and Analysis), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

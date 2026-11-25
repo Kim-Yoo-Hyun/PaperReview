@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 8 | FIS/NIS) results in performance degradation, suggesting their complementary roles. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | Crossattention treats all tokens within a sequence equally, failing to capture the hierarchical dependencies within 3D scenes. | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (2.2. State Space Models and Visual Applications), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Overall Framework). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), interface p. 3 (2.2. State Space Models and Visual Applications), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Overall Framework), objective p. 5 (3.4. Output Heads and Losses), p. 5 (3.4. Output Heads and Losses).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

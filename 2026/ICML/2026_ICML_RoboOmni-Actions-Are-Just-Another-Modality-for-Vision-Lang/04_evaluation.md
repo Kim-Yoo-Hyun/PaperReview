@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** Comparison of success rates in the real-world setting.
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** We conducted extensive ablation studies on the CALVIN benchmark to systematically evaluate the contribution of each key design choice within the RoboOmni framework.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. Overview of the RoboOmni framework and its performance. The bottom section illustrates the multi-modal interleaved data input. The top-left section details the model ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 | RoboOmni(FAST) achieves an average success rate of 86.8%, surpassing the strongest continuous baseline, SpatialVLA, by over 16%. | definition/direction/unit from same section | p. 6 (4.2. Evaluation on SimplerEnv) |
 | Table 6. Comprehensive experimental results and ablation studies on the CALVIN (ABCD→D) benchmark. This table aggregates all configurations evaluated in our study for a ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 | We compare RoboOmni against strong baselines including OpenVLA (Kim et al., 2024), Octo (Team et al., 2024), GR-1 (Wu et al., 2023), RoboVLMs (Li ... | comparison identity and matched condition | p. 7 (4.3. Real Robot Experiments) |
 | Across all settings, we compare RoboOmni against three representative and widely adopted unified VLA baselines: OpenVLA (Kim et al., 2024) is an autoregressive visionlanguage-action ... | comparison identity and matched condition | p. 5 (4. Experiment) |
 | Our RoboOmni models, with both Bin and FAST tokenizers, establish new state-of-the-art (SOTA) results in both settings. | comparison identity and matched condition | p. 6 (4.1. Evaluation on Calvin) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 | body limitation/failure cue | Finally, removing any of our core training strategies degrades performance. | p. 8 (4.4. Ablation Study) |
 | body limitation/failure cue | A similar trend is observed for the Bin tokenizer, where performance is highest with 128 bins (83.7%) and 256 bins (83.4%), but degrades significantly ... | p. 8 (4.4. Ablation Study) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 | See Appendix D.3 for detailed implementation settings. | p. 6 (4.2. Evaluation on SimplerEnv) |
 | Second, the model's dominance in the Visual Matching setting indicates exceptional robustness to sim-to-real visual shifts, suggesting that preserving the VLM's pre-trained visual representations ... | p. 7 (4.2. Evaluation on SimplerEnv) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.1. Evaluation on Calvin - extractive body cue:** The table evaluates models on two settings: in-distribution performance (Train: ABCD, Eval: D) and out-of-distribution generalization (Train: ABC, Eval: D).
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. A
 - **p. 8 / 4.4. Ablation Study - extractive body cue:** A similar trend is observed for the Bin tokenizer, where performance is highest with 128 bins (83.7%) and 256 bins (83.4%), but degrades significantly when ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experiment), p. 6 (4.2. Evaluation on SimplerEnv), p. 5 (4.1. Evaluation on Calvin), p. 7 (4.3. Real Robot Experiments), p. 7 (4.2. Evaluation on SimplerEnv), p. 6 (4.1. Evaluation on Calvin), metrics p. 8 (4.4. Ablation Study), p. 7 (4.3. Real Robot Experiments), p. 7 (4.2. Evaluation on SimplerEnv), p. 8 (4.4. Ablation Study), p. 5 (4.1. Evaluation on Calvin), p. 6 (4.1. Evaluation on Calvin), baselines p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on SimplerEnv), p. 7 (4.2. Evaluation on SimplerEnv), p. 7 (4.3. Real Robot Experiments), p. 5 (4. Experiment), p. 6 (4.1. Evaluation on Calvin), results p. 7 (4.3. Real Robot Experiments), p. 7 (4.4. Ablation Study), p. 8 (Figure/Table caption), p. 6 (4.2. Evaluation on SimplerEnv), p. 8 (4.4. Ablation Study), p. 6 (4.1. Evaluation on Calvin).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

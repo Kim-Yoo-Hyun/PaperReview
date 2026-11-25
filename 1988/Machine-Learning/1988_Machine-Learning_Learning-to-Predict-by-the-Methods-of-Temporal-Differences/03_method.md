@@ -56,7 +56,6 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 - **p. 13 / 3.2 A random-walk example - extractive body cue:** It is well known that, under repeated presentations, the Widrow-Hoff procedure minimizes the RMS error between its predictions and the actual outcomes in the training ...
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 9 (3.1 A game-playing example), p. 9 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 12 (3.2 A random-walk example).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 - **p. 14 / 3.2 A random-walk example - extractive body cue:** For example, suppose states D, E, and F all start with the prediction value 0.5, and the sequence xD, XE, XF, 1 is experienced.
 - **p. 1 / 1. Introduction - extractive body cue:** An important advantage of prediction learning is that. its training examples can be taken directly from the temporal sequence of ordinary sensory input: no special ...
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 - **p. 14 / 3.2 A random-walk example - extractive body cue:** First, each training set was presented once to each procedure.
 - **p. 13 / 3.2 A random-walk example - extractive body cue:** The second experiment concerns the question of learning rate when the training set is presented just once rather than repeatedly until convergence.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** either, edge, state, entered, then, walk, terminates, loss, nonterminal, there, corresponding, observation, vector, time, Thus, component, prediction, wTxt, simply, value.
 - **Relevant PDF headings:** 3. Examples of faster learning with TD methods (p. 8); 4.3 Temporal-difference methods as gradient descent (p. 24).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 10 (3.1 A game-playing example), p. 11 (3.2 A rand
 - **p. 22 / 4.2 Optimality and learning rate - extractive body cue:** Second, the procedure involves keeping statistics on each pair of states (e.g., the :Siy) rather than on each state or component of the observation vector.
 - **p. 32 / 7. Conclusion - extractive body cue:** In speech recognition, for example, current learning methods cannot be applied until the correct classification of the word is known.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 11 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), p. 9 (3.1 A game-playing example), p. 14 (3.2 A random-walk example), objective p. 9 (3.1 A game-playing example), p. 9 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 10 (3.1 A game-playing example), p. 13 (3.2 A random-walk example), p. 13 (3.2 A random-walk example), temporal p. 24 (4.3 Temporal-difference methods as gradient descent), p. 24 (4.3 Temporal-difference methods as gradient descent), p. 7 (2.2 Computational issues), p. 10 (3.1 A game-playing example), p. 11 (3.2 A random-walk example), p. 15 (3.2 A random-walk example).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

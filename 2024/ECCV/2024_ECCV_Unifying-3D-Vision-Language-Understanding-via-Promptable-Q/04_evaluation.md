@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 - **p. 10 / 4 Experiments - extractive body cue:** These findings imply a notable capability of PQ3D for effective transfer to different datasets.
 - **p. 11 / 4 Experiments - extractive body cue:** The notation "PQ3D (sg.)" indicates a model trained on a single dataset rather than through unified joint training.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: PQ3D is a unified model for 3D vision-language understanding, capable of taking various prompts (object categories, referring sentences, images, locations) to perform a ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | Table 5: Answer accuracy on SQA3D under question types. | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 | The loss balance weights λmask, λgen are set to 1, and λgrd is set to 10. | definition/direction/unit from same section | p. 9 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | Dense Captioning For the dense captioning task, PQ3D outperforms all other models in the CIDEr, METEOR, and ROUGE metrics. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | The proposed PQ3D provides global 3D features to the navigation agent that can improve the baseline VC-1 by a significant margin, achieving a 22.9% ... | comparison identity and matched condition | p. 11 (4 Experiments) |
 | The results suggest that a 4-layer decoder outperforms both 2-layer and 6-layer ones on all tasks. | comparison identity and matched condition | p. 12 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | body limitation/failure cue | 5 Conclusions and Future Works In conclusion, our proposed PQ3D addresses the challenges in 3D vision-language learning (3D-VL) by offering a unified approach that ... | p. 14 (4. Adjust the temperature or settings of the heater) |
 | body limitation/failure cue | However, our model's performance with tail classes is relatively less robust due to biases in the CLIP text encoder, which is analyzed in the ... | p. 9 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 | We encode the textual and visual prompts by the pre-trained CLIP | p. 5 (3 Method) |
 | The encoded task prompt is denoted as t ∈RT ×D, T is the number of prompt tokens, and D is the hidden dimension. | p. 6 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / 4 Experiments - extractive body cue:** However, our model trained only on the Multi3DRefer dataset "PQ3D (sg.)" exhibits better performance in the ZT and MT metric, but falls short of the ...
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 11 (4 Experiments), p.
 - **p. 9 / 4 Experiments - extractive body cue:** However, our model's performance with tail classes is relatively less robust due to biases in the CLIP text encoder, which is analyzed in the appendix.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), metrics p. 11 (4 Experiments), p. 11 (Figure/Table caption), p. 12 (4 Experiments), p. 10 (Figure/Table caption), p. 10 (4 Experiments), p. 9 (4 Experiments), baselines p. 10 (4 Experiments), p. 4 (Figure/Table caption), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), results p. 10 (4 Experiments), p. 11 (4 Experiments), p. 13 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

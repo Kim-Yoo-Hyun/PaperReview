@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 - **p. 3 / 1. Introduction - extractive body cue:** Evaluation Dims: Safety constraints, Long-Horizon, Extrapolation, Distractors.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 5 (3. Task Suites in VLA-Arena), p. 1 (170 Tasks), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (2. Structured Task Design).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 - **p. 4 / 2. Structured Task Design - extractive body cue:** V3 = V2 + camera position perturbations. • Level 4 (V4) Visual Noise: The final level tests the model's resilience to imperfect sensor data by ...
 - **p. 2 / 1. Introduction - extractive body cue:** Vision-Language-Action models (VLAs) aim to build generalist robot control policies (Brohan et al., 2022; Ma et al., 2024; Zhong et al., 2025a; Reed et al., ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 - **p. 2 / 1. Introduction - extractive body cue:** By stressing models with these structured perturbations, we expose latent fragilities and determine whether models rely on robust grounding or fragile memorization of training patterns.
 - **p. 6 / 3. Task Suites in VLA-Arena - extractive body cue:** Models are first trained on a vocabulary of foundational skills (L0).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Conducting, extensive, study, VLA-Arena, leading, models, dominant, architectural, paradigms, autoregressive, continuous, action, generation, analysis, surfaces, three, findings, reliance, memorization, over.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-A
 - **p. 41 / Figure/Table caption - extractive body cue:** Table 26. OpenVLA Fine-tuning Hyperparameters. The OpenVLA model was fine-tuned using Low-Rank Adaptation (LoRA). The training was distributed across 8 GPUs, resulting in a total ...
 - **p. 8 / 4.3. Diagnosing Semantic and Visual Grounding - extractive body cue:** Impact of Language on VLA-Arena and LIBERO. ting: fine-tuning causes the model to abandon generalizable concepts, overfitting specific pixel distributions rather than retaining robust representations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1. Introduction), p. 6 (3. Task Suites in VLA-Arena), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Structured Task Design), p. 4 (2. Structured Task Design), objective p. 5 (3. Task Suites in VLA-Arena), p. 1 (170 Tasks), p. 2 (Abstract), p. 2 (1. Introduction), p. 3 (1. Introduction), p. 3 (1. Introduction), temporal p. 6 (4.1. Experimental Setup), p. 7 (4.2. Analysis of Performance and Failure Modes), p. 2 (1. Introduction), p. 6 (4.1. Experimental Setup), p. 7 (4.1. Experimental Setup), p. 9 (5. Real-Robot Validation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -47,8 +47,6 @@
 - **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** Reconstruction results on the stereo-Tianmouc dataset.
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** We conduct the ablation study of image pyramids and semiisotropic loss on TUM-RGBD dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Differential rasterization and reconstructed sparse map: elongated Gaussians are used as an efficient primitive to represent scene geometry and to perform camera pose ...
@@ -82,8 +80,6 @@
 | Figure 2. Our approach follows a "sketch-then-paint" paradigm. Similar to drawing the outline before adding colors, we first generate a discrete outline (skeleton) for ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 | Figure 4. SDGS overview: our approach uses high-frame-rate SD inputs to optimize a sparse Gaussian map and performs camera pose estimation via edge alignment. ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@
 | 4, our sparse edge-guided tracking framework achieves the highest frame rate among all compared methods, while maintaining competitive accuracy. | comparison identity and matched condition | p. 8 (4.2.3. Performance Analysis) |
 | Ablation on TUM-RGBD (RMSE ATE [cm]). w/o = without; w/ = with; Pyr. = pyramid; Semi-iso = semi-isotropic. | comparison identity and matched condition | p. 8 (4.2.3. Performance Analysis) |
 | Figure 3. (a) Hybrid pixel layout, which offers color and high- frame-rate spatial difference in one sensor. (b) RGB and spatial difference comparison under ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@
 | body limitation/failure cue | We first evaluate our method against state-of-the-art approaches in terms of tracking 6-DoF pose accuracy and robustness under various motion conditions, based on the ... | p. 7 (4.2.1. Tracking Accuracy) |
 | body limitation/failure cue | Method Input tianmouc/slow tianmouc/fast tianmouc/extreme Average Gaussian-SLAM RGB 4.60 fail fail - SplaTAM 6.52 fail fail - MonoGS-RGBD 3.32 24.52 fail - WildGS-SLAM∗† 2.01 ... | p. 7 (4.2.2. Deblurring Metrics) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@
 | Leveraging hardware SD signals, we use SD as a prior to mitigate defocus and motion blur in RGB sequences. | p. 5 (3.4.2. SD-guided Mutually Exclusive RGB Supervision) |
 | Instead, we run a pyramidal Lucas-Kanade (LK) [11] search constrained along the epipolar line, which exploits the high information content of SD edges and ... | p. 5 (3.2.2. Tracking) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Conclusion - extractive body cue:** By combining emerging hybrid pixel cameras, we not only maintain robust tracking accuracy under extreme motions where other methods fail, but also reconstruct dense maps ...
@@ -162,6 +141,5 @@
 - **p. 7 / 4.2.2. Deblurring Metrics - extractive body cue:** Method Input tianmouc/slow tianmouc/fast tianmouc/extreme Average Gaussian-SLAM RGB 4.60 fail fail - SplaTAM 6.52 fail fail - MonoGS-RGBD 3.32 24.52 fail - WildGS-SLAM∗† 2.01 8.21 ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1.2. Datasets), p. 6 (4.1.3. Evaluation Metrics), p. 8 (4.3. Ablation Study), p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.2. Deblurring Metrics), p. 8 (4.3. Ablation Study), metrics p. 6 (4.1.3. Evaluation Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), baselines p. 7 (4.2.2. Deblurring Metrics), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 8 (4.2.3. Performance Analysis), p. 3 (Figure/Table caption), results p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.3. Ablation Study), p. 7 (4.2.1. Tracking Accuracy), p. 8 (4.2.3. Performance Analysis), p. 6 (4.1.3. Evaluation Metrics), p. 6 (4.1. Experiment Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

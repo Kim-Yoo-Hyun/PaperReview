@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 6 | While these trajectories did not necessarily reach the goals that were originally commanded, and therefore cannot be considered ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 13 | Figure 10: Visualization of failing learned behavior for moving kettle, turning the bottom knob, moving the slider and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries). The downstream handoff is claimed only when the body describes it.
@@ -73,10 +71,8 @@ il writing domain maps to observation -> state/world model -> task and motion de
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 Introduction), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries), p. 7 (3 Preliminaries), interface p. 4 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 5 (3 Preliminaries), objective p. 4 (3 Preliminaries), p. 5 (3 Preliminaries), p. 3 (3 Preliminaries), p. 5 (3 Preliminaries), p. 6 (3 Preliminaries), p. 6 (3 Preliminaries).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

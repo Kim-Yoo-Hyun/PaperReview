@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 - **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** For collision checking, we took the convex hull of the geometry of each link of the robot, where each link is made of one or ...
 - **p. 9 / VI. PHYSICAL EXPERIMENTS - extractive body cue:** The mesh is viewed as a soup of triangles (which are convex shapes), and we penalize collision between each triangle and the robot's links.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. TrajOpt applied to several motion planning scenarios: (a) planning an arm trajectory for the PR2 in simulation, (b) PR2 opening a door with ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 | Fig. 3. Hinge penalty for collisions a user-defined distance dcheck between them where dcheck > dsafe, and formulate the collision penalty based on these ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Fig. 4. Illustration of the non-differentiability of the signed distance function. Here, a square is rotated about its center by angle θ. The true ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 | We evaluated TrajOpt and compared it with other planners in terms of (1) average computation time for all successful planning runs computed over all ... | comparison identity and matched condition | p. 9 (V. MOTION PLANNING BENCHMARK) |
 | Fig. 12. Changing the value of the parameter αO influences the clearance of the trajectory from obstacles in the environment. Zoomed in view of ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | Fig. 13. Effect of noise level on the success rate. Re-planning after each time step greatly increases the probability of success. Collocation consistently outperforms ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -117,8 +106,6 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 - Numeric sentences retained from the body:
 - **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** OMPL-RRTConnect OMPL-LBKPIECE CHOMP-HMC CHOMP-HMC-Multi TrajOpt TrajOpt-Multi success fraction 0.85 0.76 0.65 0.83 0.82 0.96 avg. time (s) 0.62 1.30 4.91 9.27 0.19 0.30 avg. norm ...
 - **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** OMPL-RRTConnect OMPL-LBKPIECE TrajOpt TrajOpt-multi success fraction 0.41 0.51 0.73 0.88 avg. time (s) 20.3 18.7 2.2 6.1 avg. norm length 1.54 1.51 1.06 1.05 TABLE ...
-- **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** OMPL-RRTConnect OMPL-LBKPIECE CHOMP-HMC CHOMP-HMC-Multi TrajOpt TrajOpt-Multi success fraction 0.85 0.76 0.65 0.83 0.82 0.96 avg. time (s) 0.62 1.30 4.91 9.27 0.19 0.30 avg. norm ...
-- **p. 9 / V. MOTION PLANNING BENCHMARK - extractive body cue:** OMPL-RRTConnect OMPL-LBKPIECE TrajOpt TrajOpt-multi success fraction 0.41 0.51 0.73 0.88 avg. time (s) 20.3 18.7 2.2 6.1 avg. norm length 1.54 1.51 1.06 1.05 TABLE ...
 
 ## Generalization and Failure Cases
 
@@ -131,8 +118,6 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 | body limitation/failure cue | Fig. 3. Hinge penalty for collisions a user-defined distance dcheck between them where dcheck > dsafe, and formulate the collision penalty based on these ... | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | After finding a collision-free configuration W of this sort, we initialized with the trajectory SWG as described above. | p. 8 (V. MOTION PLANNING BENCHMARK) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +129,6 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 | We also compared TrajOpt to a recent implementation of CHOMP [61] on the arm planning problems. | p. 8 (V. MOTION PLANNING BENCHMARK) |
 | We used T = 11 timesteps for the arm and T = 41 timesteps for the full-body trajectories. | p. 9 (V. MOTION PLANNING BENCHMARK) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / Figure/Table caption - extractive body cue:** Fig. 14. Failure cases when using TrajOpt. (a) shows the initial path for full-body planning. (b) is the trajectory optimization outcome, which is stuck in ...
@@ -162,9 +139,8 @@ PDF body evaluation/result cue (p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figu
 - **p. 8 / V. MOTION PLANNING BENCHMARK - extractive body cue:** After finding a collision-free configuration W of this sort, we initialized with the trajectory SWG as described above.
 
 - **Evidence anchors reviewed:** datasets p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (VI. PHYSICAL EXPERIMENTS), metrics p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 11 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), baselines p. 8 (V. MOTION PLANNING BENCHMARK), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), results p. 9 (V. MOTION PLANNING BENCHMARK), p. 13 (Figure/Table caption), p. 8 (V. MOTION PLANNING BENCHMARK), p. 9 (V. MOTION PLANNING BENCHMARK), p. 12 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

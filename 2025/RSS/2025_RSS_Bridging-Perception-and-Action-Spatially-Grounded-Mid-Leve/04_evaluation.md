@@ -39,8 +39,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 
 - **p. 7 / C. Experiment Setup - extractive body cue:** For RT-H, ‘we relabel robot demonstrations with the language "move the arm leftright/up/down." For each environment in simulation and the real-world, we vary the object ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Bimanual, dexterous manipulation requires task-specifie grounding, The left depicts various axes for spatial gr ‘qualitative categorizations of different mid-level representations. Different representations lead ...
@@ -63,21 +61,12 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 |---|---|---|
 | no metric sentence selected | not reported; do not infer from keyword | verify Results/Evaluation |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | In addition, we provide two ablations based on prior ‘works investigating a single representation: a keypoints-based ablation based on MOKA (25] and a language ... | comparison identity and matched condition | p. 7 (C. Experiment Setup) |
 | In the Keypoint ablation, we identify important points of interest in the image by querying a VLM. | comparison identity and matched condition | p. 7 (C. Experiment Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -105,8 +94,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 | body limitation/failure cue | Meanwhile, Table I! records the sensitivity scores for each of our mid-level experts as well as the robustness index. ‘The robustness index is computed ... | p. 9 (C. Different Architectures offer Different Tradeoffs berween) |
 | body limitation/failure cue | This suggests that the benefits of more targeted feature utilization outweigh the slight decrease in robustness. | p. 9 (C. Different Architectures offer Different Tradeoffs berween) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -119,14 +106,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 | Each image is fed through a separate ResNetSO encoder, before being processed with a transformer encoder to obtain image embeddings. | p. 4 (V. ARCHITECTURE) |
 | Meanwhile, Table I! records the sensitivity scores for each of our mid-level experts as well as the robustness index. ‘The robustness index is computed ... | p. 9 (C. Different Architectures offer Different Tradeoffs berween) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4) Which policy architecture offers the best tradeoff be - extractive body cue:** tween responsiveness to structured mid-level representations and robustness to noise or spurious inputs?
@@ -134,9 +113,8 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 9 / C. Different Architectures offer Different Tradeoffs berween - extractive body cue:** This suggests that the benefits of more targeted feature utilization outweigh the slight decrease in robustness.
 
 - **Evidence anchors reviewed:** datasets p. 7 (C. Experiment Setup), metrics 본문 anchor 없음, baselines p. 7 (C. Experiment Setup), p. 7 (C. Experiment Setup), results p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -58,7 +58,6 @@
 - **p. 3 / 3. Mobile ALOHA Hardware - extractive body cue:** Mobile ALOHA inherits the benefits of the original ALOHA system [104], i.e. the low-cost, dex3
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** p. 5 (3. Mobile ALOHA Hardware), p. 6 (5. Tasks).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@
 - **PDF p. 5, §4 co-training (DOC-QA2 원문 대조):** Mobile demonstrations의 arm/base imitation loss와 static demonstrations의 arm action 및 zero-padded base [0,0] imitation loss를 함께 최적화한다. 두 데이터에서 같은 확률로 sampling하며 관측은 3개 RGB camera와 arm joint positions다.
 - **p. 8 / 5. Tasks - extractive body cue:** VINN with chunking, Diffusion Policy, and ACT all achieves good performance on Mobile ALOHA, and benefit from co-training with static ALOHA. the mobile base's velocity ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@
 - **p. 9 / 6.1. Co-training Improves Performance - extractive body cue:** For pre-train, we first train ACT on the static ALOHA data and then fine-tune it with the Mobile ALOHA data. co-training, we simply co-train the ...
 - **p. 4 / 3. Mobile ALOHA Hardware - extractive body cue:** All compute during data collection and inference is conducted on a consumer-grade laptop with Nvidia 3070 Ti GPU (8GB VRAM) and Intel i7-12800H.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** training, objective, mobile, manipulation, policy, task, aiarms, base, arms, Dstatic, where, observation, consisting, wrist, camera, RGB, observations, egocentric, mounted, between.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,27 +116,16 @@
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Hardware Details. Left: Mobile ALOHA has two wrist cameras and one top camera, with onboard power and compute. Middle: The teleoperation setup can ...
 - **p. 9 / 6.1. Co-training Improves Performance - extractive body cue:** For pre-train, we first train ACT on the static ALOHA data and then fine-tune it with the Mobile ALOHA data. co-training, we simply co-train the ...
 - **p. 10 / 8. User Studies - extractive body cue:** Despite Mobile ALOHA's simplicity and performance, there are still limitations that we hope to address in future works.
-- **p. 3 / Figure/Table caption - extractive body cue:** Figure 2: Hardware Details. Left: Mobile ALOHA has two wrist cameras and one top camera, with onboard power and compute. Middle: The teleoperation setup can ...
 - **p. 8 / 6.1. Co-training Improves Performance - extractive body cue:** In all of these cases, compounding errors appear to be the main source of failure, either from the stochasticity of robot base velocity control or ...
 - **p. 9 / 6.1. Co-training Improves Performance - extractive body cue:** The main failure modes are imprecise grasping on Lift Glass and Wipe as well as jerky motion when switching between chunks.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 5 (3. Mobile ALOHA Hardware), p. 2 (1. Introduction), p. 4 (3. Mobile ALOHA Hardware), p. 1 (Abstract), objective p. 5 (3. Mobile ALOHA Hardware), p. 1 (Body text (section boundary not confidently recovered)), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Mobile ALOHA Hardware), temporal p. 8 (6. Experiments), p. 8 (6. Experiments), p. 9 (6.1. Co-training Improves Performance), p. 9 (6.1. Co-training Improves Performance), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

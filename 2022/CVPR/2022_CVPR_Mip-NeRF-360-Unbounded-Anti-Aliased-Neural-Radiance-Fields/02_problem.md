@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 6 (4. Regula
 | body cue at p. 7 | Our model has several advantages over SVS and Deep Blending in addition to image quality: those models require ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | D) Removing the proposal MLP and using a single MLP to model both the scene and the proposal ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3. Ambiguity. The content of unbounded scenes may lie), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 3 (3. Ambiguity. The content of unbounded scenes may lie). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ PDF body contribution framing (p. 1 (Abstract), p. 1 (Abstract), p. 6 (4. Regula
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 1 (Abstract), p. 3 (3. Ambiguity. The content of unbounded scenes may lie), interface p. 3 (3. Ambiguity. The content of unbounded scenes may lie), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 2 (3. Ambiguity. The content of unbounded scenes may lie), p. 3 (3. Ambiguity. The content of unbounded scenes may lie), objective p. 6 (4. Regularization for Interval-Based Models), p. 6 (4. Regularization for Interval-Based Models), p. 7 (5. Optimization), p. 7 (5. Optimization).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

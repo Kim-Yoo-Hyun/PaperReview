@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 - **p. 14 / 4 Experiments - extractive body cue:** 7, our method can accurately segment the corresponding regions for the given texts/queries in 3D scenes, even for unseen categories.
 - **p. 12 / 4 Experiments - extractive body cue:** OpenScene [42] (LSeg)-3D 41.9 25.4 12.0 5.9 51.2 30.7 15.2 7.5 OpenScene(LSeg)-2D3D 43.4 26.8 13.1 6.4 53.5 33.0 17.4 8.6 OpenScene(OpenSeg)-3D 41.3 33.4 18.1 8.2 55.1 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1: Framework of our proposed Dense Multimodal Alignment (DMA) method. We generate comprehensive language modality data by leveraging a tagging model and an MLLM. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | We train a 3D model by taking our generated textual descriptions | definition/direction/unit from same section | p. 11 (4 Experiments) |
 | 4, when employing the same 2D network, i.e., OpenSeg, our method demonstrates superior zero-shot segmentation capability on both common and rare categories. | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | While for invocabulary classes, mask features outperform the CLIP feature by 11.6%. | comparison identity and matched condition | p. 13 (4 Experiments) |
 | We can observe that our method outperforms RegionPLC [55] by a large margin (about 6.7%) by building dense point-to-text correspondences. | comparison identity and matched condition | p. 13 (4 Experiments) |
 | Following [45], we partition the 200 categories into three splits, i.e., head, common, and tail sets, facilitating a more comprehensive comparison across categories with ... | comparison identity and matched condition | p. 11 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | body limitation/failure cue | We presented a dense multimodal alignment (DMA) framework for open-vocabulary 3D scene understanding by establishing dense correspondences between 3D points, 2D images and 1D ... | p. 14 (5 Conclusion) |
 | body limitation/failure cue | This is because there are only a few instances available on these long-tail categories, which is not sufficient to train a robust model from ... | p. 11 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 | This demonstrates that the fixed CLIP visual encoder could maintain the strong generalization ability on novel classes. | p. 13 (4 Experiments) |
 | We address this issue in two steps. | p. 5 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / Figure/Table caption - extractive body cue:** Fig. 2: Scene tagging generation. (1) We first employ RAM [57] to generate view-level tags, and then (2) reduce the tag noise with GPT. Finally, ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 10 (4 Experiments), p. 14 (Figure/Table capti
 - **p. 11 / 4 Experiments - extractive body cue:** This is because there are only a few instances available on these long-tail categories, which is not sufficient to train a robust model from scratch.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), metrics p. 9 (4 Experiments), p. 11 (4 Experiments), p. 12 (4 Experiments), p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), baselines p. 9 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), results p. 10 (4 Experiments), p. 14 (Figure/Table caption), p. 10 (4 Experiments), p. 13 (Figure/Table caption), p. 12 (4 Experiments), p. 12 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

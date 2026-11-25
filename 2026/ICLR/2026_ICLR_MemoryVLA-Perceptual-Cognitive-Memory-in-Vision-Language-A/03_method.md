@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** (c) Consolidation: the fused tokens are updated into PCMB.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (3 METHOD), p. 5 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** Vision-Language-Action (VLA) models (Brohan et al., 2023; Kim et al., 2024; Black et al., 2024; Li et al., 2024a; Sun et al., 2025; Xie et ...
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** The brain encodes multi-modal sensory inputs into both perceptual and cognitive representations.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** Standard 5 tasks are trained jointly for 20k steps, and validation is performed every 1k steps and results are reported at the best validation step.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Training runs for approximately 5k-20k steps depending on the task and data size.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, current, RGB, image, language, instruction, parameterized, policy, outputs, sequence, future, actions, where, action, consists, relative, translation, rotation, Euler, angles.
 - **Relevant PDF headings:** 3 METHOD (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Pick Diverse Fruits comprises five variants with 5 trials per variant (25 total); all other General tasks use 15 trials.
 - **p. 10 / 4 EXPERIMENTS - extractive body cue:** 64.6 Both 71.9 Memory Length 4 67.7 16 71.9 64 67.7 Table 7: Ablation on memory retrieval, fusion, consolidation.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), objective p. 6 (3 METHOD), p. 6 (3 METHOD), p. 5 (3 METHOD), temporal p. 5 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

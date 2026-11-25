@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 6 / 4 Experiments - extractive body cue:** Through the experiments, we aim to answer five questions: Q1: How effectively does BridgeVLA learn 3D robot manipulation compared to state-of-the-art methods when sufficient data ...
 - **p. 6 / 4 Experiments - extractive body cue:** In this section, we perform extensive experiments in both simulation and the real world to evaluate the proposed method.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 1. BridgeVLA outperforms all the comparing baseline methods, achieving an average success rate of 88.2% and an average rank of 1.9 across all the ...
@@ -70,8 +68,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8
 | Overall Success Rate (%) Models Avg. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 | The table shows the success rates across 14 generalization settings. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -82,13 +78,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8
 | BridgeVLA outperforms all the comparing baseline methods, achieving an average success rate of 88.2% and an average rank of 1.9 across all the 18 ... | comparison identity and matched condition | p. 7 (4 Experiments) |
 | BridgeVLA outperforms all the comparing baseline methods in terms of average success rate, significantly outperforming the best baseline method by 7.3%. | comparison identity and matched condition | p. 8 (4 Experiments) |
 | Q2: Does BridgeVLA learn more efficiently than existing state-of-the-art methods when data is limited (e.g., 3 trajectories per task)? | comparison identity and matched condition | p. 6 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,8 +111,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8
 | body limitation/failure cue | These results address Q3, showcasing that BridgeVLA possesses strong robustness against visual perturbation. | p. 8 (4 Experiments) |
 | body limitation/failure cue | Distractor, Lighting, Background, and Height aim to evaluate the robustness 9 | p. 9 (Method) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8
 | 3) ACT [24]: A state-of-the-art 2D non-VLA model using a Conditional Variational Autoencoder (CVAE) to model action distributions. | p. 10 (Method) |
 | We performed a hyperparameter grid search and evaluated the model on RLBench. | p. 11 (Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / Method - extractive body cue:** A common failure mode is that the robot often ignores the target object and moves directly to the 10
@@ -155,6 +134,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8
 - **p. 9 / Method - extractive body cue:** Distractor, Lighting, Background, and Height aim to evaluate the robustness 9
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), metrics p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), baselines p. 8 (4 Experiments), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 6 (4 Experiments), results p. 8 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 7 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

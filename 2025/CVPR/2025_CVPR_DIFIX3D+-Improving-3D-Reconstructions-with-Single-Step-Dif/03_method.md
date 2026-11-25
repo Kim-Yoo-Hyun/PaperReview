@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (4. Boosting 3D Reconstruction with DM priors), 
 - **p. 6 / 4. Boosting 3D Reconstruction with DM priors - extractive body cue:** Specifically, given a set of target views, we begin by optimizing the 3D representation using the reference views.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (4. Boosting 3D Reconstruction with DM priors), 
 - **p. 6 / 4. Boosting 3D Reconstruction with DM priors - extractive body cue:** When the desired novel trajectory is too far from the input views, the conditioning signal becomes weaker and the diffusion model is forced to hallucinate ...
 - **p. 2 / 1. Introduction - extractive body cue:** Moreover, as the inference speed of these models is fast, we also directly apply DIFIX to the outputs of the improved reconstruction to further improve ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (4. Boosting 3D Reconstruction with DM priors), 
 - **p. 4 / 4. Boosting 3D Reconstruction with DM priors - extractive body cue:** We fine-tune SD-Turbo [49] in a similar manner to Pix2pix-Turbo [40], using a frozen VAE encoder and a LoRA fine-tuned decoder.
 - **p. 5 / 4. Boosting 3D Reconstruction with DM priors - extractive body cue:** To generate more salient artifacts than those obtained by merely holding out views, we underfit our reconstruction by training it with a reduced number of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** achieve, leverage, strong, generative, priors, pretrained, diffusion, model, during, optimization, iteratively, augment, training, clean, pseudo-views, improve, underlying, representation, distant, unobserved.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (4. Boosting 3D Reconstruction with DM priors), 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 2. DIFIX3D+ pipeline. The overall pipeline of the DIFIX3D+ model involves the following stages: Step 1: Given a pretrained 3D representation, we render novel ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. DIFIX architecture. DIFIX takes a noisy rendered image and a reference views as input (left), and outputs an enhanced version of the input ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), objective p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), temporal p. 8 (5.2. Automotive Scene Enhancement), p. 3 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

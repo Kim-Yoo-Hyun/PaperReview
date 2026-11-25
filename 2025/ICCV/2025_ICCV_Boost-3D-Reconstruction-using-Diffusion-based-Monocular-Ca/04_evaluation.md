@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Eva
 - **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks.
 - **p. 5 / 7.8. The Importance of camera image in metric - extractive body cue:** Metrology of in-the-wild scenes for UniDepth.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Table 6. Datasets List for camera calibration. List of the training and testing datasets: number of images, scene type, and method of calibration. SfM: Structure-from-Motion.
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Eva
 | Without the aggregation, the standard deviation is sometimes not negligible, as presented in Tab. | definition/direction/unit from same section | p. 5 (7.9. Test-time ensembling) |
 | This significantly minimizes the randomness of the diffusion model, as evidenced by the small standard deviation in Tab. | definition/direction/unit from same section | p. 5 (7.9. Test-time ensembling) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Eva
 | To validate this, we conduct an ablation study comparing | comparison identity and matched condition | p. 3 (7.7. The Importance of Principal Point Evaluation) |
 | Quantitative Comparison on 5 Zero-shot Affine-invariant Depth Benchmarks. | comparison identity and matched condition | p. 4 (7.7. The Importance of Principal Point Evaluation) |
 | Despite targeting metric depth, we achieve performance comparable to SoTA affine-invariant depth methods. | comparison identity and matched condition | p. 4 (7.7. The Importance of Principal Point Evaluation) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Eva
 | body limitation/failure cue | The camera image (intrinsic information) is essential for robust and accurate metric depth estimation. | p. 4 (7.8. The Importance of camera image in metric) |
 | body limitation/failure cue | Our method accurately recovers real-world metrics while demonstrating robustness to variations in focal length. | p. 4 (7.7. The Importance of Principal Point Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Eva
 | To train camera intrinsic estimation model, we employ the AdamW optimizer with a learning rate of 3e-5 and train the model for 30,000 iterations ... | p. 1 (6. Implementation Details) |
 | The encoded image and camera image zx and zc are concatenated and sent to pretrained U-Net. | p. 2 (6.3. More implementation details and discussions) |
 | Then we employ single-step diffusion at timestamp T to generate depth latent code ˆzd, which is then decoded into predicted metric depth ˆd. ground ... | p. 2 (6.3. More implementation details and discussions) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 4 (7.7. The Importance of Principal Point Eva
 - **p. 4 / 7.7. The Importance of Principal Point Evaluation - extractive body cue:** Our method accurately recovers real-world metrics while demonstrating robustness to variations in focal length.
 
 - **Evidence anchors reviewed:** datasets p. 1 (6.2. Metric depth prediction), p. 1 (6.2. Metric depth prediction), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 2 (6.3. More implementation details and discussions), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction), metrics p. 2 (6.3. More implementation details and discussions), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 2 (6.3. More implementation details and discussions), baselines p. 1 (6.3. More implementation details and discussions), p. 1 (6.1. Camera intrinsic prediction), p. 2 (7.2. Relative Depth), p. 3 (7.7. The Importance of Principal Point Evaluation), p. 4 (7.7. The Importance of Principal Point Evaluation), p. 4 (7.7. The Importance of Principal Point Evaluation), results p. 4 (7.7. The Importance of Principal Point Evaluation), p. 5 (7.8. The Importance of camera image in metric), p. 2 (6.3. More implementation details and discussions), p. 2 (6.3. More implementation details and discussions), p. 3 (7.6. Single view 3D reconstuction), p. 3 (7.6. Single view 3D reconstuction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

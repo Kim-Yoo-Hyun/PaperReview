@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 - **p. 5 / B. Adaptation Module - extractive body cue:** Both of these are available in simulation, and hence, φ can be trained via supervised learning to minimize: MSE( ˆzt, zt) = ∥ˆzt -zt∥2, where ...
 - **Formal bridge:** body/proprioceptive/terrain state -> joint action/torque/footstep -> return, tracking or stability objective -> progress, balance and terrain robustness.
 - **Equation/algorithm anchors:** p. 4 (III. RAPID MOTOR ADAPTATION), p. 4 (III. RAPID MOTOR ADAPTATION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 - **p. 4 / III. RAPID MOTOR ADAPTATION - extractive body cue:** We additionally define the joint angles as q, joint velocities as ˙q, joint torques as τ, ground reaction forces at the feet as f, velocity ...
 - **p. 3 / 10 Hz - extractive body cue:** The base policy just uploads the most recent prediction of the extrinsics vector zt from the adaptation module to predict action at.
 - **Normalized interface:** observation=proprioception, terrain/perception observation과 velocity command; state=body/contact state, foothold 또는 behavior mode; output/action=joint target, torque, footstep 또는 locomotion action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 - **p. 6 / IV. EXPERIMENTAL SETUP - extractive body cue:** Learning Base Policy and Environmental Factor Encoder Network: We jointly train the base policy and the environment encoder network using PPO [48] for 15, 000 ...
 - **p. 3 / 10 Hz - extractive body cue:** That is at runtime, but at training time, life is easier.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, phase, base, policy, takes, input, current, state, previous, action, at-1, privileged, environmental, factors, encoded, latent, extrinsics, vector, factor, encoder.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,27 +113,16 @@ PDF body method statement (p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I.
 - **p. 6 / IV. EXPERIMENTAL SETUP - extractive body cue:** We compare RMA to A1's controller and RMA without the adaptation module.
 - **p. 7 / V. RESULTS AND ANALYSIS - extractive body cue:** 2) Robustness through Domain Randomization (Robust): The base policy is trained without zt to be robust to the variations in the training range [52, 40].
 - **p. 7 / V. RESULTS AND ANALYSIS - extractive body cue:** 4) RMA w/o Adaptation: We can also evaluate the performance of the base policy without the adaptation module to ablate the importance of the adaptation ...
-- **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 3: We evaluate RMA in several out-of-distribution setups in the real world. We compare RMA to A1's controller and RMA without the adaptation module. ...
 - **p. 8 / 6) Advantage Weighted Regression for Domain Adaptation - extractive body cue:** The controller was destabilized by unstable footholds in most of its failures.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (10 Hz), p. 2 (10 Hz), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 4 (III. RAPID MOTOR ADAPTATION), p. 5 (B. Adaptation Module), objective p. 4 (III. RAPID MOTOR ADAPTATION), p. 4 (III. RAPID MOTOR ADAPTATION), p. 1 (Abstract), p. 2 (10 Hz), p. 3 (10 Hz), p. 5 (B. Adaptation Module), temporal p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (B. Adaptation Module), p. 6 (IV. EXPERIMENTAL SETUP), p. 4 (III. RAPID MOTOR ADAPTATION), p. 1 (Abstract), p. 6 (IV. EXPERIMENTAL SETUP).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

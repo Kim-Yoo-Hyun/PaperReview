@@ -55,7 +55,6 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** Specifically, we assume access to a dataset D = {(i(n), {(x(n) t , a(n) t )}T (n) t=0 )}N n=0 of episodes, all of which ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 6 (3 PRELIMINARIES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 - **p. 5 / 3 PRELIMINARIES - extractive body cue:** 5.1 MODEL Our model is built on a Transformer architecture (Vaswani et al., 2017) and takes a history of images and task description as input ...
 - **p. 4 / 3 PRELIMINARIES - extractive body cue:** As detailed in the next section, we parameterize π by first mapping inputs i, {xj}t j=0 to a sequence {ξh}H h=0 and action outputs at ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** It also does not include inference time considerations that are necessary for real robots as discussed in Sec.
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** These evaluations consist of 15 long-horizon instructions in two real kitchens, which require executing sequences of skills consisting of ∼10 distinct steps, with each step ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** novel, architecture, call, RT-1, Robotics, Transformer, encoding, high-dimensional, inputs, outputs, including, camera, images, instructions, motor, commands, compact, token, representations, allows.
 - **Relevant PDF headings:** B MODEL CARD (p. 20); C MODEL AND DATA (p. 20); C.1 MODEL INFERENCE (p. 20); C.3 MODEL SELECTION AT SCALE (p. 22).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMIN
 - **p. 29 / Figure/Table caption - extractive body cue:** Table 11: SayCan style long horizon tasks in Kitchen1 and Kitchen2. (*Original SayCan eval uses a slightly different prompt so the planning success rate is ...
 - **p. 10 / 6 EXPERIMENTS - extractive body cue:** We further ablate different components of RT-1 in the next section to better understand what aspects of our method contribute the most to this difference.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (3 Hz), p. 6 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), objective p. 3 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 6 (3 PRELIMINARIES), p. 3 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), temporal p. 9 (6 EXPERIMENTS), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES), p. 8 (6 EXPERIMENTS), p. 9 (6 EXPERIMENTS), p. 14 (6 EXPERIMENTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

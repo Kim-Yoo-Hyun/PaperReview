@@ -48,7 +48,6 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 - **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** In the following section we describe our fused map representation and method for predictive tracking.
 - **p. 3 / 1) Estimate a fused surfel-based model of the environment - extractive body cue:** tracking and surface fusion (including surfel culling) to take place between the registered areas of the map.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,13 +81,10 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** adopt, architecture, typically, found, realtime, dense, visual, SLAM, systems, alternates, between, tracking, mapping, registration, successful, loop, been, closed, older, inactive.
 - **Relevant PDF headings:** II. APPROACH OVERVIEW (p. 2); 1) Estimate a fused surfel-based model of the environment (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -105,20 +100,10 @@ PDF body method statement (p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fus
 - **p. 8 / VIII. CONCLUSION - extractive body cue:** In future work we wish to address the problem of map scalability beyond whole rooms and also investigate the problem of dense globally consistent SLAM ...
 - **p. 7 / VII. EVALUATION - extractive body cue:** We evaluate our approach on all four trajectories in the living room scene (including synthetic noise) providing surface reconstruction accuracy results in comparison to the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (II. APPROACH OVERVIEW), p. 2 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment), p. 3 (1) Estimate a fused surfel-based model of the environment), objective 본문 anchor 없음, temporal p. 3 (III. FUSED PREDICTED TRACKING), p. 8 (VII. EVALUATION), p. 8 (VII. EVALUATION), p. 1 (Abstract), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

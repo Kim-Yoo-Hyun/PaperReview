@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning vi
 - **p. 5 / 3.5. Instance-Level Temporal State Modeling - extractive body cue:** Formally, our objective is to model a function F that maps an instance's representative feature ¯ek and a given time t to its corresponding dynamic ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.2. Overview), p. 3 (3.2. Overview), p. 5 (3.5. Instance-Level Temporal State Modeling).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning vi
 - **p. 5 / 3.5. Instance-Level Temporal State Modeling - extractive body cue:** Our goal is to model the state changes of a specific instance ok over time, binding its temporal dynamics directly to its identity.
 - **p. 2 / 1. Introduction - extractive body cue:** and timestamp to a unique semantic state feature.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning vi
 - **p. 3 / 3.2. Overview - extractive body cue:** The objective is to achieve spatial instance grounding within the 4D representation, rendering its segmentation masks across all frames during inference. • Time-sensitive referring queries ...
 - **p. 5 / 3.5. Instance-Level Temporal State Modeling - extractive body cue:** (13) This cache, which binds temporal states directly to instance identities, is then used during inference.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** objective, achieve, spatial, instance, grounding, within, representation, rendering, segmentation, masks, across, frames, during, inference, Time-sensitive, referring, queries, Esensitive, target, specified.
 - **Relevant PDF headings:** 3. Method (p. 3); 3.5. Instance-Level Temporal State Modeling (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,22 +106,11 @@ PDF body method statement (p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning vi
 - **p. 7 / 4.2. Results - extractive body cue:** 4DLangSplat often fails to parse complex spatial relations within referring expressions.
 - **p. 8 / 4.2. Results - extractive body cue:** It fails to effectively obtain features representing the temporal state, resulting in a substantial drop in accuracy (51.92% Acc).
 - **p. 8 / 5. Conclusion - extractive body cue:** To tackle this, we proposed ST4RSplat, which incorporates an Instance-Aware 4D Referring Field for robust spatial grounding and an Instance-Level Temporal State Mapping module for ...
-- **p. 4 / Figure/Table caption - extractive body cue:** Figure 1. Overview of the ST4R-Splat framework. It mainly consists of three main components: (I) MLLM-based object captioning for generating decoupled textual supervision, (II) an ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.2. Overview), p. 3 (3.3. Object Captioning via Multimodal Prompting), p. 5 (3.5. Instance-Level Temporal State Modeling), p. 5 (3.5. Instance-Level Temporal State Modeling), objective p. 3 (3.2. Overview), p. 3 (3.2. Overview), p. 5 (3.5. Instance-Level Temporal State Modeling), temporal p. 3 (3.3. Object Captioning via Multimodal Prompting), p. 3 (3.2. Overview), p. 6 (4.1. Setup), p. 6 (4.1. Setup), p. 8 (4.2. Results), p. 8 (4.2. Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

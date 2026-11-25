@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 2 / 1. Introduction - extractive body cue:** LIFT-GS achieves state-of-the-art performance on standard 3D VLG benchmarks, with 25.7% mAP on open-vocabulary instance segmentation (vs.
 - **p. 2 / 1. Introduction - extractive body cue:** More importantly, we observe that across data scales for SFT, pretraining effectively "multiplies" the finetuning dataset by approximately a constant factor (2x).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: LIFT-GS Overview. We train a powerful 3D vision lan- guage grounding model (i.e., 3D mask decoder) with point clouds and language as inputs ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 | Figure 8: Finetunning Data Scaling on Open Vocabulary 3D Instance Segmentation. We show how mAP changes along with increasing Data Ratio from 0.1 to ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | [The] [bookshelf][near] [the] [table] [besides] [the] [wall] 3D Grounding Model 2D VLM Model 2D Grounding Loss 3D Segments Point Cloud Rendered Grounding Figure 1: ... | definition/direction/unit from same section | p. 1 (1. Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 | LIFT-GS shows using SAM, CLIP, and LLMs to generate 2D supervision. • State-of-the-art performance in realistic evaluations. | comparison identity and matched condition | p. 2 (1. Introduction) |
 | Table 1. It significantly outperforms its counterpart trained from scratch (LIFT-GS-Scratch mAP +3.2%). | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | LIFT-GS achieves SOTA results using sensor point clouds common in embodied settings, with detailed ablations revealing scaling properties. | comparison identity and matched condition | p. 2 (1. Introduction) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -120,7 +109,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 
 - Numeric sentences retained from the body:
 - **p. 2 / 1. Introduction - extractive body cue:** More importantly, we observe that across data scales for SFT, pretraining effectively "multiplies" the finetuning dataset by approximately a constant factor (2x).
-- **p. 2 / 1. Introduction - extractive body cue:** More importantly, we observe that across data scales for SFT, pretraining effectively "multiplies" the finetuning dataset by approximately a constant factor (2x).
 
 ## Generalization and Failure Cases
 
@@ -131,8 +119,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 | body limitation/failure cue | Second, this allows us to overcome fundamental scaling limitations by training a large transformer decoder instead of previous dual-encoder approaches (as shown in Fig ... | p. 2 (1. Introduction) |
 | body limitation/failure cue | Figure 3: 3D grounding with CLIP-style (dual-decoder) method. Grounding heatmaps from a representative approach (Guo et al., 2024). Heatmaps are computed using dot product ... | p. 3 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +128,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 | This rendersupervised formulation enables end-to-end training of complete encoder-decoder architectures and is inherently model-agnostic. | p. 1 (Abstract) |
 | Second, this allows us to overcome fundamental scaling limitations by training a large transformer decoder instead of previous dual-encoder approaches (as shown in Fig ... | p. 2 (1. Introduction) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / 1. Introduction - extractive body cue:** From this perspective, the dual-encoder approach falls short of 3D grounding as it contradicts a core grounding requirement.
@@ -158,6 +136,5 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 8 (Figure/Table
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 3: 3D grounding with CLIP-style (dual-decoder) method. Grounding heatmaps from a representative approach (Guo et al., 2024). Heatmaps are computed using dot product similarity ...
 
 - **Evidence anchors reviewed:** datasets p. 1 (1. Introduction), p. 1 (Abstract), p. 2 (1. Introduction), p. 2 (1. Introduction), metrics p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction), baselines p. 8 (Figure/Table caption), p. 15 (Figure/Table caption), p. 1 (Abstract), p. 2 (1. Introduction), p. 7 (Figure/Table caption), p. 2 (1. Introduction), results p. 15 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Abstract), p. 2 (1. Introduction), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

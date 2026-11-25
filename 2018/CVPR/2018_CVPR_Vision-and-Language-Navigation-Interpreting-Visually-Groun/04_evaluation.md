@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 - **p. 7 / 6. Results - extractive body cue:** In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions.
 - **p. 8 / 6. Results - extractive body cue:** The techniques and practices used to optimize performance on existing vision and language datasets are unlikely to be sufficient for models that are expected to ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Room-to-Room (R2R) navigation task. We focus on executing natural language navigation instructions in previously unseen real-world buildings. The agent's camera can be rotated ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 | One of the strengths of the R2R task is that, in contrast to many other vision and language tasks such as image captioning and ... | definition/direction/unit from same section | p. 5 (4.4. Evaluation Protocol) |
 | In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions. | definition/direction/unit from same section | p. 7 (6. Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 | Both methods improve significantly over the RANDOM baseline, as illustrated in Figure 8. | comparison identity and matched condition | p. 8 (6. Results) |
 | In comparison, AMT workers achieve 86.4% success on the test set, illustrating the high quality of the dataset instructions. | comparison identity and matched condition | p. 7 (6. Results) |
 | Figure 3. Example navigation graph for a partial floor of one building-scale scene in the Matterport3D Simulator. Navigable paths between panoramic viewpoints are illustrated ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 |---|---|---|
 | body limitation/failure cue | Nevertheless, people are not infallible when it comes to navigation. | p. 7 (6. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,19 +128,10 @@ PDF body evaluation/result cue (p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. R
 | These buildings contain enormous visual diversity, posing real challenges to computer vision. | p. 3 (3.1. Matterport3D Dataset) |
 | The decoder LSTM operates as h ′ t = LSTMdec (qt, h ′ t-1). | p. 6 (5.1. Sequence-to-Sequence Model) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 6. Results - extractive body cue:** Nevertheless, people are not infallible when it comes to navigation.
 
 - **Evidence anchors reviewed:** datasets p. 3 (3.1. Matterport3D Dataset), p. 3 (3.1. Matterport3D Dataset), p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 5 (4.3. R2R Dataset Analysis), p. 5 (4.3. R2R Dataset Analysis), metrics p. 8 (6. Results), p. 7 (6. Results), p. 8 (6. Results), p. 5 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol), baselines p. 6 (4.4. Evaluation Protocol), p. 8 (6. Results), p. 7 (6. Results), p. 4 (Figure/Table caption), results p. 7 (6. Results), p. 8 (6. Results), p. 7 (6. Results), p. 8 (6. Results), p. 5 (4.4. Evaluation Protocol), p. 6 (4.4. Evaluation Protocol).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

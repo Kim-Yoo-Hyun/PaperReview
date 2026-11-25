@@ -47,7 +47,6 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 - **p. 7 / 2) Implementation Details - extractive body cue:** For GO1, fine-tuning is conducted with a learning rate of 2e-5, a batch size of 768, and 30,000 optimization steps.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -68,7 +67,6 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 - **p. 8 / 2) Implementation Details - extractive body cue:** How does data quality impact policy learning?
 - **p. 1 / I. INTRODUCTION - extractive body cue:** While significant progress has been made in general-purpose foundational models for natural language processing [1] and computer vision [2], robotics lags behind due to the ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 - **p. 7 / 2) Implementation Details - extractive body cue:** For GO1, fine-tuning is conducted with a learning rate of 2e-5, a batch size of 768, and 30,000 optimization steps.
 - **p. 6 / 1) Evaluation Tasks - extractive body cue:** The evaluation metric employs a normalized score, computed as the average across 10 rollouts per task, scenario, and method.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** inclusion, latent, planner, yields, average, improvement, task, completion, score, choose, open-source, RDT, model, study, much, AgiBot, World, dataset, help, policy.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,23 +106,13 @@ PDF body method statement (p. 7 (2) Implementation Details), p. 7 (2) Implementa
 - **p. 7 / 2) Implementation Details - extractive body cue:** For GO1, fine-tuning is conducted with a learning rate of 2e-5, a batch size of 768, and 30,000 optimization steps.
 - **p. 3 / Dataset - extractive body cue:** Notably, to expand data applicability and potential, we include imperfect data (i.e., failure recovery data with annotated error states) and tasks with dexterous hands.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 8 (2) Implementation Details), p. 8 (2) Implementation Details), objective p. 7 (2) Implementation Details), temporal p. 6 (Dataset), p. 2 (I. INTRODUCTION), p. 6 (1) Evaluation Tasks), p. 7 (2) Implementation Details), p. 7 (2) Implementation Details), p. 4 (Dataset).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

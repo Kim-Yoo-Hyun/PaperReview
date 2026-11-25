@@ -41,8 +41,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 10 (5 Experimen
 - **p. 10 / 5 Experiments - extractive body cue:** We conduct our experiments on SG-FRONT dataset [58], which provides scene-graph annotations for the high-quality 3D-FRONT [16] with household environments.
 - **p. 10 / 5 Experiments - extractive body cue:** SG-FRONT contains 15 relationship types and 45K object instances from three types of scenes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: EchoScene Schematic. EchoScene uses a dual-branch diffusion model to generate 3D scenes from scene graphs. In both branches, each node is allocated a ...
@@ -76,8 +74,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 10 (5 Experimen
 | Fig. 4: Comparisons with other generative methods. Input scene graphs have more edges between two nodes than the ones visualized here. Red rectangles highlight ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 | Table 2: Scene graph constraints (higher is better). Top: Relationship change mode. Middle: Node addition mode. Bottom: No manipulation (i.e., generation only). The decrease ... | definition/direction/unit from same section | p. 13 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -86,13 +82,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 10 (5 Experimen
 | Table 4: Ablations under three cir- cumstances. mSG means average graph constraints. observe a marginal decrease, indicating even without ⇡(t), the model still learns ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
 | Fig. 4: Comparisons with other generative methods. Input scene graphs have more edges between two nodes than the ones visualized here. Red rectangles highlight ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | Table 3: Inter-object Consistency. The consistent object shapes within a scene are indicated by low CD values (⇥0.001). Ablation FID FIDCLIP KID mSG Ours ... | comparison identity and matched condition | p. 14 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -123,8 +112,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 10 (5 Experimen
 | body limitation/failure cue | Fig. 3: One Step of Dual-Branch Information Echo. For each time step, we encourage the layout (left) and shape (right) branches to exchange information ... | p. 9 (Figure/Table caption) |
 | body limitation/failure cue | Table 4: Ablations under three cir- cumstances. mSG means average graph constraints. observe a marginal decrease, indicating even without ⇡(t), the model still learns ... | p. 14 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 10 (5 Experimen
 | 3.A.1, in the implementation, we substitute denoising data di t to the diffused bounding box bi t, resulting in VDt 7! | p. 8 (4 Method) |
 | We follow a normal DDPM training routine, in which we set 1000 time steps for all diffusion processes with weight-shared γ✓. | p. 8 (4 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / Figure/Table caption - extractive body cue:** Fig. 2: Overview of EchoScene. Our pipeline consists of graph preprocessing and two collaborative branches Layout Branch and Shape Branch. The details of two branches ...
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 12 (Figure/Table caption), p. 10 (5 Experimen
 - **p. 14 / Figure/Table caption - extractive body cue:** Table 4: Ablations under three cir- cumstances. mSG means average graph constraints. observe a marginal decrease, indicating even without ⇡(t), the model still learns temporal ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (5 Experiments), p. 10 (5 Experiments), metrics p. 10 (5 Experiments), p. 11 (Figure/Table caption), p. 10 (5 Experiments), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 13 (Figure/Table caption), p. 14 (Figure/Table caption), p. 12 (Figure/Table caption), p. 14 (Figure/Table caption), results p. 12 (Figure/Table caption), p. 10 (5 Experiments), p. 11 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -65,8 +65,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 5 (3 Methodology), p. 2
 | body cue at p. 10 | In this setting, every <dream> query, including the one meant to capture semantics, can also read the flow ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 23 | The model does not utilize past action context during generation (i.e., past window size is 0), focusing solely ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1 Introduction), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 3 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 2 (1 Introduction), p. 4 (3 Methodology), p. 4 (3 Methodology), p. 3 (1 Introduction), objective p. 6 (3 Methodology), p. 6 (3 Methodology), p. 7 (3 Methodology), p. 23 (A.1 DreamVLA Architecture), p. 24 (A.3 Training Detail), p. 24 (A.2 Feature Extraction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

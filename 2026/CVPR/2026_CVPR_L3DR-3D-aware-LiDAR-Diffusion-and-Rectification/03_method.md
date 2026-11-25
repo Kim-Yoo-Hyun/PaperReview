@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (4.3. Residual Regression Training), p. 4 (4.2. 
 - **원문 대조:** RRN loss는 보정 point cloud를 range view로 투영한 값과 ground truth의 residual에 Welsch 함수 ψ_ν를 적용해 평균한다. 큰 bias residual의 영향을 줄이기 위한 robust loss이며 단순 L2로 치환하지 않는다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=5), §4.3 Residual Regression Training, Eqs. (5)–(6)).
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4.1. Range View Projection), p. 4 (4. Method), p. 5 (4.3. Residual Regression Training), p. 5 (4.3. Residual Regression Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (4.3. Residual Regression Training), p. 4 (4.2. 
 - **p. 6 / 4.4. Diffusion-agnostic Inference - extractive body cue:** For the semantic-conditioned experiments, RRN takes segmentation map as additional input for optimal performance.
 - **p. 2 / 1. Introduction - extractive body cue:** However, although RV enables DM-based point cloud generation by projecting 3D point clouds to 2D images, it hinders accurate discernment of sparsity and selfocclusion in ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (4.3. Residual Regression Training), p. 4 (4.2. 
 - **p. 6 / 4.4. Diffusion-agnostic Inference - extractive body cue:** Specifically, during inference, we generate novel x′ gen with arbitrary LiDAR diffusion model, project RV into a point cloud P ′ gen = RRVP(x′ gen), ...
 - **p. 6 / 5.2. Experiment Setup - extractive body cue:** All networks are trained with 4× RTX 4090 24G up to 150 epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** After, obtaining, model, output, Welsch, Loss, remove, effect, erratic, high-bias, areas, training, data, focus, rectifying, highvariance, artifacts, Specifically, image, first.
 - **Relevant PDF headings:** 2.1. Diffusion Models (p. 2); 4. Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 5 (4.3. Residual Regression Training), p. 4 (4.2. 
 - **p. 7 / 5.3. Other Results - extractive body cue:** We ablate various components of the L3DR framework, including the backbone architecture between SPUNET [7] and PTV3 [46], loss choice, the usage of semantic-map input ...
 - **p. 3 / 3.2. Theoretical Analysis - extractive body cue:** As a result of Lipschitz continuity throughout the DDIM sampling process, the generated image in theory cannot exhibit arbitrarily sharp spatial transitions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training), p. 4 (4. Method), p. 5 (4.3. Residual Regression Training), p. 6 (4.4. Diffusion-agnostic Inference), objective p. 4 (4.1. Range View Projection), p. 4 (4. Method), p. 5 (4.3. Residual Regression Training), p. 5 (4.3. Residual Regression Training), temporal p. 4 (4.1. Range View Projection), p. 5 (4.2. LiDAR Diffusion Training), p. 5 (4.2. LiDAR Diffusion Training), p. 7 (5.2. Experiment Setup), p. 7 (5.3. Other Results), p. 8 (5.3. Other Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

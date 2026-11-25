@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide
 | body cue at p. 15 | In sequence 08 there are no loops and drift cannot be corrected, which makes clear the need of ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | The big loop on the right does not perfectly align because it was traversed in opposite directions and ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (III. SYSTEM OVERVIEW), p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 4 (III. SYSTEM OVERVIEW), p. 5 (III. SYSTEM OVERVIEW). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 4 (III. SYSTEM OVERVIEW), p. 1 (Body text (section not recovered)), p. 3 (B UNDLE ADJUSTMENT (BA) is known to provide ac), interface p. 6 (III. SYSTEM OVERVIEW), p. 2 (B UNDLE ADJUSTMENT (BA) is known to provide ac), p. 4 (III. SYSTEM OVERVIEW), p. 5 (III. SYSTEM OVERVIEW), objective p. 5 (III. SYSTEM OVERVIEW), p. 6 (III. SYSTEM OVERVIEW), p. 8 (VI. LOCAL MAPPING), p. 6 (III. SYSTEM OVERVIEW), p. 8 (VI. LOCAL MAPPING).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (5. Neural Implicit Feature Distillation and Sur
 - **p. 3 / 3. Empirical Study on General Visual Features - extractive body cue:** While existing methods have explored the use of ground-truth multi-view consistent instance-level annotations [17, 20, 36, 37], these approaches suffer from high annotation costs and ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (4. Overview), p. 5 (5. Neural Implicit Feature Distillation and Sur), p. 5 (5. Neural Implicit Feature Distillation and Sur), p. 6 (5. Neural Implicit Feature Distillation and Sur), p. 6 (5. Neural Implicit Feature Distillation and Sur).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (5. Neural Implicit Feature Distillation and Sur
 - **p. 6 / 6. Interactive Decomposition - extractive body cue:** Thus, we introduce human annotations to identify each object and aim to minimize human interactions.
 - **p. 6 / 6. Interactive Decomposition - extractive body cue:** The following details how we realize object decomposition based on a designed mesh-based region-growing method with human interactions using our designed method.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (5. Neural Implicit Feature Distillation and Sur
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Then, volume, rendering, formula, obtain, outputs, target, pixel, where, represent, predicted, color, normal, depth, semantic, logits, generalized, feature, Additionally, loss.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 4 (5. Neural Implicit Feature Distillation and Sur
 - **p. 7 / 7.1. Experiment Setup - extractive body cue:** Since this type of method does not introduce geometric constraints, we mainly compare the way of decomposition.
 - **p. 7 / 7.1. Experiment Setup - extractive body cue:** To further demonstrate the robustness of our method, we also use the ScanNet [6] as the real-world dataset which provides 1513 scenes.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (5. Neural Implicit Feature Distillation and Sur), p. 5 (5. Neural Implicit Feature Distillation and Sur), p. 4 (4. Overview), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 5 (5. Neural Implicit Feature Distillation and Sur), objective p. 2 (1. Introduction), p. 4 (4. Overview), p. 5 (5. Neural Implicit Feature Distillation and Sur), p. 5 (5. Neural Implicit Feature Distillation and Sur), p. 6 (5. Neural Implicit Feature Distillation and Sur), p. 3 (3. Empirical Study on General Visual Features), temporal p. 1 (Abstract), p. 2 (2. Related Work), p. 2 (1. Introduction), p. 6 (5. Neural Implicit Feature Distillation and Sur), p. 8 (8. Conclusion).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

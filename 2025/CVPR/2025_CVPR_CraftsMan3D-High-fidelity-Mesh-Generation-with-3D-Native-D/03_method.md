@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3.2. Multi-view guided 3D generation model), p.
 - **p. 6 / 3.3. Normal-based Geometry Refinement - extractive body cue:** Then in every optimization step, we regularize the deformation process by x \ gets x + \lambda v (\mathbf {W} V-V^\mathbf {W}_{init}), (6) Table 1.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3.3. Normal-based Geometry Refinement), p. 5 (3.3. Normal-based Geometry Refinement).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3.2. Multi-view guided 3D generation model), p.
 - **p. 6 / 3.3. Normal-based Geometry Refinement - extractive body cue:** Normal maps enhanced by stable diffusion contain low-frequency changes from original normal map(shown in red in (a)), which will result in global distortion of input ...
 - **p. 2 / 1. Introduction - extractive body cue:** Built on the 3D data, we present a two-stage generative 3D native generation system, coined CraftsMan, which takes as input single images as reference or ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,11 @@ PDF body method statement (p. 4 (3.2. Multi-view guided 3D generation model), p.
 - **p. 5 / 3.2. Multi-view guided 3D generation model - extractive body cue:** (a.) We first train a 3D Variational Autoencoder (VAE) to compress 3D shape into a latent space, which takes point clouds with normals as input ...
 - **p. 3 / 3. Method - extractive body cue:** Following this, we train a Variational Auto-Encoder (VAE) on the watertight meshes to learn latent set-based representations[61] and output a TSDF field.
 - **p. 3 / 3. Method - extractive body cue:** Next, we train a dedicated DiT-based denoising network that operates on these learned latent representations, using the intermediate multi-view image as conditioning (Sec.3.2).
-- **p. 3 / 3. Method - extractive body cue:** Following this, we train a Variational Auto-Encoder (VAE) on the watertight meshes to learn latent set-based representations[61] and output a TSDF field.
-- **p. 4 / 3.2. Multi-view guided 3D generation model - extractive body cue:** The encoder is trained to map points Pc and Pn into a latent vector set Z, which a decoder then translates into an implicit field ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** encoder, trained, points, latent, vector, decoder, then, translates, implicit, field, representation, first, train, Variational, Autoencoder, VAE, compress, shape, space, takes.
 - **Relevant PDF headings:** 2.2. 3D Native Generative Models (p. 3); 3. Method (p. 3); 3.2. Multi-view guided 3D generation model (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +116,10 @@ PDF body method statement (p. 4 (3.2. Multi-view guided 3D generation model), p.
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 2. Quantitative comparison on subset which contained self- occlusion in the input images. Our 3D generative model demon- strated a significant performance.
 - **p. 7 / 4.2. Evaluation of Mesh Generation - extractive body cue:** We notice that the distribution of the GSO dataset is kind of monotonous,lacking mesh with complex structures and self occlusion, which is exactly where our ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Multi-view guided 3D generation model), p. 5 (3.2. Multi-view guided 3D generation model), p. 4 (3.1. Data Preprocessing), p. 5 (3.3. Normal-based Geometry Refinement), p. 3 (3. Method), p. 3 (3. Method), objective p. 5 (3.3. Normal-based Geometry Refinement), p. 3 (3. Method), p. 4 (3.1. Data Preprocessing), p. 5 (3.2. Multi-view guided 3D generation model), p. 6 (3.3. Normal-based Geometry Refinement), p. 6 (3.3. Normal-based Geometry Refinement), temporal p. 5 (3.2. Multi-view guided 3D generation model), p. 3 (3. Method), p. 3 (3. Method), p. 5 (3.3. Normal-based Geometry Refinement), p. 6 (4. Experiments), p. 6 (4. Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

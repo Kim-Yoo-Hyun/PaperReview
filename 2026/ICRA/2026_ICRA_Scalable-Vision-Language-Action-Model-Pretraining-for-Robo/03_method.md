@@ -53,7 +53,6 @@ PDF body method statement (p. 25 (A.2.2 Diffusion Action Expert), p. 25 (A.4 Inf
 - **p. 26 / A.5.2 Hand Pose Retargeting - extractive body cue:** Notably, only the lateral-swing degrees of freedom (i.e., abduction and adduction) of the thumb and index finger are updated based on this optimization, while their ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 25 (A.3 Training Details), p. 26 (A.5.2 Hand Pose Retargeting), p. 26 (A.5.2 Hand Pose Retargeting).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 25 (A.2.2 Diffusion Action Expert), p. 25 (A.4 Inf
 - **p. 2 / 1 Introduction - extractive body cue:** These videos are typically unstructured: they come unscripted and unsegmented, vary in length and task granularity, contain noisy and irrelevant actions, and lack language instruction ...
 - **p. 4 / 1 Introduction - extractive body cue:** Recently, video-input VLMs [18, 20] with broad action understanding capabilities are proposed but they still face challenges in action localization accuracy.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -90,13 +88,10 @@ PDF body method statement (p. 25 (A.2.2 Diffusion Action Expert), p. 25 (A.4 Inf
 - **p. 24 / A.1 Hand V-L-A Data Construction - extractive body cue:** In our initial exploration, we found that replacing these depth modules with direct outputs from MoGe-2 yields more accurate and stable results, while significantly improving ...
 - **p. 8 / 5 Experiments - extractive body cue:** For fine-tuning on real robot data, we optimize the model for 20K steps with a batch size of 256 and a learning rate of 1e-5, ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** cognition, feature, hand, state, noisy, action, chunk, first, projected, MLP, subsequently, processed, through, causal, self-attention, layer, Predicted, end-effector, actions, camera.
 - **Relevant PDF headings:** A.2 Model Architecture (p. 24).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 25 (A.2.2 Diffusion Action Expert), p. 25 (A.4 Inf
 - **p. 11 / 5 Experiments - extractive body cue:** 5.2.2 Performance Analysis Comparison of Pretraining Data We first compare the performance of models trained with different pretraining datasets to validate the effectiveness of our ...
 - **p. 12 / 5 Experiments - extractive body cue:** To improve efficiency, this ablation study is conducted on a subset of 350K episodes from Ego4D.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 25 (A.2.2 Diffusion Action Expert), p. 25 (A.4 Inference Details), p. 24 (A.1 Hand V-L-A Data Construction), p. 24 (A.1 Hand V-L-A Data Construction), p. 26 (A.5.2 Hand Pose Retargeting), p. 26 (A.5.2 Hand Pose Retargeting), objective p. 26 (A.5.2 Hand Pose Retargeting), p. 25 (A.3 Training Details), p. 25 (A.3 Training Details), p. 26 (A.5.2 Hand Pose Retargeting), temporal p. 4 (1 Introduction), p. 7 (1 Introduction), p. 9 (5 Experiments), p. 12 (5 Experiments), p. 12 (5 Experiments), p. 15 (5 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

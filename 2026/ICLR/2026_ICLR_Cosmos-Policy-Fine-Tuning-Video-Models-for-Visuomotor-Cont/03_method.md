@@ -56,7 +56,6 @@ PDF body method statement (p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 21 (A.4.2 C
 - **p. 16 / A.2.1 COSMOS POLICY NOISE DISTRIBUTION - extractive body cue:** We find this empirically improves action prediction accuracy and overall success rate.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 17 (A.2.4 ALOHA TRAINING DETAILS), p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), p. 22 (A.4.2 COSMOS POLICY INFERENCE LATENCY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 21 (A.4.2 C
 - **p. 6 / 3 PRELIMINARIES - extractive body cue:** Cosmos Policy can successfully execute real-world robotic control tasks that require long-horizon, high-precision manipulation and have high action multimodality. while the latter two outputs can ...
 - **p. 6 / 3 PRELIMINARIES - extractive body cue:** 4.3 PLANNING WITH COSMOS POLICY'S WORLD MODEL AND VALUE FUNCTION Cosmos Policy can be deployed as (1) a direct policy without planning or (2) a ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 21 (A.4.2 C
 - **p. 17 / A.2.4 ALOHA TRAINING DETAILS - extractive body cue:** Finally, for the significantly smaller Diffusion Policy, which only contains approximately 150M parameters (as opposed to 2-7B for the other methods), we train from scratch ...
 - **p. 22 / A.4.2 COSMOS POLICY INFERENCE LATENCY - extractive body cue:** Each version of the policy is trained with the exact same training hyperparameters and compute as the original Cosmos Policy in RoboCasa, and evaluated across ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Note, single-step, training, losses, given, varying, noise, levels, input, rather, generations, multi-step, diffusion, sampling, during, policy, inference, magnitudes, imply, model.
 - **Relevant PDF headings:** A.2.1 COSMOS POLICY NOISE DISTRIBUTION (p. 15); A.3.1 GENERAL COSMOS POLICY EVALUATION DETAILS (p. 17); A.4.2 COSMOS POLICY INFERENCE LATENCY (p. 21).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 21 (A.4.2 C
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** We answer Q1 by comparing Cosmos Policy as a direct policy (without planning) with state-of-the-art imitation learning policies and assessing their relative effectiveness.
 - **p. 8 / 5 EXPERIMENTS - extractive body cue:** We answer Q2 by ablating various components of Cosmos Policy and analyzing the resulting effects on task performance.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 21 (A.4.2 COSMOS POLICY INFERENCE LATENCY), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), p. 15 (A.1 LATENT INJECTION IMPLEMENTATION DETAILS), objective p. 17 (A.2.2 LIBERO TRAINING DETAILS), p. 17 (A.2.4 ALOHA TRAINING DETAILS), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), p. 22 (A.4.2 COSMOS POLICY INFERENCE LATENCY), p. 15 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), p. 16 (A.2.1 COSMOS POLICY NOISE DISTRIBUTION), temporal p. 3 (3 PRELIMINARIES), p. 7 (5 EXPERIMENTS), p. 7 (5 EXPERIMENTS), p. 15 (A.1 LATENT INJECTION IMPLEMENTATION DETAILS), p. 3 (3 PRELIMINARIES), p. 5 (3 PRELIMINARIES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

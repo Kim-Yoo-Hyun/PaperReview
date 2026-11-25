@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 9 (5 Experiment
 - **p. 14 / C Implementation Details - extractive body cue:** We examine dataset diversity using three 45k-sample sets: 100% scenes and objects, 100% scenes with 30% objects, and 30% scenes with 100% objects.
 - **p. 6 / 4 Dataset - extractive body cue:** We then directed the robot to execute task sequences within the simulator, recording key information at each step.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: OWMM-Agent Operates Fetch Robot for Tidying Task. OWMM-Agent receives natural language instructions and leverages both long-term environment memory (scene images) and transient robot ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 9 (5 Experiment
 | While the baseline model demonstrated relatively strong affordance grounding capabilities for objects, its poor performance in action decisionmaking led to incorrect navigation. | definition/direction/unit from same section | p. 9 (5 Experiments) |
 | OWMM-VLM-38B model achieved the best performance, and OWMM-VLM-8B model also outperformed the baseline. | definition/direction/unit from same section | p. 9 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 9 (5 Experiment
 | Our model excels in decision-making, achieving state-of-the-art results in image retrieval and affordance grounding. | comparison identity and matched condition | p. 8 (5 Experiments) |
 | This advantage directly translates into higher overall accuracy compared to methods that employ GPT-4o as the agent. | comparison identity and matched condition | p. 8 (5 Experiments) |
 | While the baseline model demonstrated relatively strong affordance grounding capabilities for objects, its poor performance in action decisionmaking led to incorrect navigation. | comparison identity and matched condition | p. 9 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 9 (5 Experiment
 | body limitation/failure cue | For safety reasons, we cannot allow the agent to fully operate the fetch robot in the real world. | p. 8 (5 Experiments) |
 | body limitation/failure cue | This division resulted in a total of 152k training data entries and 4k testing data entries, establishing a robust dataset for training and testing ... | p. 14 (C Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 9 (5 Experiment
 | To establish appropriate thresholds, we first calculated the 3D bounding box diagonal distances of all goal receptacles in the test set, filtering out those ... | p. 16 (C Implementation Details) |
 | The model's output represents a high-level action At spanning several simulation steps, while planners resolve trajectories and low-level actions at for each step. | p. 5 (3 Methodology) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 6 Conclusion - extractive body cue:** Episodic evaluations in simulated environments further confirmed the OWMM-Agent's superior success rates and robustness against common failure modes like dead loops, while real-world tests on ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 15 (Figure/Table caption), p. 9 (5 Experiment
 - **p. 14 / C Implementation Details - extractive body cue:** This division resulted in a total of 152k training data entries and 4k testing data entries, establishing a robust dataset for training and testing in ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 Dataset), p. 13 (C Implementation Details), p. 7 (4 Dataset), p. 8 (5 Experiments), p. 13 (C Implementation Details), p. 14 (C Implementation Details), metrics p. 7 (5 Experiments), p. 15 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), baselines p. 9 (5 Experiments), p. 17 (C Implementation Details), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), results p. 15 (Figure/Table caption), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 7 (Figure/Table caption), p. 8 (5 Experiments), p. 8 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

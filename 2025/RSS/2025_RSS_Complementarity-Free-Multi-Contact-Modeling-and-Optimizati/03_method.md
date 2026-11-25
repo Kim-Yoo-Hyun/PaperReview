@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. R
 - **p. 3 / A. Optimization-based Quasi-Dynamic Contact Model - extractive body cue:** The time-stepping equation of the quasi-dynamic model is
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 3 (B. Planning and Control with Contact Dynamics), p. 4 (A. Duality of Optimization-based Contact Model), p. 4 (A. Duality of Optimization-based Contact Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. R
 - **p. 3 / C. Reinforcement Learning for Dexterous Manipulation - extractive body cue:** Our proposed method aims to bridge this gap and even surpass state-of-the-art RL in suecess rate and manipulation accuracy.
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** Wanxin Jin.
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. R
 - **p. 10 / B. MPC Setting and Results - extractive body cue:** Final errors are computed using the last 20 rollout steps in succesful ils,
 - **p. 9 / B. MPC Setting and Results - extractive body cue:** both calculated using the last 20 steps of a MPC rollout.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, closed-form, contact, constraint, resolution, model, builds, optimization-based, dynamics, instead, solving, primal, dual, programs, approximate, complementarity, constraints, space, explicit, form.
 - **Relevant PDF headings:** A. Rigid Body Multi-contact Models (p. 2); A. Optimization-based Quasi-Dynamic Contact Model (p. 3); IV. COMPLEMENTARITY-FREE MULTI-CONTACT MODEL (p. 4); A. Duality of Optimization-based Contact Model (p. 4); B. New Complementarty-Free Multi-Contact Model (p. 5); C. Physical Interpretation of the New Model (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. R
 - **p. 9 / A. Environment and Task Setup - extractive body cue:** The fingertips must coordinate to prevent the object from falling while moving it to the target.
 - **p. 10 / B. MPC Setting and Results - extractive body cue:** Fil postion Vial quaeiion MPC soe Succes ust prevent the object from falling while moving it to 8% Shor 8) ere 8) ng time te ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 5 (B. New Complementarty-Free Multi-Contact Model), p. 5 (C. Physical Interpretation of the New Model), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), objective p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), p. 4 (A. Duality of Optimization-based Contact Model), p. 2 (A. Rigid Body Multi-contact Models), p. 3 (A. Optimization-based Quasi-Dynamic Contact Model), temporal p. 4 (A. Optimization-based Quasi-Dynamic Contact Model), p. 6 (V. COMPLEMENTARITY-FREE CONTACT-IMPLICIT MPC), p. 1 (Abstract), p. 2 (A. Rigid Body Multi-contact Models), p. 2 (A. Rigid Body Multi-contact Models), p. 5 (C. Physical Interpretation of the New Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

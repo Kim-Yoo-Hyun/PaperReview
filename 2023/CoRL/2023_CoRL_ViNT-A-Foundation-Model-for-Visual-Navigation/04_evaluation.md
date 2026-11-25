@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 18 / B.2 Subgoal Diffusion - extractive body cue:** [49], we use the unweighted training objective, called Lsimple in Ho et al.
 - **p. 21 / B.4 Fine-tuning ViNT - extractive body cue:** Once we have a future goal coordinate for self-supervision, we convert to local coordinates and pass into our architecture, finetuning with the same objective as ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Overview of the ViNT foundation model. ViNT generalizes zero-shot across environments and robot embodiments, and can be directly applied to tasks including exploration ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | For our experiments, we considered three heuristics to demonstrate the flexibility of our approach: • Coverage exploration: We have no long-horizon guidance for coverage ... | definition/direction/unit from same section | p. 19 (B.3 Long-Horizon Physical Search via Topological Graphs) |
 | Table 2: ViNT can effectively utilize goal-directed heuristics, such as 2D goal positions and satellite images, to explore novel kilometer-scale environments successfully and without ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | Figure 7: Satellite-guided physical search with ViNT. We visualize a 765m rollout of ViNT with a satellite image-based heuristic from start (orange) to goal ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Figure 11: Robustness to dynamic pedestrians. ViNT can successfully navigate around a crowd of dynamic pedestrians and reach the goal behind them, despite its ... | comparison identity and matched condition | p. 11 (Figure/Table caption) |
 | In all CARLA fine-tuning experiments, on-task data was collected using a rule-based oracle agent, with start and end locations sampled randomly up to 900 ... | comparison identity and matched condition | p. 20 (B.4 Fine-tuning ViNT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | body limitation/failure cue | Figure 9: Samples from the diffusion model may be invalid subgoals, but ViNT is robust to such proposals. Implicit navigation affor- dances: Ideally, we ... | p. 10 (Figure/Table caption) |
 | body limitation/failure cue | Head Dim 8 Channels (128, 128, 256, 512, 640) Diffusion Type continuous time Noise Schedule linear Hyperparameter Value Diffusion Training Dropout 0.1 Batch Size ... | p. 19 (B.2 Subgoal Diffusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 | See Table 6 for a detailed list of hyperparameters for training the ViNT foundation model.2 | p. 18 (B.1 Training ViNT) |
 | Right: command-adaptation architecture, using latent zi selected by command label index i. • Architecture: To adapt to GPS-style goals, we cut off the goal ... | p. 21 (B.4 Fine-tuning ViNT) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / 7 Discussion - extractive body cue:** Limitations and Future Work As with many large-scale models, ViNT carries a heavier computational burden at inference time, which can present a challenge for power-constrained ...
@@ -169,9 +148,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 9 (Figure/Table 
 - **p. 19 / B.2 Subgoal Diffusion - extractive body cue:** Head Dim 8 Channels (128, 128, 256, 512, 640) Diffusion Type continuous time Noise Schedule linear Hyperparameter Value Diffusion Training Dropout 0.1 Batch Size 128 ...
 
 - **Evidence anchors reviewed:** datasets p. 20 (B.4 Fine-tuning ViNT), p. 21 (B.4 Fine-tuning ViNT), p. 20 (B.4 Fine-tuning ViNT), p. 18 (B.2 Subgoal Diffusion), p. 21 (B.4 Fine-tuning ViNT), metrics p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 17 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 25 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 11 (Figure/Table caption), p. 20 (B.4 Fine-tuning ViNT), results p. 6 (Figure/Table caption), p. 9 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

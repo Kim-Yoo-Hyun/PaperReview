@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 - **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** To incorporate explicit action trajectories into the thinking process of πθ to generate high-quality action predictions, we propose the Explicit Action Reasoner (EAR).
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 - **p. 3 / 3. Methodology - extractive body cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
 - **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** 2 (a), generating kinematically plausible action reference as explicit action-space guidance gex action for downstream action policy.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 - **p. 6 / 4.2. Simulation Experiments - extractive body cue:** For each task, the policy is evaluated over 50 trials, amounting to 2, 000 total rollouts.
 - **p. 7 / 4.2. Simulation Experiments - extractive body cue:** All models are trained for 60K steps. † indicates that the LLM backbone is frozen during training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Building, upon, explicit, action, embedding, Zex, produced, EAR, implicit, action-related, feature, Zim, obtained, IAR, section, introduce, Action-Guided, Prediction, AGP, strategy.
 - **Relevant PDF headings:** 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 - **p. 8 / 4.3. Ablation Study - extractive body cue:** As shown in Table 6, all three variants outperform the baseline, indicating that extracting implicit action cues from VLM benefits policy learning.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** Supervised Fine-Tuning denotes models trained on the LIBERO-Plus training set.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Implicit Action Reasoner), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 3 (3. Methodology), objective p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 4 (3.2. Explicit Action Reasoner), temporal p. 4 (3.2. Explicit Action Reasoner), p. 4 (3.2. Explicit Action Reasoner), p. 7 (4.2. Simulation Experiments), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (4.1. Experimental Setup).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

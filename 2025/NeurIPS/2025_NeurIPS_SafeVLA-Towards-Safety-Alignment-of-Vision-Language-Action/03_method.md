@@ -56,7 +56,6 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 - **p. 33 / C.3 Model Selection - extractive body cue:** 3) Sim-to-Real Compatibility: SPOC's sim-to-real capability, as evidenced by its 56% real-world success rate (Table 9 in SPOC), can facilitate the generalization of our safety ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 31 (C.1 Details of SafeRL Training), p. 32 (C.1 Details of SafeRL Training), p. 32 (C.1 Details of SafeRL Training), p. 31 (C.1 Details of SafeRL Training), p. 33 (C.3 Model Selection).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 - **p. 2 / 1 Introduction - extractive body cue:** Our proposed pipeline employs multifaceted framework for the systematic safety alignment of vision-language-action (VLA) models. challenges posed by the complex and unpredictable physical world [27].
 - **p. 2 / 1 Introduction - extractive body cue:** By incorporating large-scale procedurally generated scenes and specifically targeting safety critical components, Safety-CHORES more effectively surfaces VLA vulnerabilities than conventional benchmarks. • Empirical Validation and ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** At iteration k, the policy parameter θk is adjusted by a gradient step on the combined objective LR -λkLC, scaled by a learning rate η ...
 - **p. 7 / 5 Experiments - extractive body cue:** For simpler tasks like Safety-ObjNav and Safety-PickUp, we train for 15 million steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Action, Decoder, causal, transformer, step, context, windows, predicts, discrete, actions, attending, historical, observations, AllenAct, OmniSafe, training, framework, Visual, Encoder, goal-conditioned.
 - **Relevant PDF headings:** B.3 Automatic Trajectory Analysis by Large Language Models (p. 27); B.7 ISA with Alternative SafeRL Algorithms (p. 30); B.9 The Integrated Safety Approach (ISA) Pipeline (p. 30); C.3 Model Selection (p. 32).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +118,10 @@ PDF body method statement (p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selecti
 - **p. 9 / 5 Experiments - extractive body cue:** Middle: Ablation on cost thresholds bi.
 - **p. 32 / C.1 Details of SafeRL Training - extractive body cue:** The JC(θk) measures the expected constraint violation under policy πθk, and α is a dual step-size controlling the sensitivity to constraint violations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selection), p. 32 (C.3 Model Selection), p. 33 (C.3 Model Selection), p. 31 (C.1 Details of SafeRL Training), p. 31 (C.1 Details of SafeRL Training), objective p. 32 (C.1 Details of SafeRL Training), p. 31 (C.1 Details of SafeRL Training), p. 31 (C.1 Details of SafeRL Training), p. 32 (C.1 Details of SafeRL Training), p. 33 (C.3 Model Selection), temporal p. 32 (C.1 Details of SafeRL Training), p. 33 (C.3 Model Selection), p. 31 (C.1 Details of SafeRL Training), p. 31 (C.1 Details of SafeRL Training), p. 32 (C.1 Details of SafeRL Training), p. 35 (C.4 Experimental Environment and Costs).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -60,8 +60,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 8 (Method), p. 2 (1 Int
 | body cue at p. 7 | RL-VMC with end-to-end visuomotor control completely fails to solve any of the activities, whereas RL-Prim. and RL-Prim.Hist. with ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | Furthermore, to accelerate training, the action primitives check only the feasibility (e.g., reachability, collisions) of the final configuration, ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 benchmark writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -69,7 +67,5 @@ benchmark writing domain maps to observation -> state/world model -> task and mo
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 7 (Method), p. 7 (Method), p. 8 (Method), p. 2 (1 Introduction), objective p. 7 (Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 - **p. 5 / 4.2.1. Experiment Setup - extractive body cue:** Our experimental benchmark comprises six manipulation tasks (4 short-horizon tasks, 2 long-horizon tasks) designed to evaluate the model's ability to handle varying task complexities.
 - **p. 7 / 4.2.4. Sim&Real Domain Gap Analysis - extractive body cue:** The model was tested in three real-world tasks (one long-horizon and two short-horizon tasks), and the results are shown in Tab.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1. The VQ-VLA pipeline, consisting of two main stages: (1) training a general convolutional residual VQ-VAE and (2) fine-tuning OpenVLA using the LoRA approach. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 | 6, the model with embeddings significantly outperforms the baseline in terms of success rate. | definition/direction/unit from same section | p. 8 (4.3.2. Embedding Integration Effectiveness) |
 | The table compares models with and without embeddings across three tasks, showing that embeddings enhance success rates, especially for "Flip the pot upright." | definition/direction/unit from same section | p. 8 (4.3.2. Embedding Integration Effectiveness) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 | In terms of the average success rate, all VQ-based models outperform the Baseline. | comparison identity and matched condition | p. 7 (4.2.3. Performance on Long-Horizon Tasks) |
 | 6, the model with embeddings significantly outperforms the baseline in terms of success rate. | comparison identity and matched condition | p. 8 (4.3.2. Embedding Integration Effectiveness) |
 | 5, indicate that the use of the autoregressive approach for action chunking in the original OpenVLA leads to a significant drop in success rate ... | comparison identity and matched condition | p. 8 (4.3.1. Action Chunking via VQ-VAE and Autoregressive) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 | body limitation/failure cue | Although real-world data may contain noise, the inclusion of Open X-Embodiment data as a real-world dataset expands the data sources and enriches the diversity ... | p. 7 (4.2.4. Sim&Real Domain Gap Analysis) |
 | body limitation/failure cue | In contrast, the VQO+L+M model successfully opened the drawer in all test cases, demonstrating its robustness and reliability in handling complex sequential tasks. | p. 6 (4.2.3. Performance on Long-Horizon Tasks) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 | For the "Put the toy into the drawer" task, a representative longhorizon scenario, the baseline model was only able to complete the first step ... | p. 6 (4.2.3. Performance on Long-Horizon Tasks) |
 | This demonstrates that the integration of embeddings improves the encoder's ability to represent structured action sequences, leading to better overall performance. | p. 8 (4.3.2. Embedding Integration Effectiveness) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5. Limitations and Future Works - extractive body cue:** Despite these promising results, there still remain some limitations and opportunities for future work.
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 5 (4.1.2. Effectiveness of Conv Residual VQ-V
 - **p. 6 / 4.2.3. Performance on Long-Horizon Tasks - extractive body cue:** In contrast, the VQO+L+M model successfully opened the drawer in all test cases, demonstrating its robustness and reliability in handling complex sequential tasks.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.2.1. Experiment Setup), p. 4 (4.1.1. Experiment Setup), p. 7 (4.2.4. Sim&Real Domain Gap Analysis), p. 4 (4.1.1. Experiment Setup), p. 5 (4.2.1. Experiment Setup), p. 6 (4.2.1. Experiment Setup), metrics p. 6 (4.2.2. Performance on Short-Horizon Tasks), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 7 (4.2.3. Performance on Long-Horizon Tasks), baselines p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.3. Scaling Data Improves VQ-VAE Action Tokenizer), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 7 (4.2.3. Performance on Long-Horizon Tasks), p. 8 (4.3.2. Embedding Integration Effectiveness), p. 8 (4.3.1. Action Chunking via VQ-VAE and Autoregressive), results p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 7 (Figure/Table caption), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 5 (4.1.2. Effectiveness of Conv Residual VQ-VAE), p. 6 (4.2.3. Performance on Long-Horizon Tasks), p. 8 (4.3.2. Embedding Integration Effectiveness).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

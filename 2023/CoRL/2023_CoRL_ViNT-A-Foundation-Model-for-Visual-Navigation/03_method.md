@@ -56,7 +56,6 @@ PDF body method statement (p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Dif
 - **p. 20 / B.4 Fine-tuning ViNT - extractive body cue:** Image Fine-tuning: • Architecture: We utilize the exact same architecture as ViNT with no changes. • Training: For fine-tuning the image-goal directed model, we utilize ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 18 (B.2 Subgoal Diffusion), p. 20 (B.3 Long-Horizon Physical Search via Topological Graphs), p. 21 (B.4 Fine-tuning ViNT), p. 19 (B.2 Subgoal Diffusion).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Dif
 - **p. 2 / 1 Introduction - extractive body cue:** Such a model should provide a broadly capable navigation policy on top of which applications to specific domains can be constructed, giving a base level ...
 - **p. 21 / B.4 Fine-tuning ViNT - extractive body cue:** We then pass this into a 2-layer MLP which outputs the prediction of the final token for the transformer.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Dif
 - **p. 20 / B.3 Long-Horizon Physical Search via Topological Graphs - extractive body cue:** We train a convolutional neural network on the overhead image to predict the probability that the subgoal s is included on a trajectory from ot ...
 - **p. 20 / B.4 Fine-tuning ViNT - extractive body cue:** Image Fine-tuning: • Architecture: We utilize the exact same architecture as ViNT with no changes. • Training: For fine-tuning the image-goal directed model, we utilize ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** produce, training, pairs, diffusion, model, first, select, uniformly, random, data, then, fall, between, timesteps, future, unweighted, objective, called, Lsimple, architecture.
 - **Relevant PDF headings:** A ViNT Model Architecture (p. 17); A.1 Goal-Conditioning Architectures (p. 17).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Dif
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 4: Adapting ViNT to different goals using a new tunable goal token. Full model fine-tuning: While ViNT demonstrates strong zero-shot generalization to new environments ...
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 5: ViNT accomplishes long-horizon navigation with a variety of objectives in indoor and outdoor environments; example trajectories between start (orange) and goal (green) visualized ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 18 (B.2 Subgoal Diffusion), p. 18 (B.2 Subgoal Diffusion), p. 21 (B.4 Fine-tuning ViNT), p. 21 (B.4 Fine-tuning ViNT), p. 19 (B.2 Subgoal Diffusion), p. 20 (B.3 Long-Horizon Physical Search via Topological Graphs), objective p. 20 (B.3 Long-Horizon Physical Search via Topological Graphs), p. 18 (B.2 Subgoal Diffusion), p. 19 (B.3 Long-Horizon Physical Search via Topological Graphs), p. 21 (B.4 Fine-tuning ViNT), p. 19 (B.2 Subgoal Diffusion), p. 20 (B.4 Fine-tuning ViNT), temporal p. 3 (7 Tokens), p. 18 (B.2 Subgoal Diffusion), p. 19 (B.2 Subgoal Diffusion), p. 19 (B.2 Subgoal Diffusion), p. 20 (B.3 Long-Horizon Physical Search via Topological Graphs), p. 3 (7 Tokens).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

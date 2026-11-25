@@ -63,8 +63,6 @@ PDF body contribution framing (p. 3 (4. Image-conditioned 3D Gaussian Inference)
 | body cue at p. 8 | An exciting avenue for future work is to leverage our model for generative modeling by combining it with ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 3 | Figure 2. Scale ambiguity. SfM does not reconstruct camera poses in real-world, metric scale-poses are scaled by an ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.1. Resolving Scale Ambiguity), p. 3 (4.1. Resolving Scale Ambiguity). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ PDF body contribution framing (p. 3 (4. Image-conditioned 3D Gaussian Inference)
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), interface p. 1 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.1. Resolving Scale Ambiguity), p. 3 (4.1. Resolving Scale Ambiguity), objective p. 5 (4.2. Gaussian Parameter Prediction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (4.1. Resolving Scale Ambiguity), p. 4 (4.1. Resolving Scale Ambiguity).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

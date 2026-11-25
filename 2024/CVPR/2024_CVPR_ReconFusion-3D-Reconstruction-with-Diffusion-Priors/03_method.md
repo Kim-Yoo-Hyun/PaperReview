@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (3.1. Diffusion Model for Novel View Synthesis),
 - **p. 5 / 3.3. Implementation Details - extractive body cue:** To enable classifier-free guidance (CFG), we set the input images to all zeros randomly with probability 10%.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 5 (3.3. Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (3.1. Diffusion Model for Novel View Synthesis),
 - **p. 4 / 3.1. Diffusion Model for Novel View Synthesis - extractive body cue:** 2 , (2) where t ∈{1, . . . , T} is the diffusion timestep, ϵ ∼ N(0, I), zt = αtE(x) + σtϵ is ...
 - **p. 5 / 3.3. Implementation Details - extractive body cue:** In practice, diffusion models for view synthesis can be conditioned on a small number of observed input images and poses.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (3.1. Diffusion Model for Novel View Synthesis),
 - **p. 3 / 3.1. Diffusion Model for Novel View Synthesis - extractive body cue:** LDMs encode input images to a latent representation using a pretrained variational auto-encoder (VAE) E.
 - **p. 4 / 3.2. 3D Reconstruction with Diffusion Priors - extractive body cue:** The trained diffusion model produces plausible single images for novel camera poses, but generated images are often inconsistent for different poses or random seeds.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** relative, camera, pose, geometric, information, PixelNeRF, model, render, feature, same, spatial, resolution, latents, target, viewpoint, xobs, Training, freeze, weights, pretrained.
 - **Relevant PDF headings:** 3.1. Diffusion Model for Novel View Synthesis (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (3.1. Diffusion Model for Novel View Synthesis),
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Methods for reconstructing a 3D scene from images, such as Neural Radiance Fields (NeRF), often exhibit artifacts when trained with few input views. ...
 - **p. 8 / 5. Discussion - extractive body cue:** Many current limitations are evident: the heavyweight diffusion model is costly and slows down reconstruction significantly; our current results demonstrate only limited 3D outpainting abilities ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Diffusion Model for Novel View Synthesis), p. 4 (3.1. Diffusion Model for Novel View Synthesis), p. 5 (3.3. Implementation Details), p. 3 (3.1. Diffusion Model for Novel View Synthesis), p. 4 (3.1. Diffusion Model for Novel View Synthesis), p. 5 (3.3. Implementation Details), objective p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 4 (3.2. 3D Reconstruction with Diffusion Priors), p. 5 (3.3. Implementation Details), p. 5 (3.3. Implementation Details), temporal p. 5 (3.3. Implementation Details), p. 5 (3.3. Implementation Details), p. 7 (4.3. Ablation Studies), p. 8 (4.4. Scaling to More Views), p. 4 (3.1. Diffusion Model for Novel View Synthesis), p. 2 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

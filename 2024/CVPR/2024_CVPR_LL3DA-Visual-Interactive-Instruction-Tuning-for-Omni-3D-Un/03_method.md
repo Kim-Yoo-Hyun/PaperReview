@@ -49,7 +49,6 @@ PDF body method statement (p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Desi
 - **p. 4 / 3.2. Model Design - extractive body cue:** In practice, we choose to keep the scene encoder frozen to save the memory cost during training.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.2. Model Design).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Desi
 - **p. 4 / 3.2. Model Design - extractive body cue:** We consider the decoder-only generative pre-trained transformers [49, 58] as our large language model backbone, which are sensitive to the input orders because of the ...
 - **p. 1 / 1. Introduction - extractive body cue:** During this LLM carnival, researchers are also seeking generalized LLM solutions to various vision language tasks [16, 54, 59].
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Desi
 - **p. 3 / 3.2. Model Design - extractive body cue:** We adopt the masked transformer encoder pre-trained on ScanNet detection [9] as the scene encoder, 3
 - **p. 4 / 3.2. Model Design - extractive body cue:** In practice, we choose to keep the scene encoder frozen to save the memory cost during training.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** input, model, consists, scene, represented, points, textual, instruction, potential, visual, interactions, serve, supplementary, spatial, identifiers, frozen, encoder, E3D, prompt, Q-Former.
 - **Relevant PDF headings:** 3. Methodology (p. 3); 3.2. Model Design (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Desi
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We propose LL3DA, a Large Language 3D Assistant that demonstrates mighty instruction-following capacities of un- derstanding, reasoning, and planning in complex 3D environments. ...
 - **p. 6 / 5.3. Ablation Studies - extractive body cue:** The results from 3D-LLM∗come from their fine-tuned version.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Design), p. 4 (3.2. Model Design), p. 4 (3.2. Model Design), objective p. 4 (3.2. Model Design), p. 4 (3.2. Model Design), temporal p. 4 (3.2. Model Design), p. 4 (3.2. Model Design), p. 5 (5. Experiments), p. 8 (5.4. Qualitative Results).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

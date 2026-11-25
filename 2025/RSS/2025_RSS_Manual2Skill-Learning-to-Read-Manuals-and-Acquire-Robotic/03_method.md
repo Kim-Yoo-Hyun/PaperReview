@@ -56,7 +56,6 @@ PDF body method statement (p. 14 (B. Pose Estimation Implementation), p. 15 (B. 
 - **p. 15 / B. Pose Estimation Implementation - extractive body cue:** ‘TABLE V: Optimizer Corresponding to Each Component
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 14 (B. Pose Estimation Implementation), p. 14 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 16 (B. Pose Estimation Implementation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 14 (B. Pose Estimation Implementation), p. 15 (B. 
 - **p. 15 / B. Pose Estimation Implementation - extractive body cue:** We show the quantitative results in Table VI and the qualitative results in Figure 10, First, we remove the image input and only use the ...
 - **p. 1 / I. INrRopuction - extractive body cue:** This abstraction makes it difficult for robots to comprehend such instructions and derive actionable manipulation strategies (32, 49, 48].
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,15 +90,11 @@ PDF body method statement (p. 14 (B. Pose Estimation Implementation), p. 15 (B. 
 
 - **p. 15 / B. Pose Estimation Implementation - extractive body cue:** 3) Hyperparameters in Training of Pose Estimation: We train our pose estimation model on a single NVIDIA A100 40GB GPU with a batch size of ...
 - **p. 18 / B. Pose Estimation Implementation - extractive body cue:** 3) Heuristic Grasping Policy: For general grasping tasks, pre-trained models such as GraspNet{11] are commonly used to generate grasping poses.
-- **p. 15 / B. Pose Estimation Implementation - extractive body cue:** 3) Hyperparameters in Training of Pose Estimation: We train our pose estimation model on a single NVIDIA A100 40GB GPU with a batch size of ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** where, denotes, trace, matrix, transpose, Translation, MSE, Loss, Following, mean, then, feature, input, pose, regressor, MLP, inonicalize, point, cloud, same.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +114,13 @@ PDF body method statement (p. 14 (B. Pose Estimation Implementation), p. 15 (B. 
 - **p. 8 / C. Overall Performance Evaluation - extractive body cue:** 3) We place a part that is not near any other components, causing it to suspend in midair after each assembly step.
 - **p. 8 / C. Overall Performance Evaluation - extractive body cue:** Following this sequence and the predicted 6 poses of each component, we implement RRT-Connect [26] in simulation to plan feasible ‘motion paths for the 3D ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 14 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 18 (B. Pose Estimation Implementation), objective p. 14 (B. Pose Estimation Implementation), p. 14 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 16 (B. Pose Estimation Implementation), p. 16 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), temporal p. 16 (B. Pose Estimation Implementation), p. 17 (B. Pose Estimation Implementation), p. 5 (7 WO'T ry), p. 2 (I. INrRopuction), p. 8 (C. Overall Performance Evaluation), p. 8 (C. Overall Performance Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

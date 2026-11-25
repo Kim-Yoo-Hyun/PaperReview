@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), 
 - **p. 6 / 4.1. Setups - extractive body cue:** The On-the-go dataset [29] includes multiple casually captured scenes with varying ratios of occlusions.
 - **p. 6 / 4.1. Setups - extractive body cue:** To rigorously evaluate our method in wild scenes, we introduce a novel drone-captured 3D reconstruction dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Given a set of drone imagery, our method effectively eliminates the impact of dynamic distractors on the static scenes (e.g., vehicles driving on ...
@@ -75,8 +73,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), 
 | Figure 3. The framework of DroneSplat. Given a few posed drone imagery of a wild scene, our goal is to identify and eliminate dynamic ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Figure 7. Quantitative and qualitative results on NeRF On-the-go dataset. The 1st , 2nd and 3rd best results are highlighted. Our method not only ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -87,13 +83,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), 
 | Both the baselines and our method are trained on images with dynamic distractors and evaluated on images without distractors. | comparison identity and matched condition | p. 6 (4.2. Comparison) |
 | Figure 1. Given a set of drone imagery, our method effectively eliminates the impact of dynamic distractors on the static scenes (e.g., vehicles driving ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Figure 10. The ablations of our method on the DroneS- plat(dynamic) and NeRF On-the-go dataset. The 1st , 2nd and 3rd best results are ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), 
 | body limitation/failure cue | Figure 1. Given a set of drone imagery, our method effectively eliminates the impact of dynamic distractors on the static scenes (e.g., vehicles driving ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | The On-the-go dataset [29] includes multiple casually captured scenes with varying ratios of occlusions. | p. 6 (4.1. Setups) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -135,14 +122,6 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), 
 | For our method, we train the model with 7,000 iterations and all results are obtained using a NVIDIA A100 GPU. | p. 6 (4.1. Setups) |
 | To render 2D image, 3DGS first project Gaussian primitives onto the 2D plane, and then blending N ordered Gaussians overlapping each pixel to compute ... | p. 3 (3.1. Preliminaries) |
 | c = \su m \li mit s _{ i= 1 }^{N} c_i\tilde {\alpha }_{i}\prod \limits _{j=1}^{i-1} (1-\tilde {\alpha }_{j}) (2) where ci is the ... | p. 3 (3.1. Preliminaries) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), 
 - **p. 6 / 4.1. Setups - extractive body cue:** The On-the-go dataset [29] includes multiple casually captured scenes with varying ratios of occlusions.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Setups), p. 6 (4.1. Setups), metrics p. 1 (Figure/Table caption), p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), p. 4 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 6 (4.2. Comparison), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (4.2. Comparison), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 6 (4.2. Comparison), p. 6 (4.2. Comparison), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 1 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

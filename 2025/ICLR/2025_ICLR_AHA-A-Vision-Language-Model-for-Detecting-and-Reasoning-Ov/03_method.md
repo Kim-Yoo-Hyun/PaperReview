@@ -55,7 +55,6 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 - **p. 7 / 4 Method - extractive body cue:** During fine-tuning, only the projector and transformer weights are updated, while the vision encoder and tokenizer remain frozen.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 9 (4 Method), p. 10 (4 Method), p. 10 (4 Method), p. 7 (4 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 - **p. 7 / 4 Method - extractive body cue:** with an input image for prompting the VLMs.
 - **p. 1 / 1 Introduction - extractive body cue:** These models, including large language models (LLMs) and vision-language models (VLMs), have shown proficiency in interpreting and executing human language instructions[5], producing accurate predictions and ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,15 +91,11 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 - **p. 10 / 4 Method - extractive body cue:** Each policy was trained using PPO over task-specific training steps and evaluated across 1,000 test steps.
 - **p. 7 / 4 Method - extractive body cue:** During fine-tuning, only the projector and transformer weights are updated, while the vision encoder and tokenizer remain frozen.
 - **p. 9 / 4 Method - extractive body cue:** We evaluated Aha's performance using a range of AHA data for instruction fine-tuning, spanning [3k, 6k, 12k, 34k, 48k, 60k], and co-trained individual checkpoints corresponding ...
-- **p. 10 / 4 Method - extractive body cue:** Each policy was trained using PPO over task-specific training steps and evaluated across 1,000 test steps.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** model, architecture, includes, image, encoder, linear, projector, language, tokenizer, transformerbased, PRoC3S, system, solves, tasks, specified, natural, prompting, LLM, Language-Model, Program.
 - **Relevant PDF headings:** 4 Method (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +115,13 @@ PDF body method statement (p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p
 - **p. 6 / 4 Method - extractive body cue:** This section outlines the failure reasoning problem formulation (Sec.4.1) used to fine-tune and evaluate AHA.
 - **p. 7 / 4 Method - extractive body cue:** All components are initialized with pre-trained weights.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (4 Method), p. 10 (4 Method), p. 7 (4 Method), p. 9 (4 Method), p. 6 (4 Method), p. 10 (4 Method), objective p. 10 (4 Method), p. 9 (4 Method), p. 9 (4 Method), p. 10 (4 Method), p. 7 (4 Method), temporal p. 7 (4 Method), p. 7 (4 Method), p. 6 (4 Method), p. 8 (4 Method), p. 10 (4 Method), p. 10 (4 Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

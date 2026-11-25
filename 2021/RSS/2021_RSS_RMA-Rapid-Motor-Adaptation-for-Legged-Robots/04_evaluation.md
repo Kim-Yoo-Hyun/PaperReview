@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 - **p. 7 / IV. EXPERIMENTAL SETUP - extractive body cue:** 4: We analyze RMA as the robot walks over an oily plastic sheet with additional plastic covering on its feet.
 - **p. 7 / IV. EXPERIMENTAL SETUP - extractive body cue:** When the robot enters the slippery patch we see a change in the two components of the extrinsics vector ˆz, indicating that the slip event ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | RMA was successful in 90% of the runs over oily patch. | definition/direction/unit from same section | p. 7 (IV. EXPERIMENTAL SETUP) |
 | Fig. 2: RMA consists of two subsystems - the base policy π and the adaptation module φ. Top: RMA is trained in two phases. ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | We compare RMA to A1's controller and RMA without the adaptation module. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTAL SETUP) |
 | 2) Robustness through Domain Randomization (Robust): The base policy is trained without zt to be robust to the variations in the training range [52, ... | comparison identity and matched condition | p. 7 (V. RESULTS AND ANALYSIS) |
 | Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | body limitation/failure cue | When the robot enters the slippery patch we see a change in the two components of the extrinsics vector ˆz, indicating that the slip ... | p. 7 (IV. EXPERIMENTAL SETUP) |
 | body limitation/failure cue | Note that post adaptation, the recovered gait time period is similar to the original, the torque magnitudes have increased and ˆz continues to capture ... | p. 7 (IV. EXPERIMENTAL SETUP) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 | We run 5 trials for each method and report the success rate, time to fall (TTF), and distance covered. | p. 8 (6) Advantage Weighted Regression for Domain Adaptation) |
 | The robot is successfully able to walk on sand, mud, hiking trails, tall grass and dirt pile without a single failure in all our ... | p. 1 (Body text (section boundary not confidently recovered)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We demonstrate the performance of RMA on several challenging environments. The robot is successfully able to walk on sand, mud, hiking trails, tall ...
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMEN
 - **p. 7 / IV. EXPERIMENTAL SETUP - extractive body cue:** Note that post adaptation, the recovered gait time period is similar to the original, the torque magnitudes have increased and ˆz continues to capture the ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (IV. EXPERIMENTAL SETUP), p. 7 (IV. EXPERIMENTAL SETUP), metrics p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 5 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 7 (IV. EXPERIMENTAL SETUP), baselines p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 1 (Figure/Table caption), results p. 1 (Figure/Table caption), p. 6 (IV. EXPERIMENTAL SETUP), p. 6 (IV. EXPERIMENTAL SETUP), p. 7 (V. RESULTS AND ANALYSIS), p. 7 (IV. EXPERIMENTAL SETUP).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

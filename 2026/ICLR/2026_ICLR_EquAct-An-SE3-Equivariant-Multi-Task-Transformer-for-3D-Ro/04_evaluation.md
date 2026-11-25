@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 - **p. 9 / 5 Experiments - extractive body cue:** We evaluate 10 episodes for each task and report the binary success rate.
 - **p. 8 / 5 Experiments - extractive body cue:** 10* denotes 10 demonstrations per task with random SE(3) objects poses.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: Overview of EquAct. EquAct first encodes the observation o = {s, e} into latent spherical features h using a SE(3)-equivariant U-Net, enco, while ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 | Figure 6: Real world experimental setup Number of keyframe actions: 4. Variations: "top flower", "middle flower", "bottom flower". Objects: Three artificial flowers and one ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 | Figure 2: The equivariance and invariance of the multi-task keyframe policy. Under the equivariance assumption, when the obser- vation is transformed to g · ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 | On average, EquAct outperforms all the baselines on all 3 settings. avg. success rate ↑ open drawer slide block sweep dust. meat off grill ... | comparison identity and matched condition | p. 8 (5 Experiments) |
 | We benchmark our method with two strong baselines. | comparison identity and matched condition | p. 7 (5 Experiments) |
 | Besides success rate, EquAct matches the training/inference time and GPU memory consumption of other baselines. | comparison identity and matched condition | p. 9 (5 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 | body limitation/failure cue | In comparison, 3DDA struggles in these experiments, often skipping keyframe actions and resulting in failure. | p. 9 (5 Experiments) |
 | body limitation/failure cue | 6 Conclusion and limitations Conclusion. | p. 9 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 | Here, k is the encoding of the natural language instruction n, by using a CLIP [44] tokenlizer and a Transformer [59] encoder. | p. 4 (4 Method) |
 | 4.2 Equivariant Point Transformer U-net (EPTU) The SE(3)-equivariant Point Transformer U-Net (EPTU, Figure 3) encodes a point cloud s into equivariant latent features by ... | p. 5 (4 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5 Experiments - extractive body cue:** Performance is measured by a binary reward, where 0% and 100% correspond to failure and successful completion of the task according to the natural language ...
@@ -165,9 +144,8 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7
 - **p. 9 / 5 Experiments - extractive body cue:** 6 Conclusion and limitations Conclusion.
 
 - **Evidence anchors reviewed:** datasets p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 9 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), baselines p. 9 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), results p. 8 (5 Experiments), p. 9 (5 Experiments), p. 7 (5 Experiments), p. 9 (5 Experiments), p. 8 (5 Experiments), p. 7 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

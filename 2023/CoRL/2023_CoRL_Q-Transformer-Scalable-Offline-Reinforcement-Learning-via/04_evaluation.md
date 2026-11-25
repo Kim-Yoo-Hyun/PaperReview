@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 - **p. 7 / 5 Experiments - extractive body cue:** As we see in Figure 6 (left), performance with softmax conservatism drops to around the fraction of demonstration episodes (∼8%).
 - **p. 8 / 5 Experiments - extractive body cue:** Bottom Right: Success rates on real world task categories with a larger dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Q-Transformer enables training high- capacity sequential architectures on mixed qual- ity data. Our policies are able to improve upon human demonstrations and execute ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 | Figure 2: Q-values update for each action dimension at timestep t. Given a history of states, we update the Q-values of all bins in ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | All of these demonstrations succeed on their respective tasks and receive a reward of 1.0. | definition/direction/unit from same section | p. 6 (5 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 | This experiment demonstrates that Q-Transformer can continue to scale to extremely large dataset sizes, and continues to outperform both imitation learning with RT-1 and ... | comparison identity and matched condition | p. 8 (5 Experiments) |
 | Top Right: The n-step return version of our method reaches similar performance to the standard version with 4 times fewer steps, indicating that the ... | comparison identity and matched condition | p. 8 (5 Experiments) |
 | Table 2: Performance on SayCan style long-horizon tasks: SayCan queries Q(s, a) in planning to pick a language instruction, then runs a policy to ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 | body limitation/failure cue | Decision Transformer is trained on both demonstrations and sub-optimal data, but is not able to leverage the noisy data for policy improvement and does ... | p. 7 (5 Experiments) |
 | body limitation/failure cue | The demonstrations are replayed with noise to generate more trajectories (∼92% of the data). | p. 7 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 | First, we would like robotic systems that are more proficient than human teleoperators, exploiting the full potential of the hardware to perform tasks quickly, ... | p. 1 (1 Introduction) |
 | The language instruction is encoded with Universal Sentence Encoder [68] and then fed to FiLM EfficientNet [69, 70] network together with the robot camera ... | p. 4 (3 Background) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 5 Experiments - extractive body cue:** First, we focus on sparse binary reward tasks corresponding to success or failure for each trial.
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 7 (5 Experiments), p. 8 (Figure/Table caption
 - **p. 7 / 5 Experiments - extractive body cue:** The demonstrations are replayed with noise to generate more trajectories (∼92% of the data).
 
 - **Evidence anchors reviewed:** datasets p. 6 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), metrics p. 7 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (Figure/Table caption), p. 6 (5 Experiments), p. 19 (Figure/Table caption), baselines p. 7 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 8 (5 Experiments), p. 19 (Figure/Table caption), results p. 7 (5 Experiments), p. 8 (Figure/Table caption), p. 7 (5 Experiments), p. 8 (5 Experiments), p. 18 (Figure/Table caption), p. 6 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

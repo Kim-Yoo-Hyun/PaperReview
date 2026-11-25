@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 2 (1.
 | body cue at p. 10 | Fig. 11: Failure Case Analysis. We evaluate the success rate on varying (a) stove sizes, and (b) step ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 7 | before falling to the total terrain length (8 m). | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 1 (Abstract), p. 2 (1. INrRopucTION). The downstream handoff is claimed only when the body describes it.
@@ -74,7 +72,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1. INrRopucTION), p. 1 (Abstract), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 3 (B. Reinforcement Learning in Locomotion Control), interface p. 5 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 1 (Abstract), p. 2 (1. INrRopucTION), objective p. 3 (B. Double Critic for Sparse Reward Learning), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 3 (B. Reinforcement Learning in Locomotion Control), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL), p. 4 (C. Learning Terrain-Aware Locomotion via Two-Stage RL).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

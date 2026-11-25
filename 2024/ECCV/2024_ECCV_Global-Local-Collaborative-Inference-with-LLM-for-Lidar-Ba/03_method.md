@@ -53,7 +53,6 @@ PDF body method statement (p. 3 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. 
 - **p. 8 / X. Peng et al - extractive body cue:** (5) For supervision, we utilize the 2D-based MiniGPT-v2 [3] to generate scene type label ˜s and scene description label ˜d from the paired image, which ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. Peng et al).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 3 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. 
 - **p. 1 / body section not recovered - extractive body cue:** Intuitively, lidar point clouds provide 3D information, both object level and scene level, to generate trustful detection results.
 - **p. 3 / X. Peng et al - extractive body cue:** Such a paradigm could be easily affected by the point cloud's low resolution and noises since it only considers local information.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. 
 - **p. 3 / X. Peng et al - extractive body cue:** For the local branch, we propose Reflected Pseudo Labels Generation (RPLG) to generate high-quality pseudo labels for training.
 - **p. 11 / 4 Experiments - extractive body cue:** The training of phase 2 lasts for 50 epochs with a total batch size of 16.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summary, contributions, follows, lidar-based, open-vocabulary, detection, GLIS, first, explore, interactions, global, scene-level, information, local, object-level, field, introduce, LLM, conduct, chain-of-thought.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +111,10 @@ PDF body method statement (p. 3 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. 
 - **p. 14 / X. Peng et al - extractive body cue:** The limitation of GLIS exists due to the noises within the point cloud and the false pseudo labels generated from the 2D image.
 - **p. 12 / X. Peng et al - extractive body cue:** This proves that BAOL can overcome the disturbance of noises in point clouds, resulting in better localization for interested objects.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. Peng et al), p. 1 (body section not recovered), p. 2 (X. Peng et al), p. 3 (X. Peng et al), objective p. 2 (X. Peng et al), p. 6 (X. Peng et al), p. 8 (X. Peng et al), temporal p. 2 (X. Peng et al), p. 3 (X. Peng et al), p. 3 (X. Peng et al), p. 5 (2 Related Work), p. 9 (X. Peng et al), p. 10 (X. Peng et al).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

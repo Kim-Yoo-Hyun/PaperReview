@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 - **p. 8 / 4.5. Ablation Studies - extractive body cue:** Runtime efficiency comparison on five different benchmarks.
 - **p. 8 / 4.5. Ablation Studies - extractive body cue:** Ablation of submap partitioning strategies on KITTI dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of the SOTA method VGGT-Long (Deng et al., 2025) and our VGGT-Motion across sequences with varying frame counts. While VGGT-Long suffers from ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 | Recent foundation-model-based methods are included. "TL" and "OOM" indicate Tracking Lost and Out-of-Memory errors, respectively. | definition/direction/unit from same section | p. 7 (4.4. Efficiency) |
 | Observations reveal that naive dense (using all frames) or uniform sampling paradoxically degrades accuracy. | definition/direction/unit from same section | p. 8 (4.5. Ablation Studies) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 | For calibrated baselines, we supply ground-truth (GT) intrinsics to enforce an upper-bound comparison, while foundation-model-based systems are evaluated under their default uncalibrated settings. | comparison identity and matched condition | p. 6 (4.1. Experimental Setup) |
 | Given the strong SOTA performance of VGGT-Long in large-scale outdoor scenes, we adopt its submap alignment scheme as the baseline. | comparison identity and matched condition | p. 8 (4.5. Ablation Studies) |
 | In contrast, VGGT-Motion and VGGT-Long scale reliably and match calibrated baselines that use GT intrinsics. | comparison identity and matched condition | p. 6 (4.2. Comparison on Standard Benchmarks) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 | body limitation/failure cue | Figure 12. Additional trajectory visualizations on TUM-Mono sequences 39, 45, 46, 47, and 48. The color scale represents the Absolute Pose Error (APE) magnitude ... | p. 17 (Figure/Table caption) |
 | body limitation/failure cue | Instead of providing valid geometric constraints, these redundant frames accumulate sensor noise and environmental disturbances. | p. 8 (4.5. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 | (b) Average runtime per frame (s/frame). | p. 8 (4.5. Ablation Studies) |
 | (a) Total runtime per scene (s) shown in log scale. | p. 8 (4.5. Ablation Studies) |
 | To quantify camera dynamics, we compute dense optical flow Ft : Ω→R2 between consecutive frames (It-1, It), where Ωdenotes the image domain and Ft(u) ... | p. 3 (3.1. Motion-Aware Submap Construction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Sh
 - **p. 8 / 4.5. Ablation Studies - extractive body cue:** Instead of providing valid geometric constraints, these redundant frames accumulate sensor noise and environmental disturbances.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 8 (4.5. Ablation Studies), metrics p. 19 (Figure/Table caption), p. 8 (4.5. Ablation Studies), p. 16 (Figure/Table caption), p. 17 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 7 (4.4. Efficiency), baselines p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 16 (Figure/Table caption), p. 6 (4.1. Experimental Setup), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), results p. 8 (4.5. Ablation Studies), p. 6 (4.3. Zero-Shot Generalization & Scalability), p. 7 (4.4. Efficiency), p. 8 (4.5. Ablation Studies), p. 6 (4.2. Comparison on Standard Benchmarks), p. 7 (4.4. Efficiency).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

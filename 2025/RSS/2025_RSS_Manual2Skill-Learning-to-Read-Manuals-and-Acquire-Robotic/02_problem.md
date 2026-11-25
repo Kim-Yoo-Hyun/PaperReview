@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (I. INrRopuction), p. 2 (I.
 | body cue at p. 8 | The most common failure occurs when the VLM fails to generate a fully accurate assembly graph, leading to ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | We adopt the assembly success rate as the evaluation metric and define the following situations as a failure: ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (2. Per-step Assembly Pose Estimation), p. 17 (B. Pose Estimation Implementation), p. 2 (B. VLM Guided Robot Learning), p. 3 (A. VLM Guided Hierarchical Assembly Graph Generation). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 2 (A. Furniture Assembly), p. 3 (B. VLM Guided Robot Learning), p. 1 (I. INrRopuction), p. 2 (A. Furniture Assembly), interface p. 4 (2. Per-step Assembly Pose Estimation), p. 17 (B. Pose Estimation Implementation), p. 2 (B. VLM Guided Robot Learning), p. 3 (A. VLM Guided Hierarchical Assembly Graph Generation), objective p. 14 (B. Pose Estimation Implementation), p. 14 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 15 (B. Pose Estimation Implementation), p. 16 (B. Pose Estimation Implementation).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

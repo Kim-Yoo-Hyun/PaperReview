@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 - **p. 3 / B. Learning-Based Deformable Modeling - extractive body cue:** The model updates particle positions X,...+ with the predicted velocities Vs>.s¢ to perform iterative rollouts (b) Our framework enables 3D action-conditioned video prediction by reconstructing ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (B. Model Components), p. 5 (B. Model Components), p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 - **p. 4 / B. Model Components - extractive body cue:** Here, we represent the robot gripper with additional particles that carry gripper action information, and fuse this into the object point cloud.
 - **p. 5 / B. Model Components - extractive body cue:** The poiats X can either be sampled from Xcq_ or obtained from additional point cloud observations within the same coordinate frame with X¢s.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 - **p. 3 / B. Learning-Based Deformable Modeling - extractive body cue:** A detailed description of the model is provided in Section IIL-A and III-B, We introduce the data collection pipeline and the models training method in ...
 - **p. 5 / B. Model Components - extractive body cue:** Model training begins from a given point cloud at time t, followed by iterative dynamics model rollouts for K° steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Given, particle, positions, velocities, fused, multi-view, depth, images, input, model, predicts, dense, per-particle, motion, first, point, encoder, extract, features, predict.
 - **Relevant PDF headings:** A. Physics-Based Deformable Modeling (p. 2); B. Learning-Based Deformable Modeling (p. 2); B. Model Components (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +107,13 @@ PDF body method statement (p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B
 
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete camera views.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling), p. 4 (B. Model Components), p. 2 (A. Physics-Based Deformable Modeling), p. 2 (B. Learning-Based Deformable Modeling), objective p. 5 (B. Model Components), p. 5 (B. Model Components), p. 4 (B. Model Components), p. 4 (B. Learning-Based Deformable Modeling), p. 3 (B. Learning-Based Deformable Modeling), temporal p. 7 (A. Experiment Setup), p. 7 (A. Experiment Setup), p. 3 (B. Learning-Based Deformable Modeling), p. 5 (B. Model Components), p. 8 (C. Sparse-View Dynamics Prediction), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

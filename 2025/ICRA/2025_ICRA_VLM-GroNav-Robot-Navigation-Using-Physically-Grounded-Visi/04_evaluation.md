@@ -38,8 +38,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 
 - **p. 5 / V. RESULTS AND ANALYSIS - extractive body cue:** Implementation For the real-world experiments, we utilize both the Ghost Vision 60 legged robot and the Clearpath Husky wheeled robot.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of our VLM-GroNav system: Our method uses the given information to achieve a navigation objective. We leverage VLMs and aerial imagery to ...
@@ -63,21 +61,12 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 | Fig. 2: The VLM-GroNav system employs a reasoning module that integrates visual inputs from aerial imagery, weather conditions, and proprioceptive data through a large ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 | Fig. 3: Comparison of navigation trajectories across various environments using different methods: DWA (Black), GA-Nav (orange), CoNVOI (Dark purple), ViNT (light purple), and our ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Comparison Methods • DWA [30]: A baseline motion planner that performs simple collision avoidance and goal-reaching behaviors. • GA-Nav [4]: | comparison identity and matched condition | p. 5 (V. RESULTS AND ANALYSIS) |
 | Fig. 3: Comparison of navigation trajectories across various environments using different methods: DWA (Black), GA-Nav (orange), CoNVOI (Dark purple), ViNT (light purple), and our ... | comparison identity and matched condition | p. 5 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -107,8 +96,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 | body limitation/failure cue | Comparison Methods • DWA [30]: A baseline motion planner that performs simple collision avoidance and goal-reaching behaviors. • GA-Nav [4]: | p. 5 (V. RESULTS AND ANALYSIS) |
 | body limitation/failure cue | Scenarios 3 and 4 involve the wheeled robot navigating through unstructured and slippery terrains, VLM-GroNav excels at maintaining a high success rate and reduced ... | p. 6 (3. VLM-GroNav consistently achieves the highest success) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -119,14 +106,6 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 | 4 DWA [30] 20 0.97 31923 GA-NAV [4] 40 1.51 28345 CoNVOI [51] 60 1.44 29473 ViNT [50] 40 1.16 25451 VLM-GroNav w/o GP ... | p. 6 (A method) |
 | Evaluation Metrics • Success Rate: The ratio of successful navigation trials where the robot was able to reach its goal without freezing or colliding ... | p. 6 (A method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive body cue:** We observe that this results in errors in predicting the terrain's traversbility while navigating, which in turn ill-informs the local and global planners, causing failures.
@@ -136,6 +115,5 @@ PDF body evaluation/result cue (p. 1 (Figure/Table caption)): Fig. 1: Overview o
 - **p. 6 / 3. VLM-GroNav consistently achieves the highest success - extractive body cue:** Scenarios 3 and 4 involve the wheeled robot navigating through unstructured and slippery terrains, VLM-GroNav excels at maintaining a high success rate and reduced IMU ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. RESULTS AND ANALYSIS), metrics p. 5 (V. RESULTS AND ANALYSIS), p. 4 (Figure/Table caption), p. 5 (Figure/Table caption), baselines p. 5 (V. RESULTS AND ANALYSIS), p. 5 (Figure/Table caption), results p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

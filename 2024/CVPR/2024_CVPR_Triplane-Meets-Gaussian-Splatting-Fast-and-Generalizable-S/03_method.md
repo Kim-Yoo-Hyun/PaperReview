@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3. Method), p. 5 (3.2. Reconstruction from Sing
 - **p. 5 / 3.3. Training - extractive body cue:** For training the triplane decoder and 3D Gaussian decoder, we apply the rendering losses, including a pixel-wise MSE loss LMSE = //I -ˆI//2 2, a ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3.1. Hybrid Triplane-Gaussian), p. 5 (3.3. Training), p. 5 (3.3. Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3. Method), p. 5 (3.2. Reconstruction from Sing
 - **p. 2 / 1. Introduction - extractive body cue:** Our approach consists of two networks for reconstructing the point cloud and triplane from the input image, employing a fully transformer-based architecture for both.
 - **p. 3 / 3. Method - extractive body cue:** We introduce a new hybrid 3D representation that combines explicit point cloud geometry and implicit triplane features, allowing for efficient rendering without compromising on qual10326
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3. Method), p. 5 (3.2. Reconstruction from Sing
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** order, deduce, hybrid, representation, singe-view, input, first, employ, transformerbased, point, cloud, decoder, predict, coarse, points, image, features, upsample, dense, framework.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,20 +107,10 @@ PDF body method statement (p. 4 (3. Method), p. 5 (3.2. Reconstruction from Sing
 - **p. 6 / 4.1. Implementation Details - extractive body cue:** One-2-345 [35] trains a robust multi-view reconstruction model which takes multi-view images generated from a 2D diffusion model (e.g., Zero-1-2-3).
 - **p. 7 / 4.4. Novel View Synthesis - extractive body cue:** Additionally, by leveraging the transformer architecture and local feature projection, our model exhibits robust generalization to unseen objects while preserving intricate textures.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3. Method), p. 5 (3.2. Reconstruction from Single-View Images), p. 3 (3. Method), p. 4 (3. Method), p. 5 (3.2. Reconstruction from Single-View Images), objective p. 4 (3.1. Hybrid Triplane-Gaussian), p. 4 (3.1. Hybrid Triplane-Gaussian), p. 5 (3.3. Training), p. 5 (3.3. Training), temporal p. 5 (3.2. Reconstruction from Single-View Images), p. 2 (1. Introduction), p. 4 (3. Method), p. 4 (3.1. Hybrid Triplane-Gaussian), p. 5 (3.2. Reconstruction from Single-View Images), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

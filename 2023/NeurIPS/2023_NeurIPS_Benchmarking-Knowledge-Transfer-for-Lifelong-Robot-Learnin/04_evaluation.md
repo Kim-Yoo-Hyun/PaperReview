@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 - **p. 9 / 5 Experiments - extractive body cue:** The multi-task learning performance is also included for reference.
 - **p. 9 / 5 Experiments - extractive body cue:** Study on task ordering (Q5) Figure 4 shows the result of the study on Q4.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Top: LIBERO has four procedurally-generated task suites: LIBERO-SPATIAL, LIBERO- OBJECT, and LIBERO-GOAL have 10 tasks each and require transferring knowledge about spatial relationships, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 | Table 2: Performance of three lifelong algorithms and the SEQL and MTL baselines on the four task suites, where the policy is fixed to ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 | Table 3: Performance of a lifelong learner using four different language embeddings on LIBERO- LONG, where we fix the policy architecture to RESNET-T and ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 | Figure 5: Performance of different combinations of algorithms and architectures without pretraining or with pretraining. The multi-task learning performance is also included for reference. ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Table 7: Hyper parameters of VIT-T. B.1 Lifelong Learning Algorithms Lifelong learning (LL) is a field of study that aims to understand how an ... | comparison identity and matched condition | p. 19 (Figure/Table caption) |
 | Figure 13: Comparison of different algorithms using the RESNET-T policy architecture. The y-axis represents the success rate, while the x-axis shows the agent's performance ... | comparison identity and matched condition | p. 27 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 | body limitation/failure cue | Therefore, we conjecture that PACKNET is not rich enough to learn on LIBEROLONG; 3) EWC works worse than SEQL, showing that the regularization on ... | p. 8 (5 Experiments) |
 | body limitation/failure cue | This finding highlights an important direction for future research: developing algorithms or architectures that are robust to varying task orderings. | p. 9 (5 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 | Specifically, the sequential nature of LLDM suggests that even minor forgetting over successive steps can potentially lead to a total failure in execution. | p. 4 (2 Background) |
 | LIBERO procedurally generates new tasks in three steps: 1) extract behavioral templates from language annotations of human activities and generate sampled tasks described in ... | p. 4 (2 Background) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 5 Experiments - extractive body cue:** Q5: How robust are different LL algorithms to task ordering in LLDM?
@@ -168,9 +147,8 @@ PDF body evaluation/result cue (p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6
 - **p. 9 / 5 Experiments - extractive body cue:** This finding highlights an important direction for future research: developing algorithms or architectures that are robust to varying task orderings.
 
 - **Evidence anchors reviewed:** datasets p. 8 (5 Experiments), p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 6 (5 Experiments), p. 6 (5 Experiments), p. 27 (Figure/Table caption), p. 31 (Figure/Table caption), p. 9 (5 Experiments), p. 7 (Figure/Table caption), baselines p. 8 (5 Experiments), p. 8 (5 Experiments), p. 43 (Figure/Table caption), p. 9 (Figure/Table caption), p. 19 (Figure/Table caption), p. 27 (Figure/Table caption), results p. 8 (5 Experiments), p. 6 (5 Experiments), p. 6 (5 Experiments), p. 7 (5 Experiments), p. 27 (Figure/Table caption), p. 8 (5 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

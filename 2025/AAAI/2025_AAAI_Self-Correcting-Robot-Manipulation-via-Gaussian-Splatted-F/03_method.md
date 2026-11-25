@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2. By incorporating the propos
 - **p. 2 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** Based on the composed affordance and constraint maps, VoxPoser employs model predictive control to generate a feasible trajectory for the robot arm's end-effector.
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme), p. 2 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 4 (2. By incorporating the proposed self-correction scheme).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2. By incorporating the propos
 - **p. 4 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** In the implementation, Algorithm 1: Self-correction Algorithm 1: Initialize Previous action a-, 2: Pre-execution observation o, p, q, 3: Feature extraction z ←fsem(o), 4: Action ...
 - **p. 3 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** To incorporate 3D information beyond images, PerAct transforms the input into voxel maps reconstructed from RGB-D images, while the output corresponds to the best voxel ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2. By incorporating the propos
 - **p. 5 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** During traning , the model is trained with 3000 iterations in the first phase, i.e.with only action loss ℓaction, and then with the remained number ...
 - **p. 5 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** All comparative methods were trained on PerAct's dataset for 300000 iterations, while the HiveFormer dataset for 100000 iterations, both with a batch size of 2.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** represent, predict, future, observations, adopt, Gaussian, Splatting, model, representation, develop, prediction, network, outputs, transformation, distribution, conditioned, given, action, scene, introduces.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 1 (Abstract), p. 2 (2. By incorporating the propos
 - **p. 7 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** Conclusion In this paper, we introduce a novel self-correcting scheme for robot manipulation that addresses the critical challenge of failure detection and recovery in language-conditioned ...
 - **p. 3 / 2. By incorporating the proposed self-correction scheme - extractive body cue:** To mitigate this issue, we propose a foresight-driven self-correction scheme, where a foresight with Gaussian splatting-based representation is adopted for failure detection.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme), p. 5 (2. By incorporating the proposed self-correction scheme), p. 4 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 5 (2. By incorporating the proposed self-correction scheme), objective p. 5 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 3 (2. By incorporating the proposed self-correction scheme), p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme), p. 2 (2. By incorporating the proposed self-correction scheme), temporal p. 3 (2. By incorporating the proposed self-correction scheme), p. 7 (2. By incorporating the proposed self-correction scheme), p. 1 (Abstract), p. 1 (Abstract), p. 2 (2. By incorporating the proposed self-correction scheme), p. 2 (2. By incorporating the proposed self-correction scheme).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **p. 8 / 4 Experiments - extractive body cue:** Prior methods such as DUSt3R and MonST3R serve as RGB-based baselines, with MonST3R extending pointmap prediction to dynamic scenes and Easi3R variants incorporating motion-aware masking.
 - **p. 16 / A.1 Dataset Processing - extractive body cue:** The Multi-Vehicle Stereo Event Camera (MVSEC) dataset integrates three distinct sensor modalities, each with independent timestamps: Active Pixel Sensor (APS) for frame-based images, Dynamic Vision ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: EAG3R pipeline for event-augmented dynamic 3D reconstruction. EAG3R processes a low-light video and its corresponding event stream within a temporal window, extracting pairwise ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | Fine-tuning MonST3R improves its performance across 7 | definition/direction/unit from same section | p. 7 (4 Experiments) |
 | Despite these enhancements, our proposed EAG3R consistently achieves the best performance across most metrics and sequences. | definition/direction/unit from same section | p. 8 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | We compare EAG3R with state-of-the-art pose free learning-based reconstruction method, including DUSt3R [64], MonST3R [72], and Easi3R [10]. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | 4.1 Experiment Details For training, we fine-tune the MonST3R baseline by training its ViT-Base decoder, DPT heads, Enhancement Net, and the Event Adapter. | comparison identity and matched condition | p. 7 (4 Experiments) |
 | 2, RGB-only baselines such as DUSt3R fail under extreme low-light conditions, while MonST3R offers improved results. | comparison identity and matched condition | p. 8 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | body limitation/failure cue | However, applying RetinexFormer, a widely used image enhancement network, as a preprocessing light-up step (denoted as (LightUp)) does not yield significant improvements and, in ... | p. 7 (4 Experiments) |
 | body limitation/failure cue | We presented EAG3R, a event-augmented framework for robust 3D geometry estimation under dynamic and low-light conditions. | p. 9 (5 Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 | We use the Adam optimizer for 300 iterations with a learning rate of 0.01. | p. 7 (4 Experiments) |
 | Consequently, both runtime and memory cost scale linearly with the total number of frames, as confirmed by our experiments running on an NVIDIA A100 ... | p. 20 (A.6 Runtime and Memory Analysis) |
 | To assess the computational efficiency of EAG3R, we conduct a detailed runtime and memory analysis. | p. 20 (A.6 Runtime and Memory Analysis) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7
 - **p. 9 / 5 Conclusion - extractive body cue:** We presented EAG3R, a event-augmented framework for robust 3D geometry estimation under dynamic and low-light conditions.
 
 - **Evidence anchors reviewed:** datasets p. 21 (A.7 Generalization to More Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 18 (A.4 Summary of Existing Event-RGB Datasets), p. 21 (A.7 Generalization to More Datasets), p. 7 (4 Experiments), p. 7 (4 Experiments), metrics p. 7 (4 Experiments), p. 17 (A.2 Video Depth Estimation Results on MVSEC), p. 17 (A.2 Video Depth Estimation Results on MVSEC), p. 9 (4 Experiments), p. 21 (A.8 Statistical Analysis and Robustness Validation), p. 21 (A.7 Generalization to More Datasets), baselines p. 8 (4 Experiments), p. 20 (A.6 Runtime and Memory Analysis), p. 21 (A.7 Generalization to More Datasets), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), results p. 9 (4 Experiments), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments), p. 8 (4 Experiments), p. 9 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

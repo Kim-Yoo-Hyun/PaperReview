@@ -46,7 +46,6 @@ PDF body method statement (p. 3 (Approach), p. 3 (Approach)): Reinforcement lear
 - **p. 3 / Approach - extractive body cue:** While effective in specific domains (Li et al., 2026), such methods typically rely on task rewards or policy-level supervision, embedding recovery implicitly in learned behaviors.
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -67,7 +66,6 @@ PDF body method statement (p. 3 (Approach), p. 3 (Approach)): Reinforcement lear
 - **p. 2 / 1. Introduction - extractive body cue:** We further construct a VLM-VLA collaboration mechanism that enables fault detection, rollback, and action repair during VLA execution.
 - **p. 4 / 3. Construction of VLA-FixBench - extractive body cue:** Multi-dimensional Annotation We develop a fine-grained annotation framework to construct a high-resolution failure map across three integrated dimensions: temporal, spatial, and semantic.
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -82,13 +80,10 @@ PDF body method statement (p. 3 (Approach), p. 3 (Approach)): Reinforcement lear
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Reinforcement, learning, been, explored, failure, recovery, corrective, behaviors, through, interaction, including, recent, efforts, guide, agents, back, in-distribution, states, after, Out-Of-Distribution.
 - **Relevant PDF headings:** Approach (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,23 +103,13 @@ PDF body method statement (p. 3 (Approach), p. 3 (Approach)): Reinforcement lear
 - **p. 9 / 5.4. Real-Time Evaluation Results - extractive body cue:** The real-robot setup is therefore a sparse diagnostic-and-recovery loop that trades limited inspection latency for recovery from failures that the VLA alone cannot escape.
 - **p. 3 / 2.2. Benchmark and Failure Evaluation of VLM - extractive body cue:** We introduce a unified benchmark and evaluation framework that systematically characterizes failure types, severity, and spatiotemporal repair behaviors, and explicitly measures how VLMs contribute to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (Approach), p. 3 (Approach), objective p. 3 (Approach), temporal p. 9 (5.4. Real-Time Evaluation Results), p. 3 (2.2. Benchmark and Failure Evaluation of VLM), p. 3 (2.2. Benchmark and Failure Evaluation of VLM), p. 4 (4. FaultEval Evaluation Framework), p. 4 (4.2. Dynamic Evaluation), p. 6 (4.3. Real-Time Evaluation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 
 - **p. 3 / 3.2. Untargeted Action Discrepancy Attack - extractive body cue:** To exacerbate action discrepancies, we introduce the Untargeted Action Discrepancy Attack (UADA), which aims to maximize deviations in robot actions.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 4 (3.4. Targeted Manipulation Attack), p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 3 (3.2. Untargeted Action Discrepancy Attack), p. 3 (3.2. Untargeted Action Discrepancy Attack).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 
 - **p. 1 / 1. Introduction - extractive body cue:** Adversarial Threats BV2 LIBERO Instruction: Put the bowl on the plate.
 - **p. 2 / 1. Introduction - extractive body cue:** Specifically, we formulate an Action Discrepancy Objective aimed at maximizing the action discrepancy within VLA-based robotic systems.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 
 - **p. 6 / 4.2. Experiment Setup - extractive body cue:** Each suite consists of 10 tasks, with each task executed for 50 trials, resulting in a total of 500 rollouts, following Kim et al.
 - **p. 6 / 4.2. Experiment Setup - extractive body cue:** Regarding the task execution evaluation, we take the maximum steps of each task suite in the LIBERO training dataset as the timeout failure condition to ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Instead, directly, misclassification, target, introduce, soft, attack, objective, capture, discrepancy, between, actions, ensuring, smooth, gradient, optimization, stable, performance, categorizing, action.
 - **Relevant PDF headings:** 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Adversarial Vulnerabilities induced by malicious ma- nipulation. (A). Illustration of adversarial threats in robotic task execution. (B). Example of semantic-rich adversarial patches gener- ...
 - **p. 6 / 4.3. Main Result - extractive body cue:** Both UADA and UPA effectively disrupt robot execution, yielding maximum average failure rates of 100% and 89.7%, respectively.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 3 (3.1. Preliminary), p. 3 (3.2. Untargeted Action Discrepancy Attack), p. 4 (3.3. Untargeted Position-aware Attack), objective p. 4 (3.2. Untargeted Action Discrepancy Attack), p. 4 (3.4. Targeted Manipulation Attack), p. 3 (3.2. Untargeted Action Discrepancy Attack), p. 3 (3.2. Untargeted Action Discrepancy Attack), temporal p. 4 (3.4. Targeted Manipulation Attack), p. 5 (4. Experiments), p. 6 (4.2. Experiment Setup), p. 2 (1. Introduction), p. 3 (3. Methodology), p. 3 (3.1. Preliminary).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

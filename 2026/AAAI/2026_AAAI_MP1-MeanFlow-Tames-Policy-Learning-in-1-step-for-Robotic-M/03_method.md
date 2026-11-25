@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 3 / Abstract - extractive body cue:** This Lcfg is combined with a Dispersive Loss (Ldisp) imposed on the UNet's hidden states to jointly optimize the network parameters. inference time due to ...
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 1 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 1 / Abstract - extractive body cue:** These methods have enhanced the ability of robots to understand and execute complex actions in response to multimodal inputs (Chi et al.
 - **p. 1 / Abstract - extractive body cue:** To address these limitations, we introduce MP1, which pairs 3D point-cloud inputs with the MeanFlow paradigm to generate action trajectories in one network function evaluation ...
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 2 / Abstract - extractive body cue:** Conditioning on 3D point-cloud features, it learns effectively from a handful of demonstrations, yet delivers one-step sampling with SOTA success rates and millisecond-level inference latency. ...
 - **p. 3 / Abstract - extractive body cue:** This Lcfg is combined with a Dispersive Loss (Ldisp) imposed on the UNet's hidden states to jointly optimize the network parameters. inference time due to ...
 - **p. 5 / Abstract - extractive body cue:** All training and testing are performed on an NVIDIA RTX 4090 GPU, with a batch size of 128, optimization uses the AdamW optimizer with a ...
-- **p. 3 / Abstract - extractive body cue:** This Lcfg is combined with a Dispersive Loss (Ldisp) imposed on the UNet's hidden states to jointly optimize the network parameters. inference time due to ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Because, subtle, scene-context, variations, critical, robot, learning, especially, few-shot, introduce, lightweight, Dispersive, Loss, repels, state, embeddings, during, training, boosting, generalization.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +117,13 @@ PDF body method statement (p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p.
 - **p. 3 / Abstract - extractive body cue:** Furthermore, by encouraging the latent embeddings of different input states to disperse, we improve the model's generalization abilities and task success rate, all without sacrificing ...
 - **p. 4 / Abstract - extractive body cue:** Specifically, we adopt the InfoNCE-based variant of Dispersive Loss (using ℓ2 distance, with temperature τ = 1) and apply it to the output features of ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 4 (Abstract), p. 3 (Abstract), p. 4 (Abstract), p. 1 (Abstract), p. 2 (Abstract), objective p. 1 (Abstract), p. 4 (Abstract), p. 4 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), temporal p. 1 (Abstract), p. 5 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 3 (Abstract), p. 3 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

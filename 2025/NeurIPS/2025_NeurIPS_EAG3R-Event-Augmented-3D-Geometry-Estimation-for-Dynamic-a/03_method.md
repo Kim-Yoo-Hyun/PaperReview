@@ -48,7 +48,6 @@ PDF body method statement (p. 19 (A.5.4 Feature Strategy for Global Optimization
 - **p. 20 / A.5.4 Feature Strategy for Global Optimization - extractive body cue:** Method ATE ↓ RPE trans ↓ RPE rot ↓ Computation Cost Random Sampling 0.687 0.261 0.153 Low SuperPoint [12] 0.685 0.260 0.153 High Harris Corner ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 19 (A.5.4 Feature Strategy for Global Optimization), p. 19 (A.5.4 Feature Strategy for Global Optimization).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 19 (A.5.4 Feature Strategy for Global Optimization
 - **p. 19 / A.5.4 Feature Strategy for Global Optimization - extractive body cue:** The proposed Harris-based strategy provides a balanced solution, introducing stable and targeted supervision signals that improve convergence while maintaining computational efficiency.
 - **p. 20 / A.5.4 Feature Strategy for Global Optimization - extractive body cue:** The proposed Harris-corner approach achieves the best trade-off between accuracy and computational efficiency.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,13 +82,10 @@ PDF body method statement (p. 19 (A.5.4 Feature Strategy for Global Optimization
 
 - **p. 19 / A.5.4 Feature Strategy for Global Optimization - extractive body cue:** These features provide high-confidence geometric constraints and enhance convergence in the optimization of camera pose and structure.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** features, provide, high-confidence, geometric, constraints, enhance, convergence, optimization, camera, pose, structure, improve, stability, global, feature, selection, strategy, EAG3R, focuses, Harris.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -110,20 +105,10 @@ PDF body method statement (p. 19 (A.5.4 Feature Strategy for Global Optimization
 - **p. 9 / Figure/Table caption - extractive body cue:** Table 3: Ablation study on depth estimation performance on the Night3 sequence. Modules are incrementally added to the MonST3R baseline. Each addition improves performance, with ...
 - **p. 21 / A.7 Generalization to More Datasets - extractive body cue:** As reported in Table A.12, EAG3R achieves the best results across all key depth metrics, surpassing both the baseline and its finetuned variant by a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 19 (A.5.4 Feature Strategy for Global Optimization), p. 19 (A.5.4 Feature Strategy for Global Optimization), objective p. 19 (A.5.4 Feature Strategy for Global Optimization), p. 19 (A.5.4 Feature Strategy for Global Optimization), p. 20 (A.5.4 Feature Strategy for Global Optimization), temporal p. 16 (A.1.1 Daytime Sequence Processing), p. 16 (A.1.2 Nighttime Sequence Processing), p. 2 (1 Introduction), p. 7 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

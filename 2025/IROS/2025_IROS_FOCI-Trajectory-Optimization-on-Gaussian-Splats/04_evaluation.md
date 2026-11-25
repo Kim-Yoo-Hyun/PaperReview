@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 - **p. 5 / A. Trajectory Evaluation - extractive body cue:** 3: Trajectories planned for a 3 Gaussian robot rotating through realistic scenes.
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** In this section, we evaluate our algorithm by applying it to planning problems in different environments represented by 3DGS.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Four different orientation-aware trajectories planned through a Stonehenge environment for an ANYmal
@@ -74,20 +72,11 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 | Fig. 4: Trajectories planned for the ANYmal robot through real world obstacles. On the bottom the actual robot can be seen at the site ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Fig. 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Fig. 5: Comparison of the solver's creation and runtime running on the CPU and GPU for 50k environmental Gaus- sians and one robot Gaussian. ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -115,8 +104,6 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 | body limitation/failure cue | As Figure 2b shows, the planning algorithm effectively leverages the asymmetry of ANYmal to pass through the narrow opening collision-free. | p. 5 (A. Trajectory Evaluation) |
 | body limitation/failure cue | 2) General Trajectory Planning Through 3DGS: Figure 3 shows that we can plan collision-free trajectories through splats that were created directly from the real-world ... | p. 5 (A. Trajectory Evaluation) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -130,14 +117,6 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 | We exploit the independent summation structure of the collision measure (Equation 5) and run this computation on the GPU in parallel. | p. 4 (III. METHOD) |
 | 원문 대조: Progress variable s와 시간 t를 구분하며 m=ds/dt를 상수로 가정한다. 이 가정에서 i차 시간 미분은 s에 대한 i차 미분에 m^i를 곱해 계산한다. ([PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation) | [PDF p. 3](https://arxiv.org/pdf/2505.08510#page=3), §III-A Trajectory Representation |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. LIMITATIONS - extractive body cue:** 8: Optimized trajectory for which the collision avoidance fails. b) Trajectories are parameterized over an interval that depends only on the number of control points.
@@ -146,9 +125,8 @@ PDF body evaluation/result cue (p. 5 (A. Trajectory Evaluation), p. 3 (III. METH
 - **p. 5 / A. Trajectory Evaluation - extractive body cue:** 2) General Trajectory Planning Through 3DGS: Figure 3 shows that we can plan collision-free trajectories through splats that were created directly from the real-world environments.
 
 - **Evidence anchors reviewed:** datasets p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 4 (IV. EXPERIMENTS), metrics p. 5 (A. Trajectory Evaluation), p. 5 (A. Trajectory Evaluation), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), baselines p. 7 (Figure/Table caption), results p. 5 (A. Trajectory Evaluation), p. 3 (III. METHOD).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -44,8 +44,6 @@
 - **p. 5 / 4.1. Experimental Setup - extractive body cue:** Detailed sequence construction, the IoU definition, and training settings are provided in the appendix.
 - **p. 6 / 4.1. Experimental Setup - extractive body cue:** S2GS: Streaming Semantic Gaussian Splatting for Online Scene Understanding and Reconstruction Table 2.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Comparison of current-frame inference time and GPU memory usage between S2GS (Ours) and the recent advanced joint reconstruction and understanding method, SIU3R(Xu et ...
@@ -78,8 +76,6 @@
 | Nevertheless, as the number of input views increases (8/14/32), S2GS consistently improves and achieves strong performance in both reconstruction quality and temporal semantic/instance consistency, ... | definition/direction/unit from same section | p. 6 (4.2. Results) |
 | Figure 2. Overview of S2GS. S2GS processes an uncalibrated and unposed RGB image stream in a strictly causal manner. A causal Transformer encoder, guided ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@
 | This is expected, since offline baselines can exploit non-causal cross-view aggregation over the full input set to better resolve view ambiguity and occlusions when ... | comparison identity and matched condition | p. 6 (4.2. Results) |
 | Method mIoU↑ T-mIoU↑ T-SR↑ w/o CL 47.13 28.64 50.13 w CL 48.95 30.01 62.39 outperforming SIU3R and LSeg. | comparison identity and matched condition | p. 8 (4.2. Results) |
 | We observe that both S2GS and the baseline SIU3R (Xu et al., 2025) exhibit non-trivial zero-shot generalization capability. | comparison identity and matched condition | p. 8 (4.2. Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@
 | body limitation/failure cue | This is expected, since offline baselines can exploit non-causal cross-view aggregation over the full input set to better resolve view ambiguity and occlusions when ... | p. 6 (4.2. Results) |
 | body limitation/failure cue | Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness. | p. 8 (4.2. Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -140,14 +127,6 @@
 | S2GS operates under a strictly causal setting: at time t, the model processes only the current frame It together with persistent states accumulated from ... | p. 3 (3.1. Overview and Online Setting) |
 | Each incoming frame It is encoded by a frozen 2D vision foundation model (Tschannen et al., 2025) to extract robust semantic features. | p. 4 (3.3. Online Instance Tracking and Semantic) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 4.2. Results - extractive body cue:** As shown in Table 2, under the extremely sparse 2-view setting, S2GS does not achieve the best PSNR/SSIM.
@@ -155,6 +134,5 @@
 - **p. 8 / 4.2. Results - extractive body cue:** Nevertheless, under the same training configuration, S2GS achieves better reconstruction and semantic performance on both datasets, demonstrating stronger cross-dataset generalization and robustness.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 7 (4.2. Results), p. 7 (4.2. Results), p. 8 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), metrics p. 5 (4.1. Experimental Setup), p. 6 (82.49 Method), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results), baselines p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup), p. 6 (4.2. Results), p. 6 (4.2. Results), p. 8 (4.2. Results), p. 8 (4.2. Results), results p. 6 (4.2. Results), p. 8 (4.3. Ablation Studies), p. 8 (4.3. Ablation Studies), p. 6 (4.2. Results), p. 5 (4.1. Experimental Setup), p. 7 (4.2. Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

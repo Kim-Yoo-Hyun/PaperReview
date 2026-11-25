@@ -48,7 +48,6 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 - **p. 8 / 3.3. Algorithm for Measuring Shape - extractive body cue:** The lookup table is three-dimensional, and each entry contains a gradient and a first-order approximation of the reflectance functions in the neighborhood near the gradient.
 - **Formal bridge:** visual/tactile/proprioceptive contact history -> contact-aware action/force -> contact prediction/control error -> slip/contact success and safe interaction.
 - **Equation/algorithm anchors:** p. 8 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 - **p. 8 / 3.3. Algorithm for Measuring Shape - extractive body cue:** Sensors 2017, 17, 2762 8 of 21 sources from multiple directions, which can be inferred as the different channels in the red-green-blue (RGB) image I ...
 - **p. 7 / 3.3. Algorithm for Measuring Shape - extractive body cue:** We model the surface of the sensor with a height function z = f (x, y), so that the surface normal is N(x, y) = ...
 - **Normalized interface:** observation=tactile image/force, vision과 proprioceptive history; state=contact geometry, force state 또는 latent dynamics; output/action=grasp/contact action, force command 또는 object motion.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -84,15 +82,11 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 
 - **p. 8 / 3.3. Algorithm for Measuring Shape - extractive body cue:** (4) We solve the Poission Equation (3) using fast Poisson solver with discrete sine transform (DST), thus we can get a fast computation on the ...
 - **p. 17 / 5.2. Evaluation of Force Measurement - extractive body cue:** The CNN model for measuring force and torque is adjusted from VGG-16 net [34], pre-trained on the computer vision dataset ImageNet [35].
-- **p. 8 / 3.3. Algorithm for Measuring Shape - extractive body cue:** (4) We solve the Poission Equation (3) using fast Poisson solver with discrete sine transform (DST), thus we can get a fast computation on the ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** reflectance, function, models, lighting, environment, surface, model, sensor, height, normal, form, because, zero, level, scalar, field, normally, equal, solve, Poission.
 - **Relevant PDF headings:** 3.3. Algorithm for Measuring Shape (p. 7); 3.4. Algorithm for Measuring Marker Motion (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -112,23 +106,13 @@ PDF body method statement (p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3.
 - **p. 12 / Figure/Table caption - extractive body cue:** Figure 9. The change of the marker displacement field and rotational angle with the increase of in-plane torque. The contact surface is flat. When the ...
 - **p. 18 / 6. Application - extractive body cue:** Additionally, it can detect slip by measuring the relative movement of the objects on the sensor.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3.3. Algorithm for Measuring Shape), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), objective p. 8 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), temporal p. 16 (5.2. Evaluation of Force Measurement), p. 18 (5.2. Evaluation of Force Measurement), p. 18 (5.2. Evaluation of Force Measurement), p. 2 (1. Introduction), p. 3 (2. Related Work), p. 4 (2. Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 - **p. 9 / 4 Experiment - extractive body cue:** We evaluate on three diverse benchmarks including LIBERO [25], ManiSkill [41], Meta-World [30] and further validate its sim-to-real transfer on a physical robot platform.
 - **p. 9 / 4 Experiment - extractive body cue:** Reported metrics include average success rate, average physical steps, average action chunk execution length, end-to-end execution speedup, and wall-clock execution time for real-world deployment. • ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Intrinsic policy inefficiency in deployed VLA models manifests along two di- mensions. (a) Repeated rollouts on identical tasks reveal substantial variance in step ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 | Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training. | definition/direction/unit from same section | p. 26 (Figure/Table caption) |
 | Fig. 2: Overview of PolicyTrim. PolicyTrim is a two-stage RL post-training frame- work that enhances intrinsic policy efficiency of VLA models. The first stage ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 | Table 5: Ablation study of different components on LIBERO-Spatial benchmarks. Reliable Chunk Step-Saving Group-Anchored SR Stotal hchunk Spd↑ | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | Table 6: Ablation of Dynamic Execution Horizon Exploration on LIBERO-Object using π0.5 with H = 20. Fixed-γ variants replace diverse ratio sampling with a ... | comparison identity and matched condition | p. 13 (Figure/Table caption) |
 | We applied group-relative reward normalization and updated the policy directly from rollout returns, without a critic | comparison identity and matched condition | p. 21 (B Implementation Details) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 | body limitation/failure cue | Table 10: Simulation robustness results on LIBERO-Spatial under visual perturba- tions. We report SR / Step, where SR is success rate in % and ... | p. 25 (Figure/Table caption) |
 | body limitation/failure cue | Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training. | p. 26 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -141,14 +128,6 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 | Orthogonality with Compute-centric Methods. | p. 15 (2.48 Method) |
 | Moreover, prediction errors accumulate along action chunks due to distribution shift, causing the policy to take redundant corrective actions that further inflate the total ... | p. 15 (2.48 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 27 / Figure/Table caption - extractive body cue:** Fig. 7: Failure case without group-anchored stability regularization. The pol- icy approaches the bowl with insufficient clearance, causing a collision and task failure. In this ...
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 9 (4 Experiment), p. 12 (Figure/Table caption
 - **p. 26 / Figure/Table caption - extractive body cue:** Table 11: Horizon-sweep baseline for π0.5. Fixed larger horizons degrade success rate, while PolicyTrim learns to extend the reliable horizon through RL post-training.
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 Experiment), p. 9 (4 Experiment), metrics p. 2 (Figure/Table caption), p. 9 (4 Experiment), p. 25 (Figure/Table caption), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 11 (Figure/Table caption), p. 23 (Figure/Table caption), p. 26 (Figure/Table caption), p. 13 (Figure/Table caption), p. 13 (Figure/Table caption), p. 21 (B Implementation Details), results p. 9 (4 Experiment), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), p. 25 (Figure/Table caption), p. 11 (Figure/Table caption), p. 2 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -55,7 +55,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 - **p. 5 / IV. RLBENCH - extractive body cue:** This function returns a list of strings which provide descriptions that could be associated with this variation of the task; an analysis of the frequency ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 4 (IV. RLBENCH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 - **p. 5 / IV. RLBENCH - extractive body cue:** 1 from rlbench.environment import Environment 2 from rlbench.action_modes import ActionMode 3 from rlbench.tasks import ReachTarget 4 5 DATASET = 'path/to/demo/dataset' 6 7 env = Environment( ...
 - **p. 3 / III. BENCHMARK PROPERTIES - extractive body cue:** We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,15 +90,11 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 - **p. 1 / I. INTRODUCTION - extractive body cue:** To summarise, RLBench has the following 3 key aims: • Provide a benchmark and learning environment for both ‘robot learning' and ‘traditional' methods. • Provide ...
 - **p. 5 / IV. RLBENCH - extractive body cue:** 5: Example usage of the RLBench Environment for training a reinforcement learning agent.
 - **p. 5 / IV. RLBENCH - extractive body cue:** 1 from rlbench.environment import Environment 2 from rlbench.action_modes import ActionMode 3 from rlbench.tasks import ReachTarget 4 5 DATASET = 'path/to/demo/dataset' 6 7 env = Environment( ...
-- **p. 5 / IV. RLBENCH - extractive body cue:** 1 from rlbench.environment import Environment 2 from rlbench.action_modes import ActionMode 3 from rlbench.tasks import ReachTarget 4 5 DATASET = 'path/to/demo/dataset' 6 7 env = Environment( ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Robot, manipulation, systems, broadly, fall, somewhere, spectrum, ranging, traditional, modular, methods, include, object, recognition, state, estimation, planning, fully, end-to-end, approaches.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,26 +108,15 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTI
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 7: Top shows the frequency of words in the variation descriptions with function words removed, leaving only content words. Bottom shows the average length ...
 - **p. 3 / III. BENCHMARK PROPERTIES - extractive body cue:** We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging ...
-- **p. 3 / III. BENCHMARK PROPERTIES - extractive body cue:** We therefore wanted to have a range of tasks, including both easy tasks, such as reaching, which would be well suited to new and emerging ...
 - **p. 5 / IV. RLBENCH - extractive body cue:** Once a task has been created, we provide a task validation tool, that attempts to collect a number of demonstrations of the designed task in ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (I. INTRODUCTION), p. 3 (III. BENCHMARK PROPERTIES), p. 4 (IV. RLBENCH), p. 1 (I. INTRODUCTION), p. 4 (IV. RLBENCH), p. 5 (IV. RLBENCH), objective p. 4 (IV. RLBENCH), p. 4 (IV. RLBENCH), p. 5 (IV. RLBENCH), p. 1 (Abstract), p. 5 (IV. RLBENCH), temporal p. 5 (IV. RLBENCH), p. 6 (V. THE RLBENCH FEW-SHOT CHALLENGE (v 1.0)), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (II. RELATED WORK), p. 2 (II. RELATED WORK), p. 3 (III. BENCHMARK PROPERTIES).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

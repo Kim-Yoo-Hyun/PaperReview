@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIME
 - **p. 15 / VIII. EXPERIMENTS - extractive body cue:** IEEE TRANSACTIONS ON ROBOTICS 14 TABLE V RESULTS OF OUR SYSTEM IN THE KITTI DATASET.
 - **p. 13 / VIII. EXPERIMENTS - extractive body cue:** Lifelong experiment in a dynamic environment from the TUM RGBD Benchmark. were correctly detected and closed by our system.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1. ORB-SLAM system overview, showing all the steps performed by the tracking, local mapping and loop closing threads. The main components of the place ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIME
 | Even after 100 iterations still the error is very high. | definition/direction/unit from same section | p. 15 (VIII. EXPERIMENTS) |
 | The whole map after processing the full sequence at its real frame-rate is shown in Fig. | definition/direction/unit from same section | p. 10 (VIII. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIME
 | Qualitative comparisons of our trajectories and the ground truth are shown in Fig. | comparison identity and matched condition | p. 13 (VIII. EXPERIMENTS) |
 | Comparison of different loop closing strategies in KITTI 09. | comparison identity and matched condition | p. 15 (VIII. EXPERIMENTS) |
 | In table VI we show the keyframe trajectory RMSE and the time spent in the optimization in different cases: without loop closing, if we ... | comparison identity and matched condition | p. 15 (VIII. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIME
 | body limitation/failure cue | However, the paper does not give enough details on how those results were obtained, and we have been unable to reproduce them. | p. 11 (VIII. EXPERIMENTS) |
 | body limitation/failure cue | During the sequences sitting rpy and walking xyz the map does not grow, because the map created so far explains well the scene. | p. 12 (VIII. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIME
 | All the tracking steps are explained in detail in Section V. | p. 5 (III. SYSTEM OVERVIEW) |
 | The goal of the map initialization is to compute the relative pose between two frames to triangulate an initial set of map points. | p. 6 (IV. AUTOMATIC MAP INITIALIZATION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / IX. CONCLUSIONS AND DISCUSSION - extractive body cue:** However, direct methods have their own limitations.
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIME
 - **p. 12 / VIII. EXPERIMENTS - extractive body cue:** During the sequences sitting rpy and walking xyz the map does not grow, because the map created so far explains well the scene.
 
 - **Evidence anchors reviewed:** datasets p. 9 (VIII. EXPERIMENTS), p. 12 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 11 (VIII. EXPERIMENTS), p. 13 (VIII. EXPERIMENTS), p. 14 (VIII. EXPERIMENTS), metrics p. 11 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIMENTS), p. 12 (VIII. EXPERIMENTS), p. 13 (VIII. EXPERIMENTS), baselines p. 11 (VIII. EXPERIMENTS), p. 11 (VIII. EXPERIMENTS), p. 12 (VIII. EXPERIMENTS), p. 13 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIMENTS), results p. 11 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIMENTS), p. 15 (VIII. EXPERIMENTS), p. 14 (VIII. EXPERIMENTS), p. 9 (VIII. EXPERIMENTS), p. 11 (VIII. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

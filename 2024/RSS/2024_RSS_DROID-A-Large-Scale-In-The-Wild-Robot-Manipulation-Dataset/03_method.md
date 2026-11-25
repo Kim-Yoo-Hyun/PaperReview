@@ -53,7 +53,6 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 - **p. 3 / III. DROID DATA COLLECTION SETUP - extractive body cue:** 2), a hardware platform for data collection that is shared between all institutions, allowing us to quickly set up new data collection units and roll ...
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 4 (III. DROID DATA COLLECTION SETUP), p. 3 (III. DROID DATA COLLECTION SETUP).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 - **p. 4 / III. DROID DATA COLLECTION SETUP - extractive body cue:** We record image observations with three synchronized stereo camera streams: two exterior Zed 2 cameras, table-mounted on adjustable tripods to quickly adapt to a new ...
 - **p. 5 / IV. DROID DATASET ANALYSIS - extractive body cue:** For each dataset, we run our analysis using one randomly sampled third-person camera frame per episode and the provided language instruction annotations.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 - **p. 7 / V. EXPERIMENTS - extractive body cue:** We first downsample the camera observations to a resolution of 128 × 128 and use a ResNet-50 visual encoder pre-trained on ImageNet [11] to encode ...
 - **p. 8 / V. EXPERIMENTS - extractive body cue:** Similarly, in the multi-step Cook Lentils task, baselines tend to fail after two or sometimes just one step, while co-training with DROID is the only ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** point, first, gripper, closing, every, episode, proxy, interactions, dataset, visualize, location, interaction, points, different, datasets, Fig, Polymetis, controller, record, actions.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID D
 - **p. 16 / Figure/Table caption - extractive body cue:** Fig. 11: DROID data collection GUI. Top left: Screen for entering feasible tasks for the current scene. Tasks can either be selected from a list ...
 - **p. 17 / Figure/Table caption - extractive body cue:** Fig. 12: Qualitative examples of scenes in DROID. We use GPT-4V to categorize scenes into 9 scene types. DROID contains robot manipulation demonstrations in a ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (IV. DROID DATASET ANALYSIS), p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP), p. 1 (Abstract), p. 1 (13 Institutions), p. 2 (I. INTRODUCTION), objective p. 4 (III. DROID DATA COLLECTION SETUP), p. 4 (III. DROID DATA COLLECTION SETUP), p. 3 (III. DROID DATA COLLECTION SETUP), temporal p. 7 (V. EXPERIMENTS), p. 7 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 8 (V. EXPERIMENTS), p. 5 (IV. DROID DATASET ANALYSIS), p. 1 (13 Institutions).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -53,7 +53,6 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 - **p. 17 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** Unless otherwise specified, we use a learning rate of 2.5 × 10-4 for training the agents and update the parameters using the AdamW optimizer with ...
 - **Formal bridge:** standardized episode e and interface -> method trajectory/action -> benchmark score and failure cost -> comparable score and protocol validity.
 - **Equation/algorithm anchors:** p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 - **p. 3 / 1 Introduction - extractive body cue:** To our knowledge, VC-1 (adapted) is the first PVR that is competitive with (or outperforms) state-of-art results on such a diverse set of EAI tasks ...
 - **p. 18 / A.2 Overview of Downstream Policy Learning in CORTEXBENCH - extractive body cue:** We train a policy network with hidden layers of size 2000 and learning rate 10-4 for up to 100 epochs for the reach task and ...
 - **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 - **p. 18 / A.6 Scaling Hypothesis Pretraining Details - extractive body cue:** To train the MAE models, we use the official codebase released by the authors on GitHub [18] and use the default hyperparameters provided by the ...
 - **p. 22 / A.12 Franka Hardware Experiment Setup - extractive body cue:** For PVR (frozen encoders), we use Adam optimizer with a learning rate 10-3 to train the policies.
 - **p. 22 / A.12 Franka Hardware Experiment Setup - extractive body cue:** For fine-tuning, we use the same learning rate for policies but a lower learning rate (10-5) for the visual encoders.
-- **p. 18 / A.6 Scaling Hypothesis Pretraining Details - extractive body cue:** To train the MAE models, we use the official codebase released by the authors on GitHub [18] and use the default hyperparameters provided by the ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** patch, representations, ViT-based, PVRs, grid-features, last, convolutional, layer, ResNet, models, passed, through, compression, lower, dimensional, representation, policy, layers, LSTM, navigation.
 - **Relevant PDF headings:** A.2 Overview of Downstream Policy Learning in CORTEXBENCH (p. 16); A.8 Additional Analysis of All Models Evaluated on CORTEXBENCH (p. 19); A.9 Additional Analysis of Scaling Model Size (p. 19).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +113,13 @@ PDF body method statement (p. 16 (A.2 Overview of Downstream Policy Learning in 
 - **p. 6 / Results - extractive body cue:** 5.1 Constructing a Pre-training Dataset for EAI Table 3: Datasets assembled to study effects of pretraining dataset size, diversity, and relevance - the largest (Ego4D+MNI) ...
 - **p. 22 / A.12 Franka Hardware Experiment Setup - extractive body cue:** For fine-tuning, we use the same learning rate for policies but a lower learning rate (10-5) for the visual encoders.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 16 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details), p. 18 (A.6 Scaling Hypothesis Pretraining Details), objective p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 18 (A.6 Scaling Hypothesis Pretraining Details), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), temporal p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 21 (A.11 TriFinger Hardware Experiment Setup), p. 22 (A.12 Franka Hardware Experiment Setup), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 17 (A.2 Overview of Downstream Policy Learning in CORTEXBENCH), p. 2 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

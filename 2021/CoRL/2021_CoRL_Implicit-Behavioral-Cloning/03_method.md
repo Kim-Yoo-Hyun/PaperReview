@@ -58,7 +58,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1
 - **p. 1 / Abstract - extractive body cue:** We find these policies provide competitive results or outperform state-of-the-art offline reinforcement learning methods on the challenging human-expert tasks from the D4RL benchmark suite, despite ...
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 4 (1 Introduction).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1
 - **p. 4 / 1 Introduction - extractive body cue:** Visual Generalization Of particular relevance to learning visuomotor policies, we also find striking differences in extrapolation ability with converting high-dimensional image inputs into continuous outputs.
 - **PDF p. 4, Table 1 (DOC-QA2 원문 대조):** Table 1은 D4RL Human-Experts·Particle Integrator·Block Pushing·Planar Sweeping·Bi-Manual Sweeping·Real Robot을 image input, human demos, unknown cardinality, multimodal solutions로 구분한다. 예: D4RL Human-Experts는 human demos만, Real Robot은 image input·human demos·multimodal solutions가 체크된다.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1
 - **p. 6 / 1 Introduction - extractive body cue:** Real-world robot results, success % shown is mean +/- std.dev (20 rollouts per seed, 3 seeds = 60 trials per method per task).
 - **p. 1 / 1 Introduction - extractive body cue:** 1), and at inference time (given o) performs implicit regression by optimizing for the optimal action ˆa via sampling or gradient descent [11, 12].
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** either, derivative-free, sampling-based, optimization, procedure, auto-regressive, variant, optimizer, performs, coordinate, descent, gradient-based, Langevin, sampling, gradient, penalty, loss, during, training, Appendix.
 - **Relevant PDF headings:** B Energy-Based Model Training and Implicit Inference Details (p. 13); B.1 Method with Derivative-Free Optimization (p. 13); B.2 Method with Autoregressive Derivative-Free Optimization (p. 13); C.3.2 Robot Policy and Controller (p. 13); B Energy-Based Model Training and Implicit Inference Details (p. 14); B.1 Method with Derivative-Free Optimization (p. 14); B.2 Method with Autoregressive Derivative-Free Optimization (p. 15); C.3.2 Robot Policy and Controller (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,23 +120,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1
 - **p. 7 / 1 Introduction - extractive body cue:** The red/green pushing tasks, including multi-modal variant (Fig.
 - **p. 7 / 1 Introduction - extractive body cue:** This means that implicit functions can approximate steep or discontinuous explicit functions without large gradients in the function approximator that may cause generalization issues.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), p. 1 (1 Introduction), p. 6 (1 Introduction), p. 4 (1 Introduction), objective p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (1 Introduction), p. 5 (1 Introduction), p. 1 (Abstract), temporal p. 6 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 5 (1 Introduction), p. 5 (1 Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 9 | First, while it significantly reduces EE acceleration, the achieved stability still falls short of human-level performance. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 18 | We observe that increasing the upper-body control frequency reduces recovery time (defined as the time when the error ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 15 (A.1 Training Details), p. 15 (A.1 Training Details), p. 17 (A.1 Training Details), p. 2 (1 Introduction). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), interface p. 15 (A.1 Training Details), p. 15 (A.1 Training Details), p. 17 (A.1 Training Details), p. 2 (1 Introduction), objective p. 17 (A.1 Training Details), p. 16 (A.1 Training Details).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 - **p. 8 / 4.5. 3D Reconstruction - extractive body cue:** We evaluate our predictions on the DTU [1] dataset.
 - **p. 9 / 15.6 51.5 17.4 (374.2) - extractive body cue:** Furthermore, best results on this task are usually obtained via sub-pixel accurate triangulation, requiring the use of explicit camera parameters, whereas our approach relies on ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Overview: Given an unconstrained image collection, i.e. a set of photographs with unknown camera poses and intrinsics, our proposed method DUSt3R outputs a ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 | Cross-View completion (CroCo) is a recently proposed pretraining paradigm inspired by MAE [46] that has been shown to excel on various downstream 3D vision ... | definition/direction/unit from same section | p. 6 (4. Experiments with DUSt3R) |
 | In the remainder of this section, we benchmark DUSt3R on a representative set of classical 3D vision tasks, each time specifying datasets, metrics and ... | definition/direction/unit from same section | p. 6 (4. Experiments with DUSt3R) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 | In the remainder of this section, we benchmark DUSt3R on a representative set of classical 3D vision tasks, each time specifying datasets, metrics and ... | comparison identity and matched condition | p. 6 (4. Experiments with DUSt3R) |
 | (1.7) 21.1 65.6 108.4 31.0 0.82 MVS2D ScanNet [160] ✓ × ✓ × 73.4 0.0 (4.5) (54.1) 30.7 14.4 5.0 57.9 56.4 11.1 34.0 ... | comparison identity and matched condition | p. 9 (15.6 51.5 17.4 (374.2)) |
 | We emphasize that all results are obtained with the same DUSt3R model (our default model is denoted as ‘DUSt3R 512', other DUSt3R models serves ... | comparison identity and matched condition | p. 6 (4. Experiments with DUSt3R) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 | body limitation/failure cue | Our method does not reach the accuracy levels of the best methods. | p. 8 (4.5. 3D Reconstruction) |
 | body limitation/failure cue | (1.7) 21.1 65.6 108.4 31.0 0.82 MVS2D ScanNet [160] ✓ × ✓ × 73.4 0.0 (4.5) (54.1) 30.7 14.4 5.0 57.9 56.4 11.1 34.0 ... | p. 9 (15.6 51.5 17.4 (374.2)) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,23 +136,14 @@ PDF body evaluation/result cue (p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-v
 | Two views of a scene (I1, I2) are first encoded in a Siamese manner with a shared ViT encoder. | p. 4 (3. Method) |
 | To that aim, we either use existing off-the-shelf image retrieval methods, or we pass all pairs through network F (inference takes ≈40ms on a ... | p. 5 (3.4. Global Alignment) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.5. 3D Reconstruction - extractive body cue:** Our method does not reach the accuracy levels of the best methods.
 - **p. 9 / 15.6 51.5 17.4 (374.2) - extractive body cue:** (1.7) 21.1 65.6 108.4 31.0 0.82 MVS2D ScanNet [160] ✓ × ✓ × 73.4 0.0 (4.5) (54.1) 30.7 14.4 5.0 57.9 56.4 11.1 34.0 27.5 ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments with DUSt3R), p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R), p. 7 (4.1. Visual Localization), p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), metrics p. 7 (4.3. Monocular Depth), p. 8 (4.5. 3D Reconstruction), p. 8 (4.5. 3D Reconstruction), p. 9 (15.6 51.5 17.4 (374.2)), p. 7 (4.1. Visual Localization), p. 9 (15.6 51.5 17.4 (374.2)), baselines p. 7 (4.1. Visual Localization), p. 7 (4.3. Monocular Depth), p. 8 (4.4. Multi-view Depth), p. 6 (4. Experiments with DUSt3R), p. 9 (15.6 51.5 17.4 (374.2)), p. 6 (4. Experiments with DUSt3R), results p. 8 (4.4. Multi-view Depth), p. 7 (4.2. Multi-view Pose Estimation), p. 7 (4.1. Visual Localization), p. 9 (4.6. Ablations), p. 6 (4. Experiments with DUSt3R), p. 6 (4. Experiments with DUSt3R).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

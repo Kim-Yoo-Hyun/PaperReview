@@ -48,7 +48,6 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 - objective/update cue 없음 - inspect equations and algorithm boxes
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -69,7 +68,6 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 - **p. 28 / Method - extractive body cue:** 15, where the per-dataset delta in 1-click mIoU relative to SAM is color-coded to indicate the data type (image or video).
 - **p. 29 / Method - extractive body cue:** Datasets derived from video distribution are highlighted in red, while those from image distribution are highlighted in blue. ours baseline Figure 16 Comparison between our ...
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -83,17 +81,13 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 ## Training vs Inference
 
 - **p. 27 / Method - extractive body cue:** The last two rows in Table 15 illustrate the benefits of training with our mix of image and video data, which boosts the average accuracy ...
-- **p. 27 / Method - extractive body cue:** The last two rows in Table 15 illustrate the benefits of training with our mix of image and video data, which boosts the average accuracy ...
 - **p. 28 / Method - extractive body cue:** We include results from SAM 2 trained only on SA-1B, SA-V and Internal data, for different encoder sizes.
 - **p. 32 / dataset - extractive body cue:** Cost and impact of compute The released SAM 2 was trained on 256 A100 GPUs for 108 hours.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** comparison, between, baseline, Cutie-base, model, SAM, bottom, when, prompted, mask, first, frame, last, rows, Table, illustrate, benefits, training, image, video.
 - **Relevant PDF headings:** A Data and model ablations (p. 12); A.2 Model architecture ablations (p. 13); A.2.3 Memory architecture ablations (p. 15); Method (p. 27).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -113,20 +107,10 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 - **p. 24 / C Limitations - extractive body cue:** If a dataset does not follow the standard VOS format, we preprocess it into a format similar to MOSE (Ding et al., 2023).
 - **p. 32 / dataset - extractive body cue:** Caveats and recommendations See Appendix C for limitations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28 (Method), objective 본문 anchor 없음, temporal p. 18 (C Limitations), p. 1 (Body text (section not recovered)), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 27 (Method), p. 28 (Method).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 - **p. 9 / A. Experiment Setup - extractive body cue:** The robotic platforms used in this study are equipped as follows: (1) Franka Emika Panda [34]
 - **p. 9 / B. Qualitative Analysis - extractive body cue:** stances where robots encountered failures during the execution of operational tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of RoboMIND. We introduce RoboMIND (Mult-cmbodiment Intelligence Normative Data for Robot Manipulation), comprising 107k demonstration trajectories across 479 diverse tasks involving 96 ...
@@ -84,20 +82,11 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 | Fig. 4: We define 8 quality assurance criteria in the data collection process. Touch Excess: Unnecessary contact with objects by the robotic arm; Movement ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | model's manipulation robustness in handling complex and long-horizon tasks. | definition/direction/unit from same section | p. 8 (A. Quantitative Analysis) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | 8: Comparison between Open X-Embodiment and RoboMIND. | comparison identity and matched condition | p. 9 (B. Qualitative Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 | body limitation/failure cue | The failure cases documented include scenarios where different types of humane operators filed to complete their assigned tasks, as well as in | p. 8 (B. Qualitative Analysis) |
 | body limitation/failure cue | Each model was tested ten times, and the testers recorded the success or failure of each test and the reasons if there were any ... | p. 11 (B. Single-task Imitation Learning Models) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 | We tested ten trials for each experiment. | p. 12 (C. Vision-Language-Action Large Models) |
 | Specifically, we took the official pre-trained VLA models and fine-tuned them on the multitask datasets for each type of robot, and evaluated their performance ... | p. 12 (C. Vision-Language-Action Large Models) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / B. Qualitative Analysis - extractive body cue:** In the failure ‘case, the arm fails to locate the correct slot position, causing the plate to slip out of the rack, likely due to ...
@@ -163,9 +142,8 @@ PDF body evaluation/result cue (p. 11 (Figure/Table caption), p. 15 (Figure/Tabl
 - **p. 11 / B. Single-task Imitation Learning Models - extractive body cue:** Each model was tested ten times, and the testers recorded the success or failure of each test and the reasons if there were any failures.
 
 - **Evidence anchors reviewed:** datasets p. 7 (A. Quantitative Analysis), p. 8 (B. Qualitative Analysis), p. 7 (A. Quantitative Analysis), p. 8 (A. Quantitative Analysis), p. 10 (A. Experiment Setup), p. 10 (A. Experiment Setup), metrics p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (B. Qualitative Analysis), p. 9 (B. Qualitative Analysis), p. 1 (Figure/Table caption), p. 6 (Figure/Table caption), baselines p. 9 (B. Qualitative Analysis), results p. 11 (Figure/Table caption), p. 15 (Figure/Table caption), p. 7 (A. Quantitative Analysis), p. 9 (B. Qualitative Analysis), p. 9 (B. Qualitative Analysis), p. 14 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

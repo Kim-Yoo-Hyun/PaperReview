@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 - **p. 15 / VII. REAL-WORLD EXPERIMENTS - extractive body cue:** 15 TABLE VI THE AVERAGE PROCESSING TIME PER SCAN BENCHMARK IN MILLISECONDS FAST-LIO2 (2000) FAST-LIO2 (1000) FAST-LIO2 (800) FAST-LIO2 (600) FAST-LIO2 (Feature) FAST-LIO2 (ARM) LILI-OM ...
 - **p. 16 / VII. REAL-WORLD EXPERIMENTS - extractive body cue:** 2) Aggressive UAV Flight Experiment: In order to show the application of FAST-LIO2 in mobile robotic platforms, we deploy a small-scale quadrotor UAV carrying the ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1. System overview of FAST-LIO2. with on-tree downsampling which is a common requirement in mapping, whereas downsampling must be done outside before inserting new ...
@@ -84,21 +82,12 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 | The time consumption and the number of map points at each scan are shown in Fig. | definition/direction/unit from same section | p. 15 (VII. REAL-WORLD EXPERIMENTS) |
 | The difference between these two methods becomes drastic when looking at the mapping module, which includes map points retrieve and k-d tree building for ... | definition/direction/unit from same section | p. 15 (VII. REAL-WORLD EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | For example, our prior work [63] demonstrated the application of FAST-LIO2 on an autonomous UAV avoiding dynamic small objects (down to 9 mm) in ... | comparison identity and matched condition | p. 16 (VII. REAL-WORLD EXPERIMENTS) |
 | Fig. 5. Data structure comparison over different tree size. with on-tree downsampling and kNN search of ikd-Tree is indeed proportional to log n, which ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 | body limitation/failure cue | The occasional timeout usually does not affect a subsequent controller since the IMU propagated state estimate could be used during this short period. | p. 16 (VII. REAL-WORLD EXPERIMENTS) |
 | body limitation/failure cue | In this section, extensive experiments in terms of accuracy, robustness, and computational efficiency are conducted on various open datasets. | p. 10 (VI. BENCHMARK RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 | Since the IMU measurements are typically at a higher frequency than a LiDAR scan (e.g., 200Hz for IMU measurement and 10Hz ∼100Hz for LiDAR ... | p. 5 (IV. STATE ESTIMATION) |
 | 1 Forward propagation to obtain state prediction bxk and its covariance bPk via (6); 2 Backward propagation to compensate motion [22]; 3 κ = ... | p. 6 (V. MAPPING) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 13 / 100 Hz - extractive body cue:** LIO-SAM shows good performance in its own sequences liosam 2 and liosam 3 but cannot keep it on other sequences such as ulhk.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 - **p. 10 / VI. BENCHMARK RESULTS - extractive body cue:** In this section, extensive experiments in terms of accuracy, robustness, and computational efficiency are conducted on various open datasets.
 
 - **Evidence anchors reviewed:** datasets p. 11 (VI. BENCHMARK RESULTS), p. 14 (VII. REAL-WORLD EXPERIMENTS), p. 14 (VII. REAL-WORLD EXPERIMENTS), p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. BENCHMARK RESULTS), p. 10 (VI. BENCHMARK RESULTS), metrics p. 10 (VI. BENCHMARK RESULTS), p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. BENCHMARK RESULTS), p. 14 (VII. REAL-WORLD EXPERIMENTS), p. 11 (VI. BENCHMARK RESULTS), p. 14 (VII. REAL-WORLD EXPERIMENTS), baselines p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 12 (Figure/Table caption), results p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. BENCHMARK RESULTS), p. 10 (VI. BENCHMARK RESULTS), p. 14 (VII. REAL-WORLD EXPERIMENTS), p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 17 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

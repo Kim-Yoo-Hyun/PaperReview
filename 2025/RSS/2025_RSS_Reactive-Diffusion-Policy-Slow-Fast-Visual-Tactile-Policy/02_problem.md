@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (I. Ivrropucrion), p. 2 (I.
 | body cue at p. 10 | 8: Evaluation results and failure cases of baselines. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 10 | V that when the action chunk size is reduced from 8 to 2, the DP baseline tends to ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 tactile writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (B. Robot Data Collection System), p. 1 (Body text (section boundary not confidently recovered)), p. 6 (B. Slow-Fast Policy Learning), p. 2 (I. Ivrropucrion). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ tactile writing domain maps to observation -> state/world model -> task and moti
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (I. Ivrropucrion), p. 3 (B. Robot Data Collection System), p. 4 (A. 3D Deformation Field Extraction), p. 1 (Abstract), p. 1 (Abstract), interface p. 3 (B. Robot Data Collection System), p. 1 (Body text (section boundary not confidently recovered)), p. 6 (B. Slow-Fast Policy Learning), p. 2 (I. Ivrropucrion), objective p. 6 (B. Slow-Fast Policy Learning), p. 6 (B. Slow-Fast Policy Learning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

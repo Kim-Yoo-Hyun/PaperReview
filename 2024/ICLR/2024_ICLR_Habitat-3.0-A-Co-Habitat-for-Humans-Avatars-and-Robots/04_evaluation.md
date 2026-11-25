@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 19 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** These skills do not use privileged information, and hence are more prone to failures in the diverse set of scenes considered in our tasks.
 - **p. 19 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** This results in reactive behaviors, like the high-level policy commanding the robot to move backwards to give way to the humanoid in narrow corridors, or ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Habitat 3.0: An Embodied AI framework designed to facilitate simulation of human avatars and robotic agents within a wide array of indoor environments. ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 | We see that the agent is able to improve the reward while minimizing the distance to the humanoid for finding and following the humanoid ... | definition/direction/unit from same section | p. 17 (A.1 SOCIAL NAVIGATION) |
 | We plot the training success and reward for the social rearrangement baselines (top) and ablations (bottom). | definition/direction/unit from same section | p. 18 (A.2 SOCIAL REARRANGEMENT) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 | Figure 3: Social Navigation. Overview of the Social Navigation task and sensors used (left). Baseline Results (right). The bottom rows show different variations of ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 4: Overview of social rearrangement (left). Baseline results, averaged over 3 seeds (right). | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | All baselines are trained with 3 different random seeds, and results are reported averaged across those seeds. | comparison identity and matched condition | p. 16 (A.1 SOCIAL NAVIGATION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 | body limitation/failure cue | Figure 5: Social Navigation training curves. We plot the training average distance to the humanoid and reward for the social navigation baselines and ablations. ... | p. 17 (Figure/Table caption) |
 | body limitation/failure cue | The final social rearrangement reward is as follows: rsocial-rearrange t = 10 · ⊮success + 5 · ⊮subgoal -5 · ⊮collision -0.005. | p. 18 (A.2 SOCIAL REARRANGEMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 | We present the overall task success as well as the training reward for all approaches, averaged over 3 seeds. | p. 18 (A.2 SOCIAL REARRANGEMENT) |
 | All baselines are trained with three different random seeds, and results are reported averaged across those seeds. | p. 18 (A.2 SOCIAL REARRANGEMENT) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 17 / A.1 SOCIAL NAVIGATION - extractive body cue:** Since the Spot robot has a long body shape and cannot be represented by a single cylinder, we use a 2-cylinder representation, placed in the ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 - **p. 18 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** The final social rearrangement reward is as follows: rsocial-rearrange t = 10 · ⊮success + 5 · ⊮subgoal -5 · ⊮collision -0.005.
 
 - **Evidence anchors reviewed:** datasets p. 16 (A.1 SOCIAL NAVIGATION), p. 17 (A.1 SOCIAL NAVIGATION), p. 18 (A.2 SOCIAL REARRANGEMENT), p. 16 (A.1 SOCIAL NAVIGATION), p. 17 (A.1 SOCIAL NAVIGATION), p. 18 (A.2 SOCIAL REARRANGEMENT), metrics p. 25 (Figure/Table caption), p. 16 (A.1 SOCIAL NAVIGATION), p. 16 (A.1 SOCIAL NAVIGATION), p. 18 (A.2 SOCIAL REARRANGEMENT), p. 7 (Figure/Table caption), p. 17 (A.1 SOCIAL NAVIGATION), baselines p. 17 (Figure/Table caption), p. 18 (A.2 SOCIAL REARRANGEMENT), p. 18 (A.2 SOCIAL REARRANGEMENT), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 16 (A.1 SOCIAL NAVIGATION), results p. 7 (Figure/Table caption), p. 25 (Figure/Table caption), p. 19 (A.2 SOCIAL REARRANGEMENT), p. 17 (A.1 SOCIAL NAVIGATION), p. 9 (Figure/Table caption), p. 18 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

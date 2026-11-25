@@ -43,8 +43,6 @@
 - **p. 8 / 4.4. Performance on BReTS dataset - extractive body cue:** Qualitative results on the BReTS dataset.
 - **p. 8 / 4.4. Performance on BReTS dataset - extractive body cue:** Notice that our predictions are topological tree structures, however this is not always visible due to perfect overlap with the reference. the scan are leaves, ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our approach generates tree skeletons (right) of real orchard trees (left) from colorized point clouds (middle). We leverage a denoising diffusion probabilistic model ...
@@ -78,8 +76,6 @@
 | Figure 1. Our approach generates tree skeletons (right) of real orchard trees (left) from colorized point clouds (middle). We leverage a denoising diffusion probabilistic ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 3. Tree skeleton graph. We define the tree skeleton G as a graph with nodes V (in red) and edges E (in black). ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@
 | In fact, our approach still outperforms all baselines in the F1-Score, which gives a more complete picture than precision or recall individually. | comparison identity and matched condition | p. 7 (4.2. Performance on multi-variety synthetic dataset) |
 | From the comparison it can be seen that the predictions of our method follow more closely the structure of the reference, and has less ... | comparison identity and matched condition | p. 8 (4.4. Performance on BReTS dataset) |
 | Notice that our predictions are topological tree structures, however this is not always visible due to perfect overlap with the reference. the scan are ... | comparison identity and matched condition | p. 8 (4.4. Performance on BReTS dataset) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@
 | body limitation/failure cue | Due to the extreme amount of occlusions, the learned distribution of tree shapes is very effective. | p. 8 (5. Conclusion) |
 | body limitation/failure cue | We showed that our method is robust to different tree species, scales, and appearances and compared its performance to state-of-the-art methods both on synthetic ... | p. 8 (5. Conclusion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,14 +129,6 @@
 | (4) to compute xT -1, . . . , x0, where x0 is a newly generated sample conditioned on c. | p. 5 (3.1. Denoising diffusion probabilistic models) |
 | The trees were scanned 10 times over the whole growing season of one year with a terrestrial laser scanner (TLS). | p. 5 (3.3. Bonn Real-world Tree Skeletonization (BReTS)) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4.2. Performance on multi-variety synthetic dataset - extractive body cue:** Those are way less than the nodes predicted by AdTree, which is a potential limitation.
@@ -160,6 +139,5 @@
 - **p. 8 / 5. Conclusion - extractive body cue:** We showed that our method is robust to different tree species, scales, and appearances and compared its performance to state-of-the-art methods both on synthetic and ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental setup), p. 6 (4.1. Experimental setup), p. 7 (4.1. Experimental setup), p. 7 (4.2. Performance on multi-variety synthetic dataset), p. 8 (4.4. Performance on BReTS dataset), p. 8 (4.4. Performance on BReTS dataset), metrics p. 6 (4.1. Experimental setup), p. 6 (4.1. Experimental setup), p. 7 (4.3. Performance on synthetic apple tree dataset), p. 7 (4.1. Experimental setup), p. 8 (4.4. Performance on BReTS dataset), p. 8 (4.4. Performance on BReTS dataset), baselines p. 6 (4.1. Experimental setup), p. 7 (4.3. Performance on synthetic apple tree dataset), p. 7 (4.2. Performance on multi-variety synthetic dataset), p. 8 (4.4. Performance on BReTS dataset), p. 8 (4.4. Performance on BReTS dataset), results p. 7 (4.2. Performance on multi-variety synthetic dataset), p. 7 (4.2. Performance on multi-variety synthetic dataset), p. 6 (4.1. Experimental setup), p. 6 (4.1. Experimental setup), p. 8 (4.4. Performance on BReTS dataset), p. 8 (4.4. Performance on BReTS dataset).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** For the sequence cp from NTU4DRadLM dataset, we first constructed the Gaussian map based on camera and LiDAR data using our LiV-GS, then relocalized radar ...
 - **p. 5 / IV. EXPERIMENT - extractive body cue:** To evaluate trajectory error, we used the open-source tool rpg trajectory evaluation [25] to compute both Absolute Trajectory Error (ATE) and Relative Error (RE), measuring ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Overview of the system: The SLAM system comprises a tracking and optimization process that together support the visual representation of the Gaussian map. ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | Fig. 3: Effect of Normal Restriction: Top: Ellipsoid vi- sualization. Middle: Render images. Bottom: Magnified details of the render. The left comparison (in red) ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Fig. 1: Overview of the system: The SLAM system comprises a tracking and optimization process that together support the visual representation of the Gaussian ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | 7a and 7b, LiV-GS simultaneously reaches state-of-the-art performance in both accuracy and rendering quality with a running speed of 7.98 FPS, showing its potential ... | comparison identity and matched condition | p. 7 (IV. EXPERIMENT) |
 | 6: Comparison of Rendering Results. | comparison identity and matched condition | p. 6 (IV. EXPERIMENT) |
 | Fig. 3: Effect of Normal Restriction: Top: Ellipsoid vi- sualization. Middle: Render images. Bottom: Magnified details of the render. The left comparison (in red) ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | body limitation/failure cue | Fig. 8: Visualization of cross-modal mmWave radar lo- calization trajectory. mmWave radar localization on the Gaussian map. Unlike LiDAR, the point clouds of mm-Wave ... | p. 7 (Figure/Table caption) |
 | body limitation/failure cue | Our method does not use the IMU data. | p. 6 (IV. EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 | With the back-end configured with five-keyframe optimization at a time, the average runtime of the pose optimization and map update modules are 0.04 ms ... | p. 7 (IV. EXPERIMENT) |
 | (4) The regularization term would be multiplied by a hyperparameter for adjustment, aims to reinforce the alignment of normals. | p. 3 (III. METHODOLOGY) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / IV. EXPERIMENT - extractive body cue:** In this looped sequence, our LiV-GS still performs well but its performance falls behind some other algorithms occasionally.
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p.
 - **p. 6 / IV. EXPERIMENT - extractive body cue:** Our method does not use the IMU data.
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), metrics p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), baselines p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 3 (Figure/Table caption), results p. 7 (IV. EXPERIMENT), p. 7 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 5 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT), p. 6 (IV. EXPERIMENT).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

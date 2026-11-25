@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 - **p. 11 / 2 Background - extractive body cue:** Benchmark results on the simulation performance and training results are presented in the subsequent sections.
 - **p. 17 / 4. Robotic Hands - extractive body cue:** 6.4 Robotic Hands Figure 13: The three in-hand manipulation environments implemented in Isaac Gym: Shadow Hand, Trifinger, and Allegro.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 1: Isaac Gym allows high performance training on a variety of robotics environments. We benchmark on 8 different environments that offer a wide range ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 | Table 8: Observations used for ANYmal training. For rough terrain locomotion with sim-to-real, we extend the observations with 140 terrain heights around the robot's ... | definition/direction/unit from same section | p. 27 (Figure/Table caption) |
 | Reward Symbol Definition Weight Linear velocity tracking Rvel,xy φ(v∗ b,xy -vb,xy) 1dt Angular velocity tracking Rvel,yaw φ(ω∗ b,z -ωb,z) 0.5dt Linear velocity penalty Rvel,z ... | definition/direction/unit from same section | p. 27 (A.2.2 Locomotion environments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 | Figure 3: (a) Traditional RL experience collection pipelines often use CPU based physics engines which quickly become the bottleneck. (b) In contrast, Isaac Gym ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | This allows resetting a subset of environments without affecting the rest. | comparison identity and matched condition | p. 10 (2 Background) |
 | CUDA interoperability allows copying the data directly without ever going through the host. | comparison identity and matched condition | p. 10 (2 Background) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 | body limitation/failure cue | Setting new DOF states does not affect the root state. | p. 10 (2 Background) |
 | body limitation/failure cue | Also note that this variant does not use any randomisations. | p. 18 (4. Robotic Hands) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 | The implementation provided by Peng et al., 2021 [17] requires about 1 day (30 hours) on 16 CPU cores to simulate a similar number ... | p. 17 (4. Robotic Hands) |
 | 7 Summary We show that Isaac Gym is a high performance and high-fidelity framework that allows blistering fast training on many challenging simulated robotic ... | p. 20 (4. Robotic Hands) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 11 / 2 Background - extractive body cue:** Parameter Description Delta time (dt) Controls time-step size Gravity Controls the gravity in the scene Collision filtering Filters collisions between shapes Position iterations Biased (velocity ...
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure
 - **p. 18 / 4. Robotic Hands - extractive body cue:** Also note that this variant does not use any randomisations.
 
 - **Evidence anchors reviewed:** datasets p. 12 (4. Robotic Hands), p. 16 (4. Robotic Hands), p. 16 (4. Robotic Hands), p. 20 (4. Robotic Hands), p. 31 (A.4.1 Randomizations), p. 10 (2 Background), metrics p. 19 (4. Robotic Hands), p. 11 (2 Background), p. 20 (4. Robotic Hands), p. 30 (A.2.3 Robotic Hands), p. 14 (4. Robotic Hands), p. 15 (Figure/Table caption), baselines p. 13 (4. Robotic Hands), p. 13 (4. Robotic Hands), p. 17 (4. Robotic Hands), p. 7 (Figure/Table caption), p. 10 (2 Background), p. 10 (2 Background), results p. 31 (A.4.2 OpenAI Observations), p. 15 (Figure/Table caption), p. 7 (Figure/Table caption), p. 19 (4. Robotic Hands), p. 20 (4. Robotic Hands), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

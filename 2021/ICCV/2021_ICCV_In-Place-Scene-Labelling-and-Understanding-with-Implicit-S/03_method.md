@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation
 - **PDF p. 3, Eqs. (6)–(8) (DOC-QA2 원문 대조):** Photometric loss는 coarse/fine RGB prediction의 squared L2 error를 ray별로 합한다. Semantic loss는 coarse/fine class probabilities에 대한 multi-class cross entropy이며 total L=L_p+λL_s, 기본 λ=0.04다.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.3. Network Training), p. 3 (3.1. Preliminaries).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation
 - **p. 1 / 1. Introduction - extractive body cue:** NeRF [16]) that represent the shape and radiance of a single scene with a neural network trained from scratch using only images and associated camera ...
 - **p. 3 / 3.4. Implementation - extractive body cue:** Training images are resized to 320x240 for all the experiments.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,18 +83,14 @@ PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation
 
 - **p. 3 / 3.4. Implementation - extractive body cue:** A scene-specific semantic representation is obtained by training the network from scratch for each scene individually.
 - **p. 4 / 3.4. Implementation - extractive body cue:** We train the neural network using the Adam optimiser [7] with a learning rate of 5e-4 for 200,000 iterations.
-- **p. 4 / 3.4. Implementation - extractive body cue:** We train the neural network using the Adam optimiser [7] with a learning rate of 5e-4 for 200,000 iterations.
 - **p. 3 / 3.4. Implementation - extractive body cue:** We implement our model in PyTorch [20] and train it on a single RTX2080-Ti GPU with 11GB memory.
 - **p. 6 / 4.4. Semantic Fusion - extractive body cue:** Both tables are computed against clean training labels. to randomly perturb each instance: (1) Sort: Select label maps with the least occupied area ratio.
 - **p. 8 / 4.4. Semantic Fusion - extractive body cue:** We train Semantic-NeRF using posed colour images together with CNN-predicted labels for 200,000 steps and then re-render the fused semantic labels back to the training ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, hierarchical, volume, sampling, jointly, optimise, coarse, fine, networks, where, former, provides, importance, bias, latter, distribute, more, samples, positions, likely.
 - **Relevant PDF headings:** 3. Method (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,20 +110,10 @@ PDF body method statement (p. 3 (3.4. Implementation), p. 3 (3.4. Implementation
 - **p. 4 / 3.4. Implementation - extractive body cue:** batch size of rays is set to 1024 due to memory limitations.
 - **p. 4 / 4.4. Semantic Fusion - extractive body cue:** Given multiple noisy or partial semantic labels, the network can fuse them into a joint implicit 3D space so that we can extract a denoised ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.4. Implementation), p. 3 (3.4. Implementation), p. 4 (3.4. Implementation), objective p. 3 (3.3. Network Training), p. 3 (3.3. Network Training), temporal p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 4 (4.1. Indoor Scene Datasets and Data Preparation), p. 5 (4.4. Semantic Fusion), p. 5 (4.4. Semantic Fusion), p. 8 (4.4. Semantic Fusion), p. 3 (3.4. Implementation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

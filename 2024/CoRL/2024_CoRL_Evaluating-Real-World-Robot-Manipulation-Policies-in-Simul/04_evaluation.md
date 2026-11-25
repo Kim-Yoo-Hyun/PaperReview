@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 - **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** When developing SIMPLER environments, we simplified the physical properties (e.g., center of mass and friction coefficients) of objects and robots due to the complexity and ...
 - **p. 10 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** Green Screen Drawer Matching Robot Matching MMRV ↓ Real-Sim Success Gap ↓ ✗ ✗ ✗ 0.087 0.272 ✗ ✓ ✗ 0.087 0.266 ✗ ✗ ✓ ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Characterizing generalist robot manipulation policies typically involves evaluating them on many tasks across many scenarios, a laborious undertaking in the real world (top ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 | Both physics simulators lead to good correlation between simulated and real-world evaluation success rates. | definition/direction/unit from same section | p. 10 (2) Can simulated evaluations not only capture the perfor) |
 | We find that our simulated evaluation remains effective across a spectrum of plausible physical property parameters, evidenced by the low MMRV and the high ... | definition/direction/unit from same section | p. 10 (2) Can simulated evaluations not only capture the perfor) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 | 8: Change in success rate under various distribution shifts for two RT-1 policies trained without and with data augmentation. | comparison identity and matched condition | p. 9 (2) Can simulated evaluations not only capture the perfor) |
 | Ablation Studies We ablate the effect of the approaches we introduced in Section IV for closing the control and visual gaps between simulation and ... | comparison identity and matched condition | p. 9 (2) Can simulated evaluations not only capture the perfor) |
 | 10: Comparison of SIMPLER-"Variant Aggregation" using SAPIEN (default) vs. | comparison identity and matched condition | p. 10 (2) Can simulated evaluations not only capture the perfor) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 | body limitation/failure cue | Beyond comparing average policy performances, it would be beneficial to let practitioners gauge more nuanced aspects of a policy's behavior, such as its robustness ... | p. 8 (2) Can simulated evaluations not only capture the perfor) |
 | body limitation/failure cue | See Table VIII for detailed results. robustness to various distribution shifts in the real world. | p. 9 (2) Can simulated evaluations not only capture the perfor) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 | All environments can be imported with a single line of code and can be interacted with through a standard Gym interface. | p. 2 (I. INTRODUCTION) |
 | Additionally, we open-source policy inference code for real-to-sim evaluation of common generalist robot policies (RT-1 [6], RT-1-X [11], and Octo [50]), and we provide ... | p. 2 (I. INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: Illustration of Mean Maximum Rank Violation (MMRV, range [0, 1], lower is better) and Pearson correlation coefficient (Pearson r, range [-1, 1], higher ...
@@ -170,9 +149,8 @@ PDF body evaluation/result cue (p. 10 (2) Can simulated evaluations not only cap
 - **p. 9 / 2) Can simulated evaluations not only capture the perfor - extractive body cue:** See Table VIII for detailed results. robustness to various distribution shifts in the real world.
 
 - **Evidence anchors reviewed:** datasets p. 8 (2) Can simulated evaluations not only capture the perfor), p. 9 (2) Can simulated evaluations not only capture the perfor), p. 7 (VI. EXPERIMENTAL RESULTS), p. 9 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor), metrics p. 7 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor), p. 9 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor), p. 9 (2) Can simulated evaluations not only capture the perfor), baselines p. 8 (2) Can simulated evaluations not only capture the perfor), p. 10 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor), p. 9 (2) Can simulated evaluations not only capture the perfor), p. 9 (2) Can simulated evaluations not only capture the perfor), p. 10 (2) Can simulated evaluations not only capture the perfor), results p. 10 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor), p. 7 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor), p. 10 (2) Can simulated evaluations not only capture the perfor), p. 8 (2) Can simulated evaluations not only capture the perfor).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

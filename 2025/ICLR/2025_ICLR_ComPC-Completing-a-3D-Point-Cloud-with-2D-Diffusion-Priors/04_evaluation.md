@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 - **p. 16 / A.9 EVALUATION ON SHAPENET - extractive body cue:** In this section, we further compare our methods with network-based methods on 16 common models from 4 different categories of ShapeNet dataset.
 - **p. 17 / A.10 EVALUATION ON LIDAR POINTS - extractive body cue:** To validate the effectiveness of our method across different sensor types, we conduct a comparison using point clouds from the Kitti dataset (Geiger et al., ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Different point cloud completion methods. (a) Existing network-based completion methods; (b) Test-time SDS-complete (Kasten et al., 2024) with text prompts to guide Neural ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | Std denotes the Standard deviation of added noises. | definition/direction/unit from same section | p. 17 (A.9 EVALUATION ON SHAPENET) |
 | Figure 1: Different point cloud completion methods. (a) Existing network-based completion methods; (b) Test-time SDS-complete (Kasten et al., 2024) with text prompts to guide ... | definition/direction/unit from same section | p. 2 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | The results demonstrate that the Preservation Constraint improves performance compared to standard view-dependent diffusion guidance. | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
 | All metrics are multiplied by 102 in subsequent comparisons. | comparison identity and matched condition | p. 8 (4 EXPERIMENTS) |
 | More detailed ablation study can be found in the appendix A. | comparison identity and matched condition | p. 10 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | body limitation/failure cue | Existing fully-supervised methods may perform inferior even on the in-domain objects as illustrated in Table 2, which reveals their limitation on datasets differing from ... | p. 9 (4 EXPERIMENTS) |
 | body limitation/failure cue | Figure 13: Qualitative comparisons under different noise perturbations. Std denotes the Standard deviation of added noises. The green box marks a local area of ... | p. 17 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 | PoinTr Seedformer PointAttN SVDFormer ShapeFormer AdaPoinTr Ours Level CD/EMD CD/EMD CD/EMD CD/EMD CD/EMD CD/EMD CD/EMD 1 3.77/5.13 4.16/6.02 5.52/6.29 4.63/5.08 3.30/4.07 5.33/5.82 1.86/2.01 3 ... | p. 18 (A.10 EVALUATION ON LIDAR POINTS) |
 | Known category Unknown category Categories Chair Table Pistol Tower Metrics CD/EMD CD/EMD CD/EMD CD/EMD PoinTr 1.31/2.64 0.74/2.86 1.84/3.84 2.38/3.05 SeedFormer 1.39/2.77 0.80/2.17 1.79/3.91 1.95/3.24 ... | p. 19 (A.10 EVALUATION ON LIDAR POINTS) |
 | Additionally, it incorporates a Preservation Constraint computed with respect to Vp. | p. 4 (3 METHODOLOGY) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 
 - **p. 17 / Figure/Table caption - extractive body cue:** Figure 13: Qualitative comparisons under different noise perturbations. Std denotes the Standard deviation of added noises. The green box marks a local area of a ...
 
 - **Evidence anchors reviewed:** datasets p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 19 (A.10 EVALUATION ON LIDAR POINTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), metrics p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 16 (A.7 EVALUATION ON MULTI-MODAL METRICS), p. 17 (A.10 EVALUATION ON LIDAR POINTS), baselines p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 10 (4 EXPERIMENTS), results p. 10 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.7 EVALUATION ON MULTI-MODAL METRICS), p. 9 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

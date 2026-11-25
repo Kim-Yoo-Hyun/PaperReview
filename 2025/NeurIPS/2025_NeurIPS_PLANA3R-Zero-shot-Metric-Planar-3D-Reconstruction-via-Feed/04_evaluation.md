@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (
 - **p. 14 / A.1 Extra Results - extractive body cue:** Although the 7-Scenes dataset is a widely used indoor dataset and is very suitable for out-of-domain evaluation, it does not provide official plane segmentation masks.
 - **p. 14 / A.1 Extra Results - extractive body cue:** To further demonstrate the zeroshot generalization capability of our method in out-of-domain scenes, we evaluate single-view reconstruction and planar segmentation on the 7-Scenes dataset [25].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Our proposed PLANA3R learns to predict planar 3D primitives and metric-scale relative poses, providing a compact 3D representation of two-view input images with ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (
 | Table 5: Ablation study on the gradient threshold (gth). We show the relationship between the number of per-view primitives and performance. ScanNetV2 Reconstruction NYUv2 ... | definition/direction/unit from same section | p. 10 (Figure/Table caption) |
 | Figure 9: Supplement comparisons of two-view 3D plane reconstruction on the ScanNetV2 [4] (the first two rows) and Matterport3D [2] (the last three rows). ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (
 | Remarkably, despite never being trained on Matterport3D, PLANA3R outperforms prior planar reconstruction methods [11, 24, 28] that were specifically trained on this dataset, highlighting ... | comparison identity and matched condition | p. 7 (4 Experiment) |
 | Here, we show that PLANA3R can perform zero-shot plane-level semantic segmentation without plane annotations. | comparison identity and matched condition | p. 8 (4 Experiment) |
 | Input Image 1 Input Image 2 NOPE-SAC Ours Ground Truth Figure 5: Comparisons of two-view 3D plane segmentation on the Matterport3D [2] (the first ... | comparison identity and matched condition | p. 9 (4 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (
 | body limitation/failure cue | Although the 7-Scenes dataset is a widely used indoor dataset and is very suitable for out-of-domain evaluation, it does not provide official plane segmentation ... | p. 14 (A.1 Extra Results) |
 | body limitation/failure cue | Furthermore, we observe that as the overlap ratio in the test set decreases, the model's accuracy consistently degrades. | p. 16 (A.2 Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (
 | Instead, it employs a deconvolution network to predict primitives at two distinct resolutions, based on the patch divisions from the ViT encoder. | p. 4 (3 Method) |
 | We compute the gradient magnitude for each pixel in the low-resolution predicted normal patches Npatch low of size H 16 × W 16 , ... | p. 5 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 18 / A.5 Limitations - extractive body cue:** While this represents a limitation in our current analysis, it also highlights the urgent need for better benchmarks in this field.
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (
 - **p. 16 / A.2 Implementation Details - extractive body cue:** Furthermore, we observe that as the overlap ratio in the test set decreases, the model's accuracy consistently degrades.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 6 (4 Experiment), metrics p. 7 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment), baselines p. 6 (4 Experiment), p. 9 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), results p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (4 Experiment), p. 14 (A.1 Extra Results), p. 14 (A.1 Extra Results), p. 16 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

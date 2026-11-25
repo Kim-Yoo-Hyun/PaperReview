@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 11 (4 Experimen
 - **p. 10 / 4 Experiments - extractive body cue:** 4.1 Datasets and Metrics We conduct experiments on two datasets: ScanNetV2 [7] and SUN RGB-D [38].
 - **p. 11 / 4 Experiments - extractive body cue:** For a fair comparison, we evaluate our GLIS on the top-20 object classes in ScanNetV2 and SUN RGB-D respectively, following OV-3DET [26].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: (a) The previous 3D OVD paradigm determines the class of an object proposal by comparing its point cloud feature with the class text ...
@@ -75,8 +73,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 11 (4 Experimen
 | Fig. 2: The training pipeline of GLIS. local branch, the bounding boxes are extracted by the Background-Aware Ob- ject Localization (BAOL) module, while the ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Fig. 5: Visualizations of detection results. the LLM's answer, our scheme automatically recognizes the bed as false detec- tion. Subsequently, as the confidence of ... | definition/direction/unit from same section | p. 14 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -85,13 +81,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 11 (4 Experimen
 | We also report the results on top-10 classes for comparison with methods like [25, 56]. | comparison identity and matched condition | p. 11 (4 Experiments) |
 | Table 3: Ablation study on ScanNetV2 | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | Table 2: Comparisons with other methods on SUN RGB-D | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -122,8 +111,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 11 (4 Experimen
 | body limitation/failure cue | The limitation of GLIS exists due to the noises within the point cloud and the false pseudo labels generated from the 2D image. | p. 14 (X. Peng et al) |
 | body limitation/failure cue | This proves that BAOL can overcome the disturbance of noises in point clouds, resulting in better localization for interested objects. | p. 12 (X. Peng et al) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -135,14 +122,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 11 (4 Experimen
 | LLM Encoder LLM Global Projector What kind of scene is it mostly like? | p. 6 (X. Peng et al) |
 | LLM Encoder predicted bounding boxes Sink, Desk, Desk, Toilet predicted object classes Scene: bathroom Description: There is a toilet and a cabinet. predicted scene ... | p. 6 (X. Peng et al) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / X. Peng et al - extractive body cue:** These limitations could inspire our future work.
@@ -150,6 +129,5 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 11 (4 Experimen
 - **p. 12 / X. Peng et al - extractive body cue:** This proves that BAOL can overcome the disturbance of noises in point clouds, resulting in better localization for interested objects.
 
 - **Evidence anchors reviewed:** datasets p. 11 (4 Experiments), p. 10 (4 Experiments), p. 11 (4 Experiments), metrics p. 11 (4 Experiments), p. 13 (Figure/Table caption), p. 11 (4 Experiments), p. 6 (Figure/Table caption), p. 14 (Figure/Table caption), baselines p. 11 (4 Experiments), p. 11 (4 Experiments), p. 12 (Figure/Table caption), p. 12 (Figure/Table caption), results p. 13 (Figure/Table caption), p. 11 (4 Experiments), p. 11 (4 Experiments), p. 14 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 - **p. 8 / 4.5. Ablation Study - extractive body cue:** In this section, we show the ablation performance on the 3DSSG dataset in Table 5.
 - **p. 8 / 4.4. Predicting Novel Classes - extractive body cue:** Qualitative results are drawn from both VL-SAT [48] and our method utilizing the ScanNet dataset [8].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1. (a) Difference in training: Previous 3DSGG models trained on closed-set classes by fully supervised [12, 48, 61]. Our method trains a 3DSG feature ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 | In this section, we evaluate the performance of CCL3DSGG on two datasets: 3DSSG [47] and ScanNet [8]. | definition/direction/unit from same section | p. 5 (4. Experiments) |
 | Specifically, for SGPN, only the object loss was retained. | definition/direction/unit from same section | p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 | We provide a detailed account of the task description and experimental settings, compare our model to SOTA methods, and conduct ablation studies to emphasize ... | comparison identity and matched condition | p. 5 (4. Experiments) |
 | Moreover, we reproduce the VL-SAT [48], KISGP [61], and SGPN [47] for comparison in this study. | comparison identity and matched condition | p. 5 (4.2. Implementation Details) |
 | Unsupervised experimental results of mR on the 3DSSG dataset. w/o CL means without classification losses. | comparison identity and matched condition | p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 | body limitation/failure cue | These results substantiate that our model furnishes more robust 3DSG feature representations, enhancing its generalization Table 3. | p. 6 (4.3. Comparisons with SOTA Methods on Close-Set) |
 | body limitation/failure cue | Meanwhile, both unseen and seen triplets from the validation set are used to evaluate the robustness of our trained 3DSG feature extractor. | p. 6 (4.2. Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 | Because the 3DSGG task inputs the instance segmentation, we only compute the mean of the two tasks of SGCLS and PREDCLS. | p. 6 (4.2. Implementation Details) |
 | Subsequently, the text is processed by text encoder Tθ of CLIP to obtain text feature FT . | p. 4 (3.1. Cross-modality Features Extraction) |
 | Drawing from the VL-SAT method described in [48], we use a pretrained CLIP vision encoder Iθ to produce features for multi-view images. | p. 4 (3.1. Cross-modality Features Extraction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 6 (4.3. Comparisons with SOTA Methods on Clos
 - **p. 6 / 4.2. Implementation Details - extractive body cue:** Meanwhile, both unseen and seen triplets from the validation set are used to evaluate the robustness of our trained 3DSG feature extractor.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4.1. Task Description), p. 5 (4.1. Task Description), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 6 (4.2. Implementation Details), p. 7 (4.3. Comparisons with SOTA Methods on Close-Set), p. 7 (4.4. Predicting Novel Classes), metrics p. 7 (4.4. Predicting Novel Classes), p. 6 (Figure/Table caption), p. 7 (4.4. Predicting Novel Classes), p. 8 (4.5. Ablation Study), p. 8 (4.5. Ablation Study), p. 5 (4.2. Implementation Details), baselines p. 6 (4.2. Implementation Details), p. 7 (4.4. Predicting Novel Classes), p. 7 (4.4. Predicting Novel Classes), p. 5 (4. Experiments), p. 5 (4.2. Implementation Details), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), results p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 6 (4.3. Comparisons with SOTA Methods on Close-Set), p. 8 (4.5. Ablation Study), p. 7 (4.3. Comparisons with SOTA Methods on Close-Set), p. 7 (4.4. Predicting Novel Classes), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

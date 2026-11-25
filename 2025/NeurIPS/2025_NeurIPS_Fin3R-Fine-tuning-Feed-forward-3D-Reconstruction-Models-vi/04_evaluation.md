@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 
 - **p. 10 / 4.7 Discussion - extractive body cue:** This underscores the necessity of including in-the-wild data alongside highquality datasets during training to achieve optimal results.
 - **p. 10 / 4.7 Discussion - extractive body cue:** We attribute this improvement primarily to the incorporation of unlabeled datasets, which enhance the model's robustness and overall performance.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Fin3R consistently improves the reconstructed geometry quality in DUSt3R, MASt3R, CUT3R, and VGGT, recovering finer details and producing sharper boundaries. ∗Corresponding author. 39th ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 
 | The first two columns report mean monocular depth metrics (see Table 1), while the final column details the 7-Scenes [52] accuracy. | definition/direction/unit from same section | p. 9 (4 Experiment) |
 | This underscores the necessity of including in-the-wild data alongside highquality datasets during training to achieve optimal results. | definition/direction/unit from same section | p. 10 (4.7 Discussion) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 
 | The results indicate that our fine-tuning method consistently improves the baseline model correspondence by improving the geometry. | comparison identity and matched condition | p. 7 (4 Experiment) |
 | The results indicate that models enhanced with our distillation method consistently achieve lower Acc and Comp as well as improved NC scores across most ... | comparison identity and matched condition | p. 8 (4 Experiment) |
 | 4.5 Multi-view Pose Estimation Table 3 summarizes the performance of baseline models and our fine-tuned methods on the RealEstate10k [88] dataset. | comparison identity and matched condition | p. 9 (4 Experiment) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 
 | body limitation/failure cue | We attribute this improvement primarily to the incorporation of unlabeled datasets, which enhance the model's robustness and overall performance. | p. 10 (4.7 Discussion) |
 | body limitation/failure cue | This is likely because CUT3R and VGGT are trained on long sequences and are consequently more affected by the long-sequence degradation 6 | p. 6 (4 Experiment) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 
 | Pointmap Head Self-View Head LoRA🔥 Labeled Multi-View ~10% Data Decoder❄ | p. 5 (3 Method) |
 | We contend that the limitations in detail recovery primarily originate from the encoder. | p. 5 (3 Method) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 4 Experiment - extractive body cue:** Note that VGGT is not trained on dynamic datasets, so its performance bottleneck may stem from dataset limitations rather than our fine-tuning method.
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 
 - **p. 6 / 4 Experiment - extractive body cue:** This is likely because CUT3R and VGGT are trained on long sequences and are consequently more affected by the long-sequence degradation 6
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 Experiment), p. 7 (4 Experiment), p. 7 (4 Experiment), p. 9 (4 Experiment), p. 9 (4 Experiment), p. 10 (4.7 Discussion), metrics p. 6 (4 Experiment), p. 4 (Figure/Table caption), p. 9 (4 Experiment), p. 10 (4.7 Discussion), p. 8 (4 Experiment), p. 8 (4 Experiment), baselines p. 6 (4 Experiment), p. 7 (4 Experiment), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 8 (4 Experiment), p. 9 (4 Experiment), results p. 8 (4 Experiment), p. 9 (4 Experiment), p. 10 (4.7 Discussion), p. 6 (4 Experiment), p. 7 (4 Experiment), p. 9 (4 Experiment).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

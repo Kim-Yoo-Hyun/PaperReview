@@ -1489,7 +1489,8 @@ SYNTHESIS_FILES = OrderedDict(
 
 ROW_RE = re.compile(
     r"^\| (?P<year>\d{4}) \| (?P<venue>[^|]+) \| "
-    r"\[(?P<title>[^]]+)\]\((?P<path>\./[^)]+/01_overview\.md)\) \| "
+    r"\[(?P<title>[^]]+)\]\((?P<path>\./[^)]+/01_overview\.md)\)"
+    r"(?: \((?:\\.|[^|\\])*\))? \| "  # Optional aliases in the same table cell.
     r"(?P<tags>[^|]+) \| (?P<pdf>[^|]+) \|"
 )
 REFERENCE_TAG_RE = re.compile(

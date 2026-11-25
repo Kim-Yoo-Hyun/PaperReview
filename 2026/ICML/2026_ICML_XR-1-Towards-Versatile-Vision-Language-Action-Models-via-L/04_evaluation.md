@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Generalization Analysis), p. 8 (4.4. 
 - **p. 5 / 3.5. Data Collection and Implementation Details - extractive body cue:** Since the number of episodes and frames varies significantly among different sources, we assign dataset-specific sampling weights during training to balance contributions and prevent overfitting ...
 - **p. 6 / 4.1. Experiment Setup - extractive body cue:** We employ a threestage pipeline: (i) UVMC Pre-training: learning representations from large-scale heterogeneous datasets, including RoboMIND (Wu et al., 2025a), Open-X (O'Neill et al., 2024), ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce X Robotic Model 1 (XR-1), a versatile and scalable vision-language-action framework. XR-1 supports robust multi-task learning across diverse robot embodiments and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Generalization Analysis), p. 8 (4.4. 
 | Table 12. Success rate results across 20 tasks on Single-Arm UR-5e. | definition/direction/unit from same section | p. 22 (Figure/Table caption) |
 | Failure analyses for baselines and XR-1 are provided in Appendix I and Appendix J, respectively, showing that XR-1 reduces baseline failures such as optimization ... | definition/direction/unit from same section | p. 9 (4.5. Additional Analyses) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Generalization Analysis), p. 8 (4.4. 
 | By benchmarking against multiple strong baselines, we demonstrate the robustness and scalability of our approach in diverse, challenging scenarios. | comparison identity and matched condition | p. 6 (4. Experiments) |
 | We evaluate XR-1 across six robotic embodiments and over 120 tasks, including bimanual collaboration, dexterous manipulation, and long-horizon tasks, to address four key questions: ... | comparison identity and matched condition | p. 6 (4. Experiments) |
 | 1), it achieves a respectable baseline performance of 42.5%. | comparison identity and matched condition | p. 8 (4.3. Ablation Study) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Generalization Analysis), p. 8 (4.4. 
 | body limitation/failure cue | Figure 17. Failure Cases of XR-1. • Deformable Object Handling: DFR-HangTowelRack. The robot performs a bimanual manipulation task involving deformable object handling: the right ... | p. 31 (Figure/Table caption) |
 | body limitation/failure cue | Figure 1. We introduce X Robotic Model 1 (XR-1), a versatile and scalable vision-language-action framework. XR-1 supports robust multi-task learning across diverse robot embodiments ... | p. 1 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 8 (4.4. Generalization Analysis), p. 8 (4.4. 
 | Given two frames ct and ct+h, the vision encoder Evis(·) produces a latent code zvis = Evis(ct, ct+h), which compresses temporal changes over h ... | p. 4 (3.1. Overview) |
 | The decoder reconstructs actions as 4 | p. 4 (3.1. Overview) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5. Conclusion - extractive body cue:** We presented X Robotic Model 1 (XR-1), a unified framework for versatile and scalable vision-language-action learning that addresses the key limitations of existing approaches: precise ...
@@ -173,6 +152,5 @@ PDF body evaluation/result cue (p. 8 (4.4. Generalization Analysis), p. 8 (4.4. 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We introduce X Robotic Model 1 (XR-1), a versatile and scalable vision-language-action framework. XR-1 supports robust multi-task learning across diverse robot embodiments and ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.2. Results on Real-World Robotic Tasks), p. 6 (4. Experiments), p. 8 (4.3. Ablation Study), p. 8 (4.4. Generalization Analysis), p. 9 (4.5. Additional Analyses), p. 5 (3.5. Data Collection and Implementation Details), metrics p. 6 (4.1. Experiment Setup), p. 7 (4.1. Experiment Setup), p. 8 (4.3. Ablation Study), p. 8 (4.4. Generalization Analysis), p. 9 (4.4. Generalization Analysis), p. 6 (Figure/Table caption), baselines p. 24 (Figure/Table caption), p. 7 (4.2. Results on Real-World Robotic Tasks), p. 7 (4.2. Results on Real-World Robotic Tasks), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.3. Ablation Study), results p. 8 (4.4. Generalization Analysis), p. 8 (4.4. Generalization Analysis), p. 7 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup), p. 9 (4.4. Generalization Analysis), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

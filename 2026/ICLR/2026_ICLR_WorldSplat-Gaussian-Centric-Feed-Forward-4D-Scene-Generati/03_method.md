@@ -56,7 +56,6 @@ PDF body method statement (p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), p. 6 (3 M
 - **p. 16 / A.2 TRAINING DETAILS - extractive body cue:** At this stage, the ControlNet-Transformer, spatial attention, and layout module (with spatial self-attention in the base layers) are optimized.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), p. 6 (3 M
 - **p. 6 / 3 METHOD - extractive body cue:** Taking noise latent and conditons C′ as input, the Enhanced Diffusion Model refines R′, producing high-quality novel-view videos.
 - **p. 15 / A.1 ARCHITECTURES - extractive body cue:** Following DiVE (Jiang et al., 2024), we first employ a frozen variational autoencoder (VAE) to encode the input multi-view video clip into a compact latent ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), p. 6 (3 M
 - **p. 16 / A.2 TRAINING DETAILS - extractive body cue:** Steps are reported for 8-GPU training.
 - **p. 16 / A.2 TRAINING DETAILS - extractive body cue:** For 32-GPU training, divide by 4 (e.g., Stage 1: 15K steps).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** simply, adjust, input, output, channel, dimensions, suit, different, latent, representations, FFN, Temporal, Attention, Cross-View, Cross, Spatial, Self-Attention, Compress, MLP, Text.
 - **Relevant PDF headings:** 3 METHOD (p. 3); A.1 ARCHITECTURES (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), p. 6 (3 M
 - **p. 7 / 4 EXPERIMENTS - extractive body cue:** We adopt the pretrained OpenSora-VAE-1.2 (hpcai tech, 2024) as the backbone, fine-tuning only the cross-view attention blocks (Gao et al., 2023) in the diffusion transformer.
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of different driving world models. Previous driving world models (Jiang et al., 2024; Gao et al., 2023) focus on video generation, while ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.1 ARCHITECTURES), p. 3 (3 METHOD), p. 3 (3 METHOD), objective p. 5 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD), p. 16 (A.2 TRAINING DETAILS), temporal p. 5 (3 METHOD), p. 5 (3 METHOD), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.2 TRAINING DETAILS), p. 16 (A.2 TRAINING DETAILS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

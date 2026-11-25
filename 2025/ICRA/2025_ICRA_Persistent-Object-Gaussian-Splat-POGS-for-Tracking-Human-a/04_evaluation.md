@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 - **p. 5 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** We evaluate POGS on two robotic manipulation tasks across various objects.
 - **p. 5 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** These tasks test POGS's ability to track objects of interest when manipulated by a robot or a human.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Autonomous Object Manipulation and Tracking with POGS Unified Representation (Top) A robot autonomously performs a pick and place primitive to move the shoe ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 | The Gaussian means representing that object cluster are passed as a point cloud to Contact-GraspNet [57], which generates potential grasp candidates along with their ... | definition/direction/unit from same section | p. 4 (3) Persistent Object Tracking phase for online tracking) |
 | However, these methods are prone to tracking errors when objects rotate and keypoints become occluded. | definition/direction/unit from same section | p. 2 (Abstract) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 | Another limitation is that objects that are partially occluded (by a hand, a robot gripper, etc.) have less robust tracking compared to fully unobstructed ... | comparison identity and matched condition | p. 6 (3) Persistent Object Tracking phase for online tracking) |
 | Each Gaussian cluster pose parameter is optimized independently, allowing POGS to track multiple moving objects, without imposing constraints on their relative movements. unlike prior ... | comparison identity and matched condition | p. 4 (3) Persistent Object Tracking phase for online tracking) |
 | Jigsaw to Shelf Clothes Iron to Shelf Shoe to Shoerack Tier 1 Tier 2 Tier 1 Tier 2 Tier 1 Tier 2 No Depth ... | comparison identity and matched condition | p. 6 (3) Persistent Object Tracking phase for online tracking) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -138,8 +127,6 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 | body limitation/failure cue | This variation arises because each trial was executed until a grasping failure occurred-i.e., when the error in object state estimation became too high to ... | p. 6 (3) Persistent Object Tracking phase for online tracking) |
 | body limitation/failure cue | mask does not exist) is helpful in reducing group feature noise for the scene background (anything in the scene that is not a tracked ... | p. 4 (3) Persistent Object Tracking phase for online tracking) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 | We run DBSCAN [47] on the fused pointcloud to filter noise and floater points. | p. 3 (3) Persistent Object Tracking phase for online tracking) |
 | For this we use Nerfstudio's [52, 53] 3DGS tile-based rasterizer implementation, with gradients backpropagated through the MLP within Femb. | p. 3 (3) Persistent Object Tracking phase for online tracking) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** Another limitation is that objects that are partially occluded (by a hand, a robot gripper, etc.) have less robust tracking compared to fully unobstructed objects ...
@@ -171,9 +150,8 @@ PDF body evaluation/result cue (p. 6 (3) Persistent Object Tracking phase for on
 - **p. 4 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** mask does not exist) is helpful in reducing group feature noise for the scene background (anything in the scene that is not a tracked object).
 
 - **Evidence anchors reviewed:** datasets p. 2 (Abstract), p. 2 (Abstract), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 8 (3) Persistent Object Tracking phase for online tracking), p. 3 (Abstract), p. 3 (Abstract), metrics p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), baselines p. 5 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking), results p. 6 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 5 (3) Persistent Object Tracking phase for online tracking), p. 3 (6) Object surfaces exhibit low specularity for more robust), p. 6 (3) Persistent Object Tracking phase for online tracking), p. 2 (Abstract).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

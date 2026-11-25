@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 - **p. 7 / 5 Experiments - extractive body cue:** We evaluate Detic on the large-vocabulary object detection dataset LVIS [18].
 - **p. 7 / 5 Experiments - extractive body cue:** The LVIS [18] dataset has object detection and instance segmentation labels for 1203 classes with 100K images.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Top: Typical detection results from a strong open-vocabulary LVIS detector. The detector misses objects of "common" classes. Bottom: Number of images in LVIS, ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 | We report mask mAP which is the official metric for LVIS. | definition/direction/unit from same section | p. 7 (5 Experiments) |
 | Table 1: Prediction-based vs non-prediction-based methods. We show overall and novel-class mAP on open-vocabulary LVIS [17] (with 866 base classes and 337 novel classes) ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 | Table 1: Prediction-based vs non-prediction-based methods. We show overall and novel-class mAP on open-vocabulary LVIS [17] (with 866 base classes and 337 novel classes) ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Table 4: Detecting 21K classes across datasets. We use Detic to train a detector and evaluate it on multiple datasets without retraining. We report ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
 | Table 15: Detic applied to Deformable-DETR [79]. We report Box mAP on full LVIS. Our method improves Deformable-DETR. outperforms MosaicOS [73] in mAP and ... | comparison identity and matched condition | p. 26 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 | body limitation/failure cue | We leave incorporating such information for future work. | p. 14 (X. Zhou et al) |
 | body limitation/failure cue | Compared to the Box-Supervised baseline (trained on LVIS-all), Detic leverages image-level supervision to train robust detectors. | p. 12 (X. Zhou et al) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -149,14 +136,6 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 | See Appendix E for implementation details. | p. 8 (X. Zhou et al) |
 | In our implementation, we use 320×320 for ImageNet and CC and ablate this in Appendix D. | p. 8 (X. Zhou et al) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Fig. 2: Left: Standard detection requires ground-truth labeled boxes and cannot lever- age image-level labels. Center: Existing prediction-based weakly supervised detection methods [3, 44, 45] ...
@@ -166,6 +145,5 @@ PDF body evaluation/result cue (p. 13 (Figure/Table caption), p. 26 (Figure/Tabl
 - **p. 12 / X. Zhou et al - extractive body cue:** Compared to the Box-Supervised baseline (trained on LVIS-all), Detic leverages image-level supervision to train robust detectors.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 Experiments), p. 7 (5 Experiments), metrics p. 3 (Figure/Table caption), p. 5 (Figure/Table caption), p. 11 (Figure/Table caption), p. 7 (5 Experiments), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), baselines p. 22 (Figure/Table caption), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption), p. 12 (Figure/Table caption), p. 26 (Figure/Table caption), results p. 13 (Figure/Table caption), p. 26 (Figure/Table caption), p. 7 (5 Experiments), p. 11 (Figure/Table caption), p. 3 (Figure/Table caption), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

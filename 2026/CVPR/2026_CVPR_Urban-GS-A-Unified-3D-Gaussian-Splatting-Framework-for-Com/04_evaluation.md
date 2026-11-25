@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablations Study and Analysis), p. 7 (
 - **p. 8 / 5.3. Ablations Study and Analysis - extractive body cue:** It effectively enhances the densification capability of 3DGS in scenes with significant scale variations, leading to a substantial improvement in novel-view rendering quality.
 - **p. 6 / 5.1. Experimental Setup - extractive body cue:** Horizon-GS, our primary state-ofthe-art comparison, was run using its original, unmodified training settings.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Urban-GS achieves unified aerial-to-street modeling of urban scenes, supporting drastic viewpoint changes and maintaining fidelity across scales. Compared with the state-of-the-art method Horizon-GS ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablations Study and Analysis), p. 7 (
 | Figure 1. Urban-GS achieves unified aerial-to-street modeling of urban scenes, supporting drastic viewpoint changes and maintaining fidelity across scales. Compared with the state-of-the-art method ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. The overview pipeline of Urban-GS. Top (Gloabal Training): We start by initializing LOD-structured anchors from SfM- derived points of the aerial-to-street urban ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablations Study and Analysis), p. 7 (
 | We evaluate all baselines using their officially released code. | comparison identity and matched condition | p. 6 (5.1. Experimental Setup) |
 | Following Horizon-GS, for the other baseline methods, we also add depth supervision consistent with our method. | comparison identity and matched condition | p. 6 (5.1. Experimental Setup) |
 | Method/Metrics PSNR ↑ SSIM ↑ LPIPS ↓ Anchors ↓ Baseline 25.20 0.797 0.257 2774k + AJAD 25.66 0.820 0.209 9713k + CAP 25.50 0.815 ... | comparison identity and matched condition | p. 8 (5.3. Ablations Study and Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablations Study and Analysis), p. 7 (
 | body limitation/failure cue | However, this approach fundamentally fails to account for the contribution variations caused by drastic changes in projection areas. | p. 8 (5.3. Ablations Study and Analysis) |
 | body limitation/failure cue | Figure 3. Average position gradient (a) and average projection radius (b) for two sets of neural Gaussians over the densification process. Left plots: Analysis ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -143,14 +130,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablations Study and Analysis), p. 7 (
 | Further implementation details are provided in the supplementary. | p. 7 (5.1. Experimental Setup) |
 | 6, the aggregated contribution wi across the training views can be formulated as: wi = P v∈V /Pv i / · wv i · ... | p. 5 (4.2. Contribution-based Anchor Pruning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. The overview pipeline of Urban-GS. Top (Gloabal Training): We start by initializing LOD-structured anchors from SfM- derived points of the aerial-to-street urban scene, ...
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 8 (5.3. Ablations Study and Analysis), p. 7 (
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Average position gradient (a) and average projection radius (b) for two sets of neural Gaussians over the densification process. Left plots: Analysis of ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup), p. 7 (5.2. Experiment Results and Analysis), p. 8 (5.3. Ablations Study and Analysis), p. 8 (5.3. Ablations Study and Analysis), p. 6 (5.1. Experimental Setup), metrics p. 6 (5.1. Experimental Setup), p. 8 (5.3. Ablations Study and Analysis), p. 8 (5.3. Ablations Study and Analysis), p. 6 (5.1. Experimental Setup), p. 7 (5.2. Experiment Results and Analysis), p. 7 (5.1. Experimental Setup), baselines p. 7 (5.2. Experiment Results and Analysis), p. 7 (5.2. Experiment Results and Analysis), p. 1 (Figure/Table caption), p. 6 (5.1. Experimental Setup), p. 6 (5.1. Experimental Setup), p. 8 (5.3. Ablations Study and Analysis), results p. 8 (5.3. Ablations Study and Analysis), p. 7 (5.2. Experiment Results and Analysis), p. 7 (5.2. Experiment Results and Analysis), p. 1 (Figure/Table caption), p. 8 (5.3. Ablations Study and Analysis), p. 6 (5.1. Experimental Setup).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

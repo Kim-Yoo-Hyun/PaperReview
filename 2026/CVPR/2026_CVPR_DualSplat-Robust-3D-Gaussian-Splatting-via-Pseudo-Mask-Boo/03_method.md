@@ -57,7 +57,6 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 - **PDF p. 5, §3.5 / Eq. (15) (DOC-QA2 원문 대조):** L_robust = exp(−max(0,T_densify−t)/β_robustness)·(L_cos+L_res). 이는 mask refinement loss의 시간별 weighting이며 failure observation 자체가 아니다.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -78,7 +77,6 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 - **p. 1 / 1. Introduction - extractive body cue:** Its success, however, relies on a basic assumption: all training views should depict a static scene under mutually consistent observations.
 - **p. 1 / 1. Introduction - extractive body cue:** When this assumption is violated, 3DGS mistakenly absorbs these view-inconsistent observations into the scene representation by spawning spurious Gaussians, leading to ghosting artifacts and degraded ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,15 +94,11 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 - **p. 4 / 3.2. Overview - extractive body cue:** After the first training, Mask Filter produces confidence-weighted pseudo-masks.
 - **p. 3 / 3.2. Overview - extractive body cue:** We begin by training an initial 3DGS model and comparing each rendered image with its ground-truth training view.
 - **p. 6 / 4.1. Setups - extractive body cue:** We inherit RobustSplat's progressive MLP training schedule and other hyperparameters in Stage II unless otherwise stated.
-- **p. 5 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** (14) Concretely, fi is the cached feature of the ground-truth training view, and f ′ i is computed from the current rendering during optimization.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** DINOv2, feature, extraction, backbone, FiT3D, Training, images, Render, Cosine, Similarity, Threshold, Filtering, Pseudo-Masks, MLP, stop, grad, Input, Process, flow, Local.
 - **Relevant PDF headings:** 2.3. Pretrained Models (p. 3); 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -124,20 +118,10 @@ PDF body method statement (p. 5 (3.4. Reconstruction Failures to Object-Level Pr
 - **p. 2 / 1. We propose a Failure-to-Prior paradigm for transient - extractive body cue:** robust 3DGS that breaks the circular dependency between transient detection and scene reconstruction by converting first-pass reconstruction failures into explicit priors.
 - **p. 4 / 3.4. Reconstruction Failures to Object-Level Priors - extractive body cue:** The primary objective of this step is to translate these firstpass failures into reliable object-level priors for the second reconstruction stage, rather than directly outputting ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview), p. 3 (3.2. Overview), p. 3 (3.2. Overview), objective p. 3 (3.1. Preliminaries), p. 3 (3.1. Preliminaries), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), temporal p. 2 (3. We develop a prior-guided second-stage reconstruction), p. 3 (3.2. Overview), p. 3 (3.2. Overview), p. 4 (3.2. Overview), p. 4 (3.4. Reconstruction Failures to Object-Level Priors), p. 5 (3.4. Reconstruction Failures to Object-Level Priors).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

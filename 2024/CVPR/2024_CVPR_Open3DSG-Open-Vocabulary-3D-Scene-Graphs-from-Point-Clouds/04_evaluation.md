@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 - **p. 8 / 4.4. Qualitative Results - extractive body cue:** 4, we provide qualitative results from our openvocabulary 3D scene graph prediction approach for two different scenes from ScanNet [6].
 - **p. 8 / 4.5. Limitations - extractive body cue:** 3D scene graph prediction with different input modalities, object VLM, privileged ground-truth information and supervised fine-tuning. potential and advantages of open-vocabulary 3D scene graph methods.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Open3DSG. We present Open3DSG the first approach for learning to predict open-vocabulary 3D scene graphs from 3D point clouds. The advantage of our ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 | Hence, our VLM distillation training can also be an effective pre-training strategy when labels are scarce. | definition/direction/unit from same section | p. 8 (4.3. Ablation studies) |
 | Figure 2. Open3DSG overview. Given a point cloud and RGB-D images with their poses, we distill the knowledge of two vision-language models into our ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -93,13 +89,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 | The caption-based approach also achieves considerably lower performances compared to our method. | comparison identity and matched condition | p. 7 (4.2. Closed-set 3D scene graph prediction) |
 | 3 we show experimentally that using OpenSeg as the 2D object feature extractor yields better results compared to CLIP. | comparison identity and matched condition | p. 8 (4.3. Ablation studies) |
 | Table 3. Ablation study. 3D scene graph prediction with different input modalities, object VLM, privileged ground-truth information and supervised fine-tuning. potential and advantages of ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -128,8 +117,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 | body limitation/failure cue | We demonstrate that a naive CLIP-based approach is ill-suited for relationship prediction, but also a two-step approach similar to our method by combining OpenSeg ... | p. 7 (4.2. Closed-set 3D scene graph prediction) |
 | body limitation/failure cue | This demonstrates the core advantage of our zero-shot open-vocabulary approach that it performs robustly on a wide variety of objects and predicates. | p. 7 (4.2. Closed-set 3D scene graph prediction) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 | We compute the cosine similarity and choose the top-k predictions based on their cosine similarities. | p. 6 (4.1. Experimental Setup) |
 | At inference time, we perform a two-step prediction for objects and relationships. | p. 3 (3. Method) |
 | First, we predict object classes via a cosine similarity between the distilled features and open-vocabulary queries encoded by CLIP [33]. | p. 3 (3. Method) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -156,6 +135,5 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 - **p. 7 / 4.2. Closed-set 3D scene graph prediction - extractive body cue:** This demonstrates the core advantage of our zero-shot open-vocabulary approach that it performs robustly on a wide variety of objects and predicates.
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 8 (4.4. Qualitative Results), p. 8 (4.5. Limitations), metrics p. 7 (4.2. Closed-set 3D scene graph prediction), p. 8 (4.3. Ablation studies), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 8 (4.3. Ablation studies), baselines p. 7 (4.2. Closed-set 3D scene graph prediction), p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 8 (4.3. Ablation studies), p. 8 (Figure/Table caption), results p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 7 (4.2. Closed-set 3D scene graph prediction), p. 8 (4.3. Ablation studies), p. 3 (Figure/Table caption), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

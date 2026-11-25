@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 3 / 3 METHOD - extractive body cue:** These uncertainties are then integrated into a 3D Value Map, encoding affordances and constraints in the agent's perceptual space for decision-making (§3.3).
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 3 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD), p. 6 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 3 / 3 METHOD - extractive body cue:** At each step t, the agent receives a panoramic observation composed of multiple RGB views It = {It,k ∈RH×W ×3}K k=1 and associated depth maps ...
 - **p. 4 / 3 METHOD - extractive body cue:** Given multi-view RGB-D observations Ot = {It, Dt} at step t, the agent first generates a sparse pseudo-lidar point cloud via camera-to-world transformation.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 6 / 3 METHOD - extractive body cue:** Pretraining is conducted for 100k iterations with a batch size of 64, optimized by Adam [78] with a learning rate of 1e-4.
 - **p. 8 / 4 EXPERIMENT - extractive body cue:** These cases show how uncertainty helps disambiguate confounding structures and encode traversability constraints.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Following, conventional, procedure, agent, optimized, two-stage, training, scheme, pretraining, auxiliary, objectives, masked, language, modeling, single-step, action, prediction, strengthen, multimodal, representations.
 - **Relevant PDF headings:** 3 METHOD (p. 3); B MODEL DETAILS (p. 18).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 6 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), p.
 - **p. 22 / Figure/Table caption - extractive body cue:** Figure 7: Failure Cases. (a) Our agent stops once "the sofa" comes into view, as the current observation already provides sufficient evidence of the target, ...
 - **p. 9 / 4 EXPERIMENT - extractive body cue:** 5 illustrates our diverse perceptual forms. i) SGM preserves detailed geometric structures while maintaining high-fidelity rendering of the scene. ii) Geometric uncertainty reveals structural reliability, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (3 METHOD), p. 6 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), objective p. 6 (3 METHOD), p. 7 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), temporal p. 6 (3 METHOD), p. 1 (1 INTRODUCTION), p. 2 (2 RELATED WORK), p. 2 (2 RELATED WORK), p. 3 (3 METHOD), p. 3 (3 METHOD).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

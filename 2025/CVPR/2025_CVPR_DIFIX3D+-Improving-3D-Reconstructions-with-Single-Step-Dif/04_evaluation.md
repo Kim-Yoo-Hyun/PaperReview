@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 - **p. 8 / 5.3. Diagnostics - extractive body cue:** 4 averaged over the Nerfbusters [70] dataset.
 - **p. 8 / 5.2. Automotive Scene Enhancement - extractive body cue:** Ablation study of DIFIX3D+ on Nerfbusters dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. We demonstrate DIFIX3D+ on both in-the-wild scenes (top) and driving scenes (bottom). Recent Novel-View Synthesis methods struggle in sparse-input settings or when rendering ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 | Table 1. Data curation. We curate a paired dataset featuring common artifacts in novel-view synthesis. For DL3DV scenes [23], we employ sparse reconstruction and ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 3. DIFIX architecture. DIFIX takes a noisy rendered image and a reference views as input (left), and outputs an enhanced version of the ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 | We first evaluate DIFIX3D+ on in-the-wild scenes against several baselines and show its ability to enhance both NeRF and 3DGS-based pipelines (Sec. | comparison identity and matched condition | p. 6 (5. Experiments) |
 | We use the gsplat library2 for 3DGS-based experiments and the official implementation for all other methods and baselines. | comparison identity and matched condition | p. 7 (5.1. In-the-Wild Artifact Removal) |
 | Figure 5. In-the-wild artifact removal. We show comparisons on held-out scenes from the DL3DV dataset [23] (top, above the dashed line) and the Nerfbusters ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 | body limitation/failure cue | We note that simply decreasing the noise level from 1000 to 200 noticeably improves LPIPS and FID significantly, validating our findings in Fig. | p. 8 (5.3. Diagnostics) |
 | body limitation/failure cue | The primary reason is that high noise level causes the model to generate more hallucinated pixels that contradict the ground truth, resulting in poorer ... | p. 8 (5.3. Diagnostics) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 | To generate more salient artifacts than those obtained by merely holding out views, we underfit our reconstruction by training it with a reduced number ... | p. 5 (4. Boosting 3D Reconstruction with DM priors) |
 | DIFIX is fine-tuned from SD-Turbo, using a frozen VAE encoder and a LoRA fine-tuned decoder. = 200 Input = 600 = 400 = 10 ... | p. 5 (4. Boosting 3D Reconstruction with DM priors) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 5.1. In-the-Wild Artifact Removal - extractive body cue:** Our method outperforms all comparison methods by a signifi1Nerfbusters [70] uses a visibility map extracted from a NeRF model trained on a combination of training ...
@@ -167,6 +146,5 @@ PDF body evaluation/result cue (p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics)
 - **p. 8 / 5.3. Diagnostics - extractive body cue:** The primary reason is that high noise level causes the model to generate more hallucinated pixels that contradict the ground truth, resulting in poorer generalization ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (5. Experiments), p. 6 (5. Experiments), p. 8 (5.3. Diagnostics), p. 8 (5.2. Automotive Scene Enhancement), metrics p. 7 (5.1. In-the-Wild Artifact Removal), p. 8 (5.2. Automotive Scene Enhancement), p. 8 (5.3. Diagnostics), p. 7 (5.1. In-the-Wild Artifact Removal), p. 1 (Figure/Table caption), p. 2 (Figure/Table caption), baselines p. 8 (5.2. Automotive Scene Enhancement), p. 7 (5.1. In-the-Wild Artifact Removal), p. 8 (5.2. Automotive Scene Enhancement), p. 6 (5. Experiments), p. 7 (5.1. In-the-Wild Artifact Removal), p. 6 (Figure/Table caption), results p. 8 (5.3. Diagnostics), p. 8 (5.3. Diagnostics), p. 6 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (5.1. In-the-Wild Artifact Removal), p. 7 (5.1. In-the-Wild Artifact Removal).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

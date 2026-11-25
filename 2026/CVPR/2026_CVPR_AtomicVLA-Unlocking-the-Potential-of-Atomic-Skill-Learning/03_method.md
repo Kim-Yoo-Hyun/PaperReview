@@ -53,7 +53,6 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 - **p. 5 / 3.4. Continual Learning with Skill Expansion - extractive body cue:** For each task, the top row shows the task progression, and the bottom row shows AtomicVLA's inferred outputs.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 - **p. 1 / 1. Introduction - extractive body cue:** To support high-level reasoning and task planning, some existing approaches employ a two-stage architecture [1, 13, 18, 31, 37, 40], where a pretrained vision-language model ...
 - **p. 5 / 3.5. Task Planning Embodied Data Generation - extractive body cue:** Concurrently, gripper state transitions are tracked to infer action semantics and execution progress.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 - **p. 4 / 3.1. Overview - extractive body cue:** Algorithm 1 Inference Pipeline of AtomicVLA Require: VLA model πθ, language instruction ℓ 1: t ←0, O1:n t ←initial image, Atomic ←none 2: while "task ...
 - **p. 8 / 4.3. Results on Real-world Robot - extractive body cue:** Red and green boxes highlight the key differences. number of training steps, AtomicVLA* acquires new skills more efficiently and achieves an overall improvement of 21% ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** left, initial, task, state, skill-expert, activation, during, inference, bottom, design, inherently, enables, incremental, learning, lifelong, settings, when, atomic, skill, introduced.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 2); 3. Method (p. 3); 3.3. Skill-guided Mixture of Experts Architecture (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,23 +112,13 @@ PDF body method statement (p. 5 (3.4. Continual Learning with Skill Expansion), 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 6. Mixed-Training Skill Interference and Continual- Learning Degradation. The top two rows illustrate skill interfer- ence in long-horizon tasks: the first shows successful single-skill ...
 - **p. 6 / 4.2. Results on Simulation - extractive body cue:** Importantly, when an execution failure occurs, for example, the butter is grasped but subsequently dropped as illustrated in Fig.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.4. Continual Learning with Skill Expansion), p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.1. Overview), p. 5 (3.5. Task Planning Embodied Data Generation), p. 3 (3.1. Overview), p. 3 (3.1. Overview), objective p. 4 (3.3. Skill-guided Mixture of Experts Architecture), p. 4 (3.2. Unified Task Planning and Action Execution), p. 5 (3.5. Task Planning Embodied Data Generation), p. 5 (3.4. Continual Learning with Skill Expansion), temporal p. 4 (3.2. Unified Task Planning and Action Execution), p. 4 (3.2. Unified Task Planning and Action Execution), p. 5 (3.5. Task Planning Embodied Data Generation), p. 5 (3.5. Task Planning Embodied Data Generation), p. 6 (4.2. Results on Simulation), p. 8 (4.4. Ablation Study).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

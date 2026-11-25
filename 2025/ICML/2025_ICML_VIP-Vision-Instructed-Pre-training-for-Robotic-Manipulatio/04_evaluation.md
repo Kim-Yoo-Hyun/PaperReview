@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 - **p. 8 / 4.3. Method Analysis - extractive body cue:** Notably, to show the value of DINOv2 representation more clearly, when DINOv2 is not adopted, we replace the encoders in VIRT as ResNet18, the backbone ...
 - **p. 5 / 4. Experiments - extractive body cue:** We evaluate the effectiveness of our method in both real and simulated environments.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Visualization comparison between the action attention maps of the text instructed policy and vision instructed policy. We can observe that the text instructed ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 | Figure 1. Visualization comparison between the action attention maps of the text instructed policy and vision instructed policy. We can observe that the text ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 4. Visualization of different vision instructions. The three columns of images in the first and second rows show the world model input, future ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 | This part conducts an ablation study on the designs in VIRT that are not clearly analyzed before. | comparison identity and matched condition | p. 8 (4.3. Method Analysis) |
 | Figure 1. Visualization comparison between the action attention maps of the text instructed policy and vision instructed policy. We can observe that the text ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
 | Table 3. Ablation study on designs of VIRT. DINO Uncern Mask Move Box Transport Box Stack Boxes 0.80 0.58 0.49 ✓ 0.86 0.66 | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 | body limitation/failure cue | This part analyzes the robustness of VIRT to different unseen environment disturbances. | p. 8 (4.3. Method Analysis) |
 | body limitation/failure cue | According to the results, we can find that solely using a future image or sparse point flows does not lead to effective pre-training due ... | p. 7 (4.2. Instruction Comparison) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 | We mainly study the influences of three designs, i.e., initializing encoder weight with DINOv2, uncertainty in supervision loss, and randomly masking the input images. | p. 8 (4.3. Method Analysis) |
 | Notably, to show the value of DINOv2 representation more clearly, when DINOv2 is not adopted, we replace the encoders in VIRT as ResNet18, the ... | p. 8 (4.3. Method Analysis) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Method Analysis - extractive body cue:** Robustness analysis of VIRT to different disturbances, e.g., brightness change, vision noise, and image blur.
@@ -164,6 +143,5 @@ PDF body evaluation/result cue (p. 8 (4.3. Method Analysis), p. 8 (4.3. Method A
 - **p. 7 / 4.2. Instruction Comparison - extractive body cue:** According to the results, we can find that solely using a future image or sparse point flows does not lead to effective pre-training due to ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4. Experiments), p. 5 (4. Experiments), p. 6 (4. Experiments), p. 7 (4.1. VIP Effectiveness), p. 7 (4. Experiments), p. 8 (4.3. Method Analysis), metrics p. 7 (4.1. VIP Effectiveness), p. 7 (4.1. VIP Effectiveness), p. 8 (4.3. Method Analysis), p. 8 (4.3. Method Analysis), p. 6 (4. Experiments), p. 6 (4. Experiments), baselines p. 7 (4.1. VIP Effectiveness), p. 4 (Figure/Table caption), p. 7 (4.1. VIP Effectiveness), p. 8 (4.3. Method Analysis), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (4.3. Method Analysis), p. 8 (4.3. Method Analysis), p. 7 (4.1. VIP Effectiveness), p. 7 (4.1. VIP Effectiveness).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

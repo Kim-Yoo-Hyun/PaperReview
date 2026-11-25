@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 - **p. 3 / 7 S65 69K- Graplt - extractive body cue:** Realworld datasets with human hand poses offer more natural interactions, such as HO3D [18] which leverages 2D keypoint annotations and physics constraints, and DexYCB {7] ...
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (7 S65 69K- Graplt), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 - **p. 3 / 7 S65 69K- Graplt - extractive body cue:** Realworld datasets with human hand poses offer more natural interactions, such as HO3D [18] which leverages 2D keypoint annotations and physics constraints, and DexYCB {7] ...
 - **p. 4 / 0 4 © _ sminge - extractive body cue:** 2: DexIB demonstration collection. ‘The engine takes object assets and hand pose initialization as input, using a controlbased optimization algorithm to generate the Seed dataset.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 - **p. 3 / 7 S65 69K- Graplt - extractive body cue:** This seed dataset serves as the foundation for training a generative model to learn
 - **p. 4 / 0 4 © _ sminge - extractive body cue:** Then the Seed dataset is used as the training data for DexSimple, else for Dex1Bfor the last iteration.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** address, feasibility, issue, incorporating, geometric, constraints, generative, model, significantly, improves, performance, integrate, opti, mization, techniques, models, leveraging, strengths, approaches, optimization.
 - **Relevant PDF headings:** method (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,27 +112,16 @@ PDF body method statement (p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 
 - **p. 6 / V. EXPERIMENTS - extractive body cue:** Finally, ablation studies are conducted to validate our design choices.
 - **p. 6 / A. Grasping Synthesis Evaluation - extractive body cue:** It is worth noting, the success rate of DexSimple without post-optimization and filtering is slightly lower than that of DDG [22]; this is expected as ...
 - **p. 8 / B. Dataset Analysis - extractive body cue:** Without Lea, the model lacks precise spatial awareness, leading to significant failures in grasp execution On the other hand, the distance loss £0 is responsible ...
-- **p. 8 / B. Dataset Analysis - extractive body cue:** Without Lea, the model lacks precise spatial awareness, leading to significant failures in grasp execution On the other hand, the distance loss £0 is responsible ...
 - **p. 6 / B. Dataset Analysis - extractive body cue:** For the grasping task, we utilize all 5751 object assets collected by DexGraspNet [45] and exclude all objects that cannot stand stably on the table.
 - **p. 7 / B. Dataset Analysis - extractive body cue:** dataset, including retargeting human demonstrations to robot trajectories and adding noise to generate a larger number of physically plausible demonstrations.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. INrRopucTION), p. 2 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 5 (IV. DEXSIMPLE MopEL), p. 4 (0 4 © _ sminge), p. 5 (0 4 © _ sminge), objective p. 5 (IV. DEXSIMPLE MopEL), p. 5 (IV. DEXSIMPLE MopEL), p. 2 (1. INrRopucTION), p. 2 (1. INrRopucTION), p. 4 (0 4 © _ sminge), p. 3 (7 S65 69K- Graplt), temporal p. 6 (A. Grasping Synthesis Evaluation), p. 8 (B. Dataset Analysis), p. 2 (1. INrRopucTION), p. 3 (7 S65 69K- Graplt), p. 4 (0 4 © _ sminge), p. 4 (0 4 © _ sminge).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

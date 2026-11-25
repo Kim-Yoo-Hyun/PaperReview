@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (4. Method), p. 4 (4
 | body cue at p. 8 | Lastly, the DNC and ANR terms help preserve details for objects and reduce overall noise. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 16 | Figure 8. Qualitative visuals of our Depth Normal Consistency (DNR) and Adaptive Normal Regularization (ANR) terms. We visualize ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (4.4. Mesh Extraction), p. 2 (1. Introduction), p. 4 (4. Method), p. 4 (4. Method). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (4. Method), p. 4 (4
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Gaussian Splatting), p. 1 (1. Introduction), p. 3 (3.1. Geometric Priors from Handheld Devices), interface p. 6 (4.4. Mesh Extraction), p. 2 (1. Introduction), p. 4 (4. Method), p. 4 (4. Method), objective p. 5 (4.2. Adaptive Normal Regularization), p. 5 (4.3. Optimization).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

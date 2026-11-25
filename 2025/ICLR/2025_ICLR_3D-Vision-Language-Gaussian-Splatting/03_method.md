@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 5 / 3 METHODOLOGY - extractive body cue:** 3, which shows how much the distribution of semantic indicator values differs from the color opacity after optimization.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 7 (3 METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 3 / 3 METHODOLOGY - extractive body cue:** 3.1 PROBLEM STATEMENT According to the vanilla Gaussian splatting (3DGS) paradigm applied to RGB image rendering (Kerbl et al., 2023), a scene is represented by ...
 - **p. 6 / 3 METHODOLOGY - extractive body cue:** Expressing the input rotations with quaternions q1 and q2, we apply spherical linear interpolation (Slerp) (Shoemake, 1985).
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -99,13 +97,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 10 / 4.2 RESULTS - extractive body cue:** Method Training Time ↓ FPS ↑ # of Gaussians ↓ LangSplat 96min 40 86k GS-Grouping 130min 76 107k GOI 73min 42 92k Ours 65min 79 ...
 - **p. 21 / A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION - extractive body cue:** 19-22, our proposed method consistently outperforms others in terms of the training time, FPS, number of Gaussians, and storage size.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** train, semantically-enriched, DGS, models, standard, procedure, consists, first, generating, language-feature, maps, corresponding, input, images, adapt, usual, rasterization, scheme, better, modality.
 - **Relevant PDF headings:** 3 METHODOLOGY (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -125,20 +120,10 @@ PDF body method statement (p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 M
 - **p. 15 / Figure/Table caption - extractive body cue:** Table 10: Ablation results of three key contributions on the 3D-OVS dataset, in terms of mIoU. modal. fus. sem. indic. view blend. bed bench room ...
 - **p. 17 / Figure/Table caption - extractive body cue:** Table 17: Ablation results on different levels of disentanglement between the per-modality Gaussian parameters, evaluated on the downstream open-vocabulary semantic-segmentation task on LERF. Parameters shared ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 3 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), objective p. 4 (3 METHODOLOGY), p. 4 (3 METHODOLOGY), p. 6 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 5 (3 METHODOLOGY), temporal p. 4 (3 METHODOLOGY), p. 10 (4.2 RESULTS), p. 21 (A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION), p. 21 (A.5.2 EXTENDED EFFICIENCY ANALYSIS AND IMAGE QUALITY EVALUATION), p. 22 (A.5.3 PER-CATEGORY EVALUATION OF SEMANTIC INDICATOR CONTRIBUTION), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

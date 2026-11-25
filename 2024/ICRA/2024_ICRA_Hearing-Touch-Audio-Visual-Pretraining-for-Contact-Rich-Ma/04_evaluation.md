@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table capti
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We evaluate the zero-shot transfer of frozen pre-trained audio representations (a), the effect of dataset size (b), the generalization ability of our method (c), and ...
 - **p. 4 / IV. EXPERIMENTS - extractive body cue:** 1) Qualitative Analysis: Many of the configurations of the task are difficult due to the noticeable visual differences between the train and test settings.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Hearing touch: We enable multisensory pretraining for manipulation by transferring audio-visual representations to manipulation tasks using vision and contact audio. over 2 million ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table capti
 | The zipping task demonstrates the contact microphone's abilities to directly record vibrations touching the gripper, while the flipping and scooping tasks show their ability ... | definition/direction/unit from same section | p. 3 (IV. EXPERIMENTS) |
 | (a) Zero-Shot Transfer (b) Scaling Performance (c) Generalization (d) Architecture Ablation Fig. | definition/direction/unit from same section | p. 6 (IV. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table capti
 | 3) Generalization: To further investigate the poor performance of the Vision-Only baseline in comparison to our method on the flipping task, we compare the ... | comparison identity and matched condition | p. 5 (IV. EXPERIMENTS) |
 | (a) Zero-Shot Transfer (b) Scaling Performance (c) Generalization (d) Architecture Ablation Fig. | comparison identity and matched condition | p. 6 (IV. EXPERIMENTS) |
 | Fig. 6: Ablations. We evaluate the zero-shot transfer of frozen pre-trained audio representations (a), the effect of dataset size (b), the generalization ability of ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table capti
 | body limitation/failure cue | Despite having access to the same information as our method, the BYOL-A and Scratch baselines fail to reason effectively over the audio and utilize ... | p. 5 (IV. EXPERIMENTS) |
 | body limitation/failure cue | This is more like the behavior of the training data than the baselines, which often fail to begin digging the spoon into the material ... | p. 5 (IV. EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +135,6 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table capti
 | 2) Scaling Performance: We run evaluations on the scooping task for models trained with dataset sizes 50% (30 demos) and 150% (90 demos) of ... | p. 5 (IV. EXPERIMENTS) |
 | The results show that keeping the pre-trained audio encoder weights frozen during policy learning only slightly diminishes the performance of our method and still ... | p. 5 (IV. EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / V. CONCLUSION - extractive body cue:** Future work may investigate which properties of pre-training datasets are most conducive to learning audio-visual representations for manipulation policies.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table capti
 - **p. 5 / IV. EXPERIMENTS - extractive body cue:** This is more like the behavior of the training data than the baselines, which often fail to begin digging the spoon into the material as ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), metrics p. 5 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), p. 3 (IV. EXPERIMENTS), baselines p. 4 (IV. EXPERIMENTS), p. 4 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS), p. 6 (Figure/Table caption), results p. 4 (IV. EXPERIMENTS), p. 4 (Figure/Table caption), p. 5 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

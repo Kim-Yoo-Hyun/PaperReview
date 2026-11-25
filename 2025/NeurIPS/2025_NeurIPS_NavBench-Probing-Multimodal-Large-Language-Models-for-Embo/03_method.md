@@ -56,7 +56,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 - **p. 2 / 1 Introduction - extractive body cue:** Temporal Progress Estimation measures temporal-contextual awareness by requiring the model to infer progress within multi-step instructions based on a partial trajectory.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 - **p. 5 / C Progress Level - extractive body cue:** The image extraction process involves traversing agent paths, sampling intermediate viewpoints, and rendering corresponding visual observations.
 - **p. 7 / C Progress Level - extractive body cue:** It consists of three modules: (1) a Waypoint Predictor that extracts RGB and depth inputs to generate candidate waypoints, (2) an MLLM Decision Module that ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 - **p. 2 / 1 Introduction - extractive body cue:** Local Observation-Action Inference evaluates the model's ability to reason about the spatial consequences of individual actions by either predicting the future observation given an action ...
 - **p. 6 / C Progress Level - extractive body cue:** Local Observation-Action Reasoning We design two multiple-choice reasoning tasks to evaluate a model's capacity for local spatial and action reasoning inference.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** support, real-world, deployment, introduce, pipeline, converts, MLLMs, outputs, robotic, actions, NavBench, consists, components, navigation, comprehension, assessed, through, three, cognitively, grounded.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introductio
 - **p. 9 / 5.3 Discussion - extractive body cue:** Error Analysis We manually analyze 100 failed cases to understand model failures.
 - **p. 9 / 5.3 Discussion - extractive body cue:** The models' failure in this setting highlights their limited ability to reason about temporal order within complex instructions.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (Abstract), p. 2 (1 Introduction), p. 7 (C Progress Level), p. 6 (C Progress Level), p. 2 (1 Introduction), objective p. 6 (C Progress Level), p. 4 (C Progress Level), p. 4 (C Progress Level), p. 1 (Body text (section not recovered)), p. 1 (Body text (section not recovered)), p. 2 (1 Introduction), temporal p. 1 (Abstract), p. 5 (C Progress Level), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 4 (C Progress Level), p. 4 (C Progress Level).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

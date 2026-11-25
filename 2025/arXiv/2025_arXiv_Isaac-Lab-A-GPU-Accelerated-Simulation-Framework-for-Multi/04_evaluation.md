@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 21 (Figure/Tabl
 - **p. 40 / 7.1.3. Solver Implementations - extractive body cue:** Newton USD as a Staging Schema for USD Physics Standardization As part of the AOUSD's initiative to advance USD as a descriptive language for Physical ...
 - **p. 39 / 7.1.3. Solver Implementations - extractive body cue:** In addition, Newton will include a dedicated maximal coordinate solver called the Kamino Solver from Disney Research designed to robustly handle systems with closed loops ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: Isaac Lab supports diverse robotic applications with exteroceptive observation inputs. It provides a user-friendly API for experimentation and includes features to facilitate sim-to-real ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 21 (Figure/Tabl
 | Previous works (Noseworthy et al., 2025; Tang et al., 2023, 2024) have demonstrated that the policies trained and evaluated in these environments can be ... | definition/direction/unit from same section | p. 41 (7.2.2. Assembly Benchmark) |
 | Figure 4: Photo-realistic rendering in Isaac Lab using the Omniverse RTX renderer, demonstrating high-quality ray tracing with complex physically-based materials authored using NVIDIA's MDL. ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 21 (Figure/Tabl
 | Figure 13: Log-scale throughput comparison for state-based manipulation tasks on three GPU platforms, including distributed training with two, four, and eight GPUs. These are ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
 | Figure 14: Log-scale throughput comparison for perceptive locomotion tasks across GPU models and distributed training setups. The task for both Unitree G1 and Agility ... | comparison identity and matched condition | p. 21 (Figure/Table caption) |
 | Figure 16: Log-scale throughput comparison of the rough terrain locomotion task for ANYmal-D robot imple- mented using the manager-based and direct workflows. Right: The ... | comparison identity and matched condition | p. 22 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 21 (Figure/Tabl
 | body limitation/failure cue | Developed through a collaborative effort by NVIDIA, Google DeepMind, and Disney Research, Newton aims to advance robot learning and development by providing a robust, ... | p. 38 (7.1. Newton Engine and Isaac Lab Integration) |
 | body limitation/failure cue | In addition, Newton will include a dedicated maximal coordinate solver called the Kamino Solver from Disney Research designed to robustly handle systems with closed ... | p. 39 (7.1.3. Solver Implementations) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -151,14 +138,6 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 21 (Figure/Tabl
 | Users can select planner-backed generation with a single flag, configure the number of trials, number of parallel environments, and compute devices, and adjust the ... | p. 29 (5.5.2. SkillGen-based Dataset Augmentation) |
 | The cuRobo (Sundaralingam et al., 2023) integration in Isaac Lab enables fast, GPU-parallelized collision-aware motion planning. | p. 15 (3.4.3. Motion Planning) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Isaac Lab uses OpenUSD to define rich, complex simulation scenes for robotics. Robots, objects, and sensors are arranged in hierarchical scene graphs, where ...
@@ -169,6 +148,5 @@ PDF body evaluation/result cue (p. 33 (Figure/Table caption), p. 21 (Figure/Tabl
 - **p. 39 / 7.1.3. Solver Implementations - extractive body cue:** In addition, Newton will include a dedicated maximal coordinate solver called the Kamino Solver from Disney Research designed to robustly handle systems with closed loops ...
 
 - **Evidence anchors reviewed:** datasets p. 41 (7.2.2. Assembly Benchmark), p. 41 (7.2.2. Assembly Benchmark), p. 29 (5.5.2. SkillGen-based Dataset Augmentation), p. 29 (5.5.2. SkillGen-based Dataset Augmentation), p. 40 (7.1.3. Solver Implementations), p. 39 (7.1.3. Solver Implementations), metrics p. 29 (5.5.2. SkillGen-based Dataset Augmentation), p. 33 (Figure/Table caption), p. 26 (Figure/Table caption), p. 39 (7.1.3. Solver Implementations), p. 4 (Figure/Table caption), p. 30 (Figure/Table caption), baselines p. 19 (Figure/Table caption), p. 21 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), p. 21 (Figure/Table caption), p. 22 (Figure/Table caption), results p. 33 (Figure/Table caption), p. 21 (Figure/Table caption), p. 22 (Figure/Table caption), p. 26 (Figure/Table caption), p. 29 (5.5.2. SkillGen-based Dataset Augmentation), p. 39 (7.1.3. Solver Implementations).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

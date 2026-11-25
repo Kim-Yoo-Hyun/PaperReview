@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 - **p. 12 / 4 Experiments - extractive body cue:** Qualitative Results Figure 3 shows a predicted scene graph on 3DSSG [28].
 - **p. 12 / 4 Experiments - extractive body cue:** Therefore, it is effective to treat the 3D scene graph as a heterogeneous graph and predict predicates separately according to their belonging types.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: (a) Three different types of relationships constitute the complex 3D scene graph. The colors of edges indicate the predicate super-categories: support, proximity, and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | The evaluation code of KISGP is utilized to reproduce the top-k recall of the PredCls and SGCls tasks. | definition/direction/unit from same section | p. 11 (4 Experiments) |
 | The mean results across all types show that our method increases the overall performance by a significant margin. | definition/direction/unit from same section | p. 12 (4 Experiments) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | 4, our method outperforms KISGP on many predicates, especially on body and tail predicates, including same as, same symmetry as, lying in, and cover. | comparison identity and matched condition | p. 13 (4 Experiments) |
 | For a fair comparison, we split the 1,482 scenes into 3852 sub-scenes for the training set and 548 for the test set in the ... | comparison identity and matched condition | p. 10 (4 Experiments) |
 | 4.2 Comparison with Related Methods Since our model is developed based on KISGP [41], we evaluate our model in PredCls/SGCls tasks against both KISGP ... | comparison identity and matched condition | p. 10 (4 Experiments) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 |---|---|---|
 | body limitation/failure cue | However, it does not mean that we have to abandon HGSL. | p. 14 (4 Experiments) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,19 +134,10 @@ PDF body evaluation/result cue (p. 11 (4 Experiments), p. 12 (4 Experiments), p.
 | We only reproduce and compare with the results of models with open-sourced code. | p. 11 (4 Experiments) |
 | The evaluation code of KISGP is utilized to reproduce the top-k recall of the PredCls and SGCls tasks. | p. 11 (4 Experiments) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 14 / 4 Experiments - extractive body cue:** However, it does not mean that we have to abandon HGSL.
 
 - **Evidence anchors reviewed:** datasets p. 10 (4 Experiments), p. 10 (4 Experiments), p. 14 (4 Experiments), p. 13 (4 Experiments), p. 11 (4 Experiments), p. 11 (4 Experiments), metrics p. 10 (4 Experiments), p. 14 (4 Experiments), p. 14 (4 Experiments), p. 6 (Figure/Table caption), p. 10 (4 Experiments), p. 11 (4 Experiments), baselines p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 13 (4 Experiments), p. 10 (4 Experiments), p. 10 (4 Experiments), results p. 11 (4 Experiments), p. 12 (4 Experiments), p. 13 (4 Experiments), p. 14 (4 Experiments), p. 10 (4 Experiments), p. 12 (4 Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

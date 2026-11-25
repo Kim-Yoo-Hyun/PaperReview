@@ -54,6 +54,7 @@ TIERS = ROOT / "research" / "READING_TIERS.csv"
 DEFAULT_PDF_DIR = ROOT / "tmp" / "pdfs" / "fulltext_remaining_2026-09-01"
 DEFAULT_REVIEW_MANIFEST = ROOT / "work" / "sources" / "fulltext_review_manifest.json"
 BT = chr(96)
+READING_CHECKS = "[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)"
 
 LIGATURES = {
     "ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl",
@@ -728,10 +729,11 @@ def combined_evidence(*groups: list[Evidence], limit: int = 12) -> list[Evidence
 def cue_lines(values: list[Evidence], fallback: str, limit: int = 4) -> str:
     if not values:
         return f"- {fallback}"
-    return "\n".join(
+    lines = (
         f"- **p. {value.page} / {value.section} - extractive body cue:** {short_cue(value.text)}"
         for value in values[:limit]
     )
+    return "\n".join(dict.fromkeys(lines))
 
 
 def anchor(values: list[Evidence], fallback: str = "본문 anchor 없음") -> str:
@@ -1073,16 +1075,13 @@ def problem_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: 
         + cue_lines(changes[1:], "additional contribution cue 없음", 4)
         + "\n\n## Assumptions and Failure Boundary\n\n"
         + md_table(["Body anchor", "Observed limitation/failure cue", "Interpretation boundary"], assumption_rows)
-        + "\n\n- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.\n\n"
+        + "\n\n"
         + "## Position in the Robotics Loop\n\n"
         + f"{domain} writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. "
         + f"Evidence interface anchors: {anchor(interface, 'no interface anchor')}. The downstream handoff is claimed only when the body describes it.\n\n"
         + "## Verification Questions\n\n"
         + f"- **Evidence anchors reviewed:** problem {anchor(problem)}, interface {anchor(interface)}, objective {equation_anchor}.\n"
-        + "- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?\n"
-        + "- What are the observation frame, state memory, output/action frame, horizon and termination rule?\n"
-        + "- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?\n"
-        + "- Does the evaluation measure the stated target, or only an upstream proxy?\n"
+        + f"\n{READING_CHECKS}\n"
     )
 
 
@@ -1127,7 +1126,7 @@ def method_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: d
         + cue_lines(objective, "objective/update cue 없음 - inspect equations and algorithm boxes", 6)
         + f"\n- **Formal bridge:** {formulation[0]} -> {formulation[1]} -> {formulation[2]} -> {formulation[3]}.\n"
         + f"- **Equation/algorithm anchors:** {anchor(ev['equations'], 'none selected')}.\n"
-        + "- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.\n\n"
+        + "\n"
         + "## Variables and Parameters\n\n"
         + md_table(
             ["Role", "PDF-derived terms", "Normalized robotics interpretation", "Status"],
@@ -1141,7 +1140,7 @@ def method_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: d
         + "\n\n## Observation–State–Action Interface\n\n"
         + cue_lines(interface, "observation/state/action interface cue 없음", 7)
         + f"\n- **Normalized interface:** observation={scope[1]}; state={scope[2]}; output/action={scope[3]}.\n"
-        + "- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.\n\n"
+        + "\n"
         + "## Temporal and Runtime Contract\n\n"
         + md_table(
             ["Contract", "Generic domain prior", f"{evidence_label} cue", "Unresolved detail"],
@@ -1154,11 +1153,11 @@ def method_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: d
         )
         + "\n\n## Training vs Inference\n\n"
         + cue_lines(train_infer, "training/inference separation cue 없음", 6)
-        + "\n\n- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.\n\n"
+        + "\n\n"
         + "## Method-Specific Formal Details\n\n"
         + "- **Body-defined terms:** " + (", ".join(body_terms(method + objective + interface, 20)) or "not recovered") + ".\n"
         + f"- **Relevant PDF headings:** {'; '.join(method_section_list) if method_section_list else 'not reliably recovered'}.\n"
-        + "- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.\n\n"
+        + "\n"
         + "## Evaluation Link\n\n"
         + md_table(
             ["Method component", "Evaluation evidence to inspect", "PDF anchor"],
@@ -1170,19 +1169,11 @@ def method_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: d
         )
         + "\n\n## Failure and Ablation Link\n\n"
         + cue_lines(ev["ablation"] + ev["failure"], "ablation/failure cue 없음", 7)
-        + "\n\n- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.\n\n"
+        + "\n\n"
         + "## Reproduction Checklist\n\n"
-        + "1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.\n"
-        + "2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.\n"
-        + "3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.\n"
-        + "4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.\n"
-        + "5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.\n\n"
+        + f"{READING_CHECKS}\n\n"
         + "## Verification Questions\n\n"
         + f"- **Evidence anchors reviewed:** method {anchor(method)}, objective {anchor(objective)}, temporal {anchor(temporal)}.\n"
-        + "- Which module is genuinely new, and which is inherited infrastructure or a baseline?\n"
-        + "- What exact computation consumes each observation and emits each action/output?\n"
-        + "- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?\n"
-        + "- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?\n"
     )
 
 
@@ -1252,7 +1243,7 @@ def evaluation_note(item: dict[str, Any], domain: str, record: dict[str, Any], e
         + md_table(["Body section", "Type", f"{evidence_label} experiment/result cue", "Anchor"], matrix_rows)
         + "\n\n## Dataset / Benchmark Role\n\n"
         + cue_lines(dataset, "dataset/benchmark/environment role cue 없음", 8)
-        + "\n\n- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.\n\n"
+        + "\n\n"
         + "## Figures / Tables as Body Evidence\n\n"
         + cue_lines(ev["captions"], "figure/table caption cue 없음", 8)
         + "\n\n"
@@ -1268,19 +1259,9 @@ def evaluation_note(item: dict[str, Any], domain: str, record: dict[str, Any], e
         )
         + "\n\n## Metrics and Success Definition\n\n"
         + md_table(["Metric/result evidence", "Definition and aggregation to verify", "Anchor"], metric_rows)
-        + "\n\n- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.\n\n"
+        + "\n\n"
         + "## Baselines and Fairness\n\n"
         + md_table(["PDF baseline/comparison cue", "Fair comparison field", "Anchor"], baseline_rows)
-        + "\n\n"
-        + md_table(
-            ["Fairness dimension", "Required matched condition"],
-            [
-                ["Observation/action", "sensor modality, frame, preprocessing, action space and controller"],
-                ["Data", "training split, demonstrations, pretraining, labels and leakage"],
-                ["Compute", "parameter budget, inference steps, hardware, latency and control rate"],
-                ["Protocol", "reset/timeout, seeds, trials, held-out variation and success denominator"],
-            ],
-        )
         + "\n\n## Ablations and Sensitivity\n\n"
         + md_table(["PDF ablation/sensitivity cue", "What it isolates", "Anchor"], ablation_rows)
         + "\n\n## Main Results / Claim–Evidence Map\n\n"
@@ -1295,27 +1276,14 @@ def evaluation_note(item: dict[str, Any], domain: str, record: dict[str, Any], e
         + cue_lines(ev["numeric"], "no numeric body cue", 6)
         + "\n\n## Generalization and Failure Cases\n\n"
         + md_table(["Body cue type", "Observed cue or missing regime", "Anchor"], failure_rows)
-        + "\n\n- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.\n\n"
+        + "\n\n"
         + "## Statistics, Efficiency, and Reproducibility\n\n"
         + md_table(["Body reproducibility cue", "Anchor"], repro_rows)
-        + "\n\n"
-        + md_table(
-            ["Audit field", "Current status"],
-            [
-                ["Trials/episodes/seeds", "use only body sentences above; otherwise not reported"],
-                ["Mean/standard deviation/confidence interval", "use only body table/figure; otherwise not reported"],
-                ["Latency/throughput", "separate inference latency, control rate and simulator throughput"],
-                ["Train/eval split/leakage", "verify dataset/protocol section"],
-                ["Code/checkpoint/environment", "see 01_overview.md; not duplicated as evidence"],
-            ],
-        )
         + "\n\n## Limitations and Verification Questions\n\n"
         + cue_lines(failures, "explicit limitation/failure sentence not recovered", 6)
         + "\n\n"
         + f"- **Evidence anchors reviewed:** datasets {anchor(dataset)}, metrics {anchor(metrics)}, baselines {anchor(baselines)}, results {anchor(results)}.\n"
-        + "- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?\n"
-        + "- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?\n"
-        + "- What negative result or untested regime does the paper leave open?\n"
+        + f"\n{READING_CHECKS}\n"
     )
 
 

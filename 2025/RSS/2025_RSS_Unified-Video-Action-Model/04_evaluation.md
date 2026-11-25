@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 - **p. 7 / B. Real-world Benchmarks - extractive body cue:** Action Prediction Accuracy (Real-World Tasks): Table Il shows the results of real-world tasks.
 - **p. 8 / B. Real-world Benchmarks - extractive body cue:** This explains why DP-C is slower than UVA in Table I and DP-UMI is faster in Table I, ‘Overall, UVA achieves a good balance between ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Unified Video Action Model. (a) UVA features a joint video-action latent representation and decoupled video-action decoding. The Joint latent representation effectively models the ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 | We evaluate policy learning results with UVA compared to the baseline methods on a few different axes: 1) action prediction accuracy, 2) inference speed, ... | definition/direction/unit from same section | p. 6 (B. Real-world Benchmarks) |
 | Action Prediction Accuracy (Simulation Tasks): In Table I, ‘we compare UVA with baseline methods in both single-task | definition/direction/unit from same section | p. 6 (B. Real-world Benchmarks) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 | We ‘compare UVA with the baselines on the PushT (10, 16} and ‘Toolhang [32] tasks. | comparison identity and matched condition | p. 5 (A. Simulation Benchmarks) |
 | UVA has higher success rate than the baselines in most settings, with a strong performance in multi-task scenatios, Speed is measured by a single ... | comparison identity and matched condition | p. 5 (A. Simulation Benchmarks) |
 | This baseline aims to evaluate the effectiveness of joint video and action training. | comparison identity and matched condition | p. 6 (B. Real-world Benchmarks) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 | body limitation/failure cue | We evaluate policy learning results with UVA compared to the baseline methods on a few different axes: 1) action prediction accuracy, 2) inference speed, ... | p. 6 (B. Real-world Benchmarks) |
 | body limitation/failure cue | Robustness to History Length: Prior policy learning meth- ‘ods, such as DP-C, often experience performance degradation as the history length increases as shown in ... | p. 8 (B. Real-world Benchmarks) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 | All methods, except OpenVLA, infer 16 faction steps per trajectory with 8 executed steps. | p. 5 (A. Simulation Benchmarks) |
 | Both UVA and DP-UMI use 16 denoising steps. | p. 6 (B. Real-world Benchmarks) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 10 / IX. Discussion - extractive body cue:** Limitation and Future Work: One limitation of our frame- ‘work is that it does not currently leverage large amounts of actionless video data, which could ...
@@ -172,9 +151,8 @@ PDF body evaluation/result cue (p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-w
 - **p. 8 / B. Real-world Benchmarks - extractive body cue:** Robustness to History Length: Prior policy learning meth- ‘ods, such as DP-C, often experience performance degradation as the history length increases as shown in Figure ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), metrics p. 5 (A. Simulation Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), baselines p. 7 (B. Real-world Benchmarks), p. 6 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 5 (A. Simulation Benchmarks), p. 5 (A. Simulation Benchmarks), p. 6 (B. Real-world Benchmarks), results p. 8 (B. Real-world Benchmarks), p. 8 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks), p. 5 (A. Simulation Benchmarks), p. 5 (B. Real-world Benchmarks), p. 7 (B. Real-world Benchmarks).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

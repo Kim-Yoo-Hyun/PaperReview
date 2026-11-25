@@ -50,7 +50,6 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 3 / 3.1. Problem Formulation - extractive body cue:** Instead of correctly inferring task progress primarily from the environment state se t (e.g., "the cup is now grasped"), the policy incorrectly learns to associate ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 5 (3.4. Unified Training and Closed-Loop Inference).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 2 / 1. Introduction - extractive body cue:** Retry addresses ID errors by systematically decoupling robot pose from environment state.
 - **p. 2 / 1. Introduction - extractive body cue:** (2) A perturbation-bridging augmentation strategy that decouples robot pose from environment state, equipping VLAs with built-in retry robustness.
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 5 / 3.4. Unified Training and Closed-Loop Inference - extractive body cue:** Training an Expert Policy Library Our unified training dataset, comprising Dtask aug (original and "retryaugmented" task data) and Dreset aug (all augmented "reset" skill data), ...
 - **p. 6 / 4. Experiment - extractive body cue:** We fine-tuned the language model and action expert of π0.5 [15] using LoRA [14], training with the Adam optimizer at a constant learning rate of ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Following, modern, VLA, architectures, policy, Markovian-lacking, history-and, predicts, action, chunk, current, visual, observation, language, instruction, outputs, distribution, over, sequences, where.
 - **Relevant PDF headings:** 2.2. Vision-Language-Action Models (p. 2); 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,23 +109,13 @@ PDF body method statement (p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem F
 - **p. 8 / 5.2. Ablations and Analysis for Reset skills learning - extractive body cue:** Task Reset/Retry Reset Object Timestamp Coffee 88% 88% 78% ThreePiece Assembly 96% 78% 66% components: retry/reset classification, reset-object identification, and timestamp identification.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2. The overall framework of our method. We first collect the failure data with the VLA model trained with regular demonstrations. Then we perform ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 5 (3.4. Unified Training and Closed-Loop Inference), objective p. 5 (3.4. Unified Training and Closed-Loop Inference), p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), temporal p. 3 (3.1. Problem Formulation), p. 3 (3.1. Problem Formulation), p. 6 (4. Experiment), p. 6 (4. Experiment), p. 7 (4. Experiment), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

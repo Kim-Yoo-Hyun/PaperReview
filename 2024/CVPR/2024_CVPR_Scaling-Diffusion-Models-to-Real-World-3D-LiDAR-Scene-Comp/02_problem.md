@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 7 | Table 4. Completion metric where the IoU is computed against the ground truth and prediction grids with different ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | We define each point as the origin of the sampled Gaussian noise, learning an iterative denoising process to ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.2. Diffusion scene completion), p. 3 (3.1. Denoising diffusion probabilistic models), p. 4 (3.2. Diffusion scene completion), p. 6 (4.1. Scene reconstruction). The downstream handoff is claimed only when the body describes it.
@@ -70,7 +68,5 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (Abstract), p. 1 (Abstract), interface p. 3 (3.2. Diffusion scene completion), p. 3 (3.1. Denoising diffusion probabilistic models), p. 4 (3.2. Diffusion scene completion), p. 6 (4.1. Scene reconstruction), objective p. 3 (3.1. Denoising diffusion probabilistic models), p. 4 (3.4. Noise prediction regularization), p. 4 (3.4. Noise prediction regularization), p. 5 (3.4. Noise prediction regularization), p. 6 (Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

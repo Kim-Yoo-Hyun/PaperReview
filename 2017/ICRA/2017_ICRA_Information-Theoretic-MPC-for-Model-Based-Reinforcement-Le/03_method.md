@@ -45,7 +45,6 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 - **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The resulting derivation and update law are closely related to the cross-entropy method for stochastic diffusion processes [19], as well as reward weighted regression [20].
 - **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -63,7 +62,6 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 - **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** However, those prior works are geared towards updating the parameters of a feedback control policy, whereas we focus on optimizing an open-loop control plan for ...
 - **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking.
 - **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -78,13 +76,10 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 
 - **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Each training/test iteration consisted of three separate trial runs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** difference, between, classical, MPC, reinforcement, learning, tasks, have, complicated, objectives, beyond, stabilization, tracking, complexity, increases, computational, cost, optimization, major, problem.
 - **Relevant PDF headings:** II. MODEL PREDICTIVE CONTROL (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -97,30 +92,19 @@ PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL 
 ## Failure and Ablation Link
 
 - **p. 5 / V. SIMULATED RESULTS - extractive body cue:** Running the algorithm without a bootstrapped neural network results in repeated failures.
-- **p. 5 / V. SIMULATED RESULTS - extractive body cue:** Running the algorithm without a bootstrapped neural network results in repeated failures.
 - **p. 6 / VI. EXPERIMENTAL RESULTS - extractive body cue:** The slip angle is defined as -arctan( vy /vx/), where vx and vy are the longitudinal and lateral velocities, respectively.
 - **p. 6 / VI. EXPERIMENTAL RESULTS - extractive body cue:** M(x, y) is the cost-map value at the position (x, y), and Sc is an indicator variable which activates if the magnitude of the slip ...
 - **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** During training, we set the slip angle threshold to 15.76 degrees (0.275 radians), and for the final testing runs we raised it to 21.5 degrees ...
 - **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Slip 10 m/s 10.34 9.93 8.05 38.68 11 m/s 9.97 9.43 8.71 34.65 12 m/s 9.88 9.47 8.63 43.72 13 m/s 9.74 9.36 8.44 48.70 ...
 - **p. 5 / V. SIMULATED RESULTS - extractive body cue:** The temperature was set as λ = 1 and the system noise to (2.5, .25, .25, .25), where the 2.5 value corresponds to the thrust ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), objective p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), temporal p. 6 (VI. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (III. INFORMATION THEORETIC CONTROL), p. 5 (IV. MPC WITH NEURAL NETWORK DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (II. MODEL PREDICTIVE CONTROL).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

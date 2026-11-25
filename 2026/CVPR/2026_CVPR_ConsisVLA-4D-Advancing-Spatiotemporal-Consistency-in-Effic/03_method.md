@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework)
 - **p. 6 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive body cue:** The global-depth loss is defined as: \smal l \ m ath cal {L}_{ \ te x t { dep-4D}} =
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (3. Preliminary & Problem Definition), p. 3 (3. Preliminary & Problem Definition), p. 5 (4.4. Cross-Scene Spatiotemporal Consistency), p. 6 (4.4. Cross-Scene Spatiotemporal Consistency), p. 6 (4.4. Cross-Scene Spatiotemporal Consistency).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework)
 - **p. 5 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive body cue:** In the SC-Attn module, each dynamic token 0dyn-4D i is independently guided by its corresponding object representation zobj-3D i and the instruction embedding t: \ ...
 - **p. 3 / 3. Preliminary & Problem Definition - extractive body cue:** Analogous to how the human retina captures 2D images while the brain integrates spatial cues and predicts future states during manipulation, VLA models should inherit ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework)
 - **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** Compared to simulation, the real-world setup adds a new viewpoint input, increases the action chunk size from 8 to 25, and reduces the training batch ...
 - **p. 6 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive body cue:** Latency and Throughput (T-put) represent the inference delay and the number of predicted actions per second, while Cost indicates the time required for every 10k ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contributions, summarized, follows, ConsisVLA-4D, efficient, innovative, framework, advances, spatiotemporal, consistency, D-Perception, D-Reasoning, introduce, CV-Aligner, CO-Fuser, ensure, crossview, object, semantic, cross-object.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework)
 - **p. 8 / 6. Conclusion - extractive body cue:** Through the integration of CVAligner, CO-Fuser, and CS-Thinker, it achieves cross-view, cross-object, and cross-scene consistency, enabling robust and efficient understanding of dynamic environments.
 - **p. 7 / 5.2. Overall Performance & Efficiency - extractive body cue:** Notably, its realworld results are nearly consistent with those on RoboTwin 2.0 (ALOHA manipulator), demonstrating robust sim-toreal transfer capability.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework), p. 5 (4.4. Cross-Scene Spatiotemporal Consistency), p. 1 (Abstract), p. 5 (4.4. Cross-Scene Spatiotemporal Consistency), p. 3 (3. Preliminary & Problem Definition), objective p. 6 (4.4. Cross-Scene Spatiotemporal Consistency), p. 2 (1. Introduction), p. 3 (3. Preliminary & Problem Definition), p. 3 (3. Preliminary & Problem Definition), p. 5 (4.4. Cross-Scene Spatiotemporal Consistency), p. 6 (4.4. Cross-Scene Spatiotemporal Consistency), temporal p. 7 (5.2. Overall Performance & Efficiency), p. 4 (4.1. Proposed Framework), p. 6 (4.4. Cross-Scene Spatiotemporal Consistency), p. 1 (Abstract), p. 1 (Abstract), p. 2 (3) Cross-Scene).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -51,7 +51,6 @@ PDF body method statement (p. 4 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. 
 - **p. 4 / 4. Our Method - extractive body cue:** Event Double Integration (EDI) Loss.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 5 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. Our Method), p. 4 (4. Our Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -72,7 +71,6 @@ PDF body method statement (p. 4 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. 
 - **p. 3 / 3. Preliminaries - extractive body cue:** In the DDPM reverse process, a diffusion U-net is trained to predict the noise ϵ(z, y, t) to denoise zt into zt-1 as follows: zt-1 ...
 - **p. 3 / 3. Preliminaries - extractive body cue:** We propose a novel framework to leverage the EDI prior to constrain 3D Gaussian Splatting in recovering sharp rendered images with better fine-grained details and ...
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. 
 - **p. 4 / 4. Our Method - extractive body cue:** We obtain a set of latent images for each training view by warping the recovered latent image I to each of the n timesteps uniformly ...
 - **p. 5 / 4. Our Method - extractive body cue:** 3, and encode it to a latent z0 = E( ˆCB) via a pretrained VAE encoder E.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** novel, optimization, problem, leverages, EDI, prior, further, constrain, DGS, terms, fine-grained, details, precise, color, regularizing, Since, input, diffusion, model, obtained.
 - **Relevant PDF headings:** 4. Our Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. 
 - **p. 6 / Dataset - extractive body cue:** Specifically, ˜C = D(z′ 0) = D(f2D +E( ˆC)), where D is pretrained VAE decoder (cf.
 - **p. 6 / Dataset - extractive body cue:** After optimization, our model can render latent residual f2D which contains rich edge details directly guided by the pretrained diffusion model.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. Our Method), p. 5 (4. Our Method), objective p. 5 (4. Our Method), p. 4 (4. Our Method), p. 5 (4. Our Method), p. 4 (4. Our Method), temporal p. 4 (4. Our Method), p. 4 (4. Our Method), p. 5 (4. Our Method), p. 5 (4. Our Method), p. 3 (3. Preliminaries), p. 6 (5.1. Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

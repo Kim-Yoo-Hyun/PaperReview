@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 4 / III. METHODOLOGY - extractive body cue:** 2 Right), where the objective is to learn a new set of task-centric latent actions ˆaTC upon which the policy is trained.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In summary, our main contributions are three-folds: • We propose UniVLA, a recipe towards generalist policy by planning in a unified, embodiment-agnostic action space, enabling ...
 - **p. 3 / III. METHODOLOGY - extractive body cue:** To mitigate the unfavorable effect of task-irrelevant dynamics, we incorporate readily available language instructions into the first training stage of latent action model (Fig.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 7 / 2) Navigation Benchmark on Room2Room - extractive body cue:** It uses a pretrained vision encoder to encode visual observations and a pretrained LLM to predict actions.
 - **p. 7 / 2) Navigation Benchmark on Room2Room - extractive body cue:** We introduce several special tokens to tokenize navigation actions and finetune the model on the R2R training split. • NaVid [91] is a video-based large ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Drawing, inspiration, wellestablished, Chain-of-Thought, CoT, reasoning, paradigm, large, language, models, LLMs, generates, intermediate, steps, address, complex, tasks, leveraging, historical, latent.
 - **Relevant PDF headings:** III. METHODOLOGY (p. 3); 1) LIBERO-Spatial requires the policy to infer spatial (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,23 +116,13 @@ PDF body method statement (p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 2: Task-centric latent action learning. We propose a two-stage training framework aimed at disentangling task-centric visual dynamics and changes from extraneous factors. In Stage ...
 - **p. 6 / 1) Manipulation Benchmark on LIBERO - extractive body cue:** The pretraining details can be found in Sec.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), objective p. 3 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), temporal p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 4 (III. METHODOLOGY), p. 5 (III. METHODOLOGY).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

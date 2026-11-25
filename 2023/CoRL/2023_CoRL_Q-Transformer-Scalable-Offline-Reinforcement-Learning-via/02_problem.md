@@ -65,8 +65,6 @@ PDF body contribution framing (p. 2 (1 Introduction), p. 4 (3 Background), p. 1 
 | body cue at p. 6 | Although this does not change convergence, including this maximization speeds up learning (see Section 5.3). | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | To ensure a fair comparison between Q-Transformer and imitation learning methods, we discard all successful episodes in the ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 offline_rl writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 3 (3 Background). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ offline_rl writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 4 (3 Background), p. 4 (3 Background), p. 1 (1 Introduction), p. 2 (1 Introduction), interface p. 4 (3 Background), p. 4 (3 Background), p. 6 (3 Background), p. 3 (3 Background), objective p. 6 (3 Background), p. 2 (1 Introduction), p. 5 (3 Background), p. 5 (3 Background), p. 6 (3 Background), p. 2 (1 Introduction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

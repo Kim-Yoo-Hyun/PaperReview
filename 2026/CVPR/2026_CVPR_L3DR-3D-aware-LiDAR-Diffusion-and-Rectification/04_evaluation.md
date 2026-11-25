@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 - **p. 3 / 3.2. Theoretical Analysis - extractive body cue:** Therefore, DDIM outputs are smooth, with softly transitioned object boundaries.
 - **p. 4 / 3.3. Empirical Analysis - extractive body cue:** We conclude that 3D models generate sharper object borders than 2D models, thus being preferable for rectification of 2D image diffusion results.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. L3DR effectively rectifies LiDAR range-view (RV) diffusion artifacts by selectively ignoring anomalous training regions. (a) Depth bleeding creates fake points between the foreground ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 | We generate RRN training data by conditional LiDM inference on training set conditions, i.e., segmentation maps, and report the metrics of the last-epoch model ... | definition/direction/unit from same section | p. 6 (5.2. Experiment Setup) |
 | Configurations Perceptual Statistical Backbone Loss RRN Sem. | definition/direction/unit from same section | p. 8 (5.3. Other Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 | Ablation experiment on SemanticKITTI, including RRN backbone structure, loss function, semantic-map input to RRN, and a fair baseline using a 2D image Unet instead ... | comparison identity and matched condition | p. 8 (5.3. Other Results) |
 | Table 1. Benchmarking of unconditional generation on KITTI360 and semantic-conditioned generation on nuScenes and Waymo. For the semantic-conditioned experiments, RRN takes segmentation map as ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | According to the figure, range view generated images have lower ∥∇x∥compared to the ground truth due to the inherent smoothness of diffusion-generated images. | comparison identity and matched condition | p. 4 (3.3. Empirical Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 | body limitation/failure cue | Training Seg. w/ noise Generated GT UNet Generated RV & PC RRVP Residuals GT - Gen RVP 3D UNet Welsh Loss Diff. | p. 4 (3.2. Theoretical Analysis) |
 | body limitation/failure cue | Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 | All networks are trained with 4× RTX 4090 24G up to 150 epochs. | p. 6 (5.2. Experiment Setup) |
 | Method Network # Params (M) Steps Time (ms) R2DM Eff-UNet 31.10 50 579.83 LiDM VQ-VAE, UNet 257.77 50 557.36 +Ours SPUNET +37.90 +1 +19.65 ... | p. 8 (5.3. Other Results) |
 | On an RTX 4090 GPU 24G, the additional time for RRN rectification is 19.65 ms which is negligible compared to LiDM and R2DM sampling ... | p. 8 (5.3. Other Results) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experim
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 4. Visualization of two types of errors in RRN training data. While the generated point clouds (colored) approximate the GT (gray) in most of ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.2. Experiment Setup), p. 6 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 3 (3.2. Theoretical Analysis), p. 4 (3.3. Empirical Analysis), metrics p. 5 (Figure/Table caption), p. 7 (5.3. Other Results), p. 7 (5.3. Other Results), p. 8 (5.3. Other Results), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), baselines p. 7 (5.2. Experiment Setup), p. 7 (5.3. Other Results), p. 8 (Figure/Table caption), p. 8 (5.3. Other Results), p. 6 (Figure/Table caption), p. 4 (3.3. Empirical Analysis), results p. 7 (5.2. Experiment Setup), p. 7 (5.2. Experiment Setup), p. 8 (5.3. Other Results), p. 8 (5.3. Other Results), p. 4 (3.2. Theoretical Analysis), p. 4 (3.3. Empirical Analysis).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

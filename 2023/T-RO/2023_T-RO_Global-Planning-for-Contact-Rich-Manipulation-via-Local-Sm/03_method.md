@@ -58,7 +58,6 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 - **p. 3 / II. LOCAL THEORY OF SMOOTHING - extractive body cue:** This gradient, commonly used in RL, is also referred to as the likelihood ratio, or the REINFORCE gradient [41].
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 4 (II. LOCAL THEORY OF SMOOTHING), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 1 (I. INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 - **p. 6 / III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE - extractive body cue:** Quasi-dynamic models, which previous works have used extensively for robotic manipulation [10], [11], [30], [31], [45], simplify Newtonian dynamics by removing terms related to velocity ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** In addition, we propose an efficient extension step by computing actions that expand the tree using the local models (Sec.VII).
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 
 - **p. 15 / VIII. PLANNING RESULTS & DISCUSSION - extractive body cue:** In this section, we apply our algorithm on difficult 3D contactrich manipulation problems previously only tackled by heavy offline approaches in RL [2], [38], and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Quasi-dynamic, models, previous, works, have, extensively, robotic, manipulation, simplify, Newtonian, dynamics, removing, terms, related, velocity, acceleration, focusing, contact, forces, core.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,23 +115,13 @@ PDF body method statement (p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5
 - **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** The collision geometries, robot controller stiffness and coefficients of friction are kept consistent between the CQDC dynamics and Drake.
 - **p. 18 / IX. SIM2REAL TRANSFER & HARDWARE RESULTS - extractive body cue:** However, the necessary damping to uphold the quasidynamic assumption does not always exist on 3D systems.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 5 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), objective p. 4 (II. LOCAL THEORY OF SMOOTHING), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 8 (IV. SMOOTHING OF CONTACT DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (II. LOCAL THEORY OF SMOOTHING), temporal p. 14 (VII. RRT THROUGH CONTACT), p. 2 (I. INTRODUCTION), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 6 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 7 (III. CONVEX QUASI-DYNAMIC DIFFERENTIABLE), p. 10 (IV. SMOOTHING OF CONTACT DYNAMICS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

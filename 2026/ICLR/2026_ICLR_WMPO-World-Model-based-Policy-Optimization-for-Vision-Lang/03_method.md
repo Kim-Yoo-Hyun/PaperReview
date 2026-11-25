@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** Let xi denote the feature representation at frame i; the update rule within each transformer block is given as: xi = xi + (1 + ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 4 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 3 (1 Introduction), p. 4 (3. Policy Update).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** WMPO: World Model-based Policy Optimization for Vision-Language-Action Models Fangqi Zhu1,2, Zhengyang Yan1, Zicong Hong1, Quanxin Shou1, Xiao Ma2,∗, Song Guo1,∗ 1Hong Kong University of Science ...
 - **p. 2 / 1 Introduction - extractive body cue:** First, to mitigate the state-distribution mismatch between expert demonstrations and policy rollouts, we introduce policy behavior alignment, finetuning the world model with behavioral data collected ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** When applying the imagined trajectory to VLA optimization, we decode the images back into pixel space to better leverage the pretrained knowledge, rather than retraining ...
 - **p. 5 / 1. Imagined Trajectory Generation - extractive body cue:** To mitigate this issue, we introduce a noisy-frame conditioning technique: during training, conditional frames Ii-m:i are perturbed with diffusion noise at 50/1000 steps rather than ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** First, mitigate, state-distribution, mismatch, between, expert, demonstrations, policy, rollouts, introduce, behavior, alignment, finetuning, world, model, behavioral, data, collected, itself, overall.
 - **Relevant PDF headings:** 3. Policy Update (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory G
 - **p. 10 / 4 Experiments - extractive body cue:** 6, demonstrate that WMPO achieves stable and substantial improvements over both baselines, whereas DPO fails to improve iteratively due to unstable training.
 - **p. 8 / 4 Experiments - extractive body cue:** This is because WMPO discourages stuck behaviors, which often result in failures due to timeouts.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 Introduction), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 1 (Abstract), p. 2 (1 Introduction), p. 1 (Body text (section boundary not confidently recovered)), objective p. 4 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 4 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), p. 6 (1. Imagined Trajectory Generation), p. 5 (1. Imagined Trajectory Generation), temporal p. 2 (1 Introduction), p. 7 (4 Experiments), p. 5 (1. Imagined Trajectory Generation), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 8 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

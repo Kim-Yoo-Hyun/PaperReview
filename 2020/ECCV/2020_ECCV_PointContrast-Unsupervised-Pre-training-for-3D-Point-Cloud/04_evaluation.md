@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 2 (1 Introduction), p. 1 (body section not re
 - **p. 1 / body section not recovered - extractive body cue:** Our findings are extremely encouraging: using a unified triplet of architecture, source dataset, and contrastive loss for pre-training, we achieve improvement over recent best results ...
 - **p. 2 / 1 Introduction - extractive body cue:** Next, we choose a broad set of target datasets and downstream tasks that includes: semantic segmentation on S3DIS [2], ScanNetV2 [11], ShapeNetPart [77] and Synthia ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 1: Training from scratch vs. fine-tuning with ShapeNet pre-trained weights. understand the limitations of existing practice (pre-training on ShapeNet) in 3D deep learning (Section ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 2 (1 Introduction), p. 1 (body section not re
 | Table 5: SUN RGB-D detection results. PointContrast demonstrates a substan- tial boost compared to training from scratch. We observe a larger improvement in localization ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 | Table 6: Segmentation results on the 4D Synthia test set. All networks here are SR-UNet with 3D kernels, trained on individual 3D frames without ... | definition/direction/unit from same section | p. 12 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 2 (1 Introduction), p. 1 (body section not re
 | However, it still falls behind compared to its 2D counterpart as evidently, in all 3D scene understanding tasks, adhoc training from scratch on the ... | comparison identity and matched condition | p. 2 (1 Introduction) |
 | Our contributions can be summarized as follows: - We evaluate, for the first time, the transferability of learned representation in 3D point clouds to ... | comparison identity and matched condition | p. 2 (1 Introduction) |
 | Table 5: SUN RGB-D detection results. PointContrast demonstrates a substan- tial boost compared to training from scratch. We observe a larger improvement in localization ... | comparison identity and matched condition | p. 12 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,21 +121,11 @@ PDF body evaluation/result cue (p. 2 (1 Introduction), p. 1 (body section not re
 | body limitation/failure cue | This calls for an architectural modification as the SR-UNet architecture does not directly output bounding box coordinates. | p. 11 (2 Related work) |
 | body limitation/failure cue | Table 8: 3D object detection results on ScanNet validation set. Similarly to in- domain segmentation task, here as well PointContrast boost performance on detection, ... | p. 13 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | no implementation/reproducibility sentence selected | verify appendix and code/project |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -158,6 +137,5 @@ PDF body evaluation/result cue (p. 2 (1 Introduction), p. 1 (body section not re
 - **p. 13 / Figure/Table caption - extractive body cue:** Table 8: 3D object detection results on ScanNet validation set. Similarly to in- domain segmentation task, here as well PointContrast boost performance on detection, setting ...
 
 - **Evidence anchors reviewed:** datasets p. 2 (1 Introduction), p. 1 (body section not recovered), p. 1 (body section not recovered), p. 2 (1 Introduction), metrics p. 10 (Figure/Table caption), p. 23 (Figure/Table caption), p. 23 (Figure/Table caption), p. 22 (Figure/Table caption), p. 1 (1 Introduction), p. 5 (Figure/Table caption), baselines p. 5 (Figure/Table caption), p. 12 (Figure/Table caption), p. 13 (Figure/Table caption), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 12 (Figure/Table caption), results p. 2 (1 Introduction), p. 1 (body section not recovered), p. 2 (1 Introduction), p. 10 (Figure/Table caption), p. 12 (Figure/Table caption), p. 24 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 5 (3.1
 - **p. 4 / 3.1. Overview - extractive body cue:** By progressing from the unified representation to task-specific refinement, this design ensures scalability and adaptability.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3.1. Overview), p. 5 (3.1. Overview), p. 4 (3.1. Overview).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 5 (3.1
 - **p. 2 / 1. Introduction - extractive body cue:** XR-1 outperforms state-of-the-art baselines such as π0.5, π0, RDT, UniVLA, and GR00T-N1.5 across challenging scenarios involving bimanual collaboration, dexterous manipulation, deformable objects, contact-rich interactions, dynamic ...
 - **p. 3 / 1. Introduction - extractive body cue:** XR-1: Towards Versatile Vision-Language-Action Models via Learning Unified Vision-Motion Representations while an alignment loss enforces consistent multimodal embeddings across embodiments via UVMC. • We validate ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,13 +87,10 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 5 (3.1
 - **p. 4 / 3.1. Overview - extractive body cue:** At each inference step t, the policy π receives a language instruction l and multimodal observations o = ⟨c, m⟩, where c ∈RK×3×H×W denotes K ...
 - **p. 5 / 3.1. Overview - extractive body cue:** To mitigate this gap, we introduce an alignment loss that constrains visual codes to remain consistent with their motion counterparts: Lalign = DKL(q(ze mo) ∥q(ze ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** motion, decoder, Dmo, then, takes, latent, embedding, optional, conditions, input, language, instruction, proprioceptive, states, observations, inference, step, policy, receives, multimodal.
 - **Relevant PDF headings:** 2.1. Vision-Language-Action Models (p. 3); 3. Methodology (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,20 +110,10 @@ PDF body method statement (p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 5 (3.1
 - **p. 5 / 3.5. Data Collection and Implementation Details - extractive body cue:** We also provide a lightweight variant, XR-1-Light, built upon SwitchVLA (Li et al., 2025a), which uses Florence-2 (Xiao et al., 2024) to reduce computational cost ...
 - **p. 23 / Figure/Table caption - extractive body cue:** Table 14. Ablation study of UVMC. Exp. Codebook Category×Embed.Dim UVMC Token Stage-1&2&3 DUR-Clean DUR-Find
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 5 (3.1. Overview), p. 5 (3.1. Overview), p. 6 (3.5. Data Collection and Implementation Details), objective p. 5 (3.1. Overview), p. 5 (3.1. Overview), p. 4 (3.1. Overview), p. 4 (3.1. Overview), temporal p. 4 (3.1. Overview), p. 4 (3.1. Overview), p. 5 (3.5. Data Collection and Implementation Details), p. 5 (3.5. Data Collection and Implementation Details), p. 6 (4.1. Experiment Setup), p. 6 (3.5. Data Collection and Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

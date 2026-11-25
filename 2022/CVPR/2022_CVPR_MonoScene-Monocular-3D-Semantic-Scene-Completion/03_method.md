@@ -55,7 +55,6 @@ PDF body method statement (p. 2 (3. Method), p. 3 (3.1. Features Line of Sight P
 - **p. 3 / 3.2. 3D Context Relation Prior (3D CRP) - extractive body cue:** This writes, V↔ν = {ν1↔ν, . . . , νs3↔ν}̸=, (2) where {·}̸= returns distinct elements of a set.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 2 (3. Method), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)), p. 4 (3.3. Losses), p. 4 (3.3. Losses).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 2 (3. Method), p. 3 (3.1. Features Line of Sight P
 - **p. 4 / 3.2. 3D Context Relation Prior (3D CRP) - extractive body cue:** The matrices are multiplied with the supervoxels features to gather context, and later combined (concate, conv, DDR [40]) with input features.
 - **p. 1 / 1. Introduction - extractive body cue:** 1, where it outperformed all comparable baselines and even some 3D input baselines.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 2 (3. Method), p. 3 (3.1. Features Line of Sight P
 - **p. 2 / 3. Method - extractive body cue:** To guide the SSC training, we introduce new complementary losses.
 - **p. 5 / 4. Experiments - extractive body cue:** We train 30 epochs with an AdamW [46] optimizer, a batch size of 4 and a weight decay of 1e-4.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** guide, SSC, training, introduce, complementary, losses, argue, enables, D-3D, disentangled, representations, providing, network, freedom, high-level, features, fine-grained, disambiguation, First, Scene-Class.
 - **Relevant PDF headings:** 3. Method (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 2 (3. Method), p. 3 (3.1. Features Line of Sight P
 - **p. 5 / 4.1. Baselines - extractive body cue:** We use the pretrained AdaBin [4] to infer a depth map (ˆxdepth) serving as input for AICNetrgb.
 - **p. 6 / 4.2.1 Evaluation - extractive body cue:** (0.05%) ■fence (3.90%) ■pole (0.29%) ■traf.-sign (0.08%) mIoU LMSCNetrgb [55] ˆxocc 31.38 46.70 19.50 13.50 3.10 10.30 14.30 0.30 0.00 0.00 0.00 10.80 0.00 10.40 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (3. Method), p. 3 (3.1. Features Line of Sight Projection (FLoSP)), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)), p. 4 (3.2. 3D Context Relation Prior (3D CRP)), p. 4 (3.3. Losses), objective p. 4 (3.3. Losses), p. 3 (3.2. 3D Context Relation Prior (3D CRP)), p. 4 (3.4. Training strategy), p. 2 (3. Method), p. 2 (3. Method), p. 3 (3.2. 3D Context Relation Prior (3D CRP)), temporal p. 3 (3.2. 3D Context Relation Prior (3D CRP)), p. 5 (4. Experiments), p. 5 (4. Experiments), p. 6 (4.2.1 Evaluation), p. 7 (4.3. Ablation studies), p. 8 (4.3. Ablation studies).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

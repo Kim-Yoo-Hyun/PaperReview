@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 5 (3) Robustness. Can VLA-Reasoner adapt to v
 - **p. 3 / III. METHOD - extractive body cue:** Problem Statement VLAs aim to generalize robot manipulation by mapping multimodal inputs (states from the environment st, language instructions of the task l) to actions ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** Our method delivers consistent gains in both simulation and on real robots.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: VLA-Reasoner augments VLA models with test-time rea- soning via online tree search, enabling more robust and interpretable robotic manipulation than baselines. becoming a ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 5 (3) Robustness. Can VLA-Reasoner adapt to v
 | The comparison validates the design in our method, which is reflected by the significant growth in the success rate. chosen as the hyperparameter for ... | definition/direction/unit from same section | p. 7 (2 Cups) |
 | Fig. 1: VLA-Reasoner augments VLA models with test-time rea- soning via online tree search, enabling more robust and interpretable robotic manipulation than baselines. becoming ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 5 (3) Robustness. Can VLA-Reasoner adapt to v
 | On the LIBERO benchmark, wrapping a modest baseline VLA with VLA-Reasoner lifts it beyond competing VLAs. | comparison identity and matched condition | p. 2 (I. INTRODUCTION) |
 | In real-world deployments, our approach achieves higher success rates compared to popular VLAs fine-tuned with a few demonstrations, indicating stronger generalization and adaptivity at ... | comparison identity and matched condition | p. 2 (I. INTRODUCTION) |
 | For action ai, the expansion can be formulated as: Sample: ˜ Ai = {a(n)}N n=1 ∼πθ, Top-k: ATop-k i = arg min A⊆˜ Ai, ... | comparison identity and matched condition | p. 3 (III. METHOD) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -139,8 +128,6 @@ PDF body evaluation/result cue (p. 5 (3) Robustness. Can VLA-Reasoner adapt to v
 | body limitation/failure cue | Besides the strengths shown in Section IV-A, we find that injecting a directional future-conditioned feedback to action can improve the awareness of current execution, ... | p. 6 (3) Robustness. Can VLA-Reasoner adapt to varied set) |
 | body limitation/failure cue | We expect future work to build on VLA-Reasoner and explore scalable test-time computation 7 | p. 7 (V. CONCLUSION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 5 (3) Robustness. Can VLA-Reasoner adapt to v
 | The results are shown in the right part of Figure 6, where the image-wise value estimation can better reflect explicit task progress with a ... | p. 7 (2 Cups) |
 | The comparison validates the design in our method, which is reflected by the significant growth in the success rate. chosen as the hyperparameter for ... | p. 7 (2 Cups) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / V. CONCLUSION - extractive body cue:** We identified a core limitation of current short-sighted VLA deployment and introduced VLA-Reasoner, a plug-in framework that injects test-time reasoning into off-the-shelf VLAs, to mitigate ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 5 (3) Robustness. Can VLA-Reasoner adapt to v
 - **p. 7 / V. CONCLUSION - extractive body cue:** We expect future work to build on VLA-Reasoner and explore scalable test-time computation 7
 
 - **Evidence anchors reviewed:** datasets p. 6 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 6 (2 Cups), p. 5 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 3 (III. METHOD), p. 2 (I. INTRODUCTION), p. 4 (IV. EXPERIMENTS), metrics p. 7 (2 Cups), p. 5 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 6 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 6 (2 Cups), p. 2 (I. INTRODUCTION), p. 5 (2) Real-world Applicability. How does VLA-Reasoner), baselines p. 5 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 5 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 1 (Figure/Table caption), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), results p. 5 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 6 (3) Robustness. Can VLA-Reasoner adapt to varied set), p. 2 (I. INTRODUCTION), p. 6 (2 Cups), p. 2 (I. INTRODUCTION), p. 5 (3) Robustness. Can VLA-Reasoner adapt to varied set).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

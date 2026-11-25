@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of
 - **p. 8 / Model - extractive body cue:** Thorough exploration of the design space and roadmap progression.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Preliminary of LMMs), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3.1. Design space).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of
 - **p. 4 / 3.3. Compound 3D-Informed Design - extractive body cue:** While previous approaches focused on generating 3D-informed instruction tuning data to enable LMMs with the abilities to estimate distances, depths, or spatial relationships [14, 16], ...
 - **p. 5 / 3.3.1. Design space - extractive body cue:** In a multimodal LLM, a pre-trained CLIP visual encoder extracts grid features from the input image.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of
 - **p. 6 / 3.3.1. Design space - extractive body cue:** We investigate the 3D-awareness of mixed visual encoders, and incorporate 3D-informed data at each training stage across all architecture components.
 - **p. 7 / 4.2. Results - extractive body cue:** 3D-informed pretraining of vision encoder?
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, design, space, considered, choices, training, data, model, architecture, setup, advance, spatial, reasoning, capabilities, LMMs, step, enables, learn, rich, visual.
 - **Relevant PDF headings:** 3. Methods (p. 3); Model (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of
 - **p. 7 / 4.2. Results - extractive body cue:** Interestingly, although SpatialVLM [14] (implemented in SpaceLLaVA [2]) outperforms other open-source models in overall performance, it falls short in 3D orientation reasoning compared to LLaVA, ...
 - **p. 7 / 4.2. Results - extractive body cue:** We will consider models with additional inputs in future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of LMMs), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3.1. Design space), p. 4 (3.3. Compound 3D-Informed Design), p. 6 (3.3.1. Design space), objective p. 3 (3.1. Preliminary of LMMs), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3.1. Design space), p. 8 (Model), p. 8 (Model), temporal p. 3 (3.1. Preliminary of LMMs), p. 3 (3.1. Preliminary of LMMs), p. 7 (4.2. Results), p. 8 (Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

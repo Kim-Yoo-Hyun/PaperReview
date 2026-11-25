@@ -56,7 +56,6 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 - **p. 4 / 4. Problem Formulation - extractive body cue:** We say that a trajectory hT is successful when the cumulative reward R(hT ) = PT t=1 rt surpasses a threshold c ∈[0, Rmax]: Y ...
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 6 (5. Method), p. 6 (5. Method), p. 10 (6.6. Application to guided test-time action search), p. 10 (6.6. Application to guided test-time action search), p. 8 (6.1. Vision-Language-Action Models).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 - **p. 5 / 4. Problem Formulation - extractive body cue:** One may hope that a set of trajectories h∗ T = (x0, a∗ 0, . . . , xT -1, a∗ T -1), which contain ...
 - **p. 2 / 1. Introduction - extractive body cue:** Our paper further advances the research in crucial areas: • We provide the first formulation for calibration in sequential tasks, unifying recent works on failure ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 
 - **p. 10 / 6.6. Application to guided test-time action search - extractive body cue:** RNN with TDQC or BCE action selection methods uses the output of the fθ network for the guidance at all time steps (that is, the ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Temporal, Difference, Calibration, Sequential, Tasks, Application, Vision-Language-Action, Models, Algorithm, TDQC, input, Policy, dataset, Dcal, Initialize, network, weights, until, convergence, Sample.
 - **Relevant PDF headings:** 5. Method (p. 5); 6.1. Vision-Language-Action Models (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 6 (5. Method), p. 7 (5.2. Application to Test-Time
 - **p. 28 / Figure/Table caption - extractive body cue:** Figure 11. Analysis of VLA Calibration and Success Rates. (a-f) Scatter plots showing the strong negative correlation between Brier Score at Stop Time ( ˆT) ...
 - **p. 10 / Figure/Table caption - extractive body cue:** Figure 4. Averaged success rates over additional simulation steps for action selection configurations. All experiments evalu- ate 3 unseen tasks from LIBERO-10 taken with OpenVLA, ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 7 (1. TD loss improves calibration and failure detection re), p. 6 (5. Method), p. 10 (6.6. Application to guided test-time action search), p. 8 (6.1. Vision-Language-Action Models), objective p. 5 (5. Method), p. 6 (5. Method), p. 6 (5. Method), p. 5 (4. Problem Formulation), p. 4 (4. Problem Formulation), p. 4 (4. Problem Formulation), temporal p. 6 (5.1. Early Stopping with Conformal Prediction), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 4 (3. Related Work), p. 6 (5. Method), p. 7 (5.2. Application to Test-Time Guided Action Search), p. 9 (6.4. TD loss improves calibration and failure detection).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

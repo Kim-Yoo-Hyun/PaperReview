@@ -54,7 +54,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gauss
 - **p. 4 / 3. GaussianVerse - extractive body cue:** Compared with several previous studies [10, 30, 57] which also fit per-object 3D Gaussians for training diffusion models, we achieve higherquality 3DGS fittings with fewer ...
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 1 (1. Introduction), p. 3 (3. GaussianVerse), p. 4 (3. GaussianVerse), p. 4 (4. Formulating 3D Gaussians as 2D Atlas).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gauss
 - **p. 4 / 4. Formulating 3D Gaussians as 2D Atlas - extractive body cue:** LD can understand complex natural language and generate coherent 2D images, benefiting from the vast availability of over billions of paired text-image data [40].
 - **p. 1 / Abstract - extractive body cue:** To address this challenge, we propose repurposing pre-trained 2D diffusion models for 3D object generation.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gauss
 - **p. 4 / 3. GaussianVerse - extractive body cue:** We obtain Gaussian Atlas by reorganizing the flattened coordinates to pixels of a dense 2D square of size → N ↑ → N. loss nearly ...
 - **p. 1 / 1. Introduction - extractive body cue:** In this work, we achieve 3D object generation by directly fine-tuning 2D generation models. previous studies that also pre-compute 3D Gaussian references, GaussianVerse provides higher-quality ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** summarize, major, contributions, three-fold, present, large-scale, dataset, GaussianVerse, consisting, high-quality, Gaussian, fittings, diverse, objects, sampled, Sketchfab, novel, representation, Gaussians, Atlas.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gauss
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Qualitative comparisons. Our method achieves perfor- mance comparable to the state-of-the-art in terms of CLIP similar- ity scores, with the minimum number of ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. The optimization-based flattening approach results in in- consistent patterns that are hard for fine-tuning. We show two ob- jects (a) and their Gaussian ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gaussians as 2D Atlas), p. 1 (1. Introduction), p. 1 (Abstract), p. 4 (4. Formulating 3D Gaussians as 2D Atlas), p. 5 (5. 2D Diffusion for 3D Gaussian Generation), objective p. 3 (3. GaussianVerse), p. 1 (1. Introduction), p. 4 (3. GaussianVerse), p. 4 (3. GaussianVerse), temporal p. 2 (2. Related Work), p. 4 (3. GaussianVerse), p. 5 (5. 2D Diffusion for 3D Gaussian Generation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

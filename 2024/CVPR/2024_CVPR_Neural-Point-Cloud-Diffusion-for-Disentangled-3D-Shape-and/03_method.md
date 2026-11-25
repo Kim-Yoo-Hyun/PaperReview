@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 - **p. 5 / 3.4. Disentangled generation - extractive body cue:** (9), but update the point positions Pt-1 from the given P0 via the forward diffusion process in Eq.
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.1. Category-Level Point-NeRF Autodecoder), p. 5 (3.4. Disentangled generation), p. 5 (3.4. Disentangled generation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 - **p. 2 / 1. Introduction - extractive body cue:** We propose the first approach for object generation that leverages a hybrid approach consisting of a neural point cloud combined with a neural renderer and ...
 - **p. 3 / 3.1. Category-Level Point-NeRF Autodecoder - extractive body cue:** Overview of neural point cloud diffusion (NCPD).
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 - **p. 5 / 3.4. Disentangled generation - extractive body cue:** Given a trained NPCD model, we can naively sample from the joint distribution p(P, F) of point positions and features by sampling positions and features ...
 - **p. 7 / 4.2. Metrics - extractive body cue:** conduct a quantitative analysis by reporting the per-point mean cosine similarities between optimized neural point features of 10 random training examples over 100 different seeds ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** architecture, denoiser, network, Transformer, introduce, variational, autodecoder, storing, vectors, means, isotropic, variances, instead, features, point, Since, encoder, networks, functions, design.
 - **Relevant PDF headings:** 3. Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. 
 - **p. 7 / 4.6. Analysis - extractive body cue:** As diffusion on hybrid point clouds and local radiance fields has not been done before, we conduct ablation studies and analyze various novel design choices.
 - **p. 6 / 4.1. Datasets and experimental setup - extractive body cue:** Further details on the denoiser architecture, diffusion model parameters, and training parameters are provided in the supplementals.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 3 (3. Method), p. 3 (3. Method), p. 5 (3.4. Disentangled generation), objective p. 4 (3.1. Category-Level Point-NeRF Autodecoder), p. 4 (3.2. Autodecoding for diffusion), p. 5 (3.3. Neural point cloud diffusion), p. 3 (3.1. Category-Level Point-NeRF Autodecoder), p. 3 (3. Method), p. 5 (3.4. Disentangled generation), temporal p. 5 (3.3. Neural point cloud diffusion), p. 5 (3.3. Neural point cloud diffusion), p. 4 (3.2. Autodecoding for diffusion), p. 4 (3.3. Neural point cloud diffusion), p. 7 (4.3. Disentangled generation).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

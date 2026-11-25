@@ -42,8 +42,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 
 - **p. 7 / 4.4. Memory and Runtime Analysis - extractive body cue:** Additionally, we require the least GPU memory to process a room-sized scene.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Dense Reconstruction on ScanNet [17] scene0054. LoopSplat demonstrates superior performance in geometric accuracy, robust tracking, and high-quality re-rendering. This is enabled by our ...
@@ -77,8 +75,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | Table 6. Rendering Performance on 3 Datasets. LoopSplat achieves competitive results on synthetic and real-world datasets. Gray indicates evaluation on submaps instead of a ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Table 8. Ablation Study on 3DGS Registration. The num- bers are computed based on average performance of 8 scenes on Replica [71]. Mul. Opt. ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | Tab. 51. LoopSplat outperforms all 3DGS-based baselines attributed to more accurate pose estimates. LoopSplat falls behind Loopy-SLAM [40] and Point-SLAM [63], but note that ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Table 7. Runtime and Memory Usage on Replica office 0. Per-frame runtime is calculated as the total optimization time di- vided by the sequence ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 8. Ablation Study on 3DGS Registration. The num- bers are computed based on average performance of 8 scenes on Replica [71]. Mul. Opt. ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -127,8 +116,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | body limitation/failure cue | Figure 1. Dense Reconstruction on ScanNet [17] scene0054. LoopSplat demonstrates superior performance in geometric accuracy, robust tracking, and high-quality re-rendering. This is enabled by ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Table 2. Tracking Performance on ScanNet++ [93] (ATE RMSE ↓[cm]). LoopSplat achieves the highest accuracy and can robustly deal with the large camera motions ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -137,14 +124,6 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 | To assess map size, we measure the total memory needed for the map and the peak GPU memory usage. | p. 6 (Method) |
 | 7 profiles the runtime and memory usage of LoopSplat. | p. 7 (4.4. Memory and Runtime Analysis) |
 | Additionally, we require the least GPU memory to process a room-sized scene. | p. 7 (4.4. Memory and Runtime Analysis) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -155,6 +134,5 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 5 / Figure/Table caption - extractive body cue:** Table 2. Tracking Performance on ScanNet++ [93] (ATE RMSE ↓[cm]). LoopSplat achieves the highest accuracy and can robustly deal with the large camera motions in ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4.4. Memory and Runtime Analysis), metrics p. 5 (Figure/Table caption), p. 1 (Figure/Table caption), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 5 (4. Experiments), p. 6 (Figure/Table caption), baselines p. 6 (Figure/Table caption), p. 5 (4. Experiments), p. 7 (4.4. Memory and Runtime Analysis), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (4. Experiments).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

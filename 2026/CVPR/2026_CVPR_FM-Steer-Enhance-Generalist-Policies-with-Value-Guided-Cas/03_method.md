@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.
 - **원문 대조:** 후보 다양성을 위해 deterministic Euler integration에 stochasticity를 추가하고 각 forward step을 isotropic Gaussian으로 모델링한다. Σ_τ는 후보 다양성을 조절하는 hyperparameter이며 기존 cue는 이 sampling 단계의 설명이다. ([PDF p. 3](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf#page=3), §4.1 Value-Guided Test-Time Sampling).
 - **Formal bridge:** state/history and risk h(s) -> filtered/recovery action u_safe -> task utility subject to safety constraint -> low violation/failure probability with useful intervention.
 - **Equation/algorithm anchors:** p. 3 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.1. Value-Guided Test-Time Sampling).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.
 - **p. 2 / 1. Introduction - extractive body cue:** By iteratively sampling intermediate noisy actions rather than fully denoised actions, part of the flowmatching computation in the original action expert is asynchronously offloaded to ...
 - **p. 5 / 4.3. Training and Deployment Strategy - extractive body cue:** The action of the dataset used to train the LiteFlow denoiser is obtained by sampling from the frozen original VLA, and the observation is obtained ...
 - **Normalized interface:** observation=observation, uncertainty/risk estimate와 task command; state=safe set, recovery state 또는 constraint margin; output/action=shielded, recovery 또는 safe action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,15 +93,11 @@ PDF body method statement (p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.
 - **p. 4 / 4.1. Value-Guided Test-Time Sampling - extractive body cue:** During training, we use the calibrated Q-learning [49] to optimize the intermediate flow verifier φ.
 - **p. 5 / 5.1. Implementation Details - extractive body cue:** During deployment, we use a single RTX 4090 GPU for inference.
 - **p. 5 / 5.1. Implementation Details - extractive body cue:** FM-Steer is trained on 8 A100 GPUs with a batch size ranging from 8 to 32 across different datasets.
-- **p. 5 / 5.1. Implementation Details - extractive body cue:** During deployment, we use a single RTX 4090 GPU for inference.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** During, training, calibrated, Q-learning, optimize, intermediate, flow, verifier, k-th, sub-action, chunk, contains, noisy, action, time, step, corresponding, observation, including, image.
 - **Relevant PDF headings:** 4. Methodology (p. 3); Model (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,20 +117,10 @@ PDF body method statement (p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.
 - **p. 5 / 5.1. Implementation Details - extractive body cue:** FMSteer sets the noise-level bound T in the range of 0.7 to 0.9 and selects N = 5 candidates from the original VLA at each ...
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3. Experimental setups on WidowX, AgiBot G-1, and Franka. We evaluate FM-Steer across 3 simulation environments and 3 different real-world robotic platforms, covering 15 ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.2. Cascaded Action Denoising), p. 7 (5.3. Efficiency Improvement), p. 3 (4.1. Value-Guided Test-Time Sampling), p. 3 (4. Methodology), p. 7 (5.3. Efficiency Improvement), objective p. 3 (4.1. Value-Guided Test-Time Sampling), p. 4 (4.2. Cascaded Action Denoising), p. 4 (4.1. Value-Guided Test-Time Sampling), p. 5 (4.3. Training and Deployment Strategy), p. 7 (5.3. Efficiency Improvement), p. 3 (4.1. Value-Guided Test-Time Sampling), temporal p. 4 (4.2. Cascaded Action Denoising), p. 5 (4.3. Training and Deployment Strategy), p. 4 (4.2. Cascaded Action Denoising), p. 5 (4.3. Training and Deployment Strategy), p. 3 (3. Preliminaries), p. 1 (Body text (section not recovered)).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

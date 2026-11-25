@@ -44,8 +44,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** We use the 153 prompts from the object-centric COCO validation subset of Dream Fields.
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** Left: We evaluate components of our unlit renderings on albedo, full shaded and illuminated renderings and textureless illuminated geometry using CLIP L/14 on object-centric COCO.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: DreamFusion uses a pretrained text-to-image diffusion model to generate realistic 3D models from text prompts. Rendered 3D models are presented from two views, ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 | Our computation of R-Precision differs slightly from baselines. | definition/direction/unit from same section | p. 17 (A.3 EXPERIMENTAL SETUP) |
 | DreamFusion evaluates at 30◦since it is not prone to this issue, but averages the metric over multiple azimuths to reduce variance. | definition/direction/unit from same section | p. 17 (A.3 EXPERIMENTAL SETUP) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 | The base method (i) without view-dependent prompts results in a multi-faced dog with flat geometry. | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Rendering without color (iv) helps to smooth the geometry, but also causes some color details like the skull and crossbones to be "carved" into ... | comparison identity and matched condition | p. 9 (4 EXPERIMENTS) |
 | Figure 2: Comparison of 2D sampling methods from a text-to-image diffusion model with text "a photo of a tree frog wearing a sweater." For ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -130,8 +119,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 | body limitation/failure cue | DreamFusion does not require 3D or multi-view training data, and uses only a pre-trained 2D diffusion model (trained on only 2D images) to perform ... | p. 9 (5 DISCUSSION) |
 | body limitation/failure cue | Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a peacock on a surfboard." The scene ... | p. 5 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 | For the first 1k steps of optimization we set the ambient light color ℓa to 1 and the diffuse light color ℓρ to 0, ... | p. 16 (A.2 NERF DETAILS AND TRAINING HYPERPARAMETERS) |
 | In our main results in Table 1, we evaluate all captions with 2 generation seeds unless otherwise noted. | p. 17 (A.3 EXPERIMENTAL SETUP) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / 5 DISCUSSION - extractive body cue:** Though DreamFusion produces compelling results and outperforms prior work on this task, it still has several limitations.
@@ -160,6 +139,5 @@ PDF body evaluation/result cue (p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2
 - **p. 5 / Figure/Table caption - extractive body cue:** Figure 3: DreamFusion generates 3D objects from a natural language caption such as "a DSLR photo of a peacock on a surfboard." The scene is ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), metrics p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 4 (Figure/Table caption), p. 15 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 17 (A.3 EXPERIMENTAL SETUP), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 4 (Figure/Table caption), results p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 2 (Figure/Table caption), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

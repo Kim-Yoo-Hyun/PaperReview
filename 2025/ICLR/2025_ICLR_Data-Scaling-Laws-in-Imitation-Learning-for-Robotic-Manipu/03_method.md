@@ -54,7 +54,6 @@ PDF body method statement (p. 5 (3 APPROACH), p. 4 (3 APPROACH), p. 5 (3 APPROAC
 - **p. 8 / 3 APPROACH - extractive body cue:** For example, according to the equation in Fig.
 - **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
 - **Equation/algorithm anchors:** p. 7 (3 APPROACH), p. 8 (3 APPROACH).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 5 (3 APPROACH), p. 4 (3 APPROACH), p. 5 (3 APPROAC
 - **p. 3 / 3 APPROACH - extractive body cue:** Then, we demonstrate our data source and design choices for policy learning methods.
 - **p. 6 / 3 APPROACH - extractive body cue:** Each policy is evaluated in 8 unseen environments, using two unseen objects per environment, with 5 trials per environment.
 - **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (3 APPROACH), p. 4 (3 APPROACH), p. 5 (3 APPROAC
 - **p. 8 / 3 APPROACH - extractive body cue:** For each selected environment, we use all demonstrations of n objects (n = 1, 2, 3, 4) as the training data.
 - **p. 6 / 3 APPROACH - extractive body cue:** 4 illustrates that (1) increasing the number of training environment-object pairs substantially enhances the policy's generalization performance, consistent with previous observations.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** There, several, observations, number, training, objects, increases, policy, performance, unseen, consistently, improves, across, fractions, demonstrations, Temporal, ensemble, Diffusion, predicts, sequence.
 - **Relevant PDF headings:** 3 APPROACH (p. 3); C POLICY TRAINING (p. 23).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 5 (3 APPROACH), p. 4 (3 APPROACH), p. 5 (3 APPROAC
 - **p. 10 / 32 Env-Object Pairs - extractive body cue:** Both pretraining and full fine-tuning are indispensable.
 - **p. 4 / 3 APPROACH - extractive body cue:** To further enhance performance, we make two improvements: (1) DINOv2 visual encoder: In our experiments, fine-tuning the DINOv2 ViT (Oquab et al., 2023) outperforms both ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 APPROACH), p. 4 (3 APPROACH), p. 5 (3 APPROACH), p. 8 (3 APPROACH), p. 6 (3 APPROACH), p. 3 (3 APPROACH), objective p. 4 (3 APPROACH), p. 5 (3 APPROACH), p. 7 (3 APPROACH), p. 8 (3 APPROACH), temporal p. 4 (3 APPROACH), p. 4 (3 APPROACH), p. 1 (ABSTRACT), p. 5 (3 APPROACH), p. 5 (3 APPROACH).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

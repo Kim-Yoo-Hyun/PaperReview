@@ -53,7 +53,6 @@ PDF body method statement (p. 15 (A.2 Implementation Details), p. 15 (A.2 Implem
 - **p. 17 / A.2 Implementation Details - extractive body cue:** However, they may hinder reward acquisition during the initial stages of training.
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 16 (A.2 Implementation Details), p. 16 (A.2 Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -74,7 +73,6 @@ PDF body method statement (p. 15 (A.2 Implementation Details), p. 15 (A.2 Implem
 - **p. 1 / 1 Introduction - extractive body cue:** To develop an end-to-end solution with promising generalizability, recent studies [11-15] adopted Reinforcement Learning (RL) methods by training a neural model to control based on ...
 - **p. 2 / 1 Introduction - extractive body cue:** To address this limitation, we propose a high-level planning policy that dynamically selects which policy to activate based on the scenario.
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,15 +89,11 @@ PDF body method statement (p. 15 (A.2 Implementation Details), p. 15 (A.2 Implem
 - **p. 16 / A.2 Implementation Details - extractive body cue:** During training, two trained low-level policies are loaded and rolled out to generate training data for optimizing the high-level policy.
 - **p. 17 / A.2 Implementation Details - extractive body cue:** However, they may hinder reward acquisition during the initial stages of training.
 - **p. 7 / 5 Experiment - extractive body cue:** All policies are trained using three random seeds and evaluated in 1000 distinct environments.
-- **p. 15 / A.2 Implementation Details - extractive body cue:** The training terrain consists of various types, including flat planes, rough surfaces, steps, and slopes.
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Action, Space, policy, outputs, continuous, actions, utilized, target, positions, controller, compute, joint, torques, training, terrain, consists, various, types, including, flat.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -115,27 +109,16 @@ PDF body method statement (p. 15 (A.2 Implementation Details), p. 15 (A.2 Implem
 - **p. 7 / 5 Experiment - extractive body cue:** 3) DreamWaQ-Humanoid further removes the human imitation objective Df from objective (5), effectively reducing our method to an adaptation of DreamWaQ [18] for humanoid control.
 - **p. 8 / 5 Experiment - extractive body cue:** Comparably, when downplaying the sensitivity to safety-critical events and removing the safety-recovery policy, the success data drops significantly from nearly 85% to around 60% in ...
 - **p. 15 / A.2 Implementation Details - extractive body cue:** The projected gravity refers to the component of gravity expressed in the robot's local coordinate system.
-- **p. 7 / 5 Experiment - extractive body cue:** To evaluate the effectiveness of different components in HWC-Loco, we design a comparison method using an ablation approach as follows: 1) HWC-Loco-l sets α to ...
 - **p. 21 / Figure/Table caption - extractive body cue:** Figure 10: Climb Stairs Test. The blue segments indicate the activation of the goal-tracking policy, while the orange segments correspond to the safety recovery policy. ...
 - **p. 23 / Figure/Table caption - extractive body cue:** Figure 13: Robustness in Outdoor Settings: The robot responds to external disturbances in an outdoor environment by waving its arms and adjusting its gaits to ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 15 (A.2 Implementation Details), p. 15 (A.2 Implementation Details), p. 17 (A.2 Implementation Details), p. 16 (A.2 Implementation Details), p. 16 (A.2 Implementation Details), p. 17 (A.2 Implementation Details), objective p. 17 (A.2 Implementation Details), p. 16 (A.2 Implementation Details), p. 16 (A.2 Implementation Details), p. 17 (A.2 Implementation Details), temporal p. 8 (5 Experiment), p. 9 (5 Experiment), p. 9 (5 Experiment), p. 3 (2 Related Work), p. 8 (5 Experiment), p. 15 (A.2 Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

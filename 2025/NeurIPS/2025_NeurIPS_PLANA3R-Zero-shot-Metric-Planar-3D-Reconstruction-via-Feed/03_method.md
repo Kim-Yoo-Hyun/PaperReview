@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 17 / A.2 Implementation Details - extractive body cue:** For our final model used for evaluation, we set the loss weights α1 = 5, α2 = 5, α3 = 20 in Eq.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 17 (A.2 Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 2 / 1 Introduction - extractive body cue:** Planar reconstruction approaches include feedforward solutions in monocular [40, 16, 27, 24, 18, 42] and two-view [11, 1, 28] settings, and per-scene optimization approaches [29, ...
 - **p. 6 / 3 Method - extractive body cue:** This process enables the extraction of semantic information for each plane and yields the final planar surface reconstruction.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 6 / 4 Experiment - extractive body cue:** 4.1 Implementation Details We initialize the ViT encoder and the transformer decoder's part of PLANA3R model with DUSt3R's pre-trained 512-DPT weights.
 - **p. 18 / A.3 Runtime Analysis - extractive body cue:** We evaluate the inference runtime of our PLANA3R using an NVIDIA RTX 3090 GPU.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** features, then, processed, transformer, decoders, cross-attention, produce, low-resolution, decoder, embeddings, Ddec, achieve, more, compact, efficient, geometric, representation, fewer, primitives, hierarchical.
 - **Relevant PDF headings:** 3 Method (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p.
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 2: Overview of our PLANA3R. Given two images captured from the same scene, PLANA3R outputs a set of 3D planar primitives and 6-DoF relative ...
 - **p. 7 / 4 Experiment - extractive body cue:** This process does not require merging the primitives and can be performed with a single feed-forward pass.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method), p. 6 (3 Method), p. 3 (3 Method), objective p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 17 (A.2 Implementation Details), temporal p. 4 (3 Method), p. 4 (3 Method), p. 7 (4 Experiment), p. 9 (4 Experiment), p. 10 (4 Experiment), p. 14 (A.2 Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

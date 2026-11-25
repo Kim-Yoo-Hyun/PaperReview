@@ -64,8 +64,6 @@ PDF body contribution framing (p. 1 (ABSTRACT), p. 2 (1 INTRODUCTION), p. 2 (1 I
 | body cue at p. 9 | Figure 6: The system can easily track across multiple scales. Here, the map is initialised at the top-right ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | As the map grows beyond 100 keyframes, global bundle adjustment cannot keep up with exploration and is almost ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 3 (1 INTRODUCTION), p. 4 (3. A small number (50) of the coarsest-scale features are). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ navigation writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), interface p. 4 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 3 (1 INTRODUCTION), p. 4 (3. A small number (50) of the coarsest-scale features are), objective p. 4 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 5 (3. A small number (50) of the coarsest-scale features are), p. 1 (1 INTRODUCTION), p. 4 (3. A small number (50) of the coarsest-scale features are), p. 2 (1 INTRODUCTION).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

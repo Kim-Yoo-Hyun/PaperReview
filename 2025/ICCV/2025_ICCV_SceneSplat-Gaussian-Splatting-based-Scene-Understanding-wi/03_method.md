@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4
 - **p. 6 / 4.3. Self Supervised Pretraining - extractive body cue:** For a batch of Gaussian scenes {Gn}B n=1 (global/local views Gb g, Gb l), we extract tokenized bottleneck features z ∈RM×de, compute global representations ¯z ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4.3. Self Supervised Pretraining), p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4.2. Vision-Language 3DGS Pretraining), p. 6 (4.3. Self Supervised Pretraining), p. 7 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4
 - **p. 4 / 4.1. 3DGS Language Label Collection - extractive body cue:** 1, we employ SAMv2 [40] for object-level segmentation and SigLIP2 [47] for feature extraction.
 - **p. 6 / 4.3. Self Supervised Pretraining - extractive body cue:** For a batch of Gaussian scenes {Gn}B n=1 (global/local views Gb g, Gb l), we extract tokenized bottleneck features z ∈RM×de, compute global representations ¯z ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4
 - **p. 5 / 4.3. Self Supervised Pretraining - extractive body cue:** It incorporates multiple losses with different objectives into SceneSplat's large-scale pretraining.
 - **p. 8 / 5.3. Further Statistical Evaluation - extractive body cue:** 6 presents scaling results Method Steps Required Runtime / Scene Occam's LGS 2D fusion + lifting 107 min SceneSplat single inference 0.24 min Table 9.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** first, adapt, transformer, encoder-decoder, backbone, efficiently, predict, high-dimensional, perprimitive, features, corresponding, collected, DGS, language, labels, enforce, feature, similarity, Euclidean, space.
 - **Relevant PDF headings:** 4. Methodology (p. 4); Method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 3. GaussianSSL Ablation Experiments. We adopt the pre- training on the SceneSplat-7K dataset and report fine-tuning mIoU and mAcc on indoor semantic segmentation tasks. ...
 - **p. 4 / 3.1. Data Processing - extractive body cue:** We remove blurry frames by using the variance of the Laplacian as a sharpness metric.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4.2. Vision-Language 3DGS Pretraining), p. 6 (4.3. Self Supervised Pretraining), p. 6 (4.3. Self Supervised Pretraining), p. 4 (4.1. 3DGS Language Label Collection), p. 5 (4.3. Self Supervised Pretraining), objective p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 5 (4.3. Self Supervised Pretraining), p. 5 (4.2. Vision-Language 3DGS Pretraining), p. 4 (4.2. Vision-Language 3DGS Pretraining), p. 6 (4.3. Self Supervised Pretraining), p. 6 (4.3. Self Supervised Pretraining), temporal p. 4 (4. Methodology), p. 6 (4.3. Self Supervised Pretraining), p. 8 (5.3. Further Statistical Evaluation), p. 3 (3.1. Data Processing), p. 3 (2. Related Work), p. 4 (3.1. Data Processing).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

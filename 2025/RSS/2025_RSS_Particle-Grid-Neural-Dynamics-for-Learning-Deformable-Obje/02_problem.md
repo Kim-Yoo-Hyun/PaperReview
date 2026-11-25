@@ -61,8 +61,6 @@ PDF body contribution framing (p. 3 (B. Learning-Based Deformable Modeling), p. 
 |---|---|---|
 | body cue at p. 5 | Our results demonstrate that it outperforms previous state-of-the-art approaches in dynamics prediction accuracy while remaining robust to incomplete ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 safety writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (I. INTRODUCTION), p. 3 (B. Learning-Based Deformable Modeling), p. 2 (A. Physics-Based Deformable Modeling), p. 3 (B. Learning-Based Deformable Modeling). The downstream handoff is claimed only when the body describes it.
@@ -70,10 +68,8 @@ safety writing domain maps to observation -> state/world model -> task and motio
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 2 (I. INTRODUCTION), p. 3 (B. Learning-Based Deformable Modeling), p. 2 (A. Physics-Based Deformable Modeling), p. 3 (B. Learning-Based Deformable Modeling), objective p. 4 (B. Model Components), p. 5 (B. Model Components), p. 5 (B. Model Components), p. 3 (B. Learning-Based Deformable Modeling).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

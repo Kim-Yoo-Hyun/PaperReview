@@ -55,7 +55,6 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 4 / 3 METHOD - extractive body cue:** How can we effectively overcome the sub-optimality of single-sample reward generation?
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 4 (3 METHOD).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** Enables a new gradient-free in-context learning approach to reinforcement learning from human feedback (RLHF) that can generate more performant and human-aligned reward functions 2
 - **p. 5 / 3 METHOD - extractive body cue:** 2, where the snapshot values of av penalty are provided as a list in the reward feedback.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 5 / 3 METHOD - extractive body cue:** 3), reward reflection tracks the scalar values of all reward components and the task fitness function at intermediate policy checkpoints throughout training.
 - **p. 6 / 4 EXPERIMENTS - extractive body cue:** For each final reward function obtained from each method, we run 5 independent PPO training runs and report the average of the maximum task metric ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** reward, reflection, automated, feedback, summarizes, policy, training, dynamics, texts, EUREKA, consists, three, algorithmic, components, environment, context, enables, zero-shot, generation, executable.
 - **Relevant PDF headings:** 3 METHOD (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,23 +114,13 @@ PDF body method statement (p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p.
 - **p. 8 / 4.3 RESULTS - extractive body cue:** This task is highly dynamic and requires a Shadow Hand to continuously rotate a pen to achieve some pre-defined spinning patterns for as many cycles ...
 - **p. 29 / Figure/Table caption - extractive body cue:** Figure 13: Raw success rates of all methods on the Dexterity benchmark. Reward Reflection Ablations. In Fig. 14, we provide a detailed per-task breakdown on ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 3 (3 METHOD), p. 5 (3 METHOD), p. 4 (3 METHOD), objective p. 4 (3 METHOD), p. 5 (3 METHOD), p. 5 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD), temporal p. 7 (4.3 RESULTS), p. 8 (4.3 RESULTS), p. 8 (4.3 RESULTS), p. 9 (4.3 RESULTS), p. 9 (4.3 RESULTS).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

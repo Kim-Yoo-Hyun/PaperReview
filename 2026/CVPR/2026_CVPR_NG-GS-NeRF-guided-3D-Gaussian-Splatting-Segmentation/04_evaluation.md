@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 - **p. 8 / 5.4. Computational Efficiency Analysis - extractive body cue:** Ablation results in trex and orchid scenes.
 - **p. 8 / 5.4. Computational Efficiency Analysis - extractive body cue:** Ablation study of different components on NVOS dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustrate the mutated Gaussian at the boundaries by using the mask of the object. Our method leverages the contin- uous representation capacity of ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 | 3) in both quantitative performance and visual quality. | definition/direction/unit from same section | p. 8 (5.6. Hyper-parameter Analysis) |
 | Figure 2. The overall pipeline of our NG-GS framework. It takes a trained 3DGS model as input, and identifies boundary Gaussian points with the ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 | A qualitative comparison in Figure 4 between our method and reduced (without RBF+MRHE) methods on the trex and orchid scenes visually confirms this analysis. | comparison identity and matched condition | p. 8 (5.5. Ablation Studies) |
 | Time consumption comparison in the fortress scene. | comparison identity and matched condition | p. 7 (5.4. Computational Efficiency Analysis) |
 | Ablation results in trex and orchid scenes. | comparison identity and matched condition | p. 8 (5.4. Computational Efficiency Analysis) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 | body limitation/failure cue | Addressing current limitations, our future directions include extending the framework to dynamic scenes and real-time interactive applications, further bridging the gap between representation learning ... | p. 8 (6. Conclusion) |
 | body limitation/failure cue | It is shown that τ=0.6 achieves the best balance between maintaining structural integrity and controlling background noise, resulting in excellent visual coherence and detail ... | p. 8 (5.6. Hyper-parameter Analysis) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -142,20 +129,11 @@ PDF body evaluation/result cue (p. 7 (5.3. Qualitative Results), p. 7 (5.4. Comp
 | 원문 대조: Query q_i와 K-NN Gaussian center x_j의 spatial weight는 exp(−∥q_i−x_j∥²/(2σ²))이다. 이 weight를 L1 normalization한 뒤 neighbor feature를 가중합해 interpolation feature를 만든다. ([PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=4), §4.1 RBF interpolation, Eq. (8)) | [PDF p. 4](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=4), §4.1 RBF interpolation, Eq. (8) |
 | 원문 대조: Boundary alignment loss는 boundary pixel 집합 B에서 NeRF–3DGS의 RGB 차이, w_α로 가중한 opacity 차이, w_v로 가중한 local color variance를 합해 평균한다. 원문의 R_i는 해당 pixel 주변 7×7 block이다. ([PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 Loss functions, Eq. (16)) | [PDF p. 5](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=5), §4.2 Loss functions, Eq. (16) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** Addressing current limitations, our future directions include extending the framework to dynamic scenes and real-time interactive applications, further bridging the gap between representation learning and ...
 - **p. 8 / 5.6. Hyper-parameter Analysis - extractive body cue:** It is shown that τ=0.6 achieves the best balance between maintaining structural integrity and controlling background noise, resulting in excellent visual coherence and detail preservation.
 
 - **Evidence anchors reviewed:** datasets p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details), p. 7 (5.2. Quantitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), metrics p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.5. Ablation Studies), p. 1 (Figure/Table caption), p. 6 (5.1. Implementation Details), p. 6 (5.1. Implementation Details), p. 7 (5.3. Qualitative Results), baselines p. 6 (5.1. Implementation Details), p. 6 (5.2. Quantitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.5. Ablation Studies), p. 7 (5.4. Computational Efficiency Analysis), p. 8 (5.4. Computational Efficiency Analysis), results p. 7 (5.3. Qualitative Results), p. 7 (5.4. Computational Efficiency Analysis), p. 6 (5.2. Quantitative Results), p. 8 (5.6. Hyper-parameter Analysis), p. 8 (5.6. Hyper-parameter Analysis), p. 3 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 - **p. 6 / 1 Introduction - extractive body cue:** 3Referred to as "destination" to avoid confusion with contact/task goals.
 - **p. 6 / 1 Introduction - extractive body cue:** BD has achieved impressive dancing with model-based control and offline trajectory optimization [50].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: An overview of WoCoCo and tasks. (A) We decompose the task into separate contact stages, where each contact stage is defined by the ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 | This proves the necessity of our dense contact rewards. | definition/direction/unit from same section | p. 8 (1 Introduction) |
 | It can also recover after stepping on a belt tied to itself, showcasing robustness. | definition/direction/unit from same section | p. 6 (1 Introduction) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -88,13 +84,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 | Figure 6: We train the dinosaur robot to push the ball towards destinations with different end effec- tors. By altering the destinations, we make ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | [36]: the agent may over-explore a dangerous behavior pattern while staying alive, as such states are rare in the agent's experience compared to safer ... | comparison identity and matched condition | p. 8 (1 Introduction) |
 | Lower Row: We transfer the policy to the real world, testing jumps with double-foot contacts at different heights and a "hug" posture. provided current ... | comparison identity and matched condition | p. 6 (1 Introduction) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -114,7 +103,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 
 - Numeric sentences retained from the body:
 - **p. 6 / 1 Introduction - extractive body cue:** Efficient Turning in 0.5 s Efficient and Natural Walking-Picking Transition Simultaneous Box-Picking and Destination-Approaching Recovery after Step on Tied Belt Figure 3: Learned whole-body box ...
-- **p. 6 / 1 Introduction - extractive body cue:** Efficient Turning in 0.5 s Efficient and Natural Walking-Picking Transition Simultaneous Box-Picking and Destination-Approaching Recovery after Step on Tied Belt Figure 3: Learned whole-body box ...
 
 ## Generalization and Failure Cases
 
@@ -127,22 +115,12 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 | body limitation/failure cue | 2, demonstrating the humanoid's capability to perform versatile continuous jumping while tracking upper body postures, and robustness against perturbations such as unseen gravels. | p. 5 (1 Introduction) |
 | body limitation/failure cue | It can also recover after stepping on a belt tied to itself, showcasing robustness. | p. 6 (1 Introduction) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
 |---|---|
 | [28, 40], we stack 3 control steps of previous joint states and actions, and append them to the policy observations to enhance the robustness ... | p. 5 (1 Introduction) |
 | 10 in Appendix C where we plot the learning curves for five different random seeds. | p. 8 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -154,9 +132,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 6 (1 Introductio
 - **p. 6 / 1 Introduction - extractive body cue:** It can also recover after stepping on a belt tied to itself, showcasing robustness.
 
 - **Evidence anchors reviewed:** datasets p. 7 (1 Introduction), p. 7 (1 Introduction), p. 8 (1 Introduction), p. 8 (1 Introduction), p. 6 (1 Introduction), p. 6 (1 Introduction), metrics p. 7 (Figure/Table caption), p. 2 (Figure/Table caption), p. 6 (1 Introduction), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (1 Introduction), baselines p. 8 (Figure/Table caption), p. 8 (1 Introduction), p. 6 (1 Introduction), results p. 6 (Figure/Table caption), p. 6 (1 Introduction), p. 8 (1 Introduction), p. 7 (Figure/Table caption), p. 7 (1 Introduction).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

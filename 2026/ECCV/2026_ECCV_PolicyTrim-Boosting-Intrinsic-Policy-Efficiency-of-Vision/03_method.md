@@ -52,7 +52,6 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 15 (2.48 Method)
 - **p. 15 / 2.48 Method - extractive body cue:** Standard RL post-training [7,40] with binary success rewards also provides no explicit incentive for execution efficiency.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3 Method), p. 21 (B Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 15 (2.48 Method)
 - **p. 1 / Body text (section not recovered) - extractive body cue:** Extensive experiments across three benchmarks and three VLA models demonstrate that PolicyTrim improves action chunk utilization by 3× and reduces physical execution steps by 51.4%.
 - **p. 2 / X. Wang et al - extractive body cue:** However, the policy efficiency bottleneck of the models is largely unexplored, governed by the effective executable length of predicted action chunks and the total physical ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -89,15 +87,11 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 15 (2.48 Method)
 - **p. 5 / 3 Method - extractive body cue:** We propose a two-stage posttraining framework that extends the executable action horizon per inference and reduces the number of steps required to complete a task ...
 - **p. 15 / 2.48 Method - extractive body cue:** While compute-centric methods reduce per-step inference latency, PolicyTrim targets the total number of forward inference calls, a dimension existing acceleration techniques leave entirely unaddressed.
 - **p. 21 / B Implementation Details - extractive body cue:** We applied group-relative reward normalization and updated the policy directly from rollout returns, without a critic
-- **p. 5 / 3 Method - extractive body cue:** We propose a two-stage posttraining framework that extends the executable action horizon per inference and reduces the number of steps required to complete a task ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** two-stage, posttraining, framework, extends, executable, action, horizon, inference, reduces, number, steps, required, complete, task, VLA, models, arbitrary, decision, step, policy.
 - **Relevant PDF headings:** 3 Method (p. 5); 2.48 Method (p. 15); A PolicyTrim Training Algorithm (p. 21); A.1 PolicyTrim Training Algorithm (p. 21).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +111,10 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 15 (2.48 Method)
 - **p. 24 / Figure/Table caption - extractive body cue:** Table 8: Ablation on group size G for π0.5 on the four LIBERO subsets. We report success rate (SR), average physical steps (Stotal), average action ...
 - **p. 26 / Figure/Table caption - extractive body cue:** Table 12: Hyperparameter sensitivity on LIBERO-Spatial. We report SR / Step. Default values are shown in bold. α Value 1.1 1.2 1.3 1.5 2.0
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 5 (3 Method), p. 15 (2.48 Method), p. 15 (2.48 Method), p. 21 (B Implementation Details), objective p. 5 (3 Method), p. 15 (2.48 Method), p. 21 (B Implementation Details), p. 15 (2.48 Method), temporal p. 5 (3 Method), p. 5 (3 Method), p. 3 (2 Related Work), p. 3 (X. Wang et al), p. 9 (4 Experiment), p. 9 (4 Experiment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

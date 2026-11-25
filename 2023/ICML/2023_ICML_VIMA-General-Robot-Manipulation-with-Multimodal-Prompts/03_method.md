@@ -58,7 +58,6 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 - **p. 2 / 1. Introduction - extractive body cue:** The transformer decoder is conditioned on the prompt via cross-attention layers that alternate with the usual causal self-attention.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 - **p. 1 / Abstract - extractive body cue:** We design a transformer-based robot agent, VIMA, that processes these prompts and outputs motor actions autoregressively.
 - **p. 3 / 6. Visual reasoning - extractive body cue:** Our simulator also features scripted oracle programs that can generate expert demonstrations by using privileged simulator state information, such as the precise location of all ...
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 - **p. 2 / 1. Introduction - extractive body cue:** We open-source the simulation environment, training dataset, algorithm code, and pre-trained model checkpoints to ensure reproducibility and facilitate future work from the community.
 - **p. 4 / 6. Visual reasoning - extractive body cue:** We encode the multimodal prompts with a pre-trained T5 model, and condition the robot controller on the prompt through cross-attention layers.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** learn, effective, multi-task, robot, policy, VIMA, agent, encoderdecoder, architecture, object-centric, design, Fig, Because, there, prior, works, multimodal, prompting, setup, make.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 4 (4. Novel task generalization. New tasks with no
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 7: Ablation on prompt conditioning. We compare our method (xattn: cross-attention prompt conditioning) with a vanilla transformer decoder (gpt-decoder) across different model sizes. Cross-attention ...
 - **p. 41 / Figure/Table caption - extractive body cue:** Table 12: Data scaling when baseline variants' ViT is trained from scratch, indicated inside parentheses. ↑and ↓denote performance increase and decrease. Numbers in the first ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. Novel task generalization. New tasks with novel), p. 6 (5.1. Baselines), p. 2 (1. Introduction), p. 4 (6. Visual reasoning), p. 1 (1. Introduction), p. 5 (4. Novel task generalization. New tasks with novel), objective p. 5 (4. Novel task generalization. New tasks with novel), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (5. Visual constraint satisfaction. The robot must ma), p. 4 (6. Visual reasoning), p. 2 (1. Introduction), temporal p. 2 (1. Introduction), p. 6 (5.2. Evaluation Results), p. 7 (5.2. Evaluation Results), p. 4 (4. Novel task generalization. New tasks with novel), p. 5 (4. Novel task generalization. New tasks with novel), p. 5 (4. Novel task generalization. New tasks with novel).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -63,8 +63,6 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 | body cue at p. 9 | The consistently high SPL scores indicate that our method achieves efficient trajectory, rather than merely reducing step counts ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 13 | Figure 5. Failure cases of 3D-IC on OVMM Dataset. The failure cases are categorized according to the four ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 mobile_manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3. Preliminaries of Mobile Manipulation), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (4.1. Unified Modeling of Multi-stage Interaction). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ mobile_manipulation writing domain maps to observation -> state/world model -> t
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminaries of Mobile Manipulation), interface p. 3 (3. Preliminaries of Mobile Manipulation), p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (4.1. Unified Modeling of Multi-stage Interaction), objective p. 6 (4.3. Joint Planning with 3D-IC), p. 6 (4.3. Joint Planning with 3D-IC), p. 4 (4.2. 3D-IC Construction), p. 5 (4.2. 3D-IC Construction), p. 5 (4.2. 3D-IC Construction).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

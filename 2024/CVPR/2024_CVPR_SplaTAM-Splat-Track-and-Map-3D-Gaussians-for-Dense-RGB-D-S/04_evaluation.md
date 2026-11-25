@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 - **p. 7 / 5. Results & Discussion - extractive body cue:** The results for both novel-view and training-view rendering on this ScanNet++ benchmark can be found in Table 3.
 - **p. 8 / 5. Results & Discussion - extractive body cue:** Furthermore, SplaTAM can be scaled up to large-scale scenes through efficient representations like OpenVDB [24].
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. SplaTAM enables precise camera tracking and high-fidelity reconstruction for dense simultaneous localization and mapping (SLAM) in challenging real-world scenarios. SplaTAM achieves this by ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 | For depth rendering performance we use Depth L1 loss. | definition/direction/unit from same section | p. 5 (4. Experimental Setup) |
 | Each iteration of our approach renders a full 1200x980 pixel image (∼1.2 mil pixels) to apply the loss for both tracking and mapping. | definition/direction/unit from same section | p. 8 (5. Results & Discussion) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 | SplaTAM is comparable to the SOTA baseline, Point-SLAM [30] and consistently outperforms the other dense SLAM methods by a large margin. | comparison identity and matched condition | p. 7 (5. Results & Discussion) |
 | Furthermore, for all comparisons to prior baselines, we present results as the average of 3 seeds (0-2) and use seed 0 for the ablations. | comparison identity and matched condition | p. 5 (4. Experimental Setup) |
 | Figure 1. SplaTAM enables precise camera tracking and high-fidelity reconstruction for dense simultaneous localization and mapping (SLAM) in challenging real-world scenarios. SplaTAM achieves this ... | comparison identity and matched condition | p. 1 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -140,8 +129,6 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 | body limitation/failure cue | Since Point-SLAM [30] fails to successfully estimate the camera poses and build a good map, it also completely fails on the task of novel-view ... | p. 7 (5. Results & Discussion) |
 | body limitation/failure cue | Silhouette is critical as without it tracking completely fails. | p. 8 (5. Results & Discussion) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -153,14 +140,6 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 | Runtime on Replica/R0 using a RTX 3080 Ti. ing. | p. 8 (5. Results & Discussion) |
 | In Table 6, we compare our runtime to NICE-SLAM [54] and Point-SLAM [30] on a Nvidia RTX 3080 Ti. | p. 8 (5. Results & Discussion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 3. Renderings on ScanNet++ [49]. Our method, SplaTAM, renders color & depth for the novel & train views with fidelity comparable to the ground ...
@@ -171,6 +150,5 @@ PDF body evaluation/result cue (p. 6 (5. Results & Discussion), p. 6 (5. Results
 - **p. 8 / 5. Results & Discussion - extractive body cue:** Silhouette is critical as without it tracking completely fails.
 
 - **Evidence anchors reviewed:** datasets p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), p. 5 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 7 (5. Results & Discussion), metrics p. 7 (5. Results & Discussion), p. 8 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), baselines p. 5 (4. Experimental Setup), p. 6 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 5 (4. Experimental Setup), p. 1 (Figure/Table caption), results p. 6 (5. Results & Discussion), p. 6 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 7 (5. Results & Discussion), p. 8 (5. Results & Discussion), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

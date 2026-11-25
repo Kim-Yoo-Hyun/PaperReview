@@ -56,7 +56,6 @@ PDF body method statement (p. 5 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p.
 - **p. 4 / 3 Method - extractive body cue:** Specifically, given current timestamp t, all image observations {It-j / j = 0, 1, 2, . . . , n-1} with a temporal window n, ...
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 5 (3 Method), p. 5 (3 Method), p. 4 (3 Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 5 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p.
 - **p. 8 / Method - extractive body cue:** We set InternVL-4B with single RGB image inputs followed by an action head as our Base VLA model.
 - **p. 2 / 1 Introduction - extractive body cue:** Previous approaches, such as OpenVLA [1], use only a single RGB image and a textual instruction as input.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -95,13 +93,10 @@ PDF body method statement (p. 5 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p.
 - **p. 7 / 4 Experiments - extractive body cue:** We employed a cosine learning rate scheduler with a learning rate of 4e-5, using a batch size of 128 and training for 20 epochs. λd ...
 - **p. 6 / 4 Experiments - extractive body cue:** Our model was trained for 1 epoch with a batch size of 512, requiring around 20k steps to complete.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Loss, functions, Algorithm, memory, bank, sampling, Input, It-j, sample, size, feature, extractor, Output, sampled, timestamps, Initialize, Start, current, frame, Similarity.
 - **Relevant PDF headings:** 3 Method (p. 3); Method (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -121,20 +116,10 @@ PDF body method statement (p. 5 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p.
 - **p. 5 / 4 Experiments - extractive body cue:** Our model is pretrained on real-world data and fine-tuned with both simulation and real-world trajectories.
 - **p. 7 / 4 Experiments - extractive body cue:** 4.3 LIBERO evaluation After pretraining, we fine-tune and conduct close-loop testing in the LIBERO simulation environment, using task success rate as the metric to evaluate ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 5 (3 Method), p. 3 (3 Method), p. 3 (3 Method), p. 8 (Method), p. 5 (3 Method), p. 4 (3 Method), objective p. 5 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p. 4 (3 Method), p. 8 (Method), p. 4 (3 Method), temporal p. 8 (Method), p. 4 (3 Method), p. 4 (3 Method), p. 5 (3 Method), p. 5 (3 Method), p. 6 (4 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignme
 - **p. 5 / 4.2. Multi-model Alignment - extractive body cue:** as described by the following formula: Limg = -1 2N N X i=1 Si · (Contra(EG i , EI) + Contra(EI i , EG)) (4) ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignment), p. 4 (4.2. Multi-model Alignment), p. 7 (Method), p. 7 (Method), p. 8 (Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignme
 - **p. 3 / 4. Methodology - extractive body cue:** We introduce the feature extraction process from 3DGS, detailed in Sec.
 - **p. 4 / 4.1. Feature Extraction - extractive body cue:** The outputs of these processes are finally fused to obtain GS tokens ˆ GSt ∈Rg×d, where d denotes the dimension of GS tokens.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignme
 - **p. 4 / 4.2. Multi-model Alignment - extractive body cue:** The pre-trained vision language model EVA-CLIP [38] is adopted during training.
 - **p. 5 / 5.2. Zero-Shot 3D Classification - extractive body cue:** ULIP, OpenShape, and Uni3D train 3D encoders to align the visual-text representation and use point clouds for classification.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, feature, extraction, process, DGS, detailed, Sec, response, image, voting, loss, Limg, Baseline, point, cloud-based, Uni3D, model, extract, attributes, gaussian.
 - **Relevant PDF headings:** 4. Methodology (p. 3); 4.2. Multi-model Alignment (p. 4); Method (p. 7); 5.5. Scaling up model size (p. 8).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -120,20 +115,10 @@ PDF body method statement (p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignme
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 2. Zero-shot classification on Objaverse-GS, and ModelNet-GS. "no LVIS" denotes model is trained without Objaverse-LVIS shapes.
 - **p. 7 / Figure/Table caption - extractive body cue:** Table 5. Ablation of diverse designs of CLIP-GS. We use the Objaverse-GS for analysis. P&C denotes only P and C attributes of gaussian points from ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (4. Methodology), p. 4 (4.2. Multi-model Alignment), p. 7 (Method), p. 8 (Method), p. 8 (Method), p. 3 (4. Methodology), objective p. 3 (4. Methodology), p. 8 (Method), p. 8 (Method), p. 4 (4.2. Multi-model Alignment), p. 4 (4.2. Multi-model Alignment), p. 5 (4.2. Multi-model Alignment), temporal p. 3 (4. Methodology), p. 3 (4.1. Feature Extraction), p. 4 (4.1. Feature Extraction), p. 1 (Abstract), p. 2 (2. Related Work), p. 2 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

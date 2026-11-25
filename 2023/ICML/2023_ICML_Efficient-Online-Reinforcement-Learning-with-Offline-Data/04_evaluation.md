@@ -43,8 +43,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 15 (Figure/Table
 - **p. 7 / 5.1. RLPD Analysis and Ablation Study - extractive body cue:** To more clearly illustrate this effect, we construct a dataset of only the expert human demonstration data from the Adroit Sparse tasks (see "Expert Adroit ...
 - **p. 7 / 5.1. RLPD Analysis and Ablation Study - extractive body cue:** This subset comprises just 22 of the 500 trajectories in the original dataset and is much more narrowly distributed by nature-representing a task with sparse ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Our approach, RLPD, extends standard off-policy RL and achieves reliable state-of-the-art online performance on a num- ber of tasks using offline data. Here ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 15 (Figure/Table
 | Figure 4. RLPD exceeds prior state-of-the-art performance on a number of different popular benchmarks whilst being significantly simpler. Results are aggregated over 21 different ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | In Figure 7, we see LayerNorm is crucial for strong performance in the Adroit domain; excluding LayerNorm results in significantly higher variance across seeds ... | definition/direction/unit from same section | p. 7 (5.1. RLPD Analysis and Ablation Study) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -90,13 +86,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 15 (Figure/Table
 | Figure 4. RLPD exceeds prior state-of-the-art performance on a number of different popular benchmarks whilst being significantly simpler. Results are aggregated over 21 different ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
 | Figure 5. Our approach generalizes to vision-based domains, pro- viding consistent improvements over existing approaches. We see in Figure 52 that RLPD provides consistent ... | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 3. We fit data (left) with a two-layer MLP without Layer- Norm (center) and with LayerNorm (right). LayerNorm bounds the values and prevents ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 15 (Figure/Table
 | body limitation/failure cue | Figure 10. Symmetric sampling improves sample efficiency and reduces variance across seeds, and does not work by simply in- creasing the reward density in ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | Figure 9. In general, critic ensembling provides the best perfor- mance. Dropout performs worse in sparse reward tasks. In Figure 9, we see that ... | p. 8 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,23 +133,14 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 15 (Figure/Table
 | Concretely, we first introduce a remarkably simple approach to sampling the offline data, which we call "symmetric sampling", that performs well over a large ... | p. 2 (1. Introduction) |
 | AntMaze Large Play Pen Sparse Environment steps (£103) Figure 2. | p. 3 (4. Online RL with Offline Data) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 10. Symmetric sampling improves sample efficiency and reduces variance across seeds, and does not work by simply in- creasing the reward density in a ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Figure 9. In general, critic ensembling provides the best perfor- mance. Dropout performs worse in sparse reward tasks. In Figure 9, we see that ensembling ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (5.1. RLPD Analysis and Ablation Study), p. 7 (5.1. RLPD Analysis and Ablation Study), metrics p. 17 (Figure/Table caption), p. 8 (Figure/Table caption), p. 7 (5.1. RLPD Analysis and Ablation Study), p. 8 (Figure/Table caption), p. 5 (5. Experiments), p. 3 (Figure/Table caption), baselines p. 15 (Figure/Table caption), p. 1 (Figure/Table caption), p. 5 (5. Experiments), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 15 (Figure/Table caption), p. 1 (Figure/Table caption), p. 3 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (5.1. RLPD Analysis and Ablation Study).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

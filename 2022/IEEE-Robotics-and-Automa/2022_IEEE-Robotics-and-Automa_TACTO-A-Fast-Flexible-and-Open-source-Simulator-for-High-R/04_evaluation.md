@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 - **p. 7 / IV. SIMULATED EXPERIMENTS - extractive body cue:** Learning In-hand Marble Manipulation In this task, we learn in simulation to roll a marble to target locations in the sensor coordinate, following the previous ...
 - **p. 7 / IV. SIMULATED EXPERIMENTS - extractive body cue:** Our main purpose here is to validate the simulation system, and provide benchmark experiments, however, the controller can be replaced by model predictive control and/or ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: We open-source TACTO - a simulator of vision-based tactile sensors. TACTO produces high-resolution and high-fidelity reading from tactile sensors at high-frequency (>100 Hz). ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 | Fig. 1: We open-source TACTO - a simulator of vision-based tactile sensors. TACTO produces high-resolution and high-fidelity reading from tactile sensors at high-frequency (>100 ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Fig. 4: Example images of simulated DIGIT imprints. TACTO is able to generate color and depth images at the same time with details of ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 | We choose these two tasks based on previous works with real robots[6], [27] for better comparison between simulated and real environments. | comparison identity and matched condition | p. 5 (IV. SIMULATED EXPERIMENTS) |
 | Fig. 3: Workflow showing the functionality of TACTO at three major phases. (1) Initialize: create the sensor structure in the renderer; (2) Create scene: ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Fig. 7: Comparison of simulation and real signals with contacts across the sensor. TACTO captures the non-uniform light distribution similar to the real signals. ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 | body limitation/failure cue | It makes the model more robust to a variety of illumination conditions (Sim2Real with augmentation vs. | p. 7 (V. SIM2REAL EXPERIMENTS) |
 | body limitation/failure cue | The cost is defined as cumulative error distance in tactile space P t ∥¯xt∥, and we set eight different target locations and take the ... | p. 7 (IV. SIMULATED EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,14 +131,6 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 | It includes 6 minutes for optimizing the acquisition function, and 2 minutes for simulation, where there are 50 iterations, and each iteration includes 50 ... | p. 7 (IV. SIMULATED EXPERIMENTS) |
 | Although it can be extended to support more ray-tracing functionalities, this may require non-trivial engineering time to re-implement methods with GPU acceleration which are ... | p. 3 (1. Phong's model for RGB rendering from Depth (simple) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / IV. SIMULATED EXPERIMENTS - extractive body cue:** In the failure grasp, the object is only grasped by the corner and begins to slip after being lifted.
@@ -161,6 +140,5 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 - **p. 7 / IV. SIMULATED EXPERIMENTS - extractive body cue:** The cost is defined as cumulative error distance in tactile space P t ∥¯xt∥, and we set eight different target locations and take the average ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 6 (IV. SIMULATED EXPERIMENTS), p. 7 (IV. SIMULATED EXPERIMENTS), p. 7 (IV. SIMULATED EXPERIMENTS), metrics p. 7 (IV. SIMULATED EXPERIMENTS), p. 7 (V. SIM2REAL EXPERIMENTS), p. 6 (IV. SIMULATED EXPERIMENTS), p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), baselines p. 6 (IV. SIMULATED EXPERIMENTS), p. 7 (V. SIM2REAL EXPERIMENTS), p. 7 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 2 (Figure/Table caption), p. 4 (Figure/Table caption), results p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS), p. 7 (V. SIM2REAL EXPERIMENTS), p. 7 (IV. SIMULATED EXPERIMENTS), p. 6 (IV. SIMULATED EXPERIMENTS), p. 4 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

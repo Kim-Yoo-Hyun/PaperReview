@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 - **p. 4 / 3 EXPERIMENTS - extractive body cue:** Finally, we examine real-robot performance on both short-horizon and long-horizon tasks to validate practical deployment capabilities (Section 3.5).
 - **p. 4 / 3 EXPERIMENTS - extractive body cue:** We then evaluate large-scale instruction-following pick-and-place in simulation and real-world to test generalization (Section 3.3 and Section 3.4 ).
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: ST4VLA integrates spatial priors into the vision-language-action training pipeline. Given a task instruction, the VLM planner produces latent plans through explicit spatial prompting, ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 | Figure 8: Overview of objects and containers used in instruction-following pick-and-place. For each model, we conduct a total of 300 rollout evaluations. Each trial ... | definition/direction/unit from same section | p. 25 (Figure/Table caption) |
 | The underlined scores indicate the best results excluding ST4VLA. | definition/direction/unit from same section | p. 6 (3 EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 | Compared with prior state-of-the-art models, it attains a 5.9% gain in Google Robot Visual Matching, a 5.3% gain in Visual Aggregation, and a 9.8% ... | comparison identity and matched condition | p. 6 (3 EXPERIMENTS) |
 | ST4VLA outperforms all baselines across real-world test settings. | comparison identity and matched condition | p. 8 (3 EXPERIMENTS) |
 | Figure 6: Extended training curves up to 100k steps on WidowX and Google Robot tasks. Even with prolonged training, baselines saturate at a significantly ... | comparison identity and matched condition | p. 20 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 | body limitation/failure cue | Results in Figure 5 show that ST4VLA consistently surpasses GR00T N1.5 and π0, reliably grounding high-level goals into executable steps, adapting to disturbances, and ... | p. 8 (3 EXPERIMENTS) |
 | body limitation/failure cue | (2025a) also adopts spatial pre-training, though it does not explicitly leverage spatial prompting to guide action generation. | p. 9 (4 RELATED WORK) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -154,14 +141,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 | Given a task instruction, the VLM planner produces latent plans through explicit spatial prompting, which then effectively guides the action expert to generate control ... | p. 2 (1 INTRODUCTION) |
 | The framework builds on a dual-system architecture: System 2 (the VLM planner) employs as a multimodal encoder to capture spatial and semantic priors, while ... | p. 3 (1 INTRODUCTION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 36 / Figure/Table caption - extractive body cue:** Figure 23: Failure case study. To better understand the limitations of ST4VLA, we analyze representative failure cases during real-world instruction-following pick-and-place tasks. As shown in ...
@@ -172,6 +151,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 20 (Figure/Table
 - **p. 9 / 4 RELATED WORK - extractive body cue:** (2025a) also adopts spatial pre-training, though it does not explicitly leverage spatial prompting to guide action generation.
 
 - **Evidence anchors reviewed:** datasets p. 7 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), metrics p. 5 (Figure/Table caption), p. 7 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 7 (Figure/Table caption), p. 8 (Figure/Table caption), p. 20 (Figure/Table caption), baselines p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 5 (3 EXPERIMENTS), p. 6 (3 EXPERIMENTS), p. 8 (3 EXPERIMENTS), p. 20 (Figure/Table caption), results p. 7 (Figure/Table caption), p. 20 (Figure/Table caption), p. 6 (3 EXPERIMENTS), p. 5 (3 EXPERIMENTS), p. 20 (Figure/Table caption), p. 5 (3 EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

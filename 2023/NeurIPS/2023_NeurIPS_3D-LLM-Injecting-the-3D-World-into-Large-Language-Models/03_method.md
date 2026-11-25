@@ -52,7 +52,6 @@ PDF body method statement (p. 2 (5. Facing the mirror and dress), p. 6 (5. Facin
 - **p. 2 / 5. Facing the mirror and dress - extractive body cue:** By taking the 3D representations of scenes as input, LLMs are blessed with twofold advantages: (1) long-term memories about the entire scene can be stored ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 6 (5. Facing the mirror and dress).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 2 (5. Facing the mirror and dress), p. 6 (5. Facin
 - **p. 3 / 5. Facing the mirror and dress - extractive body cue:** In addition, we append a series of location tokens to the 3D-LLMs, and localization can be trained via outputting location tokens given the language descriptions ...
 - **p. 3 / 5. Facing the mirror and dress - extractive body cue:** To better align these LLMs' predictions to human instructions, improve the models' generalization abilities on unseen tasks, a series of instruction tuning methods [35, 44] ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 2 (5. Facing the mirror and dress), p. 6 (5. Facin
 - **p. 14 / B.1 Implementation Details - extractive body cue:** The learning rate is increased linearly from 0 to 10-4 up over the first 5000 steps then held constant for the duration of training.
 - **p. 5 / 5. Facing the mirror and dress - extractive body cue:** Furthermore, for 3D scenes, there are no available pretrained encoders like those for 2D images (e.g., CLIP ViT encoders).
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** inject, world, large, language, models, introduce, whole, family, D-LLMs, could, take, representations, point, clouds, features, input, perform, series, D-related, tasks.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,20 +113,10 @@ PDF body method statement (p. 2 (5. Facing the mirror and dress), p. 6 (5. Facin
 - **p. 9 / 6 Conclusion - extractive body cue:** A limitation is that the 3D feature extractor relies on 2D multi-view images, and thus all 3D scenes need to be rendered so that they ...
 - **p. 7 / 5 Experiments - extractive body cue:** We report BLEU, ROUGE-L, METEOR, CIDEr for robust answer matching.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (5. Facing the mirror and dress), p. 6 (5. Facing the mirror and dress), p. 3 (5. Facing the mirror and dress), p. 3 (5. Facing the mirror and dress), p. 6 (5. Facing the mirror and dress), p. 5 (5. Facing the mirror and dress), objective p. 6 (5. Facing the mirror and dress), p. 2 (5. Facing the mirror and dress), temporal p. 13 (B.1 Implementation Details), p. 13 (B.1 Implementation Details), p. 14 (B.1 Implementation Details), p. 5 (5. Facing the mirror and dress), p. 5 (5. Facing the mirror and dress), p. 6 (5. Facing the mirror and dress).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

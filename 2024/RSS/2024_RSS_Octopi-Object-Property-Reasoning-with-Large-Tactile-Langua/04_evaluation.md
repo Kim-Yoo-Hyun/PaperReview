@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 - **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** At test time, the Franka robot grasped each avocado once to collect the tactile readings, before passing it to the model.
 - **p. 8 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Unlike the PHYSICLEAR dataset, these tactile videos are collected with only pressing and without any rotation.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1. Avocado ripeness selection by combining tactile information with commonsense knowledge. Using inputs from its tactile sensor, OCTOPI identifies the left avocado as softer. ...
@@ -79,8 +77,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 | Avocado Ripeness Classification To evaluate OCTOPI's usefulness as a tactile-grounded physical reasoning system for real world tasks, we integrated two GelSight sensors on a ... | definition/direction/unit from same section | p. 7 (VI. EXPERIMENTAL RESULTS) |
 | Fig. 8. Cropped Avocado Image for Vision-only Property Prediction. PG-InstructBLIP is not trained on our three physical prop- erties and we find that it ... | definition/direction/unit from same section | p. 17 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 | Interestingly, we observed that the 7b model marginally outperformed the 13b model. | comparison identity and matched condition | p. 7 (VI. EXPERIMENTAL RESULTS) |
 | OCTOPI-7b and OCTOPI-13b perform above the random baseline for object property predictions and have similar performance to the finetuned CLIP. | comparison identity and matched condition | p. 8 (VI. EXPERIMENTAL RESULTS) |
 | For avocado property prediction, OCTOPI-13b achieves an accuracy of 35.50%, which is significantly higher than that of the random baseline (3.70%). | comparison identity and matched condition | p. 8 (VI. EXPERIMENTAL RESULTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -129,8 +118,6 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 |---|---|---|
 | body limitation/failure cue | This suggests that OCTOPI-13b's physical property prediction capability is robust to differences in tactile exploratory procedures. | p. 8 (VI. EXPERIMENTAL RESULTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -144,22 +131,13 @@ PDF body evaluation/result cue (p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPER
 | In the following, we describe each of these steps in greater detail. | p. 5 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED) |
 | Encoder Fine-tuning Existing LVLM models take natural videos as input and can use CLIP's visual encoder without modification. | p. 5 (IV. OCTOPI - VISION-LANGUAGE PROPERTY-GUIDED) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VI. EXPERIMENTAL RESULTS - extractive body cue:** This suggests that OCTOPI-13b's physical property prediction capability is robust to differences in tactile exploratory procedures.
 
 - **Evidence anchors reviewed:** datasets p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), metrics p. 6 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 17 (Figure/Table caption), baselines p. 7 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), results p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS), p. 7 (VI. EXPERIMENTAL RESULTS), p. 8 (VI. EXPERIMENTAL RESULTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

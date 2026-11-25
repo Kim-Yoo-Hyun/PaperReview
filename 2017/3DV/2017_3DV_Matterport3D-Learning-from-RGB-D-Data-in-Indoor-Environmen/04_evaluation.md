@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 - **p. 3 / 3.3. Properties of the Dataset - extractive body cue:** Previous RGB-D datasets have provided limited data about global alignment of camera poses.
 - **p. 5 / 3.3. Properties of the Dataset - extractive body cue:** We believe that Matterport3D is the largest RGBD dataset available.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1: The Matterport3D dataset provides visual data covering 90 buildings, including HDR color images, depth images, panoramic skyboxes, textured meshes, region lay- outs and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | Table 6: Semantic voxel label prediction accuracy on our Matterport3D test scenes. | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 | Table 2: View overlap prediction results. Results on SUN3D and Matterport3D dataset measured by normalized discounted cumulative gain. From the comparison we can clearly ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | In comparison to previous datasets, Matterport3D has unique properties that open up new research opportunities: RGB-D Panoramas. | comparison identity and matched condition | p. 3 (3.3. Properties of the Dataset) |
 | Please note the accuracy of the global alignment (no ghosting) and the relatively low noise in surface normals, even without advanced depth-fusion techniques. | comparison identity and matched condition | p. 4 (3.3. Properties of the Dataset) |
 | Table 2: View overlap prediction results. Results on SUN3D and Matterport3D dataset measured by normalized discounted cumulative gain. From the comparison we can clearly ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -125,8 +114,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 - Numeric sentences retained from the body:
 - **p. 3 / 3.2. Semantic Annotation - extractive body cue:** The 3D segmentations contain a total of 50,811 object instance annotations.
 - **p. 3 / 3.2. Semantic Annotation - extractive body cue:** Since AMT workers are allowed to provide freeform text labels, there were 1,659 unique text labels, which we then post-processed to establish a canonical set ...
-- **p. 3 / 3.2. Semantic Annotation - extractive body cue:** The 3D segmentations contain a total of 50,811 object instance annotations.
-- **p. 3 / 3.2. Semantic Annotation - extractive body cue:** Since AMT workers are allowed to provide freeform text labels, there were 1,659 unique text labels, which we then post-processed to establish a canonical set ...
 - **p. 5 / 4. Learning from the Data - extractive body cue:** For all experiments, we have split the dataset into 61 scenes for training, 11 for validation, and 18 for testing (see the supplemental materials for ...
 - **p. 8 / 4.5. Semantic Voxel Labeling - extractive body cue:** We use 20 object class labels, and a network following the architecture of ScanNet [7], and training with 52,355 subvolume samples (418,840 augmented samples).
 
@@ -136,8 +123,6 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 |---|---|---|
 | body limitation/failure cue | Although we do not have ground-truth camera poses for the dataset and so cannot measure errors objectively, we subjectively estimate that the average registration ... | p. 3 (3.3. Properties of the Dataset) |
 | body limitation/failure cue | Please note the accuracy of the global alignment (no ghosting) and the relatively low noise in surface normals, even without advanced depth-fusion techniques. | p. 4 (3.3. Properties of the Dataset) |
-
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
 
 ## Statistics, Efficiency, and Reproducibility
 
@@ -149,20 +134,11 @@ PDF body evaluation/result cue (p. 9 (Figure/Table caption), p. 6 (Figure/Table 
 | The model is a fully convolutional neural network consisting of an encoder, which shares the same architecture as VGG-16 from the beginning till the ... | p. 6 (4.3. Surface Normal Estimation) |
 | Notice how the Matterport3D dataset is able to perform well on NYUv2, while the converse is not true. to the decoder to bring in ... | p. 7 (4.3. Surface Normal Estimation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 3 / 3.3. Properties of the Dataset - extractive body cue:** Although we do not have ground-truth camera poses for the dataset and so cannot measure errors objectively, we subjectively estimate that the average registration error ...
 - **p. 4 / 3.3. Properties of the Dataset - extractive body cue:** Please note the accuracy of the global alignment (no ghosting) and the relatively low noise in surface normals, even without advanced depth-fusion techniques.
 
 - **Evidence anchors reviewed:** datasets p. 2 (3. The Matterport3D Dataset), p. 4 (3.3. Properties of the Dataset), p. 4 (3.3. Properties of the Dataset), p. 2 (3.1. Data Acquisition Process), p. 3 (3.3. Properties of the Dataset), p. 5 (3.3. Properties of the Dataset), metrics p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 9 (Figure/Table caption), p. 3 (3.3. Properties of the Dataset), p. 4 (3.3. Properties of the Dataset), p. 4 (3.3. Properties of the Dataset), baselines p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 2 (3. The Matterport3D Dataset), p. 3 (3.3. Properties of the Dataset), p. 4 (3.3. Properties of the Dataset), p. 6 (Figure/Table caption), results p. 9 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 4 (3.3. Properties of the Dataset), p. 7 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

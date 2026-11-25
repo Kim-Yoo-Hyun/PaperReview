@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 - **p. 5 / 4.3. Implementation Details - extractive body cue:** On ScanObjectNN, we use the learning rate of 0.03 and finetune for 350 epochs with batch size 32 for PointMLP.
 - **p. 5 / 4.3. Implementation Details - extractive body cue:** We keep using the same prompt strategy as it is during pre-training when constructing text features for each category candidate in this task.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Illustration of ULIP. ULIP improves 3D understand- ing by aligning features from images, texts, and point clouds in the same space. To reduce ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | Table 2. Standard 3D classification results on ModelNet40. ULIP significantly improves our baselines. Our best number achieves new SOTA. * means a voting technique ... | definition/direction/unit from same section | p. 6 (Figure/Table caption) |
 | Figure 4. Qualitative results of real image to point cloud retrieval. Query images are from Caltech101, and point clouds are from Model- Net40. We ... | definition/direction/unit from same section | p. 8 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | Figure 4. Qualitative results of real image to point cloud retrieval. Query images are from Caltech101, and point clouds are from Model- Net40. We ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | PointMLP [29] is the SOTA method on standard 3D classification task. | comparison identity and matched condition | p. 4 (4.1. 3D Backbone Networks) |
 | Figure 3. Data efficiency comparison. The X axis indicates the percentage of samples used for training and Y axis denotes the overall accuracy. Both ... | comparison identity and matched condition | p. 6 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 |---|---|---|
 | body limitation/failure cue | During pre-training, we utilize an advanced version of CLIP, namely SLIP [32], that shows superior performance as our image-text encoders. | p. 5 (4.3. Implementation Details) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,19 +133,10 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 7 (Figure/Table 
 | It conducts zero-shot 3D classification by first converting a 3D point cloud into 6 orthogonal depth maps, then using CLIP's image encoder to get ... | p. 6 (Model) |
 | We use our pre-trained ULIP with PointBERT as the 3D encoder directly. | p. 8 (4.7. Cross-Modal Retrieval) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 4.3. Implementation Details - extractive body cue:** During pre-training, we utilize an advanced version of CLIP, namely SLIP [32], that shows superior performance as our image-text encoders.
 
 - **Evidence anchors reviewed:** datasets p. 4 (4.2. Downstream Datasets), p. 4 (4.2. Downstream Datasets), p. 5 (4.3. Implementation Details), p. 5 (4.3. Implementation Details), metrics p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 4 (4. Experiments), p. 4 (Figure/Table caption), p. 5 (4.3. Implementation Details), p. 5 (4.3. Implementation Details), baselines p. 5 (Figure/Table caption), p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 8 (Figure/Table caption), p. 4 (4.1. 3D Backbone Networks), p. 6 (Figure/Table caption), results p. 6 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption), p. 6 (Figure/Table caption), p. 4 (4.1. 3D Backbone Networks), p. 8 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

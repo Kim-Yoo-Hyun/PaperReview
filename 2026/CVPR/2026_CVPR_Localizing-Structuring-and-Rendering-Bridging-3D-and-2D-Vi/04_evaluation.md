@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 - **p. 6 / 4. Experiments - extractive body cue:** These tasks cover diverse challenges including multi-step planning, fine-grained spatial reasoning, and cluttered scene.
 - **p. 8 / 4.2. Real-World Deployment Results - extractive body cue:** Beam parameters improvement for small objects. deployment confirm that color-encoded spatial beams and world-aligned cube markers generalize beyond synthetic environments.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. 2D VLA models (left-top) leverage intuitive semantic perception from multi-view transformers but struggle with explicit 3D spatial reasoning. 3D VLA models (left-bottom) achieve ...
@@ -81,8 +79,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 | Figure 2. Overview of DiffRender-VLA. The framework bridges spatial and 2D VLA paradigms through differentiable rendering: localiz- ing anchors the next manipulation target, structuring ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 | Figure 3. Visualization of differentiable point cloud rendered image. We use RLbench [19] and RH20T [10] dataset for display. Precision task: Place the stamp ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -91,13 +87,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 | This represents a +17.5% improvement over the best baseline (VLA-Adapter: 60.8%), validating real-world applicability. | comparison identity and matched condition | p. 7 (4.2. Real-World Deployment Results) |
 | DiffRender-VLA substantially outperforms recent approaches: DP3 (33.3%, +45.0%), OpenVLA-OFT (58.5%, +19.8%), Pi0 (58.2%, +20.1%), and TraceVLA (43.3%, +35.0%). | comparison identity and matched condition | p. 8 (4.2. Real-World Deployment Results) |
 | (3) Two-stage training: 76.2% (-4.3%)-without end-to-end gradient flow, stages cannot co-adapt. | comparison identity and matched condition | p. 8 (4.3. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -132,8 +121,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 | body limitation/failure cue | Figure 5. Simulation Tasks for Occlusion and Clutter enviroments. | p. 6 (Figure/Table caption) |
 | body limitation/failure cue | Task-specific improvements highlight spatial understanding capabilities: Occlusion Tasks: Average 91.7% success (+7.6% over GWM). | p. 7 (4.1. Simulation Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 | This alignment ensures rendered 2D projections encode spatial information through pure geometry: square 20814 | p. 3 (3.1. Localizing Coarse Target Region) |
 | The highest confidence coarse location pcoarse ∈R3 is computed via a differentiable spatial expectation over Qcoarse. | p. 3 (3.1. Localizing Coarse Target Region) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 4.3. Ablation Studies - extractive body cue:** (3) Two-stage training: 76.2% (-4.3%)-without end-to-end gradient flow, stages cannot co-adapt.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 - **p. 7 / 4.1. Simulation Results - extractive body cue:** Task-specific improvements highlight spatial understanding capabilities: Occlusion Tasks: Average 91.7% success (+7.6% over GWM).
 
 - **Evidence anchors reviewed:** datasets p. 7 (4. Experiments), p. 7 (4. Experiments), p. 8 (4.3. Ablation Studies), p. 6 (4. Experiments), p. 6 (4. Experiments), p. 8 (4.2. Real-World Deployment Results), metrics p. 7 (4. Experiments), p. 6 (Figure/Table caption), p. 7 (4.1. Simulation Results), p. 8 (4.2. Real-World Deployment Results), p. 8 (4.5. Generalization), p. 3 (Figure/Table caption), baselines p. 7 (4.1. Simulation Results), p. 7 (4.2. Real-World Deployment Results), p. 8 (4.2. Real-World Deployment Results), p. 8 (4.3. Ablation Studies), results p. 8 (Figure/Table caption), p. 7 (4.1. Simulation Results), p. 7 (4.1. Simulation Results), p. 6 (Figure/Table caption), p. 8 (4.4. Parameter & Viewpoint Analysis), p. 1 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

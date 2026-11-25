@@ -50,7 +50,6 @@ PDF body method statement (p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 20 (B.2 LO
 - **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** During fine-tuning, the entire model-including the vision encoder-is updated.
 - **Formal bridge:** multimodal context o,l,p/history -> action, pose, option or chunk a -> policy/action modeling objective -> instruction-conditioned task success.
 - **Equation/algorithm anchors:** p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 20 (B.1 VLM IMPLEMENTATION DETAILS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 20 (B.2 LO
 - **p. 4 / 3 BACKGROUND - extractive body cue:** 4 HAMSTER: HIERARCHICAL ACTION MODELS FOR ROBOTIC LEARNING In this work, we examine how VLA models can leverage relatively abundant data and demonstrate cross-domain transfer ...
 - **p. 7 / 3 BACKGROUND - extractive body cue:** HAMSTER's general path-conditioning framework allows lower-level policies to take in proprioceptive and perceptual (e.g., depth images) observations, that are not input to the high-level VLM.
 - **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 20 (B.2 LO
 - **p. 20 / B.2 LOW-LEVEL POLICY TRAINING DETAILS - extractive body cue:** For low-level policy training, we train the policies on ground truth paths constructed by projecting trajectory end-effector points to the camera image.
 - **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** During fine-tuning, the entire model-including the vision encoder-is updated.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** condition, model, image, prompt, except, when, training, Pixel, Point, Prediction, data, Robopoint, Yuan, where, given, prompts, dataset, low-level, policy, train.
 - **Relevant PDF headings:** B IMPLEMENTATION AND ARCHITECTURE DETAILS (p. 20); B.2 LOW-LEVEL POLICY TRAINING DETAILS (p. 20).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 20 (B.2 LO
 - **p. 10 / Figure/Table caption - extractive body cue:** Figure 6: Camera pos. for view in- variance: old (right) and new (left). VLM Generalization. We further demonstrate the benefit of HAMSTER's hi- erarchy by ...
 - **p. 20 / B.1 VLM IMPLEMENTATION DETAILS - extractive body cue:** During fine-tuning, the entire model-including the vision encoder-is updated.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 20 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), objective p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 20 (B.1 VLM IMPLEMENTATION DETAILS), temporal p. 21 (B.2 LOW-LEVEL POLICY TRAINING DETAILS), p. 20 (B IMPLEMENTATION AND ARCHITECTURE DETAILS), p. 20 (B.1 VLM IMPLEMENTATION DETAILS), p. 7 (3 BACKGROUND), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

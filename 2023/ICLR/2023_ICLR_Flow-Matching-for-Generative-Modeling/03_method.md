@@ -56,7 +56,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 3 / 1 INTRODUCTION - extractive body cue:** Our first key observation is this: The marginal vector field (equation 8) generates the marginal probability path (equation 6).
 - **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
 - **Equation/algorithm anchors:** p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 1 / 1 INTRODUCTION - extractive body cue:** The recent influx of amazing advances in generative modeling, e.g., for image generation Ramesh et al.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** We empirically validate Flow Matching and the construction via Optimal Transport paths on ImageNet, a large and highly diverse image dataset.
 - **Normalized interface:** observation=conditioning observation와 noisy/intermediate sample; state=latent/noise variable와 conditional distribution; output/action=generated sample, action chunk 또는 trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** For ImageNet-128 Dhariwal & Nichol (2021) train for 4.36m iterations with batch size 256, while FM (with 25% larger model) used 500k iterations with batch ...
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** All models are trained using the same architecture, hyperparameter values and number of training iterations, where baselines are allowed more iterations for better convergence.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Preprint, particular, Flow, Matching, objective, Section, simple, intuitive, training, regress, onto, target, vector, field, generates, desired, probability, path, Then, inspired.
 - **Relevant PDF headings:** C COMPUTING PROBABILITIES OF THE CNF MODEL (p. 15).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,27 +114,16 @@ PDF body method statement (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (A
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** Preprint CIFAR-10 ImageNet 32×32 ImageNet 64×64 Model NLL↓ FID↓ NFE↓ NLL↓ FID↓ NFE↓ NLL↓ FID↓ NFE↓ Ablations DDPM 3.12 7.48 274 3.54 6.99 262 3.32 ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** When compared to our ablation models, we find that models trained using Flow Matching with the OT path always result in the most efficient sampler, ...
 - **p. 9 / Figure/Table caption - extractive body cue:** Figure 7: Flow Matching, especially when using OT paths, allows us to use fewer evaluations for sampling while retaining similar numerical error (left) and sample ...
-- **p. 8 / 6 EXPERIMENTS - extractive body cue:** The OT path reduces noise roughly linearly, while diffusion paths visibly remove noise only towards the end of the path.
 - **p. 8 / 6 EXPERIMENTS - extractive body cue:** Score Matching w/ Diffusion Flow Matching w/ Diffusion Flow Matching w/ OT Figure 6: Sample paths from the same initial noise with models trained on ...
 - **p. 9 / 6 EXPERIMENTS - extractive body cue:** In Figure 7 (left), we compare the per-pixel MSE of low NFE solutions compared with 1000 NFE solutions (we use 256 random noise seeds), and ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (ABSTRACT), p. 4 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), objective p. 4 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 6 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), temporal p. 9 (6 EXPERIMENTS), p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 7 (5 RELATED WORK), p. 7 (5 RELATED WORK), p. 9 (7 CONCLUSION).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

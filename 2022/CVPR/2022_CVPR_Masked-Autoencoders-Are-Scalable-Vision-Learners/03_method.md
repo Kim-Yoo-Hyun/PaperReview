@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3. Approach), p. 3 (3. Approach), p. 4 (3. Appr
 - **p. 12 / A. Implementation Details - extractive body cue:** config value optimizer AdamW base learning rate 1e-4 weight decay 0.3 optimizer momentum β1, β2=0.9, 0.95 batch size 4096 learning rate schedule cosine decay warmup ...
 - **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
 - **Equation/algorithm anchors:** p. 4 (3. Approach), p. 4 (3. Approach), p. 11 (A. Implementation Details), p. 11 (A. Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3. Approach), p. 3 (3. Approach), p. 4 (3. Appr
 - **p. 4 / 3. Approach - extractive body cue:** Our MAE reconstructs the input by predicting the pixel values for each masked patch.
 - **p. 8 / 4.3. Partial Fine-tuning - extractive body cue:** These observations suggest that linear separability is not the sole metric for evaluating representation quality.
 - **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 3 (3. Approach), p. 3 (3. Approach), p. 4 (3. Appr
 - **p. 12 / A. Implementation Details - extractive body cue:** The hyper-parameters we search for are the learning rate, weight decay, drop path rate, and fine-tuning epochs.
 - **p. 5 / 4.1. Main Properties - extractive body cue:** The decoder width is 512, and the mask ratio is 75%. †: This entry is estimated by training ten epochs.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Like, autoencoders, encoder, maps, observed, signal, latent, representation, decoder, reconstructs, original, Unlike, classical, adopt, asymmetric, design, allows, operate, only, partial.
 - **Relevant PDF headings:** 3. Approach (p. 3); method (p. 7).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +117,10 @@ PDF body method statement (p. 3 (3. Approach), p. 3 (3. Approach), p. 4 (3. Appr
 - **p. 6 / 4.1. Main Properties - extractive body cue:** Our ablations thus far are based on 800-epoch pre-training.
 - **p. 6 / 4.1. Main Properties - extractive body cue:** Middle: block-wise sampling [2] that removes large random blocks.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3. Approach), p. 3 (3. Approach), p. 4 (3. Approach), p. 4 (3. Approach), p. 11 (A. Implementation Details), p. 7 (4.3. Partial Fine-tuning), objective p. 4 (3. Approach), p. 4 (3. Approach), p. 11 (A. Implementation Details), p. 11 (A. Implementation Details), p. 12 (A. Implementation Details), temporal p. 5 (4.1. Main Properties), p. 5 (4.1. Main Properties), p. 6 (4.1. Main Properties), p. 6 (4.1. Main Properties), p. 2 (1. Introduction), p. 3 (3. Approach).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

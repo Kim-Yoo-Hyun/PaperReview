@@ -55,7 +55,6 @@ PDF body method statement (p. 4 (V. ARCHITECTURE), p. 5 (B. Training), p. 4 (V. 
 - **p. 9 / C. Different Architectures offer Different Tradeoffs berween - extractive body cue:** This rechction suggests that weighted imitation learning enables policies to focus more precisely on pertinent features, potentially minimizing the influence of noisy or irrelevant information.
 - **Formal bridge:** trajectory D with task/embodiment metadata -> normalized sample or downstream action -> coverage/data efficiency/transfer objective -> cross-domain transfer and task performance.
 - **Equation/algorithm anchors:** p. 6 (B. Training), p. 5 (B. Training), p. 6 (B. Training).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 4 (V. ARCHITECTURE), p. 5 (B. Training), p. 4 (V. 
 - **p. 2 / 1. Ivrropuction - extractive body cue:** We first systematically study these representations across four critical dimensions: object centrieity, or understanding of the locations and geometry ‘of objects on the scene; motion-centricity ...
 - **p. 3 / 1. Ivrropuction - extractive body cue:** between high-level inputs (e-g., language commands or simple ‘object markers) and the low-level action space of a robot.
 - **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 4 (V. ARCHITECTURE), p. 5 (B. Training), p. 4 (V. 
 - **p. 6 / 4) Which policy architecture offers the best tradeoff be - extractive body cue:** 5) Can mid-level representations be effectively used as supervision signals during training to enhance policy precision and generalization across tasks?
 - **p. 5 / B. Training - extractive body cue:** During inference time, each of the expert models are executed asynchronously.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** implement, diffusion, policy, similar, takes, input, images, different, viewpoints, third-person, wrist, directly, outputs, absolute, joint, positions6, arm-as, well, continuous, gripper.
 - **Relevant PDF headings:** V. ARCHITECTURE (p. 4); 4) Which policy architecture offers the best tradeoff be (p. 6); C. Different Architectures offer Different Tradeoffs berween (p. 9).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 4 (V. ARCHITECTURE), p. 5 (B. Training), p. 4 (V. 
 - **p. 9 / C. Different Architectures offer Different Tradeoffs berween - extractive body cue:** Meanwhile, Table I! records the sensitivity scores for each of our mid-level experts as well as the robustness index. ‘The robustness index is computed by ...
 - **p. 9 / C. Different Architectures offer Different Tradeoffs berween - extractive body cue:** This suggests that the benefits of more targeted feature utilization outweigh the slight decrease in robustness.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (V. ARCHITECTURE), p. 5 (B. Training), p. 4 (V. ARCHITECTURE), p. 6 (B. Training), p. 6 (4) Which policy architecture offers the best tradeoff be), p. 9 (C. Different Architectures offer Different Tradeoffs berween), objective p. 6 (B. Training), p. 6 (B. Training), p. 5 (B. Training), p. 5 (B. Training), p. 9 (C. Different Architectures offer Different Tradeoffs berween), temporal p. 5 (B. Training), p. 2 (1. Ivrropuction), p. 4 (V. ARCHITECTURE), p. 5 (B. Training), p. 7 (B. Real-World Environment).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 - **p. 15 / 3.2. Universal Humanoid Motion Tracking - extractive body cue:** The total loss comprises: ℒ= ℒppo + ℒrecon + ℒtoken + ℒcycle (1) ℒrecon = ‖𝒟𝑟(𝑧𝑟) -𝑔𝑟‖2 + ‖𝒟𝑟(𝑧ℎ) -𝑔𝑟‖2 + ‖𝒟𝑟(𝑧𝑚) -𝑔𝑟‖2 (2) ℒtoken ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 16 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 17 (3.3. Generative Kinematic Motion Planner).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 - **p. 15 / 3.2. Universal Humanoid Motion Tracking - extractive body cue:** First, a robot control decoder 𝒟𝑐transforms the universal token into motor commands that control the robot's joints. 𝒟𝑐takes as input the concatenation of the universal ...
 - **p. 18 / 3.5. Deployment - extractive body cue:** The system used a multi-rate architecture with four concurrent loops: policy inference at 50 Hz, command streaming at 500 Hz, operator input at 100 Hz, ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -97,13 +95,10 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 - **p. 5 / 2.1. Motion Tracking - extractive body cue:** For compute, we trained on 2, 4, and 16 nodes (16, 32, and 128 GPUs), all to 50k iterations, yielding approximately 2k, 9k, and 21k ...
 - **p. 15 / 3.2. Universal Humanoid Motion Tracking - extractive body cue:** We chose FSQ over the vector-quantized variational autoencoder (VQ-VAE) [62] for training stability under joint PPO optimization (the Implementation Details section), and validated this and ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specialized, encoders, heterogeneous, human, robot, motion, inputs, shared, latent, representation, quantized, universal, token, drives, common, control, decoder, auxiliary, facilitates, feature.
 - **Relevant PDF headings:** 2.5. Foundation-Model-Driven Loco-manipulation (p. 9); 3. Materials and Methods (p. 12).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +118,13 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 - **p. 9 / 2.5. Foundation-Model-Driven Loco-manipulation - extractive body cue:** We observed that predicting universal tokens produced smoother and safer behavior than predicting explicit SMPL poses, which resulted in jerky motions and poor directional control ...
 - **p. 12 / 2.6. Discussion - extractive body cue:** These findings support motion tracking as a practical route to acquire broad, transferable whole-body priors without per-task reward engineering.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 15 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), objective p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking), p. 15 (3.2. Universal Humanoid Motion Tracking), temporal p. 14 (3.2. Universal Humanoid Motion Tracking), p. 17 (3.3. Generative Kinematic Motion Planner), p. 2 (1. Introduction), p. 13 (3.1. Humanoid Motion Dataset), p. 13 (3.1. Humanoid Motion Dataset), p. 15 (3.2. Universal Humanoid Motion Tracking).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

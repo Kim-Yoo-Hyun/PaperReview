@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 - **p. 5 / 2 Preliminaries - extractive body cue:** To begin with, we define empirical return of any policy π, J(π, ˆ M), which is equal to the discounted return of a policy π ...
 - **p. 5 / 2 Preliminaries - extractive body cue:** This implies that the policy πk(a/s) ∝exp( ˆQk(s, a)), is constrained to be closer to the dataset distribution, ˆπβ(a/s), thus the CQL update implicitly prevents ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 1: Performance of CQL(H) and prior methods on gym domains from D4RL, on the normalized return metric, averaged over 4 seeds. Note that CQL ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 | We assume that the rewards r satisfy: /r(s, a)/ ≤Rmax. | definition/direction/unit from same section | p. 2 (2 Preliminaries) |
 | Following [49, 28, 47], we use concentration properties of ˆBπ to control this error. | definition/direction/unit from same section | p. 3 (2 Preliminaries) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 | CQL outperforms prior methods by as much as 2-5x on many benchmark tasks, and is the only method that can outperform simple behavioral cloning ... | comparison identity and matched condition | p. 2 (1 Introduction) |
 | Table 1: Performance of CQL(H) and prior methods on gym domains from D4RL, on the normalized return metric, averaged over 4 seeds. Note that ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
 | Table 2: Normalized scores of all methods on AntMaze, Adroit, and kitchen domains from D4RL, averaged across 4 seeds. On the harder mazes, CQL ... | comparison identity and matched condition | p. 8 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -124,7 +113,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 
 - Numeric sentences retained from the body:
 - **p. 2 / 1 Introduction - extractive body cue:** CQL outperforms prior methods by as much as 2-5x on many benchmark tasks, and is the only method that can outperform simple behavioral cloning on ...
-- **p. 2 / 1 Introduction - extractive body cue:** CQL outperforms prior methods by as much as 2-5x on many benchmark tasks, and is the only method that can outperform simple behavioral cloning on ...
 
 ## Generalization and Failure Cases
 
@@ -137,8 +125,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 | body limitation/failure cue | Since D typically does not contain all possible transitions (s, a, s′), the policy evaluation step actually uses an empirical Bellman operator that only ... | p. 2 (2 Preliminaries) |
 | body limitation/failure cue | Since standard Q-function training does not query the Q-function value at unobserved states, but queries the Q-function at unseen actions, we restrict µ to ... | p. 3 (2 Preliminaries) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -148,14 +134,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 | In practice, CQL augments the standard Bellman error objective with a simple Q-value regularizer which is straightforward to implement on top of existing deep ... | p. 1 (Abstract) |
 | However, applying RL to real-world problems consistently poses practical challenges: in contrast to the kinds of data-driven methods that have been successful in supervised ... | p. 1 (1 Introduction) |
 | CQL can be implemented with less than 20 lines of code on top of a number of standard, online RL algorithms [21, 9], simply ... | p. 2 (1 Introduction) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -167,9 +145,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 31 (Figure/Table
 - **p. 3 / 2 Preliminaries - extractive body cue:** Since standard Q-function training does not query the Q-function value at unobserved states, but queries the Q-function at unseen actions, we restrict µ to match ...
 
 - **Evidence anchors reviewed:** datasets p. 2 (1 Introduction), p. 1 (Abstract), p. 1 (1 Introduction), p. 3 (2 Preliminaries), p. 2 (2 Preliminaries), p. 3 (2 Preliminaries), metrics p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 5 (2 Preliminaries), p. 6 (2 Preliminaries), p. 30 (Figure/Table caption), p. 1 (Abstract), baselines p. 30 (Figure/Table caption), p. 31 (Figure/Table caption), p. 1 (Abstract), p. 2 (1 Introduction), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), results p. 8 (Figure/Table caption), p. 31 (Figure/Table caption), p. 5 (2 Preliminaries), p. 8 (Figure/Table caption), p. 9 (Figure/Table caption), p. 9 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 7 / 3. Inference - extractive body cue:** 6.1 Partial Goals The objective of 𝜋PC is to produce motions that conform to constraints specified by partial goals, akin to the task of motion ...
 - **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
 - **Equation/algorithm anchors:** p. 7 (3. Inference), p. 1 (Body text (section boundary not confidently recovered)), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMINARIES), p. 4 (3 PRELIMINARIES).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** These partial descriptions can include target keyframes, target joint positions/rotations, text instructions, object interactions, or any combination thereof.
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** MaskedMimic can be used for a wide range of applications, including generating full-body motion from partially observed joint target positions, joystick steering, object interactions, path-following, ...
 - **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -96,13 +94,10 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 6 / 3. Inference - extractive body cue:** Training scene (screenshot): The top region consists of standard flat terrain, enabling the controller to reproduce the original motions in a setting that best represents ...
 - **p. 7 / 3. Inference - extractive body cue:** The encoder is used solely for training, and is not utilized at runtime.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** decoder, then, conditioned, latent, sampled, encoder, distribution, produces, action, simulated, character, train, versatile, controller, directed, partial, goals, simple, training, scheme.
 - **Relevant PDF headings:** 1. Fully Constrained Controller (p. 5); 2. Masked Mimic (Partially Constrained Controller) (p. 5).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,23 +117,13 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 12 / 8 RESULTS - extractive body cue:** By conditioning MaskedMimic on different goals at each stage of the task, the controller can be directed to perform a wide range of tasks without ...
 - **p. 12 / 8 RESULTS - extractive body cue:** Full-body VR Success MPJPE Success MPOJPE FC Train 98% 51.5 Test 98.2% 51 MaskedMimic Train 94.7% 61.3 94.4% 62.7 Test 95.4% 62.9 93.6% 69.4 In ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3. Inference), p. 8 (3. Inference), p. 5 (3. Inference), p. 6 (3. Inference), objective p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 5 (3. Inference), p. 2 (1 INTRODUCTION), p. 6 (3. Inference), p. 7 (3. Inference), temporal p. 10 (7.2 Evaluation), p. 12 (8 RESULTS), p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation), p. 5 (3. Inference), p. 5 (3. Inference).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

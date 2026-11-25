@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 - **p. 10 / 3.3. Human Video Datasets - extractive body cue:** These datasets cover a wide range of real-world human behaviors, including grasping, tool use, cooking, assembly, and other task-oriented activities performed in natural environments, and ...
 - **p. 11 / 4. Evaluation - extractive body cue:** Our simulation experiments are conducted on three distinct benchmarks designed to systematically assess the effectiveness of our model across various robot embodiments and manipulation tasks.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Data Pyramid for Robot Foundation Model Training. GR00T N1's heterogeneous training corpora can be represented as a pyramid: data quantity de- creases, and ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 | Figure 10: Average policy success rate on simulated manipulation tasks with varying numbers of demonstrations. | definition/direction/unit from same section | p. 20 (Figure/Table caption) |
 | For post-trained GR00T N1, we observed that, compared to the baseline Diffusion Policy, its motion is generally much smoother, and its grasping accuracy is ... | definition/direction/unit from same section | p. 16 (4.5. Qualitative Results) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 | Compared to DexMG, this benchmark features a significantly larger variety of objects with diverse placements. | comparison identity and matched condition | p. 12 (4.1. Simulation Benchmarks) |
 | Our evaluation experiment consists of post-training GR00T N1 and baseline models as described in Sec. | comparison identity and matched condition | p. 14 (4.3. Experiment Setup) |
 | Baselines To demonstrate the effectiveness of diverse pretraining of GR00T N1, we compare with two established baselines, BC-Transformer (Mandlekar et al., 2021) and Diffusion ... | comparison identity and matched condition | p. 14 (4.3. Experiment Setup) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 | body limitation/failure cue | Videos that fail this criterion undergo re-captioning, with the videos downsampled to 16 frames at 256P resolution for this process. | p. 22 (6. Conclusions) |
 | body limitation/failure cue | Figure 3: GR00T N1 Model Architecture. GR00T N1 is trained on a diverse set of embodiments ranging from single-arm robot arms to bimanual humanoid ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 | The encoder takes the current frame 𝑥𝑡and the future frame 𝑥𝑡+𝐻of a video with a fixed window size 𝐻and outputs the latent action 𝑧𝑡. | p. 5 (2.2. Training Data Generation) |
 | We used the 140,000 trajectories available at the time of launching our training run. | p. 9 (3.1. Real-World Datasets) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 24 / 6. Conclusions - extractive body cue:** (Top) Post-trained GR00T-N1-2B successfully places the cucumber into the basket, whereas the Diffusion Policy fails due to an inaccurate grasp.
@@ -174,9 +153,8 @@ PDF body evaluation/result cue (p. 15 (4.4. Quantitative Results), p. 15 (4.4. Q
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3: GR00T N1 Model Architecture. GR00T N1 is trained on a diverse set of embodiments ranging from single-arm robot arms to bimanual humanoid dexterous ...
 
 - **Evidence anchors reviewed:** datasets p. 12 (4.1. Simulation Benchmarks), p. 14 (4.2. Real-World Benchmarks), p. 10 (3.2. Synthetic Datasets), p. 17 (4.5. Qualitative Results), p. 9 (3. Pre-Training Datasets), p. 9 (3.1. Real-World Datasets), metrics p. 14 (4.3. Experiment Setup), p. 14 (4.3. Experiment Setup), p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 16 (4.5. Qualitative Results), p. 17 (4.5. Qualitative Results), baselines p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 16 (4.5. Qualitative Results), p. 12 (4.1. Simulation Benchmarks), p. 14 (4.3. Experiment Setup), p. 14 (4.3. Experiment Setup), results p. 15 (4.4. Quantitative Results), p. 15 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup), p. 16 (4.4. Quantitative Results), p. 14 (4.3. Experiment Setup), p. 16 (4.4. Quantitative Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

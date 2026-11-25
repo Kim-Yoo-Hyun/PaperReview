@@ -65,8 +65,6 @@ PDF body contribution framing (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract)
 | body cue at p. 7 | From the figure, we observe that the most difficult action in the dataset is the "Insert" action, which ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | (Crucially, it incorporates failure data to train models that can effectively learn to detect, understand, and respond to ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 robot_data writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract). The downstream handoff is claimed only when the body describes it.
@@ -74,10 +72,8 @@ robot_data writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (Abstract), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 3 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), p. 4 (2) A dataset with multi-task labels to support algorithm), interface p. 4 (B. Sensors), p. 1 (1 Seraies), p. 2 (2) A dataset with multi-task labels to support algorithm), p. 2 (Abstract), objective p. 3 (2) A dataset with multi-task labels to support algorithm), p. 11 (B. Motion Policy Learning), p. 11 (B. Motion Policy Learning), p. 12 (B. Motion Policy Learning).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

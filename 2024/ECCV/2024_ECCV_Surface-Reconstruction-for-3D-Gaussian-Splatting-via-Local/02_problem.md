@@ -62,8 +62,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 8 (3 Method), p. 3 (1 I
 | body cue at p. 14 | Although the MonoSDF (MLP) adopts pure MLP structure which shows robustness to the camera noise, the training time ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 12 | 2, the inaccurate normal estimated by the density gradient will lead to a degraded iso-surface estimation compared with ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 3d_perception writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 9 (3 Method), p. 1 (1 Introduction), p. 5 (3 Method), p. 5 (3 Method). The downstream handoff is claimed only when the body describes it.
@@ -71,7 +69,5 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 8 (3 Method), p. 3 (1 I
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), interface p. 9 (3 Method), p. 1 (1 Introduction), p. 5 (3 Method), p. 5 (3 Method), objective p. 9 (3 Method), p. 9 (3 Method), p. 7 (3 Method), p. 6 (3 Method), p. 6 (3 Method), p. 7 (3 Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

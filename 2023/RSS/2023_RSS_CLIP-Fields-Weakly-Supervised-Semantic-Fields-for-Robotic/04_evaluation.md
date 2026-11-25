@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 - **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models.
 - **p. 6 / V. EXPERIMENTAL EVALUATION - extractive body cue:** 5: Mean average precision in semantic segmentation on the Habitat-Matterport 3D (HM3D) Semantic dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Our approach, CLIP-Fields, integrates multiple views of a scene and can capture 3D semantics from relatively few examples. This results in a scalable ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 | These representations can once again be projected back into the camera frame to reconstruct the segmentation map predicted by CLIP-Fields. | definition/direction/unit from same section | p. 5 (V. EXPERIMENTAL EVALUATION) |
 | We consider the navigation task successful if the robot can navigate to and point the camera at an object that satisfies the query. | definition/direction/unit from same section | p. 8 (V. EXPERIMENTAL EVALUATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 | All baseline models were pre-trained on ImageNet-1K and then the COCO dataset. | comparison identity and matched condition | p. 5 (V. EXPERIMENTAL EVALUATION) |
 | Baselines: In our semantic and instance segmentation tasks, we use 2D RGB based segmentation models as our baselines. | comparison identity and matched condition | p. 5 (V. EXPERIMENTAL EVALUATION) |
 | Both CLIP-Fields and the baseline had access to the list of semantic labels in each scene with no extra annotations. | comparison identity and matched condition | p. 6 (V. EXPERIMENTAL EVALUATION) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -133,8 +122,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 | body limitation/failure cue | 7: Mean average accuracy on the semantic segmentation task on the HM3D Semantic dataset with label noise simulating errors in base labelling models. | p. 6 (V. EXPERIMENTAL EVALUATION) |
 | body limitation/failure cue | In this section, we examine the robustness of CLIP-Fields to such label errors. | p. 7 (V. EXPERIMENTAL EVALUATION) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 | Similar to CLIP [22], we also note that a larger batch size helps reduce the variance in the contrastive loss function. | p. 5 (IV. APPROACH) |
 | We use a Multi-resolution Hash Encoder [20] to learn a low level spatial representation mapping R3 →Rd, which is then mapped to higher dimensions ... | p. 4 (IV. APPROACH) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / VI. CONCLUSIONS AND FUTURE WORK - extractive body cue:** In future work, we hope to explore models that share parameters across scenes, and can handle dynamic scenes and objects.
@@ -165,6 +144,5 @@ PDF body evaluation/result cue (p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPE
 - **p. 7 / V. EXPERIMENTAL EVALUATION - extractive body cue:** In this section, we examine the robustness of CLIP-Fields to such label errors.
 
 - **Evidence anchors reviewed:** datasets p. 5 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), metrics p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (Figure/Table caption), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 4 (Figure/Table caption), baselines p. 6 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 5 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), results p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 6 (V. EXPERIMENTAL EVALUATION), p. 7 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION), p. 8 (V. EXPERIMENTAL EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

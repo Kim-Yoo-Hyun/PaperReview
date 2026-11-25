@@ -55,7 +55,6 @@ PDF body method statement (p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Vis
 - **p. 4 / 2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ - extractive body cue:** To prevent the model from hallucinating artifacts in invalid regions (holes), we utilize the invalidation mask ˆ M predicted by the BND module as a ...
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), p. 5 (3) Sequential Optimization Objectives. Since PRISM is), p. 3 (3. Methodology), p. 3 (2) Implicit Data-Driven Modeling leverages generative), p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), p. 5 (3) Sequential Optimization Objectives. Since PRISM is).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -76,7 +75,6 @@ PDF body method statement (p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Vis
 - **p. 2 / 1. Introduction - extractive body cue:** Real-world depth corruption follows structured physical regularities: specular surfaces (e.g., metal, mirror) cause regular reflection resulting in Sensing Invalidation, whereas transparent or translucent materials (e.g., ...
 - **p. 3 / 3. Methodology - extractive body cue:** The goal of sensor simulation is to learn a mapping M : Dsim →Dreal such that policies trained on M(Dsim) generalize to Dr.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,16 +91,12 @@ PDF body method statement (p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Vis
 - **p. 5 / 3) Sequential Optimization Objectives. Since PRISM is - extractive body cue:** Its objective is the mask-constrained loss restricted to valid regions, shown in Eq.(7).
 - **p. 6 / 5.1. Experimental Settings - extractive body cue:** Training proceeds in two phases totaling 100 epochs: first freezing the VAE and U-Net to optimize only the ControlNet, followed by joint fine-tuning where the ...
 - **p. 6 / 5.1. Experimental Settings - extractive body cue:** Implemented in PyTorch on 8 NVIDIA H200 GPUs, PRISM trains on 5122 images with a batch size of 32.
-- **p. 4 / 2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ - extractive body cue:** During inference, the predicted latent is decoded by the VAE Decoder D to obtain the residual ˆR = ψ-1(D(ˆz0)), which is added to Dsim to ...
 - **p. 4 / 2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ - extractive body cue:** The training objective is masked to compute gradients strictly within valid sensor regions: LNRG = Ez0,t,ϵ h ∥ϵ -ϵθ(zt, t, cctl)∥2 2 ⊙(1 -ˆ M) ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** architecture, consists, three, sequential, modules, State-of-theart, architectures, like, Metric3Dv2, MoGe, Wang, employ, ViT-based, encoders, distill, invariant, geometric, representations, Stage, Noise.
 - **Relevant PDF headings:** 2.2. Paradigms of Depth Noise Modeling (p. 2); 1) Explicit Analytical Modeling reconstructs noise via (p. 3); 2) Implicit Data-Driven Modeling leverages generative (p. 3); 2.3. Visual Foundation Models as Semantic Priors (p. 3); 3. Methodology (p. 3).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -122,20 +116,10 @@ PDF body method statement (p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Vis
 - **p. 25 / Figure/Table caption - extractive body cue:** Table 18. Sensitivity Analysis. We analyze the trade-offs for Positive Weight wpos (Left) and Initial Mining Ratio γstart (Right). The optimal configurations (wpos = 3.0 ...
 - **p. 6 / 5.1. Experimental Settings - extractive body cue:** Training proceeds in two phases totaling 100 epochs: first freezing the VAE and U-Net to optimize only the ControlNet, followed by joint fine-tuning where the ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Visual Foundation Models as Semantic Priors), p. 5 (3) Sequential Optimization Objectives. Since PRISM is), p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), p. 4 (3.2. Bimodal Noise Disentangler), p. 5 (3) Sequential Optimization Objectives. Since PRISM is), objective p. 5 (3) Sequential Optimization Objectives. Since PRISM is), p. 5 (3) Sequential Optimization Objectives. Since PRISM is), p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), p. 3 (3. Methodology), p. 3 (2) Implicit Data-Driven Modeling leverages generative), p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), temporal p. 3 (3. Methodology), p. 6 (5.1. Experimental Settings), p. 8 (5.2. Depth Fidelity Evaluation), p. 8 (5.3. Downstream Application Evaluation), p. 9 (7. Limitations), p. 1 (Abstract).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

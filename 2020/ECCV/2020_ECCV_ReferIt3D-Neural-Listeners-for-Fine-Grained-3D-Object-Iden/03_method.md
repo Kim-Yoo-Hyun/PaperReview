@@ -50,7 +50,6 @@ PDF body method statement (p. 1 (body section not recovered), p. 1 (1 Introducti
 - **p. 3 / 1 Introduction - extractive body cue:** As we show in our experiments, this step is critical for progress in 3D visual object identification from free-form language descriptions.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 1 (body section not recovered), p. 1 (1 Introducti
 - **p. 2 / 1 Introduction - extractive body cue:** An alternative, yet more direct way to gain this understanding is by analyzing point cloud data of real-world scenes [3,52].
 - **p. 3 / 1 Introduction - extractive body cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -85,13 +83,10 @@ PDF body method statement (p. 1 (body section not recovered), p. 1 (1 Introducti
 
 - **p. 3 / 1 Introduction - extractive body cue:** We show that training with Sr3D in addition to natural language data (Nr3D or [18]) improves neural-based pipelines.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** architectures, promote, object-to-object, communication, graph, neural, networks, outperform, less, context-aware, alternatives, fine-grained, object, classification, bottleneck, language-assisted, identification, Even, embodied, most.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -109,20 +104,10 @@ PDF body method statement (p. 1 (body section not recovered), p. 1 (1 Introducti
 - **p. 13 / VI SD - extractive body cue:** Finally, the last row shows two challenging failure cases of our model.
 - **p. 13 / VI SD - extractive body cue:** This does not come as a surprise, since the network has naturally more work to do to comprehend nuances related to viewing the scene w.r.t. ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (body section not recovered), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 3 (1 Introduction), objective p. 1 (1 Introduction), p. 3 (1 Introduction), temporal p. 3 (1 Introduction), p. 6 (2 Related Work), p. 6 (2 Related Work), p. 7 (2 Related Work), p. 8 (2 Related Work), p. 9 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

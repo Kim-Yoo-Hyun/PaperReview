@@ -50,7 +50,6 @@ PDF body method statement (p. 2 (3. Our Method), p. 3 (3. Our Method), p. 8 (1. 
 - **p. 2 / 3. Our Method - extractive body cue:** At each timestep, we use the encoder of Dynam3D [57] to process streaming posed RGB-D images to update a dynamic Multi-level 3D 32464
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 2 (3. Our Method).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -71,7 +70,6 @@ PDF body method statement (p. 2 (3. Our Method), p. 3 (3. Our Method), p. 8 (1. 
 - **p. 7 / 4.3. Long-Horizon Grounding and Planning - extractive body cue:** The SG3D benchmark is specifically designed to evaluate planning, grounding, and memory capabilities in longhorizon stateful tasks of an agent.
 - **p. 7 / 4.3. Long-Horizon Grounding and Planning - extractive body cue:** By feeding historical plans, grounded targets, and trajectories back into the VLM, our D3D-VLP maintains state, resolves temporal ambiguities, and possesses replanning capabilities that are ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -86,13 +84,10 @@ PDF body method statement (p. 2 (3. Our Method), p. 3 (3. Our Method), p. 8 (1. 
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** timestep, encoder, Dynam3D, process, streaming, posed, RGB-D, images, update, dynamic, Multi-level, RGB, Depth, Waypoint, Predictor, D3D-VLP, Model, Set, nightlight, bathroom.
 - **Relevant PDF headings:** 3. Our Method (p. 2); 4.2. Comparison with State-of-the-Art Methods (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -108,20 +103,10 @@ PDF body method statement (p. 2 (3. Our Method), p. 3 (3. Our Method), p. 8 (1. 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Model Architecture Comparison. The end-to-end models directly map instructions to navigation actions, and modu- lar systems assemble multiple specialized components. Our D3D- VLP ...
 - **p. 8 / 5. Conclusion - extractive body cue:** Future work could incorporate Reinforcement Learning to further enhance this framework.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (3. Our Method), p. 3 (3. Our Method), p. 8 (1. Synergistic Learning (SLFS) and Training Data), p. 7 (4.3. Long-Horizon Grounding and Planning), p. 7 (4.3. Long-Horizon Grounding and Planning), p. 8 (1. Synergistic Learning (SLFS) and Training Data), objective p. 2 (3. Our Method), temporal p. 5 (2. Walk to the cabinet next to the bathtub), p. 2 (3. Our Method), p. 4 (2. Walk to the cabinet next to the bathtub), p. 2 (1. Introduction), p. 3 (3. Our Method), p. 6 (4.1. Experimental Setup).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

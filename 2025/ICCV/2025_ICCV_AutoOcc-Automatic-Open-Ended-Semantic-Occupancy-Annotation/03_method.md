@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 - **p. 6 / 3.2. VL-GS - extractive body cue:** Finally, we cumulatively splat VL-GS onto the voxel grid at an arbitrary voxel size, with each voxel's semantic label determined by weighting the occupied range ...
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 4 (3. Method), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 - **p. 5 / 3.2. VL-GS - extractive body cue:** Unlike dense voxels or point clouds, our method allows for representing regions of interest with sparse Gaussians, aided by scalability and semantic attention maps.
 - **p. 6 / 3.2. VL-GS - extractive body cue:** For fair comparisions, we replicate SurroundOcc* [51] and OpenOcc* [49] by replacing the manually annotated results with the semantic point clouds projected from VLMs.
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -88,13 +86,10 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 
 - training/inference separation cue 없음
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Specifically, attention, generation, compute, aggregate, attentions, transformer, decoder, output, tokens, tensor, heads, layers, begi, frac, prime, aligned, where, n-th, semantic.
 - **Relevant PDF headings:** 3. Method (p. 4).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -114,20 +109,10 @@ PDF body method statement (p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Visi
 - **p. 2 / Figure/Table caption - extractive body cue:** Table 1. Comparisons between AutoOcc and existing semantic occupancy annotation pipelines. The definitions of closed-set, open- set, and open-ended are introduced in Section 2. Our ...
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 2. Overall pipeline of our method. AutoOcc is a vision-centric automated pipeline for semantic occupancy annotation. Our method starts with multi-view image inputs (optionally ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.1. Vision-Language Guidance), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS), objective p. 5 (3.2. VL-GS), p. 4 (3.1. Vision-Language Guidance), p. 4 (3. Method), p. 5 (3.2. VL-GS), p. 6 (3.2. VL-GS), temporal p. 7 (4.2. Performance Evaluation and Analysis), p. 4 (3. Method), p. 4 (3.1. Vision-Language Guidance), p. 5 (3.2. VL-GS), p. 5 (3.2. VL-GS), p. 6 (4.1. Implementation Details).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

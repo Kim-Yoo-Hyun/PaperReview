@@ -48,7 +48,6 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 - **p. 2 / 1.1 Approach - extractive body cue:** The key computational benefit of the approach is that it is able to incorporate geometric and kinematic constraints in the heuristic to strongly guide the ...
 - **Formal bridge:** s/q -> a/ξ ∈ feasible decisions -> path/task cost or expected utility -> success/reachability and constraint satisfaction.
 - **Equation/algorithm anchors:** p. 2 (1.1 Approach), p. 2 (1.1 Approach).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 - **p. 2 / 1.1 Approach - extractive body cue:** We introduce Extended Action Specification (EAS), a new symbolic planing representation that supports complex conditions.
 - **p. 1 / 1 Introduction - extractive body cue:** A long-standing goal in robotics is to develop robots that can operate autonomously in unstructured human environments.
 - **Normalized interface:** observation=start/goal, map, dynamics와 successor/operator description; state=path, trajectory, symbolic state 또는 task-motion decision; output/action=feasible action sequence 또는 minimum-cost plan.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** introduce, Extended, Action, Specification, EAS, symbolic, planing, representation, supports, complex, conditions, able, represent, actions, much, more, concisely, traditional, planning, Finally.
 - **Relevant PDF headings:** 1.1 Approach (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,23 +102,13 @@ PDF body method statement (p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 A
 - **p. 30 / 11 Experiments - extractive body cue:** We enforce timeouts of 30 iterations for S-PICK-PLACE due to inverse reachability, inverse kinematics, or motion planning failures.
 - **p. 33 / B.1 Proof of Theorem 1 - extractive body cue:** Finally, each segment from q0 to q0 ∈B0 or from q∗to qk ∈Bk is collision-free by the problem being robustly feasible.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 2 (1.1 Approach), p. 2 (1.1 Approach), p. 3 (1.1 Approach), objective p. 2 (1.1 Approach), p. 2 (1.1 Approach), temporal p. 27 (A PPM), p. 18 (A PPM), p. 18 (A PPM), p. 24 (A PPM), p. 27 (A PPM), p. 30 (11 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

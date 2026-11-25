@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS)
 - **p. 8 / III. EXPERIMENTS - extractive body cue:** These results highlight the effectiveness of NaVILA in bridging the gap between visionlanguage understanding and real-world navigation tasks.
 - **p. 8 / III. EXPERIMENTS - extractive body cue:** Workspace Home Outdoor Simple Complex Simple Complex Simple Complex NE↓SR↑NE↓SR↑NE↓SR↑NE↓SR↑NE↓SR↑NE↓SR↑ Unitree Go2 GPT-4o [28] 2.01 0.67 2.38 0.33 1.49 0.53 3.00 0.00 - 0.67 - ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Real-world demonstration of NaVILA: Upon receiving human instructions, NaVILA uses a vision-language model to process RGB video frames and employs locomotion skills to ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS)
 | Fig. 11: Random rough, obstacle and slope terrain. TABLE X: Reward function parameters for training RL policy. Reward Expression Weight Linear velocity tracking exp(-∥vcmd ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Fig. 1: Real-world demonstration of NaVILA: Upon receiving human instructions, NaVILA uses a vision-language model to process RGB video frames and employs locomotion skills ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS)
 | NaVILA outperforms current state-of-the-art VLA models and demonstrates superior performance to other 3D LMMs that require additional input, such as depth or camera pose. | comparison identity and matched condition | p. 7 (III. EXPERIMENTS) |
 | Despite variations such as changes in camera height and camera view angle, NaVILA consistently outperformes the baselines, highlighting the strong generalization capabilities of our ... | comparison identity and matched condition | p. 8 (III. EXPERIMENTS) |
 | Note that † indicates models trained without human touring videos. | comparison identity and matched condition | p. 8 (III. EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS)
 | body limitation/failure cue | NaVILA generates high-level language commands while a realtime locomotion policy handles obstacle avoidance, enhancing robustness across robots. | p. 9 (V. CONCLUSION AND LIMITATIONS) |
 | body limitation/failure cue | Fig. 8: Comparison between Go2 blind policy and vision policy. The blind policy failed to avoid the obstacles and got stuck. The vision policy ... | p. 14 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -155,14 +142,6 @@ PDF body evaluation/result cue (p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS)
 | During this training, all three components-vision encoder, connector, and LLM-are unfrozen. | p. 4 (II. METHOD) |
 | History Views Current View Vision Encoder 🔥 Down Sample & Projector 🔥 The next action is Walk forward and turn right. | p. 4 (II. METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / V. CONCLUSION AND LIMITATIONS - extractive body cue:** While NaVILA demonstrates strong performance, it fails in some real-world cases (see Appx.
@@ -173,9 +152,8 @@ PDF body evaluation/result cue (p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS)
 - **p. 14 / Figure/Table caption - extractive body cue:** Fig. 8: Comparison between Go2 blind policy and vision policy. The blind policy failed to avoid the obstacles and got stuck. The vision policy detected ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 5 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), metrics p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 17 (Figure/Table caption), baselines p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS), results p. 8 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 6 (III. EXPERIMENTS), p. 7 (III. EXPERIMENTS), p. 8 (III. EXPERIMENTS).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

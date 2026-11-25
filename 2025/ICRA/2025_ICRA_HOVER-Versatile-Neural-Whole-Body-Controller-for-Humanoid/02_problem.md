@@ -62,8 +62,6 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p
 | body cue at p. 6 | Future work will explore further developing an automated mode-switching module for real-world applications. | reported limitation/failure wording; scope must be verified |
 | body cue at p. 6 | The results demonstrate that HOVER can smoothly track motions across different modes, showcasing its robustness for real-world scenarios ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD). The downstream handoff is claimed only when the body describes it.
@@ -71,10 +69,8 @@ humanoid writing domain maps to observation -> state/world model -> task and mot
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), interface p. 4 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD), objective p. 4 (II. METHOD), p. 3 (II. METHOD), p. 3 (II. METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

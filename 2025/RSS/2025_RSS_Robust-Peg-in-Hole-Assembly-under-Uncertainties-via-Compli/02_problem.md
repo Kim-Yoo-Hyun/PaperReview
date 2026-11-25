@@ -59,8 +59,6 @@ PDF body contribution framing (p. 5 (A. Task Mechanics and Interaction Primitive
 | body cue at p. 9 | The peg cannot break the alignment according to Lemma 4, as the result {M} is always lower than ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 9 | Theoretically, the robustness of the insertion process is conditioned on the peg's state x, instead of its geometric ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 manipulation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives). The downstream handoff is claimed only when the body describes it.
@@ -68,10 +66,8 @@ manipulation writing domain maps to observation -> state/world model -> task and
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 3 (A. Preliminaries), p. 4 (B. Problem Statement), p. 4 (A. Preliminaries), interface p. 4 (A. Preliminaries), p. 4 (B. Problem Statement), p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives), objective p. 5 (A. Task Mechanics and Interaction Primitives), p. 5 (A. Task Mechanics and Interaction Primitives).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

@@ -56,7 +56,6 @@ PDF body method statement (p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 
 - **p. 3 / III. BACKGROUND - extractive body cue:** Both the second and third FCNs output dense feature embeddings, which are then cross-correlated with each other to output a dense per-pixel prediction of action-values ...
 - **Formal bridge:** object geometry/contact state -> grasp/pose/force/trajectory -> task/contact/pose objective -> completion, contact success and robustness.
 - **Equation/algorithm anchors:** p. 4 (V. SIMULATOR AND TASKS), p. 4 (V. SIMULATOR AND TASKS), p. 5 (V. SIMULATOR AND TASKS), p. 5 (V. SIMULATOR AND TASKS), p. 3 (III. BACKGROUND), p. 3 (III. BACKGROUND).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** 1: Example of a trained Transporter Network policy in action on the bag-items-1 task (see Table I).
 - **p. 1 / I. INTRODUCTION - extractive body cue:** These types of tasks are especially challenging with diverse goal conditioning: the goal states of deformable objects are not easily specified, for example, by compact ...
 - **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -93,13 +91,10 @@ PDF body method statement (p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 
 - **p. 3 / IV. GOAL-CONDITIONED TRANSPORTER NETWORKS - extractive body cue:** For the goal-conditioned Transporter Networks, we use the same procedure to get (ok, ak), then additionally use the corresponding observation og after the last action ...
 - **p. 5 / VII. SIMULATION RESULTS - extractive body cue:** Models are trained for 20K iterations, with a batch size of 1 for the three Transporter models and 128 for the two ground truth models ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** goal-conditioned, Transporter, Networks, same, procedure, then, additionally, corresponding, observation, after, last, action, demonstration, episode, containing, training, sample, embedding, goal-conditioning, recently.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -119,20 +114,10 @@ PDF body method statement (p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 
 - **p. 4 / Figure/Table caption - extractive body cue:** Fig. 3: The proposed Transporter-Goal-Split, applied to an example on bag-color-goal, where given the current image ot and goal og, the objective is to insert ...
 - **p. 5 / V. SIMULATOR AND TASKS - extractive body cue:** Bags with handles (e.g., top right) or with more stiffness will be addressed in future work.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 1 (Abstract), p. 3 (III. BACKGROUND), p. 1 (I. INTRODUCTION), p. 2 (III. BACKGROUND), p. 4 (V. SIMULATOR AND TASKS), objective p. 4 (V. SIMULATOR AND TASKS), p. 4 (V. SIMULATOR AND TASKS), p. 5 (V. SIMULATOR AND TASKS), p. 5 (V. SIMULATOR AND TASKS), p. 3 (III. BACKGROUND), p. 3 (III. BACKGROUND), temporal p. 5 (VI. SIMULATION EXPERIMENTS), p. 5 (VI. SIMULATION EXPERIMENTS), p. 3 (III. BACKGROUND), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (III. BACKGROUND).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

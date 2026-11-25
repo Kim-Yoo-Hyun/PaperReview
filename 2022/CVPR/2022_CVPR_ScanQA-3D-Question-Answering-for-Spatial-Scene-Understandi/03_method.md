@@ -52,7 +52,6 @@ PDF body method statement (p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 5 
 - **p. 5 / 4. ScanQA Model - extractive body cue:** To answer the 3D scene content, we additionally use the answer loss Lans of the answer classification module.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 5 (4. ScanQA Model), p. 5 (4. ScanQA Model).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 5 
 - **p. 7 / Model - extractive body cue:** Specifically, the input to the method is the object proposal feature of ScanRefer for VQA models; subsequently, the model predicts answers based on object box ...
 - **p. 7 / Model - extractive body cue:** Unlike the ScanQA model, this uses the output of VoteNet separately for object localization and QA modules (although the information for both tasks is mutually ...
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -91,13 +89,10 @@ PDF body method statement (p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 5 
 - **p. 5 / 5.1. Experimental Setup - extractive body cue:** We trained the model for 30 epochs until it converged and decreased the learning rate by 0.2 times after 15 epochs.
 - **p. 6 / Model - extractive body cue:** We applied pretrained 2D-QA models to these images and computed the answer scores for each image.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Inspired, architecture, deep, modular, co-attention, networks, MCAN, often, VQA, transformer, blocks, represent, relationships, between, object, proposals, question, words, addition, decoder.
 - **Relevant PDF headings:** 4. ScanQA Model (p. 4); Model (p. 6).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -117,20 +112,10 @@ PDF body method statement (p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 5 
 - **p. 4 / 3.3. Dataset Statistics - extractive body cue:** Therefore, the ScanQA dataset includes two test sets with and without object annotations.
 - **p. 6 / Figure/Table caption - extractive body cue:** Table 5. Feature ablation results ground-truth answers. We also included sentence evalua- tion metrics frequently used for image captioning models because some of the questions ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 6 (Model), p. 6 (Model), p. 7 (Model), objective p. 5 (4. ScanQA Model), p. 5 (4. ScanQA Model), temporal p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model), p. 1 (1. Introduction), p. 4 (4. ScanQA Model).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

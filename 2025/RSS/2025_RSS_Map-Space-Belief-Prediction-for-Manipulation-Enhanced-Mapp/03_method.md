@@ -52,7 +52,6 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** Their losses and training are described in Sec.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -73,7 +72,6 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 - **p. 4 / B. Neural Map Belief Dynamics - extractive body cue:** ‘obusinable Uyough a manipulation action followed by an observation action
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** Consider now a greedy clairvoyant oracle policy, which, at every time step, has access to all possible observations that could be taken and selects the ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 - **p. 14 / B. CNABU Implementation Details - extractive body cue:** ‘The networks are trained using backpropagation in PyTorch [32], with grid search-optimized learning rates and ADAM ‘optimizer, as well as early stopping based on the ...
 - **p. 7 / B. Simulation Experiments - extractive body cue:** and fine-tuned the network weights provided by the authors for only 5,000 action steps.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Ultimately, learn, RobotOccupancy, network, architectures, Similar, Georgakis, evaluate, performance, trained, CNABUs, unseen, test, dataset, training, consists, randomly, sampled, scenes, while.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 13 (B. CNABU Implementation Details), p. 14 (B. CN
 - **p. 9 / VI. LIMITATIONS - extractive body cue:** Limitations of our method include the need for represen: tative simulation training data or ground truth segmented maps, It also relies on high-quality semantic segmentation, ...
 - **p. 7 / B. Simulation Experiments - extractive body cue:** We generate 100 low occlusion scenarios via rejection sampling, using our sampling method described in Appendix A, but keeping only scenarios for which at least ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 13 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 13 (B. CNABU Implementation Details), p. 2 (A. Next Best Viewpoint Planning), p. 15 (B. CNABU Implementation Details), objective p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), temporal p. 14 (B. CNABU Implementation Details), p. 14 (B. CNABU Implementation Details), p. 4 (B. Neural Map Belief Dynamics), p. 6 (B. Neural Map Belief Dynamics), p. 9 (C. Push Selection Alternatives), p. 2 (2. The proticted elit map is visualized).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

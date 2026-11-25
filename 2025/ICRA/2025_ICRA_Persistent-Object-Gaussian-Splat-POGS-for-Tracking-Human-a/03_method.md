@@ -56,7 +56,6 @@ PDF body method statement (p. 4 (3) Persistent Object Tracking phase for online 
 - **p. 1 / Abstract - extractive body cue:** POGS updates object states without requiring expensive rescanning or prior CAD models of objects.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (Abstract), p. 3 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 1 (Abstract), p. 1 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -77,7 +76,6 @@ PDF body method statement (p. 4 (3) Persistent Object Tracking phase for online 
 - **p. 2 / Abstract - extractive body cue:** However, these works focus on offline processing and pose interpolation rather than tracking and estimating object states online for manipulation tasks.
 - **p. 4 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** As in LERF, during deployment we use the CLIP text encoder to obtain embedding vectors for arbitrary natural language input queries.
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,16 +92,12 @@ PDF body method statement (p. 4 (3) Persistent Object Tracking phase for online 
 - **p. 1 / Abstract - extractive body cue:** After an initial multi-view scene capture and training phase, POGS uses a single stereo camera to integrate depth estimates along with self-supervised vision encoder features ...
 - **p. 1 / Abstract - extractive body cue:** To enable online state estimation, tracking, and manipulation of unseen objects in dynamic environments, we present Persistent Object Gaussian Splat (POGS), an editable objectcentric feature ...
 - **p. 2 / Abstract - extractive body cue:** However, NeRF-based representations are limited by NeRF's training speed and implicit spatial representation, making it impossible to update when objects move without further scene-scale optimization.
-- **p. 1 / Abstract - extractive body cue:** After an initial multi-view scene capture and training phase, POGS uses a single stereo camera to integrate depth estimates along with self-supervised vision encoder features ...
 - **p. 2 / Abstract - extractive body cue:** By embedding features from encoders and detectors pretrained on internet-scale datasets such as CLIP [8], DINO [9], and Detic [10], POGS can respond to open-vocabulary ...
-
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
 
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Nerfstudio, Splatfacto, implementation, Gaussian, Splatting, gsplat, backend, modify, aforementioned, image, encoders, feature, supervision, losses, features, then, supervised, gaussians, enabling, model.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -123,23 +117,13 @@ PDF body method statement (p. 4 (3) Persistent Object Tracking phase for online 
 - **p. 5 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** The ablations highlight the critical role that both depth perception and robust visual features play in achieving accurate object localization and successful sequential object resets.
 - **p. 5 / 3) Persistent Object Tracking phase for online tracking - extractive body cue:** Similar performance trends were observed in the other tasks, where POGS consistently outperformed ablations that either had depth perception turned off or were optimized with ...
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 2 (Abstract), p. 3 (3) Persistent Object Tracking phase for online tracking), p. 1 (Abstract), p. 1 (Abstract), objective p. 3 (3) Persistent Object Tracking phase for online tracking), p. 3 (Abstract), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 2 (Abstract), p. 1 (Abstract), temporal p. 6 (3) Persistent Object Tracking phase for online tracking), p. 1 (Abstract), p. 2 (Abstract), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 4 (3) Persistent Object Tracking phase for online tracking), p. 6 (3) Persistent Object Tracking phase for online tracking).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

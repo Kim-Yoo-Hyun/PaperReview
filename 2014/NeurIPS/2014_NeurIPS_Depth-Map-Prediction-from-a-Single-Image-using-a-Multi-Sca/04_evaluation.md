@@ -46,8 +46,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 - **p. 7 / 5 Results - extractive body cue:** 5.2 KITTI We next examine results on the KITTI driving dataset.
 - **p. 7 / 5 Results - extractive body cue:** Here, the Make3D baseline is well-suited to the dataset, being composed of horizontally aligned images, and achieves relatively good results.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 1: Model architecture. as vanishing points, object locations, and room alignment. A local view (as is commonly used for stereo matching) is insufficient to ...
@@ -78,8 +76,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 | Learning rates are: 0.001 for coarse convolutional layers 1-5, 0.1 for coarse full layers 6 and 7, 0.001 for fine layers 1 and 3, ... | definition/direction/unit from same section | p. 5 (4 Experiments) |
 | Figure 1: Model architecture. as vanishing points, object locations, and room alignment. A local view (as is commonly used for stereo matching) is insufficient ... | definition/direction/unit from same section | p. 3 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -89,13 +85,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 | Here, the Make3D baseline is well-suited to the dataset, being composed of horizontally aligned images, and achieves relatively good results. | comparison identity and matched condition | p. 7 (5 Results) |
 | Figure 1: Model architecture. as vanishing points, object locations, and room alignment. A local view (as is commonly used for stereo matching) is insufficient ... | comparison identity and matched condition | p. 3 (Figure/Table caption) |
 | Mean Make3D Coarse Coarse + Fine threshold δ < 1.25 0.556 0.601 0.679 0.692 higher threshold δ < 1.252 0.752 0.820 0.897 0.899 is ... | comparison identity and matched condition | p. 7 (5 Results) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -126,8 +115,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 | body limitation/failure cue | Although the fine-scale network does not improve in the error measurements, its effect is clearly visible in the depth maps - surface boundaries have ... | p. 6 (5 Results) |
 | body limitation/failure cue | Again, the fine-scale network does not improve much over the coarse one in the error metrics, but differences between the two can be seen ... | p. 7 (5 Results) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -138,14 +125,6 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 | As an additional reference, we also compare to the mean depth image computed across the training set. | p. 6 (4 Experiments) |
 | Rather than limiting the output to the feature map size and relying on hardcoded upsampling before passing the prediction to the fine network, we ... | p. 3 (3 Approach) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 7 / 6 Discussion - extractive body cue:** In future work, we plan to extend our method to incorporate further 3D geometry information, such as surface normals.
@@ -153,6 +132,5 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 6 (5 Results), p
 - **p. 7 / 5 Results - extractive body cue:** Again, the fine-scale network does not improve much over the coarse one in the error metrics, but differences between the two can be seen in ...
 
 - **Evidence anchors reviewed:** datasets p. 5 (4 Experiments), p. 5 (4 Experiments), p. 6 (4 Experiments), p. 6 (4 Experiments), p. 7 (5 Results), p. 7 (5 Results), metrics p. 5 (4 Experiments), p. 7 (5 Results), p. 6 (5 Results), p. 6 (4 Experiments), p. 7 (5 Results), p. 5 (4 Experiments), baselines p. 6 (4 Experiments), p. 6 (5 Results), p. 7 (5 Results), p. 3 (Figure/Table caption), p. 7 (5 Results), results p. 7 (Figure/Table caption), p. 6 (5 Results), p. 6 (5 Results), p. 7 (5 Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

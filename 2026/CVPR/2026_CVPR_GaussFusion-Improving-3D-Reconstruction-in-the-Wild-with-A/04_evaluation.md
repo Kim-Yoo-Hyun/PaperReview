@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 - **p. 8 / 5.1. Results - extractive body cue:** Ablation on Input Modalities on DL3DV Dataset.
 - **p. 8 / 5.2. Ablation Studies - extractive body cue:** For efficiency, all models are trained on one-third of the full dataset.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization or ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 | Figure 1. GaussFusion Overview. Given multi-view images as input, we first obtain an initial 3D Gaussian splatting (3DGS) [23] reconstruction using either per-scene optimization ... | definition/direction/unit from same section | p. 1 (Figure/Table caption) |
 | Figure 2. GaussFusion Video Generator Architecture. Our model refines video latents using geometry-aware conditioning derived from 3D Gaussian splatting (3DGS). A Gaussian primitive buffer-comprising ... | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 | To ensure a fair comparison, we run all baselines on the same renderings and apply the same reconstruction update strategy described in Sec. | comparison identity and matched condition | p. 6 (15.11 FPS) |
 | Our distilled model maintains comparable PSNR, SSIM, and LPIPS to the nondistilled version, while surpassing all baselines with a realtime speed of 16 FPS. | comparison identity and matched condition | p. 7 (5.1. Results) |
 | Architecture PSNR↑ SSIM↑ LPIPS↓ FID↓ Baseline w/. | comparison identity and matched condition | p. 8 (5.2. Ablation Studies) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -136,8 +125,6 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 | body limitation/failure cue | Figure 2. GaussFusion Video Generator Architecture. Our model refines video latents using geometry-aware conditioning derived from 3D Gaussian splatting (3DGS). A Gaussian primitive buffer-comprising ... | p. 4 (Figure/Table caption) |
 | body limitation/failure cue | 4), which combines optimization- and feed-forward degradations while injecting pose and coverage diversity. | p. 8 (5.2. Ablation Studies) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -147,14 +134,6 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 | 1, measuring the average frame rate based on end-to-end inference time on a single H200 GPU. | p. 7 (5.1. Results) |
 | A slightly higher FID score is observed, which we attribute to the reduced number of denoising steps and minor loss of high-frequency details. | p. 7 (5.1. Results) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 8 / 6. Conclusion - extractive body cue:** We discuss our limitations and future work in Supp.
@@ -163,6 +142,5 @@ PDF body evaluation/result cue (p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p
 - **p. 8 / 5.2. Ablation Studies - extractive body cue:** 4), which combines optimization- and feed-forward degradations while injecting pose and coverage diversity.
 
 - **Evidence anchors reviewed:** datasets p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 8 (5.1. Results), p. 8 (5.2. Ablation Studies), metrics p. 7 (5.1. Results), p. 7 (5.1. Results), p. 8 (5.2. Ablation Studies), p. 6 (5.1. Results), p. 6 (5.1. Results), p. 8 (5.2. Ablation Studies), baselines p. 6 (5.1. Results), p. 8 (5.1. Results), p. 7 (Figure/Table caption), p. 6 (15.11 FPS), p. 7 (5.1. Results), p. 8 (5.2. Ablation Studies), results p. 6 (15.11 FPS), p. 1 (Figure/Table caption), p. 8 (Figure/Table caption), p. 8 (Figure/Table caption), p. 6 (5.1. Results), p. 7 (5.1. Results).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

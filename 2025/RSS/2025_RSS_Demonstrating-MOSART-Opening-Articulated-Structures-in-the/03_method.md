@@ -45,7 +45,6 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 - objective/update PDF body cue not selected; no claim inferred - inspect equations and algorithm boxes
 - **Formal bridge:** base-arm-object state and language/task goal -> base plus arm/gripper action -> long-horizon task utility under reachability/contact constraints -> task completion and recovery.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -66,7 +65,6 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 - **p. 1 / Abstract - extractive body cue:** Our large-scale study reveals a number of surprising findings: a) modular systems outperform end-to-end learned systems for this task, even when the end-to-end learned systems ...
 - **p. 2 / 1. Iyrropucrion - extractive body cue:** Very briefly, MOSART adapts a Mask RCNN model [28] for inferring articulation parameters, extends a trajectory optimization framework for producing whole body motion plans [26], ...
 - **Normalized interface:** observation=egocentric RGB-D, language/task goal, base-arm proprioception; state=map/object/contact state와 base-arm coordination decision; output/action=base motion plus arm/gripper action.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -81,13 +79,10 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** provide, additional, details, about, Robot, Utility, Models, RUM, heads, Mask, RCNN, however, rather, directly, predicting, outputs, RGB-D, input, adopt, two-stage.
 - **Relevant PDF headings:** A. Robot Utility Models (p. 20).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -107,23 +102,13 @@ PDF body method statement (p. 20 (A. Robot Utility Models)): We provide addition
 - **p. 6 / IV. EXPERIMENTS - extractive body cue:** We then study the generalization of our pipeline to other articulation types and diverse handles (Section IV-E), before wwe analyze the failure modes of our ...
 - **p. 7 / IV. EXPERIMENTS - extractive body cue:** Section IV-F° provides a extensive discussion of the failure modes
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 20 (A. Robot Utility Models), objective 본문 anchor 없음, temporal p. 20 (B. Sim2Real Behavior Cloning), p. 2 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 3 (1. Iyrropucrion), p. 4 (A. Predicting Articulation Parameters), p. 4 (A. Predicting Articulation Parameters).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

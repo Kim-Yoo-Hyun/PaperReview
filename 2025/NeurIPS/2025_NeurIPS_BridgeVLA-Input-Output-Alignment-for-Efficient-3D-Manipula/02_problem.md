@@ -63,8 +63,6 @@ PDF body contribution framing (p. 3 (1 Introduction), p. 2 (1 Introduction), p. 
 | body cue at p. 6 | Q3: How robust is BridgeVLA in handling visual disturbances (e.g., distractors, background, and lighting)? | reported limitation/failure wording; scope must be verified |
 | body cue at p. 12 | 5 Conclusions & Future Work This paper has introduced BridgeVLA, a novel and efficient 3D vision-language-action (VLA) model ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 12 (Method), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 10 (Method). The downstream handoff is claimed only when the body describes it.
@@ -72,7 +70,5 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (1 Introduction), p. 2 (1 Introduction), p. 1 (1 Introduction), interface p. 12 (Method), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 10 (Method), objective p. 11 (Method).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

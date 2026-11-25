@@ -54,7 +54,6 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 - **p. 3 / 3.2. Learning to Act to Discover Parts - extractive body cue:** The action space directly motivates network and reward design.
 - **Formal bridge:** image/point input I/P and pose -> geometry/map/query r -> geometric/semantic reconstruction or matching loss -> spatial accuracy and downstream robot utility.
 - **Equation/algorithm anchors:** p. 3 (3.1. Problem Formulation), p. 4 (3.3. Learning to Discover Parts from Action), p. 4 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -75,7 +74,6 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 - **p. 4 / 3.3. Learning to Discover Parts from Action - extractive body cue:** 4) takes the observations before and after the interaction.
 - **p. 1 / 1. Introduction - extractive body cue:** Our work, Act the Part, learns interaction strategies that expose parts and generalize to unseen categories. that objects are fixed to a ground plane [28].
 - **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -92,13 +90,10 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 - **p. 3 / 3.1. Problem Formulation - extractive body cue:** To enable large-scale training and ground truth part segmentation (for benchmarking only), we use a simulated environment.
 - **p. 5 / 4.1. Metrics and Points of Comparison - extractive body cue:** We compute the average of perceptual metrics for each category at every timestep over five models trained with different random seeds.
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** Mask, Part, Network, Decoder, ResNet18, Image, Observation, Action, Applied, Figure, then, explain, three, components, interaction, Sec, inference, first, predict, execute.
 - **Relevant PDF headings:** 3. Approach (p. 2).
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -118,23 +113,13 @@ PDF body method statement (p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (
 - **p. 3 / Figure/Table caption - extractive body cue:** Figure 3. Interaction network. Given an image and the current belief of part segmentation, our network predicts a hold and a push conditioned on the ...
 - **p. 12 / Figure/Table caption - extractive body cue:** Table 4. Act-NoHold Reward. Reward cases related to holding are removed. Optical Flow Touch Sensor Hold Reward Push Reward x 1/0
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 4 (3.2. Learning to Act to Discover Parts), p. 2 (3. Approach), p. 4 (3.5. Reward), p. 3 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation), p. 2 (3. Approach), objective p. 4 (3.2. Learning to Act to Discover Parts), p. 3 (3.1. Problem Formulation), p. 4 (3.3. Learning to Discover Parts from Action), p. 2 (3. Approach), p. 3 (3.2. Learning to Act to Discover Parts), temporal p. 5 (4.1. Metrics and Points of Comparison), p. 5 (4.1. Metrics and Points of Comparison), p. 8 (4.3. Real World Results), p. 3 (3.2. Learning to Act to Discover Parts), p. 4 (3.5. Reward), p. 1 (1. Introduction).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

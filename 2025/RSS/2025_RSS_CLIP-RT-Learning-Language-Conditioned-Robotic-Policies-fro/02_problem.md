@@ -61,8 +61,6 @@ PDF body contribution framing (p. 2 (Abstract), p. 1 (Abstract), p. 1 (Abstract)
 | body cue at p. 8 | Fig. 9: Example failure cases of CLIP-RT. (a) CLIP-RT | reported limitation/failure wording; scope must be verified |
 | body cue at p. 4 | Fig. 3: A simplified 2D example of stochastic trajectory augmentation (STA). (a): a demonstration trajectory from the starts ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (A. Preliminaries), p. 2 (A. Preliminaries), p. 7 (256 33%), p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)). The downstream handoff is claimed only when the body describes it.
@@ -70,10 +68,8 @@ vla writing domain maps to observation -> state/world model -> task and motion d
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 2 (A. Preliminaries), interface p. 2 (A. Preliminaries), p. 2 (A. Preliminaries), p. 7 (256 33%), p. 3 (B. CLIP-Based Robotics Transformer (CLIP-RT)), objective p. 3 (A. Preliminaries), p. 3 (A. Preliminaries), p. 2 (Abstract), p. 4 (B. CLIP-Based Robotics Transformer (CLIP-RT)).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

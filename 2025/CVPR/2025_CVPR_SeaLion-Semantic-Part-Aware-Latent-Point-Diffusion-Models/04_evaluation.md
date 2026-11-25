@@ -48,8 +48,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Experimental Results), p. 8 (4.3. Exp
 - **p. 8 / 4.4. Applications - extractive body cue:** (a) Original point clouds and (b) novel generated point clouds after part-aware editing (gray: fix-shape parts, green: novel generated parts with deformations). datasets and enhance ...
 - **p. 5 / 3.4. Evaluation Metrics - extractive body cue:** The inter-part score, the snapping metric (SNAP) [23], measures the connection tightness between two contacting parts in an object.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Leveraging the proposed semantic part-aware latent point diffusion technique, SeaLion generates high-quality point clouds with high inter-part coherence and accurate point-wise segmentation labels. ...
@@ -83,8 +81,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Experimental Results), p. 8 (4.3. Exp
 | The experimental results presented in Table 4 demonstrate that SeaLion outperforms DiffFacto when trained with 10% labeled data, and its performance further improves after ... | definition/direction/unit from same section | p. 8 (4.3. Experimental Analysis) |
 | To address this issue, we propose part-aware Chamfer Distance (p-CD). | definition/direction/unit from same section | p. 6 (3.4. Evaluation Metrics) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -95,13 +91,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Experimental Results), p. 8 (4.3. Exp
 | Compared with collecting 3D data, which can be automated using tools like web crawlers, manually labeling segmentation is tedious and time-consuming. | comparison identity and matched condition | p. 7 (4.3. Experimental Analysis) |
 | The experimental results presented in Table 4 demonstrate that SeaLion outperforms DiffFacto when trained with 10% labeled data, and its performance further improves after ... | comparison identity and matched condition | p. 8 (4.3. Experimental Analysis) |
 | The results, presented in Table 5, demonstrate that the incorporation of generative data steadily enhances the performance of SPoTr across all categories, outperforming traditional ... | comparison identity and matched condition | p. 8 (4.4. Applications) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -135,8 +124,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Experimental Results), p. 8 (4.3. Exp
 | body limitation/failure cue | Figure 2. (a) Training: The generative model develops semantic part awareness by being trained to reconstruct input point clouds x guided by segmentation encodings ... | p. 3 (Figure/Table caption) |
 | body limitation/failure cue | Figure 3. Data flow in the point-level diffusion module ϵh. The input, perturbed latent points ht at step t, is down-sampled and transformed to ... | p. 4 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -150,14 +137,6 @@ PDF body evaluation/result cue (p. 7 (4.2. Experimental Results), p. 8 (4.3. Exp
 | This technique builds on the hierarchical latent diffusion paradigm used in Lion but incorporates segmentation encodings y ∈Rn×c as conditional information for the point-level ... | p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion) |
 | As illustrated in Figure 2 (b), the inference process consists of three steps. | p. 4 (3.1. Semantic Part-Aware Latent Point Diffusion) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 5 / 3.4. Evaluation Metrics - extractive body cue:** However, both intra-part and inter-part scores have limitations in evaluating the generation of segmentation-labeled point clouds.
@@ -168,6 +147,5 @@ PDF body evaluation/result cue (p. 7 (4.2. Experimental Results), p. 8 (4.3. Exp
 - **p. 4 / Figure/Table caption - extractive body cue:** Figure 3. Data flow in the point-level diffusion module ϵh. The input, perturbed latent points ht at step t, is down-sampled and transformed to common ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (4.1. Experimental Setup), p. 5 (3.4. Evaluation Metrics), p. 6 (4.1. Experimental Setup), p. 7 (4.2. Experimental Results), p. 8 (4.4. Applications), p. 8 (4.4. Applications), metrics p. 5 (3.4. Evaluation Metrics), p. 5 (3.4. Evaluation Metrics), p. 6 (3.4. Evaluation Metrics), p. 7 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 8 (4.4. Applications), baselines p. 6 (4.2. Experimental Results), p. 6 (4.2. Experimental Results), p. 7 (4.2. Experimental Results), p. 7 (4.3. Experimental Analysis), p. 8 (4.3. Experimental Analysis), p. 8 (4.4. Applications), results p. 7 (4.2. Experimental Results), p. 8 (4.3. Experimental Analysis), p. 7 (4.2. Experimental Results), p. 8 (4.4. Applications), p. 6 (4.2. Experimental Results), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

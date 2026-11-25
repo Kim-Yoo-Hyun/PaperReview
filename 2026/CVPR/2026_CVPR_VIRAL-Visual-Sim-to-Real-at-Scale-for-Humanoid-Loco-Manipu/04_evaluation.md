@@ -45,8 +45,6 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 - **p. 5 / 3. Real-World Results of VIRAL - extractive body cue:** In this section, we present real-world humanoid locomanipulation results achieved by VIRAL.
 - **p. 5 / 3.1. Robustness - extractive body cue:** Across 59 consecutive real-world trials, VIRAL succeeds in 54, demonstrating strong reliability under extended deployment.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Figure 1. Center: Unitree G1 humanoid performing loco-manipulation, walking between tables to place and pick objects for 54 loops with our RGB-based sim-to-real policy. Surrounding: ...
@@ -80,8 +78,6 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 | Figure 7. Real-world performance comparison: VIRAL matches expert-level reliability, outperforms non-experts, and op- erates faster than the expert teleoperator. ure 3) to ensure that ... | definition/direction/unit from same section | p. 5 (Figure/Table caption) |
 | Figure 3. Visual randomization on image, lighting, material, and camera-extrinsics randomization for sim-to-real robustness. Reference State Initialization | definition/direction/unit from same section | p. 4 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -92,13 +88,6 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 | Figure 2. VIRAL teacher-student pipeline. Phase 1: In simulation, a privileged RL teacher policy ωteacher receives full-state proprioception and exteroception of the task information ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | Figure 10. Ablation of vision backbone for student policy. | comparison identity and matched condition | p. 7 (Figure/Table caption) |
 | Figure 11. Ablation of ratio of DAgger/BC of student policy. | comparison identity and matched condition | p. 7 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -134,8 +123,6 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 | body limitation/failure cue | To enhance robustness and improve sim-toreal transfer, we apply extensive visual and physical randomization during training (Figure 3). | p. 5 (2.3. Key Elements of Sim-to-Real Transfer) |
 | body limitation/failure cue | We randomize image quality (brightness, contrast, hue, saturation, Gaussian noise, and blur), camera extrinsics to account for small pose shifts, and camera latency to ... | p. 5 (2.3. Key Elements of Sim-to-Real Transfer) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -145,14 +132,6 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 | The teacher is trained with PPO [59] with a custom implementation of TRL [68] to train across GPUs in a distributed manner. | p. 3 (2.1. Key Elements of Teacher Training) |
 | For the student's vision backbone, we adopt a state-of-the-art image encoder [61] to extract high-quality RGB features, which are fused with proprioceptive to the ... | p. 4 (2.2. Key Elements of Student Training) |
 | The resulting student observation ostudent therefore integrates both visual embeddings and the proprioception available on real hardware, enabling the policy to reason over rich ... | p. 4 (2.2. Key Elements of Student Training) |
-
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
 
 ## Limitations and Verification Questions
 
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 6 (3.1. Robustness), p. 6 (Figure/Table capti
 - **p. 5 / 2.3. Key Elements of Sim-to-Real Transfer - extractive body cue:** We randomize image quality (brightness, contrast, hue, saturation, Gaussian noise, and blur), camera extrinsics to account for small pose shifts, and camera latency to model ...
 
 - **Evidence anchors reviewed:** datasets p. 6 (3.2. Generalization), p. 6 (3.1. Robustness), p. 5 (3. Real-World Results of VIRAL), p. 5 (3.1. Robustness), metrics p. 7 (Figure/Table caption), p. 6 (Figure/Table caption), p. 6 (3.1. Robustness), p. 8 (Figure/Table caption), p. 4 (Figure/Table caption), p. 5 (3.1. Robustness), baselines p. 6 (3.1. Robustness), p. 5 (Figure/Table caption), p. 6 (3.2. Generalization), p. 2 (Figure/Table caption), p. 7 (Figure/Table caption), p. 7 (Figure/Table caption), results p. 6 (3.1. Robustness), p. 6 (Figure/Table caption), p. 5 (3. Real-World Results of VIRAL), p. 8 (Figure/Table caption), p. 7 (Figure/Table caption), p. 5 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

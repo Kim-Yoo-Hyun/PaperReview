@@ -50,8 +50,6 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 - **p. 13 / VI. EXPERIMENTS - extractive body cue:** 6) Splat-Loc Evaluations: We validate the performance of Splat-Loc in hardware experiments in the Maze scene, showing that Splat-Loc achieves relatively the same level of ...
 - **p. 13 / VI. EXPERIMENTS - extractive body cue:** Our hardware tests consist of all combinations of goal locations and control schemes.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Fig. 1: Splat-Nav, consists of a safe planning module, Splat-Plan, and robust localization module, Splat-Loc, both operating on a Gaussian Splatting environment representation. In Splat-Plan ...
@@ -85,8 +83,6 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 | Fig. 9: Ground-truth trajectories of the drone navigating, projected onto the Maze GSplat. The drone is subjected to different goal locations and control schemes. ... | definition/direction/unit from same section | p. 16 (Figure/Table caption) |
 | Note that the safety violation of all control schemes is relatively small compared to the size of the drone, which allows error in low-level ... | definition/direction/unit from same section | p. 15 (VI. EXPERIMENTS) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -97,13 +93,6 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 | As a result, the rotation and translation errors for this goal location is higher compared to the those of the other goal locations. | comparison identity and matched condition | p. 13 (VI. EXPERIMENTS) |
 | Note that the safety violation of all control schemes is relatively small compared to the size of the drone, which allows error in low-level ... | comparison identity and matched condition | p. 15 (VI. EXPERIMENTS) |
 | Fig. 2: Visualization of a point cloud from a NeRF and a mesh from a Gaussian Splat in the synthetic scene Stonehenge. The Chamfer ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -142,8 +131,6 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 | body limitation/failure cue | Splat-Nav consists of a guaranteed-safe planning module Splat-Plan, which allows for real-time planning (> 2 Hz) by leveraging the ellipsoidal representation inherent in GSplats ... | p. 15 (VII. CONCLUSION) |
 | body limitation/failure cue | Given a test point x∗and the jth ellipsoid in the collision test set G∗, we can use our collision test (Corollary 2) to derive ... | p. 17 (VIII. LIMITATIONS AND FUTURE WORK) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -157,14 +144,6 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 | However, Splat-Loc failed in one of the closedloop trials with the "keyboard" goal location. | p. 13 (VI. EXPERIMENTS) |
 | We noticed that the VIO of the drone would drift in subsequent runs, necessitating the reinitialization of the VIO at the start of every ... | p. 14 (VI. EXPERIMENTS) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 16 / VIII. LIMITATIONS AND FUTURE WORK - extractive body cue:** Splat-Plan cannot do anything if an obstacle is completely missing from the scene, which is a fundamental limitation of the GSplat map representation.
@@ -175,9 +154,8 @@ PDF body evaluation/result cue (p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS)
 - **p. 17 / VIII. LIMITATIONS AND FUTURE WORK - extractive body cue:** Given a test point x∗and the jth ellipsoid in the collision test set G∗, we can use our collision test (Corollary 2) to derive these ...
 
 - **Evidence anchors reviewed:** datasets p. 10 (VI. EXPERIMENTS), p. 10 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), metrics p. 11 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 14 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 15 (VI. EXPERIMENTS), baselines p. 11 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 12 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 15 (VI. EXPERIMENTS), p. 4 (Figure/Table caption), results p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 11 (VI. EXPERIMENTS), p. 13 (VI. EXPERIMENTS), p. 14 (VI. EXPERIMENTS), p. 16 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

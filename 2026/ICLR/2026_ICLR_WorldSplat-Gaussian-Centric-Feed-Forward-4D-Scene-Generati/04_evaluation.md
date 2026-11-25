@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 - **p. 8 / 4 EXPERIMENTS - extractive body cue:** We systematically validate each component's contribution: (1) 3D Gaussians Representation (Version A →B): Introducing 3D Gaussians as explicit scene representation significantly improves performance with FVD ...
 - **p. 15 / A.1 ARCHITECTURES - extractive body cue:** We further fuse 3D bounding boxes, ego-trajectory data, and scene captions via a single cross-attention layer.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Comparison of different driving world models. Previous driving world models (Jiang et al., 2024; Gao et al., 2023) focus on video generation, while ...
@@ -84,8 +82,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 | 6, our method achieves superior performance across all metrics, demonstrating strong geometric consistency and multi-view coherence. | definition/direction/unit from same section | p. 16 (A.3 GEOMETRIC CONSISTENCY AND MULTI-VIEW COHERENCE EVALUATION) |
 | We compare against feed-forward 3D reconstruction methods on the nuScenes validation set, measuring PSNR, SSIM, and LPIPS to assess the geometric fidelity and multi-view ... | definition/direction/unit from same section | p. 16 (A.3 GEOMETRIC CONSISTENCY AND MULTI-VIEW COHERENCE EVALUATION) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -96,13 +92,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 | Figure 5: Qualitative comparison of our novel view synthesis against the state-of-the-art urban reconstruction method (Chen et al., 2024c). We translate the ego-vehicle by ... | comparison identity and matched condition | p. 9 (Figure/Table caption) |
 | Figure 1: Comparison of different driving world models. Previous driving world models (Jiang et al., 2024; Gao et al., 2023) focus on video generation, ... | comparison identity and matched condition | p. 2 (Figure/Table caption) |
 | 4.2 ORIGINAL VIEW VIDEO GENERATION Quantitative Comparison. | comparison identity and matched condition | p. 7 (4 EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -141,8 +130,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 | body limitation/failure cue | Figure 4: Comparison with MagicDrive (Gao et al., 2023) and Panacea (Wen et al., 2024). The top row shows real frames, the second row ... | p. 8 (Figure/Table caption) |
 | body limitation/failure cue | As discussed in Line 292 of our paper, novel-view renderings at inference often appear inferior to source views; by degrading training source view quality ... | p. 9 (4 EXPERIMENTS) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -156,14 +143,6 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 | 3.2) for multi-modal latent generation, a latent Gaussian decoder (Sec. | p. 3 (3 METHOD) |
 | Finally, we concatenate the three latents channel-wise to form the decoder input L = concate{Limg, Ldepth, Lseg}. | p. 3 (3 METHOD) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 6 / Figure/Table caption - extractive body cue:** Figure 3: Effectiveness of the enhanced diffusion model. During novel-view video synthesis, rendering quality may degrade due to unobserved regions or high ego-vehicle speed, resulting ...
@@ -174,6 +153,5 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS
 - **p. 9 / 4 EXPERIMENTS - extractive body cue:** As discussed in Line 292 of our paper, novel-view renderings at inference often appear inferior to source views; by degrading training source view quality through ...
 
 - **Evidence anchors reviewed:** datasets p. 7 (4 EXPERIMENTS), p. 16 (A.3 GEOMETRIC CONSISTENCY AND MULTI-VIEW COHERENCE EVALUATION), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.2 TRAINING DETAILS), metrics p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), baselines p. 8 (4 EXPERIMENTS), p. 8 (4 EXPERIMENTS), p. 16 (A.3 GEOMETRIC CONSISTENCY AND MULTI-VIEW COHERENCE EVALUATION), p. 9 (Figure/Table caption), p. 2 (Figure/Table caption), p. 7 (4 EXPERIMENTS), results p. 8 (Figure/Table caption), p. 8 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 7 (4 EXPERIMENTS), p. 9 (4 EXPERIMENTS), p. 16 (A.3 GEOMETRIC CONSISTENCY AND MULTI-VIEW COHERENCE EVALUATION).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

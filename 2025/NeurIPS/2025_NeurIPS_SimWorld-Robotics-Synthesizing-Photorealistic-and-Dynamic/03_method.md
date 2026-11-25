@@ -51,7 +51,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 2 / 1 Introduction - extractive body cue:** Together, these features accelerate progress toward stronger embodied intelligence.
 - **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
 - **Equation/algorithm anchors:** none selected.
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -70,7 +69,6 @@ PDF body method statement (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 3 / 1 Introduction - extractive body cue:** Our experimental results demonstrate that existing models, including state-of-the-art vision-language models (VLMs), fail to achieve meaningful success on our benchmarks.
 - **p. 2 / 1 Introduction - extractive body cue:** It offers diverse high-fidelity building and object assets, supports embodied agents with rich action spaces, includes a background traffic system powered by city-scale waypoint generation, ...
 - **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -87,13 +85,10 @@ PDF body method statement (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 1 / 1 Introduction - extractive body cue:** Training these models requires a large amount of data, much of which can be generated in high-fidelity embodied simulators, such as Habitat 3 [40], RoboTHOR ...
 - **p. 3 / 1 Introduction - extractive body cue:** The dataset contains 20K training steps sampled from 200 episodes, each averaging 500 m in length, across 100 procedurally generated city environments with an average ...
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** contributions, include, embodied, simulator, SimWorld-Robotics, SWR, supports, creation, simulation, photorealistic, dynamic, urban, environments, diverse, agents, novel, benchmarks, single, robot, navigation.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -111,22 +106,11 @@ PDF body method statement (p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (A
 - **p. 32 / Figure/Table caption - extractive body cue:** Figure 13: Qualitative result - lack of distance grounding Spatial Reasoning The VLM exhibits limitations in reasoning about spatial relationships, particularly in estimating distance, maintaining ...
 - **p. 33 / Figure/Table caption - extractive body cue:** Figure 15: Qualitative result - lack of perspective-adaptive matching These limitations also manifest when matching buildings from different perspectives. The target building is provided as ...
 - **p. 8 / Figure/Table caption - extractive body cue:** Table 4: Most common failure modes in SIMWORLD-MMNAV. Subtask Failure Mode Frequency (%) Moving to Intersection Misestimate the distance to the intersection 53.33 Fail to ...
-- **p. 9 / Figure/Table caption - extractive body cue:** Figure 5: Illustration of a multi-robot search task. Hard Setting. We further evaluated realistic obstacle avoidance and traffic rule obedience on models that performed relatively ...
-
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
 
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 3 (1 Introduction), p. 1 (1 Introduction), p. 1 (Abstract), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 2 (1 Introduction), objective p. 1 (1 Introduction), p. 2 (1 Introduction), temporal p. 3 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (2 Related Work), p. 4 (2 Related Work), p. 5 (2 Related Work).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?

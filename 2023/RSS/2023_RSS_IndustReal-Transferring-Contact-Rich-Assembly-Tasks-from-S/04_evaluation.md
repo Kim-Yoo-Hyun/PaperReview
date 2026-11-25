@@ -49,8 +49,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 - **p. 9 / VI. REAL-WORLD EXPERIMENTS - extractive body cue:** Top row: recovery behavior exhibited by the robot after human perturbation during gear insertion.
 - **p. 9 / VI. REAL-WORLD EXPERIMENTS - extractive body cue:** Asset Pick Insert Pick-Place-Insert Success Success Engage Success Engage Round peg 8 mm 19/20 7/10 7/10 7/10 7/10 Round peg 12 mm 19/20 7/10 9/10 ...
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 1 / Figure/Table caption - extractive body cue:** Fig. 1: Overview. Top: Simulation-based policy learning for one of our tasks, gear assembly. Middle: Proposed algorithms to facilitate sim-based learning and real-world deployment. Bottom: ...
@@ -83,21 +81,12 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 | Fig. 5: Evaluation of PLAI in simulation. Results of Nominal are annotated when outside of plot bounds. Full-axis plot is in Figure S13. conditions ... | definition/direction/unit from same section | p. 7 (Figure/Table caption) |
 | Fig. 7: Snapshots of real-world experiments. Top row: recovery behavior exhibited by the robot after human perturbation during gear insertion. Bottom row: search behavior ... | definition/direction/unit from same section | p. 9 (Figure/Table caption) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
 |---|---|---|
 | Fig. 3: Evaluation of Simulation-Aware Policy Update. Success rates are computed for episodes where the maximum interpenetration distance was less than the specified value ... | comparison identity and matched condition | p. 4 (Figure/Table caption) |
 | To our knowledge, IndustReal is the first system to demonstrate RL-based sim-to-real transfer for the end-to-end assembly task (i.e., detection, grasping, part transport, and ... | comparison identity and matched condition | p. 8 (VI. REAL-WORLD EXPERIMENTS) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -131,8 +120,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 | body limitation/failure cue | Fig. 1: Overview. Top: Simulation-based policy learning for one of our tasks, gear assembly. Middle: Proposed algorithms to facilitate sim-based learning and real-world deployment. ... | p. 1 (Figure/Table caption) |
 | body limitation/failure cue | Fig. 4: Joint evaluation of Simulation-Based Policy Update, SDF-Based Dense Reward, and Sampling-Based Curriculum. (A) Pegs and Holes assembly Insert policy. (B) Gears and ... | p. 6 (Figure/Table caption) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -146,14 +133,6 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 | Specifically, we implemented a GPU-based interpenetrationchecking module using warp [40]. | p. 4 (IV. POLICY LEARNING IN SIMULATION) |
 | As Factory [48] already precomputes SDFs for all objects for contact generation, we envision a single representationgeneration step for both physics and reward. | p. 5 (IV. POLICY LEARNING IN SIMULATION) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 9 / VIII. LIMITATIONS & FUTURE WORK - extractive body cue:** Second, our primary failure cases on the real system were due to slip of the object in the gripper and wedging of plugs in their ...
@@ -164,9 +143,8 @@ PDF body evaluation/result cue (p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORL
 - **p. 6 / Figure/Table caption - extractive body cue:** Fig. 4: Joint evaluation of Simulation-Based Policy Update, SDF-Based Dense Reward, and Sampling-Based Curriculum. (A) Pegs and Holes assembly Insert policy. (B) Gears and Gearshafts ...
 
 - **Evidence anchors reviewed:** datasets p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 7 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 9 (VI. REAL-WORLD EXPERIMENTS), metrics p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 4 (Figure/Table caption), p. 6 (Figure/Table caption), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), baselines p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), results p. 4 (Figure/Table caption), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 8 (VI. REAL-WORLD EXPERIMENTS), p. 1 (Figure/Table caption), p. 9 (VI. REAL-WORLD EXPERIMENTS), p. 6 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Semantic QA — PDF body cross-check
 

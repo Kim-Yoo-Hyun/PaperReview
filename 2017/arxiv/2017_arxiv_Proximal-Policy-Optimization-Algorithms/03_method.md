@@ -58,7 +58,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 - **p. 1 / Abstract - extractive body cue:** Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates.
 - **Formal bridge:** s_t/o_t -> a_t sampled or selected by πθ -> expected return / constrained return -> task return, success and safe execution.
 - **Equation/algorithm anchors:** p. 2 (1 Introduction), p. 4 (1 1 + ϵ), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Abstract).
-- Do not infer optimizer, sign convention, target-network schedule, solver tolerance or stopping criterion unless the PDF states it.
 
 ## Variables and Parameters
 
@@ -79,7 +78,6 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 - **p. 3 / 1 1 + ϵ - extractive body cue:** We can see that LCLIP is a lower bound on LCPI, with a penalty for having too large of a policy update.
 - **p. 4 / 1 1 + ϵ - extractive body cue:** This plot corresponds to the first policy update on the Hopper-v1 problem, using hyperparameters provided in Section 6.1.
 - **Normalized interface:** observation=state 또는 observation, action, reward와 transition history; state=policy/value state와 action-selection variable; output/action=action policy와 induced trajectory.
-- Verify whether output is directly actuated or passed through a planner, reference generator, controller, decoder or safety filter.
 
 ## Temporal and Runtime Contract
 
@@ -94,13 +92,10 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 
 - training/inference separation PDF body cue not selected; no claim inferred
 
-- Training inputs, privileged information, data augmentation and inference-time feedback must be recorded separately; they are not interchangeable.
-
 ## Method-Specific Formal Details
 
 - **Body-defined terms:** family, policy, gradient, methods, reinforcement, learning, alternate, between, sampling, data, through, interaction, environment, optimizing, surrogate, objective, function, stochastic, ascent, seeks.
 - **Relevant PDF headings:** not reliably recovered.
-- Exact equation text is not copied into the note; equation number, variable definition and role must be checked at the cited page.
 
 ## Evaluation Link
 
@@ -116,23 +111,13 @@ PDF body method statement (p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Intro
 - **p. 6 / 6 Experiments - extractive body cue:** Note that the score is negative for the setting without clipping or penalties, because for one environment (half cheetah) it leads to a very negative ...
 - **p. 7 / 6 Experiments - extractive body cue:** [Hee+17] used the adaptive KL variant of PPO (Section 4) to learn locomotion policies for 3D robots.
 
-- Causal attribution requires fixing data, input modality, compute, horizon, action interface and controller while removing one component.
-
 ## Reproduction Checklist
 
-1. [ ] Re-read the cited method headings and record exact variables, dimensions, units and equation/algorithm numbers.
-2. [ ] Separate objective, constraint, initialization, update schedule and inference decoding.
-3. [ ] Fix observation preprocessing, action frame, horizon, memory, rate and feedback latency.
-4. [ ] Match dataset split, baseline checkpoint, seed/trial count and success denominator from 04.
-5. [ ] Re-run the body-reported ablation and at least one failure-boundary stress test.
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
 
 ## Verification Questions
 
 - **Evidence anchors reviewed:** method p. 1 (Abstract), p. 1 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 5 (1 1 + ϵ), objective p. 2 (1 Introduction), p. 3 (1 Introduction), p. 2 (1 Introduction), p. 4 (1 1 + ϵ), p. 5 (1 1 + ϵ), p. 1 (Abstract), temporal p. 6 (6 Experiments), p. 7 (6 Experiments), p. 7 (6 Experiments), p. 5 (1 1 + ϵ), p. 2 (1 Introduction), p. 6 (6 Experiments).
-- Which module is genuinely new, and which is inherited infrastructure or a baseline?
-- What exact computation consumes each observation and emits each action/output?
-- Does the reported runtime include preprocessing, planning, safety filtering and low-level control?
-- Are all claims supported by a body section, equation, table or figure rather than the abstract alone?
 
 ## Semantic QA — PDF body cross-check
 

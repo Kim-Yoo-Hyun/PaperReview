@@ -64,8 +64,6 @@ PDF body contribution framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 
 | body cue at p. 4 | Figure 2: The overview of our framework. (1) Employing a 4D-aware diffusion model to generate a multi-modal latent ... | reported limitation/failure wording; scope must be verified |
 | body cue at p. 8 | These results demonstrate the robustness and fidelity of our 4D Gaussian representation for novel-view synthesis under varying viewpoint ... | reported limitation/failure wording; scope must be verified |
 
-- Explicit body limitations and domain stress tests are kept separate; an unreported failure is not inferred from a keyword.
-
 ## Position in the Robotics Loop
 
 generative writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 5 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD). The downstream handoff is claimed only when the body describes it.
@@ -73,7 +71,5 @@ generative writing domain maps to observation -> state/world model -> task and m
 ## Verification Questions
 
 - **Evidence anchors reviewed:** problem p. 1 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), interface p. 5 (3 METHOD), p. 6 (3 METHOD), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD), objective p. 5 (3 METHOD), p. 5 (3 METHOD), p. 6 (3 METHOD).
-- Which exact equation or algorithm defines the state, transition/observation model, objective and constraints?
-- What are the observation frame, state memory, output/action frame, horizon and termination rule?
-- Which assumption is explicitly stated by the authors, and which is only a reproduction stress test?
-- Does the evaluation measure the stated target, or only an upstream proxy?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)

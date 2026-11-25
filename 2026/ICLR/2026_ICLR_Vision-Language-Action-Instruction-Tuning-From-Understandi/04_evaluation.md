@@ -47,8 +47,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 
 - **p. 7 / 5 EXPERIMENT - extractive body cue:** In addition, we assess embodied understanding in Section A.2 and manipulation performance on the LIBERO (Liu et al., 2024b) benchmark in Section A.3.
 - **p. 9 / 5 EXPERIMENT - extractive body cue:** As shown in Table 2 the expert model with robot state generally performs better.
 
-- Names are treated as evaluation resources only when the body sentence places them in a task, split, experiment or benchmark role.
-
 ## Figures / Tables as Body Evidence
 
 - **p. 2 / Figure/Table caption - extractive body cue:** Figure 1: Method overview. InstructVLA integrates vision-language understanding with precise robotic control to achieve reasoning-guided manipulation. Its core training strategy, Vision-Language- Action Instruction Tuning, enhances ...
@@ -82,8 +80,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 
 | Accordingly, we report its official score on SimplerEnv and re-evaluate its performance on SimplerEnv-Instruct under the sampling setting. | definition/direction/unit from same section | p. 7 (5 EXPERIMENT) |
 | (2024), a β distribution is used to enhance accuracy on the noisier time steps. | definition/direction/unit from same section | p. 7 (5 EXPERIMENT) |
 
-- Exact success denominator, collision/contact rule, timeout and primary-vs-auxiliary metric are recorded only when the body specifies them.
-
 ## Baselines and Fairness
 
 | PDF baseline/comparison cue | Fair comparison field | Anchor |
@@ -94,13 +90,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 
 | Figure 21: GPT-4o as the auxiliary system 2. We prompt GPT-4o with the first image from the environment along with the instruction, asking it ... | comparison identity and matched condition | p. 31 (Figure/Table caption) |
 | We categorize the baselines into three groups: (1) Multimodal VLMs, including Bunny(He et al., 2024), PaliGemma (Beyer et al., 2024), Eagle2 (Li et al., ... | comparison identity and matched condition | p. 7 (5 EXPERIMENT) |
 | As shown in Figure 6 (b), four paradigms are compared. | comparison identity and matched condition | p. 9 (5 EXPERIMENT) |
-
-| Fairness dimension | Required matched condition |
-|---|---|
-| Observation/action | sensor modality, frame, preprocessing, action space and controller |
-| Data | training split, demonstrations, pretraining, labels and leakage |
-| Compute | parameter budget, inference steps, hardware, latency and control rate |
-| Protocol | reset/timeout, seeds, trials, held-out variation and success denominator |
 
 ## Ablations and Sensitivity
 
@@ -137,8 +126,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 
 | body limitation/failure cue | Figure 34: Light distraction. Stable visual features from DINO and SigLIP enable the model to operate robustly under extreme out-of-distribution lighting conditions. 46 | p. 46 (Figure/Table caption) |
 | body limitation/failure cue | However, we observe that finetuning OpenVLA on multimodal and manipulation datasets does not fully restore its original multimodal capabilities, although it does improve task ... | p. 8 (5 EXPERIMENT) |
 
-- Do not treat unseen objects/tasks/scenes, sensor noise, contact changes, dynamic obstacles or recovery as evaluated unless the body reports them.
-
 ## Statistics, Efficiency, and Reproducibility
 
 | Body reproducibility cue | Anchor |
@@ -152,14 +139,6 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 
 | Generation consists of three steps: (1) asynchronous auto-regressive reasoning by the VLM, (2) latent action generation, and (3) action decoding. | p. 4 (3. Atomic-Instruction Manipulation) |
 | The remaining action queries are then decoded in parallel within a single forward pass of the VLM. | p. 5 (3. Atomic-Instruction Manipulation) |
 
-| Audit field | Current status |
-|---|---|
-| Trials/episodes/seeds | use only body sentences above; otherwise not reported |
-| Mean/standard deviation/confidence interval | use only body table/figure; otherwise not reported |
-| Latency/throughput | separate inference latency, control rate and simulator throughput |
-| Train/eval split/leakage | verify dataset/protocol section |
-| Code/checkpoint/environment | see 01_overview.md; not duplicated as evidence |
-
 ## Limitations and Verification Questions
 
 - **p. 30 / Figure/Table caption - extractive body cue:** Figure 20: Failure case 2 of InstructVLA. The model fails to accurately estimate depth due to the real-to-sim gap, specifically the absence of arm reflection ...
@@ -170,6 +149,5 @@ PDF body evaluation/result cue (p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 
 - **p. 8 / 5 EXPERIMENT - extractive body cue:** However, we observe that finetuning OpenVLA on multimodal and manipulation datasets does not fully restore its original multimodal capabilities, although it does improve task performance.
 
 - **Evidence anchors reviewed:** datasets p. 7 (5 EXPERIMENT), p. 8 (5 EXPERIMENT), p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 7 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), metrics p. 26 (Figure/Table caption), p. 44 (Figure/Table caption), p. 9 (5 EXPERIMENT), p. 30 (Figure/Table caption), p. 36 (Figure/Table caption), p. 29 (Figure/Table caption), baselines p. 8 (5 EXPERIMENT), p. 8 (5 EXPERIMENT), p. 7 (5 EXPERIMENT), p. 31 (Figure/Table caption), p. 7 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), results p. 8 (5 EXPERIMENT), p. 9 (5 EXPERIMENT), p. 30 (Figure/Table caption), p. 8 (5 EXPERIMENT), p. 26 (Figure/Table caption), p. 36 (Figure/Table caption).
-- Which table/figure establishes the primary claim, and what is the exact denominator and uncertainty?
-- Which comparison is fair after matching observation, data, compute, action interface, horizon and controller?
-- What negative result or untested regime does the paper leave open?
+
+[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)
