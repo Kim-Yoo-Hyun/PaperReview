@@ -39,3 +39,9 @@ ICML 공식 metadata와 arXiv v2의 지정 절/code를 확인했다. 현재 dete
 ## Why This Paper Is Here — Researcher Interpretation
 
 Frozen prior+residual+선택적 모방의 최신 직접 선행이다. 현재 후보의 규칙 조합만으로 독립 방법 기여를 주장하지 않도록 NEXT에 추가한다.
+
+## 공개 자료
+
+- 코드 — 시각 기반 흐름 기본 정책의 잔차 학습 · agent/finetune/train_distill_residual_flow_img_agent.py [배포 파일](https://raw.githubusercontent.com/zhanyisun/dice-rl/98d936e52523878f0172e606ea32403176497100/agent/finetune/train_distill_residual_flow_img_agent.py)
+- 가중치·학습 파라미터 — can 영상 조건의 사전학습 기본 정책 · can_img/checkpoint/state_2400.pt [배포 파일](https://huggingface.co/wintermelontree/robomimic-pretrain-checkpoints/resolve/0c2e238cbc35e1629536dea2730024bebf9878c5/can_img/checkpoint/state_2400.pt)
+- 데이터 — can 영상 조건 기본 정책 사전학습 자료 · can_img/train.npz [배포 파일](https://huggingface.co/datasets/wintermelontree/robomimic-pretrain-data/resolve/42b55fc6cf7108beb1aaf089a399e32cf5a523d0/can_img/train.npz)

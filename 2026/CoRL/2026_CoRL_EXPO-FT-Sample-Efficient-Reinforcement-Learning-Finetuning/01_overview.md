@@ -7,7 +7,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, reinforcement-learning, action-chunking, residual-policy
+- Tags: VLA, Reinforcement Learning, action-chunking, residual-policy
 - Aliases: EXPO-FT
 - Official paper: https://arxiv.org/abs/2605.25477
 - Venue verification: https://www.corl.org/program/accepted-papers
@@ -39,3 +39,7 @@ CoRL accepted list와 arXiv v1/code를 별도로 확인했다. 최종본 동일�
 ## Why This Paper Is Here — Researcher Interpretation
 
 현재 VLA+RL 후보의 가장 가까운 공동 적응 baseline이다. 독립 base 갱신과 editor 공동 학습을 구별할 NEXT다.
+
+## 공개 자료
+
+- 코드 — 로봇 비동기 편집 정책 학습 · train_pi_robo_async.py [배포 파일](https://raw.githubusercontent.com/pd-perry/expo-ft/21fe3d3b7d913c80836496817965932f49e0aedf/train_pi_robo_async.py)

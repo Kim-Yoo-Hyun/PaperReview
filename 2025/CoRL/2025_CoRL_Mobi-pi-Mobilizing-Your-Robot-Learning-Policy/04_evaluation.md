@@ -1,49 +1,19 @@
 # Mobi-π: Mobilizing Your Robot Learning Policy
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
+> Source audit: 2026-11-25 원문 방법·평가 대조.
 
-## Evaluation in One Sentence
+## 평가 조건
 
-RoboCasa 기반 simulated mobile manipulation과 실로봇에서 pose 선택을 비교한다. 이 비교만으로 다른 정책에 선택된 pose를 재사용할 때의 성능을 확정할 수 없다.
+여러 위치에서 모은 RGB-D 이미지로 정적인 3D 가우시안 장면을 만든다. 후보 베이스 자세에서의 영상 합성에 쓰는 관측과 기존 조작 정책이 실행 때 받는 관측의 역할을 구분한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yang25b/yang25b.pdf#page=4)
 
-## Evaluation Type and Scope
+시뮬레이션은 Franka Panda와 Omron 베이스에서 RoboCasa의 다섯 주방 과제를 사용한다. 베이스 위치를 고르는 방식에 따른 후속 조작 성공을 비교한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yang25b/yang25b.pdf#page=5)
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
-
-## Dataset / Benchmark Role
-
-RoboCasa 기반 simulated mobile manipulation과 실로봇에서 pose 선택을 비교한다. 이 비교만으로 다른 정책에 선택된 pose를 재사용할 때의 성능을 확정할 수 없다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 pose 후보와 collision/reachability 처리, 정책별 학습 시야와 데이터 접근, 장면 구축 비용, 실제 도착 상태·평가 분모을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+저자는 실행 중 바뀐 장면을 갱신하지 않는 점을 한계로 적었다. 배포된 서랍 닫기 장면 모델과 LeLaN 내비게이션 가중치는 서로 다른 구성요소다. [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yang25b/yang25b.pdf#page=9)
 
 ## Proposed Evaluation — Researcher Interpretation
 
 동일 scene·도착 후보·navigation·비용에서 A 선택 재사용, 정책 무관 고정 pose, 제한된 B validation 재선택을 비교한다. 실제 이동 후 상태를 분기하고 전체 시도 분모를 보존한다.
 
 이 실험은 실행하지 않았으며, 수치나 결론을 미리 부여하지 않는다.
-
-## Evidence Anchor
-
-[공식 paper/abstract](https://proceedings.mlr.press/v305/yang25b.html) · [저자 project/code](https://mobipi.github.io/) · [공식 code](https://github.com/yjy0625/mobipi). Main table·appendix·negative result는 본문 수동 확인 필요.

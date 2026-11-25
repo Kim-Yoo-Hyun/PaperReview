@@ -40,3 +40,8 @@
 지시 수정·집합 지시·시연 검색 후보가 공유하는 언어 민감성의 NEXT 직접 대안이다. 같은 의미의 표현 차이를 새로운 task conflict로 해석하지 않도록 등록한다.
 
 범위와 수치의 미확인 항목은 [평가 노트](./04_evaluation.md)에, 제안하는 반증 질문은 [insights](./05_insights.md)에 둔다.
+
+## 공개 자료
+
+- 코드 — 지시 재서술 모델의 조건부 학습 · scripts/train_cfg.py [배포 파일](https://raw.githubusercontent.com/Doo-mon/RSS/f51a0a3f7373b35a61b0690696496066bb5616b8/scripts/train_cfg.py)
+- 가중치·학습 파라미터 — LIBERO 재서술 지시로 학습한 π0.5 · pi05_cfg_libero_caption_exp1/29999/params/ocdbt.process_0/d/02c1bb79f69701586dbc900ce0c56abd [배포 파일](https://huggingface.co/doomon/RSS_pi05_cfg_libero_caption/resolve/d992b3fe7b203b65aa0d2f2d8a3db61320536e58/pi05_cfg_libero_caption_exp1/29999/params/ocdbt.process_0/d/02c1bb79f69701586dbc900ce0c56abd)

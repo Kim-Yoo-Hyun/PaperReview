@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Samuel Garcin, Trevor McInroe, Pablo Samuel Castro, Christopher Lucas, David Abel, Prakash Panangaden, Stefano V. Albrecht
+- Authors: Samuel Garcin, Trevor McInroe, Pablo Samuel Castro, Prakash Panangaden, Christopher G. Lucas, David Abel, Stefano V. Albrecht
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -42,3 +42,11 @@ U1의 일반 actor–critic 표현 간섭 주장이 새롭지 않음을 보여 �
 ## Verification Boundary
 
 환경별 capacity·optimizer·data collection 통제, VLA에 그대로 적용 가능한 결론의 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — Brax 행위자·비평가 표현 실험 · brax_experiments/train_scripts/train_dcpg.py [배포 파일](https://raw.githubusercontent.com/francelico/deac-rep/4dd611159eabd21b1a67cc80acbd09dafb38a3b3/brax_experiments/train_scripts/train_dcpg.py)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/57da66da25d0ce77e0129b246f358851-Paper-Conference.pdf#page=1)

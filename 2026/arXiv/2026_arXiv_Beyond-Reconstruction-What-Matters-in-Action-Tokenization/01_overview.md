@@ -7,7 +7,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: VLA, action-tokenization, autoregressive-policy, control-horizon
+- Tags: VLA, action-tokenization, autoregressive-policy, token-predictability
 - Official paper: https://arxiv.org/abs/2610.09170
 - Venue verification: main-conference acceptance unverified; preprint으로 등록
 - Code/Project: https://ripl.github.io/action-tokenization-web/proact/

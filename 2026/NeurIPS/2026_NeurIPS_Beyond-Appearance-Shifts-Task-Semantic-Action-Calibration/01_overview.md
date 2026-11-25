@@ -34,3 +34,8 @@ REVISION·FEEDBACK·residual 보정의 직접 충돌 선행. 변화에 반응하
 입력·행동은 [method](./03_method.md), 실제 평가 범위는 [evaluation](./04_evaluation.md)을 따른다. 자동 노트는 사용자의 읽기 완료 기록이 아니다.
 
 근거: [확인한 원문](https://arxiv.org/html/2609.23650v1), §3–4, §5.1–5.3, Tables 6–7, Appendix A.2.1.
+
+## 공개 자료
+
+- 코드 — 지시의 의미 변화에 대응하는 보정 모듈 · bas_vla/breaking/residual_adapter.py [배포 파일](https://raw.githubusercontent.com/NEBULIS-Lab/BAS-VLA/51f0dab5b2edab6539f3bccda7a04b3cb1d52a6c/bas_vla/breaking/residual_adapter.py)
+- 가중치·학습 파라미터 — 반대 의미 지시에 적용하는 행동 보정 어댑터 · adapter/residual_adapter.pt [배포 파일](https://huggingface.co/Shuaijun/BAS-VLA/resolve/d5e05c8b74bc8d8f1a831151a432f73158831f85/adapter/residual_adapter.pt)

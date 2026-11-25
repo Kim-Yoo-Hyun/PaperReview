@@ -4,11 +4,11 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
-- Authors: Hongjie Fang, Shirun Tang, Mingyu Mei, Haoxiang Qin, Zihao He, Jingjing Chen, Feng Ying, Chenxi Wang, Wanxi Liu, Zaixing He, Cewu Lu, Shiquan Wang
+- Authors: Hongjie Fang, Shirun Tang, Mingyu Mei, Haoxiang Qin, Zihao He, Jingjing Chen, Ying Feng, Chenxi Wang, Wanxi Liu, Zaixing He, Cewu Lu, Shiquan Wang
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: force-control, contact, hybrid-control, interaction-frame
+- Tags: force-control, contact, hybrid-force-position-control, interaction-frame
 - Aliases: Force Policy
 - Official paper: https://roboticsproceedings.org/rss22/p128.html
 - Venue verification: https://roboticsproceedings.org/rss22/p128.html
@@ -42,3 +42,13 @@ Unified VLA의 접촉 기여가 분리된 고주파 힘 제어보다 나은지 �
 ## Verification Boundary
 
 frame label 생성과 수동 조정, 접촉 전환 조건, 정책·controller 주기을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 시연에서 힘·위치 제어 좌표계를 식별하는 구현 · adaptor/interaction_frame/frame_identifier.py [배포 파일](https://raw.githubusercontent.com/force-policy/ForcePolicy/7f292e9359f50095f5b2b64fd084f6e7c926bc26/adaptor/interaction_frame/frame_identifier.py)
+- 가중치·학습 파라미터 — 뒤집기 작업 Force Policy 체크포인트 · policy_last.ckpt [배포 파일](https://drive.google.com/file/d/1x0coPkX5jjGULa0xBea1VTwkWVEqojgU/view)
+- 데이터 — 뒤집기 작업의 훈련 자료 · flip_v3_train_data.zip [배포 파일](https://drive.google.com/file/d/1hxCXBoA1-PPF1aooK3qNLW-cxU5okafk/view)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://roboticsproceedings.org/rss22/p128.pdf#page=1)

@@ -1,6 +1,6 @@
 # 원문 감사
 
-2026-11-25 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **79편**, 한 필드 이상 미확인인 논문은 **1,173편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
+2026-11-25 KST 기준. 등록된 1,252편에서 **확인된 잔여 오류는 0/1,252편(0.00%)**, 10개 필드에 근거가 갖춰진 논문은 **92편**, 한 필드 이상 미확인인 논문은 **1,160편**이다. [논문별 판정과 직접 근거](../work/sources/batches/source_audit_2026_11.jsonl)
 
 ## 요약·기여 원문 대조
 
@@ -166,8 +166,9 @@
 | core_next_05 | 42 | 78 | 3 | 7 | 50 |
 | core_next_06 | 43 | 86 | 1 | 0 | 50 |
 | core_next_07 | 38 | 65 | 5 | 0 | 50 |
+| core_next_08 | 35 | 71 | 3 | 0 | 50 |
 
-다축 정규화에서 저자 71편의 표기나 순서를 원문 표제면에 맞췄다. 각 레코드에 이전 저자 목록을 보존했다.
+다축 정규화에서 저자 80편의 표기나 순서를 원문 표제면에 맞췄다. 각 레코드에 이전 저자 목록을 보존했다.
 
 | 논문 | 표제면 대조 |
 |---|---|
@@ -241,6 +242,15 @@
 | Towards Generalizable Safety in Crowd Navigation via Conformal Uncertainty Handling | 표제면의 저자 표기와 순서를 확인했다. [원문](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/yao25a/yao25a.pdf#page=1) |
 | RoboArena | 표제면의 저자 표기와 순서를 확인했다. [원문](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/atreya25a/atreya25a.pdf#page=1) |
 | ReMix | 표제면의 저자 표기와 순서를 확인했다. [원문](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/hejna25a/hejna25a.pdf#page=1) |
+| Learning Visuotactile Estimation and Control for Non-prehensile Manipulation under Occlusions | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/ferrandis25a/ferrandis25a.pdf#page=1) |
+| Self-Improving Vision-Language-Action Models with Data Generation via Residual RL | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://proceedings.iclr.cc/paper_files/paper/2026/file/163a875ab0c2631ed30b7435c4c9b8f1-Paper-Conference.pdf#page=1) |
+| Policy Decorator | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=1) |
+| Latent Theory of Mind | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/he25a/he25a.pdf#page=1) |
+| Cooperative Multi-Agent Vision-Language-Action Models via Reinforced Fine Tuning | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://arxiv.org/pdf/2609.36588v1#page=1) |
+| Studying the Interplay Between the Actor and Critic Representations in Reinforcement Learning | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://proceedings.iclr.cc/paper_files/paper/2025/file/57da66da25d0ce77e0129b246f358851-Paper-Conference.pdf#page=1) |
+| Autonomous Improvement of Instruction Following Skills via Foundation Models | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhou25b/zhou25b.pdf#page=1) |
+| MolmoSpaces | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://www.roboticsproceedings.org/rss22/p091.pdf#page=1) |
+| Force Policy | 지정한 원문 표제면의 저자 표기와 순서를 대조했다. [원문](https://roboticsproceedings.org/rss22/p128.pdf#page=1) |
 | Universal Value Function Approximators | 논문 표제면의 저자 표기와 순서. [원문](https://proceedings.mlr.press/v37/schaul15.pdf#page=1) |
 
 ## CORE 공개 자료
@@ -279,12 +289,12 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 |---|---:|---|
 | 11월 20일 교정 전 추가 확인 오류 | 37 / 1,252 (2.96%) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |
 | 이번 반영 후 확인 오류 | 0 / 1,252 (0.00%) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |
-| 현재 전 항목 통과 | 79 / 1,252 (6.31%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
-| 현재 미확인 필드 보유 | 1,173 / 1,252 (93.69%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
+| 현재 전 항목 통과 | 92 / 1,252 (7.35%) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |
+| 현재 미확인 필드 보유 | 1,160 / 1,252 (92.65%) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |
 
 11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 141/1,252편(11.26%)이다. 자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.
 
-**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–93.69%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
+**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. 기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 0.00%–92.65%다. 필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.
 
 ## 교정 재검증
 
@@ -307,10 +317,10 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 연도 | 0 | 1,252 | 0 | 0 |
 | 발표처·게재 | 0 | 1,182 | 70 | 0 |
 | 요약·기여 | 30 | 1,252 | 0 | 0 |
-| 코드 | 0 | 514 | 738 | 0 |
-| 가중치 | 0 | 168 | 1,084 | 0 |
-| 데이터 | 0 | 213 | 1,039 | 0 |
-| 태그 | 1 | 621 | 631 | 0 |
+| 코드 | 0 | 518 | 734 | 0 |
+| 가중치 | 0 | 183 | 1,069 | 0 |
+| 데이터 | 0 | 226 | 1,026 | 0 |
+| 태그 | 1 | 665 | 587 | 0 |
 
 링크는 대표 원문과 기재한 부가 주소별로 판정한다. 원문만 열리더라도 다른 링크의 판정은 유지한다. 잘못된 주소를 걷어낸 뒤 대체 주소가 확인되지 않은 경우에는 그 역할이 미확인이다. 저자의 공개 표명이나 배포 파일로 코드·가중치·데이터를 각각 판단한다. 배포 근거를 찾지 못한 상태는 ‘존재 불확실’이다. 기존 요약 판정에는 overview 대신 검증한 정규화 배치의 요약·기여를 대상으로 명시한 70편이 포함된다. 논문별 근거의 `scope`에서 대상 텍스트를 확인할 수 있다.
 
@@ -319,7 +329,7 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |
 |---|---:|---:|---:|---:|---:|
 | CORE | 50 | 18 | 0 | 0 | 31 |
-| NEXT | 450 | 61 | 0 | 134 | 371 |
+| NEXT | 450 | 74 | 0 | 90 | 358 |
 | REFERENCE | 510 | 0 | 0 | 366 | 504 |
 | ARCHIVE | 242 | 0 | 0 | 131 | 242 |
 
@@ -337,8 +347,8 @@ NoMaD(`pr-0568`)의 데이터는 기존에 `not_applicable`로 분류되어 있�
 | <a id="batch-08"></a>8 | [pr-0701–pr-0800](../work/sources/batches/source_audit_2026_11.jsonl#L701-L800) | 100 | 10 | 90 | 0 |
 | <a id="batch-09"></a>9 | [pr-0801–pr-0900](../work/sources/batches/source_audit_2026_11.jsonl#L801-L900) | 100 | 19 | 81 | 0 |
 | <a id="batch-10"></a>10 | [pr-0901–pr-1000](../work/sources/batches/source_audit_2026_11.jsonl#L901-L1000) | 100 | 18 | 82 | 0 |
-| <a id="batch-11"></a>11 | [pr-1001–pr-1100](../work/sources/batches/source_audit_2026_11.jsonl#L1001-L1100) | 100 | 6 | 94 | 0 |
-| <a id="batch-12"></a>12 | [pr-1101–pr-1200](../work/sources/batches/source_audit_2026_11.jsonl#L1101-L1200) | 100 | 0 | 100 | 0 |
+| <a id="batch-11"></a>11 | [pr-1001–pr-1100](../work/sources/batches/source_audit_2026_11.jsonl#L1001-L1100) | 100 | 14 | 86 | 0 |
+| <a id="batch-12"></a>12 | [pr-1101–pr-1200](../work/sources/batches/source_audit_2026_11.jsonl#L1101-L1200) | 100 | 5 | 95 | 0 |
 | <a id="batch-13"></a>13 | [pr-1201–pr-1252](../work/sources/batches/source_audit_2026_11.jsonl#L1201-L1252) | 52 | 2 | 50 | 0 |
 
 ## 이전 감사

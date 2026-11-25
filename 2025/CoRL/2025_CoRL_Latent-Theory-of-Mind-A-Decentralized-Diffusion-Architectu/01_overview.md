@@ -3,7 +3,7 @@
 > Evidence maturity: `ABSTRACT_CHECKED`. 요약과 핵심 기여 두 개는 아래에 표시한 원문 쪽수에서 확인했다. 나머지 분석은 각 절에 적힌 근거 범위를 따른다.
 
 - Year/Venue: 2025 / CoRL
-- Authors: Chengyang He, Gadiel Mark Sznaier Camps, Xu Liu, Mac Schwager, Guillaume Adrien Sartoretti
+- Authors: Chengyang He, Gadiel Sznaier Camps, Xu Liu, Mac Schwager, Guillaume Sartoretti
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -34,3 +34,11 @@ CROSSPLAY의 decentralized 협력·상대 행동 모델링은 이미 존재함�
 입력·행동은 [method](./03_method.md), 실제 평가 범위는 [evaluation](./04_evaluation.md)을 따른다. 자동 노트는 사용자의 읽기 완료 기록이 아니다.
 
 근거: [확인한 원문](https://proceedings.mlr.press/v305/he25a.html), 공식 proceedings abstract.
+
+## 공개 자료
+
+- 코드 — 협동 조작 정책의 공유·개별 표현 학습 · diffusion_policy/workspace/train_diffusion_sheaf_split_workspace.py [배포 파일](https://raw.githubusercontent.com/StanfordMSL/LatentToM/a51d929027799a53d54e7d7d2ba90e2703642b4a/diffusion_policy/workspace/train_diffusion_sheaf_split_workspace.py)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/he25a/he25a.pdf#page=1)

@@ -219,6 +219,29 @@ RTC의 저자는 Kinetix 실험의 구현·정책·전문가 궤적을 배포했
 
 **남은 분류 질문.** 성공 횟수에 대한 순차 검정(STEP)과 보상 모델 학습을 공통 방법 축에서 어떻게 구분할 것인가? 휴대형 접촉 그리퍼로 수집한 시연(CAP)을 어느 출처로 검색할 것인가? 이번에는 기존 분류를 유지하고 해당 축의 불확실성을 표시했다. VLA 22편과 휴머노이드 2편에 전용 필드를 작성했고, 저자가 명시한 한계 17편과 직접 선행 관계 18건에 원문 위치를 연결했다. [배치 원장](../sources/batches/core_next_07.yaml) · [전체 원문 감사](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
 
+## 여덟 번째 배치 태그 매핑
+
+| 기존 검색어·표현 | 원문에서 확인한 구분 |
+|---|---|
+| `deformable`, `3DGS`, `real-to-sim` | PhysTwin은 사람의 물체 상호작용 영상에서 변형체의 물리 모델을 맞춘다. Mobi-π는 이동 베이스의 시점을 고른다. PolaRiS는 재구성한 장면에서 정책의 상대 성능을 평가한다. 세 연구의 영상·깊이·가우시안 자산은 쓰임이 다르다. |
+| `tactile sensing`, `force-control` | 비파지 밀기 연구는 손목 카메라에서 얻은 물체 자세와 힘·토크를 이용해 가린 상태를 추정한다. Force Policy는 손목 영상·힘·말단 자세에서 접촉 중 힘을 제어할 축을 정한다. 입력 축의 `기타`에는 힘·토크와 추정 자세의 역할을 설명했다. |
+| `instruction-following`, `Benchmark` | Spa-Bench는 실제 SO-101에서 공간 관계를 직접 지시한 대조 조건과 비교한다. LIBERO-X는 사람이 시뮬레이터를 원격조작해 같은 장면의 여러 목표에 시연을 제공한다. |
+| `residual-RL`, `experience-retrieval` | PLD는 자료 수집용 잔차 전문가의 궤적을 범용 정책에 증류한다. 물체 중심 잔차 연구는 실행 때도 6D 물체 자세를 받는다. 각 레코드에 RL로 갱신한 모듈과 배포 시 필요한 입력을 명시했다. |
+
+*PhysTwin*부터 *Force Policy*까지 NEXT 50편을 대조했다. 지정 판본의 PDF 49편과 IJRR 출판사 HTML 1편에 방법·평가 위치와 해시를 기록했다. 이전 요약 감사에서 PDF 해시가 남아 있던 44편은 이번 파일과 일치했다. 저자 9편, 검색 태그 16편, 프로젝트 주소 4편을 고쳤다. VLA 전용 필드 33편과 휴머노이드 시뮬레이션 1편을 작성하고, 저자 명시 한계 20편과 직접 선행 관계 24건에 원문 위치를 연결했다. 배치 내부 1,225쌍과 기존 원장 60,100쌍에서 공개 식별자, 정규화 제목·별칭·약칭, 제목 유사도 0.92 이상을 대조한 결과 중복 후보는 0건이었다. 집중 읽기 대상의 누적 범위는 **423/500편(84.6%)**이다. [50편 원장과 이전 값](../sources/batches/core_next_08.yaml) · [감사 집계](../../research/SOURCE_AUDIT.md#다축-태그와-공개-자료)
+
+| 공개 여부 | 코드 | 가중치·학습 파라미터 | 데이터 | 합계 |
+|---|---:|---:|---:|---:|
+| 연구와 연결된 배포 파일 | 33 | 17 | 21 | 71 |
+| 저자의 공개 예정 안내 | 1 | 1 | 1 | 3 |
+| 해당 판본·실험의 파일 미확인 | 16 | 32 | 28 | 76 |
+
+배포 파일 65개는 본문 첫 구간을, Google Drive 파일 6개는 개별 상세 화면과 파일명을 확인했다. Force Policy는 실물에서 세 과제를 시험했으며 확인한 가중치와 훈련 데이터는 상자 뒤집기용이다. MemER 게재본의 상위 정책은 Qwen2.5-VL-7B이고, 공개된 먼지 닦기용 상위 체크포인트는 Qwen3-VL-4B다. VLAC의 원 모델은 그릇 집기 진행도 추론 예제 영상을 배포했다. 이전에 연결한 VLAC-Cut 벤치마크는 별도 후속 모델에 해당한다. [Force Policy 게재본](https://roboticsproceedings.org/rss22/p128.pdf#page=6) · [Force Policy 배포](https://drive.google.com/drive/folders/1ioEFZoJbk5hjqBs8TCiL66DwCQGdCA1E) · [MemER 게재본](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf#page=5) · [먼지 닦기 체크포인트](https://huggingface.co/ajaysri/memer-dusting-qwen3vl-4b-step-1500) · [VLAC 저자 배포](https://github.com/InternRobotics/VLAC)
+
+판본에 따라 실험을 다르게 읽어야 하는 사례도 남겼다. Equivariant Diffusion Policy의 IJRR 확장판은 점군을 이용해 회전과 병진 대칭을 다룬다. 저자가 CoRL 선행판과 공통으로 연결한 코드에서 확인한 범위는 등변 정책 학습기다. PolaRiS의 실물 순위는 정책·환경당 20회에서 얻었고, 시뮬레이션 순위는 별도 장면으로 공동학습한 뒤 과제당 50회에서 얻었다. SOAR 원 프로젝트의 데이터 공개 예정 표시는 Berkeley가 배포한 실제 RLDS 파일을 대조해 갱신했다. [IJRR 확장판](https://sage.cnpereading.com/doi/10.1177/02783649261424445) · [CoRL 선행판](https://proceedings.mlr.press/v270/wang25a.html) · [PolaRiS 평가 절차](https://roboticsproceedings.org/rss22/p062.pdf#page=6) · [SOAR 배포 자료](https://rail.eecs.berkeley.edu/datasets/soar_release/1.0.0/)
+
+분류상 남은 질문은 행동을 출력하지 않는 시각 귀인·오프라인 진단을 기존 방법 축에서 어떻게 검색할지다. 이 배치에서는 해당 논문의 방법 축에 `unknown`을 두고, 실물·시뮬레이션·저장된 에피소드 중 어디에서 평가했는지를 기록했다. [다음 50편](../../TODO.md)
+
 ## 외부 목록 대조와 CORE 심화 감사
 
 2026-11-19에 서베이 3편의 참고문헌, 6개 학회 3개년 목록, 연구실·기업 3곳 및 큐레이션 1곳을 대조했다. 등록 심사 후보 17편의 출처를 논문별로 보존했다. [목록별 커버리지와 하위 주제 순위](../../research/EXTERNAL_COVERAGE.md) · [후보 YAML](../sources/batches/missing_candidates_2026.yaml)

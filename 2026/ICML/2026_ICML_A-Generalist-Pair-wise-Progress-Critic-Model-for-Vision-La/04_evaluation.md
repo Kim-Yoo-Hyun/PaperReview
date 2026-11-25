@@ -1,49 +1,19 @@
 # A Generalist Pair-wise Progress Critic Model for Vision-Language-Action Robots
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
+> Source audit: 2026-11-25 원문 방법·평가 대조.
 
-## Evaluation in One Sentence
+## 평가 조건
 
-공식 abstract는 실제 로봇 RL 평가를 보고한다. 정확한 trial·baseline·수치는 최종 본문 확인 필요.
+InternVL2의 2B 및 8B 판본으로 두 시점의 진행도 차이와 행동 예측을 학습했다. 참조 시연을 문맥으로 제공하는 조건을 포함한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26if/zhang26if.pdf#page=5)
 
-## Evaluation Type and Scope
+실물 제어 기체는 AGILE PiPER다. 모델이 예측한 진행도와 PPO의 학습 보상, 모델의 직접 행동 출력은 서로 다른 경로다. [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26if/zhang26if.pdf#page=6)
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
-
-## Dataset / Benchmark Role
-
-공식 abstract는 실제 로봇 RL 평가를 보고한다. 정확한 trial·baseline·수치는 최종 본문 확인 필요.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 최종 ICML 모델 크기·동일 weight 여부·reward/done model 및 PPO value의 분리. 2025 preprint 설정을 최종본에 전사하지 않음을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+과제를 가로질러 진행도 추정 성능을 비교한 표와 로봇 정책의 성공 평가는 각각의 기준으로 해석한다. 공개 자료 중 원 모델에 맞는 파일은 그릇 집기 예제 영상까지 확인했다. [PDF 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26if/zhang26if.pdf#page=7)
 
 ## Proposed Evaluation — Researcher Interpretation
 
 최종 학습 그래프의 weight sharing·freeze·reward 공급 경로를 확인한 뒤 독립 성공 판정과 자기 progress 점수의 변화를 분리한다.
 
 이 실험은 실행하지 않았으며, 수치나 결론을 미리 부여하지 않는다.
-
-## Evidence Anchor
-
-[공식 paper/abstract](https://proceedings.mlr.press/v306/zhang26if.html) · [저자 project/code](https://github.com/InternRobotics/VLAC). Main table·appendix·negative result는 본문 수동 확인 필요.

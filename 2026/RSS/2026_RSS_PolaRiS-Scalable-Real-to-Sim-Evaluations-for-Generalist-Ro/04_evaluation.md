@@ -1,49 +1,19 @@
 # PolaRiS: Scalable Real-to-Sim Evaluations for Generalist Robot Policies
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
+> Source audit: 2026-11-25 원문 방법·평가 대조.
 
-## Evaluation in One Sentence
+## 평가 조건
 
-실제·시뮬레이션의 짝지은 rollout으로 정책 순위 상관을 평가한다.
+실제 장면을 촬영한 영상에서 조작 가능한 장면을 재구성한다. 정책에 필요한 관절 제어와 카메라 시점을 시뮬레이터에서 맞추는 것이 평가의 전제다. [PDF 4쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=4)
 
-## Evaluation Type and Scope
+DROID Franka의 실물 기준은 환경·정책당 20회다. 시뮬레이션에서는 평가용 장면·물체와 겹치지 않는 환경으로 정책을 1,000스텝 공동학습한 뒤 과제당 50회 실행한다. 양쪽의 과제 진행도 기준을 맞춘다. [PDF 6쪽](https://roboticsproceedings.org/rss22/p062.pdf#page=6)
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
-
-## Dataset / Benchmark Role
-
-실제·시뮬레이션의 짝지은 rollout으로 정책 순위 상관을 평가한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 평가 전에 허용된 co-training 데이터, 독립 실환경 trial, 장면 선택 편향을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+실물과 시뮬레이션에서 측정한 정책 성능의 Pearson 상관계수와 Mean Maximum Rank Violation(MMRV)을 보고한다. MMRV는 각 정책에 대해 시뮬레이션에서 순위가 뒤바뀐 상대 정책들과의 실물 점수 차이 중 최댓값을 구한 뒤 전체 정책에 걸쳐 평균한다. 순위 역전이 없으면 0이다. [지표 정의와 식 (1)](https://roboticsproceedings.org/rss22/p062.pdf#page=3) · [평가 절차](https://roboticsproceedings.org/rss22/p062.pdf#page=6)
 
 ## Proposed Evaluation — Researcher Interpretation
 
 동일 checkpoint들을 동일 task의 실환경·재구성 환경에서 비교하고 co-training 전후 순위를 별도로 계산한다.
 
 이 실험은 실행하지 않았으며, 수치나 결론을 미리 부여하지 않는다.
-
-## Evidence Anchor
-
-[공식 paper/abstract](https://roboticsproceedings.org/rss22/p062.html) · [저자 project/code](https://polaris-evals.github.io/) · [공식 code](https://github.com/arhanjain/PolaRiS). Main table·appendix·negative result는 본문 수동 확인 필요.

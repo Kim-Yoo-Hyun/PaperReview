@@ -8,7 +8,7 @@
 - Category: Benchmarks and Datasets
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, spatial-grounding, counting, real-robot-benchmark
+- Tags: manipulation, VLA, spatial-grounding, counting, real-robot-benchmark
 - Aliases: Spa-Bench (robotics)
 - Official paper: https://arxiv.org/abs/2610.12696
 - Venue verification: https://arxiv.org/abs/2610.12696
@@ -42,3 +42,8 @@ Spa-Bench는 익숙한 구성 요소를 낯선 배치로 옮겨 실제 로봇 �
 ## Verification Boundary
 
 ID/OOD support, 모델별 완료 범위와 trial 분모, 직접 지시의 정보량, 최종 수량·무행동 채점, 공개 data/코드의 실제 가용 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 가중치·학습 파라미터 — 언어 백본을 고정한 GR00T 평가 모델 · model.safetensors [배포 파일](https://huggingface.co/Spa-Bench/spa-bench-model-groot-n1-7-frozen-llm-epoch-12/resolve/decd6df3bfebc6dff80150fc7d0bfd0bc794cf35/model.safetensors)
+- 데이터 — 실제 SO-101에서 수집한 π0.5 평가 궤적 · data/chunk-000/file-000.parquet [배포 파일](https://huggingface.co/datasets/Spa-Bench/spa-bench-eval-rollouts-pi-0-5-full/resolve/b04f54b130ea84f25ab711b6dece329b3eaa8245/data/chunk-000/file-000.parquet)

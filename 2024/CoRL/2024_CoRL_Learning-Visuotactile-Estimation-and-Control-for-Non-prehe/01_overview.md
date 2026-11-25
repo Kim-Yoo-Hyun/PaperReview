@@ -4,11 +4,11 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2024 / CoRL
-- Authors: Juan Del Aguila Ferrandis, Joao Moura, Sethu Vijayakumar
+- Authors: Juan Del Aguila Ferrandis, João Moura, Sethu Vijayakumar
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: Robotics, tactile sensing, state estimation, occlusion, non-prehensile
+- Tags: Robotics, force-torque, state-estimation, occlusion, non-prehensile
 - Aliases:
 - Official paper: https://proceedings.mlr.press/v270/ferrandis25a.html
 - Venue verification: https://proceedings.mlr.press/v270/ferrandis25a.html
@@ -43,3 +43,7 @@
 ## Verification Boundary
 
 privileged training input, tactile modality, occlusion 분포, estimator와 policy ablation을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/ferrandis25a/ferrandis25a.pdf#page=1)

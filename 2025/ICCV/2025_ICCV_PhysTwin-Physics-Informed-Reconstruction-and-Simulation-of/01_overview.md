@@ -8,7 +8,7 @@
 - Category: Robotics-Enabling 3D Perception
 - Primary track: Robotics-enabling 3D perception
 - Tier: NEXT
-- Tags: Robotics, deformable, inverse-physics, gaussian-splatting, motion-planning
+- Tags: model-based-planning, deformable, inverse-physics, gaussian-splatting, motion-planning
 - Aliases: PhysTwin
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_PhysTwin_Physics-Informed_Reconstruction_and_Simulation_of_Deformable_Objects_from_Videos_ICCV_2025_paper.html
 - Venue verification: https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_PhysTwin_Physics-Informed_Reconstruction_and_Simulation_of_Deformable_Objects_from_Videos_ICCV_2025_paper.html
@@ -42,3 +42,9 @@ PhysTwin은 몇 시점에서 관측한 동영상으로 변형 물체의 모양·
 ## Verification Boundary
 
 material/boundary 식별성, interaction 데이터 접근, planning 평가와 reconstruction의 분리을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 재구성된 변형 물체의 질량–스프링 시뮬레이터 · qqtt/model/diff_simulator/spring_mass_warp.py [배포 파일](https://raw.githubusercontent.com/Jianghanxiao/PhysTwin/81c718790a37e5e0102eb77af2c6edd34a9db25f/qqtt/model/diff_simulator/spring_mass_warp.py)
+- 가중치·학습 파라미터 — 물체별로 최적화한 물리 파라미터 · experiments_optimization.zip [배포 파일](https://huggingface.co/datasets/Jianghanxiao/PhysTwin/resolve/05665bcd0edad8f069c7def9cbb58d2eb75d68d0/experiments_optimization.zip)
+- 데이터 — 실제 변형 물체 관측 자료 · data.zip [배포 파일](https://huggingface.co/datasets/Jianghanxiao/PhysTwin/resolve/05665bcd0edad8f069c7def9cbb58d2eb75d68d0/data.zip)

@@ -42,3 +42,9 @@ PPO·Flow Matching·DPPO를 로봇 flow-policy online RL로 연결하는 비교 
 ## Verification Boundary
 
 생성 경로 likelihood와 action likelihood의 차이, DPPO 비교의 모델/자료/시간 통제, noise 학습과 step 축소 효과, 실제 로봇 평가 여부을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 흐름 정책 PPO 미세조정 · agent/finetune/reinflow/train_ppo_flow_agent.py [배포 파일](https://raw.githubusercontent.com/ReinFlow/ReinFlow/e722e151bed767f3ffef47527cf697f2358af55d/agent/finetune/reinflow/train_ppo_flow_agent.py)
+- 가중치·학습 파라미터 — Ant에서 온라인 미세조정한 ReFlow 정책 · log/log_gym_finetuned/gym/ant-v0/ReFlow/seed0/2025-04-20_20-30-16_seed0/checkpoint/state_999.pt [배포 파일](https://huggingface.co/datasets/ReinFlow/ReinFlow-data-checkpoints-logs/resolve/9ae4885c78b1b72ad6759bc8434acd9475f67b96/log/log_gym_finetuned/gym/ant-v0/ReFlow/seed0/2025-04-20_20-30-16_seed0/checkpoint/state_999.pt)
+- 데이터 — Ant 기본 정책용 오프라인 궤적 · data-offline/gym_custom/ant-medium-expert-v0/train.npz [배포 파일](https://huggingface.co/datasets/ReinFlow/ReinFlow-data-checkpoints-logs/resolve/9ae4885c78b1b72ad6759bc8434acd9475f67b96/data-offline/gym_custom/ant-medium-expert-v0/train.npz)

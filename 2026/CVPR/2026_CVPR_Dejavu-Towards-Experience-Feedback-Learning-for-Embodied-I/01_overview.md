@@ -40,3 +40,7 @@ Dejavu는 배포 중 축적한 조작 경험을 다시 찾아 고정한 VLA의 �
 Residual RL과 retrieval의 직접 결합이므로 NEXT에 추가한다. Bank 성장·frozen backbone이라는 조합 자체를 새 연구 공백으로 주장하지 않도록 현재 후보의 선행 경계를 보완한다.
 
 범위와 수치의 미확인 항목은 [평가 노트](./04_evaluation.md)에, 제안하는 반증 질문은 [insights](./05_insights.md)에 둔다.
+
+## 공개 자료
+
+- 코드 — 프로젝트의 코드 링크에 공개 예정이라고 명시되어 있다. [저자 공개 안내](https://dejavu2025.github.io/)

@@ -8,7 +8,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: Robotics, imitation-learning, instruction-coverage, compositional-generalization
+- Tags: sequential-manipulation, Imitation Learning, instruction-coverage, compositional-generalization
 - Aliases:
 - Official paper: https://arxiv.org/abs/2607.29687
 - Venue verification: https://www.corl.org/program/accepted-papers
@@ -42,3 +42,8 @@ DataMIL·ReMix의 데이터 선택 흐름과 SET의 단순 분해를 연결할 i
 ## Verification Boundary
 
 v1/v2 차이, 단계별 정책의 입력과 전환 신호, 종속 지시의 정보 병목, demonstration 예산, 공개 release와 논문 설정의 차이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 조합 일반화 통제 실험의 자료 준비 · projects/corl2026_cg/src/corl2026_cg/data/prepare.py [배포 파일](https://raw.githubusercontent.com/YixiaoWang7/Diagnosing_Compositional_Generalization_Robot/e29c44474495b341d19636bbf90f3cf0fcb1d2d2/projects/corl2026_cg/src/corl2026_cg/data/prepare.py)
+- 데이터 — L4 단일 단계 조건의 훈련 궤적 · cross_into_bin/shards/shard_000.hdf5 [배포 파일](https://huggingface.co/datasets/yixiiiiii/cg_l4_1s/resolve/fabafb6e97e559af8c16d8dd06d09801beb3ddaa/cross_into_bin/shards/shard_000.hdf5)

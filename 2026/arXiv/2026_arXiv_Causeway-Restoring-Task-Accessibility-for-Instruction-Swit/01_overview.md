@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, instruction-switching, recovery
+- Tags: test-time-intervention, VLA, instruction-switching, recovery
 - Aliases: Causeway
 - Official paper: https://arxiv.org/abs/2609.30913
 - Venue verification: https://arxiv.org/abs/2609.30913

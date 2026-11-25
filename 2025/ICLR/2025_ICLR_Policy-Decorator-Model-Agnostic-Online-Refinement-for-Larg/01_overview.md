@@ -3,11 +3,11 @@
 > Evidence maturity: `FULL_TEXT_CHECKED` — 지정 절만 확인한 기록이며 전체 정독·실험 재현을 뜻하지 않는다.
 
 - Year/Venue: 2025 / ICLR
-- Authors: Xiu Yuan, Tongzhou Mu, Stone Tao, Yunhao Fang, Zhang Zhang, Hao Su
+- Authors: Xiu Yuan, Tongzhou Mu, Stone Tao, Yunhao Fang, Mengke Zhang, Hao Su
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: residual-RL, imitation-learning, controlled-exploration, manipulation
+- Tags: residual-RL, Imitation Learning, controlled-exploration, manipulation
 - Aliases: Policy Decorator
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2025/hash/45c361d4117d598d4bb6568b407e9ac9-Abstract-Conference.html
@@ -39,3 +39,13 @@ Final paper의 지정 절만 검토했고 전체 36쪽 정독은 아니다. 공�
 ## Why This Paper Is Here — Researcher Interpretation
 
 Frozen large policy+bounded residual의 핵심 비교 선행이다. 현재 후보의 scalar gain·탐색 schedule이라는 단순 대안을 놓치지 않도록 NEXT에 추가한다.
+
+## 공개 자료
+
+- 코드 — ManiSkill2에서 확산 기본 정책의 잔차 학습 · online/pi_dec_diffusion_maniskill2.py [배포 파일](https://raw.githubusercontent.com/tongzhoumu/policy_decorator/92ba9ba442587ae5989c286355ace2200a0537fb/online/pi_dec_diffusion_maniskill2.py)
+- 가중치·학습 파라미터 — PegInsertionSide의 사전학습 Behavior Transformer · best.pt [배포 파일](https://drive.google.com/file/d/1w702JogWkpdb83W4fwVLFLc9dxjFqbSS/view)
+- 데이터 — PegInsertionSide 전문가 시연 · trajectory.h5 [배포 파일](https://drive.google.com/file/d/1ZxqKdDr1D5ns92R7tKJhvJL5GN2zS73q/view)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c361d4117d598d4bb6568b407e9ac9-Paper-Conference.pdf#page=1)

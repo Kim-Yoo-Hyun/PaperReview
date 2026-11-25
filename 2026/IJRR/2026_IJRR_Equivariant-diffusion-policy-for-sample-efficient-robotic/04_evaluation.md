@@ -1,49 +1,19 @@
 # Equivariant diffusion policy for sample-efficient robotic manipulation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
+> Source audit: 2026-11-25 원문 방법·평가 대조.
 
-## Evaluation in One Sentence
+## 평가 조건
 
-MimicGen simulation과 실로봇 manipulation에서 소량 시연 학습을 비교한다.
+저널 확장판은 점군을 받는 등변 점 트랜스포머에 병진 T(3)과 회전 SO(2) 대칭을 적용한다. 저자가 이전 CoRL판과 공통으로 연결한 구현 경로의 범위는 배치 원장에 기록했다. [Equivariant point transformer and translation symmetry](https://sage.cnpereading.com/doi/10.1177/02783649261424445#:~:text=Equivariant%20point%20transformer%20and%20translation%20symmetry)
 
-## Evaluation Type and Scope
+그림 8과 9에 여섯 실제 과제와 Franka Emika·세 대의 RealSense D455 구성이 나온다. 저자들은 실물에서 관측과 시연 행동을 5 Hz로 기록하고, 비교 정책에도 같은 입력 표현을 준 조건을 제시했다. [Real-robot experiment](https://sage.cnpereading.com/doi/10.1177/02783649261424445#:~:text=Real-robot%20experiment)
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
-
-## Dataset / Benchmark Role
-
-MimicGen simulation과 실로봇 manipulation에서 소량 시연 학습을 비교한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 적용 가능한 symmetry, 절대/상대 action, RGB/point-cloud 정보량, checkpoint 선택을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+카메라 관측과 로봇 작업공간이 이론상 대칭을 완전히 만족하지 않는다는 한계를 저자가 논의한다. [Symmetry breakings](https://sage.cnpereading.com/doi/10.1177/02783649261424445#:~:text=Symmetry%20breakings)
 
 ## Proposed Evaluation — Researcher Interpretation
 
 같은 입력·시연·action 좌표계에서 augmentation과 equivariant denoising을 비교한다.
 
 이 실험은 실행하지 않았으며, 수치나 결론을 미리 부여하지 않는다.
-
-## Evidence Anchor
-
-[공식 paper/abstract](https://journals.sagepub.com/doi/10.1177/02783649261424445) · [저자 project/code](https://equidiff.github.io/) · [공식 code](https://github.com/pointW/equidiff). Main table·appendix·negative result는 본문 수동 확인 필요.

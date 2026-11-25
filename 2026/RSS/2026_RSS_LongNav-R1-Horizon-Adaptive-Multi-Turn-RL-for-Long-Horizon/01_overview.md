@@ -42,3 +42,7 @@ Object navigation과 실제 장기 항법의 zero-shot 평가를 보고한다.
 ## Verification Boundary
 
 action 단위, episode 길이별 정규화, rollout 분모, 실제 로봇의 저수준 제어기을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — Habitat 내비게이션 정책 학습 · src/longnav/habitat_training/train_dagrl.py [배포 파일](https://raw.githubusercontent.com/UMich-CURLY/LongNav-R1/927b4a4c972e4cce5ea7c4c8cb0fd12a5ce4cbf0/src/longnav/habitat_training/train_dagrl.py)

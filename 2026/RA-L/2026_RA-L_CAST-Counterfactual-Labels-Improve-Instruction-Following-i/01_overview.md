@@ -42,3 +42,9 @@ v2 abstract는 실내외 3개 navigation 환경과 distractor가 있는 manipula
 ## Verification Boundary
 
 합성 행동의 물리적 유효성, 원 데이터/평가 중복, language와 action 증강 기여 분리, 공개 모델/자료의 논문 version 대응을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 반사실 지시 자료 생성 · cast/data/utils/counterfactual.py [배포 파일](https://raw.githubusercontent.com/catglossop/CAST/ec7a214e76167e0f844800ea91d6664863a3d9b1/cast/data/utils/counterfactual.py)
+- 가중치·학습 파라미터 — CAST 내비게이션 정책의 파라미터 조각 · cast_checkpoint/0/default/ocdbt.process_0/d/1092e3334d3bc1c52edf6451f6d5e2c1 [배포 파일](https://huggingface.co/catglossop/CounterfactualVLA/resolve/6da195e2dece9732266e5b144d8e5dd0ac50f6fe/cast_checkpoint/0/default/ocdbt.process_0/d/1092e3334d3bc1c52edf6451f6d5e2c1)
+- 데이터 — 반사실 내비게이션 지시와 행동 자료 · cast_counterfactual_dataset.tar.gz [배포 파일](https://huggingface.co/datasets/catglossop/CAST-dataset/resolve/fe9de38e1e519e649a40db20c9558f94e52887a0/cast_counterfactual_dataset.tar.gz)

@@ -42,3 +42,7 @@ v2 abstract는 LIBERO-PRO의 분포 이동 조작과 실제 Franka 학습을 보
 ## Verification Boundary
 
 v2의 importance correction·label filtering·모방 대조와 우리 selector의 정확한 차이, VLM 감독 비용과 rollout 분모, 원 지시 평가 독립성을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 판본과 출처
+
+프로젝트의 개정 표제와 저자 목록은 arXiv v2 표제면과 달라 이 레코드는 v2 기준으로 유지했다. [원문](https://arxiv.org/pdf/2607.09042v2)

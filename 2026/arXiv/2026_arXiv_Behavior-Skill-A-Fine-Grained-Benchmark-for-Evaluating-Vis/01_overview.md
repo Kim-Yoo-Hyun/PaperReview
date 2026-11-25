@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, Benchmark, mobile-manipulation, skill-evaluation
+- Tags: skill-segmentation, VLA, Benchmark, mobile-manipulation, skill-evaluation
 - Aliases: Behavior-Skill
 - Official paper: https://arxiv.org/abs/2608.30536
 - Venue verification: https://arxiv.org/abs/2608.30536
@@ -42,3 +42,9 @@ Skill instruction와 복원된 시작 상태의 관측 → VLA action → skill 
 ## Verification Boundary
 
 공개 release와 논문 정책 쌍의 일치, 시연 reset과 continuation의 차이, 학습/평가 instance 분리, normalizer와 controller·queue·종료 정의을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 기술 단위 시작 상태를 이용한 평가 · benchmark/skill_eval.py [배포 파일](https://raw.githubusercontent.com/nubot-nudt/Behavior-Skill/f306427b0d5ed2d492f80ebc0ec8971de8e6cb2b/benchmark/skill_eval.py)
+- 가중치·학습 파라미터 — 50개 과제 skill 지시 조건 π0.5 체크포인트 조각 · pi05-pt50-skill/params/params.PaliGemma.img.Transformer.encoder_norm.bias.value/0 [배포 파일](https://huggingface.co/mafangniu/Behavior-Skill-VLA-Checkpoints/resolve/98941096c94b0f978391d8a0accc699c32ec8b2a/pi05-pt50-skill/params/params.PaliGemma.img.Transformer.encoder_norm.bias.value/0)
+- 데이터 — 기술별 평가 재시작 상태 · skill_init_states/task-0000/episode_00000010/skill_00_state.npz [배포 파일](https://huggingface.co/datasets/mafangniu/Behavior-Skill/resolve/0be968d3b61406ec366e1bcf7f50a9aa36bbc56f/skill_init_states/task-0000/episode_00000010/skill_00_state.npz)

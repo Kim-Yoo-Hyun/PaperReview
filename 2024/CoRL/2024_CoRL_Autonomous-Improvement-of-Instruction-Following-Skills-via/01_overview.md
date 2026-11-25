@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2024 / CoRL
-- Authors: Zhiyuan Zhou, Pranav Atreya, Abraham Lee, Homer Rich Walke, Oier Mees, Sergey Levine
+- Authors: Zhiyuan Zhou, Pranav Atreya, Abraham Lee, Homer Walke, Oier Mees, Sergey Levine
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -12,7 +12,7 @@
 - Aliases: SOAR
 - Official paper: https://proceedings.mlr.press/v270/zhou25b.html
 - Venue verification: https://proceedings.mlr.press/v270/zhou25b.html
-- Code/Project: https://soar-autonomous-improvement.github.io/
+- Code/Project: https://auto-improvement.github.io/
 - Code: https://github.com/soar-autonomous-improvement/code-release
 - Source audit: 2026-11-07: 공식 metadata/abstract·저자 project/README 확인. CoRL 행사 연도 2024, PMLR270 발행 연도 2025를 구분. 공식 proceedings와 저자 project/code 확인; OpenReview forum은 challenge로 본문 접근 실패. Project의 Data Coming Soon과 abstract의 공개 주장을 구분하여 data_status는 미확인으로 둔다. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
@@ -33,7 +33,7 @@
 
 공식 abstract는 새로운 실세계 환경의 정책 개선과 5개 tabletop 환경에서 수집한 25K trajectory 데이터 공개를 설명한다. Project는 9개 평가 scene을 설명하므로 두 숫자의 분모를 합치지 않는다.
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v270/zhou25b.html) · [저자 project/code](https://soar-autonomous-improvement.github.io/) · [공식 code](https://github.com/soar-autonomous-improvement/code-release). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
+근거: [공식 paper/abstract](https://proceedings.mlr.press/v270/zhou25b.html) · [저자 project/code](https://auto-improvement.github.io/) · [공식 code](https://github.com/soar-autonomous-improvement/code-release). 문장에 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 
@@ -42,3 +42,14 @@
 ## Verification Boundary
 
 수집 scene과 평가 scene의 분리, 데이터 release의 실제 접근성, 의미 이해와 운동 능력 개선의 기여, 서로 다른 정책 정보량을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — WidowX 자율 수집에서 목표 조건부 정책 실행 · SOAR_codebase/orchestrator/robot/gc_policy.py [배포 파일](https://raw.githubusercontent.com/soar-autonomous-improvement/code-release/27740c35eb6dfb43c98634e9455fcd15be596da3/SOAR_codebase/orchestrator/robot/gc_policy.py)
+- 데이터 — Berkeley가 공개한 WidowX 자율 수집 RLDS 궤적 · soar_dataset-failure.tfrecord-00000-of-01024 [배포 파일](https://rail.eecs.berkeley.edu/datasets/soar_release/1.0.0/soar_dataset-failure.tfrecord-00000-of-01024)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhou25b/zhou25b.pdf#page=1)
+
+저자 프로젝트. [공식 페이지](https://auto-improvement.github.io/)

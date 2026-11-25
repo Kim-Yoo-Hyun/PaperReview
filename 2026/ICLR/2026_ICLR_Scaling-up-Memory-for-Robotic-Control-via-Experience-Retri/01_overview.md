@@ -40,3 +40,13 @@ MemER는 수분에 걸친 조작에서 현재 지시 수행에 필요한 과거 
 MemoryVLA와 계층 정책의 관계를 구체화하는 NEXT다. 외부 시연 검색과 실행 중 기억을 구분하고 SET의 counting 선행을 보완한다.
 
 범위와 수치의 미확인 항목은 [평가 노트](./04_evaluation.md)에, 제안하는 반증 질문은 [insights](./05_insights.md)에 둔다.
+
+## 공개 자료
+
+- 코드 — 장기 실물 과제의 핵심 프레임 기억 · memer_eval/memory.py [배포 파일](https://raw.githubusercontent.com/memer-policy/memer/fb6dbd0e37a8dd76c965ff3f1344f9b448b61911/memer_eval/memory.py)
+- 가중치·학습 파라미터 — 먼지 닦기용 상위 기억 정책 Qwen3-VL · model-00001-of-00002.safetensors [배포 파일](https://huggingface.co/ajaysri/memer-dusting-qwen3vl-4b-step-1500/resolve/d7db9739abecb62d16dac532ddf244a56951c817/model-00001-of-00002.safetensors)
+- 데이터 — 먼지 닦기 기술 주석이 있는 훈련 시연 · data/chunk-000/file-000.parquet [배포 파일](https://huggingface.co/datasets/ajaysri/dusting_train_50_v3_subtasks_rgb/resolve/392dfd68e81b0e2e6e451ba252a1a8597bb215d5/data/chunk-000/file-000.parquet)
+
+## 판본과 출처
+
+게재본이 사용한 상위 모델은 Qwen2.5-VL-7B-Instruct다. 현재 공개된 먼지 닦기용 상위 모델은 Qwen3-VL-4B다. [원문](https://proceedings.iclr.cc/paper_files/paper/2026/file/9da515b1ad19d032a7398f00f5ff9b0c-Paper-Conference.pdf)

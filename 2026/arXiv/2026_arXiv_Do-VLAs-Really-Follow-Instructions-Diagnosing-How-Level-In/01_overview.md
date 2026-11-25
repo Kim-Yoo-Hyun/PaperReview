@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, Benchmark, instruction-following
+- Tags: language-grounding, VLA, Benchmark, instruction-following
 - Aliases: How-level instruction following, SIMPLER-IN
 - Official paper: https://arxiv.org/abs/2610.21251
 - Venue verification: https://arxiv.org/abs/2610.21251
@@ -42,3 +42,7 @@
 ## Verification Boundary
 
 SIMPLER-IN 조건별 성공 정의와 중립 문장 대조, 지시 보강 학습의 정보·데이터 통제, OOD 범위, 평가 코드와 checkpoint 일치을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 세부 지시 개입 실험 · diagnosis/online_intervention/system1/correction_m1_inference.py [배포 파일](https://raw.githubusercontent.com/sangwu99/how-level-vla-Arxiv/478fad54689126e4303bdc6bcb3c8e064e5934ab/diagnosis/online_intervention/system1/correction_m1_inference.py)

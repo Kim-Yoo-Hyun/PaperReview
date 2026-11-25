@@ -12,8 +12,8 @@
 - Aliases: VERITAS
 - Official paper: https://roboticsproceedings.org/rss22/p079.html
 - Venue verification: https://roboticsproceedings.org/rss22/p079.html
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://veritas-improvement.github.io/
+- Code: https://github.com/princeton-prism/veritas
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,11 @@ RL 자체의 기여를 주장할 때 반드시 비교할 자율 데이터 선택
 ## Verification Boundary
 
 verifier 오류와 성공 판정의 독립성, fine-tuning objective, 인간 개입의 집계 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 행동 후보를 선택하는 시각 검증기 · src/agent/veritas_verifier/veritas_verifier.py [배포 파일](https://raw.githubusercontent.com/princeton-prism/veritas/88962258bf1dd961b894b87ed0527d9bb4197cb8/src/agent/veritas_verifier/veritas_verifier.py)
+
+## 판본과 출처
+
+저자 프로젝트. [공식 페이지](https://veritas-improvement.github.io/)

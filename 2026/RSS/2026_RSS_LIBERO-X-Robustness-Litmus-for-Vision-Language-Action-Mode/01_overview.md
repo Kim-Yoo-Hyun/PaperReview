@@ -40,3 +40,8 @@ LIBERO-X는 같은 환경에서 여러 목표를 수행하게 해 VLA가 공간 
 LIBERO·LIBERO-Plus·VLABench 이후 복합 shift와 목표 다양성을 비교할 NEXT benchmark다. 같은 scene의 다른 goal을 다루는 연구에서 기존 평가 범위를 확인하는 데 필요하다.
 
 범위와 수치의 미확인 항목은 [평가 노트](./04_evaluation.md)에, 제안하는 반증 질문은 [insights](./05_insights.md)에 둔다.
+
+## 공개 자료
+
+- 코드 — LIBERO-X 정책 평가 · eval_template.py [배포 파일](https://raw.githubusercontent.com/meituan/LIBERO-X/f528726421c7211d8eb05fe48e9e5e2535ccc813/eval_template.py)
+- 데이터 — LIBERO-X 사람 원격조작 시뮬레이션 시연 · data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/meituan/LIBERO-X/resolve/6ad3cebe79e25dea1102838633e4938608c7c1c8/data/chunk-000/episode_000000.parquet)

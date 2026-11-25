@@ -34,3 +34,9 @@ FEEDBACK의 출발 근거이자 과장 방지 선행. Activation replay 결과�
 입력·행동은 [method](./03_method.md), 실제 평가 범위는 [evaluation](./04_evaluation.md)을 따른다. 자동 노트는 사용자의 읽기 완료 기록이 아니다.
 
 근거: [확인한 원문](https://arxiv.org/pdf/2603.19233v6), v6 (2026-11-02), §4.7–4.8, Appendix B.
+
+## 공개 자료
+
+- 코드 — 정책 활성 분석에 쓰는 희소 오토인코더 학습 · experiments/train_sae.py [배포 파일](https://raw.githubusercontent.com/CWRU-AISM/action-atlas/6025c47658d4f63891daf4be66757489db0e0949/experiments/train_sae.py)
+- 가중치·학습 파라미터 — OpenVLA-OFT 내부 활성 해석용 희소 오토인코더 · saes/per_token/sae_layer0.safetensors [배포 파일](https://huggingface.co/datasets/bag100/action-atlas-oft/resolve/39129d0071925f6ed2c9320d46729a87f59588d9/saes/per_token/sae_layer0.safetensors)
+- 데이터 — LIBERO의 OpenVLA-OFT 실행에서 저장한 중간 활성 · libero_10/activations_20260131_072117/task_5/task5_trial0_activations.pt [배포 파일](https://huggingface.co/datasets/bag100/action-atlas-oft-activations/resolve/8c3980092313a4fcf53cf3870cf414ebef3bbace/libero_10/activations_20260131_072117/task_5/task5_trial0_activations.pt)

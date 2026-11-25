@@ -39,3 +39,8 @@ IEEE 직접 페이지는 접근 제약이 있어 publisher-deposited Crossref와
 ## Why This Paper Is Here — Researcher Interpretation
 
 현재 후보의 critic mismatch 대안을 검토할 직접 선행이다. 합성 행동 critic을 새 알고리즘으로 재주장하지 않도록 NEXT에 등록한다.
+
+## 공개 자료
+
+- 코드 — 확산 정책 앙상블의 불확실성 기반 잔차 탐색 · examples/residual_sim/sync_residual_diffusion_ensemble.py [배포 파일](https://raw.githubusercontent.com/lakshitadodeja/uncertainty_aware_residual_rl/8125f33dcf490d4cf93d57a27d3e1963a47f52ea/examples/residual_sim/sync_residual_diffusion_ensemble.py)
+- 가중치·학습 파라미터 — RoboMimic Can 기본 정책 · can_robomimic.pth [배포 파일](https://drive.google.com/file/d/1JTU2DVYRjbeNm0Ko2f1pM3xD7FoDq3fd/view)

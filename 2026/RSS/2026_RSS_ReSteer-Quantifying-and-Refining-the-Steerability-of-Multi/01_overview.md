@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, VLA, instruction-switching, steerability
+- Tags: multitask-policy, VLA, instruction-switching, steerability
 - Aliases: ReSteer
 - Official paper: https://roboticsproceedings.org/rss22/p143.html
 - Venue verification: https://roboticsproceedings.org/rss22/p143.html
@@ -42,3 +42,9 @@ LIBERO와 실제 로봇의 지시 전환을 평가한다. 공개 repository는 L
 ## Verification Boundary
 
 steerability score의 분모·switch timing·초기 능력, estimator와 실제 성공의 관계, 데이터 생성 비용, 제약 유지·철회가 평가에 포함되는 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 지시 전환 가능성 평가 · resteer/eval/steerability.py [배포 파일](https://raw.githubusercontent.com/ChenZhenY/ReSteer/7329c159319a346b7245a69c128e5d4940c0763b/resteer/eval/steerability.py)
+- 가중치·학습 파라미터 — 배포 표에서 ReSteer π0.5의 SteerGen·SRBC 체크포인트가 공개 예정으로 표시되어 있다. [저자 공개 안내](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/README.md)
+- 데이터 — 배포 표에서 SteerGen·SRBC 시연과 전환 상태 뱅크가 공개 예정으로 표시되어 있다. [저자 공개 안내](https://github.com/ChenZhenY/ReSteer/blob/7329c159319a346b7245a69c128e5d4940c0763b/README.md)

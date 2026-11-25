@@ -1,24 +1,16 @@
 # RICL: Adding In-Context Adaptability to Pre-Trained Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract/project 기반 — 본문 수동 확인 필요.
-> Source audit: 2026-11-02 공식 서지·abstract 및 저자 소개 확인. 실제 정독·코드 실행을 뜻하지 않는다.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
+> Source audit: 2026-11-25 원문 방법·평가 대조.
 
-## Reported Evaluation Scope
+## 평가 조건
 
-새 조작 과제의 소수 시연을 이용한 적응과 추가 fine-tuning을 비교한다. 공식 abstract의 개선 주장이며 개별 trial·split은 확인 필요다.
+RICL은 현재 세 카메라 영상·지시·로봇 상태에 검색한 시연의 관측과 행동 묶음을 붙인다. 검색 시연을 활용하는 능력은 먼저 지도학습한다. [PDF 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/sridhar25a/sridhar25a.pdf#page=4)
 
-근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/sridhar25a.html) · [저자 project](https://ricl-vla.github.io/).
+Franka DROID에서 훈련 시연 집합과 새 과제용 시연 집합의 역할이 다르다. 새 과제에서는 문맥만 주는 경우와 가중치도 미세조정하는 경우를 비교한다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/sridhar25a/sridhar25a.pdf#page=5)
 
-## Protocol and Reproducibility Boundary
-
-| 항목 | 이번 확인 범위 |
-|---|---|
-| 데이터·embodiment·task | 위 source가 명시한 범위만 확정. 이름 등장만으로 평가 역할을 추론하지 않음 |
-| Train/test split·trial·seed | 본문 수동 확인 필요 |
-| Metric 정의·main table·baseline/ablation | 본문 수동 확인 필요; 개선 주장과 비교 가능한 수치를 구분 |
-| Failure·negative result | 위에 명시한 내용 외에는 미확인; 실패가 없다는 뜻이 아님 |
-| 실행 재현 | 미실행; weights·assets·native runtime은 검증하지 않음 |
+기본 VLA의 기술 범위를 크게 벗어나는 과제는 소수의 문맥 시연만으로 배우기 어렵다고 저자가 적었다. [PDF 9쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/sridhar25a/sridhar25a.pdf#page=9)
 
 ## Paper-Specific Verification Questions
 

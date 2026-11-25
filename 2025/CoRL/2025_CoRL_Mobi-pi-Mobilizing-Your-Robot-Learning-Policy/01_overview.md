@@ -8,7 +8,7 @@
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: NEXT
-- Tags: Robotics, mobile-manipulation, policy-mobilization, 3d-gaussian-splatting, base-placement
+- Tags: viewpoint-selection, mobile-manipulation, policy-mobilization, 3d-gaussian-splatting, base-placement
 - Aliases: Mobi-pi, Mobi-π
 - Official paper: https://proceedings.mlr.press/v305/yang25b.html
 - Venue verification: https://proceedings.mlr.press/v305/yang25b.html
@@ -42,3 +42,9 @@ Mobile ALOHA의 whole-body 데이터와 MoTo의 이동–조작 연결을 보완
 ## Verification Boundary
 
 pose 후보와 collision/reachability 처리, 정책별 학습 시야와 데이터 접근, 장면 구축 비용, 실제 도착 상태·평가 분모을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 베이스 배치와 조작 평가 · mobipi/eval/eval_mobipi.py [배포 파일](https://raw.githubusercontent.com/yjy0625/mobipi/19b130b8ada3f7e029918449c12d433e9e629ca1/mobipi/eval/eval_mobipi.py)
+- 가중치·학습 파라미터 — 이동 베이스의 LeLaN 내비게이션 정책 · lelan_finetuned.pth [배포 파일](https://download.cs.stanford.edu/juno/mobipi/lelan/lelan_finetuned.pth)
+- 데이터 — 서랍 닫기용 고정 장면의 3D 가우시안 재구성 · close_drawer_layout0_style0.zip [배포 파일](https://download.cs.stanford.edu/juno/mobipi/gs/close_drawer_layout0_style0.zip)

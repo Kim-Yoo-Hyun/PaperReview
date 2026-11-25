@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
-- Authors: Yejin Kim, Wilbert Pumacay, Omar Rayyan, Max Argus, Winson Han, Eli Vanderbilt, Jordi Salvador, Abhay Deshpande, Rose Hendrix, Snehal Jauhri, Shuo Liu, Nur Muhammad Mahi Shafiullah, Maya Guru, Ainaz Eftekhar, Karen Farley, Donovan Clay, Jiafei Duan, Arjun Guru, Piper Wolters, Alvaro Herrasti, Ying-Chun Lee, Georgia Chalvatzaki, Yuchen Cui, Ali Farhadi, Dieter Fox, Ranjay Krishna
+- Authors: Yejin Kim, Wilbert Pumacay, Omar Rayyan, Max Argus, Winson Han, Eli VanderBilt, Jordi Salvador, Abhay Deshpande, Rose Hendrix, Snehal Jauhri, Shuo Liu, Nur Muhammad Mahi Shafiullah, Maya Guru, Arjun Guru, Ainaz Eftekhar, Karen Farley, Donovan Clay, Jiafei Duan, Piper Wolters, Alvaro Herrasti, Ying-Chun Lee, Georgia Chalvatzaki, Yuchen Cui, Ali Farhadi, Dieter Fox, Ranjay Krishna
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -42,3 +42,12 @@ MolmoSpaces는 실내 이동·고정형 및 이동 조작 정책을 다양한 �
 ## Verification Boundary
 
 asset license, 실제 지원 simulator별 기능, 장면 split, 정책별 co-training 여부을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 시뮬레이션 문 열기 과제의 계획기 · molmo_spaces/policy/solvers/opening_solver.py [배포 파일](https://raw.githubusercontent.com/allenai/molmospaces/67acef9a17bb8212a18aadfc8f62ff6171d84891/molmo_spaces/policy/solvers/opening_solver.py)
+- 데이터 — Isaac용 iTHOR 시뮬레이션 장면 자산 · isaac/scenes/ithor/20260121/shards/00000.tar [배포 파일](https://huggingface.co/datasets/allenai/molmospaces/resolve/5f802a46816ffc3520e59b5ef49fa8dafee8eeca/isaac/scenes/ithor/20260121/shards/00000.tar)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://www.roboticsproceedings.org/rss22/p091.pdf#page=1)

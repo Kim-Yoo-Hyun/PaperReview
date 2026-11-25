@@ -5891,7 +5891,19 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:0eea18b78c7e",
+      "resource_type": "code_or_project",
+      "name": "yuan-liu-lifelong-rft.github.io",
+      "url": "https://yuan-liu-lifelong-rft.github.io/",
+      "paper_ids": [
+        "pr-1121"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:0f1a819c78d9",
@@ -6275,7 +6287,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:1c2ab89c95e5",
@@ -6359,7 +6371,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:20cc38c2542d",
@@ -6383,7 +6395,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:2194038b22b8",
@@ -6817,7 +6829,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:2e811e227360",
@@ -6937,7 +6949,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:326d5555ec43",
@@ -7156,6 +7168,18 @@
       "verified_on": "2026-11-20"
     },
     {
+      "resource_id": "code:37bfef16742c",
+      "resource_type": "code_or_project",
+      "name": "human_to_robot",
+      "url": "https://www.pi.website/research/human_to_robot",
+      "paper_ids": [
+        "pr-1085"
+      ],
+      "evidence": "manifest_link",
+      "availability": "not_identified",
+      "verified_on": "2026-11-25"
+    },
+    {
       "resource_id": "code:37dda7e3af9a",
       "resource_type": "code_or_project",
       "name": "dust3r",
@@ -7225,7 +7249,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:3a6179a8d5d9",
@@ -7876,7 +7900,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:52b85d989ac3",
@@ -7969,6 +7993,18 @@
       "url": "https://github.com/robot-colosseum/robot-colosseum",
       "paper_ids": [
         "pr-1046"
+      ],
+      "evidence": "manifest_link",
+      "availability": "released",
+      "verified_on": "2026-11-25"
+    },
+    {
+      "resource_id": "code:55e361911e9f",
+      "resource_type": "code_or_project",
+      "name": "veritas",
+      "url": "https://github.com/princeton-prism/veritas",
+      "paper_ids": [
+        "pr-1120"
       ],
       "evidence": "manifest_link",
       "availability": "released",
@@ -8164,7 +8200,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:5c68b3316ba1",
@@ -8561,7 +8597,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:6586990d845d",
@@ -8863,7 +8899,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:6e4ee284f56b",
@@ -9056,7 +9092,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:759582020b33",
@@ -9068,7 +9104,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:76d8bb390b0c",
@@ -9236,7 +9272,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:7aabbce1f404",
@@ -9500,7 +9536,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:85e26dacaa94",
@@ -9634,7 +9670,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:8955da8515a8",
@@ -9694,7 +9730,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:8b10864fe675",
@@ -10572,7 +10608,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:a4b1294e6577",
@@ -10861,7 +10897,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:acb850b34d6f",
@@ -10885,7 +10921,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:adc16a96f325",
@@ -11389,8 +11425,8 @@
         "pr-1105"
       ],
       "evidence": "manifest_link",
-      "availability": "not_identified",
-      "verified_on": "2026-11-20"
+      "availability": "released",
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:bc4e9ef75339",
@@ -11546,7 +11582,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:c150e69b13a8",
@@ -12076,7 +12112,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:d64f7dd989cd",
@@ -12184,7 +12220,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:d7923ce7babc",
@@ -12544,7 +12580,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:e2cd762be301",
@@ -12592,7 +12628,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:e53dbec430d3",
@@ -12640,7 +12676,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:e66a2556cf45",
@@ -12953,7 +12989,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:ed4ff13cd7d6",
@@ -13073,7 +13109,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:efcb3a629bfa",
@@ -13133,7 +13169,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:f1a7ff291802",
@@ -13529,7 +13565,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:fc8a3542a1a9",
@@ -13565,7 +13601,7 @@
       ],
       "evidence": "manifest_link",
       "availability": "released",
-      "verified_on": "2026-11-20"
+      "verified_on": "2026-11-25"
     },
     {
       "resource_id": "code:fd28e0b973ee",

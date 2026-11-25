@@ -1,49 +1,21 @@
 # Force Policy: Learning Hybrid Force-Position Control Policy under Interaction Frame for Contact-Rich Manipulation
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
-> Source audit: 공식 abstract/project 수준; 실제 정독 및 코드 실행은 미확인.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
+> Source audit: 2026-11-25 원문 방법·평가 대조.
 
-## Evaluation in One Sentence
+## 평가 조건
 
-실제 contact-rich 조작과 새로운 형상·물성 객체를 평가한다.
+그림 3의 전역 정책은 5 Hz로 시각 특징과 행동을 생성한다. 50 Hz의 국소 정책은 손목 영상·말단 자세·힘/토크 이력을 이용해 힘을 제어할 축과 위치를 제어할 축, 목표 힘을 정한다. [PDF 5쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=5)
 
-## Evaluation Type and Scope
+Flexiv Rizon 4와 손목 6축 힘·토크 센서로 상자 뒤집기, 전기차 충전기 삽입, 스티커 제거를 시험했다(그림 4). [PDF 6쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=6)
 
-Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 필요 항목과 연구자가 제안한 실험을 paper-reported result로 합치지 않는다.
+표 II의 성공률은 단계별 누적 성공이며 마지막 단계까지 완료해야 과제 성공이다. [PDF 7쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=7)
 
-## Dataset / Benchmark Role
-
-실제 contact-rich 조작과 새로운 형상·물성 객체를 평가한다.
-
-Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Metrics and Success Definition
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Baselines and Fairness
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. Baseline identity, 같은 observation/action, demonstration/interaction, reward access와 compute 조건을 본문에서 대조한다.
-
-## Ablations and Sensitivity
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
-
-## Generalization and Failure Cases
-
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 frame label 생성과 수동 조정, 접촉 전환 조건, 정책·controller 주기을 점검한다.
-
-## Statistics, Efficiency, and Reproducibility
-
-Trials/seeds, confidence interval, checkpoint/commit, reset/timeout, hardware와 control latency는 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
+저자가 설명한 상호작용 좌표계의 범위는 안정된 접촉이다. 공개 체크포인트와 시연의 확인 범위는 상자 뒤집기 과제다. [PDF 8쪽](https://roboticsproceedings.org/rss22/p128.pdf#page=8)
 
 ## Proposed Evaluation — Researcher Interpretation
 
 관측과 controller를 맞춘 후 접촉 검출, frame 추정, force regulation의 실패를 각각 계측한다.
 
 이 실험은 실행하지 않았으며, 수치나 결론을 미리 부여하지 않는다.
-
-## Evidence Anchor
-
-[공식 paper/abstract](https://roboticsproceedings.org/rss22/p128.html) · [저자 project/code](https://force-policy.github.io/) · [공식 code](https://github.com/force-policy/ForcePolicy). Main table·appendix·negative result는 본문 수동 확인 필요.

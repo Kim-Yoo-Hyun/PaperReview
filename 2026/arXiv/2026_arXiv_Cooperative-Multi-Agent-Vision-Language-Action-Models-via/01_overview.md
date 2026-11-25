@@ -3,7 +3,7 @@
 > Evidence maturity: `FULL_TEXT_CHECKED`. 지정 본문 절만 확인; 전체 정독·재현 아님.
 
 - Year/Venue: 2026 / arXiv
-- Authors: Ruixiao Xu, Wong Lik Hang Kenny, Zhiqian Liu, Jianing Guo, Hanxiao Li, Kejian Shi, Shuning Zhang, Pu Feng, Yongjia Ma, Yuqing Ma, Kai Chen, Qi Dou, Yaodong Yang, Xianglong Liu, Simin Li
+- Authors: Ruixiao Xu, WONG Lik Hang Kenny, Zhiqian Liu, Jianing Guo, Hanxiao Li, Kejian Shi, Shuning Zhang, Pu Feng, Yongjia Ma, Yuqing Ma, Kai Chen, Qi Dou, Yaodong Yang, Xianglong Liu, Simin Li
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -34,3 +34,11 @@ CROSSPLAY에서 VLA+MARL 결합 자체의 신규성을 배제하는 가장 가�
 입력·행동은 [method](./03_method.md), 실제 평가 범위는 [evaluation](./04_evaluation.md)을 따른다. 자동 노트는 사용자의 읽기 완료 기록이 아니다.
 
 근거: [확인한 원문](https://arxiv.org/html/2609.36588v1), §4.2–4.3, §5, Appendix C.1.
+
+## 공개 자료
+
+- 코드 — 시뮬레이션의 다중 로봇 잠재 잡음 강화학습 · dsrl_pi0/examples/train_sim_ma.py [배포 파일](https://anonymous.4open.science/api/repo/mavla_rft-2BC0/file/dsrl_pi0/examples/train_sim_ma.py)
+
+## 판본과 출처
+
+저자 표기·순서는 표제면 기준이다. [표제면](https://arxiv.org/pdf/2609.36588v1#page=1)

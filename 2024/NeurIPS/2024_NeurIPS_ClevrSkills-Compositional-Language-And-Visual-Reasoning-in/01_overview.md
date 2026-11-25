@@ -8,7 +8,7 @@
 - Category: Benchmarks and Datasets
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
-- Tags: Robotics, compositional-reasoning, Benchmark, multimodal-instructions
+- Tags: manipulation, compositional-reasoning, Benchmark, multimodal-instructions
 - Aliases: ClevrSkills
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html
 - Venue verification: https://proceedings.neurips.cc/paper_files/paper/2024/hash/439539557e9ba0d04055773ff1f3241c-Abstract-Datasets_and_Benchmarks_Track.html
@@ -42,3 +42,8 @@ VIMA·VLABench와 함께 집합/수량 후보의 기존 조합 task와 평가 pr
 ## Verification Boundary
 
 task 생성의 정답 정보와 자동 입력, 부분집합 허용 범위, release/contact predicate, 조합 split의 학습 support을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 조합 과제용 시뮬레이션 전문가 · clevr_skills/solvers/ordered_solver.py [배포 파일](https://raw.githubusercontent.com/Qualcomm-AI-research/ClevrSkills/779aec6822abe79b65a66cbbdf7ecc868aa58b59/clevr_skills/solvers/ordered_solver.py)
+- 데이터 — Qualcomm이 배포한 ClevrSkills 기초 조작 과제 자료 · simple_tasks.zip [배포 파일](https://softwarecenter.qualcomm.com/api/download/software/dataset/AIDataset/ClevrSkills/simple_tasks.zip)

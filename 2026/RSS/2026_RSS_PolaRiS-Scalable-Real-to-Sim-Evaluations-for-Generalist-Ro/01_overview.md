@@ -8,7 +8,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: policy-evaluation, real-to-sim, 3DGS
+- Tags: policy-evaluation, real-to-sim, Gaussian Splatting
 - Aliases: PolaRiS
 - Official paper: https://roboticsproceedings.org/rss22/p062.html
 - Venue verification: https://roboticsproceedings.org/rss22/p062.html
@@ -42,3 +42,8 @@ SIMPLER·RoboCasa의 점수를 실제 개선으로 해석하기 전 필요한 �
 ## Verification Boundary
 
 평가 전에 허용된 co-training 데이터, 독립 실환경 trial, 장면 선택 편향을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 재구성한 장면에서 로봇 정책 평가 · src/polaris/environments/manager_based_rl_splat_environment.py [배포 파일](https://raw.githubusercontent.com/arhanjain/PolaRiS/129abc45f680559a7da62b9280fdb127b02b7275/src/polaris/environments/manager_based_rl_splat_environment.py)
+- 데이터 — 블록 쌓기 평가 장면의 재구성된 가우시안 · block_stack_kitchen/assets/g60_kitchen_table_zed/splat.ply [배포 파일](https://huggingface.co/datasets/owhan/PolaRiS-Hub/resolve/8c7e4103e266ef83d8b1ad2e9a63116edd5f155b/block_stack_kitchen/assets/g60_kitchen_table_zed/splat.ply)

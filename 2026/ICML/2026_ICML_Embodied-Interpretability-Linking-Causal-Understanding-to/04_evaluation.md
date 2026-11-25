@@ -1,18 +1,12 @@
 # Evaluation — Embodied Interpretability: Linking Causal Understanding to Generalization in Vision-Language-Action Models
 
 > Canonical metadata: [01_overview.md](./01_overview.md).
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 아래에 인용한 원문 절·표의 평가 조건을 대조했다.
 
-## Paper-Supported Evaluation Scope
+## 평가 조건
 
-공식 abstract는 manipulation에서 NMR과 일반화의 관계 및 기존 attribution 대비 설명 충실도를 보고한다. 로봇 종류·trial·정확한 split은 이번 확인 범위 밖이다.
+마스킹한 영상 영역이 행동 예측 오차에 미치는 영향을 ISS로 구한다. NMR은 과제와 무관하다고 분류한 영역에 귀속된 영향의 비율이다. [PDF 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26gz/zhang26gz.pdf#page=5)
 
-## Interpretation Boundary
+AGNOSTOS에서 기존 과제 3,600개 에피소드로 π0.5를 SFT하고 새 과제 575개 에피소드에서 오프라인으로 평가했다. 비교 기준은 attention score와 token norm을 포함한다(§5). [PDF 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26gz/zhang26gz.pdf#page=6)
 
-Abstract 기반 — 본문 확인 필요. Action error가 causal influence proxy가 되는 조건과 실제 return의 관계를 동일시할 수 없다.
-
-## Reproduction Status
-
-이번 작업의 정책 실행·학습은 0회다. 위에서 명시하지 않은 dataset 크기·split·trial·hardware·metric·baseline 수치는 미기록이며 논문 자체의 미보고를 뜻하지 않는다. Resource 자동 연결은 cue_only다.
-
-근거: [확인한 원문](https://proceedings.mlr.press/v306/zhang26gz.html), 공식 proceedings abstract; software landing.
+저자는 여러 행동이 타당할 때 하나의 참조 행동과의 오차가 행동 분포의 차이를 잘 대리하지 못할 수 있다고 밝혔다. [PDF 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26gz/zhang26gz.pdf#page=8)

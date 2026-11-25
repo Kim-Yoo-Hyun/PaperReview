@@ -42,3 +42,9 @@ SPRINT는 적은 수의 지시와 기존 오프라인 궤적으로 더 다양한
 ## Verification Boundary
 
 cross-trajectory 연결의 유효성, downstream adaptation 예산, 시뮬레이터와 실로봇의 서로 다른 행동 interface, code의 실제 공개 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 — 언어 조건부 조작 정책의 후속 학습 · sprint/finetune.py [배포 파일](https://raw.githubusercontent.com/clvrai/sprint/6bb74ad03defdab0c60ebdb07252d418815ce624/sprint/finetune.py)
+- 가중치·학습 파라미터 — SPRINT 사전학습 정책 모음 · SPRINT_release_pretrained_models.tar.gz [배포 파일](https://huggingface.co/datasets/jesbu1/boss_sprint_datasets/resolve/74e6e2bacbcfdc28e03818e37bc5564932a48a54/SPRINT_release_pretrained_models.tar.gz)
+- 데이터 — 저자가 배포한 SPRINT용 언어 재표기 학습 자료 · px_llama_13b.tar.gz [배포 파일](https://huggingface.co/datasets/jesbu1/boss_sprint_datasets/resolve/74e6e2bacbcfdc28e03818e37bc5564932a48a54/px_llama_13b.tar.gz)

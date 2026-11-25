@@ -7,7 +7,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: reinforcement-learning, expressive-policy, residual-policy, value-selection
+- Tags: Reinforcement Learning, expressive-policy, residual-policy, value-selection
 - Aliases: EXPO
 - Official paper: https://iclr.cc/virtual/2026/poster/10008723
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/d56a652ad743308b24b6c4d0e6411dd7-Abstract-Conference.html
@@ -39,3 +39,8 @@ EXPO는 모방학습 정책이 제시한 행동을 작은 확률적 정책이 �
 ## Why This Paper Is Here — Researcher Interpretation
 
 Residual/editor와 value 선택을 결합한 강한 직접 baseline이다. Q 선택·base 모방·editor RL이라는 조합 자체의 신규성 주장을 막는 NEXT다.
+
+## 공개 자료
+
+- 코드 — 행동 후보의 가치 비교와 편집 정책 학습 · expo/agents/sac/expo_learner.py [배포 파일](https://raw.githubusercontent.com/pd-perry/EXPO/bbd571306b413e05d5d4b01a6efa20352c2b891a/expo/agents/sac/expo_learner.py)
+- 데이터 — EXPO가 재배포한 MimicGen 조작 자료 · expo_mmgdatasets.zip [배포 파일](https://drive.google.com/file/d/1qemTmLkEkE17dFN6A2BJvVYLJBtLbN67/view)

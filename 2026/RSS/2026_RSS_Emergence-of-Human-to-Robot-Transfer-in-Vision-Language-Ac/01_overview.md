@@ -12,7 +12,7 @@
 - Aliases:
 - Official paper: https://roboticsproceedings.org/rss22/p072.html
 - Venue verification: https://roboticsproceedings.org/rss22/p072.html
-- Code/Project: not identified
+- Code/Project: https://www.pi.website/research/human_to_robot
 - Code: not_identified
 - Source audit: 2026-11-02 공식 proceedings/publisher의 서지·abstract와 저자 project/code 소개를 확인했다. 노트는 abstract/project 기반이며 본문 정독·native 실행을 뜻하지 않는다. 사용자 읽기 상태는 UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
@@ -40,3 +40,7 @@
 Open X-Embodiment와 사람 영상 기반 로봇 학습을 잇는 NEXT 데이터 조건 연구다. Cross-embodiment 전이를 보편적 성질로 가정하지 않도록 비교 기준을 추가한다.
 
 범위와 수치의 미확인 항목은 [평가 노트](./04_evaluation.md)에, 제안하는 반증 질문은 [insights](./05_insights.md)에 둔다.
+
+## 판본과 출처
+
+저자 프로젝트. [공식 페이지](https://www.pi.website/research/human_to_robot)
