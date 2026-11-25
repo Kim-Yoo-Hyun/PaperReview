@@ -1,5 +1,28 @@
 # LIBERO 서랍 실험 재현
 
+<a id="drawer-width"></a>
+
+## 같은 물체 위치에서 개방 폭만 바꾸기
+
+배치 2에서 이전 연구의 충돌 없는 그릇·접시 좌표를 그대로 쓴다. 모두 닫힘과 가운데·아래 각각 76 mm 및 원래의 완전 개방 폭을 만들어 다섯 조건을 비교한다. 각 복귀 자세에서 모두 닫힘과 두 완전 개방 상태의 물리 해시를 직전 원본과 대조한다. 76 mm에서는 닫힌 상태의 전체 적분 상태에서 해당 슬라이드 위치 하나만 달라야 한다. 정책 실행 전 물체의 탁자 지지, 충돌, 1초 정지 시 이동을 검사한다. [사전 설계](./drawer/drawer_width.json) · [물리 개입](./drawer_width_sim.py) · [채점](./drawer_width.py)
+
+같은 두 자세와 여덟 시드를 짝짓고, 다섯 조건을 순환한 뒤 모델을 새로 불러와 역순으로 반복한다. 15초와 30초에는 3초의 자세 복귀가 포함된다. 각 경로에서 정책이 실행한 540개 제어를 물리 재생한다. 당긴 장면의 명령은 같은 칸의 다른 폭에서, 닫힌 장면의 명령은 네 개의 당긴 장면 모두에서 재생한다.
+
+```sh
+recipe='work/research_topics/instruction_revision/재현 방법'
+archive="$recipe/results/2026-11-25-drawer-width"
+(cd "$archive" && sha256sum -c SHA256SUMS)
+sh "$recipe/resume.sh" verify-drawer-width "$archive"
+report_dir=$(mktemp -d)
+sh "$recipe/resume.sh" replay-drawer-width "$archive" "$report_dir/physical.json"
+# 같은 정책으로 다섯 조건을 새로 수집할 때
+sh "$recipe/resume.sh" drawer-width "$report_dir/new-study"
+```
+
+원본 수집 폴더와 압축본을 각각 새 컨테이너에서 재생했다. 재생 한 번에 원래 경로 160개와 다른 폭·장면에 적용한 경로 256개를 검증했다. 교차 경로에서는 총 138,240개 제어를 적용했다. 두 재생의 접촉·수납 추적, 제어별 물리 측정 해시와 종단 물리 상태가 일치했다. 원래 경로의 카메라 관측 17,280시점 중 수집 당시와 다시 렌더링한 영상이 다른 시점은 각각 8개와 13개였다. 원본 수집 코드와 해시는 압축본의 `sources/`와 `runtime.json`에 있다. [두 독립 재생 대조](./results/2026-11-25-drawer-width/physical_replay.json) · [파일 해시](./results/2026-11-25-drawer-width/SHA256SUMS)
+
+새 컴퓨터에서는 아래 설치·자산 절차로 로컬 Docker 이미지와 체크포인트를 준비한다. 보존한 원본을 재채점하거나 물리만 재생하는 단계에는 체크포인트가 필요하지 않다.
+
 <a id="drawer-location"></a>
 
 ## 위 칸 지시를 유지하고 가운데·아래 서랍의 개방 위치 바꾸기

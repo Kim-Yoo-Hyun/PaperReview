@@ -428,7 +428,7 @@ Gato/CLIP/CLIPort → PaLM-E/RT-1/RT-2 → MT-Opt/AutoRT data engine → Open X-
 
 ReSteer는 상태마다 지시 전환의 실행 가능성이 다름을 다룬다. Causeway는 지시 변경 뒤의 상태 접근 가능성을, How-level 평가는 수행 조건 준수를 다룬다. [ReSteer](../2026/RSS/2026_RSS_ReSteer-Quantifying-and-Refining-the-Steerability-of-Multi/01_overview.md) · [Causeway](../2026/arXiv/2026_arXiv_Causeway-Restoring-Task-Accessibility-for-Instruction-Swit/01_overview.md)
 
-LIBERO 배치 2의 위 칸 지시에서는 같은 팔 자세·물체 위치에서 아래 칸이 열려 있어도 닫힌 조건의 성공 명령을 재생하면 32/32회 위 칸에 넣었다. 그 열린 장면에서 정책을 그대로 실행하면 32/32회 아래 칸에 넣었다. 같은 명령을 어느 칸에 재생하느냐도 도착지에 영향을 주었다. 수납 칸 하나만으로 정책의 언어 이해나 목표 높이 선택을 판정할 수 있는지는 추가 대조가 필요하다. [서랍 위치·명령 교차 비교](../work/research_topics/instruction_revision/내용/README.md#drawer-location)
+LIBERO 배치 2에서 물체 위치와 위 칸 지시를 고정해도, 가운데나 아래 서랍을 76 mm 당기면 서랍·그릇 중 위 칸에 먼저 닿았고 약 160 mm에서는 그릇에 먼저 닿았다. 76 mm에서 수집한 명령은 넓힌 두 장면에서도 모두 위 칸 수납을 달성했다. 반대로 넓게 열린 장면의 명령을 좁은 장면에 재생하면 그릇이 첫 접촉인 채로 수납이 대부분 사라졌다. 같은 과제에서 관측에 반응해 선택한 행동과 동일한 행동의 물리적 결과를 구별할 수 있는 사례다. [고정 배치 실험과 양방향 재생](../work/research_topics/instruction_revision/내용/README.md#drawer-width)
 
 <a id="gap-selective-observation-2026"></a>
 

@@ -60,12 +60,28 @@ def write_measurements(run, metadata_file, stage):
     shutil.copyfile(run/'verification.json',stage/'verification.json')
 
 
+def figure_filename(result):
+    default = 'drawer_width.png' if 'width_comparisons' in result else 'middle_aperture.png'
+    name = result.get('figure_name', default)
+    assert name in ('middle_aperture.png', 'drawer_location.png', 'drawer_width.png')
+    return name
+
+
 def add_replay(stage, proof_file, figure):
     result, proof = read(stage/'verification.json'), read(proof_file)
     assert result['paths']==proof['paths']==len(proof['runs'])
-    assert proof['alternate_controls']==proof.get('alternatives_per_path',1)*sum(r['policy_controls'] for r in proof['runs'])
-    figure_name = result.get('figure_name','middle_aperture.png')
-    assert figure_name in ('middle_aperture.png','drawer_location.png')
+    if 'alternates' in proof['runs'][0]:
+        controls = 0
+        for run in proof['runs']:
+            if 'alternatives_per_path' in proof:
+                assert len(run['alternates']) == proof['alternatives_per_path']
+            for alternate in run['alternates'].values():
+                assert alternate['controls'] == run['policy_controls']
+                controls += alternate['controls']
+    else:
+        controls = sum(r['policy_controls'] for r in proof['runs'])
+    assert proof['alternate_controls'] == controls
+    figure_name = figure_filename(result)
     if 'standalone' in result:
         assert result['standalone']['paths']==proof['standalone']['paths']
     shutil.copyfile(proof_file,stage/'physical_replay.json')
@@ -99,8 +115,7 @@ def rerender_differences(first, second):
 
 def seal(archive, repeat_file, destination):
     checksums = {n:h for h,n in (line.split('  ',1) for line in (archive/'SHA256SUMS').read_text().splitlines())}
-    figure_name = read(archive/'verification.json').get('figure_name','middle_aperture.png')
-    assert figure_name in ('middle_aperture.png','drawer_location.png')
+    figure_name = figure_filename(read(archive/'verification.json'))
     assert set(checksums)=={'study.zip','verification.json','physical_replay.json',figure_name}
     assert all(sha((archive/n).read_bytes())==h for n,h in checksums.items())
     first,second = read(archive/'physical_replay.json'),read(repeat_file)

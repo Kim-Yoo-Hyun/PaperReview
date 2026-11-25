@@ -5,6 +5,12 @@
   "libero_goal": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
   "resteer": "https://github.com/ChenZhenY/ReSteer/tree/7329c159319a346b7245a69c128e5d4940c0763b",
   "openpi": "https://github.com/Physical-Intelligence/openpi/tree/215abfb217dbac7d5f1273282331b9b1866c0479",
+  "drawer_width": {
+    "protocol": "../재현 방법/drawer/drawer_width.json",
+    "verification": "../재현 방법/results/2026-11-25-drawer-width/verification.json",
+    "physical_and_cross_width_replay": "../재현 방법/results/2026-11-25-drawer-width/physical_replay.json",
+    "evidence": "../재현 방법/results/2026-11-25-drawer-width/study.zip"
+  },
   "drawer_location": {
     "protocol": "../재현 방법/drawer/drawer_location.json",
     "clearance": "../재현 방법/drawer_location_clearance.py",

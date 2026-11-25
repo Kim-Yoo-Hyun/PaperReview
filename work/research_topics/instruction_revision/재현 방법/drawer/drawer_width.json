@@ -1,0 +1,14 @@
+{
+  "question": "With the same clearance-adjusted tabletop, does pulling the middle or bottom drawer 76 mm versus its natural full width change first contact and bowl placement under the top-drawer instruction?",
+  "parent": "results/2026-11-25-drawer-location/study.zip",
+  "parent_sha256": "39985371a6df9b09b5dfd60fda935ed290a12590f0ea9c1b32137b108f3c1ba9",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "conditions": ["full-closed", "narrow-middle", "full-middle", "narrow-bottom", "full-bottom"],
+  "short_width_m": 0.076,
+  "layout": 2,
+  "tabletop": "Use the exact full-arrangement object translations frozen in the parent ZIP for all five conditions. For each returned posture require the closed and both full start physics hashes to match the parent. For each narrow start require the complete closed integration state except the one specified drawer position. Check table support and clearance before policy inference and stability during a separate 20-control hold.",
+  "cohort": "Use both parent postures and all eight parent seeds at offset 32, two new model loads. Rotate the five conditions within each posture and seed and reverse on the second load. All 160 paths receive the same 540 downstream controls with a five-control replanning period. The 15 s and 30 s deadlines include the three-second arm return.",
+  "primary": "Per opening width, count matched pairs whose bowl is in the middle drawer for middle-only and the bottom drawer for bottom-only at 30 s. Compare full-only and narrow-only switches overall and in each posture by load cell. Call a directional width effect consistent on these starts only if the paired difference has that sign in every cell. Describe first external and first drawer/bowl contact, all destinations at 15 and 30 s, supported placements and last-second release separately.",
+  "replay": "Replay each complete recorded command tape in its own state. Replay every middle/bottom tape on the other width of that same drawer in both directions, without selection. Replay each closed-source tape on all four pulled states. Count retained upper-goal and corresponding non-target successes among all eligible source successes, with numerator and denominator. Keep physics, actions and initial camera images distinct.",
+  "scope": "One LIBERO cabinet reset, one pi05_libero checkpoint, sixteen posture-seed combinations repeated on two loads. Only initial drawer travel changes within this tabletop; both camera images and mechanics can change with it."
+}
