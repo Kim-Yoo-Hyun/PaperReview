@@ -88,8 +88,10 @@ def prepare_start(out, arm, mode):
     return dict(geometry=geometry, renderer=renderer)
 
 
-def check_first(out, arm, mode):
+def check_first(out, arm, mode, *, prepare_fn=None):
     from drawer_location_sim import LocationCabinet, branch
+    if prepare_fn is None:
+        prepare_fn = branch
     from drawer_sim import observe
     from drawer_view_render import ViewSchedule
     from middle_aperture_sim import environment, restore
@@ -99,7 +101,7 @@ def check_first(out, arm, mode):
     try:
         scene = LocationCabinet(env)
         common = restore(env, scene, arm, out, donors_file=study['donors'])
-        branch(env, scene, common, mode, BASE['lead'], corrections=read(out/'clearance.json')['arrangements'][arm])
+        prepare_fn(env, scene, common, mode, BASE['lead'], corrections=read(out/'clearance.json')['arrangements'][arm])
         bank = read(out/'camera_inputs.json')['images'][arm]
         result = {}
         for name, indices in [('self', []), ('opposite', [0])]:
@@ -113,10 +115,10 @@ def check_first(out, arm, mode):
         env.close()
 
 
-def subprocess_starts(out, stage, modes):
+def subprocess_starts(out, stage, modes, *, script=SCRIPT):
     cells = [(a, m) for a in LAYOUT for m in modes]
     def one(cell):
-        output = subprocess.check_output([sys.executable, str(PACKET/SCRIPT), str(out), stage, *cell], text=True)
+        output = subprocess.check_output([sys.executable, str(PACKET/script), str(out), stage, *cell], text=True)
         return json.loads(output.strip().splitlines()[-1])
     with ThreadPoolExecutor(max_workers=2) as pool:
         return dict(zip(cells, pool.map(one, cells), strict=True))
@@ -218,9 +220,9 @@ def validate(out, qual):
     return starts, dict(images=images, changed_pixels=changes)
 
 
-def checked_inputs(out):
+def checked_inputs(out, *, validate_fn=validate):
     qual = read(out/'qualification.json')
-    starts, bank = validate(out, qual)
+    starts, bank = validate_fn(out, qual)
     assert qual['starts'] == starts and read(out/'camera_inputs.json') == bank
     for arm in LAYOUT:
         for mode in HOSTS:

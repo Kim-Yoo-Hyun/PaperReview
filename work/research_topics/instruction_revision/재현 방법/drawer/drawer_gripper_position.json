@@ -1,0 +1,17 @@
+{
+  "question": "Does moving the gripper to the opposite layout's starting XYZ transfer the late visual effect on first contact at a fully open bottom drawer?",
+  "parent": "results/2026-11-26-drawer-bowl-position/study.zip",
+  "parent_sha256": "ea9dff70dba4a8e9d8ed2e13e2f7a3211359fb47c33344b598727c03e2db6673",
+  "parent_verification_sha256": "a77971b2c41036c12265216d1ca3602a5067d43c76ba3816c2cf4e9cf5c0db36",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "positions": ["native", "crossed"],
+  "exchange_indices": {"self": [], "late": [2, 3], "four": [0, 1, 2, 3]},
+  "camera_width_m": 0.076,
+  "figure": "drawer_gripper_position.png",
+  "paired_arms": [["drawer-1-2-k0", "drawer-1-3-k0"], ["drawer-1-2-k1", "drawer-2-3-k0"]],
+  "limits": {"target_mm": 0.5, "orientation_deg": 0.1, "finger_gap_mm": 0.2, "joint_speed_rad_s": 0.01, "object_mm": 0.01, "drawer_mm": 0.01},
+  "return": "Keep the native prefix, eight clearance commands, total of 60 return controls, cosine ramp, gains and open-finger command. Native uses its original seven-joint target. Crossed solves for the other arm's archived handoff XYZ displacement and its own command orientation in detached forward kinematics at the native target. Index-match the two archived donor arms per layout. In the live simulation move the robot only by physical controls. Use the exact archived native object shifts and fully open bottom width in both arms. Save achieved XYZ, orientation, fingers, joint positions/velocity, contact/support, object and drawer movement, proprioception and both camera images.",
+  "cohort": "Use the same 384 full-width paths, 20 Hz, 540 policy controls per path, upper-drawer instruction, four archived donors, three schedules, eight shared seeds, one checkpoint and two independently loaded processes, reversing scheduled order. Each 15/30 s deadline includes the three-second return. Qualify physically prepared matched 76 mm camera references before inference.",
+  "primary": "Pair late vs own-width first contacts including no contact within each arm, seed, position and load. Compare that change across positions within each layout. Predicted signs: layout 2 decreases, layout 3 increases. Also count each posture by load separately, individual target transitions, and whether the late contact matches the full-second exchange when the two controls differ.",
+  "secondary": "Measure each contact and destination at 15/30 seconds, agreement with the historical native return, paired reloads and two command replays. Report whether the own-width reference itself changes. The gripper intervention changes the wrist view, proprioception and arm configuration together."
+}

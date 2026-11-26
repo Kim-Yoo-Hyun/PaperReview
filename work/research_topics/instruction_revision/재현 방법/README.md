@@ -1,5 +1,55 @@
 # LIBERO 서랍 실험 재현
 
+<a id="drawer-gripper-position"></a>
+
+## 아래 서랍 앞에서 그리퍼의 출발 위치 교환
+
+LIBERO-Goal 배치 2와 3의 두 복귀 자세를 순서대로 짝지었다. 각 자세에서 이전 실험의 서랍 열기 160개 제어를 재생했다. 이후 두 조건 모두 같은 방향으로 물러나는 8개 제어와, 관절 목표로 돌아가는 52개 제어를 사용했다. 원래 위치 대조에는 기존 관절 목표를 썼다. 옮긴 조건에서는 상대 배치의 그리퍼 위치까지 필요한 변위를 계산하고, 원래 손목 방향을 유지하는 관절 목표를 별도의 MuJoCo 상태에서 역기구학으로 구했다. 실제 장면에서는 두 조건 모두 관절 제어와 같은 손가락 열기 명령으로 이동했다. 복귀 뒤 그릇·접시와 아래 서랍에는 각 자세의 원래 설정을 적용했다. [사전 설계](./drawer/drawer_gripper_position.json) · [관절 목표와 검증 코드](./drawer_gripper_position_starts.py)
+
+네 자세에서 완전히 열린 아래 서랍과 영상 기준용 76 mm 서랍을 각각 준비해 총 16개 시작 상태를 만들었다. 독립 예비 실행과 본 수집에서 16개 상태의 물리 해시와 외부·손목 영상이 모두 일치했다. 원래 위치의 두 폭에서 얻은 기준 영상 16장도 이전 보관본과 일치했다. 아래 서랍의 실제 완전 개방 폭은 159.84–159.92 mm였다. 팔을 움직인 두 조건에서 복귀 도중 물체·서랍 좌표의 최대 차이는 0 mm였다. 시작 때 그릇과 접시는 탁자에 지지됐고 그리퍼나 서랍에 닿지 않았다. 별도의 1초 정지 검사에서도 물체·서랍 이동은 0 mm였다. [상태·속도·지지·영상별 픽셀 실측](./results/2026-11-26-drawer-gripper-position/verification.json)
+
+아래 서랍이 실제로 완전히 열린 장면에서 같은 지시와 체크포인트로 384경로를 실행했다. 실제 폭을 유지하거나, 정책 시작 후 0.5–1초 또는 0–1초에 두 카메라에 76 mm의 폭을 보여줬다. 개입할 때마다 현재 장면을 복제해 아래 서랍의 슬라이드만 바꿔 영상을 그렸다. 첫 과제 접촉 이후에는 실제 영상을 보냈다. 제어는 20 Hz, 정책 질의는 다섯 제어마다 한 번이다. 15·30초 수납 시계에는 팔 복귀 3초가 포함된다. 자세별 여덟 시드를 두 번째 모델 실행에서 역순으로 배정했다. [실행·채점 코드](./drawer_gripper_position.py)
+
+```sh
+recipe='work/research_topics/instruction_revision/재현 방법'
+archive="$recipe/results/2026-11-26-drawer-gripper-position"
+(cd "$archive" && sha256sum -c SHA256SUMS)
+sh "$recipe/resume.sh" verify-drawer-gripper-position "$archive"
+report_dir=$(mktemp -d)
+sh "$recipe/resume.sh" replay-drawer-gripper-position "$archive" "$report_dir/replay.json"
+# 체크포인트에서 정책을 새로 실행할 때
+sh "$recipe/resume.sh" drawer-gripper-position "$report_dir/new-study"
+```
+
+그리퍼가 실제 이동한 거리는 30.003–30.006 mm, 목표 위치 오차는 최대 0.00682 mm였다. 원래 자세 대비 방향 차이는 최대 0.00265°, 두 손가락 간격 차이는 최대 0.00470 mm였다. 시작 시점 그리퍼의 병진 속력은 0.094–0.147 mm/s, 각속력은 0.120–0.181°/s였다. 16개 출발 상태를 다시 복원해 그리퍼 사이트의 야코비안과 관절계 속도의 곱을 MuJoCo의 사이트 속도와 대조했다. 완전 개방 장면에서 위치를 교환하면 224×224 영상 중 외부 카메라는 3,220–3,226픽셀, 손목 카메라는 41,907–42,034픽셀이 달라졌다. 원래 관절 위치·속도와 여덟 성분의 정책 상태, 두 속도 계산과 이미지 해시는 보관본의 `preparation/`과 `audit/`에 있다. [원본과 실행 환경](./results/2026-11-26-drawer-gripper-position/study.zip)
+
+정책에 지시·상태·영상·난수가 의도대로 전달됐는지 41,472개 수신 기록을 검산했다. 실제 폭 대조와 뒤 구간 교환 경로의 첫 두 질의와 첫 열 제어는 128/128쌍에서 같았다. 첫 네 질의의 1,536시점에서 장면 물리 해시와 자기 폭 영상을 확인했고, 배정한 768질의 모두에서 76 mm 영상이 전달됐다. 자기 영상을 맞추려고 다시 그린 시도 14회에서 관측한 차이는 카메라당 최대 한 픽셀이었다. 별도 코드가 384경로의 그리퍼 접촉 지오메트리와 서랍 영역 좌표로 첫 접촉과 수납을 다시 계산했다. [채점·렌더링 검사](./results/2026-11-26-drawer-gripper-position/verification.json)
+
+원래 위치에서 수집한 192경로의 시작 물리, 첫 서버 입력과 난수는 이전 그릇 실험의 원래 위치와 전부 일치했다. 첫 다섯 제어는 192쌍 모두 소폭 달랐다. 대응쌍별 최대 성분 차이의 중앙값은 0.00165, 최댓값은 0.00247이었다. 첫 접촉 대상은 178/192쌍, 15초 점유는 190/192쌍, 30초 점유는 172/192쌍에서 일치했다. 뒤 구간이 실제 폭 대조의 첫 접촉을 바꾼 빈도는 두 수집 모두 배치 2에서 32/32, 배치 3에서 0/32였다. 같은 체크포인트·이미지·라이브러리에서 발생한 출력 차이의 원인은 이 비교만으로 특정할 수 없다. [이전 연구의 수신·명령 원본](./results/2026-11-26-drawer-bowl-position/study.zip) · [같은 입력의 제어 비교](./results/2026-11-26-drawer-gripper-position/independent_repeat.zip)
+
+본 수집의 두 모델 프로세스는 같은 컨테이너의 JAX 컴파일 캐시 경로를 사용했다. 192개 대응쌍 모두에서 첫 20개 제어, 첫 접촉 대상, 15초·30초 점유가 같았고, 종단 물리 해시는 186쌍이 같았다. 최초 수집 폴더와 압축 보관본에서 각 384경로의 저장 명령을 한 번씩 재생했다. 두 번 모두 207,360개 후속 제어의 접촉·점유 기록과 모든 종단 물리 해시가 수집본과 일치했다. 재렌더링 차이는 41,472질의 중 각각 18회와 16회였으며, 첫 네 질의 중에는 각 1회였다. [두 물리 재생의 경로별 기록](./results/2026-11-26-drawer-gripper-position/physical_replay.json)
+
+이전 수집과의 첫 출력 차이를 점검하기 위해 별도 Docker 컨테이너와 빈 JAX 컴파일 캐시로 체크포인트를 한 번 더 불러왔다. 두 배치·두 자세·두 위치에서 짝수 시드 0·2·4·6의 실제 폭 대조와 뒤 구간 교환을 다시 수집했다. 64경로의 첫 서버 입력·난수가 본 수집과 같았고, 처음 다섯 제어의 최대 성분 차이는 0.00391이었다. 개별 첫 접촉 대상은 61/64, 15초 점유는 64/64, 30초 점유는 60/64경로에서 같았다. 같은 위치에서 뒤 구간이 첫 접촉을 바꿨는지에 대한 판정은 32/32쌍에서 재현됐다. 배치 2는 원래 위치 8/8 → 옮긴 위치 0/8, 배치 3은 0/8 → 6/8이었다. 이 64경로의 명령 34,560개도 재생해 물리 기록과 종단을 확인했다. 재렌더링 차이는 6,912질의 중 2회였다. [독립 반복 코드](./repeat_gripper_position.py) · [보조 수집·재생·이전 수집 비교](./results/2026-11-26-drawer-gripper-position/independent_repeat.zip) · [전체 체크섬](./results/2026-11-26-drawer-gripper-position/SHA256SUMS)
+
+독립 반복을 재채점하려면 저장소 루트에서 다음 명령을 실행한다. 새로 수집할 때는 위의 `drawer-gripper-position`으로 만든 원본 폴더를 사용한다.
+
+```sh
+packet=$(cd "$recipe" && pwd)
+image=paper-revision-p0:7329c159
+record=/packet/results/2026-11-26-drawer-gripper-position
+docker run --rm --network none -v "$packet:/packet:ro" \
+  --entrypoint /opt/resteer/.venv/bin/python "$image" \
+  /packet/repeat_gripper_position.py verify "$record" "$record/independent_repeat.zip"
+
+# 새 GPU 프로세스와 빈 컨테이너 캐시로 짝수 시드 64경로를 다시 수집할 때
+docker run --rm --network none --hostname localhost --gpus device=0 --shm-size 2g \
+  -e CUDA_VISIBLE_DEVICES=0 -e MUJOCO_EGL_DEVICE_ID=0 -e JAX_COMPILATION_CACHE_DIR=/tmp/gripper-repeat-jit \
+  -e REVISION_IMAGE_ID="$(docker image inspect --format '{{.Id}}' "$image")" \
+  -v paper-revision-p0-data:/data:ro -v "$packet:/packet:ro" -v "$report_dir:/trial" \
+  --entrypoint /opt/resteer/third_party/openpi/.venv/bin/python "$image" \
+  /packet/repeat_gripper_position.py collect /trial/new-study /trial/independent
+```
+
 <a id="drawer-bowl-position"></a>
 
 ## 두 배치에서 그릇의 시작 위치 교환

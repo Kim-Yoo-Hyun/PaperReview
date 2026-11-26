@@ -4,11 +4,11 @@
 
 ## 최근 실험
 
-아래 서랍을 약 160 mm 연 채 정책 시작 후 0.5–1초에 76 mm로 보여주면, 첫 접촉이 바뀐 경우는 배치 2에서 32/32쌍, 배치 3에서 0/32쌍이었다. 두 배치에서 그릇 중심 위치만 9.4 mm 서로 바꾸고 다시 측정해도 각각 30/32쌍과 0/32쌍이었다. 달라진 두 쌍은 같은 자세·시드를 두 번 실행한 결과다. [접촉·수납과 검증 범위](./work/research_topics/instruction_revision/내용/README.md#drawer-bowl-position) · [그릇 위치 비교 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-bowl-position/drawer_bowl_position.png)
+아래 서랍을 약 160 mm 연 채 정책 시작 후 0.5–1초에 두 카메라에 76 mm로 보여줬다. 그리퍼 출발 위치를 두 배치 사이에서 약 30 mm 교환하자, 이 영상으로 첫 접촉이 바뀐 경우는 배치 2에서 **32/32 → 0/32쌍**, 배치 3에서 **0/32 → 26/32쌍**이 됐다. 실제 폭을 계속 보여준 대조는 네 조건 모두 그릇에 먼저 닿았다. [접촉·수납과 해석 범위](./work/research_topics/instruction_revision/내용/README.md#drawer-gripper-position) · [위치별 대응쌍 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-gripper-position/drawer_gripper_position.png)
 
 | 하려는 일 | 시작점 |
 |---|---|
-| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-bowl-position) |
+| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-gripper-position) |
 | 후속 실험의 대조 조건 확인 | [다음 작업](./TODO.md) |
 | 1,260편의 논문 검색 | [분야별 목록](./PAPER.md) · [태그·별칭 색인](./research/REGISTRY_INDEX.csv) |
 | 정독 순서·기록·분야별 비교 | [논문 읽기](./research/README.md) · [7개 분야의 합성](./synthesis/README.md) |

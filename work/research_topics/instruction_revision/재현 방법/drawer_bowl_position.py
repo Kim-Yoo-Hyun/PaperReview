@@ -30,7 +30,7 @@ def sessions():
     return entries
 
 
-def run_path(out, entry, replaying):
+def run_path(out, entry, replaying, **run_options):
     from drawer_location_sim import run
     from drawer_view_render import ViewSchedule
 
@@ -39,20 +39,23 @@ def run_path(out, entry, replaying):
     factory = partial(ViewSchedule, drawer='bottom', width=DESIGN['camera_width_m'], indices=INDICES[entry['view']],
                       limit=LIMIT, bank=bank[mode], opposite_bank=bank[alternate(mode)], initial_attempts=8)
     return run(out, entry, replay=replaying, view_factory=factory, cohort=live_study(out, LAYOUT[arm]),
-               arrangements=read(out/'clearance.json')['arrangements'][arm])
+               arrangements=read(out/'clearance.json')['arrangements'][arm], **run_options)
 
 
-def collect(out):
+def collect(out, design_file=DESIGN_FILE, script=SCRIPT, *, scorer=None, extra_sources=()):
+    design = read(PACKET / design_file)
     from run_atomic import SIM_PYTHON
     from run_stove_layouts import initialize_study
     from run_stove_pose import policy_block
 
-    with ZipFile(archive_for(3)) as z:
+    path = PACKET / design['parent']
+    assert sha(path) == design['parent_sha256']
+    with ZipFile(path) as z:
         sources = list(json.loads(z.read('runtime.json'))['sources'])
     os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] = 'false'
-    initialize_study(out, DESIGN, [*sources, DESIGN_FILE, SCRIPT, 'drawer_bowl_position_starts.py', 'plot_drawer_bowl_position.py'],
+    initialize_study(out, design, [*sources, design_file, script, 'drawer_bowl_position_starts.py', 'plot_drawer_bowl_position.py', *extra_sources],
                      key_count=BASE['key_offset'] + TASK['extension']//PERIOD)
-    sim = [SIM_PYTHON, str(PACKET/SCRIPT), str(out)]
+    sim = [SIM_PYTHON, str(PACKET/script), str(out)]
     subprocess.run([*sim, 'prepare'], check=True)
     entries = sessions()
     write_json(out/'sessions.json', entries)
@@ -60,7 +63,7 @@ def collect(out):
         subset = [e for e in entries.values() if e['block'] == block]
         policy_block(out, sim, subset, f'block-{block}', f'policy-{block}.log', workers=5)
         print(f'Completed model load {block} with {len(subset)} paths', flush=True)
-    write_json(out/'verification.json', score(out))
+    write_json(out/'verification.json', (scorer or score)(out))
 
 
 def direction(cells, view):
@@ -129,9 +132,10 @@ def layout_summary(layout, entries, paths):
                 reload_agreement={**agreement(repeats),'final_physics':sum(a['final_physics']==b['final_physics'] for a,b in repeats)})
 
 
-def score(out):
+def score(out, *, design_file=DESIGN_FILE, inputs_fn=checked_inputs):
+    design = read(PACKET/design_file)
     src, runtime = out/'sources', read(out/'runtime.json')
-    assert read(src/DESIGN_FILE) == DESIGN == read(out/'design.json')
+    assert read(src/design_file) == design == read(out/'design.json')
     assert all(sha(src/n) == h for n,h in runtime['sources'].items())
     assert digest(runtime['checkpoint']) == BASE['checkpoint_manifest_sha256']
     check_freeze(src)
@@ -144,8 +148,8 @@ def score(out):
     order = lambda e: (e['layout'],e['arm'],e['mode'],e['view'],e['key'])
     assert [order(e) for e in a] == [order(e) for e in reversed(b)]
     keys = read(out/'rng.json')
-    assert digest(keys) == DESIGN['rng_sha256']
-    qual, bank = checked_inputs(out)
+    assert digest(keys) == design['rng_sha256']
+    qual, bank = inputs_fn(out)
     geometry = {i: contact_geometry(qual['geometry'][str(i)]) for i in STUDIES}
     preps = {(arm,m): tape_for(out,arm,m) for arm in LAYOUT for m in MODES}
     paths, seen, raster = {}, set(), Counter()
@@ -173,14 +177,15 @@ def score(out):
     expected = {'2':-1,'3':1}
     overall = all(summaries[i]['late']['crossed_minus_native']*sign > 0 for i,sign in expected.items())
     every = all(row['crossed_minus_native']*expected[i] > 0 for i,s in summaries.items() for row in s['by_posture_load'].values())
-    return dict(figure_name=DESIGN['figure'], paths=len(paths), policy_queries=sum(e['queries'] for e in entries.values()),
+    return dict(figure_name=design['figure'], paths=len(paths), policy_queries=sum(e['queries'] for e in entries.values()),
                 changed_camera_pixels=bank['changed_pixels'], physical_starts=qual['starts'], render_checks=LIMIT*len(paths),
                 raster_retries=dict(raster), exchanged_queries=sum(len(r['exchanged']) for r in paths.values()),
                 early_cutoffs=sum(r['exchanged'] != r['assigned'] for r in paths.values()),
                 transfer_in_predicted_directions=overall, transfer_in_every_posture_load=every, layouts=summaries, paths_by_session=paths)
 
 
-def main():
+def main(*, script=SCRIPT, label='bowl-position', prepare_cell=prepare_start, first_cell=check_first,
+         prepare_study=prepare, collect_study=collect, path_fn=run_path, score_fn=score):
     parser = argparse.ArgumentParser()
     parser.add_argument('folder', type=Path)
     parser.add_argument('stage', choices=('collect','prepare','prepare-start','check-first','verify','run','replay'),
@@ -191,26 +196,26 @@ def main():
     out = args.folder
     if args.stage in ('prepare-start', 'check-first'):
         arm, mode = args.arguments
-        fn = prepare_start if args.stage == 'prepare-start' else check_first
+        fn = prepare_cell if args.stage == 'prepare-start' else first_cell
         print(json.dumps(fn(out, arm, mode)))
     elif args.stage == 'prepare':
-        prepare(out)
+        prepare_study(out)
     elif args.stage == 'collect':
-        collect(out)
+        collect_study(out)
     elif args.arguments:
         name, = args.arguments
         assert args.stage in ('run','replay')
-        report = run_path(out, read(out/'sessions.json')[name], args.stage == 'replay')
+        report = path_fn(out, read(out/'sessions.json')[name], args.stage == 'replay')
         if report is not None:
             print(json.dumps(report))
     else:
         assert args.stage in ('verify','replay')
         with unpack(args.folder) as raw:
-            result = score(raw)
+            result = score_fn(raw)
             assert result == read(out/'verification.json')
             entries = sessions()
             if args.stage == 'replay':
-                report = replay(raw, script=SCRIPT, entries=entries, workers=6)
+                report = replay(raw, script=script, entries=entries, workers=6)
                 check_replayed_paths(raw, report, entries, {})
                 if args.output:
                     if args.output.exists():
@@ -223,7 +228,7 @@ def main():
                 check_replayed_paths(raw, report, entries, {})
                 if 'archive_repeat' in report:
                     check_archive_repeat(out, raw, report, entries)
-            print(f"Verified {result['paths']} bowl-position paths and {result['policy_queries']} receipts", flush=True)
+            print(f"Verified {result['paths']} {label} paths and {result['policy_queries']} receipts", flush=True)
 
 
 if __name__ == '__main__':

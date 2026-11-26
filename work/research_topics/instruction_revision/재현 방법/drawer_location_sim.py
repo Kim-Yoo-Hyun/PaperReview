@@ -79,12 +79,12 @@ def branch(env, scene, common, mode, length, *, corrections=None):
     return tape
 
 
-def run(out, entry, replay=False, *, first_images=None, view_factory=None, cohort=COHORT, arrangements=None):
+def run(out, entry, replay=False, *, first_images=None, view_factory=None, cohort=COHORT, arrangements=None, prepare_fn=branch):
     if arrangements is None:
         arrangements = read(out/'clearance.json')['arrangements']
     return trajectory(out, entry, replay=replay, open_env=partial(environment, layout=cohort['layout']),
                       restore_prefix=partial(restore, donors_file=cohort['donors']),
-                      prepare_fn=partial(branch,corrections=arrangements), scene_type=LocationCabinet,
+                      prepare_fn=partial(prepare_fn,corrections=arrangements), scene_type=LocationCabinet,
                       first_images=first_images, view_factory=view_factory)
 
 

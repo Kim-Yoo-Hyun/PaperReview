@@ -10,11 +10,13 @@ import numpy as np
 
 
 def plot(folder, output):
-    layouts = json.loads((folder/'verification.json').read_bytes())['layouts']
+    report = json.loads((folder/'verification.json').read_bytes())
+    layouts = report['layouts']
+    subject = 'gripper' if report['figure_name'] == 'drawer_gripper_position.png' else 'bowl'
     data = [layouts[i]['late'] for i in ('2','3')]
     fig, (bars, table) = plt.subplots(1, 2, figsize=(10.8, 3.8), gridspec_kw={'width_ratios':[1,1.15]})
     fig.subplots_adjust(left=.11, right=.98, top=.70, bottom=.24, wspace=.34)
-    fig.suptitle('Does the first-contact effect follow the bowl position?', fontsize=16, y=.97)
+    fig.suptitle(f'Does the first-contact effect follow the {subject} position?', fontsize=16, y=.97)
     for i,(key,label,color) in enumerate([('native_changed','Original position','#216b70'),
                                           ('crossed_changed','Other layout’s position','#ba6030')]):
         for y,row in enumerate(data):
