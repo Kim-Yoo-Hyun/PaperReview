@@ -149,7 +149,7 @@ def qualify(out):
     return write
 
 def trajectory(out, entry, replay=False, *, open_env=drawer_environment, restore_prefix=restore, prepare_fn=prepare,
-               scene_type=Scene, first_images=None):
+               scene_type=Scene, first_images=None, view_factory=None):
     arm, mode, name = entry['arm'],entry['mode'],entry['session']
     length = entry['lead']
     reference = read(out/'preparation'/f'{arm}-{mode}-{length}.json')
@@ -161,6 +161,7 @@ def trajectory(out, entry, replay=False, *, open_env=drawer_environment, restore
         assert common == reference['common'] and state_hash(capture_state(env)) == reference['donor_physics']
         prep = prepare_fn(env,scene,common,mode,length)
         assert all(value == reference[key] for key,value in prep.items())
+        views = view_factory(env, scene) if view_factory is not None else None
         path = out/'paths'/(name+'.json')
         saved = read(path) if replay else None
         if not replay:
@@ -179,10 +180,14 @@ def trajectory(out, entry, replay=False, *, open_env=drawer_environment, restore
                     sample['sent'] = first_images
                     for camera, signature in first_images.items():
                         query[camera] = frame(out, signature)
+            if views is not None:
+                views.apply((tick-length)//period, query, sample, data['rows'])
             if replay:
                 old = saved['queries'][(tick-length)//period]
                 assert (tick,sample['physics'],sample['state']) == (old['tick'],old['physics'],old['state'])
-                if sample['live'] != old['live']:
+                # Count this query once if either native or delivered pixels changed.
+                rendered_difference = views is not None and views.compare_replay(sample, old)
+                if sample['live'] != old['live'] or rendered_difference:
                     changed.append(tick)
                 commands = [r['action'] for r in saved['rows'][tick-length:tick-length+period]]
             else:

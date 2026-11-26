@@ -79,11 +79,11 @@ def branch(env, scene, common, mode, length, *, corrections=None):
     return tape
 
 
-def run(out, entry, replay=False, *, first_images=None):
+def run(out, entry, replay=False, *, first_images=None, view_factory=None):
     return trajectory(out, entry, replay=replay, open_env=partial(environment, layout=COHORT['layout']),
                       restore_prefix=partial(restore, donors_file=COHORT['donors']),
                       prepare_fn=partial(branch,corrections=read(out/'clearance.json')['arrangements']), scene_type=LocationCabinet,
-                      first_images=first_images)
+                      first_images=first_images, view_factory=view_factory)
 
 
 def replay_all_scenes(out, entry):

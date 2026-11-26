@@ -134,7 +134,7 @@ def qualified(out):
     return selected,used,base,keys
 
 
-def check_receipts(out,e,tape,keys,seen,first,*,first_images=None):
+def check_receipts(out,e,tape,keys,seen,first,*,first_images=None,sent_by_tick=None):
     wire = [json.loads(line) for line in (out/e['receipts']).read_bytes().splitlines()]
     period = PLAN['replan_every']
     assert len(wire)==len(tape['queries'])==e['queries'] and len(tape['rows'])==len(wire)*period
@@ -142,7 +142,10 @@ def check_receipts(out,e,tape,keys,seen,first,*,first_images=None):
     for i,(sample,rec) in enumerate(zip(tape['queries'],wire,strict=True)):
         assert sample['tick']==e['lead']+i*period and rec['prompt']==e['source']
         expected = sample['live']
-        if i == 0 and first_images is not None:
+        if sent_by_tick is not None:
+            assert first_images is None
+            expected = sent_by_tick.get(sample['tick'], expected)
+        elif i == 0 and first_images is not None:
             assert expected == first['live'] and sample['sent'] == first_images
             expected = first_images
         elif first_images is not None:

@@ -1,5 +1,32 @@
 # LIBERO 서랍 실험 재현
 
+<a id="drawer-view-duration"></a>
+
+## 반대 폭의 영상을 첫 0.25초 또는 1초 동안 보여주기
+
+같은 자세·시드·모델 실행·실제 폭에서 자기 폭, 1질의 교환, 4질의 교환을 짝짓는다. 외부·손목 카메라를 함께 다룬다. 매 질의에서 현재 MuJoCo 데이터를 복사하고, 반대 폭을 그릴 때는 별도 복사본에서 대상 서랍의 슬라이드 위치를 바꿔 운동학을 계산한다. 해당 서랍의 월드 좌표만 렌더링용 데이터에 반영해 팔·그릇·접시·카메라가 그 순간의 자세를 유지하게 한다. 재렌더링한 자기 영상과 실제 입력의 픽셀 배열, 렌더링 전후 원래 장면의 물리 해시를 비교한다. 첫 질의에서는 반대 폭 영상도 [직전 교환 실험](#drawer-first-camera)의 원본과 대조한다. [사전 설계](./drawer/drawer_view_duration.json) · [렌더링 코드](./drawer_view_render.py)
+
+예비 실행에서 같은 자세의 손목 영상에 한 픽셀 차이가 관측됐다. 자기 영상이 실제 입력과 다르면 물리를 멈춘 채 복제 영상을 최대 네 번 비교한다. 필요하면 같은 물리 해시와 로봇 상태에서 실제 영상을 최대 두 번 다시 읽는다. 어긋난 시도는 카메라별 픽셀 수와 해시를 기록하고, 두 카메라가 모두 정확히 일치해야 정책에 질의한다. [렌더링 판정 기준](./drawer/drawer_view_duration.json)
+
+과제 접촉은 그리퍼가 위·가운데·아래 칸 또는 그릇에 닿은 첫 제어로 판정한다. 교환 시간이 끝나거나 그 접촉이 발생한 뒤의 다음 질의에서는 해당 경로의 실제 영상을 공급한다. 서버 수신 기록에서 두 영상, 로봇 상태, 지시, 난수, 반환 명령을 검산한다. 첫 접촉과 첫 수납 시점은 정책 시작부터 20 Hz 제어 단위로 기록한다. 15초·30초의 도착지 판정에는 시작 전 3초의 자세 복귀가 포함된다. [실행·채점 코드](./drawer_view_duration.py)
+
+```sh
+recipe='work/research_topics/instruction_revision/재현 방법'
+archive="$recipe/results/2026-11-26-drawer-view-duration"
+(cd "$archive" && sha256sum -c SHA256SUMS)
+sh "$recipe/resume.sh" verify-drawer-view-duration "$archive"
+report_dir=$(mktemp -d)
+sh "$recipe/resume.sh" replay-drawer-view-duration "$archive" "$report_dir/replay.json"
+# 체크포인트에서 정책을 다시 실행할 때
+sh "$recipe/resume.sh" drawer-view-duration "$report_dir/new-study"
+```
+
+2026년 11월 26일 로컬 RTX 5090에서 배치 2, 체크포인트 `pi05_libero`, 두 복귀 자세와 여덟 시드로 384경로를 수집했다. 총 41,472회 질의 중 첫 네 질의 1,536회에서 두 자기 영상이 실제 입력과 같았고, 640회는 반대 폭의 두 영상을 공급했다. 여섯 번의 재렌더링 불일치는 세 질의에서 발생했고 카메라당 최대 한 픽셀이었다. 한 질의에서 실제 영상을 한 번 다시 읽었다. 1,536회 모두 렌더링 전후 원래 장면의 물리 해시가 유지됐고, 접촉에 의한 조기 교환 중단은 0회였다. [실행별 검산](./results/2026-11-26-drawer-view-duration/verification.json) · [원자료·수신 기록·환경](./results/2026-11-26-drawer-view-duration/study.zip)
+
+각 경로는 3초의 자세 복귀 뒤 27초간 540개 정책 제어를 실행했다. 두 모델 실행의 192쌍에서 첫 20개 제어·첫 접촉 대상·15초 수납은 192쌍, 30초 수납은 191쌍, 종단 물리 상태는 176쌍이 같았다. 0.25초 조건을 직전 실험의 두 카메라 교환과 맞춘 128쌍에서는 첫 접촉과 30초 수납이 모두 일치했다. [직전 실험](#drawer-first-camera) · [결과 그림 생성기](./plot_drawer_view_duration.py)
+
+수집 폴더와 압축 원본에서 각각 새 Docker 컨테이너로 384경로 전체를 물리 재생했다. 두 재생 모두 207,360개 후속 제어의 접촉·수납 기록, 각 질의의 물리 상태, 모든 경로의 종단 상태가 수집값과 일치했다. 카메라 재렌더링은 41,472개 질의 시점 중 두 재생에서 각각 22시점이 수집값과 달랐다. 이 차이는 모두 각 경로의 첫 네 질의 이후에 발생했다. 그림도 보관한 소스에서 다시 생성해 PNG 체크섬을 대조했다. [두 재생의 기록](./results/2026-11-26-drawer-view-duration/physical_replay.json) · [파일 체크섬](./results/2026-11-26-drawer-view-duration/SHA256SUMS)
+
 <a id="drawer-first-camera"></a>
 
 ## 실제 서랍 폭을 고정하고 첫 카메라 입력만 교환하기
