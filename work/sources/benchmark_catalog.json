@@ -1640,6 +1640,11 @@
           "paper_id": "pr-0881",
           "source": "2025/RSS/2025_RSS_Uni-NaVid-A-Video-based-Vision-Language-Action-Model-for-U/04_evaluation.md",
           "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1268",
+          "source": "2026/RSS/2026_RSS_OpenFrontier-General-Navigation-with-Visual-Language-Groun/04_evaluation.md",
+          "evidence": "cue_only"
         }
       ],
       "reference_basis": "04_evaluation.md token cue; dataset/metric role, split, aggregation, and primary-vs-auxiliary status remain paper-specific.",
@@ -4496,6 +4501,11 @@
         {
           "paper_id": "pr-1214",
           "source": "2026/CVPR/2026_CVPR_GeoPredict-Leveraging-Predictive-Kinematics-and-3D-Gaussia/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1274",
+          "source": "2026/ICRA/2026_ICRA_SymSkill-Symbol-and-Skill-Co-Invention-for-Data-Efficient/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],

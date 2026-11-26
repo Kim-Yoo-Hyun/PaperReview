@@ -1432,6 +1432,10 @@ FOCUS_SOURCE_CHECKS.update({
 })
 FOCUS_REVIEW_DATES.update(dict.fromkeys(("pr-1251", "pr-1252"), "2026-11-20"))
 
+FOCUS_REFERENCE_RATIONALES["pr-1270"] = "지시의 모호함과 정책의 실행 불능을 분리해 질문·행동 개입을 고르는 로봇 조작 기준선이다."
+FOCUS_SOURCE_CHECKS["pr-1270"] = "https://roboticsproceedings.org/rss22/p142.html"
+FOCUS_REVIEW_DATES["pr-1270"] = "2026-11-26"
+
 SYNTHESIS_FILES = OrderedDict(
     [
         (

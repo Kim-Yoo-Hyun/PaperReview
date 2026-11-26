@@ -78,6 +78,18 @@ REFERENCE 논문의 방법·평가 절에서 제안 방법, 사용한 구성요�
 
 ## 등록·서지 교정
 
+<a id="reg-contact-nav"></a>
+
+### 접촉·이동·실패 복구
+
+공식 RSS 2026 게재 목록과 CoRL 2026 채택 목록을 대조하고, ICRA 공식 수상·게재 서지, CVF 및 IEEE 기록에서 관련 후보를 선별했다. Robo3R, PolaRiS, *Beyond Binary Success*, OmniRetarget는 기존 ID를 확인했다. 새로 등록한 14편(`pr-1267`–`pr-1280`)은 REFERENCE로 분류했다. FLoRe는 전신 힘 제어의 직접 비교 문헌으로 등록하고 arXiv 상태를 기록했다. [RSS 게재 목록](https://roboticsproceedings.org/rss22/) · [CoRL 채택 목록](https://2026.corl.org/program/accepted-papers/) · [ICRA 후보 목록](https://2026.ieee-icra.org/awards/) · [논문별 색인](../../research/REGISTRY_INDEX.csv)
+
+| 비교 범위 | 등록 문헌과 선정 이유 |
+|---|---|
+| 전신 접촉·힘 추종 | **GentleHumanoid**의 상체 순응, **FLoRe**의 G1 손별 힘 목표, **Safe Whole-Body Loco-Manipulation**의 명시적 제약 제어를 비교한다. **TactileStep**은 발 접촉 품질, **Learning Wrist Policies**는 손잡이 기하 오차에 대한 파지 강건성의 기준이다. [GentleHumanoid](https://ieeexplore.ieee.org/abstract/document/11753909) · [FLoRe 표 Ⅱ](https://arxiv.org/pdf/2610.35862#page=7) · [안전 전신 제어](https://www.merl.com/publications/TR2026-072) · [TactileStep 표 3](https://arxiv.org/pdf/2609.28959#page=9) · [손목 정책](https://doi.org/10.1109/TRO.2025.3576950) |
+| 조작·복구 | **TACTIC**은 여러 팔 링크의 접촉을 제어하고, **HydroShear**는 촉각 전단의 시뮬레이션 전이를 검증한다. **ActivePusher**는 적은 실물 접촉으로 동역학 오차를 줄인다. **SymSkill**, **UPS**, **ViFailback**은 각각 술어 기반 재계획, 관측 불확실성에 따른 개입 선택, 실물 실패의 시각적 교정을 비교하는 기준이다. [TACTIC](https://roboticsproceedings.org/rss22/p060.html) · [HydroShear](https://roboticsproceedings.org/rss22/p155.html) · [ActivePusher](https://ieeexplore.ieee.org/abstract/document/11696785) · [SymSkill](https://symskill.github.io/) · [UPS](https://roboticsproceedings.org/rss22/p142.html) · [ViFailback](https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html) |
+| 내비게이션·이동 조작 | **OpenFrontier**는 언어와 3D 탐색 지점의 대응을, **TravSUITE**는 지형 불확실성을 반영한 주행을 다룬다. **RMMBench**는 국소 위치 오차와 복합 조작 실패를 함께 기록한다. RMMBench의 arXiv 페이지는 70개 시나리오를, 공개 PDF의 실험 절은 90개를 기술해 평가판을 함께 남겼다. [OpenFrontier](https://roboticsproceedings.org/rss22/p067.html) · [TravSUITE](https://roboticsproceedings.org/rss22/p070.html) · [RMMBench 초록](https://arxiv.org/abs/2610.05414) · [실험 절](https://arxiv.org/pdf/2610.05414#page=7) |
+
 - 접촉 제어 비교표의 아홉 편 가운데 기존 다섯 편을 확인하고 네 편을 REFERENCE로 등록했다. ACP(`pr-1263`, ICRA 2025)는 시연에서 가변 강성을 배우는 기준선이다. FTP-1(`pr-1264`, CoRL 2026)은 센서 간 촉각 전이, HapticVLA(`pr-1265`, IROS 2026)는 훈련용 촉각의 증류, N₀-VTLA(`pr-1266`, arXiv 2026)는 배포 궤적을 이용한 오프라인 정책 개선을 비교하는 근거다. [논문별 원문과 평가](../../research/VLA_ACTION_SPACE.md#추가-조사)
 - VLA의 정책 출력과 실행 제어기를 대조해 10편(`pr-1253`~`pr-1262`)을 REFERENCE에 등록했다. 관절각·각속도·토크를 함께 명령하는 Bi-LAT/Bi-VLA, 전신 행동을 학습한 HumanVLA/LHM-Humanoid, 힘·강성·감쇠를 다룬 Tactile-VLA/Compliance for Free/PaCo-VLA, 이동·태스크 전환을 다룬 SPOC/OneTwoVLA/G0.5다. 총 28편의 원장 포함 여부와 직접 확인한 출력·평가 조건은 비교표에서 찾을 수 있다. [VLA 행동 공간](../../synthesis/04_vla.md#vla-action-interfaces) · [원장 색인](../../research/REGISTRY_INDEX.csv)
 - 공유 제어 문헌 HARMONIC과 Residual Copilot을 REFERENCE에 추가했다. 두 논문은 각각 보조 전후의 명령 기록과 보조 시연으로 학습한 정책의 실물 기어 삽입 평가를 제공한다. DROID의 RSS 게재본과 저자 배포 자료도 연결했다. [HARMONIC](../../2022/IJRR/2022_IJRR_HARMONIC-A-multimodal-dataset-of-assistive-humanrobot-coll/01_overview.md) · [Residual Copilot](../../2026/CoRL/2026_CoRL_Efficient-and-Reliable-Teleoperation-through-Real-to-Sim-t/01_overview.md) · [DROID 게재본](https://www.roboticsproceedings.org/rss20/p120.html)

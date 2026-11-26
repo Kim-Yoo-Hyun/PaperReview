@@ -22,6 +22,7 @@ CORE 31편에 남은 공개 여부 55개는 새 배포 파일이나 저자의 �
 
 ## 직전 완료
 
+- 접촉·전신 제어, 조작 복구, 내비게이션의 비교 기준 14편을 REFERENCE에 등록했다. G1 걸쇠 해제 검증에는 GentleHumanoid와 FLoRe의 힘·순응 제어 범위를 대조했다. [신규 논문과 선정 근거](./work/update/REGISTRY.md#reg-contact-nav) · [G1 선행 비교](./work/research_topics/README.md#g1-load-release)
 - 논문 폴더·표준 노트·문서 링크·생성 색인을 원장과 대조했다. 검색 단서 794편을 동기화하고 PDF 실패 로그를 제거했다. π₀ 프로젝트 주소와 PointWorld PDF 필드를 교정했고, 링크 미확인 논문은 36편에서 26편으로 줄었다. [구조 검증](./work/update/REGISTRY.md#구조-검증)
 - ARCHIVE 마지막 31편을 원문과 대조해 표시 태그 22편과 검색 필터 30편을 수정했다. 감사 당시 ARCHIVE 242편과 11월 감사 대상 전체 1,252편의 태그 검토를 완료했다. [ARCHIVE 감사 결과](./research/SOURCE_AUDIT.md#archive-검색-태그) · [전체 항목별 판정](./research/SOURCE_AUDIT.md#항목별-결과)
 - 2020년까지의 논문 148편을 두 기간 폴더로 옮기고 읽기 이력과 노트 경로를 연결했다. [기간별 탐색](./README.md#수록-현황)

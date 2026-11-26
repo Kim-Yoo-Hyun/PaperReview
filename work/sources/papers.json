@@ -4589,7 +4589,8 @@
         "pr-1242",
         "pr-1247",
         "pr-1252",
-        "pr-1263"
+        "pr-1263",
+        "pr-1270"
       ],
       "queue_adjacency_paper_ids": [
         "pr-0745",
@@ -4597,7 +4598,7 @@
       ],
       "legacy_summary_candidate_paper_ids": [],
       "legacy_summary_present": false,
-      "audited_on": "2026-11-25",
+      "audited_on": "2026-11-26",
       "audit_scope": "all_registry",
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     },
@@ -302034,6 +302035,2761 @@
       "legacy_summary_candidate_paper_ids": [],
       "legacy_summary_present": false,
       "audited_on": "2026-11-25",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "TACTIC: Tactile and Vision Conditioned Contact-Centric Control for Whole-Arm Manipulation",
+    "aliases": [
+      "TACTIC"
+    ],
+    "authors": [
+      "Rishabh Madan",
+      "Angchen Xie",
+      "Samantha Saak",
+      "Andres Blanco",
+      "Dohyeok Lee",
+      "Sarah Grace Brown",
+      "Yunting Yan",
+      "Mark Zolotas",
+      "Jose Barreiros",
+      "Tapomayukh Bhattacharjee"
+    ],
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "whole-arm manipulation",
+      "tactile sensing",
+      "RGB-D",
+      "model predictive control",
+      "force control"
+    ],
+    "page": "https://roboticsproceedings.org/rss22/p060.html",
+    "pdf": "https://roboticsproceedings.org/rss22/p060.pdf",
+    "project": "https://emprise.cs.cornell.edu/tactic/",
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.060",
+      "arxiv": "2607.09218"
+    },
+    "found_in": [
+      "https://roboticsproceedings.org/rss22/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 RSS 게재본 PDF 3–9쪽의 모델·MPC 및 실험 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://roboticsproceedings.org/rss22/p060.pdf#page=8",
+    "problem": "팔 여러 링크의 접촉이 생기고 끊기면 말단의 자세만으로 각 접촉력을 예측하기 어렵다.",
+    "method": "행동 조건부 잠재 동역학에 접촉 Jacobian을 결합한다. 표본 기반 MPC는 접촉력을 바꿀 수 있는 방향으로 행동을 샘플링하고 목표 진행과 힘 조절을 함께 평가한다.",
+    "interface": "RGB-D, 팔에 분산된 촉각 및 2D 근접 표현에서 다음 접촉 배치와 힘을 예측해 팔 명령을 선택한다.",
+    "evaluation": "모의 실험에서 모델 기반·모델 자유 기준과 예측기 변형을 비교하고, 실물 Kinova Gen3에서는 다중 접촉이 포함된 보조 팔 움직임을 평가했다.",
+    "role": "말단 센서가 놓치는 팔 링크 접촉을 제어에 사용하는 직접 비교 기준이다.",
+    "question": "실물 결과를 해석할 때 센서 배치와 접촉력 제한이 같은지 확인한다.",
+    "minimal_experiment": "같은 팔 모델과 목표를 두고 전체 촉각과 손목 센서만 제공한 경우의 과제 진행 및 최대 링크 접촉력을 비교한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "말단 센서가 놓치는 팔 링크 접촉을 제어에 사용하는 직접 비교 기준이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "folder": "2026/RSS/2026_RSS_TACTIC-Tactile-and-Vision-Conditioned-Contact-Centric-Cont",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "publication": {
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p060.html",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2607.09218",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://roboticsproceedings.org/rss22/p060.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": {
+        "url": "https://emprise.cs.cornell.edu/tactic/",
+        "kind": "publisher_or_project"
+      },
+      "code": null
+    },
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 RSS 게재본 PDF 3–9쪽의 모델·MPC 및 실험 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1267",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_TACTIC-Tactile-and-Vision-Conditioned-Contact-Centric-Cont/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://emprise.cs.cornell.edu/tactic/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/RSS/2026_RSS_TACTIC-Tactile-and-Vision-Conditioned-Contact-Centric-Cont/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "OpenFrontier: General Navigation with Visual-Language Grounded Frontiers",
+    "aliases": [
+      "OpenFrontier"
+    ],
+    "authors": [
+      "Esteban Padilla Cerdio",
+      "Boyang Sun",
+      "Marc Pollefeys",
+      "Hermann Blum"
+    ],
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Embodied Navigation and Mapping",
+    "primary_track": "Planning and control",
+    "tags": [
+      "Navigation",
+      "frontier exploration",
+      "vision-language models",
+      "zero-shot",
+      "RGB-D"
+    ],
+    "page": "https://roboticsproceedings.org/rss22/p067.html",
+    "pdf": "https://roboticsproceedings.org/rss22/p067.pdf",
+    "project": "https://boysun045.github.io/OpenFrontier-Project/",
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.067",
+      "arxiv": "2603.05377"
+    },
+    "found_in": [
+      "https://roboticsproceedings.org/rss22/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 RSS 게재본 PDF 3–9쪽과 저자 배포 저장소 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://roboticsproceedings.org/rss22/p067.pdf#page=5",
+    "problem": "개방형 언어 목표로 이동하려면 탐색 후보를 관측에 연결하고 현재 지도 밖의 경로도 선택해야 한다.",
+    "method": "영상의 frontier를 후보로 만들고 언어 목표와의 관련성을 VLM으로 점수화한다. 후보를 희소한 3D 중간 목표로 유지해 지역 제어와 전역 경로 선택에 사용한다.",
+    "interface": "카메라 관측과 언어 목표에서 탐색 지점의 위치·점수를 계산하고, 다음 도달 지점을 계획기에 보낸다.",
+    "evaluation": "HM3D·MP3D·OVON의 ObjectNav에서 비교하고 이동 로봇에 배포했다. 기준 비교는 표 Ⅰ, 실패 사례는 그림 10에 있다.",
+    "role": "학습을 추가하지 않고 3D 관측으로 언어 내비게이션 행동을 개선하는 기준선이다.",
+    "question": "의미 관련도, 탐색 가능성, 지도 갱신 중 무엇이 각 실패에 관여했는지 분리해 기록한다.",
+    "minimal_experiment": "같은 에피소드와 지역 제어기를 두고 frontier의 거리·기하 점수와 VLM 점수를 비교한다.",
+    "reviewed_predecessors": [
+      {
+        "paper_id": "pr-0540",
+        "basis": "같은 평가 설정에서 VLFM을 frontier 기반 비교군으로 사용한다.",
+        "source": "https://roboticsproceedings.org/rss22/p067.pdf#page=6"
+      }
+    ],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "학습을 추가하지 않고 3D 관측으로 언어 내비게이션 행동을 개선하는 기준선이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/cvg/OpenFrontier",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p067.html",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.05377",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://roboticsproceedings.org/rss22/p067.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": {
+        "url": "https://boysun045.github.io/OpenFrontier-Project/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/RSS/2026_RSS_OpenFrontier-General-Navigation-with-Visual-Language-Groun",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "publication": {
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 RSS 게재본 PDF 3–9쪽과 저자 배포 저장소 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1268",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:hm3d",
+          "name": "HM3D",
+          "evidence": "cue_only",
+          "source": "2026/RSS/2026_RSS_OpenFrontier-General-Navigation-with-Visual-Language-Groun/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_OpenFrontier-General-Navigation-with-Visual-Language-Groun/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/cvg/OpenFrontier",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/RSS/2026_RSS_OpenFrontier-General-Navigation-with-Visual-Language-Groun/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "TravSUITE: Traversability via Self-Supervised, Uncertainty-Aware IRL and Terrain Estimation",
+    "aliases": [
+      "TravSUITE"
+    ],
+    "authors": [
+      "Samuel Triest",
+      "Amirreza Shaban",
+      "David Fan",
+      "Wenshan Wang",
+      "Sebastian Scherer"
+    ],
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Embodied Navigation and Mapping",
+    "primary_track": "Planning and control",
+    "tags": [
+      "Navigation",
+      "traversability",
+      "inverse reinforcement learning",
+      "uncertainty estimation",
+      "BEV"
+    ],
+    "page": "https://roboticsproceedings.org/rss22/p070.html",
+    "pdf": "https://roboticsproceedings.org/rss22/p070.pdf",
+    "project": "not identified",
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.070",
+      "arxiv": "2610.32130"
+    },
+    "found_in": [
+      "https://roboticsproceedings.org/rss22/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 RSS 게재본 PDF 2–9쪽의 지도·학습·하드웨어 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://roboticsproceedings.org/rss22/p070.pdf#page=8",
+    "problem": "고속 오프로드 주행에서는 가려진 지형의 상태와 통과 위험이 함께 달라진다.",
+    "method": "차량 센서의 기하·시각 특징으로 복셀 지도를 구성한다. 조감도에서 기하, 의미, 속도 및 비용을 함께 추정하고 역강화학습과 가림 복원으로 학습한다. 계획 중 예측 불확실성을 비용에 반영한다.",
+    "interface": "차량 관측에서 지역 지도를 만들고 예상 통과 비용과 속도 지도를 주행 계획기에 넘긴다.",
+    "evaluation": "오프라인 계획 품질과 실물 ATV 주행을 분리해 평가했다. 표 Ⅵ은 안전 운전자 개입과 충돌, 주행 속도를 따로 기록한다.",
+    "role": "시각적 불확실성이 실제 이동 경로와 안전에 미치는 영향을 검증하는 내비게이션 기준선이다.",
+    "question": "지면 영역과 주행 속도가 달라질 때 개입 횟수 감소가 유지되는지 확인한다.",
+    "minimal_experiment": "같은 주행 구간에서 복원 기능과 불확실성 비용을 각각 끄고 계획 속도와 개입 횟수를 비교한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "시각적 불확실성이 실제 이동 경로와 안전에 미치는 영향을 검증하는 내비게이션 기준선이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "folder": "2026/RSS/2026_RSS_TravSUITE-Traversability-via-Self-Supervised-Uncertainty-A",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "publication": {
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "sources": {
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p070.html",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.32130",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://roboticsproceedings.org/rss22/p070.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": null,
+      "code": null
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 RSS 게재본 PDF 2–9쪽의 지도·학습·하드웨어 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1269",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_TravSUITE-Traversability-via-Self-Supervised-Uncertainty-A/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/RSS/2026_RSS_TravSUITE-Traversability-via-Self-Supervised-Uncertainty-A/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "When to Act, Ask, or Learn: Uncertainty-Aware Policy Steering",
+    "aliases": [
+      "UPS"
+    ],
+    "authors": [
+      "Jessie Yuan",
+      "Yilin Wu",
+      "Andrea Bajcsy"
+    ],
+    "year": 2026,
+    "venue": "RSS",
+    "category": "World Models, Safety, and Recovery",
+    "primary_track": "World models, safety, uncertainty, and recovery",
+    "tags": [
+      "conformal prediction",
+      "uncertainty estimation",
+      "policy steering",
+      "human intervention",
+      "residual learning"
+    ],
+    "page": "https://roboticsproceedings.org/rss22/p142.html",
+    "pdf": "https://roboticsproceedings.org/rss22/p142.pdf",
+    "project": "https://jessie-yuan.github.io/ups/",
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.142",
+      "arxiv": "2602.22474"
+    },
+    "found_in": [
+      "https://roboticsproceedings.org/rss22/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 RSS 게재본 PDF 2–8쪽에서 의사결정과 배포 결과 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://roboticsproceedings.org/rss22/p142.pdf#page=8",
+    "problem": "언어 지시의 모호함과 기본 정책이 행동을 생성하지 못하는 상황에는 서로 다른 피드백이 필요하다.",
+    "method": "VLM의 평가와 정책의 행동 후보에 conformal prediction을 적용한다. 실행, 지시 확인 질문, 행동 개입 요청을 구분하고, 수집한 개입으로 잔차를 학습한다.",
+    "interface": "지시와 관측, 동결한 확산 정책의 행동 후보를 받아 삼중 선택지 중 하나를 출력한다.",
+    "evaluation": "모의·실물 집기와 배치를 통해 모호함과 실행 불능을 각각 평가하고, 미보정 기준 및 개입 방식과 비교했다.",
+    "role": "실패 원인에 따라 재관측, 사용자 질문, 수정 시연에 예산을 나누는 연구에서 직접 비교할 수 있다.",
+    "question": "새 작업에서 캘리브레이션 분포가 바뀔 때 선택별 오류와 개입 비용을 추적한다.",
+    "minimal_experiment": "같은 상태에서 목표만 모호하게 만든 경우와 정책의 유효 후보를 없앤 경우를 분리해 개입 선택 오류를 비교한다.",
+    "reviewed_predecessors": [
+      {
+        "paper_id": "pr-0706",
+        "basis": "KnowNo의 언어 수준 불확실성 처리와 제안 선택지를 비교한다.",
+        "source": "https://roboticsproceedings.org/rss22/p142.pdf#page=3"
+      },
+      {
+        "paper_id": "pr-0019",
+        "basis": "실험의 저수준 행동 후보를 내는 기준선으로 Diffusion Policy를 사용한다.",
+        "source": "https://roboticsproceedings.org/rss22/p142.pdf#page=6"
+      }
+    ],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "지시의 모호함과 정책의 실행 불능을 분리해 질문·행동 개입을 고르는 로봇 조작 기준선이다.",
+      "admission_reason": "지시의 모호함과 정책의 실행 불능을 분리해 질문·행동 개입을 고르는 로봇 조작 기준선이다.",
+      "rationale_basis": "vla_rl_manipulation_navigation_focus_review",
+      "rationale_status": "recorded",
+      "rationale_reviewed_on": "2026-11-26",
+      "priority_source_check": {
+        "url": "https://roboticsproceedings.org/rss22/p142.html",
+        "checked_on": "2026-11-26",
+        "scope": "official_abstract_or_project; priority review only"
+      },
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/CMU-IntentLab/uncertainty_aware_policy_steering",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p142.html",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2602.22474",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://roboticsproceedings.org/rss22/p142.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": {
+        "url": "https://jessie-yuan.github.io/ups/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "relations": [
+      {
+        "type": "builds_on",
+        "paper_id": "pr-0019",
+        "confidence": "verified",
+        "status": "curated",
+        "basis": "저수준 정책의 행동 후보를 Diffusion Policy로 생성한다.",
+        "evidence_scope": "paper_body",
+        "reviewed_on": "2026-11-26",
+        "source": "https://roboticsproceedings.org/rss22/p142.pdf#page=6",
+        "managed_by": "registry_paper_admission"
+      }
+    ],
+    "folder": "2026/RSS/2026_RSS_When-to-Act-Ask-or-Learn-Uncertainty-Aware-Policy-Steering",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "publication": {
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 RSS 게재본 PDF 2–8쪽에서 의사결정과 배포 결과 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1270",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_When-to-Act-Ask-or-Learn-Uncertainty-Aware-Policy-Steering/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/CMU-IntentLab/uncertainty_aware_policy_steering",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/RSS/2026_RSS_When-to-Act-Ask-or-Learn-Uncertainty-Aware-Policy-Steering/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "curated_edges",
+      "outgoing_paper_ids": [
+        "pr-0019"
+      ],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "HydroShear: Hydroelastic Shear Simulation for Tactile Sim-to-Real Reinforcement Learning",
+    "aliases": [
+      "HydroShear"
+    ],
+    "authors": [
+      "An Thanh Dang",
+      "Jayjun Lee",
+      "Mustafa Mukadam",
+      "X. Alice Wu",
+      "Bernadette Bucher",
+      "Manikantan Nambi",
+      "Nima Fazeli"
+    ],
+    "year": 2026,
+    "venue": "RSS",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "tactile simulation",
+      "contact",
+      "slip",
+      "sim-to-real",
+      "Reinforcement Learning"
+    ],
+    "page": "https://roboticsproceedings.org/rss22/p155.html",
+    "pdf": "https://roboticsproceedings.org/rss22/p155.pdf",
+    "project": "https://hydroshear.github.io/",
+    "identifiers": {
+      "doi": "10.15607/RSS.2026.XXII.155",
+      "arxiv": "2603.00446"
+    },
+    "found_in": [
+      "https://roboticsproceedings.org/rss22/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 RSS 게재본 PDF 3–9쪽에서 전단 모델, 센서 보정 및 표 Ⅱ 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://roboticsproceedings.org/rss22/p155.pdf#page=9",
+    "problem": "정상력과 접촉 이미지만으로는 센서 막이 미끄러지거나 전단을 누적하는 과정을 놓치기 쉽다.",
+    "method": "함몰 물체 표면의 변위를 SDF로 추적하고 이력에 따라 축적된 전단과 붙었다 미끄러지는 전이를 모의한다. 이 전단 관측을 사용하는 정책을 시뮬레이션에서 강화학습한다.",
+    "interface": "물체와 촉각 막 사이의 상대 자세와 변위 이력에서 촉각 전단장과 힘을 계산한다.",
+    "evaluation": "GelSight Mini에서 전단 예측을 검증한 뒤 삽입, 상자 담기, 책 끼우기, 서랍 당기기를 실물에서 평가했다. 표 Ⅱ는 같은 과제의 촉각 영상과 다른 전단 모델 기준을 제공한다.",
+    "role": "서랍 같은 미끄럼 과제에서 촉각 모델의 물리적 차이가 실물 정책에 전달되는지 비교할 수 있다.",
+    "question": "물체 마찰, 접촉 경로, 촉각 센서막의 강도가 달라질 때 실물 전이 범위를 확인한다.",
+    "minimal_experiment": "동일한 학습·제어 조건에서 전단 관측의 이력만 제거하고 서랍 손잡이 미끄럼과 성공률을 비교한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "서랍 같은 미끄럼 과제에서 촉각 모델의 물리적 차이가 실물 정책에 전달되는지 비교할 수 있다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/MMintLab/hydroshear",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://roboticsproceedings.org/rss22/p155.html",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.00446",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://roboticsproceedings.org/rss22/p155.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": {
+        "url": "https://hydroshear.github.io/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/RSS/2026_RSS_HydroShear-Hydroelastic-Shear-Simulation-for-Tactile-Sim-t",
+    "venue_as_recorded": "RSS",
+    "venue_canonical": "RSS",
+    "publication": {
+      "venue": "RSS",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "rss"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 RSS 게재본 PDF 3–9쪽에서 전단 모델, 센서 보정 및 표 Ⅱ 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1271",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RSS/2026_RSS_HydroShear-Hydroelastic-Shear-Simulation-for-Tactile-Sim-t/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/MMintLab/hydroshear",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/RSS/2026_RSS_HydroShear-Hydroelastic-Shear-Simulation-for-Tactile-Sim-t/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Safe Whole-Body Loco-Manipulation via Combined Model and Learning-based Control",
+    "aliases": [
+      "Safe Whole-Body Loco-Manipulation"
+    ],
+    "authors": [
+      "Alexander Schperberg",
+      "Yeping Wang",
+      "Stefano Di Cairano"
+    ],
+    "year": 2026,
+    "venue": "ICRA",
+    "category": "Locomotion, Whole-Body, and Mobile Manipulation",
+    "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
+    "tags": [
+      "force control",
+      "admittance control",
+      "whole-body control",
+      "Reinforcement Learning",
+      "reference governor"
+    ],
+    "page": "https://www.merl.com/publications/TR2026-072",
+    "pdf": "https://www.merl.com/publications/docs/TR2026-072.pdf",
+    "project": "not identified",
+    "identifiers": {
+      "doi": "10.1109/ICRA57385.2026.11697564",
+      "arxiv": "2603.02443"
+    },
+    "found_in": [
+      "https://www.merl.com/publications/TR2026-072",
+      "https://doi.org/10.1109/ICRA57385.2026.11697564"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 ICRA 서지와 MERL 저자 게재본 PDF 4–9쪽의 제어기·실물 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://www.merl.com/publications/docs/TR2026-072.pdf#page=8",
+    "problem": "걷는 중 말단에 힘이 걸리면 다리 속도 추종과 팔의 순응을 같이 조절해야 한다.",
+    "method": "손목의 힘·토크를 어드미턴스로 말단 속도에 매핑하고 다리 RL과 팔 제어에 배분한다. Reference Governor가 기준 속도를 허용 범위로 조정한다.",
+    "interface": "손목 6축 힘·토크와 추정한 베이스 상태를 사용해 팔과 이동 베이스의 속도를 명령한다.",
+    "evaluation": "6자유도 팔을 단 Unitree Go2의 시뮬레이션과 실물에서 힘 추종과 상호작용을 검증했다.",
+    "role": "G1의 전신 제어 실험에서 학습형 새 방법의 이득을 보기 전에 사용할 힘 반응과 제약 기준이다.",
+    "question": "모델의 안전 보장에 사용한 제약과 실물 데이터에서 검증한 힘 범위를 구분한다.",
+    "minimal_experiment": "지속 외력과 갑자기 종료되는 외력을 비교하고, 같은 손 움직임에서 베이스 속도와 힘 제한 위반을 기록한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "G1의 전신 제어 실험에서 학습형 새 방법의 이득을 보기 전에 사용할 힘 반응과 제약 기준이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "venue_verification": {
+        "url": "https://doi.org/10.1109/ICRA57385.2026.11697564",
+        "kind": "official_venue",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://www.merl.com/publications/TR2026-072",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2603.02443",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://www.merl.com/publications/docs/TR2026-072.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": null,
+      "code": null
+    },
+    "folder": "2026/ICRA/2026_ICRA_Safe-Whole-Body-Loco-Manipulation-via-Combined-Model-and-L",
+    "venue_as_recorded": "ICRA",
+    "venue_canonical": "ICRA",
+    "publication": {
+      "venue": "ICRA",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "icra"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 ICRA 서지와 MERL 저자 게재본 PDF 4–9쪽의 제어기·실물 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1272",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/ICRA/2026_ICRA_Safe-Whole-Body-Loco-Manipulation-via-Combined-Model-and-L/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/ICRA/2026_ICRA_Safe-Whole-Body-Loco-Manipulation-via-Combined-Model-and-L/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "ActivePusher: Active Learning and Planning with Residual Physics for Nonprehensile Manipulation",
+    "aliases": [
+      "ActivePusher"
+    ],
+    "authors": [
+      "Zhuoyun Zhong",
+      "Seyedali Golestaneh",
+      "Constantinos Chamzas"
+    ],
+    "year": 2026,
+    "venue": "ICRA",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "nonprehensile manipulation",
+      "active learning",
+      "residual dynamics",
+      "contact",
+      "Planning"
+    ],
+    "page": "https://ieeexplore.ieee.org/abstract/document/11696785",
+    "pdf": "https://events.infovaya.com/uploads/documents/pdfviewer/7c/40/222074-4101.pdf",
+    "project": "https://github.com/elpis-lab/ActivePusher",
+    "identifiers": {
+      "doi": "10.1109/ICRA57385.2026.11696785",
+      "arxiv": "2506.04646"
+    },
+    "found_in": [
+      "https://2026.ieee-icra.org/awards/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 IEEE 서지와 학회 원문 PDF 3–8쪽의 능동 수집·실물 실험 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://events.infovaya.com/uploads/documents/pdfviewer/7c/40/222074-4101.pdf#page=7",
+    "problem": "접촉 물리의 오차가 클 때 밀기 모델의 학습에 어떤 실제 상호작용을 사용해야 할지가 문제다.",
+    "method": "공칭 물리 모델의 예측 오차를 잔차로 학습하고, 예측 불확실성을 기준으로 새 상호작용을 고른다. 보정 동역학과 불확실성을 이용해 접촉을 포함한 경로를 계획한다.",
+    "interface": "물체와 로봇 상태, 밀기 행동에서 다음 물체 상태를 예측해 kinodynamic planner의 후보를 평가한다.",
+    "evaluation": "MuJoCo와 실물 밀기 실험에서 예측, 데이터 획득 전략 및 계획 성공을 비교했다. 물체와 경로는 PDF 6–7쪽에 있다.",
+    "role": "밀기에서 동역학 보정과 능동 재수집을 함께 적용하는 비교 기준으로, 로봇팔과 시뮬레이션에서 비교할 수 있다.",
+    "question": "잔차 학습 데이터 수와 실제 접촉 수행 비용을 비교군 사이에 맞춘다.",
+    "minimal_experiment": "같은 물체와 실물 밀기 예산에서 무작위 수집과 불확실성 기반 수집의 경로 완료율을 비교한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "밀기에서 동역학 보정과 능동 재수집을 함께 적용하는 비교 기준으로, 로봇팔과 시뮬레이션에서 비교할 수 있다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/elpis-lab/ActivePusher",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/abstract/document/11696785",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2506.04646",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://events.infovaya.com/uploads/documents/pdfviewer/7c/40/222074-4101.pdf",
+        "kind": "publisher_or_project"
+      },
+      "project": {
+        "url": "https://github.com/elpis-lab/ActivePusher",
+        "kind": "code"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/ICRA/2026_ICRA_ActivePusher-Active-Learning-and-Planning-with-Residual-Ph",
+    "venue_as_recorded": "ICRA",
+    "venue_canonical": "ICRA",
+    "publication": {
+      "venue": "ICRA",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "icra"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 IEEE 서지와 학회 원문 PDF 3–8쪽의 능동 수집·실물 실험 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1273",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/ICRA/2026_ICRA_ActivePusher-Active-Learning-and-Planning-with-Residual-Ph/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/elpis-lab/ActivePusher",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/ICRA/2026_ICRA_ActivePusher-Active-Learning-and-Planning-with-Residual-Ph/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "SymSkill: Symbol and Skill Co-Invention for Data-Efficient and Reactive Long-Horizon Manipulation",
+    "aliases": [
+      "SymSkill",
+      "Symskill: Symbol and Skill Co-Invention for Data-Efficient and Real-Time Long-Horizon Manipulation"
+    ],
+    "authors": [
+      "Yifei Simon Shao",
+      "Yuchen Zheng",
+      "Sunan Sun",
+      "Pratik Chaudhari",
+      "Vijay Kumar",
+      "Nadia Figueroa"
+    ],
+    "year": 2026,
+    "venue": "ICRA",
+    "category": "Planning and Long-Horizon Reasoning",
+    "primary_track": "Planning and control",
+    "tags": [
+      "symbolic planning",
+      "Imitation Learning",
+      "skill composition",
+      "failure recovery",
+      "long-horizon"
+    ],
+    "page": "https://symskill.github.io/",
+    "pdf": "https://arxiv.org/pdf/2510.01661",
+    "project": "https://symskill.github.io/",
+    "identifiers": {
+      "doi": "10.1109/ICRA57385.2026.11696696",
+      "arxiv": "2510.01661"
+    },
+    "found_in": [
+      "https://2026.ieee-icra.org/awards/",
+      "https://www.ieee-ras.org/awards-recognition/conference-awards/ieee-icra-best-conference-paper-award/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 IEEE 게재 DOI와 저자판 PDF 3–7쪽의 방법·표 Ⅱ 및 실물 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://arxiv.org/pdf/2510.01661#page=6",
+    "problem": "시연으로 얻은 기술을 긴 작업에서 조합하려면 완료와 실패를 인식할 조건을 함께 알아야 한다.",
+    "method": "분절·라벨 없는 play 데이터에서 상대 자세 술어, 이산 연산자와 안정적인 SE(3) 동역학 기술을 함께 학습한다. 유지 조건이 깨지면 기술을 중단하고 상위 계획을 다시 고른다.",
+    "interface": "로봇과 물체의 자세에서 술어를 평가하고 현재 스킬의 연속 행동을 실행한다.",
+    "evaluation": "RoboCasa에서 기술 조합과 상태 변화에 대한 반응을 비교하고 실물 Franka에서 학습한 기술을 사용했다.",
+    "role": "관측 가능한 실패 조건과 재계획을 갖춘 비-VLA 장기 조작 기준선이다.",
+    "question": "위치 추정 오차를 주었을 때 술어 기반 재계획이 기술 자체의 실패와 구별되는지 확인한다.",
+    "minimal_experiment": "실패가 일어나는 시점만 바꿔, 유지 조건 확인을 끈 기준과 재계획 성공률을 비교한다.",
+    "reviewed_predecessors": [
+      {
+        "paper_id": "pr-0019",
+        "basis": "저자판 표 Ⅱ에서 Diffusion Policy를 모의 조작 기준선으로 비교한다.",
+        "source": "https://arxiv.org/pdf/2510.01661#page=6"
+      }
+    ],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "관측 가능한 실패 조건과 재계획을 갖춘 비-VLA 장기 조작 기준선이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/shaoyifei96/Symskill",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/icra57385.2026.11696696",
+        "kind": "official_venue",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://symskill.github.io/",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2510.01661",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2510.01661",
+        "kind": "arxiv"
+      },
+      "project": {
+        "url": "https://symskill.github.io/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/ICRA/2026_ICRA_SymSkill-Symbol-and-Skill-Co-Invention-for-Data-Efficient",
+    "venue_as_recorded": "ICRA",
+    "venue_canonical": "ICRA",
+    "publication": {
+      "venue": "ICRA",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "icra"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 IEEE 게재 DOI와 저자판 PDF 3–7쪽의 방법·표 Ⅱ 및 실물 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1274",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [
+        {
+          "resource_id": "benchmark:robocasa",
+          "name": "RoboCasa",
+          "evidence": "cue_only",
+          "source": "2026/ICRA/2026_ICRA_SymSkill-Symbol-and-Skill-Co-Invention-for-Data-Efficient/04_evaluation.md"
+        }
+      ],
+      "metric_cues": [],
+      "source_note": "2026/ICRA/2026_ICRA_SymSkill-Symbol-and-Skill-Co-Invention-for-Data-Efficient/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/shaoyifei96/Symskill",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/ICRA/2026_ICRA_SymSkill-Symbol-and-Skill-Co-Invention-for-Data-Efficient/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Diagnose, Correct, and Learn from Manipulation Failures via Visual Symbols",
+    "aliases": [
+      "ViFailback"
+    ],
+    "authors": [
+      "Xianchao Zeng",
+      "Xinyu Zhou",
+      "Youcheng Li",
+      "Jiayou Shi",
+      "Tianle Li",
+      "Liangming Chen",
+      "Lei Ren",
+      "Yong-Lu Li"
+    ],
+    "year": 2026,
+    "venue": "CVPR",
+    "category": "World Models, Safety, and Recovery",
+    "primary_track": "World models, safety, uncertainty, and recovery",
+    "tags": [
+      "failure diagnosis",
+      "failure recovery",
+      "vision-language models",
+      "VLA",
+      "Dataset",
+      "Benchmark"
+    ],
+    "page": "https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html",
+    "pdf": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.pdf",
+    "project": "https://x1nyuzhou.github.io/vifailback.github.io/",
+    "identifiers": {
+      "arxiv": "2512.02787"
+    },
+    "found_in": [
+      "https://openaccess.thecvf.com/CVPR2026?day=2026-06-07"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "benchmark",
+    "source_audit": "2026-11-26 서지와 CVF 게재본 PDF 2–8쪽의 데이터·진단·표 4와 배포 자료 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.pdf#page=8",
+    "problem": "실제 로봇 조작에서 실패 장면을 찾더라도 어떻게 움직여야 복구되는지 표현하기 어렵다.",
+    "method": "실제 로봇 궤적에 실패 구간과 화살표 등의 시각적 교정 지시를 붙인다. ViFailback-8B가 실패 진단과 교정 표식을 생성하고 이를 배포 정책의 입력으로 사용한다.",
+    "interface": "카메라 궤적과 작업 지시로부터 실패 프레임과 교정 단서를 내며, 조작 행동은 파인튜닝한 π0.5가 실행한다.",
+    "evaluation": "ViFailback-Bench의 닫힌·열린 질의 평가를 보고하고, 별도의 세 실물 과제에서 π0.5 조작 성공률을 비교했다(표 4).",
+    "role": "실제 실패 데이터로 진단 정확도와 이후 제어 복구를 구분해서 비교할 수 있다.",
+    "question": "시각 표식, 언어 진단, 개입 타이밍을 고정해 각각의 기여를 구별한다.",
+    "minimal_experiment": "동일 실패 상태에서 재시도와 텍스트 교정·시각 교정을 비교하고 제어 복구 성공을 측정한다.",
+    "reviewed_predecessors": [
+      {
+        "paper_id": "pr-0071",
+        "basis": "관련 연구에서 AHA를 실패 진단 기반 모델로 구분한다.",
+        "source": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.pdf#page=2"
+      }
+    ],
+    "curation": {
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "실제 실패 데이터로 진단 정확도와 이후 제어 복구를 구분해서 비교할 수 있다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/x1nyuzhou/ViFailback",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "data": {
+        "url": "https://huggingface.co/datasets/sii-rhos-ai/ViFailback-Dataset",
+        "kind": "official_dataset",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.html",
+        "kind": "cvf",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2512.02787",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zeng_Diagnose_Correct_and_Learn_from_Manipulation_Failures_via_Visual_Symbols_CVPR_2026_paper.pdf",
+        "kind": "cvf"
+      },
+      "project": {
+        "url": "https://x1nyuzhou.github.io/vifailback.github.io/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "released",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/CVPR/2026_CVPR_Diagnose-Correct-and-Learn-from-Manipulation-Failures-via",
+    "venue_as_recorded": "CVPR",
+    "venue_canonical": "CVPR",
+    "publication": {
+      "venue": "CVPR",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "cvpr"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "cvf",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 CVF 게재본 PDF 2–8쪽의 데이터·진단·표 4와 배포 자료 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1275",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/CVPR/2026_CVPR_Diagnose-Correct-and-Learn-from-Manipulation-Failures-via/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/x1nyuzhou/ViFailback",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "released",
+        "source": "https://huggingface.co/datasets/sii-rhos-ai/ViFailback-Dataset/tree/21df46c2585c52e5a62df5f4b946bae6cbc6fed7",
+        "evidence": "실물 실패 VQA의 학습·평가 및 주석 프레임 파일 목록을 확인했다.",
+        "verified_on": "2026-11-26"
+      },
+      "checkpoint": {
+        "status": "reported",
+        "source": "https://huggingface.co/sii-rhos-ai/ViFailback-8B/tree/f5d2752a0168b413b8b674dc77eac02a5435e5a1",
+        "evidence": "ViFailback-8B 가중치와 인덱스 파일이 공개 목록에 있다.",
+        "verified_on": "2026-11-26"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/CVPR/2026_CVPR_Diagnose-Correct-and-Learn-from-Manipulation-Failures-via/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Learning Wrist Policies for Anthropomorphic Soft Power Grasping in Handle and Door Manipulation",
+    "aliases": [
+      "Learning Wrist Policies"
+    ],
+    "authors": [
+      "Florian Voigt",
+      "Abdeljalil Naceri",
+      "Sami Haddadin"
+    ],
+    "year": 2025,
+    "venue": "T-RO",
+    "category": "Manipulation, Contact, and Dexterity",
+    "primary_track": "Manipulation, contact, tactile, and dexterity",
+    "tags": [
+      "force control",
+      "Impedance Control",
+      "door opening",
+      "dexterous manipulation",
+      "sim-to-real"
+    ],
+    "page": "https://portal.fis.tum.de/en/publications/learning-wrist-policies-for-anthropomorphic-soft-power-grasping-i/",
+    "pdf": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=11027453",
+    "project": "not identified",
+    "identifiers": {
+      "doi": "10.1109/TRO.2025.3576950"
+    },
+    "found_in": [
+      "https://doi.org/10.1109/TRO.2025.3576950"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 T-RO 인쇄 초록과 TUM 서지(인쇄 저자는 Abdeljalil, TUM·기탁 서지는 Abdeldjallil 표기) 대조. 본문 검토 범위는 제한적이다.",
+    "evidence": "ABSTRACT_CHECKED",
+    "note_format": "abstract_analysis_v1",
+    "section_source": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=11027453",
+    "problem": "손잡이의 위치와 방향이 불확실할 때 순응하는 손목을 이용해 접촉을 유지하는 문제다.",
+    "method": "손·팔을 하나의 임피던스 제어기로 다루며, 손목 임피던스와 손바닥·손가락 힘을 함께 조절하는 정책을 학습한다.",
+    "interface": "손과 팔 기구의 제어 설정을 하나의 정책에서 정해 손잡이 잡기와 회전에 사용한다.",
+    "evaluation": "시뮬레이션에서 학습하고 완전 구동 손과 부족 구동 손을 장착한 서비스 휴머노이드에서 손잡이·문 조작을 검증했다.",
+    "role": "걸쇠와 손잡이 실험에서 재학습 없는 순응 제어 기준을 제공한다.",
+    "question": "손잡이의 기하 오차 강건성과 저항 해제 직후의 몸통 균형을 서로 다른 지표로 다룬다.",
+    "minimal_experiment": "손잡이 초기 자세 오류를 독립적으로 바꿔 일정 손목 강성과 순응 정책의 손잡이 파지 유지율을 비교한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "걸쇠와 손잡이 실험에서 재학습 없는 순응 제어 기준을 제공한다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "lineage": "손목 임피던스 학습과 휴머노이드 접촉 제어를 연결하는 비교 문헌이다",
+    "verification_questions": "손의 구동 형태와 문 유형별 시험 조건 및 힘·속도 제어 기준선",
+    "sources": {
+      "venue_verification": {
+        "url": "https://api.crossref.org/works/10.1109/tro.2025.3576950",
+        "kind": "official_venue",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://portal.fis.tum.de/en/publications/learning-wrist-policies-for-anthropomorphic-soft-power-grasping-i/",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": null,
+      "paper_pdf": {
+        "url": "https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?arnumber=11027453",
+        "kind": "publisher_or_project"
+      },
+      "project": null,
+      "code": null
+    },
+    "folder": "2025/T-RO/2025_T-RO_Learning-Wrist-Policies-for-Anthropomorphic-Soft-Power-Gra",
+    "venue_as_recorded": "T-RO",
+    "venue_canonical": "T-RO",
+    "publication": {
+      "venue": "T-RO",
+      "year": 2025,
+      "venue_year": 2025,
+      "kind": "journal",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "t-ro"
+    },
+    "artifacts": {
+      "code_status": "not_identified",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "ABSTRACT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 T-RO 인쇄 초록과 TUM 서지(인쇄 저자는 Abdeljalil, TUM·기탁 서지는 Abdeldjallil 표기) 대조. 본문 검토 범위는 제한적이다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "ABSTRACT_CHECKED",
+        "02_problem.md": "ABSTRACT_CHECKED",
+        "03_method.md": "ABSTRACT_CHECKED",
+        "04_evaluation.md": "ABSTRACT_CHECKED",
+        "05_insights.md": "ABSTRACT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1276",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2025/T-RO/2025_T-RO_Learning-Wrist-Policies-for-Anthropomorphic-Soft-Power-Gra/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "Abstract/project-only note cues; detailed protocol remains not_recorded. Source claims are not full-text or experiment verification; catalog links are cue_only."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "not_identified"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2025/T-RO/2025_T-RO_Learning-Wrist-Policies-for-Anthropomorphic-Soft-Power-Gra/04_evaluation.md",
+      "basis": "Manifest artifact links and abstract/project-only note cues; full-text protocol and reproducible execution have not been checked."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": true,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "GentleHumanoid: Learning Upper-Body Compliance for Contact-Rich Human and Object Interaction",
+    "aliases": [
+      "GentleHumanoid"
+    ],
+    "authors": [
+      "Qingzhou Lu",
+      "Yao Feng",
+      "Baiyu Shi",
+      "Michael Piseno",
+      "Zhenan Bao",
+      "C. Karen Liu"
+    ],
+    "year": 2026,
+    "venue": "RA-L",
+    "category": "Locomotion, Whole-Body, and Mobile Manipulation",
+    "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
+    "tags": [
+      "whole-body control",
+      "Impedance Control",
+      "humanoid",
+      "Reinforcement Learning",
+      "force threshold"
+    ],
+    "page": "https://ieeexplore.ieee.org/abstract/document/11753909",
+    "pdf": "https://arxiv.org/pdf/2511.04679",
+    "project": "https://gentle-humanoid.axell.top/",
+    "identifiers": {
+      "doi": "10.1109/LRA.2026.3747618",
+      "arxiv": "2511.04679"
+    },
+    "found_in": [
+      "https://ieeexplore.ieee.org/abstract/document/11753909"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 IEEE 온라인 출판 2026-10-26와 권호 2027-01, 저자판 PDF 3–8쪽 및 배포 코드 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://arxiv.org/pdf/2511.04679#page=7",
+    "problem": "휴머노이드가 외력을 모두 밀어내는 추종 정책으로는 상체 접촉과 자연스러운 움직임을 함께 만들기 어렵다.",
+    "method": "어깨·팔꿈치·손의 스프링-댐퍼 목표를 이용해 동작 추종과 순응을 함께 학습한다. 과제에 따라 조절할 수 있는 힘 상한을 제어에 넣는다.",
+    "interface": "전신 추종 목표와 접촉에 순응하도록 수정한 목표를 사용해 전신 관절 동작을 명령한다.",
+    "evaluation": "시뮬레이션과 G1 실물의 밀기, 포옹, 물체 조작에서 상체 순응과 힘을 평가했다. 배포 코드와 훈련 코드는 서로 다른 저장소다.",
+    "role": "걸쇠 해제 검증에서 순응 목표·힘 상한을 갖춘 공개 전신 제어 기준이다.",
+    "question": "해제 전 추종 오차를 같게 맞춘 상태에서 해제 순간의 상한 초과와 몸통 가속을 관찰한다.",
+    "minimal_experiment": "동일한 당김 힘에서 힘 상한과 순응 계수를 바꿔 몸통 및 발 접촉의 초기 응답을 비교한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "걸쇠 해제 검증에서 순응 목표·힘 상한을 갖춘 공개 전신 제어 기준이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "paper_reported_limitation": {
+      "text": "저자판은 기록한 인간 동작의 다양성이 제한되고 실물 힘 상한을 일시적으로 넘는 경우가 있다고 보고한다.",
+      "source": "https://arxiv.org/pdf/2511.04679#page=8"
+    },
+    "publication": {
+      "venue_year": 2027,
+      "venue": "RA-L",
+      "year": 2026,
+      "kind": "journal",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "ra-l"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/Axellwppr/gentle-humanoid",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "venue_verification": {
+        "url": "https://ieeexplore.ieee.org/abstract/document/11753909",
+        "kind": "official_venue",
+        "scope": "paper_specific",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://ieeexplore.ieee.org/abstract/document/11753909",
+        "kind": "publisher_or_project",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2511.04679",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2511.04679",
+        "kind": "arxiv"
+      },
+      "project": {
+        "url": "https://gentle-humanoid.axell.top/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/RA-L/2026_RA-L_GentleHumanoid-Learning-Upper-Body-Compliance-for-Contact",
+    "venue_as_recorded": "RA-L",
+    "venue_canonical": "RA-L",
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "publisher_or_project",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 IEEE 온라인 출판 2026-10-26와 권호 2027-01, 저자판 PDF 3–8쪽 및 배포 코드 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1277",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/RA-L/2026_RA-L_GentleHumanoid-Learning-Upper-Body-Compliance-for-Contact/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/Axellwppr/gentle-humanoid",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "reported",
+        "source": "https://github.com/Axellwppr/gentle-humanoid/blob/12aee8d84b9bf998c910b717eb9e3cbedd4d0559/assets/ckpts/G1/policy.onnx",
+        "evidence": "G1 배포용 ONNX 파일이 공식 저장소에 있다.",
+        "verified_on": "2026-11-26"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/RA-L/2026_RA-L_GentleHumanoid-Learning-Upper-Body-Compliance-for-Contact/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "TactileStep: Sole Tactile Learning for Regulating Foot–Terrain Interaction in Humanoid Locomotion",
+    "aliases": [
+      "TactileStep"
+    ],
+    "authors": [
+      "Zizhuo Wang",
+      "Ming-Ju Lee",
+      "Shaoting Zhu",
+      "Haozhe Lou",
+      "Hang Zhao",
+      "Yiming Li"
+    ],
+    "year": 2026,
+    "venue": "CoRL",
+    "category": "Locomotion, Whole-Body, and Mobile Manipulation",
+    "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
+    "tags": [
+      "humanoid",
+      "locomotion",
+      "tactile sensing",
+      "sim-to-real",
+      "Reinforcement Learning"
+    ],
+    "page": "https://arxiv.org/abs/2609.28959",
+    "pdf": "https://arxiv.org/pdf/2609.28959",
+    "project": "https://tactilestep.github.io/",
+    "identifiers": {
+      "arxiv": "2609.28959",
+      "openreview": "aGLO1l8SNB"
+    },
+    "found_in": [
+      "https://2026.corl.org/program/accepted-papers/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 CoRL 공식 채택·Spotlight S7과 저자판 PDF 3–9쪽의 학습·실물 표 3 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://arxiv.org/pdf/2609.28959#page=9",
+    "problem": "과제 성공률로는 착지 충격과 불안정한 발 지지를 비교하기 어렵다.",
+    "method": "발 접촉을 압력 배열로 바꾸는 모의 센서를 구성하고 실물 깔창과 같은 접촉 특징을 정책이 읽게 한다. 접지 위상별 보상은 착지 충격과 지지 상태를 따로 조절한다.",
+    "interface": "발바닥 압력 기반 특징과 로봇 운동 정보를 사용해 보행 관절 명령을 생성한다.",
+    "evaluation": "시뮬레이션과 Unitree G1에서 착지력, 충격 소음, 접촉 면적, 이동 성능을 평가했다. 실물 결과는 표 3에 있다.",
+    "role": "G1 실험에 발 접촉 품질과 균형 회복을 별도 지표로 넣는 근거다.",
+    "question": "상체가 받는 하중의 절단에 발 특징이 추가 정보를 주는지는 별도 검증해야 한다.",
+    "minimal_experiment": "동일 자세에서 발 접촉의 면적·압력 중심 변화가 몸통 각속도보다 먼저 나타나는지를 확인한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "G1 실험에 발 접촉 품질과 균형 회복을 별도 지표로 넣는 근거다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "paper_reported_limitation": {
+      "text": "평가는 제한된 명령 속도 범위에 있고 그 범위 밖의 보행 제어는 향후 확인 사항이다.",
+      "source": "https://arxiv.org/pdf/2609.28959#page=9"
+    },
+    "publication": {
+      "presentation": "spotlight",
+      "venue": "CoRL",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "venue_id": "corl"
+    },
+    "sources": {
+      "venue_verification": {
+        "url": "https://2026.corl.org/program/accepted-papers/",
+        "kind": "official_venue",
+        "scope": "venue_index",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://arxiv.org/abs/2609.28959",
+        "kind": "arxiv",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2609.28959",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2609.28959",
+        "kind": "arxiv"
+      },
+      "project": {
+        "url": "https://tactilestep.github.io/",
+        "kind": "publisher_or_project"
+      },
+      "code": null
+    },
+    "folder": "2026/CoRL/2026_CoRL_TactileStep-Sole-Tactile-Learning-for-Regulating-FootTerra",
+    "venue_as_recorded": "CoRL",
+    "venue_canonical": "CoRL",
+    "artifacts": {
+      "code_status": "project_only",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 CoRL 공식 채택·Spotlight S7과 저자판 PDF 3–9쪽의 학습·실물 표 3 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1278",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/CoRL/2026_CoRL_TactileStep-Sole-Tactile-Learning-for-Regulating-FootTerra/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "project_only",
+        "source": "https://tactilestep.github.io/",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/CoRL/2026_CoRL_TactileStep-Sole-Tactile-Learning-for-Regulating-FootTerra/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "RMMBench: A Comprehensive Benchmark for Robotic Mobile Manipulation",
+    "aliases": [
+      "RMMBench"
+    ],
+    "authors": [
+      "Huapeng Li",
+      "Fuxiang Feng",
+      "Jinqiu Fan",
+      "Shuo Yang",
+      "Fengjiao Chen",
+      "Xuezhi Cao",
+      "Ran Song",
+      "Wei Zhang"
+    ],
+    "year": 2026,
+    "venue": "CoRL",
+    "category": "Locomotion, Whole-Body, and Mobile Manipulation",
+    "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
+    "tags": [
+      "Benchmark",
+      "mobile manipulation",
+      "Navigation",
+      "long-horizon",
+      "process evaluation"
+    ],
+    "page": "https://arxiv.org/abs/2610.05414",
+    "pdf": "https://arxiv.org/pdf/2610.05414",
+    "project": "https://mxxq-stack.github.io/rmmbench-project/",
+    "identifiers": {
+      "arxiv": "2610.05414",
+      "openreview": "Nxn1pyNZpE"
+    },
+    "found_in": [
+      "https://2026.corl.org/program/accepted-papers/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "benchmark",
+    "source_audit": "2026-11-26 서지와 CoRL 공식 채택 목록과 저자판 PDF 4–9쪽의 과제·과정 지표 및 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://arxiv.org/pdf/2610.05414#page=7",
+    "problem": "장기 이동 조작이 실패했을 때 지도·위치 추정이 문제였는지 물체 조작이 문제였는지 종단 성공률로 판정하기 어렵다.",
+    "method": "이동과 조작에 고수준 지시를 적용하고, 실행 중의 국소 위치 정확도·행동 반복·과제 진행을 별도로 기록한다.",
+    "interface": "VLM이 언어 지시와 시각 관측 및 조건별 조감도에서 중간 목표를 선택하고, 원자적 조작·이동 기술을 호출한다.",
+    "evaluation": "모의 조작 및 이동-조작을 비교하며 조감도 유무를 나눠 평가한다. [arXiv 랜딩 초록](https://arxiv.org/abs/2610.05414)은 70개, 내려받은 PDF §3.1·§4.1은 90개(조작 60·복합 30)를 제시하므로 결과마다 해당 판본과 표를 함께 사용한다.",
+    "role": "내비게이션의 위치 오차가 길어진 조작 계획에 어떻게 전파되는지 확인할 평가 자원이다.",
+    "question": "후보의 정책이나 모델을 비교할 때 평가 코드에 포함된 과제 수와 지도 제공 조건을 확인한다.",
+    "minimal_experiment": "배포 지도 조건과 일인칭 영상만 제공하는 조건을 고정 시드에서 비교하고, 성공률과 이동·조작 단계별 완료를 함께 남긴다.",
+    "reviewed_predecessors": [
+      {
+        "paper_id": "pr-0788",
+        "basis": "표 1에서 언어 조건 조작 범위의 비교 대상으로 VLABench를 포함한다.",
+        "source": "https://arxiv.org/pdf/2610.05414#page=3"
+      }
+    ],
+    "curation": {
+      "roles": [
+        "benchmark_or_dataset"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "내비게이션의 위치 오차가 길어진 조작 계획에 어떻게 전파되는지 확인할 평가 자원이다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "paper_reported_limitation": {
+      "text": "평가 결과는 원자 기술 라이브러리의 세분화 및 이산화된 이동 추상화에 의존한다.",
+      "source": "https://arxiv.org/pdf/2610.05414#page=9"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/mxxq-stack/RMMBench",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "venue_verification": {
+        "url": "https://2026.corl.org/program/accepted-papers/",
+        "kind": "official_venue",
+        "scope": "venue_index",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.05414",
+        "kind": "arxiv",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.05414",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2610.05414",
+        "kind": "arxiv"
+      },
+      "project": {
+        "url": "https://mxxq-stack.github.io/rmmbench-project/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/CoRL/2026_CoRL_RMMBench-A-Comprehensive-Benchmark-for-Robotic-Mobile-Mani",
+    "venue_as_recorded": "CoRL",
+    "venue_canonical": "CoRL",
+    "publication": {
+      "venue": "CoRL",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "conference",
+      "status": "peer_reviewed",
+      "presentation": "unknown",
+      "venue_id": "corl"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 CoRL 공식 채택 목록과 저자판 PDF 4–9쪽의 과제·과정 지표 및 평가 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1279",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/CoRL/2026_CoRL_RMMBench-A-Comprehensive-Benchmark-for-Robotic-Mobile-Mani/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/mxxq-stack/RMMBench",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "not_recorded",
+        "evidence": "no explicit checkpoint availability cue"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/CoRL/2026_CoRL_RMMBench-A-Comprehensive-Benchmark-for-Robotic-Mobile-Mani/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
+      "audit_scope": "all_registry",
+      "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
+    }
+  },
+  {
+    "title": "Learning Force-Reactive Humanoid Loco-Manipulation",
+    "aliases": [
+      "FLoRe",
+      "FLORE"
+    ],
+    "authors": [
+      "Sihang Li",
+      "Xiaofeng Guo",
+      "Jinkun Cao",
+      "Charlie Cheng",
+      "Ruihan Yang",
+      "Chen Feng",
+      "Guanya Shi",
+      "Haozhi Qi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "category": "Locomotion, Whole-Body, and Mobile Manipulation",
+    "primary_track": "Locomotion, whole-body, mobile manipulation, and humanoids",
+    "tags": [
+      "humanoid",
+      "whole-body control",
+      "force control",
+      "Diffusion",
+      "Imitation Learning",
+      "contact"
+    ],
+    "page": "https://arxiv.org/abs/2610.35862",
+    "pdf": "https://arxiv.org/pdf/2610.35862",
+    "project": "https://louis-leee.github.io/FLoRe/",
+    "identifiers": {
+      "arxiv": "2610.35862"
+    },
+    "found_in": [
+      "https://louis-leee.github.io/FLoRe/",
+      "https://haozhi.io/"
+    ],
+    "added_in": "gapfill-2026-11",
+    "verified_on": "2026-11-26",
+    "paper_type": "method",
+    "source_audit": "2026-11-26 서지와 arXiv PDF 2–8쪽의 힘 관측·명령 어블레이션과 저자 코드. 게재 확정은 확인되지 않음 대조. Full-text scope의 수치·조건만 기록했다.",
+    "evidence": "FULL_TEXT_CHECKED",
+    "note_format": "reviewed_sections_v1",
+    "section_source": "https://arxiv.org/pdf/2610.35862#page=7",
+    "problem": "양손으로 힘을 내면서 균형을 유지해야 하는 휴머노이드 과제에서는 위치 명령만으로 접촉 반응을 지정하기 어렵다.",
+    "method": "휴대형 힘 센서 그리퍼와 착용형 추적기로 시연을 얻는다. 확산 정책이 양손 힘과 운동 명령을 예측하며, 전신 제어기가 손목의 힘 오차를 적분해 명령 방향의 힘을 추종한다.",
+    "interface": "영상, 고유수용감각과 양손 힘·토크를 사용해 자세 변화와 손별 힘 명령을 함께 출력한다.",
+    "evaluation": "모의 힘·운동 추종 및 G1 실물의 보드 닦기, 상자 돌리기, 갠트리 밀기를 평가했다. 표 Ⅱ는 같은 제어기에서 위치 전용 정책과 힘 관측·명령 변형을 비교한다.",
+    "role": "G1 걸쇠 해제 연구와 가장 가까운 공개 힘 반응 정책 중 하나다. 접촉력 추종과 해제 직후 균형 반응을 구분할 근거를 준다.",
+    "question": "유지하던 접촉력을 없앤 직후의 단기 안정성과 센서·명령 지연의 효과를 별도로 측정한다.",
+    "minimal_experiment": "힘 추종이 있는 경우와 기본 순응만 있는 경우를 같은 해제 전 하중에서 비교하고 초기 몸통 반응과 작업 시간을 기록한다.",
+    "reviewed_predecessors": [],
+    "curation": {
+      "roles": [
+        "method"
+      ],
+      "tier_reason": "현재 연구의 실험·평가 비교에 사용하는 REFERENCE 문헌이다.",
+      "admission_reason": "G1 걸쇠 해제 연구와 가장 가까운 공개 힘 반응 정책 중 하나다. 접촉력 추종과 해제 직후 균형 반응을 구분할 근거를 준다.",
+      "rationale_basis": "existing_role",
+      "rationale_status": "recorded",
+      "scope_status": "adjacent"
+    },
+    "sources": {
+      "code": {
+        "url": "https://github.com/amazon-far/FLoRe",
+        "kind": "official_code",
+        "scope": "project_landing",
+        "verified_on": "2026-11-26"
+      },
+      "primary": {
+        "url": "https://arxiv.org/abs/2610.35862",
+        "kind": "arxiv",
+        "scope": "paper_specific"
+      },
+      "preprint": {
+        "url": "https://arxiv.org/abs/2610.35862",
+        "kind": "arxiv"
+      },
+      "paper_pdf": {
+        "url": "https://arxiv.org/pdf/2610.35862",
+        "kind": "arxiv"
+      },
+      "project": {
+        "url": "https://louis-leee.github.io/FLoRe/",
+        "kind": "publisher_or_project"
+      }
+    },
+    "artifacts": {
+      "code_status": "released",
+      "data_status": "not_identified",
+      "local_pdf_cache": false
+    },
+    "folder": "2026/arXiv/2026_arXiv_Learning-Force-Reactive-Humanoid-Loco-Manipulation",
+    "venue_as_recorded": "arXiv",
+    "venue_canonical": "arXiv",
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "venue_year": 2026,
+      "kind": "preprint",
+      "status": "preprint",
+      "presentation": "unknown",
+      "venue_id": "arxiv"
+    },
+    "relations": [],
+    "provenance": {
+      "metadata_source_kind": "arxiv",
+      "content_evidence": "FULL_TEXT_CHECKED",
+      "source_audit_status": "recorded",
+      "metadata_checked_on": "2026-11-26",
+      "source_audit_note": "2026-11-26 서지와 arXiv PDF 2–8쪽의 힘 관측·명령 어블레이션과 저자 코드. 게재 확정은 확인되지 않음 대조. Full-text scope의 수치·조건만 기록했다.",
+      "schema_version": "1.0",
+      "schema_migrated_on": "2026-11-26",
+      "note_evidence": {
+        "01_overview.md": "FULL_TEXT_CHECKED",
+        "02_problem.md": "FULL_TEXT_CHECKED",
+        "03_method.md": "FULL_TEXT_CHECKED",
+        "04_evaluation.md": "FULL_TEXT_CHECKED",
+        "05_insights.md": "FULL_TEXT_CHECKED"
+      },
+      "primary_source_scope": "paper_specific"
+    },
+    "paper_id": "pr-1280",
+    "evaluation_profile": {
+      "profile_version": "1.0",
+      "status": "structured_note_cues",
+      "type": "not_recorded",
+      "settings": [
+        "not_recorded"
+      ],
+      "protocol": {
+        "dataset_or_benchmark": "not_recorded",
+        "metrics": "not_recorded",
+        "baselines": "not_recorded",
+        "ablations": "not_recorded",
+        "split_or_generalization": "not_recorded",
+        "trials_or_seeds": "not_recorded",
+        "statistics": "not_recorded",
+        "failure_cases": "not_recorded"
+      },
+      "trial_evidence": [],
+      "benchmark_cues": [],
+      "metric_cues": [],
+      "source_note": "2026/arXiv/2026_arXiv_Learning-Force-Reactive-Humanoid-Loco-Manipulation/04_evaluation.md",
+      "reviewed_on": "2026-11-26",
+      "basis": "04_evaluation.md body-derived section cues; benchmark and metric links remain cue_only; unresolved role, split, aggregation, and condition are not promoted to verified metadata."
+    },
+    "reproducibility": {
+      "profile_version": "1.0",
+      "status": "metadata_audited",
+      "code": {
+        "status": "released",
+        "source": "https://github.com/amazon-far/FLoRe",
+        "evidence": "manifest_link"
+      },
+      "data": {
+        "status": "not_identified",
+        "source": null,
+        "evidence": "note_cue_scan; no explicit data artifact status identified"
+      },
+      "checkpoint": {
+        "status": "reported",
+        "source": "https://github.com/amazon-far/FLoRe/tree/cb99fd05ac3e43eefdd1269647a29b98be2b6ea3#-release-plan",
+        "evidence": "공식 README는 저수준 5-keypoint 제어기 ONNX를 안내한다. 상위 확산 정책의 학습·배포 가이드는 공개 계획에 남아 있다.",
+        "verified_on": "2026-11-26"
+      },
+      "configuration": {
+        "status": "not_recorded",
+        "evidence": "note_cue_or_not_recorded"
+      },
+      "environment": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md section cue"
+      },
+      "run_conditions": {
+        "status": "not_recorded",
+        "evidence": "04_evaluation.md trial/statistics cue"
+      },
+      "reviewed_on": "2026-11-26",
+      "source_note": "2026/arXiv/2026_arXiv_Learning-Force-Reactive-Humanoid-Loco-Manipulation/04_evaluation.md",
+      "basis": "manifest artifact links plus full-text evaluation/method note cues; availability is not a claim of reproducible execution unless an explicit source or experiment check exists."
+    },
+    "lineage_profile": {
+      "profile_version": "1.0",
+      "status": "no_curated_edge_recorded",
+      "outgoing_paper_ids": [],
+      "incoming_paper_ids": [],
+      "queue_adjacency_paper_ids": [],
+      "legacy_summary_candidate_paper_ids": [],
+      "legacy_summary_present": false,
+      "audited_on": "2026-11-26",
       "audit_scope": "all_registry",
       "basis": "manifest relations are curated edges; queue adjacency and legacy lineage matches are retained as non-relational candidates. Absence of an edge is not a claim that the paper has no citations."
     }
