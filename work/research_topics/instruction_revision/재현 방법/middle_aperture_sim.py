@@ -115,7 +115,7 @@ def qualify_standalone(out):
         env.close()
 
 
-def record_branches(out, study, modes, *, scene_type=Cabinet, prepare_fn=branch):
+def record_branches(out, study, modes, *, scene_type=Cabinet, prepare_fn=branch, first_observe=observe):
     from OpenGL import GL
     geometry = None
     for arm in study['arms']:
@@ -129,7 +129,7 @@ def record_branches(out, study, modes, *, scene_type=Cabinet, prepare_fn=branch)
                 common = restore(env, scene, arm, out, donors_file=study['donors'])
                 donor = state_hash(capture_state(env))
                 tape = prepare_fn(env, scene, common, mode, BASE['lead'])
-                _, first = observe(env, out, False, TASK['prompt'])
+                _, first = first_observe(env, out, False, TASK['prompt'])
                 tape.update(arm=arm, mode=mode, length=BASE['lead'], common=common, donor_physics=donor,
                             first=first, handoff=scene.read(), stationary=stationary_probe(env, scene))
                 save(out/'preparation'/f"{arm}-{mode}-{BASE['lead']}.json", tape)

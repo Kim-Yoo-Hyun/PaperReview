@@ -104,7 +104,8 @@ class DrawerViews:
 
 
 class ViewSchedule:
-    def __init__(self, env, scene, *, drawer, width, limit, bank, opposite_bank, indices=None, duration=None):
+    def __init__(self, env, scene, *, drawer, width, limit, bank, opposite_bank, indices=None, duration=None,
+                 initial_attempts=1):
         self.renderer = DrawerViews(env, drawer)
         self.geometry = contact_geometry(scene.geometry)
         self.qpos = scene.slides[drawer]['closed'] - width
@@ -112,16 +113,29 @@ class ViewSchedule:
         self.indices = frozenset(range(duration) if indices is None else indices)
         self.limit = limit
         self.bank, self.opposite_bank = bank, opposite_bank
+        self.initial_attempts = initial_attempts
 
     def apply(self, index, query, sample, rows):
         if index >= self.limit:
             return
         contact = any(set(targets(r, self.geometry)) - {'other'} for r in rows)
         exchange = index in self.indices and not contact
-        rgb, record = self.renderer.images(query, sample, self.qpos if exchange else None)
-        if index == 0:
-            assert sample['live'] == self.bank
-            assert record['sent'] == (self.opposite_bank if exchange else self.bank)
+        reference = self.opposite_bank if exchange else self.bank
+        retries = []
+        for attempt in range(self.initial_attempts if index == 0 else 1):
+            if attempt:
+                fresh, state = observe(self.renderer.env, None, False, query['prompt'])
+                assert (state['physics'], state['state']) == (sample['physics'], sample['state'])
+                query.update({c: fresh[c] for c in CAMERAS})
+                sample['live'] = state['live']
+            rgb, record = self.renderer.images(query, sample, self.qpos if exchange else None)
+            if index or (sample['live'] == self.bank and record['sent'] == reference):
+                break
+            retries.append(record)
+        else:
+            raise RuntimeError(f'Initial host or delivered image differs from native width reference: {retries}')
+        if retries:
+            record['reference_retries'] = retries
         if exchange or (not self.indices and not contact):
             query.update(rgb)
         sample['render'] = dict(record, exchange=exchange)

@@ -1,0 +1,15 @@
+{
+  "question": "Does the late half-second change first gripper contact more often than the early half-second on two returned postures of LIBERO-Goal layout 3?",
+  "layout": 3,
+  "parent": "results/2026-11-26-drawer-view-window/study.zip",
+  "parent_sha256": "f2e3116738c939ec36a821d81d716eb69e4c0832190f27e519142627556140f0",
+  "parent_verification_sha256": "821f0610a6d22ff224fd1b393d2a83dcf565797b77a7be27ad0b3ff7b5ee9c3a",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "physical_modes": ["narrow-middle", "full-middle", "narrow-bottom", "full-bottom"],
+  "render_queries": 4,
+  "initial_raster": "Before inference take nine native RGB pairs without advancing each start. Register the strict majority pixel-hash pair. At query zero require the host and the delivered images to equal the corresponding registered native pairs exactly. A mismatching raster can be reacquired at identical physics up to eight total attempts, with rejected signatures retained. No policy query or controls during retries.",
+  "exchange_indices": {"self": [], "early": [0, 1], "late": [2, 3], "four": [0, 1, 2, 3]},
+  "figure": "drawer_view_window_layout3.png",
+  "preparation": "Restore both layout-3 endpoints and 60-control returns from the original stove-layout archive. Test the native tabletop first and the archived layout-2 bowl/plate translations second. Select the first arrangement with table support, free of robot, slide and object collisions in every host and posture, before inference. Use 76 mm and each posture's measured near-160 mm travel. Verify native camera pixels, full integration state and one second of stationary controls on every start. Closed starts only verify the physical interventions.",
+  "analysis": "Use the same pi05_libero checkpoint, upper-drawer bowl instruction, eight seeds at offset 32, reversed order across two fresh model loads, 20 Hz and five controls per query as layout 2. Compare each exposure to self on every matched host/posture/seed/load, then early versus late. Report whether late changes first target more often overall, for each level and width, and within each posture by load cell. Where self and full-second differ, classify both half-seconds as self, full-second or neither. Report contact identities, no contact, first containment order and conditional onset time including the missing count, and 15/30 s occupancy for both layouts. The two layouts have separate physical starts. Model reloads repeat seeds."
+}

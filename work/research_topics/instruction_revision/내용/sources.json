@@ -1,10 +1,16 @@
 {
   "task": "LIBERO-Goal, open the top drawer and put the bowl inside",
   "checkpoint": "pi05_libero",
-  "reset_row": 2,
+  "reset_rows": [2, 3],
   "libero_goal": "https://github.com/Lifelong-Robot-Learning/LIBERO/blob/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/bddl_files/libero_goal/open_the_top_drawer_and_put_the_bowl_inside.bddl",
   "resteer": "https://github.com/ChenZhenY/ReSteer/tree/7329c159319a346b7245a69c128e5d4940c0763b",
   "openpi": "https://github.com/Physical-Intelligence/openpi/tree/215abfb217dbac7d5f1273282331b9b1866c0479",
+  "drawer_view_window_layout3": {
+    "protocol": "../재현 방법/drawer/drawer_view_window_layout3.json",
+    "verification": "../재현 방법/results/2026-11-26-drawer-view-window-layout3/verification.json",
+    "physical_replay": "../재현 방법/results/2026-11-26-drawer-view-window-layout3/physical_replay.json",
+    "evidence": "../재현 방법/results/2026-11-26-drawer-view-window-layout3/study.zip"
+  },
   "drawer_view_window": {
     "protocol": "../재현 방법/drawer/drawer_view_window.json",
     "verification": "../재현 방법/results/2026-11-26-drawer-view-window/verification.json",

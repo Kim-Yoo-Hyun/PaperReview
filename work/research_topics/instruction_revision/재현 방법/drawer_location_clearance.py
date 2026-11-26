@@ -17,12 +17,12 @@ from verify_stove_layouts import digest
 
 
 class Probe:
-    def __init__(self, env, arm, out):
+    def __init__(self, env, arm, out, *, cohort=COHORT):
         self.env = env
         self.scene = LocationCabinet(env)
-        common = restore(env,self.scene,arm,out,donors_file=COHORT['donors'])
+        common = restore(env,self.scene,arm,out,donors_file=cohort['donors'])
         prepare(env,self.scene,common,'pose',BASE['lead'])
-        assert digest(capture_state(env)) == COHORT['returned_physics'][arm]
+        assert digest(capture_state(env)) == cohort['returned_physics'][arm]
         data, model = env.sim.data, env.sim.model
         self.qpos,self.qvel,self.warm = data.qpos.copy(),data.qvel.copy(),data.qacc_warmstart.copy()
         slide = self.scene.slides['middle']
