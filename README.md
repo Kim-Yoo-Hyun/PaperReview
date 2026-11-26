@@ -1,14 +1,14 @@
 # PaperReview
 
-로봇의 관측·제어·접촉·복구를 연결해 문헌을 비교하고, 연구 질문을 실제 정책 행동으로 검증한다. `research1`에서는 **위 칸에 그릇을 넣으라는 지시에서, 다른 서랍의 개방 폭을 언제 얼마나 오래 보여주면 로봇의 첫 접촉과 수납 위치가 바뀌는가**를 조사한다.
+로봇의 관측·제어·접촉·복구를 연결해 문헌을 비교하고, 연구 질문을 실제 정책 행동으로 검증한다. `research1`에서는 **위 칸에 그릇을 넣으라는 지시에서, 다른 서랍의 개방 폭을 어느 카메라에 언제 보여주면 첫 접촉과 수납 위치가 바뀌는가**를 조사한다.
 
 ## 최근 실험
 
-아래 서랍을 약 160 mm 연 채 정책 시작 후 0.5–1초에 두 카메라에 76 mm로 보여줬다. 그리퍼 출발 위치를 두 배치 사이에서 약 30 mm 교환하자, 이 영상으로 첫 접촉이 바뀐 경우는 배치 2에서 **32/32 → 0/32쌍**, 배치 3에서 **0/32 → 26/32쌍**이 됐다. 실제 폭을 계속 보여준 대조는 네 조건 모두 그릇에 먼저 닿았다. [접촉·수납과 해석 범위](./work/research_topics/instruction_revision/내용/README.md#drawer-gripper-position) · [위치별 대응쌍 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-gripper-position/drawer_gripper_position.png)
+약 160 mm 열린 아래 서랍을 정책 시작 후 0.5–1초에 76 mm로 보여줬다. 두 카메라를 함께 바꿨을 때 첫 접촉이 그릇에서 아래 서랍으로 옮겨간 **34묶음 중 한 카메라만 바꿔 같은 접촉을 재현한 경우는 0묶음**이었다. 두 영상을 함께 바꿔 무접촉이 된 24묶음에서는 외부 카메라 단독으로 5묶음, 손목 단독으로 0묶음에서 무접촉이 재현됐다. [접촉·수납과 해석 범위](./work/research_topics/instruction_revision/내용/README.md#drawer-camera-window) · [카메라·출발 위치별 비교 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-camera-window/drawer_camera_window.png)
 
 | 하려는 일 | 시작점 |
 |---|---|
-| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-gripper-position) |
+| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-camera-window) |
 | 후속 실험의 대조 조건 확인 | [다음 작업](./TODO.md) |
 | 1,260편의 논문 검색 | [분야별 목록](./PAPER.md) · [태그·별칭 색인](./research/REGISTRY_INDEX.csv) |
 | 정독 순서·기록·분야별 비교 | [논문 읽기](./research/README.md) · [7개 분야의 합성](./synthesis/README.md) |

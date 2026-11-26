@@ -1,0 +1,15 @@
+{
+  "question": "Which single camera reproduces the first contact caused by showing a narrower bottom drawer in both cameras from 0.5 to 1.0 s, at original and reciprocally moved gripper starts?",
+  "parent": "results/2026-11-26-drawer-gripper-position/study.zip",
+  "parent_sha256": "7f27f557c3aaee7ac21b5e624ed35544f76ec39add2f31d26f3eaeaf64d800d3",
+  "parent_verification_sha256": "b1997bef9c90bd3976b480bf6a1c36f8646650e79b89ac0e761a0672aa49c9fc",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "camera_width_m": 0.076,
+  "indices": [2, 3],
+  "channels": {"self": [], "external": ["observation/image"], "wrist": ["observation/wrist_image"], "both": ["observation/image", "observation/wrist_image"]},
+  "figure": "drawer_camera_window.png",
+  "starts": "Restore the four archived returns at both native and crossed gripper starts. Recheck all eight physical full-width hosts and eight 76 mm references. For each full host verify all four camera routings against physically rendered native and narrow images without taking a physics step. Use both current native cameras at all non-assigned queries.",
+  "protocol": "One upper-drawer instruction and pi05_libero checkpoint. At 20 Hz, replan every five steps. At queries 2 and 3, before any gripper contact with a drawer or bowl, render the alternate width in detached MuJoCo data, sending only the assigned cameras. Record the native, alternate and actually delivered camera hashes, selected pixels, live proprioception and before/after physics. Keep the other camera from that query's own state. Run 512 full trajectories with the same eight seeds per posture, two gripper positions, four camera conditions and two distinct policy processes with fresh compilation cache directories and reversed scheduling order. The 15/30 s clock includes the three-second arm return.",
+  "primary": "Within every posture, position, seed and model load pair all four views. Where self and both have different first contact, including no contact, count external only, wrist only, both singles and neither single reproducing the exact both-camera target. A single departure from self can land on a third target. Report all target identities and ties, eligible/ineligible denominators, both-group no contact, and results with contact observed in both controls. Compare each position and layout and show posture/load counts.",
+  "secondary": "For all quartets report contact and occupancy transitions at 15/30 s, including singles that change contact when both and self agree. Compare fresh self and both controls against the matched parent self and late sessions. Check that pre-window receipts and first ten commands agree, account for possible raster differences, and repeat the primary analysis restricted to matched prefixes. Recount from primitive geometry and receipts and physically replay the saved actions."
+}
